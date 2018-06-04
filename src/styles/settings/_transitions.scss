@@ -1,0 +1,9 @@
+$transition-duration: 0.25s;
+$transition-duration-long: 1s;
+$transition-duration-short: 0.125s;
+$transition-easing: ease-in-out;
+$transition: $transition-duration $transition-easing;
+
+.transition {
+  transition: $transition;
+}

@@ -1,0 +1,11 @@
+$opacities: (
+  'low': 0.3,
+  'medium': 0.6,
+  'height': 0.9
+);
+
+@each $name, $opacity in $opacities {
+  .#{$name}-opacity {
+    opacity: #{$opacity};
+  }
+}

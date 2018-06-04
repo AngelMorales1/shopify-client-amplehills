@@ -1,0 +1,25 @@
+/*
+Global element shapes
+*/
+$viewport-height: 100vh;
+$border-radius: 0.25rem;
+$drop-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+/*
+Spacing
+*/
+@function spacing($units) {
+  @return $units * 0.25rem;
+}
+
+$spacing: (
+  '0': spacing(0),
+  's': spacing(2),
+  'm': spacing(4),
+  'l': spacing(8),
+  'xl': spacing(16)
+);
+
+@function spacing($spacing-name) {
+  @return map-get($spacing, $spacing-name);
+}
