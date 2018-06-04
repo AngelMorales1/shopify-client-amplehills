@@ -31,6 +31,14 @@
     "react-app-rewired": "^1.5.2",
     "sass-loader": "^7.0.2"
   },
+  "prettier": {
+    "useTabs": false,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "jsxBracketSameLine": false
+  },
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --write",
