@@ -1,0 +1,5 @@
+@import "settings/aspect";
+
+.square {
+  @include aspect-ratio(1, 1);
+}
