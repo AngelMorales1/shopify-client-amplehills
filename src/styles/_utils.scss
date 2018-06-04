@@ -1,0 +1,78 @@
+@import "settings";
+
+.min100vh {
+  min-height: 100vh;
+}
+
+.maxh100 {
+  max-height: 100%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-cover-center {
+  background-size: cover;
+  background-position: center;
+}
+
+.absolute-cover {
+  @extend .bg-cover-center;
+  @extend .overlay;
+  z-index: -1;
+}
+
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.t0 {
+  top: 0;
+}
+
+.r0 {
+  right: 0;
+}
+
+.b0 {
+  bottom: 0;
+}
+
+.l0 {
+  left: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.events-none {
+  pointer-events: none;
+}
+
+.events-all {
+  pointer-events: all;
+}

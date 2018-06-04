@@ -1,0 +1,18 @@
+/*
+Import global settings
+*/
+@import "settings";
+
+/*
+Dimension classes
+*/
+.content {
+  min-height: 100vh;
+}
+
+/*
+Drop shadows
+*/
+.drop-shadow {
+  box-shadow: $drop-shadow;
+}
