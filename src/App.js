@@ -1,4 +1,11 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+
+import { initializeApplication } from "state/actions/applicationActions";
+import { fetchProducts } from "state/actions/productsActions";
+import { IDLE } from "constants/Status";
+import get from "utils/get";
 
 import ProductGrid from "components/ProductGrid";
 
@@ -6,44 +13,48 @@ import "basscss/css/basscss.min.css";
 import "./styles/app.scss";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      shop: null,
-      products: null,
-      checkout: null
-    };
-  }
-
   componentWillMount() {
-    this.props.client.checkout.create().then(res => {
-      this.setState({
-        checkout: res
-      });
-    });
-
-    this.props.client.product.fetchAll().then(res => {
-      this.setState({
-        products: res
-      });
-    });
-
-    this.props.client.shop.fetchInfo().then(res => {
-      this.setState({
-        shop: res
-      });
-    });
+    const {
+      applicationStatus,
+      actions: { initializeApplication, fetchProducts }
+    } = this.props;
+    if (applicationStatus === IDLE) {
+      initializeApplication();
+      fetchProducts();
+    }
   }
 
   render() {
     return (
       <div className="App">
         <h1>Hello, Ample World!</h1>
-        {this.state.products && <ProductGrid products={this.state.products} />}
+        {this.props.products && <ProductGrid products={this.props.products} />}
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    ...state,
+    applicationStatus: get(state, "status.initializeApplication")
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        initializeApplication,
+        fetchProducts
+      },
+      dispatch
+    )
+  };
+};
+
+export { App };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
