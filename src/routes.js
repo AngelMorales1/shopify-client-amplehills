@@ -10,13 +10,13 @@ import CollectionDetailContainer from "containers/CollectionDetailContainer";
 const Routes = ({ location }) => (
   <Switch location={location}>
     <Route exact path="/" component={HomeContainer} />
-    <Route path="/products" component={ProductLandingContainer} />
     <Route path="/products/:product_id" component={ProductDetailContainer} />
-    <Route path="/collections" component={CollectionLandingContainer} />
+    <Route path="/products" component={ProductLandingContainer} />
     <Route
       path="/collections/:collection_id"
       component={CollectionDetailContainer}
     />
+    <Route path="/collections" component={CollectionLandingContainer} />
   </Switch>
 );
 

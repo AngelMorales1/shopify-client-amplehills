@@ -60,7 +60,7 @@ class ContainerBase extends Component {
   render() {
     const { view: View, model } = this.state;
     return (
-      <main className={`content`}>
+      <main className={`container p1`}>
         {View ? <View model={model} {...this.props} {...this.state} /> : null}
       </main>
     );
