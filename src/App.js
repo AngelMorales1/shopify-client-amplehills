@@ -21,10 +21,7 @@ class App extends Component {
       applicationStatus,
       actions: { initializeApplication, fetchProducts }
     } = this.props;
-    if (applicationStatus === IDLE) {
-      initializeApplication();
-      fetchProducts();
-    }
+    if (applicationStatus === IDLE) initializeApplication();
   }
 
   render() {
