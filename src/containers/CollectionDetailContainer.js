@@ -1,7 +1,7 @@
 import ContainerBase from "lib/ContainerBase";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { fetchCollection } from "state/actions/collectionsActions";
+import { fetchCollection } from "state/actions/collectionActions";
 
 class CollectionDetailContainer extends ContainerBase {
   view = import("views/CollectionDetailView");

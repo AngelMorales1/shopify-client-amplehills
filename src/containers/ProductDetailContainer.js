@@ -1,7 +1,7 @@
 import ContainerBase from "lib/ContainerBase";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { fetchProduct } from "state/actions/productsActions";
+import { fetchProduct } from "state/actions/productActions";
 
 class ProductDetailContainer extends ContainerBase {
   view = import("views/ProductDetailView");
