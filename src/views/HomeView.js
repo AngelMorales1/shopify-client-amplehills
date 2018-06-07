@@ -6,7 +6,7 @@ class HomeView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    return <div className="Home">Home</div>;
+    return <div className="Home">Welcome Home!</div>;
   }
 }
 
