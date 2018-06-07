@@ -1,4 +1,4 @@
-import BuySDK from "lib/buy";
+import BuySDK from "lib/Buy";
 
 export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
 export const fetchProducts = payload => dispatch => {
