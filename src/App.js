@@ -7,8 +7,9 @@ import { fetchProducts } from "state/actions/productsActions";
 import { IDLE, FULFILLED } from "constants/Status";
 import get from "utils/get";
 
-import ProductGrid from "components/ProductGrid";
 import Loader from "components/Loader";
+import Nav from "components/Nav";
+import Footer from "components/Footer";
 
 import "basscss/css/basscss.min.css";
 import "./styles/app.scss";
@@ -30,10 +31,8 @@ class App extends Component {
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
-          <h1>Hello, Ample World!</h1>
-          {this.props.products && (
-            <ProductGrid products={this.props.products} />
-          )}
+          <Nav />
+          <Footer />
         </div>
       );
     }
