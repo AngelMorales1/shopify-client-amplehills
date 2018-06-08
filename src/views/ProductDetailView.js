@@ -8,8 +8,9 @@ class ProductDetailView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    const product = model.value;
+    const { product, content } = model;
 
+    console.log(product, content);
     return (
       <div className="ProductDetail">
         <h1 className="mb2">Product Details for {product.title}</h1>
