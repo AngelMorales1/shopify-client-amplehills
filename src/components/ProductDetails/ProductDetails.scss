@@ -2,6 +2,6 @@
 
 .ProductDetails {
   &--Blue {
-    background: color('sky-blue');
+    @extend .bg-sky-blue;
   }
 }
