@@ -50,7 +50,7 @@
     "jsxBracketSameLine": false
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,json,css,scss,md}": [
       "prettier --write",
       "git add"
     ]
