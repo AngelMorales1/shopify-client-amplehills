@@ -6,6 +6,7 @@ import BlockSwitch from 'components/BlockSwitch';
 class ProductDetailView extends Component {
   render() {
     const { model } = this.props;
+    console.log(this.props);
     if (model.isError) return <h1>Error</h1>;
 
     const { product, content } = model;
@@ -13,7 +14,6 @@ class ProductDetailView extends Component {
       fields: { contentBlocks }
     } = content.items[0];
 
-    console.log(this.props);
     return (
       <div className="ProductDetail">
         <h1 className="mb2">Product Details for {product.title}</h1>

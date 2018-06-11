@@ -1,16 +1,17 @@
-import Data from "lib/Data";
-import ContentfulClient from "lib/Contentful";
-import BuySDK from "lib/Buy";
+import Data from 'lib/Data';
+import ContentfulClient from 'lib/Contentful';
+import BuySDK from 'lib/Buy';
 
-export const INITIALIZE_APPLICATION = "INITIALIZE_APPLICATION";
+export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = payload => {
   return {
     type: INITIALIZE_APPLICATION,
     payload: new Promise(resolve => {
       const Contentful = ContentfulClient();
 
-      Data.setRef("contentful", Contentful);
-      Data.setRef("shopify", BuySDK);
+      Data.setRef('contentful', Contentful);
+      Data.setRef('shopify', BuySDK);
+      console.log(Data.shopify);
       resolve(Contentful);
     })
   };

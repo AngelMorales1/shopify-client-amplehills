@@ -1,20 +1,19 @@
-import hashify from "object-hash";
-import { SHOPIFY, CONTENTFUL } from "constants/Clients";
+import hashify from 'object-hash';
 
 const Data = {
   cache: {
     getEntries: {},
     getProducts: {},
-    getProduct: {}
+    fetchByHandle: {}
   },
   setRef(clientID, client) {
     this[clientID] = client;
   },
-  getEntries(type = "page", handle) {
+  getEntries(type = 'page', handle) {
     const query = {
       content_type: type,
       include: 4,
-      "fields.productHandle": handle
+      'fields.productHandle': handle
     };
 
     const hashified = hashify(query);
@@ -24,6 +23,19 @@ const Data = {
 
     return this.contentful.getEntries(query).then(val => {
       this.cache.getEntries[hashified] = val;
+      return val;
+    });
+  },
+  fetchByHandle(handle) {
+    const hashified = hashify(handle);
+
+    if (this.cache.fetchByHandle[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.fetchByHandle[hashified])
+      );
+
+    return this.shopify.product.fetchByHandle(handle).then(val => {
+      this.cache.fetchByHandle[hashified] = val;
       return val;
     });
   }
