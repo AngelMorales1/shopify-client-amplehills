@@ -1,0 +1,7 @@
+@import 'settings';
+
+.ProductDetails {
+  &--Blue {
+    background: color('sky-blue');
+  }
+}

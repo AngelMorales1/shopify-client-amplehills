@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import get from "utils/get";
+import React, { Component } from 'react';
+import get from 'utils/get';
 
-import ProductGridCard from "components/ProductGridCard";
+import BlockSwitch from 'components/BlockSwitch';
 
 class ProductDetailView extends Component {
   render() {
@@ -9,13 +9,22 @@ class ProductDetailView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     const { product, content } = model;
+    const {
+      fields: { contentBlocks }
+    } = content.items[0];
 
-    console.log(product, content);
+    console.log(this.props);
     return (
       <div className="ProductDetail">
         <h1 className="mb2">Product Details for {product.title}</h1>
         <div>
-          <ProductGridCard product={product} />
+          {contentBlocks.map((block, i) => (
+            <BlockSwitch
+              key={get(block, 'sys.id', i)}
+              block={block}
+              {...this.props}
+            />
+          ))}
         </div>
       </div>
     );
