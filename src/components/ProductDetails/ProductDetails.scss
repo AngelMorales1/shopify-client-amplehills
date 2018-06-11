@@ -1,0 +1,7 @@
+@import 'settings';
+
+.ProductDetails {
+  &--Blue {
+    @extend .bg-sky-blue;
+  }
+}
