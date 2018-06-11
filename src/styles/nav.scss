@@ -1,0 +1,59 @@
+@import "reset", "globals", "typography";
+
+.text {
+  font-weight: bold;
+  color: #FE5C60;
+}
+
+.text > a {
+  text-decoration: none;
+}
+
+.text--box {
+  background-color: #FE5C60;
+  border: solid #FE5C60;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+}
+
+.text--box > a {
+  position: relative;
+  top:25%;
+}
+
+
+.hover-reset > a:hover {
+  color: white;
+}
+
+.align-center {
+  position: absolute;
+  left: 47%;
+}
+
+.order-box {
+  margin: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.align-left {
+  justify-self: flex-start;
+  margin-right: auto;
+}
+
+.margin-left {
+  margin-left: 40px;
+}
+
+.margin-right {
+  margin-right: 40px;
+}
+
+.align-right {
+  justify-self: flex-end;
+  margin-left: auto;
+}
