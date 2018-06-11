@@ -36,7 +36,7 @@ const Data = {
 
     return this.shopify.product.fetchByHandle(handle).then(val => {
       this.cache.fetchByHandle[hashified] = val;
-      return val;
+      return new Promise(resolve => resolve(val));
     });
   }
 };

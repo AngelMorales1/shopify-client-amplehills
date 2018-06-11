@@ -7,7 +7,7 @@ export const fetchProduct = payload => dispatch => {
     payload: new Promise((resolve, reject) => {
       Data.fetchByHandle(payload).then(res => {
         const product = res;
-        console.log('RES', res);
+
         if (!product.handle || product.handle !== payload)
           reject(new Error('No Products'));
 

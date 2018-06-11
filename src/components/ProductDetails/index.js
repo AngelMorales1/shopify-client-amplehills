@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
+import get from 'utils/get';
 
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
   render() {
-    const colorClass = `ProductDetails--${this.props.data.color}`;
+    const { data } = this.props;
+    const details = get(data, 'productDetails', []);
+
+    const colorClass = `ProductDetails--${get(data, 'color', 'Blue')}`;
 
     return (
       <div className={`${styles['ProductDetails']} ${styles[colorClass]}`}>
         <p>THE DETAILS</p>
-        {this.props.data.productDetails.map(detail => {
+        {details.map(detail => {
           const { fields } = detail;
           return (
             <div className="ProductDetail" key={detail.sys.id}>

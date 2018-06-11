@@ -8,10 +8,9 @@ export const initializeApplication = payload => {
     type: INITIALIZE_APPLICATION,
     payload: new Promise(resolve => {
       const Contentful = ContentfulClient();
-
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
-      console.log(Data.shopify);
+
       resolve(Contentful);
     })
   };
