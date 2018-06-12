@@ -1,59 +1,50 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import "../../styles/nav.scss";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
   render() {
     return (
-      <div>
-        <div className="align-center">
-          <ul>
-            <li className="mr1 text">
-              <NavLink exact to="/">
-                Ample Hills
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="p1 mb3 order-box">
-          <div className="inline align-left">
-            <ul>
-              <li className="inline text margin-left">
-                <NavLink exact to="/Location">
-                  Location
-                </NavLink>
-              </li>
-              <li className="inline text margin-left">
-                <NavLink exact to="/Contact">
-                  Contact
-                </NavLink>
-              </li>
-            </ul>
+      <div className="mx0 my3 nav flex clearfix">
+        <div className="col col-4 flex justify-start">
+          <div className="flex ml4 nav__text">
+            <NavLink exact to="/Location">
+              Location
+            </NavLink>
           </div>
-
-          <div className="inline align-right">
-            <ul>
-              <li className="inline margin-right text">
-                <NavLink exact to="/profile">
-                  Profile
-                </NavLink>
-              </li>
-              <li className="inline margin-right text">
-                <NavLink exact to="/collections">
-                  Collections
-                </NavLink>
-              </li>
-              <li className="inline margin-right text text--box hover-reset">
-                <NavLink exact to="/products">
-                  Shop Online
-                </NavLink>
-              </li>
-            </ul>
+          <div className="flex ml4 nav__text">
+            <NavLink exact to="/Contact">
+              Contact
+            </NavLink>
+          </div>
+        </div>
+        <div className="col col-4">
+          <div className="flex justify-center">
+            <NavLink exact to="/">
+              <img src="/assets/images/Logo.svg" />
+            </NavLink>
+          </div>
+        </div>
+        <div className="col col-4 flex justify-end clearfix">
+          <div className="flex mr4 nav__text">
+            <NavLink exact to="/profile">
+              Profile
+            </NavLink>
+          </div>
+          <div className="flex mr4 nav__text">
+            <NavLink exact to="/collections">
+              Collections
+            </NavLink>
+          </div>
+          <div className="flex mr4 nav__text">
+            <NavLink exact to="/products">
+              <button className="button">Shop Online</button>
+            </NavLink>
           </div>
         </div>
       </div>
     );
   }
 }
+// className={`nav__text mx0 border ${styles['nav__text--center']}`}
 
 export default Nav;

@@ -1,7 +1,7 @@
 /*
 Import global settings
 */
-@import "settings";
+@import 'settings';
 
 /*
 Dimension classes
@@ -15,4 +15,26 @@ Drop shadows
 */
 .drop-shadow {
   box-shadow: $drop-shadow;
+}
+
+/*
+Button
+*/
+.button {
+  background-color: color('peach');
+  border: solid 0px color('peach');
+  border-radius: 0.5rem;
+  padding: spacing(3.5) spacing(6);
+  color: color('white');
+  font-size: $font-4;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: red; /* hover color for button*/
+}
+
+.button:focus {
+  outline: 0;
 }
