@@ -9,14 +9,14 @@ class Nav extends Component {
         <div className={`col col-4 flex justify-start ${styles['left-side']}`}>
           <NavLink
             exact
-            to="/Location"
+            to="/location"
             className="flex items-center ml4 link-text"
           >
             Location
           </NavLink>
           <NavLink
             exact
-            to="/Contact"
+            to="/contact"
             className="flex items-center ml4 link-text"
           >
             Contact
