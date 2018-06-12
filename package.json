@@ -32,7 +32,7 @@
     "babel-plugin-react-css-modules": "^3.4.2",
     "babel-preset-react-app": "^3.1.1",
     "browser-env": "^3.2.5",
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "cross-env": "^5.1.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

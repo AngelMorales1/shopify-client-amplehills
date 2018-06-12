@@ -34,5 +34,25 @@ strong {
 
 .block-headline {
   font-family: $font-carter;
-  font-size: $font-6;
+  font-size: $font-7;
+}
+
+.callout {
+  font-family: $font-carter;
+  font-size: $font-5;
+}
+
+.callout-small {
+  font-family: $font-carter;
+  font-size: $font-4;
+}
+
+.description {
+  font-size: $font-2;
+  line-height: $font-6;
+
+  @media ($medium-up) {
+    font-size: $font-5;
+    line-height: $font-7;
+  }
 }

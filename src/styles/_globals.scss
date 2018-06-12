@@ -6,8 +6,17 @@ Import global settings
 /*
 Dimension classes
 */
+.App {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .container {
   min-height: 100vh;
+}
+
+.container-width {
+  max-width: 74rem;
 }
 
 /*
@@ -37,4 +46,11 @@ Button
   &:focus {
     /*focus style*/
   }
+}
+
+/*
+UI elements
+*/
+.arrow {
+  width: spacing(8);
 }

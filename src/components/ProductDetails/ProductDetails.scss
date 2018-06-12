@@ -1,8 +1,83 @@
 @import 'settings';
 
+$flavor-label-diameter: spacing(50);
+$flavor-image-diameter-mobile: spacing(100);
+$flavor-image-diameter-desktop: spacing(160);
+
 .ProductDetails {
   &--Blue {
     @extend .bg-sky-blue;
     @extend .text-denim;
+  }
+}
+
+.ProductDetails--container {
+  .ProductDetail {
+    @extend .transition;
+    display: none;
+    opacity: 0;
+    max-height: 80vh;
+
+    &--active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .FlavorHighlight {
+      order: 1;
+      padding-bottom: calc(
+        (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
+      );
+
+      &--wrapper {
+        width: $flavor-label-diameter;
+
+        @media ($medium-up) {
+          transform: translate(50%, 50%);
+        }
+      }
+
+      &--label {
+        height: $flavor-label-diameter;
+      }
+
+      &--image {
+        height: $flavor-image-diameter-mobile;
+        width: $flavor-image-diameter-mobile;
+        left: calc(#{$flavor-label-diameter} / 3 * 2);
+        top: calc(#{$flavor-label-diameter} / -4);
+
+        @media ($medium-up) {
+          height: $flavor-image-diameter-desktop;
+          width: $flavor-image-diameter-desktop;
+          left: calc(#{$flavor-label-diameter});
+          top: calc(#{$flavor-label-diameter} / -4);
+        }
+      }
+
+      @media ($medium-up) {
+        order: 3;
+        margin-top: spacing(-16);
+        padding-bottom: calc(
+          (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
+        );
+      }
+    }
+
+    &--description {
+      order: 2;
+
+      @media ($medium-up) {
+        order: 1;
+      }
+    }
+
+    &--detail {
+      order: 3;
+
+      @media ($medium-up) {
+        order: 2;
+      }
+    }
   }
 }

@@ -12,7 +12,7 @@ class ProductDetailView extends Component {
     const contentBlocks = get(content, 'items[0].fields.contentBlocks', []);
 
     return (
-      <div className="ProductDetail">
+      <div className="ProductDetailView">
         <h1 className="mb2">Product Details for {product.title}</h1>
         <div>
           {contentBlocks &&

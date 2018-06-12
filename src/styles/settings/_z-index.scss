@@ -1,9 +1,9 @@
 $z: (
-  "below": -1,
-  "0": 0,
-  "1": 1,
-  "nav": 800,
-  "overlay": 900
+  'below': -1,
+  '0': 0,
+  '1': 1,
+  'nav': 800,
+  'overlay': 900
 );
 
 @function z($index) {
@@ -12,6 +12,6 @@ $z: (
 
 @each $name, $z-index in $z {
   .z-#{$name} {
-    color: #{$z-index};
+    z-index: #{$z-index};
   }
 }
