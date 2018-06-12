@@ -45,6 +45,5 @@ class Nav extends Component {
     );
   }
 }
-// className={`nav__text mx0 border ${styles['nav__text--center']}`}
 
 export default Nav;
