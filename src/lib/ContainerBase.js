@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import get from "utils/get";
+import React, { Component } from 'react';
+import get from 'utils/get';
 
 class ContainerBase extends Component {
   state = {
@@ -8,7 +8,7 @@ class ContainerBase extends Component {
     error: null
   };
 
-  view = "Undefined";
+  view = 'Undefined';
 
   redirect = f => f;
   beforeModel = f => f;
@@ -44,8 +44,8 @@ class ContainerBase extends Component {
 
   async componentWillReceiveProps(nextProps) {
     if (
-      get(this, "props.location.pathname") !==
-      get(nextProps, "location.pathname")
+      get(this, 'props.location.pathname') !==
+      get(nextProps, 'location.pathname')
     ) {
       this.redirect();
       const [{ default: View }, model] = await Promise.all([
@@ -60,7 +60,7 @@ class ContainerBase extends Component {
   render() {
     const { view: View, model } = this.state;
     return (
-      <main className={`container p1`}>
+      <main className={`container`}>
         {View ? <View model={model} {...this.props} {...this.state} /> : null}
       </main>
     );

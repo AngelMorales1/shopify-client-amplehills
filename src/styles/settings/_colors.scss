@@ -1,8 +1,9 @@
 $colors: (
   'white': #fff,
   'black': #222,
-  'sky-blue': #d7f6ff,
-  'peach': #fe5c60
+  'peach': #fe5c60,
+  'denim': #1a6db6,
+  'sky-blue': #d7f6ff
 );
 
 @function color($color-name) {

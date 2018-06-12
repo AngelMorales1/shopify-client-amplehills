@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import get from 'utils/get';
 
+import { Button } from 'components/base';
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
@@ -12,12 +13,12 @@ class ProductDetails extends Component {
 
     return (
       <div className={`${styles['ProductDetails']} ${styles[colorClass]}`}>
-        <p>THE DETAILS</p>
+        <h2 className="block-headline">The Details</h2>
         {details.map(detail => {
           const { fields } = detail;
           return (
             <div className="ProductDetail" key={detail.sys.id}>
-              <p>{fields.title}</p>
+              <Button label={fields.title} />
               <p>{fields.description}</p>
               <img alt="" src={fields.pintImage.fields.file.url} />
               <p>{fields.details}</p>

@@ -3,5 +3,6 @@
 .ProductDetails {
   &--Blue {
     @extend .bg-sky-blue;
+    @extend .text-denim;
   }
 }
