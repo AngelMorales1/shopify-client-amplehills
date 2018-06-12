@@ -1,45 +1,62 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Nav.scss';
 
 class Nav extends Component {
   render() {
     return (
-      <div className="mx0 my3 nav flex clearfix">
-        <div className="col col-4 flex justify-start">
-          <div className="flex ml4 nav__text">
-            <NavLink exact to="/Location">
-              Location
-            </NavLink>
-          </div>
-          <div className="flex ml4 nav__text">
-            <NavLink exact to="/Contact">
-              Contact
-            </NavLink>
-          </div>
+      <div className="mx0 my3 px4 nav flex clearfix">
+        <div className={`col col-4 flex justify-start ${styles['left-side']}`}>
+          <NavLink
+            exact
+            to="/Location"
+            className="flex ml4 link-text link-text__align"
+          >
+            Location
+          </NavLink>
+          <NavLink
+            exact
+            to="/Contact"
+            className="flex ml4 link-text link-text__align"
+          >
+            Contact
+          </NavLink>
         </div>
         <div className="col col-4">
-          <div className="flex justify-center">
-            <NavLink exact to="/">
-              <img src="/assets/images/Logo.svg" />
-            </NavLink>
-          </div>
+          <NavLink
+            exact
+            to="/"
+            className="flex justify-center link-text__align"
+          >
+            <img src="/assets/images/ample-hills-logo.svg" />
+          </NavLink>
         </div>
-        <div className="col col-4 flex justify-end clearfix">
-          <div className="flex mr4 nav__text">
-            <NavLink exact to="/profile">
-              Profile
-            </NavLink>
-          </div>
-          <div className="flex mr4 nav__text">
-            <NavLink exact to="/collections">
-              Collections
-            </NavLink>
-          </div>
-          <div className="flex mr4 nav__text">
-            <NavLink exact to="/products">
-              <button className="button">Shop Online</button>
-            </NavLink>
-          </div>
+        <div
+          className={`col col-4 flex justify-end clearfix ${
+            styles['right-side']
+          }`}
+        >
+          <NavLink
+            exact
+            to="/profile"
+            className="flex mr4 link-text link-text__align"
+          >
+            Profile
+          </NavLink>
+          <NavLink
+            exact
+            to="/collections"
+            className="flex mr4 link-text link-text__align"
+          >
+            Collections
+          </NavLink>
+          <NavLink
+            exact
+            to="/products"
+            className="flex mr4 link-text link-text__align"
+          >
+            <button className="button">Shop Online</button>
+          </NavLink>
         </div>
       </div>
     );

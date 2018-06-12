@@ -25,16 +25,16 @@ strong {
   font-weight: bold;
 }
 
-.nav__text {
+.link-text {
   font-size: $font-4;
   font-weight: bold;
   color: color('peach');
   text-align: center;
-  display: flex;
-  > a {
-    text-decoration: none;
-    text-align: center;
-    margin: 0 auto;
-    align-self: center;
-  }
+}
+
+.link-text__align {
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  align-self: center;
 }

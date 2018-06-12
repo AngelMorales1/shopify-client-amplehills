@@ -28,13 +28,13 @@ Button
   color: color('white');
   font-size: $font-4;
   font-weight: bold;
-}
 
-.button:hover {
-  cursor: pointer;
-  background-color: red; /* hover color for button*/
-}
+  &:hover {
+    cursor: pointer;
+    background-color: red; /* hover color for button*/
+  }
 
-.button:focus {
-  outline: 0;
+  &:focus {
+    /*focus style*/
+  }
 }
