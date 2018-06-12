@@ -14,7 +14,7 @@ class Nav extends Component {
             Contact
           </NavLink>
         </div>
-        <div className="col col-4 flex items-center">
+        <div className="col col-4 flex justify-center items-center">
           <NavLink exact to="/" className="justify-center">
             <img src="/assets/images/ample-hills-logo.svg" />
           </NavLink>
