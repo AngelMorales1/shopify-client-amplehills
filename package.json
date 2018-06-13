@@ -24,7 +24,7 @@
     "precommit": "lint-staged",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "cross-env CI=true react-app-rewired test --env=jsdom",
+    "test": "cross-env CI=true react-app-rewired test --verbose --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
