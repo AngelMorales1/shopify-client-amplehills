@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
@@ -34,7 +35,7 @@ class ProductDetails extends Component {
         <div className="flex justify-center flex-wrap center mb3">
           <h2 className="block-headline w100 my3">The Details</h2>
           {details.map((detail, i) => {
-            const color = this.isActiveFlavor(detail.sys.id, i)
+            const color = this.isActiveFlavor(get(detail, 'sys.id', ''), i)
               ? 'denim'
               : 'white-denim';
 
@@ -42,11 +43,11 @@ class ProductDetails extends Component {
               <Button
                 className="m1"
                 color={color}
-                key={detail.sys.id}
-                label={detail.fields.title}
+                key={get(detail, 'sys.id', '')}
+                label={get(detail, 'fields.title', '')}
                 onClick={() =>
                   this.setState({
-                    activeFlavor: detail.sys.id
+                    activeFlavor: get(detail, 'sys.id', '')
                   })
                 }
               />
@@ -55,21 +56,21 @@ class ProductDetails extends Component {
         </div>
         <div className={`${styles['ProductDetails--container']}`}>
           {details.map((detail, i) => {
-            const { fields } = detail;
+            const fields = get(detail, 'fields', {});
 
             const classes = cx(
               styles['ProductDetail'],
               'container-width mx-auto flex flex-wrap py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
-                  detail.sys.id,
+                  get(detail, 'sys.id', ''),
                   i
                 )
               }
             );
 
             return (
-              <div className={classes} key={detail.sys.id}>
+              <div className={classes} key={get(detail, 'sys.id', '')}>
                 <div
                   className={`${
                     styles['FlavorHighlight']
@@ -91,7 +92,7 @@ class ProductDetails extends Component {
                         styles['FlavorHighlight--label']
                       } w100 p3 flex justify-center items-center circle bg-goldenrod callout`}
                     >
-                      <p>{fields.flavorHighlight}</p>
+                      <p>{get(fields, 'flavorHighlight', '')}</p>
                     </div>
                   </div>
                   <div
@@ -100,8 +101,12 @@ class ProductDetails extends Component {
                     } circle absolute`}
                   >
                     <Image
-                      alt={`${fields.title} flavor highlight`}
-                      src={fields.flavorHighlightImage.fields.file.url}
+                      alt={`${get(fields, 'title', '')} flavor highlight`}
+                      src={get(
+                        fields,
+                        'flavorHighlightImage.fields.file.url',
+                        ''
+                      )}
                     />
                   </div>
                 </div>
@@ -112,13 +117,15 @@ class ProductDetails extends Component {
                 >
                   <div className="col col-12 md-col-3">
                     <Image
-                      alt={`pint of ${fields.title}`}
+                      alt={`pint of ${get(fields, 'title', '')}`}
                       className="col-3 md-col-9"
-                      src={fields.pintImage.fields.file.url}
+                      src={get(fields, 'pintImage.fields.file.url', '')}
                     />
                   </div>
                   <div className="col col-12 md-col-9">
-                    <p className="description">{fields.description}</p>
+                    <p className="description">
+                      {get(fields, 'description', '')}
+                    </p>
                   </div>
                 </div>
                 <div
@@ -129,9 +136,9 @@ class ProductDetails extends Component {
                   <div className="flex">
                     <div className="col-4 md-col-3">
                       <Image
-                        alt={`${fields.title} ice cream details`}
+                        alt={`${get(fields, 'title', '')} ice cream details`}
                         className="circle square col-12 md-col-9"
-                        src={fields.detailsImage.fields.file.url}
+                        src={get(fields, 'detailsImage.fields.file.url', '')}
                       />
                     </div>
                     <div className="col-8 md-col-9 flex flex-wrap content-center items-center">
@@ -141,7 +148,9 @@ class ProductDetails extends Component {
                           src="/assets/images/arrow-left.svg"
                         />
                       </div>
-                      <p className="callout-small">{fields.details}</p>
+                      <p className="callout-small">
+                        {get(fields, 'details', '')}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -153,5 +162,54 @@ class ProductDetails extends Component {
     );
   }
 }
+
+ProductDetails.propTypes = {
+  z: PropTypes.number,
+  data: PropTypes.shape({
+    color: PropTypes.string,
+    productDetails: PropTypes.arrayOf(
+      PropTypes.shape({
+        fields: PropTypes.shape({
+          title: PropTypes.string,
+          description: PropTypes.string,
+          details: PropTypes.string,
+          flavorHighlight: PropTypes.string,
+          pintImage: PropTypes.shape({
+            fields: PropTypes.shape({
+              description: PropTypes.string,
+              file: PropTypes.shape({
+                url: PropTypes.string
+              })
+            })
+          }),
+          detailsImage: PropTypes.shape({
+            fields: PropTypes.shape({
+              description: PropTypes.string,
+              file: PropTypes.shape({
+                url: PropTypes.string
+              })
+            })
+          }),
+          flavorHighlightImage: PropTypes.shape({
+            fields: PropTypes.shape({
+              description: PropTypes.string,
+              file: PropTypes.shape({
+                url: PropTypes.string
+              })
+            })
+          })
+        }),
+        sys: PropTypes.shape({
+          id: PropTypes.string
+        })
+      })
+    )
+  })
+};
+
+ProductDetails.defaultProps = {
+  z: 1,
+  data: {}
+};
 
 export default ProductDetails;
