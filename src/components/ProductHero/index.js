@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import get from 'utils/get';
-import { Image, Radio, Button } from 'components/base';
+import { Image, Radio, Button, QuantitySelector } from 'components/base';
 
 import styles from './ProductHero.scss';
 
@@ -19,6 +19,7 @@ class ProductHero extends Component {
     const { data, product, z } = this.props;
     const heroImage = get(product, 'images[0].src', '');
     const availability = get(product, 'variants[0].availability', []);
+    const price = get(product, 'variants[0].price', []);
 
     console.log(this.props);
     return (
@@ -48,7 +49,10 @@ class ProductHero extends Component {
             </div>
             <form>
               <QuantitySelector onChange={value => this.setState({ value })} />
-              <Button />
+              <Button color="denim">
+                <span className="mr2">Add to Cart</span>
+                <span className="ml2">${price}</span>
+              </Button>
             </form>
           </div>
         </div>

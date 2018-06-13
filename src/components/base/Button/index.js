@@ -11,6 +11,7 @@ const Button = ({
   label,
   variant,
   color,
+  children,
   disabled,
   onClick,
   minWidth,
@@ -49,7 +50,7 @@ const Button = ({
     linkedComponent
   ) : (
     <button type={type} onClick={onClick} className={classes}>
-      {label}
+      {children && !label ? children : label}
     </button>
   );
 
@@ -61,6 +62,7 @@ Button.propTypes = {
   label: PropTypes.string,
   variant: PropTypes.string,
   color: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   onClick: PropTypes.func,
   fullWidth: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -70,6 +72,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   className: '',
+  children: null,
   label: '',
   variant: 'primary',
   color: 'white-denim',
