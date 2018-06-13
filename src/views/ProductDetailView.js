@@ -13,13 +13,13 @@ class ProductDetailView extends Component {
 
     return (
       <div className="ProductDetailView">
-        <h1 className="mb2">Product Details for {product.title}</h1>
         <div>
           {contentBlocks &&
             contentBlocks.map((block, i) => (
               <BlockSwitch
-                key={get(block, 'sys.id', i)}
+                key={`${i}-${get(block, 'sys.id', i)}`}
                 block={block}
+                product={product}
                 z={contentBlocks.length - i}
                 {...this.props}
               />
