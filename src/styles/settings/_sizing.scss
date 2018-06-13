@@ -12,7 +12,7 @@ Spacing
   @return $units * 0.25rem;
 }
 
-$spacing: (
+$spacer: (
   '0': spacing(0),
   's': spacing(2),
   'm': spacing(4),
@@ -20,6 +20,6 @@ $spacing: (
   'xl': spacing(16)
 );
 
-@function spacing($spacing-name) {
-  @return map-get($spacing, $spacing-name);
+@function spacer($spacing-name) {
+  @return map-get($spacer, $spacing-name);
 }
