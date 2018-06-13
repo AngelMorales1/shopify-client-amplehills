@@ -19,6 +19,47 @@ Dimension classes
   max-width: 74rem;
 }
 
+.drip {
+  position: relative;
+
+  &::after {
+    background: inherit;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  &:nth-child(3n + 0) {
+    &::after {
+      mask: url('/assets/images/polygon.svg');
+      bottom: -120px;
+      height: 120px;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    &::after {
+      mask: url('/assets/images/polygon-1.svg');
+      bottom: -105px;
+      height: 105px;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    &::after {
+      mask: url('/assets/images/polygon-2.svg');
+      bottom: -120px;
+      height: 120px;
+    }
+  }
+
+  & + div {
+    padding-top: spacing(32);
+  }
+}
+
 /*
 Drop shadows
 */

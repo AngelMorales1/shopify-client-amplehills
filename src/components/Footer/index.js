@@ -1,8 +1,14 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
+import styles from './Footer.scss';
 
 class Footer extends Component {
   render() {
-    return <span>&copy; 2018 Ample Hills</span>;
+    return (
+      <div className={`${styles['Footer']} flex items-end`}>
+        &copy; 2018 Ample Hills
+      </div>
+    );
   }
 }
 

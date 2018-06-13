@@ -30,7 +30,8 @@ class ProductDetails extends Component {
       <div
         className={`${styles['ProductDetails']} ${
           styles[colorClass]
-        } p2 overflow-visible`}
+        } p2 overflow-visible drip`}
+        style={{ zIndex: this.props.z }}
       >
         <div className="flex justify-center flex-wrap center mb3">
           <h2 className="block-headline w100 my3">The Details</h2>

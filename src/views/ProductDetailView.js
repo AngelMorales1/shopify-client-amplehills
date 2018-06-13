@@ -20,6 +20,7 @@ class ProductDetailView extends Component {
               <BlockSwitch
                 key={get(block, 'sys.id', i)}
                 block={block}
+                z={contentBlocks.length - i}
                 {...this.props}
               />
             ))}
