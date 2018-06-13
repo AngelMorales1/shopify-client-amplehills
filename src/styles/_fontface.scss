@@ -2,40 +2,45 @@
 Avenir
 */
 @font-face {
-  font-family: "Avenir";
-  src: url("/assets/fonts/Avenir-Book.eot");
-  src: url("/assets/fonts/Avenir-Book.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Avenir-Book.woff") format("woff"),
-    url("/assets/fonts/Avenir-Book.ttf") format("truetype"),
-    url("/assets/fonts/Avenir-Book.svg#Avenir-Book") format("svg");
+  font-family: 'Avenir';
+  src: url('/assets/fonts/Avenir-Book.eot');
+  src: url('/assets/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Avenir-Book.woff') format('woff'),
+    url('/assets/fonts/Avenir-Book.ttf') format('truetype'),
+    url('/assets/fonts/Avenir-Book.svg#Avenir-Book') format('svg');
 }
 
 @font-face {
-  font-family: "Avenir";
-  src: url("/assets/fonts/Avenir-Medium.eot");
-  src: url("/assets/fonts/Avenir-Medium.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Avenir-Medium.woff") format("woff"),
-    url("/assets/fonts/Avenir-Medium.ttf") format("truetype"),
-    url("/assets/fonts/Avenir-Medium.svg#Avenir-Book") format("svg");
+  font-family: 'Avenir';
+  src: url('/assets/fonts/Avenir-Medium.eot');
+  src: url('/assets/fonts/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Avenir-Medium.woff') format('woff'),
+    url('/assets/fonts/Avenir-Medium.ttf') format('truetype'),
+    url('/assets/fonts/Avenir-Medium.svg#Avenir-Book') format('svg');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Avenir";
-  src: url("/assets/fonts/Avenir-Heavy.eot");
-  src: url("/assets/fonts/Avenir-Heavy.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Avenir-Heavy.woff") format("woff"),
-    url("/assets/fonts/Avenir-Heavy.ttf") format("truetype"),
-    url("/assets/fonts/Avenir-Heavy.svg#Avenir-Heavy") format("svg");
+  font-family: 'Avenir';
+  src: url('/assets/fonts/Avenir-Heavy.eot');
+  src: url('/assets/fonts/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Avenir-Heavy.woff') format('woff'),
+    url('/assets/fonts/Avenir-Heavy.ttf') format('truetype'),
+    url('/assets/fonts/Avenir-Heavy.svg#Avenir-Heavy') format('svg');
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "Avenir";
-  src: url("/assets/fonts/Avenir-Black.eot");
-  src: url("/assets/fonts/Avenir-Black.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/Avenir-Black.woff") format("woff"),
-    url("/assets/fonts/Avenir-Black.ttf") format("truetype"),
-    url("/assets/fonts/Avenir-Black.svg#Avenir-Black") format("svg");
+  font-family: 'Avenir';
+  src: url('/assets/fonts/Avenir-Black.eot');
+  src: url('/assets/fonts/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/Avenir-Black.woff') format('woff'),
+    url('/assets/fonts/Avenir-Black.ttf') format('truetype'),
+    url('/assets/fonts/Avenir-Black.svg#Avenir-Black') format('svg');
   font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Carter One';
+  src: url('/assets/fonts/CarterOne.ttf');
 }

@@ -6,8 +6,64 @@ Import global settings
 /*
 Dimension classes
 */
+.App {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
 .container {
   min-height: 100vh;
+}
+
+.container-width {
+  max-width: 74rem;
+}
+
+.drip {
+  position: relative;
+
+  &::after {
+    background: inherit;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  &:nth-child(3n + 0) {
+    &::after {
+      mask: url('/assets/images/polygon.svg') no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      bottom: -120px;
+      height: 120px;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    &::after {
+      mask: url('/assets/images/polygon-1.svg') no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      bottom: -105px;
+      height: 105px;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    &::after {
+      mask: url('/assets/images/polygon-2.svg') no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      bottom: -120px;
+      height: 120px;
+    }
+  }
+
+  & + div {
+    padding-top: spacing(32);
+  }
 }
 
 /*
@@ -37,4 +93,11 @@ Button
   &:focus {
     /*focus style*/
   }
+}
+
+/*
+UI elements
+*/
+.arrow {
+  width: spacing(8);
 }

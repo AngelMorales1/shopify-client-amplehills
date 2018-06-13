@@ -8,6 +8,7 @@
     "history": "^4.7.2",
     "lodash": "^4.17.10",
     "node-sass": "^4.9.0",
+    "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
@@ -23,7 +24,7 @@
     "precommit": "lint-staged",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "cross-env CI=true react-app-rewired test --env=jsdom",
+    "test": "cross-env CI=true react-app-rewired test --verbose --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -31,7 +32,7 @@
     "babel-plugin-react-css-modules": "^3.4.2",
     "babel-preset-react-app": "^3.1.1",
     "browser-env": "^3.2.5",
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "cross-env": "^5.1.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
