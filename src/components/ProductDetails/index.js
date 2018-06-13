@@ -28,9 +28,7 @@ class ProductDetails extends Component {
 
     return (
       <div
-        className={`${styles['ProductDetails']} ${
-          styles[colorClass]
-        } p2 overflow-visible drip`}
+        className={`${styles['ProductDetails']} ${styles[colorClass]} p2 drip`}
         style={{ zIndex: this.props.z }}
       >
         <div className="flex justify-center flex-wrap center mb3">
@@ -61,7 +59,7 @@ class ProductDetails extends Component {
 
             const classes = cx(
               styles['ProductDetail'],
-              'container-width mx-auto flex flex-wrap flex-column py3',
+              'container-width mx-auto flex flex-wrap py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
                   detail.sys.id,
