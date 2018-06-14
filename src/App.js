@@ -5,12 +5,14 @@ import { bindActionCreators } from 'redux';
 import { initializeApplication } from 'state/actions/applicationActions';
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
+
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
 
 import Loader from 'components/Loader';
 import Nav from 'components/Nav';
+import Cart from 'components/Cart';
 import Footer from 'components/Footer';
 
 import 'basscss/css/basscss.min.css';
@@ -34,6 +36,7 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
+          <Cart isCartOpen={true} />
           <Routes location={get(this, 'props.location')} />
           <Footer locations={this.props.locations} />
         </div>
