@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import styles from './Footer.scss';
+
 class Region extends Component {
   sortHours(fields) {
     let weeksInOrder = [
@@ -35,52 +37,75 @@ class Region extends Component {
         days.includes(weeksInOrder[weeksInOrder.length - 1]) &&
         days.length < 7
       ) {
-        for (let i = 0; i < days.length; i++) {
+        days.forEach((day, idx) => {
           if (
-            weeksInOrder.indexOf(days[i + 1]) -
-              weeksInOrder.indexOf(days[i]) !==
-            1
+            weeksInOrder.indexOf(days[idx + 1]) - weeksInOrder.indexOf(day) !==
+              1 &&
+            idx !== days.length - 1
           ) {
-            acc[cur] = `${this.makeFirstLetterUppercase(
-              days[i + 1]
-            )} - ${this.makeFirstLetterUppercase(days[0])}`;
-            return acc;
+            acc[cur] = `${this.abbreviateDay(
+              days[idx + 1]
+            )} - ${this.abbreviateDay(day)}`;
           }
-        }
+        });
+
+        return acc;
       } else if (days.length === 7) {
         acc[cur] = 'Everyday';
         return acc;
       }
       days.length > 1
-        ? (acc[cur] = `${this.makeFirstLetterUppercase(
-            days[0]
-          )} - ${this.makeFirstLetterUppercase(days[days.length - 1])}`)
-        : (acc[cur] = this.makeFirstLetterUppercase(days[0]));
+        ? (acc[cur] = `${this.abbreviateDay(days[0])} - ${this.abbreviateDay(
+            days[days.length - 1]
+          )}`)
+        : (acc[cur] = this.abbreviateDay(days[0]));
+      console.log('final', acc);
       return acc;
     }, {});
 
     return sortAsPeriod;
   }
 
-  makeFirstLetterUppercase(str) {
+  abbreviateDay(str) {
     return str[0].toUpperCase() + str.slice(1, 3);
   }
 
   render() {
     return (
       <div className="border">
-        <h1>
-          <strong>{this.props.region}</strong>
+        <h1
+          className={`${styles['footer--font-color']} ${
+            styles['sub-title-text']
+          } my2`}
+        >
+          {this.props.region}
         </h1>
         {this.props.stores.map(store => {
           let hours = this.sortHours(store.fields);
           return (
             <div key={store.sys.id}>
-              {store.fields.title}
+              <p
+                className={`${styles['footer--font-color']} ${
+                  styles['content-text']
+                } my1`}
+              >
+                <strong>{store.fields.title}</strong>
+              </p>
               {Object.keys(hours).map((hour, idx) => {
-                return <div key={idx}>{`${hours[hour]}: ${hour}`}</div>;
+                return (
+                  <p
+                    className={`${styles['footer--font-color']} ${
+                      styles['content-text']
+                    } my1`}
+                    key={idx}
+                  >{`${hours[hour]}: ${hour}`}</p>
+                );
               })}
-              {store.fields.delivery ? <button>ORDER DELIVERY</button> : null}
+              {store.fields.delivery ? (
+                <button className={`${styles['region-button']}`}>
+                  ORDER DELIVERY
+                </button>
+              ) : null}
             </div>
           );
         })}

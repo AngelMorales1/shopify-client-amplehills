@@ -1,6 +1,48 @@
 @import 'settings';
 
+<<<<<<< HEAD
 .Footer {
   min-height: 300px;
 }
 
+=======
+.footer-container {
+  background-color: #1e436a;
+}
+
+.footer--font-color {
+  color: color('white');
+}
+
+.location-container {
+  width: spacing(180);
+  height: spacing(150);
+}
+
+.region-container {
+  width: spacing(180);
+  height: spacing(135);
+}
+
+.test {
+  border: solid red;
+}
+
+.title-text {
+  font-size: spacing(8);
+}
+
+.sub-title-text {
+  font-size: spacing(5);
+}
+
+.content-text {
+  font-size: spacing(3);
+}
+
+.region-button {
+  font-size: spacing(2.5);
+  border-radius: spacing(10);
+  padding: spacing(1) spacing(2);
+}
+>>>>>>> clean up sorthours function
