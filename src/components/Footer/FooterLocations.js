@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
+import cx from 'classnames';
 import FooterRegions from './FooterRegions.js';
-
 import styles from './Footer.scss';
 
 class FooterLocations extends Component {
   render() {
     let regions = Object.keys(this.props.locations);
     return (
-      <div className={`p3`}>
-        <h2 className={`footer-text  mb2 ml3 ${styles['title-text']}`}>
+      <div className="p3">
+        <h2 className={cx('footer-text  mb2 ml3', styles['title-text'])}>
           Locations
         </h2>
         <div
-          className={`${
-            styles['FooterRegion__container']
-          } flex flex-column flex-wrap`}
+          className={cx(
+            'flex flex-column flex-wrap',
+            styles['FooterRegions__container']
+          )}
         >
           {regions.map(region => (
             <FooterRegions

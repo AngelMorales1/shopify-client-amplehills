@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cx from 'classnames';
 
 import styles from './Footer.scss';
 import FooterLocations from './FooterLocations.js';
@@ -16,11 +17,11 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className={`${styles['Footer__container']} drip p4`}>
+      <div className={cx('drip p4', styles['Footer'])}>
         <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items)}
         />
-        <span className={`footer-text ${styles['licence-text']}`}>
+        <span className={cx('footer-text', styles['licence-text'])}>
           &copy; 2017 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>
