@@ -22,27 +22,9 @@ export const createCheckout = payload => dispatch => {
     payload: new Promise((resolve, reject) => {
       BuySDK.checkout.create().then(res => {
         const checkout = res;
-        console.log(checkout);
-        // if (!collection.handle || collection.handle !== payload)
-        //   reject(new Error("No Collections"));
+        if (!checkout.id) reject(new Error('Error creating checkout'));
 
         resolve(checkout);
-      });
-    })
-  });
-};
-
-export const ADD_PRODUCT = 'ADD_PRODUCT';
-export const addProduct = payload => dispatch => {
-  return dispatch({
-    type: ADD_PRODUCT,
-    payload: new Promise((resolve, reject) => {
-      BuySDK.checkout.addProduct(payload).then(res => {
-        const collection = res;
-        if (!collection.handle || collection.handle !== payload)
-          reject(new Error('No Collections'));
-
-        resolve(collection);
       });
     })
   });
