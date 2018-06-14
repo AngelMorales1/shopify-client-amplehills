@@ -68,7 +68,7 @@ class Region extends Component {
 
   render() {
     return (
-      <div>
+      <div className="border">
         <h1>
           <strong>{this.props.region}</strong>
         </h1>
