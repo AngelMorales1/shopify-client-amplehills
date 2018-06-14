@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import get from "utils/get";
+import React, { Component } from 'react';
 
-import ProductGrid from "components/ProductGrid";
+import ProductGrid from 'components/ProductGrid';
 
 class CollectionDetailView extends Component {
   render() {

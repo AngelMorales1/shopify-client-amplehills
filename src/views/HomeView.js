@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import get from "utils/get";
+import React, { Component } from 'react';
 
 class HomeView extends Component {
   render() {
