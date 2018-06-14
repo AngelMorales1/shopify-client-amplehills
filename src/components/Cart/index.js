@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { openCart, closeCart } from 'state/actions/cartActions';
+import { openCart, closeCart } from 'state/actions/ui/cartUIActions';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -47,7 +47,7 @@ Cart.defaultProps = {
 const mapStateToProps = state => {
   return {
     ...state,
-    isCartOpen: get(state, 'cart.isCartOpen')
+    isCartOpen: get(state, 'cartUI.isCartOpen')
   };
 };
 

@@ -1,4 +1,4 @@
-import { OPEN_CART, CLOSE_CART } from 'state/actions/cartActions';
+import { OPEN_CART, CLOSE_CART } from 'state/actions/ui/cartUIActions';
 
 const initialState = {
   isCartOpen: false
