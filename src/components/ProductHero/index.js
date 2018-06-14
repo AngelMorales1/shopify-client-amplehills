@@ -48,10 +48,16 @@ class ProductHero extends Component {
               <p className="copy pr2">{get(product, 'description', '')}</p>
             </div>
             <form>
-              <QuantitySelector onChange={value => this.setState({ value })} />
+              <QuantitySelector
+                className="my3"
+                quantity={this.state.quantity}
+                onChange={value => this.setState({ quantity: value })}
+              />
               <Button color="denim">
                 <span className="mr2">Add to Cart</span>
-                <span className="ml2">${price}</span>
+                <span className="ml2">
+                  ${(price * this.state.quantity).toFixed(2)}
+                </span>
               </Button>
             </form>
           </div>

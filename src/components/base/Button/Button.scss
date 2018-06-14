@@ -43,4 +43,10 @@
     @extend .bg-white;
     @extend .text-denim;
   }
+
+  &--white-denim-outline {
+    @extend .bg-white;
+    @extend .text-denim;
+    border: spacing(1) solid color('denim');
+  }
 }
