@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-import { getCheckout } from 'state/actions/checkoutActions';
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
@@ -64,8 +63,7 @@ const mapDispatchToProps = dispatch => {
       {
         initializeApplication,
         fetchProducts,
-        getLocationData,
-        getCheckout
+        getLocationData
       },
       dispatch
     )
