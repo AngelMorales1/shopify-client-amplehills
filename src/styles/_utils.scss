@@ -1,4 +1,4 @@
-@import "settings";
+@import 'settings';
 
 .min100vh {
   min-height: 100vh;
@@ -63,6 +63,10 @@
 
 .l0 {
   left: 0;
+}
+
+.text-decoration-none {
+  text-decoration: none;
 }
 
 .pointer {

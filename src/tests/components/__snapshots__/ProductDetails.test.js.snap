@@ -351,6 +351,7 @@ ShallowWrapper {
                     fullWidth={false}
                     label="The Munchies"
                     onClick={[Function]}
+                    to=""
                     type="button"
                     variant="primary"
           />
@@ -361,6 +362,7 @@ ShallowWrapper {
                     fullWidth={false}
                     label="Peppermint Patty"
                     onClick={[Function]}
+                    to=""
                     type="button"
                     variant="primary"
           />
@@ -614,6 +616,7 @@ ShallowWrapper {
                 fullWidth={false}
                 label="The Munchies"
                 onClick={[Function]}
+                to=""
                 type="button"
                 variant="primary"
 />,
@@ -624,6 +627,7 @@ ShallowWrapper {
                 fullWidth={false}
                 label="Peppermint Patty"
                 onClick={[Function]}
+                to=""
                 type="button"
                 variant="primary"
 />,
@@ -656,6 +660,7 @@ ShallowWrapper {
               "fullWidth": false,
               "label": "The Munchies",
               "onClick": [Function],
+              "to": "",
               "type": "button",
               "variant": "primary",
             },
@@ -674,6 +679,7 @@ ShallowWrapper {
               "fullWidth": false,
               "label": "Peppermint Patty",
               "onClick": [Function],
+              "to": "",
               "type": "button",
               "variant": "primary",
             },
@@ -2139,6 +2145,7 @@ ShallowWrapper {
                         fullWidth={false}
                         label="The Munchies"
                         onClick={[Function]}
+                        to=""
                         type="button"
                         variant="primary"
             />
@@ -2149,6 +2156,7 @@ ShallowWrapper {
                         fullWidth={false}
                         label="Peppermint Patty"
                         onClick={[Function]}
+                        to=""
                         type="button"
                         variant="primary"
             />
@@ -2402,6 +2410,7 @@ ShallowWrapper {
                   fullWidth={false}
                   label="The Munchies"
                   onClick={[Function]}
+                  to=""
                   type="button"
                   variant="primary"
 />,
@@ -2412,6 +2421,7 @@ ShallowWrapper {
                   fullWidth={false}
                   label="Peppermint Patty"
                   onClick={[Function]}
+                  to=""
                   type="button"
                   variant="primary"
 />,
@@ -2444,6 +2454,7 @@ ShallowWrapper {
                 "fullWidth": false,
                 "label": "The Munchies",
                 "onClick": [Function],
+                "to": "",
                 "type": "button",
                 "variant": "primary",
               },
@@ -2462,6 +2473,7 @@ ShallowWrapper {
                 "fullWidth": false,
                 "label": "Peppermint Patty",
                 "onClick": [Function],
+                "to": "",
                 "type": "button",
                 "variant": "primary",
               },

@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import get from "utils/get";
+import React, { Component } from 'react';
 
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 class CollectionLandingView extends Component {
   render() {

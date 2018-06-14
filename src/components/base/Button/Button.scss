@@ -1,21 +1,37 @@
 @import 'settings', 'src/styles/utils';
 
 .Button {
+  @extend .pointer;
+  box-shadow: $drop-shadow;
+  font-family: $font-avenir;
+  font-size: $font-4;
+  font-weight: 800;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $drop-shadow-large;
+    transform: translate3d(0, spacing(-0.5), 0);
+  }
+
   &--primary {
-    @extend .pointer;
     border-radius: spacing(8);
-    box-shadow: $drop-shadow;
-    font-family: $font-avenir;
-    font-size: $font-4;
-    font-weight: 800;
     height: spacing(15);
     padding: spacing(4) spacing(6);
-    transition: $transition;
+  }
 
-    &:hover {
-      box-shadow: $drop-shadow-large;
-      transform: translate3d(0, spacing(-0.5), 0);
-    }
+  &--secondary {
+    border-radius: 0.5rem;
+    padding: spacing(3) spacing(6);
+  }
+
+  &--peach {
+    @extend .bg-peach;
+    @extend .text-white;
+  }
+
+  &--white-peach {
+    @extend .bg-white;
+    @extend .text-peach;
   }
 
   &--denim {

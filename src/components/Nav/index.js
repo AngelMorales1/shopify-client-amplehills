@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
@@ -16,7 +18,10 @@ class Nav extends Component {
         </div>
         <div className="col col-4 flex justify-center items-center">
           <NavLink exact to="/" className="justify-center">
-            <img src="/assets/images/ample-hills-logo.svg" />
+            <Image
+              alt="Click the Ample Hills Logo to return to the homepage"
+              src="/assets/images/ample-hills-logo.svg"
+            />
           </NavLink>
         </div>
         <div
@@ -30,9 +35,12 @@ class Nav extends Component {
           <NavLink exact to="/collections" className="mr4 link-text">
             Collections
           </NavLink>
-          <NavLink exact to="/products" className="mr4 link-text">
-            <button className="button">Shop Online</button>
-          </NavLink>
+          <Button
+            to="/products"
+            variant="secondary"
+            color="peach"
+            label="Shop Online"
+          />
         </div>
       </div>
     );
