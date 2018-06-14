@@ -1,7 +1,7 @@
 import { OPEN_CART, CLOSE_CART } from 'state/actions/ui/cartUIActions';
 
 const initialState = {
-  isCartOpen: false
+  cartIsOpen: false
 };
 
 export default (state = initialState, action) => {
@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case CLOSE_CART:
       return {
         ...state,
-        isCartOpen: action.payload
+        cartIsOpen: action.payload
       };
     default:
       return state;

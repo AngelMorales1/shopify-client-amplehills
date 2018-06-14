@@ -16,7 +16,7 @@ class Cart extends Component {
       actions: { openCart, closeCart }
     } = this.props;
     const classes = cx(styles['Cart'], 'fixed p3', {
-      [styles['Cart--open']]: this.props.isCartOpen
+      [styles['Cart--open']]: this.props.cartIsOpen
     });
 
     return (
@@ -33,7 +33,7 @@ Cart.propTypes = {
     openCart: PropTypes.func,
     closeCart: PropTypes.func
   }),
-  isCartOpen: PropTypes.bool
+  cartIsOpen: PropTypes.bool
 };
 
 Cart.defaultProps = {
@@ -41,13 +41,13 @@ Cart.defaultProps = {
     openCart: () => {},
     closeCart: () => {}
   },
-  isCartOpen: false
+  cartIsOpen: false
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
-    isCartOpen: get(state, 'cartUI.isCartOpen'),
+    cartIsOpen: get(state, 'cartUI.cartIsOpen'),
     checkout: get(state, 'session.checkout')
   };
 };

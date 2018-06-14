@@ -14,10 +14,11 @@ import styles from './Nav.scss';
 class Nav extends Component {
   toggleCart = () => {
     const {
+      cartIsOpen,
       actions: { openCart, closeCart }
     } = this.props;
 
-    return this.props.isCartOpen ? closeCart() : openCart();
+    return cartIsOpen ? closeCart() : openCart();
   };
 
   render() {
@@ -68,7 +69,7 @@ Nav.propTypes = {
     openCart: PropTypes.func,
     closeCart: PropTypes.func
   }),
-  isCartOpen: PropTypes.bool
+  cartIsOpen: PropTypes.bool
 };
 
 Nav.defaultProps = {
@@ -76,13 +77,13 @@ Nav.defaultProps = {
     openCart: () => {},
     closeCart: () => {}
   },
-  isCartOpen: false
+  cartIsOpen: false
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
-    isCartOpen: get(state, 'cartUI.isCartOpen')
+    cartIsOpen: get(state, 'cartUI.cartIsOpen')
   };
 };
 
