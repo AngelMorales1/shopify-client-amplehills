@@ -5,7 +5,7 @@ import BuySDK from 'lib/Buy';
 import { getCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
-export const initializeApplication = payload => dispatch => {
+export const initializeApplication = checkoutID => dispatch => {
   return dispatch({
     type: INITIALIZE_APPLICATION,
     payload: new Promise(resolve => {
@@ -13,9 +13,7 @@ export const initializeApplication = payload => dispatch => {
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
 
-      dispatch(getCheckout(payload));
-
-      resolve(Contentful);
+      dispatch(getCheckout(checkoutID)).then(() => resolve(Contentful));
     })
   });
 };

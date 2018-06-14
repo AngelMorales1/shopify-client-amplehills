@@ -11,7 +11,8 @@ export const getCheckout = payload => dispatch => {
   });
 
   return dispatch({
-    type: GET_CHECKOUT
+    type: GET_CHECKOUT,
+    payload: new Promise(resolve => resolve())
   });
 };
 
