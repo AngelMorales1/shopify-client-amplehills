@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { openCart, closeCart } from 'state/actions/cartActions';
 
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import get from 'utils/get';
+
+import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
+  toggleCart = () => {
+    const {
+      actions: { openCart, closeCart }
+    } = this.props;
+
+    return this.props.isCartOpen ? closeCart() : openCart();
+  };
+
   render() {
     return (
       <div className="my3 px4 flex items-center clearfix">
@@ -41,10 +56,49 @@ class Nav extends Component {
             color="peach"
             label="Shop Online"
           />
+          <Button onClick={this.toggleCart} label="Cart" />
         </div>
       </div>
     );
   }
 }
 
-export default Nav;
+Nav.propTypes = {
+  actions: PropTypes.shape({
+    openCart: PropTypes.func,
+    closeCart: PropTypes.func
+  }),
+  isCartOpen: PropTypes.bool
+};
+
+Nav.defaultProps = {
+  actions: {
+    openCart: () => {},
+    closeCart: () => {}
+  },
+  isCartOpen: false
+};
+
+const mapStateToProps = state => {
+  return {
+    ...state,
+    isCartOpen: get(state, 'cart.isCartOpen')
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(
+      {
+        openCart,
+        closeCart
+      },
+      dispatch
+    )
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Nav);

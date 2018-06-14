@@ -36,7 +36,7 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
-          <Cart isCartOpen={true} />
+          <Cart />
           <Routes location={get(this, 'props.location')} />
           <Footer locations={this.props.locations} />
         </div>
