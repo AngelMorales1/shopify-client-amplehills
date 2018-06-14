@@ -80,7 +80,7 @@ class Region extends Component {
               {Object.keys(hours).map((hour, idx) => {
                 return <div key={idx}>{`${hours[hour]}: ${hour}`}</div>;
               })}
-              {store.fields.delivery ? <button>order delivery</button> : null}
+              {store.fields.delivery ? <button>ORDER DELIVERY</button> : null}
             </div>
           );
         })}
