@@ -6,7 +6,7 @@ export const THURSDAY = 'thursday';
 export const FRIDAY = 'friday';
 export const SATURDAY = 'saturday';
 
-export const DaysInOrder = {
+export const DaysInOrder = [
   SUNDAY,
   MONDAY,
   TUESDAY,
@@ -14,4 +14,4 @@ export const DaysInOrder = {
   THURSDAY,
   FRIDAY,
   SATURDAY
-};
+];

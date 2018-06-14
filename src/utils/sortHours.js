@@ -1,24 +1,6 @@
-import {
-  SUNDAY,
-  MONDAY,
-  TUESDAY,
-  WEDNESDAY,
-  THURSDAY,
-  FRIDAY,
-  SATURDAY
-} from 'constants/Days.js';
+import { DaysInOrder } from 'constants/Days.js';
 
 const sortHours = fields => {
-  const weeksInOrder = [
-    SUNDAY,
-    MONDAY,
-    TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
-    SATURDAY
-  ];
-
   const openHours = Object.keys(fields)
     .filter(field => field.includes('day'))
     .reduce((accumulated, current) => {
@@ -26,7 +8,7 @@ const sortHours = fields => {
       return accumulated;
     }, {});
 
-  const sortByOpenHours = weeksInOrder.reduce((accumulated, current) => {
+  const sortByOpenHours = DaysInOrder.reduce((accumulated, current) => {
     let time = openHours[current];
     accumulated[time]
       ? (accumulated[time] = accumulated[time].concat([current]))
@@ -39,13 +21,13 @@ const sortHours = fields => {
       let days = sortByOpenHours[current];
 
       if (
-        days.includes(weeksInOrder[0]) &&
-        days.includes(weeksInOrder[weeksInOrder.length - 1]) &&
+        days.includes(DaysInOrder[0]) &&
+        days.includes(DaysInOrder[DaysInOrder.length - 1]) &&
         days.length < 7
       ) {
         days.forEach((day, idx) => {
           if (
-            weeksInOrder.indexOf(days[idx + 1]) - weeksInOrder.indexOf(day) !==
+            DaysInOrder.indexOf(days[idx + 1]) - DaysInOrder.indexOf(day) !==
               1 &&
             idx !== days.length - 1
           ) {
