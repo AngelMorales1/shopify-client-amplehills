@@ -3,7 +3,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 
 import { persistStore, persistReducer } from 'redux-persist';
-import localforage from 'localforage';
+import storage from 'redux-persist/lib/storage';
 import { routerReducer } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
@@ -15,7 +15,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const persistConfig = {
   key: 'root',
-  storage: localforage,
+  storage,
   debug: process.env.NODE_ENV === 'development',
   whitelist: ['session']
 };

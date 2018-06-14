@@ -6,7 +6,6 @@
     "basscss": "^8.0.4",
     "contentful": "^6.1.1",
     "history": "^4.7.2",
-    "localforage": "^1.7.1",
     "lodash": "^4.17.10",
     "node-sass": "^4.9.0",
     "prop-types": "^15.6.1",
