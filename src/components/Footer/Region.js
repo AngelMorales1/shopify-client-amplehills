@@ -59,7 +59,6 @@ class Region extends Component {
             days[days.length - 1]
           )}`)
         : (acc[cur] = this.abbreviateDay(days[0]));
-      console.log('final', acc);
       return acc;
     }, {});
 
@@ -72,31 +71,21 @@ class Region extends Component {
 
   render() {
     return (
-      <div className="border">
-        <h1
-          className={`${styles['footer--font-color']} ${
-            styles['sub-title-text']
-          } my2`}
-        >
+      <div className="mx3">
+        <h3 className={`footer-text my2 ${styles['sub-title-text']}`}>
           {this.props.region}
-        </h1>
+        </h3>
         {this.props.stores.map(store => {
           let hours = this.sortHours(store.fields);
           return (
-            <div key={store.sys.id}>
-              <p
-                className={`${styles['footer--font-color']} ${
-                  styles['content-text']
-                } my1`}
-              >
-                <strong>{store.fields.title}</strong>
-              </p>
+            <div className="mb3" key={store.sys.id}>
+              <h4 className={`footer-text mb1 ${styles['content-title-text']}`}>
+                {store.fields.title}
+              </h4>
               {Object.keys(hours).map((hour, idx) => {
                 return (
                   <p
-                    className={`${styles['footer--font-color']} ${
-                      styles['content-text']
-                    } my1`}
+                    className={`footer-text ${styles['content-text']} mb1`}
                     key={idx}
                   >{`${hours[hour]}: ${hour}`}</p>
                 );

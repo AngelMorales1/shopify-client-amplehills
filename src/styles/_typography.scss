@@ -56,3 +56,8 @@ strong {
     line-height: $font-7;
   }
 }
+
+.footer-text {
+  font-family: $font-avenir;
+  color: color('white');
+}
