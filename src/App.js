@@ -3,11 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-<<<<<<< HEAD
-=======
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
->>>>>>> get data to footer
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
