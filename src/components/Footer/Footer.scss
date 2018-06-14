@@ -1,14 +1,14 @@
 @import 'settings';
 
 .Footer {
-  min-height: 300px;
+  min-height: spacing(75);
 }
 
-.footer-container {
-  background: color('Chathams-Blue');
+.Footer__container {
+  background: color('madison-blue');
 }
 
-.region-container {
+.FooterRegion__container {
   width: spacing(180);
   height: spacing(160);
 }
@@ -33,11 +33,16 @@
   font-weight: 100;
 }
 
-.region-button {
+.delivery-button {
   font-size: 7px;
   border-radius: spacing(10);
   padding: spacing(1) spacing(3);
   font-family: $font-avenir;
   font-weight: 700;
-  color: color('Chathams-Blue');
+  color: color('madison-blue');
+}
+
+.licence-text {
+  font-size: $font-3;
+  font-weight: 800;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import styles from './Footer.scss';
-import Locations from './Locations.js';
+import FooterLocations from './FooterLocations.js';
 
 class Footer extends Component {
   sortDataByRegion(data = []) {
@@ -16,11 +16,11 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className={`${styles['footer-container']} drip p4`}>
-        <Locations
+      <div className={`${styles['Footer__container']} drip p4`}>
+        <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items)}
         />
-        <span className={`footer-text}`}>
+        <span className={`footer-text ${styles['licence-text']}`}>
           &copy; 2017 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>

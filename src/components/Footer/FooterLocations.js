@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Region from './Region.js';
+import FooterRegions from './FooterRegions.js';
 
 import styles from './Footer.scss';
 
-class Locations extends Component {
+class FooterLocations extends Component {
   render() {
     let regions = Object.keys(this.props.locations);
     return (
@@ -12,10 +12,12 @@ class Locations extends Component {
           Locations
         </h2>
         <div
-          className={`${styles['region-container']} flex flex-column flex-wrap`}
+          className={`${
+            styles['FooterRegion__container']
+          } flex flex-column flex-wrap`}
         >
           {regions.map(region => (
-            <Region
+            <FooterRegions
               key={region}
               region={region}
               stores={this.props.locations[region]}
@@ -27,4 +29,4 @@ class Locations extends Component {
   }
 }
 
-export default Locations;
+export default FooterLocations;

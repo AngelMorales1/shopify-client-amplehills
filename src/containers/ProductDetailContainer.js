@@ -18,7 +18,7 @@ class ProductDetailContainer extends ContainerBase {
     return Promise.all([
       fetchProduct(handle),
       fetchProductContent(handle)
-    ]).then(([productResult, contentResult, locationsResult]) => {
+    ]).then(([productResult, contentResult]) => {
       return {
         product: get(productResult, 'value'),
         content: get(contentResult, 'value')
