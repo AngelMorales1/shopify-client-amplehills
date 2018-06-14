@@ -17,12 +17,12 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className={cx('drip p4', styles['Footer'])}>
+      <div className={cx('p4', styles['Footer'])}>
         <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items) || {}}
         />
         <span className={cx('footer-text', styles['licence-text'])}>
-          &copy; 2017 Ample Hills Creamery. Privacy Policy & Accessibility
+          &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>
     );

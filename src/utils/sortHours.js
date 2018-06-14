@@ -1,6 +1,7 @@
 import { DaysInOrder } from 'constants/Days.js';
+import { abbreviateDay } from './abbreviateDay.js';
 
-const sortHours = fields => {
+export const sortHours = fields => {
   const openHours = Object.keys(fields)
     .filter(field => field.includes('day'))
     .reduce((accumulated, current) => {
@@ -54,9 +55,3 @@ const sortHours = fields => {
 
   return sortAsPeriod;
 };
-
-const abbreviateDay = str => {
-  return str[0].toUpperCase() + str.slice(1, 3);
-};
-
-export { sortHours, abbreviateDay };
