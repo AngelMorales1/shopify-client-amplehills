@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-import { getCheckout } from 'state/actions/cartActions';
+import { getCheckout } from 'state/actions/checkoutActions';
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
@@ -27,9 +27,8 @@ class App extends Component {
       actions: { initializeApplication, fetchProducts, getLocationData }
     } = this.props;
     if (applicationStatus === IDLE) {
-      initializeApplication();
+      initializeApplication(get(checkout, 'id', false));
       getLocationData();
-      getCheckout(get(checkout, 'id', false));
     }
   }
 
@@ -55,7 +54,7 @@ const mapStateToProps = state => {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
     locations: get(state, 'applicationUI.locations'),
-    checkout: get(state, 'cart')
+    checkout: get(state, 'session.checkout')
   };
 };
 

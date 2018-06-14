@@ -8,6 +8,7 @@ import { routerReducer } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 
 import reducers from 'state/reducers';
+import session from 'state/reducers/session';
 
 const middleware = [thunk, promiseMiddleware()];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -15,14 +16,15 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const persistConfig = {
   key: 'root',
   storage: localforage,
-  debug: true,
-  whitelist: ['cart']
+  debug: process.env.NODE_ENV === 'development',
+  whitelist: ['session']
 };
 
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     ...reducers,
+    session,
     router: routerReducer
   })
 );

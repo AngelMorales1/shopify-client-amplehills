@@ -1,4 +1,4 @@
-import { CREATE_CHECKOUT } from 'state/actions/cartActions';
+import { CREATE_CHECKOUT } from 'state/actions/checkoutActions';
 
 const initialState = {};
 
