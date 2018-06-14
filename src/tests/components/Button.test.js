@@ -23,3 +23,35 @@ it('renders with data', () => {
 
   expect(component).toMatchSnapshot();
 });
+
+it('renders with data and internal link', () => {
+  const component = shallow(
+    <Button
+      label="Click Me"
+      variant="primary"
+      color="denim"
+      className="foo"
+      fullWidth
+      to="/products"
+      onClick={() => console.log('foo')}
+    />
+  );
+
+  expect(component).toMatchSnapshot();
+});
+
+it('renders with data and external link', () => {
+  const component = shallow(
+    <Button
+      label="Click Me"
+      variant="primary"
+      color="denim"
+      className="foo"
+      fullWidth
+      to="https://google.com"
+      onClick={() => console.log('foo')}
+    />
+  );
+
+  expect(component).toMatchSnapshot();
+});

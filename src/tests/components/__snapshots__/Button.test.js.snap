@@ -11,6 +11,7 @@ ShallowWrapper {
     fullWidth={true}
     label="Click Me"
     onClick={[Function]}
+    to=""
     type="button"
     variant="primary"
 />,
@@ -61,6 +62,196 @@ ShallowWrapper {
 }
 `;
 
+exports[`renders with data and external link 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className="foo"
+    color="denim"
+    disabled={false}
+    fullWidth={true}
+    label="Click Me"
+    onClick={[Function]}
+    to="https://google.com"
+    type="button"
+    variant="primary"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="foo w100"
+>
+        Click Me
+</div>,
+      "className": "text-decoration-none",
+      "href": "https://google.com",
+      "onClick": [Function],
+      "rel": "noopener",
+      "target": "_blank",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Click Me",
+        "className": "foo w100",
+      },
+      "ref": null,
+      "rendered": "Click Me",
+      "type": "div",
+    },
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="foo w100"
+>
+          Click Me
+</div>,
+        "className": "text-decoration-none",
+        "href": "https://google.com",
+        "onClick": [Function],
+        "rel": "noopener",
+        "target": "_blank",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click Me",
+          "className": "foo w100",
+        },
+        "ref": null,
+        "rendered": "Click Me",
+        "type": "div",
+      },
+      "type": "a",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders with data and internal link 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Button
+    className="foo"
+    color="denim"
+    disabled={false}
+    fullWidth={true}
+    label="Click Me"
+    onClick={[Function]}
+    to="/products"
+    type="button"
+    variant="primary"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="foo w100"
+>
+        Click Me
+</div>,
+      "className": "text-decoration-none",
+      "onClick": [Function],
+      "replace": false,
+      "to": "/products",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "Click Me",
+        "className": "foo w100",
+      },
+      "ref": null,
+      "rendered": "Click Me",
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="foo w100"
+>
+          Click Me
+</div>,
+        "className": "text-decoration-none",
+        "onClick": [Function],
+        "replace": false,
+        "to": "/products",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click Me",
+          "className": "foo w100",
+        },
+        "ref": null,
+        "rendered": "Click Me",
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
 exports[`renders without data 1`] = `
 ShallowWrapper {
   "length": 1,
@@ -72,6 +263,7 @@ ShallowWrapper {
     fullWidth={false}
     label=""
     onClick={[Function]}
+    to=""
     type="button"
     variant="primary"
 />,

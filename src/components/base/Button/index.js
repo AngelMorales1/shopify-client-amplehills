@@ -30,11 +30,17 @@ const Button = ({
   );
 
   const linkedComponent = isExternalLink(to) ? (
-    <a href={to} target="_blank" rel="noopener" onClick={onClick}>
+    <a
+      className="text-decoration-none"
+      href={to}
+      target="_blank"
+      rel="noopener"
+      onClick={onClick}
+    >
       <div className={classes}>{label}</div>
     </a>
   ) : (
-    <Link to={to} onClick={onClick}>
+    <Link className="text-decoration-none" to={to} onClick={onClick}>
       <div className={classes}>{label}</div>
     </Link>
   );
