@@ -12,6 +12,7 @@ import styles from './Cart.scss';
 
 class Cart extends Component {
   render() {
+    console.log('cec', this.props.checkout);
     const {
       actions: { openCart, closeCart }
     } = this.props;
@@ -47,7 +48,8 @@ Cart.defaultProps = {
 const mapStateToProps = state => {
   return {
     ...state,
-    isCartOpen: get(state, 'cartUI.isCartOpen')
+    isCartOpen: get(state, 'cartUI.isCartOpen'),
+    checkout: get(state, 'cart')
   };
 };
 

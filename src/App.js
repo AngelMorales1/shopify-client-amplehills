@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
+import { getCheckout } from 'state/actions/cartActions';
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
@@ -22,11 +23,13 @@ class App extends Component {
   componentWillMount() {
     const {
       applicationStatus,
+      checkout,
       actions: { initializeApplication, fetchProducts, getLocationData }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication();
       getLocationData();
+      getCheckout(get(checkout, 'id', false));
     }
   }
 
@@ -51,7 +54,8 @@ const mapStateToProps = state => {
   return {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
-    locations: get(state, 'applicationUI.locations')
+    locations: get(state, 'applicationUI.locations'),
+    checkout: get(state, 'cart')
   };
 };
 
@@ -61,7 +65,8 @@ const mapDispatchToProps = dispatch => {
       {
         initializeApplication,
         fetchProducts,
-        getLocationData
+        getLocationData,
+        getCheckout
       },
       dispatch
     )
