@@ -7,6 +7,7 @@ class Locations extends Component {
 
     return (
       <div>
+        <h1>Locations</h1>
         {regions.map(region => (
           <Region
             key={region}

@@ -41,7 +41,9 @@ class Region extends Component {
               weeksInOrder.indexOf(days[i]) !==
             1
           ) {
-            acc[cur] = `${days[i + 1]} - ${days[0]}`;
+            acc[cur] = `${this.makeFirstLetterUppercase(
+              days[i + 1]
+            )} - ${this.makeFirstLetterUppercase(days[0])}`;
             return acc;
           }
         }
@@ -50,12 +52,18 @@ class Region extends Component {
         return acc;
       }
       days.length > 1
-        ? (acc[cur] = `${days[0]} - ${days[days.length - 1]}`)
-        : (acc[cur] = days[0]);
+        ? (acc[cur] = `${this.makeFirstLetterUppercase(
+            days[0]
+          )} - ${this.makeFirstLetterUppercase(days[days.length - 1])}`)
+        : (acc[cur] = this.makeFirstLetterUppercase(days[0]));
       return acc;
     }, {});
 
     return sortAsPeriod;
+  }
+
+  makeFirstLetterUppercase(str) {
+    return str[0].toUpperCase() + str.slice(1, 3);
   }
 
   render() {
