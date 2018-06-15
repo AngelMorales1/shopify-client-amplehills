@@ -4,14 +4,6 @@ import PropTypes from 'prop-types';
 import { Button, TextField } from 'components/base';
 
 class QuantitySelector extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      quantity: this.props.quantity
-    };
-  }
-
   changeQuantity(value) {
     const quantity = Math.max(1, value);
     this.setState({ quantity }, this.props.onChange(quantity));
@@ -26,11 +18,11 @@ class QuantitySelector extends Component {
           variant="circle"
           color="white-denim-outline"
           label="–"
-          onClick={() => this.changeQuantity(this.state.quantity - 1)}
+          onClick={() => this.changeQuantity(this.props.quantity - 1)}
         />
         <TextField
           variant="quantity"
-          value={this.state.quantity}
+          value={this.props.quantity}
           color="denim"
           className="copy mx1"
           onChange={value => this.changeQuantity(value)}
@@ -39,7 +31,7 @@ class QuantitySelector extends Component {
           variant="circle"
           color="white-denim-outline"
           label="+"
-          onClick={() => this.changeQuantity(this.state.quantity + 1)}
+          onClick={() => this.changeQuantity(this.props.quantity + 1)}
         />
       </div>
     );
