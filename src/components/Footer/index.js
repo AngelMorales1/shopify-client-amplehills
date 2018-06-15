@@ -21,7 +21,7 @@ class Footer extends Component {
         <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items) || {}}
         />
-        <span className={cx('Footer__text Footer__licence-text text-white')}>
+        <span className="Footer__licence-text text-white">
           &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>
