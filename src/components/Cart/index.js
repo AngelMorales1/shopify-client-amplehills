@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { openCart, closeCart } from 'state/actions/ui/cartUIActions';
+import { closeCart } from 'state/actions/ui/cartUIActions';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -13,7 +13,7 @@ import styles from './Cart.scss';
 class Cart extends Component {
   render() {
     const {
-      actions: { openCart, closeCart }
+      actions: { closeCart }
     } = this.props;
     const classes = cx(styles['Cart'], 'fixed p3', {
       [styles['Cart--open']]: this.props.cartIsOpen
@@ -30,7 +30,6 @@ class Cart extends Component {
 
 Cart.propTypes = {
   actions: PropTypes.shape({
-    openCart: PropTypes.func,
     closeCart: PropTypes.func
   }),
   cartIsOpen: PropTypes.bool
@@ -38,7 +37,6 @@ Cart.propTypes = {
 
 Cart.defaultProps = {
   actions: {
-    openCart: () => {},
     closeCart: () => {}
   },
   cartIsOpen: false
@@ -56,7 +54,6 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        openCart,
         closeCart
       },
       dispatch

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
 import { getCheckout } from 'state/actions/checkoutActions';
 
@@ -24,7 +23,7 @@ class App extends Component {
     const {
       applicationStatus,
       checkout,
-      actions: { initializeApplication, fetchProducts, getLocationData }
+      actions: { initializeApplication, getLocationData }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
@@ -63,7 +62,6 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         initializeApplication,
-        fetchProducts,
         getLocationData,
         getCheckout
       },

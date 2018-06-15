@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { openCart, closeCart } from 'state/actions/ui/cartUIActions';
 
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 import get from 'utils/get';
 
 import { NavLink } from 'react-router-dom';
