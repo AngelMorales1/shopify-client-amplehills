@@ -5,56 +5,68 @@ import { Button, Image } from 'components/base';
 
 class FooterLnks extends Component {
   render() {
-    console.log('///', this.props);
     return (
-      <div>
-        <div>
-          <h2>We would love to talk!</h2>
+      <div className="p3">
+        <h2 className="title-text text-white">We would love to talk!</h2>
+        <div className="my3">
           <Button label="Contact Us" />
-        </div>
-        <div>
           <Image
             alt="Decorative arrow icon"
             src="/assets/images/footer-arrow.svg"
-            style={{ width: '50px', height: '50px' }}
+            className={cx('ml3', styles['arrow'])}
           />
         </div>
         <div>
-          <div>
-            <div>
+          <div className="my4">
+            <div className="my2 flex items-center">
               <Image
                 alt="Instagram icon"
                 src="/assets/images/sns-link-image-mock.svg"
                 style={{ width: '30px', height: '30px' }}
               />
-              <a href={this.props.footerLinks.instagramLink} target="_blank">
+              <a
+                href={this.props.footerLinks.instagramLink}
+                target="_blank"
+                className="Footer__link-text text-white text-decoration-none ml3"
+              >
                 Instagram
               </a>
             </div>
-            <div>
+            <div className="my2 flex items-center">
               <Image
                 alt="Instagram icon"
                 src="/assets/images/sns-link-image-mock.svg"
                 style={{ width: '30px', height: '30px' }}
               />
-              <a href={this.props.footerLinks.twitterLink} target="_blank">
+              <a
+                href={this.props.footerLinks.twitterLink}
+                target="_blank"
+                className="Footer__link-text text-white text-decoration-none ml3"
+              >
                 Twitter
               </a>
             </div>
-            <div>
+            <div className="my2 flex items-center">
               <Image
                 alt="Instagram icon"
                 src="/assets/images/sns-link-image-mock.svg"
                 style={{ width: '30px', height: '30px' }}
               />
-              <a href={this.props.footerLinks.facebookLink} target="_blank">
+              <a
+                href={this.props.footerLinks.facebookLink}
+                target="_blank"
+                className="Footer__link-text text-white text-decoration-none ml3"
+              >
                 Facebook
               </a>
             </div>
-            {this.props.footerIllustration ? (
-              <img src={this.props.footerIllustration.fields.file.url} />
-            ) : null}
           </div>
+          {this.props.footerIllustration ? (
+            <Image
+              src={this.props.footerIllustration.fields.file.url}
+              className={cx(styles['illustration'])}
+            />
+          ) : null}
         </div>
       </div>
     );
