@@ -66,7 +66,7 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.string,
-  value: PropTypes.string
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 TextField.defaultProps = {

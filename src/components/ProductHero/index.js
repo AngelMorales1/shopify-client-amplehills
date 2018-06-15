@@ -16,11 +16,16 @@ class ProductHero extends Component {
     };
   }
 
+  addToCart = () => {
+    console.log(this.state.quantity);
+  };
+
   render() {
     const { data, product, z } = this.props;
     const heroImage = get(product, 'images[0].src', '');
-    const availability = get(product, 'variants[0].availability', []);
+    const availability = get(product, 'variants[0].available', false);
     const price = get(product, 'variants[0].price', []);
+    console.log(product);
 
     return (
       <div
@@ -54,7 +59,11 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              <Button color="denim">
+              <Button
+                color="denim"
+                onClick={this.addToCart}
+                disabled={!availability}
+              >
                 <span className="mr2">Add to Cart</span>
                 <span className="ml2">
                   ${(price * this.state.quantity).toFixed(2)}
