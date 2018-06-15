@@ -30,15 +30,17 @@ class App extends Component {
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
-      getLocationData();
-      getGlobalSettings();
     }
   }
 
   render() {
     const { applicationStatus } = this.props;
+    const {
+      facebookLink,
+      instagramLink,
+      twitterLink
+    } = this.props.globalSettings;
     if (applicationStatus === FULFILLED) {
-      console.log('>>>', this.props.globalSettings);
       return (
         <div className="App">
           <Nav />
@@ -46,7 +48,8 @@ class App extends Component {
           <Routes location={get(this, 'props.location')} />
           <Footer
             locations={this.props.locations}
-            globalSettingsData={this.props.globalSettings}
+            footerIllustration={this.props.globalSettings.footerIllustration}
+            footerLinks={{ facebookLink, instagramLink, twitterLink }}
           />
         </div>
       );
@@ -61,8 +64,13 @@ const mapStateToProps = state => {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
     locations: get(state, 'applicationUI.locations'),
-    checkout: get(state, 'session.checkout')
-    globalSettings: get(state, 'applicationUI.globalSettings')
+    checkout: get(state, 'session.checkout'),
+    locations: get(state, 'applicationUI.locations', {}),
+    globalSettings: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields',
+      {}
+    )
   };
 };
 

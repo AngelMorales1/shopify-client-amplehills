@@ -16,14 +16,16 @@ class Footer extends Component {
   }
 
   render() {
-    // let globalDataItems = this.props.globalSettingsData.items.length > 0 ? this.props.globalSettingsData.items[0] : {};
     return (
       <div className={cx('p4 bg-madison-blue Footer__text', styles['Footer'])}>
         <div>
           <FooterLocations
             locations={this.sortDataByRegion(this.props.locations.items)}
           />
-          <FooterLinks />
+          <FooterLinks
+            footerIllustration={this.props.footerIllustration}
+            footerLinks={this.props.footerLinks}
+          />
         </div>
         <span className="Footer__licence-text text-white">
           &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
