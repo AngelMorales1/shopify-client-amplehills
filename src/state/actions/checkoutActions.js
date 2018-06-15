@@ -40,24 +40,15 @@ export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
 export const addLineItems = (checkoutID, items) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
-    payload: new Promise(resolve => {
-      BuySDK.checkout.addLineItems(checkoutID, items).then(checkout => {
-        dispatch(openCart());
-        resolve(checkout);
-      });
-    })
-  });
+    payload: BuySDK.checkout.addLineItems(checkoutID, items)
+  }).then(() => dispatch(openCart()));
 };
 
 export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';
 export const removeLineItems = (checkoutID, items) => dispatch => {
   return dispatch({
     type: REMOVE_LINE_ITEMS,
-    payload: new Promise(resolve => {
-      BuySDK.checkout.removeLineItems(checkoutID, items).then(checkout => {
-        resolve(checkout);
-      });
-    })
+    payload: BuySDK.checkout.removeLineItems(checkoutID, items)
   });
 };
 
@@ -66,10 +57,6 @@ export const updateLineItems = (checkoutID, items) => dispatch => {
   return dispatch({
     type: UPDATE_LINE_ITEMS,
     meta: { id: get(items, '[0].id', '') },
-    payload: new Promise(resolve => {
-      BuySDK.checkout.updateLineItems(checkoutID, items).then(checkout => {
-        resolve(checkout);
-      });
-    })
+    payload: BuySDK.checkout.updateLineItems(checkoutID, items)
   });
 };
