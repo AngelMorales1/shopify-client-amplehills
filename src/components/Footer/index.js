@@ -17,7 +17,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className={cx('p4 bg-madison-blue', styles['Footer'])}>
+      <div className={cx('p4 bg-madison-blue Footer__text', styles['Footer'])}>
         <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items) || {}}
         />

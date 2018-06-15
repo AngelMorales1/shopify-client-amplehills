@@ -6,7 +6,7 @@ import styles from './Footer.scss';
 class FooterRegions extends Component {
   render() {
     return (
-      <div className="mx3 Footer__text">
+      <div className="mx3">
         <h3 className="my2 text-white Footer__sub-title-text">
           {this.props.region}
         </h3>
