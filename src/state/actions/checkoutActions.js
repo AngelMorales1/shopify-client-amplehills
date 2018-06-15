@@ -2,10 +2,10 @@ import BuySDK from 'lib/Buy';
 import get from 'utils/get';
 
 export const GET_CHECKOUT = 'GET_CHECKOUT';
-export const getCheckout = payload => dispatch => {
-  if (!payload) return dispatch(createCheckout());
+export const getCheckout = checkoutID => dispatch => {
+  if (!checkoutID) return dispatch(createCheckout());
 
-  return BuySDK.checkout.fetch(payload).then(res => {
+  return BuySDK.checkout.fetch(checkoutID).then(res => {
     const checkout = res;
     if (get(checkout, 'completedAt', false)) return dispatch(createCheckout());
 
@@ -20,8 +20,6 @@ export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
 export const createCheckout = payload => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
-    payload: new Promise(resolve =>
-      BuySDK.checkout.create().then(checkout => resolve(checkout))
-    )
+    payload: BuySDK.checkout.create()
   });
 };
