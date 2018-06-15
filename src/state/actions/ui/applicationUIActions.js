@@ -9,3 +9,13 @@ export const getLocationData = payload => {
     })
   };
 };
+
+export const GET_GLOBAL_SETTINGS = 'GET_GLOBAL_SETTINGS';
+export const getGlobalSettings = payload => {
+  return {
+    type: `GET_GLOBAL_SETTINGS`,
+    payload: new Promise(resolve => {
+      resolve(Data.getGlobalSettings());
+    })
+  };
+};

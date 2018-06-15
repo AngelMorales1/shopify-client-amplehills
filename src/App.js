@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { initializeApplication } from 'state/actions/applicationActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
+import { fetchProducts } from 'state/actions/productsActions';
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
@@ -22,23 +23,31 @@ class App extends Component {
     const {
       applicationStatus,
       checkout,
-      actions: { initializeApplication, getLocationData }
+      actions: {
+        initializeApplication,
+        fetchProducts
+      }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
       getLocationData();
+      getGlobalSettings();
     }
   }
 
   render() {
     const { applicationStatus } = this.props;
     if (applicationStatus === FULFILLED) {
+      console.log('>>>', this.props.globalSettings);
       return (
         <div className="App">
           <Nav />
           <Cart />
           <Routes location={get(this, 'props.location')} />
-          <Footer locations={this.props.locations} />
+          <Footer
+            locations={this.props.locations}
+            globalSettingsData={this.props.globalSettings}
+          />
         </div>
       );
     }
@@ -53,6 +62,7 @@ const mapStateToProps = state => {
     applicationStatus: get(state, 'status.initializeApplication'),
     locations: get(state, 'applicationUI.locations'),
     checkout: get(state, 'session.checkout')
+    globalSettings: get(state, 'applicationUI.globalSettings')
   };
 };
 
@@ -61,7 +71,7 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         initializeApplication,
-        getLocationData
+        fetchProducts
       },
       dispatch
     )
