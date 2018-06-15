@@ -6,13 +6,8 @@ const initialState = {
 
 export default (state = initialState, action) => {
   const { type } = action;
-  // console.log('action type', action.type);
   switch (type) {
     case `${GET_LOCATION_DATA}_FULFILLED`:
-      // console.log({
-      //   ...state,
-      //   locations: action.payload
-      // });
       return {
         ...state,
         locations: action.payload

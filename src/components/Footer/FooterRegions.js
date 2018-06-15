@@ -6,31 +6,34 @@ import styles from './Footer.scss';
 class FooterRegions extends Component {
   render() {
     return (
-      <div className="mx3">
-        <h3 className={cx('footer-text my2', styles['sub-title-text'])}>
+      <div className="mx3 Footer__text">
+        <h3 className="my2 text-white Footer__sub-title-text">
           {this.props.region}
         </h3>
         {this.props.stores.map(store => {
           let hours = sortHours(store.fields);
           return (
             <div className="mb3" key={store.sys.id}>
-              <h4
-                className={cx('footer-text mb1', styles['content-title-text'])}
-              >
+              <h4 className="mb1 text-white Footer__content-title-text">
                 {store.fields.title}
               </h4>
-              {Object.keys(hours).map((hour, idx) => {
+              {Object.keys(hours).map((hour, i) => {
                 return (
                   <p
-                    className={cx('footer-text mb1', styles['content-text'])}
-                    key={idx}
+                    className="mb1 text-white Footer__content-text"
+                    key={i}
                   >{`${hours[hour]}: ${hour}`}</p>
                 );
               })}
               {store.fields.delivery ? (
-                <button className={cx(styles['delivery-button'])}>
+                <div
+                  className={cx(
+                    'bg-white text-madison-blue inline',
+                    styles['order-delivery']
+                  )}
+                >
                   ORDER DELIVERY
-                </button>
+                </div>
               ) : null}
             </div>
           );

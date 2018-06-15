@@ -6,22 +6,22 @@ import FooterLocations from './FooterLocations.js';
 
 class Footer extends Component {
   sortDataByRegion(data = []) {
-    return data.reduce((acc, cur) => {
-      let region = cur.fields.region;
-      acc[region]
-        ? (acc[region] = acc[region].concat([cur]))
-        : (acc[region] = [cur]);
-      return acc;
+    return data.reduce((accumulated, current) => {
+      let region = current.fields.region;
+      accumulated[region]
+        ? (accumulated[region] = accumulated[region].concat([current]))
+        : (accumulated[region] = [current]);
+      return accumulated;
     }, {});
   }
 
   render() {
     return (
-      <div className={cx('p4', styles['Footer'])}>
+      <div className={cx('p4 bg-madison-blue', styles['Footer'])}>
         <FooterLocations
           locations={this.sortDataByRegion(this.props.locations.items) || {}}
         />
-        <span className={cx('footer-text', styles['licence-text'])}>
+        <span className={cx('Footer__text Footer__licence-text text-white')}>
           &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>

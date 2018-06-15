@@ -2,7 +2,6 @@
 
 .Footer {
   min-height: spacing(75);
-  background: color('madison-blue');
 }
 
 .FooterRegions__container {
@@ -10,36 +9,9 @@
   height: spacing(160);
 }
 
-.title-text {
-  font-size: $font-7;
-  font-weight: 800;
-}
-
-.sub-title-text {
-  font-size: $font-5;
-  font-weight: 800;
-}
-
-.content-title-text {
-  font-size: $font-3;
-  font-weight: 800;
-}
-
-.content-text {
-  font-size: $font-3;
-  font-weight: 100;
-}
-
-.delivery-button {
+.order-delivery {
   font-size: 7px;
   border-radius: spacing(10);
   padding: spacing(1) spacing(3);
-  font-family: $font-avenir;
   font-weight: 700;
-  color: color('madison-blue');
-}
-
-.licence-text {
-  font-size: $font-3;
-  font-weight: 800;
 }

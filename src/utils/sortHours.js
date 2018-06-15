@@ -26,14 +26,13 @@ export const sortHours = fields => {
         days.includes(DaysInOrder[DaysInOrder.length - 1]) &&
         days.length < 7
       ) {
-        days.forEach((day, idx) => {
+        days.forEach((day, i) => {
           if (
-            DaysInOrder.indexOf(days[idx + 1]) - DaysInOrder.indexOf(day) !==
-              1 &&
-            idx !== days.length - 1
+            DaysInOrder.indexOf(days[i + 1]) - DaysInOrder.indexOf(day) !== 1 &&
+            i !== days.length - 1
           ) {
             accumulated[current] = `${abbreviateDay(
-              days[idx + 1]
+              days[i + 1]
             )}–${abbreviateDay(day)}`;
           }
         });
