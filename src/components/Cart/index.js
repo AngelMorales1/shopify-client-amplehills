@@ -13,16 +13,34 @@ import styles from './Cart.scss';
 class Cart extends Component {
   render() {
     const {
+      checkout,
       actions: { closeCart }
     } = this.props;
-    const classes = cx(styles['Cart'], 'fixed p3', {
+
+    const classes = cx(styles['Cart'], 'fixed z-nav p3 bg-white', {
       [styles['Cart--open']]: this.props.cartIsOpen
     });
 
+    const items = get(checkout, 'lineItems', []);
+
     return (
       <div className={classes}>
-        <span>Cart</span>
-        <Button onClick={() => closeCart()} label="close" />
+        <div className="mb2">
+          <strong className="callout">Cart</strong>
+        </div>
+
+        <div className="mb4">
+          {items.map(item => (
+            <div className="mb2">
+              <span className="mr2">{item.title}</span>
+              <span>Qty: {item.quantity}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mb2">
+          <Button onClick={() => closeCart()} label="close" />
+        </div>
       </div>
     );
   }
