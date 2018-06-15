@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { initializeApplication } from 'state/actions/applicationActions';
+import { fetchProducts } from 'state/actions/productsActions';
+import { getLocationData } from 'state/actions/ui/applicationUIActions';
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
@@ -18,9 +20,12 @@ class App extends Component {
   componentWillMount() {
     const {
       applicationStatus,
-      actions: { initializeApplication }
+      actions: { initializeApplication, fetchProducts, getLocationData }
     } = this.props;
-    if (applicationStatus === IDLE) initializeApplication();
+    if (applicationStatus === IDLE) {
+      initializeApplication();
+      getLocationData();
+    }
   }
 
   render() {
@@ -30,7 +35,7 @@ class App extends Component {
         <div className="App">
           <Nav />
           <Routes location={get(this, 'props.location')} />
-          <Footer />
+          <Footer locations={this.props.locations} />
         </div>
       );
     }
@@ -42,7 +47,8 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     ...state,
-    applicationStatus: get(state, 'status.initializeApplication')
+    applicationStatus: get(state, 'status.initializeApplication'),
+    locations: get(state, 'applicationUI.locations')
   };
 };
 
@@ -50,7 +56,9 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        initializeApplication
+        initializeApplication,
+        fetchProducts,
+        getLocationData
       },
       dispatch
     )

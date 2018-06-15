@@ -1,12 +1,13 @@
-import ContainerBase from "lib/ContainerBase";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { fetchProduct } from "state/actions/productActions";
-import { fetchProductContent } from "state/actions/contentActions";
-import get from "utils/get";
+import ContainerBase from 'lib/ContainerBase';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchProduct } from 'state/actions/productActions';
+import { fetchProductContent } from 'state/actions/contentActions';
+
+import get from 'utils/get';
 
 class ProductDetailContainer extends ContainerBase {
-  view = import("views/ProductDetailView");
+  view = import('views/ProductDetailView');
 
   model = () => {
     const {
@@ -19,8 +20,8 @@ class ProductDetailContainer extends ContainerBase {
       fetchProductContent(handle)
     ]).then(([productResult, contentResult]) => {
       return {
-        product: get(productResult, "value"),
-        content: get(contentResult, "value")
+        product: get(productResult, 'value'),
+        content: get(contentResult, 'value')
       };
     });
   };

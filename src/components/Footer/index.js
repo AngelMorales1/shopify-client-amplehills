@@ -1,12 +1,29 @@
 import React, { Component } from 'react';
+import cx from 'classnames';
 
 import styles from './Footer.scss';
+import FooterLocations from './FooterLocations.js';
 
 class Footer extends Component {
+  sortDataByRegion(data = []) {
+    return data.reduce((accumulated, current) => {
+      let region = current.fields.region;
+      accumulated[region]
+        ? (accumulated[region] = accumulated[region].concat([current]))
+        : (accumulated[region] = [current]);
+      return accumulated;
+    }, {});
+  }
+
   render() {
     return (
-      <div className={`${styles['Footer']} flex items-end`}>
-        &copy; 2018 Ample Hills
+      <div className={cx('p4 bg-madison-blue Footer__text', styles['Footer'])}>
+        <FooterLocations
+          locations={this.sortDataByRegion(this.props.locations.items) || {}}
+        />
+        <span className="Footer__licence-text text-white">
+          &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+        </span>
       </div>
     );
   }

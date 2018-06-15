@@ -56,3 +56,33 @@ strong {
     line-height: $font-7;
   }
 }
+
+.Footer__text {
+  font-family: $font-avenir;
+
+  .Footer__sub-title-text {
+    font-size: $font-5;
+    font-weight: 800;
+  }
+
+  .Footer__content-title-text {
+    font-size: $font-3;
+    font-weight: 800;
+  }
+
+  .Footer__content-text {
+    font-size: $font-3;
+    font-weight: 100;
+  }
+
+  .Footer__licence-text {
+    font-size: $font-3;
+    font-weight: 800;
+  }
+}
+
+.title-text {
+  font-family: $font-avenir;
+  font-size: $font-7;
+  font-weight: 800;
+}

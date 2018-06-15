@@ -1,3 +1,17 @@
+@import 'settings';
+
 .Footer {
-  min-height: 300px;
+  min-height: spacing(75);
+}
+
+.FooterRegions__container {
+  width: spacing(180);
+  height: spacing(160);
+}
+
+.order-delivery {
+  font-size: 7px;
+  border-radius: spacing(10);
+  padding: spacing(1) spacing(3);
+  font-weight: 700;
 }
