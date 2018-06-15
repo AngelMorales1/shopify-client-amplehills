@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import get from 'utils/get';
 
 import { Button, TextField } from 'components/base';
 
@@ -18,11 +19,13 @@ class QuantitySelector extends Component {
           variant="circle"
           color="white-denim-outline"
           label="–"
-          onClick={() => this.changeQuantity(this.props.quantity - 1)}
+          onClick={() =>
+            this.changeQuantity(get(this, 'props.quantity', 1) - 1)
+          }
         />
         <TextField
           variant="quantity"
-          value={this.props.quantity}
+          value={get(this, 'props.quantity', 1)}
           color="denim"
           className="copy mx1"
           onChange={value => this.changeQuantity(value)}
@@ -31,7 +34,9 @@ class QuantitySelector extends Component {
           variant="circle"
           color="white-denim-outline"
           label="+"
-          onClick={() => this.changeQuantity(this.props.quantity + 1)}
+          onClick={() =>
+            this.changeQuantity(get(this, 'props.quantity', 1) + 1)
+          }
         />
       </div>
     );
