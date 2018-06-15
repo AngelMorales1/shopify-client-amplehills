@@ -32,6 +32,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props.checkout);
     const { applicationStatus } = this.props;
     if (applicationStatus === FULFILLED) {
       return (

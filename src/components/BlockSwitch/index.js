@@ -10,9 +10,22 @@ const BlockSwitch = props => {
   const contentType = get(block, 'sys.contentType.sys.id');
   const fields = get(block, 'fields');
 
+  const {
+    checkout,
+    actions: { addLineItems }
+  } = props;
+
   switch (contentType) {
     case 'blockProductHero':
-      return <ProductHero data={fields} product={product} z={z} />;
+      return (
+        <ProductHero
+          data={fields}
+          product={product}
+          z={z}
+          addLineItems={addLineItems}
+          checkout={checkout}
+        />
+      );
     case 'blockProductDetails':
       return <ProductDetails data={fields} z={z} />;
     default:

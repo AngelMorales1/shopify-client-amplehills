@@ -1,6 +1,8 @@
 import BuySDK from 'lib/Buy';
 import get from 'utils/get';
 
+import { openCart } from 'state/actions/ui/cartUIActions';
+
 export const GET_CHECKOUT = 'GET_CHECKOUT';
 export const getCheckout = checkoutID => dispatch => {
   if (!checkoutID) return dispatch(createCheckout());
@@ -31,5 +33,17 @@ export const createCheckout = payload => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
     payload: BuySDK.checkout.create()
+  });
+};
+
+export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
+export const addLineItems = (checkoutID, items) => dispatch => {
+  return BuySDK.checkout.addLineItems(checkoutID, items).then(checkout => {
+    dispatch(openCart());
+
+    return dispatch({
+      type: ADD_LINE_ITEMS,
+      payload: new Promise(resolve => resolve(checkout))
+    });
   });
 };

@@ -17,7 +17,16 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    console.log(this.state.quantity);
+    const variant = get(this.props, 'product.variants[0].id', {});
+    const items = [
+      {
+        variantId: variant,
+        quantity: this.state.quantity
+      }
+    ];
+
+    console.log(this.props.checkout, items);
+    this.props.addLineItems(this.props.checkout, items);
   };
 
   render() {
@@ -25,7 +34,6 @@ class ProductHero extends Component {
     const heroImage = get(product, 'images[0].src', '');
     const availability = get(product, 'variants[0].available', false);
     const price = get(product, 'variants[0].price', []);
-    console.log(product);
 
     return (
       <div
