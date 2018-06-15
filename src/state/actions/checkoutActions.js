@@ -29,7 +29,7 @@ export const fetchCheckout = checkoutID => dispatch => {
 };
 
 export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
-export const createCheckout = payload => dispatch => {
+export const createCheckout = () => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
     payload: BuySDK.checkout.create()
@@ -38,22 +38,38 @@ export const createCheckout = payload => dispatch => {
 
 export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
 export const addLineItems = (checkoutID, items) => dispatch => {
-  return BuySDK.checkout.addLineItems(checkoutID, items).then(checkout => {
-    dispatch(openCart());
-
-    return dispatch({
-      type: ADD_LINE_ITEMS,
-      payload: new Promise(resolve => resolve(checkout))
-    });
+  return dispatch({
+    type: ADD_LINE_ITEMS,
+    payload: new Promise(resolve => {
+      BuySDK.checkout.addLineItems(checkoutID, items).then(checkout => {
+        dispatch(openCart());
+        resolve(checkout);
+      });
+    })
   });
 };
 
 export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';
 export const removeLineItems = (checkoutID, items) => dispatch => {
-  return BuySDK.checkout.removeLineItems(checkoutID, items).then(checkout => {
-    return dispatch({
-      type: REMOVE_LINE_ITEMS,
-      payload: new Promise(resolve => resolve(checkout))
-    });
+  return dispatch({
+    type: REMOVE_LINE_ITEMS,
+    payload: new Promise(resolve => {
+      BuySDK.checkout.removeLineItems(checkoutID, items).then(checkout => {
+        resolve(checkout);
+      });
+    })
+  });
+};
+
+export const UPDATE_LINE_ITEMS = 'UPDATE_LINE_ITEMS';
+export const updateLineItems = (checkoutID, items) => dispatch => {
+  return dispatch({
+    type: UPDATE_LINE_ITEMS,
+    meta: { id: get(items, '[0].id', '') },
+    payload: new Promise(resolve => {
+      BuySDK.checkout.updateLineItems(checkoutID, items).then(checkout => {
+        resolve(checkout);
+      });
+    })
   });
 };

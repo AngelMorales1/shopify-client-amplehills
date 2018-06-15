@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { closeCart } from 'state/actions/ui/cartUIActions';
-import { removeLineItems } from 'state/actions/checkoutActions';
+import {
+  removeLineItems,
+  updateLineItems
+} from 'state/actions/checkoutActions';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -22,10 +25,21 @@ class Cart extends Component {
   };
 
   updateLineItem = (item, quantity) => {
-    console.log(item, quantity);
+    const items = [
+      {
+        id: item,
+        quantity
+      }
+    ];
+
+    this.props.actions.updateLineItems(
+      get(this.props, 'checkout.id', null),
+      items
+    );
   };
 
   render() {
+    console.log(this.props);
     const {
       checkout,
       actions: { closeCart }
@@ -44,25 +58,39 @@ class Cart extends Component {
         </div>
 
         <div className="mb4">
-          {items.map(item => (
-            <div className="mb2" key={item.id}>
-              <div className="mb1">
-                <span className="mr2">{item.title}</span>
-                <span>Qty: {item.quantity}</span>
+          {items.map(item => {
+            console.log(
+              this.props.lineItemsBeingUpdated.includes(get(item, 'id', '')),
+              this.props.lineItemsBeingUpdated
+            );
+            const classes = cx(styles['Cart__line-item'], 'mb2', {
+              [styles[
+                'Cart__line-item--updating'
+              ]]: this.props.lineItemsBeingUpdated.includes(get(item, 'id', ''))
+            });
+
+            return (
+              <div className={classes} key={item.id}>
+                <div className="mb1">
+                  <span className="mr2">{item.title}</span>
+                  <span>Qty: {item.quantity}</span>
+                </div>
+                <div className="w100 flex justify-between">
+                  <Button
+                    variant="text"
+                    onClick={() => this.removeLineItem(item.id)}
+                    label="remove"
+                  />
+                  <QuantitySelector
+                    quantity={item.quantity}
+                    onChange={quantity =>
+                      this.updateLineItem(item.id, quantity)
+                    }
+                  />
+                </div>
               </div>
-              <div className="w100 flex justify-between">
-                <Button
-                  variant="text"
-                  onClick={() => this.removeLineItem(item.id)}
-                  label="remove"
-                />
-                <QuantitySelector
-                  quantity={item.quantity}
-                  onChange={quantity => this.updateLineItem(item.id, quantity)}
-                />
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mb2">
@@ -75,15 +103,39 @@ class Cart extends Component {
 
 Cart.propTypes = {
   actions: PropTypes.shape({
-    closeCart: PropTypes.func
+    closeCart: PropTypes.func,
+    removeLineItems: PropTypes.func,
+    updateLineItems: PropTypes.func
   }),
-  cartIsOpen: PropTypes.bool
+  checkout: PropTypes.shape({
+    id: PropTypes.string,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        id: PropTypes.string,
+        quantity: PropTypes.number
+      })
+    )
+  }),
+  cartIsOpen: PropTypes.bool,
+  lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string)
 };
 
 Cart.defaultProps = {
   actions: {
     closeCart: () => {},
-    removeLineItems: () => {}
+    removeLineItems: () => {},
+    updateLineItems: () => {}
+  },
+  checkout: {
+    id: '',
+    items: [
+      {
+        id: '',
+        title: '',
+        quantity: 1
+      }
+    ]
   },
   cartIsOpen: false
 };
@@ -91,8 +143,9 @@ Cart.defaultProps = {
 const mapStateToProps = state => {
   return {
     ...state,
-    cartIsOpen: get(state, 'cartUI.cartIsOpen'),
-    checkout: get(state, 'session.checkout')
+    cartIsOpen: get(state, 'cartUI.cartIsOpen', false),
+    checkout: get(state, 'session.checkout', {}),
+    lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', [])
   };
 };
 
@@ -101,7 +154,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         closeCart,
-        removeLineItems
+        removeLineItems,
+        updateLineItems
       },
       dispatch
     )
