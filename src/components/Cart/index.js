@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
-import { Button } from 'components/base';
+import { Button, QuantitySelector } from 'components/base';
 import styles from './Cart.scss';
 
 class Cart extends Component {
@@ -19,6 +19,10 @@ class Cart extends Component {
       get(this.props, 'checkout.id', null),
       items
     );
+  };
+
+  updateLineItem = (item, quantity) => {
+    console.log(item, quantity);
   };
 
   render() {
@@ -46,11 +50,15 @@ class Cart extends Component {
                 <span className="mr2">{item.title}</span>
                 <span>Qty: {item.quantity}</span>
               </div>
-              <div className="w100">
+              <div className="w100 flex justify-between">
                 <Button
                   variant="text"
                   onClick={() => this.removeLineItem(item.id)}
                   label="remove"
+                />
+                <QuantitySelector
+                  quantity={item.quantity}
+                  onChange={quantity => this.updateLineItem(item.id, quantity)}
                 />
               </div>
             </div>
