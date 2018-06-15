@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import cx from 'classnames';
 import get from 'utils/get';
 import { Image, Radio, Button, QuantitySelector } from 'components/base';
 
@@ -21,7 +22,6 @@ class ProductHero extends Component {
     const availability = get(product, 'variants[0].availability', []);
     const price = get(product, 'variants[0].price', []);
 
-    console.log(this.props);
     return (
       <div
         className={`${styles['ProductHero']} flex py4`}
@@ -38,9 +38,10 @@ class ProductHero extends Component {
                 {get(data, 'title')}
               </h1>
               <Image
-                className={`${
+                className={cx(
+                  'absolute',
                   styles['ProductHero__title-illustration']
-                } absolute`}
+                )}
                 src={get(data, 'titleIllustration.fields.file.url', '')}
               />
             </div>
