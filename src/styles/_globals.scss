@@ -4,6 +4,13 @@ Import global settings
 @import 'settings';
 
 /*
+Manual Resets
+*/
+*:focus {
+  outline-color: lightgray;
+}
+
+/*
 Dimension classes
 */
 .App {
