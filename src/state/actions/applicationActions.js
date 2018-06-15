@@ -13,8 +13,7 @@ export const initializeApplication = checkoutID => dispatch => {
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
 
-      // dispatch(getCheckout(checkoutID)).then(() => resolve(Contentful));
-      resolve(Contentful);
+      return getCheckout(checkoutID)(dispatch).then(() => resolve(Contentful));
     })
   });
 };

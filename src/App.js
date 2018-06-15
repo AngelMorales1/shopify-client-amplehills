@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { initializeApplication } from 'state/actions/applicationActions';
 import { fetchProducts } from 'state/actions/productsActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
+import { getCheckout } from 'state/actions/checkoutActions';
 
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
@@ -63,7 +64,8 @@ const mapDispatchToProps = dispatch => {
       {
         initializeApplication,
         fetchProducts,
-        getLocationData
+        getLocationData,
+        getCheckout
       },
       dispatch
     )

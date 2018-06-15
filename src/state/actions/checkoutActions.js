@@ -5,7 +5,7 @@ export const GET_CHECKOUT = 'GET_CHECKOUT';
 export const getCheckout = payload => dispatch => {
   if (!payload) return dispatch(createCheckout());
 
-  BuySDK.checkout.fetch(payload).then(res => {
+  return BuySDK.checkout.fetch(payload).then(res => {
     const checkout = res;
     if (get(checkout, 'completedAt', false)) return dispatch(createCheckout());
 
