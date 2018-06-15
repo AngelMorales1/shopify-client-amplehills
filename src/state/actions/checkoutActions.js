@@ -47,3 +47,13 @@ export const addLineItems = (checkoutID, items) => dispatch => {
     });
   });
 };
+
+export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';
+export const removeLineItems = (checkoutID, items) => dispatch => {
+  return BuySDK.checkout.removeLineItems(checkoutID, items).then(checkout => {
+    return dispatch({
+      type: REMOVE_LINE_ITEMS,
+      payload: new Promise(resolve => resolve(checkout))
+    });
+  });
+};

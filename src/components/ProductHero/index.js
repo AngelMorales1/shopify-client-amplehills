@@ -25,8 +25,9 @@ class ProductHero extends Component {
       }
     ];
 
-    console.log(this.props.checkout, items);
-    this.props.addLineItems(this.props.checkout, items);
+    this.props.addLineItems(this.props.checkout, items).then(() => {
+      this.setState({ quantity: 1 });
+    });
   };
 
   render() {
