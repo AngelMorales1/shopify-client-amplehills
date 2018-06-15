@@ -5,12 +5,22 @@ export const GET_CHECKOUT = 'GET_CHECKOUT';
 export const getCheckout = checkoutID => dispatch => {
   if (!checkoutID) return dispatch(createCheckout());
 
+  return dispatch(fetchCheckout(checkoutID)).then(() => {
+    return dispatch({
+      type: GET_CHECKOUT,
+      payload: new Promise(resolve => resolve())
+    });
+  });
+};
+
+export const FETCH_CHECKOUT = 'FETCH_CHECKOUT';
+export const fetchCheckout = checkoutID => dispatch => {
   return BuySDK.checkout.fetch(checkoutID).then(res => {
     const checkout = res;
     if (get(checkout, 'completedAt', false)) return dispatch(createCheckout());
 
     return dispatch({
-      type: GET_CHECKOUT,
+      type: FETCH_CHECKOUT,
       payload: new Promise(resolve => resolve())
     });
   });
