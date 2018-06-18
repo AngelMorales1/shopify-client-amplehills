@@ -6,9 +6,7 @@ import { Button, Image } from 'components/base';
 class FooterLinks extends Component {
   render() {
     return (
-      <div
-        className={cx('m4 flex flex-column', styles['FooterLinks__container'])}
-      >
+      <div className="m4 col-4">
         <h2 className="title bold text-white">We would love to talk!</h2>
         <div className="my3 flex">
           <Button label="Contact Us" color="white-madison-blue" />
@@ -18,7 +16,7 @@ class FooterLinks extends Component {
             className={cx('arrow mx3', styles['Footer__arrow'])}
           />
         </div>
-        <div className={cx(styles['FooterLinks__menu'])}>
+        <div className="mt4">
           <div className="my3 flex items-center">
             <Image
               alt="Instagram icon"
@@ -65,12 +63,12 @@ class FooterLinks extends Component {
             </a>
           </div>
         </div>
-        {this.props.footerIllustration ? (
+        {/* {this.props.footerIllustration ? (
           <Image
             src={this.props.footerIllustration.fields.file.url}
-            className={cx('self-end', styles['illustration'])}
+            className={cx('self-end col-5 col-right', styles['illustration'])}
           />
-        ) : null}
+        ) : null} */}
       </div>
     );
   }

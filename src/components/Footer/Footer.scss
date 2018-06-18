@@ -2,31 +2,19 @@
 
 .Footer {
   min-height: spacing(75);
+  position: relative;
 }
 
 .FooterRegions__container {
-  width: spacing(180);
-  height: spacing(160);
-}
-
-.FooterLinks__container {
-  min-width: spacing(80);
-  width: spacing(180);
+  max-height: spacing(180);
 }
 
 .Footer__arrow {
-  position: relative;
-  top: spacing(-6);
-}
-
-.FooterLinks__menu {
-  margin-top: spacing(15);
+  margin-top: spacing(-10);
 }
 
 .illustration {
-  min-width: spacing(40);
-  max-width: spacing(60);
-  width: 36%;
-  position: relative;
-  top: spacing(26);
+  position: absolute;
+  bottom: spacing(16);
+  right: spacing(32);
 }

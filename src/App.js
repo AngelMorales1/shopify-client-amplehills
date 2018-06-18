@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 import { initializeApplication } from 'state/actions/applicationActions';
 import { getLocationData } from 'state/actions/ui/applicationUIActions';
@@ -91,3 +92,15 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+App.propTypes = {
+  facebookLink: PropTypes.string,
+  instagramLink: PropTypes.string,
+  twitterLink: PropTypes.string
+};
+
+App.defaultProps = {
+  facebookLink: 'https://www.facebook.com/',
+  instagramLink: 'https://www.instagram.com/',
+  twitterLink: 'https://twitter.com/'
+};

@@ -88,10 +88,10 @@ UI elements
 }
 
 .tag {
-  border-radius: spacing(10);
-  padding: spacing(1) spacing(3);
-
   @extend .tag-text;
+
+  border-radius: 10%/50%;
+  padding: spacing(1) spacing(3);
 }
 
 .icon {

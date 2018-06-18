@@ -24,9 +24,11 @@ class FooterRegions extends Component {
               })}
               {store.fields.delivery ? (
                 <div
-                  className={cx('bg-white text-madison-blue inline bold tag')}
+                  className={cx(
+                    'bg-white text-madison-blue inline bold tag uppercase'
+                  )}
                 >
-                  ORDER DELIVERY
+                  Order Delivery
                 </div>
               ) : null}
             </div>
