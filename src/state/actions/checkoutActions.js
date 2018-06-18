@@ -10,9 +10,7 @@ export const getCheckout = checkoutID => dispatch => {
     payload: new Promise(resolve => {
       if (!checkoutID) resolve(dispatch(createCheckout()));
 
-      return dispatch(fetchCheckout(checkoutID)).then(checkout =>
-        resolve(checkout)
-      );
+      resolve(fetchCheckout(checkoutID));
     })
   });
 };
@@ -25,7 +23,7 @@ export const fetchCheckout = checkoutID => dispatch => {
       return BuySDK.checkout.fetch(checkoutID).then(res => {
         const checkout = res;
         if (get(checkout, 'completedAt', false))
-          return dispatch(createCheckout()).then(checkout => resolve(checkout));
+          resolve(dispatch(createCheckout()));
 
         resolve(checkout);
       });
