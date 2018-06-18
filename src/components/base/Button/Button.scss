@@ -26,7 +26,7 @@
 
   &--primary {
     border-radius: spacing(8);
-    height: spacing(15);
+    height: spacing(14);
     padding: spacing(4) spacing(6);
   }
 
@@ -38,9 +38,8 @@
   &--circle {
     @extend .circle;
     font-size: $font-5;
-    padding: spacing(2);
-    height: spacing(12);
-    width: spacing(12);
+    height: spacing(10);
+    width: spacing(10);
   }
 
   &--peach {
@@ -63,10 +62,15 @@
     @extend .text-denim;
   }
 
-  &--white-denim-outline {
+  &--madison-blue {
+    @extend .bg-madison-blue;
+    @extend .text-white;
+  }
+
+  &--white-madison-blue-outline {
     @extend .bg-white;
-    @extend .text-denim;
-    border: spacing(1) solid color('denim');
+    @extend .text-madison-blue;
+    border: spacing(1) solid color('madison-blue');
   }
   
   &--white-madison-blue {

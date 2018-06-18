@@ -73,14 +73,14 @@ class ProductHero extends Component {
             <div>
               <p className="copy pr2">{get(product, 'description', '')}</p>
             </div>
-            <form>
+            <form className="flex items-center">
               <QuantitySelector
-                className="my3"
+                className="my3 mr3"
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
               <Button
-                color="denim"
+                color="madison-blue"
                 onClick={this.addToCart}
                 disabled={!availability}
               >

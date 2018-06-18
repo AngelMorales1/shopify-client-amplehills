@@ -16,7 +16,7 @@ class QuantitySelector extends Component {
       <div className={classes}>
         <Button
           variant="circle"
-          color="white-denim-outline"
+          color="white-madison-blue-outline"
           label="–"
           onClick={() =>
             this.changeQuantity(get(this, 'props.quantity', 1) - 1)
@@ -25,13 +25,13 @@ class QuantitySelector extends Component {
         <TextField
           variant="quantity"
           value={get(this, 'props.quantity', 1)}
-          color="denim"
+          color="madison-blue"
           className="copy mx1"
           onChange={value => this.changeQuantity(value)}
         />
         <Button
           variant="circle"
-          color="white-denim-outline"
+          color="white-madison-blue-outline"
           label="+"
           onClick={() =>
             this.changeQuantity(get(this, 'props.quantity', 1) + 1)
