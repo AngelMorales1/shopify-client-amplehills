@@ -49,15 +49,15 @@ class ProductHero extends Component {
 
     return (
       <div
-        className={`${styles['ProductHero']} flex py4`}
+        className={`${styles['ProductHero']} flex flex-wrap`}
         style={{ zIndex: z }}
       >
         <div className="col col-12 md-col-6 right-align">
-          <Image className="col-7" src={heroImage} />
+          <Image className="w100" src={heroImage} />
         </div>
 
-        <div className="col col-12 md-col-6">
-          <div className="col-8 mx-auto">
+        <div className="col col-12 md-col-6 py4">
+          <div className="col-12 md-col-8 px2 mx-auto">
             <div className="relative inline-block">
               <h1 className="block-headline mb4 relative z-1">
                 {get(data, 'title')}
@@ -73,7 +73,7 @@ class ProductHero extends Component {
             <div>
               <p className="copy pr2">{get(product, 'description', '')}</p>
             </div>
-            <form className="flex items-center">
+            <form className="flex flex-wrap items-center">
               <QuantitySelector
                 className="my3 mr3"
                 quantity={this.state.quantity}
