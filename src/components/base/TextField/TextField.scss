@@ -1,0 +1,45 @@
+@import 'settings', 'src/styles/utils', 'src/styles/typography';
+
+.TextField {
+  label {
+    display: block;
+  }
+
+  input {
+    border: spacing(1) solid color('denim');
+    padding: spacing(4);
+    width: 100%;
+    appearance: none;
+    border-radius: 0;
+  }
+
+  &--error {
+    input {
+      border-color: color('peach');
+    }
+  }
+
+  &--denim {
+    input {
+      @extend .bg-denim;
+      @extend .text-white;
+    }
+  }
+
+  &--quantity {
+    label {
+      display: none;
+    }
+
+    input {
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: $font-4;
+      padding: spacing(2);
+      height: spacing(12);
+      width: spacing(12);
+      text-align: center;
+      transform: translateY(spacing(-0.5));
+    }
+  }
+}

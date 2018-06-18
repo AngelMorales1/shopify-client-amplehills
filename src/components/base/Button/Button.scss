@@ -6,11 +6,17 @@
   font-family: $font-avenir;
   font-size: $font-4;
   font-weight: 800;
+  transform: translate3d(0, spacing(-0.5), 0);
   transition: $transition;
 
   &:hover {
-    box-shadow: $drop-shadow-large;
-    transform: translate3d(0, spacing(-0.5), 0);
+    box-shadow: $drop-shadow;
+    transform: translate3d(0, spacing(-0.25), 0);
+  }
+
+  &:active {
+    box-shadow: 0;
+    transform: translate3d(0, spacing(0.25), 0);
   }
 
   &--primary {
@@ -22,6 +28,14 @@
   &--secondary {
     border-radius: 0.5rem;
     padding: spacing(3) spacing(6);
+  }
+
+  &--circle {
+    @extend .circle;
+    font-size: $font-5;
+    padding: spacing(2);
+    height: spacing(12);
+    width: spacing(12);
   }
 
   &--peach {
@@ -42,5 +56,11 @@
   &--white-denim {
     @extend .bg-white;
     @extend .text-denim;
+  }
+
+  &--white-denim-outline {
+    @extend .bg-white;
+    @extend .text-denim;
+    border: spacing(1) solid color('denim');
   }
 }

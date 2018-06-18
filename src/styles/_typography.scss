@@ -1,6 +1,7 @@
 @import 'settings';
 
 body {
+  color: color('denim');
   font-family: $font-avenir;
 }
 
@@ -45,6 +46,12 @@ strong {
 .callout-small {
   font-family: $font-carter;
   font-size: $font-4;
+}
+
+.copy {
+  font-size: $font-3;
+  font-weight: 600;
+  line-height: $font-7;
 }
 
 .description {
