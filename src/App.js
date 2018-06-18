@@ -13,6 +13,7 @@ import Loader from 'components/Loader';
 import Nav from 'components/Nav';
 import Cart from 'components/Cart';
 import Footer from 'components/Footer';
+import OurPledge from 'components/OurPledge';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -40,6 +41,7 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
+          <OurPledge />
           <Cart />
           <Routes location={get(this, 'props.location')} />
           <Footer
