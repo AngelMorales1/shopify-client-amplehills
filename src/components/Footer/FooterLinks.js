@@ -63,12 +63,6 @@ class FooterLinks extends Component {
             </a>
           </div>
         </div>
-        {/* {this.props.footerIllustration ? (
-          <Image
-            src={this.props.footerIllustration.fields.file.url}
-            className={cx('self-end col-5 col-right', styles['illustration'])}
-          />
-        ) : null} */}
       </div>
     );
   }
