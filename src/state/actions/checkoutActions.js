@@ -5,11 +5,13 @@ import { openCart } from 'state/actions/ui/cartUIActions';
 
 export const GET_CHECKOUT = 'GET_CHECKOUT';
 export const getCheckout = checkoutID => dispatch => {
-  if (!checkoutID) return dispatch(createCheckout());
-
   return dispatch({
     type: GET_CHECKOUT,
-    payload: dispatch(fetchCheckout(checkoutID))
+    payload: new Promise(resolve => {
+      if (!checkoutID) resolve(dispatch(createCheckout()));
+
+      resolve(dispatch(fetchCheckout(checkoutID)));
+    })
   });
 };
 
