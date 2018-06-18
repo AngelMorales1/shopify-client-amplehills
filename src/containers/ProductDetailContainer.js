@@ -1,6 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchProduct } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
 
@@ -27,12 +28,20 @@ class ProductDetailContainer extends ContainerBase {
   };
 }
 
+const mapStateToProps = state => {
+  return {
+    checkout: get(state, 'session.checkout.id'),
+    addLineItemsStatus: get(state, 'status.addLineItemsStatus')
+  };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
         fetchProduct,
-        fetchProductContent
+        fetchProductContent,
+        addLineItems
       },
       dispatch
     )
@@ -40,6 +49,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(ProductDetailContainer);

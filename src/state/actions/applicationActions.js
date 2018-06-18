@@ -2,7 +2,7 @@ import Data from 'lib/Data';
 import ContentfulClient from 'lib/Contentful';
 import BuySDK from 'lib/Buy';
 
-import { getCheckout } from 'state/actions/checkoutActions';
+import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = checkoutID => dispatch => {
@@ -13,7 +13,9 @@ export const initializeApplication = checkoutID => dispatch => {
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
 
-      return getCheckout(checkoutID)(dispatch).then(() => resolve(Contentful));
+      return fetchOrCreateCheckout(checkoutID)(dispatch).then(() =>
+        resolve(Contentful)
+      );
     })
   });
 };

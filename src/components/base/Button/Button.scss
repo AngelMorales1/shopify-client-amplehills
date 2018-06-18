@@ -19,6 +19,11 @@
     transform: translate3d(0, spacing(0.25), 0);
   }
 
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
   &--primary {
     border-radius: spacing(8);
     height: spacing(15);
