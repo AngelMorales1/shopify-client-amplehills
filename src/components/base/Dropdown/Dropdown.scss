@@ -1,0 +1,51 @@
+@import 'settings', 'src/styles/typography';
+
+.Dropdown {
+  * {
+    width: auto;
+  }
+
+  :global {
+    .Select-arrow-zone {
+      display: inline-block;
+      margin-left: spacing(4);
+      width: spacing(4);
+    }
+
+    .Select-placeholder,
+    .Select-value {
+      color: color('peach');
+      font-weight: 800;
+    }
+
+    .Select-control {
+      display: inline-flex;
+      height: $font-5;
+    }
+
+    .Select-menu-outer {
+      position: relative;
+
+      .Select-menu {
+        background: color('white');
+        border-radius: spacing(2);
+        box-shadow: $drop-shadow;
+        position: absolute;
+        top: 0;
+        left: spacing(-3);
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .Select-option {
+        padding: spacing(2) spacing(6);
+        transition: $transition;
+
+        &:hover {
+          background: color('peach');
+        }
+      }
+    }
+  }
+}
