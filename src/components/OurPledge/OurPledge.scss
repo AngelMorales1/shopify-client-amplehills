@@ -3,6 +3,10 @@
 .OurPledge-container {
   border-radius: spacing(3);
   height: spacing(20);
-  max-width: spacing(160);
+  max-width: spacing(140);
   min-width: spacing(90);
+
+  p {
+    text-align: center;
+  }
 }
