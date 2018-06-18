@@ -39,7 +39,6 @@ class Cart extends Component {
   };
 
   render() {
-    console.log(this.props);
     const {
       checkout,
       actions: { closeCart }
@@ -59,10 +58,6 @@ class Cart extends Component {
 
         <div className="mb4">
           {items.map(item => {
-            console.log(
-              this.props.lineItemsBeingUpdated.includes(get(item, 'id', '')),
-              this.props.lineItemsBeingUpdated
-            );
             const classes = cx(styles['Cart__line-item'], 'mb2', {
               [styles[
                 'Cart__line-item--updating'
