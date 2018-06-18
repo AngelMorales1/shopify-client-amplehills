@@ -3,14 +3,17 @@ import get from 'utils/get';
 
 import { openCart } from 'state/actions/ui/cartUIActions';
 
-export const GET_CHECKOUT = 'GET_CHECKOUT';
-export const getCheckout = checkoutID => dispatch => {
+export const FETCH_OR_CREATE_CHECKOUT = 'FETCH_OR_CREATE_CHECKOUT';
+export const fetchOrCreateCheckout = checkoutID => dispatch => {
   return dispatch({
-    type: GET_CHECKOUT,
+    type: FETCH_OR_CREATE_CHECKOUT,
     payload: new Promise(resolve => {
-      if (!checkoutID) resolve(dispatch(createCheckout()));
+      if (!checkoutID)
+        return dispatch(createCheckout()).then(checkout => resolve(checkout));
 
-      resolve(fetchCheckout(checkoutID));
+      return dispatch(fetchCheckout(checkoutID)).then(checkout =>
+        resolve(checkout)
+      );
     })
   });
 };
@@ -20,10 +23,9 @@ export const fetchCheckout = checkoutID => dispatch => {
   return dispatch({
     type: FETCH_CHECKOUT,
     payload: new Promise(resolve => {
-      return BuySDK.checkout.fetch(checkoutID).then(res => {
-        const checkout = res;
+      return BuySDK.checkout.fetch(checkoutID).then(checkout => {
         if (get(checkout, 'completedAt', false))
-          resolve(dispatch(createCheckout()));
+          return dispatch(createCheckout()).then(checkout => resolve(checkout));
 
         resolve(checkout);
       });
