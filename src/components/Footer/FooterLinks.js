@@ -6,7 +6,7 @@ import { Button, Image } from 'components/base';
 class FooterLinks extends Component {
   render() {
     return (
-      <div className="m4 col-4">
+      <div className="m4 col-3">
         <h2 className="title bold text-white">We would love to talk!</h2>
         <div className="my3 flex">
           <Button label="Contact Us" color="white-madison-blue" />
