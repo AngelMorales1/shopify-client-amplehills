@@ -9,25 +9,26 @@ class FooterLinks extends Component {
       <div
         className={cx('m4 flex flex-column', styles['FooterLinks__container'])}
       >
-        <h2 className="title-text text-white">We would love to talk!</h2>
+        <h2 className="title bold text-white">We would love to talk!</h2>
         <div className="my3 flex">
-          <Button label="Contact Us" color="madison-blue" />
+          <Button label="Contact Us" color="white-madison-blue" />
           <Image
             alt="Decorative arrow icon"
             src="/assets/images/arrow-left-down.svg"
             className={cx('arrow mx3', styles['Footer__arrow'])}
           />
         </div>
-        <div className={cx(styles['sns-links__container'])}>
+        <div className={cx(styles['FooterLinks__menu'])}>
           <div className="my3 flex items-center">
             <Image
               alt="Instagram icon"
-              src="/assets/images/sns-link-image-mock.svg"
-              style={{ width: '30px', height: '30px' }}
+              src="/assets/images/bubble-icon.svg"
+              className="icon"
             />
             <a
               href={this.props.footerLinks.instagramLink}
               target="_blank"
+              rel="noopener"
               className="bold text-white text-decoration-none ml3"
             >
               Instagram
@@ -36,12 +37,13 @@ class FooterLinks extends Component {
           <div className="my3 flex items-center">
             <Image
               alt="Instagram icon"
-              src="/assets/images/sns-link-image-mock.svg"
-              style={{ width: '30px', height: '30px' }}
+              src="/assets/images/bubble-icon.svg"
+              className="icon"
             />
             <a
               href={this.props.footerLinks.twitterLink}
               target="_blank"
+              rel="noopener"
               className="bold text-white text-decoration-none ml3"
             >
               Twitter
@@ -50,12 +52,13 @@ class FooterLinks extends Component {
           <div className="my3 flex items-center">
             <Image
               alt="Instagram icon"
-              src="/assets/images/sns-link-image-mock.svg"
-              style={{ width: '30px', height: '30px' }}
+              src="/assets/images/bubble-icon.svg"
+              className="icon"
             />
             <a
               href={this.props.footerLinks.facebookLink}
               target="_blank"
+              rel="noopener"
               className="bold text-white text-decoration-none ml3"
             >
               Facebook

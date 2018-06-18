@@ -8,7 +8,7 @@ class FooterLocations extends Component {
     let regions = Object.keys(this.props.locations);
     return (
       <div className={cx('m4')}>
-        <h2 className="title-text mb2 text-white">Locations</h2>
+        <h2 className="title bold mb2 text-white">Locations</h2>
         <div
           className={cx(
             'flex flex-column flex-wrap',

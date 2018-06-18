@@ -58,11 +58,9 @@ const Data = {
       );
 
     return this.contentful.getEntries(query).then(val => {
-      // console.log('>>>>>>>>', val)
       this.cache.getGlobalSettings[hashified] = val;
       return val;
     });
-    // return {global: 'data!!!!'};
   },
   fetchByHandle(handle) {
     const hashified = hashify(handle);

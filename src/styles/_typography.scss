@@ -26,6 +26,14 @@ strong {
   font-weight: bold;
 }
 
+.semi-bold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 800;
+}
+
 .link-text {
   font-size: $font-4;
   font-weight: 600;
@@ -64,32 +72,18 @@ strong {
   }
 }
 
-.semi-bold {
-  font-weight: 600;
+.small {
+  font-size: $font-3;
 }
 
-.bold {
-  font-weight: 800;
+.big {
+  font-size: $font-5;
 }
 
-.Footer__text {
-  font-family: $font-avenir;
-
-  .Footer--smaller-text {
-    font-size: $font-3;
-  }
-
-  .Footer--bigger-text {
-    font-size: $font-5;
-  }
-
-  .Footer__order-delivery-text {
-    font-size: 7px;
-  }
+.tag-text {
+  font-size: 7px;
 }
 
-.title-text {
-  font-family: $font-avenir;
+.title {
   font-size: $font-7;
-  font-weight: 800;
 }

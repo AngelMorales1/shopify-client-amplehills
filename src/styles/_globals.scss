@@ -86,3 +86,14 @@ UI elements
 .arrow {
   width: spacing(10);
 }
+
+.tag {
+  border-radius: spacing(10);
+  padding: spacing(1) spacing(3);
+
+  @extend .tag-text;
+}
+
+.icon {
+  width: spacing(9);
+}
