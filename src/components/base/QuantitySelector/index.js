@@ -7,7 +7,7 @@ import { Button, TextField } from 'components/base';
 class QuantitySelector extends Component {
   changeQuantity(value) {
     const quantity = Math.max(1, value);
-    this.setState({ quantity }, this.props.onChange(quantity));
+    this.props.onChange(quantity);
   }
 
   render() {
