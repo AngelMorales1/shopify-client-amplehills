@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import cx from 'classnames';
 import get from 'utils/get';
-import { Image, Radio, Button, QuantitySelector } from 'components/base';
+import { Image, Button, QuantitySelector } from 'components/base';
 
 import styles from './ProductHero.scss';
 

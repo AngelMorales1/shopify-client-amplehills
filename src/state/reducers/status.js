@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         lineItemsBeingUpdated: state.lineItemsBeingUpdated.filter(
-          item => item != action.meta.id
+          item => item !== action.meta.id
         )
       };
 

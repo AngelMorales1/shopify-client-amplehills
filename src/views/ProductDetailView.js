@@ -5,7 +5,7 @@ import BlockSwitch from 'components/BlockSwitch';
 
 class ProductDetailView extends Component {
   render() {
-    const { model, addLineItems } = this.props;
+    const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     const { product, content } = model;

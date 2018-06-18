@@ -11,8 +11,7 @@ class QuantitySelector extends Component {
   }
 
   render() {
-    const { className, quantity, onChange } = this.props;
-    const classes = `flex ${className}`;
+    const classes = `flex ${this.props.className}`;
     return (
       <div className={classes}>
         <Button
