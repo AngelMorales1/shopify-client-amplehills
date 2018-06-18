@@ -18,7 +18,7 @@ class Footer extends Component {
   render() {
     return (
       <div className={cx('p4 bg-madison-blue Footer__text', styles['Footer'])}>
-        <div className="flex">
+        <div className="flex flex justify-between">
           <FooterLocations
             locations={this.sortDataByRegion(this.props.locations.items)}
           />
@@ -27,7 +27,7 @@ class Footer extends Component {
             footerLinks={this.props.footerLinks}
           />
         </div>
-        <span className="Footer__licence-text text-white">
+        <span className="ml4 bold Footer--smaller-text text-white">
           &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
       </div>

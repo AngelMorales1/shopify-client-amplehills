@@ -10,18 +10,28 @@
 }
 
 .order-delivery {
-  font-size: 7px;
   border-radius: spacing(10);
   padding: spacing(1) spacing(3);
-  font-weight: 700;
 }
 
-.arrow {
-  width: spacing(10);
-  height: spacing(10);
+.FooterLinks__container {
+  min-width: spacing(80);
+  width: spacing(180);
+}
+
+.Footer__arrow {
+  position: relative;
+  top: spacing(-6);
+}
+
+.sns-links__container {
+  margin-top: spacing(15);
 }
 
 .illustration {
-  width: spacing(50);
-  margin-left: spacing(50);
+  min-width: spacing(40);
+  max-width: spacing(60);
+  width: 36%;
+  position: relative;
+  top: spacing(26);
 }
