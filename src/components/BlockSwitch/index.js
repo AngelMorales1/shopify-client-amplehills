@@ -11,6 +11,7 @@ const BlockSwitch = props => {
   const fields = get(block, 'fields');
 
   const {
+    addLineItemsStatus,
     checkout,
     actions: { addLineItems }
   } = props;
@@ -23,6 +24,7 @@ const BlockSwitch = props => {
           product={product}
           z={z}
           addLineItems={addLineItems}
+          addLineItemsStatus={addLineItemsStatus}
           checkout={checkout}
         />
       );

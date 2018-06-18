@@ -30,7 +30,8 @@ class ProductDetailContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    checkout: get(state, 'session.checkout.id')
+    checkout: get(state, 'session.checkout.id'),
+    addLineItemsStatus: get(state, 'status.addLineItemsStatus')
   };
 };
 

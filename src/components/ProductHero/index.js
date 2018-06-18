@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import cx from 'classnames';
 import get from 'utils/get';
+import { PENDING, FULFILLED } from 'constants/Status';
 import { Image, Button, QuantitySelector } from 'components/base';
 
 import styles from './ProductHero.scss';
@@ -16,6 +17,14 @@ class ProductHero extends Component {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.addLineItemsStatus === PENDING &&
+      this.props.addLineItemsStatus === FULFILLED
+    )
+      this.didAddToCart();
+  }
+
   addToCart = () => {
     const variant = get(this.props, 'product.variants[0].id', {});
     const items = [
@@ -25,9 +34,11 @@ class ProductHero extends Component {
       }
     ];
 
-    this.props.addLineItems(this.props.checkout, items).then(() => {
-      this.setState({ quantity: 1 });
-    });
+    this.props.addLineItems(this.props.checkout, items);
+  };
+
+  didAddToCart = () => {
+    this.setState({ quantity: 1 });
   };
 
   render() {
