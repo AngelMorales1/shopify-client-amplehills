@@ -19,14 +19,14 @@ class OurPledge extends Component {
             styles['OurPledge__text-container']
           )}
         >
-          <p className="col4 mx2 text-madison-blue bold nowrap">Our Pledge</p>
-          <p className="col4 mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
+          <p className="mx2 text-madison-blue bold nowrap">Our Pledge</p>
+          <p className="mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
             Ice cream arrives fresh delicious, and frozen
           </p>
           <p
             className={cx(
-              'col4 mx2 uppercase text-madison-blue info-text-big bold nowrap',
-              styles['OurPledge__moreinfo']
+              'mx2 uppercase text-madison-blue info-text-big bold nowrap',
+              styles['OurPledge__more-info']
             )}
           >
             More Info
