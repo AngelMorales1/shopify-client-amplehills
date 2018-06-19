@@ -8,15 +8,17 @@ class OurPledge extends Component {
     return (
       <div
         className={cx(
-          'm4 flex justify-around items-center bg-goldenrod',
+          'm4 flex clearfix items-center bg-varden',
           styles['OurPledge-container']
         )}
       >
-        <p className="callout mx-auto px1 flex text-madison-blue">Our Pledge</p>
-        <p className="uppercase mx-auto px1 flex text-madison-blue">
+        <p className="mx-auto col4 px1 flex text-madison-blue bold">
+          Our Pledge
+        </p>
+        <p className="uppercase mx-auto col4 px1 flex text-madison-blue">
           Ice cream arrives fresh delicious, and frozen
         </p>
-        <p className="uppercase mx-auto px1 text-madison-blue bold">
+        <p className="uppercase mx-auto col4 px1 text-madison-blue bold">
           More Info
         </p>
       </div>

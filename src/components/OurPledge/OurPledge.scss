@@ -1,10 +1,11 @@
 @import 'settings';
 
 .OurPledge-container {
-  border-radius: spacing(3);
+  border-radius: 4%/25%;
   height: spacing(20);
   max-width: spacing(140);
   min-width: spacing(90);
+  opacity: opacities('low');
 
   p {
     text-align: center;
