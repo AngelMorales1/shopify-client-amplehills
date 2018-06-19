@@ -11,7 +11,7 @@ class FooterLinks extends Component {
         <div className="my3 flex">
           <Button label="Contact Us" color="white-madison-blue" />
           <Image
-            alt="Decorative arrow icon"
+            alt="Decorative left down arrow icon"
             src="/assets/images/arrow-left-down.svg"
             className={cx('arrow mx3', styles['Footer__arrow'])}
           />
