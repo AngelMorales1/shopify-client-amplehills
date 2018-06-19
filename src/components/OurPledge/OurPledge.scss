@@ -3,11 +3,16 @@
 .OurPledge-container {
   border-radius: 4%/25%;
   height: spacing(20);
-  max-width: spacing(140);
-  min-width: spacing(90);
-  opacity: opacities('low');
+  max-width: spacing(115);
+  min-width: spacing(100);
 
-  p {
-    text-align: center;
+  .OurPledge__moreinfo {
+    border-bottom: solid color('peach') 0.1px;
+    padding-bottom: spacing(1);
   }
+}
+
+.OurPledge-icon {
+  margin-bottom: spacing(-3);
+  z-index: z('1');
 }
