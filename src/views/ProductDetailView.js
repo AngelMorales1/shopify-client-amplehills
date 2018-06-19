@@ -10,6 +10,7 @@ class ProductDetailView extends Component {
 
     const { product, content } = model;
     const contentBlocks = get(content, 'items[0].fields.contentBlocks', []);
+    
     return (
       <div className="ProductDetailView">
         <div>

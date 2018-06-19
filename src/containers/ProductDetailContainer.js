@@ -1,10 +1,11 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchProduct } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
-
+import fetchShippingDates from 'state/selectors/fetchShippingDates';
 import get from 'utils/get';
 
 class ProductDetailContainer extends ContainerBase {
@@ -36,7 +37,8 @@ const mapStateToProps = state => {
       state,
       'applicationUI.globalSettings.items[0].fields',
       {}
-    )
+    ),
+    shippingDates: fetchShippingDates(state)
   };
 };
 

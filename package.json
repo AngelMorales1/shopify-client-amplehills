@@ -45,6 +45,7 @@
     "postcss-scss": "^1.0.5",
     "prettier": "^1.13.4",
     "react-app-rewired": "^1.5.2",
+    "reselect": "^3.0.1",
     "sass-loader": "^7.0.2"
   },
   "prettier": {
