@@ -9,8 +9,8 @@ class OurPledge extends Component {
     return (
       <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
         <Image
-          alt="bubble icon"
-          src="/assets/images/bubble-icon.svg"
+          alt="Our pledge icon"
+          src={this.props.ourPledgeIcon.fields.file.url}
           className={cx('icon', styles['OurPledge__icon'])}
         />
         <div

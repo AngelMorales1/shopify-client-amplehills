@@ -41,7 +41,7 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
-          <OurPledge />
+          <OurPledge ourPledgeIcon={this.props.globalSettings.ourPledgeIcon} />
           <Cart />
           <Routes location={get(this, 'props.location')} />
           <Footer
@@ -93,7 +93,8 @@ App.propTypes = {
   globalSettings: PropTypes.shape({
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
-    twitterLink: PropTypes.string
+    twitterLink: PropTypes.string,
+    ourPledgeIcon: PropTypes.object
   }),
   locations: PropTypes.object
 };
