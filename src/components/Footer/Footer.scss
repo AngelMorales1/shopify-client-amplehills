@@ -3,18 +3,19 @@
 .Footer {
   min-height: spacing(75);
   position: relative;
-}
 
-.FooterRegions__container {
-  max-height: spacing(180);
-}
+  &__Regions-container {
+    max-height: spacing(180);
+  }
 
-.Footer__arrow {
-  margin-top: spacing(-10);
-}
+  &__arrow {
+    margin-top: spacing(-10);
+  }
 
-.illustration {
-  position: absolute;
-  bottom: spacing(16);
-  right: spacing(32);
+  &__illustration {
+    position: absolute;
+    bottom: spacing(16);
+    right: spacing(32);
+    width: 14%;
+  }
 }

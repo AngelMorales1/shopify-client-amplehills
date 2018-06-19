@@ -34,7 +34,7 @@ class Footer extends Component {
         {this.props.footerIllustration ? (
           <Image
             src={this.props.footerIllustration.fields.file.url}
-            className={cx('w14', styles['illustration'])}
+            className={cx(styles['Footer__illustration'])}
           />
         ) : null}
       </div>

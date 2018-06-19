@@ -12,7 +12,7 @@ class FooterLocations extends Component {
         <div
           className={cx(
             'flex flex-column flex-wrap',
-            styles['FooterRegions__container']
+            styles['Footer__Regions-container']
           )}
         >
           {regions.map(region => (
