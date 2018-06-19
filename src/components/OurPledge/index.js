@@ -7,20 +7,20 @@ import { Image } from 'components/base';
 class OurPledge extends Component {
   render() {
     return (
-      <div className="flex flex-column items-center">
+      <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
         <Image
           alt="bubble icon"
           src="/assets/images/bubble-icon.svg"
-          className={cx('icon', styles['OurPledge-icon'])}
+          className={cx('icon', styles['OurPledge__icon'])}
         />
         <div
           className={cx(
             'bg-varden p2 flex items-center',
-            styles['OurPledge-container']
+            styles['OurPledge__text-container']
           )}
         >
           <p className="col4 mx2 text-madison-blue bold nowrap">Our Pledge</p>
-          <p className="col4 mx2 flex uppercase text-madison-blue info-text-small semi-bold">
+          <p className="col4 mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
             Ice cream arrives fresh delicious, and frozen
           </p>
           <p

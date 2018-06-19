@@ -1,18 +1,20 @@
 @import 'settings';
 
-.OurPledge-container {
-  border-radius: 4%/25%;
-  height: spacing(20);
-  max-width: spacing(115);
-  min-width: spacing(100);
+.OurPledge {
+  &__text-container {
+    border-radius: 4% / 25%;
+    height: spacing(20);
+    max-width: spacing(115);
+    min-width: spacing(100);
+  }
 
-  .OurPledge__moreinfo {
+  &__moreinfo {
     border-bottom: solid color('peach') 0.1px;
     padding-bottom: spacing(1);
   }
-}
 
-.OurPledge-icon {
-  margin-bottom: spacing(-3);
-  z-index: z('1');
+  &__icon {
+    margin-bottom: spacing(-3);
+    z-index: z('1');
+  }
 }
