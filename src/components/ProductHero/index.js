@@ -42,6 +42,7 @@ class ProductHero extends Component {
   };
 
   onShippingChange = shipping => {
+    // TODO: Figure out best way to add this to Checkout
     this.setState({ shipping });
   };
 
