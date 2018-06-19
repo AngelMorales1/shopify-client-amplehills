@@ -87,6 +87,7 @@ class ProductHero extends Component {
                   value={this.state.shipping}
                   label="Shipping Date"
                   onChange={this.onShippingChange}
+                  // TODO: Pull from globalSettings when it's merged in
                   options={[
                     { value: 'June 18', label: 'June 18' },
                     { value: 'June 28', label: 'June 28' }

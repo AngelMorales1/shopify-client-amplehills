@@ -32,11 +32,12 @@
       .Select-menu {
         background: color('white');
         border-radius: spacing(2);
-        box-shadow: $drop-shadow;
+        box-shadow: $drop-shadow-large;
         position: absolute;
         top: 0;
-        left: spacing(-3);
+        left: spacing(-2);
         overflow: hidden;
+        opacity: 0;
         white-space: nowrap;
         width: auto;
         transform: translate3d(0, spacing(-2), 0);
@@ -44,8 +45,13 @@
       }
 
       .Select-option {
+        border-bottom: spacing(0.25) solid color('goldenrod');
         padding: spacing(3) spacing(6);
         transition: $transition;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
 
         &:hover {
           background: color('peach');
