@@ -12,13 +12,11 @@ class OurPledge extends Component {
           styles['OurPledge-container']
         )}
       >
-        <p className="mx-auto col4 px1 flex text-madison-blue bold">
-          Our Pledge
-        </p>
-        <p className="uppercase mx-auto col4 px1 flex text-madison-blue">
+        <p className="mx-auto col4 px1 text-madison-blue bold">Our Pledge</p>
+        <p className="uppercase mx-auto col4 px1 flex text-madison-blue info-text-small semi-bold">
           Ice cream arrives fresh delicious, and frozen
         </p>
-        <p className="uppercase mx-auto col4 px1 text-madison-blue bold">
+        <p className="uppercase mx-auto col4 px1 text-madison-blue info-text-big bold info-text-focus">
           More Info
         </p>
       </div>
