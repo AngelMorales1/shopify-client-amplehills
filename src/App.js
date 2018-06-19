@@ -92,8 +92,7 @@ App.propTypes = {
   globalSettings: PropTypes.shape({
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
-    twitterLink: PropTypes.string,
-    ourPledgeIcon: PropTypes.object
+    twitterLink: PropTypes.string
   }),
   locations: PropTypes.object
 };
