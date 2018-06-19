@@ -4,9 +4,7 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
-import { fetchProducts } from 'state/actions/productsActions';
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
@@ -24,7 +22,7 @@ class App extends Component {
     const {
       applicationStatus,
       checkout,
-      actions: { initializeApplication, fetchProducts }
+      actions: { initializeApplication }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
@@ -77,8 +75,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        initializeApplication,
-        fetchProducts
+        initializeApplication
       },
       dispatch
     )
@@ -96,9 +93,11 @@ App.propTypes = {
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string
-  })
+  }),
+  locations: PropTypes.object
 };
 
 App.defaultProps = {
-  globalSettings: {}
+  globalSettings: {},
+  locations: {}
 };
