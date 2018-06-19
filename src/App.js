@@ -30,7 +30,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('>>', this.props);
     const { applicationStatus } = this.props;
     const {
       facebookLink,
