@@ -89,7 +89,7 @@ class ProductHero extends Component {
                   value={this.state.shipping}
                   label="Shipping Date"
                   onChange={this.onShippingChange}
-                  options={get(this, 'props.shippingDates').map(date => {
+                  options={this.props.shippingDates.map(date => {
                     return { value: date, label: date };
                   })}
                 />
