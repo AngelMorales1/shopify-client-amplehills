@@ -119,7 +119,10 @@ class ProductHero extends Component {
 }
 
 ProductHero.propTypes = {
-  data: PropTypes.shape({})
+  data: PropTypes.shape({}),
+  z: PropTypes.number,
+  product: PropTypes.shape({}),
+  shippingDates: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProductHero.defaultProps = {
