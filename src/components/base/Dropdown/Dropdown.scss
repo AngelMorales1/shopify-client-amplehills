@@ -1,6 +1,9 @@
 @import 'settings', 'src/styles/typography';
 
 .Dropdown {
+  animation-name: bg;
+  animation-duration: 1s;
+
   * {
     width: auto;
   }
@@ -36,15 +39,26 @@
         overflow: hidden;
         white-space: nowrap;
         width: auto;
+        transform: translate3d(0, spacing(-2), 0);
+        transition: $transition;
       }
 
       .Select-option {
-        padding: spacing(2) spacing(6);
+        padding: spacing(3) spacing(6);
         transition: $transition;
 
         &:hover {
           background: color('peach');
         }
+      }
+    }
+  }
+
+  &--open {
+    :global {
+      .Select-menu-outer .Select-menu {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
       }
     }
   }

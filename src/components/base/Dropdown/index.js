@@ -14,6 +14,14 @@ const Arrow = ({ onMouseDown, isOpen }) => {
 };
 
 class Dropdown extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      menuIsOpen: false
+    };
+  }
+
   renderOption = ({ option: { value } }) => {
     return <div className="my1">{value}</div>;
   };
@@ -26,6 +34,14 @@ class Dropdown extends Component {
     this.props.onChange(value);
   };
 
+  onOpen = () => {
+    this.setState({ menuIsOpen: true });
+  };
+
+  onClose = () => {
+    this.setState({ menuIsOpen: false });
+  };
+
   render() {
     const { name, value, options, label, placeholder } = this.props;
     return (
@@ -34,12 +50,16 @@ class Dropdown extends Component {
           {label}
         </label>
         <Select
-          className={cx(styles['Dropdown'], 'relative inline-block')}
+          className={cx(styles['Dropdown'], 'relative inline-block', {
+            [styles['Dropdown--open']]: this.state.menuIsOpen
+          })}
           name={name}
           value={value}
           options={options}
           clearable={false}
           searchable={false}
+          onOpen={this.onOpen}
+          onClose={this.onClose}
           placeholder={placeholder}
           onChange={this.onChange}
           arrowRenderer={Arrow}
@@ -56,7 +76,10 @@ Dropdown.propTypes = {
       label: PropTypes.string
     })
   ),
-  value: PropTypes.string,
+  value: PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string
+  }),
   name: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
