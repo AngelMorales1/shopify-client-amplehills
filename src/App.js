@@ -13,6 +13,7 @@ import Loader from 'components/Loader';
 import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
+import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
