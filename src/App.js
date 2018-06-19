@@ -41,7 +41,6 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
-          <OurPledge ourPledgeIcon={this.props.globalSettings.ourPledgeIcon} />
           <Cart />
           <Routes location={get(this, 'props.location')} />
           <Footer

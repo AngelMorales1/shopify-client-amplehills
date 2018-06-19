@@ -5,6 +5,7 @@ import { PENDING, FULFILLED } from 'constants/Status';
 import cx from 'classnames';
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Dropdown } from 'components/base';
+import OurPledge from 'components/OurPledge';
 
 import styles from './ProductHero.scss';
 
@@ -64,7 +65,7 @@ class ProductHero extends Component {
             backgroundSize: 'cover'
           }}
         />
-        <div className="col col-12 md-col-6 py4">
+        <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px2 mx-auto">
             <div className="relative inline-block">
               <h1 className="block-headline mb4 relative z-1">
@@ -112,6 +113,7 @@ class ProductHero extends Component {
               </Button>
             </form>
           </div>
+          <OurPledge ourPledgeIcon={this.props.globalSettings.ourPledgeIcon} />
         </div>
       </div>
     );

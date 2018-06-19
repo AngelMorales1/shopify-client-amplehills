@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchProduct } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
+import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 
 import get from 'utils/get';
 
@@ -12,17 +13,19 @@ class ProductDetailContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchProduct, fetchProductContent }
+      actions: { fetchProduct, fetchProductContent, getGlobalSettings }
     } = this.props;
 
     const handle = this.props.match.params.productHandle;
     return Promise.all([
       fetchProduct(handle),
-      fetchProductContent(handle)
-    ]).then(([productResult, contentResult]) => {
+      fetchProductContent(handle),
+      getGlobalSettings()
+    ]).then(([productResult, contentResult, globalSettings]) => {
       return {
         product: get(productResult, 'value'),
-        content: get(contentResult, 'value')
+        content: get(contentResult, 'value'),
+        globalSettings: get(globalSettings, 'value')
       };
     });
   };
@@ -31,7 +34,12 @@ class ProductDetailContainer extends ContainerBase {
 const mapStateToProps = state => {
   return {
     checkout: get(state, 'session.checkout.id'),
-    addLineItemsStatus: get(state, 'status.addLineItemsStatus')
+    addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
+    globalSettings: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields',
+      {}
+    )
   };
 };
 
@@ -41,7 +49,8 @@ const mapDispatchToProps = dispatch => {
       {
         fetchProduct,
         fetchProductContent,
-        addLineItems
+        addLineItems,
+        getGlobalSettings
       },
       dispatch
     )
