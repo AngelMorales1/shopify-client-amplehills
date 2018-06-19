@@ -1,7 +1,11 @@
-import { GET_LOCATION_DATA } from 'state/actions/ui/applicationUIActions';
+import {
+  GET_LOCATION_DATA,
+  GET_GLOBAL_SETTINGS
+} from 'state/actions/ui/applicationUIActions';
 
 const initialState = {
-  locations: {}
+  locations: {},
+  globalSettings: {}
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +15,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         locations: action.payload
+      };
+    case `${GET_GLOBAL_SETTINGS}_FULFILLED`:
+      return {
+        ...state,
+        globalSettings: action.payload
       };
     default:
       return state;

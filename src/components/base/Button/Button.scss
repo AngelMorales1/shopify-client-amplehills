@@ -68,4 +68,9 @@
     @extend .text-denim;
     border: spacing(1) solid color('denim');
   }
+  
+  &--white-madison-blue {
+    @extend .bg-white;
+    @extend .text-madison-blue;
+  }
 }

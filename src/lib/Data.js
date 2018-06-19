@@ -5,7 +5,8 @@ const Data = {
     getEntries: {},
     getProducts: {},
     fetchByHandle: {},
-    getLocations: {}
+    getLocations: {},
+    getGlobalSettings: {}
   },
   setRef(clientID, client) {
     this[clientID] = client;
@@ -41,6 +42,23 @@ const Data = {
 
     return this.contentful.getEntries(query).then(val => {
       this.cache.getLocations[hashified] = val;
+      return val;
+    });
+  },
+  getGlobalSettings() {
+    const query = {
+      content_type: 'globalSettings'
+    };
+
+    const hashified = hashify(query);
+
+    if (!!this.cache.getGlobalSettings[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.getGlobalSettings[hashified])
+      );
+
+    return this.contentful.getEntries(query).then(val => {
+      this.cache.getGlobalSettings[hashified] = val;
       return val;
     });
   },

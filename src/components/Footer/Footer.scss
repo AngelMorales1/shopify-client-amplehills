@@ -2,16 +2,20 @@
 
 .Footer {
   min-height: spacing(75);
-}
+  position: relative;
 
-.FooterRegions__container {
-  width: spacing(180);
-  height: spacing(160);
-}
+  &__Regions-container {
+    max-height: spacing(180);
+  }
 
-.order-delivery {
-  font-size: 7px;
-  border-radius: spacing(10);
-  padding: spacing(1) spacing(3);
-  font-weight: 700;
+  &__arrow {
+    margin-top: spacing(-10);
+  }
+
+  &__illustration {
+    position: absolute;
+    bottom: spacing(16);
+    right: spacing(32);
+    width: 14%;
+  }
 }

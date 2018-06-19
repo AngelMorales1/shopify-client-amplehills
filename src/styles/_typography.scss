@@ -22,19 +22,20 @@ em {
   font-style: italic;
 }
 
-strong {
-  font-weight: bold;
+.semi-bold {
+  font-weight: 600;
 }
 
-.link-text {
-  font-size: $font-4;
-  font-weight: 600;
-  color: color('peach');
-  text-decoration: none;
+.bold {
+  font-weight: 800;
 }
 
 .block-headline {
   font-family: $font-carter;
+  font-size: $font-7;
+}
+
+.title {
   font-size: $font-7;
 }
 
@@ -54,6 +55,13 @@ strong {
   line-height: $font-7;
 }
 
+.link-text {
+  font-size: $font-4;
+  font-weight: 600;
+  color: color('peach');
+  text-decoration: none;
+}
+
 .description {
   font-size: $font-2;
   line-height: $font-6;
@@ -64,32 +72,14 @@ strong {
   }
 }
 
-.Footer__text {
-  font-family: $font-avenir;
-
-  .Footer__sub-title-text {
-    font-size: $font-5;
-    font-weight: 800;
-  }
-
-  .Footer__content-title-text {
-    font-size: $font-3;
-    font-weight: 800;
-  }
-
-  .Footer__content-text {
-    font-size: $font-3;
-    font-weight: 100;
-  }
-
-  .Footer__licence-text {
-    font-size: $font-3;
-    font-weight: 800;
-  }
+.small {
+  font-size: $font-3;
 }
 
-.title-text {
-  font-family: $font-avenir;
-  font-size: $font-7;
-  font-weight: 800;
+.big {
+  font-size: $font-5;
+}
+
+.tag-text {
+  font-size: 0.4rem;
 }

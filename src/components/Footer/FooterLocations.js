@@ -7,12 +7,12 @@ class FooterLocations extends Component {
   render() {
     let regions = Object.keys(this.props.locations);
     return (
-      <div className="p3">
-        <h2 className="title-text mb2 ml3 text-white">Locations</h2>
+      <div className="m4 col-7">
+        <h2 className="title bold mb2 text-white">Locations</h2>
         <div
           className={cx(
             'flex flex-column flex-wrap',
-            styles['FooterRegions__container']
+            styles['Footer__Regions-container']
           )}
         >
           {regions.map(region => (

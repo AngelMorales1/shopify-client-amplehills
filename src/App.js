@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 import { initializeApplication } from 'state/actions/applicationActions';
-import { getLocationData } from 'state/actions/ui/applicationUIActions';
 
 import { IDLE, FULFILLED } from 'constants/Status';
 import get from 'utils/get';
@@ -22,23 +22,31 @@ class App extends Component {
     const {
       applicationStatus,
       checkout,
-      actions: { initializeApplication, getLocationData }
+      actions: { initializeApplication }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
-      getLocationData();
     }
   }
 
   render() {
     const { applicationStatus } = this.props;
+    const {
+      facebookLink,
+      instagramLink,
+      twitterLink
+    } = this.props.globalSettings;
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
           <Nav />
           <Cart />
           <Routes location={get(this, 'props.location')} />
-          <Footer locations={this.props.locations} />
+          <Footer
+            locations={this.props.locations}
+            footerIllustration={this.props.globalSettings.footerIllustration}
+            footerLinks={{ facebookLink, instagramLink, twitterLink }}
+          />
         </div>
       );
     }
@@ -52,7 +60,13 @@ const mapStateToProps = state => {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
     locations: get(state, 'applicationUI.locations'),
-    checkout: get(state, 'session.checkout')
+    checkout: get(state, 'session.checkout'),
+    locations: get(state, 'applicationUI.locations', {}),
+    globalSettings: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields',
+      {}
+    )
   };
 };
 
@@ -60,8 +74,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        initializeApplication,
-        getLocationData
+        initializeApplication
       },
       dispatch
     )
@@ -73,3 +86,17 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+App.propTypes = {
+  globalSettings: PropTypes.shape({
+    facebookLink: PropTypes.string,
+    instagramLink: PropTypes.string,
+    twitterLink: PropTypes.string
+  }),
+  locations: PropTypes.object
+};
+
+App.defaultProps = {
+  globalSettings: {},
+  locations: {}
+};

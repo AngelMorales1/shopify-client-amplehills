@@ -84,5 +84,15 @@ Drop shadows
 UI elements
 */
 .arrow {
-  width: spacing(8);
+  width: spacing(10);
+}
+
+.tag {
+  @extend .tag-text;
+  border-radius: 10% / 50%;
+  padding: spacing(1) spacing(3);
+}
+
+.icon {
+  width: spacing(9);
 }
