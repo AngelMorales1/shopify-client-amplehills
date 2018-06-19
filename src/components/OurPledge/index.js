@@ -11,7 +11,7 @@ class OurPledge extends Component {
         <Image
           alt="Our pledge icon"
           src={this.props.ourPledgeIcon.fields.file.url}
-          className={cx('icon', styles['OurPledge__icon'])}
+          className={cx('icon z-1', styles['OurPledge__icon'])}
         />
         <div
           className={cx(
