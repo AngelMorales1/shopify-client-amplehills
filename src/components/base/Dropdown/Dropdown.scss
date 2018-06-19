@@ -1,0 +1,71 @@
+@import 'settings', 'src/styles/typography';
+
+.Dropdown {
+  animation-name: bg;
+  animation-duration: 1s;
+
+  * {
+    width: auto;
+  }
+
+  :global {
+    .Select-arrow-zone {
+      display: inline-block;
+      margin-left: spacing(4);
+      width: spacing(4);
+    }
+
+    .Select-placeholder,
+    .Select-value {
+      color: color('peach');
+      font-weight: 800;
+    }
+
+    .Select-control {
+      display: inline-flex;
+      height: $font-5;
+    }
+
+    .Select-menu-outer {
+      position: relative;
+
+      .Select-menu {
+        background: color('white');
+        border-radius: spacing(2);
+        box-shadow: $drop-shadow-large;
+        position: absolute;
+        top: 0;
+        left: spacing(-2);
+        overflow: hidden;
+        opacity: 0;
+        white-space: nowrap;
+        width: auto;
+        transform: translate3d(0, spacing(-2), 0);
+        transition: $transition;
+      }
+
+      .Select-option {
+        border-bottom: spacing(0.25) solid color('goldenrod');
+        padding: spacing(3) spacing(6);
+        transition: $transition;
+
+        &:last-of-type {
+          border-bottom: 0;
+        }
+
+        &:hover {
+          background: color('peach');
+        }
+      }
+    }
+  }
+
+  &--open {
+    :global {
+      .Select-menu-outer .Select-menu {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+}

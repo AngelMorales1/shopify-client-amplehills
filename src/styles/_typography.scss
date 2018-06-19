@@ -1,7 +1,7 @@
 @import 'settings';
 
 body {
-  color: color('denim');
+  color: color('madison-blue');
   font-family: $font-avenir;
 }
 
@@ -28,6 +28,13 @@ em {
 
 .bold {
   font-weight: 800;
+}
+
+.link-text {
+  font-size: $font-4;
+  font-weight: 600;
+  color: color('peach');
+  text-decoration: none;
 }
 
 .block-headline {
