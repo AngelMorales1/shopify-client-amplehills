@@ -24,10 +24,7 @@ class App extends Component {
     const {
       applicationStatus,
       checkout,
-      actions: {
-        initializeApplication,
-        fetchProducts
-      }
+      actions: { initializeApplication, fetchProducts }
     } = this.props;
     if (applicationStatus === IDLE) {
       initializeApplication(get(checkout, 'id', false));
@@ -35,6 +32,7 @@ class App extends Component {
   }
 
   render() {
+    console.log('>>', this.props);
     const { applicationStatus } = this.props;
     const {
       facebookLink,
@@ -94,13 +92,13 @@ export default connect(
 )(App);
 
 App.propTypes = {
-  facebookLink: PropTypes.string,
-  instagramLink: PropTypes.string,
-  twitterLink: PropTypes.string
+  globalSettings: PropTypes.shape({
+    facebookLink: PropTypes.string,
+    instagramLink: PropTypes.string,
+    twitterLink: PropTypes.string
+  })
 };
 
 App.defaultProps = {
-  facebookLink: 'https://www.facebook.com/',
-  instagramLink: 'https://www.instagram.com/',
-  twitterLink: 'https://twitter.com/'
+  globalSettings: {}
 };
