@@ -61,12 +61,7 @@ const mapStateToProps = state => {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
     checkout: get(state, 'session.checkout'),
-    locations: get(state, 'applicationUI.locations', {}),
-    globalSettings: get(
-      state,
-      'applicationUI.globalSettings.items[0].fields',
-      {}
-    )
+    locations: get(state, 'applicationUI.locations', {})
   };
 };
 
