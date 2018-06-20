@@ -6,6 +6,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Dropdown } from 'components/base';
 import OurPledge from 'components/OurPledge';
+// import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 import styles from './ProductHero.scss';
 
@@ -112,6 +113,7 @@ class ProductHero extends Component {
             </form>
           </div>
           <OurPledge ourPledgeIcon={this.props.globalSettings.ourPledgeIcon} />
+          {/* <OurPledgeOverlay /> */}
         </div>
       </div>
     );

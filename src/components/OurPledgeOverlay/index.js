@@ -34,11 +34,12 @@ class OurPledgeOverlay extends Component {
               styles['OurPledgeOverlay__container__content']
             )}
           >
-            <Image
-              alt="Close button"
-              src="/assets/images/close-button.svg"
+            <div
+              onClick={this.props.handleMoreInfoClick}
               className={cx('close-button self-end')}
-            />
+            >
+              <Image alt="Close button" src="/assets/images/close-button.svg" />
+            </div>
             <div className={cx('border m4 col-8')}>
               <div>We Ship Nationwide</div>
               <div>

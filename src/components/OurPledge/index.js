@@ -3,8 +3,21 @@ import cx from 'classnames';
 
 import styles from './OurPledge.scss';
 import { Image } from 'components/base';
+import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      moreInfoClick: false
+    };
+  }
+
+  handleMoreInfoClick = () => {
+    this.setState({ moreInfoClick: !this.state.moreInfoClick });
+  };
+
   render() {
     return (
       <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
@@ -24,6 +37,7 @@ class OurPledge extends Component {
             Ice cream arrives fresh delicious, and frozen
           </p>
           <p
+            onClick={this.handleMoreInfoClick}
             className={cx(
               'mx2 uppercase text-madison-blue info-text-big bold nowrap',
               styles['OurPledge__more-info']
@@ -32,6 +46,9 @@ class OurPledge extends Component {
             More Info
           </p>
         </div>
+        {this.state.moreInfoClick ? (
+          <OurPledgeOverlay handleMoreInfoClick={this.handleMoreInfoClick} />
+        ) : null}
       </div>
     );
   }

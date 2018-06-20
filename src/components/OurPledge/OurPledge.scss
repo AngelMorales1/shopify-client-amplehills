@@ -11,6 +11,10 @@
   &__more-info {
     border-bottom: solid color('peach') 1px;
     padding-bottom: spacing(1);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__icon {
