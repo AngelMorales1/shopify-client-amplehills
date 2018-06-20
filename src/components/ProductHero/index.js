@@ -89,11 +89,9 @@ class ProductHero extends Component {
                   value={this.state.shipping}
                   label="Shipping Date"
                   onChange={this.onShippingChange}
-                  // TODO: Pull from globalSettings when it's merged in
-                  options={[
-                    { value: 'June 18', label: 'June 18' },
-                    { value: 'June 28', label: 'June 28' }
-                  ]}
+                  options={this.props.shippingDates.map(date => {
+                    return { value: date, label: date };
+                  })}
                 />
               </div>
               <QuantitySelector
@@ -121,13 +119,17 @@ class ProductHero extends Component {
 }
 
 ProductHero.propTypes = {
-  data: PropTypes.shape({})
+  data: PropTypes.shape({}),
+  z: PropTypes.number,
+  product: PropTypes.shape({}),
+  shippingDates: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProductHero.defaultProps = {
   data: {},
   z: 1,
-  product: {}
+  product: {},
+  shippingDates: []
 };
 
 export default ProductHero;

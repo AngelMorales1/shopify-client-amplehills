@@ -13,6 +13,7 @@ const BlockSwitch = props => {
     addLineItemsStatus,
     globalSettings,
     checkout,
+    shippingDates,
     actions: { addLineItems }
   } = props;
 
@@ -25,6 +26,7 @@ const BlockSwitch = props => {
           z={z}
           addLineItems={addLineItems}
           addLineItemsStatus={addLineItemsStatus}
+          shippingDates={shippingDates}
           checkout={checkout}
           globalSettings={globalSettings}
         />
