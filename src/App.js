@@ -59,7 +59,6 @@ const mapStateToProps = state => {
   return {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
-    locations: get(state, 'applicationUI.locations'),
     checkout: get(state, 'session.checkout'),
     locations: get(state, 'applicationUI.locations', {}),
     globalSettings: get(

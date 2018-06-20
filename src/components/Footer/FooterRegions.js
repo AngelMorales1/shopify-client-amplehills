@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import cx from 'classnames';
 import { sortHours } from 'utils/sortHours';
-import styles from './Footer.scss';
 
 class FooterRegions extends Component {
   render() {

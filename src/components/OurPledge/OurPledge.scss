@@ -1,0 +1,19 @@
+@import 'settings';
+
+.OurPledge {
+  &__text-container {
+    border-radius: 4% / 25%;
+    height: spacing(20);
+    max-width: spacing(115);
+    min-width: spacing(100);
+  }
+
+  &__more-info {
+    border-bottom: solid color('peach') 1px;
+    padding-bottom: spacing(1);
+  }
+
+  &__icon {
+    margin-bottom: spacing(-3);
+  }
+}
