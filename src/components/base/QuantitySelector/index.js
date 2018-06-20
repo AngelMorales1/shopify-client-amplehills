@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import get from 'utils/get';
+import cx from 'classnames';
 
+import get from 'utils/get';
 import { Button, TextField } from 'components/base';
 
 class QuantitySelector extends Component {
@@ -11,11 +12,12 @@ class QuantitySelector extends Component {
   }
 
   render() {
-    const classes = `flex ${this.props.className}`;
+    const { variant } = this.props;
+
     return (
-      <div className={classes}>
+      <div className={cx('flex', this.props.className)}>
         <Button
-          variant="circle"
+          variant={variant === 'small' ? 'circle-small' : 'circle'}
           color="white-madison-blue-outline"
           label="–"
           onClick={() =>
@@ -23,14 +25,14 @@ class QuantitySelector extends Component {
           }
         />
         <TextField
-          variant="quantity"
+          variant={variant === 'small' ? 'quantity-small' : 'quantity'}
           value={get(this, 'props.quantity', 1)}
           color="madison-blue"
           className="copy mx1"
           onChange={value => this.changeQuantity(value)}
         />
         <Button
-          variant="circle"
+          variant={variant === 'small' ? 'circle-small' : 'circle'}
           color="white-madison-blue-outline"
           label="+"
           onClick={() =>

@@ -1,12 +1,4 @@
 /*
-Global element shapes
-*/
-$viewport-height: 100vh;
-$border-radius: 0.25rem;
-$drop-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-$drop-shadow-large: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-/*
 Spacing
 */
 @function spacing($units) {
@@ -24,3 +16,12 @@ $spacer: (
 @function spacer($spacing-name) {
   @return map-get($spacer, $spacing-name);
 }
+
+/*
+Global element shapes
+*/
+$viewport-height: 100vh;
+$border-radius: 0.25rem;
+$drop-shadow: 0 spacing(0.5) spacing(1) 0 rgba(0, 0, 0, 0.2);
+$drop-shadow-large: 0 spacing(1) spacing(2) 0 rgba(0, 0, 0, 0.2);
+$drop-shadow-xlarge: 0 spacing(1) spacing(6) 0 rgba(0, 0, 0, 0.2);

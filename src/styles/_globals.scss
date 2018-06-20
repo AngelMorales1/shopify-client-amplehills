@@ -80,11 +80,23 @@ Drop shadows
   box-shadow: $drop-shadow;
 }
 
+.drop-shadow-large {
+  box-shadow: $drop-shadow-large;
+}
+
+.drop-shadow-xlarge {
+  box-shadow: $drop-shadow-xlarge;
+}
+
 /*
 UI elements
 */
 .arrow {
   width: spacing(10);
+}
+
+.card {
+  border-radius: spacing(4);
 }
 
 .tag {

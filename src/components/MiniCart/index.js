@@ -10,8 +10,9 @@ import {
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import getLineItemPrice from 'utils/getLineItemPrice';
 
-import { Button, QuantitySelector } from 'components/base';
+import { Button, Image, QuantitySelector } from 'components/base';
 import styles from './MiniCart.scss';
 
 class MiniCart extends Component {
@@ -44,15 +45,19 @@ class MiniCart extends Component {
       actions: { closeMiniCart }
     } = this.props;
 
-    const classes = cx(styles['MiniCart'], 'fixed z-nav p3 bg-white', {
-      [styles['MiniCart--open']]: this.props.miniCartIsOpen
-    });
+    const classes = cx(
+      styles['MiniCart'],
+      'col-11 fixed z-nav p3 bg-white card drop-shadow-xlarge',
+      {
+        [styles['MiniCart--open']]: this.props.miniCartIsOpen
+      }
+    );
 
     const items = get(checkout, 'lineItems', []);
 
     return (
       <div className={classes}>
-        <div className="mb2">
+        <div className="mb3 center">
           <strong className="callout">Cart</strong>
         </div>
 
@@ -64,24 +69,32 @@ class MiniCart extends Component {
               ]]: this.props.lineItemsBeingUpdated.includes(get(item, 'id', ''))
             });
 
+            console.log(item);
             return (
               <div className={classes} key={item.id}>
-                <div className="mb1">
+                <div className="mb2 line-item-title flex justify-between">
                   <span className="mr2">{item.title}</span>
-                  <span>Qty: {item.quantity}</span>
+                  <span>
+                    ${getLineItemPrice(
+                      get(item, 'variant.price', '0.00'),
+                      item.quantity
+                    )}
+                  </span>
                 </div>
                 <div className="w100 flex justify-between">
-                  <Button
-                    variant="text"
-                    onClick={() => this.removeLineItem(item.id)}
-                    label="remove"
-                  />
                   <QuantitySelector
                     quantity={item.quantity}
+                    variant="small"
                     onChange={quantity =>
                       this.updateLineItem(item.id, quantity)
                     }
                   />
+                  <Button
+                    variant="icon"
+                    onClick={() => this.removeLineItem(item.id)}
+                  >
+                    <Image src="/assets/images/icon-trash.svg" />
+                  </Button>
                 </div>
               </div>
             );
