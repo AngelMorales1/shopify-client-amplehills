@@ -54,8 +54,7 @@ class MiniCart extends Component {
     );
 
     const items = get(checkout, 'lineItems', []);
-    console.log(items.length);
-    console.log(checkout);
+
     return (
       <div className={classes}>
         <div className="mb3 center relative">
