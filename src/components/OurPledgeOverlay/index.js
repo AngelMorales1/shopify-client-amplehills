@@ -47,7 +47,7 @@ class OurPledgeOverlay extends Component {
               styles['OurPledgeOverlay__container__content']
             )}
           >
-            <div
+            <button
               onClick={closeOurPledgeOverlay}
               className={cx(
                 'close-button t0 r0 m3',
@@ -55,7 +55,7 @@ class OurPledgeOverlay extends Component {
               )}
             >
               <Image alt="Close button" src="/assets/images/close-icon.svg" />
-            </div>
+            </button>
             <div
               className={cx(
                 'mt3 mb4 col-9',

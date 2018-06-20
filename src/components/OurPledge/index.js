@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import { Image } from 'components/base';
-
 import get from 'utils/get';
-
 import styles from './OurPledge.scss';
+
+import { Image } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
@@ -50,15 +49,15 @@ class OurPledge extends Component {
           <p className="mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
             Ice cream arrives fresh delicious, and frozen
           </p>
-          <p
+          <button
             onClick={this.openOurPledgeOverlay}
             className={cx(
-              'mx2 uppercase text-madison-blue info-text-big bold nowrap',
+              'mx2 uppercase text-madison-blue info-text-big bold nowrap px0',
               styles['OurPledge__more-info']
             )}
           >
             More Info
-          </p>
+          </button>
         </div>
         {this.state.ourPledgeOverlayIsOpen ? (
           <OurPledgeOverlay
