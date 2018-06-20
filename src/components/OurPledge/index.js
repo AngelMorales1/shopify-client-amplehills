@@ -12,12 +12,16 @@ class OurPledge extends Component {
     super(props);
 
     this.state = {
-      moreInfoClick: false
+      ourPledgeOverlayIsOpen: false
     };
   }
 
-  handleMoreInfoClick = () => {
-    this.setState({ moreInfoClick: !this.state.moreInfoClick });
+  openOurPledgeOverlay = () => {
+    this.setState({ ourPledgeOverlayIsOpen: true });
+  };
+
+  closeOurPledgeOverlay = () => {
+    this.setState({ ourPledgeOverlayIsOpen: false });
   };
 
   render() {
@@ -47,7 +51,7 @@ class OurPledge extends Component {
             Ice cream arrives fresh delicious, and frozen
           </p>
           <p
-            onClick={this.handleMoreInfoClick}
+            onClick={this.openOurPledgeOverlay}
             className={cx(
               'mx2 uppercase text-madison-blue info-text-big bold nowrap',
               styles['OurPledge__more-info']
@@ -56,12 +60,12 @@ class OurPledge extends Component {
             More Info
           </p>
         </div>
-        {this.state.moreInfoClick ? (
+        {this.state.ourPledgeOverlayIsOpen ? (
           <OurPledgeOverlay
             overlayContentImage={overlayContentImage}
             shippingInformation={shippingInformation}
             shippingPledge={shippingPledge}
-            handleMoreInfoClick={this.handleMoreInfoClick}
+            closeOurPledgeOverlay={this.closeOurPledgeOverlay}
           />
         ) : null}
       </div>

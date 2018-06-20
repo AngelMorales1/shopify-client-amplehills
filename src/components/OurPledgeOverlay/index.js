@@ -8,7 +8,7 @@ import { Image } from 'components/base';
 class OurPledgeOverlay extends Component {
   render() {
     const {
-      handleMoreInfoClick,
+      closeOurPledgeOverlay,
       overlayContentImage,
       shippingInformation,
       shippingPledge
@@ -48,13 +48,13 @@ class OurPledgeOverlay extends Component {
             )}
           >
             <div
-              onClick={handleMoreInfoClick}
+              onClick={closeOurPledgeOverlay}
               className={cx(
                 'close-button t0 r0 m3',
                 styles['OurPledgeOverlay__container__content__button']
               )}
             >
-              <Image alt="Close button" src="/assets/images/close-button.svg" />
+              <Image alt="Close button" src="/assets/images/close-icon.svg" />
             </div>
             <div
               className={cx(
