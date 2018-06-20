@@ -5,26 +5,16 @@
     position: fixed;
   }
 
-  &__container {
-    position: fixed;
+  &__content {
+    width: spacing(160);
+    height: spacing(200);
+  }
 
-    &__background {
-      position: fixed;
-    }
+  &__button {
+    background-color: transparent;
+  }
 
-    &__content {
-      position: fixed;
-      width: spacing(160);
-      height: spacing(200);
-
-      &__button {
-        position: fixed;
-        background-color: transparent;
-      }
-    }
-
-    &__image {
-      width: spacing(50);
-    }
+  &__image {
+    width: spacing(50);
   }
 }

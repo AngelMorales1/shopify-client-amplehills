@@ -27,41 +27,28 @@ class OurPledgeOverlay extends Component {
             styles['OurPledgeOverlay__base-background']
           )}
         />
-        <div
-          className={cx(
-            'text-black z-overlay wh100 t0 r0',
-            styles['OurPledgeOverlay__container']
-          )}
-        >
+        <div className={cx('text-black z-overlay wh100 t0 r0 fixed')}>
           <Image
             alt="Our pledge overlay background"
             src="/assets/images/our-pledge-overlay-background.svg"
-            className={cx(
-              'r0 t0',
-              styles['OurPledgeOverlay__container__background']
-            )}
+            className={cx('r0 t0 fixed')}
           />
           <div
             className={cx(
-              'flex flex-column justify-center items-center z-overlay m3 t0 r0',
-              styles['OurPledgeOverlay__container__content']
+              'flex flex-column justify-center items-center z-overlay m3 t0 r0 fixed',
+              styles['OurPledgeOverlay__content']
             )}
           >
             <button
               onClick={closeOurPledgeOverlay}
               className={cx(
-                'close-button t0 r0 m3',
-                styles['OurPledgeOverlay__container__content__button']
+                'close-button t0 r0 m3 fixed',
+                styles['OurPledgeOverlay__button']
               )}
             >
               <Image alt="Close button" src="/assets/images/close-icon.svg" />
             </button>
-            <div
-              className={cx(
-                'mt3 mb4 col-9',
-                styles['OurPledgeOverlay__container__content__text']
-              )}
-            >
+            <div className={cx('mt3 mb4 col-9')}>
               <div className="m2 big text-madison-blue">We Ship Nationwide</div>
               <div>
                 <Image
