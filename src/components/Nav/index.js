@@ -25,7 +25,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="my3 px4 flex items-center clearfix">
+      <div className="py3 px4 flex items-center bg-peach clearfix">
         <div className={`col col-4 flex justify-start ${styles['left-side']}`}>
           <NavLink exact to="/location" className="ml4 link-text">
             Location

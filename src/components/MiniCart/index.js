@@ -54,11 +54,19 @@ class MiniCart extends Component {
     );
 
     const items = get(checkout, 'lineItems', []);
-
+    console.log(items.length);
+    console.log(checkout);
     return (
       <div className={classes}>
-        <div className="mb3 center">
+        <div className="mb3 center relative">
           <strong className="callout">Cart</strong>
+          <Button
+            variant="icon-small"
+            className="absolute t0 r0 mt1"
+            onClick={() => closeMiniCart()}
+          >
+            <Image src="/assets/images/icon-close.svg" />
+          </Button>
         </div>
 
         <div className="mb4">
@@ -69,7 +77,6 @@ class MiniCart extends Component {
               ]]: this.props.lineItemsBeingUpdated.includes(get(item, 'id', ''))
             });
 
-            console.log(item);
             return (
               <div className={classes} key={item.id}>
                 <div className="mb2 line-item-title flex justify-between">
@@ -101,8 +108,16 @@ class MiniCart extends Component {
           })}
         </div>
 
-        <div className="mb2">
-          <Button onClick={() => closeMiniCart()} label="close" />
+        <div className="mt3 flex justify-between items-center">
+          <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
+          <Button
+            disabled={!items.length}
+            // TODO: redirect to amplehills.com/checkout
+            to={checkout.webUrl}
+            color="madison-blue"
+            onClick={() => closeMiniCart()}
+            label="Checkout"
+          />
         </div>
       </div>
     );

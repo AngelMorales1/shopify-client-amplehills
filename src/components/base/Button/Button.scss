@@ -20,7 +20,9 @@
   }
 
   &--disabled {
+    box-shadow: 0 0 0 0;
     pointer-events: none;
+    transform: translate3d(0, 0, 0);
     opacity: 0.8;
   }
 
@@ -35,14 +37,23 @@
     padding: spacing(3) spacing(6);
   }
 
-  &--icon {
+  &--icon,
+  &--icon-small {
+    padding: 0;
     box-shadow: 0 0 0 0;
-    transform-origin: center bottom;
+    transform-origin: center top;
+    width: spacing(5);
+    transition-duration: $transition-duration-short;
 
     &:hover {
       box-shadow: 0 0 0 0;
-      transform: scale(1.05);
+      transform: scale(0.95);
     }
+  }
+
+  &--icon-small {
+    padding: 0;
+    width: spacing(4);
   }
 
   &--circle {
