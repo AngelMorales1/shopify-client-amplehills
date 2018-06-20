@@ -30,29 +30,47 @@ class OurPledgeOverlay extends Component {
           />
           <div
             className={cx(
-              'flex flex-column justify-center items-center z-overlay m3 col-5 t0 r0',
+              'flex flex-column justify-center items-center z-overlay m3 t0 r0',
               styles['OurPledgeOverlay__container__content']
             )}
           >
             <div
               onClick={this.props.handleMoreInfoClick}
-              className={cx('close-button self-end')}
+              className={cx(
+                'close-button t0 r0 m3',
+                styles['OurPledgeOverlay__container__content__button']
+              )}
             >
               <Image alt="Close button" src="/assets/images/close-button.svg" />
             </div>
-            <div className={cx('border m4 col-8')}>
-              <div>We Ship Nationwide</div>
+            <div
+              className={cx(
+                'mt3 mb4 col-9',
+                styles['OurPledgeOverlay__container__content__text']
+              )}
+            >
+              <div className="m2 big text-madison-blue">We Ship Nationwide</div>
               <div>
                 <Image
                   alt="Our pledge image"
                   src={this.props.overlayContentImage.fields.file.url}
+                  className={cx(
+                    'my3',
+                    styles['OurPledgeOverlay__container__image']
+                  )}
                 />
-                <h2>Shipping information</h2>
-                <p>{this.props.shippingInformation}</p>
+                <h2 className="my2 big text-madison-blue">
+                  Shipping information
+                </h2>
+                <p className="mb4 small text-madison-blue">
+                  {this.props.shippingInformation}
+                </p>
               </div>
               <div>
-                <h2>Shipping Pledge</h2>
-                <p>{this.props.shippingPledge}</p>
+                <h2 className="my2 big text-madison-blue">Shipping Pledge</h2>
+                <p className="small text-madison-blue">
+                  {this.props.shippingPledge}
+                </p>
               </div>
             </div>
           </div>

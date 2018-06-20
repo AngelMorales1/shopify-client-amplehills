@@ -1,7 +1,6 @@
-.OurPledgeOverlay {
-  // position: fixed;
-  // border: solid blue;
+@import 'settings';
 
+.OurPledgeOverlay {
   &__base-background {
     position: fixed;
   }
@@ -15,6 +14,16 @@
 
     &__content {
       position: fixed;
+      width: spacing(160);
+      height: spacing(200);
+
+      &__button {
+        position: fixed;
+      }
+    }
+
+    &__image {
+      width: spacing(50);
     }
   }
 }
