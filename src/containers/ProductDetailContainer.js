@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchProduct } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
-import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 
 import get from 'utils/get';
 
@@ -13,19 +12,17 @@ class ProductDetailContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchProduct, fetchProductContent, getGlobalSettings }
+      actions: { fetchProduct, fetchProductContent }
     } = this.props;
 
     const handle = this.props.match.params.productHandle;
     return Promise.all([
       fetchProduct(handle),
-      fetchProductContent(handle),
-      getGlobalSettings()
-    ]).then(([productResult, contentResult, globalSettings]) => {
+      fetchProductContent(handle)
+    ]).then(([productResult, contentResult]) => {
       return {
         product: get(productResult, 'value'),
-        content: get(contentResult, 'value'),
-        globalSettings: get(globalSettings, 'value')
+        content: get(contentResult, 'value')
       };
     });
   };
@@ -49,8 +46,7 @@ const mapDispatchToProps = dispatch => {
       {
         fetchProduct,
         fetchProductContent,
-        addLineItems,
-        getGlobalSettings
+        addLineItems
       },
       dispatch
     )

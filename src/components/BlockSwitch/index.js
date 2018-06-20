@@ -11,8 +11,9 @@ const BlockSwitch = props => {
   const fields = get(block, 'fields');
   const {
     addLineItemsStatus,
+    globalSettings,
     checkout,
-    actions: { addLineItems, globalSettings }
+    actions: { addLineItems }
   } = props;
 
   switch (contentType) {
@@ -25,7 +26,7 @@ const BlockSwitch = props => {
           addLineItems={addLineItems}
           addLineItemsStatus={addLineItemsStatus}
           checkout={checkout}
-          globalSettings={props.globalSettings}
+          globalSettings={globalSettings}
         />
       );
     case 'blockProductDetails':

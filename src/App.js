@@ -13,7 +13,6 @@ import Loader from 'components/Loader';
 import Nav from 'components/Nav';
 import Cart from 'components/Cart';
 import Footer from 'components/Footer';
-import OurPledge from 'components/OurPledge';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -60,14 +59,8 @@ const mapStateToProps = state => {
   return {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
-    locations: get(state, 'applicationUI.locations'),
     checkout: get(state, 'session.checkout'),
-    locations: get(state, 'applicationUI.locations', {}),
-    globalSettings: get(
-      state,
-      'applicationUI.globalSettings.items[0].fields',
-      {}
-    )
+    locations: get(state, 'applicationUI.locations', {})
   };
 };
 
