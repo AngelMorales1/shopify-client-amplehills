@@ -1,6 +1,6 @@
 import status from './status';
 import applicationUI from './ui/applicationUI';
-import cartUI from './ui/cartUI';
+import miniCartUI from './ui/miniCartUI';
 import content from './content';
 import collection from './collection';
 import collections from './collections';
@@ -10,7 +10,7 @@ import products from './products';
 export default {
   status,
   applicationUI,
-  cartUI,
+  miniCartUI,
   content,
   collection,
   collections,

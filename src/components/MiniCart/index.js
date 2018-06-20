@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { closeCart } from 'state/actions/ui/cartUIActions';
+import { closeMiniCart } from 'state/actions/ui/miniCartUIActions';
 import {
   removeLineItems,
   updateLineItems
@@ -12,9 +12,9 @@ import cx from 'classnames';
 import get from 'utils/get';
 
 import { Button, QuantitySelector } from 'components/base';
-import styles from './Cart.scss';
+import styles from './MiniCart.scss';
 
-class Cart extends Component {
+class MiniCart extends Component {
   removeLineItem = item => {
     const items = [item];
 
@@ -41,11 +41,11 @@ class Cart extends Component {
   render() {
     const {
       checkout,
-      actions: { closeCart }
+      actions: { closeMiniCart }
     } = this.props;
 
-    const classes = cx(styles['Cart'], 'fixed z-nav p3 bg-white', {
-      [styles['Cart--open']]: this.props.cartIsOpen
+    const classes = cx(styles['MiniCart'], 'fixed z-nav p3 bg-white', {
+      [styles['MiniCart--open']]: this.props.miniCartIsOpen
     });
 
     const items = get(checkout, 'lineItems', []);
@@ -58,9 +58,9 @@ class Cart extends Component {
 
         <div className="mb4">
           {items.map(item => {
-            const classes = cx(styles['Cart__line-item'], 'mb2', {
+            const classes = cx(styles['MiniCart__line-item'], 'mb2', {
               [styles[
-                'Cart__line-item--updating'
+                'MiniCart__line-item--updating'
               ]]: this.props.lineItemsBeingUpdated.includes(get(item, 'id', ''))
             });
 
@@ -89,16 +89,16 @@ class Cart extends Component {
         </div>
 
         <div className="mb2">
-          <Button onClick={() => closeCart()} label="close" />
+          <Button onClick={() => closeMiniCart()} label="close" />
         </div>
       </div>
     );
   }
 }
 
-Cart.propTypes = {
+MiniCart.propTypes = {
   actions: PropTypes.shape({
-    closeCart: PropTypes.func,
+    closeMiniCart: PropTypes.func,
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
@@ -112,13 +112,13 @@ Cart.propTypes = {
       })
     )
   }),
-  cartIsOpen: PropTypes.bool,
+  miniCartIsOpen: PropTypes.bool,
   lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string)
 };
 
-Cart.defaultProps = {
+MiniCart.defaultProps = {
   actions: {
-    closeCart: () => {},
+    closeMiniCart: () => {},
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
@@ -132,13 +132,13 @@ Cart.defaultProps = {
       }
     ]
   },
-  cartIsOpen: false
+  miniCartIsOpen: false
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
-    cartIsOpen: get(state, 'cartUI.cartIsOpen', false),
+    miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: get(state, 'session.checkout', {}),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', [])
   };
@@ -148,7 +148,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        closeCart,
+        closeMiniCart,
         removeLineItems,
         updateLineItems
       },
@@ -160,4 +160,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cart);
+)(MiniCart);

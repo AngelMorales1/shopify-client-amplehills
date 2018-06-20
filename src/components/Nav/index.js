@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { openCart, closeCart } from 'state/actions/ui/cartUIActions';
+import {
+  openMiniCart,
+  closeMiniCart
+} from 'state/actions/ui/miniCartUIActions';
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
@@ -11,13 +14,13 @@ import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
-  toggleCart = () => {
+  toggleMiniCart = () => {
     const {
-      cartIsOpen,
-      actions: { openCart, closeCart }
+      miniCartIsOpen,
+      actions: { openMiniCart, closeMiniCart }
     } = this.props;
 
-    return cartIsOpen ? closeCart() : openCart();
+    return miniCartIsOpen ? closeMiniCart() : openMiniCart();
   };
 
   render() {
@@ -56,7 +59,7 @@ class Nav extends Component {
             color="peach"
             label="Shop Online"
           />
-          <Button onClick={this.toggleCart} label="Cart" />
+          <Button onClick={this.toggleMiniCart} label="Cart" />
         </div>
       </div>
     );
@@ -65,24 +68,24 @@ class Nav extends Component {
 
 Nav.propTypes = {
   actions: PropTypes.shape({
-    openCart: PropTypes.func,
-    closeCart: PropTypes.func
+    openMiniCart: PropTypes.func,
+    closeMiniCart: PropTypes.func
   }),
-  cartIsOpen: PropTypes.bool
+  miniCartIsOpen: PropTypes.bool
 };
 
 Nav.defaultProps = {
   actions: {
-    openCart: () => {},
-    closeCart: () => {}
+    openMiniCart: () => {},
+    closeMiniCart: () => {}
   },
-  cartIsOpen: false
+  miniCartIsOpen: false
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
-    cartIsOpen: get(state, 'cartUI.cartIsOpen')
+    miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen')
   };
 };
 
@@ -90,8 +93,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        openCart,
-        closeCart
+        openMiniCart,
+        closeMiniCart
       },
       dispatch
     )
