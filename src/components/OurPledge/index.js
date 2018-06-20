@@ -11,7 +11,7 @@ class OurPledge extends Component {
     super(props);
 
     this.state = {
-      ourPledgeOverlayIsOpen: false
+      ourPledgeOverlayIsOpen: true
     };
   }
 

@@ -27,15 +27,15 @@ class OurPledgeOverlay extends Component {
             styles['OurPledgeOverlay__base-background']
           )}
         />
-        <div className={cx('text-black z-overlay wh100 t0 r0 fixed')}>
-          <Image
-            alt="Our pledge overlay background"
-            src="/assets/images/our-pledge-overlay-background.svg"
-            className={cx('r0 t0 fixed')}
-          />
+        <div
+          className={cx(
+            'fixed bg-island-spice p4 z-overlay',
+            styles['OurPledgeOverlay__circle-background']
+          )}
+        >
           <div
             className={cx(
-              'flex flex-column justify-center items-center z-overlay m3 t0 r0 fixed',
+              'flex flex-column justify-center items-end z-overlay m3 t0 r0 fixed',
               styles['OurPledgeOverlay__content']
             )}
           >
@@ -48,16 +48,18 @@ class OurPledgeOverlay extends Component {
             >
               <Image alt="Close button" src="/assets/images/close-icon.svg" />
             </button>
-            <div className={cx('mt3 mb4 col-9')}>
-              <div className="m2 big text-madison-blue">We Ship Nationwide</div>
+            <div
+              className={cx(
+                'mt3 mb4',
+                styles['OurPledgeOverlay__text-content']
+              )}
+            >
+              <h2 className="m2 big text-madison-blue">We Ship Nationwide</h2>
               <div>
                 <Image
                   alt="Our pledge image"
                   src={overlayContentImageUrl}
-                  className={cx(
-                    'my3',
-                    styles['OurPledgeOverlay__container__image']
-                  )}
+                  className={cx('my3', styles['OurPledgeOverlay__image'])}
                 />
                 <h2 className="my2 big text-madison-blue">
                   Shipping information
