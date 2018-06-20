@@ -6,6 +6,8 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchProduct } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
+import { getOurPledge } from 'state/actions/ui/applicationUIActions';
+
 import get from 'utils/get';
 
 class ProductDetailContainer extends ContainerBase {
@@ -13,17 +15,19 @@ class ProductDetailContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchProduct, fetchProductContent }
+      actions: { fetchProduct, fetchProductContent, getOurPledge }
     } = this.props;
 
     const handle = this.props.match.params.productHandle;
     return Promise.all([
       fetchProduct(handle),
-      fetchProductContent(handle)
-    ]).then(([productResult, contentResult]) => {
+      fetchProductContent(handle),
+      getOurPledge()
+    ]).then(([productResult, contentResult, ourPledgeResult]) => {
       return {
         product: get(productResult, 'value'),
-        content: get(contentResult, 'value')
+        content: get(contentResult, 'value'),
+        ourPledge: get(ourPledgeResult, 'value')
       };
     });
   };
@@ -49,7 +53,8 @@ const mapDispatchToProps = dispatch => {
       {
         fetchProduct,
         fetchProductContent,
-        addLineItems
+        addLineItems,
+        getOurPledge
       },
       dispatch
     )

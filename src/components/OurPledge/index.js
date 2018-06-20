@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
+import { Image } from 'components/base';
+
+import get from 'utils/get';
 
 import styles from './OurPledge.scss';
-import { Image } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
@@ -22,13 +24,16 @@ class OurPledge extends Component {
     const {
       overlayContentImage,
       shippingInformation,
-      shippingPledge
+      shippingPledge,
+      calloutImage
     } = this.props.ourPledge;
+
+    const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
     return (
       <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
         <Image
           alt="Our pledge icon"
-          src={this.props.ourPledge.calloutImage.fields.file.url}
+          src={calloutImageUrl}
           className={cx('icon z-1', styles['OurPledge__icon'])}
         />
         <div

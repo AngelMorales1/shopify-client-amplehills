@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
+import get from 'utils/get';
 import styles from './OurPledgeOverlay.scss';
 
 import { Image } from 'components/base';
 
 class OurPledgeOverlay extends Component {
   render() {
+    const {
+      handleMoreInfoClick,
+      overlayContentImage,
+      shippingInformation,
+      shippingPledge
+    } = this.props;
+
+    const overlayContentImageUrl = get(
+      overlayContentImage,
+      'fields.file.url',
+      ''
+    );
     return (
       <div className={cx('wh100', styles['OurPledgeOverlay'])}>
         <div
@@ -35,7 +48,7 @@ class OurPledgeOverlay extends Component {
             )}
           >
             <div
-              onClick={this.props.handleMoreInfoClick}
+              onClick={handleMoreInfoClick}
               className={cx(
                 'close-button t0 r0 m3',
                 styles['OurPledgeOverlay__container__content__button']
@@ -53,7 +66,7 @@ class OurPledgeOverlay extends Component {
               <div>
                 <Image
                   alt="Our pledge image"
-                  src={this.props.overlayContentImage.fields.file.url}
+                  src={overlayContentImageUrl}
                   className={cx(
                     'my3',
                     styles['OurPledgeOverlay__container__image']
@@ -63,14 +76,12 @@ class OurPledgeOverlay extends Component {
                   Shipping information
                 </h2>
                 <p className="mb4 small text-madison-blue">
-                  {this.props.shippingInformation}
+                  {shippingInformation}
                 </p>
               </div>
               <div>
                 <h2 className="my2 big text-madison-blue">Shipping Pledge</h2>
-                <p className="small text-madison-blue">
-                  {this.props.shippingPledge}
-                </p>
+                <p className="small text-madison-blue">{shippingPledge}</p>
               </div>
             </div>
           </div>
