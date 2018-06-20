@@ -109,3 +109,11 @@ UI elements
 .icon {
   width: spacing(9);
 }
+
+.close-button {
+  width: spacing(5);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

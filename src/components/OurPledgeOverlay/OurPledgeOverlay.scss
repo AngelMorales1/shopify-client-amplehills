@@ -1,17 +1,20 @@
 .OurPledgeOverlay {
-  position: fixed;
+  // position: fixed;
+  // border: solid blue;
 
-  &__content {
-    position: relative;
+  &__base-background {
+    position: fixed;
+  }
+
+  &__container {
+    position: fixed;
 
     &__background {
       position: fixed;
+    }
 
-      &__text {
-        position: fixed;
-        height: spacing(100);
-        width: spacing(100);
-      }
+    &__content {
+      position: fixed;
     }
   }
 }

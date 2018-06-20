@@ -7,42 +7,39 @@ import { Image } from 'components/base';
 class OurPledgeOverlay extends Component {
   render() {
     return (
-      <div>
+      <div className={cx('wh100', styles['OurPledgeOverlay'])}>
         <div
           className={cx(
-            'wh100 t0 l0 border bg-white low-opacity z-overlay',
-            styles['OurPledgeOverlay']
+            'wh100 t0 l0 bg-white low-opacity z-overlay',
+            styles['OurPledgeOverlay__base-background']
           )}
         />
         <div
           className={cx(
-            'text-black z-overlay',
-            styles['OurPledgeOverlay__content']
+            'text-black z-overlay wh100 t0 r0',
+            styles['OurPledgeOverlay__container']
           )}
         >
           <Image
-            alt="Our pledge"
+            alt="Our pledge overlay background"
             src="/assets/images/our-pledge-overlay-background.svg"
             className={cx(
-              'z-overlay r0 t0',
-              styles['OurPledgeOverlay__content__background']
+              'r0 t0',
+              styles['OurPledgeOverlay__container__background']
             )}
           />
-          <div>
+          <div
+            className={cx(
+              'flex flex-column justify-center items-center z-overlay m3 col-5 t0 r0',
+              styles['OurPledgeOverlay__container__content']
+            )}
+          >
             <Image
               alt="Close button"
               src="/assets/images/close-button.svg"
-              className={cx(
-                'icon p1 m1 t0 r0 z-overlay col-6',
-                styles['OurPledgeOverlay__content__background']
-              )}
+              className={cx('close-button self-end')}
             />
-            <div
-              className={cx(
-                'z-overlay border',
-                styles['OurPledgeOverlay__content__background__text']
-              )}
-            >
+            <div className={cx('border m4 col-8')}>
               <div>We Ship Nationwide</div>
               <div>
                 <h2>Shipping information</h2>
