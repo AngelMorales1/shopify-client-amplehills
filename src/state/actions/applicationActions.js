@@ -3,7 +3,8 @@ import ContentfulClient from 'lib/Contentful';
 import BuySDK from 'lib/Buy';
 import {
   getLocationData,
-  getGlobalSettings
+  getGlobalSettings,
+  getOurPledge
 } from 'state/actions/ui/applicationUIActions';
 
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
@@ -18,7 +19,9 @@ export const initializeApplication = checkoutID => dispatch => {
       Data.setRef('shopify', BuySDK);
       return fetchOrCreateCheckout(checkoutID)(dispatch).then(() =>
         dispatch(getLocationData()).then(() =>
-          dispatch(getGlobalSettings()).then(() => resolve())
+          dispatch(getGlobalSettings()).then(() =>
+            dispatch(getOurPledge()).then(() => resolve())
+          )
         )
       );
     })

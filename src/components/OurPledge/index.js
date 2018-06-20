@@ -19,11 +19,16 @@ class OurPledge extends Component {
   };
 
   render() {
+    const {
+      overlayContentImage,
+      shippingInformation,
+      shippingPledge
+    } = this.props.ourPledge;
     return (
       <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
         <Image
           alt="Our pledge icon"
-          src={this.props.ourPledgeIcon.fields.file.url}
+          src={this.props.ourPledge.calloutImage.fields.file.url}
           className={cx('icon z-1', styles['OurPledge__icon'])}
         />
         <div
@@ -47,7 +52,12 @@ class OurPledge extends Component {
           </p>
         </div>
         {this.state.moreInfoClick ? (
-          <OurPledgeOverlay handleMoreInfoClick={this.handleMoreInfoClick} />
+          <OurPledgeOverlay
+            overlayContentImage={overlayContentImage}
+            shippingInformation={shippingInformation}
+            shippingPledge={shippingPledge}
+            handleMoreInfoClick={this.handleMoreInfoClick}
+          />
         ) : null}
       </div>
     );

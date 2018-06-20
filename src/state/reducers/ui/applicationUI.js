@@ -1,11 +1,13 @@
 import {
   GET_LOCATION_DATA,
-  GET_GLOBAL_SETTINGS
+  GET_GLOBAL_SETTINGS,
+  GET_OUR_PLEDGE
 } from 'state/actions/ui/applicationUIActions';
 
 const initialState = {
   locations: {},
-  globalSettings: {}
+  globalSettings: {},
+  ourPledge: {}
 };
 
 export default (state = initialState, action) => {
@@ -20,6 +22,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         globalSettings: action.payload
+      };
+    case `${GET_OUR_PLEDGE}_FULFILLED`:
+      return {
+        ...state,
+        ourPledge: action.payload
       };
     default:
       return state;

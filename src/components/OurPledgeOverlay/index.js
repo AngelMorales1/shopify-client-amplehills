@@ -43,26 +43,16 @@ class OurPledgeOverlay extends Component {
             <div className={cx('border m4 col-8')}>
               <div>We Ship Nationwide</div>
               <div>
+                <Image
+                  alt="Our pledge image"
+                  src={this.props.overlayContentImage.fields.file.url}
+                />
                 <h2>Shipping information</h2>
-                <p>
-                  We are receiving a very high demand for our ice cream both
-                  in-store and for shipping nationwide. As a result, we need to
-                  limit the amount of ice cream that is sold online each day to
-                  ensure there is enough ice cream for everyone. The next
-                  available shipping day is preselected by default. You will
-                  receive your ice cream 1-2 days after your ship day, depending
-                  on shipping speed selected in checkout. You're welcome to
-                  choose a ship day in the future if desired.
-                </p>
+                <p>{this.props.shippingInformation}</p>
               </div>
               <div>
                 <h2>Shipping Pledge</h2>
-                <p>
-                  Everyone loves receiving the gift of ice cream at their
-                  doorstep but no one likes receiving melted ice cream. This is
-                  why we will happily reship your ice cream or issue you a full
-                  refund if it does not arrive perfect, delicious and frozen.
-                </p>
+                <p>{this.props.shippingPledge}</p>
               </div>
             </div>
           </div>

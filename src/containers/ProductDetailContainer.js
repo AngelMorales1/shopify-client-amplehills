@@ -38,7 +38,8 @@ const mapStateToProps = state => {
       'applicationUI.globalSettings.items[0].fields',
       {}
     ),
-    shippingDates: fetchShippingDates(state)
+    shippingDates: fetchShippingDates(state),
+    ourPledge: get(state, 'applicationUI.ourPledge.items[0].fields', {})
   };
 };
 
