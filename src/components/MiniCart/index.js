@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { closeCart } from 'state/actions/ui/cartUIActions';
+import { closeMiniCart } from 'state/actions/ui/miniCartUIActions';
 import {
   removeLineItems,
   updateLineItems
@@ -10,11 +10,12 @@ import {
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import getLineItemPrice from 'utils/getLineItemPrice';
 
-import { Button, QuantitySelector } from 'components/base';
-import styles from './Cart.scss';
+import { Button, Image, QuantitySelector } from 'components/base';
+import styles from './MiniCart.scss';
 
-class Cart extends Component {
+class MiniCart extends Component {
   removeLineItem = item => {
     const items = [item];
 
@@ -41,64 +42,90 @@ class Cart extends Component {
   render() {
     const {
       checkout,
-      actions: { closeCart }
+      actions: { closeMiniCart }
     } = this.props;
 
-    const classes = cx(styles['Cart'], 'fixed z-nav p3 bg-white', {
-      [styles['Cart--open']]: this.props.cartIsOpen
-    });
+    const classes = cx(
+      styles['MiniCart'],
+      'col-11 fixed z-nav p3 bg-white card drop-shadow-xlarge',
+      {
+        [styles['MiniCart--open']]: this.props.miniCartIsOpen
+      }
+    );
 
     const items = get(checkout, 'lineItems', []);
 
     return (
       <div className={classes}>
-        <div className="mb2">
+        <div className="mb3 center relative">
           <strong className="callout">Cart</strong>
+          <Button
+            variant="icon-small"
+            className="absolute t0 r0 mt1"
+            onClick={() => closeMiniCart()}
+          >
+            <Image src="/assets/images/icon-close.svg" />
+          </Button>
         </div>
 
         <div className="mb4">
           {items.map(item => {
-            const classes = cx(styles['Cart__line-item'], 'mb2', {
+            const classes = cx(styles['MiniCart__line-item'], 'mb2', {
               [styles[
-                'Cart__line-item--updating'
+                'MiniCart__line-item--updating'
               ]]: this.props.lineItemsBeingUpdated.includes(get(item, 'id', ''))
             });
 
             return (
               <div className={classes} key={item.id}>
-                <div className="mb1">
+                <div className="mb2 line-item-title flex justify-between">
                   <span className="mr2">{item.title}</span>
-                  <span>Qty: {item.quantity}</span>
+                  <span>
+                    ${getLineItemPrice(
+                      get(item, 'variant.price', '0.00'),
+                      item.quantity
+                    )}
+                  </span>
                 </div>
                 <div className="w100 flex justify-between">
-                  <Button
-                    variant="text"
-                    onClick={() => this.removeLineItem(item.id)}
-                    label="remove"
-                  />
                   <QuantitySelector
                     quantity={item.quantity}
+                    variant="small"
                     onChange={quantity =>
                       this.updateLineItem(item.id, quantity)
                     }
                   />
+                  <Button
+                    variant="icon"
+                    onClick={() => this.removeLineItem(item.id)}
+                  >
+                    <Image src="/assets/images/icon-trash.svg" />
+                  </Button>
                 </div>
               </div>
             );
           })}
         </div>
 
-        <div className="mb2">
-          <Button onClick={() => closeCart()} label="close" />
+        <div className="mt3 flex justify-between items-center">
+          <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
+          <Button
+            disabled={!items.length}
+            // TODO: redirect to amplehills.com/checkout
+            to={checkout.webUrl}
+            color="madison-blue"
+            onClick={() => closeMiniCart()}
+            label="Checkout"
+          />
         </div>
       </div>
     );
   }
 }
 
-Cart.propTypes = {
+MiniCart.propTypes = {
   actions: PropTypes.shape({
-    closeCart: PropTypes.func,
+    closeMiniCart: PropTypes.func,
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
@@ -112,13 +139,13 @@ Cart.propTypes = {
       })
     )
   }),
-  cartIsOpen: PropTypes.bool,
+  miniCartIsOpen: PropTypes.bool,
   lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string)
 };
 
-Cart.defaultProps = {
+MiniCart.defaultProps = {
   actions: {
-    closeCart: () => {},
+    closeMiniCart: () => {},
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
@@ -132,13 +159,13 @@ Cart.defaultProps = {
       }
     ]
   },
-  cartIsOpen: false
+  miniCartIsOpen: false
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
-    cartIsOpen: get(state, 'cartUI.cartIsOpen', false),
+    miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: get(state, 'session.checkout', {}),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', [])
   };
@@ -148,7 +175,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        closeCart,
+        closeMiniCart,
         removeLineItems,
         updateLineItems
       },
@@ -160,4 +187,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cart);
+)(MiniCart);

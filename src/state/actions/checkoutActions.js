@@ -1,7 +1,7 @@
 import BuySDK from 'lib/Buy';
 import get from 'utils/get';
 
-import { openCart } from 'state/actions/ui/cartUIActions';
+import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 
 export const FETCH_OR_CREATE_CHECKOUT = 'FETCH_OR_CREATE_CHECKOUT';
 export const fetchOrCreateCheckout = checkoutID => dispatch => {
@@ -46,7 +46,7 @@ export const addLineItems = (checkoutID, items) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
     payload: BuySDK.checkout.addLineItems(checkoutID, items)
-  }).then(() => dispatch(openCart()));
+  }).then(() => dispatch(openMiniCart()));
 };
 
 export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';

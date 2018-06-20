@@ -1,17 +1,20 @@
-import { OPEN_CART, CLOSE_CART } from 'state/actions/ui/cartUIActions';
+import {
+  OPEN_MINI_CART,
+  CLOSE_MINI_CART
+} from 'state/actions/ui/miniCartUIActions';
 
 const initialState = {
-  cartIsOpen: false
+  miniCartIsOpen: true
 };
 
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case OPEN_CART:
-    case CLOSE_CART:
+    case OPEN_MINI_CART:
+    case CLOSE_MINI_CART:
       return {
         ...state,
-        cartIsOpen: action.payload
+        miniCartIsOpen: action.payload
       };
     default:
       return state;

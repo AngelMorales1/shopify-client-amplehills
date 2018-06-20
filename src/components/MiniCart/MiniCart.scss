@@ -1,0 +1,30 @@
+@import 'settings';
+
+.MiniCart {
+  @extend .transition;
+  top: calc(#{$header-height-mobile} + #{spacing(4)});
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+  max-width: spacing(92);
+
+  @media ($medium-up) {
+    top: calc(#{$header-height-desktop} + #{spacing(8)});
+  }
+
+  &--open {
+    transform: translate3d(calc(100vw / -12 / 2), 0, 0);
+
+    @media ($medium-up) {
+      transform: translate3d(spacing(-8), 0, 0);
+    }
+  }
+
+  &__line-item {
+    transition: $transition;
+
+    &--updating {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  }
+}

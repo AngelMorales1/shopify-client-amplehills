@@ -26,7 +26,8 @@
     }
   }
 
-  &--quantity {
+  &--quantity,
+  &--quantity-small {
     label {
       display: none;
     }
@@ -40,6 +41,16 @@
       width: spacing(10);
       text-align: center;
       transform: translateY(spacing(-0.5));
+    }
+  }
+
+  &--quantity-small {
+    input {
+      padding: 0;
+      font-size: $font-2;
+      height: spacing(7);
+      width: spacing(7);
+      transform: translateY(spacing(-1));
     }
   }
 }

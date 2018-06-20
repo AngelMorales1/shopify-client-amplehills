@@ -11,7 +11,7 @@ import Routes from 'routes';
 
 import Loader from 'components/Loader';
 import Nav from 'components/Nav';
-import Cart from 'components/Cart';
+import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
 
 import 'basscss/css/basscss.min.css';
@@ -40,7 +40,7 @@ class App extends Component {
       return (
         <div className="App">
           <Nav />
-          <Cart />
+          <MiniCart />
           <Routes location={get(this, 'props.location')} />
           <Footer
             locations={this.props.locations}

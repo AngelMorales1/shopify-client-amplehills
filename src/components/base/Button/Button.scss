@@ -15,12 +15,14 @@
   }
 
   &:active {
-    box-shadow: 0;
+    box-shadow: 0 0 0 0;
     transform: translate3d(0, spacing(0.25), 0);
   }
 
   &--disabled {
+    box-shadow: 0 0 0 0;
     pointer-events: none;
+    transform: translate3d(0, 0, 0);
     opacity: 0.8;
   }
 
@@ -35,11 +37,38 @@
     padding: spacing(3) spacing(6);
   }
 
+  &--icon,
+  &--icon-small {
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    transform-origin: center top;
+    width: spacing(5);
+    transition-duration: $transition-duration-short;
+
+    &:hover {
+      box-shadow: 0 0 0 0;
+      transform: scale(0.95);
+    }
+  }
+
+  &--icon-small {
+    padding: 0;
+    width: spacing(4);
+  }
+
   &--circle {
     @extend .circle;
     font-size: $font-5;
     height: spacing(10);
     width: spacing(10);
+  }
+
+  &--circle-small {
+    @extend .circle;
+    padding: 0;
+    font-size: $font-4;
+    height: spacing(7);
+    width: spacing(7);
   }
 
   &--peach {
@@ -71,8 +100,12 @@
     @extend .bg-white;
     @extend .text-madison-blue;
     border: spacing(1) solid color('madison-blue');
+
+    &.Button--circle-small {
+      border-width: spacing(0.5);
+    }
   }
-  
+
   &--white-madison-blue {
     @extend .bg-white;
     @extend .text-madison-blue;

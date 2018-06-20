@@ -62,13 +62,6 @@ em {
   line-height: $font-7;
 }
 
-.link-text {
-  font-size: $font-4;
-  font-weight: 600;
-  color: color('peach');
-  text-decoration: none;
-}
-
 .description {
   font-size: $font-2;
   line-height: $font-6;
@@ -77,6 +70,12 @@ em {
     font-size: $font-5;
     line-height: $font-7;
   }
+}
+
+.line-item-title {
+  @extend .bold;
+  font-size: $font-3;
+  letter-spacing: spacing(0.1);
 }
 
 .small {
