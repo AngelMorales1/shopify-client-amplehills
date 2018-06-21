@@ -62,7 +62,7 @@ class Nav extends Component {
             variant="circle"
             color="madison-blue"
             onClick={this.toggleMiniCart}
-            label={this.props.totalItems}
+            label={this.props.totalItems.toString()}
           />
         </div>
       </div>
