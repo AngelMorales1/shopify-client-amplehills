@@ -7,7 +7,7 @@ class ContactUs extends Component {
     super();
 
     this.state = {
-      radioIsChecked: false
+      checkedRadio: ''
     };
   }
   render() {

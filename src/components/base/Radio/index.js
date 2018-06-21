@@ -4,16 +4,16 @@ import cx from 'classnames';
 
 import styles from './Radio.scss';
 
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 
 const Radio = ({ className, label, check }) => {
   return (
-    <div className={cx(styles['Radio'], className, 'text-peach link-text')}>
+    <Button className={cx(styles['Radio'], className, 'text-peach link-text')}>
       {check ? (
         <Image alt="Check icon" src="/assets/images/check-icon.svg" />
       ) : null}
       {label}
-    </div>
+    </Button>
   );
 };
 
