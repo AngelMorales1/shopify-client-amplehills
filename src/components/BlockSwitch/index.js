@@ -12,7 +12,7 @@ const BlockSwitch = props => {
   const {
     addLineItemsStatus,
     globalSettings,
-    ourPledge,
+    ourPledgeBlocks,
     checkout,
     shippingDates,
     actions: { addLineItems }
@@ -30,13 +30,13 @@ const BlockSwitch = props => {
           shippingDates={shippingDates}
           checkout={checkout}
           globalSettings={globalSettings}
-          ourPledge={ourPledge}
+          ourPledge={ourPledgeBlocks}
         />
       );
     case 'blockProductDetails':
       return <ProductDetails data={fields} z={z} />;
     default:
-      return null, console.log('????');
+      return null;
   }
 };
 

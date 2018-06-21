@@ -20,7 +20,7 @@ class ProductDetailView extends Component {
                 key={`${i}-${get(block, 'sys.id', i)}`}
                 block={block}
                 product={product}
-                ourPledge={ourPledgeBlocks}
+                ourPledgeBlocks={ourPledgeBlocks}
                 z={contentBlocks.length - i}
                 {...this.props}
               />

@@ -16,21 +16,17 @@ class ProductDetailContainer extends ContainerBase {
     const {
       actions: { fetchProduct, fetchProductContent, getOurPledge }
     } = this.props;
-
     const handle = this.props.match.params.productHandle;
     return Promise.all([
       fetchProduct(handle),
       fetchProductContent(handle),
       getOurPledge()
     ]).then(([productResult, contentResult, ourPledgeResult]) => {
-      return (
-        {
-          product: get(productResult, 'value'),
-          content: get(contentResult, 'value'),
-          ourPledge: get(ourPledgeResult, 'value')
-        },
-        console.log('PDC', ourPledgeResult, productResult, contentResult)
-      );
+      return {
+        product: get(productResult, 'value'),
+        content: get(contentResult, 'value'),
+        ourPledge: get(ourPledgeResult, 'value')
+      };
     });
   };
 }
