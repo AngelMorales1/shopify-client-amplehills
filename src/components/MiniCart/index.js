@@ -224,7 +224,7 @@ const mapStateToProps = state => {
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: get(state, 'session.checkout', {}),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
-    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', false)
+    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
   };
 };
 
