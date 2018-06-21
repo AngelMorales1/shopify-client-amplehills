@@ -6,11 +6,18 @@ import styles from './Radio.scss';
 
 import { Image, Button } from 'components/base';
 
-const Radio = ({ className, label, check }) => {
+const Radio = ({ className, label, check, onClick }) => {
   return (
-    <Button className={cx(styles['Radio'], className, 'text-peach link-text')}>
+    <Button
+      onClick={onClick}
+      className={cx(styles['Radio'], className, 'text-peach link-text')}
+    >
       {check ? (
-        <Image alt="Check icon" src="/assets/images/check-icon.svg" />
+        <Image
+          className={cx('fixed', styles['Radio__check'])}
+          alt="Check icon"
+          src="/assets/images/check-icon.svg"
+        />
       ) : null}
       {label}
     </Button>
