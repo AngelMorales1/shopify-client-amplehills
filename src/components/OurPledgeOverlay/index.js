@@ -3,7 +3,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledgeOverlay.scss';
 
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 
 class OurPledgeOverlay extends Component {
   render() {
