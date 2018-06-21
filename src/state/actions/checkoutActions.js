@@ -1,6 +1,6 @@
 import BuySDK from 'lib/Buy';
 import get from 'utils/get';
-
+import GLOBAL from 'constants/Global';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 
 export const FETCH_OR_CREATE_CHECKOUT = 'FETCH_OR_CREATE_CHECKOUT';
@@ -50,10 +50,33 @@ export const addLineItems = (checkoutID, items) => dispatch => {
 };
 
 export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';
-export const removeLineItems = (checkoutID, items) => dispatch => {
-  return dispatch({
+export const removeLineItems = itemID => {
+  return {
     type: REMOVE_LINE_ITEMS,
-    payload: BuySDK.checkout.removeLineItems(checkoutID, items)
+    payload: itemID
+  };
+};
+
+export const CANCEL_REMOVE_LINE_ITEMS = 'CANCEL_REMOVE_LINE_ITEMS';
+export const cancelRemoveLineItems = itemID => {
+  return {
+    type: CANCEL_REMOVE_LINE_ITEMS,
+    payload: itemID
+  };
+};
+
+export const CONFIRM_REMOVE_LINE_ITEMS = 'CONFIRM_REMOVE_LINE_ITEMS';
+export const confirmRemoveLineItems = (checkoutID, items) => dispatch => {
+  return dispatch({
+    type: CONFIRM_REMOVE_LINE_ITEMS,
+    payload: new Promise(resolve => {
+      items.map(item => dispatch(cancelRemoveLineItems(item)));
+      setTimeout(() => {
+        BuySDK.checkout.removeLineItems(checkoutID, items).then(checkout => {
+          resolve(checkout);
+        });
+      }, GLOBAL.transition);
+    })
   });
 };
 

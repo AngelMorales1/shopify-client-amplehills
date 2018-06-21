@@ -44,11 +44,11 @@
   }
 
   &--icon,
-  &--icon-small {
+  &--icon-small,
+  &--no-style {
     padding: 0;
     box-shadow: 0 0 0 0;
     transform-origin: center top;
-    width: spacing(5);
     transition-duration: $transition-duration-short;
 
     &:hover {
@@ -57,8 +57,11 @@
     }
   }
 
+  &--icon {
+    width: spacing(5);
+  }
+
   &--icon-small {
-    padding: 0;
     width: spacing(4);
   }
 

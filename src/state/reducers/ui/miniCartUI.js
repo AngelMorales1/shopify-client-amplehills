@@ -1,10 +1,13 @@
 import {
   OPEN_MINI_CART,
-  CLOSE_MINI_CART
+  CLOSE_MINI_CART,
+  OPEN_DELETE_MODAL,
+  CLOSE_DELETE_MODAL
 } from 'state/actions/ui/miniCartUIActions';
 
 const initialState = {
-  miniCartIsOpen: false
+  miniCartIsOpen: false,
+  lineItemsBeingRemoved: []
 };
 
 export default (state = initialState, action) => {
@@ -15,6 +18,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         miniCartIsOpen: action.payload
+      };
+    case OPEN_DELETE_MODAL:
+    case CLOSE_DELETE_MODAL:
+      return {
+        ...state,
+        lineItemsBeingRemoved: action.payload
       };
     default:
       return state;

@@ -9,7 +9,8 @@ $colors: (
   'madison-blue': #13436d,
   'goldenrod': #fce29f,
   'varden': #fff6dc,
-  'island-spice': #fffaed
+  'island-spice': #fffaed,
+  'white-wash': rgba(255, 255, 255, 0.9)
 );
 
 @function color($color-name) {

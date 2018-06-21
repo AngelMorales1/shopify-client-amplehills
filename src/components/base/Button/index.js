@@ -32,19 +32,23 @@ const Button = ({
 
   const linkedComponent = isExternalLink(to) ? (
     <a
-      className="text-decoration-none"
-      href={disabled ? '' : to}
+      className={cx('text-decoration-none', {
+        'events-none': disabled
+      })}
+      href={to}
       target="_blank"
       rel="noopener"
-      onClick={disabled ? () => {} : onClick}
+      onClick={onClick}
     >
       <div className={classes}>{label}</div>
     </a>
   ) : (
     <Link
-      className="text-decoration-none"
-      to={disabled ? '' : to}
-      onClick={disabled ? () => {} : onClick}
+      className={cx('text-decoration-none', {
+        'events-none': disabled
+      })}
+      to={to}
+      onClick={onClick}
     >
       <div className={classes}>{label}</div>
     </Link>
