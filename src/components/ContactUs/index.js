@@ -1,50 +1,68 @@
 import React, { Component } from 'react';
 import { Radio, TextField, Button } from 'components/base';
 import cx from 'classnames';
+import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
   constructor() {
     super();
 
     this.state = {
-      checkedRadio: ''
+      checkedRadioField: ''
     };
   }
 
   handleRadioClick = field => {
-    this.setState({ checkedRadio: field });
+    this.setState({ checkedRadioField: field });
   };
 
   render() {
     return (
-      <div className="flex flex-column justify-around items-center">
-        <h2 className="title bold">Contact us</h2>
-        <p>What can we help you with?</p>
-        <div className="flex">
+      <div className="flex flex-column justify-around items-center p4">
+        <h2 className="title bold m3">Contact us</h2>
+        <p className="m3">What can we help you with?</p>
+        <div className="flex m3">
           <Radio
-            check={this.state.checkedRadio === 'ordering'}
+            check={this.state.checkedRadioField === 'ordering'}
             onClick={() => this.handleRadioClick('ordering')}
-            className="mx2"
+            className="mx3"
             label="Ordering"
           />
           <Radio
-            check={this.state.checkedRadio === 'shipping'}
+            check={this.state.checkedRadioField === 'shipping'}
             onClick={() => this.handleRadioClick('shipping')}
-            className="mx2"
+            className="mx3"
             label="Shipping"
           />
           <Radio
-            check={this.state.checkedRadio === 'other'}
+            check={this.state.checkedRadioField === 'other'}
             onClick={() => this.handleRadioClick('other')}
-            className="mx2"
+            className="mx3"
             label="Other"
           />
         </div>
-        <div className="flex flex-column">
-          <TextField color="pampas" placeholder="Name" />
-          <TextField color="pampas" placeholder="Email Address" />
-          <TextField color="pampas" placeholder="Phone Number" />
-          <TextField color="pampas" placeholder="Message" />
+        <div
+          className={cx(
+            'flex flex-column m3',
+            styles['ContactUs__input-fields']
+          )}
+        >
+          <TextField className="m1" variant="pampas" placeholder="Name" />
+          <TextField
+            className="m1"
+            variant="pampas"
+            placeholder="Email Address"
+          />
+          <TextField
+            className="m1"
+            variant="pampas"
+            placeholder="Phone Number"
+          />
+          <TextField
+            className="m1"
+            variant="pampas-tall"
+            placeholder="Message"
+          />
         </div>
         <Button label="Send Us a Message" color="madison-blue" />
       </div>

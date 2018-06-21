@@ -9,6 +9,7 @@ import { Image, Button } from 'components/base';
 const Radio = ({ className, label, check, onClick }) => {
   return (
     <Button
+      variant="style-none"
       onClick={onClick}
       className={cx(styles['Radio'], className, 'text-peach link-text')}
     >

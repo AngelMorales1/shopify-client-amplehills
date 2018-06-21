@@ -26,17 +26,27 @@
     }
   }
 
-  &--pampas {
+  &--pampas,
+  &--pampas-tall {
     input {
       @extend .bg-pampas;
       @extend .text-madison-blue;
       @extend .bold;
       border: 0;
-      border-radius: 5% / 20%;
+      border-radius: 2% / 20%;
+      height: spacing(14);
 
       &::placeholder {
         @extend .text-madison-blue;
       }
+    }
+  }
+
+  &--pampas-tall {
+    input {
+      border-radius: 3% / 9%;
+      height: spacing(50);
+      padding: spacing(5);
     }
   }
 
