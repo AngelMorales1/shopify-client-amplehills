@@ -21,12 +21,7 @@ class OurPledgeOverlay extends Component {
     );
     return (
       <div className={cx('wh100', styles['OurPledgeOverlay'])}>
-        <div
-          className={cx(
-            'wh100 t0 l0 bg-white low-opacity z-overlay',
-            styles['OurPledgeOverlay__base-background']
-          )}
-        />
+        <div className="wh100 t0 l0 bg-white low-opacity z-overlay fixed" />
         <div
           className={cx(
             'fixed bg-island-spice z-overlay',
