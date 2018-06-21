@@ -29,13 +29,13 @@ class OurPledgeOverlay extends Component {
         />
         <div
           className={cx(
-            'fixed bg-island-spice p4 z-overlay',
+            'fixed bg-island-spice z-overlay',
             styles['OurPledgeOverlay__circle-background']
           )}
         >
           <div
             className={cx(
-              'flex flex-column justify-center items-end z-overlay m3 t0 r0 fixed',
+              'flex flex-column items-center z-overlay m3 t0 r0 fixed',
               styles['OurPledgeOverlay__content']
             )}
           >
@@ -48,12 +48,7 @@ class OurPledgeOverlay extends Component {
             >
               <Image alt="Close button" src="/assets/images/close-icon.svg" />
             </button>
-            <div
-              className={cx(
-                'mt3 mb4',
-                styles['OurPledgeOverlay__text-content']
-              )}
-            >
+            <div className={cx(styles['OurPledgeOverlay__text-content'])}>
               <h2 className="m2 big text-madison-blue">We Ship Nationwide</h2>
               <div>
                 <Image
