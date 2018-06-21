@@ -4,9 +4,14 @@ import cx from 'classnames';
 
 import styles from './Radio.scss';
 
-const Radio = ({ className, label }) => {
+import { Image } from 'components/base';
+
+const Radio = ({ className, label, check }) => {
   return (
     <div className={cx(styles['Radio'], className, 'text-peach link-text')}>
+      {check ? (
+        <Image alt="Check icon" src="/assets/images/check-icon.svg" />
+      ) : null}
       {label}
     </div>
   );
@@ -14,12 +19,14 @@ const Radio = ({ className, label }) => {
 
 Radio.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  check: PropTypes.bool
 };
 
 Radio.defaultProps = {
   className: '',
-  label: ''
+  label: '',
+  check: false
 };
 
 export default Radio;

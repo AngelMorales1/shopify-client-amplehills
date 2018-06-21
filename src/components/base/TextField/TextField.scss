@@ -26,6 +26,20 @@
     }
   }
 
+  &--pampas {
+    input {
+      @extend .bg-pampas;
+      @extend .text-madison-blue;
+      @extend .bold;
+      border: 0;
+      border-radius: 5% / 20%;
+
+      &::placeholder {
+        @extend .text-madison-blue;
+      }
+    }
+  }
+
   &--quantity,
   &--quantity-small {
     label {
