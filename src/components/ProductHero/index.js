@@ -52,7 +52,6 @@ class ProductHero extends Component {
     const heroImage = get(product, 'images[0].src', '');
     const availability = get(product, 'variants[0].available', false);
     const price = get(product, 'variants[0].price', []);
-
     return (
       <div
         className={`${styles['ProductHero']} flex flex-wrap`}
@@ -111,7 +110,7 @@ class ProductHero extends Component {
               </Button>
             </form>
           </div>
-          <OurPledge ourPledgeIcon={this.props.globalSettings.ourPledgeIcon} />
+          <OurPledge ourPledge={this.props.ourPledge} />
         </div>
       </div>
     );

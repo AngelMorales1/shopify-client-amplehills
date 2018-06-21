@@ -6,7 +6,8 @@ const Data = {
     getProducts: {},
     fetchByHandle: {},
     getLocations: {},
-    getGlobalSettings: {}
+    getGlobalSettings: {},
+    getOurPledge: {}
   },
   setRef(clientID, client) {
     this[clientID] = client;
@@ -26,6 +27,19 @@ const Data = {
     return this.contentful.getEntries(query).then(val => {
       this.cache.getEntries[hashified] = val;
       return val;
+    });
+  },
+  fetchByHandle(handle) {
+    const hashified = hashify(handle);
+
+    if (this.cache.fetchByHandle[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.fetchByHandle[hashified])
+      );
+
+    return this.shopify.product.fetchByHandle(handle).then(val => {
+      this.cache.fetchByHandle[hashified] = val;
+      return new Promise(resolve => resolve(val));
     });
   },
   getLocations() {
@@ -62,17 +76,21 @@ const Data = {
       return val;
     });
   },
-  fetchByHandle(handle) {
-    const hashified = hashify(handle);
+  getOurPledge() {
+    const query = {
+      content_type: 'ourPledge'
+    };
 
-    if (this.cache.fetchByHandle[hashified])
+    const hashified = hashify(query);
+
+    if (!!this.cache.getOurPledge[hashified])
       return new Promise(resolve =>
-        resolve(this.cache.fetchByHandle[hashified])
+        resolve(this.cache.getOurPledge[hashified])
       );
 
-    return this.shopify.product.fetchByHandle(handle).then(val => {
-      this.cache.fetchByHandle[hashified] = val;
-      return new Promise(resolve => resolve(val));
+    return this.contentful.getEntries(query).then(val => {
+      this.cache.getOurPledge[hashified] = val;
+      return val;
     });
   }
 };

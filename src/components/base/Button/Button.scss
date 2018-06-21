@@ -116,4 +116,15 @@
     @extend .bg-white;
     @extend .text-madison-blue;
   }
+
+  &--style-none {
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: 0;
+    padding: 0;
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
 }

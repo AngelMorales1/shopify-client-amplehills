@@ -12,6 +12,7 @@ const BlockSwitch = props => {
   const {
     addLineItemsStatus,
     globalSettings,
+    ourPledgeBlocks,
     checkout,
     shippingDates,
     actions: { addLineItems }
@@ -29,6 +30,7 @@ const BlockSwitch = props => {
           shippingDates={shippingDates}
           checkout={checkout}
           globalSettings={globalSettings}
+          ourPledge={ourPledgeBlocks}
         />
       );
     case 'blockProductDetails':
