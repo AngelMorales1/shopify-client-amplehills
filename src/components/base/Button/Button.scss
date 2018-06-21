@@ -26,10 +26,16 @@
     opacity: 0.8;
   }
 
-  &--primary {
+  &--primary,
+  &--primary-small {
     border-radius: spacing(8);
     height: spacing(14);
     padding: spacing(4) spacing(6);
+  }
+
+  &--primary-small {
+    height: spacing(10);
+    padding: spacing(2.5) spacing(6);
   }
 
   &--secondary {
