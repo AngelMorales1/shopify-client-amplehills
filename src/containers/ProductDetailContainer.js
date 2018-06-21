@@ -23,11 +23,14 @@ class ProductDetailContainer extends ContainerBase {
       fetchProductContent(handle),
       getOurPledge()
     ]).then(([productResult, contentResult, ourPledgeResult]) => {
-      return {
-        product: get(productResult, 'value'),
-        content: get(contentResult, 'value'),
-        ourPledge: get(ourPledgeResult, 'value')
-      };
+      return (
+        {
+          product: get(productResult, 'value'),
+          content: get(contentResult, 'value'),
+          ourPledge: get(ourPledgeResult, 'value')
+        },
+        console.log('PDC', ourPledgeResult, productResult, contentResult)
+      );
     });
   };
 }

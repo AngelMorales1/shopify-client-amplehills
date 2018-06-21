@@ -52,6 +52,7 @@ class ProductHero extends Component {
     const heroImage = get(product, 'images[0].src', '');
     const availability = get(product, 'variants[0].available', false);
     const price = get(product, 'variants[0].price', []);
+    console.log('PDH');
     return (
       <div
         className={`${styles['ProductHero']} flex flex-wrap`}

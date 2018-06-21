@@ -4,7 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledge.scss';
 
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
@@ -50,15 +50,15 @@ class OurPledge extends Component {
           <p className="mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
             Ice cream arrives fresh delicious, and frozen
           </p>
-          <button
+          <Button
+            variant="style-none"
             onClick={this.openOurPledgeOverlay}
+            label="More Info"
             className={cx(
-              'mx2 uppercase text-madison-blue info-text-big bold nowrap px0 pointer',
+              'mx2 uppercase text-madison-blue info-text-big bold nowrap',
               styles['OurPledge__more-info']
             )}
-          >
-            More Info
-          </button>
+          />
         </div>
         {this.state.ourPledgeOverlayIsOpen ? (
           <OurPledgeOverlay

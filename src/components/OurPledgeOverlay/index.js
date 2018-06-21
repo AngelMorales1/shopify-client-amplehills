@@ -34,15 +34,13 @@ class OurPledgeOverlay extends Component {
               styles['OurPledgeOverlay__content']
             )}
           >
-            <button
+            <Button
+              variant="style-none"
               onClick={closeOurPledgeOverlay}
-              className={cx(
-                't0 r0 m3 fixed pointer',
-                styles['OurPledgeOverlay__button']
-              )}
+              className="t0 r0 m3 fixed"
             >
               <Image alt="Close button" src="/assets/images/close-icon.svg" />
-            </button>
+            </Button>
             <div className={cx(styles['OurPledgeOverlay__text-content'])}>
               <h2 className="m2 big text-madison-blue">We Ship Nationwide</h2>
               <div>
