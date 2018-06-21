@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {
-  closeMiniCart,
-  openDeleteModal,
-  closeDeleteModal
-} from 'state/actions/ui/miniCartUIActions';
+import { closeMiniCart } from 'state/actions/ui/miniCartUIActions';
 import {
   confirmRemoveLineItems,
   cancelRemoveLineItems,
@@ -18,7 +14,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 
-import { Button, Image, DeleteModal, QuantitySelector } from 'components/base';
+import { Button, Image, QuantitySelector } from 'components/base';
 import styles from './MiniCart.scss';
 
 class MiniCart extends Component {
@@ -179,8 +175,6 @@ class MiniCart extends Component {
 MiniCart.propTypes = {
   actions: PropTypes.shape({
     closeMiniCart: PropTypes.func,
-    closeDeleteModal: PropTypes.func,
-    openDeleteModal: PropTypes.func,
     removeLineItems: PropTypes.func,
     cancelRemoveLineItems: PropTypes.func,
     confirmRemoveLineItems: PropTypes.func,
@@ -204,8 +198,6 @@ MiniCart.propTypes = {
 MiniCart.defaultProps = {
   actions: {
     closeMiniCart: () => {},
-    closeDeleteModal: () => {},
-    openDeleteModal: () => {},
     removeLineItems: () => {},
     cancelRemoveLineItems: () => {},
     confirmRemoveLineItems: () => {},
@@ -241,8 +233,6 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         closeMiniCart,
-        closeDeleteModal,
-        openDeleteModal,
         removeLineItems,
         cancelRemoveLineItems,
         confirmRemoveLineItems,

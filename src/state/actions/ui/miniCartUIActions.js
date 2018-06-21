@@ -13,19 +13,3 @@ export const closeMiniCart = payload => {
     payload: false
   };
 };
-
-export const OPEN_DELETE_MODAL = 'OPEN_DELETE_MODAL';
-export const openDeleteModal = payload => {
-  return {
-    type: OPEN_DELETE_MODAL,
-    payload: true
-  };
-};
-
-export const CLOSE_DELETE_MODAL = 'CLOSE_DELETE_MODAL';
-export const closeDeleteModal = payload => {
-  return {
-    type: CLOSE_DELETE_MODAL,
-    payload: false
-  };
-};
