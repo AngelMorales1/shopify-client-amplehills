@@ -11,13 +11,6 @@ Manual Resets
 }
 
 /*
-Position
-*/
-.fixed {
-  position: fixed;
-}
-
-/*
 Dimension classes
 */
 
@@ -115,9 +108,4 @@ UI elements
 
 .icon {
   width: spacing(9);
-}
-
-.close-button {
-  width: spacing(5);
-  cursor: pointer;
 }

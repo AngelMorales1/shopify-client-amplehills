@@ -16,3 +16,11 @@ export const fetchProduct = payload => dispatch => {
     })
   });
 };
+
+export const GET_OUR_PLEDGE = 'GET_OUR_PLEDGE';
+export const getOurPledge = payload => {
+  return {
+    type: `GET_OUR_PLEDGE`,
+    payload: Data.getOurPledge()
+  };
+};

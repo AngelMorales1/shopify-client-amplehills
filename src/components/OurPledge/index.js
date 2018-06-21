@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledge.scss';
@@ -52,7 +53,7 @@ class OurPledge extends Component {
           <button
             onClick={this.openOurPledgeOverlay}
             className={cx(
-              'mx2 uppercase text-madison-blue info-text-big bold nowrap px0',
+              'mx2 uppercase text-madison-blue info-text-big bold nowrap px0 pointer',
               styles['OurPledge__more-info']
             )}
           >
@@ -73,3 +74,17 @@ class OurPledge extends Component {
 }
 
 export default OurPledge;
+
+OurPledge.propTypes = {
+  ourPledge: PropTypes.shape({
+    calloutImage: PropTypes.object,
+    overlayContentImage: PropTypes.object,
+    shippingInformation: PropTypes.string,
+    shippingPledge: PropTypes.string,
+    title: PropTypes.string
+  })
+};
+
+OurPledge.defaultProps = {
+  ourPledge: {}
+};

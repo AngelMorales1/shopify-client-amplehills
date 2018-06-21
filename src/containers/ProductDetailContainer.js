@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
-import { fetchProduct } from 'state/actions/productActions';
+import { fetchProduct, getOurPledge } from 'state/actions/productActions';
 import { fetchProductContent } from 'state/actions/contentActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
-import { getOurPledge } from 'state/actions/ui/applicationUIActions';
 
 import get from 'utils/get';
 

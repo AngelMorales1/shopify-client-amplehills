@@ -42,7 +42,7 @@ class OurPledgeOverlay extends Component {
             <button
               onClick={closeOurPledgeOverlay}
               className={cx(
-                'close-button t0 r0 m3 fixed',
+                't0 r0 m3 fixed pointer',
                 styles['OurPledgeOverlay__button']
               )}
             >
