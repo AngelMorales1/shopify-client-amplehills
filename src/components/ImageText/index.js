@@ -11,26 +11,15 @@ class ImageText extends Component {
     const colorClass = `ImageText--${get(data, 'backgroundColor', 'Pink')}`;
     const position = get(data, 'imagePosition', 0);
     return (
-      <div
-        className={cx(
-          'p4 drip',
-          styles[colorClass],
-          styles['Imagetext__container']
-        )}
-      >
-        <div className="flex justify-around m4 px4">
+      <div className={cx('p4 flex', styles['ImageText'], styles[colorClass])}>
+        <div className="flex justify-around px4">
           <Image
-            className={cx('z-overlay self-end', styles['ImageText__image'])}
+            className="z-1 self-end col-3 square"
             style={{ marginBottom: `-${position}vh` }}
             alt={`${data.title} illustration`}
             src={get(data, 'image.fields.file.url', '')}
           />
-          <div
-            className={cx(
-              'flex flex-column justify-center my4',
-              styles['ImageText__text-box']
-            )}
-          >
+          <div className="flex flex-column justify-center my4 col-4">
             <h2 className="block-headline mb3">{data.title}</h2>
             <p>{data.text}</p>
           </div>
