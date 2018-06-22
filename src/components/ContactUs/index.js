@@ -12,7 +12,7 @@ class ContactUs extends Component {
     };
   }
 
-  handleRadioClick = field => {
+  checkRadioButton = field => {
     this.setState({ checkedRadioField: field });
   };
 
@@ -24,19 +24,19 @@ class ContactUs extends Component {
         <div className="flex m3">
           <Radio
             check={this.state.checkedRadioField === 'ordering'}
-            onClick={() => this.handleRadioClick('ordering')}
+            onClick={() => this.checkRadioButton('ordering')}
             className="mx3"
             label="Ordering"
           />
           <Radio
             check={this.state.checkedRadioField === 'shipping'}
-            onClick={() => this.handleRadioClick('shipping')}
+            onClick={() => this.checkRadioButton('shipping')}
             className="mx3"
             label="Shipping"
           />
           <Radio
             check={this.state.checkedRadioField === 'other'}
-            onClick={() => this.handleRadioClick('other')}
+            onClick={() => this.checkRadioButton('other')}
             className="mx3"
             label="Other"
           />
