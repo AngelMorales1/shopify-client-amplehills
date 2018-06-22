@@ -9,7 +9,6 @@ class ProductLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     const content = get(model, 'landing.items[0].fields', {});
-    console.log(this.props);
 
     return (
       <div className="ProductLanding mb3">

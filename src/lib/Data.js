@@ -38,7 +38,6 @@ const Data = {
         resolve(this.cache.fetchProducts[hashified])
       );
 
-    console.log('sss');
     return this.shopify.product.fetchAll().then(val => {
       this.cache.fetchProducts[hashified] = val;
       return new Promise(resolve => resolve(val));
