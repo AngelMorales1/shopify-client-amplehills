@@ -3,7 +3,8 @@ import hashify from 'object-hash';
 const Data = {
   cache: {
     getEntries: {},
-    getProducts: {},
+    fetchProducts: {},
+    fetchProductLanding: {},
     fetchByHandle: {},
     getLocations: {},
     getGlobalSettings: {},
@@ -26,6 +27,37 @@ const Data = {
 
     return this.contentful.getEntries(query).then(val => {
       this.cache.getEntries[hashified] = val;
+      return val;
+    });
+  },
+  fetchProducts() {
+    const hashified = hashify('fetchAll');
+
+    if (this.cache.fetchProducts[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.fetchProducts[hashified])
+      );
+
+    console.log('sss');
+    return this.shopify.product.fetchAll().then(val => {
+      this.cache.fetchProducts[hashified] = val;
+      return new Promise(resolve => resolve(val));
+    });
+  },
+  fetchProductLanding() {
+    const query = {
+      content_type: 'productLanding'
+    };
+
+    const hashified = hashify(query);
+
+    if (!!this.cache.fetchProductLanding[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.fetchProductLanding[hashified])
+      );
+
+    return this.contentful.getEntries(query).then(val => {
+      this.cache.fetchProductLanding[hashified] = val;
       return val;
     });
   },
@@ -90,6 +122,23 @@ const Data = {
 
     return this.contentful.getEntries(query).then(val => {
       this.cache.getOurPledge[hashified] = val;
+      return val;
+    });
+  },
+  getProductLanding() {
+    const query = {
+      content_type: 'productLanding'
+    };
+
+    const hashified = hashify(query);
+
+    if (!!this.cache.getProductLanding[hashified])
+      return new Promise(resolve =>
+        resolve(this.cache.getProductLanding[hashified])
+      );
+
+    return this.contentful.getEntries(query).then(val => {
+      this.cache.getProductLanding[hashified] = val;
       return val;
     });
   }
