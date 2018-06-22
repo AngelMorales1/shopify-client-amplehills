@@ -6,7 +6,7 @@ import ProductLandingContainer from 'containers/ProductLandingContainer';
 import ProductDetailContainer from 'containers/ProductDetailContainer';
 import CollectionLandingContainer from 'containers/CollectionLandingContainer';
 import CollectionDetailContainer from 'containers/CollectionDetailContainer';
-import ContactUs from 'components/ContactUs';
+import ContactUsContainer from 'components/ContactUs';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -18,7 +18,7 @@ const Routes = ({ location }) => (
       component={CollectionDetailContainer}
     />
     <Route path="/collections" component={CollectionLandingContainer} />
-    <Route path="/contact" component={ContactUs} />
+    <Route path="/contact" component={ContactUsContainer} />
   </Switch>
 );
 

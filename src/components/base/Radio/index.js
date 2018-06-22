@@ -17,7 +17,7 @@ const Radio = ({ className, label, check, onClick }) => {
         <Image
           className={cx('fixed', styles['Radio__check'])}
           alt="Check icon"
-          src="/assets/images/check-icon.svg"
+          src="/assets/images/icon-check.svg"
         />
       ) : null}
       {label}

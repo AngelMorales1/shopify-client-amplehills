@@ -26,11 +26,11 @@
     }
   }
 
-  &--pampas,
-  &--pampas-tall {
+  &--light-gray,
+  &--light-gray-tall {
     input,
     textarea {
-      @extend .bg-pampas;
+      @extend .bg-light-gray;
       @extend .text-madison-blue;
       @extend .bold;
       border: 0;
@@ -43,7 +43,7 @@
     }
   }
 
-  &--pampas-tall {
+  &--light-gray-tall {
     textarea {
       border-radius: 3% / 9%;
       height: spacing(50);

@@ -12,7 +12,7 @@ class ContactUs extends Component {
     };
   }
 
-  checkRadioButton = field => {
+  handleRadioClick = field => {
     this.setState({ checkedRadioField: field });
   };
 
@@ -21,26 +21,26 @@ class ContactUs extends Component {
       <div className="flex flex-column justify-around items-center p4">
         <h2 className="title bold m3">Contact us</h2>
         <p className="m3">What can we help you with?</p>
-        <div className="flex m3">
+        <form className="flex m3">
           <Radio
             check={this.state.checkedRadioField === 'ordering'}
-            onClick={() => this.checkRadioButton('ordering')}
+            onClick={() => this.handleRadioClick('ordering')}
             className="mx3"
             label="Ordering"
           />
           <Radio
             check={this.state.checkedRadioField === 'shipping'}
-            onClick={() => this.checkRadioButton('shipping')}
+            onClick={() => this.handleRadioClick('shipping')}
             className="mx3"
             label="Shipping"
           />
           <Radio
             check={this.state.checkedRadioField === 'other'}
-            onClick={() => this.checkRadioButton('other')}
+            onClick={() => this.handleRadioClick('other')}
             className="mx3"
             label="Other"
           />
-        </div>
+        </form>
         <div
           className={cx(
             'flex flex-column m3',
@@ -49,25 +49,25 @@ class ContactUs extends Component {
         >
           <TextField
             className="m1"
-            variant="pampas"
+            variant="light-gray"
             type="text"
             placeholder="Name"
           />
           <TextField
             className="m1"
-            variant="pampas"
+            variant="light-gray"
             type="email"
             placeholder="Email Address"
           />
           <TextField
             className="m1"
-            variant="pampas"
+            variant="light-gray"
             type="tel"
             placeholder="Phone Number"
           />
           <TextField
             className="m1"
-            variant="pampas-tall"
+            variant="light-gray-tall"
             placeholder="Message"
             multiLine={true}
           />

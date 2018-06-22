@@ -9,7 +9,12 @@ class FooterLinks extends Component {
       <div className="m4 col-3">
         <h2 className="title bold text-white">We would love to talk!</h2>
         <div className="my3 flex">
-          <Button label="Contact Us" color="white-madison-blue" />
+          <Button
+            exact
+            to="/contact"
+            label="Contact Us"
+            color="white-madison-blue"
+          />
           <Image
             alt="Decorative left down arrow icon"
             src="/assets/images/arrow-left-down.svg"
