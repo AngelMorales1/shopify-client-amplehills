@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Radio, TextField, Button } from 'components/base';
-import cx from 'classnames';
-import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       checkedRadioField: ''
@@ -41,12 +39,7 @@ class ContactUs extends Component {
             label="Other"
           />
         </form>
-        <div
-          className={cx(
-            'flex flex-column m3',
-            styles['ContactUs__input-fields']
-          )}
-        >
+        <div className="flex flex-column m3 wh100 text-container-width">
           <TextField
             className="m1"
             variant="light-gray"
