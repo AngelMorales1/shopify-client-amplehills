@@ -47,21 +47,29 @@ class ContactUs extends Component {
             styles['ContactUs__input-fields']
           )}
         >
-          <TextField className="m1" variant="pampas" placeholder="Name" />
           <TextField
             className="m1"
             variant="pampas"
+            type="text"
+            placeholder="Name"
+          />
+          <TextField
+            className="m1"
+            variant="pampas"
+            type="email"
             placeholder="Email Address"
           />
           <TextField
             className="m1"
             variant="pampas"
+            type="tel"
             placeholder="Phone Number"
           />
           <TextField
             className="m1"
             variant="pampas-tall"
             placeholder="Message"
+            multiLine={true}
           />
         </div>
         <Button label="Send Us a Message" color="madison-blue" />

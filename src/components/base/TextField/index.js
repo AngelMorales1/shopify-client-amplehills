@@ -18,7 +18,8 @@ const TextField = ({
   value,
   variant,
   color,
-  fullWidth
+  fullWidth,
+  multiLine
 }) => {
   const classes = cx(styles['TextField'], 'field-group', className, {
     [styles['TextField--error']]: error,
@@ -36,17 +37,30 @@ const TextField = ({
       <label htmlFor={_id} className="label-text caps mb1">
         {label}
       </label>
-      <input
-        id={_id}
-        name={name}
-        onBlur={e => onBlur(e.target.value)}
-        onChange={e => onChange(e.target.value)}
-        pattern={pattern}
-        placeholder={placeholder}
-        type={type}
-        required={required ? 'required' : false}
-        value={value}
-      />
+      {multiLine ? (
+        <textarea
+          id={_id}
+          name={name}
+          onBlur={e => onBlur(e.target.value)}
+          onChange={e => onChange(e.target.value)}
+          pattern={pattern}
+          placeholder={placeholder}
+          required={required ? 'required' : false}
+          value={value}
+        />
+      ) : (
+        <input
+          id={_id}
+          name={name}
+          onBlur={e => onBlur(e.target.value)}
+          onChange={e => onChange(e.target.value)}
+          pattern={pattern}
+          placeholder={placeholder}
+          type={type}
+          required={required ? 'required' : false}
+          value={value}
+        />
+      )}
     </div>
   );
 };
@@ -66,7 +80,8 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  multiLine: PropTypes.bool
 };
 
 TextField.defaultProps = {
@@ -77,7 +92,8 @@ TextField.defaultProps = {
   placeholder: '',
   required: false,
   type: 'text',
-  name: ''
+  name: '',
+  multiLine: false
 };
 
 export default TextField;

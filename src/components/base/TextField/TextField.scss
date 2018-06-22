@@ -28,7 +28,8 @@
 
   &--pampas,
   &--pampas-tall {
-    input {
+    input,
+    textarea {
       @extend .bg-pampas;
       @extend .text-madison-blue;
       @extend .bold;
@@ -43,10 +44,16 @@
   }
 
   &--pampas-tall {
-    input {
+    textarea {
       border-radius: 3% / 9%;
       height: spacing(50);
+      width: 100%;
       padding: spacing(5);
+      resize: none;
+
+      span {
+        width: 100%;
+      }
     }
   }
 
