@@ -26,7 +26,6 @@ class ProductDetails extends Component {
     const details = get(data, 'productDetails', []);
 
     const colorClass = `ProductDetails--${get(data, 'color', 'Blue')}`;
-
     return (
       <div
         className={`${styles['ProductDetails']} ${styles[colorClass]} p2 drip`}
