@@ -11,7 +11,6 @@ class ProductLandingView extends Component {
 
     return (
       <div className="ProductLanding">
-        <h1 className="mb2">ProductLanding</h1>
         <ProductGrid products={products} />
       </div>
     );
