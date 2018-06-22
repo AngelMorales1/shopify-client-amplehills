@@ -46,7 +46,9 @@ class OurPledge extends Component {
             styles['OurPledge__text-container']
           )}
         >
-          <p className="mx2 text-madison-blue bold nowrap">Our Pledge</p>
+          <p className="mx2 callout-small text-madison-blue nowrap">
+            Our Pledge
+          </p>
           <p className="mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
             Ice cream arrives fresh delicious, and frozen
           </p>
