@@ -6,18 +6,9 @@
     @extend .text-madison-blue;
   }
 
-  &__container {
-    // position: relative;
-    min-height: spacing(300);
-    border: solid red;
-  }
-
   &__image {
-    width: 30%;
-    height: 30%;
-    // width:spacing(90);
-    // height:spacing(90);
-    // position: absolute;
+    width: 32%;
+    height: 32%;
   }
 
   &__text-box {

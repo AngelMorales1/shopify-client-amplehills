@@ -7,7 +7,6 @@ import { Image } from 'components/base';
 
 class ImageText extends Component {
   render() {
-    console.log('???', this.props);
     const { data } = this.props;
     const colorClass = `ImageText--${get(data, 'backgroundColor', 'Pink')}`;
     const position = get(data, 'imagePosition', 0);
@@ -19,12 +18,7 @@ class ImageText extends Component {
           styles['Imagetext__container']
         )}
       >
-        <div
-          className={cx(
-            'flex justify-around m4 px4',
-            styles['Imagetext__container']
-          )}
-        >
+        <div className="flex justify-around m4 px4">
           <Image
             className={cx('z-overlay self-end', styles['ImageText__image'])}
             style={{ marginBottom: `-${position}vh` }}
