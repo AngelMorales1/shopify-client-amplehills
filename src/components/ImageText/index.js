@@ -11,7 +11,9 @@ class ImageText extends Component {
     const colorClass = `ImageText--${get(data, 'backgroundColor', 'Pink')}`;
     const position = get(data, 'imagePosition', 0);
     return (
-      <div className={cx('p4 flex', styles['ImageText'], styles[colorClass])}>
+      <div
+        className={cx('p4 flex drip', styles['ImageText'], styles[colorClass])}
+      >
         <div className="flex justify-around px4">
           <Image
             className="z-1 self-end col-3 square"
