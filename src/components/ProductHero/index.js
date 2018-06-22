@@ -57,6 +57,12 @@ class ProductHero extends Component {
         className={`${styles['ProductHero']} flex flex-wrap`}
         style={{ zIndex: z }}
       >
+        {get(data, 'alert', '') ? (
+          <div className="absolute center mt3 uppercase tout z-1 w100">
+            {get(data, 'alert', '')}
+          </div>
+        ) : null}
+
         <div
           className="col col-12 md-col-6 square"
           style={{
