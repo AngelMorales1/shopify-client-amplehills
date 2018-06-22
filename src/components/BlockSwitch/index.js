@@ -35,7 +35,7 @@ const BlockSwitch = props => {
     case 'blockProductDetails':
       return <ProductDetails data={fields} z={z} />;
     case 'blockImageText':
-      return <ImageText data={fields} />;
+      return <ImageText data={fields} z={z} />;
     default:
       return null;
   }
