@@ -41,10 +41,54 @@ class MiniCart extends Component {
     );
   };
 
+  renderDeleteModal() {
+    const classes = cx(
+      'fixed-cover bg-white-wash flex justify-center items-center',
+      styles['MiniCart__delete-modal'],
+      {
+        [styles['MiniCart__delete-modal--active']]: this.props
+          .lineItemsBeingRemoved.length
+      }
+    );
+
+    const id = this.props.lineItemsBeingRemoved[0];
+
+    return (
+      <div className={classes}>
+        <div
+          className={cx(
+            styles['MiniCart__delete-modal-inner'],
+            'w100 bg-white drop-shadow-xlarge p3 card'
+          )}
+        >
+          <div className="mb4">
+            <span className="big bold">
+              Are you sure you want to remove this from your cart?
+            </span>
+          </div>
+          <div className="flex justify-end">
+            <Button
+              variant="no-style"
+              label="Cancel"
+              className="mr3 text-peach"
+              onClick={() => this.props.actions.cancelRemoveLineItems(id)}
+            />
+            <Button
+              variant="primary"
+              color="madison-blue"
+              label="Yes"
+              onClick={() => this.confirmRemoveLineItems(id)}
+            />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const {
       checkout,
-      actions: { closeMiniCart, removeLineItems, cancelRemoveLineItems }
+      actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
     const classes = cx(
@@ -124,49 +168,7 @@ class MiniCart extends Component {
             />
           </div>
         </div>
-        {items.map(item => {
-          const id = get(item, 'id', '');
-          const classes = cx(
-            'fixed-cover bg-white-wash flex justify-center items-center',
-            styles['MiniCart__delete-modal'],
-            {
-              [styles[
-                'MiniCart__delete-modal--active'
-              ]]: this.props.lineItemsBeingRemoved.includes(id)
-            }
-          );
-
-          return (
-            <div key={id} className={classes}>
-              <div
-                className={cx(
-                  styles['MiniCart__delete-modal-inner'],
-                  'w100 bg-white drop-shadow-xlarge p3 card'
-                )}
-              >
-                <div className="mb4">
-                  <span className="big bold">
-                    Are you sure you want to remove {item.title} from your cart?
-                  </span>
-                </div>
-                <div className="flex justify-end">
-                  <Button
-                    variant="no-style"
-                    label="Cancel"
-                    className="mr3 text-peach"
-                    onClick={() => cancelRemoveLineItems(id)}
-                  />
-                  <Button
-                    variant="primary"
-                    color="madison-blue"
-                    label="Yes"
-                    onClick={() => this.confirmRemoveLineItems(id)}
-                  />
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {this.renderDeleteModal()}
       </div>
     );
   }

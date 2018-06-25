@@ -4,8 +4,7 @@ import {
 } from 'state/actions/ui/miniCartUIActions';
 
 const initialState = {
-  miniCartIsOpen: false,
-  lineItemsBeingRemoved: []
+  miniCartIsOpen: false
 };
 
 export default (state = initialState, action) => {
