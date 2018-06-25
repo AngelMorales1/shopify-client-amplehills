@@ -4,15 +4,11 @@
   &::before {
     @extend .circle;
     content: ' ';
-    border: spacing(0.7) solid color('peach');
+    border: spacing(0.5) solid color('peach');
     display: inline-block;
     height: spacing(4);
     margin-right: spacing(2);
     width: spacing(4);
     vertical-align: middle;
-  }
-
-  &__check {
-    left: spacing(1);
   }
 }
