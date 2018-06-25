@@ -40,7 +40,7 @@ const Data = {
 
     return this.shopify.product.fetchAll().then(val => {
       this.cache.fetchProducts[hashified] = val;
-      return new Promise(resolve => resolve(val));
+      return val;
     });
   },
   fetchProductLanding() {
@@ -70,7 +70,7 @@ const Data = {
 
     return this.shopify.product.fetchByHandle(handle).then(val => {
       this.cache.fetchByHandle[hashified] = val;
-      return new Promise(resolve => resolve(val));
+      return val;
     });
   },
   getLocations() {
