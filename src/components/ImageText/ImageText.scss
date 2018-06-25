@@ -1,8 +1,6 @@
 @import 'settings';
 
 .ImageText {
-  min-height: 65vh;
-
   &--Pink {
     @extend .bg-light-pink;
     @extend .text-madison-blue;

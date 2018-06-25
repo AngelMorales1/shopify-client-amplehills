@@ -17,8 +17,8 @@ class ImageText extends Component {
         <div className="flex justify-around px4">
           <Image
             className="z-overlay self-end col-3 square"
-            style={{ marginBottom: `-${position}vh` }}
-            alt={`${data.title} illustration`}
+            style={{ transform: `translateY(${position}%)` }}
+            alt={`${get(data, 'title', '')} illustration`}
             src={get(data, 'image.fields.file.url', '')}
           />
           <div className="flex flex-column justify-center my4 col-4">
