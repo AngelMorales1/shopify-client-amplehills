@@ -2,13 +2,16 @@ import { FULFILLED, IDLE, PENDING, REJECTED } from 'constants/Status';
 import { INITIALIZE_APPLICATION } from 'state/actions/applicationActions';
 import {
   ADD_LINE_ITEMS,
-  UPDATE_LINE_ITEMS
+  UPDATE_LINE_ITEMS,
+  REMOVE_LINE_ITEMS,
+  CANCEL_REMOVE_LINE_ITEMS
 } from 'state/actions/checkoutActions';
 
 const initialState = {
   initializeApplication: IDLE,
   addLineItemsStatus: IDLE,
-  lineItemsBeingUpdated: []
+  lineItemsBeingUpdated: [],
+  lineItemsBeingRemoved: []
 };
 
 export default (state = initialState, action) => {
@@ -38,6 +41,20 @@ export default (state = initialState, action) => {
         ...state,
         lineItemsBeingUpdated: state.lineItemsBeingUpdated.filter(
           item => item !== action.meta.id
+        )
+      };
+    case REMOVE_LINE_ITEMS:
+      return {
+        ...state,
+        lineItemsBeingRemoved: state.lineItemsBeingUpdated.concat(
+          action.payload
+        )
+      };
+    case CANCEL_REMOVE_LINE_ITEMS:
+      return {
+        ...state,
+        lineItemsBeingRemoved: state.lineItemsBeingRemoved.filter(
+          item => item !== action.payload
         )
       };
 

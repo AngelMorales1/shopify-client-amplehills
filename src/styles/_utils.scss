@@ -44,6 +44,12 @@
   z-index: -1;
 }
 
+.fixed-cover {
+  @extend .absolute-cover;
+  position: fixed;
+  z-index: z('overlay');
+}
+
 .circle {
   border-radius: 50%;
   overflow: hidden;

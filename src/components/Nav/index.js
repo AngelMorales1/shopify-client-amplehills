@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import totalItems from 'state/selectors/totalItems';
 import {
   openMiniCart,
   closeMiniCart
@@ -17,7 +18,6 @@ class Nav extends Component {
   toggleMiniCart = () => {
     const {
       miniCartIsOpen,
-      checkout,
       actions: { openMiniCart, closeMiniCart }
     } = this.props;
 
@@ -62,7 +62,7 @@ class Nav extends Component {
             variant="circle"
             color="madison-blue"
             onClick={this.toggleMiniCart}
-            label={get(this.props.checkout, 'lineItems.length', 0)}
+            label={this.props.totalItems.toString()}
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ const mapStateToProps = state => {
   return {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
-    checkout: get(state, 'sessions.checkout')
+    totalItems: totalItems(state)
   };
 };
 
