@@ -26,10 +26,9 @@ class ProductDetails extends Component {
     const details = get(data, 'productDetails', []);
 
     const colorClass = `ProductDetails--${get(data, 'color', 'Blue')}`;
-
     return (
       <div
-        className={`${styles['ProductDetails']} ${styles[colorClass]} p2 drip`}
+        className={cx(styles['ProductDetails'], styles[colorClass], 'p2 drip')}
         style={{ zIndex: this.props.z }}
       >
         <div className="flex justify-center flex-wrap center mb3">

@@ -4,6 +4,7 @@ import get from 'utils/get';
 
 import ProductHero from 'components/ProductHero';
 import ProductDetails from 'components/ProductDetails';
+import ImageText from 'components/ImageText';
 
 const BlockSwitch = props => {
   const { block, product, z } = props;
@@ -35,6 +36,8 @@ const BlockSwitch = props => {
       );
     case 'blockProductDetails':
       return <ProductDetails data={fields} z={z} />;
+    case 'blockImageText':
+      return <ImageText data={fields} z={z} />;
     default:
       return null;
   }
