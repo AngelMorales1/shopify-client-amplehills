@@ -23,7 +23,7 @@ class ImageText extends Component {
           />
           <div className="flex flex-column justify-center my4 col-4">
             <h2 className="block-headline mb3">{data.title}</h2>
-            <p>{data.text}</p>
+            <p className="description">{data.text}</p>
           </div>
         </div>
       </div>
