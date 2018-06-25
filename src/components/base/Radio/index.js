@@ -4,22 +4,37 @@ import cx from 'classnames';
 
 import styles from './Radio.scss';
 
-const Radio = ({ className, label }) => {
+import { Image, Button } from 'components/base';
+
+const Radio = ({ className, label, check, onClick }) => {
   return (
-    <div className={cx(styles['Radio'], className, 'text-peach link-text')}>
+    <Button
+      variant="style-none"
+      onClick={onClick}
+      className={cx(styles['Radio'], 'text-peach bold', className)}
+    >
+      {check ? (
+        <Image
+          className={cx('fixed', styles['Radio__check'])}
+          alt="Check icon"
+          src="/assets/images/icon-check.svg"
+        />
+      ) : null}
       {label}
-    </div>
+    </Button>
   );
 };
 
 Radio.propTypes = {
   className: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  check: PropTypes.bool
 };
 
 Radio.defaultProps = {
   className: '',
-  label: ''
+  label: '',
+  check: false
 };
 
 export default Radio;

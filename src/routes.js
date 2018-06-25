@@ -1,11 +1,12 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import HomeContainer from "containers/HomeContainer";
-import ProductLandingContainer from "containers/ProductLandingContainer";
-import ProductDetailContainer from "containers/ProductDetailContainer";
-import CollectionLandingContainer from "containers/CollectionLandingContainer";
-import CollectionDetailContainer from "containers/CollectionDetailContainer";
+import HomeContainer from 'containers/HomeContainer';
+import ProductLandingContainer from 'containers/ProductLandingContainer';
+import ProductDetailContainer from 'containers/ProductDetailContainer';
+import CollectionLandingContainer from 'containers/CollectionLandingContainer';
+import CollectionDetailContainer from 'containers/CollectionDetailContainer';
+import ContactUsContainer from 'components/ContactUs';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -17,6 +18,7 @@ const Routes = ({ location }) => (
       component={CollectionDetailContainer}
     />
     <Route path="/collections" component={CollectionLandingContainer} />
+    <Route path="/contact" component={ContactUsContainer} />
   </Switch>
 );
 
