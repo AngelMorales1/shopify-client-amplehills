@@ -20,6 +20,7 @@ const BlockSwitch = props => {
     actions: { addLineItems }
   } = props;
 
+  console.log('o', props.ourPledge, ourPledgeBlocks);
   switch (contentType) {
     case 'blockProductHero':
       return (
@@ -40,7 +41,9 @@ const BlockSwitch = props => {
     case 'blockImageText':
       return <ImageText data={fields} z={z} />;
     case 'blockChooseYourOwnStory':
-      return <ChooseYourOwnStory data={fields} z={z} />;
+      return (
+        <ChooseYourOwnStory ourPledge={ourPledgeBlocks} data={fields} z={z} />
+      );
     default:
       return null;
   }

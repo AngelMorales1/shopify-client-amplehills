@@ -7,11 +7,13 @@ import get from 'utils/get';
 
 import { Radio } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
+import OurPledge from 'components/OurPledge';
 import ProductShoppableCard from 'components/ProductShoppableCard';
 
 class ChooseYourOwnStory extends Component {
   render() {
-    const { data, products } = this.props;
+    console.log('props', this.props);
+    const { data, products, ourPledge } = this.props;
     const shoppableProducts = get(data, 'products', []);
     const breadcrumbs = [
       {
@@ -49,9 +51,10 @@ class ChooseYourOwnStory extends Component {
               <Radio label="4-Pack" className="mr3" />
               <Radio label="6-Pack" />
             </div>
-            <div>
+            <div className="mb4">
               <p className="copy pr2">{get(data, 'description', '')}</p>
             </div>
+            <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
         <div className="fixed b0 l0 w100 bg-madison-blue text-white">Menu</div>
