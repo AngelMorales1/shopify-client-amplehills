@@ -34,8 +34,10 @@
       @extend .text-madison-blue;
       @extend .bold;
       border: 0;
-      border-radius: 2% / 20%;
-      height: spacing(14);
+      border-radius: 1.5% / 15%;
+      padding: spacing(6);
+      height: spacing(15);
+      font-size: $font-4;
 
       &::placeholder {
         @extend .text-madison-blue;
@@ -46,7 +48,7 @@
   &--light-gray-tall {
     textarea {
       border-radius: 3% / 9%;
-      height: spacing(50);
+      height: spacing(45);
       width: 100%;
       padding: spacing(5);
       resize: none;

@@ -17,8 +17,8 @@ class ContactUs extends Component {
   render() {
     return (
       <div className="flex flex-column justify-around items-center p4">
-        <h2 className="title bold m3">Contact us</h2>
-        <p className="m3">What can we help you with?</p>
+        <h2 className="block-headline m2">Contact us</h2>
+        <p className="m2">What can we help you with?</p>
         <form className="flex m3">
           <Radio
             check={this.state.checkedRadioField === 'ordering'}

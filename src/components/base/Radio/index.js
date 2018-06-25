@@ -11,7 +11,7 @@ const Radio = ({ className, label, check, onClick }) => {
     <Button
       variant="style-none"
       onClick={onClick}
-      className={cx(styles['Radio'], className, 'text-peach link-text')}
+      className={cx(styles['Radio'], 'text-peach bold', className)}
     >
       {check ? (
         <Image
