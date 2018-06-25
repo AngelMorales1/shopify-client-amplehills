@@ -4,8 +4,31 @@
   min-height: spacing(75);
   position: relative;
 
+  &__container {
+    @media ($medium-down) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      > span {
+        margin: 0;
+      }
+    }
+  }
+
   &__Regions-container {
     max-height: spacing(180);
+
+    @media ($medium-down) {
+      max-height: none;
+      display: flex;
+      align-items: center;
+
+      > div {
+        margin: 0;
+      }
+    }
   }
 
   &__arrow {

@@ -109,8 +109,20 @@ UI elements
   @extend .tag-text;
   border-radius: 10% / 50%;
   padding: spacing(1) spacing(3);
+
+  @media ($medium-down) {
+    padding: spacing(3) spacing(6);
+    display: inline-block;
+    margin-top: spacing(4);
+  }
 }
 
 .icon {
   width: spacing(9);
+}
+
+.medium-down-display-none {
+  @media ($medium-down) {
+    display: none;
+  }
 }

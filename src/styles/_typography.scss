@@ -50,6 +50,11 @@ em {
     line-height: $font-7;
   }
 }
+.block-headline-responsive-text {
+  @media ($medium-down) {
+    font-size: $font-6;
+  }
+}
 
 .title {
   font-size: $font-7;
@@ -102,6 +107,24 @@ em {
 
 .tag-text {
   font-size: 0.4rem;
+  @media ($large-up) {
+    text-transform: uppercase;
+  }
+  @media ($medium-down) {
+    font-size: $font-4;
+  }
+}
+
+.content-title {
+  @extend .big;
+
+  @media ($large-up) {
+    font-weight: 800;
+    font-family: $font-avenir;
+  }
+  @media ($medium-down) {
+    font-family: $font-carter;
+  }
 }
 
 .info-text-big {
