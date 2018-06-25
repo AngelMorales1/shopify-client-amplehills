@@ -6,6 +6,11 @@ import {
   getGlobalSettings
 } from 'state/actions/ui/applicationUIActions';
 
+import {
+  fetchProducts,
+  fetchContentfulProducts
+} from 'state/actions/productsActions';
+
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
@@ -18,7 +23,11 @@ export const initializeApplication = checkoutID => dispatch => {
       Data.setRef('shopify', BuySDK);
       return fetchOrCreateCheckout(checkoutID)(dispatch).then(() =>
         dispatch(getLocationData()).then(() =>
-          dispatch(getGlobalSettings()).then(() => resolve())
+          dispatch(getGlobalSettings()).then(() =>
+            dispatch(fetchProducts()).then(() =>
+              dispatch(fetchContentfulProducts()).then(() => resolve())
+            )
+          )
         )
       );
     })

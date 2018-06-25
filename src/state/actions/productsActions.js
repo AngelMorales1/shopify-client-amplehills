@@ -8,6 +8,14 @@ export const fetchProducts = payload => dispatch => {
   });
 };
 
+export const FETCH_CONTENTFUL_PRODUCTS = 'FETCH_CONTENTFUL_PRODUCTS';
+export const fetchContentfulProducts = payload => dispatch => {
+  return dispatch({
+    type: FETCH_CONTENTFUL_PRODUCTS,
+    payload: Data.fetchContentfulProducts()
+  });
+};
+
 export const FETCH_PRODUCT_LANDING = 'FETCH_PRODUCT_LANDING';
 export const fetchProductLanding = payload => dispatch => {
   return dispatch({
