@@ -13,12 +13,21 @@ class ChooseYourOwnStory extends Component {
   render() {
     const { data, products } = this.props;
     const shoppableProducts = get(data, 'products', []);
-    console.log(shoppableProducts);
+    const breadcrumbs = [
+      {
+        to: '/products',
+        label: 'Order Online'
+      },
+      {
+        to: '/products/choose-your-own-story-4-pack',
+        label: 'Choose Your Own Story'
+      }
+    ];
 
     return (
-      <div>
-        <Breadcrumbs />
-        <div className="flex container-width mx-auto">
+      <div className="mx-auto container-width">
+        <Breadcrumbs breadcrumbs={breadcrumbs} />
+        <div className="flex">
           <div className="col col-12 md-col-6 px2">
             {shoppableProducts.map(product => {
               const handle = get(product, 'fields.productHandle', '');
@@ -32,7 +41,7 @@ class ChooseYourOwnStory extends Component {
               );
             })}
           </div>
-          <div className="col col-12 md-col-6 px2">
+          <div className="col col-12 md-col-6 px4">
             <h1 className="block-headline mb4 relative z-1">
               {get(data, 'title')}
             </h1>
