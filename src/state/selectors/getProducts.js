@@ -11,6 +11,7 @@ export default createSelector(
     products.forEach(product => {
       const title = get(product, 'fields.productTitle', '');
       const handle = get(product, 'fields.productHandle', '');
+      const flavorDescription = get(product, 'fields.flavorDescription', '');
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
 
@@ -21,12 +22,13 @@ export default createSelector(
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
       productObj[handle] = {
-        handle,
+        title,
         id,
-        gridImage,
-        pintImage,
+        handle,
+        flavorDescription,
         price,
-        title
+        gridImage,
+        pintImage
       };
     });
 
