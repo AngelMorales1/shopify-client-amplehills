@@ -44,14 +44,14 @@ const Radio = ({ variant, color, className, label, checked, onClick }) => {
 Radio.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
-  check: PropTypes.bool,
+  checked: PropTypes.bool,
   variant: PropTypes.string
 };
 
 Radio.defaultProps = {
   className: '',
   label: '',
-  check: false,
+  checked: false,
   variant: 'primary'
 };
 

@@ -14,7 +14,6 @@ import styles from './ChooseYourOwnStory.scss';
 
 class ChooseYourOwnStory extends Component {
   render() {
-    console.log('props', this.props);
     const { data, products, ourPledge } = this.props;
     const shoppableProducts = get(data, 'products', []);
     const breadcrumbs = [
