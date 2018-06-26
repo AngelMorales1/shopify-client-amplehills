@@ -13,6 +13,7 @@ import Loader from 'components/Loader';
 import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
+import FooterNewsletter from 'components/FooterNewsletter';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -42,6 +43,7 @@ class App extends Component {
           <Nav />
           <MiniCart />
           <Routes location={get(this, 'props.location')} />
+          <FooterNewsletter />
           <Footer
             locations={this.props.locations}
             footerIllustration={this.props.globalSettings.footerIllustration}
