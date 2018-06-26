@@ -40,7 +40,16 @@ const BlockSwitch = props => {
     case 'blockImageText':
       return <ImageText data={fields} z={z} />;
     case 'blockChooseYourOwnStory':
-      return <ChooseYourOwnStory ourPledge={ourPledge} data={fields} z={z} />;
+      return (
+        <ChooseYourOwnStory
+          checkout={checkout}
+          addLineItems={addLineItems}
+          addLineItemsStatus={addLineItemsStatus}
+          ourPledge={ourPledge}
+          data={fields}
+          z={z}
+        />
+      );
     default:
       return null;
   }

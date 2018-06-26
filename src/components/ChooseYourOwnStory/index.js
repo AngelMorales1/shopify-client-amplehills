@@ -48,6 +48,23 @@ class ChooseYourOwnStory extends Component {
     this.setState({ shipping });
   };
 
+  handleAddToCart = () => {
+    const { pints, size, quantity } = this.state;
+    if (pints.length !== size) return null;
+
+    const variant = this.props.product.variants.find(
+      variant => parseInt(variant.title) === this.state.size
+    );
+    const items = [
+      {
+        variantId: variant.id,
+        quantity
+      }
+    ];
+
+    this.props.addLineItems(this.props.checkout, items);
+  };
+
   render() {
     const { data, products, ourPledge } = this.props;
     const product =
@@ -182,19 +199,21 @@ class ChooseYourOwnStory extends Component {
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-add'],
-                'col flex justify-end items-end'
+                'col flex justify-between items-end'
               )}
             >
               <QuantitySelector
                 color="madison-blue-outline"
                 quantity={this.state.quantity}
-                className="mr4"
+                className="mr1"
                 onChange={value => this.setState({ quantity: value })}
               />
               <Button
                 className="small"
+                disabled={this.state.size !== this.state.pints.length}
                 variant="primary-small"
                 color="white-madison-blue"
+                onClick={this.handleAddToCart}
               >
                 <span className="mr2">Add to Cart</span>
                 <span>
