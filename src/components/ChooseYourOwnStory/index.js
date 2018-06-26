@@ -209,7 +209,10 @@ class ChooseYourOwnStory extends Component {
               />
               <Button
                 className="small"
-                disabled={this.state.size !== this.state.pints.length}
+                disabled={
+                  this.state.size !== this.state.pints.length ||
+                  !this.state.shipping
+                }
                 variant="primary-small"
                 color="white-madison-blue"
                 onClick={this.handleAddToCart}
