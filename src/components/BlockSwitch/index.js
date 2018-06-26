@@ -20,7 +20,6 @@ const BlockSwitch = props => {
     actions: { addLineItems }
   } = props;
 
-  console.log('o', props.ourPledge, ourPledgeBlocks);
   switch (contentType) {
     case 'blockProductHero':
       return (

@@ -8,7 +8,7 @@ import styles from './ProductShoppableCard.scss';
 class ProductShoppableCard extends Component {
   render() {
     const { product } = this.props;
-    console.log(product);
+
     return (
       <div className={cx(styles['ProductGridCard'], 'col col-12 md-col-6 p1')}>
         <div
