@@ -63,7 +63,8 @@
 
   &__Links-container {
     > h2 {
-      @extend .block-headline--small;
+      @extend .block-headline;
+      font-size: $font-6;
     }
     display: flex;
     flex-direction: column;
