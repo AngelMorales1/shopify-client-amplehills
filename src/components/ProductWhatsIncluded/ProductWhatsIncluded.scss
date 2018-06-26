@@ -1,0 +1,25 @@
+@import 'settings';
+
+.ProductWhatsIncluded {
+  padding: spacing(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ($medium-up) {
+    paddiing: spacing(28);
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__flavor-container {
+    @media ($medium-up) {
+      padding: spacing(3) 0;
+    }
+  }
+
+  &--Light-Pink {
+    @extend .bg-baby-pink;
+    @extend .text-madison-blue;
+  }
+}
