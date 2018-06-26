@@ -36,6 +36,9 @@
       align-items: start;
       width: 40vw;
     }
+    > h2 {
+      font-size: $font-7;
+    }
   }
 
   &__Regions-container {
@@ -62,18 +65,11 @@
   }
 
   &__Links-container {
-    > h2 {
-      @extend .block-headline;
-      font-size: $font-6;
-    }
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @media ($medium-up) {
-      > h2 {
-        font-size: $font-7;
-      }
       align-items: flex-start;
     }
   }

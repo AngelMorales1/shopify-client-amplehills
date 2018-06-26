@@ -38,7 +38,11 @@ em {
 
 .block-headline {
   font-family: $font-carter;
-  font-size: $font-7;
+  font-size: $font-6;
+
+  @media ($medium-up) {
+    font-size: $font-7;
+  }
 }
 
 .block-subheadline {
