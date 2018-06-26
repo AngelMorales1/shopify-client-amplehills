@@ -8,17 +8,20 @@ import ImageText from 'components/ImageText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 
 const BlockSwitch = props => {
-  const { block, product, z } = props;
-  const contentType = get(block, 'sys.contentType.sys.id');
-  const fields = get(block, 'fields');
   const {
+    block,
+    z,
     addLineItemsStatus,
     globalSettings,
     ourPledge,
     checkout,
+    product,
+    products,
     shippingDates,
     actions: { addLineItems }
   } = props;
+  const contentType = get(block, 'sys.contentType.sys.id');
+  const fields = get(block, 'fields');
 
   switch (contentType) {
     case 'blockProductHero':
@@ -45,6 +48,9 @@ const BlockSwitch = props => {
           checkout={checkout}
           addLineItems={addLineItems}
           addLineItemsStatus={addLineItemsStatus}
+          shipping={shippingDates}
+          product={product}
+          products={products}
           ourPledge={ourPledge}
           data={fields}
           z={z}

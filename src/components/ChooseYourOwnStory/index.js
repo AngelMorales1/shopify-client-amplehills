@@ -233,15 +233,4 @@ class ChooseYourOwnStory extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    ...state,
-    products: products(state),
-    shipping: fetchShippingDates(state)
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  null
-)(ChooseYourOwnStory);
+export default ChooseYourOwnStory;
