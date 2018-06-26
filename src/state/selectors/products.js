@@ -21,6 +21,10 @@ export default createSelector(
       const available = get(shopifyProduct, 'variants[0].available', false);
       const price = get(shopifyProduct, 'variants[0].price', '0.00');
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
+      const variants = get(shopifyProduct, 'variants', []).map(variant => {
+        const { id, price, title, available } = variant;
+        return { id, price, title, available };
+      });
 
       mergedProducts[handle] = {
         title,
@@ -29,6 +33,7 @@ export default createSelector(
         available,
         flavorDescription,
         price,
+        variants,
         gridImage,
         pintImage,
         blocks

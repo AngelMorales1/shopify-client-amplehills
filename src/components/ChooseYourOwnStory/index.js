@@ -4,7 +4,9 @@ import { bindActionCreators } from 'redux';
 import cx from 'classnames';
 
 import products from 'state/selectors/products';
+import fetchShippingDates from 'state/selectors/fetchShippingDates';
 import get from 'utils/get';
+import getLineItemPrice from 'utils/getLineItemPrice';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -25,7 +27,13 @@ class ChooseYourOwnStory extends Component {
   }
 
   handleSizeClick = size => {
-    this.setState({ size });
+    if (size >= this.state.pints.length) return this.setState({ size });
+
+    const pints = this.state.pints.slice(0, size);
+    this.setState({
+      pints,
+      size
+    });
   };
 
   handleProductAddClick = id => {
@@ -36,8 +44,18 @@ class ChooseYourOwnStory extends Component {
     this.setState({ pints });
   };
 
+  handleShippingClick = shipping => {
+    this.setState({ shipping });
+  };
+
   render() {
     const { data, products, ourPledge } = this.props;
+    const product =
+      products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const activeVariant = product.variants.find(
+      variant => parseInt(variant.title) === this.state.size
+    );
+
     const shoppableProducts = get(data, 'products', []);
     const breadcrumbs = [
       {
@@ -45,23 +63,12 @@ class ChooseYourOwnStory extends Component {
         label: 'Order Online'
       },
       {
-        to: '/products/choose-your-own-story-4-pack',
+        to: '/products/choose-your-own-story',
         label: 'Choose Your Own Story'
       }
     ];
 
-    const sizes = [
-      {
-        label: '4-Pack',
-        value: 4
-      },
-      {
-        label: '6-Pack',
-        value: 6
-      }
-    ];
-
-    console.log('state', this.state);
+    console.log('state', this.state, this.props);
     return (
       <div className="mx-auto container-width">
         <Breadcrumbs breadcrumbs={breadcrumbs} />
@@ -85,12 +92,12 @@ class ChooseYourOwnStory extends Component {
               {get(data, 'title')}
             </h1>
             <div className="w100 flex my3">
-              {sizes.map(size => (
+              {product.variants.map(variant => (
                 <Radio
-                  label={size.label}
+                  label={variant.title}
                   className="mr3"
-                  checked={size.value === this.state.size}
-                  onClick={() => this.handleSizeClick(size.value)}
+                  checked={variant.id === activeVariant.id}
+                  onClick={() => this.handleSizeClick(parseInt(variant.title))}
                 />
               ))}
             </div>
@@ -108,12 +115,12 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start'
               )}
             >
-              {sizes.map(size => (
+              {product.variants.map(variant => (
                 <Radio
+                  label={variant.title}
                   className="mr3"
-                  checked={size.value === this.state.size}
-                  onClick={() => this.handleSizeClick(size.value)}
-                  label={size.label}
+                  checked={variant.id === activeVariant.id}
+                  onClick={() => this.handleSizeClick(parseInt(variant.title))}
                   variant="vertical"
                   color="white"
                 />
@@ -158,18 +165,19 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label className="w100 mb2">Pick Your Ship Date</label>
-              <Button
-                variant="primary-small"
-                color="madison-blue-outline"
-                className="small mr2"
-                label="May 4"
-              />
-              <Button
-                variant="primary-small"
-                color="madison-blue-outline"
-                className="small"
-                label="May 8"
-              />
+              {this.props.shipping.map(shipping => (
+                <Button
+                  variant="primary-small"
+                  color={
+                    shipping === this.state.shipping
+                      ? 'white-madison-blue'
+                      : 'madison-blue-outline'
+                  }
+                  className="small mr2"
+                  label={shipping}
+                  onClick={() => this.handleShippingClick(shipping)}
+                />
+              ))}
             </div>
             <div
               className={cx(
@@ -177,13 +185,22 @@ class ChooseYourOwnStory extends Component {
                 'col flex justify-end items-end'
               )}
             >
-              <QuantitySelector color="madison-blue-outline" className="mr4" />
+              <QuantitySelector
+                color="madison-blue-outline"
+                quantity={this.state.quantity}
+                className="mr4"
+                onChange={value => this.setState({ quantity: value })}
+              />
               <Button
                 className="small"
                 variant="primary-small"
                 color="white-madison-blue"
-                label="Add to Cart"
-              />
+              >
+                <span className="mr2">Add to Cart</span>
+                <span>
+                  ${getLineItemPrice(activeVariant.price, this.state.quantity)}
+                </span>
+              </Button>
             </div>
           </div>
         </div>
@@ -195,7 +212,8 @@ class ChooseYourOwnStory extends Component {
 const mapStateToProps = state => {
   return {
     ...state,
-    products: products(state)
+    products: products(state),
+    shipping: fetchShippingDates(state)
   };
 };
 
