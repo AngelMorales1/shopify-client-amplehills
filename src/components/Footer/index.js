@@ -18,14 +18,8 @@ class Footer extends Component {
 
   render() {
     return (
-      <div
-        className={cx(
-          'p4 bg-madison-blue',
-          styles['Footer'],
-          styles['Footer__container']
-        )}
-      >
-        <div className={cx('flex', styles['Footer__container'])}>
+      <div className={cx('p4 bg-madison-blue', styles['Footer'])}>
+        <div className={cx(styles['Footer__container'])}>
           <FooterLocations
             locations={this.sortDataByRegion(this.props.locations.items)}
           />
@@ -34,7 +28,7 @@ class Footer extends Component {
             footerLinks={this.props.footerLinks}
           />
         </div>
-        <span className="ml4 bold small text-white">
+        <span className="bold small text-white center">
           &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
         </span>
         {this.props.footerIllustration ? (
@@ -42,7 +36,7 @@ class Footer extends Component {
             src={this.props.footerIllustration.fields.file.url}
             className={cx(
               styles['Footer__illustration'],
-              'medium-down-display-none'
+              'medium-down-display-none xs-hide sm-hide'
             )}
           />
         ) : null}

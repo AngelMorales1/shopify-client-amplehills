@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import { sortHours } from 'utils/sortHours';
+import styles from './Footer.scss';
+import cx from 'classnames';
 
 class FooterRegions extends Component {
   render() {
     return (
-      <div className="mr4">
+      <div
+        className={cx('flex flex-column', styles['Footer__Regions-content'])}
+      >
         <h3 className="my2 text-white content-title">{this.props.region}</h3>
         {this.props.stores.map(store => {
           let hours = sortHours(store.fields);
           return (
-            <div className="mb3" key={store.sys.id}>
+            <div
+              className={cx('mb3', styles['Footer__Regions-store'])}
+              key={store.sys.id}
+            >
               <h4 className="mb1 text-white bold small nowrap">
                 {store.fields.title}
               </h4>
@@ -21,7 +28,7 @@ class FooterRegions extends Component {
                 );
               })}
               {store.fields.delivery ? (
-                <div className="bg-white text-madison-blue inline bold tag">
+                <div className="bg-white text-madison-blue inline-block mt1 bold tag">
                   {' '}
                   > Order Delivery
                 </div>

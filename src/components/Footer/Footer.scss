@@ -1,33 +1,79 @@
-@import 'settings';
+@import 'settings', 'src/styles/typography';
 
 .Footer {
-  min-height: spacing(75);
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > span {
+    @media ($medium-up) {
+      margin-left: spacing(16);
+    }
+  }
+
+  @media ($medium-up) {
+    align-items: flex-start;
+    position: relative;
+  }
 
   &__container {
-    @media ($medium-down) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-      > span {
-        margin: 0;
-      }
+    @media ($medium-up) {
+      width: 100%;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__Locations-container {
+    align-items: center;
+
+    @media ($medium-up) {
+      align-items: start;
+      width: 40vw;
     }
   }
 
   &__Regions-container {
-    max-height: spacing(180);
+    @media ($medium-up) {
+      max-height: spacing(180);
+    }
+  }
 
-    @media ($medium-down) {
-      max-height: none;
-      display: flex;
-      align-items: center;
+  &__Regions-content {
+    align-items: center;
 
-      > div {
-        margin: 0;
+    @media ($medium-up) {
+      align-items: flex-start;
+      margin-right: spacing(16);
+    }
+  }
+
+  &__Regions-store {
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: left;
+    }
+  }
+
+  &__Links-container {
+    > h2 {
+      @extend .block-headline--small;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media ($medium-up) {
+      > h2 {
+        font-size: $font-7;
       }
+      align-items: flex-start;
     }
   }
 
