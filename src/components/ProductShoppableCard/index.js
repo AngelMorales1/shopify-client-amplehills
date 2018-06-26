@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-import { Button, Image } from 'components/base';
+import { Button } from 'components/base';
 import styles from './ProductShoppableCard.scss';
 
 class ProductShoppableCard extends Component {

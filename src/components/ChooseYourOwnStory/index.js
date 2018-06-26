@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import cx from 'classnames';
 
 import products from 'state/selectors/products';
@@ -53,7 +52,7 @@ class ChooseYourOwnStory extends Component {
     if (pints.length !== size) return null;
 
     const variant = this.props.product.variants.find(
-      variant => parseInt(variant.title) === this.state.size
+      variant => parseInt(variant.title, 10) === this.state.size
     );
     const items = [
       {
@@ -70,7 +69,7 @@ class ChooseYourOwnStory extends Component {
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
     const activeVariant = product.variants.find(
-      variant => parseInt(variant.title) === this.state.size
+      variant => parseInt(variant.title, 10) === this.state.size
     );
 
     const shoppableProducts = get(data, 'products', []);
@@ -113,7 +112,9 @@ class ChooseYourOwnStory extends Component {
                   label={variant.title}
                   className="mr3"
                   checked={variant.id === activeVariant.id}
-                  onClick={() => this.handleSizeClick(parseInt(variant.title))}
+                  onClick={() =>
+                    this.handleSizeClick(parseInt(variant.title, 10))
+                  }
                 />
               ))}
             </div>
@@ -136,7 +137,9 @@ class ChooseYourOwnStory extends Component {
                   label={variant.title}
                   className="mr3"
                   checked={variant.id === activeVariant.id}
-                  onClick={() => this.handleSizeClick(parseInt(variant.title))}
+                  onClick={() =>
+                    this.handleSizeClick(parseInt(variant.title, 10))
+                  }
                   variant="vertical"
                   color="white"
                 />
