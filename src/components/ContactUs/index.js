@@ -21,19 +21,19 @@ class ContactUs extends Component {
         <p className="m2">What can we help you with?</p>
         <form className="flex m3">
           <Radio
-            check={this.state.checkedRadioField === 'ordering'}
+            checked={this.state.checkedRadioField === 'ordering'}
             onClick={() => this.handleRadioClick('ordering')}
             className="mx3"
             label="Ordering"
           />
           <Radio
-            check={this.state.checkedRadioField === 'shipping'}
+            checked={this.state.checkedRadioField === 'shipping'}
             onClick={() => this.handleRadioClick('shipping')}
             className="mx3"
             label="Shipping"
           />
           <Radio
-            check={this.state.checkedRadioField === 'other'}
+            checked={this.state.checkedRadioField === 'other'}
             onClick={() => this.handleRadioClick('other')}
             className="mx3"
             label="Other"

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import cx from 'classnames';
 
 import getProducts from 'state/selectors/getProducts';
 import get from 'utils/get';
 
-import { Radio } from 'components/base';
+import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import OurPledge from 'components/OurPledge';
 import ProductShoppableCard from 'components/ProductShoppableCard';
+import styles from './ChooseYourOwnStory.scss';
 
 class ChooseYourOwnStory extends Component {
   render() {
@@ -57,7 +59,73 @@ class ChooseYourOwnStory extends Component {
             <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
-        <div className="fixed b0 l0 w100 bg-madison-blue text-white">Menu</div>
+        <div className="fixed b0 l0 w100 bg-madison-blue text-white p3">
+          <div className="flex content-width mx-auto w100">
+            <div
+              className={cx(
+                styles['ChooseYourOwnStory__menu-size'],
+                'col flex items-start'
+              )}
+            >
+              <Radio
+                className="mr3"
+                checked="true"
+                label="4-Pack"
+                variant="vertical"
+                color="white"
+              />
+              <Radio label="6-Pack" variant="vertical" color="white" />
+            </div>
+            <div
+              className={cx(
+                styles['ChooseYourOwnStory__menu-pints'],
+                'col flex flex-wrap items-center'
+              )}
+            >
+              <label>Choose 4 Flavors</label>
+              <div className="flex w100 justify-start pt2">
+                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+              </div>
+            </div>
+            <div
+              className={cx(
+                styles['ChooseYourOwnStory__menu-shipping'],
+                'col flex flex-wrap items-end'
+              )}
+            >
+              <label className="w100 mb2">Pick Your Ship Date</label>
+              <Button
+                variant="primary-small"
+                color="madison-blue-outline"
+                className="small mr2"
+                label="May 4"
+              />
+              <Button
+                variant="primary-small"
+                color="madison-blue-outline"
+                className="small"
+                label="May 8"
+              />
+            </div>
+            <div
+              className={cx(
+                styles['ChooseYourOwnStory__menu-add'],
+                'col flex justify-end items-end'
+              )}
+            >
+              <QuantitySelector color="madison-blue-outline" className="mr4" />
+              <Button
+                className="small"
+                variant="primary-small"
+                color="white-madison-blue"
+                label="Add to Cart"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

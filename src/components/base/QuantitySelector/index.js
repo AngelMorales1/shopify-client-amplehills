@@ -11,14 +11,33 @@ class QuantitySelector extends Component {
     this.props.onChange(quantity);
   }
 
+  colorVariation = color => {
+    let buttonColor, inputColor;
+
+    switch (color) {
+      case 'madison-blue-outline':
+        buttonColor = 'madison-blue-outline';
+        inputColor = 'madison-blue-outline';
+        break;
+      default:
+        buttonColor = 'white-madison-blue-outline';
+        inputColor = 'madison-blue';
+    }
+
+    return {
+      buttonColor,
+      inputColor
+    };
+  };
+
   render() {
-    const { variant } = this.props;
+    const { variant, color } = this.props;
 
     return (
       <div className={cx('flex', this.props.className)}>
         <Button
           variant={variant === 'small' ? 'circle-small' : 'circle'}
-          color="white-madison-blue-outline"
+          color={this.colorVariation(color).buttonColor}
           label="–"
           onClick={() =>
             this.changeQuantity(get(this, 'props.quantity', 1) - 1)
@@ -27,13 +46,13 @@ class QuantitySelector extends Component {
         <TextField
           variant={variant === 'small' ? 'quantity-small' : 'quantity'}
           value={get(this, 'props.quantity', 1)}
-          color="madison-blue"
-          className="copy mx1"
+          color={this.colorVariation(color).inputColor}
+          className="copy mx2"
           onChange={value => this.changeQuantity(value)}
         />
         <Button
           variant={variant === 'small' ? 'circle-small' : 'circle'}
-          color="white-madison-blue-outline"
+          color={this.colorVariation(color).buttonColor}
           label="+"
           onClick={() =>
             this.changeQuantity(get(this, 'props.quantity', 1) + 1)

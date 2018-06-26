@@ -41,6 +41,14 @@
     }
   }
 
+  &--madison-blue-outline {
+    input {
+      @extend .bg-madison-blue;
+      @extend .text-white;
+      border: spacing(1) solid color('white');
+    }
+  }
+
   &--light-gray,
   &--light-gray-tall {
     input,
