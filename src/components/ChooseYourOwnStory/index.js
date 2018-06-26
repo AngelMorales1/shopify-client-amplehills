@@ -70,6 +70,10 @@ class ChooseYourOwnStory extends Component {
     this.props.actions.addLineItems(this.props.checkout, items);
   };
 
+  handleShippingClick = shipping => {
+    this.setState({ shipping });
+  };
+
   render() {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
@@ -234,6 +238,7 @@ class ChooseYourOwnStory extends Component {
               >
                 <span className="mr2">Add to Cart</span>
                 <span>${getLineItemPrice(activeVariant.price, quantity)}</span>
+
               </Button>
             </div>
           </div>
