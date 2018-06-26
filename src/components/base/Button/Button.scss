@@ -109,7 +109,7 @@
   &--madison-blue-outline {
     @extend .bg-madison-blue;
     @extend .text-white;
-    border: spacing(1) solid color('white');
+    border: spacing(0.75) solid color('white');
     padding: spacing(1.75) spacing(6);
 
     &.Button--circle {

@@ -1,4 +1,11 @@
+@import 'settings';
+
 .ChooseYourOwnStory {
+  &__pint-icon {
+    height: spacing(10);
+    width: spacing(9);
+  }
+
   &__menu-size {
     width: 17.5%;
   }

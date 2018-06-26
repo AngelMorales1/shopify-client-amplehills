@@ -13,6 +13,29 @@ import ProductShoppableCard from 'components/ProductShoppableCard';
 import styles from './ChooseYourOwnStory.scss';
 
 class ChooseYourOwnStory extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      size: 4,
+      pints: [],
+      shipping: '',
+      quantity: 1
+    };
+  }
+
+  handleSizeClick = size => {
+    this.setState({ size });
+  };
+
+  handleProductAddClick = id => {
+    const { pints, size } = this.state;
+    if (pints.length >= size) return null;
+
+    pints.push(id);
+    this.setState({ pints });
+  };
+
   render() {
     const { data, products, ourPledge } = this.props;
     const shoppableProducts = get(data, 'products', []);
@@ -27,6 +50,18 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
+    const sizes = [
+      {
+        label: '4-Pack',
+        value: 4
+      },
+      {
+        label: '6-Pack',
+        value: 6
+      }
+    ];
+
+    console.log('state', this.state);
     return (
       <div className="mx-auto container-width">
         <Breadcrumbs breadcrumbs={breadcrumbs} />
@@ -40,6 +75,7 @@ class ChooseYourOwnStory extends Component {
                 <ProductShoppableCard
                   key={handle}
                   product={get(products, handle)}
+                  onClick={() => this.handleProductAddClick(handle)}
                 />
               );
             })}
@@ -49,8 +85,14 @@ class ChooseYourOwnStory extends Component {
               {get(data, 'title')}
             </h1>
             <div className="w100 flex my3">
-              <Radio label="4-Pack" className="mr3" />
-              <Radio label="6-Pack" />
+              {sizes.map(size => (
+                <Radio
+                  label={size.label}
+                  className="mr3"
+                  checked={size.value === this.state.size}
+                  onClick={() => this.handleSizeClick(size.value)}
+                />
+              ))}
             </div>
             <div className="mb4">
               <p className="copy pr2">{get(data, 'description', '')}</p>
@@ -66,14 +108,16 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start'
               )}
             >
-              <Radio
-                className="mr3"
-                checked={true}
-                label="4-Pack"
-                variant="vertical"
-                color="white"
-              />
-              <Radio label="6-Pack" variant="vertical" color="white" />
+              {sizes.map(size => (
+                <Radio
+                  className="mr3"
+                  checked={size.value === this.state.size}
+                  onClick={() => this.handleSizeClick(size.value)}
+                  label={size.label}
+                  variant="vertical"
+                  color="white"
+                />
+              ))}
             </div>
             <div
               className={cx(
@@ -82,11 +126,29 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label>Choose 4 Flavors</label>
-              <div className="flex w100 justify-start pt2">
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+              <div className="flex justify-start w100 pt2">
+                {this.state.pints.map(handle => (
+                  <div
+                    className={cx(
+                      styles['ChooseYourOwnStory__pint-icon'],
+                      'mr2'
+                    )}
+                  >
+                    <Image src={get(products, `[${handle}].pintImage`, '')} />
+                  </div>
+                ))}
+                {[...Array(this.state.size - this.state.pints.length)].map(
+                  () => (
+                    <div
+                      className={cx(
+                        styles['ChooseYourOwnStory__pint-icon'],
+                        'mr2'
+                      )}
+                    >
+                      <Image src="/assets/images/icon-pint.svg" />
+                    </div>
+                  )
+                )}
               </div>
             </div>
             <div

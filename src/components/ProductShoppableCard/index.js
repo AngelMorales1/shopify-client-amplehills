@@ -27,6 +27,7 @@ class ProductShoppableCard extends Component {
               variant="primary-small"
               color="white-madison-blue-outline"
               label="+ Add"
+              onClick={this.props.onClick}
             />
           </div>
         </div>
