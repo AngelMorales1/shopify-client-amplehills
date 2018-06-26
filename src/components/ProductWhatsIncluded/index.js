@@ -7,22 +7,21 @@ import { Image } from 'components/base';
 
 class ProductWhatsIncluded extends Component {
   render() {
-    const { data } = this.props;
-    const whatsIncluded = get(data, 'whatsIncluded', []);
+    const { productDetails } = this.props;
     const colorClass = `ProductWhatsIncluded--${get(
-      data,
+      productDetails,
       'backgroundColor',
       'Light-Pink'
     )}`;
     return (
       <div className={cx(styles['ProductWhatsIncluded'], styles[colorClass])}>
-        <h2 className="block-headline m3 nowrap">{get(data, 'title', '')}</h2>
+        <h2 className="block-headline m3 nowrap">What's included</h2>
         <div className="flex flex-column">
-          {whatsIncluded.map(flavor => {
+          {productDetails.map((flavor, i) => {
             const flavorTitle = get(flavor, 'fields.title', '');
             return (
               <div
-                key={flavorTitle}
+                key={`${i}-${get(flavor, 'sys.id', i)}`}
                 className={cx(
                   styles['ProductWhatsIncluded__flavor-container'],
                   'flex items-center my2'
@@ -30,20 +29,16 @@ class ProductWhatsIncluded extends Component {
               >
                 <Image
                   alt={`${flavorTitle} image`}
-                  src={get(flavor, 'fields.image.fields.file.url', '')}
+                  src={get(flavor, 'fields.pintImage.fields.file.url', '')}
                   className={cx(
                     styles['ProductWhatsIncluded__image'],
                     'mr3 col-2'
                   )}
                 />
                 <div>
-                  <h3 className="block-subheadline bold nowrap">{`${get(
-                    flavor,
-                    'fields.quantity',
-                    '1'
-                  )}x ${flavorTitle}`}</h3>
+                  <h3 className="block-subheadline bold nowrap">{`1x ${flavorTitle}`}</h3>
                   <p className="description nowrap">
-                    {get(flavor, 'fields.description', '')}
+                    {get(flavor, 'fields.oneLineDescription', '')}
                   </p>
                 </div>
               </div>

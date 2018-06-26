@@ -11,6 +11,18 @@ import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 const BlockSwitch = props => {
   const { block } = props;
   const type = get(block, 'sys.contentType.sys.id');
+  // const { block, product, z } = props;
+  // const contentType = get(block, 'sys.contentType.sys.id');
+  // const fields = get(block, 'fields');
+
+  // const {
+  //   addLineItemsStatus,
+  //   globalSettings,
+  //   ourPledge,
+  //   checkout,
+  //   shippingDates,
+  //   actions: { addLineItems }
+  // } = props;
 
   switch (type) {
     case 'blockProductHero':

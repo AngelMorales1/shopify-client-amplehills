@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
+import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 class ProductDetailView extends Component {
   render() {
@@ -10,9 +11,19 @@ class ProductDetailView extends Component {
 
     const {
       ourPledge,
+      content,
       product,
       product: { blocks }
     } = this.props;
+    // const { product, content, ourPledge } = model;
+    const contentBlocks = get(content, 'items[0].fields.contentBlocks', []);
+    const ourPledgeBlocks = get(ourPledge, 'items[0].fields', {});
+    const productDetailBlocks = contentBlocks.filter(
+      contentBlock =>
+        get(contentBlock, 'sys.contentType.sys.id', '') ===
+        'blockProductDetails'
+    );
+
     return (
       <div className="ProductDetailView">
         <div>
@@ -27,6 +38,21 @@ class ProductDetailView extends Component {
                 {...this.props}
               />
             ))}
+          {productDetailBlocks.map((productDetailData, i) => {
+            if (productDetailData.fields.whatsIncluded) {
+              const productDetails = get(
+                productDetailData,
+                'fields.productDetails',
+                []
+              );
+              return (
+                <ProductWhatsIncluded
+                  key={`${i}-${get(productDetails, 'fields.sys.id', i)}`}
+                  productDetails={productDetails}
+                />
+              );
+            }
+          })}
         </div>
       </div>
     );
