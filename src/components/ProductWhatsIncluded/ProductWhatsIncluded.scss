@@ -7,7 +7,6 @@
   align-items: center;
 
   @media ($medium-up) {
-    paddiing: spacing(28);
     flex-direction: row;
     justify-content: space-around;
   }
