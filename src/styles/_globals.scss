@@ -108,7 +108,7 @@ UI elements
 .tag {
   @extend .tag-text;
   padding: spacing(3) spacing(6);
-  border-radius: 15% / 50%;
+  border-radius: 13% / 50%;
 
   @media ($medium-up) {
     border-radius: 10% / 50%;
