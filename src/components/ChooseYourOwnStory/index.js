@@ -85,7 +85,6 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
-    console.log('state', this.state, this.props);
     return (
       <div className="mx-auto container-width">
         <Breadcrumbs breadcrumbs={breadcrumbs} />

@@ -42,13 +42,10 @@ export const createCheckout = () => dispatch => {
 
 export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
 export const addLineItems = (checkoutID, items) => dispatch => {
-  console.log('swwww', checkoutID, items);
   return dispatch({
     type: ADD_LINE_ITEMS,
     payload: BuySDK.checkout.addLineItems(checkoutID, items)
-  })
-    .then(() => dispatch(openMiniCart()))
-    .catch(err => console.log(err));
+  }).then(() => dispatch(openMiniCart()));
 };
 
 export const REMOVE_LINE_ITEMS = 'REMOVE_LINE_ITEMS';
