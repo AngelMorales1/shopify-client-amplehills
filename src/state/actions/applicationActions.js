@@ -21,15 +21,13 @@ export const initializeApplication = checkoutID => dispatch => {
       const Contentful = ContentfulClient();
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
-      return fetchOrCreateCheckout(checkoutID)(dispatch).then(() =>
-        dispatch(getLocationData()).then(() =>
-          dispatch(getGlobalSettings()).then(() =>
-            dispatch(fetchProducts()).then(() =>
-              dispatch(fetchContentfulProducts()).then(() => resolve())
-            )
-          )
-        )
-      );
+      return Promise.all([
+        fetchOrCreateCheckout(checkoutID)(dispatch),
+        getLocationData(),
+        getGlobalSettings(),
+        fetchProducts(),
+        fetchContentfulProducts()
+      ]).then(() => resolve());
     })
   });
 };
