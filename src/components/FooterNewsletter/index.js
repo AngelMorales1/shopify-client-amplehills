@@ -27,12 +27,9 @@ class FooterNewsletter extends Component {
             Sign up for the latest news from us!
           </p>
           <Image
-            className={cx(
-              styles['FooterNewsletter__image'],
-              'my2 xs-hide sm-hide'
-            )}
-            alt="Decorative left to right arrow"
-            src="/assets/images/arrow-left-right.svg"
+            className="my2 xs-hide sm-hide icon"
+            alt="Decorative arrow"
+            src="/assets/images/arrow-straight-right.svg"
           />
         </div>
         <div
@@ -49,7 +46,7 @@ class FooterNewsletter extends Component {
           <Button
             className="my2 px3"
             label="Sign Up"
-            variant="primary-short"
+            variant="primary"
             color="madison-blue"
           />
         </div>

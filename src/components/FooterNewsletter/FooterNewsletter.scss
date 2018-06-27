@@ -5,7 +5,6 @@
 
   @media ($medium-up) {
     flex-direction: row;
-    justify-content: space-evenly;
   }
 
   &__container {
@@ -14,6 +13,7 @@
 
     @media ($medium-up) {
       flex-direction: row;
+      width: 50%;
       justify-content: center;
     }
   }
@@ -25,10 +25,6 @@
     @media ($medium-up) {
       margin-right: spacing(6);
     }
-  }
-
-  &__image {
-    width: 4%;
   }
 
   &__text-field {
