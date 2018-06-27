@@ -65,6 +65,7 @@ class ChooseYourOwnStory extends Component {
   };
 
   render() {
+    console.log(this.props);
     const { data, products, ourPledge } = this.props;
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];

@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { addLineItems } from 'state/actions/checkoutActions';
 import { fetchOurPledge } from 'state/actions/productActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
+import products from 'state/selectors/products';
 import product from 'state/selectors/product';
 
 import get from 'utils/get';
@@ -31,6 +32,7 @@ const mapStateToProps = (state, props) => {
       {}
     ),
     product: product(state, props),
+    products: products(state),
     shippingDates: fetchShippingDates(state),
     ourPledge: get(state, 'product.ourPledge.items[0].fields', {})
   };
