@@ -21,19 +21,18 @@ export default createSelector(
       const price = get(shopifyProduct, 'variants[0].price', '0.00');
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
-      return {
-        ...mergedProducts,
-        [handle]: {
-          title,
-          id,
-          handle,
-          flavorDescription,
-          price,
-          gridImage,
-          pintImage,
-          blocks
-        }
+      mergedProducts[handle] = {
+        title,
+        id,
+        handle,
+        flavorDescription,
+        price,
+        gridImage,
+        pintImage,
+        blocks
       };
-    });
+
+      return mergedProducts;
+    }, {});
   }
 );
