@@ -122,7 +122,7 @@ class Cart extends Component {
         <div
           className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
         />
-        <div className={cx(styles['Cart__shipping-info__container'], 'my4')}>
+        <div className={cx(styles['Cart__shipping-info__container'], 'mt4')}>
           <div className={cx(styles['Cart__shipping-info__content'])}>
             <p className="info-text-uppercase">
               An Item you ordered has shipping limitations that will be selected
@@ -133,14 +133,14 @@ class Cart extends Component {
             <p className="info-text-uppercase xs-hide sm-hide">
               Shipping & taxes calculated at checkout
             </p>
-            <p className="price-text">{`Subtotal: $${
+            <p className="price-text my1">{`Subtotal: $${
               checkout.subtotalPrice
             }`}</p>
           </div>
         </div>
-        <div>
-          <div>
-            <h2 className="block-headline">Gift Message</h2>
+        <div className={cx(styles['Cart__bottom-container'])}>
+          <div className={cx(styles['Cart__gift-message'], 'xs-hide sm-hide')}>
+            <h2 className="block-headline m1">Gift Message</h2>
             <TextField
               className="m1"
               variant="light-gray-tall"
@@ -148,13 +148,19 @@ class Cart extends Component {
               multiLine={true}
               placeholder={`Message (don't forget to include your name)`}
             />
-            <span className="info-text-uppercase xs-hide sm-hide">
+            <span className="info-text-uppercase m1 xs-hide sm-hide">
               Gift messages will not include prices
             </span>
           </div>
-          <div>
-            <Button label="Update Cart" color="peach" />
-            <Button label="Checkout" color="madison-blue" />
+          <div
+            className={cx(styles['Cart__button-container'], 'flex items-end')}
+          >
+            <Button
+              className="ml3 xs-hide sm-hide"
+              label="Update Cart"
+              color="peach"
+            />
+            <Button className="ml3" label="Checkout" color="madison-blue" />
           </div>
         </div>
         <DeleteModal />
