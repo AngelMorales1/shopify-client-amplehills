@@ -117,6 +117,7 @@ class MiniCart extends Component {
 
           <div className="mb4">
             {items.map(item => {
+              console.log(item);
               const classes = cx(styles['MiniCart__line-item'], 'mb2', {
                 [styles['MiniCart__line-item--updating']]:
                   this.props.lineItemsBeingUpdated.includes(

@@ -63,7 +63,11 @@ class ChooseYourOwnStory extends Component {
     const items = [
       {
         variantId: variant.id,
-        quantity
+        quantity,
+        customAttributes: pints.map((value, i) => {
+          const key = `item-${i}`;
+          return { key, value };
+        })
       }
     ];
 
