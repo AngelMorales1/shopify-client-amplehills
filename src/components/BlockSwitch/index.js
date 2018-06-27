@@ -14,7 +14,7 @@ const BlockSwitch = props => {
   const {
     addLineItemsStatus,
     globalSettings,
-    ourPledgeBlocks,
+    ourPledge,
     checkout,
     shippingDates,
     actions: { addLineItems }
@@ -32,7 +32,7 @@ const BlockSwitch = props => {
           shippingDates={shippingDates}
           checkout={checkout}
           globalSettings={globalSettings}
-          ourPledge={ourPledgeBlocks}
+          ourPledge={ourPledge}
         />
       );
     case 'blockProductDetails':
@@ -40,9 +40,7 @@ const BlockSwitch = props => {
     case 'blockImageText':
       return <ImageText data={fields} z={z} />;
     case 'blockChooseYourOwnStory':
-      return (
-        <ChooseYourOwnStory ourPledge={ourPledgeBlocks} data={fields} z={z} />
-      );
+      return <ChooseYourOwnStory ourPledge={ourPledge} data={fields} z={z} />;
     default:
       return null;
   }

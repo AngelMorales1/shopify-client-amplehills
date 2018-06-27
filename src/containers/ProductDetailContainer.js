@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
-import { fetchProduct, getOurPledge } from 'state/actions/productActions';
+import { fetchOurPledge } from 'state/actions/productActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
 import product from 'state/selectors/product';
 
@@ -12,7 +12,13 @@ import get from 'utils/get';
 class ProductDetailContainer extends ContainerBase {
   view = import('views/ProductDetailView');
 
-  model = () => {};
+  model = () => {
+    const {
+      actions: { fetchOurPledge }
+    } = this.props;
+
+    return fetchOurPledge();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -26,7 +32,7 @@ const mapStateToProps = (state, props) => {
     ),
     product: product(state, props),
     shippingDates: fetchShippingDates(state),
-    ourPledge: get(state, 'applicationUI.ourPledge.items[0].fields', {})
+    ourPledge: get(state, 'product.ourPledge.items[0].fields', {})
   };
 };
 
@@ -34,9 +40,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        fetchProduct,
         addLineItems,
-        getOurPledge
+        fetchOurPledge
       },
       dispatch
     )

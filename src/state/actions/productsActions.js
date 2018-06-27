@@ -23,6 +23,9 @@ export const FETCH_PRODUCT_LANDING = 'FETCH_PRODUCT_LANDING';
 export const fetchProductLanding = payload => dispatch => {
   return dispatch({
     type: FETCH_PRODUCT_LANDING,
-    payload: Data.fetchProductLanding()
+    payload: Data.getEntries({
+      content_type: 'productLanding',
+      include: 4
+    })
   });
 };
