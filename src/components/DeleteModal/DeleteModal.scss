@@ -1,0 +1,22 @@
+@import 'settings';
+
+.DeleteModal {
+  pointer-events: none;
+  opacity: 0;
+  transition: $transition;
+
+  .DeleteModal-inner {
+    max-width: spacing(120);
+    transform: translate3d(0, spacing(8), 0);
+    transition: $transition;
+  }
+
+  &--active {
+    pointer-events: all;
+    opacity: 1;
+
+    .DeleteModal-inner {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
