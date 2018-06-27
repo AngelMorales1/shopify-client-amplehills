@@ -13,7 +13,7 @@ import get from 'utils/get';
 import updateLineItem from 'utils/updateLineItem';
 import getLineItemPrice from 'utils/getLineItemPrice';
 
-import { Button, Image, QuantitySelector } from 'components/base';
+import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
 import styles from './Cart.scss';
 
@@ -136,6 +136,25 @@ class Cart extends Component {
             <p className="price-text">{`Subtotal: $${
               checkout.subtotalPrice
             }`}</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h2 className="block-headline">Gift Message</h2>
+            <TextField
+              className="m1"
+              variant="light-gray-tall"
+              placeholder="Message"
+              multiLine={true}
+              placeholder={`Message (don't forget to include your name)`}
+            />
+            <span className="info-text-uppercase xs-hide sm-hide">
+              Gift messages will not include prices
+            </span>
+          </div>
+          <div>
+            <Button label="Update Cart" color="peach" />
+            <Button label="Checkout" color="madison-blue" />
           </div>
         </div>
         <DeleteModal />
