@@ -6,9 +6,8 @@ export default createSelector(
   state => get(state, 'products.contentfulProducts', []),
   (shopify, contentful) => {
     const products = get(contentful, 'items', {});
-    const productObj = {};
 
-    products.forEach(product => {
+    return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
       const handle = get(product, 'fields.productHandle', '');
       const flavorDescription = get(product, 'fields.flavorDescription', '');
@@ -22,18 +21,19 @@ export default createSelector(
       const price = get(shopifyProduct, 'variants[0].price', '0.00');
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
-      productObj[handle] = {
-        title,
-        id,
-        handle,
-        flavorDescription,
-        price,
-        gridImage,
-        pintImage,
-        blocks
+      return {
+        ...mergedProducts,
+        [handle]: {
+          title,
+          id,
+          handle,
+          flavorDescription,
+          price,
+          gridImage,
+          pintImage,
+          blocks
+        }
       };
     });
-
-    return productObj;
   }
 );
