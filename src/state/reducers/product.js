@@ -8,7 +8,6 @@ export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
     case `${FETCH_OUR_PLEDGE}_FULFILLED`:
-      console.log(action);
       return {
         ...state,
         ourPledge: action.payload

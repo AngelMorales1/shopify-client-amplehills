@@ -8,8 +8,6 @@ class ProductDetailView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    console.log(model);
-    console.log(this.props);
     const {
       ourPledge,
       product,
