@@ -133,3 +133,22 @@ em {
 .info-text-small {
   font-size: $font-1;
 }
+
+.info-text-uppercase {
+  font-size: $font-3;
+  line-height: $font-6;
+
+  @media ($medium-up) {
+    font-size: $font-2;
+    text-transform: uppercase;
+  }
+}
+
+.price-text {
+  @extend .bold;
+  font-size: $font-4;
+
+  @media ($medium-up) {
+    font-size: $font-3;
+  }
+}

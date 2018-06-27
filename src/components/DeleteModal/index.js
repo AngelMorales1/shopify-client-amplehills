@@ -23,7 +23,6 @@ class DeleteModal extends Component {
   };
 
   render() {
-    console.log(this.props, '<<');
     const classes = cx(
       'fixed-cover bg-white-wash flex justify-center items-center',
       styles['DeleteModal'],

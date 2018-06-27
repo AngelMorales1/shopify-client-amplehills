@@ -1,0 +1,120 @@
+@import 'settings';
+
+.Cart {
+  padding: spacing(8);
+
+  @media ($medium-up) {
+    padding: spacing(16);
+  }
+  &__content-title__container {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    width: 80vw;
+  }
+
+  &__content-title-item {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &__content-title-quantity {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+
+  &__content-title-total-price {
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+  }
+
+  &__content-info__container {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: spacing(8);
+
+    @media ($medium-up) {
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: auto;
+    }
+  }
+
+  &__content-info__item {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @media ($medium-up) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__content-info__price {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: flex-end;
+
+    @media ($medium-up) {
+      grid-column: 5 / 6;
+      grid-row: 1 / 2;
+      align-items: center;
+    }
+  }
+
+  &__content-info__quantity {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    @media ($medium-up) {
+      grid-column: 4 / 5;
+      grid-row: 1 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__content-info__delete {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+
+    @media ($medium-up) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      justify-content: center;
+      align-items: center;
+      padding-left: 50%;
+    }
+  }
+
+  &__shipping-info__container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__shipping-info__content {
+    width: 100%;
+
+    @media ($medium-up) {
+      max-width: spacing(80);
+    }
+  }
+
+  &__decorative-line {
+    width: 80vw;
+    border-top: spacing(0.5) solid color('gray');
+  }
+}

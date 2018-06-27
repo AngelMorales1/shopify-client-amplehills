@@ -5,6 +5,7 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
+// import { fetchProductContent } from 'state/actions/contentActions';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -32,7 +33,6 @@ class Cart extends Component {
   };
 
   render() {
-    console.log(this.props, '??');
     const {
       checkout,
       actions: { removeLineItems }
@@ -40,41 +40,74 @@ class Cart extends Component {
     const items = get(checkout, 'lineItems', []);
 
     return (
-      <div>
-        Cart
-        <div>
-          <p>Item</p>
-          <p>Quantity</p>
-          <p>Total Price</p>
+      <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
+        <h2 className="block-headline">Cart</h2>
+        <div
+          className={cx(
+            styles['Cart__content-title__container'],
+            'xs-hide sm-hide my2'
+          )}
+        >
+          <span
+            className={cx(
+              styles['Cart__content-title-item'],
+              'bold flex justify-start'
+            )}
+          >
+            Item
+          </span>
+          <span
+            className={cx(
+              styles['Cart__content-title-quantity'],
+              'bold flex justify-center'
+            )}
+          >
+            Quantity
+          </span>
+          <span
+            className={cx(
+              styles['Cart__content-title-total-price'],
+              'bold flex justify-end'
+            )}
+          >
+            Total Price
+          </span>
         </div>
-        <div>
-          <p>item</p>
+        <div
+          className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
+        />
+        <div className="my3">
           {items.map(item => {
-            const classes = cx('mb2', {
-              [styles['MiniCart__line-item--updating']]:
-                this.props.lineItemsBeingUpdated.includes(
-                  get(item, 'id', '')
-                ) ||
-                this.props.lineItemsBeingRemoved.includes(get(item, 'id', ''))
-            });
-
             return (
-              <div className={classes} key={item.id}>
-                <div>
-                  <span>{item.title}</span>
-                  <span>
+              <div
+                className={cx(styles['Cart__content-info__container'])}
+                key={item.id}
+              >
+                <div className={cx(styles['Cart__content-info__item'])}>
+                  <span className="bold my2">{item.title}</span>
+                </div>
+                <div className={cx(styles['Cart__content-info__price'])}>
+                  <span className="bold small">
                     ${getLineItemPrice(
                       get(item, 'variant.price', '0.00'),
                       item.quantity
                     )}
                   </span>
                 </div>
-                <div>
+                <div className={cx(styles['Cart__content-info__quantity'])}>
                   <QuantitySelector
                     quantity={item.quantity}
                     variant="small"
-                    onChange={quantity => updateLineItem(item.id, quantity)}
+                    onChange={quantity =>
+                      this.updateLineItem(
+                        item.id,
+                        quantity,
+                        get(this.props, 'checkout.id', null)
+                      )
+                    }
                   />
+                </div>
+                <div className={cx(styles['Cart__content-info__delete'])}>
                   <Button
                     variant="icon"
                     onClick={() => removeLineItems(item.id)}
@@ -85,12 +118,25 @@ class Cart extends Component {
               </div>
             );
           })}
-          <p>
-            An Item you ordered has shipping limitations that will be selected
-            in checkout
-          </p>
-          <p>Shipping & taxes calculated at checkout</p>
-          <p>{`Subtotal: $${checkout.subtotalPrice}`}</p>
+        </div>
+        <div
+          className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
+        />
+        <div className={cx(styles['Cart__shipping-info__container'], 'my4')}>
+          <div className={cx(styles['Cart__shipping-info__content'])}>
+            <p className="info-text-uppercase">
+              An Item you ordered has shipping limitations that will be selected
+              in checkout
+            </p>
+          </div>
+          <div>
+            <p className="info-text-uppercase xs-hide sm-hide">
+              Shipping & taxes calculated at checkout
+            </p>
+            <p className="price-text">{`Subtotal: $${
+              checkout.subtotalPrice
+            }`}</p>
+          </div>
         </div>
         <DeleteModal />
       </div>
@@ -112,7 +158,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         removeLineItems,
-        updateLineItems
+        updateLineItems,
+        // fetchProductContent
       },
       dispatch
     )
