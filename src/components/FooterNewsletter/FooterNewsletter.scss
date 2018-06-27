@@ -1,0 +1,38 @@
+@import 'settings';
+
+.FooterNewsletter {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+
+  &__container {
+    flex-direction: column;
+    width: 100%;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      width: 50%;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    font-family: $font-carter;
+    font-size: $font-6;
+
+    @media ($medium-up) {
+      margin-right: spacing(6);
+    }
+  }
+
+  &__text-field {
+    width: 100%;
+
+    @media ($medium-up) {
+      width: 60%;
+      margin-right: spacing(6);
+    }
+  }
+}

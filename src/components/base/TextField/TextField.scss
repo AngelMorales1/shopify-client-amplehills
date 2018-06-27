@@ -26,6 +26,21 @@
     }
   }
 
+  &--madison-blue-outline-round {
+    input {
+      @extend .text-madison-blue;
+      @extend .bold;
+      border: spacing(1) solid color('madison-blue');
+      border-radius: spacing(10);
+      font-size: $font-4;
+
+      &::placeholder {
+        @extend .text-madison-blue;
+        @extend .bold;
+      }
+    }
+  }
+
   &--light-gray,
   &--light-gray-tall {
     input,
