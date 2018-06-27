@@ -14,6 +14,7 @@ export default createSelector(
       const flavorDescription = get(product, 'fields.flavorDescription', '');
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
+      const blocks = get(product, 'fields.contentBlocks', '');
 
       const shopifyProduct = shopify.find(
         shopifyProduct => get(shopifyProduct, 'handle', '') === handle
@@ -28,7 +29,8 @@ export default createSelector(
         flavorDescription,
         price,
         gridImage,
-        pintImage
+        pintImage,
+        blocks
       };
     });
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import cx from 'classnames';
 
-import getProducts from 'state/selectors/getProducts';
+import products from 'state/selectors/products';
 import get from 'utils/get';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
@@ -133,7 +133,7 @@ class ChooseYourOwnStory extends Component {
 const mapStateToProps = state => {
   return {
     ...state,
-    products: getProducts(state)
+    products: products(state)
   };
 };
 

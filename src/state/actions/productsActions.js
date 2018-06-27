@@ -12,7 +12,10 @@ export const FETCH_CONTENTFUL_PRODUCTS = 'FETCH_CONTENTFUL_PRODUCTS';
 export const fetchContentfulProducts = payload => dispatch => {
   return dispatch({
     type: FETCH_CONTENTFUL_PRODUCTS,
-    payload: Data.fetchContentfulProducts()
+    payload: Data.getEntries({
+      content_type: 'productPage',
+      include: 4
+    })
   });
 };
 

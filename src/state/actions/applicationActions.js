@@ -23,11 +23,13 @@ export const initializeApplication = checkoutID => dispatch => {
       Data.setRef('shopify', BuySDK);
       return Promise.all([
         fetchOrCreateCheckout(checkoutID)(dispatch),
-        getLocationData(),
-        getGlobalSettings(),
-        fetchProducts(),
-        fetchContentfulProducts()
-      ]).then(() => resolve());
+        getLocationData()(dispatch),
+        getGlobalSettings()(dispatch),
+        fetchProducts()(dispatch),
+        fetchContentfulProducts()(dispatch)
+      ]).then(([checkout, locations, settings, products, contentfulProducts]) =>
+        resolve()
+      );
     })
   });
 };

@@ -14,13 +14,7 @@ const Data = {
   setRef(clientID, client) {
     this[clientID] = client;
   },
-  getEntries(type = 'page', handle) {
-    const query = {
-      content_type: type,
-      include: 4,
-      'fields.productHandle': handle
-    };
-
+  getEntries(query) {
     const hashified = hashify(query);
 
     if (!!this.cache.getEntries[hashified])

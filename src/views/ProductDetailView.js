@@ -8,20 +8,23 @@ class ProductDetailView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    const { product, content, ourPledge } = model;
-    const contentBlocks = get(content, 'items[0].fields.contentBlocks', []);
-    const ourPledgeBlocks = get(ourPledge, 'items[0].fields', {});
+    console.log(this.props);
+    const {
+      ourPledge,
+      product,
+      product: { blocks }
+    } = this.props;
     return (
       <div className="ProductDetailView">
         <div>
-          {contentBlocks &&
-            contentBlocks.map((block, i) => (
+          {blocks &&
+            blocks.map((block, i) => (
               <BlockSwitch
                 key={`${i}-${get(block, 'sys.id', i)}`}
                 block={block}
                 product={product}
-                ourPledgeBlocks={ourPledgeBlocks}
-                z={contentBlocks.length - i}
+                ourPledge={ourPledge}
+                z={blocks.length - i}
                 {...this.props}
               />
             ))}
