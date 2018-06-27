@@ -25,7 +25,7 @@ class Breadcrumbs extends Component {
             i < breadcrumbs.length - 1 ? <span className="px1">/</span> : '';
 
           return (
-            <span>
+            <span key={i}>
               <Link className="link-text" to={get(crumb, 'to', '')}>
                 <span className="small">{get(crumb, 'label', '')}</span>
               </Link>

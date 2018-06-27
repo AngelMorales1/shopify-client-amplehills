@@ -38,7 +38,7 @@ class ChooseYourOwnStory extends Component {
 
               return (
                 <ProductShoppableCard
-                  key={product.handle}
+                  key={handle}
                   product={get(products, handle)}
                 />
               );
@@ -68,7 +68,7 @@ class ChooseYourOwnStory extends Component {
             >
               <Radio
                 className="mr3"
-                checked="true"
+                checked={true}
                 label="4-Pack"
                 variant="vertical"
                 color="white"
