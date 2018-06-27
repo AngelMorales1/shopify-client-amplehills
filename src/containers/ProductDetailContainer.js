@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
-import { fetchProduct, getOurPledge } from 'state/actions/productActions';
-import { fetchProductContent } from 'state/actions/contentActions';
+import { fetchOurPledge } from 'state/actions/productActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
+import product from 'state/selectors/product';
 
 import get from 'utils/get';
 
@@ -14,24 +14,14 @@ class ProductDetailContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchProduct, fetchProductContent, getOurPledge }
+      actions: { fetchOurPledge }
     } = this.props;
-    const handle = this.props.match.params.productHandle;
-    return Promise.all([
-      fetchProduct(handle),
-      fetchProductContent(handle),
-      getOurPledge()
-    ]).then(([productResult, contentResult, ourPledgeResult]) => {
-      return {
-        product: get(productResult, 'value'),
-        content: get(contentResult, 'value'),
-        ourPledge: get(ourPledgeResult, 'value')
-      };
-    });
+
+    return fetchOurPledge();
   };
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
   return {
     checkout: get(state, 'session.checkout.id'),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
@@ -40,8 +30,9 @@ const mapStateToProps = state => {
       'applicationUI.globalSettings.items[0].fields',
       {}
     ),
+    product: product(state, props),
     shippingDates: fetchShippingDates(state),
-    ourPledge: get(state, 'applicationUI.ourPledge.items[0].fields', {})
+    ourPledge: get(state, 'product.ourPledge.items[0].fields', {})
   };
 };
 
@@ -49,10 +40,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        fetchProduct,
-        fetchProductContent,
         addLineItems,
-        getOurPledge
+        fetchOurPledge
       },
       dispatch
     )

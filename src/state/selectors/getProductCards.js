@@ -17,9 +17,11 @@ export default createSelector(
         shopifyProduct => get(shopifyProduct, 'handle', '') === handle
       );
       const price = get(shopifyProduct, 'variants[0].price', '0.00');
+      const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
       return {
         handle,
+        id,
         image,
         price,
         title

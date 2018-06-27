@@ -5,6 +5,7 @@ import get from 'utils/get';
 import ProductHero from 'components/ProductHero';
 import ProductDetails from 'components/ProductDetails';
 import ImageText from 'components/ImageText';
+import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 
 const BlockSwitch = props => {
   const { block, product, z } = props;
@@ -13,7 +14,7 @@ const BlockSwitch = props => {
   const {
     addLineItemsStatus,
     globalSettings,
-    ourPledgeBlocks,
+    ourPledge,
     checkout,
     shippingDates,
     actions: { addLineItems }
@@ -31,13 +32,15 @@ const BlockSwitch = props => {
           shippingDates={shippingDates}
           checkout={checkout}
           globalSettings={globalSettings}
-          ourPledge={ourPledgeBlocks}
+          ourPledge={ourPledge}
         />
       );
     case 'blockProductDetails':
       return <ProductDetails data={fields} z={z} />;
     case 'blockImageText':
       return <ImageText data={fields} z={z} />;
+    case 'blockChooseYourOwnStory':
+      return <ChooseYourOwnStory ourPledge={ourPledge} data={fields} z={z} />;
     default:
       return null;
   }

@@ -1,5 +1,9 @@
-@import "settings/aspect";
+@import 'settings/aspect';
 
 .square {
   @include aspect-ratio(1, 1);
+}
+
+.aspect-5-4 {
+  @include aspect-ratio(5, 4);
 }

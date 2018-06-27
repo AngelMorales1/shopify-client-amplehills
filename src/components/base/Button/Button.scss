@@ -6,6 +6,7 @@
   font-family: $font-avenir;
   font-size: $font-4;
   font-weight: 800;
+  white-space: nowrap;
   transform: translate3d(0, spacing(-0.5), 0);
   transition: $transition;
 
@@ -35,7 +36,7 @@
 
   &--primary-small {
     height: spacing(10);
-    padding: spacing(2.5) spacing(6);
+    padding: spacing(2) spacing(6);
   }
 
   &--secondary {
@@ -103,6 +104,17 @@
   &--madison-blue {
     @extend .bg-madison-blue;
     @extend .text-white;
+  }
+
+  &--madison-blue-outline {
+    @extend .bg-madison-blue;
+    @extend .text-white;
+    border: spacing(1) solid color('white');
+    padding: spacing(1.75) spacing(6);
+
+    &.Button--circle {
+      padding: 0;
+    }
   }
 
   &--white-madison-blue-outline {

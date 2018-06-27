@@ -6,6 +6,11 @@ import {
   getGlobalSettings
 } from 'state/actions/ui/applicationUIActions';
 
+import {
+  fetchProducts,
+  fetchContentfulProducts
+} from 'state/actions/productsActions';
+
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
@@ -16,10 +21,14 @@ export const initializeApplication = checkoutID => dispatch => {
       const Contentful = ContentfulClient();
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
-      return fetchOrCreateCheckout(checkoutID)(dispatch).then(() =>
-        dispatch(getLocationData()).then(() =>
-          dispatch(getGlobalSettings()).then(() => resolve())
-        )
+      return Promise.all([
+        fetchOrCreateCheckout(checkoutID)(dispatch),
+        getLocationData()(dispatch),
+        getGlobalSettings()(dispatch),
+        fetchProducts()(dispatch),
+        fetchContentfulProducts()(dispatch)
+      ]).then(([checkout, locations, settings, products, contentfulProducts]) =>
+        resolve()
       );
     })
   });
