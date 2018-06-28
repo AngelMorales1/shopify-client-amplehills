@@ -43,8 +43,7 @@ class ChooseYourOwnStory extends Component {
 
     if (pints.length >= size) return null;
 
-    pints.push(id);
-    this.setState({ pints });
+    this.setState({ pints: [...pints, id] });
   };
 
   handleShippingDateClick = shippingDate => {
