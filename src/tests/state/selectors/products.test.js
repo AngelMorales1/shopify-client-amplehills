@@ -1,9 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-
 import products from 'state/selectors/products';
 
-it('renders without data', () => {
+it('products selector works as intended', () => {
   const shopifyProducts = [
     {
       handle: 'test-product',
@@ -59,36 +56,3 @@ it('renders without data', () => {
     mergedProducts
   );
 });
-
-// return products.reduce((mergedProducts, product) => {
-//   const title = get(product, 'fields.productTitle', '');
-//   const handle = get(product, 'fields.productHandle', '');
-//   const flavorDescription = get(product, 'fields.flavorDescription', '');
-//   const gridImage = get(product, 'fields.image.fields.file.url', '');
-//   const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
-//   const blocks = get(product, 'fields.contentBlocks', []);
-//
-//   const shopifyProduct = shopifyProducts[handle];
-//   const available = get(shopifyProduct, 'variants[0].available', false);
-//   const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
-//   const id = get(shopifyProduct, 'variants[0].id', '');
-//   const variants = get(shopifyProduct, 'variants', []).map(variant => {
-//     const { id, price, title, available } = variant;
-//     return { id, price, title, available };
-//   });
-//
-//   mergedProducts[handle] = {
-//     title,
-//     id,
-//     handle,
-//     available,
-//     flavorDescription,
-//     price,
-//     variants,
-//     gridImage,
-//     pintImage,
-//     blocks
-//   };
-//
-//   return mergedProducts;
-// }, {});

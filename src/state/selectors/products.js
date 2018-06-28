@@ -22,7 +22,7 @@ export default createSelector(
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
 
-      const shopifyProduct = shopifyProducts[handle];
+      const shopifyProduct = get(shopifyProducts, handle, {});
       const available = get(shopifyProduct, 'variants[0].available', false);
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
       const id = get(shopifyProduct, 'variants[0].id', '');
