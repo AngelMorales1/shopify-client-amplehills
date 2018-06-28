@@ -23,17 +23,20 @@ class ChooseYourOwnStory extends Component {
   }
 
   handleSizeClick = size => {
-    if (size >= this.state.pints.length) return this.setState({ size });
+    const pints = get(this.state, 'pints', []);
+    if (size >= pints.length) return this.setState({ size });
 
-    const pints = this.state.pints.slice(0, size);
+    const trimmedPints = pints.slice(0, size);
     this.setState({
-      pints,
+      pints: trimmedPints,
       size
     });
   };
 
   handleProductAddClick = id => {
-    const { pints, size } = this.state;
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', 1);
+
     if (pints.length >= size) return null;
 
     pints.push(id);
@@ -45,7 +48,10 @@ class ChooseYourOwnStory extends Component {
   };
 
   handleAddToCart = () => {
-    const { pints, size, quantity } = this.state;
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', 1);
+    const quantity = get(this.state, 'quantity', 1);
+
     if (pints.length !== size) return null;
 
     const variant = this.props.product.variants.find(
@@ -62,13 +68,17 @@ class ChooseYourOwnStory extends Component {
   };
 
   render() {
-    console.log(this.props);
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', 1);
+    const quantity = get(this.state, 'quantity', 1);
+    const shipping = get(this.state, 'shippingDate', '');
+
     const { block, products, ourPledge } = this.props;
     const fields = get(block, 'fields', {});
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
     const activeVariant = product.variants.find(
-      variant => parseInt(variant.title, 10) === this.state.size
+      variant => parseInt(variant.title, 10) === size
     );
 
     const shoppableProducts = get(fields, 'products', []);
@@ -152,7 +162,7 @@ class ChooseYourOwnStory extends Component {
             >
               <label>Choose 4 Flavors</label>
               <div className="flex justify-start w100 pt2">
-                {this.state.pints.map(handle => (
+                {pints.map(handle => (
                   <div
                     className={cx(
                       styles['ChooseYourOwnStory__pint-icon'],
@@ -162,18 +172,16 @@ class ChooseYourOwnStory extends Component {
                     <Image src={get(products, `[${handle}].pintImage`, '')} />
                   </div>
                 ))}
-                {[...Array(this.state.size - this.state.pints.length)].map(
-                  () => (
-                    <div
-                      className={cx(
-                        styles['ChooseYourOwnStory__pint-icon'],
-                        'mr2'
-                      )}
-                    >
-                      <Image src="/assets/images/icon-pint.svg" />
-                    </div>
-                  )
-                )}
+                {[...Array(size - pints.length)].map(() => (
+                  <div
+                    className={cx(
+                      styles['ChooseYourOwnStory__pint-icon'],
+                      'mr2'
+                    )}
+                  >
+                    <Image src="/assets/images/icon-pint.svg" />
+                  </div>
+                ))}
               </div>
             </div>
             <div
@@ -187,7 +195,7 @@ class ChooseYourOwnStory extends Component {
                 <Button
                   variant="primary-small"
                   color={
-                    shippingDate === this.state.shippingDate
+                    shippingDate === shipping
                       ? 'white-madison-blue'
                       : 'madison-blue-outline'
                   }
@@ -205,24 +213,19 @@ class ChooseYourOwnStory extends Component {
             >
               <QuantitySelector
                 color="madison-blue-outline"
-                quantity={this.state.quantity}
+                quantity={quantity}
                 className="mr1"
                 onChange={value => this.setState({ quantity: value })}
               />
               <Button
                 className="small"
-                disabled={
-                  this.state.size !== this.state.pints.length ||
-                  !this.state.shippingDate
-                }
+                disabled={size !== pints.length || !shipping}
                 variant="primary-small"
                 color="white-madison-blue"
                 onClick={this.handleAddToCart}
               >
                 <span className="mr2">Add to Cart</span>
-                <span>
-                  ${getLineItemPrice(activeVariant.price, this.state.quantity)}
-                </span>
+                <span>${getLineItemPrice(activeVariant.price, quantity)}</span>
               </Button>
             </div>
           </div>
