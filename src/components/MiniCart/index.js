@@ -8,6 +8,8 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
+import products from 'state/selectors/products';
+import lineItems from 'state/selectors/lineItems';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -88,6 +90,8 @@ class MiniCart extends Component {
   render() {
     const {
       checkout,
+      items,
+      products,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -98,8 +102,6 @@ class MiniCart extends Component {
         [styles['MiniCart--open']]: this.props.miniCartIsOpen
       }
     );
-
-    const items = get(checkout, 'lineItems', []);
 
     return (
       <div className="relative">
@@ -117,25 +119,28 @@ class MiniCart extends Component {
 
           <div className="mb4">
             {items.map(item => {
-              console.log(item);
               const classes = cx(styles['MiniCart__line-item'], 'mb2', {
                 [styles['MiniCart__line-item--updating']]:
-                  this.props.lineItemsBeingUpdated.includes(
-                    get(item, 'id', '')
-                  ) ||
-                  this.props.lineItemsBeingRemoved.includes(get(item, 'id', ''))
+                  this.props.lineItemsBeingUpdated.includes(item.id) ||
+                  this.props.lineItemsBeingRemoved.includes(item.id)
               });
+
+              const { subItems } = item;
 
               return (
                 <div className={classes} key={item.id}>
-                  <div className="mb2 line-item-title flex justify-between">
+                  <div className="mb2 line-item-title flex flex-wrap justify-between">
                     <span className="mr2">{item.title}</span>
-                    <span>
-                      ${getLineItemPrice(
-                        get(item, 'variant.price', '0.00'),
-                        item.quantity
-                      )}
-                    </span>
+                    <span>${item.price}</span>
+                    {subItems.length ? (
+                      <div className="w100">
+                        {subItems.map(subItem => (
+                          <span key={subItem.handle}>{`${subItem.quantity}x ${
+                            products[subItem.handle].title
+                          }`}</span>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                   <div className="w100 flex justify-between">
                     <QuantitySelector
@@ -226,6 +231,8 @@ const mapStateToProps = state => {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: get(state, 'session.checkout', {}),
+    products: products(state),
+    items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
   };
