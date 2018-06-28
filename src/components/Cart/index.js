@@ -10,7 +10,6 @@ import {
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import updateLineItem from 'utils/updateLineItem';
 import getLineItemPrice from 'utils/getLineItemPrice';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
@@ -33,7 +32,6 @@ class Cart extends Component {
   };
 
   render() {
-    
     const {
       checkout,
       actions: { removeLineItems }
@@ -122,45 +120,52 @@ class Cart extends Component {
         <div
           className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
         />
+
         <div className={cx(styles['Cart__shipping-info__container'], 'mt4')}>
-          <div className={cx(styles['Cart__shipping-info__content'])}>
+          <div className={cx(styles['Cart__shipping-info__delivery-info'])}>
             <p className="info-text-uppercase">
               An Item you ordered has shipping limitations that will be selected
               in checkout
             </p>
           </div>
-          <div>
-            <p className="info-text-uppercase xs-hide sm-hide">
-              Shipping & taxes calculated at checkout
-            </p>
-            <p className="price-text my1">{`Subtotal: $${
-              checkout.subtotalPrice
-            }`}</p>
+          <div className={cx(styles['Cart__shipping-info__total'])}>
+            <div>
+              <p className="info-text-uppercase xs-hide sm-hide">
+                Shipping & taxes calculated at checkout
+              </p>
+              <p className="price-text my1">{`Subtotal: $${
+                checkout.subtotalPrice
+              }`}</p>
+            </div>
           </div>
-        </div>
-        <div className={cx(styles['Cart__bottom-container'])}>
-          <div className={cx(styles['Cart__gift-message'], 'xs-hide sm-hide')}>
-            <h2 className="block-headline m1">Gift Message</h2>
+
+          <div
+            className={cx(
+              styles['Cart__shipping-info__gift-message'],
+              'xs-hide sm-hide'
+            )}
+          >
+            <h2 className="sub-title ml1 mt2 mb3">Gift Message</h2>
             <TextField
-              className="m1"
+              className="ml1 mb2"
               variant="light-gray-tall"
               placeholder="Message"
               multiLine={true}
               placeholder={`Message (don't forget to include your name)`}
             />
-            <span className="info-text-uppercase m1 xs-hide sm-hide">
+            <span className="info-text-uppercase ml1 xs-hide sm-hide">
               Gift messages will not include prices
             </span>
           </div>
-          <div
-            className={cx(styles['Cart__button-container'], 'flex items-end')}
-          >
-            <Button
-              className="ml3 xs-hide sm-hide"
-              label="Update Cart"
-              color="peach"
-            />
-            <Button className="ml3" label="Checkout" color="madison-blue" />
+          <div className={cx(styles['Cart__shipping-info__buttons'], 'my1')}>
+            <div>
+              <Button
+                className="xs-hide sm-hide"
+                label="Update Cart"
+                color="peach"
+              />
+              <Button label="Checkout" color="madison-blue" />
+            </div>
           </div>
         </div>
         <DeleteModal />
@@ -170,7 +175,6 @@ class Cart extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     ...state,
     checkout: get(state, 'session.checkout', {}),
@@ -185,7 +189,6 @@ const mapDispatchToProps = dispatch => {
       {
         removeLineItems,
         updateLineItems
-        // fetchProductContent
       },
       dispatch
     )

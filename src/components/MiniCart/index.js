@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { closeMiniCart } from 'state/actions/ui/miniCartUIActions';
 import {
-  confirmRemoveLineItems,
-  cancelRemoveLineItems,
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
@@ -16,6 +14,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 
 import { Button, Image, QuantitySelector } from 'components/base';
+import DeleteModal from 'components/DeleteModal';
 import styles from './MiniCart.scss';
 
 class MiniCart extends Component {
@@ -32,59 +31,6 @@ class MiniCart extends Component {
       items
     );
   };
-
-  confirmRemoveLineItems = item => {
-    const items = [item];
-
-    this.props.actions.confirmRemoveLineItems(
-      get(this.props, 'checkout.id', null),
-      items
-    );
-  };
-
-  renderDeleteModal() {
-    const classes = cx(
-      'fixed-cover bg-white-wash flex justify-center items-center',
-      styles['MiniCart__delete-modal'],
-      {
-        [styles['MiniCart__delete-modal--active']]: this.props
-          .lineItemsBeingRemoved.length
-      }
-    );
-
-    const id = this.props.lineItemsBeingRemoved[0];
-
-    return (
-      <div className={classes}>
-        <div
-          className={cx(
-            styles['MiniCart__delete-modal-inner'],
-            'w100 bg-white drop-shadow-xlarge p3 card'
-          )}
-        >
-          <div className="mb4">
-            <span className="big bold">
-              Are you sure you want to remove this from your cart?
-            </span>
-          </div>
-          <div className="flex justify-end">
-            <Button
-              variant="no-style"
-              label="Cancel"
-              className="mr3 text-peach"
-              onClick={() => this.props.actions.cancelRemoveLineItems(id)}
-            />
-            <Button
-              variant="primary"
-              color="madison-blue"
-              label="Yes"
-              onClick={() => this.confirmRemoveLineItems(id)}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   render() {
     const {
@@ -179,7 +125,8 @@ class MiniCart extends Component {
             />
           </div>
         </div>
-        {this.renderDeleteModal()}
+        <DeleteModal />
+        {/* {this.renderDeleteModal()} */}
       </div>
     );
   }
@@ -249,8 +196,6 @@ const mapDispatchToProps = dispatch => {
       {
         closeMiniCart,
         removeLineItems,
-        cancelRemoveLineItems,
-        confirmRemoveLineItems,
         updateLineItems
       },
       dispatch
