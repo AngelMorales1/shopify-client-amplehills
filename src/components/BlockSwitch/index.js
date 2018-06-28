@@ -11,28 +11,13 @@ import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 const BlockSwitch = props => {
   const { block } = props;
   const type = get(block, 'sys.contentType.sys.id');
-  // const { block, product, z } = props;
-  // const contentType = get(block, 'sys.contentType.sys.id');
-  // const fields = get(block, 'fields');
-  // const { block, product, z } = props;
-  // const contentType = get(block, 'sys.contentType.sys.id');
-  // const fields = get(block, 'fields');
   const productDetailBlocks = get(block, 'fields.productDetails', []);
-
-  // const {
-  //   addLineItemsStatus,
-  //   globalSettings,
-  //   ourPledge,
-  //   checkout,
-  //   shippingDates,
-  //   actions: { addLineItems }
-  // } = props;
+  const viewWhatsIncluded = get(block, 'fields.whatsIncluded', false);
 
   switch (type) {
     case 'blockProductHero':
       return <ProductHero {...props} />;
     case 'blockProductDetails':
-      const viewWhatsIncluded = get(block, 'fields.whatsIncluded', false);
       if ('blockProductDetails' && viewWhatsIncluded) {
         return (
           <React.Fragment>
