@@ -5,9 +5,29 @@ import Product from 'constants/types/Product';
 import { Button } from 'components/base';
 import styles from './ProductShoppableCard.scss';
 
-const ProductShoppableCard = ({ product, onClick }) => {
+const ProductShoppableCard = ({
+  product,
+  quantity,
+  handleAddProduct,
+  handleRemoveProduct
+}) => {
+  const handleQuantityChange = newQuantity => {
+    if (newQuantity > quantity) handleAddProduct(product.handle);
+    if (newQuantity < quantity) handleRemoveProduct(product.handle);
+  };
+
+  const actionClasses = cx(
+    styles['ProductShoppableCard__actions'],
+    'relative',
+    {
+      [styles['ProductShoppableCard__actions--has-quantity']]: quantity
+    }
+  );
+
   return (
-    <div className={cx(styles['ProductGridCard'], 'col col-12 md-col-6 p1')}>
+    <div
+      className={cx(styles['ProductShoppableCard'], 'col col-12 md-col-6 p1')}
+    >
       <div
         className="card"
         style={{
@@ -19,22 +39,28 @@ const ProductShoppableCard = ({ product, onClick }) => {
         <div className="flex flex-column items-start p2 bg-seafoam">
           <span className="w100 bold mt2 mb1">{product.title}</span>
           <p className="detail mb3">{product.flavorDescription}</p>
-          {quantity ? (
+          <div className={actionClasses}>
             <QuantitySelector
+              className={cx(
+                styles['ProductShoppableCard__quantity-selector'],
+                'absolute t0 l0 transition'
+              )}
               quantity={quantity}
               color="seafoam"
               allowZero={true}
               onChange={newQuantity => handleQuantityChange(newQuantity)}
             />
-          ) : (
             <Button
-              className="small bg-seafoam"
+              className={cx(
+                styles['ProductShoppableCard__button'],
+                'small bg-seafoam absolute t0 l0'
+              )}
               variant="primary-small"
               color="white-madison-blue-outline"
               label="+ Add"
               onClick={() => handleAddProduct(product.handle)}
             />
-          )}
+          </div>
         </div>
       </div>
     </div>

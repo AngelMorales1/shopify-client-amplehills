@@ -30,12 +30,12 @@
   &--primary,
   &--primary-small {
     border-radius: spacing(8);
-    height: spacing(14);
+    height: $button-primary-height;
     padding: spacing(4) spacing(6);
   }
 
   &--primary-small {
-    height: spacing(10);
+    height: $button-small-height;
     padding: spacing(2) spacing(6);
   }
 
@@ -69,7 +69,7 @@
   &--circle {
     @extend .circle;
     font-size: $font-5;
-    height: spacing(10);
+    height: $button-small-height;
     width: spacing(10);
   }
 
