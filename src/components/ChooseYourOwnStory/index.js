@@ -123,6 +123,7 @@ class ChooseYourOwnStory extends Component {
                 <Radio
                   label={variant.title}
                   className="mr3"
+                  key={variant.id}
                   checked={variant.id === activeVariant.id}
                   onClick={() =>
                     this.handleSizeClick(parseInt(variant.title, 10))
@@ -148,6 +149,7 @@ class ChooseYourOwnStory extends Component {
                 <Radio
                   label={variant.title}
                   className="mr3"
+                  key={variant.id}
                   checked={variant.id === activeVariant.id}
                   onClick={() =>
                     this.handleSizeClick(parseInt(variant.title, 10))
@@ -165,8 +167,9 @@ class ChooseYourOwnStory extends Component {
             >
               <label>Choose 4 Flavors</label>
               <div className="flex justify-start w100 pt2">
-                {pints.map(handle => (
+                {pints.map((handle, i) => (
                   <div
+                    key={i}
                     className={cx(
                       styles['ChooseYourOwnStory__pint-icon'],
                       'mr2'
@@ -175,8 +178,9 @@ class ChooseYourOwnStory extends Component {
                     <Image src={get(products, `[${handle}].pintImage`, '')} />
                   </div>
                 ))}
-                {[...Array(size - pints.length)].map(() => (
+                {[...Array(size - pints.length)].map((pint, i) => (
                   <div
+                    key={i}
                     className={cx(
                       styles['ChooseYourOwnStory__pint-icon'],
                       'mr2'
@@ -202,6 +206,7 @@ class ChooseYourOwnStory extends Component {
                       ? 'white-madison-blue'
                       : 'madison-blue-outline'
                   }
+                  key={shippingDate}
                   className="small mr2"
                   label={shippingDate}
                   onClick={() => this.handleShippingDateClick(shippingDate)}
@@ -240,7 +245,7 @@ class ChooseYourOwnStory extends Component {
 
 ChooseYourOwnStory.propTypes = {
   product: Product.propTypes,
-  products: PropTypes.arrayOf(Product.propTypes),
+  products: PropTypes.object,
   block: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
@@ -254,7 +259,7 @@ ChooseYourOwnStory.propTypes = {
 
 ChooseYourOwnStory.defaultProps = {
   product: Product.default,
-  products: [],
+  products: {},
   block: {
     title: '',
     description: '',
