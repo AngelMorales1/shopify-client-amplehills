@@ -11,7 +11,6 @@ const Radio = ({ variant, color, className, label, checked, onClick }) => {
     switch (color) {
       case 'white':
         return '/assets/images/icon-check-peach.svg';
-        break;
       default:
         return '/assets/images/icon-check.svg';
     }

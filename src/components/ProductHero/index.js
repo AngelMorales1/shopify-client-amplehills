@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import Product from 'constants/types/Product';
 import { PENDING, FULFILLED } from 'constants/Status';
 
-import cx from 'classnames';
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Dropdown } from 'components/base';
 import OurPledge from 'components/OurPledge';
@@ -35,7 +36,7 @@ class ProductHero extends Component {
       }
     ];
 
-    this.props.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout, items);
   };
 
   didAddToCart = () => {
@@ -48,17 +49,18 @@ class ProductHero extends Component {
   };
 
   render() {
-    const { data, product, z } = this.props;
+    const { block, product, z } = this.props;
     const { gridImage, available, price } = product;
+    const fields = get(block, 'fields', {});
 
     return (
       <div
         className={`${styles['ProductHero']} flex flex-wrap`}
         style={{ zIndex: z }}
       >
-        {get(data, 'alert', '') ? (
+        {get(fields, 'alert', '') ? (
           <div className="absolute center mt3 uppercase tout z-1 w100">
-            {get(data, 'alert', '')}
+            {get(fields, 'alert', '')}
           </div>
         ) : null}
 
@@ -73,14 +75,14 @@ class ProductHero extends Component {
           <div className="col-12 md-col-8 px2 mx-auto">
             <div className="relative inline-block">
               <h1 className="block-headline mb4 relative z-1">
-                {get(data, 'title')}
+                {get(fields, 'title', '')}
               </h1>
               <Image
                 className={cx(
                   'absolute',
                   styles['ProductHero__title-illustration']
                 )}
-                src={get(data, 'titleIllustration.fields.file.url', '')}
+                src={get(fields, 'titleIllustration.fields.file.url', '')}
               />
             </div>
             <div>
@@ -125,14 +127,14 @@ class ProductHero extends Component {
 ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
-  product: PropTypes.shape({}),
+  product: Product.propTypes,
   shippingDates: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProductHero.defaultProps = {
   data: {},
   z: 1,
-  product: {},
+  product: Product.default,
   shippingDates: []
 };
 

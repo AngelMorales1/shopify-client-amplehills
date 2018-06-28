@@ -8,39 +8,18 @@ import ImageText from 'components/ImageText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 
 const BlockSwitch = props => {
-  const { block, product, z } = props;
-  const contentType = get(block, 'sys.contentType.sys.id');
-  const fields = get(block, 'fields');
-  const {
-    addLineItemsStatus,
-    globalSettings,
-    ourPledge,
-    checkout,
-    shippingDates,
-    actions: { addLineItems }
-  } = props;
+  const { block } = props;
+  const type = get(block, 'sys.contentType.sys.id');
 
-  switch (contentType) {
+  switch (type) {
     case 'blockProductHero':
-      return (
-        <ProductHero
-          data={fields}
-          product={product}
-          z={z}
-          addLineItems={addLineItems}
-          addLineItemsStatus={addLineItemsStatus}
-          shippingDates={shippingDates}
-          checkout={checkout}
-          globalSettings={globalSettings}
-          ourPledge={ourPledge}
-        />
-      );
+      return <ProductHero {...props} />;
     case 'blockProductDetails':
-      return <ProductDetails data={fields} z={z} />;
+      return <ProductDetails {...props} />;
     case 'blockImageText':
-      return <ImageText data={fields} z={z} />;
+      return <ImageText {...props} />;
     case 'blockChooseYourOwnStory':
-      return <ChooseYourOwnStory ourPledge={ourPledge} data={fields} z={z} />;
+      return <ChooseYourOwnStory {...props} />;
     default:
       return null;
   }

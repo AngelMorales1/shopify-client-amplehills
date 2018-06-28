@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import products from 'state/selectors/products';
 import get from 'utils/get';
+import getLineItemPrice from 'utils/getLineItemPrice';
+import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
+import Product from 'constants/types/Product';
+import PintSizes from 'constants/PintSizes';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -13,16 +15,83 @@ import ProductShoppableCard from 'components/ProductShoppableCard';
 import styles from './ChooseYourOwnStory.scss';
 
 class ChooseYourOwnStory extends Component {
+  constructor(...args) {
+    super(...args);
+
+    this.state = {
+      size: PintSizes.FOUR.size,
+      pints: [],
+      shippingDate: '',
+      quantity: 1
+    };
+  }
+
+  handleSizeClick = size => {
+    const pints = get(this.state, 'pints', []);
+    if (size >= pints.length) return this.setState({ size });
+
+    const trimmedPints = pints.slice(0, size);
+    this.setState({
+      pints: trimmedPints,
+      size
+    });
+  };
+
+  handleProductAddClick = id => {
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
+
+    if (pints.length >= size) return null;
+
+    this.setState({ pints: [...pints, id] });
+  };
+
+  handleShippingDateClick = shippingDate => {
+    this.setState({ shippingDate });
+  };
+
+  handleAddToCart = () => {
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
+    const quantity = get(this.state, 'quantity', 1);
+
+    if (pints.length !== size) return null;
+
+    const variant = this.props.product.variants.find(
+      variant => getPintSizeFromTitle(variant.title) === size
+    );
+    const items = [
+      {
+        variantId: variant.id,
+        quantity
+      }
+    ];
+
+    this.props.actions.addLineItems(this.props.checkout, items);
+  };
+
   render() {
-    const { data, products, ourPledge } = this.props;
-    const shoppableProducts = get(data, 'products', []);
+    const pints = get(this.state, 'pints', []);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
+    const quantity = get(this.state, 'quantity', 1);
+    const shipping = get(this.state, 'shippingDate', '');
+
+    const { block, products, ourPledge } = this.props;
+    const fields = get(block, 'fields', {});
+    const product =
+      products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const activeVariant = product.variants.find(
+      variant => getPintSizeFromTitle(variant.title) === size
+    );
+
+    const shoppableProducts = get(fields, 'products', []);
     const breadcrumbs = [
       {
         to: '/products',
         label: 'Order Online'
       },
       {
-        to: '/products/choose-your-own-story-4-pack',
+        to: '/products/choose-your-own-story',
         label: 'Choose Your Own Story'
       }
     ];
@@ -40,20 +109,30 @@ class ChooseYourOwnStory extends Component {
                 <ProductShoppableCard
                   key={handle}
                   product={get(products, handle)}
+                  onClick={() => this.handleProductAddClick(handle)}
                 />
               );
             })}
           </div>
           <div className="col col-12 md-col-6 px4">
             <h1 className="block-headline mb4 relative z-1">
-              {get(data, 'title')}
+              {get(fields, 'title')}
             </h1>
             <div className="w100 flex my3">
-              <Radio label="4-Pack" className="mr3" />
-              <Radio label="6-Pack" />
+              {product.variants.map(variant => (
+                <Radio
+                  label={variant.title}
+                  className="mr3"
+                  key={variant.id}
+                  checked={variant.id === activeVariant.id}
+                  onClick={() =>
+                    this.handleSizeClick(parseInt(variant.title, 10))
+                  }
+                />
+              ))}
             </div>
             <div className="mb4">
-              <p className="copy pr2">{get(data, 'description', '')}</p>
+              <p className="copy pr2">{get(fields, 'description', '')}</p>
             </div>
             <OurPledge ourPledge={ourPledge} />
           </div>
@@ -66,14 +145,19 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start'
               )}
             >
-              <Radio
-                className="mr3"
-                checked={true}
-                label="4-Pack"
-                variant="vertical"
-                color="white"
-              />
-              <Radio label="6-Pack" variant="vertical" color="white" />
+              {product.variants.map(variant => (
+                <Radio
+                  label={variant.title}
+                  className="mr3"
+                  key={variant.id}
+                  checked={variant.id === activeVariant.id}
+                  onClick={() =>
+                    this.handleSizeClick(parseInt(variant.title, 10))
+                  }
+                  variant="vertical"
+                  color="white"
+                />
+              ))}
             </div>
             <div
               className={cx(
@@ -82,11 +166,29 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label>Choose 4 Flavors</label>
-              <div className="flex w100 justify-start pt2">
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
-                <Image className="mr2" src="/assets/images/icon-pint.svg" />
+              <div className="flex justify-start w100 pt2">
+                {pints.map((handle, i) => (
+                  <div
+                    key={i}
+                    className={cx(
+                      styles['ChooseYourOwnStory__pint-icon'],
+                      'mr2'
+                    )}
+                  >
+                    <Image src={get(products, `[${handle}].pintImage`, '')} />
+                  </div>
+                ))}
+                {[...Array(size - pints.length)].map((pint, i) => (
+                  <div
+                    key={i}
+                    className={cx(
+                      styles['ChooseYourOwnStory__pint-icon'],
+                      'mr2'
+                    )}
+                  >
+                    <Image src="/assets/images/icon-pint.svg" />
+                  </div>
+                ))}
               </div>
             </div>
             <div
@@ -96,32 +198,43 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label className="w100 mb2">Pick Your Ship Date</label>
-              <Button
-                variant="primary-small"
-                color="madison-blue-outline"
-                className="small mr2"
-                label="May 4"
-              />
-              <Button
-                variant="primary-small"
-                color="madison-blue-outline"
-                className="small"
-                label="May 8"
-              />
+              {this.props.shippingDates.map(shippingDate => (
+                <Button
+                  variant="primary-small"
+                  color={
+                    shippingDate === shipping
+                      ? 'white-madison-blue'
+                      : 'madison-blue-outline'
+                  }
+                  key={shippingDate}
+                  className="small mr2"
+                  label={shippingDate}
+                  onClick={() => this.handleShippingDateClick(shippingDate)}
+                />
+              ))}
             </div>
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-add'],
-                'col flex justify-end items-end'
+                'col flex justify-between items-end'
               )}
             >
-              <QuantitySelector color="madison-blue-outline" className="mr4" />
+              <QuantitySelector
+                color="madison-blue-outline"
+                quantity={quantity}
+                className="mr1"
+                onChange={value => this.setState({ quantity: value })}
+              />
               <Button
                 className="small"
+                disabled={size !== pints.length || !shipping}
                 variant="primary-small"
                 color="white-madison-blue"
-                label="Add to Cart"
-              />
+                onClick={this.handleAddToCart}
+              >
+                <span className="mr2">Add to Cart</span>
+                <span>${getLineItemPrice(activeVariant.price, quantity)}</span>
+              </Button>
             </div>
           </div>
         </div>
@@ -130,14 +243,28 @@ class ChooseYourOwnStory extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    ...state,
-    products: products(state)
-  };
+ChooseYourOwnStory.propTypes = {
+  product: Product.propTypes,
+  products: PropTypes.object,
+  block: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    products: PropTypes.arrayOf(
+      PropTypes.shape({
+        productHandle: PropTypes.string
+      })
+    )
+  })
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(ChooseYourOwnStory);
+ChooseYourOwnStory.defaultProps = {
+  product: Product.default,
+  products: {},
+  block: {
+    title: '',
+    description: '',
+    products: []
+  }
+};
+
+export default ChooseYourOwnStory;
