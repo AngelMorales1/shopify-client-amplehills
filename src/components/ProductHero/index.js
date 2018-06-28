@@ -27,7 +27,7 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    const variant = get(this.props, 'product.variants[0].id', {});
+    const variant = this.props.product.id;
     const items = [
       {
         variantId: variant,
@@ -49,9 +49,8 @@ class ProductHero extends Component {
 
   render() {
     const { data, product, z } = this.props;
-    const heroImage = get(product, 'images[0].src', '');
-    const availability = get(product, 'variants[0].available', false);
-    const price = get(product, 'variants[0].price', []);
+    const { gridImage, available, price } = product;
+
     return (
       <div
         className={`${styles['ProductHero']} flex flex-wrap`}
@@ -66,7 +65,7 @@ class ProductHero extends Component {
         <div
           className="col col-12 md-col-6 square"
           style={{
-            background: `url(${heroImage}) no-repeat center`,
+            background: `url(${gridImage}) no-repeat center`,
             backgroundSize: 'cover'
           }}
         />
@@ -85,7 +84,7 @@ class ProductHero extends Component {
               />
             </div>
             <div>
-              <p className="copy pr2">{get(product, 'description', '')}</p>
+              <p className="copy pr2">{product.flavorDescription}</p>
             </div>
             <form className="flex flex-wrap items-center">
               <div className="w100 mt3 mb1">
@@ -107,7 +106,7 @@ class ProductHero extends Component {
               <Button
                 color="madison-blue"
                 onClick={this.addToCart}
-                disabled={!availability}
+                disabled={!available}
               >
                 <span className="mr2">Add to Cart</span>
                 <span className="ml2">
