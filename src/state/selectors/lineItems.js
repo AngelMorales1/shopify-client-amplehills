@@ -20,15 +20,10 @@ export default createSelector(
       );
       const subItems = allSubItems
         .reduce((uniques, subItem) => {
-          const similar = uniques.find(
-            (item, index) => item.handle === subItem.value
-          );
           const similarIndex = uniques.findIndex(
             (item, index) => item.handle === subItem.value
           );
-          0;
 
-          let uniqueSubItems;
           if (similarIndex > -1) {
             uniques[similarIndex].quantity++;
           } else {

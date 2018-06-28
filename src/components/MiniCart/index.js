@@ -14,7 +14,6 @@ import lineItems from 'state/selectors/lineItems';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getLineItemPrice from 'utils/getLineItemPrice';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import styles from './MiniCart.scss';
