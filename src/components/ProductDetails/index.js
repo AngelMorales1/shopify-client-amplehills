@@ -22,14 +22,15 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { data } = this.props;
-    const details = get(data, 'productDetails', []);
+    const { block, z } = this.props;
+    const fields = get(block, 'fields', {});
+    const details = get(fields, 'productDetails', []);
 
-    const colorClass = `ProductDetails--${get(data, 'color', 'Blue')}`;
+    const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div
         className={cx(styles['ProductDetails'], styles[colorClass], 'p2 drip')}
-        style={{ zIndex: this.props.z }}
+        style={{ zIndex: z }}
       >
         <div className="flex justify-center flex-wrap center mb3">
           <h2 className="block-headline w100 my3">The Details</h2>
@@ -164,51 +165,53 @@ class ProductDetails extends Component {
 
 ProductDetails.propTypes = {
   z: PropTypes.number,
-  data: PropTypes.shape({
-    color: PropTypes.string,
-    productDetails: PropTypes.arrayOf(
-      PropTypes.shape({
-        fields: PropTypes.shape({
-          title: PropTypes.string,
-          description: PropTypes.string,
-          details: PropTypes.string,
-          flavorHighlight: PropTypes.string,
-          pintImage: PropTypes.shape({
-            fields: PropTypes.shape({
-              description: PropTypes.string,
-              file: PropTypes.shape({
-                url: PropTypes.string
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      color: PropTypes.string,
+      productDetails: PropTypes.arrayOf(
+        PropTypes.shape({
+          fields: PropTypes.shape({
+            title: PropTypes.string,
+            description: PropTypes.string,
+            details: PropTypes.string,
+            flavorHighlight: PropTypes.string,
+            pintImage: PropTypes.shape({
+              fields: PropTypes.shape({
+                description: PropTypes.string,
+                file: PropTypes.shape({
+                  url: PropTypes.string
+                })
+              })
+            }),
+            detailsImage: PropTypes.shape({
+              fields: PropTypes.shape({
+                description: PropTypes.string,
+                file: PropTypes.shape({
+                  url: PropTypes.string
+                })
+              })
+            }),
+            flavorHighlightImage: PropTypes.shape({
+              fields: PropTypes.shape({
+                description: PropTypes.string,
+                file: PropTypes.shape({
+                  url: PropTypes.string
+                })
               })
             })
           }),
-          detailsImage: PropTypes.shape({
-            fields: PropTypes.shape({
-              description: PropTypes.string,
-              file: PropTypes.shape({
-                url: PropTypes.string
-              })
-            })
-          }),
-          flavorHighlightImage: PropTypes.shape({
-            fields: PropTypes.shape({
-              description: PropTypes.string,
-              file: PropTypes.shape({
-                url: PropTypes.string
-              })
-            })
+          sys: PropTypes.shape({
+            id: PropTypes.string
           })
-        }),
-        sys: PropTypes.shape({
-          id: PropTypes.string
         })
-      })
-    )
+      )
+    })
   })
 };
 
 ProductDetails.defaultProps = {
   z: 1,
-  data: {}
+  block: {}
 };
 
 export default ProductDetails;

@@ -5,7 +5,7 @@ import cx from 'classnames';
 import { Button } from 'components/base';
 import styles from './ProductShoppableCard.scss';
 
-const ProductShoppableCard = ({ product }) => {
+const ProductShoppableCard = ({ product, onClick }) => {
   return (
     <div className={cx(styles['ProductGridCard'], 'col col-12 md-col-6 p1')}>
       <div
@@ -24,7 +24,7 @@ const ProductShoppableCard = ({ product }) => {
             variant="primary-small"
             color="white-madison-blue-outline"
             label="+ Add"
-            onClick={this.props.onClick}
+            onClick={onClick}
           />
         </div>
       </div>

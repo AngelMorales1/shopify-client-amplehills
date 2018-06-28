@@ -35,7 +35,7 @@ class ProductHero extends Component {
       }
     ];
 
-    this.props.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout, items);
   };
 
   didAddToCart = () => {
@@ -48,17 +48,18 @@ class ProductHero extends Component {
   };
 
   render() {
-    const { data, product, z } = this.props;
+    const { block, product, z } = this.props;
     const { gridImage, available, price } = product;
+    const fields = get(block, 'fields', {});
 
     return (
       <div
         className={`${styles['ProductHero']} flex flex-wrap`}
         style={{ zIndex: z }}
       >
-        {get(data, 'alert', '') ? (
+        {get(fields, 'alert', '') ? (
           <div className="absolute center mt3 uppercase tout z-1 w100">
-            {get(data, 'alert', '')}
+            {get(fields, 'alert', '')}
           </div>
         ) : null}
 
@@ -73,14 +74,14 @@ class ProductHero extends Component {
           <div className="col-12 md-col-8 px2 mx-auto">
             <div className="relative inline-block">
               <h1 className="block-headline mb4 relative z-1">
-                {get(data, 'title')}
+                {get(fields, 'title', '')}
               </h1>
               <Image
                 className={cx(
                   'absolute',
                   styles['ProductHero__title-illustration']
                 )}
-                src={get(data, 'titleIllustration.fields.file.url', '')}
+                src={get(fields, 'titleIllustration.fields.file.url', '')}
               />
             </div>
             <div>

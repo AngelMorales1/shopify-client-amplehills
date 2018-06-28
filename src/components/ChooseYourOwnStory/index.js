@@ -17,7 +17,7 @@ class ChooseYourOwnStory extends Component {
     this.state = {
       size: 4,
       pints: [],
-      shipping: '',
+      shippingDate: '',
       quantity: 1
     };
   }
@@ -40,8 +40,8 @@ class ChooseYourOwnStory extends Component {
     this.setState({ pints });
   };
 
-  handleShippingClick = shipping => {
-    this.setState({ shipping });
+  handleShippingDateClick = shippingDate => {
+    this.setState({ shippingDate });
   };
 
   handleAddToCart = () => {
@@ -58,19 +58,20 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
-    this.props.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout, items);
   };
 
   render() {
     console.log(this.props);
-    const { data, products, ourPledge } = this.props;
+    const { block, products, ourPledge } = this.props;
+    const fields = get(block, 'fields', {});
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
     const activeVariant = product.variants.find(
       variant => parseInt(variant.title, 10) === this.state.size
     );
 
-    const shoppableProducts = get(data, 'products', []);
+    const shoppableProducts = get(fields, 'products', []);
     const breadcrumbs = [
       {
         to: '/products',
@@ -102,7 +103,7 @@ class ChooseYourOwnStory extends Component {
           </div>
           <div className="col col-12 md-col-6 px4">
             <h1 className="block-headline mb4 relative z-1">
-              {get(data, 'title')}
+              {get(fields, 'title')}
             </h1>
             <div className="w100 flex my3">
               {product.variants.map(variant => (
@@ -117,7 +118,7 @@ class ChooseYourOwnStory extends Component {
               ))}
             </div>
             <div className="mb4">
-              <p className="copy pr2">{get(data, 'description', '')}</p>
+              <p className="copy pr2">{get(fields, 'description', '')}</p>
             </div>
             <OurPledge ourPledge={ourPledge} />
           </div>
@@ -182,17 +183,17 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label className="w100 mb2">Pick Your Ship Date</label>
-              {this.props.shipping.map(shipping => (
+              {this.props.shippingDates.map(shippingDate => (
                 <Button
                   variant="primary-small"
                   color={
-                    shipping === this.state.shipping
+                    shippingDate === this.state.shippingDate
                       ? 'white-madison-blue'
                       : 'madison-blue-outline'
                   }
                   className="small mr2"
-                  label={shipping}
-                  onClick={() => this.handleShippingClick(shipping)}
+                  label={shippingDate}
+                  onClick={() => this.handleShippingDateClick(shippingDate)}
                 />
               ))}
             </div>
