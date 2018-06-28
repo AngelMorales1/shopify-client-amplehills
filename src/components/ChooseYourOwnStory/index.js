@@ -13,8 +13,8 @@ import ProductShoppableCard from 'components/ProductShoppableCard';
 import styles from './ChooseYourOwnStory.scss';
 
 class ChooseYourOwnStory extends Component {
-  constructor(props) {
-    super(props);
+  constructor(...args) {
+    super(...args);
 
     this.state = {
       size: 4,
