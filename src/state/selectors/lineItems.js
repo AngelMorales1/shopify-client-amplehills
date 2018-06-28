@@ -15,32 +15,31 @@ export default createSelector(
       const allSubItems = attributes.filter(attribute =>
         get(attribute, 'key', '').includes('Item ')
       );
-      const subItems = allSubItems
-        .reduce((uniques, subItem) => {
-          const similarIndex = uniques.findIndex(
-            (item, index) => item.handle === subItem.value
-          );
 
-          if (similarIndex > -1) {
-            uniques[similarIndex].quantity++;
-          } else {
-            uniques.push({ handle: subItem.value, quantity: 1 });
-          }
+      const subItemsObject = allSubItems.reduce((uniqueSubItems, subItem) => {
+        uniqueSubItems[subItem.value]
+          ? uniqueSubItems[subItem.value].quantity++
+          : (uniqueSubItems[subItem.value] = {
+              handle: subItem.value,
+              quantity: 1
+            });
+        return uniqueSubItems;
+      }, {});
 
-          return uniques;
-        }, [])
-        .sort((a, b) => b.quantity - a.quantity);
+      const subItems = Object.values(subItemsObject).sort(
+        (a, b) => b.quantity - a.quantity
+      );
 
-      return lineItems.concat([
-        {
-          id,
-          title,
-          price,
-          quantity,
-          attributes,
-          subItems
-        }
-      ]);
+      lineItems.push({
+        id,
+        title,
+        price,
+        quantity,
+        attributes,
+        subItems
+      });
+
+      return lineItems;
     }, []);
   }
 );
