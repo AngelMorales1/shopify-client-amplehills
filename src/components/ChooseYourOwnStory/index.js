@@ -5,6 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import Product from 'constants/types/Product';
+import PintSizes from 'constant/PintSizes';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -17,7 +18,7 @@ class ChooseYourOwnStory extends Component {
     super(...args);
 
     this.state = {
-      size: 4,
+      size: PintSizes.FOUR,
       pints: [],
       shippingDate: '',
       quantity: 1
@@ -25,6 +26,8 @@ class ChooseYourOwnStory extends Component {
   }
 
   handleSizeClick = size => {
+    if (typeof size !== 'number') return null;
+
     const pints = get(this.state, 'pints', []);
     if (size >= pints.length) return this.setState({ size });
 
@@ -37,21 +40,22 @@ class ChooseYourOwnStory extends Component {
 
   handleProductAddClick = id => {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', 1);
+    const size = get(this.state, 'size', PintSizes.FOUR);
 
-    if (pints.length >= size) return null;
+    if (typeof id !== 'string' || pints.length >= size) return null;
 
     pints.push(id);
     this.setState({ pints });
   };
 
   handleShippingDateClick = shippingDate => {
+    if (typeof shippingDates !== 'string') return null;
     this.setState({ shippingDate });
   };
 
   handleAddToCart = () => {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', 1);
+    const size = get(this.state, 'size', PintSizes.FOUR);
     const quantity = get(this.state, 'quantity', 1);
 
     if (pints.length !== size) return null;
@@ -71,7 +75,7 @@ class ChooseYourOwnStory extends Component {
 
   render() {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', 1);
+    const size = get(this.state, 'size', PintSizes.FOUR);
     const quantity = get(this.state, 'quantity', 1);
     const shipping = get(this.state, 'shippingDate', '');
 
