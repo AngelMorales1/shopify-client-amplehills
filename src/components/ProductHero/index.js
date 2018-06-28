@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import Product from 'constants/types/Product';
 import { PENDING, FULFILLED } from 'constants/Status';
 
-import cx from 'classnames';
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Dropdown } from 'components/base';
 import OurPledge from 'components/OurPledge';
@@ -126,14 +127,14 @@ class ProductHero extends Component {
 ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
-  product: PropTypes.shape({}),
+  product: Product.propTypes,
   shippingDates: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProductHero.defaultProps = {
   data: {},
   z: 1,
-  product: {},
+  product: Product.default,
   shippingDates: []
 };
 

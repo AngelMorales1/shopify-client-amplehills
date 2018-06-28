@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
+import Product from 'constants/types/Product';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -55,7 +57,7 @@ class ChooseYourOwnStory extends Component {
     if (pints.length !== size) return null;
 
     const variant = this.props.product.variants.find(
-      variant => parseInt(variant.title, 10) === this.state.size
+      variant => parseInt(variant.title, 10) === size
     );
     const items = [
       {
@@ -234,5 +236,29 @@ class ChooseYourOwnStory extends Component {
     );
   }
 }
+
+ChooseYourOwnStory.propTypes = {
+  product: Product.propTypes,
+  products: PropTypes.arrayOf(Product.propTypes),
+  block: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    products: PropTypes.arrayOf(
+      PropTypes.shape({
+        productHandle: PropTypes.string
+      })
+    )
+  })
+};
+
+ChooseYourOwnStory.defaultProps = {
+  product: Product.default,
+  products: [],
+  block: {
+    title: '',
+    description: '',
+    products: []
+  }
+};
 
 export default ChooseYourOwnStory;

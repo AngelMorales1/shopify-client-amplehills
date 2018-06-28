@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import Product from 'constants/types/Product';
 import { Button } from 'components/base';
 import styles from './ProductShoppableCard.scss';
 
@@ -33,21 +33,11 @@ const ProductShoppableCard = ({ product, onClick }) => {
 };
 
 ProductShoppableCard.propTypes = {
-  product: PropTypes.shape({
-    id: PropTypes.string,
-    title: PropTypes.string,
-    flavorDescription: PropTypes.string,
-    gridImage: PropTypes.string
-  })
+  product: Product.propTypes
 };
 
 ProductShoppableCard.defaultProps = {
-  product: {
-    id: '',
-    title: '',
-    flavorDescription: '',
-    gridImage: ''
-  }
+  product: Product.defaultProps
 };
 
 export default ProductShoppableCard;
