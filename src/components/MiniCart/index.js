@@ -126,7 +126,6 @@ class MiniCart extends Component {
           </div>
         </div>
         <DeleteModal />
-        {/* {this.renderDeleteModal()} */}
       </div>
     );
   }
