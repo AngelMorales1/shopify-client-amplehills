@@ -9,14 +9,11 @@ export default createSelector(
       const id = get(item, 'id', '');
       const title = get(item, 'title', '');
       const quantity = get(item, 'quantity', 0);
-      const price = getLineItemPrice(
-        get(item, 'variant.price', '0.00'),
-        quantity
-      );
+      const price = getLineItemPrice(get(item, 'variant.price', 0.0), quantity);
 
       const attributes = get(item, 'customAttributes', []);
       const allSubItems = attributes.filter(attribute =>
-        get(attribute, 'key', '').includes('subItem-')
+        get(attribute, 'key', '').includes('Item ')
       );
       const subItems = allSubItems
         .reduce((uniques, subItem) => {

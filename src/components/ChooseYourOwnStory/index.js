@@ -37,13 +37,13 @@ class ChooseYourOwnStory extends Component {
     });
   };
 
-  handleProductAddClick = id => {
+  handleProductAddClick = handle => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
 
     if (pints.length >= size) return null;
 
-    this.setState({ pints: [...pints, id] });
+    this.setState({ pints: [...pints, handle] });
   };
 
   handleShippingDateClick = shippingDate => {
@@ -65,7 +65,7 @@ class ChooseYourOwnStory extends Component {
         variantId: variant.id,
         quantity,
         customAttributes: pints.map((value, i) => {
-          const key = `subItem-${i}`;
+          const key = `Item ${i + 1}`;
           return { key, value };
         })
       }
@@ -242,7 +242,6 @@ class ChooseYourOwnStory extends Component {
               >
                 <span className="mr2">Add to Cart</span>
                 <span>${getLineItemPrice(activeVariant.price, quantity)}</span>
-
               </Button>
             </div>
           </div>
