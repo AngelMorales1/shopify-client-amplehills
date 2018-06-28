@@ -213,7 +213,7 @@ class ChooseYourOwnStory extends Component {
                 className="small"
                 disabled={
                   this.state.size !== this.state.pints.length ||
-                  !this.state.shipping
+                  !this.state.shippingDate
                 }
                 variant="primary-small"
                 color="white-madison-blue"
