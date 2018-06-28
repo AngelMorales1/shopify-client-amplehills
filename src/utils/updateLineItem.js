@@ -1,8 +1,7 @@
 import get from 'utils/get';
 import { updateLineItems } from 'state/actions/checkoutActions';
 
-const updateLineItem = (item, quantity, id) => {
-  console.log(item, quantity, id);
+const updateLineItem = (item, quantity) => {
   const items = [
     {
       id: item,
@@ -10,8 +9,7 @@ const updateLineItem = (item, quantity, id) => {
     }
   ];
 
-  updateLineItems(id, items);
-  console.log(updateLineItems);
+  updateLineItems(get(this.props, 'checkout.id', null), items);
 };
 
 export default updateLineItem;

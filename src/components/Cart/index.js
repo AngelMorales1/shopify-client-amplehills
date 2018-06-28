@@ -33,12 +33,12 @@ class Cart extends Component {
   };
 
   render() {
+    
     const {
       checkout,
       actions: { removeLineItems }
     } = this.props;
     const items = get(checkout, 'lineItems', []);
-
     return (
       <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
         <h2 className="block-headline">Cart</h2>
@@ -170,6 +170,7 @@ class Cart extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     ...state,
     checkout: get(state, 'session.checkout', {}),
@@ -183,7 +184,7 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         removeLineItems,
-        updateLineItems,
+        updateLineItems
         // fetchProductContent
       },
       dispatch
