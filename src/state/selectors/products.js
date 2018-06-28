@@ -18,6 +18,7 @@ export default createSelector(
       const shopifyProduct = shopify.find(
         shopifyProduct => get(shopifyProduct, 'handle', '') === handle
       );
+      const available = get(shopifyProduct, 'variants[0].available', false);
       const price = get(shopifyProduct, 'variants[0].price', '0.00');
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
@@ -25,6 +26,7 @@ export default createSelector(
         title,
         id,
         handle,
+        available,
         flavorDescription,
         price,
         gridImage,
