@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
+import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import Product from 'constants/types/Product';
 import PintSizes from 'constants/PintSizes';
 
@@ -18,7 +19,7 @@ class ChooseYourOwnStory extends Component {
     super(...args);
 
     this.state = {
-      size: PintSizes.FOUR,
+      size: PintSizes.FOUR.size,
       pints: [],
       shippingDate: '',
       quantity: 1
@@ -26,8 +27,6 @@ class ChooseYourOwnStory extends Component {
   }
 
   handleSizeClick = size => {
-    if (typeof size !== 'number') return null;
-
     const pints = get(this.state, 'pints', []);
     if (size >= pints.length) return this.setState({ size });
 
@@ -40,28 +39,27 @@ class ChooseYourOwnStory extends Component {
 
   handleProductAddClick = id => {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', PintSizes.FOUR);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
 
-    if (typeof id !== 'string' || pints.length >= size) return null;
+    if (pints.length >= size) return null;
 
     pints.push(id);
     this.setState({ pints });
   };
 
   handleShippingDateClick = shippingDate => {
-    if (typeof shippingDate !== 'string') return null;
     this.setState({ shippingDate });
   };
 
   handleAddToCart = () => {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', PintSizes.FOUR);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
     const quantity = get(this.state, 'quantity', 1);
 
     if (pints.length !== size) return null;
 
     const variant = this.props.product.variants.find(
-      variant => parseInt(variant.title, 10) === size
+      variant => getPintSizeFromTitle(variant.title) === size
     );
     const items = [
       {
@@ -75,7 +73,7 @@ class ChooseYourOwnStory extends Component {
 
   render() {
     const pints = get(this.state, 'pints', []);
-    const size = get(this.state, 'size', PintSizes.FOUR);
+    const size = get(this.state, 'size', PintSizes.FOUR.size);
     const quantity = get(this.state, 'quantity', 1);
     const shipping = get(this.state, 'shippingDate', '');
 
@@ -84,7 +82,7 @@ class ChooseYourOwnStory extends Component {
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
     const activeVariant = product.variants.find(
-      variant => parseInt(variant.title, 10) === size
+      variant => getPintSizeFromTitle(variant.title) === size
     );
 
     const shoppableProducts = get(fields, 'products', []);
