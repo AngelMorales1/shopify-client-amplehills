@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import cx from 'classnames';
 
-import products from 'state/selectors/products';
-import fetchShippingDates from 'state/selectors/fetchShippingDates';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 
