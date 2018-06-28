@@ -49,6 +49,14 @@
     }
   }
 
+  &--seafoam-madison-blue-outline {
+    input {
+      @extend .bg-seafoam;
+      @extend .text-madison-blue;
+      border: spacing(0.75) solid color('madison-blue');
+    }
+  }
+
   &--light-gray,
   &--light-gray-tall {
     input,

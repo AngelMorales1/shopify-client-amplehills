@@ -116,6 +116,16 @@
     }
   }
 
+  &--seafoam-madison-blue-outline {
+    @extend .bg-seafoam;
+    @extend .text-madison-blue;
+    border: spacing(0.75) solid color('madison-blue');
+
+    &.Button--circle {
+      padding: 0;
+    }
+  }
+
   &--white-madison-blue-outline {
     @extend .bg-white;
     @extend .text-madison-blue;

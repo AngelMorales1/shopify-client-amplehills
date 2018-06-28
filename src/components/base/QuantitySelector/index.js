@@ -10,7 +10,7 @@ class QuantitySelector extends Component {
     const quantity = this.props.allowZero
       ? Math.max(0, value)
       : Math.max(1, value);
-    console.log(this.props.allowZero, quantity);
+
     this.props.onChange(quantity);
   }
 
@@ -21,6 +21,10 @@ class QuantitySelector extends Component {
       case 'madison-blue-outline':
         buttonColor = 'madison-blue-outline';
         inputColor = 'madison-blue-outline';
+        break;
+      case 'seafoam':
+        buttonColor = 'seafoam-madison-blue-outline';
+        inputColor = 'seafoam-madison-blue-outline';
         break;
       default:
         buttonColor = 'white-madison-blue-outline';

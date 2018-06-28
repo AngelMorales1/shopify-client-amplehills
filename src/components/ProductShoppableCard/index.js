@@ -22,6 +22,7 @@ const ProductShoppableCard = ({ product, onClick }) => {
           {quantity ? (
             <QuantitySelector
               quantity={quantity}
+              color="seafoam"
               allowZero={true}
               onChange={newQuantity => handleQuantityChange(newQuantity)}
             />
