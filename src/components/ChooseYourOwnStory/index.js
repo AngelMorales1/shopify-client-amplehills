@@ -46,6 +46,14 @@ class ChooseYourOwnStory extends Component {
     this.setState({ pints: [...pints, handle] });
   };
 
+  handleRemoveProduct = handle => {
+    const pints = get(this.state, 'pints', []);
+    const removedProduct = pints.findIndex(pint => pint === handle);
+
+    pints.splice(removedProduct, 1);
+    this.setState({ pints });
+  };
+
   handleShippingDateClick = shippingDate => {
     this.setState({ shippingDate });
   };
@@ -72,10 +80,6 @@ class ChooseYourOwnStory extends Component {
     ];
 
     this.props.actions.addLineItems(this.props.checkout, items);
-  };
-
-  handleShippingClick = shipping => {
-    this.setState({ shipping });
   };
 
   render() {

@@ -19,13 +19,21 @@ const ProductShoppableCard = ({ product, onClick }) => {
         <div className="flex flex-column items-start p2 bg-seafoam">
           <span className="w100 bold mt2 mb1">{product.title}</span>
           <p className="detail mb3">{product.flavorDescription}</p>
-          <Button
-            className="small bg-seafoam"
-            variant="primary-small"
-            color="white-madison-blue-outline"
-            label="+ Add"
-            onClick={onClick}
-          />
+          {quantity ? (
+            <QuantitySelector
+              quantity={quantity}
+              allowZero={true}
+              onChange={newQuantity => handleQuantityChange(newQuantity)}
+            />
+          ) : (
+            <Button
+              className="small bg-seafoam"
+              variant="primary-small"
+              color="white-madison-blue-outline"
+              label="+ Add"
+              onClick={() => handleAddProduct(product.handle)}
+            />
+          )}
         </div>
       </div>
     </div>
