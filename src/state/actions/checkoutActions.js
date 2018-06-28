@@ -41,8 +41,7 @@ export const createCheckout = () => dispatch => {
 };
 
 export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
-export const addLineItems = (checkoutID, items, detail) => dispatch => {
-  console.log('checkout actions', checkoutID, items);
+export const addLineItems = (checkoutID, items) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
     payload: BuySDK.checkout.addLineItems(checkoutID, items)
