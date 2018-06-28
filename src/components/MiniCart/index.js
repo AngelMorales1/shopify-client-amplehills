@@ -117,9 +117,10 @@ class MiniCart extends Component {
             </Button>
           </div>
 
-          <div className="mb4">
+          <div className={cx(styles['MiniCart__line-items'], 'mb4')}>
             {items.map(item => {
-              const classes = cx(styles['MiniCart__line-item'], 'mb2', {
+              const classes = cx(styles['MiniCart__line-item'], 'mb3', {
+                mb4: item.subItems.length,
                 [styles['MiniCart__line-item--updating']]:
                   this.props.lineItemsBeingUpdated.includes(item.id) ||
                   this.props.lineItemsBeingRemoved.includes(item.id)
@@ -129,16 +130,21 @@ class MiniCart extends Component {
 
               return (
                 <div className={classes} key={item.id}>
-                  <div className="mb2 line-item-title flex flex-wrap justify-between">
-                    <span className="mr2">{item.title}</span>
-                    <span>${item.price}</span>
+                  <div className="mb2 flex flex-wrap justify-between">
+                    <span className="line-item-title mr2">{item.title}</span>
+                    <span className="line-item-title">${item.price}</span>
                     {subItems.length ? (
                       <div className="w100">
-                        {subItems.map(subItem => (
-                          <span key={subItem.handle}>{`${subItem.quantity}x ${
-                            products[subItem.handle].title
-                          }`}</span>
-                        ))}
+                        <ul className="mt2 mb1">
+                          {subItems.map(subItem => (
+                            <li
+                              className="sub-line-item small"
+                              key={subItem.handle}
+                            >{`${subItem.quantity}x ${
+                              products[subItem.handle].title
+                            }`}</li>
+                          ))}
+                        </ul>
                       </div>
                     ) : null}
                   </div>
