@@ -15,11 +15,8 @@ import styles from './DeleteModal.scss';
 class DeleteModal extends Component {
   confirmRemoveLineItems = item => {
     const items = [item];
-
-    this.props.actions.confirmRemoveLineItems(
-      get(this.props, 'checkout.id', null),
-      items
-    );
+    const { actions } = this.props;
+    actions.confirmRemoveLineItems(get(this.props, 'checkout.id', null), items);
   };
 
   render() {
@@ -64,6 +61,48 @@ class DeleteModal extends Component {
     );
   }
 }
+
+DeleteModal.propTypes = {
+  actions: PropTypes.shape({
+    closeMiniCart: PropTypes.func,
+    cancelRemoveLineItems: PropTypes.func,
+    confirmRemoveLineItems: PropTypes.func
+  }),
+  checkout: PropTypes.shape({
+    id: PropTypes.string,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        id: PropTypes.string,
+        quantity: PropTypes.number
+      })
+    )
+  }),
+  miniCartIsOpen: PropTypes.bool,
+  lineItemsBeingRemoved: PropTypes.arrayOf(PropTypes.string),
+  lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string)
+};
+
+DeleteModal.defaultProps = {
+  actions: {
+    closeMiniCart: () => {},
+    cancelRemoveLineItems: () => {},
+    confirmRemoveLineItems: () => {}
+  },
+  checkout: {
+    id: '',
+    items: [
+      {
+        id: '',
+        title: '',
+        quantity: 1
+      }
+    ]
+  },
+  miniCartIsOpen: false,
+  lineItemsBeingRemoved: [],
+  lineItemsBeingUpdated: []
+};
 
 const mapStateToProps = state => {
   return {

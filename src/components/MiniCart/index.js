@@ -133,10 +133,7 @@ class MiniCart extends Component {
 
 MiniCart.propTypes = {
   actions: PropTypes.shape({
-    closeMiniCart: PropTypes.func,
     removeLineItems: PropTypes.func,
-    cancelRemoveLineItems: PropTypes.func,
-    confirmRemoveLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
   checkout: PropTypes.shape({
@@ -148,18 +145,12 @@ MiniCart.propTypes = {
         quantity: PropTypes.number
       })
     )
-  }),
-  miniCartIsOpen: PropTypes.bool,
-  lineItemsBeingRemoved: PropTypes.arrayOf(PropTypes.string),
-  lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string)
+  })
 };
 
 MiniCart.defaultProps = {
   actions: {
-    closeMiniCart: () => {},
     removeLineItems: () => {},
-    cancelRemoveLineItems: () => {},
-    confirmRemoveLineItems: () => {},
     updateLineItems: () => {}
   },
   checkout: {
@@ -171,10 +162,7 @@ MiniCart.defaultProps = {
         quantity: 1
       }
     ]
-  },
-  miniCartIsOpen: false,
-  lineItemsBeingRemoved: [],
-  lineItemsBeingUpdated: []
+  }
 };
 
 const mapStateToProps = state => {

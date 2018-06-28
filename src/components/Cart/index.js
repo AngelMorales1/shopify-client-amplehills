@@ -5,7 +5,6 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
-// import { fetchProductContent } from 'state/actions/contentActions';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -173,6 +172,40 @@ class Cart extends Component {
     );
   }
 }
+
+Cart.propTypes = {
+  actions: PropTypes.shape({
+    removeLineItems: PropTypes.func,
+    updateLineItems: PropTypes.func
+  }),
+  checkout: PropTypes.shape({
+    id: PropTypes.string,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        id: PropTypes.string,
+        quantity: PropTypes.number
+      })
+    )
+  })
+};
+
+Cart.defaultProps = {
+  actions: {
+    removeLineItems: () => {},
+    updateLineItems: () => {}
+  },
+  checkout: {
+    id: '',
+    items: [
+      {
+        id: '',
+        title: '',
+        quantity: 1
+      }
+    ]
+  }
+};
 
 const mapStateToProps = state => {
   return {
