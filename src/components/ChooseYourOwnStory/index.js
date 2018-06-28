@@ -5,7 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import Product from 'constants/types/Product';
-import PintSizes from 'constant/PintSizes';
+import PintSizes from 'constants/PintSizes';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -49,7 +49,7 @@ class ChooseYourOwnStory extends Component {
   };
 
   handleShippingDateClick = shippingDate => {
-    if (typeof shippingDates !== 'string') return null;
+    if (typeof shippingDate !== 'string') return null;
     this.setState({ shippingDate });
   };
 
