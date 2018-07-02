@@ -13,8 +13,8 @@
   }
 
   &--image {
-    height: spacing(160);
-    width: spacing(160);
+    height: spacing(130);
+    width: spacing(130);
     left: spacing(-55);
     top: spacing(-30);
 
@@ -28,7 +28,7 @@
 
   &--text-container {
     min-height: spacing(120);
-    margin-top: spacing(110);
+    margin-top: spacing(80);
 
     @media ($medium-up) {
       margin-right: 6vw;
