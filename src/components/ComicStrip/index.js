@@ -26,27 +26,32 @@ class ComicStrip extends Component {
     const products = get(fields, 'products', []);
     const colorClass = `ComicStrip--${get(fields, 'color', 'Yellow')}`;
     return (
-      <div style={{ zIndex: z }} className={cx(styles[colorClass])}>
+      <div
+        style={{ zIndex: z }}
+        className={cx(styles[colorClass], 'flex flex-column items-center')}
+      >
         <h2 className="block-headline">The Artwork</h2>
-        {products.map((product, i) => {
-          const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
-            ? 'denim'
-            : 'white-denim';
+        <div>
+          {products.map((product, i) => {
+            const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
+              ? 'denim'
+              : 'white-denim';
 
-          return (
-            <Button
-              className="m1"
-              color={color}
-              key={get(product, 'sys.id', '')}
-              label={get(product, 'fields.title', '')}
-              onClick={() =>
-                this.setState({
-                  activeFlavor: get(product, 'sys.id', '')
-                })
-              }
-            />
-          );
-        })}
+            return (
+              <Button
+                className="m1"
+                color={color}
+                key={get(product, 'sys.id', '')}
+                label={get(product, 'fields.title', '')}
+                onClick={() =>
+                  this.setState({
+                    activeFlavor: get(product, 'sys.id', '')
+                  })
+                }
+              />
+            );
+          })}
+        </div>
         <div className={`${styles['ComicStrips--container']}`}>
           {products.map((product, i) => {
             const comics = get(product, 'fields.comicStrip', []);
@@ -62,16 +67,22 @@ class ComicStrip extends Component {
             );
 
             return (
-              <div className={classes} key={get(product, 'sys.id', '')}>
+              <div className={cx(classes)} key={get(product, 'sys.id', '')}>
                 {comics.map((comic, i) => {
-                  console.log(comic);
                   const comicUrl = get(comic, 'fields.file.url', '');
                   return (
-                    <Image
+                    <div
                       key={`${i}-${get(comic, 'sys.id', '')}`}
-                      alt={`${get(comic, 'fields.title', '')}`}
-                      src={comicUrl}
-                    />
+                      className={cx(
+                        styles['ComicStrips--container--image'],
+                        'm3'
+                      )}
+                    >
+                      <Image
+                        alt={`${get(comic, 'fields.title', '')}`}
+                        src={comicUrl}
+                      />
+                    </div>
                   );
                 })}
               </div>
