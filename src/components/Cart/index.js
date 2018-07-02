@@ -38,11 +38,11 @@ class Cart extends Component {
     const items = get(checkout, 'lineItems', []);
     return (
       <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
-        <h2 className="block-headline">Cart</h2>
+        <h2 className="block-headline-mobile-small">Cart</h2>
         <div
           className={cx(
             styles['Cart__content-title__container'],
-            'xs-hide sm-hide my2'
+            'xs-hide sm-hide mt4 pt4'
           )}
         >
           <span
@@ -70,9 +70,7 @@ class Cart extends Component {
             Total Price
           </span>
         </div>
-        <div
-          className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
-        />
+        <div className={cx(styles['Cart__decorative-line'], 'mt3')} />
         <div className="my3">
           {items.map(item => {
             return (
@@ -116,53 +114,51 @@ class Cart extends Component {
             );
           })}
         </div>
-        <div
-          className={cx(styles['Cart__decorative-line'], 'xs-hide sm-hide')}
-        />
+        <div className={cx(styles['Cart__decorative-line'])} />
 
         <div className={cx(styles['Cart__shipping-info__container'], 'mt4')}>
           <div className={cx(styles['Cart__shipping-info__delivery-info'])}>
-            <p className="info-text-uppercase">
-              An Item you ordered has shipping limitations that will be selected
-              in checkout
+            <p className="uppercase info-text-small">
+              When the shipping label is created you will receive an email with
+              your tracking number.
             </p>
           </div>
           <div className={cx(styles['Cart__shipping-info__total'])}>
-            <div>
-              <p className="info-text-uppercase xs-hide sm-hide">
+            <div className={cx(styles['Cart__mobile-position'])}>
+              <p className="uppercase info-text-small flex items-center">
                 Shipping & taxes calculated at checkout
               </p>
-              <p className="price-text my1">{`Subtotal: $${
+              <p className="price-text my1 flex items-center">{`Subtotal: $${
                 checkout.subtotalPrice
               }`}</p>
             </div>
           </div>
 
-          <div
-            className={cx(
-              styles['Cart__shipping-info__gift-message'],
-              'xs-hide sm-hide'
-            )}
-          >
-            <h2 className="sub-title ml1 mt2 mb3">Gift Message</h2>
+          <div className={cx(styles['Cart__shipping-info__gift-message'])}>
+            <h2 className="sub-title mt2 mb3">Gift Message</h2>
             <TextField
-              className="ml1 mb2"
+              className="mb2"
               variant="light-gray-tall"
               multiLine={true}
-              placeholder={`Message (don't forget to include your name)`}
+              placeholder={`Write a message`}
             />
-            <span className="info-text-uppercase ml1 xs-hide sm-hide">
+            <span className="uppercase info-text-small">
               Gift messages will not include prices
             </span>
+            <div
+              className={cx(
+                styles['Cart__decorative-line'],
+                'mt3 md-hide lg-hide'
+              )}
+            />
           </div>
           <div className={cx(styles['Cart__shipping-info__buttons'], 'my1')}>
-            <div>
+            <div className={cx(styles['Cart__mobile-position'])}>
               <Button
-                className="xs-hide sm-hide"
-                label="Update Cart"
-                color="peach"
+                className="flex items-center justify-center"
+                label="Checkout"
+                color="madison-blue"
               />
-              <Button label="Checkout" color="madison-blue" />
             </div>
           </div>
         </div>
