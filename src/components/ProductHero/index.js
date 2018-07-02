@@ -28,17 +28,16 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    const variant = this.props.product.id;    
+    const variant = this.props.product.id;
     const title = get(this.props, 'data.title', '');
     const items = [
       {
         variantId: variant,
-        quantity: this.state.quantity,
+        quantity: this.state.quantity
       }
     ];
 
     this.props.actions.addLineItems(this.props.checkout, items);
-    // this.props.addLineItems(this.props.checkout, items);
   };
 
   didAddToCart = () => {
@@ -54,11 +53,6 @@ class ProductHero extends Component {
     const { block, product, z } = this.props;
     const { available, price } = product;
     const fields = get(block, 'fields', {});
-    // const productDetail = get(
-    //   this.props,
-    //   'product.blocks[1].fields.productDetails',
-    //   []
-    // );
 
     return (
       <div
