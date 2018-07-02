@@ -1,8 +1,38 @@
 @import 'settings';
 
-.ImageText {
+.ImageDoubleText {
   &--Light-Yellow {
     @extend .bg-light-yellow;
     @extend .text-madison-blue;
+  }
+
+  padding: spacing(4);
+
+  @media ($medium-up) {
+    padding: spacing(16);
+  }
+
+  &--image {
+    height: spacing(160);
+    width: spacing(160);
+    left: spacing(-55);
+    top: spacing(-30);
+
+    @media ($medium-up) {
+      height: spacing(185);
+      width: spacing(185);
+      left: calc(30vw - #{spacing(148)});
+      top: spacing(-25);
+    }
+  }
+
+  &--text-container {
+    min-height: spacing(120);
+    margin-top: spacing(110);
+
+    @media ($medium-up) {
+      margin-right: 6vw;
+      margin-top: 0;
+    }
   }
 }

@@ -7,29 +7,47 @@ import { Image } from 'components/base';
 
 class ImageDoubleText extends Component {
   render() {
-    const { block } = this.props;
+    const { block, z } = this.props;
     const fields = get(block, 'fields', {});
-    const colorClass = `ImageText--${get(
+    const colorClass = `ImageDoubleText--${get(
       fields,
       'backgroundColor',
       'Light-Yellow'
     )}`;
     return (
-      <div className={cx(styles['ImageDoubleText'], styles[colorClass])}>
-        <div>
+      <div
+        style={{ zIndex: z }}
+        className={cx(
+          styles['ImageDoubleText'],
+          styles[colorClass],
+          'flex justify-end relative drip'
+        )}
+      >
+        <div
+          className={cx(styles['ImageDoubleText--image'], 'circle absolute')}
+        >
           <Image
             alt={`${get(fields, 'image.fields.title', '')} illustration`}
             src={get(fields, 'image.fields.file.url', '')}
           />
         </div>
-        <div>
-          <div>
-            <h2>{get(fields, 'firstTitle', '')}</h2>
-            <p>{get(fields, 'firstText', '')}</p>
+        <div
+          className={cx(
+            styles['ImageDoubleText--text-container'],
+            'flex flex-column justify-center items-center col-12 md-col-5'
+          )}
+        >
+          <div className="mb3">
+            <h2 className="block-headline mb2">
+              {get(fields, 'firstTitle', '')}
+            </h2>
+            <p className="copy">{get(fields, 'firstText', '')}</p>
           </div>
           <div>
-            <h2>{get(fields, 'secondTitle', '')}</h2>
-            <p>{get(fields, 'secondText', '')}</p>
+            <h2 className="block-headline mb2">
+              {get(fields, 'secondTitle', '')}
+            </h2>
+            <p className="copy">{get(fields, 'secondText', '')}</p>
           </div>
         </div>
       </div>
