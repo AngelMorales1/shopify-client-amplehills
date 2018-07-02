@@ -1,0 +1,11 @@
+@import 'settings';
+
+.ComicStrip {
+  &--Yellow {
+    @extend .bg-sky-blue;
+    @extend .text-madison-blue;
+  }
+}
+
+.ComicStrip--container {
+}
