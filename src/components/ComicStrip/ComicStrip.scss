@@ -2,10 +2,20 @@
 
 .ComicStrip {
   &--Yellow {
-    @extend .bg-sky-blue;
+    @extend .bg-yellow;
     @extend .text-madison-blue;
   }
 }
 
-.ComicStrip--container {
+.ComicStrips--container {
+  .ComicStrip {
+    @extend .transition;
+    display: none;
+    opacity: 0;
+
+    &--active {
+      display: flex;
+      opacity: 1;
+    }
+  }
 }
