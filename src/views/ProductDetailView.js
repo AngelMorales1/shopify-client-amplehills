@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
-import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 class ProductDetailView extends Component {
   render() {
