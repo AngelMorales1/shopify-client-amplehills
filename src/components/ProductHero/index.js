@@ -29,7 +29,6 @@ class ProductHero extends Component {
 
   addToCart = () => {
     const variant = this.props.product.id;
-    const title = get(this.props, 'data.title', '');
     const items = [
       {
         variantId: variant,

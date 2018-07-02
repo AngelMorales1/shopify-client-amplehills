@@ -148,7 +148,6 @@ class Cart extends Component {
             <TextField
               className="ml1 mb2"
               variant="light-gray-tall"
-              placeholder="Message"
               multiLine={true}
               placeholder={`Message (don't forget to include your name)`}
             />

@@ -61,7 +61,6 @@ class Nav extends Component {
             className="ml2 small flex items-center justify-center"
             variant="circle"
             color="madison-blue"
-            // onClick={this.toggleMiniCart}
             to="/cart"
             label={this.props.totalItems.toString()}
           />
