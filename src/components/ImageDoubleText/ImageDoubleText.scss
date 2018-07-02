@@ -1,0 +1,8 @@
+@import 'settings';
+
+.ImageText {
+  &--Light-Yellow {
+    @extend .bg-light-yellow;
+    @extend .text-madison-blue;
+  }
+}
