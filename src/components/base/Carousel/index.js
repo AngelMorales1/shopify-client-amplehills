@@ -112,6 +112,7 @@ class Carousel extends Component {
               );
               return (
                 <Button
+                  key={i}
                   onClick={() => this.handleClickIndicator(i)}
                   variant="style-none"
                 >
@@ -128,57 +129,6 @@ class Carousel extends Component {
 
 export default Carousel;
 
-// const Carousel = ({
-//   className,
-//   label,
-//   variant,
-//   color,
-//   children,
-//   disabled,
-//   onClick,
-//   minWidth,
-//   fullWidth,
-//   type,
-//   to
-// }) => {
-//   const classes = cx(
-//     className,
-//     styles.Carousel,
-//     styles[`Carousel--${variant}`],
-//     styles[`Carousel--${color}`],
-//     {
-//       w100: fullWidth,
-//       [styles['Carousel--disabled']]: disabled
-//     }
-//   );
-
-//   const linkedComponent = isExternalLink(to) ? (
-//     <a
-//       className={cx('text-decoration-none', {
-//         'events-none': disabled
-//       })}
-//       href={to}
-//       target="_blank"
-//       rel="noopener"
-//       onClick={onClick}
-//     >
-//       <div className={classes}>{label}</div>
-//     </a>
-//   ) : (
-//     <Link
-//       className={cx('text-decoration-none', {
-//         'events-none': disabled
-//       })}
-//       to={to}
-//       onClick={onClick}
-//     >
-//       <div className={classes}>{label}</div>
-//     </Link>
-//   );
-
-//   return Carousel;
-// };
-
 Carousel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -187,14 +137,6 @@ Carousel.propTypes = {
   buttonImageRight: PropTypes.string,
   showIndicators: PropTypes.bool,
   showNextItemShadow: PropTypes.bool
-  // label: PropTypes.string,
-  // variant: PropTypes.string,
-  // color: PropTypes.string,
-
-  // onClick: PropTypes.func,
-  // fullWidth: PropTypes.bool,
-  // disabled: PropTypes.bool,
-  // type: PropTypes.string,
 };
 
 Carousel.defaultProps = {
@@ -205,11 +147,4 @@ Carousel.defaultProps = {
   buttonImageRight: '/assets/images/icon-circle-right-arrow.svg',
   showIndicators: false,
   showNextItemShadow: false
-  // label: '',
-  // variant: 'primary',
-  // color: 'white-denim',
-  // onClick: () => {},
-  // fullWidth: false,
-  // disabled: false,
-  // type: 'Carousel',
 };

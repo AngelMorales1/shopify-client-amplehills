@@ -1,7 +1,7 @@
 @import 'settings';
 
 .ComicStrip {
-  &--Yellow {
+  &--yellow {
     @extend .bg-yellow;
     @extend .text-madison-blue;
   }
@@ -22,13 +22,17 @@
       display: flex;
       opacity: 1;
     }
+
+    &--button-container {
+      max-width: spacing(130);
+    }
   }
 
   &--image {
     width: spacing(65);
 
     @media ($medium-up) {
-      width: spacing(90);
+      width: 30vw;
     }
   }
 }

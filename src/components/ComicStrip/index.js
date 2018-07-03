@@ -24,14 +24,14 @@ class ComicStrip extends Component {
     const { block, z } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
-    const colorClass = `ComicStrip--${get(fields, 'color', 'Yellow')}`;
+    const colorClass = `ComicStrip--${get(fields, 'color', 'yellow')}`;
     return (
       <div
         style={{ zIndex: z }}
         className={cx(
           styles[colorClass],
           styles['ComicStrips--container'],
-          'flex flex-column items-center py3'
+          'flex flex-column justify-center items-center py3'
         )}
       >
         <h2 className="block-headline m4 center">The Artwork</h2>
@@ -56,7 +56,13 @@ class ComicStrip extends Component {
               />
             );
           })}
-          <Carousel className="md-hide lg-hide" ShowArrow={true}>
+          <Carousel
+            className={cx(
+              styles['ComicStrip--button-container'],
+              'md-hide lg-hide'
+            )}
+            ShowArrow={true}
+          >
             {products.map((product, i) => {
               const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
                 ? 'clear-madison-blue-outline'
@@ -82,17 +88,21 @@ class ComicStrip extends Component {
         <div
           className={cx(
             styles['ComicStrips--container'],
-            'flex justify-center overflow-scroll w100'
+            'flex justify-center w100'
           )}
         >
           {products.map((product, i) => {
             const comics = get(product, 'fields.comicStrip', []);
-            const classes = cx(styles['ComicStrip'], 'py3', {
-              [styles['ComicStrip--active']]: this.isActiveFlavor(
-                get(product, 'sys.id', ''),
-                i
-              )
-            });
+            const classes = cx(
+              styles['ComicStrip'],
+              'py3 flex justify-center',
+              {
+                [styles['ComicStrip--active']]: this.isActiveFlavor(
+                  get(product, 'sys.id', ''),
+                  i
+                )
+              }
+            );
             return (
               <div className={cx(classes)} key={get(product, 'sys.id', '')}>
                 {comics.map((comic, i) => {
@@ -102,7 +112,7 @@ class ComicStrip extends Component {
                       key={`${i}-${get(comic, 'sys.id', '')}`}
                       className={cx(
                         styles['ComicStrips--container--image'],
-                        'm3 xs-hide sm-hide'
+                        'm2 xs-hide sm-hide'
                       )}
                     >
                       <Image

@@ -40,30 +40,3 @@
     }
   }
 }
-// .Carousel {
-//   @extend .pointer;
-//   box-shadow: $drop-shadow;
-//   font-family: $font-avenir;
-//   font-size: $font-4;
-//   font-weight: 800;
-//   white-space: nowrap;
-//   transform: translate3d(0, spacing(-0.5), 0);
-//   transition: $transition;
-
-//   &:hover {
-//     box-shadow: $drop-shadow;
-//     transform: translate3d(0, spacing(-0.25), 0);
-//   }
-
-//   &:active {
-//     box-shadow: 0 0 0 0;
-//     transform: translate3d(0, spacing(0.25), 0);
-//   }
-
-//   &--disabled {
-//     box-shadow: 0 0 0 0;
-//     pointer-events: none;
-//     transform: translate3d(0, 0, 0);
-//     opacity: 0.8;
-//   }
-// }
