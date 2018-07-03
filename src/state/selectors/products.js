@@ -5,7 +5,14 @@ export default createSelector(
   state => get(state, 'products.products', []),
   state => get(state, 'products.contentfulProducts', []),
   (shopify, contentful) => {
-    const products = get(contentful, 'items', {});
+    const products = get(contentful, 'items', []);
+
+    // Index shopify products on handle.
+    const shopifyProducts = shopify.reduce((mergedShopifyProducts, product) => {
+      const handle = get(product, 'handle', '');
+      mergedShopifyProducts[handle] = product;
+      return mergedShopifyProducts;
+    }, {});
 
     return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
@@ -15,9 +22,7 @@ export default createSelector(
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
 
-      const shopifyProduct = shopify.find(
-        shopifyProduct => get(shopifyProduct, 'handle', '') === handle
-      );
+      const shopifyProduct = get(shopifyProducts, handle, {});
       const available = get(shopifyProduct, 'variants[0].available', false);
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
       const id = get(shopifyProduct, 'variants[0].id', '');
