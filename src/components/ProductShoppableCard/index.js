@@ -36,7 +36,12 @@ const ProductShoppableCard = ({
         }}
       >
         <div className="aspect-5-4 w100" />
-        <div className="flex flex-column items-start p2 bg-seafoam">
+        <div
+          className={cx(
+            styles['ProductShoppableCard__info'],
+            'flex flex-column items-start bg-seafoam'
+          )}
+        >
           <span className="w100 bold mt2 mb1">{product.title}</span>
           <p className="detail mb3">{product.flavorDescription}</p>
           <div className={actionClasses}>
