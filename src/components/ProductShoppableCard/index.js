@@ -11,7 +11,6 @@ const ProductShoppableCard = ({
   handleAddProduct,
   handleRemoveProduct
 }) => {
-  console.log(quantity);
   const handleQuantityChange = newQuantity => {
     if (newQuantity > quantity) handleAddProduct(product.handle);
     if (newQuantity < quantity) handleRemoveProduct(product.handle);
