@@ -133,6 +133,12 @@
     }
   }
 
+  &--clear-madison-blue-outline {
+    @extend .text-madison-blue;
+    border: spacing(0.75) solid color('madison-blue');
+    background-color: Transparent;
+  }
+
   &--white-madison-blue-border {
     @extend .bg-white;
     @extend .text-madison-blue;

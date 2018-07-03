@@ -8,6 +8,11 @@
 }
 
 .ComicStrips--container {
+  padding: 0;
+
+  @media ($medium-up) {
+    padding: spacing(12);
+  }
   .ComicStrip {
     @extend .transition;
     display: none;
@@ -20,6 +25,10 @@
   }
 
   &--image {
-    width: spacing(90);
+    width: spacing(65);
+
+    @media ($medium-up) {
+      width: spacing(90);
+    }
   }
 }

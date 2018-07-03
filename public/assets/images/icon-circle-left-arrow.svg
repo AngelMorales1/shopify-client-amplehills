@@ -1,0 +1,13 @@
+
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Circle left arrow icon</desc>
+    <defs></defs>
+    <g id="Collection" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Disney-Collection-Mobile" transform="translate(-21.000000, -3109.000000)">
+            <g id="UI/arrow/Red/Left" transform="translate(21.000000, 3109.000000)">
+                <circle id="Oval-2" fill="#FE5C60" cx="18.5" cy="18.5" r="18.5"></circle>
+                <polygon id="→" fill="#FFFFFF" transform="translate(18.682876, 18.376116) scale(-1, 1) translate(-18.682876, -18.376116) " points="27.0188138 18.3839286 20.0188138 25.3683036 18.2219388 23.5714286 22.1594388 19.6651786 10.3469388 19.6651786 10.3469388 17.1026786 22.1594388 17.1026786 18.2531888 13.1651786 20.0500638 11.3839286"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
