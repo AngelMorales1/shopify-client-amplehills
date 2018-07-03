@@ -1,16 +1,13 @@
 @import 'settings';
 
 .ContactUs {
-  padding: spacing(16) spacing(4) spacing(16) spacing(4);
+  padding: spacing(16) spacing(4);
 
   @media ($medium-up) {
     padding: spacing(16);
   }
 
   &__button-container {
-    max-width: 36rem;
-    width: 100%;
-    display: flex;
     justify-content: flex-end;
 
     @media ($medium-up) {

@@ -73,7 +73,12 @@ class ContactUs extends Component {
             multiLine={true}
           />
         </div>
-        <div className={cx(styles['ContactUs__button-container'])}>
+        <div
+          className={cx(
+            styles['ContactUs__button-container'],
+            'w100 flex text-container-width'
+          )}
+        >
           <Button
             label="Send Us a Message"
             color="madison-blue"
