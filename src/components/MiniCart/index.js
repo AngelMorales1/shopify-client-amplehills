@@ -8,11 +8,12 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
+import products from 'state/selectors/products';
+import lineItems from 'state/selectors/lineItems';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getLineItemPrice from 'utils/getLineItemPrice';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import styles from './MiniCart.scss';
@@ -88,6 +89,8 @@ class MiniCart extends Component {
   render() {
     const {
       checkout,
+      items,
+      products,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -98,8 +101,6 @@ class MiniCart extends Component {
         [styles['MiniCart--open']]: this.props.miniCartIsOpen
       }
     );
-
-    const items = get(checkout, 'lineItems', []);
 
     return (
       <div className="relative">
@@ -115,26 +116,36 @@ class MiniCart extends Component {
             </Button>
           </div>
 
-          <div className="mb4">
+          <div className={cx(styles['MiniCart__line-items'], 'mb4')}>
             {items.map(item => {
-              const classes = cx(styles['MiniCart__line-item'], 'mb2', {
+              const classes = cx(styles['MiniCart__line-item'], 'mb3', {
+                mb4: item.subItems.length,
                 [styles['MiniCart__line-item--updating']]:
-                  this.props.lineItemsBeingUpdated.includes(
-                    get(item, 'id', '')
-                  ) ||
-                  this.props.lineItemsBeingRemoved.includes(get(item, 'id', ''))
+                  this.props.lineItemsBeingUpdated.includes(item.id) ||
+                  this.props.lineItemsBeingRemoved.includes(item.id)
               });
+
+              const { subItems } = item;
 
               return (
                 <div className={classes} key={item.id}>
-                  <div className="mb2 line-item-title flex justify-between">
-                    <span className="mr2">{item.title}</span>
-                    <span>
-                      ${getLineItemPrice(
-                        get(item, 'variant.price', '0.00'),
-                        item.quantity
-                      )}
-                    </span>
+                  <div className="mb2 flex flex-wrap justify-between">
+                    <span className="line-item-title mr2">{item.title}</span>
+                    <span className="line-item-title">${item.price}</span>
+                    {subItems.length ? (
+                      <div className="w100">
+                        <ul className="mt2 mb1">
+                          {subItems.map(subItem => (
+                            <li
+                              className="sub-line-item small"
+                              key={subItem.handle}
+                            >{`${subItem.quantity}x ${
+                              products[subItem.handle].title
+                            }`}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
                   </div>
                   <div className="w100 flex justify-between">
                     <QuantitySelector
@@ -225,6 +236,8 @@ const mapStateToProps = state => {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: get(state, 'session.checkout', {}),
+    products: products(state),
+    items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
   };

@@ -100,6 +100,10 @@ Drop shadows
 /*
 UI elements
 */
+.sub-line-item {
+  line-height: spacing(6);
+}
+
 .arrow {
   width: spacing(10);
 }
