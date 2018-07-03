@@ -118,8 +118,13 @@ class ChooseYourOwnStory extends Component {
     return (
       <div className="mx-auto container-width">
         <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <div className="flex">
-          <div className="col col-12 md-col-6 px2">
+        <div className="flex flex-wrap">
+          <div
+            className={cx(
+              styles['ChooseYourOwnStory__product-cards'],
+              'col col-12 md-col-6 px2'
+            )}
+          >
             {shoppableProducts.map(product => {
               const handle = get(product, 'fields.productHandle', '');
               if (!get(products, handle, false)) return null;
@@ -135,7 +140,12 @@ class ChooseYourOwnStory extends Component {
               );
             })}
           </div>
-          <div className="col col-12 md-col-6 px4">
+          <div
+            className={cx(
+              styles['ChooseYourOwnStory__product-info'],
+              'col col-12 md-col-6'
+            )}
+          >
             <h1 className="block-headline mb4 relative z-1">
               {get(fields, 'title')}
             </h1>

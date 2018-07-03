@@ -26,7 +26,7 @@ const ProductShoppableCard = ({
 
   return (
     <div
-      className={cx(styles['ProductShoppableCard'], 'col col-12 md-col-6 p1')}
+      className={cx(styles['ProductShoppableCard'], 'col col-12 sm-col-6 p1')}
     >
       <div
         className="card"
