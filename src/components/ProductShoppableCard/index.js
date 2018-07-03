@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import Product from 'constants/types/Product';
-import { Button } from 'components/base';
+import { Button, QuantitySelector } from 'components/base';
 import styles from './ProductShoppableCard.scss';
 
 const ProductShoppableCard = ({
@@ -11,6 +11,7 @@ const ProductShoppableCard = ({
   handleAddProduct,
   handleRemoveProduct
 }) => {
+  console.log(quantity);
   const handleQuantityChange = newQuantity => {
     if (newQuantity > quantity) handleAddProduct(product.handle);
     if (newQuantity < quantity) handleRemoveProduct(product.handle);

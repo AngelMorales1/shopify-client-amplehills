@@ -37,7 +37,7 @@ class ChooseYourOwnStory extends Component {
     });
   };
 
-  handleProductAddClick = handle => {
+  handleAddProduct = handle => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
 
@@ -121,7 +121,9 @@ class ChooseYourOwnStory extends Component {
                 <ProductShoppableCard
                   key={handle}
                   product={get(products, handle)}
-                  onClick={() => this.handleProductAddClick(handle)}
+                  handleAddProduct={() => this.handleAddProduct(handle)}
+                  handleRemoveProduct={() => this.handleRemoveProduct(handle)}
+                  quantity={pints.filter(pint => pint === handle).length}
                 />
               );
             })}
