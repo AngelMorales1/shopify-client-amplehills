@@ -1,23 +1,14 @@
 @import 'settings', 'src/styles/utils';
 
 .Radio {
-  position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   color: color('peach');
 
-  &::before {
-    @extend .circle;
-    content: ' ';
-    border: spacing(0.7) solid color('peach');
-    display: inline-block;
-    height: spacing(4);
-    margin-right: spacing(2);
-    margin-bottom: spacing(4);
-    width: spacing(4);
-    vertical-align: middle;
+  &__check {
+    top: 0;
+    left: spacing(7);
   }
 
   @media ($medium-up) {
@@ -26,8 +17,32 @@
     align-items: flex-start;
 
     &__check {
-      top: 0;
       left: spacing(1);
+      border: solid red;
+    }
+
+    label {
+      margin-left: 0;
+
+      @media ($medium-up) {
+        margin-left: spacing(3);
+      }
+    }
+  }
+
+  &::before {
+    @extend .circle;
+    content: ' ';
+    border: spacing(0.7) solid color('peach');
+    display: inline-block;
+    height: spacing(4);
+    margin-right: 0;
+    margin-bottom: spacing(4);
+    width: spacing(4);
+    vertical-align: middle;
+
+    @media (medium-up) {
+      margin-right: spacing(2);
     }
   }
 
