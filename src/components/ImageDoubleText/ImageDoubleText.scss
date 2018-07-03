@@ -1,7 +1,7 @@
 @import 'settings';
 
 .ImageDoubleText {
-  &--Light-Yellow {
+  &--light-yellow {
     @extend .bg-light-yellow;
     @extend .text-madison-blue;
   }
@@ -31,7 +31,7 @@
     margin-top: spacing(80);
 
     @media ($medium-up) {
-      margin-right: 6vw;
+      margin-right: 5%;
       margin-top: 0;
     }
   }
