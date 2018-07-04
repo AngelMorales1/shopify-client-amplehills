@@ -1,6 +1,10 @@
 @import 'settings';
 
+$menu-height: spacing(37.5);
+
 .ChooseYourOwnStory {
+  padding-bottom: calc(#{$menu-height} + #{spacing(8)});
+
   &__product-info {
     order: 1;
     padding: spacing(8);
@@ -22,6 +26,8 @@
   }
 
   &__menu {
+    border-bottom: dotted spacing(1) color('white');
+    transform: translateY(spacing(1));
   }
 
   &__pint-icon {

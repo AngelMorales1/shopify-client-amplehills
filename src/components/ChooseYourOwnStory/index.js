@@ -33,7 +33,7 @@ class ChooseYourOwnStory extends Component {
       currentBreakpoint: Global.breakpoints.small.label,
       screenHeight: 0,
       elementRect: {
-        bottom: 0
+        bottom: window.innerHeight
       }
     };
   }
