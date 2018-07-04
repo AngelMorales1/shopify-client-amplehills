@@ -153,14 +153,14 @@ class ChooseYourOwnStory extends Component {
 
     return (
       <div
-        className={cx(
-          styles['ChooseYourOwnStory'],
-          'mx-auto container-width relative'
-        )}
+        className={cx(styles['ChooseYourOwnStory'], 'relative')}
         ref={element => (this.element = element)}
       >
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <div className="flex items-start">
+        <Breadcrumbs
+          breadcrumbs={breadcrumbs}
+          className="mx-auto container-width"
+        />
+        <div className="mx-auto container-width flex items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
