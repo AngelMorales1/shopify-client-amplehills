@@ -30,7 +30,17 @@ class ChooseYourOwnStory extends Component {
       pints: [],
       shippingDate: '',
       quantity: 1,
+<<<<<<< HEAD
       currentBreakpoint: Global.breakpoints.small.label
+=======
+      window: {
+        innerWidth: window.innerWidth
+      },
+      positions: {
+        menuPosition: 0,
+        infoPosition: 0
+      }
+>>>>>>> add route switch for FooterNewsletter rendering
     };
   }
 
@@ -118,6 +128,11 @@ class ChooseYourOwnStory extends Component {
     const quantity = get(this.state, 'quantity', 1);
     const shipping = get(this.state, 'shippingDate', '');
 
+    const { menuPosition, infoPosition } = get(this.state, 'position', {
+      menuPosition: 0,
+      infoPosition: 0
+    });
+
     const { block, products, ourPledge } = this.props;
     const fields = get(block, 'fields', {});
     const product =
@@ -139,13 +154,13 @@ class ChooseYourOwnStory extends Component {
     ];
 
     return (
-      <div className="mx-auto container-width">
+      <div className="mx-auto container-width relative">
         <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <div className="flex flex-wrap">
+        <div className="flex items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
-              'col col-12 md-col-6 px2'
+              'col-12 md-col-6 px2'
             )}
           >
             {shoppableProducts.map(product => {
@@ -166,7 +181,7 @@ class ChooseYourOwnStory extends Component {
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-info'],
-              'col col-12 md-col-6'
+              'col-12 md-col-6'
             )}
           >
             <h1 className="block-headline mb4 relative z-1">
@@ -191,7 +206,14 @@ class ChooseYourOwnStory extends Component {
             <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
-        <div className="fixed z-nav b0 l0 w100 bg-madison-blue text-white p3">
+        <div
+          className={cx(
+            styles['ChooseYourOwnStory__menu'],
+            'absolute z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            {}
+          )}
+          style={{ bottom: 0 }}
+        >
           <div className="flex content-width mx-auto w100">
             <div
               className={cx(

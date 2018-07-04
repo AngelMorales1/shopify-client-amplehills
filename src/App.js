@@ -43,7 +43,7 @@ class App extends Component {
           <Nav />
           <MiniCart />
           <Routes location={get(this, 'props.location')} />
-          <FooterNewsletter />
+          <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
           <Footer
             locations={this.props.locations}
             footerIllustration={this.props.globalSettings.footerIllustration}
