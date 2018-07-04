@@ -13,6 +13,13 @@ const Arrow = ({ onMouseDown, isOpen }) => {
   return <Image src={src} />;
 };
 
+const ArrowWhite = ({ onMouseDown, isOpen }) => {
+  const src = isOpen
+    ? '/assets/images/arrow-dropdown-active.svg'
+    : '/assets/images/arrow-dropdown-white.svg';
+  return <Image src={src} />;
+};
+
 class Dropdown extends Component {
   constructor(props) {
     super(props);
@@ -43,10 +50,31 @@ class Dropdown extends Component {
   };
 
   render() {
-    const { name, value, options, label, placeholder } = this.props;
+    const {
+      name,
+      value,
+      options,
+      label,
+      placeholder,
+      variant,
+      color,
+      className
+    } = this.props;
     return (
-      <div className="w-auto relative z-1 pointer">
-        <label className="w100 inline-block mb1" htmlFor={name}>
+      <div
+        className={cx(
+          styles['Dropdown'],
+          'w-auto relative z-1 pointer',
+          className,
+          {
+            [styles['Dropdown--small']]: variant === 'small'
+          }
+        )}
+      >
+        <label
+          className={cx(styles['Dropdown--label'], 'w100 inline-block mb1')}
+          htmlFor={name}
+        >
           {label}
         </label>
         <Select
@@ -62,7 +90,7 @@ class Dropdown extends Component {
           onClose={this.onClose}
           placeholder={placeholder}
           onChange={this.onChange}
-          arrowRenderer={Arrow}
+          arrowRenderer={color === 'white' ? ArrowWhite : Arrow}
         />
       </div>
     );
@@ -76,10 +104,13 @@ Dropdown.propTypes = {
       label: PropTypes.string
     })
   ),
-  value: PropTypes.shape({
-    value: PropTypes.string,
-    label: PropTypes.string
-  }),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string
+    })
+  ]),
   name: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
@@ -91,7 +122,8 @@ Dropdown.defaultProps = {
   name: '',
   placeholder: 'Select',
   className: '',
-  label: ''
+  label: '',
+  value: ''
 };
 
 export default Dropdown;

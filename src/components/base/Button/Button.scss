@@ -69,7 +69,7 @@
   &--circle {
     @extend .circle;
     font-size: $font-5;
-    height: $button-small-height;
+    height: spacing(10);
     width: spacing(10);
   }
 

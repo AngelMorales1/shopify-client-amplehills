@@ -7,8 +7,15 @@ import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import Product from 'constants/types/Product';
 import PintSizes from 'constants/PintSizes';
+import Global from 'constants/Global';
 
-import { Radio, Image, Button, QuantitySelector } from 'components/base';
+import {
+  Dropdown,
+  Radio,
+  Image,
+  Button,
+  QuantitySelector
+} from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import OurPledge from 'components/OurPledge';
 import ProductShoppableCard from 'components/ProductShoppableCard';
@@ -22,9 +29,26 @@ class ChooseYourOwnStory extends Component {
       size: PintSizes.FOUR.size,
       pints: [],
       shippingDate: '',
-      quantity: 1
+      quantity: 1,
+      window: {
+        innerWidth: window.innerWidth
+      }
     };
   }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+  }
+
+  updateWindow = () => {
+    const { innerWidth } = window;
+
+    this.setState({
+      window: {
+        innerWidth
+      }
+    });
+  };
 
   handleSizeClick = size => {
     const pints = get(this.state, 'pints', []);
@@ -168,12 +192,12 @@ class ChooseYourOwnStory extends Component {
             <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
-        <div className="fixed b0 l0 w100 bg-madison-blue text-white p3">
+        <div className="fixed z-nav b0 l0 w100 bg-madison-blue text-white p3">
           <div className="flex content-width mx-auto w100">
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-size'],
-                'col flex items-start'
+                'col flex items-start xs-hide sm-hide md-hide'
               )}
             >
               {product.variants.map(variant => (
@@ -193,7 +217,7 @@ class ChooseYourOwnStory extends Component {
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-pints'],
-                'col flex flex-wrap items-center'
+                'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
               <label>Choose 4 Flavors</label>
@@ -225,7 +249,7 @@ class ChooseYourOwnStory extends Component {
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-shipping'],
-                'col flex flex-wrap items-end'
+                'col flex flex-wrap items-end xs-hide sm-hide md-hide '
               )}
             >
               <label className="w100 mb2">Pick Your Ship Date</label>
@@ -247,25 +271,61 @@ class ChooseYourOwnStory extends Component {
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-add'],
-                'col flex justify-between items-end'
+                'col flex flex-wrap'
               )}
             >
-              <QuantitySelector
-                color="madison-blue-outline"
-                quantity={quantity}
-                className="mr1"
-                onChange={value => this.setState({ quantity: value })}
-              />
-              <Button
-                className="small"
-                disabled={size !== pints.length || !shipping}
-                variant="primary-small"
-                color="white-madison-blue"
-                onClick={this.handleAddToCart}
+              <div className="lg-hide xl-hide col col-7">
+                <div className="col col-12 small bold">
+                  Choose {size} Flavors
+                </div>
+              </div>
+              <div
+                className={cx(
+                  styles['ChooseYourOwnStory__menu-quantity'],
+                  'col col-5 md-col-6'
+                )}
               >
-                <span className="mr2">Add to Cart</span>
-                <span>${getLineItemPrice(activeVariant.price, quantity)}</span>
-              </Button>
+                <QuantitySelector
+                  color="madison-blue-outline"
+                  quantity={quantity}
+                  variant={
+                    this.state.window.innerWidth <= Global.breakpoints.large
+                      ? 'small'
+                      : null
+                  }
+                  onChange={value => this.setState({ quantity: value })}
+                />
+              </div>
+              <div className="lg-hide xl-hide col col-5">
+                <Dropdown
+                  name="shipping-date"
+                  className={
+                    styles['ChooseYourOwnStory__menu-shipping-dropdown']
+                  }
+                  value={shipping}
+                  color="white"
+                  variant="small"
+                  label="Shipping Date"
+                  onChange={date => this.handleShippingDateClick(date.value)}
+                  options={this.props.shippingDates.map(date => {
+                    return { value: date, label: date };
+                  })}
+                />
+              </div>
+              <div className="col col-7 md-col-6 right-align">
+                <Button
+                  className="small"
+                  disabled={size !== pints.length || !shipping}
+                  variant="primary-small"
+                  color="white-madison-blue"
+                  onClick={this.handleAddToCart}
+                >
+                  <span className="mr2">Add to Cart</span>
+                  <span>
+                    ${getLineItemPrice(activeVariant.price, quantity)}
+                  </span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>

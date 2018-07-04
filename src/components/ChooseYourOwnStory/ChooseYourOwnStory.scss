@@ -36,7 +36,33 @@
     width: 22.5%;
   }
 
+  &__menu-shipping-dropdown {
+    margin-top: spacing(-2);
+  }
+
   &__menu-add {
-    width: 30%;
+    width: 100%;
+
+    @media ($large-up) {
+      align-items: flex-end;
+      justify-items: space-between;
+      width: 30%;
+    }
+  }
+
+  &__menu-quantity {
+    margin-bottom: spacing(6);
+
+    > div {
+      justify-content: flex-end;
+    }
+
+    @media ($medium-up) {
+      margin-bottom: 0;
+
+      > div {
+        justify-content: flex-start;
+      }
+    }
   }
 }
