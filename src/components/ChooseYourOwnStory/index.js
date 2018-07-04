@@ -30,33 +30,36 @@ class ChooseYourOwnStory extends Component {
       pints: [],
       shippingDate: '',
       quantity: 1,
-<<<<<<< HEAD
-      currentBreakpoint: Global.breakpoints.small.label
-=======
-      window: {
-        innerWidth: window.innerWidth
-      },
-      positions: {
-        menuPosition: 0,
-        infoPosition: 0
+      currentBreakpoint: Global.breakpoints.small.label,
+      screenHeight: 0,
+      elementRect: {
+        bottom: 0
       }
->>>>>>> add route switch for FooterNewsletter rendering
     };
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.updateElement);
     window.addEventListener('resize', this.updateWindow);
     this.updateWindow();
   }
 
+  updateElement = () => {
+    const elementRect = this.element.getBoundingClientRect();
+
+    this.setState({ elementRect }, console.log(elementRect.bottom));
+  };
+
   updateWindow = () => {
-    const { innerWidth } = window;
+    const { innerWidth, innerHeight } = window;
     const { small, large } = Global.breakpoints;
     const currentBreakpoint =
       innerWidth <= large.lowerbound ? small.label : large.label;
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
+
+    if (this.state.screenHeight !== innerHeight) this.setState({ screenHeight: innerHeight});
   };
 
   handleSizeClick = size => {
@@ -128,11 +131,6 @@ class ChooseYourOwnStory extends Component {
     const quantity = get(this.state, 'quantity', 1);
     const shipping = get(this.state, 'shippingDate', '');
 
-    const { menuPosition, infoPosition } = get(this.state, 'position', {
-      menuPosition: 0,
-      infoPosition: 0
-    });
-
     const { block, products, ourPledge } = this.props;
     const fields = get(block, 'fields', {});
     const product =
@@ -154,7 +152,13 @@ class ChooseYourOwnStory extends Component {
     ];
 
     return (
-      <div className="mx-auto container-width relative">
+      <div
+        className={cx(
+          styles['ChooseYourOwnStory'],
+          'mx-auto container-width relative'
+        )}
+        ref={element => (this.element = element)}
+      >
         <Breadcrumbs breadcrumbs={breadcrumbs} />
         <div className="flex items-start">
           <div
@@ -209,8 +213,13 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'absolute z-nav b0 l0 w100 bg-madison-blue text-white p3',
-            {}
+            'z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            {
+              fixed:
+                this.state.elementRect.bottom >= this.state.screenHeight,
+              absolute:
+                this.state.elementRect.bottom < this.state.screenHeight
+            }
           )}
           style={{ bottom: 0 }}
         >
