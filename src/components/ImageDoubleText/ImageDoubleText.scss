@@ -17,16 +17,14 @@
   }
 
   &--image-container {
-    //could not figure out how to make it square
-    width: 70%;
-    border: solid red;
-    margin-top: spacing(-70);
-    margin-left: spacing(-35);
+    min-width: spacing(100);
+    margin-top: spacing(-50);
+    margin-left: spacing(-55);
 
     @media ($medium-up) {
-      width: 47%;
-      margin-top: spacing(-130);
-      margin-left: spacing(-45);
+      width: 56%;
+      margin-top: spacing(-120);
+      margin-left: spacing(-54);
     }
   }
 
