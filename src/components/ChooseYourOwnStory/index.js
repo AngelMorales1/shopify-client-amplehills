@@ -160,11 +160,11 @@ class ChooseYourOwnStory extends Component {
           breadcrumbs={breadcrumbs}
           className="mx-auto container-width"
         />
-        <div className="mx-auto container-width flex items-start">
+        <div className="mx-auto container-width flex flex-wrap items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
-              'col-12 md-col-6 px2'
+              'flex flex-wrap col-12 lg-col-6 px2'
             )}
           >
             {shoppableProducts.map(product => {
@@ -185,29 +185,31 @@ class ChooseYourOwnStory extends Component {
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-info'],
-              'col-12 md-col-6'
+              'col-12 lg-col-6'
             )}
           >
-            <h1 className="block-headline mb4 relative z-1">
-              {get(fields, 'title')}
-            </h1>
-            <div className="w100 flex my3">
-              {product.variants.map(variant => (
-                <Radio
-                  label={variant.title}
-                  className="mr3"
-                  key={variant.id}
-                  checked={variant.id === activeVariant.id}
-                  onClick={() =>
-                    this.handleSizeClick(parseInt(variant.title, 10))
-                  }
-                />
-              ))}
+            <div className="text-container-width mx-auto">
+              <h1 className="block-headline mb4 relative z-1">
+                {get(fields, 'title')}
+              </h1>
+              <div className="w100 flex my3">
+                {product.variants.map(variant => (
+                  <Radio
+                    label={variant.title}
+                    className="mr3"
+                    key={variant.id}
+                    checked={variant.id === activeVariant.id}
+                    onClick={() =>
+                      this.handleSizeClick(parseInt(variant.title, 10))
+                    }
+                  />
+                ))}
+              </div>
+              <div className="mb4">
+                <p className="copy pr2">{get(fields, 'description', '')}</p>
+              </div>
+              <OurPledge ourPledge={ourPledge} />
             </div>
-            <div className="mb4">
-              <p className="copy pr2">{get(fields, 'description', '')}</p>
-            </div>
-            <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
         <div
@@ -312,7 +314,7 @@ class ChooseYourOwnStory extends Component {
               <div
                 className={cx(
                   styles['ChooseYourOwnStory__menu-quantity'],
-                  'col col-5 md-col-6'
+                  'col col-5 lg-col-6'
                 )}
               >
                 <QuantitySelector
@@ -338,7 +340,7 @@ class ChooseYourOwnStory extends Component {
                   })}
                 />
               </div>
-              <div className="col col-7 md-col-6 right-align">
+              <div className="col col-7 lg-col-6 right-align">
                 <Button
                   className="small"
                   disabled={size !== pints.length || !shipping}
