@@ -7,7 +7,10 @@ import { Button, TextField } from 'components/base';
 
 class QuantitySelector extends Component {
   changeQuantity(value) {
-    const quantity = Math.max(1, value);
+    const quantity = this.props.allowZero
+      ? Math.max(0, value)
+      : Math.max(1, value);
+
     this.props.onChange(quantity);
   }
 
@@ -18,6 +21,10 @@ class QuantitySelector extends Component {
       case 'madison-blue-outline':
         buttonColor = 'madison-blue-outline';
         inputColor = 'madison-blue-outline';
+        break;
+      case 'seafoam':
+        buttonColor = 'seafoam-madison-blue-outline';
+        inputColor = 'seafoam-madison-blue-outline';
         break;
       default:
         buttonColor = 'white-madison-blue-outline';
@@ -66,13 +73,15 @@ class QuantitySelector extends Component {
 QuantitySelector.propTypes = {
   className: PropTypes.string,
   quantity: PropTypes.number,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  allowZero: PropTypes.bool
 };
 
 QuantitySelector.defaultProps = {
   className: '',
   quantity: 1,
-  onChange: () => {}
+  onChange: () => {},
+  allowZero: false
 };
 
 export default QuantitySelector;

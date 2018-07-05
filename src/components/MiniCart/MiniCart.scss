@@ -19,6 +19,13 @@
     }
   }
 
+  &__line-items {
+    @media ($medium-up) {
+      max-height: 30vh;
+      overflow: auto;
+    }
+  }
+
   &__line-item {
     transition: $transition;
 

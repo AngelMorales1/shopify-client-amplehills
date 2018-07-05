@@ -37,13 +37,28 @@ class ChooseYourOwnStory extends Component {
     });
   };
 
-  handleProductAddClick = handle => {
+  handleAddProduct = handle => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
 
     if (pints.length >= size) return null;
-
     this.setState({ pints: [...pints, handle] });
+  };
+
+  handleRemoveProduct = handle => {
+    const currentPints = get(this.state, 'pints', []);
+
+    let hasRemovedPint = false;
+    const pints = currentPints.reduce((accumulated, pint) => {
+      if (!hasRemovedPint && pint === handle) {
+        hasRemovedPint = true;
+      } else {
+        accumulated.push(pint);
+      }
+
+      return accumulated;
+    }, []);
+    this.setState({ pints });
   };
 
   handleShippingDateClick = shippingDate => {
@@ -72,10 +87,6 @@ class ChooseYourOwnStory extends Component {
     ];
 
     this.props.actions.addLineItems(this.props.checkout, items);
-  };
-
-  handleShippingClick = shipping => {
-    this.setState({ shipping });
   };
 
   render() {
@@ -117,7 +128,9 @@ class ChooseYourOwnStory extends Component {
                 <ProductShoppableCard
                   key={handle}
                   product={get(products, handle)}
-                  onClick={() => this.handleProductAddClick(handle)}
+                  handleAddProduct={() => this.handleAddProduct(handle)}
+                  handleRemoveProduct={() => this.handleRemoveProduct(handle)}
+                  quantity={pints.filter(pint => pint === handle).length}
                 />
               );
             })}
