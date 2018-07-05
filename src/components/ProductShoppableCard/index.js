@@ -18,7 +18,7 @@ const ProductShoppableCard = ({
 
   const actionClasses = cx(
     styles['ProductShoppableCard__actions'],
-    'relative ',
+    'relative',
     {
       [styles['ProductShoppableCard__actions--has-quantity']]: quantity
     }
