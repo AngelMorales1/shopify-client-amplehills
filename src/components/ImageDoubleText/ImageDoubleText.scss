@@ -6,33 +6,35 @@
     @extend .text-madison-blue;
   }
 
-  padding: spacing(4);
-
-  @media ($medium-up) {
-    padding: spacing(16);
-  }
-
-  &--image {
-    height: spacing(130);
-    width: spacing(130);
-    left: spacing(-55);
-    top: spacing(-30);
+  &--container {
+    flex-direction: column;
+    margin: 0;
 
     @media ($medium-up) {
-      height: spacing(185);
-      width: spacing(185);
-      left: calc(30vw - #{spacing(148)});
-      top: spacing(-25);
+      margin: 0 spacing(24);
+      flex-direction: row;
+    }
+  }
+
+  &--image-container {
+    //could not figure out how to make it square
+    width: 70%;
+    border: solid red;
+    margin-top: spacing(-70);
+    margin-left: spacing(-35);
+
+    @media ($medium-up) {
+      width: 47%;
+      margin-top: spacing(-130);
+      margin-left: spacing(-45);
     }
   }
 
   &--text-container {
-    min-height: spacing(120);
-    margin-top: spacing(80);
+    margin: spacing(8);
 
     @media ($medium-up) {
-      margin-right: 5%;
-      margin-top: 0;
+      margin: spacing(12);
     }
   }
 }

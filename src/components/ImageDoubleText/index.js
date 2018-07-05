@@ -16,35 +16,37 @@ const ImageDoubleText = ({ block, z }) => {
   return (
     <div
       style={{ zIndex: z }}
-      className={cx(
-        styles['ImageDoubleText'],
-        styles[colorClass],
-        'flex justify-end relative drip'
-      )}
+      className={cx(styles['ImageDoubleText'], styles[colorClass], 'p4 drip')}
     >
-      <div className={cx(styles['ImageDoubleText--image'], 'circle absolute')}>
-        <Image
-          alt={`${get(fields, 'image.fields.title', '')} illustration`}
-          src={get(fields, 'image.fields.file.url', '')}
-        />
-      </div>
       <div
         className={cx(
-          styles['ImageDoubleText--text-container'],
-          'flex flex-column justify-center items-center col-12 md-col-5'
+          styles['ImageDoubleText--container'],
+          'flex items-center justify-between'
         )}
       >
-        <div className="mb3">
-          <h2 className="block-headline mb2">
-            {get(fields, 'firstTitle', '')}
-          </h2>
-          <p className="copy">{get(fields, 'firstText', '')}</p>
+        <div
+          className={cx(styles['ImageDoubleText--image-container'], 'circle')}
+        >
+          <Image
+            alt={`${get(fields, 'image.fields.title', '')}`}
+            src={get(fields, 'image.fields.file.url', '')}
+          />
         </div>
-        <div>
-          <h2 className="block-headline mb2">
-            {get(fields, 'secondTitle', '')}
-          </h2>
-          <p className="copy">{get(fields, 'secondText', '')}</p>
+        <div
+          className={cx(styles['ImageDoubleText--text-container'], 'md-col-5')}
+        >
+          <div className="mb3">
+            <h2 className="block-headline mb2">
+              {get(fields, 'firstTitle', '')}
+            </h2>
+            <p className="copy">{get(fields, 'firstText', '')}</p>
+          </div>
+          <div>
+            <h2 className="block-headline mb2">
+              {get(fields, 'secondTitle', '')}
+            </h2>
+            <p className="copy">{get(fields, 'secondText', '')}</p>
+          </div>
         </div>
       </div>
     </div>
