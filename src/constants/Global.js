@@ -1,8 +1,20 @@
 export default {
   transition: 250,
   breakpoints: {
-    small: 325,
-    medium: 832,
-    large: 1024
+    small: {
+      label: 'small',
+      lowerbound: 325,
+      upperbound: 831
+    },
+    medium: {
+      label: 'medium',
+      lowerbound: 832,
+      upperbound: 1023
+    },
+    large: {
+      label: 'large',
+      lowerbound: 1024,
+      upperbound: 2100
+    }
   }
 };

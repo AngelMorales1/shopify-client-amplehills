@@ -42,12 +42,12 @@ class ChooseYourOwnStory extends Component {
 
   updateWindow = () => {
     const { innerWidth } = window;
+    const { small, large } = Global.breakpoints;
+    const screenSize =
+      innerWidth <= large.lowerbound ? small.label : large.label;
 
-    this.setState({
-      window: {
-        innerWidth
-      }
-    });
+    if (this.state.window.screenSize !== screenSize)
+      this.setState({ window: { screenSize } });
   };
 
   handleSizeClick = size => {
@@ -288,11 +288,7 @@ class ChooseYourOwnStory extends Component {
                 <QuantitySelector
                   color="madison-blue-outline"
                   quantity={quantity}
-                  variant={
-                    this.state.window.innerWidth <= Global.breakpoints.large
-                      ? 'small'
-                      : null
-                  }
+                  variant={this.state.window.screenSize}
                   onChange={value => this.setState({ quantity: value })}
                 />
               </div>
