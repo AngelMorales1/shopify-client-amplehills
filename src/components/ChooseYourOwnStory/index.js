@@ -30,24 +30,23 @@ class ChooseYourOwnStory extends Component {
       pints: [],
       shippingDate: '',
       quantity: 1,
-      window: {
-        innerWidth: window.innerWidth
-      }
+      currentBreakpoint: Global.breakpoints.small.label
     };
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
   }
 
   updateWindow = () => {
     const { innerWidth } = window;
     const { small, large } = Global.breakpoints;
-    const screenSize =
+    const currentBreakpoint =
       innerWidth <= large.lowerbound ? small.label : large.label;
 
-    if (this.state.window.screenSize !== screenSize)
-      this.setState({ window: { screenSize } });
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
   };
 
   handleSizeClick = size => {
