@@ -86,7 +86,7 @@ class ProductHero extends Component {
               />
             </div>
             <div>
-              <p className="copy pr2">{product.flavorDescription}</p>
+              <p className="copy pr2">{product.description}</p>
             </div>
             <form className="flex flex-wrap items-center">
               <div className="w100 mt3 mb1">
@@ -108,7 +108,7 @@ class ProductHero extends Component {
               <Button
                 color="madison-blue"
                 onClick={this.addToCart}
-                disabled={!available}
+                disabled={!available || !this.state.shipping}
               >
                 <span className="mr2">Add to Cart</span>
                 <span className="ml2">
