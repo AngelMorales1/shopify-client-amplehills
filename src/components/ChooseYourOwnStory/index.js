@@ -287,7 +287,7 @@ class ChooseYourOwnStory extends Component {
                 <QuantitySelector
                   color="madison-blue-outline"
                   quantity={quantity}
-                  variant={this.state.window.screenSize}
+                  variant={this.state.currentBreakpoint}
                   onChange={value => this.setState({ quantity: value })}
                 />
               </div>
