@@ -32,22 +32,24 @@ class ChooseYourOwnStory extends Component {
       quantity: 1,
       currentBreakpoint: Global.breakpoints.small.label,
       screenHeight: 0,
-      elementRect: {
-        bottom: window.innerHeight
-      }
+      menuPosition: 'fixed'
     };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.updateElement);
     window.addEventListener('resize', this.updateWindow);
+    window.addEventListener('scroll', this.updateMenu);
     this.updateWindow();
+    this.updateMenu();
   }
 
-  updateElement = () => {
+  updateMenu = () => {
     const elementRect = this.element.getBoundingClientRect();
+    const menuPosition =
+      elementRect.bottom < this.state.screenHeight ? 'absolute' : 'fixed';
 
-    this.setState({ elementRect });
+    if (this.state.menuPosition !== menuPosition)
+      this.setState({ menuPosition });
   };
 
   updateWindow = () => {
@@ -59,7 +61,8 @@ class ChooseYourOwnStory extends Component {
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
 
-    if (this.state.screenHeight !== innerHeight) this.setState({ screenHeight: innerHeight});
+    if (this.state.screenHeight !== innerHeight)
+      this.setState({ screenHeight: innerHeight });
   };
 
   handleSizeClick = size => {
@@ -216,14 +219,8 @@ class ChooseYourOwnStory extends Component {
           className={cx(
             styles['ChooseYourOwnStory__menu'],
             'z-nav b0 l0 w100 bg-madison-blue text-white p3',
-            {
-              fixed:
-                this.state.elementRect.bottom >= this.state.screenHeight,
-              absolute:
-                this.state.elementRect.bottom < this.state.screenHeight
-            }
+            this.state.menuPosition
           )}
-          style={{ bottom: 0 }}
         >
           <div className="flex content-width mx-auto w100">
             <div
