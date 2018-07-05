@@ -47,10 +47,17 @@ class ChooseYourOwnStory extends Component {
   };
 
   handleRemoveProduct = handle => {
-    const pints = get(this.state, 'pints', []);
-    const removedProduct = pints.findIndex(pint => pint === handle);
+    const currentPints = get(this.state, 'pints', []);
 
-    pints.splice(removedProduct, 1);
+    let hasRemovedPint = false;
+    const pints = currentPints.reduce((accumulated, pint) => {
+      if (!hasRemovedPint && pint === handle) {
+        hasRemovedPint = true;
+        return accumulated;
+      } else {
+        return [...accumulated, handle];
+      }
+    }, []);
     this.setState({ pints });
   };
 
