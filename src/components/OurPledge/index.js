@@ -34,7 +34,12 @@ class OurPledge extends Component {
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
     return (
-      <div className={cx('flex flex-column items-center', styles['OurPledge'])}>
+      <div
+        className={cx(
+          'flex flex-column items-center w100',
+          styles['OurPledge']
+        )}
+      >
         <Image
           alt="Our pledge icon"
           src={calloutImageUrl}
@@ -42,25 +47,34 @@ class OurPledge extends Component {
         />
         <div
           className={cx(
-            'bg-varden p2 flex items-center',
+            'bg-varden flex w100',
             styles['OurPledge__text-container']
           )}
         >
-          <p className="mx2 callout-small text-madison-blue nowrap">
-            Our Pledge
-          </p>
-          <p className="mx2 flex uppercase text-madison-blue info-text-small semi-bold center">
-            Ice cream arrives fresh delicious, and frozen
-          </p>
-          <Button
-            variant="style-none"
-            onClick={this.openOurPledgeOverlay}
-            label="More Info"
-            className={cx(
-              'mx2 uppercase text-madison-blue info-text-big bold nowrap',
-              styles['OurPledge__more-info']
-            )}
-          />
+          <div className="col col-8 flex flex-wrap items-center">
+            <p className="col col-12 md-col-6 px2 callout-small text-madison-blue nowrap">
+              Our Pledge
+            </p>
+            <p
+              className={cx(
+                styles['OurPledge__text-description'],
+                'col col-12 md-col-6 flex uppercase text-madison-blue info-text-small semi-bold'
+              )}
+            >
+              Ice cream arrives fresh delicious, and frozen
+            </p>
+          </div>
+          <div className="col col-4 px2 right-align">
+            <Button
+              variant="style-none"
+              onClick={this.openOurPledgeOverlay}
+              label="More Info"
+              className={cx(
+                'uppercase text-madison-blue info-text-big bold nowrap',
+                styles['OurPledge__more-info']
+              )}
+            />
+          </div>
         </div>
         {this.state.ourPledgeOverlayIsOpen ? (
           <OurPledgeOverlay

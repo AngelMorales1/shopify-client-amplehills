@@ -68,4 +68,17 @@
       }
     }
   }
+
+  &--small {
+    .Dropdown--label {
+      color: color('gray');
+      font-size: $font-3;
+    }
+
+    :global {
+      .Select-placeholder {
+        color: color('white');
+      }
+    }
+  }
 }
