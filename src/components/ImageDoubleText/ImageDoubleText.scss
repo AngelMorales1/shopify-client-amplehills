@@ -17,12 +17,12 @@
   }
 
   &--image-container {
+    width: 56%;
     min-width: spacing(100);
     margin-top: spacing(-50);
     margin-left: spacing(-55);
 
     @media ($medium-up) {
-      width: 56%;
       margin-top: spacing(-120);
       margin-left: spacing(-54);
     }
