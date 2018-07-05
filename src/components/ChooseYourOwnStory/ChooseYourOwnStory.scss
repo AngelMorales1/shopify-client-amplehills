@@ -11,9 +11,9 @@ $menu-height: spacing(37.5);
 
     @media ($medium-up) {
       order: 2;
-      padding: spacing(16);
+      padding: 0 spacing(16);
       position: sticky;
-      top: 20px;
+      top: spacing(16);
     }
   }
 
