@@ -25,11 +25,9 @@ const ProductShoppableCard = ({
   );
 
   return (
-    <div
-      className={cx(styles['ProductShoppableCard'], 'col col-12 sm-col-6 p1')}
-    >
+    <div className={cx(styles['ProductShoppableCard'], 'flex col-12 sm-col-6')}>
       <div
-        className="card"
+        className="card flex flex-column w100"
         style={{
           background: `url(${product.gridImage}) no-repeat center`,
           backgroundSize: 'cover'
@@ -39,11 +37,13 @@ const ProductShoppableCard = ({
         <div
           className={cx(
             styles['ProductShoppableCard__info'],
-            'flex flex-column items-start bg-seafoam'
+            'flex flex-column justify-between bg-seafoam h100 relative'
           )}
         >
-          <span className="w100 bold mt2 mb1">{product.title}</span>
-          <p className="detail mb3">{product.flavorDescription}</p>
+          <div>
+            <span className="w100 bold mt2 mb1">{product.title}</span>
+            <p className="detail mb3">{product.flavorDescription}</p>
+          </div>
           <div className={actionClasses}>
             <QuantitySelector
               className={cx(

@@ -30,20 +30,33 @@ class ChooseYourOwnStory extends Component {
       pints: [],
       shippingDate: '',
       quantity: 1,
-      currentBreakpoint: Global.breakpoints.small.label
+      currentBreakpoint: Global.breakpoints.small.label,
+      screenHeight: 0,
+      menuPosition: 'fixed'
     };
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
+    window.addEventListener('scroll', this.updateMenu);
     this.updateWindow();
+    this.updateMenu();
   }
 
+  updateMenu = () => {
+    if (!this.element) return null;
+    const elementRect = this.element.getBoundingClientRect();
+    const menuPosition =
+      elementRect.bottom < window.innerHeight ? 'absolute' : 'fixed';
+
+    if (this.state.menuPosition !== menuPosition)
+      this.setState({ menuPosition });
+  };
+
   updateWindow = () => {
-    const { innerWidth } = window;
     const { small, large } = Global.breakpoints;
     const currentBreakpoint =
-      innerWidth <= large.lowerbound ? small.label : large.label;
+      window.innerWidth <= large.lowerbound ? small.label : large.label;
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
@@ -139,13 +152,19 @@ class ChooseYourOwnStory extends Component {
     ];
 
     return (
-      <div className="mx-auto container-width">
-        <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <div className="flex flex-wrap">
+      <div
+        className={cx(styles['ChooseYourOwnStory'], 'relative')}
+        ref={element => (this.element = element)}
+      >
+        <Breadcrumbs
+          breadcrumbs={breadcrumbs}
+          className="mx-auto container-width"
+        />
+        <div className="mx-auto container-width flex flex-wrap items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
-              'col col-12 md-col-6 px2'
+              'flex flex-wrap col-12 lg-col-6 px2'
             )}
           >
             {shoppableProducts.map(product => {
@@ -166,32 +185,40 @@ class ChooseYourOwnStory extends Component {
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-info'],
-              'col col-12 md-col-6'
+              'col-12 lg-col-6'
             )}
           >
-            <h1 className="block-headline mb4 relative z-1">
-              {get(fields, 'title')}
-            </h1>
-            <div className="w100 flex my3">
-              {product.variants.map(variant => (
-                <Radio
-                  label={variant.title}
-                  className="mr3"
-                  key={variant.id}
-                  checked={variant.id === activeVariant.id}
-                  onClick={() =>
-                    this.handleSizeClick(parseInt(variant.title, 10))
-                  }
-                />
-              ))}
+            <div className="text-container-width mx-auto">
+              <h1 className="block-headline mb4 relative z-1">
+                {get(fields, 'title')}
+              </h1>
+              <div className="w100 flex my3">
+                {product.variants.map(variant => (
+                  <Radio
+                    label={variant.title}
+                    className="mr3"
+                    key={variant.id}
+                    checked={variant.id === activeVariant.id}
+                    onClick={() =>
+                      this.handleSizeClick(parseInt(variant.title, 10))
+                    }
+                  />
+                ))}
+              </div>
+              <div className="mb4">
+                <p className="copy pr2">{get(fields, 'description', '')}</p>
+              </div>
+              <OurPledge ourPledge={ourPledge} />
             </div>
-            <div className="mb4">
-              <p className="copy pr2">{get(fields, 'description', '')}</p>
-            </div>
-            <OurPledge ourPledge={ourPledge} />
           </div>
         </div>
-        <div className="fixed z-nav b0 l0 w100 bg-madison-blue text-white p3">
+        <div
+          className={cx(
+            styles['ChooseYourOwnStory__menu'],
+            'z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            this.state.menuPosition
+          )}
+        >
           <div className="flex content-width mx-auto w100">
             <div
               className={cx(
@@ -281,7 +308,7 @@ class ChooseYourOwnStory extends Component {
               <div
                 className={cx(
                   styles['ChooseYourOwnStory__menu-quantity'],
-                  'col col-5 md-col-6'
+                  'col col-5 lg-col-6'
                 )}
               >
                 <QuantitySelector
@@ -307,7 +334,7 @@ class ChooseYourOwnStory extends Component {
                   })}
                 />
               </div>
-              <div className="col col-7 md-col-6 right-align">
+              <div className="col col-7 lg-col-6 right-align">
                 <Button
                   className="small"
                   disabled={size !== pints.length || !shipping}

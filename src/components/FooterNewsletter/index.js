@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
 import styles from './FooterNewsletter.scss';
+import RoutesWithoutNewsletter from 'constants/RoutesWithoutNewsletter';
 import { Image, Button, TextField } from 'components/base';
 
 class FooterNewsletter extends Component {
+  routeOmitsNewsletter() {
+    return RoutesWithoutNewsletter.includes(this.props.pathname);
+  }
+
   render() {
+    if (this.routeOmitsNewsletter()) return null;
     return (
       <div
         className={cx(
