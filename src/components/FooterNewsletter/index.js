@@ -4,9 +4,9 @@ import styles from './FooterNewsletter.scss';
 import RoutesWithoutNewsletter from 'constants/RoutesWithoutNewsletter';
 import { Image, Button, TextField } from 'components/base';
 
-const FooterNewsletter = () => {
+const FooterNewsletter = ({ pathname }) => {
   const routeOmitsNewsletter = () => {
-    return RoutesWithoutNewsletter.includes(this.props.pathname);
+    return RoutesWithoutNewsletter.includes(pathname);
   };
 
   if (routeOmitsNewsletter()) return null;
