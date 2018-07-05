@@ -47,7 +47,7 @@ class ChooseYourOwnStory extends Component {
   updateElement = () => {
     const elementRect = this.element.getBoundingClientRect();
 
-    this.setState({ elementRect }, console.log(elementRect.bottom));
+    this.setState({ elementRect });
   };
 
   updateWindow = () => {
