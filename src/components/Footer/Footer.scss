@@ -36,9 +36,10 @@
       align-items: start;
       width: 40vw;
     }
-    > h2 {
-      font-size: $font-7;
-    }
+  }
+
+  &__Locations-title {
+    font-size: $font-7;
   }
 
   &__Regions-container {
