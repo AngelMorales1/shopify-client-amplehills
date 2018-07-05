@@ -70,7 +70,7 @@ class OurPledge extends Component {
               onClick={this.openOurPledgeOverlay}
               label="More Info"
               className={cx(
-                ' uppercase text-madison-blue info-text-big bold nowrap',
+                'uppercase text-madison-blue info-text-big bold nowrap',
                 styles['OurPledge__more-info']
               )}
             />
