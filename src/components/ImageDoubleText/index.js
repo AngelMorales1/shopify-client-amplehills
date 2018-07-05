@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
@@ -12,7 +13,6 @@ const ImageDoubleText = ({ block, z }) => {
     'backgroundColor',
     'light-yellow'
   )}`;
-
   return (
     <div
       style={{ zIndex: z }}
@@ -36,21 +36,43 @@ const ImageDoubleText = ({ block, z }) => {
           className={cx(styles['ImageDoubleText--text-container'], 'md-col-5')}
         >
           <div className="mb3">
-            <h2 className="block-headline mb2">
-              {get(fields, 'firstTitle', '')}
-            </h2>
-            <p className="copy">{get(fields, 'firstText', '')}</p>
+            <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>
+            <p className="copy">{get(fields, 'text1', '')}</p>
           </div>
           <div>
-            <h2 className="block-headline mb2">
-              {get(fields, 'secondTitle', '')}
-            </h2>
-            <p className="copy">{get(fields, 'secondText', '')}</p>
+            <h2 className="block-headline mb2">{get(fields, 'title2', '')}</h2>
+            <p className="copy">{get(fields, 'text2', '')}</p>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+ImageDoubleText.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      backgroundColor: PropTypes.string,
+      text1: PropTypes.string,
+      text2: PropTypes.string,
+      title1: PropTypes.string,
+      title2: PropTypes.string,
+      image: PropTypes.shape({
+        fields: PropTypes.shape({
+          title: PropTypes.string,
+          file: PropTypes.shape({
+            url: PropTypes.string
+          })
+        })
+      })
+    })
+  })
+};
+
+ImageDoubleText.defaultProps = {
+  z: 1,
+  block: {}
 };
 
 export default ImageDoubleText;
