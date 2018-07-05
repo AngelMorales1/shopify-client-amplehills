@@ -1,0 +1,17 @@
+@import 'settings';
+
+.ContactUs {
+  padding: spacing(16) spacing(4);
+
+  @media ($medium-up) {
+    padding: spacing(16);
+  }
+
+  &__button-container {
+    justify-content: flex-end;
+
+    @media ($medium-up) {
+      justify-content: center;
+    }
+  }
+}

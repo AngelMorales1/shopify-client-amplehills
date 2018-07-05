@@ -24,7 +24,7 @@ const Radio = ({ variant, color, className, label, checked, onClick }) => {
         styles['Radio'],
         styles[`Radio--${color}`],
         styles[`Radio--${variant}`],
-        'relative bold',
+        'relative flex bold',
         className
       )}
     >

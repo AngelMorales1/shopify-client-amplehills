@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Radio, TextField, Button } from 'components/base';
 
+import cx from 'classnames';
+import styles from './ContactUs.scss';
+
 class ContactUs extends Component {
   constructor(props) {
     super(props);
@@ -16,9 +19,14 @@ class ContactUs extends Component {
 
   render() {
     return (
-      <div className="flex flex-column justify-around items-center p4">
-        <h2 className="block-headline m2">Contact us</h2>
-        <p className="m2">What can we help you with?</p>
+      <div
+        className={cx(
+          styles['ContactUs'],
+          'flex flex-column justify-around items-center'
+        )}
+      >
+        <h2 className="block-headline m2 center">Contact us</h2>
+        <p className="m2 center">What can we help you with?</p>
         <form className="flex m3">
           <Radio
             checked={this.state.checkedRadioField === 'ordering'}
@@ -65,7 +73,18 @@ class ContactUs extends Component {
             multiLine={true}
           />
         </div>
-        <Button label="Send Us a Message" color="madison-blue" />
+        <div
+          className={cx(
+            styles['ContactUs__button-container'],
+            'w100 flex text-container-width'
+          )}
+        >
+          <Button
+            label="Send Us a Message"
+            color="madison-blue"
+            className="m1"
+          />
+        </div>
       </div>
     );
   }
