@@ -4,7 +4,6 @@ import cx from 'classnames';
 import get from 'utils/get';
 
 import styles from './ImageDoubleText.scss';
-import { Image } from 'components/base';
 
 const ImageDoubleText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
@@ -25,7 +24,10 @@ const ImageDoubleText = ({ block, z }) => {
         )}
       >
         <div
-          className={cx(styles['ImageDoubleText--image-container'], 'circle')}
+          className={cx(
+            styles['ImageDoubleText--image-container'],
+            'circle square'
+          )}
           style={{
             background: `url(${get(
               fields,
