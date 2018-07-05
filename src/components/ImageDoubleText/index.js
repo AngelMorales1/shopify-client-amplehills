@@ -26,12 +26,15 @@ const ImageDoubleText = ({ block, z }) => {
       >
         <div
           className={cx(styles['ImageDoubleText--image-container'], 'circle')}
-        >
-          <Image
-            alt={`${get(fields, 'image.fields.title', '')}`}
-            src={get(fields, 'image.fields.file.url', '')}
-          />
-        </div>
+          style={{
+            background: `url(${get(
+              fields,
+              'image.fields.file.url',
+              ''
+            )}) no-repeat center`,
+            backgroundSize: 'cover'
+          }}
+        />
         <div
           className={cx(styles['ImageDoubleText--text-container'], 'md-col-5')}
         >
