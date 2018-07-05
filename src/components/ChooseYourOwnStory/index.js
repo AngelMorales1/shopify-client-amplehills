@@ -44,9 +44,13 @@ class ChooseYourOwnStory extends Component {
   }
 
   updateMenu = () => {
-    const elementRect = this.element.getBoundingClientRect();
+    const elementRect = this.element
+      ? this.element.getBoundingClientRect()
+      : null;
     const menuPosition =
-      elementRect.bottom < this.state.screenHeight ? 'absolute' : 'fixed';
+      this.element && elementRect.bottom < this.state.screenHeight
+        ? 'absolute'
+        : 'fixed';
 
     if (this.state.menuPosition !== menuPosition)
       this.setState({ menuPosition });
