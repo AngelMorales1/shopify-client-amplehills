@@ -13,7 +13,6 @@ class ProductDetailView extends Component {
       product,
       product: { blocks }
     } = this.props;
-
     return (
       <div className="ProductDetailView">
         <div>
