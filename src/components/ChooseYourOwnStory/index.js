@@ -42,7 +42,6 @@ class ChooseYourOwnStory extends Component {
     const size = get(this.state, 'size', PintSizes.FOUR.size);
 
     if (pints.length >= size) return null;
-
     this.setState({ pints: [...pints, handle] });
   };
 
@@ -53,10 +52,11 @@ class ChooseYourOwnStory extends Component {
     const pints = currentPints.reduce((accumulated, pint) => {
       if (!hasRemovedPint && pint === handle) {
         hasRemovedPint = true;
-        return accumulated;
       } else {
-        return [...accumulated, handle];
+        accumulated.push(pint);
       }
+
+      return accumulated;
     }, []);
     this.setState({ pints });
   };
