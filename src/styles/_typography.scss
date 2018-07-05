@@ -80,6 +80,14 @@ em {
   line-height: $font-6;
 }
 
+.description-title {
+  font-size: $font-4;
+
+  @media ($medium-up) {
+    font-size: $font-5;
+  }
+}
+
 .description {
   font-size: $font-2;
   line-height: $font-6;

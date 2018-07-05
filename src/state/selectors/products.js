@@ -22,6 +22,7 @@ export default createSelector(
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
+      const shortDescription = get(product, 'fileds.shortDescription', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {});
       const available = get(shopifyProduct, 'variants[0].available', false);
@@ -43,7 +44,8 @@ export default createSelector(
         variants,
         gridImage,
         pintImage,
-        blocks
+        blocks,
+        shortDescription
       };
 
       return mergedProducts;
