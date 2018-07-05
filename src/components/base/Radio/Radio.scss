@@ -8,7 +8,11 @@
 
   &__check {
     top: 0;
-    left: spacing(7);
+    left: spacing(4);
+  }
+
+  label {
+    margin-left: 0;
   }
 
   @media ($medium-up) {
@@ -18,15 +22,10 @@
 
     &__check {
       left: spacing(1);
-      border: solid red;
     }
 
     label {
-      margin-left: 0;
-
-      @media ($medium-up) {
-        margin-left: spacing(3);
-      }
+      margin-left: spacing(3);
     }
   }
 
