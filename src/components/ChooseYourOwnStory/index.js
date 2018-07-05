@@ -47,23 +47,19 @@ class ChooseYourOwnStory extends Component {
     if (!this.element) return null;
     const elementRect = this.element.getBoundingClientRect();
     const menuPosition =
-      elementRect.bottom < this.state.screenHeight ? 'absolute' : 'fixed';
+      elementRect.bottom < window.innerHeight ? 'absolute' : 'fixed';
 
     if (this.state.menuPosition !== menuPosition)
       this.setState({ menuPosition });
   };
 
   updateWindow = () => {
-    const { innerWidth, innerHeight } = window;
     const { small, large } = Global.breakpoints;
     const currentBreakpoint =
-      innerWidth <= large.lowerbound ? small.label : large.label;
+      window.innerWidth <= large.lowerbound ? small.label : large.label;
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
-
-    if (this.state.screenHeight !== innerHeight)
-      this.setState({ screenHeight: innerHeight });
   };
 
   handleSizeClick = size => {
