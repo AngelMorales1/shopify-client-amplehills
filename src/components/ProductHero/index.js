@@ -50,7 +50,7 @@ class ProductHero extends Component {
 
   render() {
     const { block, product, z } = this.props;
-    const { gridImage, available, price } = product;
+    const { available, price } = product;
     const fields = get(block, 'fields', {});
 
     return (
@@ -67,7 +67,11 @@ class ProductHero extends Component {
         <div
           className="col col-12 md-col-6 square"
           style={{
-            background: `url(${gridImage}) no-repeat center`,
+            background: `url(${get(
+              fields,
+              'image.fields.file.url',
+              ''
+            )}) no-repeat center`,
             backgroundSize: 'cover'
           }}
         />
