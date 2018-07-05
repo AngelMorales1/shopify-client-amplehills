@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import get from 'utils/get';
 import { Button, TextField } from 'components/base';
 
 const QuantitySelector = ({
