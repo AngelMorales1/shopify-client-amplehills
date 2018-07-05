@@ -96,7 +96,7 @@ class MiniCart extends Component {
 
     const classes = cx(
       styles['MiniCart'],
-      'col-11 fixed z-nav p3 bg-white card drop-shadow-xlarge',
+      'col-11 fixed z-nav bg-white card drop-shadow-xlarge',
       {
         [styles['MiniCart--open']]: this.props.miniCartIsOpen
       }
@@ -105,18 +105,18 @@ class MiniCart extends Component {
     return (
       <div className="relative">
         <div className={classes}>
-          <div className="mb3 center relative">
+          <div className="mb3 pt3 px3 center relative">
             <strong className="callout">Cart</strong>
             <Button
               variant="icon-small"
-              className="absolute t0 r0 mt1"
+              className="absolute t0 r0 m3 pt1"
               onClick={() => closeMiniCart()}
             >
               <Image src="/assets/images/icon-close.svg" />
             </Button>
           </div>
 
-          <div className={cx(styles['MiniCart__line-items'], 'mb4')}>
+          <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
@@ -167,7 +167,7 @@ class MiniCart extends Component {
             })}
           </div>
 
-          <div className="mt3 flex justify-between items-center">
+          <div className="my3 px3 flex justify-between items-center">
             <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
             <Button
               disabled={!items.length}
