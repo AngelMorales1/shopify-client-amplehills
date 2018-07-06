@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
@@ -12,6 +12,7 @@ const ImageDoubleText = ({ block, z }) => {
     'backgroundColor',
     'light-yellow'
   )}`;
+
   return (
     <div
       style={{ zIndex: z }}
@@ -77,7 +78,23 @@ ImageDoubleText.propTypes = {
 
 ImageDoubleText.defaultProps = {
   z: 1,
-  block: {}
+  block: {
+    fields: {
+      backgroundColor: 'light-yellow',
+      text1: '',
+      text2: '',
+      title1: '',
+      title2: '',
+      image: {
+        fields: {
+          title: '',
+          file: {
+            url: ''
+          }
+        }
+      }
+    }
+  }
 };
 
 export default ImageDoubleText;

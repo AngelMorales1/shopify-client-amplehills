@@ -7,7 +7,9 @@ class ProductLandingView extends Component {
   render() {
     const { model, products } = this.props;
     if (model.isError) return <h1>Error</h1>;
+
     const content = get(model, 'landing.items[0].fields', {});
+
     return (
       <div className="ProductLanding mb3">
         <div className="my4 px3 text-container-width mx-auto center">
