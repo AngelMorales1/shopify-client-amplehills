@@ -134,7 +134,7 @@ class ComicStrip extends Component {
                         key={`${i}-${get(comic, 'sys.id', '')}`}
                         className={cx(
                           styles['ComicStrips--container--image'],
-                          'm3'
+                          'mx-auto'
                         )}
                       >
                         <Image

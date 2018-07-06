@@ -1,7 +1,6 @@
 @import 'settings', 'src/styles/utils';
 
 .Carousel {
-  @extend .transition;
   display: none;
   opacity: 0;
 
@@ -15,7 +14,7 @@
     display: flex;
     opacity: 0.5;
     position: absolute;
-    left: 83%;
+    left: 98%;
     bottom: 7%;
   }
 
@@ -24,7 +23,7 @@
     display: flex;
     opacity: 0.5;
     position: absolute;
-    right: 83%;
+    right: 98%;
     bottom: 7%;
   }
 

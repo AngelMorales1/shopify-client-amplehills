@@ -62,7 +62,7 @@ class Carousel extends Component {
       <div
         className={cx(
           className,
-          'w100 flex flex-column items-center justify-center'
+          'w100 flex flex-column items-center justify-center transition'
         )}
       >
         <div className="w100 flex justify-between items-center relative">
@@ -103,7 +103,7 @@ class Carousel extends Component {
           ) : null}
         </div>
         {showIndicators ? (
-          <div className="flex">
+          <div className="flex mt3">
             {children.map((child, i) => {
               const classes = cx(
                 styles['Carousel__indicator'],
