@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
 
-const ProductWhatsIncluded = ({ block, z, products, ...props }) => {
+const ProductWhatsIncluded = ({ block, z, products }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(
     fields,
@@ -59,3 +60,31 @@ const ProductWhatsIncluded = ({ block, z, products, ...props }) => {
 };
 
 export default ProductWhatsIncluded;
+
+ProductWhatsIncluded.propTypes = {
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      backgroundColor: PropTypes.string,
+      products: PropTypes.arrayOf(
+        PropTypes.shape({
+          fields: PropTypes.shape({
+            productHandle: PropTypes.string
+          })
+        })
+      )
+    })
+  }),
+  z: PropTypes.number,
+  products: PropTypes.object
+};
+
+ProductWhatsIncluded.defaultProps = {
+  block: {
+    fields: {
+      backgroundColor: 'light-pink',
+      products: []
+    }
+  },
+  z: 1,
+  products: {}
+};
