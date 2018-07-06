@@ -31,6 +31,7 @@ const Cart = props => {
     actions: { removeLineItems }
   } = props;
   const items = get(checkout, 'lineItems', []);
+  console.log(props);
   return (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
       <Button
@@ -55,6 +56,7 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
         <div className="my3">
           {items.map(item => {
+            console.log('from lineitem', items);
             return (
               <div key={item.id}>
                 <div
