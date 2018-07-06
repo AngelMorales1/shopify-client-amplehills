@@ -7,11 +7,13 @@ class ProductDetailView extends Component {
   render() {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
+
     const {
       ourPledge,
       product,
       product: { blocks }
     } = this.props;
+
     return (
       <div className="ProductDetailView">
         <div>

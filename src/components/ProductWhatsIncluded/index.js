@@ -5,14 +5,15 @@ import get from 'utils/get';
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
 
-const ProductWhatsIncluded = ({ block, z }) => {
+const ProductWhatsIncluded = ({ block, z, products, ...props }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(
     fields,
     'backgroundColor',
     'light-pink'
   )}`;
-  const products = get(fields, 'products', []);
+
+  const includedItems = get(fields, 'products', []);
 
   return (
     <div
@@ -25,24 +26,29 @@ const ProductWhatsIncluded = ({ block, z }) => {
     >
       <h2 className="block-headline m3 nowrap">What's included</h2>
       <div className="flex flex-column col-12 md-col-4">
-        {products.map((flavor, i) => {
-          const flavorTitle = get(flavor, 'fields.productTitle', '');
-          const pintImage = get(flavor, 'fields.pintImage.fields.file.url', '');
-          const description = get(flavor, 'fields.flavorDescription');
+        {includedItems.map(product => {
+          const handle = get(product, 'fields.productHandle', '');
+          const productInfo = get(products, handle, {});
+
           return (
             <div
-              key={`${i}-${get(flavor, 'sys.id', i)}`}
+              key={productInfo.id}
               className={cx(
                 styles['ProductWhatsIncluded__flavor-container'],
                 'flex items-center my2 col-12'
               )}
             >
               <div className="mr3 col-2">
-                <Image alt={`${flavorTitle} image`} src={pintImage} />
+                <Image
+                  alt={`${productInfo.title} image`}
+                  src={productInfo.pintImage}
+                />
               </div>
               <div className="col-10">
-                <h3 className="description-title bold nowrap mb2">{`1x ${flavorTitle}`}</h3>
-                <p className="tout">{description}</p>
+                <h3 className="description-title bold nowrap mb2">{`1x ${
+                  productInfo.title
+                }`}</h3>
+                <p className="tout">{productInfo.flavorDescription}</p>
               </div>
             </div>
           );
