@@ -16,12 +16,12 @@ const ImageDoubleText = ({ block, z }) => {
   return (
     <div
       style={{ zIndex: z }}
-      className={cx(styles['ImageDoubleText'], styles[colorClass], 'p4 drip')}
+      className={cx(styles['ImageDoubleText'], styles[colorClass], 'drip')}
     >
       <div
         className={cx(
           styles['ImageDoubleText--container'],
-          'flex items-center justify-between'
+          'flex items-center justify-between container-width'
         )}
       >
         <div

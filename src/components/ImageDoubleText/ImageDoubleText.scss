@@ -8,10 +8,8 @@
 
   &--container {
     flex-direction: column;
-    margin: 0;
 
     @media ($medium-up) {
-      margin: 0 spacing(24);
       flex-direction: row;
     }
   }
