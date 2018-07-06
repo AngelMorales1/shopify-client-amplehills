@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import {
   updateLineItems,
@@ -9,7 +10,8 @@ import {
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getLineItemPrice from 'utils/getLineItemPrice';
+import products from 'state/selectors/products';
+import lineItems from 'state/selectors/lineItems';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -28,11 +30,12 @@ const Cart = props => {
   };
   const {
     checkout,
-    actions: { removeLineItems }
+    actions: { removeLineItems },
+    items,
+    products
   } = props;
-  const items = get(checkout, 'lineItems', []);
-  console.log(props);
-  return (
+
+  const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
       <Button
         variant="style-none"
@@ -47,40 +50,84 @@ const Cart = props => {
       <h2 className="block-headline-mobile-small">Cart</h2>
       <div className={cx(styles['Cart__container'], 'w100')}>
         <div className="flex xs-hide sm-hide mt4 pt4 justify-between">
-          <span className="bold">Item</span>
-          <div className="flex justify-end col-8">
-            <span className="bold flex justify-center col-4">Quantity</span>
-            <span className="bold flex justify-end col-4">Total Price</span>
-          </div>
+          <span className={cx(styles['Cart__item-title'], 'bold')}>Item</span>
+          <span
+            className={cx(
+              styles['Cart__quantity-title'],
+              'bold flex justify-end col-3'
+            )}
+          >
+            Quantity
+          </span>
+          <span className="bold flex justify-end col-3">Total Price</span>
         </div>
         <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
         <div className="my3">
           {items.map(item => {
-            console.log('from lineitem', items);
+            const link = Object.keys(products).find(handle => {
+              if (products[handle].title === item.title) {
+                return handle;
+              }
+            });
             return (
-              <div key={item.id}>
+              <div key={item.id} className="mb3">
                 <div
                   className={cx(
                     styles['Cart__content-container'],
-                    'flex flex-wrap justify-between'
+                    'flex items-start justify-end'
                   )}
                 >
-                  <div className="md-hide lg-hide flex justify-between w100">
-                    <span className="bold my2 md-hide lg-hide">
-                      {item.title}
-                    </span>
+                  <div className="md-hide lg-hide flex items-start justify-between w100">
+                    <div className="my2">
+                      <Link
+                        className="text-decoration-none"
+                        exact
+                        to={`/products/${link}`}
+                      >
+                        <span className="bold">{item.title}</span>
+                      </Link>
+                      <div className="flex flex-column mt2">
+                        {item.subItems.map(subItem => {
+                          return (
+                            <span
+                              key={subItem.handle}
+                              className="small mb1"
+                            >{`${subItem.quantity}x ${
+                              products[subItem.handle].title
+                            }`}</span>
+                          );
+                        })}
+                      </div>
+                    </div>
                     <span className="bold small my2 md-hide lg-hide">
-                      ${getLineItemPrice(
-                        get(item, 'variant.price', '0.00'),
-                        item.quantity
-                      )}
+                      {item.price}
                     </span>
                   </div>
-                  <span className="bold my2 xs-hide sm-hide">{item.title}</span>
+                  <div
+                    className={cx(
+                      styles['Cart__title'],
+                      'xs-hide sm-hide flex flex-column mr-auto'
+                    )}
+                  >
+                    <Link
+                      className="text-decoration-none my2 xs-hide sm-hide"
+                      exact
+                      to={`/products/${link}`}
+                    >
+                      <span className="bold ">{item.title}</span>
+                    </Link>
+                    {item.subItems.map(subItem => {
+                      return (
+                        <span key={subItem.handle} className="small mb1">{`${
+                          subItem.quantity
+                        }x ${products[subItem.handle].title}`}</span>
+                      );
+                    })}
+                  </div>
                   <div
                     className={cx(
                       styles['Cart__content-inner-wrapper'],
-                      'flex items-center'
+                      'flex items-start mr2'
                     )}
                   >
                     <Button
@@ -103,11 +150,8 @@ const Cart = props => {
                       }
                     />
                   </div>
-                  <span className="bold small my2 xs-hide sm-hide col-1 flex justify-end">
-                    ${getLineItemPrice(
-                      get(item, 'variant.price', '0.00'),
-                      item.quantity
-                    )}
+                  <span className="bold small my2 xs-hide sm-hide col-3 flex justify-end right">
+                    ${item.price}
                   </span>
                 </div>
               </div>
@@ -204,6 +248,18 @@ const Cart = props => {
       <DeleteModal />
     </div>
   );
+
+  const emptyCart = (
+    <div className="flex justify-center items-center flex-column p4">
+      <h2 className="block-headline m4">Your cart is empty</h2>
+      <Link className="text-decoration-none" exact to={`/products`}>
+        {' '}
+        shop{' '}
+      </Link>
+    </div>
+  );
+
+  return items.length > 0 ? cart : emptyCart;
 };
 
 Cart.propTypes = {
@@ -245,7 +301,9 @@ const mapStateToProps = (state, props) => {
     ...state,
     checkout: get(state, 'session.checkout', {}),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
-    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
+    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', []),
+    items: lineItems(state),
+    products: products(state)
   };
 };
 

@@ -7,16 +7,16 @@
     padding: spacing(16);
   }
 
-  &__arrow {
-    width: spacing(4);
-  }
-
   &__container {
     padding: 0;
 
     @media ($medium-up) {
       padding: 0 15%;
     }
+  }
+
+  &__title {
+    margin-right: auto;
   }
 
   &__content-container {
@@ -31,10 +31,24 @@
     flex-direction: row-reverse;
     width: 100%;
     justify-content: space-between;
+
     @media ($medium-up) {
       width: 37%;
       flex-direction: row;
       justify-content: flex-end;
+    }
+  }
+
+  &__item-title {
+    @media ($medium-up) {
+      margin-right: auto;
+    }
+  }
+
+  &__quantity-title {
+    margin-right: 0;
+    @media ($medium-up) {
+      margin-right: spacing(11);
     }
   }
 
