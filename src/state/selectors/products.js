@@ -17,6 +17,7 @@ export default createSelector(
     return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
       const handle = get(product, 'fields.productHandle', '');
+      const description = get(product, 'fields.description', '');
       const flavorDescription = get(product, 'fields.flavorDescription', '');
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
@@ -37,6 +38,7 @@ export default createSelector(
         handle,
         available,
         flavorDescription,
+        description,
         price,
         variants,
         gridImage,

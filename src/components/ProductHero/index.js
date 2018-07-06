@@ -50,7 +50,7 @@ class ProductHero extends Component {
 
   render() {
     const { block, product, z } = this.props;
-    const { gridImage, available, price } = product;
+    const { available, price } = product;
     const fields = get(block, 'fields', {});
 
     return (
@@ -67,7 +67,11 @@ class ProductHero extends Component {
         <div
           className="col col-12 md-col-6 square"
           style={{
-            background: `url(${gridImage}) no-repeat center`,
+            background: `url(${get(
+              fields,
+              'image.fields.file.url',
+              ''
+            )}) no-repeat center`,
             backgroundSize: 'cover'
           }}
         />
@@ -86,7 +90,7 @@ class ProductHero extends Component {
               />
             </div>
             <div>
-              <p className="copy pr2">{product.flavorDescription}</p>
+              <p className="copy pr2">{product.description}</p>
             </div>
             <form className="flex flex-wrap items-center">
               <div className="w100 mt3 mb1">
@@ -108,7 +112,7 @@ class ProductHero extends Component {
               <Button
                 color="madison-blue"
                 onClick={this.addToCart}
-                disabled={!available}
+                disabled={!available || !this.state.shipping}
               >
                 <span className="mr2">Add to Cart</span>
                 <span className="ml2">
