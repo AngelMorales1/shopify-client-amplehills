@@ -15,6 +15,7 @@ import lineItems from 'state/selectors/lineItems';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
+import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './Cart.scss';
 
 const Cart = props => {
@@ -35,18 +36,14 @@ const Cart = props => {
     products
   } = props;
 
+  const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
+
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
-      <Button
-        variant="style-none"
+      <Breadcrumbs
+        breadcrumbs={breadcrumbs}
         className="flex flex-row items-center self-start mb4"
-      >
-        <Image
-          className="flex justify-center mx1"
-          src="/assets/images/icon-arrow-left.svg"
-        />
-        <span className="line-item-title text-peach">Continue Shopping</span>
-      </Button>
+      />
       <h2 className="block-headline-mobile-small">Cart</h2>
       <div className={cx(styles['Cart__container'], 'w100')}>
         <div className="flex xs-hide sm-hide mt4 pt4 justify-between">
@@ -192,7 +189,7 @@ const Cart = props => {
                   'flex justify-between'
                 )}
               >
-                <p className="price-text flex items-center">{`Subtotal: $${
+                <p className="price-text flex items-center mt1">{`Subtotal: $${
                   checkout.subtotalPrice
                 }`}</p>
 
