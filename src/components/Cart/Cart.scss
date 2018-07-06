@@ -115,14 +115,6 @@
     }
   }
 
-  &__message-field {
-    height: spacing(10);
-
-    @media ($medium-up) {
-      height: auto;
-    }
-  }
-
   &__decorative-line {
     border-top: spacing(0.5) solid color('gray');
   }
