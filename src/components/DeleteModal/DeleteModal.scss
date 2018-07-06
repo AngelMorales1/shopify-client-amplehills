@@ -3,7 +3,6 @@
 .DeleteModal {
   pointer-events: none;
   opacity: 0;
-  transition: $transition;
 
   .DeleteModal-inner {
     max-width: spacing(120);
