@@ -253,8 +253,7 @@ const Cart = props => {
     <div className="flex justify-center items-center flex-column p4">
       <h2 className="block-headline m4">Your cart is empty</h2>
       <Link className="text-decoration-none" exact to={`/products`}>
-        {' '}
-        shop{' '}
+        shop
       </Link>
     </div>
   );
