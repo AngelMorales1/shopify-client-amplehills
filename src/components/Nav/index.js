@@ -9,6 +9,7 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import cx from 'classnames';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -26,16 +27,43 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="py2 px4 flex bg-peach text-white items-center clearfix">
-        <div className={`col col-4 flex justify-start ${styles['left-side']}`}>
-          <NavLink exact to="/location" className="ml3 link-text">
+      <div
+        className={cx(
+          styles['Nav'],
+          'flex bg-peach text-white items-center clearfix'
+        )}
+      >
+        <div
+          className={`col col-4 flex justify-start items-center xs-hide sm-hide ${
+            styles['Nav__left-side']
+          }`}
+        >
+          <NavLink exact to="/location" className="ml3 link-text center">
             Locations
           </NavLink>
-          <NavLink exact to="/contact" className="ml3 link-text">
-            Contact
+          <NavLink exact to="/flavors" className="ml3 link-text center">
+            Flavors
+          </NavLink>
+          <NavLink exact to="/events" className="ml3 link-text center">
+            Events
+          </NavLink>
+          <NavLink exact to="/classes-socials" className="ml3 link-text center">
+            Classes &amp; Socials
+          </NavLink>
+          <NavLink exact to="/parties" className="ml3 link-text center">
+            Parties
           </NavLink>
         </div>
-        <div className="col col-4 h100 flex justify-center items-center">
+        <div className="md-hide lg-hide">
+          <NavLink exact to="/menu" className="ml3 link-text center">
+            <div className={cx(styles['Nav__menu-icon-container'])}>
+              <div className={cx(styles['Nav__menu-icon'])} />
+              <div className={cx(styles['Nav__menu-icon'])} />
+              <div className={cx(styles['Nav__menu-icon'])} />
+            </div>
+          </NavLink>
+        </div>
+        <div className="col mx-auto h100 flex justify-center items-center">
           <NavLink exact to="/" className="flex justify-center items-center">
             <Image
               alt="Click the Ample Hills Logo to return to the homepage"
@@ -44,11 +72,17 @@ class Nav extends Component {
           </NavLink>
         </div>
         <div
-          className={`col col-4 flex items-center justify-end clearfix ${
+          className={`col col-4 flex items-center justify-end clearfix xs-hide sm-hide ${
             styles['right-side']
           }`}
         >
-          <NavLink exact to="/profile" className="mr3 link-text">
+          <NavLink exact to="/outstory" className="mr3 link-text center">
+            Our Story
+          </NavLink>
+          <NavLink exact to="/profile" className="mr3 link-text center">
+            <Image src="/assets/images/icon-search.svg" />
+          </NavLink>
+          <NavLink exact to="/profile" className="mr3 link-text center">
             <Image src="/assets/images/bubble-icon.svg" />
           </NavLink>
           <Button

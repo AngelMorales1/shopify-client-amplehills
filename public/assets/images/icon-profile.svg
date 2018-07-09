@@ -1,0 +1,12 @@
+<svg width="22px" height="26px" viewBox="0 0 22 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Profile icon</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Mobile-Nav/Red" transform="translate(-273.000000, -30.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="single-01" transform="translate(275.000000, 32.000000)">
+                <path d="M18,19.3522 C18,18.3418 17.3282143,17.4394 16.3099286,17.0962 C14.814,16.5916 12.3467143,16 9,16 C5.65328571,16 3.186,16.5916 1.69007143,17.0962 C0.671785714,17.4394 0,18.3418 0,19.3522 L0,21 C6.76353751e-17,21.5522847 0.44771525,22 1,22 L17,22 C17.5522847,22 18,21.5522847 18,21 L18,19.3522 Z" id="Shape"></path>
+                <path d="M9,11 C6.23857143,11 4,8.845375 4,6.1875 L4,4.8125 C4,2.154625 6.23857143,0 9,0 C11.7614286,0 14,2.154625 14,4.8125 L14,6.1875 C14,8.845375 11.7614286,11 9,11 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
