@@ -35,13 +35,14 @@ class ProductDetails extends Component {
           <h2 className="block-headline w100 my3">The Details</h2>
           {details.map((detail, i) => {
             const color = this.isActiveFlavor(get(detail, 'sys.id', ''), i)
-              ? 'denim'
-              : 'white-denim';
+              ? 'clear-madison-blue-outline'
+              : 'madison-blue';
 
             return (
               <Button
                 className="m1"
                 color={color}
+                variant="primary-small"
                 key={get(detail, 'sys.id', '')}
                 label={get(detail, 'fields.title', '')}
                 onClick={() =>
