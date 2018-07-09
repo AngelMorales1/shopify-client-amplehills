@@ -24,6 +24,7 @@ class ComicStrip extends Component {
     const { block, z } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
+    console.log(products);
     const colorClass = `ComicStrip--${get(fields, 'color', 'yellow')}`;
     return (
       <div
@@ -38,8 +39,8 @@ class ComicStrip extends Component {
         <div className="w100 flex justify-center">
           {products.map((product, i) => {
             const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
-              ? 'clear-madison-blue-outline'
-              : 'madison-blue';
+              ? 'madison-blue'
+              : 'clear-madison-blue-outline';
 
             return (
               <Button
@@ -92,7 +93,7 @@ class ComicStrip extends Component {
           )}
         >
           {products.map((product, i) => {
-            const comics = get(product, 'fields.comicStrip', []);
+            const comics = get(product, 'fields.comics', []);
             const classes = cx(
               styles['ComicStrip'],
               'py3 flex justify-center',
