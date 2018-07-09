@@ -21,8 +21,8 @@ const ArrowWhite = ({ onMouseDown, isOpen }) => {
 };
 
 class Dropdown extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super(...arguments);
 
     this.state = {
       menuIsOpen: false

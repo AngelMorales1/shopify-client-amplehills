@@ -5,7 +5,8 @@ import styles from './Image.scss';
 
 class Image extends Component {
   constructor(props) {
-    super(props);
+    super(...arguments);
+
     this.state = {
       loaded: false,
       classes: cx('Image preload', props.className),
