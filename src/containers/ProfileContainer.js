@@ -13,7 +13,8 @@ class ProfileContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    products: products(state)
+    products: products(state),
+    user: get(state, 'user')
   };
 };
 
