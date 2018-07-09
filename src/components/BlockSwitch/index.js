@@ -7,6 +7,7 @@ import ProductDetails from 'components/ProductDetails';
 import ImageText from 'components/ImageText';
 import ImageDoubleText from 'components/ImageDoubleText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
+import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -15,6 +16,8 @@ const BlockSwitch = props => {
   switch (type) {
     case 'blockProductHero':
       return <ProductHero {...props} />;
+    case 'blockWhatsIncluded':
+      return <ProductWhatsIncluded {...props} />;
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
     case 'blockImageText':
