@@ -22,9 +22,9 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { data, block, z } = this.props;
+    const { block, z } = this.props;
     const fields = get(block, 'fields', {});
-    const details = get(data, 'productDetails', []);
+    const details = get(fields, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div
@@ -60,7 +60,7 @@ class ProductDetails extends Component {
 
             const classes = cx(
               styles['ProductDetail'],
-              'container-width mx-auto flex flex-wrap py3',
+              'container-width mx-auto flex items-center py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
                   get(detail, 'sys.id', ''),
@@ -71,45 +71,11 @@ class ProductDetails extends Component {
 
             return (
               <div className={classes} key={get(detail, 'sys.id', '')}>
-                <div
-                  className={`${
-                    styles['FlavorHighlight']
-                  } relative col-12 md-col-6 z-1`}
-                >
-                  <div
-                    className={`${
-                      styles['FlavorHighlight--wrapper']
-                    } flex items-center flex-wrap z-1 relative`}
-                  >
-                    <div
-                      className={`${
-                        styles['FlavorHighlight--label']
-                      } w100 p3 flex justify-center items-center circle bg-goldenrod callout`}
-                    >
-                      <p>{get(fields, 'flavorHighlight', '')}</p>
-                    </div>
-                  </div>
-                  <div
-                    className={`${
-                      styles['FlavorHighlight--image']
-                    } circle absolute`}
-                  >
-                    <Image
-                      alt={`${get(fields, 'title', '')} flavor highlight`}
-                      src={get(
-                        fields,
-                        'flavorHighlightImage.fields.file.url',
-                        ''
-                      )}
-                    />
-                  </div>
-                </div>
-
                 <div className="col-12 md-col-6">
                   <div
                     className={cx(
                       styles['ProductDetail--description'],
-                      'flex items-center mb4'
+                      'flex justify-center items-center mb4'
                     )}
                   >
                     <div
@@ -137,7 +103,7 @@ class ProductDetails extends Component {
                   <div
                     className={cx(
                       styles['ProductDetail--description'],
-                      'flex items-center mb4'
+                      'flex items-center'
                     )}
                   >
                     <div
@@ -161,6 +127,44 @@ class ProductDetails extends Component {
                         {get(fields, 'text2', '')}
                       </p>
                     </div>
+                  </div>
+                </div>
+                <div
+                  className={`${
+                    styles['FlavorHighlight']
+                  } relative col-10 md-col-5 z-1`}
+                >
+                  <div
+                    className={`${
+                      styles['FlavorHighlight--wrapper']
+                    } z-1 absolute flex justify-center items-center`}
+                  >
+                    <p
+                      className={cx(
+                        styles['FlavorHighlight--label-text'],
+                        'absolute center callout-small z-1'
+                      )}
+                    >
+                      {get(fields, 'flavorHighlight', '')}
+                    </p>
+                    <div
+                      className={`${
+                        styles['FlavorHighlight--label']
+                      } p3 circle square bg-goldenrod`}
+                    />
+                  </div>
+                  <div>
+                    <div
+                      className="circle square"
+                      style={{
+                        background: `url(${get(
+                          fields,
+                          'flavorHighlightImage.fields.file.url',
+                          ''
+                        )}) no-repeat center`,
+                        backgroundSize: 'cover'
+                      }}
+                    />
                   </div>
                 </div>
               </div>

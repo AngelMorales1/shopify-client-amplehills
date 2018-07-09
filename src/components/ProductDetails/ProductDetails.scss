@@ -1,13 +1,9 @@
 @import 'settings';
 
-$flavor-label-diameter: spacing(40);
-$flavor-image-diameter-mobile: spacing(80);
-$flavor-image-diameter-desktop: spacing(120);
-
 .ProductDetails {
   &--Blue {
     @extend .bg-sky-blue;
-    @extend .text-denim;
+    @extend .text-madison-blue;
   }
 }
 
@@ -17,51 +13,38 @@ $flavor-image-diameter-desktop: spacing(120);
     display: none;
     opacity: 0;
     margin-top: 0;
+    flex-direction: column;
+
     &--active {
       display: flex;
       opacity: 1;
+      display: flex;
+      justify-content: space-between;
     }
 
     .FlavorHighlight {
-      order: 1;
-      display: flex;
-      justify-content: center;
-      // padding-bottom: calc(
-      //   (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
-      // );
+      margin-top: spacing(16);
 
       &--wrapper {
-        width: $flavor-label-diameter;
-        transform: translate(-80%, 80%);
+        min-width: spacing(30);
+        width: 20%;
+        bottom: 0;
+        left: 0;
         @media ($medium-up) {
-          transform: translate(70%, 150%);
+          width: 30%;
         }
       }
 
       &--label {
-        height: $flavor-label-diameter;
+        width: 100%;
       }
 
-      &--image {
-        height: $flavor-image-diameter-mobile;
-        width: $flavor-image-diameter-mobile;
-        // left: calc(#{$flavor-label-diameter} / 3 * 2);
-        top: calc(#{$flavor-label-diameter} / -4);
-
-        @media ($medium-up) {
-          height: $flavor-image-diameter-desktop;
-          width: $flavor-image-diameter-desktop;
-          left: calc(#{$flavor-label-diameter});
-          top: calc(#{$flavor-label-diameter} / -4);
-        }
+      &--label-text {
+        width: 60%;
       }
 
       @media ($medium-up) {
-        order: 3;
-        // margin-top: spacing(-16);
-        // padding-bottom: calc(
-        //   (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
-        // );
+        margin-top: 0;
       }
     }
 
@@ -91,18 +74,9 @@ $flavor-image-diameter-desktop: spacing(120);
       }
     }
 
-    &--detail {
-      order: 3;
-      border: solid-red;
-
-      @media ($medium-up) {
-        order: 2;
-      }
-    }
-
     @media ($medium-up) {
       max-height: 70vh;
-      margin-top: spacing(16);
+      flex-direction: row;
     }
   }
 }
