@@ -1,15 +1,60 @@
 import React, { Component } from 'react';
-import { Button } from 'components/base';
+import { Button, TextField } from 'components/base';
 
 class SignInView extends Component {
+  constructor() {
+    super(...arguments);
+
+    this.state = {
+      email: '',
+      password: ''
+    };
+  }
+
+  handleEmailInputChange = email => this.setState({ email });
+  handlePasswordInputChange = password => this.setState({ password });
+
+  signIn = () => {
+    console.log(this.state);
+  };
+
   render() {
     const { model, user } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="SignIn">
-        <p>Sign In</p>
-        <Button to="/sign-up" label="Don't have an account? Sign up &rarr;" />
+      <div className="SignIn text-container-width mx-auto p3">
+        <h1 className="block-headline">Sign In</h1>
+        <div className="my3">
+          <form>
+            <TextField
+              color="light-gray"
+              placeholder="Email"
+              onChange={this.handleEmailInputChange}
+            />
+            <TextField
+              color="light-gray"
+              type="password"
+              placeholder="Password"
+              onChange={this.handlePasswordInputChange}
+            />
+            <Button
+              className="mt2"
+              type="button"
+              variant="primary"
+              color="madison-blue"
+              onClick={this.signIn}
+              label="Sign In"
+            />
+          </form>
+        </div>
+        <Button
+          className="mt2 inline-block"
+          to="/sign-up"
+          variant="primary"
+          color="white-madison-blue-outline"
+          label="Don't have an account? Sign up &rarr;"
+        />
       </div>
     );
   }

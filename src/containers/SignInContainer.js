@@ -2,6 +2,8 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { signInUser } from 'state/actions/userActions';
+
 import products from 'state/selectors/products';
 import get from 'utils/get';
 
@@ -20,7 +22,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators(
+      {
+        signInUser
+      },
+      dispatch
+    )
   };
 };
 
