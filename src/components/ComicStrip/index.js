@@ -7,7 +7,7 @@ import styles from './ComicStrip.scss';
 
 class ComicStrip extends Component {
   constructor(props) {
-    super(props);
+    super(...arguments);
 
     this.state = {
       activeFlavor: false
