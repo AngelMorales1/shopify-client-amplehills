@@ -57,7 +57,6 @@ class ProductDetails extends Component {
         <div className={`${styles['ProductDetails--container']}`}>
           {details.map((detail, i) => {
             const fields = get(detail, 'fields', {});
-
             const classes = cx(
               styles['ProductDetail'],
               'container-width mx-auto flex items-center py3',
