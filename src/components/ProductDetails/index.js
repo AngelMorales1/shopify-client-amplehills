@@ -7,7 +7,7 @@ import { Image, Button } from 'components/base';
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
-  constructor(props) {
+  constructor() {
     super(...arguments);
 
     this.state = {

@@ -8,7 +8,7 @@ import { Image, Button } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
-  constructor(props) {
+  constructor() {
     super(...arguments);
 
     this.state = {
