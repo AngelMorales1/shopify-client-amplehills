@@ -5,6 +5,7 @@ import HomeContainer from 'containers/HomeContainer';
 import ProductLandingContainer from 'containers/ProductLandingContainer';
 import ProductDetailContainer from 'containers/ProductDetailContainer';
 import ContactUsContainer from 'components/ContactUs';
+import Cart from 'components/Cart';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -16,6 +17,7 @@ const Routes = ({ location }) => (
     />
     <Route path="/products" component={ProductLandingContainer} />
     <Route path="/contact" component={ContactUsContainer} />
+    <Route path="/cart" component={Cart} />
   </Switch>
 );
 

@@ -22,10 +22,9 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { block, z } = this.props;
+    const { data, block, z } = this.props;
     const fields = get(block, 'fields', {});
-    const details = get(fields, 'productDetails', []);
-
+    const details = get(data, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div

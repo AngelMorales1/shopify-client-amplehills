@@ -41,6 +41,15 @@ em {
   font-size: $font-7;
 }
 
+.block-headline-mobile-small {
+  font-family: $font-carter;
+  font-size: $font-5;
+
+  @media ($medium-up) {
+    font-size: $font-7;
+  }
+}
+
 .block-subheadline {
   font-size: $font-3;
   line-height: $font-5;
@@ -53,6 +62,15 @@ em {
 
 .title {
   font-size: $font-7;
+}
+
+.sub-title {
+  font-family: $font-carter;
+  font-size: $font-6;
+
+  @media ($medium-up) {
+    font-size: $font-5;
+  }
 }
 
 .callout {
@@ -131,5 +149,15 @@ em {
 }
 
 .info-text-small {
-  font-size: $font-1;
+  font-size: $font-2;
+  line-height: $font-6;
+}
+
+.price-text {
+  @extend .bold;
+  font-size: $font-4;
+
+  @media ($medium-up) {
+    font-size: $font-3;
+  }
 }

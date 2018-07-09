@@ -58,10 +58,10 @@ class Nav extends Component {
             label="Shop Online"
           />
           <Button
-            className="ml2 small"
+            className="ml2 small flex items-center justify-center"
             variant="circle"
             color="madison-blue"
-            onClick={this.toggleMiniCart}
+            to="/cart"
             label={this.props.totalItems.toString()}
           />
         </div>
