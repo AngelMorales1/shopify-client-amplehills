@@ -1,8 +1,8 @@
 @import 'settings';
 
-$flavor-label-diameter: spacing(50);
-$flavor-image-diameter-mobile: spacing(100);
-$flavor-image-diameter-desktop: spacing(160);
+$flavor-label-diameter: spacing(40);
+$flavor-image-diameter-mobile: spacing(80);
+$flavor-image-diameter-desktop: spacing(120);
 
 .ProductDetails {
   &--Blue {
@@ -16,7 +16,7 @@ $flavor-image-diameter-desktop: spacing(160);
     @extend .transition;
     display: none;
     opacity: 0;
-
+    margin-top: 0;
     &--active {
       display: flex;
       opacity: 1;
@@ -24,15 +24,17 @@ $flavor-image-diameter-desktop: spacing(160);
 
     .FlavorHighlight {
       order: 1;
-      padding-bottom: calc(
-        (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
-      );
+      display: flex;
+      justify-content: center;
+      // padding-bottom: calc(
+      //   (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
+      // );
 
       &--wrapper {
         width: $flavor-label-diameter;
-
+        transform: translate(-80%, 80%);
         @media ($medium-up) {
-          transform: translate(50%, 50%);
+          transform: translate(70%, 150%);
         }
       }
 
@@ -43,7 +45,7 @@ $flavor-image-diameter-desktop: spacing(160);
       &--image {
         height: $flavor-image-diameter-mobile;
         width: $flavor-image-diameter-mobile;
-        left: calc(#{$flavor-label-diameter} / 3 * 2);
+        // left: calc(#{$flavor-label-diameter} / 3 * 2);
         top: calc(#{$flavor-label-diameter} / -4);
 
         @media ($medium-up) {
@@ -56,23 +58,42 @@ $flavor-image-diameter-desktop: spacing(160);
 
       @media ($medium-up) {
         order: 3;
-        margin-top: spacing(-16);
-        padding-bottom: calc(
-          (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
-        );
+        // margin-top: spacing(-16);
+        // padding-bottom: calc(
+        //   (#{$flavor-image-diameter-mobile} - #{$flavor-label-diameter}) / 2
+        // );
       }
     }
 
     &--description {
-      order: 2;
+      flex-direction: column;
 
       @media ($medium-up) {
-        order: 1;
+        flex-direction: row;
+      }
+    }
+
+    &--description-image {
+      margin-right: 0;
+      margin-bottom: spacing(12);
+
+      @media ($medium-up) {
+        margin-right: spacing(16);
+        margin-bottom: 0;
+      }
+    }
+
+    &--description-text {
+      text-align: center;
+
+      @media ($medium-up) {
+        text-align: left;
       }
     }
 
     &--detail {
       order: 3;
+      border: solid-red;
 
       @media ($medium-up) {
         order: 2;
@@ -80,8 +101,8 @@ $flavor-image-diameter-desktop: spacing(160);
     }
 
     @media ($medium-up) {
-      flex-direction: column;
       max-height: 70vh;
+      margin-top: spacing(16);
     }
   }
 }

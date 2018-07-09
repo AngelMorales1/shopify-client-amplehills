@@ -81,12 +81,6 @@ class ProductDetails extends Component {
                       styles['FlavorHighlight--wrapper']
                     } flex items-center flex-wrap z-1 relative`}
                   >
-                    <div className="w100 center">
-                      <Image
-                        className="arrow mb1"
-                        src="/assets/images/arrow-right.svg"
-                      />
-                    </div>
                     <div
                       className={`${
                         styles['FlavorHighlight--label']
@@ -110,46 +104,61 @@ class ProductDetails extends Component {
                     />
                   </div>
                 </div>
-                <div
-                  className={`${
-                    styles['ProductDetail--description']
-                  } col-12 md-col-6 mb2`}
-                >
-                  <div className="col col-12 md-col-3">
-                    <Image
-                      alt={`pint of ${get(fields, 'title', '')}`}
-                      className="col-3 md-col-9"
-                      src={get(fields, 'pintImage.fields.file.url', '')}
-                    />
-                  </div>
-                  <div className="col col-12 md-col-9">
-                    <p className="description">
-                      {get(fields, 'description', '')}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={`${
-                    styles['ProductDetail--detail']
-                  } col-12 md-col-6 mb2`}
-                >
-                  <div className="flex">
-                    <div className="col-4 md-col-3">
+
+                <div className="col-12 md-col-6">
+                  <div
+                    className={cx(
+                      styles['ProductDetail--description'],
+                      'flex items-center mb4'
+                    )}
+                  >
+                    <div
+                      className={cx(
+                        styles['ProductDetail--description-image'],
+                        'col-3 md-col-2'
+                      )}
+                    >
                       <Image
-                        alt={`${get(fields, 'title', '')} ice cream details`}
-                        className="circle square col-12 md-col-9"
-                        src={get(fields, 'detailsImage.fields.file.url', '')}
+                        alt={`${get(fields, 'title', '')} description1 image`}
+                        src={get(fields, 'text1Image.fields.file.url', '')}
                       />
                     </div>
-                    <div className="col-8 md-col-9 flex flex-wrap content-center items-center">
-                      <div className="w100">
-                        <Image
-                          className="arrow mb1"
-                          src="/assets/images/arrow-left.svg"
-                        />
-                      </div>
-                      <p className="callout-small">
-                        {get(fields, 'details', '')}
+                    <div className="md-col-10">
+                      <p
+                        className={cx(
+                          styles['ProductDetail--description-text'],
+                          'block-subheadline'
+                        )}
+                      >
+                        {get(fields, 'text1', '')}
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className={cx(
+                      styles['ProductDetail--description'],
+                      'flex items-center mb4'
+                    )}
+                  >
+                    <div
+                      className={cx(
+                        styles['ProductDetail--description-image'],
+                        'col-3 md-col-2'
+                      )}
+                    >
+                      <Image
+                        alt={`${get(fields, 'title', '')} description1 image`}
+                        src={get(fields, 'text2Image.fields.file.url', '')}
+                      />
+                    </div>
+                    <div className="md-col-10">
+                      <p
+                        className={cx(
+                          styles['ProductDetail--description-text'],
+                          'block-subheadline'
+                        )}
+                      >
+                        {get(fields, 'text2', '')}
                       </p>
                     </div>
                   </div>
