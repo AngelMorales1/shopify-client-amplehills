@@ -1,0 +1,36 @@
+@import 'settings';
+
+.ImageDoubleText {
+  &--light-yellow {
+    @extend .bg-light-yellow;
+    @extend .text-madison-blue;
+  }
+
+  &--container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &--image-container {
+    width: 56%;
+    min-width: spacing(100);
+    margin-top: spacing(-50);
+    margin-left: spacing(-55);
+
+    @media ($medium-up) {
+      margin-top: spacing(-120);
+      margin-left: spacing(-54);
+    }
+  }
+
+  &--text-container {
+    margin: spacing(8);
+
+    @media ($medium-up) {
+      margin: spacing(12);
+    }
+  }
+}

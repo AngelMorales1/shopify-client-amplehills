@@ -5,6 +5,7 @@ import get from 'utils/get';
 import ProductHero from 'components/ProductHero';
 import ProductDetails from 'components/ProductDetails';
 import ImageText from 'components/ImageText';
+import ImageDoubleText from 'components/ImageDoubleText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 
 const BlockSwitch = props => {
@@ -18,6 +19,8 @@ const BlockSwitch = props => {
       return <ProductDetails {...props} />;
     case 'blockImageText':
       return <ImageText {...props} />;
+    case 'blockImageDoubleText':
+      return <ImageDoubleText {...props} />;
     case 'blockChooseYourOwnStory':
       return <ChooseYourOwnStory {...props} />;
     default:
