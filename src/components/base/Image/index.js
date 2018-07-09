@@ -4,9 +4,8 @@ import cx from 'classnames';
 import styles from './Image.scss';
 
 class Image extends Component {
-  constructor(...args) {
-    super(...args);
-    const props = args[0];
+  constructor(props) {
+    super(...arguments);
 
     this.state = {
       loaded: false,

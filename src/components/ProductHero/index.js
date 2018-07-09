@@ -11,8 +11,8 @@ import OurPledge from 'components/OurPledge';
 import styles from './ProductHero.scss';
 
 class ProductHero extends Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(...arguments);
 
     this.state = {
       quantity: 1

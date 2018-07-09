@@ -8,8 +8,8 @@ import { Image, Button } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(...arguments);
 
     this.state = {
       ourPledgeOverlayIsOpen: false

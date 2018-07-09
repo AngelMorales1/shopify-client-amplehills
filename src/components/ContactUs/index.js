@@ -5,8 +5,8 @@ import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(...arguments);
 
     this.state = {
       checkedRadioField: ''
