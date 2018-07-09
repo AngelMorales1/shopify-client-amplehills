@@ -24,8 +24,8 @@ class ComicStrip extends Component {
     const { block, z } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
-    console.log(products);
     const colorClass = `ComicStrip--${get(fields, 'color', 'yellow')}`;
+
     return (
       <div
         style={{ zIndex: z }}
@@ -104,6 +104,7 @@ class ComicStrip extends Component {
                 )
               }
             );
+
             return (
               <div className={cx(classes)} key={get(product, 'sys.id', '')}>
                 {comics.map((comic, i) => {
@@ -130,6 +131,7 @@ class ComicStrip extends Component {
                 >
                   {comics.map((comic, i) => {
                     const comicUrl = get(comic, 'fields.file.url', '');
+
                     return (
                       <div
                         key={`${i}-${get(comic, 'sys.id', '')}`}
