@@ -37,7 +37,6 @@ const Cart = props => {
   } = props;
 
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
-
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
       <Breadcrumbs
@@ -61,11 +60,10 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
         <div className="my3">
           {items.map(item => {
-            const link = Object.keys(products).find(handle => {
-              if (products[handle].title === item.title) {
-                return handle;
-              }
-            });
+            const link = Object.values(products).find(
+              value => value.id === item.productId
+            ).handle;
+
             return (
               <div key={item.id} className="mb3">
                 <div

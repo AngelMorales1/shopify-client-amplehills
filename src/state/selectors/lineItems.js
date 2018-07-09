@@ -30,13 +30,16 @@ export default createSelector(
         (a, b) => b.quantity - a.quantity
       );
 
+      const productId = get(item, 'variant.id', '');
+
       lineItems.push({
         id,
         title,
         price,
         quantity,
         attributes,
-        subItems
+        subItems,
+        productId
       });
 
       return lineItems;
