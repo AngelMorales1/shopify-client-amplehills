@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import totalItems from 'state/selectors/totalItems';
@@ -17,13 +17,9 @@ import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
-  constructor(props) {
-    super(...arguments);
-
-    this.state = {
-      currentBreakpoint: Global.breakpoints.medium.label
-    };
-  }
+  state = {
+    currentBreakpoint: Global.breakpoints.medium.label
+  };
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
@@ -85,7 +81,7 @@ class Nav extends Component {
         </div>
         <div className={`col col-5 flex items-center ${styles['right-side']}`}>
           {this.state.currentBreakpoint === 'medium' ? (
-            <React.Fragment>
+            <Fragment>
               <NavLink exact to="/profile" className="mr3 link-text center">
                 <Image className="icon" src="/assets/images/bubble-icon.svg" />
               </NavLink>
@@ -96,16 +92,16 @@ class Nav extends Component {
                 color="white-peach"
                 label="Shop Online"
               />
-            </React.Fragment>
+            </Fragment>
           ) : (
-            <React.Fragment>
+            <Fragment>
               <NavLink exact to="/products" className="link-text center">
                 Shop
               </NavLink>
               <NavLink exact to="/profile" className="link-text center">
                 <Image src="/assets/images/icon-profile.svg" />
               </NavLink>
-            </React.Fragment>
+            </Fragment>
           )}
           <Button
             className="small flex items-center justify-center"
