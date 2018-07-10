@@ -1,27 +1,38 @@
-@import 'settings';
+@import 'settings', 'src/styles/typography';
 
 .Nav {
-  padding: spacing(8) spacing(8);
+  padding: spacing(4) spacing(4);
 
   @media ($medium-up) {
-    padding: spacing(16) spacing(8);
+    padding: spacing(8) spacing(12);
   }
 
-  &__left-side {
-    > a:first-of-type {
-      margin-left: 0;
+  .left-side {
+    order: 2;
+    justify-content: center;
+
+    @media ($medium-up) {
+      order: 1;
+      justify-content: flex-start;
     }
   }
 
-  &__menu-icon-container {
-    div:nth-child(2) {
-      margin: spacing(1) 0;
+  .logo-container {
+    order: 1;
+    justify-content: flex-start;
+
+    @media ($medium-up) {
+      order: 2;
+      justify-content: center;
     }
   }
 
-  &__menu-icon {
-    height: 0;
-    border-radius: spacing(1);
-    border: spacing(0.4) solid color('white');
+  .right-side {
+    order: 3;
+    justify-content: space-between;
+
+    @media ($medium-up) {
+      justify-content: flex-end;
+    }
   }
 }

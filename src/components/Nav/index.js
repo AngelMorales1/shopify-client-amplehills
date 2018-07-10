@@ -10,12 +10,35 @@ import {
 import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
+import Global from 'constants/Global';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
+  constructor(props) {
+    super(...arguments);
+
+    this.state = {
+      currentBreakpoint: Global.breakpoints.medium.label
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+  }
+
+  updateWindow = () => {
+    const { small, medium } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
+  };
+
   toggleMiniCart = () => {
     const {
       miniCartIsOpen,
@@ -28,71 +51,68 @@ class Nav extends Component {
   render() {
     return (
       <div
-        className={cx(
-          styles['Nav'],
-          'flex bg-peach text-white items-center clearfix'
-        )}
+        className={cx(styles['Nav'], 'flex bg-peach text-white items-center')}
       >
         <div
-          className={`col col-4 flex justify-start items-center xs-hide sm-hide ${
-            styles['Nav__left-side']
+          className={`col col-4 md-col-5 flex items-center ${
+            styles['left-side']
           }`}
         >
-          <NavLink exact to="/location" className="ml3 link-text center">
+          <NavLink exact to="/location" className="link-text center">
             Locations
           </NavLink>
-          <NavLink exact to="/flavors" className="ml3 link-text center">
-            Flavors
-          </NavLink>
-          <NavLink exact to="/events" className="ml3 link-text center">
-            Events
-          </NavLink>
-          <NavLink exact to="/classes-socials" className="ml3 link-text center">
-            Classes &amp; Socials
-          </NavLink>
-          <NavLink exact to="/parties" className="ml3 link-text center">
-            Parties
+          <NavLink
+            exact
+            to="/contact"
+            className="ml3 link-text center xs-hide sm-hide"
+          >
+            Contact
           </NavLink>
         </div>
-        <div className="md-hide lg-hide">
-          <NavLink exact to="/menu" className="ml3 link-text center">
-            <div className={cx(styles['Nav__menu-icon-container'])}>
-              <div className={cx(styles['Nav__menu-icon'])} />
-              <div className={cx(styles['Nav__menu-icon'])} />
-              <div className={cx(styles['Nav__menu-icon'])} />
-            </div>
-          </NavLink>
-        </div>
-        <div className="col mx-auto h100 flex justify-center items-center">
-          <NavLink exact to="/" className="flex justify-center items-center">
+        <div
+          className={cx(
+            styles['logo-container'],
+            'col col-3 md-col-4 h100 flex items-center'
+          )}
+        >
+          <NavLink exact to="/" className="flex items-center">
             <Image
+              className="col-12 md-col-10"
               alt="Click the Ample Hills Logo to return to the homepage"
               src="/assets/images/ample-hills-logo.svg"
             />
           </NavLink>
         </div>
         <div
-          className={`col col-4 flex items-center justify-end clearfix xs-hide sm-hide ${
+          className={`col col-5 md-col-5 flex items-center ${
             styles['right-side']
           }`}
         >
-          <NavLink exact to="/outstory" className="mr3 link-text center">
-            Our Story
-          </NavLink>
-          <NavLink exact to="/profile" className="mr3 link-text center">
-            <Image src="/assets/images/icon-search.svg" />
-          </NavLink>
-          <NavLink exact to="/profile" className="mr3 link-text center">
-            <Image src="/assets/images/bubble-icon.svg" />
-          </NavLink>
+          {this.state.currentBreakpoint === 'medium' ? (
+            <React.Fragment>
+              <NavLink exact to="/profile" className="mr3 link-text center">
+                <Image className="icon" src="/assets/images/bubble-icon.svg" />
+              </NavLink>
+              <Button
+                className="mr3"
+                to="/products"
+                variant="primary-small"
+                color="white-peach"
+                label="Shop Online"
+              />
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <NavLink exact to="/products" className="link-text center">
+                Shop
+              </NavLink>
+              <NavLink exact to="/profile" className="link-text center">
+                <Image src="/assets/images/icon-profile.svg" />
+              </NavLink>
+            </React.Fragment>
+          )}
           <Button
-            to="/products"
-            variant="primary-small"
-            color="white-peach"
-            label="Shop Online"
-          />
-          <Button
-            className="ml2 small flex items-center justify-center"
+            className="small flex items-center justify-center"
             variant="circle"
             color="madison-blue"
             to="/cart"

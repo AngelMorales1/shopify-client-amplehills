@@ -1,0 +1,12 @@
+@import 'settings';
+
+.MobileNavModal {
+  color: color('peach');
+  pointer-events: none;
+  opacity: 0;
+
+  &--active {
+    pointer-events: all;
+    opacity: 1;
+  }
+}
