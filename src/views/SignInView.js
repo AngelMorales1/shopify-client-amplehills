@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
+import get from 'utils/get';
+
 import { Button, TextField } from 'components/base';
 
 class SignInView extends Component {
@@ -16,11 +19,14 @@ class SignInView extends Component {
 
   signIn = () => {
     console.log(this.state);
+    this.props.actions.signInUser(this.state);
   };
 
   render() {
     const { model, user } = this.props;
     if (model.isError) return <h1>Error</h1>;
+
+    if (get(user, 'id', 0)) return <Redirect to="/profile" />;
 
     return (
       <div className="SignIn text-container-width mx-auto p3">
@@ -28,11 +34,13 @@ class SignInView extends Component {
         <div className="my3">
           <form>
             <TextField
+              id="email"
               color="light-gray"
               placeholder="Email"
               onChange={this.handleEmailInputChange}
             />
             <TextField
+              id="password"
               color="light-gray"
               type="password"
               placeholder="Password"
