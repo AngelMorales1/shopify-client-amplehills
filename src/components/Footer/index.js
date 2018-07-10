@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import styles from './Footer.scss';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
@@ -42,3 +44,35 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
 };
 
 export default Footer;
+
+Footer.propTypes = {
+  footerIllustration: PropTypes.shape({
+    fields: PropTypes.shape({
+      description: PropTypes.string,
+      file: PropTypes.shape({
+        title: PropTypes.string,
+        url: PropTypes.string
+      })
+    })
+  }),
+  footerLinks: PropTypes.object,
+  locations: PropTypes.shape({
+    items: PropTypes.array
+  })
+};
+
+Footer.defaultProps = {
+  footerIllustration: {
+    fields: {
+      description: '',
+      file: {
+        title: '',
+        url: ''
+      }
+    }
+  },
+  footerLinks: {},
+  locations: {
+    items: []
+  }
+};

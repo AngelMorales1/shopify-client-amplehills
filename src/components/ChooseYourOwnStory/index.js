@@ -367,7 +367,8 @@ ChooseYourOwnStory.propTypes = {
         productHandle: PropTypes.string
       })
     )
-  })
+  }),
+  ourPledge: PropTypes.object
 };
 
 ChooseYourOwnStory.defaultProps = {
@@ -377,7 +378,8 @@ ChooseYourOwnStory.defaultProps = {
     title: '',
     description: '',
     products: []
-  }
+  },
+  ourPledge: {}
 };
 
 export default ChooseYourOwnStory;

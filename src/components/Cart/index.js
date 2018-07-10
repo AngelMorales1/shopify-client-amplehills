@@ -262,15 +262,24 @@ Cart.propTypes = {
     updateLineItems: PropTypes.func
   }),
   checkout: PropTypes.shape({
-    id: PropTypes.string,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        id: PropTypes.string,
-        quantity: PropTypes.number
-      })
-    )
-  })
+    subtotalPrice: PropTypes.string,
+    id: PropTypes.string
+  }),
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      price: PropTypes.string,
+      productId: PropTypes.string,
+      subItems: PropTypes.arrayOf(
+        PropTypes.shape({
+          handle: PropTypes.string,
+          quantity: PropTypes.number
+        })
+      ),
+      title: PropTypes.string
+    })
+  ),
+  products: PropTypes.object
 };
 
 Cart.defaultProps = {
@@ -279,15 +288,20 @@ Cart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: {
+    subtotalPrice: '',
+    id: ''
+  },
+  items: PropTypes.arrayOf({
     id: '',
-    items: [
-      {
-        id: '',
-        title: '',
-        quantity: 1
-      }
-    ]
-  }
+    price: '',
+    productId: '',
+    subItems: PropTypes.arrayOf({
+      handle: '',
+      quantity: 0
+    }),
+    title: ''
+  }),
+  products: {}
 };
 
 const mapStateToProps = (state, props) => {

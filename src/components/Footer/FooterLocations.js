@@ -1,10 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import FooterRegions from './FooterRegions.js';
 import styles from './Footer.scss';
 
 const FooterLocations = ({ locations }) => {
   const regions = Object.keys(locations);
+
   return (
     <div
       className={cx(
@@ -32,3 +35,11 @@ const FooterLocations = ({ locations }) => {
 };
 
 export default FooterLocations;
+
+FooterLocations.propTypes = {
+  locations: PropTypes.object
+};
+
+FooterLocations.defaultProps = {
+  locations: {}
+};

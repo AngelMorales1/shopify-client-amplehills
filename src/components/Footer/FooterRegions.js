@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { sortHours } from 'utils/sortHours';
 import styles from './Footer.scss';
-import cx from 'classnames';
 
 const FooterRegions = ({ region, stores }) => {
   return (
@@ -37,3 +38,47 @@ const FooterRegions = ({ region, stores }) => {
 };
 
 export default FooterRegions;
+
+FooterRegions.propTypes = {
+  region: PropTypes.string,
+  stores: PropTypes.arrayOf(
+    PropTypes.shape({
+      fields: PropTypes.shape({
+        title: PropTypes.string,
+        delivery: PropTypes.bool,
+        monday: PropTypes.string,
+        tuesday: PropTypes.string,
+        wednesday: PropTypes.string,
+        thursday: PropTypes.string,
+        friday: PropTypes.string,
+        saturday: PropTypes.string,
+        sunday: PropTypes.string
+      }),
+      sys: PropTypes.shape({
+        id: PropTypes.string
+      })
+    })
+  )
+};
+
+FooterRegions.defaultProps = {
+  region: '',
+  stores: [
+    {
+      fields: {
+        title: '',
+        delivery: false,
+        monday: '',
+        tuesday: '',
+        wednesday: '',
+        thursday: '',
+        friday: '',
+        saturday: '',
+        sunday: ''
+      },
+      sys: {
+        id: ''
+      }
+    }
+  ]
+};
