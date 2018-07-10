@@ -22,9 +22,9 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { data, block, z } = this.props;
+    const { block, z } = this.props;
     const fields = get(block, 'fields', {});
-    const details = get(data, 'productDetails', []);
+    const details = get(fields, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div
@@ -35,13 +35,14 @@ class ProductDetails extends Component {
           <h2 className="block-headline w100 my3">The Details</h2>
           {details.map((detail, i) => {
             const color = this.isActiveFlavor(get(detail, 'sys.id', ''), i)
-              ? 'denim'
-              : 'white-denim';
+              ? 'clear-madison-blue-outline'
+              : 'madison-blue';
 
             return (
               <Button
                 className="m1"
                 color={color}
+                variant="primary-small"
                 key={get(detail, 'sys.id', '')}
                 label={get(detail, 'fields.title', '')}
                 onClick={() =>
@@ -56,10 +57,9 @@ class ProductDetails extends Component {
         <div className={`${styles['ProductDetails--container']}`}>
           {details.map((detail, i) => {
             const fields = get(detail, 'fields', {});
-
             const classes = cx(
               styles['ProductDetail'],
-              'container-width mx-auto flex flex-wrap py3',
+              'container-width mx-auto flex items-center py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
                   get(detail, 'sys.id', ''),
@@ -70,87 +70,100 @@ class ProductDetails extends Component {
 
             return (
               <div className={classes} key={get(detail, 'sys.id', '')}>
+                <div className="col-12 md-col-6">
+                  <div
+                    className={cx(
+                      styles['ProductDetail--description'],
+                      'flex justify-center items-center mb4'
+                    )}
+                  >
+                    <div
+                      className={cx(
+                        styles['ProductDetail--description-image'],
+                        'col-3 md-col-2'
+                      )}
+                    >
+                      <Image
+                        alt={`${get(fields, 'title', '')} description image`}
+                        src={get(fields, 'text1Image.fields.file.url', '')}
+                      />
+                    </div>
+                    <div className="md-col-10">
+                      <p
+                        className={cx(
+                          styles['ProductDetail--description-text'],
+                          'block-subheadline'
+                        )}
+                      >
+                        {get(fields, 'text1', '')}
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    className={cx(
+                      styles['ProductDetail--description'],
+                      'flex items-center'
+                    )}
+                  >
+                    <div
+                      className={cx(
+                        styles['ProductDetail--description-image'],
+                        'col-3 md-col-2'
+                      )}
+                    >
+                      <Image
+                        alt={`${get(fields, 'title', '')} description image`}
+                        src={get(fields, 'text2Image.fields.file.url', '')}
+                      />
+                    </div>
+                    <div className="md-col-10">
+                      <p
+                        className={cx(
+                          styles['ProductDetail--description-text'],
+                          'block-subheadline'
+                        )}
+                      >
+                        {get(fields, 'text2', '')}
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <div
                   className={`${
                     styles['FlavorHighlight']
-                  } relative col-12 md-col-6 z-1`}
+                  } relative col-10 md-col-5 z-1`}
                 >
                   <div
                     className={`${
                       styles['FlavorHighlight--wrapper']
-                    } flex items-center flex-wrap z-1 relative`}
+                    } z-1 absolute flex justify-center items-center`}
                   >
-                    <div className="w100 center">
-                      <Image
-                        className="arrow mb1"
-                        src="/assets/images/arrow-right.svg"
-                      />
-                    </div>
+                    <p
+                      className={cx(
+                        styles['FlavorHighlight--label-text'],
+                        'absolute center callout-small z-1'
+                      )}
+                    >
+                      {get(fields, 'flavorHighlight', '')}
+                    </p>
                     <div
                       className={`${
                         styles['FlavorHighlight--label']
-                      } w100 p3 flex justify-center items-center circle bg-goldenrod callout`}
-                    >
-                      <p>{get(fields, 'flavorHighlight', '')}</p>
-                    </div>
-                  </div>
-                  <div
-                    className={`${
-                      styles['FlavorHighlight--image']
-                    } circle absolute`}
-                  >
-                    <Image
-                      alt={`${get(fields, 'title', '')} flavor highlight`}
-                      src={get(
-                        fields,
-                        'flavorHighlightImage.fields.file.url',
-                        ''
-                      )}
+                      } p3 circle square bg-goldenrod`}
                     />
                   </div>
-                </div>
-                <div
-                  className={`${
-                    styles['ProductDetail--description']
-                  } col-12 md-col-6 mb2`}
-                >
-                  <div className="col col-12 md-col-3">
-                    <Image
-                      alt={`pint of ${get(fields, 'title', '')}`}
-                      className="col-3 md-col-9"
-                      src={get(fields, 'pintImage.fields.file.url', '')}
+                  <div>
+                    <div
+                      className="circle square"
+                      style={{
+                        background: `url(${get(
+                          fields,
+                          'flavorHighlightImage.fields.file.url',
+                          ''
+                        )}) no-repeat center`,
+                        backgroundSize: 'cover'
+                      }}
                     />
-                  </div>
-                  <div className="col col-12 md-col-9">
-                    <p className="description">
-                      {get(fields, 'description', '')}
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={`${
-                    styles['ProductDetail--detail']
-                  } col-12 md-col-6 mb2`}
-                >
-                  <div className="flex">
-                    <div className="col-4 md-col-3">
-                      <Image
-                        alt={`${get(fields, 'title', '')} ice cream details`}
-                        className="circle square col-12 md-col-9"
-                        src={get(fields, 'detailsImage.fields.file.url', '')}
-                      />
-                    </div>
-                    <div className="col-8 md-col-9 flex flex-wrap content-center items-center">
-                      <div className="w100">
-                        <Image
-                          className="arrow mb1"
-                          src="/assets/images/arrow-left.svg"
-                        />
-                      </div>
-                      <p className="callout-small">
-                        {get(fields, 'details', '')}
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>

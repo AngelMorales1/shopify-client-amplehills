@@ -106,6 +106,12 @@
     @extend .text-white;
   }
 
+  &--clear-madison-blue-outline {
+    @extend .text-madison-blue;
+    border: spacing(0.75) solid color('madison-blue');
+    background-color: Transparent;
+  }
+
   &--madison-blue-outline {
     @extend .bg-madison-blue;
     @extend .text-white;

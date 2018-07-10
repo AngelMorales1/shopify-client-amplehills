@@ -84,7 +84,11 @@ em {
 
 .callout-small {
   font-family: $font-carter;
-  font-size: $font-4;
+  font-size: $font-2;
+
+  @media ($medium-up) {
+    font-size: $font-4;
+  }
 }
 
 .copy {
