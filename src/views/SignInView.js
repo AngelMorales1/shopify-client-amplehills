@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import get from 'utils/get';
+import { PENDING } from 'constants/Status';
 
 import { Button, TextField } from 'components/base';
 
@@ -19,7 +20,7 @@ class SignInView extends Component {
   };
 
   render() {
-    const { model, customer } = this.props;
+    const { model, customer, customerSigningIn } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     if (get(customer, 'id', '')) return <Redirect to="/profile" />;
@@ -43,6 +44,7 @@ class SignInView extends Component {
               onChange={this.handlePasswordInputChange}
             />
             <Button
+              disabled={customerSigningIn === PENDING}
               className="mt2"
               type="button"
               variant="primary"

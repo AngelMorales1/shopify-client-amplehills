@@ -7,11 +7,14 @@ import {
   CANCEL_REMOVE_LINE_ITEMS
 } from 'state/actions/checkoutActions';
 
+import { SIGN_IN_CUSTOMER } from 'state/actions/customerActions';
+
 const initialState = {
   initializeApplication: IDLE,
   addLineItemsStatus: IDLE,
   lineItemsBeingUpdated: [],
-  lineItemsBeingRemoved: []
+  lineItemsBeingRemoved: [],
+  customerSigningIn: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -57,6 +60,11 @@ export default (state = initialState, action) => {
           item => item !== action.payload
         )
       };
+
+    case `${SIGN_IN_CUSTOMER}_PENDING`:
+      return { ...state, customerSigningIn: PENDING };
+    case `${SIGN_IN_CUSTOMER}_FULFILLED`:
+      return { ...state, customerSigningIn: FULFILLED };
 
     default:
       return state;
