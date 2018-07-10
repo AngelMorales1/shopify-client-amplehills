@@ -14,7 +14,8 @@ class SignInView extends Component {
   handleEmailInputChange = email => this.setState({ email });
   handlePasswordInputChange = password => this.setState({ password });
 
-  signIn = () => {
+  signIn = event => {
+    event.preventDefault();
     const { email, password } = this.state;
     this.props.actions.signInCustomer({ email, password });
   };
@@ -29,7 +30,7 @@ class SignInView extends Component {
       <div className="SignIn text-container-width mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
         <div className="my3">
-          <form>
+          <form onSubmit={e => this.signIn(e)}>
             <TextField
               id="email"
               color="light-gray"
@@ -46,10 +47,9 @@ class SignInView extends Component {
             <Button
               disabled={customerSigningIn === PENDING}
               className="mt2"
-              type="button"
+              type="submit"
               variant="primary"
               color="madison-blue"
-              onClick={this.signIn}
               label="Sign In"
             />
           </form>
