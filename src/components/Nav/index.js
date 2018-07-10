@@ -83,11 +83,7 @@ class Nav extends Component {
             />
           </NavLink>
         </div>
-        <div
-          className={`col col-5 md-col-5 flex items-center ${
-            styles['right-side']
-          }`}
-        >
+        <div className={`col col-5 flex items-center ${styles['right-side']}`}>
           {this.state.currentBreakpoint === 'medium' ? (
             <React.Fragment>
               <NavLink exact to="/profile" className="mr3 link-text center">
