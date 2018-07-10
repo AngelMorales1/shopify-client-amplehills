@@ -17,7 +17,7 @@ const persistConfig = {
   key: 'root',
   storage,
   debug: process.env.NODE_ENV === 'development',
-  whitelist: ['session']
+  whitelist: ['session', 'customer']
 };
 
 const persistedReducer = persistReducer(
