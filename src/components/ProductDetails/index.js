@@ -84,7 +84,7 @@ class ProductDetails extends Component {
                       )}
                     >
                       <Image
-                        alt={`${get(fields, 'title', '')} description1 image`}
+                        alt={`${get(fields, 'title', '')} description image`}
                         src={get(fields, 'text1Image.fields.file.url', '')}
                       />
                     </div>
@@ -112,7 +112,7 @@ class ProductDetails extends Component {
                       )}
                     >
                       <Image
-                        alt={`${get(fields, 'title', '')} description1 image`}
+                        alt={`${get(fields, 'title', '')} description image`}
                         src={get(fields, 'text2Image.fields.file.url', '')}
                       />
                     </div>
