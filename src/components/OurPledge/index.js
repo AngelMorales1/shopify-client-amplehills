@@ -33,6 +33,7 @@ class OurPledge extends Component {
     } = this.props.ourPledge;
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
+
     return (
       <div
         className={cx(
@@ -96,11 +97,15 @@ OurPledge.propTypes = {
     calloutImage: PropTypes.object,
     overlayContentImage: PropTypes.object,
     shippingInformation: PropTypes.string,
-    shippingPledge: PropTypes.string,
-    title: PropTypes.string
+    shippingPledge: PropTypes.string
   })
 };
 
 OurPledge.defaultProps = {
-  ourPledge: {}
+  ourPledge: {
+    calloutImage: {},
+    overlayContentImage: {},
+    shippingInformation: '',
+    shippingPledge: ''
+  }
 };

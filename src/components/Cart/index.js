@@ -293,7 +293,7 @@ Cart.defaultProps = {
   },
   items: PropTypes.arrayOf({
     id: '',
-    price: '',
+    price: '0.0',
     productId: '',
     subItems: PropTypes.arrayOf({
       handle: '',

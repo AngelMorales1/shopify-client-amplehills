@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledgeOverlay.scss';
@@ -66,3 +67,31 @@ const OurPledgeOverlay = ({
 };
 
 export default OurPledgeOverlay;
+
+OurPledgeOverlay.propTypes = {
+  closeOurPledgeOverlay: PropTypes.func,
+  overlayContentImage: PropTypes.shape({
+    fields: PropTypes.shape({
+      file: PropTypes.shape({
+        url: PropTypes.string
+      }),
+      title: PropTypes.string
+    })
+  }),
+  shippingInformation: PropTypes.string,
+  shippingPledge: PropTypes.string
+};
+
+OurPledgeOverlay.defaultProps = {
+  closeOurPledgeOverlay: () => {},
+  overlayContentImage: {
+    fields: {
+      file: {
+        url: ''
+      },
+      title: ''
+    }
+  },
+  shippingInformation: '',
+  shippingPledge: ''
+};

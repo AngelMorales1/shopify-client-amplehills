@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes, { shape } from 'prop-types';
 import ProductGridCard from 'components/ProductGridCard';
 
 const ProductGrid = ({ products }) => {
@@ -14,3 +15,15 @@ const ProductGrid = ({ products }) => {
 };
 
 export default ProductGrid;
+
+ProductGrid.propTypes = {
+  products: PropTypes.arrayOf(
+    shape({
+      id: PropTypes.string
+    })
+  )
+};
+
+ProductGrid.defaultProps = {
+  products: [{ id: '' }]
+};

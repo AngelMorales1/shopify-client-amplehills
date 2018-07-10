@@ -184,7 +184,7 @@ MiniCart.defaultProps = {
             quantity: 1
           }
         ],
-        price: ''
+        price: '0.0'
       }
     ]
   },
