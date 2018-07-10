@@ -132,37 +132,63 @@ class MiniCart extends Component {
 }
 
 MiniCart.propTypes = {
+  miniCartIsOpen: PropTypes.bool,
+  lineItemsBeingRemoved: PropTypes.arrayOf(PropTypes.string),
+  lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string),
   actions: PropTypes.shape({
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
   checkout: PropTypes.shape({
+    webUrl: PropTypes.string,
+    subtotalPrice: PropTypes.string,
     id: PropTypes.string,
     items: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,
         id: PropTypes.string,
-        quantity: PropTypes.number
+        quantity: PropTypes.number,
+        subItems: PropTypes.arrayOf(
+          PropTypes.shape({
+            handle: PropTypes.string,
+            quantity: PropTypes.number
+          })
+        ),
+        price: PropTypes.string
       })
     )
-  })
+  }),
+  products: PropTypes.object
 };
 
 MiniCart.defaultProps = {
+  miniCartIsOpen: false,
+  lineItemsBeingRemoved: [''],
+  lineItemsBeingUpdated: [''],
   actions: {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
   checkout: {
+    webUrl: '',
+    subtotalPrice: '',
     id: '',
     items: [
       {
-        id: '',
         title: '',
-        quantity: 1
+        id: '',
+        quantity: 1,
+        subItems: [
+          {
+            handle: '',
+            quantity: 1
+          }
+        ],
+        price: ''
       }
     ]
-  }
+  },
+  products: {}
 };
 
 const mapStateToProps = state => {

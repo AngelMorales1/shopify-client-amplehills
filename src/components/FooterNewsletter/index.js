@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
-import styles from './FooterNewsletter.scss';
 import RoutesWithoutNewsletter from 'constants/RoutesWithoutNewsletter';
+
+import styles from './FooterNewsletter.scss';
 import { Image, Button, TextField } from 'components/base';
 
 const FooterNewsletter = ({ pathname }) => {
@@ -10,6 +12,7 @@ const FooterNewsletter = ({ pathname }) => {
   };
 
   if (routeOmitsNewsletter()) return null;
+
   return (
     <div
       className={cx(
@@ -60,3 +63,11 @@ const FooterNewsletter = ({ pathname }) => {
 };
 
 export default FooterNewsletter;
+
+FooterNewsletter.propTypes = {
+  pathname: PropTypes.string
+};
+
+FooterNewsletter.defaultProps = {
+  pathname: ''
+};

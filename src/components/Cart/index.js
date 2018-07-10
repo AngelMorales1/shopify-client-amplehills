@@ -297,7 +297,7 @@ Cart.defaultProps = {
     productId: '',
     subItems: PropTypes.arrayOf({
       handle: '',
-      quantity: 0
+      quantity: 1
     }),
     title: ''
   }),
