@@ -3,7 +3,7 @@ import { Button } from 'components/base';
 
 class SignUpView extends Component {
   render() {
-    const { model, user } = this.props;
+    const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     return (

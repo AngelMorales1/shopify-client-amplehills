@@ -17,18 +17,14 @@ class SignInView extends Component {
   handleEmailInputChange = email => this.setState({ email });
   handlePasswordInputChange = password => this.setState({ password });
 
-  signIn = () => {
-    console.log(this.state);
-    this.props.actions.signInCustomer(this.state);
-  };
+  signIn = () => this.props.actions.signInCustomer(this.state);
 
   render() {
     const { model, customer } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (get(customer, 'id', 0)) return <Redirect to="/profile" />;
+    if (get(customer, 'id', '')) return <Redirect to="/profile" />;
 
-    console.log('props', this.props);
     return (
       <div className="SignIn text-container-width mx-auto p3">
         <h1 className="block-headline">Sign In</h1>

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import products from 'state/selectors/products';
-import get from 'utils/get';
+import customer from 'state/selectors/customer';
 
 class ProfileContainer extends ContainerBase {
   view = import('views/ProfileView');
@@ -14,7 +14,7 @@ class ProfileContainer extends ContainerBase {
 const mapStateToProps = state => {
   return {
     products: products(state),
-    customer: get(state, 'customer')
+    customer: customer(state)
   };
 };
 

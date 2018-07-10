@@ -2,9 +2,6 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import products from 'state/selectors/products';
-import get from 'utils/get';
-
 class SignUpContainer extends ContainerBase {
   view = import('views/SignUpView');
 
@@ -12,10 +9,7 @@ class SignUpContainer extends ContainerBase {
 }
 
 const mapStateToProps = state => {
-  return {
-    products: products(state),
-    user: get(state, 'user')
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {

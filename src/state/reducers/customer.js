@@ -1,7 +1,7 @@
 import { FETCH_CUSTOMER } from 'state/actions/customerActions';
 
 const initialState = {
-  id: 0
+  id: ''
 };
 
 export default (state = initialState, action) => {
