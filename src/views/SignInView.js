@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import get from 'utils/get';
 import { PENDING } from 'constants/Status';
 
-import { Button, TextField } from 'components/base';
+import { Button, TextField, FormFlash } from 'components/base';
 
 class SignInView extends Component {
   state = {
@@ -21,7 +21,12 @@ class SignInView extends Component {
   };
 
   render() {
-    const { model, customer, customerSigningIn } = this.props;
+    const {
+      model,
+      customer,
+      customerSigningIn,
+      location: { search }
+    } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     if (get(customer, 'id', '')) return <Redirect to="/profile" />;
@@ -29,6 +34,12 @@ class SignInView extends Component {
     return (
       <div className="SignIn text-container-width mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
+        {search === '?new-account=true' ? (
+          <FormFlash
+            message="Almost there! Sign in to your new account below"
+            success={true}
+          />
+        ) : null}
         <div className="my3">
           <form onSubmit={e => this.signIn(e)}>
             <TextField

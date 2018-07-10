@@ -4,7 +4,7 @@ import cx from 'classnames';
 import styles from './FormFlash.scss';
 
 const FormFlash = ({ message, success, error }) => {
-  const classes = cx(styles['FormFlash'], 'p2 my3', {
+  const classes = cx(styles['FormFlash'], 'py1 px2 my3', {
     [styles['FormFlash--success']]: success,
     [styles['FormFlash--error']]: error
   });
