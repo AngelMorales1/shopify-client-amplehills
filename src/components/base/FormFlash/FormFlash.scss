@@ -1,0 +1,18 @@
+.FormFlash {
+  background: color('light-yellow');
+  border-radius: spacing(1);
+  border: spacing(0.75) solid color('goldenrod');
+  color: color('goldenrod');
+
+  &--success {
+    background: color('seafoam');
+    border-color: color('madison-blue');
+    color: color('madison-blue');
+  }
+
+  &--error {
+    background: color('light-pink');
+    border-color: color('peach');
+    color: color('peach');
+  }
+}
