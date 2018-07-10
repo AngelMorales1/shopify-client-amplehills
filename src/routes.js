@@ -4,6 +4,9 @@ import { Route, Switch } from 'react-router-dom';
 import HomeContainer from 'containers/HomeContainer';
 import ProductLandingContainer from 'containers/ProductLandingContainer';
 import ProductDetailContainer from 'containers/ProductDetailContainer';
+import ProfileContainer from 'containers/ProfileContainer';
+import SignInContainer from 'containers/SignInContainer';
+import SignUpContainer from 'containers/SignUpContainer';
 import ContactUsContainer from 'components/ContactUs';
 import Cart from 'components/Cart';
 
@@ -16,6 +19,9 @@ const Routes = ({ location }) => (
       component={ProductDetailContainer}
     />
     <Route path="/products" component={ProductLandingContainer} />
+    <Route path="/profile" component={ProfileContainer} />
+    <Route path="/sign-in" component={SignInContainer} />
+    <Route path="/sign-up" component={SignUpContainer} />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />
   </Switch>
