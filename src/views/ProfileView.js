@@ -4,10 +4,10 @@ import get from 'utils/get';
 
 class ProfileView extends Component {
   render() {
-    const { model, user } = this.props;
+    const { model, customer } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (!get(user, 'id', 0)) return <Redirect to="/sign-in" />;
+    if (!get(customer, 'id', 0)) return <Redirect to="/sign-in" />;
 
     return (
       <div className="Profile">

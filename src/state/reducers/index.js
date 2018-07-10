@@ -3,7 +3,7 @@ import applicationUI from './ui/applicationUI';
 import miniCartUI from './ui/miniCartUI';
 import product from './product';
 import products from './products';
-import user from './user';
+import customer from './customer';
 
 export default {
   status,
@@ -11,5 +11,5 @@ export default {
   miniCartUI,
   product,
   products,
-  user
+  customer
 };

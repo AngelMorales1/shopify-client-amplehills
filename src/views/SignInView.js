@@ -19,14 +19,14 @@ class SignInView extends Component {
 
   signIn = () => {
     console.log(this.state);
-    this.props.actions.signInUser(this.state);
+    this.props.actions.signInCustomer(this.state);
   };
 
   render() {
-    const { model, user } = this.props;
+    const { model, customer } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (get(user, 'id', 0)) return <Redirect to="/profile" />;
+    if (get(customer, 'id', 0)) return <Redirect to="/profile" />;
 
     console.log('props', this.props);
     return (
