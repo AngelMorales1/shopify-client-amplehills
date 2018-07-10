@@ -1,4 +1,5 @@
 import React from 'react';
+
 import get from 'utils/get';
 
 import ProductHero from 'components/ProductHero';
