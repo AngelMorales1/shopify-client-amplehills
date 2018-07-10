@@ -9,20 +9,17 @@ export const SIGN_IN_CUSTOMER = 'SIGN_IN_CUSTOMER';
 export const signInCustomer = payload => dispatch => {
   return dispatch({
     type: SIGN_IN_CUSTOMER,
-    payload: new Promise(resolve => {
-      Apollo.mutate({
-        mutation: customerAccessTokenCreate,
-        variables: { input: payload }
-      }).then(customerAccessToken => {
-        const accessToken = get(
-          customerAccessToken,
-          'data.customerAccessTokenCreate.customerAccessToken.accessToken',
-          ''
-        );
-        dispatch(fetchCustomer(accessToken)).then(response =>
-          resolve(response)
-        );
-      });
+    payload: Apollo.mutate({
+      mutation: customerAccessTokenCreate,
+      variables: { input: payload }
+    }).then(customerAccessToken => {
+      const accessToken = get(
+        customerAccessToken,
+        'data.customerAccessTokenCreate.customerAccessToken.accessToken',
+        ''
+      );
+
+      return dispatch(fetchCustomer(accessToken));
     })
   });
 };

@@ -8,8 +8,6 @@ import customer from 'state/selectors/customer';
 
 class SignInContainer extends ContainerBase {
   view = import('views/SignInView');
-
-  model = () => {};
 }
 
 const mapStateToProps = state => {

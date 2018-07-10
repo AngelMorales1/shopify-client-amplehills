@@ -5,19 +5,18 @@ import get from 'utils/get';
 import { Button, TextField } from 'components/base';
 
 class SignInView extends Component {
-  constructor() {
-    super(...arguments);
-
-    this.state = {
-      email: '',
-      password: ''
-    };
-  }
+  state = {
+    email: '',
+    password: ''
+  };
 
   handleEmailInputChange = email => this.setState({ email });
   handlePasswordInputChange = password => this.setState({ password });
 
-  signIn = () => this.props.actions.signInCustomer(this.state);
+  signIn = () => {
+    const { email, password } = this.state;
+    this.props.actions.signInCustomer({ email, password });
+  };
 
   render() {
     const { model, customer } = this.props;

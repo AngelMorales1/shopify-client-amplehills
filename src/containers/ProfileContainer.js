@@ -7,8 +7,6 @@ import customer from 'state/selectors/customer';
 
 class ProfileContainer extends ContainerBase {
   view = import('views/ProfileView');
-
-  model = () => {};
 }
 
 const mapStateToProps = state => {

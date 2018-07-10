@@ -4,8 +4,6 @@ import { bindActionCreators } from 'redux';
 
 class SignUpContainer extends ContainerBase {
   view = import('views/SignUpView');
-
-  model = () => {};
 }
 
 const mapStateToProps = state => {
