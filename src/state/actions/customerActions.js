@@ -27,6 +27,19 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
       mutation: customerAccessTokenCreate,
       variables: { input }
     }).then(customerAccessToken => {
+      if (
+        get(
+          customerAccessToken,
+          'data.customerAccessTokenCreate.userErrors',
+          []
+        ).length
+      )
+        throw get(
+          customerAccessToken,
+          'data.customerAccessTokenCreate.userErrors[0].message',
+          ''
+        );
+
       const accessToken = get(
         customerAccessToken,
         'data.customerAccessTokenCreate.customerAccessToken.accessToken',
