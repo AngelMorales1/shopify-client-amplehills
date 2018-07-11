@@ -25,9 +25,8 @@ const FooterRegions = ({ region, stores }) => {
               );
             })}
             {store.fields.delivery ? (
-              <div className="bg-white text-madison-blue inline-block mt1 bold tag">
-                {' '}
-                > Order Delivery
+              <div className="bg-white text-madison-blue inline-block mt1 tag">
+                Order Delivery
               </div>
             ) : null}
           </div>

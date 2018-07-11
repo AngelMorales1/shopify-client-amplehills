@@ -154,14 +154,7 @@ em {
 
 .content-title {
   @extend .big;
-
-  @media ($large-up) {
-    font-weight: 800;
-    font-family: $font-avenir;
-  }
-  @media ($medium-down) {
-    font-family: $font-carter;
-  }
+  font-family: $font-carter;
 }
 
 .info-text-big {

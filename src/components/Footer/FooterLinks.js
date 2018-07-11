@@ -5,8 +5,10 @@ import { Button, Image } from 'components/base';
 
 const FooterLinks = ({ footerLinks }) => {
   return (
-    <div className={cx('m4 col-3', styles['Footer__Links-container'])}>
-      <h2 className="text-white nowrap block-headline">We would love to talk!</h2>
+    <div className={cx('col-3', styles['Footer__Links-container'])}>
+      <h2 className="text-white nowrap block-headline">
+        We would love to talk!
+      </h2>
       <div className="my3 flex">
         <Button
           exact
