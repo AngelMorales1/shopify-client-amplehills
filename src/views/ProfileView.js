@@ -13,21 +13,27 @@ class ProfileView extends Component {
     const { model, customer } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (!customer.id) return <Redirect to="/sign-in" />;
+    const { id, firstName, lastName } = customer;
+    if (!id) return <Redirect to="/sign-in" />;
 
     return (
       <div className="Profile">
-        <p>
-          Welcome {customer.firstName} {customer.lastName}!
-          <div className="my2">
-            <Button
-              variant="primary-small"
-              color="peach"
-              label="Sign Out"
-              onClick={this.signOut}
-            />
+        <div className="bg-iceberg drip">
+          <div className="container-width mx-auto pt4 px2 center">
+            <p className="block-headline">
+              {firstName && lastName ? `${firstName} ${lastName}` : 'Profile'}
+            </p>
+            <div className="my3">
+              <Button
+                className="small"
+                variant="primary-small"
+                color="peach"
+                label="Sign Out"
+                onClick={this.signOut}
+              />
+            </div>
           </div>
-        </p>
+        </div>
       </div>
     );
   }
