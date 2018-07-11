@@ -16,8 +16,9 @@ class SignInView extends Component {
 
   signIn = event => {
     event.preventDefault();
+    const { checkout } = this.props;
     const { email, password } = this.state;
-    this.props.actions.signInCustomer({ email, password });
+    this.props.actions.signInCustomer({ email, password }, checkout.id);
   };
 
   render() {

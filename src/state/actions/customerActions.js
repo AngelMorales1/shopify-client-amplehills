@@ -4,6 +4,7 @@ import {
   customerAccessTokenCreate,
   customerFetch
 } from 'state/graphql/customer';
+import { checkoutCustomerAssociate } from 'state/actions/checkoutActions';
 
 import get from 'utils/get';
 
@@ -21,7 +22,7 @@ export const signUpCustomer = input => dispatch => {
 };
 
 export const SIGN_IN_CUSTOMER = 'SIGN_IN_CUSTOMER';
-export const signInCustomer = input => dispatch => {
+export const signInCustomer = (input, checkoutId) => dispatch => {
   return dispatch({
     type: SIGN_IN_CUSTOMER,
     payload: Apollo.mutate({
@@ -34,7 +35,11 @@ export const signInCustomer = input => dispatch => {
         ''
       );
 
-      return dispatch(fetchCustomer(accessToken));
+      return dispatch(checkoutCustomerAssociate(checkoutId, accessToken)).then(
+        () => {
+          return dispatch(fetchCustomer(accessToken));
+        }
+      );
     })
   });
 };

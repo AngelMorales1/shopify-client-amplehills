@@ -4,8 +4,9 @@ import { Button } from 'components/base';
 
 class ProfileView extends Component {
   signOut = () => {
-    const { actions } = this.props;
+    const { actions, checkout } = this.props;
     actions.signOutCustomer();
+    actions.checkoutCustomerDisassociate(checkout.id);
   };
 
   render() {
