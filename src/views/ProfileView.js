@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { Button } from 'components/base';
+import ProfileInfo from 'components/ProfileInfo';
 
 import get from 'utils/get';
 
@@ -12,7 +13,7 @@ class ProfileView extends Component {
   };
 
   render() {
-    const { model, customer } = this.props;
+    const { model, customer, actions, customerFieldsBeingEdited } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     const { id, firstName, lastName, email, phone, addresses } = customer;
@@ -40,47 +41,11 @@ class ProfileView extends Component {
           <div className="flex flex-wrap">
             <div className="col col-12 md-col-6">
               <div className="col col-12 md-col-9">
-                <div className="my3">
-                  <h2 className="carter sub-title mb3">Personal Info</h2>
-                  <div className="card card--light-gray-border p3 my2">
-                    <div className="relative">
-                      <strong className="bold block mb2">Email Address</strong>
-                      <p>{email}</p>
-
-                      <Button
-                        variant="no-style"
-                        label="Edit"
-                        className="text-peach absolute t0 r0"
-                      />
-                    </div>
-                  </div>
-                  {phone ? (
-                    <div className="card card--light-gray-border p3 my2">
-                      <div className="relative">
-                        <strong className="bold block mb2">Phone Number</strong>
-                        <p>{phone}</p>
-
-                        <Button
-                          variant="no-style"
-                          label="Edit"
-                          className="text-peach absolute t0 r0"
-                        />
-                      </div>
-                    </div>
-                  ) : null}
-                  <div className="card card--light-gray-border p3 my2">
-                    <div className="relative">
-                      <strong className="bold block mb2">Password</strong>
-                      <p>• • • • • • • • • •</p>
-
-                      <Button
-                        variant="no-style"
-                        label="Edit"
-                        className="text-peach absolute t0 r0"
-                      />
-                    </div>
-                  </div>
-                </div>
+                <ProfileInfo
+                  actions={actions}
+                  customerFieldsBeingEdited={customerFieldsBeingEdited}
+                  {...customer}
+                />
               </div>
             </div>
             <div className="col col-12 md-col-6">

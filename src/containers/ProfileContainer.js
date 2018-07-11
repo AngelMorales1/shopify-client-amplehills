@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { signOutCustomer } from 'state/actions/customerActions';
 import { checkoutCustomerDisassociate } from 'state/actions/checkoutActions';
+import {
+  editCustomerField,
+  cancelEditCustomerFields
+} from 'state/actions/ui/customerUIActions';
 
 import products from 'state/selectors/products';
 import customer from 'state/selectors/customer';
@@ -15,6 +19,11 @@ class ProfileContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
+    customerFieldsBeingEdited: get(
+      state,
+      'customerUI.customerFieldsBeingEdited',
+      []
+    ),
     checkout: get(state, 'session.checkout', {}),
     products: products(state),
     customer: customer(state)
@@ -26,7 +35,9 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         signOutCustomer,
-        checkoutCustomerDisassociate
+        checkoutCustomerDisassociate,
+        editCustomerField,
+        cancelEditCustomerFields
       },
       dispatch
     )
