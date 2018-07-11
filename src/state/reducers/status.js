@@ -75,7 +75,11 @@ export default (state = initialState, action) => {
     case `${SIGN_UP_CUSTOMER}_PENDING`:
       return { ...state, customerSigningUp: PENDING };
     case `${SIGN_UP_CUSTOMER}_FULFILLED`:
-      return { ...state, customerSigningUp: FULFILLED };
+      return {
+        ...state,
+        customerSigningUp: FULFILLED,
+        customerSigningIn: IDLE
+      };
 
     default:
       return state;
