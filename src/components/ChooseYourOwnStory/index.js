@@ -6,6 +6,7 @@ import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import Product from 'constants/types/Product';
+import ImagePropTypes from 'constants/types/ImagePropTypes';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 
@@ -135,6 +136,12 @@ class ChooseYourOwnStory extends Component {
     const fields = get(block, 'fields', {});
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const {
+      overlayContentImage,
+      shippingInformation,
+      shippingPledge,
+      calloutImage
+    } = ourPledge;
     const activeVariant = product.variants.find(
       variant => getPintSizeFromTitle(variant.title) === size
     );
@@ -208,7 +215,12 @@ class ChooseYourOwnStory extends Component {
               <div className="mb4">
                 <p className="copy pr2">{get(fields, 'description', '')}</p>
               </div>
-              <OurPledge ourPledge={ourPledge} />
+              <OurPledge
+                overlayContentImage={overlayContentImage}
+                shippingInformation={shippingInformation}
+                shippingPledge={shippingPledge}
+                calloutImage={calloutImage}
+              />
             </div>
           </div>
         </div>
@@ -368,7 +380,12 @@ ChooseYourOwnStory.propTypes = {
       })
     )
   }),
-  ourPledge: PropTypes.object
+  ourPledge: PropTypes.shape({
+    closeOurPledgeOverlay: PropTypes.func,
+    overlayContentImage: ImagePropTypes.propTypes,
+    shippingInformation: PropTypes.string,
+    shippingPledge: PropTypes.string
+  })
 };
 
 ChooseYourOwnStory.defaultProps = {
@@ -379,7 +396,12 @@ ChooseYourOwnStory.defaultProps = {
     description: '',
     products: []
   },
-  ourPledge: {}
+  ourPledge: {
+    closeOurPledgeOverlay: () => {},
+    overlayContentImage: ImagePropTypes.default,
+    shippingInformation: '',
+    shippingPledge: ''
+  }
 };
 
 export default ChooseYourOwnStory;

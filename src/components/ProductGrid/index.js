@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { shape } from 'prop-types';
+import PropTypes from 'prop-types';
 import ProductGridCard from 'components/ProductGridCard';
 
 const ProductGrid = ({ products }) => {
