@@ -3,7 +3,8 @@ import { Redirect } from 'react-router';
 import get from 'utils/get';
 import { PENDING } from 'constants/Status';
 
-import { Button, TextField } from 'components/base';
+import { Button, TextField, FormFlash } from 'components/base';
+import getUrlParam from 'utils/getUrlParam';
 
 class SignInView extends Component {
   state = {
@@ -16,19 +17,31 @@ class SignInView extends Component {
 
   signIn = event => {
     event.preventDefault();
+    const { checkout } = this.props;
     const { email, password } = this.state;
-    this.props.actions.signInCustomer({ email, password });
+    this.props.actions.signInCustomer({ email, password }, checkout.id);
   };
 
   render() {
-    const { model, customer, customerSigningIn } = this.props;
+    const {
+      model,
+      customer,
+      customerSigningIn,
+      location: { search }
+    } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (get(customer, 'id', '')) return <Redirect to="/profile" />;
+    if (get(customer, 'id')) return <Redirect to="/profile" />;
 
     return (
       <div className="SignIn text-container-width mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
+        {getUrlParam('new-account') === 'true' ? (
+          <FormFlash
+            message="Almost there! Sign in to your new account below"
+            success={true}
+          />
+        ) : null}
         <div className="my3">
           <form onSubmit={e => this.signIn(e)}>
             <TextField

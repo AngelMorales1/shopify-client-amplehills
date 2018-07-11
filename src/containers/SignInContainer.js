@@ -13,6 +13,7 @@ class SignInContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
+    checkout: get(state, 'session.checkout', {}),
     customer: customer(state),
     customerSigningIn: get(state, 'status.customerSigningIn', false)
   };

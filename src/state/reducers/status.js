@@ -7,14 +7,18 @@ import {
   CANCEL_REMOVE_LINE_ITEMS
 } from 'state/actions/checkoutActions';
 
-import { SIGN_IN_CUSTOMER } from 'state/actions/customerActions';
+import {
+  SIGN_IN_CUSTOMER,
+  SIGN_UP_CUSTOMER
+} from 'state/actions/customerActions';
 
 const initialState = {
   initializeApplication: IDLE,
   addLineItemsStatus: IDLE,
   lineItemsBeingUpdated: [],
   lineItemsBeingRemoved: [],
-  customerSigningIn: IDLE
+  customerSigningIn: IDLE,
+  customerSigningUp: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -65,6 +69,11 @@ export default (state = initialState, action) => {
       return { ...state, customerSigningIn: PENDING };
     case `${SIGN_IN_CUSTOMER}_FULFILLED`:
       return { ...state, customerSigningIn: FULFILLED };
+
+    case `${SIGN_UP_CUSTOMER}_PENDING`:
+      return { ...state, customerSigningUp: PENDING };
+    case `${SIGN_UP_CUSTOMER}_FULFILLED`:
+      return { ...state, customerSigningUp: FULFILLED };
 
     default:
       return state;
