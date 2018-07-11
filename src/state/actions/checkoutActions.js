@@ -1,6 +1,12 @@
 import BuySDK from 'lib/Buy';
-import get from 'utils/get';
+import { client as Apollo } from 'lib/Apollo';
+
+import {
+  customerAssociate,
+  customerDisassociate
+} from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
+import get from 'utils/get';
 
 export const FETCH_OR_CREATE_CHECKOUT = 'FETCH_OR_CREATE_CHECKOUT';
 export const fetchOrCreateCheckout = checkoutID => dispatch => {
@@ -83,5 +89,30 @@ export const updateLineItems = (checkoutID, items) => dispatch => {
     type: UPDATE_LINE_ITEMS,
     meta: { id: get(items, '[0].id', '') },
     payload: BuySDK.checkout.updateLineItems(checkoutID, items)
+  });
+};
+
+export const CHECKOUT_CUSTOMER_ASSOCIATE = 'CHECKOUT_CUSTOMER_ASSOCIATE';
+export const checkoutCustomerAssociate = (
+  checkoutId,
+  customerAccessToken
+) => dispatch => {
+  return dispatch({
+    type: CHECKOUT_CUSTOMER_ASSOCIATE,
+    payload: Apollo.mutate({
+      mutation: customerAssociate,
+      variables: { checkoutId, customerAccessToken }
+    })
+  });
+};
+
+export const CHECKOUT_CUSTOMER_DISASSOCIATE = 'CHECKOUT_CUSTOMER_DISASSOCIATE';
+export const checkoutCustomerDisassociate = checkoutId => dispatch => {
+  return dispatch({
+    type: CHECKOUT_CUSTOMER_DISASSOCIATE,
+    payload: Apollo.mutate({
+      mutation: customerDisassociate,
+      variables: { checkoutId }
+    })
   });
 };

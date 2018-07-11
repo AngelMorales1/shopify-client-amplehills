@@ -4,6 +4,7 @@ import {
   customerAccessTokenCreate,
   customerFetch
 } from 'state/graphql/customer';
+
 import get from 'utils/get';
 
 export const SIGN_UP_CUSTOMER = 'SIGN_UP_CUSTOMER';
@@ -36,6 +37,13 @@ export const signInCustomer = input => dispatch => {
       return dispatch(fetchCustomer(accessToken));
     })
   });
+};
+
+export const SIGN_OUT_CUSTOMER = 'SIGN_OUT_CUSTOMER';
+export const signOutCustomer = () => {
+  return {
+    type: SIGN_OUT_CUSTOMER
+  };
 };
 
 export const FETCH_CUSTOMER = 'FETCH_CUSTOMER';
