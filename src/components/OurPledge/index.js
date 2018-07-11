@@ -53,13 +53,13 @@ class OurPledge extends Component {
             styles['OurPledge__content-container']
           )}
         >
-          <p className="col col-12 md-col-4 px2 callout-medium text-madison-blue center nowrap">
+          <p className="col col-12 md-col-4 px2 callout-medium center nowrap">
             Our Pledge
           </p>
           <p
             className={cx(
               styles['OurPledge__text-description'],
-              'col col-12 md-col-4 flex uppercase text-madison-blue info-text-extra-small semi-bold center flex justify-center'
+              'col col-12 md-col-4 flex uppercase info-text-extra-small semi-bold center flex justify-center'
             )}
           >
             Ice cream arrives fresh delicious, and frozen
@@ -70,7 +70,7 @@ class OurPledge extends Component {
               onClick={this.openOurPledgeOverlay}
               label="More Info"
               className={cx(
-                'uppercase text-madison-blue info-text-big bold nowrap',
+                'uppercase info-text-big bold nowrap text-madison-blue',
                 styles['OurPledge__more-info']
               )}
             />
