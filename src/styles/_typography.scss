@@ -145,16 +145,14 @@ em {
 
 .tag-text {
   font-size: $font-4;
+  font-weight: 800;
 
   @media ($medium-up) {
     text-transform: uppercase;
+    font-family: $font-carter;
     font-size: 0.4rem;
+    font-weight: 400;
   }
-}
-
-.content-title {
-  @extend .big;
-  font-family: $font-carter;
 }
 
 .info-text-big {
