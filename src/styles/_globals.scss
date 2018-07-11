@@ -110,6 +110,10 @@ UI elements
 .card {
   border-radius: spacing(4);
   overflow: hidden;
+
+  &--light-gray-border {
+    border: spacing(0.5) solid color('light-gray');
+  }
 }
 
 .tag {
