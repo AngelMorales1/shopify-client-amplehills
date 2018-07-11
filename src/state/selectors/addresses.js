@@ -13,6 +13,7 @@ export const deriveAddresses = addresses =>
     const zip = get(address, 'node.zip', '');
     const country = get(address, 'node.country', '');
     const countryCode = get(address, 'node.countryCodeV2', '');
+    const phone = get(address, 'node.phone', '');
 
     return {
       firstName,
@@ -24,7 +25,8 @@ export const deriveAddresses = addresses =>
       province,
       zip,
       country,
-      countryCode
+      countryCode,
+      phone
     };
   });
 
