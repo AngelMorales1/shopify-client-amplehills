@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledgeOverlay.scss';
+import imageModel from 'models/imageModel';
 
 import { Image, Button } from 'components/base';
 
@@ -66,3 +68,17 @@ const OurPledgeOverlay = ({
 };
 
 export default OurPledgeOverlay;
+
+OurPledgeOverlay.propTypes = {
+  closeOurPledgeOverlay: PropTypes.func,
+  overlayContentImage: imageModel.propTypes,
+  shippingInformation: PropTypes.string,
+  shippingPledge: PropTypes.string
+};
+
+OurPledgeOverlay.defaultProps = {
+  closeOurPledgeOverlay: () => {},
+  overlayContentImage: imageModel.default,
+  shippingInformation: '',
+  shippingPledge: ''
+};

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Product from 'constants/types/Product';
+import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 
 import get from 'utils/get';
@@ -49,9 +50,15 @@ class ProductHero extends Component {
   };
 
   render() {
-    const { block, product, z } = this.props;
+    const { block, product, ourPledge, z } = this.props;
     const { available, price } = product;
     const fields = get(block, 'fields', {});
+    const {
+      overlayContentImage,
+      shippingInformation,
+      shippingPledge,
+      calloutImage
+    } = ourPledge;
 
     return (
       <div
@@ -121,7 +128,12 @@ class ProductHero extends Component {
               </Button>
             </form>
           </div>
-          <OurPledge ourPledge={this.props.ourPledge} />
+          <OurPledge
+            overlayContentImage={overlayContentImage}
+            shippingInformation={shippingInformation}
+            shippingPledge={shippingPledge}
+            calloutImage={calloutImage}
+          />
         </div>
       </div>
     );
@@ -131,15 +143,27 @@ class ProductHero extends Component {
 ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
-  product: Product.propTypes,
-  shippingDates: PropTypes.arrayOf(PropTypes.string)
+  product: productModel.propTypes,
+  shippingDates: PropTypes.arrayOf(PropTypes.string),
+  ourPledge: PropTypes.shape({
+    closeOurPledgeOverlay: PropTypes.func,
+    overlayContentImage: imageModel.propTypes,
+    shippingInformation: PropTypes.string,
+    shippingPledge: PropTypes.string
+  })
 };
 
 ProductHero.defaultProps = {
   data: {},
   z: 1,
-  product: Product.default,
-  shippingDates: []
+  product: productModel.default,
+  shippingDates: [],
+  ourPledge: {
+    closeOurPledgeOverlay: () => {},
+    overlayContentImage: imageModel.default,
+    shippingInformation: '',
+    shippingPledge: ''
+  }
 };
 
 export default ProductHero;

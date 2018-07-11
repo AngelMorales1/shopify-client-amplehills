@@ -12,6 +12,8 @@ import lineItems from 'state/selectors/lineItems';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import checkoutModel from 'models/checkoutModel';
+import productModel from 'models/productModel';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -132,37 +134,27 @@ class MiniCart extends Component {
 }
 
 MiniCart.propTypes = {
+  miniCartIsOpen: PropTypes.bool,
+  lineItemsBeingRemoved: PropTypes.arrayOf(PropTypes.string),
+  lineItemsBeingUpdated: PropTypes.arrayOf(PropTypes.string),
   actions: PropTypes.shape({
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: PropTypes.shape({
-    id: PropTypes.string,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        id: PropTypes.string,
-        quantity: PropTypes.number
-      })
-    )
-  })
+  checkout: checkoutModel.propTypes,
+  products: PropTypes.objectOf(productModel.propTypes)
 };
 
 MiniCart.defaultProps = {
+  miniCartIsOpen: false,
+  lineItemsBeingRemoved: [''],
+  lineItemsBeingUpdated: [''],
   actions: {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: {
-    id: '',
-    items: [
-      {
-        id: '',
-        title: '',
-        quantity: 1
-      }
-    ]
-  }
+  checkout: checkoutModel.default,
+  products: {}
 };
 
 const mapStateToProps = state => {

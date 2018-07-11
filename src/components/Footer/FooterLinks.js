@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
+
 import styles from './Footer.scss';
 import { Button, Image } from 'components/base';
 
@@ -78,3 +80,15 @@ const FooterLinks = ({ footerLinks }) => {
 };
 
 export default FooterLinks;
+
+FooterLinks.propTypes = {
+  facebookLink: PropTypes.string,
+  instagramLink: PropTypes.string,
+  twitterLink: PropTypes.string
+};
+
+FooterLinks.defaultProps = {
+  facebookLink: '',
+  instagramLink: '',
+  twitterLink: ''
+};

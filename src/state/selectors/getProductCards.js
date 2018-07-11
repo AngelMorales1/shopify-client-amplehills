@@ -15,22 +15,24 @@ export default createSelector(
       return mergedShopifyProducts;
     }, {});
 
-    return products.map(product => {
+    return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
       const handle = get(product, 'fields.productHandle', '');
       const image = get(product, 'fields.image.fields.file.url', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {});
-      const price = get(shopifyProduct, 'variants[0].price', '0.00');
+      const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
       const id = get(shopifyProduct, 'variants[0].id', '0.00');
 
-      return {
+      mergedProducts[title] = {
         handle,
         id,
         image,
         price,
         title
       };
-    });
+
+      return mergedProducts;
+    }, {});
   }
 );

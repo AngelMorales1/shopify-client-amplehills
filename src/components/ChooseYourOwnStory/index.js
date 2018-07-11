@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
-import Product from 'constants/types/Product';
+import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 
@@ -133,8 +133,15 @@ class ChooseYourOwnStory extends Component {
 
     const { block, products, ourPledge } = this.props;
     const fields = get(block, 'fields', {});
+
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const {
+      overlayContentImage,
+      shippingInformation,
+      shippingPledge,
+      calloutImage
+    } = ourPledge;
     const activeVariant = product.variants.find(
       variant => getPintSizeFromTitle(variant.title) === size
     );
@@ -208,7 +215,12 @@ class ChooseYourOwnStory extends Component {
               <div className="mb4">
                 <p className="copy pr2">{get(fields, 'description', '')}</p>
               </div>
-              <OurPledge ourPledge={ourPledge} />
+              <OurPledge
+                overlayContentImage={overlayContentImage}
+                shippingInformation={shippingInformation}
+                shippingPledge={shippingPledge}
+                calloutImage={calloutImage}
+              />
             </div>
           </div>
         </div>
@@ -357,8 +369,8 @@ class ChooseYourOwnStory extends Component {
 }
 
 ChooseYourOwnStory.propTypes = {
-  product: Product.propTypes,
-  products: PropTypes.object,
+  product: productModel.propTypes,
+  products: PropTypes.objectOf(productModel.propTypes),
   block: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
@@ -367,16 +379,28 @@ ChooseYourOwnStory.propTypes = {
         productHandle: PropTypes.string
       })
     )
+  }),
+  ourPledge: PropTypes.shape({
+    closeOurPledgeOverlay: PropTypes.func,
+    overlayContentImage: imageModel.propTypes,
+    shippingInformation: PropTypes.string,
+    shippingPledge: PropTypes.string
   })
 };
 
 ChooseYourOwnStory.defaultProps = {
-  product: Product.default,
+  product: productModel.default,
   products: {},
   block: {
     title: '',
     description: '',
     products: []
+  },
+  ourPledge: {
+    closeOurPledgeOverlay: () => {},
+    overlayContentImage: imageModel.default,
+    shippingInformation: '',
+    shippingPledge: ''
   }
 };
 

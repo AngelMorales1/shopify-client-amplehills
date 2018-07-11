@@ -12,6 +12,9 @@ import cx from 'classnames';
 import get from 'utils/get';
 import products from 'state/selectors/products';
 import lineItems from 'state/selectors/lineItems';
+import checkoutModel from 'models/checkoutModel';
+import itemModel from 'models/itemModel';
+import productModel from 'models/productModel';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -261,16 +264,9 @@ Cart.propTypes = {
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: PropTypes.shape({
-    id: PropTypes.string,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        id: PropTypes.string,
-        quantity: PropTypes.number
-      })
-    )
-  })
+  checkout: checkoutModel.propTypes,
+  items: itemModel.propTypes,
+  products: PropTypes.objectOf(productModel.propTypes)
 };
 
 Cart.defaultProps = {
@@ -278,16 +274,9 @@ Cart.defaultProps = {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: {
-    id: '',
-    items: [
-      {
-        id: '',
-        title: '',
-        quantity: 1
-      }
-    ]
-  }
+  checkout: checkoutModel.default,
+  items: itemModel.default,
+  products: {}
 };
 
 const mapStateToProps = (state, props) => {

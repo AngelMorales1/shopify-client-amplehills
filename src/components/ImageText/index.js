@@ -1,16 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import imageModel from 'models/imageModel';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
 
-const ImageText = ({ block }) => {
+const ImageText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'Pink')}`;
   const position = get(fields, 'imagePosition', 0);
+
   return (
     <div
+      style={{ zIndex: z }}
       className={cx('p4 flex drip', styles['ImageText'], styles[colorClass])}
     >
       <div className="flex justify-around px4">
@@ -30,3 +34,29 @@ const ImageText = ({ block }) => {
 };
 
 export default ImageText;
+
+ImageText.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      backgroundColor: PropTypes.string,
+      image: imageModel.propTypes,
+      imagePosition: PropTypes.number,
+      text: PropTypes.string,
+      title: PropTypes.string
+    })
+  })
+};
+
+ImageText.defaultProps = {
+  z: 1,
+  block: {
+    fields: {
+      backgroundColor: 'Pink',
+      image: imageModel.default,
+      imagePosition: 0,
+      text: '',
+      title: ''
+    }
+  }
+};

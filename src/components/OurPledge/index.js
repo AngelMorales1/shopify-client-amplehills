@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import styles from './OurPledge.scss';
+import imageModel from 'models/imageModel';
 
+import styles from './OurPledge.scss';
 import { Image, Button } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
-  constructor() {
+  constructor(props) {
     super(...arguments);
 
     this.state = {
@@ -30,9 +31,10 @@ class OurPledge extends Component {
       shippingInformation,
       shippingPledge,
       calloutImage
-    } = this.props.ourPledge;
+    } = this.props;
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
+
     return (
       <div
         className={cx(
@@ -92,15 +94,15 @@ class OurPledge extends Component {
 export default OurPledge;
 
 OurPledge.propTypes = {
-  ourPledge: PropTypes.shape({
-    calloutImage: PropTypes.object,
-    overlayContentImage: PropTypes.object,
-    shippingInformation: PropTypes.string,
-    shippingPledge: PropTypes.string,
-    title: PropTypes.string
-  })
+  calloutImage: imageModel.propTypes,
+  overlayContentImage: PropTypes.object,
+  shippingInformation: PropTypes.string,
+  shippingPledge: PropTypes.string
 };
 
 OurPledge.defaultProps = {
-  ourPledge: {}
+  calloutImage: imageModel.default,
+  overlayContentImage: {},
+  shippingInformation: '',
+  shippingPledge: ''
 };

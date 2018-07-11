@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
 
@@ -64,14 +65,7 @@ ImageDoubleText.propTypes = {
       text2: PropTypes.string,
       title1: PropTypes.string,
       title2: PropTypes.string,
-      image: PropTypes.shape({
-        fields: PropTypes.shape({
-          title: PropTypes.string,
-          file: PropTypes.shape({
-            url: PropTypes.string
-          })
-        })
-      })
+      image: imageModel.propTypes
     })
   })
 };
@@ -85,14 +79,7 @@ ImageDoubleText.defaultProps = {
       text2: '',
       title1: '',
       title2: '',
-      image: {
-        fields: {
-          title: '',
-          file: {
-            url: ''
-          }
-        }
-      }
+      image: imageModel.default
     }
   }
 };

@@ -223,7 +223,48 @@ ProductDetails.propTypes = {
 
 ProductDetails.defaultProps = {
   z: 1,
-  block: {}
+  block: {
+    fields: {
+      color: 'Blue',
+      productDetails: [
+        {
+          fields: {
+            title: '',
+            description: '',
+            details: '',
+            flavorHighlight: '',
+            pintImage: {
+              fields: {
+                description: '',
+                file: {
+                  url: ''
+                }
+              }
+            },
+            detailsImage: {
+              fields: {
+                description: '',
+                file: {
+                  url: ''
+                }
+              }
+            },
+            flavorHighlightImage: {
+              fields: {
+                description: '',
+                file: {
+                  url: ''
+                }
+              }
+            }
+          },
+          sys: {
+            id: ''
+          }
+        }
+      ]
+    }
+  }
 };
 
 export default ProductDetails;

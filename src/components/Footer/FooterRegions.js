@@ -1,21 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { sortHours } from 'utils/sortHours';
 import styles from './Footer.scss';
-import cx from 'classnames';
 
-const FooterRegions = ({ region, stores }) => {
+const FooterRegions = ({ region, locations }) => {
   return (
     <div className={cx('flex flex-column', styles['Footer__Regions-content'])}>
       <h3 className="my2 text-white callout">{region}</h3>
-      {stores.map(store => {
-        let hours = sortHours(store.fields);
+      {locations.map(location => {
+        let hours = sortHours(location.fields);
         return (
           <div
             className={cx('mb3', styles['Footer__Regions-store'])}
-            key={store.sys.id}
+            key={location.sys.id}
           >
             <h4 className="mb1 text-white bold small nowrap">
-              {store.fields.title}
+              {location.fields.title}
             </h4>
             {Object.keys(hours).map((hour, i) => {
               return (
@@ -24,7 +25,7 @@ const FooterRegions = ({ region, stores }) => {
                 }: ${hour}`}</p>
               );
             })}
-            {store.fields.delivery ? (
+            {location.fields.delivery ? (
               <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
                 Order Delivery
               </div>
@@ -37,3 +38,47 @@ const FooterRegions = ({ region, stores }) => {
 };
 
 export default FooterRegions;
+
+FooterRegions.propTypes = {
+  region: PropTypes.string,
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      fields: PropTypes.shape({
+        title: PropTypes.string,
+        delivery: PropTypes.bool,
+        monday: PropTypes.string,
+        tuesday: PropTypes.string,
+        wednesday: PropTypes.string,
+        thursday: PropTypes.string,
+        friday: PropTypes.string,
+        saturday: PropTypes.string,
+        sunday: PropTypes.string
+      }),
+      sys: PropTypes.shape({
+        id: PropTypes.string
+      })
+    })
+  )
+};
+
+FooterRegions.defaultProps = {
+  region: '',
+  locations: [
+    {
+      fields: {
+        title: '',
+        delivery: false,
+        monday: '',
+        tuesday: '',
+        wednesday: '',
+        thursday: '',
+        friday: '',
+        saturday: '',
+        sunday: ''
+      },
+      sys: {
+        id: ''
+      }
+    }
+  ]
+};

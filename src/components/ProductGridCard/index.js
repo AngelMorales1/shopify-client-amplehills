@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
+import productModel from 'models/productModel';
 
 import { Image } from 'components/base';
 import styles from './ProductGridCard.scss';
@@ -30,3 +31,11 @@ const ProductGridCard = ({ product }) => {
 };
 
 export default ProductGridCard;
+
+ProductGridCard.propTypes = {
+  product: productModel.propTypes
+};
+
+ProductGridCard.defaultProps = {
+  product: productModel.default
+};
