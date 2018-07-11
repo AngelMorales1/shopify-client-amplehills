@@ -134,6 +134,7 @@ class ChooseYourOwnStory extends Component {
 
     const { block, products, ourPledge } = this.props;
     const fields = get(block, 'fields', {});
+
     const product =
       products[get(this.props.product, 'handle', 'choose-your-own-story')];
     const {
