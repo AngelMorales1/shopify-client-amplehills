@@ -6,7 +6,7 @@ import cx from 'classnames';
 const FooterRegions = ({ region, stores }) => {
   return (
     <div className={cx('flex flex-column', styles['Footer__Regions-content'])}>
-      <h3 className="my2 text-white content-title">{region}</h3>
+      <h3 className="my2 text-white callout">{region}</h3>
       {stores.map(store => {
         let hours = sortHours(store.fields);
         return (
@@ -25,9 +25,8 @@ const FooterRegions = ({ region, stores }) => {
               );
             })}
             {store.fields.delivery ? (
-              <div className="bg-white text-madison-blue inline-block mt1 bold tag">
-                {' '}
-                > Order Delivery
+              <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
+                Order Delivery
               </div>
             ) : null}
           </div>
