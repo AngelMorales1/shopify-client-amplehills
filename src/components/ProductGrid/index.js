@@ -18,12 +18,24 @@ export default ProductGrid;
 
 ProductGrid.propTypes = {
   products: PropTypes.arrayOf(
-    shape({
-      id: PropTypes.string
+    PropTypes.shape({
+      handle: PropTypes.string,
+      id: PropTypes.string,
+      image: PropTypes.string,
+      price: PropTypes.string,
+      title: PropTypes.string
     })
   )
 };
 
 ProductGrid.defaultProps = {
-  products: [{ id: '' }]
+  products: [
+    {
+      handle: '',
+      id: '',
+      image: '',
+      price: '0.0',
+      title: ''
+    }
+  ]
 };

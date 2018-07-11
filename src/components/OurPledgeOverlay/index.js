@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import styles from './OurPledgeOverlay.scss';
+import ImagePropTypes from 'constants/types/ImagePropTypes';
 
 import { Image, Button } from 'components/base';
 
@@ -70,28 +71,14 @@ export default OurPledgeOverlay;
 
 OurPledgeOverlay.propTypes = {
   closeOurPledgeOverlay: PropTypes.func,
-  overlayContentImage: PropTypes.shape({
-    fields: PropTypes.shape({
-      file: PropTypes.shape({
-        url: PropTypes.string
-      }),
-      title: PropTypes.string
-    })
-  }),
+  overlayContentImage: ImagePropTypes.propTypes,
   shippingInformation: PropTypes.string,
   shippingPledge: PropTypes.string
 };
 
 OurPledgeOverlay.defaultProps = {
   closeOurPledgeOverlay: () => {},
-  overlayContentImage: {
-    fields: {
-      file: {
-        url: ''
-      },
-      title: ''
-    }
-  },
+  overlayContentImage: ImagePropTypes.default,
   shippingInformation: '',
   shippingPledge: ''
 };

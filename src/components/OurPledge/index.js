@@ -94,7 +94,14 @@ export default OurPledge;
 
 OurPledge.propTypes = {
   ourPledge: PropTypes.shape({
-    calloutImage: PropTypes.object,
+    calloutImage: PropTypes.shape({
+      fields: PropTypes.shape({
+        file: PropTypes.shape({
+          url: PropTypes.string
+        }),
+        title: PropTypes.string
+      })
+    }),
     overlayContentImage: PropTypes.object,
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
@@ -103,7 +110,14 @@ OurPledge.propTypes = {
 
 OurPledge.defaultProps = {
   ourPledge: {
-    calloutImage: {},
+    calloutImage: {
+      fields: {
+        file: {
+          url: PropTypes.string
+        },
+        title: PropTypes.string
+      }
+    },
     overlayContentImage: {},
     shippingInformation: '',
     shippingPledge: ''

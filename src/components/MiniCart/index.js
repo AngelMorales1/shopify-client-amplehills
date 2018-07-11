@@ -12,6 +12,8 @@ import lineItems from 'state/selectors/lineItems';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import Checkout from 'constants/types/Checkout';
+import Product from 'constants/types/Product';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -139,26 +141,8 @@ MiniCart.propTypes = {
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: PropTypes.shape({
-    webUrl: PropTypes.string,
-    subtotalPrice: PropTypes.string,
-    id: PropTypes.string,
-    items: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        id: PropTypes.string,
-        quantity: PropTypes.number,
-        subItems: PropTypes.arrayOf(
-          PropTypes.shape({
-            handle: PropTypes.string,
-            quantity: PropTypes.number
-          })
-        ),
-        price: PropTypes.string
-      })
-    )
-  }),
-  products: PropTypes.object
+  checkout: Checkout.propTypes,
+  products: PropTypes.objectOf(Product.propTypes)
 };
 
 MiniCart.defaultProps = {
@@ -169,25 +153,7 @@ MiniCart.defaultProps = {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: {
-    webUrl: '',
-    subtotalPrice: '',
-    id: '',
-    items: [
-      {
-        title: '',
-        id: '',
-        quantity: 1,
-        subItems: [
-          {
-            handle: '',
-            quantity: 1
-          }
-        ],
-        price: '0.0'
-      }
-    ]
-  },
+  checkout: Checkout.default,
   products: {}
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import Product from 'constants/types/Product';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
@@ -72,14 +73,20 @@ ProductWhatsIncluded.propTypes = {
     })
   }),
   z: PropTypes.number,
-  products: PropTypes.object
+  products: PropTypes.objectOf(Product.propTypes)
 };
 
 ProductWhatsIncluded.defaultProps = {
   block: {
     fields: {
       backgroundColor: 'light-pink',
-      products: []
+      products: [
+        {
+          fields: {
+            productHandle: ''
+          }
+        }
+      ]
     }
   },
   z: 1,

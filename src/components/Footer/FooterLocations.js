@@ -26,7 +26,7 @@ const FooterLocations = ({ locations }) => {
           <FooterRegions
             key={region}
             region={region}
-            stores={locations[region]}
+            locations={locations[region]}
           />
         ))}
       </div>

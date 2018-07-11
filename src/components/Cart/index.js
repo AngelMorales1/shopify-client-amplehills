@@ -12,6 +12,9 @@ import cx from 'classnames';
 import get from 'utils/get';
 import products from 'state/selectors/products';
 import lineItems from 'state/selectors/lineItems';
+import Checkout from 'constants/types/Checkout';
+import Item from 'constants/types/Item';
+import Product from 'constants/types/Product';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -35,7 +38,6 @@ const Cart = props => {
     items,
     products
   } = props;
-
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
@@ -261,25 +263,9 @@ Cart.propTypes = {
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: PropTypes.shape({
-    subtotalPrice: PropTypes.string,
-    id: PropTypes.string
-  }),
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      price: PropTypes.string,
-      productId: PropTypes.string,
-      subItems: PropTypes.arrayOf(
-        PropTypes.shape({
-          handle: PropTypes.string,
-          quantity: PropTypes.number
-        })
-      ),
-      title: PropTypes.string
-    })
-  ),
-  products: PropTypes.object
+  checkout: Checkout.propTypes,
+  items: Item.propTypes,
+  products: PropTypes.objectOf(Product.propTypes)
 };
 
 Cart.defaultProps = {
@@ -287,20 +273,8 @@ Cart.defaultProps = {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: {
-    subtotalPrice: '',
-    id: ''
-  },
-  items: PropTypes.arrayOf({
-    id: '',
-    price: '0.0',
-    productId: '',
-    subItems: PropTypes.arrayOf({
-      handle: '',
-      quantity: 1
-    }),
-    title: ''
-  }),
+  checkout: Checkout.default,
+  items: Item.default,
   products: {}
 };
 
