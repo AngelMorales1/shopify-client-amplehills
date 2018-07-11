@@ -31,9 +31,13 @@ em {
 }
 
 .link-text {
-  font-size: $font-4;
   font-weight: 600;
   text-decoration: none;
+  font-size: $font-3;
+
+  @media ($small-up) {
+    font-size: $font-4;
+  }
 }
 
 .block-headline {
