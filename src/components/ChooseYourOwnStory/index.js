@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
@@ -371,7 +370,7 @@ class ChooseYourOwnStory extends Component {
 
 ChooseYourOwnStory.propTypes = {
   product: productModel.propTypes,
-  products: PropTypes.object,
+  products: PropTypes.objectOf(productModel.propTypes),
   block: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
