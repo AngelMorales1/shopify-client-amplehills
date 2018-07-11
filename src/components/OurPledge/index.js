@@ -38,7 +38,7 @@ class OurPledge extends Component {
     return (
       <div
         className={cx(
-          'flex flex-column items-center w100',
+          'col-12 md-col-8 mx-auto mt3 px2 flex flex-column items-center',
           styles['OurPledge']
         )}
       >
@@ -49,24 +49,22 @@ class OurPledge extends Component {
         />
         <div
           className={cx(
-            'bg-varden flex w100',
-            styles['OurPledge__text-container']
+            'bg-varden flex items-center w100',
+            styles['OurPledge__content-container']
           )}
         >
-          <div className="col col-8 flex flex-wrap items-center">
-            <p className="col col-12 md-col-6 px2 callout-small text-madison-blue nowrap">
-              Our Pledge
-            </p>
-            <p
-              className={cx(
-                styles['OurPledge__text-description'],
-                'col col-12 md-col-6 flex uppercase text-madison-blue info-text-small semi-bold'
-              )}
-            >
-              Ice cream arrives fresh delicious, and frozen
-            </p>
-          </div>
-          <div className="col col-4 px2 right-align">
+          <p className="col col-12 md-col-4 px2 callout-medium text-madison-blue center nowrap">
+            Our Pledge
+          </p>
+          <p
+            className={cx(
+              styles['OurPledge__text-description'],
+              'col col-12 md-col-4 flex uppercase text-madison-blue info-text-extra-small semi-bold center flex justify-center'
+            )}
+          >
+            Ice cream arrives fresh delicious, and frozen
+          </p>
+          <div className="col col-4 px2 right-align flex justify-center">
             <Button
               variant="style-none"
               onClick={this.openOurPledgeOverlay}

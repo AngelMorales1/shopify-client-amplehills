@@ -90,6 +90,15 @@ em {
   font-size: $font-5;
 }
 
+.callout-medium {
+  font-family: $font-carter;
+  font-size: $font-3;
+
+  @media ($medium-up) {
+    font-size: $font-4;
+  }
+}
+
 .callout-small {
   font-family: $font-carter;
   font-size: $font-2;
@@ -166,6 +175,10 @@ em {
 .info-text-small {
   font-size: $font-2;
   line-height: $font-6;
+}
+
+.info-text-extra-small {
+  font-size: $font-1;
 }
 
 .price-text {
