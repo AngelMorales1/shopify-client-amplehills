@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import totalItems from 'state/selectors/totalItems';
@@ -9,12 +9,32 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import cx from 'classnames';
+import Global from 'constants/Global';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
 import styles from './Nav.scss';
 
 class Nav extends Component {
+  state = {
+    currentBreakpoint: Global.breakpoints.medium.label
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+  }
+
+  updateWindow = () => {
+    const { small, medium } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
+  };
+
   toggleMiniCart = () => {
     const {
       miniCartIsOpen,
@@ -26,39 +46,65 @@ class Nav extends Component {
 
   render() {
     return (
-      <div className="py2 px4 flex bg-peach text-white items-center clearfix">
-        <div className={`col col-4 flex justify-start ${styles['left-side']}`}>
-          <NavLink exact to="/location" className="ml3 link-text">
+      <div
+        className={cx(styles['Nav'], 'flex bg-peach text-white items-center')}
+      >
+        <div
+          className={`col col-4 md-col-5 flex items-center ${
+            styles['left-side']
+          }`}
+        >
+          <NavLink exact to="/location" className="link-text center">
             Locations
           </NavLink>
-          <NavLink exact to="/contact" className="ml3 link-text">
+          <NavLink
+            exact
+            to="/contact"
+            className="ml3 link-text center xs-hide sm-hide"
+          >
             Contact
           </NavLink>
         </div>
-        <div className="col col-4 h100 flex justify-center items-center">
-          <NavLink exact to="/" className="flex justify-center items-center">
+        <div
+          className={cx(
+            styles['logo-container'],
+            'col col-3 md-col-4 h100 flex items-center'
+          )}
+        >
+          <NavLink exact to="/" className="flex items-center">
             <Image
+              className="col-12 md-col-10"
               alt="Click the Ample Hills Logo to return to the homepage"
               src="/assets/images/ample-hills-logo.svg"
             />
           </NavLink>
         </div>
-        <div
-          className={`col col-4 flex items-center justify-end clearfix ${
-            styles['right-side']
-          }`}
-        >
-          <NavLink exact to="/profile" className="mr3 link-text">
-            <Image src="/assets/images/bubble-icon.svg" />
-          </NavLink>
+        <div className={`col col-5 flex items-center ${styles['right-side']}`}>
+          {this.state.currentBreakpoint === 'medium' ? (
+            <Fragment>
+              <NavLink exact to="/profile" className="mr3 link-text center">
+                <Image className="icon" src="/assets/images/bubble-icon.svg" />
+              </NavLink>
+              <Button
+                className="mr3"
+                to="/products"
+                variant="primary-small"
+                color="white-peach"
+                label="Shop Online"
+              />
+            </Fragment>
+          ) : (
+            <Fragment>
+              <NavLink exact to="/products" className="link-text center">
+                Shop
+              </NavLink>
+              <NavLink exact to="/profile" className="link-text center">
+                <Image src="/assets/images/icon-profile.svg" />
+              </NavLink>
+            </Fragment>
+          )}
           <Button
-            to="/products"
-            variant="primary-small"
-            color="white-peach"
-            label="Shop Online"
-          />
-          <Button
-            className="ml2 small flex items-center justify-center"
+            className="small flex items-center justify-center"
             variant="circle"
             color="madison-blue"
             to="/cart"

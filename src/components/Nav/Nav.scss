@@ -1,5 +1,38 @@
-.left-side {
-  > a:first-of-type {
-    margin-left: 0;
+@import 'settings', 'src/styles/typography';
+
+.Nav {
+  padding: spacing(4) spacing(4);
+
+  @media ($medium-up) {
+    padding: spacing(4) spacing(8);
+  }
+
+  .left-side {
+    order: 2;
+    justify-content: center;
+
+    @media ($medium-up) {
+      order: 1;
+      justify-content: flex-start;
+    }
+  }
+
+  .logo-container {
+    order: 1;
+    justify-content: flex-start;
+
+    @media ($medium-up) {
+      order: 2;
+      justify-content: center;
+    }
+  }
+
+  .right-side {
+    order: 3;
+    justify-content: space-between;
+
+    @media ($medium-up) {
+      justify-content: flex-end;
+    }
   }
 }
