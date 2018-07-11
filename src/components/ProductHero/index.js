@@ -127,13 +127,13 @@ class ProductHero extends Component {
                 </span>
               </Button>
             </form>
+            <OurPledge
+              overlayContentImage={overlayContentImage}
+              shippingInformation={shippingInformation}
+              shippingPledge={shippingPledge}
+              calloutImage={calloutImage}
+            />
           </div>
-          <OurPledge
-            overlayContentImage={overlayContentImage}
-            shippingInformation={shippingInformation}
-            shippingPledge={shippingPledge}
-            calloutImage={calloutImage}
-          />
         </div>
       </div>
     );

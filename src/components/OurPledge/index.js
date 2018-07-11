@@ -38,7 +38,7 @@ class OurPledge extends Component {
     return (
       <div
         className={cx(
-          'col-12 md-col-8 mx-auto mt3 px2 flex flex-column items-center',
+          'col-12 mx-auto mt3 flex flex-column items-center',
           styles['OurPledge']
         )}
       >
@@ -76,14 +76,13 @@ class OurPledge extends Component {
             />
           </div>
         </div>
-        {this.state.ourPledgeOverlayIsOpen ? (
-          <OurPledgeOverlay
-            overlayContentImage={overlayContentImage}
-            shippingInformation={shippingInformation}
-            shippingPledge={shippingPledge}
-            closeOurPledgeOverlay={this.closeOurPledgeOverlay}
-          />
-        ) : null}
+        <OurPledgeOverlay
+          overlayContentImage={overlayContentImage}
+          shippingInformation={shippingInformation}
+          shippingPledge={shippingPledge}
+          closeOurPledgeOverlay={this.closeOurPledgeOverlay}
+          ourPledgeOverlayIsOpen={this.state.ourPledgeOverlayIsOpen}
+        />
       </div>
     );
   }
