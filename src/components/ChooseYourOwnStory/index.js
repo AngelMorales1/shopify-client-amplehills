@@ -5,8 +5,8 @@ import cx from 'classnames';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
-import Product from 'constants/types/Product';
-import ImagePropTypes from 'constants/types/ImagePropTypes';
+import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 
@@ -369,7 +369,7 @@ class ChooseYourOwnStory extends Component {
 }
 
 ChooseYourOwnStory.propTypes = {
-  product: Product.propTypes,
+  product: productModel.propTypes,
   products: PropTypes.object,
   block: PropTypes.shape({
     title: PropTypes.string,
@@ -382,14 +382,14 @@ ChooseYourOwnStory.propTypes = {
   }),
   ourPledge: PropTypes.shape({
     closeOurPledgeOverlay: PropTypes.func,
-    overlayContentImage: ImagePropTypes.propTypes,
+    overlayContentImage: imageModel.propTypes,
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
   })
 };
 
 ChooseYourOwnStory.defaultProps = {
-  product: Product.default,
+  product: productModel.default,
   products: {},
   block: {
     title: '',
@@ -398,7 +398,7 @@ ChooseYourOwnStory.defaultProps = {
   },
   ourPledge: {
     closeOurPledgeOverlay: () => {},
-    overlayContentImage: ImagePropTypes.default,
+    overlayContentImage: imageModel.default,
     shippingInformation: '',
     shippingPledge: ''
   }

@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import Item from './Item.js';
+import itemModel from './itemModel.js';
 
 export default {
   propTypes: PropTypes.shape({
     webUrl: PropTypes.string,
     subtotalPrice: PropTypes.string,
     id: PropTypes.string,
-    items: Item.propTypes
+    items: itemModel.propTypes
   }),
 
   default: {
     webUrl: '',
     subtotalPrice: '',
     id: '',
-    items: Item.default
+    items: itemModel.default
   }
 };

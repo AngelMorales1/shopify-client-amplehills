@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import ImagePropTypes from 'constants/types/ImagePropTypes';
+import imageModel from 'models/imageModel';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
@@ -40,7 +40,7 @@ ImageText.propTypes = {
   block: PropTypes.shape({
     fields: PropTypes.shape({
       backgroundColor: PropTypes.string,
-      image: ImagePropTypes.propTypes,
+      image: imageModel.propTypes,
       imagePosition: PropTypes.number,
       text: PropTypes.string,
       title: PropTypes.string
@@ -53,7 +53,7 @@ ImageText.defaultProps = {
   block: {
     fields: {
       backgroundColor: 'Pink',
-      image: ImagePropTypes.default,
+      image: imageModel.default,
       imagePosition: 0,
       text: '',
       title: ''

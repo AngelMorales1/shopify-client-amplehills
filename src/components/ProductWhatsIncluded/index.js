@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import Product from 'constants/types/Product';
+import productModel from 'models/productModel';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
@@ -73,7 +73,7 @@ ProductWhatsIncluded.propTypes = {
     })
   }),
   z: PropTypes.number,
-  products: PropTypes.objectOf(Product.propTypes)
+  products: PropTypes.objectOf(productModel.propTypes)
 };
 
 ProductWhatsIncluded.defaultProps = {

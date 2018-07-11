@@ -12,9 +12,9 @@ import cx from 'classnames';
 import get from 'utils/get';
 import products from 'state/selectors/products';
 import lineItems from 'state/selectors/lineItems';
-import Checkout from 'constants/types/Checkout';
-import Item from 'constants/types/Item';
-import Product from 'constants/types/Product';
+import checkoutModel from 'models/checkoutModel';
+import itemModel from 'models/itemModel';
+import productModel from 'models/productModel';
 
 import { Button, Image, QuantitySelector, TextField } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -263,9 +263,9 @@ Cart.propTypes = {
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: Checkout.propTypes,
-  items: Item.propTypes,
-  products: PropTypes.objectOf(Product.propTypes)
+  checkout: checkoutModel.propTypes,
+  items: itemModel.propTypes,
+  products: PropTypes.objectOf(productModel.propTypes)
 };
 
 Cart.defaultProps = {
@@ -273,8 +273,8 @@ Cart.defaultProps = {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: Checkout.default,
-  items: Item.default,
+  checkout: checkoutModel.default,
+  items: itemModel.default,
   products: {}
 };
 

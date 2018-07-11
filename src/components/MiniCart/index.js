@@ -12,8 +12,8 @@ import lineItems from 'state/selectors/lineItems';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import Checkout from 'constants/types/Checkout';
-import Product from 'constants/types/Product';
+import checkoutModel from 'models/checkoutModel';
+import productModel from 'models/productModel';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -141,8 +141,8 @@ MiniCart.propTypes = {
     removeLineItems: PropTypes.func,
     updateLineItems: PropTypes.func
   }),
-  checkout: Checkout.propTypes,
-  products: PropTypes.objectOf(Product.propTypes)
+  checkout: checkoutModel.propTypes,
+  products: PropTypes.objectOf(productModel.propTypes)
 };
 
 MiniCart.defaultProps = {
@@ -153,7 +153,7 @@ MiniCart.defaultProps = {
     removeLineItems: () => {},
     updateLineItems: () => {}
   },
-  checkout: Checkout.default,
+  checkout: checkoutModel.default,
   products: {}
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Product from 'constants/types/Product';
+import productModel from 'models/productModel';
 
 import { Button, QuantitySelector } from 'components/base';
 import styles from './ProductShoppableCard.scss';
@@ -74,14 +74,14 @@ const ProductShoppableCard = ({
 };
 
 ProductShoppableCard.propTypes = {
-  product: Product.propTypes,
+  product: productModel.propTypes,
   quantity: PropTypes.number,
   handleAddProduct: PropTypes.func,
   handleRemoveProduct: PropTypes.func
 };
 
 ProductShoppableCard.defaultProps = {
-  product: Product.defaultProps,
+  product: productModel.defaultProps,
   quantity: 0,
   handleAddProduct: () => {},
   handleRemoveProduct: () => {}

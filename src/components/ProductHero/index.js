@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import Product from 'constants/types/Product';
-import ImagePropTypes from 'constants/types/ImagePropTypes';
+import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 
 import get from 'utils/get';
@@ -143,11 +143,11 @@ class ProductHero extends Component {
 ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
-  product: Product.propTypes,
+  product: productModel.propTypes,
   shippingDates: PropTypes.arrayOf(PropTypes.string),
   ourPledge: PropTypes.shape({
     closeOurPledgeOverlay: PropTypes.func,
-    overlayContentImage: ImagePropTypes.propTypes,
+    overlayContentImage: imageModel.propTypes,
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
   })
@@ -156,11 +156,11 @@ ProductHero.propTypes = {
 ProductHero.defaultProps = {
   data: {},
   z: 1,
-  product: Product.default,
+  product: productModel.default,
   shippingDates: [],
   ourPledge: {
     closeOurPledgeOverlay: () => {},
-    overlayContentImage: ImagePropTypes.default,
+    overlayContentImage: imageModel.default,
     shippingInformation: '',
     shippingPledge: ''
   }

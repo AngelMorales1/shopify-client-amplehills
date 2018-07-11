@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import ImagePropTypes from 'constants/types/ImagePropTypes';
+import imageModel from 'models/imageModel';
 
 import styles from './OurPledge.scss';
 import { Image, Button } from 'components/base';
@@ -94,14 +94,14 @@ class OurPledge extends Component {
 export default OurPledge;
 
 OurPledge.propTypes = {
-  calloutImage: ImagePropTypes.propTypes,
+  calloutImage: imageModel.propTypes,
   overlayContentImage: PropTypes.object,
   shippingInformation: PropTypes.string,
   shippingPledge: PropTypes.string
 };
 
 OurPledge.defaultProps = {
-  calloutImage: ImagePropTypes.default,
+  calloutImage: imageModel.default,
   overlayContentImage: {},
   shippingInformation: '',
   shippingPledge: ''

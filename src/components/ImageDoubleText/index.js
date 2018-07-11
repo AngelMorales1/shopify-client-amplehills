@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import ImagePropTypes from 'constants/types/ImagePropTypes';
+import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
 
@@ -65,7 +65,7 @@ ImageDoubleText.propTypes = {
       text2: PropTypes.string,
       title1: PropTypes.string,
       title2: PropTypes.string,
-      image: ImagePropTypes.propTypes
+      image: imageModel.propTypes
     })
   })
 };
@@ -79,7 +79,7 @@ ImageDoubleText.defaultProps = {
       text2: '',
       title1: '',
       title2: '',
-      image: ImagePropTypes.default
+      image: imageModel.default
     }
   }
 };
