@@ -4,6 +4,7 @@ import get from 'utils/get';
 import { PENDING } from 'constants/Status';
 
 import { Button, TextField, FormFlash } from 'components/base';
+import getUrlParam from 'utils/getUrlParam';
 
 class SignInView extends Component {
   state = {
@@ -30,12 +31,12 @@ class SignInView extends Component {
     } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (get(customer, 'id', '')) return <Redirect to="/profile" />;
+    if (get(customer, 'id')) return <Redirect to="/profile" />;
 
     return (
       <div className="SignIn text-container-width mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
-        {search === '?new-account=true' ? (
+        {getUrlParam('new-account') === 'true' ? (
           <FormFlash
             message="Almost there! Sign in to your new account below"
             success={true}

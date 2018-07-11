@@ -24,7 +24,7 @@ class SignUpView extends Component {
     const { model, customer, customerSigningUp } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    if (get(customer, 'id', '')) return <Redirect to="/profile" />;
+    if (get(customer, 'id')) return <Redirect to="/profile" />;
 
     return (
       <div className="SignUp text-container-width mx-auto p3">

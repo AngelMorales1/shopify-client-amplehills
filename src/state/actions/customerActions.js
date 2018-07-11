@@ -15,8 +15,6 @@ export const signUpCustomer = input => dispatch => {
     payload: Apollo.mutate({
       mutation: customerCreate,
       variables: { input }
-    }).then(customer => {
-      console.log(customer);
     })
   });
 };
