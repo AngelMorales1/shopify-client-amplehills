@@ -19,8 +19,10 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
   };
 
   return (
-    <div className={cx('p4 bg-madison-blue', styles['Footer'])}>
-      <div className={cx(styles['Footer__container'])}>
+    <div
+      className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
+    >
+      <div className={cx('flex', styles['Footer__container'])}>
         <FooterLocations locations={sortDataByRegion(locations.items)} />
         <FooterLinks
           footerIllustration={footerIllustration}

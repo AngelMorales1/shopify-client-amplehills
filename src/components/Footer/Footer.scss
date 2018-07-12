@@ -1,8 +1,6 @@
 @import 'settings', 'src/styles/typography';
 
 .Footer {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 
   > span {
@@ -17,7 +15,6 @@
   }
 
   &__container {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -34,12 +31,8 @@
 
     @media ($medium-up) {
       align-items: start;
-      width: 40vw;
+      width: 50%;
     }
-  }
-
-  &__Locations-title {
-    font-size: $font-7;
   }
 
   &__Regions-container {
@@ -66,8 +59,6 @@
   }
 
   &__Links-container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 0;
 
