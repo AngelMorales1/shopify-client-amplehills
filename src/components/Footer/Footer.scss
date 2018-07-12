@@ -16,7 +16,6 @@
   }
 
   &__container {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
@@ -65,8 +64,6 @@
   }
 
   &__Links-container {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 0;
 
