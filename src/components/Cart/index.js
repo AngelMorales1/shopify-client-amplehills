@@ -63,7 +63,6 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
         <div className="my3">
           {items.map(item => {
-            console.log(item);
             const link = Object.values(products).find(
               value => value.id === item.productId
             ).handle;

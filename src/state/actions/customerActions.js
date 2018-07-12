@@ -93,7 +93,6 @@ export const updateCustomer = (customerAccessToken, customer) => dispatch => {
         variables: { customerAccessToken, customer }
       }).then(res => {
         if (get(res, 'data.customerUpdate.userErrors', []).length) {
-          dispatch(cancelEditCustomerFields());
           return reject(
             get(res, 'data.customerUpdate.userErrors[0].message', '')
           );

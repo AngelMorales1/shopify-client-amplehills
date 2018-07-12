@@ -34,7 +34,7 @@ export default (state = initialState, action) => {
       };
     case `${UPDATE_CUSTOMER}_REJECTED`:
       return {
-        ...state,
+        ...initialState,
         errors: action.payload
       };
     case `${UPDATE_CUSTOMER}_FULFILLED`:
@@ -42,7 +42,7 @@ export default (state = initialState, action) => {
         ...state,
         errors: initialState.error
       };
-    case `${SIGN_OUT_CUSTOMER}_FULFILLED`:
+    case SIGN_OUT_CUSTOMER:
       return initialState;
     default:
       return state;

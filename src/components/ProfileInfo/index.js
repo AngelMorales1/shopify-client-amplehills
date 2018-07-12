@@ -23,6 +23,19 @@ class ProfileInfo extends Component {
     this.setState({ [id]: value });
   };
 
+  renderSuccessMessage(successfullyEditedFields) {
+    if (!successfullyEditedFields.length) return null;
+
+    const field = Object.keys(successfullyEditedFields[0])[0];
+    const value = Object.values(successfullyEditedFields[0])[0];
+    const message =
+      field === 'password'
+        ? 'Your password has been updated!'
+        : `Your ${field} has been updated to: ${value}`;
+
+    return <FormFlash success={true} message={message} />;
+  }
+
   render() {
     const {
       email,
@@ -42,16 +55,7 @@ class ProfileInfo extends Component {
       <div className="my3">
         <h2 className="carter sub-title mb3">Personal Info</h2>
 
-        {successfullyEditedFields.length ? (
-          <FormFlash
-            success={true}
-            message={`Your ${
-              Object.keys(successfullyEditedFields[0])[0]
-            } has been updated to: ${
-              Object.values(successfullyEditedFields[0])[0]
-            }`}
-          />
-        ) : null}
+        {this.renderSuccessMessage(successfullyEditedFields)}
         {errors ? (
           <FormFlash error={true} message={`Unexpected Error: ${errors}`} />
         ) : null}
@@ -117,10 +121,17 @@ class ProfileInfo extends Component {
                   id: 'password',
                   label: 'password',
                   placeholder: '• • • • • • • • • •',
-                  onSave: () =>
+                  onSave: () => {
+                    this.setState({ error: '' });
+                    if (this.state.password !== this.state.confirmPassword)
+                      return this.setState({
+                        error: 'Your passwords do not match!'
+                      });
+
                     this.handleCustomerUpdate(accessToken, {
                       password: this.state.password
-                    })
+                    });
+                  }
                 })
               }
             />
@@ -131,6 +142,9 @@ class ProfileInfo extends Component {
             <span className="sub-title">
               Edit {customerFieldBeingEdited.label}
             </span>
+            {this.state.error ? (
+              <FormFlash error={true} message={this.state.error} />
+            ) : null}
             <form>
               <div className="mt3 mb4">
                 <TextField
