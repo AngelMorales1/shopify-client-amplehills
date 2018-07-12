@@ -15,7 +15,6 @@ class ProfileInfo extends Component {
   }
 
   handleCustomerUpdate = (customerAccessToken, customer) => {
-    // TODO: Validation
     this.props.actions.updateCustomer(customerAccessToken, customer);
   };
 
