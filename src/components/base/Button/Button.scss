@@ -9,6 +9,12 @@
   white-space: nowrap;
   transform: translate3d(0, spacing(-0.5), 0);
   transition: $transition;
+  border: spacing(1) solid transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     box-shadow: $drop-shadow;
@@ -106,23 +112,23 @@
     @extend .text-white;
   }
 
-  &--clear-madison-blue-outline {
+  &--clear-madison-blue-border {
     @extend .text-madison-blue;
-    border: spacing(0.75) solid color('madison-blue');
     background-color: Transparent;
+    border: spacing(1) solid color('madison-blue');
   }
 
-  &--madison-blue-outline {
+  &--madison-blue-white-border {
     @extend .bg-madison-blue;
     @extend .text-white;
-    border: spacing(0.75) solid color('white');
+    border: spacing(1) solid color('white');
 
     &.Button--circle {
       padding: 0;
     }
   }
 
-  &--seafoam-madison-blue-outline {
+  &--seafoam-madison-blue-border {
     @extend .bg-seafoam;
     @extend .text-madison-blue;
     border: spacing(1) solid color('madison-blue');
@@ -132,7 +138,7 @@
     }
   }
 
-  &--white-madison-blue-outline {
+  &--white-madison-blue-border {
     @extend .bg-white;
     @extend .text-madison-blue;
     border: spacing(1) solid color('madison-blue');
@@ -145,7 +151,7 @@
   &--white-madison-blue {
     @extend .bg-white;
     @extend .text-madison-blue;
-    border: spacing(0.75) solid color('white');
+    border: spacing(1) solid color('white');
   }
 
   &--style-none {

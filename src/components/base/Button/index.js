@@ -58,7 +58,7 @@ const Button = ({
     linkedComponent
   ) : (
     <button type={type} onClick={onClick} className={classes}>
-      {children && !label ? children : label}
+      <div>{children && !label ? children : label}</div>
     </button>
   );
 

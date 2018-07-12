@@ -297,7 +297,7 @@ class ChooseYourOwnStory extends Component {
                   color={
                     shippingDate === shipping
                       ? 'white-madison-blue'
-                      : 'madison-blue-outline'
+                      : 'madison-blue-white-border'
                   }
                   key={shippingDate}
                   className="small mr2"
@@ -324,7 +324,7 @@ class ChooseYourOwnStory extends Component {
                 )}
               >
                 <QuantitySelector
-                  color="madison-blue-outline"
+                  color="madison-blue-white-border"
                   quantity={quantity}
                   variant={this.state.currentBreakpoint}
                   onChange={value => this.setState({ quantity: value })}

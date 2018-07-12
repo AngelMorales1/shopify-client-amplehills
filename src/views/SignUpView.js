@@ -58,7 +58,7 @@ class SignUpView extends Component {
           className="mt2 inline-block"
           to="/sign-in"
           variant="primary"
-          color="white-madison-blue-outline"
+          color="white-madison-blue-border"
           label="Already have an account? Sign in &rarr;"
         />
       </div>

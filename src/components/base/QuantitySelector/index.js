@@ -22,16 +22,16 @@ const QuantitySelector = ({
     let buttonColor, inputColor;
 
     switch (color) {
-      case 'madison-blue-outline':
-        buttonColor = 'madison-blue-outline';
+      case 'madison-blue-white-border':
+        buttonColor = 'madison-blue-white-border';
         inputColor = 'madison-blue-outline';
         break;
       case 'seafoam':
-        buttonColor = 'seafoam-madison-blue-outline';
+        buttonColor = 'seafoam-madison-blue-border';
         inputColor = 'seafoam-madison-blue-outline';
         break;
       default:
-        buttonColor = 'white-madison-blue-outline';
+        buttonColor = 'white-madison-blue-border';
         inputColor = 'madison-blue';
     }
 
