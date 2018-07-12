@@ -14,7 +14,6 @@ export default (state = initialState, action) => {
     case `${FETCH_CUSTOMER}_FULFILLED`:
       return action.payload;
     case `${SIGN_IN_CUSTOMER}_REJECTED`:
-      console.log('rehected');
       return {
         ...state,
         error: action.payload
