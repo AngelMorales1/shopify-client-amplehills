@@ -31,7 +31,7 @@
       @extend .text-madison-blue;
       @extend .bold;
       border: spacing(1) solid color('madison-blue');
-      border-radius: radius('xl');
+      border-radius: radius('l');
       font-size: $font-4;
 
       &::placeholder {
@@ -65,7 +65,7 @@
       @extend .text-madison-blue;
       @extend .bold;
       border: 0;
-      border-radius: radius('xs');
+      border-radius: radius('s');
       padding: spacing(6);
       height: spacing(15);
       font-size: $font-3;

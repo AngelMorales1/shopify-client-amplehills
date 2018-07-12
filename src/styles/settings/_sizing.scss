@@ -22,12 +22,10 @@ Border Radius
 */
 $radius: (
   '0': spacing(0),
-  'xxs': spacing(1),
-  'xs': spacing(2),
-  's': spacing(3),
+  'xs': spacing(1),
+  's': spacing(2),
   'm': spacing(4),
   'l': spacing(8),
-  'xl': spacing(10),
   'circle': 50%
 );
 
