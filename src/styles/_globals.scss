@@ -108,7 +108,7 @@ UI elements
 }
 
 .card {
-  border-radius: spacing(4);
+  border-radius: radius('m');
   overflow: hidden;
 
   &--light-gray-border {
@@ -119,10 +119,10 @@ UI elements
 .tag {
   @extend .tag-text;
   padding: spacing(3) spacing(6);
-  border-radius: 13% / 50%;
+  border-radius: radius('l');
 
   @media ($medium-up) {
-    border-radius: 10% / 50%;
+    border-radius: radius('m');
     padding: spacing(1) spacing(3);
   }
 }

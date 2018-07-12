@@ -10,7 +10,7 @@
     padding: spacing(4);
     width: 100%;
     appearance: none;
-    border-radius: 0;
+    border-radius: radius('0');
   }
 
   &--error {
@@ -31,7 +31,7 @@
       @extend .text-madison-blue;
       @extend .bold;
       border: spacing(1) solid color('madison-blue');
-      border-radius: spacing(10);
+      border-radius: radius('xl');
       font-size: $font-4;
 
       &::placeholder {
@@ -65,7 +65,7 @@
       @extend .text-madison-blue;
       @extend .bold;
       border: 0;
-      border-radius: spacing(2);
+      border-radius: radius('xs');
       padding: spacing(6);
       height: spacing(15);
       font-size: $font-3;
@@ -78,7 +78,7 @@
 
   &--light-gray-tall {
     textarea {
-      border-radius: spacing(3);
+      border-radius: radius('s');
       height: spacing(65);
       width: 100%;
       padding: spacing(5);
@@ -97,7 +97,7 @@
     }
 
     input {
-      border-radius: 50%;
+      border-radius: radius('circle');
       font-weight: 600;
       font-size: $font-4;
       padding: spacing(2);

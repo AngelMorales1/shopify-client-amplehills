@@ -29,7 +29,7 @@
 
   &--primary,
   &--primary-small {
-    border-radius: spacing(8);
+    border-radius: radius('l');
     height: $button-primary-height;
     padding: spacing(4) spacing(6);
   }
@@ -40,7 +40,7 @@
   }
 
   &--secondary {
-    border-radius: 0.5rem;
+    border-radius: radius('xs');
     padding: spacing(3) spacing(6);
   }
 
@@ -151,7 +151,7 @@
   &--style-none {
     background-color: transparent;
     box-shadow: unset;
-    border-radius: 0;
+    border-radius: radius('0');
     padding: 0;
 
     &:hover {
