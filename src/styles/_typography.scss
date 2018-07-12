@@ -64,12 +64,18 @@ em {
 
 .block-subheadline {
   font-size: $font-3;
-  line-height: $font-5;
+  line-height: $font-6;
+  letter-spacing: spacing(0.1);
 
   @media ($medium-up) {
     font-size: $font-4;
     line-height: $font-7;
   }
+}
+
+.block-subheadline-small {
+  font-size: $font-3;
+  line-height: $font-6;
 }
 
 .title {

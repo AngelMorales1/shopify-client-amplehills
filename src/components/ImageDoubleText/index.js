@@ -44,11 +44,15 @@ const ImageDoubleText = ({ block, z }) => {
         >
           <div className="mb3">
             <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>
-            <p className="copy">{get(fields, 'text1', '')}</p>
+            <p className="block-subheadline-small">
+              {get(fields, 'text1', '')}
+            </p>
           </div>
           <div>
             <h2 className="block-headline mb2">{get(fields, 'title2', '')}</h2>
-            <p className="copy">{get(fields, 'text2', '')}</p>
+            <p className="block-subheadline-small">
+              {get(fields, 'text2', '')}
+            </p>
           </div>
         </div>
       </div>
