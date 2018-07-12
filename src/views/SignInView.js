@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import get from 'utils/get';
-import { PENDING } from 'constants/Status';
+import { PENDING, REJECTED } from 'constants/Status';
 
 import { Button, TextField, FormFlash } from 'components/base';
 import getUrlParam from 'utils/getUrlParam';
@@ -40,6 +40,12 @@ class SignInView extends Component {
           <FormFlash
             message="Almost there! Sign in to your new account below"
             success={true}
+          />
+        ) : null}
+        {customerSigningIn === REJECTED ? (
+          <FormFlash
+            message="Your email or password was incorrect!"
+            error={true}
           />
         ) : null}
         <div className="my3">
