@@ -31,7 +31,7 @@
 
       .Select-menu {
         background: color('white');
-        border-radius: spacing(2);
+        border-radius: radius('s');
         box-shadow: $drop-shadow-large;
         position: absolute;
         top: 0;

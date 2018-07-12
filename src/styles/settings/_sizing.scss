@@ -18,10 +18,25 @@ $spacer: (
 }
 
 /*
+Border Radius
+*/
+$radius: (
+  '0': spacing(0),
+  'xs': spacing(1),
+  's': spacing(2),
+  'm': spacing(4),
+  'l': spacing(8),
+  'circle': 50%
+);
+
+@function radius($radius-name) {
+  @return map-get($radius, $radius-name);
+}
+
+/*
 Global element shapes
 */
 $viewport-height: 100vh;
-$border-radius: 0.25rem;
 $drop-shadow: 0 spacing(0.5) spacing(1) 0 rgba(0, 0, 0, 0.2);
 $drop-shadow-large: 0 spacing(1) spacing(2) 0 rgba(0, 0, 0, 0.2);
 $drop-shadow-xlarge: 0 spacing(1) spacing(6) 0 rgba(0, 0, 0, 0.2);
