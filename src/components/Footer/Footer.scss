@@ -36,10 +36,6 @@
     }
   }
 
-  &__Locations-title {
-    font-size: $font-7;
-  }
-
   &__Regions-container {
     @media ($medium-up) {
       max-height: spacing(180);
