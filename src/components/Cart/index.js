@@ -129,7 +129,7 @@ const Cart = props => {
                     )}
                   >
                     <Button
-                      className="my2 small-icon"
+                      className="my2 icon"
                       variant="icon"
                       onClick={() => removeLineItems(item.id)}
                     >
