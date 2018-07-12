@@ -21,7 +21,10 @@ export default createSelector(
       get(customer, 'data.customer.addresses.edges', [])
     );
 
+    const accessToken = get(customer, 'accessToken', '');
+
     return {
+      accessToken,
       id,
       email,
       firstName,

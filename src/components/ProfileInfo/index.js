@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Button, Modal, TextField } from 'components/base';
+import { Button, Modal, TextField, FormFlash } from 'components/base';
 import get from 'utils/get';
 
 class ProfileInfo extends Component {
@@ -16,7 +16,7 @@ class ProfileInfo extends Component {
 
   handleCustomerUpdate = (customerAccessToken, customer) => {
     // TODO: Validation
-    this.props.actions.customerUpdate(customerAccessToken, customer);
+    this.props.actions.updateCustomer(customerAccessToken, customer);
   };
 
   handleCustomerFieldChange = (id, value) => {
@@ -29,8 +29,11 @@ class ProfileInfo extends Component {
       phone,
       actions,
       accessToken,
-      customerFieldsBeingEdited
+      customerFieldsBeingEdited,
+      successfullyEditedFields,
+      errors
     } = this.props;
+
     const customerFieldBeingEdited = customerFieldsBeingEdited.length
       ? customerFieldsBeingEdited[0]
       : null;
@@ -38,6 +41,20 @@ class ProfileInfo extends Component {
     return (
       <div className="my3">
         <h2 className="carter sub-title mb3">Personal Info</h2>
+
+        {successfullyEditedFields.length ? (
+          <FormFlash
+            success={true}
+            message={`Your ${
+              Object.keys(successfullyEditedFields[0])[0]
+            } has been updated to: ${
+              Object.values(successfullyEditedFields[0])[0]
+            }`}
+          />
+        ) : null}
+        {errors ? (
+          <FormFlash error={true} message={`Unexpected Error: ${errors}`} />
+        ) : null}
         <div className="card card--light-gray-border p3 my2">
           <div className="relative">
             <strong className="bold block mb2">Email Address</strong>

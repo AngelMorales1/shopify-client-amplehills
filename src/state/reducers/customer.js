@@ -33,8 +33,7 @@ export default (state = initialState, action) => {
       const { accessToken, customer } = action.payload;
       return {
         ...state,
-        ...customer,
-        accessToken
+        accessToken: action.payload
       };
     default:
       return state;

@@ -77,7 +77,8 @@ export const fetchCustomer = customerAccessToken => dispatch => {
     type: FETCH_CUSTOMER,
     payload: Apollo.query({
       query: customerFetch,
-      variables: { customerAccessToken }
+      variables: { customerAccessToken },
+      fetchPolicy: 'no-cache'
     })
   });
 };
@@ -86,43 +87,30 @@ export const UPDATE_CUSTOMER = 'UPDATE_CUSTOMER';
 export const updateCustomer = (customerAccessToken, customer) => dispatch => {
   return dispatch({
     type: UPDATE_CUSTOMER,
-    payload: new Promise(resolve => {
+    payload: new Promise((resolve, reject) => {
       return Apollo.mutate({
         mutation: customerUpdate,
         variables: { customerAccessToken, customer }
       }).then(res => {
-        if (
-          get(
-            customerAccessToken,
-            'data.customerAccessTokenCreate.userErrors',
-            []
-          ).length
-        ) {
-          return dispatch(cancelEditCustomerFields()).then(() => {
-            throw get(
-              customerAccessToken,
-              'data.customerAccessTokenCreate.userErrors[0].message',
-              ''
-            );
-          });
+        if (get(res, 'data.customerUpdate.userErrors', []).length) {
+          dispatch(cancelEditCustomerFields());
+          return reject(
+            get(res, 'data.customerUpdate.userErrors[0].message', '')
+          );
         }
 
-        return dispatch(cancelEditCustomerFields()).then(() => {
-          return dispatch(alertCustomerEditSuccess(customer)).then(() =>
-            resolve({
-              accessToken: get(
-                res,
-                'data.customerUpdate.customerAccessToken.accessToken',
-                ''
-              ),
-              customer: get(
-                res,
-                'data.customerUpdate.customerAccessToken.accessToken',
-                ''
-              )
-            })
-          );
-        });
+        const newAccessToken = get(
+          res,
+          'data.customerUpdate.customerAccessToken.accessToken'
+        )
+          ? get(res, 'data.customerUpdate.customerAccessToken.accessToken')
+          : customerAccessToken;
+
+        dispatch(alertCustomerEditSuccess(customer));
+        dispatch(cancelEditCustomerFields());
+        dispatch(fetchCustomer(newAccessToken)).then(() =>
+          resolve(newAccessToken)
+        );
       });
     })
   });

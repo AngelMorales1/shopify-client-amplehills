@@ -13,7 +13,14 @@ class ProfileView extends Component {
   };
 
   render() {
-    const { model, customer, actions, customerFieldsBeingEdited } = this.props;
+    const {
+      model,
+      customer,
+      actions,
+      customerFieldsBeingEdited,
+      successfullyEditedFields,
+      errors
+    } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     const { id, firstName, lastName, email, phone, addresses } = customer;
@@ -43,6 +50,8 @@ class ProfileView extends Component {
               <div className="col col-12 md-col-9">
                 <ProfileInfo
                   actions={actions}
+                  errors={errors}
+                  successfullyEditedFields={successfullyEditedFields}
                   customerFieldsBeingEdited={customerFieldsBeingEdited}
                   {...customer}
                 />
