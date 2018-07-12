@@ -27,7 +27,7 @@
     }
   }
 
-  &--madison-blue-outline-round {
+  &--madison-blue-border-round {
     input {
       @extend .text-madison-blue;
       @extend .bold;
@@ -42,7 +42,7 @@
     }
   }
 
-  &--madison-blue-outline {
+  &--madison-blue-border {
     input {
       @extend .bg-madison-blue;
       @extend .text-white;
@@ -50,7 +50,7 @@
     }
   }
 
-  &--seafoam-madison-blue-outline {
+  &--seafoam-madison-blue-border {
     input {
       @extend .bg-seafoam;
       @extend .text-madison-blue;

@@ -21,7 +21,7 @@ const Button = ({
 }) => {
   const classes = cx(
     className,
-    'flex flex-column justify-center items-center',
+    // 'flex justify-center items-center',
     styles.Button,
     styles[`Button--${variant}`],
     styles[`Button--${color}`],
@@ -41,7 +41,9 @@ const Button = ({
       rel="noopener"
       onClick={onClick}
     >
-      <div className={classes}>{label}</div>
+      <div className={classes}>
+        <div className="h100 flex justify-center items-center">{label}</div>
+      </div>
     </a>
   ) : (
     <Link
@@ -51,7 +53,9 @@ const Button = ({
       to={to}
       onClick={onClick}
     >
-      <div className={classes}>{label}</div>
+      <div className={classes}>
+        <div className="h100 flex justify-center items-center">{label}</div>
+      </div>
     </Link>
   );
 
@@ -59,7 +63,9 @@ const Button = ({
     linkedComponent
   ) : (
     <button type={type} onClick={onClick} className={classes}>
-      <div>{children && !label ? children : label}</div>
+      <div className="h100 flex justify-center items-center">
+        {children && !label ? children : label}
+      </div>
     </button>
   );
 
