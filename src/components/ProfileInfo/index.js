@@ -14,8 +14,12 @@ class ProfileInfo extends Component {
     };
   }
 
+  handleCustomerFieldChange = (id, value) => {
+    this.setState({ [id]: value });
+  };
+
   render() {
-    console.log(this.props);
+    console.log(this.state['email']);
     const { email, phone, actions, customerFieldsBeingEdited } = this.props;
     const customerFieldBeingEdited = customerFieldsBeingEdited.length
       ? customerFieldsBeingEdited[0]
@@ -37,6 +41,7 @@ class ProfileInfo extends Component {
                 actions.editCustomerField({
                   id: 'email',
                   label: 'email address',
+                  placeholder: 'eat@amplehills.com',
                   onChange: () => {}
                 })
               }
@@ -57,6 +62,7 @@ class ProfileInfo extends Component {
                   actions.editCustomerField({
                     id: 'phone',
                     label: 'phone number',
+                    placeholder: '5556667890',
                     onChange: () => {}
                   })
                 }
@@ -77,6 +83,7 @@ class ProfileInfo extends Component {
                 actions.editCustomerField({
                   id: 'password',
                   label: 'password',
+                  placeholder: '• • • • • • • • • •',
                   onChange: () => {}
                 })
               }
@@ -89,16 +96,47 @@ class ProfileInfo extends Component {
               Edit {customerFieldBeingEdited.label}
             </span>
             <form>
-              <TextField
-                value={get(this.state, 'customerFieldBeingEdited.id', '')}
-                onChange={customerFieldBeingEdited.onChange}
-                color="light-gray"
-              />
-              <div className="flex mt4 justify-end">
+              <div className="mt3 mb4">
+                <TextField
+                  value={get(this.state, customerFieldBeingEdited.id, '')}
+                  onChange={value =>
+                    this.handleCustomerFieldChange(
+                      customerFieldBeingEdited.id,
+                      value
+                    )
+                  }
+                  color="light-gray"
+                  className="my3"
+                  type={
+                    customerFieldBeingEdited.id === 'password'
+                      ? 'password'
+                      : 'text'
+                  }
+                  label={
+                    customerFieldBeingEdited.id === 'password' ? 'Password' : ''
+                  }
+                  placeholder={customerFieldBeingEdited.placeholder}
+                />
+                {customerFieldBeingEdited.id === 'password' ? (
+                  <TextField
+                    value={get(this.state, 'confirmPassword', '')}
+                    onChange={value =>
+                      this.handleCustomerFieldChange('confirmPassword', value)
+                    }
+                    color="light-gray"
+                    className="my3"
+                    type="password"
+                    label="Confirm Password"
+                    placeholder={customerFieldBeingEdited.placeholder}
+                  />
+                ) : null}
+              </div>
+              <div className="flex justify-end">
                 <Button
                   color="peach"
                   label="Cancel"
                   onClick={actions.cancelEditCustomerFields}
+                  className="mr2"
                 />
                 <Button
                   color="madison-blue"

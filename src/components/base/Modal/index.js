@@ -15,7 +15,7 @@ const Modal = ({ className, children }) => {
       <div
         className={cx(
           styles['Modal__inner'],
-          'text-container-width bg-white card drop-shadow p3'
+          'text-container-width w100 bg-white card drop-shadow p3'
         )}
       >
         {children}
