@@ -21,6 +21,7 @@ const Button = ({
 }) => {
   const classes = cx(
     className,
+    'flex flex-column justify-center items-center',
     styles.Button,
     styles[`Button--${variant}`],
     styles[`Button--${color}`],

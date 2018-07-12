@@ -10,11 +10,6 @@
   transform: translate3d(0, spacing(-0.5), 0);
   transition: $transition;
   border: spacing(1) solid transparent;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   &:hover {
     box-shadow: $drop-shadow;
