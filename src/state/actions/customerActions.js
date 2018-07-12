@@ -2,8 +2,13 @@ import { client as Apollo } from 'lib/Apollo';
 import {
   customerCreate,
   customerAccessTokenCreate,
-  customerFetch
+  customerFetch,
+  customerUpdate
 } from 'state/graphql/customer';
+import {
+  cancelEditCustomerFields,
+  alertCustomerEditSuccess
+} from 'state/actions/ui/customerUIActions';
 import { checkoutCustomerAssociate } from 'state/actions/checkoutActions';
 
 import get from 'utils/get';
@@ -23,34 +28,38 @@ export const SIGN_IN_CUSTOMER = 'SIGN_IN_CUSTOMER';
 export const signInCustomer = (input, checkoutId) => dispatch => {
   return dispatch({
     type: SIGN_IN_CUSTOMER,
-    payload: Apollo.mutate({
-      mutation: customerAccessTokenCreate,
-      variables: { input }
-    }).then(customerAccessToken => {
-      if (
-        get(
+    payload: new Promise(resolve => {
+      return Apollo.mutate({
+        mutation: customerAccessTokenCreate,
+        variables: { input }
+      }).then(customerAccessToken => {
+        if (
+          get(
+            customerAccessToken,
+            'data.customerAccessTokenCreate.userErrors',
+            []
+          ).length
+        )
+          throw get(
+            customerAccessToken,
+            'data.customerAccessTokenCreate.userErrors[0].message',
+            ''
+          );
+
+        const accessToken = get(
           customerAccessToken,
-          'data.customerAccessTokenCreate.userErrors',
-          []
-        ).length
-      )
-        throw get(
-          customerAccessToken,
-          'data.customerAccessTokenCreate.userErrors[0].message',
+          'data.customerAccessTokenCreate.customerAccessToken.accessToken',
           ''
         );
 
-      const accessToken = get(
-        customerAccessToken,
-        'data.customerAccessTokenCreate.customerAccessToken.accessToken',
-        ''
-      );
-
-      return dispatch(checkoutCustomerAssociate(checkoutId, accessToken)).then(
-        () => {
-          return dispatch(fetchCustomer(accessToken));
-        }
-      );
+        return dispatch(
+          checkoutCustomerAssociate(checkoutId, accessToken)
+        ).then(() => {
+          return dispatch(fetchCustomer(accessToken)).then(() =>
+            resolve(accessToken)
+          );
+        });
+      });
     })
   });
 };
@@ -69,6 +78,52 @@ export const fetchCustomer = customerAccessToken => dispatch => {
     payload: Apollo.query({
       query: customerFetch,
       variables: { customerAccessToken }
+    })
+  });
+};
+
+export const UPDATE_CUSTOMER = 'UPDATE_CUSTOMER';
+export const updateCustomer = (customerAccessToken, customer) => dispatch => {
+  return dispatch({
+    type: UPDATE_CUSTOMER,
+    payload: new Promise(resolve => {
+      return Apollo.mutate({
+        mutation: customerUpdate,
+        variables: { customerAccessToken, customer }
+      }).then(res => {
+        if (
+          get(
+            customerAccessToken,
+            'data.customerAccessTokenCreate.userErrors',
+            []
+          ).length
+        ) {
+          return dispatch(cancelEditCustomerFields()).then(() => {
+            throw get(
+              customerAccessToken,
+              'data.customerAccessTokenCreate.userErrors[0].message',
+              ''
+            );
+          });
+        }
+
+        return dispatch(cancelEditCustomerFields()).then(() => {
+          return dispatch(alertCustomerEditSuccess(customer)).then(() =>
+            resolve({
+              accessToken: get(
+                res,
+                'data.customerUpdate.customerAccessToken.accessToken',
+                ''
+              ),
+              customer: get(
+                res,
+                'data.customerUpdate.customerAccessToken.accessToken',
+                ''
+              )
+            })
+          );
+        });
+      });
     })
   });
 };

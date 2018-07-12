@@ -64,3 +64,27 @@ export const customerFetch = gql`
     }
   }
 `;
+
+export const customerUpdate = gql`
+  mutation customerUpdate(
+    $customerAccessToken: String!
+    $customer: CustomerUpdateInput!
+  ) {
+    customerUpdate(
+      customerAccessToken: $customerAccessToken
+      customer: $customer
+    ) {
+      userErrors {
+        field
+        message
+      }
+      customer {
+        id
+      }
+      customerAccessToken {
+        accessToken
+        expiresAt
+      }
+    }
+  }
+`;

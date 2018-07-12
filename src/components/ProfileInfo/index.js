@@ -14,13 +14,23 @@ class ProfileInfo extends Component {
     };
   }
 
+  handleCustomerUpdate = (customerAccessToken, customer) => {
+    // TODO: Validation
+    this.props.actions.customerUpdate(customerAccessToken, customer);
+  };
+
   handleCustomerFieldChange = (id, value) => {
     this.setState({ [id]: value });
   };
 
   render() {
-    console.log(this.state['email']);
-    const { email, phone, actions, customerFieldsBeingEdited } = this.props;
+    const {
+      email,
+      phone,
+      actions,
+      accessToken,
+      customerFieldsBeingEdited
+    } = this.props;
     const customerFieldBeingEdited = customerFieldsBeingEdited.length
       ? customerFieldsBeingEdited[0]
       : null;
@@ -42,7 +52,10 @@ class ProfileInfo extends Component {
                   id: 'email',
                   label: 'email address',
                   placeholder: 'eat@amplehills.com',
-                  onChange: () => {}
+                  onSave: () =>
+                    this.handleCustomerUpdate(accessToken, {
+                      email: this.state.email
+                    })
                 })
               }
             />
@@ -63,7 +76,10 @@ class ProfileInfo extends Component {
                     id: 'phone',
                     label: 'phone number',
                     placeholder: '5556667890',
-                    onChange: () => {}
+                    onSave: () =>
+                      this.handleCustomerUpdate(accessToken, {
+                        phone: this.state.phone
+                      })
                   })
                 }
               />
@@ -84,7 +100,10 @@ class ProfileInfo extends Component {
                   id: 'password',
                   label: 'password',
                   placeholder: '• • • • • • • • • •',
-                  onChange: () => {}
+                  onSave: () =>
+                    this.handleCustomerUpdate(accessToken, {
+                      password: this.state.password
+                    })
                 })
               }
             />
@@ -141,7 +160,7 @@ class ProfileInfo extends Component {
                 <Button
                   color="madison-blue"
                   label="Save"
-                  onClick={actions.submitCustomerFields}
+                  onClick={customerFieldBeingEdited.onSave}
                 />
               </div>
             </form>

@@ -12,3 +12,11 @@ export const cancelEditCustomerFields = () => {
     type: CANCEL_EDIT_CUSTOMER_FIELDS
   };
 };
+
+export const ALERT_CUSTOMER_EDIT_SUCCESS = 'ALERT_CUSTOMER_EDIT_SUCCESS';
+export const alertCustomerEditSuccess = customer => {
+  return {
+    type: ALERT_CUSTOMER_EDIT_SUCCESS,
+    payload: customer
+  };
+};
