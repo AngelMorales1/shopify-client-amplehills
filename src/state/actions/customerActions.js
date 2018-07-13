@@ -28,7 +28,7 @@ export const SIGN_IN_CUSTOMER = 'SIGN_IN_CUSTOMER';
 export const signInCustomer = (input, checkoutId) => dispatch => {
   return dispatch({
     type: SIGN_IN_CUSTOMER,
-    payload: new Promise(resolve => {
+    payload: new Promise((resolve, reject) => {
       return Apollo.mutate({
         mutation: customerAccessTokenCreate,
         variables: { input }
@@ -39,12 +39,15 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
             'data.customerAccessTokenCreate.userErrors',
             []
           ).length
-        )
-          throw get(
-            customerAccessToken,
-            'data.customerAccessTokenCreate.userErrors[0].message',
-            ''
+        ) {
+          reject(
+            get(
+              customerAccessToken,
+              'data.customerAccessTokenCreate.userErrors[0].message',
+              ''
+            )
           );
+        }
 
         const accessToken = get(
           customerAccessToken,
