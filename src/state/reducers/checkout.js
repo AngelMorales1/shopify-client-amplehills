@@ -4,7 +4,6 @@ import {
   CONFIRM_REMOVE_LINE_ITEMS,
   UPDATE_LINE_ITEMS
 } from 'state/actions/checkoutActions';
-import get from 'utils/get';
 
 const initialState = {};
 

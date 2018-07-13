@@ -1,0 +1,29 @@
+@import 'settings';
+
+.Modal {
+  animation: fade-in $transition-duration;
+
+  &__inner {
+    animation: slide-up $transition-duration-long;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translate3d(0, spacing(8), 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

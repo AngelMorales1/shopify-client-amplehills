@@ -64,3 +64,55 @@ export const customerFetch = gql`
     }
   }
 `;
+
+export const customerUpdate = gql`
+  mutation customerUpdate(
+    $customerAccessToken: String!
+    $customer: CustomerUpdateInput!
+  ) {
+    customerUpdate(
+      customerAccessToken: $customerAccessToken
+      customer: $customer
+    ) {
+      userErrors {
+        field
+        message
+      }
+      customer {
+        id
+        email
+        firstName
+        lastName
+        phone
+        addresses(first: 5) {
+          edges {
+            node {
+              address1
+              address2
+              city
+              company
+              country
+              countryCodeV2
+              firstName
+              lastName
+              province
+              zip
+            }
+          }
+        }
+        orders(first: 5, reverse: true) {
+          edges {
+            node {
+              orderNumber
+              totalPrice
+            }
+          }
+        }
+      }
+      customerAccessToken {
+        accessToken
+        expiresAt
+      }
+    }
+  }
+`;

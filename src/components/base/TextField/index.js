@@ -34,7 +34,7 @@ const TextField = ({
         styles[`TextField--${color}`]
       }`}
     >
-      <label htmlFor={_id} className="label-text caps mb1">
+      <label htmlFor={_id} className="small bold mb1">
         {label}
       </label>
       {multiLine ? (
