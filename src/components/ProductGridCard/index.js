@@ -23,7 +23,7 @@ const ProductGridCard = ({ product }) => {
             src={product.image}
           />
           <span className="bold mt2 mb1">{product.title}</span>
-          <span>{product.price}</span>
+          <span>{`$${product.price.toFixed(2)}`}</span>
         </div>
       </Link>
     </div>

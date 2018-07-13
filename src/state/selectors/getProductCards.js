@@ -22,7 +22,7 @@ export default createSelector(
 
       const shopifyProduct = get(shopifyProducts, handle, {});
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
-      const id = get(shopifyProduct, 'variants[0].id', '0.00');
+      const id = get(shopifyProduct, 'variants[0].id', '');
 
       mergedProducts[title] = {
         handle,
