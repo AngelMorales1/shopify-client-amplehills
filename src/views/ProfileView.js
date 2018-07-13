@@ -3,8 +3,6 @@ import { Redirect } from 'react-router';
 import { Button } from 'components/base';
 import ProfileInfo from 'components/ProfileInfo';
 
-import get from 'utils/get';
-
 class ProfileView extends Component {
   signOut = () => {
     const { actions, checkout } = this.props;
@@ -17,13 +15,13 @@ class ProfileView extends Component {
       model,
       customer,
       actions,
-      customerFieldsBeingEdited,
+      customerFieldBeingEdited,
       successfullyEditedFields,
       errors
     } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    const { id, firstName, lastName, email, phone, addresses } = customer;
+    const { id, firstName, lastName } = customer;
     if (!id) return <Redirect to="/sign-in" />;
 
     return (
@@ -52,7 +50,7 @@ class ProfileView extends Component {
                   actions={actions}
                   errors={errors}
                   successfullyEditedFields={successfullyEditedFields}
-                  customerFieldsBeingEdited={customerFieldsBeingEdited}
+                  customerFieldBeingEdited={customerFieldBeingEdited}
                   {...customer}
                 />
               </div>

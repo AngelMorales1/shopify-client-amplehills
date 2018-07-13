@@ -1,5 +1,5 @@
 import {
-  EDIT_CUSTOMER_FIELD,
+  ACTIVATE_EDIT_CUSTOMER_FIELD,
   CANCEL_EDIT_CUSTOMER_FIELDS,
   ALERT_CUSTOMER_EDIT_SUCCESS
 } from 'state/actions/ui/customerUIActions';
@@ -9,7 +9,7 @@ import {
 } from 'state/actions/customerActions';
 
 const initialState = {
-  customerFieldsBeingEdited: [],
+  customerFieldBeingEdited: '',
   successfullyEditedFields: [],
   errors: ''
 };
@@ -17,10 +17,10 @@ const initialState = {
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case EDIT_CUSTOMER_FIELD:
+    case ACTIVATE_EDIT_CUSTOMER_FIELD:
       return {
         ...state,
-        customerFieldsBeingEdited: [action.payload]
+        customerFieldBeingEdited: action.payload
       };
     case ALERT_CUSTOMER_EDIT_SUCCESS:
       return {
@@ -30,7 +30,7 @@ export default (state = initialState, action) => {
     case CANCEL_EDIT_CUSTOMER_FIELDS:
       return {
         ...state,
-        customerFieldsBeingEdited: []
+        customerFieldBeingEdited: initialState.customerFieldBeingEdited
       };
     case `${UPDATE_CUSTOMER}_REJECTED`:
       return {

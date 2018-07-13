@@ -82,7 +82,6 @@ export const fetchCustomer = customerAccessToken => dispatch => {
         fetchPolicy: 'no-cache'
       }).then(res => {
         const customer = get(res, 'data.customer', {});
-        console.log('ding', customer);
         return resolve(customer);
       });
     })

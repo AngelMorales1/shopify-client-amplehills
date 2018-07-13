@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { Button, Modal, TextField, FormFlash } from 'components/base';
+import UpdateCustomerForm from 'constants/forms/UpdateCustomer';
 import get from 'utils/get';
 
 class ProfileInfo extends Component {
@@ -14,8 +15,24 @@ class ProfileInfo extends Component {
     };
   }
 
-  handleCustomerUpdate = (customerAccessToken, customer) => {
-    this.props.actions.updateCustomer(customerAccessToken, customer);
+  handleCustomerUpdate = field => {
+    const { accessToken } = this.props;
+    const { email, phone, password } = this.state;
+    if (field === UpdateCustomerForm.EMAIL.id)
+      this.props.actions.updateCustomer(accessToken, { email });
+
+    if (field === UpdateCustomerForm.PHONE.id)
+      this.props.actions.updateCustomer(accessToken, { phone });
+
+    if (field === UpdateCustomerForm.PASSWORD.id) {
+      this.setState({ error: '' });
+      if (this.state.password !== this.state.confirmPassword)
+        return this.setState({
+          error: 'Your passwords do not match!'
+        });
+
+      this.props.actions.updateCustomer(accessToken, { password });
+    }
   };
 
   handleCustomerFieldChange = (id, value) => {
@@ -40,14 +57,15 @@ class ProfileInfo extends Component {
       email,
       phone,
       actions,
-      accessToken,
-      customerFieldsBeingEdited,
+      customerFieldBeingEdited,
       successfullyEditedFields,
       errors
     } = this.props;
 
-    const customerFieldBeingEdited = customerFieldsBeingEdited.length
-      ? customerFieldsBeingEdited[0]
+    const editModal = customerFieldBeingEdited
+      ? Object.values(UpdateCustomerForm).find(
+          field => field.id === customerFieldBeingEdited
+        )
       : null;
 
     return (
@@ -68,15 +86,7 @@ class ProfileInfo extends Component {
               label="Edit"
               className="text-peach absolute t0 r0"
               onClick={() =>
-                actions.editCustomerField({
-                  id: 'email',
-                  label: 'email address',
-                  placeholder: 'eat@amplehills.com',
-                  onSave: () =>
-                    this.handleCustomerUpdate(accessToken, {
-                      email: this.state.email
-                    })
-                })
+                actions.activateEditCustomerField(UpdateCustomerForm.EMAIL.id)
               }
             />
           </div>
@@ -92,15 +102,7 @@ class ProfileInfo extends Component {
                 label="Edit"
                 className="text-peach absolute t0 r0"
                 onClick={() =>
-                  actions.editCustomerField({
-                    id: 'phone',
-                    label: 'phone number',
-                    placeholder: '5556667890',
-                    onSave: () =>
-                      this.handleCustomerUpdate(accessToken, {
-                        phone: this.state.phone
-                      })
-                  })
+                  actions.activateEditCustomerField(UpdateCustomerForm.PHONE.id)
                 }
               />
             </div>
@@ -116,57 +118,33 @@ class ProfileInfo extends Component {
               label="Edit"
               className="text-peach absolute t0 r0"
               onClick={() =>
-                actions.editCustomerField({
-                  id: 'password',
-                  label: 'password',
-                  placeholder: '• • • • • • • • • •',
-                  onSave: () => {
-                    this.setState({ error: '' });
-                    if (this.state.password !== this.state.confirmPassword)
-                      return this.setState({
-                        error: 'Your passwords do not match!'
-                      });
-
-                    this.handleCustomerUpdate(accessToken, {
-                      password: this.state.password
-                    });
-                  }
-                })
+                actions.activateEditCustomerField(
+                  UpdateCustomerForm.PASSWORD.id
+                )
               }
             />
           </div>
         </div>
-        {customerFieldsBeingEdited.length ? (
+        {editModal ? (
           <Modal>
-            <span className="sub-title">
-              Edit {customerFieldBeingEdited.label}
-            </span>
+            <span className="sub-title">Edit {editModal.label}</span>
             {this.state.error ? (
               <FormFlash error={true} message={this.state.error} />
             ) : null}
             <form>
               <div className="mt3 mb4">
                 <TextField
-                  value={get(this.state, customerFieldBeingEdited.id, '')}
+                  value={get(this.state, editModal.id, '')}
                   onChange={value =>
-                    this.handleCustomerFieldChange(
-                      customerFieldBeingEdited.id,
-                      value
-                    )
+                    this.handleCustomerFieldChange(editModal.id, value)
                   }
                   color="light-gray"
                   className="my3"
-                  type={
-                    customerFieldBeingEdited.id === 'password'
-                      ? 'password'
-                      : 'text'
-                  }
-                  label={
-                    customerFieldBeingEdited.id === 'password' ? 'Password' : ''
-                  }
-                  placeholder={customerFieldBeingEdited.placeholder}
+                  type={editModal.id === 'password' ? 'password' : 'text'}
+                  label={editModal.id === 'password' ? 'Password' : ''}
+                  placeholder={editModal.placeholder}
                 />
-                {customerFieldBeingEdited.id === 'password' ? (
+                {editModal.id === 'password' ? (
                   <TextField
                     value={get(this.state, 'confirmPassword', '')}
                     onChange={value =>
@@ -176,7 +154,7 @@ class ProfileInfo extends Component {
                     className="my3"
                     type="password"
                     label="Confirm Password"
-                    placeholder={customerFieldBeingEdited.placeholder}
+                    placeholder={editModal.placeholder}
                   />
                 ) : null}
               </div>
@@ -190,7 +168,9 @@ class ProfileInfo extends Component {
                 <Button
                   color="madison-blue"
                   label="Save"
-                  onClick={customerFieldBeingEdited.onSave}
+                  onClick={() =>
+                    this.handleCustomerUpdate(customerFieldBeingEdited)
+                  }
                 />
               </div>
             </form>
@@ -209,12 +189,7 @@ ProfileInfo.propTypes = {
     editCustomerPhone: PropTypes.func,
     editCustomerPassword: PropTypes.func
   }),
-  customerFieldsBeingEdited: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      onChange: PropTypes.func
-    })
-  )
+  customerFieldBeingEdited: PropTypes.string
 };
 
 ProfileInfo.defaultProps = {
@@ -225,7 +200,7 @@ ProfileInfo.defaultProps = {
     editCustomerPhone: () => {},
     editCustomerPassword: () => {}
   },
-  customerFieldsBeingEdited: []
+  customerFieldBeingEdited: ''
 };
 
 export default ProfileInfo;

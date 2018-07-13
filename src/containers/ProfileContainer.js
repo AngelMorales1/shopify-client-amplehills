@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { signOutCustomer, updateCustomer } from 'state/actions/customerActions';
 import { checkoutCustomerDisassociate } from 'state/actions/checkoutActions';
 import {
-  editCustomerField,
+  activateEditCustomerField,
   cancelEditCustomerFields
 } from 'state/actions/ui/customerUIActions';
 
@@ -19,10 +19,10 @@ class ProfileContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    customerFieldsBeingEdited: get(
+    customerFieldBeingEdited: get(
       state,
-      'customerUI.customerFieldsBeingEdited',
-      []
+      'customerUI.customerFieldBeingEdited',
+      ''
     ),
     successfullyEditedFields: get(
       state,
@@ -43,7 +43,7 @@ const mapDispatchToProps = dispatch => {
         signOutCustomer,
         updateCustomer,
         checkoutCustomerDisassociate,
-        editCustomerField,
+        activateEditCustomerField,
         cancelEditCustomerFields
       },
       dispatch

@@ -1,7 +1,7 @@
-export const EDIT_CUSTOMER_FIELD = 'EDIT_CUSTOMER_FIELD';
-export const editCustomerField = payload => {
+export const ACTIVATE_EDIT_CUSTOMER_FIELD = 'ACTIVATE_EDIT_CUSTOMER_FIELD';
+export const activateEditCustomerField = payload => {
   return {
-    type: EDIT_CUSTOMER_FIELD,
+    type: ACTIVATE_EDIT_CUSTOMER_FIELD,
     payload
   };
 };
