@@ -38,7 +38,7 @@ const Cart = props => {
     items,
     products
   } = props;
-
+  console.log(items);
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
@@ -63,9 +63,10 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
         <div className="my3">
           {items.map(item => {
-            const link = Object.values(products).find(
+            const getProduct = Object.values(products).find(
               value => value.id === item.productId
-            ).handle;
+            );
+            const link = get(getProduct, 'handle', '');
 
             return (
               <div key={item.id} className="mb3">
