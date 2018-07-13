@@ -40,7 +40,7 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
             []
           ).length
         ) {
-          reject(
+          return reject(
             get(
               customerAccessToken,
               'data.customerAccessTokenCreate.userErrors[0].message',

@@ -10,6 +10,7 @@ class ProfileInfo extends Component {
     super(...arguments);
 
     this.state = {
+      error: null,
       email: props.email,
       phone: props.phone
     };
@@ -18,20 +19,21 @@ class ProfileInfo extends Component {
   handleCustomerUpdate = field => {
     const { accessToken } = this.props;
     const { email, phone, password } = this.state;
-    if (field === UpdateCustomerForm.EMAIL.id)
-      this.props.actions.updateCustomer(accessToken, { email });
+    switch (field) {
+      case UpdateCustomerForm.EMAIL.id:
+        return this.props.actions.updateCustomer(accessToken, { email });
+      case UpdateCustomerForm.PHONE.id:
+        return this.props.actions.updateCustomer(accessToken, { phone });
+      case UpdateCustomerForm.PASSWORD.id:
+        this.setState({ error: '' });
+        if (this.state.password !== this.state.confirmPassword)
+          return this.setState({
+            error: 'Your passwords do not match!'
+          });
 
-    if (field === UpdateCustomerForm.PHONE.id)
-      this.props.actions.updateCustomer(accessToken, { phone });
-
-    if (field === UpdateCustomerForm.PASSWORD.id) {
-      this.setState({ error: '' });
-      if (this.state.password !== this.state.confirmPassword)
-        return this.setState({
-          error: 'Your passwords do not match!'
-        });
-
-      this.props.actions.updateCustomer(accessToken, { password });
+        return this.props.actions.updateCustomer(accessToken, { password });
+      default:
+        return null;
     }
   };
 
