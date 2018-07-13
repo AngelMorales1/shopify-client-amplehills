@@ -42,10 +42,7 @@ const Cart = props => {
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column')}>
-      <Breadcrumbs
-        breadcrumbs={breadcrumbs}
-        className="mb4"
-      />
+      <Breadcrumbs breadcrumbs={breadcrumbs} className="mb4" />
       <h2 className="block-headline-mobile-small mx-auto">Cart</h2>
       <div className={cx(styles['Cart__container'])}>
         <div className="flex xs-hide sm-hide mt4 pt4 justify-between">
@@ -69,44 +66,12 @@ const Cart = props => {
             const handle = get(getProduct, 'handle', '');
 
             return (
-              <div key={item.id} className="mb3">
-                <div
-                  className={cx(
-                    styles['Cart__content-container'],
-                    'flex items-start justify-end'
-                  )}
-                >
-                  <div className="md-hide lg-hide flex items-start justify-between w100">
-                    <div className="my2">
-                      <Link
-                        className="text-decoration-none"
-                        to={`/products/${handle}`}
-                      >
-                        <span className="bold">{item.title}</span>
-                      </Link>
-                      <div className="flex flex-column mt2">
-                        {item.subItems.map(subItem => {
-                          return (
-                            <span
-                              key={subItem.handle}
-                              className="small mb1"
-                            >{`${subItem.quantity}x ${
-                              products[subItem.handle].title
-                            }`}</span>
-                          );
-                        })}
-                      </div>
-                    </div>
-                    <span className="bold small my2 md-hide lg-hide">
-                      {item.price}
-                    </span>
-                  </div>
-                  <div
-                    className={cx(
-                      styles['Cart__title'],
-                      'xs-hide sm-hide flex flex-column mr-auto'
-                    )}
-                  >
+              <div
+                key={item.id}
+                className={cx(styles['Cart__content-container'], 'mb3 flex')}
+              >
+                <div className="md-hide lg-hide flex items-start justify-between w100">
+                  <div className="my2">
                     <Link
                       className="text-decoration-none my2 xs-hide sm-hide"
                       to={`/products/${handle}`}
@@ -154,22 +119,23 @@ const Cart = props => {
                     'mr2 flex'
                   )}
                 >
-                  <div className='flex items-center'>
+                  <div
+                    className={cx(
+                      styles['Cart__delete'],
+                      'flex items-center col-8'
+                    )}
+                  >
                     <Button
                       variant="style-none"
                       onClick={() => removeLineItems(item.id)}
                     >
                       <Image
+                        className="icon-small"
                         src="/assets/images/icon-trash.svg"
                       />
                     </Button>
                   </div>
-                  <div
-                    className={cx(
-                      styles['Cart__quantity'],
-                      'flex items-center'
-                    )}
-                  >
+                  <div className="flex items-center">
                     <QuantitySelector
                       quantity={item.quantity}
                       variant="small"
