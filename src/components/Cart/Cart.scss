@@ -34,6 +34,7 @@
 
     @media ($medium-up) {
       width: 37%;
+      min-width: spacing(50);
       flex-direction: row;
       justify-content: flex-end;
     }

@@ -41,13 +41,13 @@ const Cart = props => {
 
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
-    <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
+    <div className={cx(styles['Cart'], 'flex flex-column')}>
       <Breadcrumbs
         breadcrumbs={breadcrumbs}
-        className="flex flex-row items-center self-start mb4"
+        className="mb4"
       />
-      <h2 className="block-headline-mobile-small">Cart</h2>
-      <div className={cx(styles['Cart__container'], 'w100')}>
+      <h2 className="block-headline-mobile-small mx-auto">Cart</h2>
+      <div className={cx(styles['Cart__container'])}>
         <div className="flex xs-hide sm-hide mt4 pt4 justify-between">
           <span className={cx(styles['Cart__item-title'], 'bold')}>Item</span>
           <span
@@ -60,7 +60,7 @@ const Cart = props => {
           </span>
           <span className="bold flex justify-end col-3">Total Price</span>
         </div>
-        <div className={cx(styles['Cart__decorative-line'], 'mt3 w100')} />
+        <div className={cx(styles['Cart__decorative-line'], 'mt3')} />
         <div className="my3">
           {items.map(item => {
             const getProduct = Object.values(products).find(
@@ -111,31 +111,66 @@ const Cart = props => {
                       className="text-decoration-none my2 xs-hide sm-hide"
                       to={`/products/${handle}`}
                     >
-                      <span className="bold ">{item.title}</span>
+                      <span className="bold">{item.title}</span>
                     </Link>
-                    {item.subItems.map(subItem => {
-                      return (
-                        <span key={subItem.handle} className="small mb1">{`${
-                          subItem.quantity
-                        }x ${products[subItem.handle].title}`}</span>
-                      );
-                    })}
+                    <div className="flex flex-column mt2">
+                      {item.subItems.map(subItem => {
+                        return (
+                          <span key={subItem.handle} className="small mb1">{`${
+                            subItem.quantity
+                          }x ${products[subItem.handle].title}`}</span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                  <span className="bold small my2 md-hide lg-hide">
+                    {item.price}
+                  </span>
+                </div>
+                <div
+                  className={cx(
+                    styles['Cart__title'],
+                    'xs-hide sm-hide flex flex-column mr-auto'
+                  )}
+                >
+                  <Link
+                    className="text-decoration-none mt1 mb2 xs-hide sm-hide"
+                    exact
+                    to={`/products/${link}`}
+                  >
+                    <span className="bold ">{item.title}</span>
+                  </Link>
+                  {item.subItems.map(subItem => {
+                    return (
+                      <span key={subItem.handle} className="small mb1">{`${
+                        subItem.quantity
+                      }x ${products[subItem.handle].title}`}</span>
+                    );
+                  })}
+                </div>
+                <div
+                  className={cx(
+                    styles['Cart__content-inner-wrapper'],
+                    'mr2 flex'
+                  )}
+                >
+                  <div className='flex items-center'>
+                    <Button
+                      variant="style-none"
+                      onClick={() => removeLineItems(item.id)}
+                    >
+                      <Image
+                        src="/assets/images/icon-trash.svg"
+                      />
+                    </Button>
                   </div>
                   <div
                     className={cx(
-                      styles['Cart__content-inner-wrapper'],
-                      'flex items-start mr2'
+                      styles['Cart__quantity'],
+                      'flex items-center'
                     )}
                   >
-                    <Button
-                      className="my2"
-                      variant="icon"
-                      onClick={() => removeLineItems(item.id)}
-                    >
-                      <Image src="/assets/images/icon-trash.svg" />
-                    </Button>
                     <QuantitySelector
-                      className={cx(styles['Cart__quantity'], 'my2')}
                       quantity={item.quantity}
                       variant="small"
                       onChange={quantity =>
@@ -147,10 +182,10 @@ const Cart = props => {
                       }
                     />
                   </div>
-                  <span className="bold small my2 xs-hide sm-hide col-3 flex justify-end right">
-                    ${item.price}
-                  </span>
                 </div>
+                <span className="bold small my2 xs-hide sm-hide col-3 flex justify-end items-center">
+                  ${item.price}
+                </span>
               </div>
             );
           })}
