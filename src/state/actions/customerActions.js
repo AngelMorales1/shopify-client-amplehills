@@ -75,10 +75,16 @@ export const FETCH_CUSTOMER = 'FETCH_CUSTOMER';
 export const fetchCustomer = customerAccessToken => dispatch => {
   return dispatch({
     type: FETCH_CUSTOMER,
-    payload: Apollo.query({
-      query: customerFetch,
-      variables: { customerAccessToken },
-      fetchPolicy: 'no-cache'
+    payload: new Promise(resolve => {
+      return Apollo.query({
+        query: customerFetch,
+        variables: { customerAccessToken },
+        fetchPolicy: 'no-cache'
+      }).then(res => {
+        const customer = get(res, 'data.customer', {});
+        console.log('ding', customer);
+        return resolve(customer);
+      });
     })
   });
 };
@@ -107,9 +113,11 @@ export const updateCustomer = (customerAccessToken, customer) => dispatch => {
 
         dispatch(alertCustomerEditSuccess(customer));
         dispatch(cancelEditCustomerFields());
-        dispatch(fetchCustomer(newAccessToken)).then(() =>
-          resolve(newAccessToken)
-        );
+
+        return resolve({
+          accessToken: newAccessToken,
+          customer: get(res, 'data.customerUpdate.customer', {})
+        });
       });
     })
   });

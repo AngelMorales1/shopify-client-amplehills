@@ -23,12 +23,8 @@ class SignInView extends Component {
   };
 
   render() {
-    const {
-      model,
-      customer,
-      customerSigningIn,
-      location: { search }
-    } = this.props;
+    const { model, customer, customerSigningIn } = this.props;
+
     if (model.isError) return <h1>Error</h1>;
 
     if (get(customer, 'id')) return <Redirect to="/profile" />;
