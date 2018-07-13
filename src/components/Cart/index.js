@@ -38,7 +38,7 @@ const Cart = props => {
     items,
     products
   } = props;
-  console.log(items);
+
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column items-center')}>
