@@ -49,7 +49,7 @@ const FooterNewsletter = ({ pathname }) => {
         <TextField
           className={cx(styles['FooterNewsletter__text-field'], 'my2 pb1')}
           placeholder="Enter your email address"
-          variant="madison-blue-outline-round"
+          variant="madison-blue-border-round"
         />
         <Button
           className="my2 px3"

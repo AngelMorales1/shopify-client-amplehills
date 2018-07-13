@@ -129,7 +129,7 @@ const Cart = props => {
                     )}
                   >
                     <Button
-                      className="my2 small-icon"
+                      className="my2"
                       variant="icon"
                       onClick={() => removeLineItems(item.id)}
                     >
@@ -234,11 +234,7 @@ const Cart = props => {
               />
             </div>
             <div className="my1 md-col-4 xs-hide sm-hide">
-              <Button
-                className="flex items-center justify-center"
-                label="Checkout"
-                color="madison-blue"
-              />
+              <Button label="Checkout" color="madison-blue" />
             </div>
           </div>
         </div>

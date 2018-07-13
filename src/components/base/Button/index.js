@@ -40,7 +40,9 @@ const Button = ({
       rel="noopener"
       onClick={onClick}
     >
-      <div className={classes}>{label}</div>
+      <div className={classes}>
+        <div className="h100 flex justify-center items-center">{label}</div>
+      </div>
     </a>
   ) : (
     <Link
@@ -50,7 +52,9 @@ const Button = ({
       to={to}
       onClick={onClick}
     >
-      <div className={classes}>{label}</div>
+      <div className={classes}>
+        <div className="h100 flex justify-center items-center">{label}</div>
+      </div>
     </Link>
   );
 
@@ -58,7 +62,9 @@ const Button = ({
     linkedComponent
   ) : (
     <button type={type} onClick={onClick} className={classes}>
-      {children && !label ? children : label}
+      <div className="h100 flex justify-center items-center">
+        {children && !label ? children : label}
+      </div>
     </button>
   );
 

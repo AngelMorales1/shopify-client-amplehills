@@ -62,7 +62,7 @@ const ProductShoppableCard = ({
                 'small bg-seafoam absolute t0 l0'
               )}
               variant="primary-small"
-              color="white-madison-blue-outline"
+              color="white-madison-blue-border"
               label="+ Add"
               onClick={() => handleAddProduct(product.handle)}
             />

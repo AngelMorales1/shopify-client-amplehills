@@ -35,7 +35,7 @@ class ProductDetails extends Component {
           <h2 className="block-headline w100 my3">The Details</h2>
           {details.map((detail, i) => {
             const color = this.isActiveFlavor(get(detail, 'sys.id', ''), i)
-              ? 'clear-madison-blue-outline'
+              ? 'clear-madison-blue-border'
               : 'madison-blue';
 
             return (
