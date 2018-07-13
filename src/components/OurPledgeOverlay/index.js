@@ -20,22 +20,22 @@ const OurPledgeOverlay = ({
     ''
   );
 
-  const classes = cx('wh100 transition', styles['OurPledgeOverlay'], {
+  const classes = cx('z-overlay wh100 transition', styles['OurPledgeOverlay'], {
     [styles['OurPledgeOverlay--active']]: ourPledgeOverlayIsOpen
   });
 
   return (
     <div className={classes}>
-      <div className="wh100 t0 l0 bg-white low-opacity z-overlay fixed" />
+      <div className="wh100 t0 l0 bg-white low-opacity fixed" />
       <div
         className={cx(
-          'fixed bg-island-spice z-overlay',
+          'fixed bg-island-spice',
           styles['OurPledgeOverlay__circle-background']
         )}
       >
         <div
           className={cx(
-            'flex flex-column items-center z-overlay p3 fixed',
+            'flex flex-column items-center p3 fixed',
             styles['OurPledgeOverlay__content']
           )}
         >
