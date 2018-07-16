@@ -23,6 +23,7 @@ export default createSelector(
       const receipt = get(orderNode, 'customerUrl', '');
       const id = get(orderNode, 'id', '');
       const orderNumber = get(orderNode, 'orderNumber', '');
+      const date = get(orderNode, 'processedAt', '');
       const totalPrice = get(orderNode, 'totalPrice', 0.0);
 
       const lineItems = get(orderNode, 'lineItems.edges', []).map(lineItem =>
@@ -35,6 +36,7 @@ export default createSelector(
         orderNumber,
         receipt,
         totalPrice,
+        date,
         items
       };
     });

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import { Button } from 'components/base';
 import ProfileInfo from 'components/ProfileInfo';
+import ProfileOrders from 'components/ProfileOrders';
 
 class ProfileView extends Component {
   signOut = () => {
@@ -17,7 +18,8 @@ class ProfileView extends Component {
       actions,
       customerFieldBeingEdited,
       successfullyEditedFields,
-      errors
+      errors,
+      products
     } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
@@ -59,9 +61,11 @@ class ProfileView extends Component {
             </div>
             <div className="col col-12 md-col-6">
               <div className="w100">
-                <div className="my2">
-                  <h2 className="carter sub-title">Order History</h2>
-                </div>
+                <ProfileOrders
+                  actions={actions}
+                  products={products}
+                  {...customer}
+                />
               </div>
             </div>
           </div>

@@ -60,6 +60,7 @@ export const customerFetch = gql`
             id
             customerUrl
             totalPrice
+            processedAt
             lineItems(first: 20) {
               edges {
                 node {
