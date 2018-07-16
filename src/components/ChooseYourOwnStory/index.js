@@ -33,8 +33,7 @@ class ChooseYourOwnStory extends Component {
       quantity: 1,
       currentBreakpoint: Global.breakpoints.small.label,
       screenHeight: 0,
-      menuPosition: 'fixed',
-      ourPledgeOverlayIsOpen: false
+      menuPosition: 'fixed'
     };
   }
 
@@ -127,14 +126,6 @@ class ChooseYourOwnStory extends Component {
     this.props.actions.addLineItems(this.props.checkout, items);
   };
 
-  openOurPledgeOverlaySeparate = () => {
-    this.setState({ ourPledgeOverlayIsOpen: true });
-  };
-
-  closeOurPledgeOverlay = () => {
-    this.setState({ ourPledgeOverlayIsOpen: false });
-  };
-
   render() {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
@@ -178,13 +169,6 @@ class ChooseYourOwnStory extends Component {
           className="mx-auto container-width"
         />
         <div className="mx-auto container-width flex flex-wrap items-start">
-          <OurPledgeOverlay
-            overlayContentImage={overlayContentImage}
-            shippingInformation={shippingInformation}
-            shippingPledge={shippingPledge}
-            closeOurPledgeOverlay={this.closeOurPledgeOverlay}
-            ourPledgeOverlayIsOpen={this.state.ourPledgeOverlayIsOpen}
-          />
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
@@ -209,7 +193,7 @@ class ChooseYourOwnStory extends Component {
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-info'],
-              'col-12 lg-col-6'
+              'col-12 lg-col-6 z-overlay'
             )}
           >
             <div className="text-container-width mx-auto">
@@ -233,8 +217,9 @@ class ChooseYourOwnStory extends Component {
                 <p className="copy pr2">{get(fields, 'description', '')}</p>
               </div>
               <OurPledge
-                separateOverlay={true}
-                openOurPledgeOverlaySeparate={this.openOurPledgeOverlaySeparate}
+                overlayContentImage={overlayContentImage}
+                shippingInformation={shippingInformation}
+                shippingPledge={shippingPledge}
                 calloutImage={calloutImage}
               />
             </div>

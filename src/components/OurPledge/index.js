@@ -30,9 +30,7 @@ class OurPledge extends Component {
       overlayContentImage,
       shippingInformation,
       shippingPledge,
-      calloutImage,
-      separateOverlay,
-      openOurPledgeOverlaySeparate
+      calloutImage
     } = this.props;
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
@@ -69,11 +67,7 @@ class OurPledge extends Component {
           <div className="col col-4 px2 right-align flex justify-center">
             <Button
               variant="style-none"
-              onClick={
-                separateOverlay
-                  ? openOurPledgeOverlaySeparate
-                  : this.openOurPledgeOverlay
-              }
+              onClick={this.openOurPledgeOverlay}
               label="More Info"
               className={cx(
                 'uppercase info-text-big bold nowrap text-madison-blue',
@@ -82,15 +76,13 @@ class OurPledge extends Component {
             />
           </div>
         </div>
-        {separateOverlay ? null : (
-          <OurPledgeOverlay
-            overlayContentImage={overlayContentImage}
-            shippingInformation={shippingInformation}
-            shippingPledge={shippingPledge}
-            closeOurPledgeOverlay={this.closeOurPledgeOverlay}
-            ourPledgeOverlayIsOpen={this.state.ourPledgeOverlayIsOpen}
-          />
-        )}
+        <OurPledgeOverlay
+          overlayContentImage={overlayContentImage}
+          shippingInformation={shippingInformation}
+          shippingPledge={shippingPledge}
+          closeOurPledgeOverlay={this.closeOurPledgeOverlay}
+          ourPledgeOverlayIsOpen={this.state.ourPledgeOverlayIsOpen}
+        />
       </div>
     );
   }
@@ -102,16 +94,12 @@ OurPledge.propTypes = {
   calloutImage: imageModel.propTypes,
   overlayContentImage: PropTypes.object,
   shippingInformation: PropTypes.string,
-  shippingPledge: PropTypes.string,
-  separateOverlay: PropTypes.bool,
-  openOurPledgeOverlaySeparate: PropTypes.func
+  shippingPledge: PropTypes.string
 };
 
 OurPledge.defaultProps = {
   calloutImage: imageModel.default,
   overlayContentImage: {},
   shippingInformation: '',
-  shippingPledge: '',
-  separateOverlay: false,
-  openOurPledgeOverlaySeparate: () => {}
+  shippingPledge: ''
 };
