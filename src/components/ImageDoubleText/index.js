@@ -17,12 +17,16 @@ const ImageDoubleText = ({ block, z }) => {
   return (
     <div
       style={{ zIndex: z }}
-      className={cx(styles['ImageDoubleText'], styles[colorClass], 'drip')}
+      className={cx(
+        styles['ImageDoubleText'],
+        styles[colorClass],
+        'drip flex justify-center items-center'
+      )}
     >
       <div
         className={cx(
           styles['ImageDoubleText--container'],
-          'flex items-center justify-between container-width'
+          'container-width flex items-center justify-between'
         )}
       >
         <div
@@ -40,19 +44,15 @@ const ImageDoubleText = ({ block, z }) => {
           }}
         />
         <div
-          className={cx(styles['ImageDoubleText--text-container'], 'md-col-5')}
+          className={cx(styles['ImageDoubleText--text-container'], 'md-col-6')}
         >
           <div className="mb3">
             <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>
-            <p className="block-subheadline-small">
-              {get(fields, 'text1', '')}
-            </p>
+            <p className="block-subheadline">{get(fields, 'text1', '')}</p>
           </div>
           <div>
             <h2 className="block-headline mb2">{get(fields, 'title2', '')}</h2>
-            <p className="block-subheadline-small">
-              {get(fields, 'text2', '')}
-            </p>
+            <p className="block-subheadline">{get(fields, 'text2', '')}</p>
           </div>
         </div>
       </div>
