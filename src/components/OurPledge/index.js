@@ -27,8 +27,6 @@ class OurPledge extends Component {
       actions
     } = this.props;
 
-    console.log(actions);
-
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
 
     return (

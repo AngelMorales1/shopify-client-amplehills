@@ -199,7 +199,10 @@ class ChooseYourOwnStory extends Component {
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-info'],
-              `col-12 lg-col-6 `
+              `col-12 lg-col-6`,
+              {
+                'z-overlay': ourPledgeOverlayIsOpen
+              }
             )}
           >
             <div className="text-container-width mx-auto">
