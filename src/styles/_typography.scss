@@ -90,15 +90,6 @@ em {
   font-size: $font-5;
 }
 
-.callout-medium {
-  font-family: $font-carter;
-  font-size: $font-3;
-
-  @media ($medium-up) {
-    font-size: $font-4;
-  }
-}
-
 .callout-small {
   font-family: $font-carter;
   font-size: $font-2;
