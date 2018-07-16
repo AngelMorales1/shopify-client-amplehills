@@ -15,6 +15,7 @@ class ProfileView extends Component {
     const {
       model,
       customer,
+      checkout,
       actions,
       customerFieldBeingEdited,
       successfullyEditedFields,
@@ -64,6 +65,7 @@ class ProfileView extends Component {
                 <ProfileOrders
                   actions={actions}
                   products={products}
+                  checkout={checkout}
                   {...customer}
                 />
               </div>

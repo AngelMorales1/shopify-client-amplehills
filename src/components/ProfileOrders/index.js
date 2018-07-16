@@ -3,7 +3,22 @@ import moment from 'moment';
 
 import { Button } from 'components/base';
 
-const ProfileOrders = ({ actions, orders, products }) => {
+const ProfileOrders = ({ actions, checkout, orders, products }) => {
+  const handleReorder = order => {
+    const items = order.items.map(item => {
+      return {
+        variantId: item.productId,
+        quantity: item.quantity,
+        customAttributes: item.attributes.map(attribute => {
+          const { key, value } = attribute;
+          return { key, value };
+        })
+      };
+    });
+
+    actions.addLineItems(checkout.id, items);
+  };
+
   return (
     <div className="my3">
       <h2 className="carter sub-title mb3">Order History</h2>
@@ -50,6 +65,7 @@ const ProfileOrders = ({ actions, orders, products }) => {
                 className="tag mb2 bg-peach text-white"
                 variant="secondary"
                 label="Re-order"
+                onClick={() => handleReorder(order)}
               />
             </div>
           </div>

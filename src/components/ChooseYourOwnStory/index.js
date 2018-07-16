@@ -122,6 +122,7 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
+    console.log(this.props.checkout, items);
     this.props.actions.addLineItems(this.props.checkout, items);
   };
 

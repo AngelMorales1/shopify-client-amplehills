@@ -2,7 +2,10 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { signOutCustomer, updateCustomer } from 'state/actions/customerActions';
-import { checkoutCustomerDisassociate } from 'state/actions/checkoutActions';
+import {
+  addLineItems,
+  checkoutCustomerDisassociate
+} from 'state/actions/checkoutActions';
 import {
   activateEditCustomerField,
   cancelEditCustomerFields
@@ -40,6 +43,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
+        addLineItems,
         signOutCustomer,
         updateCustomer,
         checkoutCustomerDisassociate,
