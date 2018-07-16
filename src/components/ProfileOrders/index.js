@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const ProfileOrders = ({ actions, orders, products }) => {
   return (
@@ -7,7 +8,9 @@ const ProfileOrders = ({ actions, orders, products }) => {
       <div>
         {orders.map(order => (
           <div className="card card--light-gray-border p3 my2">
-            <p className="bold text-peach mb3">{order.date}</p>
+            <p className="bold text-peach mb3">
+              {moment(order.date).format('MMMM D, YYYY')}
+            </p>
             {order.items.map(item => (
               <div className="mb2 flex flex-wrap justify-between">
                 <span className="line-item-title mr2">{item.title}</span>
