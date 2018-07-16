@@ -66,7 +66,7 @@ const Cart = props => {
             const getProduct = Object.values(products).find(
               value => value.id === item.productId
             );
-            const link = get(getProduct, 'handle', '');
+            const handle = get(getProduct, 'handle', '');
 
             return (
               <div key={item.id} className="mb3">
@@ -80,8 +80,7 @@ const Cart = props => {
                     <div className="my2">
                       <Link
                         className="text-decoration-none"
-                        exact
-                        to={`/products/${link}`}
+                        to={`/products/${handle}`}
                       >
                         <span className="bold">{item.title}</span>
                       </Link>
@@ -110,8 +109,7 @@ const Cart = props => {
                   >
                     <Link
                       className="text-decoration-none my2 xs-hide sm-hide"
-                      exact
-                      to={`/products/${link}`}
+                      to={`/products/${handle}`}
                     >
                       <span className="bold ">{item.title}</span>
                     </Link>
@@ -247,7 +245,7 @@ const Cart = props => {
   const emptyCart = (
     <div className="flex justify-center items-center flex-column p4">
       <h2 className="block-headline m4">Your cart is empty</h2>
-      <Link className="text-decoration-none" exact to={`/products`}>
+      <Link className="text-decoration-none" to={`/products`}>
         shop
       </Link>
     </div>
