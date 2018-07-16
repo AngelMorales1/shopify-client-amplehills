@@ -15,6 +15,7 @@
 
   &__text-description {
     margin: spacing(4) 0;
+    font-size: $font-1;
 
     @media ($medium-up) {
       margin: 0;

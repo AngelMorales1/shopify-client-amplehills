@@ -55,13 +55,13 @@ class OurPledge extends Component {
             styles['OurPledge__content-container']
           )}
         >
-          <p className="col col-12 md-col-4 px2 callout-medium center nowrap">
+          <p className="col col-12 md-col-4 px2 block-subheadline carter center nowrap">
             Our Pledge
           </p>
           <p
             className={cx(
               styles['OurPledge__text-description'],
-              'col col-12 md-col-4 flex uppercase info-text-extra-small semi-bold center flex justify-center'
+              'col col-12 md-col-4 flex uppercase semi-bold center flex justify-center'
             )}
           >
             Ice cream arrives fresh delicious, and frozen

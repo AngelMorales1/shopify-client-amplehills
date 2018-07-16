@@ -177,10 +177,6 @@ em {
   line-height: $font-6;
 }
 
-.info-text-extra-small {
-  font-size: $font-1;
-}
-
 .price-text {
   @extend .bold;
   font-size: $font-4;
