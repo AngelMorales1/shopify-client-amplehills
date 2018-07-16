@@ -53,11 +53,36 @@ export const customerFetch = gql`
           }
         }
       }
-      orders(first: 5, reverse: true) {
+      orders(first: 20) {
         edges {
           node {
             orderNumber
+            id
+            customerUrl
             totalPrice
+            lineItems(first: 20) {
+              edges {
+                node {
+                  title
+                  quantity
+                  customAttributes {
+                    key
+                    value
+                  }
+                  variant {
+                    availableForSale
+                    compareAtPrice
+                    id
+                    price
+                    title
+                    selectedOptions {
+                      name
+                      value
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

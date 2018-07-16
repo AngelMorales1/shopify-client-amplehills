@@ -21,8 +21,10 @@ class ProfileView extends Component {
     } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    const { id, firstName, lastName } = customer;
+    const { id, firstName, lastName, orders } = customer;
     if (!id) return <Redirect to="/sign-in" />;
+
+    console.log('orders', orders);
 
     return (
       <div className="Profile">
