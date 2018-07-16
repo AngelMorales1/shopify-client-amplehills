@@ -132,7 +132,13 @@ class ChooseYourOwnStory extends Component {
     const quantity = get(this.state, 'quantity', 1);
     const shipping = get(this.state, 'shippingDate', '');
 
-    const { block, products, ourPledge } = this.props;
+    const {
+      block,
+      products,
+      ourPledge,
+      actions,
+      ourPledgeOverlayIsOpen
+    } = this.props;
     const fields = get(block, 'fields', {});
 
     const product =
@@ -217,10 +223,12 @@ class ChooseYourOwnStory extends Component {
                 <p className="copy pr2">{get(fields, 'description', '')}</p>
               </div>
               <OurPledge
+                actions={actions}
                 overlayContentImage={overlayContentImage}
                 shippingInformation={shippingInformation}
                 shippingPledge={shippingPledge}
                 calloutImage={calloutImage}
+                ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
               />
             </div>
           </div>

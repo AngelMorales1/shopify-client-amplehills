@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
+import {
+  openOurPledge,
+  closeOurPledge
+} from 'state/actions/ui/productUIActions';
 import { fetchOurPledge } from 'state/actions/productActions';
 import fetchShippingDates from 'state/selectors/fetchShippingDates';
 import products from 'state/selectors/products';
@@ -34,7 +38,12 @@ const mapStateToProps = (state, props) => {
     product: product(state, props),
     products: products(state),
     shippingDates: fetchShippingDates(state),
-    ourPledge: get(state, 'product.ourPledge.items[0].fields', {})
+    ourPledge: get(state, 'product.ourPledge.items[0].fields', {}),
+    ourPledgeOverlayIsOpen: get(
+      state,
+      'productUI.ourPledgeOverlayIsOpen',
+      false
+    )
   };
 };
 
@@ -43,7 +52,9 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         addLineItems,
-        fetchOurPledge
+        fetchOurPledge,
+        openOurPledge,
+        closeOurPledge
       },
       dispatch
     )

@@ -9,29 +9,25 @@ import { Image, Button } from 'components/base';
 import OurPledgeOverlay from 'components/OurPledgeOverlay';
 
 class OurPledge extends Component {
-  constructor(props) {
-    super(...arguments);
-
-    this.state = {
-      ourPledgeOverlayIsOpen: false
-    };
-  }
-
   openOurPledgeOverlay = () => {
-    this.setState({ ourPledgeOverlayIsOpen: true });
+    this.props.actions.openOurPledge();
   };
 
   closeOurPledgeOverlay = () => {
-    this.setState({ ourPledgeOverlayIsOpen: false });
+    this.props.actions.closeOurPledge();
   };
 
   render() {
     const {
+      ourPledgeOverlayIsOpen,
       overlayContentImage,
       shippingInformation,
       shippingPledge,
-      calloutImage
+      calloutImage,
+      actions
     } = this.props;
+
+    console.log(actions);
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
 
@@ -88,7 +84,7 @@ class OurPledge extends Component {
           shippingInformation={shippingInformation}
           shippingPledge={shippingPledge}
           closeOurPledgeOverlay={this.closeOurPledgeOverlay}
-          ourPledgeOverlayIsOpen={this.state.ourPledgeOverlayIsOpen}
+          ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
         />
       </div>
     );
@@ -101,10 +97,12 @@ OurPledge.propTypes = {
   calloutImage: imageModel.propTypes,
   overlayContentImage: PropTypes.object,
   shippingInformation: PropTypes.string,
-  shippingPledge: PropTypes.string
+  shippingPledge: PropTypes.string,
+  ourPledgeOverlayIsOpen: PropTypes.bool
 };
 
 OurPledge.defaultProps = {
+  ourPledgeOverlayIsOpen: false,
   calloutImage: imageModel.default,
   overlayContentImage: {},
   shippingInformation: '',

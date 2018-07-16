@@ -20,9 +20,13 @@ const OurPledgeOverlay = ({
     ''
   );
 
-  const classes = cx('z-overlay wh100 transition', styles['OurPledgeOverlay'], {
-    [styles['OurPledgeOverlay--active']]: ourPledgeOverlayIsOpen
-  });
+  const classes = cx(
+    'z-overlay wh100 transition fixed t0 r0',
+    styles['OurPledgeOverlay'],
+    {
+      [styles['OurPledgeOverlay--active']]: ourPledgeOverlayIsOpen
+    }
+  );
 
   return (
     <div className={classes}>
