@@ -64,7 +64,7 @@ class ProfileView extends Component {
                   actions={actions}
                   products={products}
                   checkout={checkout}
-                  {...customer}
+                  orders={customer.orders}
                 />
               </div>
             </div>
