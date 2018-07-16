@@ -1,6 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 
+import orderModel from 'models/orderModel';
+
 import { Button } from 'components/base';
 
 const ProfileOrders = ({ actions, checkout, orders, products }) => {
@@ -75,10 +77,17 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
   );
 };
 
-ProfileOrders.propTypes = {};
+ProfileOrders.propTypes = {
+  actions: PropTypes.shape({
+    addLineItems: PropTypes.func
+  }),
+  orders: PropTypes.arrayOf(orderModel.propTypes)
+};
 
 ProfileOrders.defaultProps = {
-  actions: {},
+  actions: {
+    addLineItems: () => {}
+  },
   orders: []
 };
 
