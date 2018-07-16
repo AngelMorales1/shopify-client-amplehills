@@ -7,7 +7,6 @@ import orderModel from 'models/orderModel';
 import { Button } from 'components/base';
 
 const ProfileOrders = ({ actions, checkout, orders, products }) => {
-  console.log(orders);
   const handleReorder = order => {
     const items = order.items.map(item => {
       return {
