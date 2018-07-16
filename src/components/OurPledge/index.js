@@ -23,8 +23,7 @@ class OurPledge extends Component {
       overlayContentImage,
       shippingInformation,
       shippingPledge,
-      calloutImage,
-      actions
+      calloutImage
     } = this.props;
 
     const calloutImageUrl = get(calloutImage, 'fields.file.url', '');

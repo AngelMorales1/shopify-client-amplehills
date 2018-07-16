@@ -18,7 +18,6 @@ import {
 } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import OurPledge from 'components/OurPledge';
-import OurPledgeOverlay from 'components/OurPledgeOverlay';
 import ProductShoppableCard from 'components/ProductShoppableCard';
 import styles from './ChooseYourOwnStory.scss';
 
@@ -381,6 +380,11 @@ class ChooseYourOwnStory extends Component {
 }
 
 ChooseYourOwnStory.propTypes = {
+  actions: PropTypes.shape({
+    addLineItems: PropTypes.func,
+    openOurPledge: PropTypes.func,
+    closeOurPledge: PropTypes.func
+  }),
   product: productModel.propTypes,
   products: PropTypes.objectOf(productModel.propTypes),
   block: PropTypes.shape({
@@ -393,7 +397,6 @@ ChooseYourOwnStory.propTypes = {
     )
   }),
   ourPledge: PropTypes.shape({
-    closeOurPledgeOverlay: PropTypes.func,
     overlayContentImage: imageModel.propTypes,
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
@@ -401,6 +404,11 @@ ChooseYourOwnStory.propTypes = {
 };
 
 ChooseYourOwnStory.defaultProps = {
+  actions: {
+    addLineItems: () => {},
+    openOurPledge: () => {},
+    closeOurPledge: () => {}
+  },
   product: productModel.default,
   products: {},
   block: {
@@ -409,7 +417,6 @@ ChooseYourOwnStory.defaultProps = {
     products: []
   },
   ourPledge: {
-    closeOurPledgeOverlay: () => {},
     overlayContentImage: imageModel.default,
     shippingInformation: '',
     shippingPledge: ''
