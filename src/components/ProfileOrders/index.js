@@ -1,27 +1,35 @@
 import React from 'react';
 import moment from 'moment';
 
+import { Button } from 'components/base';
+
 const ProfileOrders = ({ actions, orders, products }) => {
   return (
     <div className="my3">
       <h2 className="carter sub-title mb3">Order History</h2>
       <div>
         {orders.map(order => (
-          <div className="card card--light-gray-border p3 my2">
+          <div
+            key={order.id}
+            className="card card--light-gray-border px3 pt3 pb2 my2"
+          >
             <p className="bold text-peach mb3">
               {moment(order.date).format('MMMM D, YYYY')}
             </p>
-            {order.items.map(item => (
-              <div className="mb2 flex flex-wrap justify-between">
+            {order.items.map((item, i) => (
+              <div
+                key={`${item.title} ${i}`}
+                className="mb2 flex flex-wrap justify-between"
+              >
                 <span className="line-item-title mr2">{item.title}</span>
                 <span className="line-item-title">${item.price}</span>
                 {item.subItems.length ? (
                   <div className="w100">
                     <ul className="mt2 mb1">
-                      {item.subItems.map(subItem => (
+                      {item.subItems.map((subItem, i) => (
                         <li
                           className="sub-line-item small"
-                          key={subItem.handle}
+                          key={`${subItem.handle} ${i}`}
                         >{`${subItem.quantity}x ${
                           products[subItem.handle].title
                         }`}</li>
@@ -31,6 +39,19 @@ const ProfileOrders = ({ actions, orders, products }) => {
                 ) : null}
               </div>
             ))}
+            <div className="mt4 flex flex-wrap">
+              <Button
+                className="tag mb2 mr2 bg-peach text-white w-auto"
+                variant="secondary"
+                label="View Receipt"
+                to={order.receipt}
+              />
+              <Button
+                className="tag mb2 bg-peach text-white"
+                variant="secondary"
+                label="Re-order"
+              />
+            </div>
           </div>
         ))}
       </div>
