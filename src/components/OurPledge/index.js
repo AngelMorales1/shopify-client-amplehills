@@ -53,18 +53,25 @@ class OurPledge extends Component {
             styles['OurPledge__content-container']
           )}
         >
-          <p className="col col-12 md-col-4 px2 block-subheadline carter center nowrap">
-            Our Pledge
-          </p>
-          <p
+          <div
             className={cx(
-              styles['OurPledge__text-description'],
-              'col col-12 md-col-4 flex uppercase semi-bold center flex justify-center'
+              styles['OurPledge__text-content-container'],
+              'flex col-8'
             )}
           >
-            Ice cream arrives fresh delicious, and frozen
-          </p>
-          <div className="col col-4 px2 right-align flex justify-center">
+            <p className="col md-col-6 px2 block-subheadline carter nowrap">
+              Our Pledge
+            </p>
+            <p
+              className={cx(
+                styles['OurPledge__text-description'],
+                'col col-12 md-col-6 px2 flex uppercase semi-bold flex'
+              )}
+            >
+              Ice cream arrives fresh delicious, and frozen
+            </p>
+          </div>
+          <div className="col col-4 px2 right-align flex justify-end">
             <Button
               variant="style-none"
               onClick={this.openOurPledgeOverlay}
