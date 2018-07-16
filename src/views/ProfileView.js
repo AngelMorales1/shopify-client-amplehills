@@ -27,8 +27,6 @@ class ProfileView extends Component {
     const { id, firstName, lastName, orders } = customer;
     if (!id) return <Redirect to="/sign-in" />;
 
-    console.log('orders', orders);
-
     return (
       <div className="Profile">
         <div className="bg-iceberg drip">
