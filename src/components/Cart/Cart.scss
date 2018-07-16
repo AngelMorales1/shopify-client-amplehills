@@ -33,8 +33,7 @@
     justify-content: space-between;
 
     @media ($medium-up) {
-      width: 37%;
-      min-width: spacing(50);
+      width: 40%;
       flex-direction: row;
       justify-content: flex-end;
     }
