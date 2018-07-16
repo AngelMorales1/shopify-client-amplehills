@@ -16,9 +16,9 @@ const ImageText = ({ block, z }) => {
     <div
       style={{ zIndex: z }}
       className={cx(
-        'flex justify-center drip',
         styles['ImageText'],
-        styles[colorClass]
+        styles[colorClass],
+        'flex justify-center drip'
       )}
     >
       <div
