@@ -1,8 +1,42 @@
 @import 'settings';
 
 .ImageText {
-  &--Pink {
+  &--pink {
     @extend .bg-light-pink;
     @extend .text-madison-blue;
+  }
+
+  &__container {
+    flex-direction: column;
+    justify-content: center;
+    margin: spacing(8);
+
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: spacing(16);
+    }
+  }
+
+  &__image {
+    min-width: spacing(65);
+    order: 2;
+
+    @media ($medium-up) {
+      order: 1;
+      margin-left: spacing(20);
+      align-self: flex-end;
+    }
+  }
+
+  &__text-content {
+    order: 1;
+    transform: translateY(35%);
+
+    @media ($medium-up) {
+      order: 2;
+      transform: none;
+      margin-left: spacing(18);
+    }
   }
 }
