@@ -33,4 +33,10 @@
       margin: spacing(12);
     }
   }
+
+  &--content-text {
+    @media ($medium-up) {
+      font-size: $font-3;
+    }
+  }
 }
