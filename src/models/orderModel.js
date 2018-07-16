@@ -4,19 +4,19 @@ import itemModel from 'models/itemModel';
 export default {
   propTypes: PropTypes.shape({
     id: PropTypes.string,
-    orderNumber: PropTypes.string,
+    orderNumber: PropTypes.number,
     receipt: PropTypes.string,
-    items: PropTypes.arrayOf(itemModel.propTypes),
-    totalPrice: PropTypes.number,
+    items: itemModel.propTypes,
+    totalPrice: PropTypes.string,
     date: PropTypes.string
   }),
 
   default: {
     id: '',
-    orderNumber: '',
+    orderNumber: 0,
     receipt: '',
     items: [],
-    totalPrice: 0.0,
+    totalPrice: '0.00',
     date: ''
   }
 };

@@ -24,7 +24,7 @@ export default createSelector(
       const id = get(orderNode, 'id', '');
       const orderNumber = get(orderNode, 'orderNumber', '');
       const date = get(orderNode, 'processedAt', '');
-      const totalPrice = get(orderNode, 'totalPrice', 0.0);
+      const totalPrice = get(orderNode, 'totalPrice', '0.00');
 
       const lineItems = get(orderNode, 'lineItems.edges', []).map(lineItem =>
         get(lineItem, 'node', {})
