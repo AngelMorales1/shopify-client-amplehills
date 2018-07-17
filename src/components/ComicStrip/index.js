@@ -54,7 +54,6 @@ class ComicStrip extends Component {
               styles['ComicStrip--button-container'],
               'md-hide lg-hide'
             )}
-            showArrow={true}
           >
             {products.map((product, i) => {
               const color = this.flavorIsActive(i)

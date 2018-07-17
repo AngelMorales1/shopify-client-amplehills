@@ -45,6 +45,14 @@
     padding: spacing(3) spacing(6);
   }
 
+  &--carousel-arrow {
+    border: 0;
+    border-radius: radius('circle');
+    padding: 0;
+    background: transparent;
+    width: spacing(10);
+  }
+
   &--icon,
   &--icon-small,
   &--no-style {
