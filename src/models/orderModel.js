@@ -6,7 +6,7 @@ export default {
     id: PropTypes.string,
     orderNumber: PropTypes.number,
     receipt: PropTypes.string,
-    items: itemModel.propTypes,
+    items: PropTypes.arrayOf(itemModel.propTypes),
     totalPrice: PropTypes.string,
     date: PropTypes.string
   }),
