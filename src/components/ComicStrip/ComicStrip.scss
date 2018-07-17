@@ -5,6 +5,14 @@
     @extend .bg-yellow;
     @extend .text-madison-blue;
   }
+
+  &__headline {
+    margin: spacing(8) auto;
+
+    @media ($medium-up) {
+      margin: spacing(16) auto;
+    }
+  }
 }
 
 .ComicStrips__container {
@@ -24,7 +32,7 @@
 
   &__image {
     animation: slide-up 0.5s;
-    width: 70vw;
+    width: calc(100vw - #{spacing(16)});
 
     @media ($medium-up) {
       width: 30%;

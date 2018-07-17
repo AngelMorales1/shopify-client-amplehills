@@ -26,7 +26,7 @@ const ErrorPage = ({ children }) => {
                 <a
                   href="mailto:info@amplehills.com"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   info@amplehills.com
                 </a>{' '}
@@ -34,7 +34,7 @@ const ErrorPage = ({ children }) => {
                 <a
                   href="https://www.google.com/search?q=ample+hills+near+me"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   our scoop shops
                 </a>.

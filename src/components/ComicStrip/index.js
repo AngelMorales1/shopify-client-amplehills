@@ -6,6 +6,10 @@ import { Image, Button, Carousel } from 'components/base';
 import styles from './ComicStrip.scss';
 
 class ComicStrip extends Component {
+  componentDidMount() {
+    window.dispatchEvent(new Event('resize'));
+  }
+
   state = {
     activeFlavor: 0,
     activeSlide: 0
@@ -28,7 +32,14 @@ class ComicStrip extends Component {
           'flex flex-column justify-center items-center py3'
         )}
       >
-        <h2 className="block-headline m4 center">The Artwork</h2>
+        <h2
+          className={cx(
+            styles['ComicStrip__headline'],
+            'block-headline center'
+          )}
+        >
+          The Artwork
+        </h2>
         <div className="w100 flex justify-center">
           {products.map((product, i) => {
             const color = this.flavorIsActive(i)
@@ -90,7 +101,7 @@ class ComicStrip extends Component {
             const comics = get(product, 'fields.comics', []);
             const classes = cx(
               styles['ComicStrip'],
-              'py3 flex justify-center w100',
+              'py3 flex justify-center w100 container-width mx-auto',
               {
                 [styles['ComicStrip--active']]: this.flavorIsActive(i)
               }
