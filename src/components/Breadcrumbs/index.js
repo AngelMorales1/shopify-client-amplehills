@@ -26,7 +26,7 @@ const Breadcrumbs = ({ breadcrumbs, className }) => {
         return (
           <span key={i}>
             <Link className="link-text" to={get(crumb, 'to', '')}>
-              <span className="small">{get(crumb, 'label', '')}</span>
+              <span className="small bold">{get(crumb, 'label', '')}</span>
             </Link>
             {delimiter}
           </span>
