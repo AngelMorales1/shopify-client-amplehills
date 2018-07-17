@@ -21,7 +21,7 @@ import DeleteModal from 'components/DeleteModal';
 import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './Cart.scss';
 
-const Cart = ({ checkout, actions, items, products }) => {
+const Cart = ({ actions, checkout, items, products }) => {
   const updateLineItem = (item, quantity) => {
     const items = [
       {
@@ -33,15 +33,18 @@ const Cart = ({ checkout, actions, items, products }) => {
     actions.updateLineItems(get(checkout, 'id', ''), items);
   };
 
-  console.log(items, products);
-
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
     <div className={cx(styles['Cart'], 'flex flex-column')}>
       <Breadcrumbs breadcrumbs={breadcrumbs} className="mb4" />
       <h2 className="block-headline-mobile-small mx-auto">Cart</h2>
       <div className={cx(styles['Cart__container'])}>
-        <div className="flex xs-hide sm-hide mt4 pt4 justify-between">
+        <div
+          className={cx(
+            styles['Cart__block-with-border'],
+            'flex xs-hide sm-hide mt4 py3 justify-between'
+          )}
+        >
           <span className={cx(styles['Cart__item-title'], 'bold')}>Item</span>
           <span
             className={cx(
@@ -53,22 +56,19 @@ const Cart = ({ checkout, actions, items, products }) => {
           </span>
           <span className="bold flex justify-end col-3">Total Price</span>
         </div>
-        <div className={cx(styles['Cart__decorative-line'], 'mt3')} />
-        <div className="my3">
+
+        <div className={cx(styles['Cart__block-with-border'], 'my3 pb3')}>
           {items.map(item => {
             const handle = Object.values(products).find(product => {
-              let match = false;
-              product.variants.forEach(variant => {
-                if (variant.id === item.productId) match = true;
-              });
-
-              return match;
+              return product.variants.some(
+                variant => variant.id === item.productId
+              );
             }).handle;
 
             return (
               <div
                 key={item.id}
-                className={cx(styles['Cart__content-container'], 'mb3 flex')}
+                className={cx(styles['Cart__content-container'], 'my3 flex')}
               >
                 <div className="md-hide lg-hide flex items-start justify-between w100">
                   <div className="my2">
@@ -151,7 +151,6 @@ const Cart = ({ checkout, actions, items, products }) => {
             );
           })}
         </div>
-        <div className={cx(styles['Cart__decorative-line'], ' w100')} />
         <div
           className={cx(
             styles['Cart__shipping-info'],
