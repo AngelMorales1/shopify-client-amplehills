@@ -21,7 +21,7 @@ import DeleteModal from 'components/DeleteModal';
 import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './Cart.scss';
 
-const Cart = props => {
+const Cart = ({ checkout, actions, items, products }) => {
   const updateLineItem = (item, quantity) => {
     const items = [
       {
@@ -30,14 +30,10 @@ const Cart = props => {
       }
     ];
 
-    props.actions.updateLineItems(get(props, 'checkout.id', null), items);
+    actions.updateLineItems(get(checkout, 'id', ''), items);
   };
-  const {
-    checkout,
-    actions: { removeLineItems },
-    items,
-    products
-  } = props;
+
+  console.log(items, products);
 
   const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
   const cart = (
@@ -60,9 +56,14 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3')} />
         <div className="my3">
           {items.map(item => {
-            const link = Object.values(products).find(
-              value => value.id === item.productId
-            ).handle;
+            const handle = Object.values(products).find(product => {
+              let match = false;
+              product.variants.forEach(variant => {
+                if (variant.id === item.productId) match = true;
+              });
+
+              return match;
+            }).handle;
 
             return (
               <div
@@ -74,7 +75,7 @@ const Cart = props => {
                     <Link
                       className="text-decoration-none"
                       exact
-                      to={`/products/${link}`}
+                      to={`/products/${handle}`}
                     >
                       <span className="bold">{item.title}</span>
                     </Link>
@@ -101,7 +102,7 @@ const Cart = props => {
                   <Link
                     className="text-decoration-none mt1 mb2 xs-hide sm-hide"
                     exact
-                    to={`/products/${link}`}
+                    to={`/products/${handle}`}
                   >
                     <span className="bold ">{item.title}</span>
                   </Link>
@@ -127,7 +128,7 @@ const Cart = props => {
                   >
                     <Button
                       variant="style-none"
-                      onClick={() => removeLineItems(item.id)}
+                      onClick={() => actions.removeLineItems(item.id)}
                     >
                       <Image
                         className="icon-small"
@@ -139,13 +140,7 @@ const Cart = props => {
                     <QuantitySelector
                       quantity={item.quantity}
                       variant="small"
-                      onChange={quantity =>
-                        updateLineItem(
-                          item.id,
-                          quantity,
-                          get(props, 'checkout.id', null)
-                        )
-                      }
+                      onChange={quantity => updateLineItem(item.id, quantity)}
                     />
                   </div>
                 </div>
@@ -252,7 +247,7 @@ const Cart = props => {
     </div>
   );
 
-  return items.length > 0 ? cart : emptyCart;
+  return items.length ? cart : emptyCart;
 };
 
 Cart.propTypes = {
@@ -275,7 +270,7 @@ Cart.defaultProps = {
   products: {}
 };
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = state => {
   return {
     ...state,
     checkout: get(state, 'session.checkout', {}),
