@@ -30,6 +30,8 @@
 
   &--primary,
   &--primary-small {
+    display: flex;
+    align-items: center;
     border-radius: radius('l');
     height: $button-primary-height;
     padding: spacing(4) spacing(6);
@@ -41,6 +43,8 @@
   }
 
   &--secondary {
+    display: flex;
+    align-items: center;
     border-radius: radius('s');
     padding: spacing(3) spacing(6);
   }
@@ -49,6 +53,7 @@
   &--icon-small,
   &--no-style {
     padding: 0;
+    padding-top: 0;
     box-shadow: 0 0 0 0;
     transform-origin: center top;
     transition-duration: $transition-duration-short;
@@ -67,9 +72,18 @@
     width: spacing(6);
   }
 
+  &--div {
+    padding-top: 1.4rem;
+
+    &.Button--primary-small {
+      padding-top: 0.8rem;
+    }
+  }
+
   &--circle {
     @extend .circle;
     font-size: $font-5;
+    padding-top: 0;
     height: spacing(10);
     width: spacing(10);
   }
@@ -77,6 +91,7 @@
   &--circle-small {
     @extend .circle;
     padding: 0;
+    padding-top: 0;
     font-size: $font-4;
     height: spacing(7);
     width: spacing(7);
