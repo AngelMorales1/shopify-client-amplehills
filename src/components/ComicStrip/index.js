@@ -24,7 +24,7 @@ class ComicStrip extends Component {
         style={{ zIndex: z }}
         className={cx(
           styles[colorClass],
-          styles['ComicStrips--container'],
+          styles['ComicStrips__container'],
           'flex flex-column justify-center items-center py3'
         )}
       >
@@ -62,33 +62,27 @@ class ComicStrip extends Component {
               'md-hide lg-hide'
             )}
           >
-            {products.map((product, i) => {
-              const color = this.flavorIsActive(i)
-                ? 'clear-madison-blue-outline'
-                : 'madison-blue';
-
-              return (
-                <div key={i} className="flex justify-center">
-                  <Button
-                    className="m1"
-                    color={color}
-                    variant="primary-small"
-                    key={i}
-                    label={get(product, 'fields.title', '')}
-                    onClick={() =>
-                      this.setState({
-                        activeFlavor: i
-                      })
-                    }
-                  />
-                </div>
-              );
-            })}
+            {products.map((product, i) => (
+              <div key={i} className="flex justify-center">
+                <Button
+                  className="m1"
+                  color="madison-blue"
+                  variant="primary-small"
+                  key={i}
+                  label={get(product, 'fields.title', '')}
+                  onClick={() =>
+                    this.setState({
+                      activeFlavor: i
+                    })
+                  }
+                />
+              </div>
+            ))}
           </Carousel>
         </div>
         <div
           className={cx(
-            styles['ComicStrips--container'],
+            styles['ComicStrips__container'],
             'flex justify-center w100'
           )}
         >
@@ -110,7 +104,7 @@ class ComicStrip extends Component {
                     <div
                       key={i}
                       className={cx(
-                        styles['ComicStrips--container--image'],
+                        styles['ComicStrips__container__image'],
                         'm2 xs-hide sm-hide'
                       )}
                     >
@@ -134,7 +128,7 @@ class ComicStrip extends Component {
                       <div
                         key={`${i}-${get(comic, 'sys.id', '')}`}
                         className={cx(
-                          styles['ComicStrips--container--image'],
+                          styles['ComicStrips__container__image'],
                           'w-auto mx-auto'
                         )}
                       >

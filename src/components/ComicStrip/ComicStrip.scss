@@ -7,7 +7,7 @@
   }
 }
 
-.ComicStrips--container {
+.ComicStrips__container {
   .ComicStrip {
     display: none;
     opacity: 0;
@@ -22,11 +22,24 @@
     }
   }
 
-  &--image {
+  &__image {
+    animation: slide-up 0.5s;
     width: 70vw;
 
     @media ($medium-up) {
       width: 30%;
     }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, spacing(8), 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
