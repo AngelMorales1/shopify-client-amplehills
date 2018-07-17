@@ -239,9 +239,14 @@ const Cart = ({ actions, checkout, items, products }) => {
 
   const emptyCart = (
     <div className="flex justify-center items-center flex-column p4">
-      <h2 className="block-headline m4">Your cart is empty</h2>
+      <h2 className="block-headline mt4 mb3">Your cart is empty!</h2>
       <Link className="text-decoration-none" exact to={`/products`}>
-        shop
+        <Button
+          label="Find Your Pint &rarr;"
+          color="madison-blue"
+          variant="primary"
+          to="/products"
+        />
       </Link>
     </div>
   );
