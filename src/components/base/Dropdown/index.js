@@ -72,7 +72,10 @@ class Dropdown extends Component {
         )}
       >
         <label
-          className={cx(styles['Dropdown--label'], 'w100 inline-block mb1')}
+          className={cx(
+            styles['Dropdown--label'],
+            'w100 inline-block mb1 bold small'
+          )}
           htmlFor={name}
         >
           {label}
