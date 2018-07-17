@@ -33,7 +33,7 @@
     justify-content: space-between;
 
     @media ($medium-up) {
-      width: 37%;
+      width: 40%;
       flex-direction: row;
       justify-content: flex-end;
     }
@@ -52,11 +52,11 @@
     }
   }
 
-  &__quantity {
-    margin-left: 0;
+  &__delete {
+    justify-content: flex-end;
 
     @media ($medium-up) {
-      margin-left: spacing(17);
+      justify-content: center;
     }
   }
 
@@ -115,7 +115,7 @@
     }
   }
 
-  &__decorative-line {
-    border-top: spacing(0.5) solid color('gray');
+  &__block-with-border {
+    border-bottom: spacing(0.5) solid color('gray');
   }
 }
