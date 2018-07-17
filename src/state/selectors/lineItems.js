@@ -28,7 +28,8 @@ export const deriveLineItems = items =>
       (a, b) => b.quantity - a.quantity
     );
 
-    const productId = get(item, 'variant.id', '');
+    const variant = get(item, 'variant', {});
+    const productId = get(variant, 'id', '');
 
     lineItems.push({
       id,
@@ -37,7 +38,8 @@ export const deriveLineItems = items =>
       quantity,
       attributes,
       subItems,
-      productId
+      productId,
+      variant
     });
 
     return lineItems;
