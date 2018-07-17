@@ -50,6 +50,8 @@ class ComicStrip extends Component {
             );
           })}
           <Carousel
+            showDots={false}
+            onChange={activeFlavor => this.setState({ activeFlavor })}
             className={cx(
               styles['ComicStrip--button-container'],
               'md-hide lg-hide'
@@ -61,18 +63,20 @@ class ComicStrip extends Component {
                 : 'madison-blue';
 
               return (
-                <Button
-                  className="m1"
-                  color={color}
-                  variant="primary-small"
-                  key={get(product, 'sys.id', '')}
-                  label={get(product, 'fields.title', '')}
-                  onClick={() =>
-                    this.setState({
-                      activeFlavor: get(product, 'sys.id', '')
-                    })
-                  }
-                />
+                <div className="flex justify-center">
+                  <Button
+                    className="m1"
+                    color={color}
+                    variant="primary-small"
+                    key={get(product, 'sys.id', '')}
+                    label={get(product, 'fields.title', '')}
+                    onClick={() =>
+                      this.setState({
+                        activeFlavor: get(product, 'sys.id', '')
+                      })
+                    }
+                  />
+                </div>
               );
             })}
           </Carousel>

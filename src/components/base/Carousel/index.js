@@ -18,7 +18,8 @@ class Carousel extends Component {
       showArrows,
       showDots,
       arrowPreviousImage,
-      arrowNextImage
+      arrowNextImage,
+      onChange
     } = this.props;
     return (
       <div
@@ -28,14 +29,16 @@ class Carousel extends Component {
         )}
       >
         <Nuka
+          afterSlide={index => onChange(index)}
           renderCenterLeftControls={({ previousSlide }) =>
             showArrows ? (
               <Button
                 disabled={this.state.index <= 0}
-                onClick={() =>
-                  this.setState({ index: this.state.index - 1 }, previousSlide)
-                }
-                className={styles['Carousel__arrow--previous']}
+                onClick={() => {
+                  const index = this.state.index - 1;
+                  this.setState({ index }, previousSlide);
+                }}
+                className={cx(styles['Carousel__arrow--previous'], 'm2')}
                 variant="carousel-arrow"
               >
                 <Image src={arrowPreviousImage} />
@@ -46,10 +49,11 @@ class Carousel extends Component {
             showArrows ? (
               <Button
                 disabled={this.state.index >= slideCount - 1}
-                onClick={() =>
-                  this.setState({ index: this.state.index + 1 }, nextSlide)
-                }
-                className={styles['Carousel__arrow--next']}
+                onClick={() => {
+                  const index = this.state.index + 1;
+                  this.setState({ index }, nextSlide);
+                }}
+                className={cx(styles['Carousel__arrow--next'], 'm2')}
                 variant="carousel-arrow"
               >
                 <Image src={arrowNextImage} />
@@ -87,7 +91,8 @@ Carousel.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   showArrows: PropTypes.bool,
   arrowNextImage: PropTypes.string,
-  arrowPreviousImage: PropTypes.string
+  arrowPreviousImage: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 Carousel.defaultProps = {
@@ -96,7 +101,8 @@ Carousel.defaultProps = {
   showArrows: true,
   showDots: true,
   arrowPreviousImage: '/assets/images/icon-circle-left-arrow.svg',
-  arrowNextImage: '/assets/images/icon-circle-right-arrow.svg'
+  arrowNextImage: '/assets/images/icon-circle-right-arrow.svg',
+  onChange: () => {}
 };
 
 export default Carousel;
