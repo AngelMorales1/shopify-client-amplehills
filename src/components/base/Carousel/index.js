@@ -19,7 +19,8 @@ class Carousel extends Component {
       showDots,
       arrowPreviousImage,
       arrowNextImage,
-      onChange
+      onChange,
+      index
     } = this.props;
     return (
       <div
@@ -29,15 +30,16 @@ class Carousel extends Component {
         )}
       >
         <Nuka
-          afterSlide={index => onChange(index)}
+          className={cx('w100', {
+            pb4: showDots
+          })}
+          slideIndex={index}
+          afterSlide={index => this.setState({ index }, onChange(index))}
           renderCenterLeftControls={({ previousSlide }) =>
             showArrows ? (
               <Button
                 disabled={this.state.index <= 0}
-                onClick={() => {
-                  const index = this.state.index - 1;
-                  this.setState({ index }, previousSlide);
-                }}
+                onClick={previousSlide}
                 className={cx(styles['Carousel__arrow--previous'], 'm2')}
                 variant="carousel-arrow"
               >
@@ -49,10 +51,7 @@ class Carousel extends Component {
             showArrows ? (
               <Button
                 disabled={this.state.index >= slideCount - 1}
-                onClick={() => {
-                  const index = this.state.index + 1;
-                  this.setState({ index }, nextSlide);
-                }}
+                onClick={nextSlide}
                 className={cx(styles['Carousel__arrow--next'], 'm2')}
                 variant="carousel-arrow"
               >
@@ -64,7 +63,7 @@ class Carousel extends Component {
             showDots ? (
               <ul>
                 {[...Array(props.slideCount)].map((dot, i) => (
-                  <li className="inline-block p1">
+                  <li key={i} className="inline-block p1">
                     <Button
                       className="big text-peach"
                       variant="no-style"
@@ -92,7 +91,8 @@ Carousel.propTypes = {
   showArrows: PropTypes.bool,
   arrowNextImage: PropTypes.string,
   arrowPreviousImage: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  index: PropTypes.number
 };
 
 Carousel.defaultProps = {
@@ -102,7 +102,8 @@ Carousel.defaultProps = {
   showDots: true,
   arrowPreviousImage: '/assets/images/icon-circle-left-arrow.svg',
   arrowNextImage: '/assets/images/icon-circle-right-arrow.svg',
-  onChange: () => {}
+  onChange: () => {},
+  index: 0
 };
 
 export default Carousel;

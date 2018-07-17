@@ -7,7 +7,8 @@ import styles from './ComicStrip.scss';
 
 class ComicStrip extends Component {
   state = {
-    activeFlavor: 0
+    activeFlavor: 0,
+    activeSlide: 0
   };
 
   flavorIsActive = index => this.state.activeFlavor === index;
@@ -39,7 +40,7 @@ class ComicStrip extends Component {
                 className="m1 xs-hide sm-hide "
                 color={color}
                 variant="primary-small"
-                key={get(product, 'sys.id', '')}
+                key={i}
                 label={get(product, 'fields.title', '')}
                 onClick={() =>
                   this.setState({
@@ -51,7 +52,11 @@ class ComicStrip extends Component {
           })}
           <Carousel
             showDots={false}
-            onChange={activeFlavor => this.setState({ activeFlavor })}
+            onChange={activeFlavor => {
+              this.setState({ activeFlavor, activeSlide: 0 }, () =>
+                window.dispatchEvent(new Event('resize'))
+              );
+            }}
             className={cx(
               styles['ComicStrip--button-container'],
               'md-hide lg-hide'
@@ -63,16 +68,16 @@ class ComicStrip extends Component {
                 : 'madison-blue';
 
               return (
-                <div className="flex justify-center">
+                <div key={i} className="flex justify-center">
                   <Button
                     className="m1"
                     color={color}
                     variant="primary-small"
-                    key={get(product, 'sys.id', '')}
+                    key={i}
                     label={get(product, 'fields.title', '')}
                     onClick={() =>
                       this.setState({
-                        activeFlavor: get(product, 'sys.id', '')
+                        activeFlavor: i
                       })
                     }
                   />
@@ -91,19 +96,19 @@ class ComicStrip extends Component {
             const comics = get(product, 'fields.comics', []);
             const classes = cx(
               styles['ComicStrip'],
-              'py3 flex justify-center',
+              'py3 flex justify-center w100',
               {
                 [styles['ComicStrip--active']]: this.flavorIsActive(i)
               }
             );
 
             return (
-              <div className={cx(classes)} key={get(product, 'sys.id', '')}>
+              <div className={classes} key={i}>
                 {comics.map((comic, i) => {
                   const comicUrl = get(comic, 'fields.file.url', '');
                   return (
                     <div
-                      key={`${i}-${get(comic, 'sys.id', '')}`}
+                      key={i}
                       className={cx(
                         styles['ComicStrips--container--image'],
                         'm2 xs-hide sm-hide'
@@ -117,9 +122,10 @@ class ComicStrip extends Component {
                   );
                 })}
                 <Carousel
-                  className="md-hide lg-hide"
-                  showNextItemShadow={true}
-                  showIndicators={true}
+                  className="w-auto md-hide lg-hide"
+                  showArrows={false}
+                  index={this.state.activeSlide}
+                  onChange={activeSlide => this.setState({ activeSlide })}
                 >
                   {comics.map((comic, i) => {
                     const comicUrl = get(comic, 'fields.file.url', '');
@@ -129,7 +135,7 @@ class ComicStrip extends Component {
                         key={`${i}-${get(comic, 'sys.id', '')}`}
                         className={cx(
                           styles['ComicStrips--container--image'],
-                          'mx-auto'
+                          'w-auto mx-auto'
                         )}
                       >
                         <Image
