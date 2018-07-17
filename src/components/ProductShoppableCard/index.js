@@ -42,7 +42,7 @@ const ProductShoppableCard = ({
           )}
         >
           <div>
-            <span className="w100 bold mt2 mb1">{product.title}</span>
+            <span className="w100 bold mt2 mb1 block">{product.title}</span>
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
           <div className={actionClasses}>
