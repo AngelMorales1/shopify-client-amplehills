@@ -44,7 +44,7 @@ class ComicStrip extends Component {
           {products.map((product, i) => {
             const color = this.flavorIsActive(i)
               ? 'madison-blue'
-              : 'clear-madison-blue-outline';
+              : 'clear-madison-blue-border';
 
             return (
               <Button

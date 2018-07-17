@@ -19,7 +19,7 @@ const ErrorPage = ({ children }) => {
               src="/assets/images/ample-hills-logo.svg"
             />
             <div className="my3 text-container-width">
-              <h1 className="title carter mb2">We'll be right back!</h1>
+              <h1 className="title carter mb2">{`We\'ll be right back!`}</h1>
               <p className="block-subheadline">
                 Our online shop is currently unavailable. In the meantime, feel
                 free to reach out at{' '}

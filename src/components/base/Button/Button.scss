@@ -121,7 +121,7 @@
 
   &--clear-madison-blue-border {
     @extend .text-madison-blue;
-    background-color: Transparent;
+    background-color: transparent;
     border: spacing(1) solid color('madison-blue');
   }
 
@@ -143,12 +143,6 @@
     &.Button--circle {
       padding: 0;
     }
-  }
-
-  &--clear-madison-blue-outline {
-    @extend .text-madison-blue;
-    border: spacing(0.75) solid color('madison-blue');
-    background-color: Transparent;
   }
 
   &--white-madison-blue-border {
