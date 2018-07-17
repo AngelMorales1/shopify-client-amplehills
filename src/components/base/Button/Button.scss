@@ -67,6 +67,10 @@
     }
   }
 
+  &--no-style {
+    background: transparent;
+  }
+
   &--icon {
     width: spacing(8);
   }

@@ -31,7 +31,10 @@ class Carousel extends Component {
           renderCenterLeftControls={({ previousSlide }) =>
             showArrows ? (
               <Button
-                onClick={previousSlide}
+                disabled={this.state.index <= 0}
+                onClick={() =>
+                  this.setState({ index: this.state.index - 1 }, previousSlide)
+                }
                 className={styles['Carousel__arrow--previous']}
                 variant="carousel-arrow"
               >
@@ -39,10 +42,13 @@ class Carousel extends Component {
               </Button>
             ) : null
           }
-          renderCenterRightControls={({ nextSlide }) =>
+          renderCenterRightControls={({ nextSlide, slideCount }) =>
             showArrows ? (
               <Button
-                onClick={nextSlide}
+                disabled={this.state.index >= slideCount - 1}
+                onClick={() =>
+                  this.setState({ index: this.state.index + 1 }, nextSlide)
+                }
                 className={styles['Carousel__arrow--next']}
                 variant="carousel-arrow"
               >
@@ -53,14 +59,18 @@ class Carousel extends Component {
           renderBottomCenterControls={props =>
             showDots ? (
               <ul>
-                {console.log(Array(props.slideCount))}
-                {Array(props.slideCount).map((dot, i) => {
-                  <li>
+                {[...Array(props.slideCount)].map((dot, i) => (
+                  <li className="inline-block p1">
                     <Button
-                      label={i === this.state.index ? '\u2022' : '\u26AC'}
+                      className="big text-peach"
+                      variant="no-style"
+                      label={i === this.state.index ? '\u26AC' : '\u2022'}
+                      onClick={() => {
+                        this.setState({ index: i }, props.goToSlide(i));
+                      }}
                     />
-                  </li>;
-                })}
+                  </li>
+                ))}
               </ul>
             ) : null
           }
