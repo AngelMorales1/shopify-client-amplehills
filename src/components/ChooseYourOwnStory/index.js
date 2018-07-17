@@ -252,7 +252,7 @@ class ChooseYourOwnStory extends Component {
               {product.variants.map(variant => (
                 <Radio
                   label={variant.title}
-                  className="mr3"
+                  className="mr3 small bold"
                   key={variant.id}
                   checked={variant.id === activeVariant.id}
                   onClick={() =>
@@ -269,7 +269,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
-              <label>Choose 4 Flavors</label>
+              <label className="small bold">Choose 4 Flavors</label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
                   <div
@@ -301,7 +301,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-end xs-hide sm-hide md-hide '
               )}
             >
-              <label className="w100 mb2">Pick Your Ship Date</label>
+              <label className="w100 mb2 small bold">Pick Your Ship Date</label>
               {this.props.shippingDates.map(shippingDate => (
                 <Button
                   variant="primary-small"
@@ -324,8 +324,8 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <div className="lg-hide xl-hide col col-7">
-                <div className="col col-12 small bold">
-                  Choose {size} Flavors
+                <div className="col col-12">
+                  <span className="small bold">Choose {size} Flavors</span>
                 </div>
               </div>
               <div
