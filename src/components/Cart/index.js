@@ -60,10 +60,9 @@ const Cart = props => {
         <div className={cx(styles['Cart__decorative-line'], 'mt3')} />
         <div className="my3">
           {items.map(item => {
-            const getProduct = Object.values(products).find(
+            const link = Object.values(products).find(
               value => value.id === item.productId
-            );
-            const handle = get(getProduct, 'handle', '');
+            ).handle;
 
             return (
               <div
@@ -73,8 +72,9 @@ const Cart = props => {
                 <div className="md-hide lg-hide flex items-start justify-between w100">
                   <div className="my2">
                     <Link
-                      className="text-decoration-none my2 xs-hide sm-hide"
-                      to={`/products/${handle}`}
+                      className="text-decoration-none"
+                      exact
+                      to={`/products/${link}`}
                     >
                       <span className="bold">{item.title}</span>
                     </Link>
@@ -246,7 +246,7 @@ const Cart = props => {
   const emptyCart = (
     <div className="flex justify-center items-center flex-column p4">
       <h2 className="block-headline m4">Your cart is empty</h2>
-      <Link className="text-decoration-none" to={`/products`}>
+      <Link className="text-decoration-none" exact to={`/products`}>
         shop
       </Link>
     </div>
