@@ -34,7 +34,7 @@ class ProfileView extends Component {
             <p className="block-headline">
               {firstName && lastName ? `${firstName} ${lastName}` : 'Profile'}
             </p>
-            <div className="my3">
+            <div className="my3 flex justify-center">
               <Button
                 className="small"
                 variant="primary-small"
