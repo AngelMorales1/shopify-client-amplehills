@@ -6,19 +6,11 @@ import { Image, Button, Carousel } from 'components/base';
 import styles from './ComicStrip.scss';
 
 class ComicStrip extends Component {
-  constructor(props) {
-    super(...arguments);
+  state = {
+    activeFlavor: 0
+  };
 
-    this.state = {
-      activeFlavor: false
-    };
-  }
-
-  isActiveFlavor(id, index) {
-    return (
-      this.state.activeFlavor === id || (!index && !this.state.activeFlavor)
-    );
-  }
+  flavorIsActive = index => this.state.activeFlavor === index;
 
   render() {
     const { block, z } = this.props;
@@ -38,7 +30,7 @@ class ComicStrip extends Component {
         <h2 className="block-headline m4 center">The Artwork</h2>
         <div className="w100 flex justify-center">
           {products.map((product, i) => {
-            const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
+            const color = this.flavorIsActive(i)
               ? 'madison-blue'
               : 'clear-madison-blue-outline';
 
@@ -51,7 +43,7 @@ class ComicStrip extends Component {
                 label={get(product, 'fields.title', '')}
                 onClick={() =>
                   this.setState({
-                    activeFlavor: get(product, 'sys.id', '')
+                    activeFlavor: i
                   })
                 }
               />
@@ -62,10 +54,10 @@ class ComicStrip extends Component {
               styles['ComicStrip--button-container'],
               'md-hide lg-hide'
             )}
-            ShowArrow={true}
+            showArrow={true}
           >
             {products.map((product, i) => {
-              const color = this.isActiveFlavor(get(product, 'sys.id', ''), i)
+              const color = this.flavorIsActive(i)
                 ? 'clear-madison-blue-outline'
                 : 'madison-blue';
 
@@ -98,10 +90,7 @@ class ComicStrip extends Component {
               styles['ComicStrip'],
               'py3 flex justify-center',
               {
-                [styles['ComicStrip--active']]: this.isActiveFlavor(
-                  get(product, 'sys.id', ''),
-                  i
-                )
+                [styles['ComicStrip--active']]: this.flavorIsActive(i)
               }
             );
 
