@@ -6,7 +6,7 @@ import { Image } from 'components/base';
 
 const ErrorPage = ({ children }) => {
   return (
-    <div className={cx(styles['ErrorPage'], 'fixed-cover bg-peach p3')}>
+    <div className={cx(styles['ErrorPage'], 'fixed-cover bg-peach')}>
       {children ? (
         children
       ) : (
@@ -18,7 +18,7 @@ const ErrorPage = ({ children }) => {
               className={cx(styles['ErrorPage__logo'], 'w100')}
               src="/assets/images/ample-hills-logo.svg"
             />
-            <div className="my3 text-container-width">
+            <div className="my3 text-container-width p2">
               <h1 className="title carter mb2">{`We\'ll be right back!`}</h1>
               <p className="block-subheadline">
                 Our online shop is currently unavailable. In the meantime, feel
