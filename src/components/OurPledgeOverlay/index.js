@@ -11,7 +11,8 @@ const OurPledgeOverlay = ({
   closeOurPledgeOverlay,
   overlayContentImage,
   shippingInformation,
-  shippingPledge
+  shippingPledge,
+  ourPledgeOverlayIsOpen
 }) => {
   const overlayContentImageUrl = get(
     overlayContentImage,
@@ -19,18 +20,26 @@ const OurPledgeOverlay = ({
     ''
   );
 
+  const classes = cx(
+    'z-overlay wh100 transition fixed t0 r0',
+    styles['OurPledgeOverlay'],
+    {
+      [styles['OurPledgeOverlay--active']]: ourPledgeOverlayIsOpen
+    }
+  );
+
   return (
-    <div className={cx('wh100', styles['OurPledgeOverlay'])}>
-      <div className="wh100 t0 l0 bg-white low-opacity z-overlay fixed" />
+    <div className={classes}>
+      <div className="wh100 t0 l0 bg-white low-opacity fixed" />
       <div
         className={cx(
-          'fixed bg-island-spice z-overlay',
+          'fixed bg-island-spice',
           styles['OurPledgeOverlay__circle-background']
         )}
       >
         <div
           className={cx(
-            'flex flex-column items-center z-overlay m3 t0 r0 fixed',
+            'flex flex-column items-center p3 fixed',
             styles['OurPledgeOverlay__content']
           )}
         >
@@ -42,14 +51,16 @@ const OurPledgeOverlay = ({
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
           <div className={cx(styles['OurPledgeOverlay__text-content'])}>
-            <h2 className="m2 big text-madison-blue">We Ship Nationwide</h2>
+            <h2 className="my2 callout text-madison-blue">
+              We Ship Nationwide
+            </h2>
             <div>
               <Image
                 alt="Our pledge image"
                 src={overlayContentImageUrl}
                 className={cx('my3', styles['OurPledgeOverlay__image'])}
               />
-              <h2 className="my2 big text-madison-blue">
+              <h2 className="my2 callout text-madison-blue">
                 Shipping information
               </h2>
               <p className="mb4 small text-madison-blue">
@@ -57,7 +68,7 @@ const OurPledgeOverlay = ({
               </p>
             </div>
             <div>
-              <h2 className="my2 big text-madison-blue">Shipping Pledge</h2>
+              <h2 className="my2 callout text-madison-blue">Shipping Pledge</h2>
               <p className="small text-madison-blue">{shippingPledge}</p>
             </div>
           </div>
@@ -73,12 +84,14 @@ OurPledgeOverlay.propTypes = {
   closeOurPledgeOverlay: PropTypes.func,
   overlayContentImage: imageModel.propTypes,
   shippingInformation: PropTypes.string,
-  shippingPledge: PropTypes.string
+  shippingPledge: PropTypes.string,
+  ourPledgeOverlayIsOpen: PropTypes.bool
 };
 
 OurPledgeOverlay.defaultProps = {
   closeOurPledgeOverlay: () => {},
   overlayContentImage: imageModel.default,
   shippingInformation: '',
-  shippingPledge: ''
+  shippingPledge: '',
+  ourPledgeOverlayIsOpen: false
 };

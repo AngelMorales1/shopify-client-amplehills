@@ -50,7 +50,14 @@ class ProductHero extends Component {
   };
 
   render() {
-    const { block, product, ourPledge, z } = this.props;
+    const {
+      block,
+      product,
+      ourPledge,
+      ourPledgeOverlayIsOpen,
+      actions,
+      z
+    } = this.props;
     const { available, price } = product;
     const fields = get(block, 'fields', {});
     const {
@@ -127,13 +134,15 @@ class ProductHero extends Component {
                 </span>
               </Button>
             </form>
+            <OurPledge
+              actions={actions}
+              ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
+              overlayContentImage={overlayContentImage}
+              shippingInformation={shippingInformation}
+              shippingPledge={shippingPledge}
+              calloutImage={calloutImage}
+            />
           </div>
-          <OurPledge
-            overlayContentImage={overlayContentImage}
-            shippingInformation={shippingInformation}
-            shippingPledge={shippingPledge}
-            calloutImage={calloutImage}
-          />
         </div>
       </div>
     );
