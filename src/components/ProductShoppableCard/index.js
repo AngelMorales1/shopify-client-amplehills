@@ -45,28 +45,43 @@ const ProductShoppableCard = ({
             <span className="w100 bold mt2 mb1 block">{product.title}</span>
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
-          <div className={actionClasses}>
-            <QuantitySelector
-              className={cx(
-                styles['ProductShoppableCard__quantity-selector'],
-                'absolute t0 l0 transition'
-              )}
-              quantity={quantity}
-              color="seafoam"
-              allowZero={true}
-              onChange={newQuantity => handleQuantityChange(newQuantity)}
-            />
-            <Button
-              className={cx(
-                styles['ProductShoppableCard__button'],
-                'small bg-seafoam absolute t0 l0'
-              )}
-              variant="primary-small"
-              color="white-madison-blue-border"
-              label="+ Add"
-              onClick={() => handleAddProduct(product.handle)}
-            />
-          </div>
+          {product.available ? (
+            <div className={actionClasses}>
+              <QuantitySelector
+                className={cx(
+                  styles['ProductShoppableCard__quantity-selector'],
+                  'absolute t0 l0 transition'
+                )}
+                quantity={quantity}
+                color="seafoam"
+                allowZero={true}
+                onChange={newQuantity => handleQuantityChange(newQuantity)}
+              />
+              <Button
+                className={cx(
+                  styles['ProductShoppableCard__button'],
+                  'small bg-seafoam absolute t0 l0'
+                )}
+                variant="primary-small"
+                color="white-madison-blue-border"
+                label="+ Add"
+                onClick={() => handleAddProduct(product.handle)}
+              />
+            </div>
+          ) : (
+            <div className={actionClasses}>
+              <Button
+                className={cx(
+                  styles['ProductShoppableCard__button'],
+                  'small bg-seafoam absolute t0 l0'
+                )}
+                variant="primary-small"
+                color="white-madison-blue-border"
+                label="Sold Out"
+                disabled={true}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
