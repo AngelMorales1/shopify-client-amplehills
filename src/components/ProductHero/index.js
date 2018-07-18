@@ -123,16 +123,25 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              <Button
-                color="madison-blue"
-                onClick={this.addToCart}
-                disabled={!available || !this.state.shipping}
-              >
-                <span className="mr2">Add to Cart</span>
-                <span className="ml2">
-                  ${(price * this.state.quantity).toFixed(2)}
-                </span>
-              </Button>
+              {available ? (
+                <Button
+                  color="madison-blue"
+                  onClick={this.addToCart}
+                  disabled={!this.state.shipping}
+                >
+                  <span className="mr2">Add to Cart</span>
+                  <span className="ml2">
+                    ${(price * this.state.quantity).toFixed(2)}
+                  </span>
+                </Button>
+              ) : (
+                <Button color="peach" onClick={this.addToCart} disabled={true}>
+                  <span className="mr2">Sold Out</span>
+                  <span className="ml2">
+                    ${(price * this.state.quantity).toFixed(2)}
+                  </span>
+                </Button>
+              )}
             </form>
             <OurPledge
               actions={actions}
