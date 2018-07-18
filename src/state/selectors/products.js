@@ -14,6 +14,8 @@ export default createSelector(
       return mergedShopifyProducts;
     }, {});
 
+    console.log(shopifyProducts, products);
+
     return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
       const handle = get(product, 'fields.productHandle', '');
@@ -32,6 +34,17 @@ export default createSelector(
         return { id, price, title, available };
       });
 
+      const subItems = get(product, 'fields.subItems', []).map(subItem =>
+        get(subItem, 'fields.productHandle', '')
+      );
+      const subItemsAvailable =
+        !subItems.length ||
+        subItems.every(subItem => {
+          const shopifySubItem = get(shopifyProducts, subItem, {});
+          const variants = get(shopifySubItem, 'variants', []);
+          return variants.some(variant => variant.available);
+        });
+
       mergedProducts[handle] = {
         title,
         id,
@@ -43,7 +56,9 @@ export default createSelector(
         variants,
         gridImage,
         pintImage,
-        blocks
+        blocks,
+        subItems,
+        subItemsAvailable
       };
 
       return mergedProducts;
