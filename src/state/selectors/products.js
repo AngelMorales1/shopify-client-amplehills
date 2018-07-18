@@ -22,6 +22,7 @@ export default createSelector(
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
+      const cartDetails = get(product, 'fields.cartDetails', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {});
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
@@ -57,7 +58,8 @@ export default createSelector(
         pintImage,
         blocks,
         subItems,
-        subItemsAvailable
+        subItemsAvailable,
+        cartDetails
       };
 
       return mergedProducts;
