@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import {
   updateLineItems,
-  removeLineItems
+  removeLineItems,
+  updateNote
 } from 'state/actions/checkoutActions';
 
 import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
@@ -62,11 +63,7 @@ class Cart extends Component {
 
   render() {
     const { actions, checkout, items, products, updatingNote } = this.props;
-
     const currentNote = get(checkout, 'note') ? get(checkout, 'note') : '';
-
-    console.log(this.state.note, currentNote);
-
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
 
     const cart = (
@@ -226,24 +223,6 @@ class Cart extends Component {
                   Shipping & taxes calculated at checkout
                 </p>
               </div>
-              <div
-                className={cx(
-                  styles['Cart__shipping-info-total'],
-                  'flex justify-between'
-                )}
-              >
-                <p className="price-text flex items-center mt1">{`Subtotal: $${
-                  checkout.subtotalPrice
-                }`}</p>
-
-                <div className="my1 md-col-4 md-hide lg-hide">
-                  <Button
-                    className="flex items-center justify-center"
-                    label="Checkout"
-                    color="madison-blue"
-                  />
-                </div>
-              </div>
             </div>
           </div>
           <div
@@ -252,7 +231,7 @@ class Cart extends Component {
               'flex flex-row justify-between'
             )}
           >
-            <div className="col-12 md-col-6">
+            <div className="col-12 md-col-6 xs-hide sm-hide">
               <div className="flex justify-between items-center">
                 <h2 className="sub-title mt2 mb3">Gift Message</h2>
                 <Button
@@ -306,8 +285,8 @@ class Cart extends Component {
                 )}
               />
             </div>
-            <div className="my1 md-col-4 xs-hide sm-hide">
-              <Button label="Checkout" color="madison-blue" />
+            <div className="my1 md-col-4">
+              <Button className="inline-block" label="Checkout" color="madison-blue" to={get(checkout, 'webUrl', '')} />
             </div>
           </div>
         </div>
@@ -350,7 +329,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         removeLineItems,
-        updateLineItems
+        updateLineItems,
+        updateNote
       },
       dispatch
     )

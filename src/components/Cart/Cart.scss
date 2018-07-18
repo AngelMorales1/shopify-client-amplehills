@@ -111,11 +111,11 @@
   }
 
   &__message-checkout-container {
-    margin-top: 0;
+    margin-top: spacing(8);
     order: 1;
 
     @media ($medium-up) {
-      margin-top: spacing(16);
+      margin-top: 0;
       order: 2;
     }
   }

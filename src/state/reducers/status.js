@@ -4,7 +4,8 @@ import {
   ADD_LINE_ITEMS,
   UPDATE_LINE_ITEMS,
   REMOVE_LINE_ITEMS,
-  CANCEL_REMOVE_LINE_ITEMS
+  CANCEL_REMOVE_LINE_ITEMS,
+  UPDATE_NOTE
 } from 'state/actions/checkoutActions';
 
 import {
@@ -18,7 +19,8 @@ const initialState = {
   lineItemsBeingUpdated: [],
   lineItemsBeingRemoved: [],
   customerSigningIn: IDLE,
-  customerSigningUp: IDLE
+  customerSigningUp: IDLE,
+  updatingNote: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -80,6 +82,13 @@ export default (state = initialState, action) => {
         customerSigningUp: FULFILLED,
         customerSigningIn: IDLE
       };
+
+    case `${UPDATE_NOTE}_PENDING`:
+      return { ...state, updatingNote: PENDING };
+    case `${UPDATE_NOTE}_FULFILLED`:
+      return { ...state, updatingNote: FULFILLED };
+    case `${UPDATE_NOTE}_REJECTED`:
+      return { ...state, updatingNote: REJECTED };
 
     default:
       return state;

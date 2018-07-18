@@ -2,7 +2,8 @@ import {
   CREATE_CHECKOUT,
   ADD_LINE_ITEMS,
   CONFIRM_REMOVE_LINE_ITEMS,
-  UPDATE_LINE_ITEMS
+  UPDATE_LINE_ITEMS,
+  UPDATE_NOTE
 } from 'state/actions/checkoutActions';
 
 const initialState = {};
@@ -15,6 +16,11 @@ export default (state = initialState, action) => {
     case `${CONFIRM_REMOVE_LINE_ITEMS}_FULFILLED`:
     case `${UPDATE_LINE_ITEMS}_FULFILLED`:
       return action.payload;
+    case `${UPDATE_NOTE}_FULFILLED`:
+      return {
+        ...state,
+        ...action.payload
+      };
     default:
       return state;
   }
