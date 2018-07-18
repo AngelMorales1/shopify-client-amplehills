@@ -46,7 +46,7 @@ class MiniCart extends Component {
       styles['MiniCart'],
       'col-11 fixed z-nav bg-white card drop-shadow-xlarge',
       {
-        [styles['MiniCart--open']]: this.props.miniCartIsOpen || true
+        [styles['MiniCart--open']]: this.props.miniCartIsOpen
       }
     );
 
