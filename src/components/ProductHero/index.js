@@ -58,7 +58,7 @@ class ProductHero extends Component {
       actions,
       z
     } = this.props;
-    const { available, price } = product;
+    const { available, subItemsAvailable, price } = product;
     const fields = get(block, 'fields', {});
     const {
       overlayContentImage,
@@ -123,7 +123,7 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {available ? (
+              {available && subItemsAvailable ? (
                 <Button
                   color="madison-blue"
                   onClick={this.addToCart}
