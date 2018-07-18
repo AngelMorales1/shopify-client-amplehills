@@ -24,13 +24,14 @@ export default createSelector(
       const blocks = get(product, 'fields.contentBlocks', []);
 
       const shopifyProduct = get(shopifyProducts, handle, {});
-      const available = get(shopifyProduct, 'variants[0].available', false);
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
       const id = get(shopifyProduct, 'variants[0].id', '');
       const variants = get(shopifyProduct, 'variants', []).map(variant => {
         const { id, price, title, available } = variant;
         return { id, price, title, available };
       });
+
+      const available = variants.some(variant => variant.available);
 
       const subItems = get(product, 'fields.subItems', []).map(subItem => {
         return get(subItem, 'fields.productHandle', '');
