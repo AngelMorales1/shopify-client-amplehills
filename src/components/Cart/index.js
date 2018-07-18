@@ -87,6 +87,13 @@ const Cart = ({ actions, checkout, items, products }) => {
                         );
                       })}
                     </div>
+                    {products[handle].cartDetails ? (
+                      <div className="flex flex-column mb2">
+                        <pre className={styles['Cart__product-details']}>
+                          {products[handle].cartDetails}
+                        </pre>
+                      </div>
+                    ) : null}
                   </div>
                   <span className="bold small my2 md-hide lg-hide">
                     {item.price}
@@ -111,6 +118,13 @@ const Cart = ({ actions, checkout, items, products }) => {
                       }x ${products[subItem.handle].title}`}</span>
                     );
                   })}
+                  {products[handle].cartDetails ? (
+                    <div className="flex flex-column">
+                      <pre className={styles['Cart__product-details']}>
+                        {products[handle].cartDetails}
+                      </pre>
+                    </div>
+                  ) : null}
                 </div>
                 <div
                   className={cx(
