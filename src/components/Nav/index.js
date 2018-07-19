@@ -71,7 +71,7 @@ class Nav extends Component {
             'col col-3 md-col-4 h100 flex items-center'
           )}
         >
-          <NavLink exact to="/" className="flex items-center">
+          <NavLink exact to="/" className="flex justify-center">
             <Image
               className="col-12 md-col-10"
               alt="Click the Ample Hills Logo to return to the homepage"
