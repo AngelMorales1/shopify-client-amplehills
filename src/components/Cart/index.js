@@ -74,7 +74,6 @@ const Cart = ({ actions, checkout, items, products }) => {
                   <div className="my2">
                     <Link
                       className="text-decoration-none"
-                      exact
                       to={`/products/${handle}`}
                     >
                       <span className="bold">{item.title}</span>
@@ -101,7 +100,6 @@ const Cart = ({ actions, checkout, items, products }) => {
                 >
                   <Link
                     className="text-decoration-none mt1 mb2 xs-hide sm-hide"
-                    exact
                     to={`/products/${handle}`}
                   >
                     <span className="bold ">{item.title}</span>
@@ -240,7 +238,7 @@ const Cart = ({ actions, checkout, items, products }) => {
   const emptyCart = (
     <div className="flex justify-center items-center flex-column p4">
       <h2 className="block-headline mt4 mb3">Your cart is empty!</h2>
-      <Link className="text-decoration-none" exact to={`/products`}>
+      <Link className="text-decoration-none" to={`/products`}>
         <Button
           label="Find Your Pint &rarr;"
           color="madison-blue"
@@ -260,7 +258,7 @@ Cart.propTypes = {
     updateLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  items: itemModel.propTypes,
+  items: PropTypes.arrayOf(itemModel.propTypes),
   products: PropTypes.objectOf(productModel.propTypes)
 };
 
@@ -270,7 +268,7 @@ Cart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  items: itemModel.default,
+  items: [],
   products: {}
 };
 
