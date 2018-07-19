@@ -9,12 +9,7 @@ import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 
-import {
-  Radio,
-  Image,
-  Button,
-  QuantitySelector
-} from 'components/base';
+import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import OurPledge from 'components/OurPledge';
 import ProductShoppableCard from 'components/ProductShoppableCard';

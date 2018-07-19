@@ -141,7 +141,6 @@ ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
   product: productModel.propTypes,
-  shippingDates: PropTypes.arrayOf(PropTypes.string),
   ourPledge: PropTypes.shape({
     closeOurPledgeOverlay: PropTypes.func,
     overlayContentImage: imageModel.propTypes,
