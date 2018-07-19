@@ -291,7 +291,7 @@ class ChooseYourOwnStory extends Component {
             <div
               className={cx(
                 styles['ChooseYourOwnStory__menu-add'],
-                'col flex flex-wrap'
+                'col flex flex-wrap justify-end'
               )}
             >
               <div className="lg-hide xl-hide col col-7">
@@ -302,7 +302,7 @@ class ChooseYourOwnStory extends Component {
               <div
                 className={cx(
                   styles['ChooseYourOwnStory__menu-quantity'],
-                  'col col-5 lg-col-6'
+                  'col col-5'
                 )}
               >
                 <QuantitySelector
