@@ -107,7 +107,6 @@ class ProductHero extends Component {
                 <Button
                   color="madison-blue"
                   onClick={this.addToCart}
-                  disabled={!this.state.shipping}
                 >
                   <span className="mr2">Add to Cart</span>
                   <span className="ml2">

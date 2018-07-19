@@ -10,7 +10,6 @@ import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 
 import {
-  Dropdown,
   Radio,
   Image,
   Button,
@@ -28,7 +27,6 @@ class ChooseYourOwnStory extends Component {
     this.state = {
       size: PintSizes.FOUR.size,
       pints: [],
-      shippingDate: '',
       quantity: 1,
       currentBreakpoint: Global.breakpoints.small.label,
       screenHeight: 0,
@@ -97,10 +95,6 @@ class ChooseYourOwnStory extends Component {
     this.setState({ pints });
   };
 
-  handleShippingDateClick = shippingDate => {
-    this.setState({ shippingDate });
-  };
-
   handleAddToCart = () => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
@@ -129,7 +123,6 @@ class ChooseYourOwnStory extends Component {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
     const quantity = get(this.state, 'quantity', 1);
-    const shipping = get(this.state, 'shippingDate', '');
 
     const {
       block,
@@ -297,28 +290,6 @@ class ChooseYourOwnStory extends Component {
             </div>
             <div
               className={cx(
-                styles['ChooseYourOwnStory__menu-shipping'],
-                'col flex flex-wrap items-end xs-hide sm-hide md-hide '
-              )}
-            >
-              <label className="w100 mb2 small bold">Pick Your Ship Date</label>
-              {this.props.shippingDates.map(shippingDate => (
-                <Button
-                  variant="primary-small"
-                  color={
-                    shippingDate === shipping
-                      ? 'white-madison-blue'
-                      : 'madison-blue-white-border'
-                  }
-                  key={shippingDate}
-                  className="small mr2"
-                  label={shippingDate}
-                  onClick={() => this.handleShippingDateClick(shippingDate)}
-                />
-              ))}
-            </div>
-            <div
-              className={cx(
                 styles['ChooseYourOwnStory__menu-add'],
                 'col flex flex-wrap'
               )}
@@ -341,27 +312,11 @@ class ChooseYourOwnStory extends Component {
                   onChange={value => this.setState({ quantity: value })}
                 />
               </div>
-              <div className="lg-hide xl-hide col col-5">
-                <Dropdown
-                  name="shipping-date"
-                  className={
-                    styles['ChooseYourOwnStory__menu-shipping-dropdown']
-                  }
-                  value={shipping}
-                  color="white"
-                  variant="small"
-                  label="Shipping Date"
-                  onChange={date => this.handleShippingDateClick(date.value)}
-                  options={this.props.shippingDates.map(date => {
-                    return { value: date, label: date };
-                  })}
-                />
-              </div>
               <div className="col col-7 lg-col-6 right-align">
                 {product.available ? (
                   <Button
                     className="small"
-                    disabled={size !== pints.length || !shipping}
+                    disabled={size !== pints.length}
                     variant="primary-small"
                     color="white-madison-blue"
                     onClick={this.handleAddToCart}
