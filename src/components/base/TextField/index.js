@@ -18,8 +18,7 @@ const TextField = ({
   value,
   variant,
   color,
-  fullWidth,
-  multiLine
+  fullWidth
 }) => {
   const classes = cx(styles['TextField'], 'field-group', className, {
     [styles['TextField--error']]: error,
@@ -30,14 +29,19 @@ const TextField = ({
 
   return (
     <div
-      className={`${classes} ${styles[`TextField--${variant}`]} ${
-        styles[`TextField--${color}`]
-      }`}
+      className={cx(
+        classes,
+        styles[`TextField--${variant}`],
+        styles[`TextField--${color}`],
+        {
+          [styles[`TextField--textarea`]]: type === 'textarea'
+        }
+      )}
     >
       <label htmlFor={_id} className="small bold mb1">
         {label}
       </label>
-      {multiLine ? (
+      {type === 'textarea' ? (
         <textarea
           id={_id}
           name={name}
@@ -80,8 +84,7 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  multiLine: PropTypes.bool
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 TextField.defaultProps = {
@@ -92,8 +95,7 @@ TextField.defaultProps = {
   placeholder: '',
   required: false,
   type: 'text',
-  name: '',
-  multiLine: false
+  name: ''
 };
 
 export default TextField;
