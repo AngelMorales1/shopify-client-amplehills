@@ -100,15 +100,6 @@ class ContactUs extends Component {
               />
             ))}
           </div>
-          {Object.values(ContactUsForm.FIELDS).map(field => {
-            <TextField
-              className="m1"
-              variant="light-gray"
-              type={field.type}
-              onChange={value => this.setState({ [field.id]: value })}
-              placeholder={field.label}
-            />;
-          })}
           <div className="w100 flex flex-column">
             {Object.values(ContactUsForm.FIELDS).map(field => (
               <TextField
