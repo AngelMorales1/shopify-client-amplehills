@@ -3,7 +3,9 @@ export const sendContactForm = payload => dispatch => {
   return dispatch({
     type: SEND_CONTACT_FORM,
     payload: new Promise((resolve, reject) => {
-      setTimeout(3000, resolve('sent'));
+      return setTimeout(() => {
+        reject('sent');
+      }, 1500);
     })
   });
 };

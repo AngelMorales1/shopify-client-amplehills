@@ -8,6 +8,17 @@ import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
+  componentDidUpdate(prevProps) {
+    if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
+      this.setState({
+        selectedAddress: '',
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+  }
+
   state = {
     selectedAddress: '',
     name: '',
@@ -53,7 +64,16 @@ class ContactUs extends Component {
   submitContactForm = () => {
     if (this.formHasErrors()) return null;
 
-    console.log('sent');
+    const { selectedAddress, name, email, phone, message } = this.state;
+
+    this.setState({ error: '' });
+    this.props.actions.sendContactForm({
+      selectedAddress,
+      name,
+      email,
+      phone,
+      message
+    });
   };
 
   render() {
@@ -107,8 +127,23 @@ class ContactUs extends Component {
               'w100 flex flex-wrap text-container-width my2 px1'
             )}
           >
-            {error ? (
-              <FormFlash className="w100 mb2" error={true} message={error} />
+            {error || formStatus === REJECTED ? (
+              <FormFlash
+                className="w100 mb2"
+                error={true}
+                message={
+                  error
+                    ? error
+                    : 'There was an unexpected problem while submitting your message. Please reach out directly to info@amplehills.com'
+                }
+              />
+            ) : null}
+            {formStatus === FULFILLED ? (
+              <FormFlash
+                className="w100 mb2"
+                success={true}
+                message="Your message has been sent!"
+              />
             ) : null}
             <Button
               disabled={formStatus === PENDING}
