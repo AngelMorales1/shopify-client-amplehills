@@ -22,12 +22,13 @@ const Button = ({
   const classes = cx(
     className,
     styles.Button,
-    styles[`Button--${variant}`],
     styles[`Button--${color}`],
     {
       w100: fullWidth,
-      [styles['Button--disabled']]: disabled
-    }
+      [styles['Button--disabled']]: disabled,
+      [styles['Button--div']]: to
+    },
+    styles[`Button--${variant}`]
   );
 
   const linkedComponent = isExternalLink(to) ? (
@@ -41,7 +42,7 @@ const Button = ({
       onClick={onClick}
     >
       <div className={classes}>
-        <div className="h100 flex justify-center items-center">{label}</div>
+        <span className="h100 flex justify-center items-center">{label}</span>
       </div>
     </a>
   ) : (
@@ -53,7 +54,7 @@ const Button = ({
       onClick={onClick}
     >
       <div className={classes}>
-        <div className="h100 flex justify-center items-center">{label}</div>
+        <span className="h100 flex justify-center items-center">{label}</span>
       </div>
     </Link>
   );

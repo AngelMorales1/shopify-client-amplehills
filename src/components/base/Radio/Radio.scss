@@ -12,6 +12,7 @@
   }
 
   label {
+    padding-top: spacing(1);
     margin-left: 0;
   }
 
@@ -58,8 +59,8 @@
     flex-direction: column-reverse;
 
     label {
-      font-weight: 400;
       margin-left: 0;
+      padding-top: 0;
       margin-bottom: spacing(4);
     }
 

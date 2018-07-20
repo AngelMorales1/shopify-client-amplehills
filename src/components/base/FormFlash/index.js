@@ -10,7 +10,7 @@ const FormFlash = ({ message, success, error }) => {
   });
   return (
     <div className={classes}>
-      <p className="copy">{message}</p>
+      <p className="copy bold">{message}</p>
     </div>
   );
 };
