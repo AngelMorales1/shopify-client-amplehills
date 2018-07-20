@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import ContactUsForm from 'constants/forms/ContactUs';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 import { Dropdown, Radio, TextField, Button, FormFlash } from 'components/base';
 
 import cx from 'classnames';
@@ -57,6 +58,7 @@ class ContactUs extends Component {
 
   render() {
     const { error, selectedAddress } = this.state;
+    const { formStatus } = this.props;
 
     return (
       <div
@@ -109,6 +111,7 @@ class ContactUs extends Component {
               <FormFlash className="w100 mb2" error={true} message={error} />
             ) : null}
             <Button
+              disabled={formStatus === PENDING}
               label="Send Us a Message"
               color="madison-blue"
               className="my1"
