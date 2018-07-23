@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
-import MapboxMap from 'components/MapboxMap';
+import Global from 'constants/Global';
+
+import LocationsMap from 'components/LocationsMap';
 
 class LocationsLandingView extends Component {
+  state = {
+    currentBreakpoint: Global.breakpoints.small.label
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+  }
+
+  updateWindow = () => {
+    const { small, large } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= large.lowerbound ? small.label : large.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
+  };
+
   render() {
     const { model, locationGeo } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     return (
       <div className="Locations">
-        <MapboxMap
-          featureCollection={locationGeo}
-          styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
-        />
+        {this.state.currentBreakpoint !== 'small' ? (
+          <div className="col col-8">
+            <LocationsMap {...this.props} />
+          </div>
+        ) : null}
       </div>
     );
   }
