@@ -236,8 +236,7 @@ class Cart extends Component {
                 <h2 className="sub-title mt2 mb3">Gift Message</h2>
                 <Button
                   disabled={
-                    this.state.note === currentNote ||
-                    updatingNote === PENDING
+                    this.state.note === currentNote || updatingNote === PENDING
                   }
                   className={cx(styles['Cart__update-button'], {
                     [styles['Cart__update-button--active']]:
@@ -246,16 +245,19 @@ class Cart extends Component {
                   variant="primary-small"
                   color="peach"
                   label="Update"
+                  onClick={this.updateNote}
                 />
               </div>
               {updatingNote === FULFILLED ? (
                 <FormFlash
+                  className="mb2"
                   success={true}
                   message="Your gift message has updated successfully."
                 />
               ) : null}
               {updatingNote === REJECTED ? (
                 <FormFlash
+                  className="mt1"
                   error={true}
                   message="There was an unexpected error while updating your gift message."
                 />
@@ -286,7 +288,12 @@ class Cart extends Component {
               />
             </div>
             <div className="my1 md-col-4">
-              <Button className="inline-block" label="Checkout" color="madison-blue" to={get(checkout, 'webUrl', '')} />
+              <Button
+                className="inline-block"
+                label="Checkout"
+                color="madison-blue"
+                to={get(checkout, 'webUrl', '')}
+              />
             </div>
           </div>
         </div>

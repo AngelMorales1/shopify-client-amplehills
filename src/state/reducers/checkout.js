@@ -19,7 +19,7 @@ export default (state = initialState, action) => {
     case `${UPDATE_NOTE}_FULFILLED`:
       return {
         ...state,
-        ...action.payload
+        note: action.payload.note
       };
     default:
       return state;
