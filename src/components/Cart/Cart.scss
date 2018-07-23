@@ -19,6 +19,11 @@
     margin-right: auto;
   }
 
+  &__product-details {
+    font-size: $font-3;
+    line-height: $font-6;
+  }
+
   &__content-container {
     flex-direction: column;
 

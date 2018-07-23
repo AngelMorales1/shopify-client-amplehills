@@ -66,6 +66,12 @@ class MiniCart extends Component {
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
+              const handle = Object.values(products).find(product => {
+                return product.variants.some(
+                  variant => variant.id === item.productId
+                );
+              }).handle;
+
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
                 [styles['MiniCart__line-item--updating']]:
@@ -92,6 +98,13 @@ class MiniCart extends Component {
                             }`}</li>
                           ))}
                         </ul>
+                      </div>
+                    ) : null}
+                    {products[handle].cartDetails ? (
+                      <div className="flex flex-column my2">
+                        <pre className={styles['MiniCart__product-details']}>
+                          {products[handle].cartDetails}
+                        </pre>
                       </div>
                     ) : null}
                   </div>
