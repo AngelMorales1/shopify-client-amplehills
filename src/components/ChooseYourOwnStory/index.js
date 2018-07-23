@@ -307,7 +307,7 @@ class ChooseYourOwnStory extends Component {
                   onChange={value => this.setState({ quantity: value })}
                 />
               </div>
-              <div className="col col-7 lg-col-6 right-align">
+              <div className="col">
                 {product.available ? (
                   <Button
                     className="small"
