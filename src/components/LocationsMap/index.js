@@ -1,6 +1,7 @@
 import React from 'react';
-import MapboxMap from 'components/MapboxMap';
+import PropTypes from 'prop-types';
 
+import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
@@ -12,6 +13,13 @@ const LocationsMap = props => {
       />
     </div>
   );
+};
+
+LocationsMap.propTypes = {
+  locationGeo: PropTypes.shape({
+    type: PropTypes.string,
+    features: PropTypes.arrayOf(PropTypes.object)
+  })
 };
 
 export default LocationsMap;
