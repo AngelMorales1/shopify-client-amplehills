@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import styles from './FormFlash.scss';
 
-const FormFlash = ({ message, success, error }) => {
-  const classes = cx(styles['FormFlash'], 'py1 px2 my3', {
+const FormFlash = ({ className, message, success, error }) => {
+  const classes = cx(styles['FormFlash'], className, 'py1 px2', {
     [styles['FormFlash--success']]: success,
     [styles['FormFlash--error']]: error
   });
@@ -16,12 +16,14 @@ const FormFlash = ({ message, success, error }) => {
 };
 
 FormFlash.propTypes = {
+  className: PropTypes.string,
   message: PropTypes.string,
   success: PropTypes.bool,
   error: PropTypes.bool
 };
 
 FormFlash.defaultProps = {
+  className: 'my3',
   message: '',
   success: false,
   error: false
