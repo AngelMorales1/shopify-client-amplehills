@@ -3,11 +3,14 @@ import MapboxMap from 'components/MapboxMap';
 
 class LocationsLandingView extends Component {
   render() {
-    const { model } = this.props;
+    const { model, locationGeo } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    console.log(this.props);
-    return <div className="Locations" />;
+    return (
+      <div className="Locations">
+        <MapboxMap featureCollection={locationGeo} />
+      </div>
+    );
   }
 }
 
