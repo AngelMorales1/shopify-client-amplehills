@@ -1,10 +1,8 @@
 import Data from 'lib/Data';
 import ContentfulClient from 'lib/Contentful';
 import BuySDK from 'lib/Buy';
-import {
-  getLocationData,
-  getGlobalSettings
-} from 'state/actions/ui/applicationUIActions';
+import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
+import { getLocationData } from 'state/actions/locationsActions';
 
 import {
   fetchProducts,
