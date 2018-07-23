@@ -8,7 +8,10 @@ class LocationsLandingView extends Component {
 
     return (
       <div className="Locations">
-        <MapboxMap featureCollection={locationGeo} />
+        <MapboxMap
+          featureCollection={locationGeo}
+          styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+        />
       </div>
     );
   }
