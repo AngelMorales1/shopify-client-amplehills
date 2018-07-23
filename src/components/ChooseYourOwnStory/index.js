@@ -358,18 +358,32 @@ class ChooseYourOwnStory extends Component {
                 />
               </div>
               <div className="col col-7 lg-col-6 right-align">
-                <Button
-                  className="small"
-                  disabled={size !== pints.length || !shipping}
-                  variant="primary-small"
-                  color="white-madison-blue"
-                  onClick={this.handleAddToCart}
-                >
-                  <span className="mr2">Add to Cart</span>
-                  <span>
-                    ${getLineItemPrice(activeVariant.price, quantity)}
-                  </span>
-                </Button>
+                {product.available ? (
+                  <Button
+                    className="small"
+                    disabled={size !== pints.length || !shipping}
+                    variant="primary-small"
+                    color="white-madison-blue"
+                    onClick={this.handleAddToCart}
+                  >
+                    <span className="mr2">Add to Cart</span>
+                    <span>
+                      ${getLineItemPrice(activeVariant.price, quantity)}
+                    </span>
+                  </Button>
+                ) : (
+                  <Button
+                    className="small"
+                    disabled={true}
+                    variant="primary-small"
+                    color="white-madison-blue"
+                  >
+                    <span className="mr2">Sold Out</span>
+                    <span>
+                      ${getLineItemPrice(activeVariant.price, quantity)}
+                    </span>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
