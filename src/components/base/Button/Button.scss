@@ -49,6 +49,14 @@
     padding: spacing(3) spacing(6);
   }
 
+  &--carousel-arrow {
+    border: 0;
+    border-radius: radius('circle');
+    padding: 0;
+    background: transparent;
+    width: spacing(10);
+  }
+
   &--icon,
   &--icon-small,
   &--no-style {
@@ -62,6 +70,10 @@
       box-shadow: 0 0 0 0;
       transform: scale(0.95);
     }
+  }
+
+  &--no-style {
+    background: transparent;
   }
 
   &--icon {
@@ -124,7 +136,7 @@
 
   &--clear-madison-blue-border {
     @extend .text-madison-blue;
-    background-color: Transparent;
+    background-color: transparent;
     border: spacing(1) solid color('madison-blue');
   }
 

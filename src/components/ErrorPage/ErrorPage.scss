@@ -1,0 +1,23 @@
+@import 'settings';
+
+.ErrorPage {
+  &__container {
+    animation: slide-up 0.5s;
+  }
+
+  &__logo {
+    max-width: spacing(40);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, spacing(8), 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

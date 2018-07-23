@@ -17,7 +17,7 @@ export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = checkoutID => dispatch => {
   return dispatch({
     type: INITIALIZE_APPLICATION,
-    payload: new Promise(resolve => {
+    payload: new Promise((resolve, reject) => {
       const Contentful = ContentfulClient();
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
@@ -27,9 +27,11 @@ export const initializeApplication = checkoutID => dispatch => {
         getGlobalSettings()(dispatch),
         fetchProducts()(dispatch),
         fetchContentfulProducts()(dispatch)
-      ]).then(([checkout, locations, settings, products, contentfulProducts]) =>
-        resolve()
-      );
+      ])
+        .then(([checkout, locations, settings, products, contentfulProducts]) =>
+          resolve()
+        )
+        .catch(err => reject(err));
     })
   });
 };
