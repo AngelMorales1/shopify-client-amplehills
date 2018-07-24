@@ -14,11 +14,13 @@ export default (state = initialState, action) => {
         formStatus: PENDING
       };
     case `${SEND_CONTACT_FORM}_${FULFILLED}`:
+      console.log(action);
       return {
         ...state,
         formStatus: FULFILLED
       };
     case `${SEND_CONTACT_FORM}_${REJECTED}`:
+      console.log('err', action);
       return {
         ...state,
         formStatus: REJECTED

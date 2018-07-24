@@ -1,11 +1,16 @@
 export const SEND_CONTACT_FORM = 'SEND_CONTACT_FORM';
-export const sendContactForm = payload => dispatch => {
+export const sendContactForm = contactInfo => dispatch => {
+  const { selectedAddress, name, email, phone, message } = contactInfo;
   return dispatch({
     type: SEND_CONTACT_FORM,
-    payload: new Promise((resolve, reject) => {
-      return setTimeout(() => {
-        reject('sent');
-      }, 1500);
+    payload: fetch(selectedAddress, {
+      method: 'post',
+      mode: 'cors',
+      headers: {
+        accept: 'application/javascript',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, phone, message })
     })
   });
 };
