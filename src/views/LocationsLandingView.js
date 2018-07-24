@@ -13,6 +13,10 @@ class LocationsLandingView extends Component {
     this.updateWindow();
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+  }
+
   updateWindow = () => {
     const { small, large } = Global.breakpoints;
     const currentBreakpoint =
@@ -23,7 +27,7 @@ class LocationsLandingView extends Component {
   };
 
   render() {
-    const { model, locationGeo } = this.props;
+    const { model, locationGeoJSON } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     return (

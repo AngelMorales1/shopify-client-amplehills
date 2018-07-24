@@ -8,7 +8,7 @@ const LocationsMap = props => {
   return (
     <div className={styles['LocationsMap']}>
       <MapboxMap
-        featureCollection={props.locationGeo}
+        featureCollection={props.locationGeoJSON}
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
       />
     </div>
@@ -16,7 +16,7 @@ const LocationsMap = props => {
 };
 
 LocationsMap.propTypes = {
-  locationGeo: PropTypes.shape({
+  locationGeoJSON: PropTypes.shape({
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   })

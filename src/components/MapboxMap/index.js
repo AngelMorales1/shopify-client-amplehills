@@ -58,7 +58,6 @@ class MapboxMap extends Component {
     return new Promise((resolve, reject) => {
       const { styleUrl } = this.props;
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
-      console.log(mapboxgl, process.env);
       const map = new mapboxgl.Map({
         container: this.state.mapId,
         style: styleUrl
