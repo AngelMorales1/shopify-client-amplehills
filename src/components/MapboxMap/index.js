@@ -9,6 +9,7 @@ class MapboxMap extends Component {
     mapId: uuid(),
     map: null,
     source: null,
+    cluster: null,
     layer: null,
     bounds: null,
     loaded: false
@@ -56,7 +57,7 @@ class MapboxMap extends Component {
 
   initializeMap() {
     return new Promise((resolve, reject) => {
-      const { styleUrl } = this.props;
+      const { styleUrl, cluster } = this.props;
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
@@ -72,7 +73,10 @@ class MapboxMap extends Component {
     const { featureCollection } = this.props;
     const source = this.state.map.addSource('source', {
       type: 'geojson',
-      data: featureCollection
+      data: featureCollection,
+      cluster: true,
+      clusterMaxZoom: 14, // Max zoom to cluster points on
+      clusterRadius: 50
     });
     this.setState({ source });
   }
@@ -86,13 +90,29 @@ class MapboxMap extends Component {
       layout: {
         'icon-allow-overlap': true,
         'icon-image': defaultIcon,
-        'icon-size': 0.5
+        'icon-size': 1.4
       },
       paint: {
         'icon-opacity': ['match', ['get', 'id'], '', 0.5, 1]
       }
     });
-    this.setState({ layer });
+
+    const cluster = this.props.cluster
+      ? this.state.map.addLayer({
+          id: 'cluster-count',
+          type: 'symbol',
+          source: 'source',
+          layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+            'text-size': 16
+          },
+          paint: {
+            'text-color': '#ffffff'
+          }
+        })
+      : null;
+    this.setState({ layer, cluster });
   }
 
   setMapProperties() {
@@ -276,6 +296,7 @@ MapboxMap.propTypes = {
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   }).isRequired,
+  cluster: PropTypes.bool,
   onClickFeature: PropTypes.func,
   defaultIcon: PropTypes.string.isRequired,
   styleUrl: PropTypes.string.isRequired,
@@ -290,6 +311,7 @@ MapboxMap.defaultProps = {
     type: 'FeatureCollection',
     features: []
   },
+  cluster: false,
   onLoad: () => {},
   onClickFeature: () => {},
   defaultIcon: 'star',

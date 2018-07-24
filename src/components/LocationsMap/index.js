@@ -9,7 +9,9 @@ const LocationsMap = props => {
     <div className={styles['LocationsMap']}>
       <MapboxMap
         featureCollection={props.locationGeoJSON}
+        defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+        cluster
       />
     </div>
   );
