@@ -54,7 +54,7 @@ class Nav extends Component {
             styles['left-side']
           }`}
         >
-          <NavLink exact to="/location" className="link-text center">
+          <NavLink exact to="/locations" className="link-text center">
             Locations
           </NavLink>
           <NavLink
