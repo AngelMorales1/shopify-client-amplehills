@@ -2,23 +2,27 @@ export default {
   ADDRESSES: {
     GENERAL: {
       label: 'General Info',
-      email: 'info@amplehills.com'
+      bucket: 'https://api.formbucket.com/f/buk_kKdxdYIemPLCBDerpzkJEKwN'
     },
-    PRESS: {
-      label: 'Press',
-      email: 'press@amplehills.com'
-    },
-    PARTIES: {
-      label: 'Parties',
-      email: 'parties@amplehills.com'
+    ORDERS: {
+      label: 'Orders',
+      bucket: 'https://api.formbucket.com/f/buk_XQ0dUN0om86uh27oPRwJ0UoW'
     },
     EVENTS: {
       label: 'Off-Site Events',
-      email: 'events@amplehills.com'
+      bucket: 'https://api.formbucket.com/f/buk_joP9qRO98UF0VjDvTpo4fxcX'
+    },
+    PRESS: {
+      label: 'Press',
+      bucket: 'https://api.formbucket.com/f/buk_qfXW1wbPdli0hUuMRxUsoWdB'
+    },
+    PARTIES: {
+      label: 'Parties',
+      bucket: 'https://api.formbucket.com/f/buk_UH6TQ3Xp9WHXK0kbTT4Wg3jg'
     },
     CONCERNS: {
       label: 'Comments & Concerns',
-      email: 'comments@amplehills.com'
+      bucket: 'https://api.formbucket.com/f/buk_yKUCJ0AFMTIByM9A6HzfgqoE'
     }
   },
   FIELDS: {

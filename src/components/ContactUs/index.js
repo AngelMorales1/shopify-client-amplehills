@@ -93,8 +93,8 @@ class ContactUs extends Component {
           <div className="flex flex-wrap justify-center px2 my2">
             {Object.values(ContactUsForm.ADDRESSES).map(field => (
               <Radio
-                checked={selectedAddress === field.email}
-                onClick={() => this.setState({ selectedAddress: field.email })}
+                checked={selectedAddress === field.bucket}
+                onClick={() => this.setState({ selectedAddress: field.bucket })}
                 className="mx2 my1 small"
                 label={field.label}
               />
