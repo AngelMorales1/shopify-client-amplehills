@@ -14,19 +14,19 @@ class MapboxMap extends Component {
     loaded: false
   };
 
-  componentDidMount() {
-    this.initializeMap().then(() => {
-      this.addSource();
-      this.addLayers();
-      if (this.props.collections.length) {
-        this.setMapProperties();
-      }
-      this.bindEventListeners();
-      this.setBounds().then(this.zoomToBounds);
-      this.props.onLoad();
-      this.setState({
-        loaded: true
-      });
+  async componentDidMount() {
+    await this.initializeMap();
+    this.addSource();
+    this.addLayers();
+    if (this.props.collections.length) {
+      this.setMapProperties();
+    }
+    this.bindEventListeners();
+    await this.setBounds();
+    this.zoomToBounds();
+    this.props.onLoad();
+    this.setState({
+      loaded: true
     });
   }
 
