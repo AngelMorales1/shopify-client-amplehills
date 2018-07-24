@@ -141,7 +141,7 @@ class ContactUs extends Component {
               label="Send Us a Message"
               color="madison-blue"
               className="my1"
-              onClick={() => this.submitContactForm()}
+              onClick={this.submitContactForm}
             />
           </div>
         </form>
