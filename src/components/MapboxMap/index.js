@@ -9,6 +9,7 @@ class MapboxMap extends Component {
     mapId: uuid(),
     map: null,
     source: null,
+    cluster: null,
     layer: null,
     bounds: null,
     loaded: false
@@ -69,16 +70,24 @@ class MapboxMap extends Component {
   }
 
   addSource() {
-    const { featureCollection } = this.props;
+    const {
+      featureCollection,
+      cluster,
+      clusterMaxZoom,
+      clusterRadius
+    } = this.props;
     const source = this.state.map.addSource('source', {
       type: 'geojson',
-      data: featureCollection
+      data: featureCollection,
+      cluster,
+      clusterMaxZoom,
+      clusterRadius
     });
     this.setState({ source });
   }
 
   addLayers() {
-    const { defaultIcon } = this.props;
+    const { defaultIcon, iconSize, textSize, textColor } = this.props;
     const layer = this.state.map.addLayer({
       id: 'layer',
       type: 'symbol',
@@ -86,13 +95,29 @@ class MapboxMap extends Component {
       layout: {
         'icon-allow-overlap': true,
         'icon-image': defaultIcon,
-        'icon-size': 0.5
+        'icon-size': iconSize
       },
       paint: {
         'icon-opacity': ['match', ['get', 'id'], '', 0.5, 1]
       }
     });
-    this.setState({ layer });
+
+    const cluster = this.props.cluster
+      ? this.state.map.addLayer({
+          id: 'cluster-count',
+          type: 'symbol',
+          source: 'source',
+          layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['Open Sans Bold'],
+            'text-size': textSize
+          },
+          paint: {
+            'text-color': textColor
+          }
+        })
+      : null;
+    this.setState({ layer, cluster });
   }
 
   setMapProperties() {
@@ -110,6 +135,7 @@ class MapboxMap extends Component {
 
   setIconImageProperty() {
     const { defaultIcon } = this.props;
+
     this.state.map.setLayoutProperty('layer', 'icon-image', [
       'match',
       ['get', 'id'],
@@ -159,10 +185,15 @@ class MapboxMap extends Component {
 
     // If collection has featureIds, add return sanitized ids directly from
     // array.
-    if (collection.filter.ids) {
+    if (collection.filter.ids && collection.filter.ids.length) {
       // Translates null values to empty strings, as mapbox does not except null
       // values in expressions.
       featureIds = [collection.filter.ids.map(id => (id === null ? '' : id))];
+
+      // If a collection is provided an empty array of featureIds provide an
+      // empty array with a string
+    } else if (collection.filter.ids && !collection.filter.ids.length) {
+      featureIds = [['']];
 
       // If collection has key and value, look up feature ids by those keys
       // and values.
@@ -245,7 +276,9 @@ class MapboxMap extends Component {
   }
 
   zoomToBounds = () => {
-    this.state.map.fitBounds(this.state.bounds, { padding: 100 });
+    this.state.map.fitBounds(this.state.bounds, {
+      padding: this.props.mapPadding
+    });
   };
 
   zoomToFeature(feature) {
@@ -276,6 +309,13 @@ MapboxMap.propTypes = {
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   }).isRequired,
+  iconSize: PropTypes.number,
+  cluster: PropTypes.bool,
+  clusterMaxZoom: PropTypes.number,
+  clusterRadius: PropTypes.number,
+  textSize: PropTypes.number,
+  textColor: PropTypes.string,
+  mapPadding: PropTypes.number,
   onClickFeature: PropTypes.func,
   defaultIcon: PropTypes.string.isRequired,
   styleUrl: PropTypes.string.isRequired,
@@ -290,6 +330,13 @@ MapboxMap.defaultProps = {
     type: 'FeatureCollection',
     features: []
   },
+  iconSize: 1,
+  cluster: false,
+  clusterMaxZoom: null,
+  clusterRadius: null,
+  textSize: 12,
+  textColor: '#000000',
+  mapPadding: 100,
   onLoad: () => {},
   onClickFeature: () => {},
   defaultIcon: 'star',
