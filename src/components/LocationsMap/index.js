@@ -5,7 +5,6 @@ import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
-  console.log(props.locations);
   return (
     <div className={styles['LocationsMap']}>
       <MapboxMap
