@@ -2,6 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import locations from 'state/selectors/locations';
 import locationGeoJSON from 'state/selectors/locationGeoJSON';
 
 class LocationsLandingContainer extends ContainerBase {
@@ -12,6 +13,7 @@ class LocationsLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
+    locations: locations(state),
     locationGeoJSON: locationGeoJSON(state)
   };
 };

@@ -73,10 +73,7 @@ class MapboxMap extends Component {
     const { featureCollection } = this.props;
     const source = this.state.map.addSource('source', {
       type: 'geojson',
-      data: featureCollection,
-      cluster: true,
-      clusterMaxZoom: 14, // Max zoom to cluster points on
-      clusterRadius: 50
+      data: featureCollection
     });
     this.setState({ source });
   }
@@ -97,22 +94,22 @@ class MapboxMap extends Component {
       }
     });
 
-    const cluster = this.props.cluster
-      ? this.state.map.addLayer({
-          id: 'cluster-count',
-          type: 'symbol',
-          source: 'source',
-          layout: {
-            'text-field': '{point_count_abbreviated}',
-            'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-            'text-size': 16
-          },
-          paint: {
-            'text-color': '#ffffff'
-          }
-        })
-      : null;
-    this.setState({ layer, cluster });
+    // const cluster = this.props.cluster
+    //   ? this.state.map.addLayer({
+    //       id: 'cluster-count',
+    //       type: 'symbol',
+    //       source: 'source',
+    //       layout: {
+    //         'text-field': '{point_count_abbreviated}',
+    //         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+    //         'text-size': 16
+    //       },
+    //       paint: {
+    //         'text-color': '#ffffff'
+    //       }
+    //     })
+    //   : null;
+    this.setState({ layer });
   }
 
   setMapProperties() {
@@ -130,6 +127,13 @@ class MapboxMap extends Component {
 
   setIconImageProperty() {
     const { defaultIcon } = this.props;
+
+    console.log('eee', [
+      'match',
+      ['get', 'id'],
+      ...this.featuresWithoutDefaultIcon(),
+      defaultIcon
+    ]);
     this.state.map.setLayoutProperty('layer', 'icon-image', [
       'match',
       ['get', 'id'],
@@ -153,7 +157,9 @@ class MapboxMap extends Component {
     return collections
       .filter(collection => collection.icon)
       .reduce((agg, collection) => {
-        const featureIds = this.featureIdsFromCollectionFilter(collection);
+        let featureIds = this.featureIdsFromCollectionFilter(collection);
+        if (!featureIds[0].length) featureIds = [['']];
+
         return agg.concat(featureIds, collection.icon);
       }, []);
   }
@@ -179,10 +185,15 @@ class MapboxMap extends Component {
 
     // If collection has featureIds, add return sanitized ids directly from
     // array.
-    if (collection.filter.ids) {
+    if (collection.filter.ids.length) {
       // Translates null values to empty strings, as mapbox does not except null
       // values in expressions.
       featureIds = [collection.filter.ids.map(id => (id === null ? '' : id))];
+
+      // If a collection is provided an empty array of featureIds provide an
+      // empty array with a string
+    } else if (collection.filter.ids && !collection.filter.ids.length) {
+      featureIds = [['']];
 
       // If collection has key and value, look up feature ids by those keys
       // and values.
@@ -265,7 +276,7 @@ class MapboxMap extends Component {
   }
 
   zoomToBounds = () => {
-    this.state.map.fitBounds(this.state.bounds, { padding: 100 });
+    this.state.map.fitBounds(this.state.bounds, { padding: 200 });
   };
 
   zoomToFeature(feature) {

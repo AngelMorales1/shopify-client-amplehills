@@ -5,6 +5,7 @@ import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
+  console.log(props.locations);
   return (
     <div className={styles['LocationsMap']}>
       <MapboxMap
@@ -12,6 +13,32 @@ const LocationsMap = props => {
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
         cluster
+        onClickFeature={feature => console.log('FE', feature)}
+        collections={[
+          {
+            name: 'Selected',
+            filter: {
+              ids: []
+            },
+            icon: 'selected-location-icon'
+          },
+          {
+            name: 'SeasonalLocations',
+            filter: {
+              ids: props.locations
+                .filter(location => location.seasonal)
+                .map(location => location.id)
+            },
+            icon: 'seasonal-icon'
+          },
+          {
+            name: 'HiddenByFilter',
+            filter: {
+              ids: []
+            },
+            visible: false
+          }
+        ]}
       />
     </div>
   );
