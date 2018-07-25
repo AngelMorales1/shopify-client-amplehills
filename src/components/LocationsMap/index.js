@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Image, Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
@@ -45,6 +46,24 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={200}
       />
+      <div className="absolute b0 l0 flex p3">
+        <Button
+          className="mr3 flex items-center"
+          color="white"
+          variant="legend-key"
+        >
+          <Image src="/assets/images/year-round-icon.svg" className="mr2" />
+          <span>Open Year Round</span>
+        </Button>
+        <Button
+          className="mr3 flex items-center"
+          color="white"
+          variant="legend-key"
+        >
+          <Image src="/assets/images/seasonal-icon.svg" className="mr2" />
+          <span>Open Seasonally</span>
+        </Button>
+      </div>
     </div>
   );
 };

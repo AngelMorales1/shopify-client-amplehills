@@ -7,14 +7,7 @@ export default createSelector(
   state => locations(state),
   state => get(state, 'locationsUI.locationFilters', []),
   (locations, locationFilters) => {
-    const filteredOutLocations = get(locations, 'items', []).map(location => {
-      const id = get(location, 'sys.id', '');
-      const fields = get(location, 'fields', {});
-      return {
-        id,
-        ...fields
-      };
-    });
+    const filteredOutLocations = [];
 
     return filteredOutLocations;
   }
