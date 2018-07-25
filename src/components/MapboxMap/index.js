@@ -70,10 +70,13 @@ class MapboxMap extends Component {
   }
 
   addSource() {
-    const { featureCollection } = this.props;
+    const { featureCollection, cluster } = this.props;
     const source = this.state.map.addSource('source', {
       type: 'geojson',
-      data: featureCollection
+      data: featureCollection,
+      cluster,
+      clusterMaxZoom: 14,
+      clusterRadius: 50
     });
     this.setState({ source });
   }
@@ -94,22 +97,22 @@ class MapboxMap extends Component {
       }
     });
 
-    // const cluster = this.props.cluster
-    //   ? this.state.map.addLayer({
-    //       id: 'cluster-count',
-    //       type: 'symbol',
-    //       source: 'source',
-    //       layout: {
-    //         'text-field': '{point_count_abbreviated}',
-    //         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-    //         'text-size': 16
-    //       },
-    //       paint: {
-    //         'text-color': '#ffffff'
-    //       }
-    //     })
-    //   : null;
-    this.setState({ layer });
+    const cluster = this.props.cluster
+      ? this.state.map.addLayer({
+          id: 'cluster-count',
+          type: 'symbol',
+          source: 'source',
+          layout: {
+            'text-field': '{point_count_abbreviated}',
+            'text-font': ['Open Sans Bold'],
+            'text-size': 16
+          },
+          paint: {
+            'text-color': '#ffffff'
+          }
+        })
+      : null;
+    this.setState({ layer, cluster });
   }
 
   setMapProperties() {
