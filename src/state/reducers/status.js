@@ -12,6 +12,7 @@ import {
   SIGN_IN_CUSTOMER,
   SIGN_UP_CUSTOMER
 } from 'state/actions/customerActions';
+import { SEND_CONTACT_FORM } from 'state/actions/ui/contactUIActions';
 
 const initialState = {
   initializeApplication: IDLE,
@@ -20,7 +21,8 @@ const initialState = {
   lineItemsBeingRemoved: [],
   customerSigningIn: IDLE,
   customerSigningUp: IDLE,
-  updatingNote: IDLE
+  updatingNote: IDLE,
+  contactUsFormStatus: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -89,6 +91,22 @@ export default (state = initialState, action) => {
       return { ...state, updatingNote: FULFILLED };
     case `${UPDATE_NOTE}_REJECTED`:
       return { ...state, updatingNote: REJECTED };
+
+    case `${SEND_CONTACT_FORM}_${PENDING}`:
+      return {
+        ...state,
+        contactUsFormStatus: PENDING
+      };
+    case `${SEND_CONTACT_FORM}_${FULFILLED}`:
+      return {
+        ...state,
+        contactUsFormStatus: FULFILLED
+      };
+    case `${SEND_CONTACT_FORM}_${REJECTED}`:
+      return {
+        ...state,
+        contactUsFormStatus: REJECTED
+      };
 
     default:
       return state;

@@ -12,7 +12,7 @@ class ProfileContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    formStatus: get(state, 'contactUI.formStatus', IDLE)
+    formStatus: get(state, 'status.contactUsFormStatus', IDLE)
   };
 };
 
