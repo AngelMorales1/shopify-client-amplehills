@@ -159,7 +159,7 @@ class MapboxMap extends Component {
     return collections
       .filter(collection => collection.icon)
       .reduce((agg, collection) => {
-        let featureIds = this.featureIdsFromCollectionFilter(collection);
+        const featureIds = this.featureIdsFromCollectionFilter(collection);
         return agg.concat(featureIds, collection.icon);
       }, []);
   }
