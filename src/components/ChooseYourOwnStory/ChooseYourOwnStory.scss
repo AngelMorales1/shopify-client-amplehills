@@ -36,28 +36,26 @@ $menu-height: spacing(37.5);
   }
 
   &__menu-size {
-    width: 17.5%;
+    width: 20%;
   }
 
   &__menu-pints {
     width: 30%;
   }
 
-  &__menu-shipping {
-    width: 22.5%;
-  }
-
-  &__menu-shipping-dropdown {
-    margin-top: spacing(-2);
-  }
-
   &__menu-add {
     width: 100%;
+    justify-items: flex-end;
 
     @media ($large-up) {
       align-items: flex-end;
-      justify-items: space-between;
-      width: 30%;
+      width: 50%;
+    }
+  }
+
+  &__menu-add-button-wrapper {
+    @media ($large-up) {
+      width: auto;
     }
   }
 
@@ -70,9 +68,11 @@ $menu-height: spacing(37.5);
 
     @media ($large-up) {
       margin-bottom: 0;
+      margin-right: spacing(16);
+      width: auto;
 
       > div {
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
     }
   }

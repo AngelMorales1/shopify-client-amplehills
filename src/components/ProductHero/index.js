@@ -6,19 +6,15 @@ import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 
 import get from 'utils/get';
-import { Image, Button, QuantitySelector, Dropdown } from 'components/base';
+import { Image, Button, QuantitySelector } from 'components/base';
 import OurPledge from 'components/OurPledge';
 
 import styles from './ProductHero.scss';
 
 class ProductHero extends Component {
-  constructor() {
-    super(...arguments);
-
-    this.state = {
-      quantity: 1
-    };
-  }
+  state = {
+    quantity: 1
+  };
 
   componentDidUpdate(prevProps) {
     if (
@@ -42,11 +38,6 @@ class ProductHero extends Component {
 
   didAddToCart = () => {
     this.setState({ quantity: 1 });
-  };
-
-  onShippingChange = shipping => {
-    // TODO: Figure out best way to add this to Checkout
-    this.setState({ shipping });
   };
 
   render() {
@@ -107,17 +98,6 @@ class ProductHero extends Component {
               <p className="copy pr2">{product.description}</p>
             </div>
             <form className="flex flex-wrap items-center">
-              <div className="w100 mt3 mb1">
-                <Dropdown
-                  name="shipping-date"
-                  value={this.state.shipping}
-                  label="Shipping Date"
-                  onChange={this.onShippingChange}
-                  options={this.props.shippingDates.map(date => {
-                    return { value: date, label: date };
-                  })}
-                />
-              </div>
               <QuantitySelector
                 className="my3 mr3"
                 quantity={this.state.quantity}
@@ -127,7 +107,6 @@ class ProductHero extends Component {
                 <Button
                   color="madison-blue"
                   onClick={this.addToCart}
-                  disabled={!this.state.shipping}
                 >
                   <span className="mr2">Add to Cart</span>
                   <span className="ml2">
@@ -162,7 +141,6 @@ ProductHero.propTypes = {
   data: PropTypes.shape({}),
   z: PropTypes.number,
   product: productModel.propTypes,
-  shippingDates: PropTypes.arrayOf(PropTypes.string),
   ourPledge: PropTypes.shape({
     closeOurPledgeOverlay: PropTypes.func,
     overlayContentImage: imageModel.propTypes,
