@@ -19,9 +19,9 @@ export default (state = initialState, action) => {
       const { key, value } = action.payload;
       return {
         ...state,
-        locationFilters: state.locationFilters.filter(
-          filter => filter.key !== key && filter.value !== value
-        )
+        locationFilters: state.locationFilters.filter(filter => {
+          return filter.key !== key || filter.value !== value;
+        })
       };
     default:
       return state;

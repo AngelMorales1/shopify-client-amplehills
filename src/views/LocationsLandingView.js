@@ -30,8 +30,6 @@ class LocationsLandingView extends Component {
     const { model, locationFilters } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    console.log(locationFilters);
-
     return (
       <div className="Locations">
         {this.state.currentBreakpoint !== 'small' ? (
