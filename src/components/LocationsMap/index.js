@@ -13,7 +13,6 @@ const LocationsMap = props => {
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
         cluster
-        onClickFeature={feature => console.log('FE', feature)}
         collections={[
           {
             name: 'Selected',

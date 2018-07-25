@@ -57,7 +57,7 @@ class MapboxMap extends Component {
 
   initializeMap() {
     return new Promise((resolve, reject) => {
-      const { styleUrl, cluster } = this.props;
+      const { styleUrl } = this.props;
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
@@ -131,12 +131,6 @@ class MapboxMap extends Component {
   setIconImageProperty() {
     const { defaultIcon } = this.props;
 
-    console.log('eee', [
-      'match',
-      ['get', 'id'],
-      ...this.featuresWithoutDefaultIcon(),
-      defaultIcon
-    ]);
     this.state.map.setLayoutProperty('layer', 'icon-image', [
       'match',
       ['get', 'id'],
