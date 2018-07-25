@@ -5,6 +5,7 @@ import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
+  const { filteredOutLocations } = props;
   return (
     <div className={styles['LocationsMap']}>
       <MapboxMap
@@ -31,7 +32,7 @@ const LocationsMap = props => {
           {
             name: 'HiddenByFilter',
             filter: {
-              ids: []
+              ids: filteredOutLocations
             },
             visible: false
           }
