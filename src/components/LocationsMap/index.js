@@ -11,7 +11,6 @@ const LocationsMap = props => {
         featureCollection={props.locationGeoJSON}
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
-        cluster
         collections={[
           {
             name: 'Selected',
@@ -37,6 +36,13 @@ const LocationsMap = props => {
             visible: false
           }
         ]}
+        iconSize={1.4}
+        cluster={true}
+        clusterMaxZoom={14}
+        clusterRadius={50}
+        textSize={16}
+        textColor="#ffffff"
+        mapPadding={200}
       />
     </div>
   );

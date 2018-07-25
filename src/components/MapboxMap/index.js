@@ -70,19 +70,24 @@ class MapboxMap extends Component {
   }
 
   addSource() {
-    const { featureCollection, cluster } = this.props;
+    const {
+      featureCollection,
+      cluster,
+      clusterMaxZoom,
+      clusterRadius
+    } = this.props;
     const source = this.state.map.addSource('source', {
       type: 'geojson',
       data: featureCollection,
       cluster,
-      clusterMaxZoom: 14,
-      clusterRadius: 50
+      clusterMaxZoom,
+      clusterRadius
     });
     this.setState({ source });
   }
 
   addLayers() {
-    const { defaultIcon } = this.props;
+    const { defaultIcon, iconSize, textSize, textColor } = this.props;
     const layer = this.state.map.addLayer({
       id: 'layer',
       type: 'symbol',
@@ -90,7 +95,7 @@ class MapboxMap extends Component {
       layout: {
         'icon-allow-overlap': true,
         'icon-image': defaultIcon,
-        'icon-size': 1.4
+        'icon-size': iconSize
       },
       paint: {
         'icon-opacity': ['match', ['get', 'id'], '', 0.5, 1]
@@ -105,10 +110,10 @@ class MapboxMap extends Component {
           layout: {
             'text-field': '{point_count_abbreviated}',
             'text-font': ['Open Sans Bold'],
-            'text-size': 16
+            'text-size': textSize
           },
           paint: {
-            'text-color': '#ffffff'
+            'text-color': textColor
           }
         })
       : null;
@@ -273,7 +278,9 @@ class MapboxMap extends Component {
   }
 
   zoomToBounds = () => {
-    this.state.map.fitBounds(this.state.bounds, { padding: 200 });
+    this.state.map.fitBounds(this.state.bounds, {
+      padding: this.props.mapPadding
+    });
   };
 
   zoomToFeature(feature) {
@@ -304,7 +311,13 @@ MapboxMap.propTypes = {
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   }).isRequired,
+  iconSize: PropTypes.number,
   cluster: PropTypes.bool,
+  clusterMaxZoom: PropTypes.number,
+  clusterRadius: PropTypes.number,
+  textSize: PropTypes.number,
+  textColor: PropTypes.string,
+  mapPadding: PropTypes.number,
   onClickFeature: PropTypes.func,
   defaultIcon: PropTypes.string.isRequired,
   styleUrl: PropTypes.string.isRequired,
@@ -319,7 +332,13 @@ MapboxMap.defaultProps = {
     type: 'FeatureCollection',
     features: []
   },
+  iconSize: 1,
   cluster: false,
+  clusterMaxZoom: null,
+  clusterRadius: null,
+  textSize: 12,
+  textColor: '#000000',
+  mapPadding: 100,
   onLoad: () => {},
   onClickFeature: () => {},
   defaultIcon: 'star',
