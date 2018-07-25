@@ -8,7 +8,7 @@ import ProfileContainer from 'containers/ProfileContainer';
 import SignInContainer from 'containers/SignInContainer';
 import SignUpContainer from 'containers/SignUpContainer';
 import LocationsLandingContainer from 'containers/LocationsLandingContainer';
-import ContactUsContainer from 'components/ContactUs';
+import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 
 const Routes = ({ location }) => (

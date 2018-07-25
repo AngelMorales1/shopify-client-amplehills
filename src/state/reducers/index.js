@@ -13,7 +13,6 @@ export default {
   applicationUI,
   miniCartUI,
   customerUI,
-  productUI,
   locations,
   product,
   products,
