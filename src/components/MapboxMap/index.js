@@ -160,8 +160,6 @@ class MapboxMap extends Component {
       .filter(collection => collection.icon)
       .reduce((agg, collection) => {
         let featureIds = this.featureIdsFromCollectionFilter(collection);
-        if (!featureIds[0].length) featureIds = [['']];
-
         return agg.concat(featureIds, collection.icon);
       }, []);
   }
@@ -187,7 +185,7 @@ class MapboxMap extends Component {
 
     // If collection has featureIds, add return sanitized ids directly from
     // array.
-    if (collection.filter.ids.length) {
+    if (collection.filter.ids && collection.filter.ids.length) {
       // Translates null values to empty strings, as mapbox does not except null
       // values in expressions.
       featureIds = [collection.filter.ids.map(id => (id === null ? '' : id))];
