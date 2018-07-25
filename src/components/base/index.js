@@ -6,6 +6,7 @@ import TextField from './TextField';
 import Dropdown from './Dropdown';
 import FormFlash from './FormFlash';
 import Modal from './Modal';
+import Carousel from './Carousel';
 
 export {
   Button,
@@ -15,5 +16,6 @@ export {
   TextField,
   Dropdown,
   FormFlash,
-  Modal
+  Modal,
+  Carousel
 };

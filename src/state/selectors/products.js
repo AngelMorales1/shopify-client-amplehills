@@ -22,16 +22,28 @@ export default createSelector(
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
-      const shortDescription = get(product, 'fileds.shortDescription', '');
+      const cartDetails = get(product, 'fields.cartDetails', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {});
-      const available = get(shopifyProduct, 'variants[0].available', false);
       const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
       const id = get(shopifyProduct, 'variants[0].id', '');
       const variants = get(shopifyProduct, 'variants', []).map(variant => {
         const { id, price, title, available } = variant;
         return { id, price, title, available };
       });
+
+      const available = variants.some(variant => variant.available);
+
+      const subItems = get(product, 'fields.subItems', []).map(subItem => {
+        return get(subItem, 'fields.productHandle', '');
+      });
+      const subItemsAvailable =
+        !subItems.length ||
+        subItems.every(subItem => {
+          const shopifySubItem = get(shopifyProducts, subItem, {});
+          const variants = get(shopifySubItem, 'variants', []);
+          return variants.some(variant => variant.available);
+        });
 
       mergedProducts[handle] = {
         title,
@@ -45,7 +57,9 @@ export default createSelector(
         gridImage,
         pintImage,
         blocks,
-        shortDescription
+        subItems,
+        subItemsAvailable,
+        cartDetails
       };
 
       return mergedProducts;

@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 
 import { initializeApplication } from 'state/actions/applicationActions';
 
-import { IDLE, FULFILLED } from 'constants/Status';
+import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
 
 import Loader from 'components/Loader';
+import ErrorPage from 'components/ErrorPage';
 import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
@@ -51,6 +52,9 @@ class App extends Component {
           />
         </div>
       );
+    }
+    if (applicationStatus === REJECTED) {
+      return <ErrorPage />;
     }
 
     return <Loader />;

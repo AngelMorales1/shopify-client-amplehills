@@ -33,6 +33,8 @@
       @extend .bold;
       border: spacing(1) solid color('madison-blue');
       border-radius: radius('l');
+      padding-left: spacing(6);
+      padding-right: spacing(6);
       font-size: $font-4;
 
       &::placeholder {
@@ -58,8 +60,7 @@
     }
   }
 
-  &--light-gray,
-  &--light-gray-tall {
+  &--light-gray {
     input,
     textarea {
       @extend .bg-light-gray;
@@ -85,7 +86,7 @@
     }
   }
 
-  &--light-gray-tall {
+  &--textarea {
     textarea {
       border-radius: radius('s');
       height: spacing(65);

@@ -33,3 +33,20 @@ export const customerDisassociate = gql`
     }
   }
 `;
+
+export const checkoutAttributesUpdate = gql`
+  mutation checkoutAttributesUpdate(
+    $checkoutId: ID!
+    $input: CheckoutAttributesUpdateInput!
+  ) {
+    checkoutAttributesUpdate(checkoutId: $checkoutId, input: $input) {
+      userErrors {
+        field
+        message
+      }
+      checkout {
+        note
+      }
+    }
+  }
+`;

@@ -1,10 +1,8 @@
 import Data from 'lib/Data';
 import ContentfulClient from 'lib/Contentful';
 import BuySDK from 'lib/Buy';
-import {
-  getLocationData,
-  getGlobalSettings
-} from 'state/actions/ui/applicationUIActions';
+import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
+import { getLocationData } from 'state/actions/locationsActions';
 
 import {
   fetchProducts,
@@ -17,7 +15,7 @@ export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = checkoutID => dispatch => {
   return dispatch({
     type: INITIALIZE_APPLICATION,
-    payload: new Promise(resolve => {
+    payload: new Promise((resolve, reject) => {
       const Contentful = ContentfulClient();
       Data.setRef('contentful', Contentful);
       Data.setRef('shopify', BuySDK);
@@ -27,9 +25,11 @@ export const initializeApplication = checkoutID => dispatch => {
         getGlobalSettings()(dispatch),
         fetchProducts()(dispatch),
         fetchContentfulProducts()(dispatch)
-      ]).then(([checkout, locations, settings, products, contentfulProducts]) =>
-        resolve()
-      );
+      ])
+        .then(([checkout, locations, settings, products, contentfulProducts]) =>
+          resolve()
+        )
+        .catch(err => reject(err));
     })
   });
 };

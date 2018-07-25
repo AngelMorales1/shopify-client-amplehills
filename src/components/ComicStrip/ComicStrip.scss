@@ -1,0 +1,53 @@
+@import 'settings';
+
+.ComicStrip {
+  &--yellow {
+    @extend .bg-yellow;
+    @extend .text-madison-blue;
+  }
+
+  &__headline {
+    margin: spacing(8) auto;
+
+    @media ($medium-up) {
+      margin: spacing(16) auto;
+    }
+  }
+}
+
+.ComicStrips__container {
+  .ComicStrip {
+    display: none;
+    opacity: 0;
+
+    &--active {
+      display: flex;
+      opacity: 1;
+    }
+
+    &--button-container {
+      max-width: spacing(130);
+    }
+  }
+
+  &__image {
+    animation: slide-up 0.5s;
+    width: calc(100vw - #{spacing(16)});
+
+    @media ($medium-up) {
+      width: 30%;
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, spacing(8), 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

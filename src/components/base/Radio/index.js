@@ -35,7 +35,7 @@ const Radio = ({ variant, color, className, label, checked, onClick }) => {
           src={checkImage(color)}
         />
       ) : null}
-      <label>{label}</label>
+      <label className="pointer">{label}</label>
     </Button>
   );
 };

@@ -1,32 +1,19 @@
 @import 'settings', 'src/styles/utils';
 
 .Radio {
-  flex-direction: column;
+  flex-direction: row;
+  text-align: left;
   align-items: center;
-  text-align: center;
-  color: color('peach');
 
   &__check {
     top: 0;
-    left: spacing(4);
+    left: spacing(1);
   }
 
   label {
-    margin-left: 0;
-  }
-
-  @media ($medium-up) {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-
-    &__check {
-      left: spacing(1);
-    }
-
-    label {
-      margin-left: spacing(3);
-    }
+    padding-top: spacing(1);
+    color: color('peach');
+    margin-left: spacing(1);
   }
 
   &::before {
@@ -35,18 +22,14 @@
     border: spacing(0.7) solid color('peach');
     display: inline-block;
     height: spacing(4);
-    margin-right: 0;
-    margin-bottom: spacing(4);
+    margin-right: spacing(2);
     width: spacing(4);
-    vertical-align: middle;
-
-    @media (medium-up) {
-      margin-right: spacing(2);
-    }
   }
 
   &--white {
-    color: color('white');
+    label {
+      color: color('white');
+    }
 
     &::before {
       border-color: color('white');
@@ -56,10 +39,11 @@
   &--vertical {
     display: flex;
     flex-direction: column-reverse;
+    align-items: flex-start;
 
     label {
-      font-weight: 400;
       margin-left: 0;
+      padding-top: 0;
       margin-bottom: spacing(4);
     }
 

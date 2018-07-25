@@ -42,7 +42,7 @@ const QuantitySelector = ({
   };
 
   return (
-    <div className={cx('wh100 flex items-center', className)}>
+    <div className={cx('flex items-center', className)}>
       <Button
         variant={variant === 'small' ? 'circle-small' : 'circle'}
         color={colorVariation(color).buttonColor}

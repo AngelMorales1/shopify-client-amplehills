@@ -1,23 +1,85 @@
 import React, { Component } from 'react';
-import { Radio, TextField, Button } from 'components/base';
+import isValidEmailAddress from 'utils/isValidEmailAddress';
+import ContactUsForm from 'constants/forms/ContactUs';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
+import { Dropdown, Radio, TextField, Button, FormFlash } from 'components/base';
 
 import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
-  constructor() {
-    super(...arguments);
-
-    this.state = {
-      checkedRadioField: ''
-    };
+  componentDidUpdate(prevProps) {
+    if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
+      this.setState({
+        selectedAddress: '',
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
   }
 
-  handleRadioClick = field => {
-    this.setState({ checkedRadioField: field });
+  state = {
+    selectedAddress: '',
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
+  handleChangeAddress = selectedAddress => {
+    this.setState({ selectedAddress });
+  };
+
+  formHasErrors = () => {
+    const { selectedAddress, name, email, message } = this.state;
+
+    if (!selectedAddress) {
+      const error = 'Please select the reason why you are contacting us.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!name) {
+      const error = 'Please enter your full name.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!email || !isValidEmailAddress(email)) {
+      const error = 'Please enter a valid email address.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!message) {
+      const error = 'Please write a message.';
+      this.setState({ error });
+      return true;
+    }
+
+    return false;
+  };
+
+  submitContactForm = () => {
+    if (this.formHasErrors()) return null;
+
+    const { selectedAddress, name, email, phone, message } = this.state;
+
+    this.setState({ error: '' });
+    this.props.actions.sendContactForm({
+      selectedAddress,
+      name,
+      email,
+      phone,
+      message
+    });
   };
 
   render() {
+    const { error, selectedAddress } = this.state;
+    const { formStatus } = this.props;
+
     return (
       <div
         className={cx(
@@ -25,66 +87,64 @@ class ContactUs extends Component {
           'flex flex-column justify-around items-center'
         )}
       >
-        <h2 className="block-headline m2 center">Contact us</h2>
-        <p className="m2 center">What can we help you with?</p>
-        <form className="flex m3">
-          <Radio
-            checked={this.state.checkedRadioField === 'ordering'}
-            onClick={() => this.handleRadioClick('ordering')}
-            className="mx3"
-            label="Ordering"
-          />
-          <Radio
-            checked={this.state.checkedRadioField === 'shipping'}
-            onClick={() => this.handleRadioClick('shipping')}
-            className="mx3"
-            label="Shipping"
-          />
-          <Radio
-            checked={this.state.checkedRadioField === 'other'}
-            onClick={() => this.handleRadioClick('other')}
-            className="mx3"
-            label="Other"
-          />
+        <h2 className="block-headline my2 px2 center">Contact us</h2>
+        <p className="my2 px2 center">What can we help you with?</p>
+        <form className="flex flex-wrap justify-center text-container-width">
+          <div className="flex flex-wrap justify-center px2 my2">
+            {Object.values(ContactUsForm.ADDRESSES).map(field => (
+              <Radio
+                checked={selectedAddress === field.bucket}
+                onClick={() => this.setState({ selectedAddress: field.bucket })}
+                className="mx2 my1 small"
+                label={field.label}
+              />
+            ))}
+          </div>
+          <div className="w100 flex flex-column">
+            {Object.values(ContactUsForm.FIELDS).map(field => (
+              <TextField
+                className="m1"
+                variant="light-gray"
+                type={field.type}
+                value={this.state[field.id]}
+                onChange={value => this.setState({ [field.id]: value })}
+                placeholder={field.label}
+              />
+            ))}
+          </div>
+          <div
+            className={cx(
+              styles['ContactUs__button-container'],
+              'w100 flex flex-wrap text-container-width my2 px1'
+            )}
+          >
+            {error || formStatus === REJECTED ? (
+              <FormFlash
+                className="w100 mb2"
+                error={true}
+                message={
+                  error
+                    ? error
+                    : 'There was an unexpected problem while submitting your message. Please reach out directly to info@amplehills.com'
+                }
+              />
+            ) : null}
+            {formStatus === FULFILLED ? (
+              <FormFlash
+                className="w100 mb2"
+                success={true}
+                message="Your message has been sent!"
+              />
+            ) : null}
+            <Button
+              disabled={formStatus === PENDING}
+              label="Send Us a Message"
+              color="madison-blue"
+              className="my1"
+              onClick={this.submitContactForm}
+            />
+          </div>
         </form>
-        <div className="flex flex-column m3 wh100 text-container-width">
-          <TextField
-            className="m1"
-            variant="light-gray"
-            type="text"
-            placeholder="Name"
-          />
-          <TextField
-            className="m1"
-            variant="light-gray"
-            type="email"
-            placeholder="Email Address"
-          />
-          <TextField
-            className="m1"
-            variant="light-gray"
-            type="tel"
-            placeholder="Phone Number"
-          />
-          <TextField
-            className="m1"
-            variant="light-gray-tall"
-            placeholder="Message"
-            multiLine={true}
-          />
-        </div>
-        <div
-          className={cx(
-            styles['ContactUs__button-container'],
-            'w100 flex text-container-width'
-          )}
-        >
-          <Button
-            label="Send Us a Message"
-            color="madison-blue"
-            className="m1"
-          />
-        </div>
       </div>
     );
   }
