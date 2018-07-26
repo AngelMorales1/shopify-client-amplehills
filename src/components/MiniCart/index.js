@@ -57,7 +57,7 @@ class MiniCart extends Component {
             <strong className="callout">Cart</strong>
             <Button
               variant="icon-small"
-              className="absolute t0 r0 m3 pt1"
+              className={cx(styles['MiniCart__close-button'], 'absolute r0 m3')}
               onClick={() => closeMiniCart()}
             >
               <Image src="/assets/images/icon-close.svg" />
