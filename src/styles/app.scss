@@ -1,1 +1,5 @@
-@import "reset", "fontface", "globals", "typography", "utils", "aspect-ratios";
+@import 'reset', 'fontface', 'globals', 'typography', 'utils', 'aspect-ratios';
+
+[data-whatintent='mouse'] *:focus {
+  outline: none;
+}
