@@ -13,3 +13,10 @@ export const removeLocationFilter = filter => {
     payload: filter
   };
 };
+
+export const CLEAR_LOCATION_FILTERS = 'CLEAR_LOCATION_FILTERS';
+export const clearLocationFilters = filter => {
+  return {
+    type: CLEAR_LOCATION_FILTERS
+  };
+};

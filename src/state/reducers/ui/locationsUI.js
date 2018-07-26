@@ -1,6 +1,7 @@
 import {
   ADD_LOCATION_FILTER,
-  REMOVE_LOCATION_FILTER
+  REMOVE_LOCATION_FILTER,
+  CLEAR_LOCATION_FILTERS
 } from 'state/actions/ui/locationsUIActions';
 
 const initialState = {
@@ -22,6 +23,12 @@ export default (state = initialState, action) => {
         locationFilters: state.locationFilters.filter(filter => {
           return filter.key !== key || filter.value !== value;
         })
+      };
+    case CLEAR_LOCATION_FILTERS:
+      const { locationFilters } = initialState;
+      return {
+        ...state,
+        locationFilters
       };
     default:
       return state;
