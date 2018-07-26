@@ -110,6 +110,7 @@ class Nav extends Component {
             color="madison-blue"
             to="/cart"
             label={this.props.totalItems.toString()}
+            shadow={false}
           />
         </div>
       </div>
