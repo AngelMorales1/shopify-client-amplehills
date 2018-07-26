@@ -3,6 +3,7 @@
 .TextField {
   label {
     display: block;
+    font-weight: 800;
   }
 
   input {
@@ -12,6 +13,7 @@
     appearance: none;
     border-radius: radius('0');
     border: spacing(1) solid transparent;
+    font-weight: 800;
   }
 
   &--error {
@@ -71,16 +73,9 @@
       padding: spacing(6);
       height: spacing(15);
       font-size: $font-3;
-      transition: box-shadow $transition-duration,
-        transform $transition-duration;
-
-      &:hover {
-        box-shadow: $drop-shadow;
-      }
 
       &:focus {
         transform: scale(1.05);
-        box-shadow: $drop-shadow-large;
         outline: none;
       }
     }
