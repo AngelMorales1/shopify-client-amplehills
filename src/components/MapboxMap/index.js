@@ -121,16 +121,13 @@ class MapboxMap extends Component {
   }
 
   setMapProperties() {
-    this.setVisibilityProperty();
     this.setIconImageProperty();
-  }
 
-  setVisibilityProperty() {
-    this.state.map.setFilter('layer', [
-      '!in',
-      'id',
-      ...this.featuresNotVisible()
-    ]);
+    if (this.props.cluster) {
+      this.resetMapSource();
+    } else {
+      this.setVisibilityProperty();
+    }
   }
 
   setIconImageProperty() {
@@ -141,6 +138,31 @@ class MapboxMap extends Component {
       ['get', 'id'],
       ...this.featuresWithoutDefaultIcon(),
       defaultIcon
+    ]);
+  }
+
+  resetMapSource() {
+    const hiddenFeatures = this.featuresNotVisible();
+    const filteredFeatures = this.props.featureCollection.features.filter(
+      feature => {
+        const { id } = feature.properties;
+        return !hiddenFeatures.includes(id);
+      }
+    );
+
+    const filteredGeoJSON = {
+      type: 'feature',
+      features: filteredFeatures
+    };
+
+    this.state.map.getSource('source').setData(filteredGeoJSON);
+  }
+
+  setVisibilityProperty() {
+    this.state.map.setFilter('layer', [
+      '!in',
+      'id',
+      ...this.featuresNotVisible()
     ]);
   }
 

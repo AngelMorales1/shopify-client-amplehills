@@ -9,8 +9,7 @@ import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
   const { filteredOutLocations, locationFilters, actions } = props;
-
-  const handleFilterClick = filter => {};
+  console.log(filteredOutLocations);
 
   return (
     <div className={styles['LocationsMap']}>
@@ -52,7 +51,7 @@ const LocationsMap = props => {
         mapPadding={200}
       />
       <div className="absolute b0 l0 flex p3">
-        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => {
+        {LocationsMapFilters.SEASONAL_FILTERS.map((filter, i) => {
           const filterIsActive = locationFilters.some(
             activeFilter =>
               activeFilter.key === filter.key &&
@@ -64,6 +63,7 @@ const LocationsMap = props => {
               className="mr3 flex items-center"
               color={filterIsActive ? 'madison-blue' : 'white'}
               variant="legend-key"
+              key={i}
               onClick={
                 filterIsActive
                   ? () =>
