@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Year-Round Location icon</desc>
+    <defs></defs>
+    <g id="Locations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-48.000000, -788.000000)" id="Group-4">
+            <g transform="translate(48.000000, 788.000000)">
+                <circle id="Oval-4-Copy-9" fill="#6587D9" cx="12" cy="12" r="12"></circle>
+                <text id="12" font-family="Avenir-Black, Avenir" font-size="8" font-weight="700" letter-spacing="0.22" fill="#FFFFFF">
+                    <tspan x="7.044" y="15">12</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

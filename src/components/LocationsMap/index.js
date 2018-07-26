@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LocationsMapFilters from 'constants/LocationsMapFilters';
+
+import { Image, Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
+  const { filteredOutLocations, locationFilters, actions } = props;
+
   return (
     <div className={styles['LocationsMap']}>
       <MapboxMap
@@ -31,7 +36,7 @@ const LocationsMap = props => {
           {
             name: 'HiddenByFilter',
             filter: {
-              ids: []
+              ids: filteredOutLocations
             },
             visible: false
           }
@@ -44,6 +49,40 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={200}
       />
+      <div className="absolute b0 l0 flex p3">
+        {LocationsMapFilters.SEASONAL_FILTERS.map((filter, i) => {
+          const filterIsActive = locationFilters.some(
+            activeFilter =>
+              activeFilter.key === filter.key &&
+              activeFilter.value === filter.value
+          );
+
+          return (
+            <Button
+              className="mr3 flex items-center"
+              color={filterIsActive ? 'madison-blue' : 'white'}
+              variant="legend-key"
+              key={i}
+              onClick={
+                filterIsActive
+                  ? () =>
+                      actions.removeLocationFilter({
+                        key: filter.key,
+                        value: filter.value
+                      })
+                  : () =>
+                      actions.addLocationFilter({
+                        key: filter.key,
+                        value: filter.value
+                      })
+              }
+            >
+              <Image src={filter.icon} className="mr2" />
+              <span>{filter.label}</span>
+            </Button>
+          );
+        })}
+      </div>
     </div>
   );
 };
