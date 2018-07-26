@@ -3,17 +3,20 @@
 .TextField {
   label {
     display: block;
-    font-weight: 800;
   }
 
   input {
+    @extend .bold;
     border: spacing(1) solid color('madison-blue');
     padding: spacing(4);
     width: 100%;
     appearance: none;
     border-radius: radius('0');
     border: spacing(1) solid transparent;
-    font-weight: 800;
+
+    &::placeholder {
+      @extend .bold;
+    }
   }
 
   &--error {
@@ -32,7 +35,7 @@
   &--madison-blue-border-round {
     input {
       @extend .text-madison-blue;
-      @extend .bold;
+
       border: spacing(1) solid color('madison-blue');
       border-radius: radius('l');
       padding-left: spacing(6);
@@ -41,7 +44,6 @@
 
       &::placeholder {
         @extend .text-madison-blue;
-        @extend .bold;
       }
     }
   }
@@ -67,22 +69,17 @@
     textarea {
       @extend .bg-light-gray;
       @extend .text-madison-blue;
-      @extend .bold;
       border: 0;
       border-radius: radius('s');
       padding: spacing(6);
       height: spacing(15);
       font-size: $font-3;
-
-      &:focus {
-        transform: scale(1.05);
-        outline: none;
-      }
     }
   }
 
   &--textarea {
     textarea {
+      @extend .bold;
       border-radius: radius('s');
       height: spacing(65);
       width: 100%;
@@ -102,8 +99,11 @@
     }
 
     input {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       border-radius: radius('circle');
-      font-weight: 600;
       font-size: $font-4;
       padding: spacing(2);
       height: spacing(10);
