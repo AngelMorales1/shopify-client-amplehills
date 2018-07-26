@@ -98,28 +98,16 @@ const LocationsMap = props => {
           );
 
           return (
-            <Button
-              className="mr3 flex items-center"
-              color={filterIsActive ? 'madison-blue' : 'white'}
-              variant="legend-key"
+            <div
+              className={cx(
+                styles['LocationsMap__map-key-item'],
+                'mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold'
+              )}
               key={filter.value}
-              onClick={
-                filterIsActive
-                  ? () =>
-                      actions.removeLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-                  : () =>
-                      actions.addLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-              }
             >
               <Image src={filter.icon} className="mr2" />
               <span>{filter.label}</span>
-            </Button>
+            </div>
           );
         })}
       </div>
