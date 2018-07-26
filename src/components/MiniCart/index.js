@@ -111,7 +111,7 @@ class MiniCart extends Component {
                   <div className="w100 flex justify-between">
                     <QuantitySelector
                       quantity={item.quantity}
-                      variant="small"
+                      variant="medium"
                       onChange={quantity =>
                         this.updateLineItem(item.id, quantity)
                       }
