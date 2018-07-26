@@ -90,26 +90,18 @@ const LocationsMap = props => {
         })}
       </div>
       <div className="absolute b0 l0 flex p3">
-        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => {
-          const filterIsActive = locationFilters.some(
-            activeFilter =>
-              activeFilter.key === filter.key &&
-              activeFilter.value === filter.value
-          );
-
-          return (
-            <div
-              className={cx(
-                styles['LocationsMap__map-key-item'],
-                'mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold'
-              )}
-              key={filter.value}
-            >
-              <Image src={filter.icon} className="mr2" />
-              <span>{filter.label}</span>
-            </div>
-          );
-        })}
+        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => (
+          <div
+            className={cx(
+              styles['LocationsMap__map-key-item'],
+              'mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold'
+            )}
+            key={filter.value}
+          >
+            <Image src={filter.icon} className="mr2" />
+            <span>{filter.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
