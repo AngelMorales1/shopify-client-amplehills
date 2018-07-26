@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import whatInput from 'what-input';
 
 import { initializeApplication } from 'state/actions/applicationActions';
 
