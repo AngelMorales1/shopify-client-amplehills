@@ -14,7 +14,7 @@ export default (state = initialState, action) => {
     case ADD_LOCATION_FILTER:
       return {
         ...state,
-        locationFilters: [...state.locationFilters, action.payload]
+        locationFilters: [action.payload]
       };
     case REMOVE_LOCATION_FILTER:
       const { key, value } = action.payload;
