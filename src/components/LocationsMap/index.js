@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 
@@ -11,7 +12,7 @@ const LocationsMap = props => {
   const { filteredOutLocations, locationFilters, actions } = props;
 
   return (
-    <div className={styles['LocationsMap']}>
+    <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
         featureCollection={props.locationGeoJSON}
         defaultIcon="year-round-icon"
@@ -49,8 +50,47 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={200}
       />
+      <div className="absolute t0 l0 flex p3">
+        <Button
+          className="mr2 flex items-center"
+          color={locationFilters.length ? 'white-denim' : 'madison-blue'}
+          variant="primary-small"
+          label="All"
+          onClick={actions.clearLocationFilters}
+        />
+        {LocationsMapFilters.STATE_FILTERS.map(filter => {
+          const filterIsActive = locationFilters.some(
+            activeFilter =>
+              activeFilter.key === filter.key &&
+              activeFilter.value === filter.value
+          );
+
+          return (
+            <Button
+              className="mr2 flex items-center"
+              color={filterIsActive ? 'madison-blue' : 'white-denim'}
+              variant="primary-small"
+              key={filter.value}
+              label={filter.label}
+              onClick={
+                filterIsActive
+                  ? () =>
+                      actions.removeLocationFilter({
+                        key: filter.key,
+                        value: filter.value
+                      })
+                  : () =>
+                      actions.addLocationFilter({
+                        key: filter.key,
+                        value: filter.value
+                      })
+              }
+            />
+          );
+        })}
+      </div>
       <div className="absolute b0 l0 flex p3">
-        {LocationsMapFilters.SEASONAL_FILTERS.map((filter, i) => {
+        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => {
           const filterIsActive = locationFilters.some(
             activeFilter =>
               activeFilter.key === filter.key &&
@@ -62,7 +102,7 @@ const LocationsMap = props => {
               className="mr3 flex items-center"
               color={filterIsActive ? 'madison-blue' : 'white'}
               variant="legend-key"
-              key={i}
+              key={filter.value}
               onClick={
                 filterIsActive
                   ? () =>
