@@ -91,6 +91,7 @@ class Nav extends Component {
                 variant="primary-small"
                 color="white-peach"
                 label="Shop Online"
+                shadow={false}
               />
             </Fragment>
           ) : (

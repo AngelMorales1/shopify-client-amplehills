@@ -95,7 +95,7 @@
   &--circle {
     @extend .circle;
     font-size: $font-5;
-    padding-top: 0;
+    padding-top: 2px;
     height: spacing(10);
     width: spacing(10);
   }
@@ -103,7 +103,6 @@
   &--circle-small {
     @extend .circle;
     padding: 0;
-    padding-top: 0;
     font-size: $font-4;
     height: spacing(7);
     width: spacing(7);
@@ -185,5 +184,9 @@
     &:hover {
       box-shadow: unset;
     }
+  }
+
+  &--shadow-none {
+    box-shadow: 0 0 0 0;
   }
 }

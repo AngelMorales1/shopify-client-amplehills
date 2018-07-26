@@ -17,7 +17,8 @@ const Button = ({
   minWidth,
   fullWidth,
   type,
-  to
+  to,
+  shadow
 }) => {
   const classes = cx(
     className,
@@ -28,7 +29,8 @@ const Button = ({
       [styles['Button--disabled']]: disabled,
       [styles['Button--div']]: to
     },
-    styles[`Button--${variant}`]
+    styles[`Button--${variant}`],
+    { [styles['Button--shadow-none']]: !shadow }
   );
 
   const linkedComponent = isExternalLink(to) ? (
@@ -82,7 +84,8 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
   disabled: PropTypes.bool,
   type: PropTypes.string,
-  to: PropTypes.string
+  to: PropTypes.string,
+  shadow: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -95,7 +98,8 @@ Button.defaultProps = {
   fullWidth: false,
   disabled: false,
   type: 'button',
-  to: ''
+  to: '',
+  shadow: true
 };
 
 export default Button;
