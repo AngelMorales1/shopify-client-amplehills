@@ -1,10 +1,15 @@
 import Data from 'lib/Data';
+import { client as Apollo } from 'lib/Apollo';
 
-export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
-export const fetchProducts = payload => dispatch => {
+import { fetchProducts } from 'state/graphql/products';
+
+export const FETCH_SHOPIFY_PRODUCTS = 'FETCH_SHOPIFY_PRODUCTS';
+export const fetchShopifyProducts = payload => dispatch => {
   return dispatch({
-    type: FETCH_PRODUCTS,
-    payload: Data.fetchProducts()
+    type: FETCH_SHOPIFY_PRODUCTS,
+    payload: Apollo.query({
+      query: fetchProducts
+    })
   });
 };
 

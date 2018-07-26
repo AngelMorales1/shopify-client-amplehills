@@ -5,7 +5,7 @@ import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
 
 import {
-  fetchProducts,
+  fetchShopifyProducts,
   fetchContentfulProducts
 } from 'state/actions/productsActions';
 
@@ -23,7 +23,7 @@ export const initializeApplication = checkoutID => dispatch => {
         fetchOrCreateCheckout(checkoutID)(dispatch),
         getLocationData()(dispatch),
         getGlobalSettings()(dispatch),
-        fetchProducts()(dispatch),
+        fetchShopifyProducts()(dispatch),
         fetchContentfulProducts()(dispatch)
       ])
         .then(([checkout, locations, settings, products, contentfulProducts]) =>

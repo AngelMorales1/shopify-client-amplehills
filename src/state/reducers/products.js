@@ -1,5 +1,5 @@
 import {
-  FETCH_PRODUCTS,
+  FETCH_SHOPIFY_PRODUCTS,
   FETCH_CONTENTFUL_PRODUCTS,
   FETCH_PRODUCT_LANDING
 } from 'state/actions/productsActions';
@@ -13,7 +13,7 @@ const initialState = {
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case `${FETCH_PRODUCTS}_FULFILLED`:
+    case `${FETCH_SHOPIFY_PRODUCTS}_FULFILLED`:
       return {
         ...state,
         products: action.payload
