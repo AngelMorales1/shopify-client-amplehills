@@ -28,8 +28,6 @@ class LocationsLandingView extends Component {
 
   render() {
     const { model } = this.props;
-
-    console.log(this.props.locations.map(location => location.state));
     if (model.isError) return <h1>Error</h1>;
 
     return (
