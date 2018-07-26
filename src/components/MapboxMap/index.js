@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 import cx from 'classnames';
+import isEqual from 'lodash/isEqual';
 
 class MapboxMap extends Component {
   state = {
@@ -143,15 +144,15 @@ class MapboxMap extends Component {
 
   resetMapSource() {
     const hiddenFeatures = this.featuresNotVisible();
-    const filteredFeatures = this.props.featureCollection.features.filter(
-      feature => {
-        const { id } = feature.properties;
-        return !hiddenFeatures.includes(id);
-      }
-    );
+    const filteredFeatures = hiddenFeatures.length
+      ? this.props.featureCollection.features.filter(feature => {
+          const { id } = feature.properties;
+          return !hiddenFeatures.includes(id);
+        })
+      : [];
 
     const filteredGeoJSON = {
-      type: 'feature',
+      type: 'FeatureCollection',
       features: filteredFeatures
     };
 

@@ -9,7 +9,6 @@ import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
   const { filteredOutLocations, locationFilters, actions } = props;
-  console.log(filteredOutLocations);
 
   return (
     <div className={styles['LocationsMap']}>
