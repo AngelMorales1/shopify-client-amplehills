@@ -106,6 +106,7 @@
       align-items: center;
       border-radius: radius('circle');
       font-size: $font-4;
+      margin-top: -1px;
       padding: spacing(2);
       height: spacing(10);
       width: spacing(10);
@@ -117,7 +118,6 @@
   &--quantity-medium {
     input {
       padding: 0;
-      margin: -2px;
       font-size: $font-3;
       height: spacing(9);
       width: spacing(9);

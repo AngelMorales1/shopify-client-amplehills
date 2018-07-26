@@ -48,7 +48,7 @@ const QuantitySelector = ({
       case 'medium':
         return 'quantity-medium';
       default:
-        return 'circle';
+        return 'quantity';
     }
   };
 
