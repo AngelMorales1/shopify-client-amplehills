@@ -9,7 +9,6 @@ export default createSelector(
       'data.shop.products.edges',
       []
     ).reduce((handlizedProducts, product) => {
-      console.log(product);
       const node = get(product, 'node', {});
       const price = parseFloat(get(node, 'variants.edges[0].node.price', 0.0));
       const id = get(node, 'variants.edges[0].node.id', '');
