@@ -88,7 +88,7 @@ class MiniCart extends Component {
                     <span className="line-item-title">${item.price}</span>
                     {subItems.length ? (
                       <div className="w100">
-                        <ul className="mt2 mb1">
+                        <ul className="my1">
                           {subItems.map(subItem => (
                             <li
                               className="sub-line-item small"
@@ -101,7 +101,7 @@ class MiniCart extends Component {
                       </div>
                     ) : null}
                     {products[handle].cartDetails ? (
-                      <div className="flex flex-column my2">
+                      <div className="flex flex-column my1">
                         <pre className={styles['MiniCart__product-details']}>
                           {products[handle].cartDetails}
                         </pre>
