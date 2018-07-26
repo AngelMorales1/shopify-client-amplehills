@@ -27,7 +27,7 @@ class LocationsLandingView extends Component {
   };
 
   render() {
-    const { model, locationFilters } = this.props;
+    const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     return (

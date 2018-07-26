@@ -15,6 +15,7 @@ export default {
   miniCartUI,
   customerUI,
   locationsUI,
+  productUI,
   locations,
   product,
   products,

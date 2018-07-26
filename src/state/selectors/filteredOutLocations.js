@@ -10,7 +10,7 @@ export default createSelector(
     const filteredLocations = locations.filter(location => {
       return (
         !locationFilters.length ||
-        locationFilters.every(filter => location[filter.key] == filter.value)
+        locationFilters.every(filter => location[filter.key] === filter.value)
       );
     });
 

@@ -3,7 +3,6 @@ import mapboxgl from 'mapbox-gl';
 import PropTypes from 'prop-types';
 import uuid from 'uuid/v4';
 import cx from 'classnames';
-import isEqual from 'lodash/isEqual';
 
 class MapboxMap extends Component {
   state = {
