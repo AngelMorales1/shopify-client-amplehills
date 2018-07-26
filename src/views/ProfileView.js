@@ -39,6 +39,7 @@ class ProfileView extends Component {
                 className="small"
                 variant="primary-small"
                 color="peach"
+                shadow={true}
                 label="Sign Out"
                 onClick={this.signOut}
               />

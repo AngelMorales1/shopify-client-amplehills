@@ -137,6 +137,7 @@ class MiniCart extends Component {
               color="madison-blue"
               onClick={() => closeMiniCart()}
               label="Checkout"
+              shadow={true}
             />
           </div>
         </div>

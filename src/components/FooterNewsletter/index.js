@@ -56,6 +56,7 @@ const FooterNewsletter = ({ pathname }) => {
           label="Sign Up"
           variant="primary"
           color="madison-blue"
+          shadow={true}
         />
       </div>
     </div>
