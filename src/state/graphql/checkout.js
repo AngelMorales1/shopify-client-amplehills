@@ -1,5 +1,53 @@
 import gql from 'graphql-tag';
 
+export const checkoutCreate = gql`
+  mutation checkoutCreate($input: CheckoutCreateInput!) {
+    checkoutCreate(input: $input) {
+      userErrors {
+        field
+        message
+      }
+      checkout {
+        id
+        completedAt
+        currencyCode
+        note
+        subtotalPrice
+        totalPrice
+        lineItems(first: 250) {
+          edges {
+            node {
+              customAttributes {
+                key
+                value
+              }
+              id
+              quantity
+              title
+              variant {
+                id
+                compareAtPrice
+                availableForSale
+                title
+                price
+                image {
+                  id
+                  altText
+                  originalSrc
+                }
+                product {
+                  id
+                  handle
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const customerAssociate = gql`
   mutation checkoutCustomerAssociate(
     $checkoutId: ID!

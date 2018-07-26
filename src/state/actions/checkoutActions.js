@@ -4,7 +4,8 @@ import { client as Apollo } from 'lib/Apollo';
 import {
   customerAssociate,
   customerDisassociate,
-  checkoutAttributesUpdate
+  checkoutAttributesUpdate,
+  checkoutCreate
 } from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 import get from 'utils/get';
@@ -43,7 +44,10 @@ export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
 export const createCheckout = () => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
-    payload: BuySDK.checkout.create()
+    payload: Apollo.mutate({
+      mutation: checkoutCreate,
+      variables: { input: {} }
+    })
   });
 };
 
