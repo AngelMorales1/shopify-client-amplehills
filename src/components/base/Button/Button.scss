@@ -2,7 +2,6 @@
 
 .Button {
   @extend .pointer;
-  box-shadow: $drop-shadow;
   font-family: $font-avenir;
   font-size: $font-4;
   font-weight: 800;
@@ -19,6 +18,10 @@
   &:active {
     box-shadow: 0 0 0 0;
     transform: translate3d(0, spacing(0.25), 0);
+  }
+
+  &--shadow {
+    box-shadow: $drop-shadow;
   }
 
   &--disabled {
@@ -184,9 +187,5 @@
     &:hover {
       box-shadow: unset;
     }
-  }
-
-  &--shadow-none {
-    box-shadow: 0 0 0 0;
   }
 }

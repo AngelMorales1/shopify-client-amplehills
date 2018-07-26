@@ -43,6 +43,7 @@ class ProductDetails extends Component {
                 className="m1"
                 color={color}
                 variant="primary-small"
+                shadow={true}
                 key={get(detail, 'sys.id', '')}
                 label={get(detail, 'fields.title', '')}
                 onClick={() =>

@@ -48,6 +48,7 @@ const QuantitySelector = ({
         color={colorVariation(color).buttonColor}
         label="–"
         onClick={() => changeQuantity(quantity - 1)}
+        shadow={true}
       />
       <TextField
         variant={variant === 'small' ? 'quantity-small' : 'quantity'}
@@ -61,6 +62,7 @@ const QuantitySelector = ({
         color={colorVariation(color).buttonColor}
         label="+"
         onClick={() => changeQuantity(quantity + 1)}
+        shadow={true}
       />
     </div>
   );

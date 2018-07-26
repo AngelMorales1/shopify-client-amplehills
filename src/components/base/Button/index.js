@@ -30,7 +30,7 @@ const Button = ({
       [styles['Button--div']]: to
     },
     styles[`Button--${variant}`],
-    { [styles['Button--shadow-none']]: !shadow }
+    { [styles['Button--shadow']]: shadow }
   );
 
   const linkedComponent = isExternalLink(to) ? (
@@ -99,7 +99,7 @@ Button.defaultProps = {
   disabled: false,
   type: 'button',
   to: '',
-  shadow: true
+  shadow: false
 };
 
 export default Button;

@@ -52,6 +52,7 @@ const DeleteModal = props => {
             variant="primary"
             color="madison-blue"
             label="Yes"
+            shadow={true}
             onClick={() => confirmRemoveLineItems(id)}
           />
         </div>
