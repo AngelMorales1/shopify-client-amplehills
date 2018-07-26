@@ -111,11 +111,13 @@
   }
 
   &__message-checkout-container {
-    margin-top: spacing(8);
+    flex-direction: column;
     order: 1;
 
     @media ($medium-up) {
-      margin-top: 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
       order: 2;
     }
   }

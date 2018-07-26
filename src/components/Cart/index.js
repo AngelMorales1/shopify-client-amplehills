@@ -67,227 +67,257 @@ class Cart extends Component {
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
 
     const cart = (
-      <div className={cx(styles['Cart'], 'flex flex-column')}>
-        <Breadcrumbs breadcrumbs={breadcrumbs} className="mb4" />
-        <h2 className="block-headline-mobile-small mx-auto">Cart</h2>
-        <div className={cx(styles['Cart__container'])}>
-          <div
-            className={cx(
-              styles['Cart__block-with-border'],
-              'flex xs-hide sm-hide mt4 py3 justify-between'
-            )}
-          >
-            <span className={cx(styles['Cart__item-title'], 'bold')}>Item</span>
-            <span
+      <div>
+        <Breadcrumbs
+          breadcrumbs={breadcrumbs}
+          className="mx-auto container-width"
+        />
+        <div className={cx(styles['Cart'], 'flex flex-column')}>
+          <h2 className="block-headline-mobile-small mx-auto">Cart</h2>
+          <div className={cx(styles['Cart__container'])}>
+            <div
               className={cx(
-                styles['Cart__quantity-title'],
-                'bold flex justify-end col-3'
+                styles['Cart__block-with-border'],
+                'flex xs-hide sm-hide mt4 py3 justify-between'
               )}
             >
-              Quantity
-            </span>
-            <span className="bold flex justify-end col-3">Total Price</span>
-          </div>
-
-          <div className={cx(styles['Cart__block-with-border'], 'my3 pb3')}>
-            {items.map(item => {
-              const handle = Object.values(products).find(product => {
-                return product.variants.some(
-                  variant => variant.id === item.productId
-                );
-              }).handle;
-
-              return (
-                <div
-                  key={item.id}
-                  className={cx(styles['Cart__content-container'], 'my3 flex')}
-                >
-                  <div className="md-hide lg-hide flex items-start justify-between w100">
-                    <div className="my2">
-                      <Link
-                        className="text-decoration-none"
-                        to={`/products/${handle}`}
-                      >
-                        <span className="bold">{item.title}</span>
-                      </Link>
-                      <div className="flex flex-column mt2">
-                        {item.subItems.map(subItem => {
-                          return (
-                            <span
-                              key={subItem.handle}
-                              className="small mb1"
-                            >{`${subItem.quantity}x ${
-                              products[subItem.handle].title
-                            }`}</span>
-                          );
-                        })}
-                      </div>
-                    </div>
-                    <span className="bold small my2 md-hide lg-hide">
-                      {item.price}
-                    </span>
-                  </div>
-                  <div
-                    className={cx(
-                      styles['Cart__title'],
-                      'xs-hide sm-hide flex flex-column mr-auto'
-                    )}
-                  >
-                    <Link
-                      className="text-decoration-none"
-                      to={`/products/${handle}`}
-                    >
-                      <span className="bold ">{item.title}</span>
-                    </Link>
-                    {item.subItems.map(subItem => {
-                      return (
-                        <span key={subItem.handle} className="small mb1">{`${
-                          subItem.quantity
-                        }x ${products[subItem.handle].title}`}</span>
-                      );
-                    })}
-                    {products[handle].cartDetails ? (
-                      <div className="flex flex-column">
-                        <pre className={styles['Cart__product-details']}>
-                          {products[handle].cartDetails}
-                        </pre>
-                      </div>
-                    ) : null}
-                  </div>
-                  <div
-                    className={cx(
-                      styles['Cart__content-inner-wrapper'],
-                      'mr2 flex'
-                    )}
-                  >
-                    <div
-                      className={cx(
-                        styles['Cart__delete'],
-                        'flex items-center col-8'
-                      )}
-                    >
-                      <Button
-                        variant="style-none"
-                        onClick={() => actions.removeLineItems(item.id)}
-                      >
-                        <Image
-                          className="icon-small"
-                          src="/assets/images/icon-trash.svg"
-                        />
-                      </Button>
-                    </div>
-                    <div className="flex items-center">
-                      <QuantitySelector
-                        quantity={item.quantity}
-                        variant="small"
-                        onChange={quantity =>
-                          this.updateLineItem(item.id, quantity)
-                        }
-                      />
-                    </div>
-                  </div>
-                  <span className="bold small my2 xs-hide sm-hide col-3 flex justify-end items-center">
-                    ${item.price}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-          <div
-            className={cx(
-              styles['Cart__shipping-info'],
-              'flex flex-column justify-between'
-            )}
-          >
-            <div
-              className={cx(styles['Cart__shipping-info__container'], 'flex')}
-            >
-              <div className="col-12 md-col-5">
-                <p className="uppercase info-text-small">
-                  When the shipping label is created you will receive an email
-                  with your tracking number.
-                </p>
-              </div>
-              <div
+              <span
+                className={cx(styles['Cart__item-title'], 'line-item-title')}
+              >
+                Item
+              </span>
+              <span
                 className={cx(
-                  styles['Cart__shipping-info__checkout'],
-                  'col-12 md-col-4'
+                  styles['Cart__quantity-title'],
+                  'line-item-title flex justify-end col-3'
                 )}
               >
-                <p
+                Quantity
+              </span>
+              <span className="line-item-title flex justify-end col-2">
+                Total Price
+              </span>
+            </div>
+
+            <div className={cx(styles['Cart__block-with-border'], 'my3 pb3')}>
+              {items.map(item => {
+                const handle = Object.values(products).find(product => {
+                  return product.variants.some(
+                    variant => variant.id === item.productId
+                  );
+                }).handle;
+
+                return (
+                  <div
+                    key={item.id}
+                    className={cx(
+                      styles['Cart__content-container'],
+                      'my3 flex'
+                    )}
+                  >
+                    <div className="md-hide lg-hide flex items-start justify-between w100">
+                      <div className="my2">
+                        <Link
+                          className="text-decoration-none"
+                          to={`/products/${handle}`}
+                        >
+                          <span className="small bold">{item.title}</span>
+                        </Link>
+                        <div className="flex flex-column mt2">
+                          {item.subItems.map(subItem => {
+                            return (
+                              <span
+                                key={subItem.handle}
+                                className="small mb1"
+                              >{`${subItem.quantity}x ${
+                                products[subItem.handle].title
+                              }`}</span>
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <span className="line-item-title my2 md-hide lg-hide">
+                        {item.price}
+                      </span>
+                    </div>
+                    <div
+                      className={cx(
+                        styles['Cart__title'],
+                        'xs-hide sm-hide flex flex-column mr-auto'
+                      )}
+                    >
+                      <Link
+                        className="text-decoration-none mb2"
+                        to={`/products/${handle}`}
+                      >
+                        <span className="small bold">{item.title}</span>
+                      </Link>
+                      {item.subItems.map(subItem => {
+                        return (
+                          <span key={subItem.handle} className="small mb1">{`${
+                            subItem.quantity
+                          }x ${products[subItem.handle].title}`}</span>
+                        );
+                      })}
+                      {products[handle].cartDetails ? (
+                        <div className="flex flex-column">
+                          <pre className={styles['Cart__product-details']}>
+                            {products[handle].cartDetails}
+                          </pre>
+                        </div>
+                      ) : null}
+                    </div>
+                    <div
+                      className={cx(
+                        styles['Cart__content-inner-wrapper'],
+                        'mr2 flex'
+                      )}
+                    >
+                      <div
+                        className={cx(
+                          styles['Cart__delete'],
+                          'flex items-center col-7'
+                        )}
+                      >
+                        <Button
+                          variant="style-none"
+                          onClick={() => actions.removeLineItems(item.id)}
+                        >
+                          <Image
+                            className="icon-small"
+                            src="/assets/images/icon-trash.svg"
+                          />
+                        </Button>
+                      </div>
+                      <div className="flex items-center">
+                        <QuantitySelector
+                          quantity={item.quantity}
+                          variant="small"
+                          onChange={quantity =>
+                            this.updateLineItem(item.id, quantity)
+                          }
+                        />
+                      </div>
+                    </div>
+                    <span className="line-item-title my2 xs-hide sm-hide col-2 flex justify-end items-center">
+                      ${item.price}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+            <div
+              className={cx(
+                styles['Cart__shipping-info'],
+                'flex flex-column justify-between'
+              )}
+            >
+              <div
+                className={cx(styles['Cart__shipping-info__container'], 'flex')}
+              >
+                <div className="col-12 md-col-4">
+                  <p className="uppercase info-text-small">
+                    When the shipping label is created you will receive an email
+                    with your tracking number.
+                  </p>
+                </div>
+                <div
                   className={cx(
-                    styles['Cart__shipping-info__tax'],
-                    'uppercase info-text-small flex items-center col-6 md-col-12'
+                    styles['Cart__shipping-info__checkout'],
+                    'col-12 md-col-4'
                   )}
                 >
-                  Shipping & taxes calculated at checkout
-                </p>
+                  <p
+                    className={cx(
+                      styles['Cart__shipping-info__tax'],
+                      'uppercase info-text-small flex items-center col-6 md-col-12'
+                    )}
+                  >
+                    Shipping & taxes calculated at checkout
+                  </p>
+                  <p className="tout bold sm-hide xs-hide">
+                    Subtotal: ${this.props.checkout.subtotalPrice}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div
-            className={cx(
-              styles['Cart__message-checkout-container'],
-              'flex flex-row justify-between'
-            )}
-          >
-            <div className="col-12 md-col-6 xs-hide sm-hide">
-              <div className="flex justify-between items-center">
-                <h2 className="sub-title mt2 mb3">Gift Message</h2>
-                <Button
-                  disabled={
-                    this.state.note === currentNote || updatingNote === PENDING
-                  }
-                  className={cx(styles['Cart__update-button'], {
-                    [styles['Cart__update-button--active']]:
-                      this.state.note !== currentNote
-                  })}
-                  variant="primary-small"
-                  color="peach"
-                  label="Update"
-                  onClick={this.updateNote}
-                />
-              </div>
-              {updatingNote === FULFILLED ? (
-                <FormFlash
-                  className="mb2"
-                  success={true}
-                  message="Your gift message has updated successfully."
-                />
-              ) : null}
-              {updatingNote === REJECTED ? (
-                <FormFlash
-                  className="mt1"
-                  error={true}
-                  message="There was an unexpected error while updating your gift message."
-                />
-              ) : null}
-              <TextField
-                className="mb2 md-hide lg-hide"
-                variant="light-gray"
-                placeholder={`Write a message`}
-              />
-              <TextField
-                className="mb2 xs-hide sm-hide"
-                variant="light-gray-tall"
-                multiLine={true}
-                placeholder={`Write a message. Don't forget to include your name!`}
-                value={this.state.note}
-                onChange={note =>
-                  note ? this.setState({ note }) : this.setState({ note: '' })
-                }
-              />
-              <span className="uppercase info-text-small">
-                Gift messages will not include prices
-              </span>
+
               <div
                 className={cx(
-                  styles['Cart__decorative-line'],
-                  'mt3 md-hide lg-hide w100'
+                  styles['Cart__message-checkout-container'],
+                  'flex'
                 )}
-              />
+              >
+                <div className="col-12 md-col-6">
+                  <div className="flex justify-between items-center">
+                    <h2 className="sub-title mt2 mb3">Gift Message</h2>
+                    <Button
+                      disabled={
+                        this.state.note === currentNote ||
+                        updatingNote === PENDING
+                      }
+                      className={cx(styles['Cart__update-button'], {
+                        [styles['Cart__update-button--active']]:
+                          this.state.note !== currentNote
+                      })}
+                      variant="primary-small"
+                      color="peach"
+                      label="Update"
+                      onClick={this.updateNote}
+                    />
+                  </div>
+                  {updatingNote === FULFILLED ? (
+                    <FormFlash
+                      className="mb2"
+                      success={true}
+                      message="Your gift message has updated successfully."
+                    />
+                  ) : null}
+                  {updatingNote === REJECTED ? (
+                    <FormFlash
+                      className="mt1"
+                      error={true}
+                      message="There was an unexpected error while updating your gift message."
+                    />
+                  ) : null}
+                  <TextField
+                    className="mb2 md-hide lg-hide"
+                    variant="light-gray"
+                    placeholder={`Write a message.`}
+                    value={this.state.note}
+                    onChange={note =>
+                      note
+                        ? this.setState({ note })
+                        : this.setState({ note: '' })
+                    }
+                  />
+                  <TextField
+                    className="mb2 xs-hide sm-hide"
+                    variant="light-gray-tall"
+                    type={'textarea'}
+                    placeholder={`Write a message.`}
+                    value={this.state.note}
+                    onChange={note =>
+                      note
+                        ? this.setState({ note })
+                        : this.setState({ note: '' })
+                    }
+                  />
+                  <span className="uppercase info-text-small">
+                    Gift messages will not include prices
+                  </span>
+                  <div
+                    className={cx(
+                      styles['Cart__block-with-border'],
+                      'mt3 md-hide lg-hide w100'
+                    )}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="my1 md-col-4">
+            <div className="my1 col-12 md-col-4 flex flex-row items-center justify-between">
+              <p className="line-item-title md-hide lg-hide">
+                Subtotal: ${this.props.checkout.subtotalPrice}
+              </p>
               <Button
                 className="inline-block"
                 label="Checkout"
@@ -296,8 +326,8 @@ class Cart extends Component {
               />
             </div>
           </div>
+          <DeleteModal />
         </div>
-        <DeleteModal />
       </div>
     );
 
