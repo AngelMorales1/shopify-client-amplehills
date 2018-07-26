@@ -2,8 +2,7 @@ import hashify from 'object-hash';
 
 const Data = {
   cache: {
-    getEntries: {},
-    fetchProducts: {}
+    getEntries: {}
   },
   setRef(clientID, client) {
     this[clientID] = client;
@@ -16,19 +15,6 @@ const Data = {
 
     return this.contentful.getEntries(query).then(val => {
       this.cache.getEntries[hashified] = val;
-      return val;
-    });
-  },
-  fetchProducts() {
-    const hashified = hashify('fetchAll');
-
-    if (this.cache.fetchProducts[hashified])
-      return new Promise(resolve =>
-        resolve(this.cache.fetchProducts[hashified])
-      );
-
-    return this.shopify.product.fetchAll().then(val => {
-      this.cache.fetchProducts[hashified] = val;
       return val;
     });
   }
