@@ -124,7 +124,7 @@ class MapboxMap extends Component {
     this.setIconImageProperty();
 
     if (this.props.cluster) {
-      this.resetMapSource();
+      this.setMapData();
     } else {
       this.setVisibilityProperty();
     }
@@ -141,7 +141,7 @@ class MapboxMap extends Component {
     ]);
   }
 
-  resetMapSource() {
+  setMapData() {
     const hiddenFeatures = this.featuresNotVisible();
     const filteredFeatures = hiddenFeatures.length
       ? this.props.featureCollection.features.filter(feature => {
