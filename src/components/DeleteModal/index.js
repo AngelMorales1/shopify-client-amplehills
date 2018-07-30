@@ -33,7 +33,7 @@ const DeleteModal = props => {
       <div
         className={cx(
           styles['DeleteModal-inner'],
-          'w100 bg-white drop-shadow-xlarge p3 card'
+          'w100 bg-white drop-shadow-xlarge p3 m3 card'
         )}
       >
         <div className="mb4">
@@ -41,7 +41,7 @@ const DeleteModal = props => {
             Are you sure you want to remove this from your cart?
           </span>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end items-center">
           <Button
             variant="no-style"
             label="Cancel"
