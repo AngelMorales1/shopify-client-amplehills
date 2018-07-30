@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
+import LocationsMapKey from 'constants/LocationsMapKey';
 
 import { Image, Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
@@ -90,7 +91,7 @@ const LocationsMap = props => {
         })}
       </div>
       <div className="absolute b0 l0 flex p3">
-        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => (
+        {LocationsMapKey.SEASONAL_FILTERS.map(filter => (
           <div
             className={cx(
               styles['LocationsMap__map-key-item'],
