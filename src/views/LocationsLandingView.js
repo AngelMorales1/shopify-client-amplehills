@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Global from 'constants/Global';
 
 import LocationsMap from 'components/LocationsMap';
+import LocationsSideRail from 'components/LocationsSideRail';
 
 class LocationsLandingView extends Component {
   state = {
@@ -37,6 +38,9 @@ class LocationsLandingView extends Component {
             <LocationsMap {...this.props} />
           </div>
         ) : null}
+        <div className="col col-12 md-col-4">
+          <LocationsSideRail {...this.props} />
+        </div>
       </div>
     );
   }

@@ -11,7 +11,6 @@ import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
   const { filteredOutLocations, locationFilters, actions } = props;
-
   return (
     <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
