@@ -325,6 +325,12 @@ class Cart extends Component {
                 </div>
                 <div className="mt4 col-4 xs-hide sm-hide flex flex-row">
                   <Button
+                    className="inline-block mr3"
+                    label="Checkout"
+                    color="madison-blue"
+                    to={get(checkout, 'webUrl', '')}
+                  />
+                  <Button
                     disabled={
                       this.state.note === currentNote ||
                       updatingNote === PENDING
@@ -336,12 +342,6 @@ class Cart extends Component {
                     color="peach"
                     label="Update"
                     onClick={this.updateNote}
-                  />
-                  <Button
-                    className="inline-block ml3"
-                    label="Checkout"
-                    color="madison-blue"
-                    to={get(checkout, 'webUrl', '')}
                   />
                 </div>
               </div>
