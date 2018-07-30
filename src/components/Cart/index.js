@@ -99,7 +99,7 @@ class Cart extends Component {
               </span>
             </div>
 
-            <div className={cx(styles['Cart__block-with-border'], 'my3 pb3')}>
+            <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {items.map(item => {
                 const handle = Object.values(products).find(product => {
                   return product.variants.some(
@@ -249,7 +249,14 @@ class Cart extends Component {
               >
                 <div className="col-12 md-col-6">
                   <div className="flex justify-between items-center">
-                    <h2 className="sub-title mt2 mb3">Gift Message</h2>
+                    <h2
+                      className={cx(
+                        styles['Cart__gift-message'],
+                        'sub-title mb2'
+                      )}
+                    >
+                      Gift Message
+                    </h2>
                     <Button
                       disabled={
                         this.state.note === currentNote ||
@@ -312,10 +319,18 @@ class Cart extends Component {
                     )}
                   />
                 </div>
+                <div className="col-4 xs-hide sm-hide">
+                  <Button
+                    className="inline-block mt4"
+                    label="Checkout"
+                    color="madison-blue"
+                    to={get(checkout, 'webUrl', '')}
+                  />
+                </div>
               </div>
             </div>
-            <div className="my1 col-12 md-col-4 flex flex-row items-center justify-between">
-              <p className="line-item-title md-hide lg-hide">
+            <div className="my1 col-12 md-col-4 flex flex-row items-center justify-between md-hide lg-hide">
+              <p className="line-item-title">
                 Subtotal: ${this.props.checkout.subtotalPrice}
               </p>
               <Button
