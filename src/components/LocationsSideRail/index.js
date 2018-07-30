@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 
 import { Image, Button } from 'components/base';
+import styles from './LocationsSideRail.scss';
 
 const LocationsSideRail = props => {
   const locations = props.locations;
@@ -21,12 +22,12 @@ const LocationsSideRail = props => {
   };
 
   return (
-    <div>
-      {locations.map(location => {
+    <div className={cx(styles['LocationsSideRail'], 'overflow-scroll')}>
+      {locations.map((location, index) => {
         const locationOpenHours = getTodayOpenHours(location);
 
         return (
-          <div className="border">
+          <div key={`${index}-${location.id}`} className="col-10 mx-auto">
             <div>
               <Image
                 src={get(location, 'image.fields.file.url', '')}
