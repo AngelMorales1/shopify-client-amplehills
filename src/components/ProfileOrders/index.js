@@ -79,7 +79,7 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
             <strong className="bold block mb2">
               Your order history will live here.
             </strong>
-            <p>What will your first purchase be?</p>
+            <p className="small">What will your first purchase be?</p>
             <Button
               className="small mt4"
               variant="primary-small"
