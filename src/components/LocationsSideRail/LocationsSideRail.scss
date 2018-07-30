@@ -2,4 +2,19 @@
 
 .LocationsSideRail {
   height: calc(100vh - #{$header-height-desktop});
+
+  &__card-container {
+    border-radius: radius('s');
+    min-height: spacing(100);
+
+    @media ($medium-up) {
+      min-height: spacing(120);
+    }
+  }
+
+  &__card-image {
+    height: spacing(50);
+    border-top-right-radius: radius('s');
+    border-top-left-radius: radius('s');
+  }
 }
