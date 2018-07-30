@@ -60,16 +60,14 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
               ))}
               <div className="mt4 flex flex-wrap">
                 <Button
-                  className="tag mb2 mr2 bg-peach text-white overflow-auto"
+                  className="tag mb2 mr2 bg-peach text-white w-auto"
                   variant="secondary"
                   label="View Receipt"
-                  shadow={true}
                   to={order.receipt}
                 />
                 <Button
                   className="tag mb2 bg-peach text-white"
                   variant="secondary"
-                  shadow={true}
                   label="Re-order"
                   onClick={() => handleReorder(order)}
                 />
