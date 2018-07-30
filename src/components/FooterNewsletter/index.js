@@ -17,7 +17,7 @@ const FooterNewsletter = ({ pathname }) => {
     <div
       className={cx(
         styles['FooterNewsletter'],
-        'my4 py4 px3 flex items-center'
+        'mt4 py4 px3 flex items-center drip bg-white z-1'
       )}
     >
       <div
