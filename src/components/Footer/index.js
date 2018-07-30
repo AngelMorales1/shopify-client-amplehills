@@ -2,28 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import styles from './Footer.scss';
+import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
-import { Image } from 'components/base';
+
+import styles from './Footer.scss';
 
 const Footer = ({ footerIllustration, footerLinks, locations }) => {
-  const sortDataByRegion = (data = []) => {
-    return data.reduce((accumulated, current) => {
-      let region = current.fields.region;
-      accumulated[region]
-        ? (accumulated[region] = accumulated[region].concat([current]))
-        : (accumulated[region] = [current]);
-      return accumulated;
-    }, {});
-  };
-
   return (
     <div
       className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
     >
       <div className={cx('flex', styles['Footer__container'])}>
-        <FooterLocations locations={sortDataByRegion(locations.items)} />
+        <FooterLocations locations={locations} />
         <FooterLinks
           footerIllustration={footerIllustration}
           footerLinks={footerLinks}
@@ -74,7 +65,5 @@ Footer.defaultProps = {
     }
   },
   footerLinks: {},
-  locations: {
-    items: []
-  }
+  locations: []
 };
