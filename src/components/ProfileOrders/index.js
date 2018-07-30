@@ -75,16 +75,18 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
             </div>
           ))
         ) : (
-          <div className="card card--light-gray-border px3 pt3 pb2 my2 flex flex-column items-center">
+          <div className="card card--light-gray-border p4 pb2 my2 flex flex-column items-center">
             <strong className="bold block mb2">
               Your order history will live here.
             </strong>
-            <p className="small">What will your first purchase be?</p>
+            <p className="small">
+              You don&apos;t have any past orders. Let&apos;s fix that!
+            </p>
             <Button
-              className="small mt4"
+              className="small mt3 pt0 pb1 h100 align-middle"
               variant="primary-small"
               color="peach"
-              label="Let&apos;s explore!"
+              label="Find your pint →"
               to={'/products'}
             />
           </div>
