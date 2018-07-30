@@ -32,6 +32,12 @@ class App extends Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }
+
   render() {
     const { applicationStatus } = this.props;
     const {
