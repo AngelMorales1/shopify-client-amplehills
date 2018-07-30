@@ -75,7 +75,7 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
             </div>
           ))
         ) : (
-          <div className="card card--light-gray-border p4 pb2 my2 flex flex-column items-center">
+          <div className="card card--light-gray-border py4 px2 pb2 my2 flex flex-column items-center">
             <strong className="bold block mb2">
               Your order history will live here.
             </strong>
