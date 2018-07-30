@@ -53,9 +53,7 @@ const FooterLocations = ({ locations }) => {
           >
             <h3 className="my2 text-white callout">{region}</h3>
             {regions[region].map(location => {
-              console.log('sdsdds');
               let hours = sortHours(location);
-              console.log(hours);
               return (
                 <div
                   className={cx('mb3', styles['Footer__Regions-store'])}
