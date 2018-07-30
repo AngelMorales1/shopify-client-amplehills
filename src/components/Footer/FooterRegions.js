@@ -59,22 +59,5 @@ FooterRegions.propTypes = {
 
 FooterRegions.defaultProps = {
   region: '',
-  locations: [
-    {
-      fields: {
-        title: '',
-        delivery: false,
-        monday: '',
-        tuesday: '',
-        wednesday: '',
-        thursday: '',
-        friday: '',
-        saturday: '',
-        sunday: ''
-      },
-      sys: {
-        id: ''
-      }
-    }
-  ]
+  locations: []
 };
