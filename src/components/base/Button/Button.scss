@@ -32,8 +32,7 @@
   }
 
   &--primary,
-  &--primary-small,
-  &--legend-key {
+  &--primary-small {
     display: flex;
     align-items: center;
     border-radius: radius('l');
@@ -44,14 +43,6 @@
   &--primary-small {
     height: $button-small-height;
     padding: spacing(2) spacing(6);
-  }
-
-  &--legend-key {
-    padding: 0 spacing(8) 0 spacing(4);
-
-    span {
-      margin-top: spacing(1);
-    }
   }
 
   &--secondary {

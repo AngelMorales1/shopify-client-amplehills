@@ -2,4 +2,13 @@
 
 .LocationsMap {
   height: calc(100vh - #{$header-height-desktop});
+
+  &__map-key-item {
+    height: $button-small-height;
+    border-radius: radius('l');
+
+    span {
+      margin-top: spacing(1);
+    }
+  }
 }

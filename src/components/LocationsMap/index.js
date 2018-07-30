@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
+import LocationsMapKey from 'constants/LocationsMapKey';
 
 import { Image, Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
@@ -90,38 +91,18 @@ const LocationsMap = props => {
         })}
       </div>
       <div className="absolute b0 l0 flex p3">
-        {LocationsMapFilters.SEASONAL_FILTERS.map(filter => {
-          const filterIsActive = locationFilters.some(
-            activeFilter =>
-              activeFilter.key === filter.key &&
-              activeFilter.value === filter.value
-          );
-
-          return (
-            <Button
-              className="mr3 flex items-center"
-              color={filterIsActive ? 'madison-blue' : 'white'}
-              variant="legend-key"
-              key={filter.value}
-              onClick={
-                filterIsActive
-                  ? () =>
-                      actions.removeLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-                  : () =>
-                      actions.addLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-              }
-            >
-              <Image src={filter.icon} className="mr2" />
-              <span>{filter.label}</span>
-            </Button>
-          );
-        })}
+        {LocationsMapKey.SEASONAL_FILTERS.map(filter => (
+          <div
+            className={cx(
+              styles['LocationsMap__map-key-item'],
+              'mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold'
+            )}
+            key={filter.value}
+          >
+            <Image src={filter.icon} className="mr2" />
+            <span>{filter.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
