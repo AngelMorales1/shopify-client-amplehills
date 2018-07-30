@@ -6,7 +6,8 @@ import get from 'utils/get';
 
 import {
   addLocationFilter,
-  removeLocationFilter
+  removeLocationFilter,
+  clearLocationFilters
 } from 'state/actions/ui/locationsUIActions';
 
 import locations from 'state/selectors/locations';
@@ -33,7 +34,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         addLocationFilter,
-        removeLocationFilter
+        removeLocationFilter,
+        clearLocationFilters
       },
       dispatch
     )
