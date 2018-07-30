@@ -1,6 +1,7 @@
 @import 'settings', 'src/styles/typography';
 
 .Nav {
+  animation: fade-in 0.3s;
   padding: spacing(4) spacing(4);
 
   @media ($medium-up) {
@@ -34,5 +35,15 @@
     @media ($medium-up) {
       justify-content: flex-end;
     }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    background: color('white');
+  }
+
+  100% {
+    background: color('peach');
   }
 }
