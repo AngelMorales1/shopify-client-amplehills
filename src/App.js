@@ -42,8 +42,6 @@ class App extends Component {
       footerIllustration
     } = globalSettings;
 
-    console.log(locations);
-
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
