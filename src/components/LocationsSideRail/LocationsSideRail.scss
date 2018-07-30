@@ -5,17 +5,44 @@
 
   &__card-container {
     border-radius: radius('s');
-    min-height: spacing(100);
+    min-height: spacing(96);
 
     @media ($medium-up) {
       min-height: spacing(120);
     }
   }
 
+  &__card-seasonal {
+    top: spacing(37);
+    right: spacing(12);
+
+    @media ($medium-up) {
+      top: spacing(47);
+    }
+  }
+
+  &__card-seasonal-image {
+    width: spacing(8);
+    margin-bottom: spacing(-7);
+  }
+
+  &__card-seasonal-circle {
+    width: spacing(17);
+    height: spacing(17);
+  }
+
+  &__card-seasonal-circle-text {
+    margin-top: spacing(6);
+  }
+
   &__card-image {
-    height: spacing(50);
     border-top-right-radius: radius('s');
     border-top-left-radius: radius('s');
+    height: spacing(50);
+
+    @media ($medium-up) {
+      height: spacing(60);
+    }
   }
 
   &__card-text {
@@ -23,7 +50,26 @@
   }
 
   &__card-delivery {
-    padding: spacing(3) spacing(6);
+    padding: spacing(2.5) spacing(5);
     border-radius: radius('l');
+    letter-spacing: spacing(0.2);
+  }
+
+  &__card-drip {
+    position: relative;
+
+    &::before {
+      background-color: color('white');
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: spacing(-5);
+      width: 100%;
+      height: spacing(10);
+      mask: url('/assets/images/card-polygon.svg') no-repeat;
+      mask-position: center;
+      mask-size: cover;
+    }
   }
 }

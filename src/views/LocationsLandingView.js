@@ -38,7 +38,7 @@ class LocationsLandingView extends Component {
             <LocationsMap {...this.props} />
           </div>
         ) : null}
-        <div className="col col-12 md-col-4">
+        <div>
           <LocationsSideRail {...this.props} />
         </div>
       </div>
