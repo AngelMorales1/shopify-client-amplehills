@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { sortHours } from 'utils/sortHours';
-import FooterRegions from 'constants/FooterRegions.js';
+import FooterRegions from 'constants/FooterRegions';
+import locationModel from 'models/locationModel';
 
 import styles from './Footer.scss';
 
@@ -88,9 +89,9 @@ const FooterLocations = ({ locations }) => {
 export default FooterLocations;
 
 FooterLocations.propTypes = {
-  locations: PropTypes.object
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 FooterLocations.defaultProps = {
-  locations: {}
+  locations: []
 };
