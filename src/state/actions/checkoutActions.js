@@ -44,9 +44,13 @@ export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
 export const createCheckout = () => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
-    payload: Apollo.mutate({
-      mutation: checkoutCreate,
-      variables: { input: {} }
+    payload: new Promise(resolve => {
+      return Apollo.mutate({
+        mutation: checkoutCreate,
+        variables: { input: {} }
+      }).then(checkout =>
+        resolve(get(checkout, 'data.checkoutCreate.checkout', {}))
+      );
     })
   });
 };
