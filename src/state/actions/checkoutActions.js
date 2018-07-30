@@ -7,7 +7,8 @@ import {
   checkoutAttributesUpdate,
   checkoutFetch,
   checkoutCreate,
-  checkoutLineItemsAdd
+  checkoutLineItemsAdd,
+  checkoutLineItemsRemove
 } from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 import get from 'utils/get';
@@ -104,13 +105,22 @@ export const cancelRemoveLineItems = itemId => {
 };
 
 export const CONFIRM_REMOVE_LINE_ITEMS = 'CONFIRM_REMOVE_LINE_ITEMS';
-export const confirmRemoveLineItems = (checkoutId, items) => dispatch => {
+export const confirmRemoveLineItems = (checkoutId, lineItemIds) => dispatch => {
   return dispatch({
     type: CONFIRM_REMOVE_LINE_ITEMS,
-    payload: new Promise(resolve => {
-      BuySDK.checkout.removeLineItems(checkoutId, items).then(checkout => {
-        items.map(item => dispatch(cancelRemoveLineItems(item)));
-        resolve(checkout);
+    payload: new Promise((resolve, reject) => {
+      return Apollo.mutate({
+        mutation: checkoutLineItemsRemove,
+        variables: { checkoutId, lineItemIds }
+      }).then(res => {
+        if (get(res, 'data.checkoutLineItemsRemove.userErrors', []).length) {
+          return reject(
+            get(res, 'data.checkoutLineItemsRemove.userErrors[0].message', '')
+          );
+        }
+
+        lineItemIds.map(id => dispatch(cancelRemoveLineItems(id)));
+        return resolve(get(res, 'data.checkoutLineItemsRemove.checkout', {}));
       });
     })
   });

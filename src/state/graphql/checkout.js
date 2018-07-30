@@ -143,6 +143,57 @@ export const checkoutLineItemsAdd = gql`
   }
 `;
 
+export const checkoutLineItemsRemove = gql`
+  mutation checkoutLineItemsRemove($checkoutId: ID!, $lineItemIds: [ID!]!) {
+    checkoutLineItemsRemove(
+      checkoutId: $checkoutId
+      lineItemIds: $lineItemIds
+    ) {
+      userErrors {
+        field
+        message
+      }
+      checkout {
+        id
+        completedAt
+        currencyCode
+        note
+        subtotalPrice
+        totalPrice
+        lineItems(first: 250) {
+          edges {
+            node {
+              customAttributes {
+                key
+                value
+              }
+              id
+              quantity
+              title
+              variant {
+                id
+                compareAtPrice
+                availableForSale
+                title
+                price
+                image {
+                  id
+                  altText
+                  originalSrc
+                }
+                product {
+                  id
+                  handle
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const customerAssociate = gql`
   mutation checkoutCustomerAssociate(
     $checkoutId: ID!
