@@ -9,14 +9,14 @@ const FooterRegions = ({ region, locations }) => {
     <div className={cx('flex flex-column', styles['Footer__Regions-content'])}>
       <h3 className="my2 text-white callout">{region}</h3>
       {locations.map(location => {
-        let hours = sortHours(location.fields);
+        let hours = sortHours(location);
         return (
           <div
             className={cx('mb3', styles['Footer__Regions-store'])}
-            key={location.sys.id}
+            key={location.id}
           >
             <h4 className="mb1 text-white bold small nowrap">
-              {location.fields.title}
+              {location.title}
             </h4>
             {Object.keys(hours).map((hour, i) => {
               return (
@@ -25,7 +25,7 @@ const FooterRegions = ({ region, locations }) => {
                 }: ${hour}`}</p>
               );
             })}
-            {location.fields.delivery ? (
+            {location.delivery ? (
               <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
                 Order Delivery
               </div>
@@ -43,20 +43,16 @@ FooterRegions.propTypes = {
   region: PropTypes.string,
   locations: PropTypes.arrayOf(
     PropTypes.shape({
-      fields: PropTypes.shape({
-        title: PropTypes.string,
-        delivery: PropTypes.bool,
-        monday: PropTypes.string,
-        tuesday: PropTypes.string,
-        wednesday: PropTypes.string,
-        thursday: PropTypes.string,
-        friday: PropTypes.string,
-        saturday: PropTypes.string,
-        sunday: PropTypes.string
-      }),
-      sys: PropTypes.shape({
-        id: PropTypes.string
-      })
+      title: PropTypes.string,
+      delivery: PropTypes.bool,
+      monday: PropTypes.string,
+      tuesday: PropTypes.string,
+      wednesday: PropTypes.string,
+      thursday: PropTypes.string,
+      friday: PropTypes.string,
+      saturday: PropTypes.string,
+      sunday: PropTypes.string,
+      id: PropTypes.string
     })
   )
 };

@@ -10,7 +10,7 @@ import { Image } from 'components/base';
 const Footer = ({ footerIllustration, footerLinks, locations }) => {
   const sortDataByRegion = (data = []) => {
     return data.reduce((accumulated, current) => {
-      let region = current.fields.region;
+      let region = current.region;
       accumulated[region]
         ? (accumulated[region] = accumulated[region].concat([current]))
         : (accumulated[region] = [current]);
@@ -23,7 +23,7 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
       className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
     >
       <div className={cx('flex', styles['Footer__container'])}>
-        <FooterLocations locations={sortDataByRegion(locations.items)} />
+        <FooterLocations locations={sortDataByRegion(locations)} />
         <FooterLinks
           footerIllustration={footerIllustration}
           footerLinks={footerLinks}
@@ -74,7 +74,5 @@ Footer.defaultProps = {
     }
   },
   footerLinks: {},
-  locations: {
-    items: []
-  }
+  locations: []
 };

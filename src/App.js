@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import whatInput from 'what-input';
 
 import { initializeApplication } from 'state/actions/applicationActions';
+import locations from 'state/selectors/locations';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
@@ -33,12 +34,16 @@ class App extends Component {
   }
 
   render() {
-    const { applicationStatus } = this.props;
+    const { applicationStatus, locations, globalSettings } = this.props;
     const {
       facebookLink,
       instagramLink,
-      twitterLink
-    } = this.props.globalSettings;
+      twitterLink,
+      footerIllustration
+    } = globalSettings;
+
+    console.log(locations);
+
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
@@ -47,8 +52,8 @@ class App extends Component {
           <Routes location={get(this, 'props.location')} />
           <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
           <Footer
-            locations={this.props.locations}
-            footerIllustration={this.props.globalSettings.footerIllustration}
+            locations={locations}
+            footerIllustration={footerIllustration}
             footerLinks={{ facebookLink, instagramLink, twitterLink }}
           />
         </div>
@@ -67,7 +72,7 @@ const mapStateToProps = state => {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
     checkout: get(state, 'session.checkout'),
-    locations: get(state, 'applicationUI.locations', {}),
+    locations: locations(state),
     globalSettings: get(
       state,
       'applicationUI.globalSettings.items[0].fields',
