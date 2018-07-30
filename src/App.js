@@ -39,7 +39,7 @@ class App extends Component {
       instagramLink,
       twitterLink
     } = this.props.globalSettings;
-    if (applicationStatus === FULFILLED) {
+    if (applicationStatus === 'FULFILLED') {
       return (
         <div className="App">
           <Nav />

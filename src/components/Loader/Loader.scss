@@ -1,0 +1,15 @@
+@import 'settings';
+
+.Loader {
+  justify-content: start;
+
+  @media ($medium-up) {
+    justify-content: center;
+  }
+
+  &__image {
+    @media ($medium-up) {
+      width: 110px;
+    }
+  }
+}

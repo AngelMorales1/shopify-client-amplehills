@@ -1,11 +1,16 @@
-import React from "react";
+import React from 'react';
+import cx from 'classnames';
 
-const Loader = ({ message }) => {
+import { Image } from 'components/base';
+import styles from './Loader.scss';
+
+const Loader = () => {
   return (
-    <div
-      className={`Loader flex justify-center items-center absolute-cover bg-black text-white p2`}
-    >
-      <span>{message ? message : "Loading..."}</span>
+    <div className={cx(styles['Loader'], `w100 flex bg-white p2`)}>
+      <Image
+        className={styles['Loader__image']}
+        src="/assets/images/ample-hills-logo.svg"
+      />
     </div>
   );
 };
