@@ -1,5 +1,49 @@
 import gql from 'graphql-tag';
 
+export const checkoutFetch = gql`
+  query checkoutFetch($id: ID!) {
+    node(id: $id) {
+      ... on Checkout {
+        id
+        completedAt
+        currencyCode
+        note
+        subtotalPrice
+        totalPrice
+        lineItems(first: 250) {
+          edges {
+            node {
+              customAttributes {
+                key
+                value
+              }
+              id
+              quantity
+              title
+              variant {
+                id
+                compareAtPrice
+                availableForSale
+                title
+                price
+                image {
+                  id
+                  altText
+                  originalSrc
+                }
+                product {
+                  id
+                  handle
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export const checkoutCreate = gql`
   mutation checkoutCreate($input: CheckoutCreateInput!) {
     checkoutCreate(input: $input) {

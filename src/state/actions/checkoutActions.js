@@ -5,6 +5,7 @@ import {
   customerAssociate,
   customerDisassociate,
   checkoutAttributesUpdate,
+  checkoutFetch,
   checkoutCreate,
   checkoutLineItemsAdd
 } from 'state/graphql/checkout';
@@ -30,13 +31,22 @@ export const FETCH_CHECKOUT = 'FETCH_CHECKOUT';
 export const fetchCheckout = checkoutId => dispatch => {
   return dispatch({
     type: FETCH_CHECKOUT,
-    payload: new Promise(resolve => {
-      return BuySDK.checkout.fetch(checkoutId).then(checkout => {
-        if (get(checkout, 'completedAt', false))
-          return dispatch(createCheckout()).then(checkout => resolve(checkout));
+    payload: new Promise((resolve, reject) => {
+      return Apollo.query({
+        query: checkoutFetch,
+        variables: { id: checkoutId }
+      })
+        .then(res => {
+          if (get(res, 'data.node.completedAt', false))
+            return dispatch(createCheckout()).then(checkout =>
+              resolve(checkout)
+            );
 
-        resolve(checkout);
-      });
+          resolve(get(res, 'data.node', {}));
+        })
+        .catch(error => {
+          return reject(error);
+        });
     })
   });
 };
@@ -61,7 +71,7 @@ export const addLineItems = (checkoutId, lineItems) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
     payload: new Promise((resolve, reject) => {
-      Apollo.mutate({
+      return Apollo.mutate({
         mutation: checkoutLineItemsAdd,
         variables: { lineItems, checkoutId }
       }).then(res => {
