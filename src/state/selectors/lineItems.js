@@ -5,7 +5,8 @@ import getLineItemPrice from 'utils/getLineItemPrice';
 import checkout from 'state/selectors/checkout';
 
 export const deriveLineItems = checkout =>
-  checkout.lineItems.reduce((lineItems, item) => {
+  checkout.lineItems.reduce((lineItems, node) => {
+    const item = get(node, 'node', {});
     const id = get(item, 'id', '');
     const title = get(item, 'title', '');
     const quantity = get(item, 'quantity', 0);

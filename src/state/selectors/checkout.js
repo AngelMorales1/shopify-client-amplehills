@@ -4,6 +4,7 @@ import get from 'utils/get';
 export default createSelector(
   state => get(state, 'session.checkout', {}),
   checkout => {
+    console.log('CH', checkout);
     const id = get(checkout, 'id', '');
     const lineItems = get(checkout, 'lineItems.edges', []);
     const completedAt = get(checkout, 'completedAt', '');

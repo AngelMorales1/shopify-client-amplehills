@@ -5,7 +5,8 @@ import {
   customerAssociate,
   customerDisassociate,
   checkoutAttributesUpdate,
-  checkoutCreate
+  checkoutCreate,
+  checkoutLineItemsAdd
 } from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 import get from 'utils/get';
@@ -56,10 +57,23 @@ export const createCheckout = () => dispatch => {
 };
 
 export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
-export const addLineItems = (checkoutId, items) => dispatch => {
+export const addLineItems = (checkoutId, lineItems) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
-    payload: BuySDK.checkout.addLineItems(checkoutId, items)
+    payload: new Promise((resolve, reject) => {
+      Apollo.mutate({
+        mutation: checkoutLineItemsAdd,
+        variables: { lineItems, checkoutId }
+      }).then(res => {
+        if (get(res, 'data.checkoutLineItemsAdd.userErrors', []).length) {
+          return reject(
+            get(res, 'data.checkoutLineItemsAdd.userErrors[0].message', '')
+          );
+        }
+
+        return resolve(get(res, 'data.checkoutLineItemsAdd.checkout', {}));
+      });
+    })
   }).then(() => dispatch(openMiniCart()));
 };
 
