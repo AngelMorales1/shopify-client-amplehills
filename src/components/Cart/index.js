@@ -262,10 +262,14 @@ class Cart extends Component {
                         this.state.note === currentNote ||
                         updatingNote === PENDING
                       }
-                      className={cx(styles['Cart__update-button'], {
-                        [styles['Cart__update-button--active']]:
-                          this.state.note !== currentNote
-                      })}
+                      className={cx(
+                        styles['Cart__update-button'],
+                        {
+                          [styles['Cart__update-button--active']]:
+                            this.state.note !== currentNote
+                        },
+                        'md-hide lg-hide'
+                      )}
                       variant="primary-small"
                       color="peach"
                       label="Update"
@@ -319,9 +323,22 @@ class Cart extends Component {
                     )}
                   />
                 </div>
-                <div className="col-4 xs-hide sm-hide">
+                <div className="mt4 col-4 xs-hide sm-hide flex flex-row">
                   <Button
-                    className="inline-block mt4"
+                    disabled={
+                      this.state.note === currentNote ||
+                      updatingNote === PENDING
+                    }
+                    className={cx(styles['Cart__update-button'], {
+                      [styles['Cart__update-button--active']]:
+                        this.state.note !== currentNote
+                    })}
+                    color="peach"
+                    label="Update"
+                    onClick={this.updateNote}
+                  />
+                  <Button
+                    className="inline-block ml3"
                     label="Checkout"
                     color="madison-blue"
                     to={get(checkout, 'webUrl', '')}
