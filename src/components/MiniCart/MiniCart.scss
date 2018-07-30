@@ -19,6 +19,10 @@
     }
   }
 
+  &__close-button {
+    top: spacing(1);
+  }
+
   &__line-items {
     @media ($medium-up) {
       min-height: 20vh;
