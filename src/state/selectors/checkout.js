@@ -4,6 +4,14 @@ import get from 'utils/get';
 export default createSelector(
   state => get(state, 'session.checkout', {}),
   checkout => {
-    console.log('dddd', checkout);
+    const lineItems = get(checkout, 'lineItems.edges', []);
+    console.log('CHECKOUT', {
+      ...checkout,
+      lineItems
+    });
+    return {
+      ...checkout,
+      lineItems
+    };
   }
 );
