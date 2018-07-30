@@ -38,7 +38,7 @@ const LocationsSideRail = props => {
               key={`${index}-${location.id}`}
               className={cx(
                 styles['LocationsSideRail__card-container'],
-                'bg-white my3'
+                'bg-white my3 flex flex-column justify-between'
               )}
             >
               <div
@@ -52,26 +52,42 @@ const LocationsSideRail = props => {
                 }
                 className={cx(styles['LocationsSideRail__card-image'])}
               />
-              <div className="p2">
-                <h2 className="description-title carter">{location.title}</h2>
+              <div className="p3">
+                <h2 className="big carter mb3">{location.title}</h2>
                 <div>
                   <div className="flex flex-column justify-between">
-                    <span className="tout">{location.address1}</span>
-                    <span className="tout">{location.address2}</span>
-                    <span className="tout">{`${location.city}, ${
-                      location.state
-                    } ${location.zip}`}</span>
-                    <span className="tout">{location.phone}</span>
+                    <span className="small">{location.address1}</span>
+                    <span
+                      className={cx(
+                        styles['LocationsSideRail__card-text'],
+                        'small'
+                      )}
+                    >{`${location.city}, ${location.state} ${
+                      location.zip
+                    }`}</span>
+                    <span
+                      className={cx(
+                        styles['LocationsSideRail__card-text'],
+                        'small'
+                      )}
+                    >
+                      {location.phone}
+                    </span>
                   </div>
                 </div>
                 <div>
-                  <div className="flex flex-row justify-between mt2">
+                  <div className="flex flex-row justify-between items-center mt2">
                     {locationOpenHours.length ? (
                       <div className="flex flex-column">
                         <span className="block-subheadline bold">
                           Open today
                         </span>
-                        <span className="tout">
+                        <span
+                          className={cx(
+                            styles['LocationsSideRail__card-text'],
+                            'small'
+                          )}
+                        >
                           {location[locationOpenHours[0]]}
                         </span>
                       </div>
@@ -81,7 +97,12 @@ const LocationsSideRail = props => {
                       </span>
                     )}
                     {location.delivery ? (
-                      <div className="tag uppercase bg-madison-blue info-text-big text-white inline-block">
+                      <div
+                        className={cx(
+                          styles['LocationsSideRail__card-delivery'],
+                          'uppercase bold bg-madison-blue info-text-big text-white inline-block flex flex-row items-center'
+                        )}
+                      >
                         Delivery
                       </div>
                     ) : null}
