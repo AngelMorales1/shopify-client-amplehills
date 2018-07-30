@@ -164,7 +164,8 @@ em {
 }
 
 .info-text-small {
-  font-size: $font-2;
+  font-size: 0.6875rem;
+  letter-spacing: spacing(0.1);
   line-height: $font-6;
 }
 

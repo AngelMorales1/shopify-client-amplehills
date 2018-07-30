@@ -64,7 +64,8 @@
     }
   }
 
-  &--light-gray {
+  &--light-gray,
+  &--light-gray-tall {
     input,
     textarea {
       @extend .bg-light-gray;
@@ -77,10 +78,9 @@
     }
   }
 
-  &--textarea {
+  &--light-gray-tall {
     textarea {
       @extend .bold;
-      border-radius: radius('s');
       height: spacing(65);
       width: 100%;
       padding: spacing(5);
