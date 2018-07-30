@@ -41,28 +41,48 @@ const QuantitySelector = ({
     };
   };
 
+  const textfieldVariant = variant => {
+    switch (variant) {
+      case 'small':
+        return 'quantity-small';
+      case 'medium':
+        return 'quantity-medium';
+      default:
+        return 'quantity';
+    }
+  };
+
+  const buttonVariant = variant => {
+    switch (variant) {
+      case 'small':
+        return 'circle-small';
+      case 'medium':
+        return 'circle-medium';
+      default:
+        return 'circle';
+    }
+  };
+
   return (
     <div className={cx('flex items-center', className)}>
       <Button
-        variant={variant === 'small' ? 'circle-small' : 'circle'}
+        variant={buttonVariant(variant)}
         color={colorVariation(color).buttonColor}
         label="–"
         onClick={() => changeQuantity(quantity - 1)}
-        shadow={true}
       />
       <TextField
-        variant={variant === 'small' ? 'quantity-small' : 'quantity'}
+        variant={textfieldVariant(variant)}
         value={quantity}
         color={colorVariation(color).inputColor}
         className="copy mx2"
         onChange={value => changeQuantity(value)}
       />
       <Button
-        variant={variant === 'small' ? 'circle-small' : 'circle'}
+        variant={buttonVariant(variant)}
         color={colorVariation(color).buttonColor}
         label="+"
         onClick={() => changeQuantity(quantity + 1)}
-        shadow={true}
       />
     </div>
   );

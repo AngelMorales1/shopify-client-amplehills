@@ -57,7 +57,7 @@ class MiniCart extends Component {
             <strong className="callout">Cart</strong>
             <Button
               variant="icon-small"
-              className="absolute t0 r0 m3 pt1"
+              className={cx(styles['MiniCart__close-button'], 'absolute r0 m3')}
               onClick={() => closeMiniCart()}
             >
               <Image src="/assets/images/icon-close.svg" />
@@ -88,7 +88,7 @@ class MiniCart extends Component {
                     <span className="line-item-title">${item.price}</span>
                     {subItems.length ? (
                       <div className="w100">
-                        <ul className="mt2 mb1">
+                        <ul className="my1">
                           {subItems.map(subItem => (
                             <li
                               className="sub-line-item small"
@@ -101,7 +101,7 @@ class MiniCart extends Component {
                       </div>
                     ) : null}
                     {products[handle].cartDetails ? (
-                      <div className="flex flex-column my2">
+                      <div className="flex flex-column my1">
                         <pre className={styles['MiniCart__product-details']}>
                           {products[handle].cartDetails}
                         </pre>
@@ -111,7 +111,7 @@ class MiniCart extends Component {
                   <div className="w100 flex justify-between">
                     <QuantitySelector
                       quantity={item.quantity}
-                      variant="small"
+                      variant="medium"
                       onChange={quantity =>
                         this.updateLineItem(item.id, quantity)
                       }
@@ -137,7 +137,7 @@ class MiniCart extends Component {
               color="madison-blue"
               onClick={() => closeMiniCart()}
               label="Checkout"
-              shadow={true}
+              className="mb1"
             />
           </div>
         </div>
