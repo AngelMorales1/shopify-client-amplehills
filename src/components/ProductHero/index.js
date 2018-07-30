@@ -33,7 +33,7 @@ class ProductHero extends Component {
       }
     ];
 
-    this.props.actions.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout.id, items);
   };
 
   didAddToCart = () => {
