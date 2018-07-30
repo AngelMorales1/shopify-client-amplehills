@@ -39,7 +39,7 @@ const OurPledge = ({
         <div
           className={cx(
             styles['OurPledge__text-content-container'],
-            'flex col-8'
+            'flex col-8 py1'
           )}
         >
           <p className="col md-col-6 px2 block-subheadline carter nowrap">
@@ -48,22 +48,23 @@ const OurPledge = ({
           <p
             className={cx(
               styles['OurPledge__text-description'],
-              'col col-12 md-col-6 px2 flex uppercase semi-bold flex'
+              'tout col col-12 md-col-6 px2 flex uppercase semi-bold flex'
             )}
           >
             Ice cream arrives fresh delicious, and frozen
           </p>
         </div>
-        <div className="col col-4 px2 right-align flex justify-end">
-          <Button
-            variant="style-none"
-            onClick={actions.openOurPledge}
-            label="More Info"
-            className={cx(
-              'uppercase info-text-big bold nowrap text-madison-blue',
-              styles['OurPledge__more-info']
-            )}
-          />
+        <div className="col col-4 px2 right-align flex flex-column justify-end">
+          <div className={cx(styles['OurPledge__more-info'], 'ml-auto')}>
+            <Button
+              variant="style-none"
+              onClick={actions.openOurPledge}
+              label="More Info"
+              className={cx(
+                'uppercase info-text-wide bold nowrap text-madison-blue'
+              )}
+            />
+          </div>
         </div>
       </div>
       <OurPledgeOverlay
