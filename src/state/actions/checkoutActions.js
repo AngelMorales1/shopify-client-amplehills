@@ -32,22 +32,14 @@ export const FETCH_CHECKOUT = 'FETCH_CHECKOUT';
 export const fetchCheckout = checkoutId => dispatch => {
   return dispatch({
     type: FETCH_CHECKOUT,
-    payload: new Promise((resolve, reject) => {
-      return Apollo.query({
-        query: checkoutFetch,
-        variables: { id: checkoutId }
-      })
-        .then(res => {
-          if (get(res, 'data.node.completedAt', false))
-            return dispatch(createCheckout()).then(checkout =>
-              resolve(checkout)
-            );
+    payload: Apollo.query({
+      query: checkoutFetch,
+      variables: { id: checkoutId }
+    }).then(res => {
+      if (get(res, 'data.node.completedAt', false))
+        return dispatch(createCheckout());
 
-          resolve(get(res, 'data.node', {}));
-        })
-        .catch(error => {
-          return reject(error);
-        });
+      return get(res, 'data.node', {});
     })
   });
 };
@@ -56,13 +48,11 @@ export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
 export const createCheckout = () => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
-    payload: new Promise(resolve => {
-      return Apollo.mutate({
-        mutation: checkoutCreate,
-        variables: { input: {} }
-      }).then(checkout =>
-        resolve(get(checkout, 'data.checkoutCreate.checkout', {}))
-      );
+    payload: Apollo.mutate({
+      mutation: checkoutCreate,
+      variables: { input: {} }
+    }).then(checkout => {
+      return get(checkout, 'data.checkoutCreate.checkout', {});
     })
   });
 };
