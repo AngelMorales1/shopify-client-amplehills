@@ -1,4 +1,3 @@
-import BuySDK from 'lib/Buy';
 import { client as Apollo } from 'lib/Apollo';
 
 import {

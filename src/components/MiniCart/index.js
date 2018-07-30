@@ -40,8 +40,6 @@ class MiniCart extends Component {
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
-    console.log(checkout);
-
     const classes = cx(
       styles['MiniCart'],
       'col-11 fixed z-nav bg-white card drop-shadow-xlarge',
