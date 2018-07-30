@@ -28,7 +28,7 @@ const LocationsSideRail = props => {
         'overflow-scroll bg-goldenrod'
       )}
     >
-      <div className="mt3 mb4 col-10 mx-auto">
+      <div className="mt3 mb4 col-11 md-col-10 mx-auto">
         {locations.map((location, index) => {
           const locationOpenHours = getTodayOpenHours(location);
           const imageUrl = get(location, 'image.fields.file.url', '');
@@ -55,7 +55,7 @@ const LocationsSideRail = props => {
               <div className="p2">
                 <h2 className="description-title carter">{location.title}</h2>
                 <div>
-                  <div className="flex flex-column">
+                  <div className="flex flex-column justify-between">
                     <span className="tout">{location.address1}</span>
                     <span className="tout">{location.address2}</span>
                     <span className="tout">{`${location.city}, ${
