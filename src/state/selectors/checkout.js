@@ -4,14 +4,22 @@ import get from 'utils/get';
 export default createSelector(
   state => get(state, 'session.checkout', {}),
   checkout => {
+    const id = get(checkout, 'id', '');
     const lineItems = get(checkout, 'lineItems.edges', []);
-    console.log('CHECKOUT', {
-      ...checkout,
-      lineItems
-    });
+    const completedAt = get(checkout, 'completedAt', '');
+    const currencyCode = get(checkout, 'currencyCode', 'USD');
+    const note = get(checkout, 'note', '');
+    const subtotalPrice = get(checkout, 'subtotalPrice', '');
+    const totalPrice = get(checkout, 'totalPrice', '');
+
     return {
-      ...checkout,
-      lineItems
+      id,
+      lineItems,
+      completedAt,
+      currencyCode,
+      note,
+      subtotalPrice,
+      totalPrice
     };
   }
 );
