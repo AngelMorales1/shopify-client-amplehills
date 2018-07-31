@@ -39,32 +39,21 @@ const OurPledge = ({
         <div
           className={cx(
             styles['OurPledge__text-content-container'],
-            'flex col-8 md-hide lg-hide'
+            'flex col-9'
           )}
         >
-          <p className="col md-col-6 px2 block-subheadline carter nowrap">
+          <p className="col md-col-5 px2 block-subheadline carter nowrap">
             Our Pledge
           </p>
           <p
             className={cx(
               styles['OurPledge__text-description'],
-              'tout col col-12 md-col-6 px2 flex uppercase semi-bold flex'
+              'tout col col-12 md-col-7 px2 flex uppercase semi-bold flex'
             )}
           >
             Ice cream arrives fresh delicious, and frozen
           </p>
         </div>
-        <p className="col md-col-3 px2 mr2 block-subheadline carter nowrap xs-hide sm-hide">
-          Our Pledge
-        </p>
-        <p
-          className={cx(
-            styles['OurPledge__text-description'],
-            'tout col col-5 px2 flex uppercase semi-bold flex xs-hide sm-hide'
-          )}
-        >
-          Ice cream arrives fresh delicious, and frozen
-        </p>
         <div className="col col-4 md-col-3 px2 right-align flex flex-column justify-end">
           <div className={cx(styles['OurPledge__more-info'], 'ml-auto')}>
             <Button
