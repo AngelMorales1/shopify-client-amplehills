@@ -39,7 +39,7 @@ const OurPledge = ({
         <div
           className={cx(
             styles['OurPledge__text-content-container'],
-            'flex col-8 md-col-9'
+            'flex col col-8 md-col-9'
           )}
         >
           <p className="col col-12 md-col-4 px2 block-subheadline carter nowrap">
