@@ -46,6 +46,7 @@ const FooterLocations = ({ locations }) => {
       >
         {Object.keys(regions).map(region => (
           <div
+            key={region}
             className={cx(
               'flex flex-column',
               styles['Footer__Regions-content']
@@ -54,6 +55,7 @@ const FooterLocations = ({ locations }) => {
             <h3 className="my2 text-white callout">{region}</h3>
             {regions[region].map(location => {
               let hours = sortHours(location);
+
               return (
                 <div
                   className={cx('mb3', styles['Footer__Regions-store'])}
@@ -91,5 +93,5 @@ FooterLocations.propTypes = {
 };
 
 FooterLocations.defaultProps = {
-  locations: []
+  locations: locationModel.default
 };

@@ -11,6 +11,7 @@ import checkout from 'state/selectors/checkout';
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
+import locationModel from 'models/locationModel';
 
 import Loader from 'components/Loader';
 import ErrorPage from 'components/ErrorPage';
@@ -109,10 +110,10 @@ App.propTypes = {
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string
   }),
-  locations: PropTypes.object
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 App.defaultProps = {
   globalSettings: {},
-  locations: {}
+  locations: locationModel.default
 };

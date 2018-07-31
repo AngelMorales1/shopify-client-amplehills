@@ -5,6 +5,7 @@ import cx from 'classnames';
 import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
+import locationModel from 'models/locationModel';
 
 import styles from './Footer.scss';
 
@@ -49,9 +50,7 @@ Footer.propTypes = {
     })
   }),
   footerLinks: PropTypes.object,
-  locations: PropTypes.shape({
-    items: PropTypes.array
-  })
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 Footer.defaultProps = {
@@ -65,5 +64,5 @@ Footer.defaultProps = {
     }
   },
   footerLinks: {},
-  locations: []
+  locations: locationModel.default
 };
