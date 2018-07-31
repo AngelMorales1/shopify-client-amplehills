@@ -14,15 +14,13 @@ class LocationsCards extends Component {
 
   componentDidMount = () => {
     if ('geolocation' in window.navigator) {
-      this.props.locations.map(location => {
-        return this.getDistanceToStore(location.title, location.location);
-      });
+      return this.getDistanceToStore(this.props.locations);
     } else {
       return 'location not available';
     }
   };
 
-  getDistanceToStore = (storeName, storeLocation) => {
+  getDistanceToStore = locations => {
     new Promise((resolve, reject) => {
       window.navigator.geolocation.getCurrentPosition(position => {
         resolve({
@@ -31,20 +29,22 @@ class LocationsCards extends Component {
         });
       });
     }).then(currentLocation => {
-      const distance = getDistanceBetweenLocations(
-        storeLocation.lat,
-        storeLocation.lon,
-        currentLocation.lat,
-        currentLocation.lon
-      );
-      const roundedDistance = Math.round(distance * 10) / 10;
+      const storeDistance = locations.map(location => {
+        const storeLocation = location.location;
 
-      this.setState(prevState => ({
-        storeDistance: {
-          ...prevState.storeDistance,
-          [storeName]: roundedDistance
-        }
-      }));
+        const distance = getDistanceBetweenLocations(
+          storeLocation.lat,
+          storeLocation.lon,
+          currentLocation.lat,
+          currentLocation.lon
+        );
+
+        const roundedDistance = Math.round(distance * 10) / 10;
+
+        return roundedDistance;
+      });
+
+      this.setState({ storeDistance: storeDistance });
     });
   };
 
@@ -243,7 +243,7 @@ LocationsCards.propTypes = {
 };
 
 LocationsCards.defaultProps = {
-  locations: [locationModel.default]
+  locations: []
 };
 
 export default LocationsCards;

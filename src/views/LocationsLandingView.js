@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Global from 'constants/Global';
-import cx from 'classnames';
 
 import LocationsMap from 'components/LocationsMap';
 import LocationsCards from 'components/LocationsCards';
