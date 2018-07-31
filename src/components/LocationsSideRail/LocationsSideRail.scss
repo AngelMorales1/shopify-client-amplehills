@@ -49,8 +49,8 @@
     margin-top: spacing(2);
   }
 
-  &__card-delivery {
-    padding: spacing(2.5) spacing(5);
+  &__card-tag {
+    padding: spacing(2) spacing(5);
     border-radius: radius('l');
     letter-spacing: spacing(0.2);
   }
@@ -71,5 +71,35 @@
       mask-position: center;
       mask-size: cover;
     }
+  }
+}
+
+.dot {
+  opacity: 0;
+  animation: showHideDot 2.5s ease-in-out infinite;
+
+  &.one {
+    animation-delay: 0.2s;
+  }
+  &.two {
+    animation-delay: 0.4s;
+  }
+  &.three {
+    animation-delay: 0.6s;
+  }
+}
+
+@keyframes showHideDot {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
