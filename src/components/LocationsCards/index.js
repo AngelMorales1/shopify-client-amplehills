@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import cx from 'classnames';
 import get from 'utils/get';
 import { getDistanceBetweenLocations } from 'utils/getDistanceBetweenLocations';
-import moment from 'moment';
+import locationModel from 'models/locationModel';
 
 import { Image } from 'components/base';
 import styles from './LocationsCards.scss';
@@ -238,91 +239,11 @@ class LocationsCards extends Component {
 }
 
 LocationsCards.propTypes = {
-  locations: PropTypes.arrayOf(
-    PropTypes.shape({
-      adddress1: PropTypes.string,
-      city: PropTypes.string,
-      delivery: PropTypes.bool,
-      id: PropTypes.string,
-      phone: PropTypes.string,
-      region: PropTypes.string,
-      seasonal: PropTypes.bool,
-      state: PropTypes.string,
-      title: PropTypes.string,
-      zip: PropTypes.string,
-      image: PropTypes.shape({
-        fileds: PropTypes.shape({
-          title: PropTypes.string,
-          file: PropTypes.shape({
-            url: PropTypes.string
-          })
-        })
-      }),
-      location: PropTypes.shape({
-        lat: PropTypes.number,
-        lon: PropTypes.number
-      }),
-      seasonalImage: PropTypes.shape({
-        fields: PropTypes.shape({
-          title: PropTypes.string,
-          file: PropTypes.shape({
-            url: PropTypes.string
-          })
-        })
-      }),
-      monday: PropTypes.string,
-      tuesday: PropTypes.string,
-      wednesday: PropTypes.string,
-      thursday: PropTypes.string,
-      friday: PropTypes.string,
-      saturday: PropTypes.string,
-      sunday: PropTypes.string
-    })
-  )
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 LocationsCards.defaultProps = {
-  locations: [
-    {
-      adddress1: '',
-      city: '',
-      delivery: false,
-      id: '',
-      phone: '',
-      region: '',
-      seasonal: true,
-      state: '',
-      title: '',
-      zip: '',
-      image: {
-        fileds: {
-          title: '',
-          file: {
-            url: ''
-          }
-        }
-      },
-      location: {
-        lat: 0,
-        lon: 0
-      },
-      seasonalImage: {
-        fields: {
-          title: '',
-          file: {
-            url: ''
-          }
-        }
-      },
-      monday: '',
-      tuesday: '',
-      wednesday: '',
-      thursday: '',
-      friday: '',
-      saturday: '',
-      sunday: ''
-    }
-  ]
+  locations: [locationModel.default]
 };
 
 export default LocationsCards;
