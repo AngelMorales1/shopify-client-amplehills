@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import moment from 'moment';
 
 import { Image } from 'components/base';
-import styles from './LocationsSideRail.scss';
+import styles from './LocationsCard.scss';
 
-class LocationsSideRail extends Component {
+class LocationsCard extends Component {
   state = { storeDistance: {} };
 
   componentDidMount = () => {
@@ -16,13 +17,12 @@ class LocationsSideRail extends Component {
   };
 
   getTodayOpenHours = location => {
-    const currentDay = new Date()
-      .toString()
-      .split(' ')[0]
+    const currentDay = moment()
+      .format('dddd')
       .toLowerCase();
 
     const todayOpenHours = Object.keys(location).filter(
-      field => field.slice(0, 3) === currentDay
+      field => field === currentDay
     );
 
     return todayOpenHours;
@@ -83,37 +83,34 @@ class LocationsSideRail extends Component {
 
     return (
       <div
-        className={cx(
-          styles['LocationsSideRail'],
-          'overflow-scroll bg-goldenrod'
-        )}
+        className={cx(styles['LocationsCard'], 'overflow-scroll bg-goldenrod')}
       >
         <div className="mt3 mb4 col-11 md-col-10 mx-auto">
-          {locations.map((location, index) => {
+          {locations.map(location => {
             const locationOpenHours = this.getTodayOpenHours(location);
-            const imageUrl = get(location, 'image.fields.file.url', '');
+            const imageUrl = get(location, 'image.fields.file.url');
             const seasonalBackground = get(location, 'seasonal', true)
               ? 'bg-pastel-pink'
               : 'bg-pastel-blue';
 
             return (
               <div
-                key={`${index}-${location.id}`}
+                key={location.id}
                 className={cx(
-                  styles['LocationsSideRail__card-container'],
+                  styles['LocationsCard__card-container'],
                   'bg-white my3 flex flex-column justify-between relative'
                 )}
               >
                 <div
                   className={cx(
-                    styles['LocationsSideRail__card-tag'],
-                    'tag bg-peach text-white absolute m3'
+                    styles['LocationsCard__card-tag'],
+                    'bg-peach bold text-white absolute m3'
                   )}
                 >
                   {this.state.storeDistance[location.title] ? (
                     <span
                       className={cx(
-                        styles['LocationsSideRail__card-text'],
+                        styles['LocationsCard__card-text'],
                         'uppercase info-text-big'
                       )}
                     >
@@ -128,7 +125,7 @@ class LocationsSideRail extends Component {
                           'info-text-big'
                         )}
                       >
-                        .
+                        ·
                       </p>
                       <p
                         className={cx(
@@ -137,7 +134,7 @@ class LocationsSideRail extends Component {
                           'info-text-big ml1'
                         )}
                       >
-                        .
+                        ·
                       </p>
                       <p
                         className={cx(
@@ -146,34 +143,34 @@ class LocationsSideRail extends Component {
                           'info-text-big ml1'
                         )}
                       >
-                        .
+                        ·
                       </p>
                     </span>
                   )}
                 </div>
                 <div
                   className={cx(
-                    styles['LocationsSideRail__card-seasonal'],
+                    styles['LocationsCard__card-seasonal'],
                     'z-1 absolute flex flex-column items-center justify-center'
                   )}
                 >
                   <Image
                     className={cx(
-                      styles['LocationsSideRail__card-seasonal-image'],
+                      styles['LocationsCard__card-seasonal-image'],
                       'z-overlay'
                     )}
                     src={get(location, 'seasonalImage.fields.file.url', '')}
                   />
                   <div
                     className={cx(
-                      styles['LocationsSideRail__card-seasonal-circle'],
+                      styles['LocationsCard__card-seasonal-circle'],
                       seasonalBackground,
                       'circle flex flex-column items-center justify-center'
                     )}
                   >
                     <span
                       className={cx(
-                        styles['LocationsSideRail__card-seasonal-circle-text'],
+                        styles['LocationsCard__card-seasonal-circle-text'],
                         'text-white small bold'
                       )}
                     >
@@ -183,25 +180,25 @@ class LocationsSideRail extends Component {
                 </div>
                 <div
                   style={
-                    imageUrl.length > 0
+                    imageUrl
                       ? {
                           background: `url(${imageUrl}) no-repeat center`,
                           backgroundSize: 'cover'
                         }
-                      : { backgroundColor: '#1a6db6' }
+                      : null
                   }
-                  className={cx(styles['LocationsSideRail__card-image'])}
+                  className={cx(styles['LocationsCard__card-image'], {
+                    'bg-denim': !imageUrl
+                  })}
                 />
-                <div
-                  className={cx(styles['LocationsSideRail__card-drip'], 'p3')}
-                >
+                <div className={cx(styles['LocationsCard__card-drip'], 'p3')}>
                   <h2 className="big carter mb3">{location.title}</h2>
                   <div>
                     <div className="flex flex-column justify-between">
                       <span className="small">{location.address1}</span>
                       <span
                         className={cx(
-                          styles['LocationsSideRail__card-text'],
+                          styles['LocationsCard__card-text'],
                           'small'
                         )}
                       >{`${location.city}, ${location.state} ${
@@ -209,7 +206,7 @@ class LocationsSideRail extends Component {
                       }`}</span>
                       <span
                         className={cx(
-                          styles['LocationsSideRail__card-text'],
+                          styles['LocationsCard__card-text'],
                           'small'
                         )}
                       >
@@ -236,7 +233,7 @@ class LocationsSideRail extends Component {
                       {location.delivery ? (
                         <div
                           className={cx(
-                            styles['LocationsSideRail__card-tag'],
+                            styles['LocationsCard__card-tag'],
                             'uppercase bold bg-madison-blue inline-block'
                           )}
                         >
@@ -257,7 +254,7 @@ class LocationsSideRail extends Component {
   }
 }
 
-LocationsSideRail.propTypes = {
+LocationsCard.propTypes = {
   locations: PropTypes.arrayOf(
     PropTypes.shape({
       adddress1: PropTypes.string,
@@ -301,4 +298,48 @@ LocationsSideRail.propTypes = {
   )
 };
 
-export default LocationsSideRail;
+LocationsCard.defaultProps = {
+  locations: [
+    {
+      adddress1: '',
+      city: '',
+      delivery: false,
+      id: '',
+      phone: '',
+      region: '',
+      seasonal: true,
+      state: '',
+      title: '',
+      zip: '',
+      image: {
+        fileds: {
+          title: '',
+          file: {
+            url: ''
+          }
+        }
+      },
+      location: {
+        lat: 0,
+        lon: 0
+      },
+      seasonalImage: {
+        fields: {
+          title: '',
+          file: {
+            url: ''
+          }
+        }
+      },
+      monday: '',
+      tuesday: '',
+      wednesday: '',
+      thursday: '',
+      friday: '',
+      saturday: '',
+      sunday: ''
+    }
+  ]
+};
+
+export default LocationsCard;
