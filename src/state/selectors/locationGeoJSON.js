@@ -11,7 +11,7 @@ export default createSelector(
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [location.coordinate.lon, location.coordinate.lat]
+          coordinates: [location.coordinates.lon, location.coordinates.lat]
         },
         properties: {
           ...location

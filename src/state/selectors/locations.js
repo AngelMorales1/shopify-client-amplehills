@@ -18,7 +18,7 @@ export default createSelector(
       const region = get(fields, 'region', '');
       const state = get(fields, 'state', '');
       const zip = get(fields, 'zip', '');
-      const coordinate = get(fields, 'location', {});
+      const coordinates = get(fields, 'location', {});
       const phone = get(fields, 'phone', '');
       const seasonal = get(fields, 'seasonal', true);
       const delivery = get(fields, 'delivery', false);
@@ -41,7 +41,7 @@ export default createSelector(
         region,
         state,
         zip,
-        coordinate,
+        coordinates,
         phone,
         seasonal,
         hours,
