@@ -64,5 +64,5 @@ Footer.defaultProps = {
     }
   },
   footerLinks: {},
-  locations: locationModel.default
+  locations: []
 };

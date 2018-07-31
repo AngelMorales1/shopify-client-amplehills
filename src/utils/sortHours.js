@@ -1,9 +1,7 @@
 import { DaysInOrder } from 'constants/Days.js';
 import { abbreviateDay } from './abbreviateDay.js';
 
-export const sortHours = fields => {
-  const openHours = fields.hours;
-
+export const sortHours = openHours => {
   const sortByOpenHours = DaysInOrder.reduce((accumulated, current) => {
     let time = openHours[current];
     accumulated[time]

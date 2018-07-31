@@ -54,7 +54,7 @@ const FooterLocations = ({ locations }) => {
           >
             <h3 className="my2 text-white callout">{region}</h3>
             {regions[region].map(location => {
-              let hours = sortHours(location);
+              let hours = sortHours(location.hours);
 
               return (
                 <div
@@ -93,5 +93,5 @@ FooterLocations.propTypes = {
 };
 
 FooterLocations.defaultProps = {
-  locations: locationModel.default
+  locations: []
 };

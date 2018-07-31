@@ -115,5 +115,5 @@ App.propTypes = {
 
 App.defaultProps = {
   globalSettings: {},
-  locations: locationModel.default
+  locations: []
 };

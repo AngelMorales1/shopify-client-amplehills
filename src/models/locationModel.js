@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 
 export default {
   propTypes: PropTypes.shape({
-    adddress1: PropTypes.string,
+    address1: PropTypes.string,
+    address2: PropTypes.string,
     city: PropTypes.string,
     delivery: PropTypes.bool,
     id: PropTypes.string,
@@ -12,26 +13,12 @@ export default {
     state: PropTypes.string,
     title: PropTypes.string,
     zip: PropTypes.string,
-    image: PropTypes.shape({
-      fileds: PropTypes.shape({
-        title: PropTypes.string,
-        file: PropTypes.shape({
-          url: PropTypes.string
-        })
-      })
-    }),
+    image: PropTypes.string,
     location: PropTypes.shape({
       lat: PropTypes.number,
       lon: PropTypes.number
     }),
-    seasonalImage: PropTypes.shape({
-      fields: PropTypes.shape({
-        title: PropTypes.string,
-        file: PropTypes.shape({
-          url: PropTypes.string
-        })
-      })
-    }),
+    seasonalImage: PropTypes.string,
     hours: PropTypes.shape({
       monday: PropTypes.string,
       tuesday: PropTypes.string,
@@ -44,7 +31,8 @@ export default {
   }),
 
   default: {
-    adddress1: '',
+    address1: '',
+    address2: '',
     city: '',
     delivery: false,
     id: '',
@@ -54,26 +42,12 @@ export default {
     state: '',
     title: '',
     zip: '',
-    image: {
-      fileds: {
-        title: '',
-        file: {
-          url: ''
-        }
-      }
-    },
+    image: '',
     location: {
       lat: 0,
       lon: 0
     },
-    seasonalImage: {
-      fields: {
-        title: '',
-        file: {
-          url: ''
-        }
-      }
-    },
+    seasonalImage: '',
     hours: {
       monday: '',
       tuesday: '',
