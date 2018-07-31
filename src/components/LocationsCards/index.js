@@ -29,7 +29,9 @@ class LocationsCards extends Component {
         });
       });
     }).then(currentLocation => {
-      const storeDistance = locations.map(location => {
+      const storeDistance = {};
+
+      locations.forEach(location => {
         const storeLocation = location.location;
 
         const distance = getDistanceBetweenLocations(
@@ -40,8 +42,7 @@ class LocationsCards extends Component {
         );
 
         const roundedDistance = Math.round(distance * 10) / 10;
-
-        return roundedDistance;
+        storeDistance[location.title] = roundedDistance;
       });
 
       this.setState({ storeDistance: storeDistance });
