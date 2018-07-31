@@ -65,6 +65,7 @@ class SignInView extends Component {
               type="submit"
               variant="primary"
               color="madison-blue"
+              shadow={true}
               label="Sign In"
             />
           </form>
@@ -74,6 +75,7 @@ class SignInView extends Component {
           to="/sign-up"
           variant="primary"
           color="white-madison-blue-border"
+          shadow={true}
           label="Don't have an account? Sign up &rarr;"
         />
       </div>

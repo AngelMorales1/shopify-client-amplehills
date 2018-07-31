@@ -8,6 +8,7 @@ import {
   closeOurPledge
 } from 'state/actions/ui/productUIActions';
 import { fetchOurPledge } from 'state/actions/productActions';
+import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
 
@@ -27,7 +28,7 @@ class ProductDetailContainer extends ContainerBase {
 
 const mapStateToProps = (state, props) => {
   return {
-    checkout: get(state, 'session.checkout.id'),
+    checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     globalSettings: get(
       state,

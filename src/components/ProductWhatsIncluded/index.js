@@ -47,7 +47,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
                 <h3 className="description-title bold nowrap mb2">{`1x ${
                   product.title
                 }`}</h3>
-                <p className="tout">{product.flavorDescription}</p>
+                <p className="block-subheadline">{product.flavorDescription}</p>
               </div>
             </div>
           );

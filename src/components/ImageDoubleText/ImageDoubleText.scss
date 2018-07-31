@@ -15,14 +15,14 @@
   }
 
   &--image-container {
-    width: 56%;
+    width: 65%;
     min-width: spacing(100);
-    margin-top: spacing(-50);
+    margin-top: spacing(-24);
     margin-left: spacing(-55);
 
     @media ($medium-up) {
-      margin-top: spacing(-100);
-      margin-left: spacing(-75);
+      margin-top: spacing(-40);
+      margin-left: spacing(-84);
     }
   }
 
@@ -31,12 +31,6 @@
 
     @media ($medium-up) {
       margin: spacing(12);
-    }
-  }
-
-  &--content-text {
-    @media ($medium-up) {
-      font-size: $font-3;
     }
   }
 }

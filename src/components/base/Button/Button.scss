@@ -2,7 +2,6 @@
 
 .Button {
   @extend .pointer;
-  box-shadow: $drop-shadow;
   font-family: $font-avenir;
   font-size: $font-4;
   font-weight: 800;
@@ -19,6 +18,10 @@
   &:active {
     box-shadow: 0 0 0 0;
     transform: translate3d(0, spacing(0.25), 0);
+  }
+
+  &--shadow {
+    box-shadow: $drop-shadow;
   }
 
   &--disabled {
@@ -95,16 +98,24 @@
   &--circle {
     @extend .circle;
     font-size: $font-5;
-    padding-top: 0;
+    padding-top: 2px;
     height: spacing(10);
     width: spacing(10);
+  }
+
+  &--circle-medium {
+    @extend .circle;
+    padding: 0;
+    padding-top: 0;
+    font-size: $font-3;
+    height: spacing(9);
+    width: spacing(9);
   }
 
   &--circle-small {
     @extend .circle;
     padding: 0;
-    padding-top: 0;
-    font-size: $font-4;
+    font-size: $font-3;
     height: spacing(7);
     width: spacing(7);
   }
@@ -167,6 +178,10 @@
 
     &.Button--circle-small {
       border-width: spacing(0.5);
+    }
+
+    &.Button--circle-medium {
+      border-width: spacing(0.7);
     }
   }
 

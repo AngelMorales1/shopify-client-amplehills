@@ -2,6 +2,7 @@ $colors: (
   'white': #fff,
   'light-gray': #ededed,
   'gray': #d8d8d8,
+  'dark-gray': #4d5859,
   'black': #222,
   'peach': #fe5c60,
   'baby-pink': #ffeeee,
@@ -17,7 +18,7 @@ $colors: (
   'yellow': #fce8b6,
   'varden': #fff6dc,
   'island-spice': #fffaed,
-  'white-wash': rgba(255, 255, 255, 0.9)
+  'white-wash': rgba(255, 255, 255, 0.5)
 );
 
 @function color($color-name) {

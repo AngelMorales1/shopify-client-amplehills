@@ -42,6 +42,7 @@ class Carousel extends Component {
                 onClick={previousSlide}
                 className={cx(styles['Carousel__arrow--previous'], 'm2')}
                 variant="carousel-arrow"
+                shadow={true}
               >
                 <Image src={arrowPreviousImage} />
               </Button>
@@ -54,6 +55,7 @@ class Carousel extends Component {
                 onClick={nextSlide}
                 className={cx(styles['Carousel__arrow--next'], 'm2')}
                 variant="carousel-arrow"
+                shadow={true}
               >
                 <Image src={arrowNextImage} />
               </Button>

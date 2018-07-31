@@ -137,6 +137,7 @@ em {
 .tout {
   font-size: $font-3;
   letter-spacing: spacing(0.2);
+  line-height: $font-3;
 }
 
 .small {
@@ -159,12 +160,14 @@ em {
   }
 }
 
-.info-text-big {
-  font-size: $font-2;
+.info-text-wide {
+  font-size: $font-1;
+  letter-spacing: spacing(0.1);
 }
 
 .info-text-small {
-  font-size: $font-2;
+  font-size: 0.6875rem;
+  letter-spacing: spacing(0.1);
   line-height: $font-6;
 }
 

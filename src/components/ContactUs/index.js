@@ -104,7 +104,9 @@ class ContactUs extends Component {
             {Object.values(ContactUsForm.FIELDS).map(field => (
               <TextField
                 className="m1"
-                variant="light-gray"
+                variant={
+                  field.type === 'textarea' ? 'light-gray-tall' : 'light-gray'
+                }
                 type={field.type}
                 value={this.state[field.id]}
                 onChange={value => this.setState({ [field.id]: value })}

@@ -51,6 +51,7 @@ class ComicStrip extends Component {
                 className="m1 xs-hide sm-hide "
                 color={color}
                 variant="primary-small"
+                shadow={true}
                 key={i}
                 label={get(product, 'fields.title', '')}
                 onClick={() =>
@@ -79,6 +80,7 @@ class ComicStrip extends Component {
                   className="m1"
                   color="madison-blue"
                   variant="primary-small"
+                  shadow={true}
                   key={i}
                   label={get(product, 'fields.title', '')}
                   onClick={() =>

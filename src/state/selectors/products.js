@@ -2,17 +2,42 @@ import { createSelector } from 'reselect';
 import get from 'utils/get';
 
 export default createSelector(
-  state => get(state, 'products.products', []),
-  state => get(state, 'products.contentfulProducts', []),
-  (shopify, contentful) => {
-    const products = get(contentful, 'items', []);
+  state => {
+    const shopifyResponse = get(state, 'products.products', []);
+    const products = get(
+      shopifyResponse,
+      'data.shop.products.edges',
+      []
+    ).reduce((handlizedProducts, product) => {
+      const node = get(product, 'node', {});
+      const price = parseFloat(get(node, 'variants.edges[0].node.price', 0.0));
+      const id = get(node, 'variants.edges[0].node.id', '');
+      const handle = get(node, 'handle', '');
+      const variants = get(node, 'variants.edges', []).map(variant => {
+        const variantNode = get(variant, 'node', {});
+        const { id, price, title, availableForSale } = variantNode;
+        return { id, price, title, available: availableForSale };
+      });
 
-    // Index shopify products on handle.
-    const shopifyProducts = shopify.reduce((mergedShopifyProducts, product) => {
-      const handle = get(product, 'handle', '');
-      mergedShopifyProducts[handle] = product;
-      return mergedShopifyProducts;
+      const available = variants.some(variant => variant.available);
+
+      const handlizedProduct = {
+        id,
+        price,
+        variants,
+        handle,
+        available
+      };
+
+      handlizedProducts[handle] = handlizedProduct;
+      return handlizedProducts;
     }, {});
+
+    return products;
+  },
+  state => get(state, 'products.contentfulProducts', []),
+  (shopifyProducts, contentful) => {
+    const products = get(contentful, 'items', []);
 
     return products.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.productTitle', '');
@@ -25,15 +50,6 @@ export default createSelector(
       const cartDetails = get(product, 'fields.cartDetails', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {});
-      const price = parseFloat(get(shopifyProduct, 'variants[0].price', 0.0));
-      const id = get(shopifyProduct, 'variants[0].id', '');
-      const variants = get(shopifyProduct, 'variants', []).map(variant => {
-        const { id, price, title, available } = variant;
-        return { id, price, title, available };
-      });
-
-      const available = variants.some(variant => variant.available);
-
       const subItems = get(product, 'fields.subItems', []).map(subItem => {
         return get(subItem, 'fields.productHandle', '');
       });
@@ -47,19 +63,16 @@ export default createSelector(
 
       mergedProducts[handle] = {
         title,
-        id,
         handle,
-        available,
         flavorDescription,
         description,
-        price,
-        variants,
         gridImage,
         pintImage,
         blocks,
         subItems,
         subItemsAvailable,
-        cartDetails
+        cartDetails,
+        ...shopifyProduct
       };
 
       return mergedProducts;

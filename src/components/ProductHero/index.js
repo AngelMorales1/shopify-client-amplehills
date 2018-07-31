@@ -33,7 +33,7 @@ class ProductHero extends Component {
       }
     ];
 
-    this.props.actions.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout.id, items);
   };
 
   didAddToCart = () => {
@@ -106,6 +106,7 @@ class ProductHero extends Component {
               {available && subItemsAvailable ? (
                 <Button
                   color="madison-blue"
+                  shadow={true}
                   onClick={this.addToCart}
                 >
                   <span className="mr2">Add to Cart</span>

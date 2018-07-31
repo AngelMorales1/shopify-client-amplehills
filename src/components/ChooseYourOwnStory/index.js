@@ -111,7 +111,7 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
-    this.props.actions.addLineItems(this.props.checkout, items);
+    this.props.actions.addLineItems(this.props.checkout.id, items);
   };
 
   render() {
@@ -314,6 +314,7 @@ class ChooseYourOwnStory extends Component {
                     disabled={size !== pints.length}
                     variant="primary-small"
                     color="white-madison-blue"
+                    shadow={true}
                     onClick={this.handleAddToCart}
                   >
                     <span className="mr2">Add to Cart</span>

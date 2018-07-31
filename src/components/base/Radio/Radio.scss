@@ -19,11 +19,11 @@
   &::before {
     @extend .circle;
     content: ' ';
-    border: spacing(0.7) solid color('peach');
+    border: 3px solid color('peach');
     display: inline-block;
     height: spacing(4);
-    margin-right: spacing(2);
     width: spacing(4);
+    margin-right: spacing(2);
   }
 
   &--white {

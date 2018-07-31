@@ -6,12 +6,17 @@
   }
 
   input {
+    @extend .bold;
     border: spacing(1) solid color('madison-blue');
     padding: spacing(4);
     width: 100%;
     appearance: none;
     border-radius: radius('0');
     border: spacing(1) solid transparent;
+
+    &::placeholder {
+      @extend .bold;
+    }
   }
 
   &--error {
@@ -30,7 +35,7 @@
   &--madison-blue-border-round {
     input {
       @extend .text-madison-blue;
-      @extend .bold;
+
       border: spacing(1) solid color('madison-blue');
       border-radius: radius('l');
       padding-left: spacing(6);
@@ -39,7 +44,6 @@
 
       &::placeholder {
         @extend .text-madison-blue;
-        @extend .bold;
       }
     }
   }
@@ -60,35 +64,23 @@
     }
   }
 
-  &--light-gray {
+  &--light-gray,
+  &--light-gray-tall {
     input,
     textarea {
       @extend .bg-light-gray;
       @extend .text-madison-blue;
-      @extend .bold;
       border: 0;
       border-radius: radius('s');
       padding: spacing(6);
       height: spacing(15);
       font-size: $font-3;
-      transition: box-shadow $transition-duration,
-        transform $transition-duration;
-
-      &:hover {
-        box-shadow: $drop-shadow;
-      }
-
-      &:focus {
-        transform: scale(1.05);
-        box-shadow: $drop-shadow-large;
-        outline: none;
-      }
     }
   }
 
-  &--textarea {
+  &--light-gray-tall {
     textarea {
-      border-radius: radius('s');
+      @extend .bold;
       height: spacing(65);
       width: 100%;
       padding: spacing(5);
@@ -101,20 +93,34 @@
   }
 
   &--quantity,
+  &--quantity-medium,
   &--quantity-small {
     label {
       display: none;
     }
 
     input {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       border-radius: radius('circle');
-      font-weight: 600;
       font-size: $font-4;
+      margin-top: -1px;
       padding: spacing(2);
       height: spacing(10);
       width: spacing(10);
       text-align: center;
       transform: translateY(spacing(-0.5));
+    }
+  }
+
+  &--quantity-medium {
+    input {
+      padding: 0;
+      font-size: $font-3;
+      height: spacing(9);
+      width: spacing(9);
     }
   }
 

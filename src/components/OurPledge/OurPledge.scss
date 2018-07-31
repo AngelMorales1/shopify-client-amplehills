@@ -3,7 +3,7 @@
 .OurPledge {
   &__content-container {
     border-radius: radius('m');
-    padding: spacing(4) spacing(4);
+    padding: spacing(6) spacing(4);
     flex-direction: row;
     justify-content: space-between;
 
@@ -38,7 +38,6 @@
 
   &__more-info {
     border-bottom: solid color('peach') 1px;
-    padding-bottom: spacing(1);
   }
 
   &__icon {

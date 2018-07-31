@@ -2,11 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import FooterRegions from './FooterRegions.js';
+import { sortHours } from 'utils/sortHours';
+import FooterRegions from 'constants/FooterRegions';
+import locationModel from 'models/locationModel';
+
 import styles from './Footer.scss';
 
 const FooterLocations = ({ locations }) => {
-  const regions = Object.keys(locations);
+  const locationsSortedByRegion = (locations = []) => {
+    const regions = locations.reduce((accumulated, current) => {
+      let region = current.region;
+      accumulated[region] = accumulated[region]
+        ? accumulated[region].concat([current])
+        : [current];
+
+      return accumulated;
+    }, {});
+
+    return FooterRegions.reduce(
+      (accumulated, region) => ({
+        ...accumulated,
+        [region]: regions[region]
+      }),
+      {}
+    );
+  };
+
+  const regions = locationsSortedByRegion(locations);
 
   return (
     <div
@@ -22,12 +44,40 @@ const FooterLocations = ({ locations }) => {
           styles['Footer__Regions-container']
         )}
       >
-        {regions.map(region => (
-          <FooterRegions
-            key={region}
-            region={region}
-            locations={locations[region]}
-          />
+        {Object.keys(regions).map(region => (
+          <div
+            className={cx(
+              'flex flex-column',
+              styles['Footer__Regions-content']
+            )}
+          >
+            <h3 className="my2 text-white callout">{region}</h3>
+            {regions[region].map(location => {
+              let hours = sortHours(location);
+              return (
+                <div
+                  className={cx('mb3', styles['Footer__Regions-store'])}
+                  key={location.id}
+                >
+                  <h4 className="mb1 text-white bold small nowrap">
+                    {location.title}
+                  </h4>
+                  {Object.keys(hours).map((hour, i) => {
+                    return (
+                      <p className="mb1 text-white small nowrap" key={i}>{`${
+                        hours[hour]
+                      }: ${hour}`}</p>
+                    );
+                  })}
+                  {location.delivery ? (
+                    <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
+                      Order Delivery
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
         ))}
       </div>
     </div>
@@ -37,9 +87,9 @@ const FooterLocations = ({ locations }) => {
 export default FooterLocations;
 
 FooterLocations.propTypes = {
-  locations: PropTypes.object
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 FooterLocations.defaultProps = {
-  locations: {}
+  locations: []
 };

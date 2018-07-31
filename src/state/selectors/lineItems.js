@@ -2,8 +2,11 @@ import { createSelector } from 'reselect';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 
-export const deriveLineItems = items =>
-  items.reduce((lineItems, item) => {
+import checkout from 'state/selectors/checkout';
+
+export const deriveLineItems = checkout =>
+  checkout.lineItems.reduce((lineItems, node) => {
+    const item = get(node, 'node', {});
     const id = get(item, 'id', '');
     const title = get(item, 'title', '');
     const quantity = get(item, 'quantity', 0);
@@ -45,7 +48,4 @@ export const deriveLineItems = items =>
     return lineItems;
   }, []);
 
-export default createSelector(
-  state => get(state, 'session.checkout.lineItems', []),
-  deriveLineItems
-);
+export default createSelector(state => checkout(state), deriveLineItems);

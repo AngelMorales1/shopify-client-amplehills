@@ -22,6 +22,7 @@ const FooterLinks = ({ footerLinks }) => {
           to="/contact"
           label="Contact Us"
           color="white-madison-blue"
+          shadow={true}
           className="nowrap"
         />
         <Image
