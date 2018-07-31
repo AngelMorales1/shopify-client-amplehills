@@ -1,6 +1,5 @@
 import Data from 'lib/Data';
 import ContentfulClient from 'lib/Contentful';
-import BuySDK from 'lib/Buy';
 import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
 
@@ -18,7 +17,6 @@ export const initializeApplication = checkoutID => dispatch => {
     payload: new Promise((resolve, reject) => {
       const Contentful = ContentfulClient();
       Data.setRef('contentful', Contentful);
-      Data.setRef('shopify', BuySDK);
       return Promise.all([
         fetchOrCreateCheckout(checkoutID)(dispatch),
         getLocationData()(dispatch),

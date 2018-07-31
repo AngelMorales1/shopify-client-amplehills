@@ -6,6 +6,7 @@ import whatInput from 'what-input';
 
 import { initializeApplication } from 'state/actions/applicationActions';
 import locations from 'state/selectors/locations';
+import checkout from 'state/selectors/checkout';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
@@ -75,7 +76,7 @@ const mapStateToProps = state => {
   return {
     ...state,
     applicationStatus: get(state, 'status.initializeApplication'),
-    checkout: get(state, 'session.checkout'),
+    checkout: checkout(state),
     locations: locations(state),
     globalSettings: get(
       state,

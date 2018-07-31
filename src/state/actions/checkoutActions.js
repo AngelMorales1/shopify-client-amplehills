@@ -1,10 +1,14 @@
-import BuySDK from 'lib/Buy';
 import { client as Apollo } from 'lib/Apollo';
 
 import {
   customerAssociate,
   customerDisassociate,
-  checkoutAttributesUpdate
+  checkoutAttributesUpdate,
+  checkoutFetch,
+  checkoutCreate,
+  checkoutLineItemsAdd,
+  checkoutLineItemsRemove,
+  checkoutLineItemsUpdate
 } from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
 import get from 'utils/get';
@@ -28,13 +32,14 @@ export const FETCH_CHECKOUT = 'FETCH_CHECKOUT';
 export const fetchCheckout = checkoutId => dispatch => {
   return dispatch({
     type: FETCH_CHECKOUT,
-    payload: new Promise(resolve => {
-      return BuySDK.checkout.fetch(checkoutId).then(checkout => {
-        if (get(checkout, 'completedAt', false))
-          return dispatch(createCheckout()).then(checkout => resolve(checkout));
+    payload: Apollo.query({
+      query: checkoutFetch,
+      variables: { id: checkoutId }
+    }).then(res => {
+      if (get(res, 'data.node.completedAt', false))
+        return dispatch(createCheckout());
 
-        resolve(checkout);
-      });
+      return get(res, 'data.node', {});
     })
   });
 };
@@ -43,15 +48,33 @@ export const CREATE_CHECKOUT = 'CREATE_CHECKOUT';
 export const createCheckout = () => dispatch => {
   return dispatch({
     type: CREATE_CHECKOUT,
-    payload: BuySDK.checkout.create()
+    payload: Apollo.mutate({
+      mutation: checkoutCreate,
+      variables: { input: {} }
+    }).then(checkout => {
+      return get(checkout, 'data.checkoutCreate.checkout', {});
+    })
   });
 };
 
 export const ADD_LINE_ITEMS = 'ADD_LINE_ITEMS';
-export const addLineItems = (checkoutId, items) => dispatch => {
+export const addLineItems = (checkoutId, lineItems) => dispatch => {
   return dispatch({
     type: ADD_LINE_ITEMS,
-    payload: BuySDK.checkout.addLineItems(checkoutId, items)
+    payload: new Promise((resolve, reject) => {
+      return Apollo.mutate({
+        mutation: checkoutLineItemsAdd,
+        variables: { lineItems, checkoutId }
+      }).then(res => {
+        if (get(res, 'data.checkoutLineItemsAdd.userErrors', []).length) {
+          return reject(
+            get(res, 'data.checkoutLineItemsAdd.userErrors[0].message', '')
+          );
+        }
+
+        return resolve(get(res, 'data.checkoutLineItemsAdd.checkout', {}));
+      });
+    })
   }).then(() => dispatch(openMiniCart()));
 };
 
@@ -72,24 +95,46 @@ export const cancelRemoveLineItems = itemId => {
 };
 
 export const CONFIRM_REMOVE_LINE_ITEMS = 'CONFIRM_REMOVE_LINE_ITEMS';
-export const confirmRemoveLineItems = (checkoutId, items) => dispatch => {
+export const confirmRemoveLineItems = (checkoutId, lineItemIds) => dispatch => {
   return dispatch({
     type: CONFIRM_REMOVE_LINE_ITEMS,
-    payload: new Promise(resolve => {
-      BuySDK.checkout.removeLineItems(checkoutId, items).then(checkout => {
-        items.map(item => dispatch(cancelRemoveLineItems(item)));
-        resolve(checkout);
+    payload: new Promise((resolve, reject) => {
+      return Apollo.mutate({
+        mutation: checkoutLineItemsRemove,
+        variables: { checkoutId, lineItemIds }
+      }).then(res => {
+        if (get(res, 'data.checkoutLineItemsRemove.userErrors', []).length) {
+          return reject(
+            get(res, 'data.checkoutLineItemsRemove.userErrors[0].message', '')
+          );
+        }
+
+        lineItemIds.map(id => dispatch(cancelRemoveLineItems(id)));
+        return resolve(get(res, 'data.checkoutLineItemsRemove.checkout', {}));
       });
     })
   });
 };
 
 export const UPDATE_LINE_ITEMS = 'UPDATE_LINE_ITEMS';
-export const updateLineItems = (checkoutId, items) => dispatch => {
+export const updateLineItems = (checkoutId, lineItems) => dispatch => {
   return dispatch({
     type: UPDATE_LINE_ITEMS,
-    meta: { id: get(items, '[0].id', '') },
-    payload: BuySDK.checkout.updateLineItems(checkoutId, items)
+    meta: { id: get(lineItems, '[0].id', '') },
+    payload: new Promise((resolve, reject) => {
+      return Apollo.mutate({
+        mutation: checkoutLineItemsUpdate,
+        variables: { checkoutId, lineItems }
+      }).then(res => {
+        if (get(res, 'data.checkoutLineItemsUpdate.userErrors', []).length) {
+          return reject(
+            get(res, 'data.checkoutLineItemsUpdate.userErrors[0].message', '')
+          );
+        }
+
+        return resolve(get(res, 'data.checkoutLineItemsUpdate.checkout', {}));
+      });
+    })
   });
 };
 

@@ -7,6 +7,7 @@ import {
   removeLineItems
 } from 'state/actions/checkoutActions';
 import products from 'state/selectors/products';
+import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
 
 import PropTypes from 'prop-types';
@@ -28,10 +29,7 @@ class MiniCart extends Component {
       }
     ];
 
-    this.props.actions.updateLineItems(
-      get(this.props, 'checkout.id', null),
-      items
-    );
+    this.props.actions.updateLineItems(this.props.checkout.id, items);
   };
 
   render() {
@@ -175,7 +173,7 @@ const mapStateToProps = state => {
   return {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
-    checkout: get(state, 'session.checkout', {}),
+    checkout: checkout(state),
     products: products(state),
     items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
