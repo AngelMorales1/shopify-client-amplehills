@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Global from 'constants/Global';
+import cx from 'classnames';
 
 import LocationsMap from 'components/LocationsMap';
-import LocationsCard from 'components/LocationsCard';
+import LocationsCards from 'components/LocationsCards';
 
 class LocationsLandingView extends Component {
   state = {
@@ -38,8 +39,12 @@ class LocationsLandingView extends Component {
             <LocationsMap {...this.props} />
           </div>
         ) : null}
-        <div>
-          <LocationsCard {...this.props} />
+        <div
+          className={`col ${
+            this.state.currentBreakpoint === 'small' ? 'col-12' : 'col-4'
+          }`}
+        >
+          <LocationsCards {...this.props} />
         </div>
       </div>
     );

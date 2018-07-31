@@ -1,7 +1,15 @@
 @import 'settings';
 
-.LocationsCard {
+.LocationsCards {
   height: calc(100vh - #{$header-height-desktop});
+
+  &__cards-container {
+    padding: 0 spacing(6);
+
+    @media ($medium-up) {
+      padding: 0 spacing(8);
+    }
+  }
 
   &__card-container {
     border-radius: radius('s');

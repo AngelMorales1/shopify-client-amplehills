@@ -2,80 +2,61 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import { getDistanceBetweenLocations } from 'utils/getDistanceBetweenLocations';
 import moment from 'moment';
 
 import { Image } from 'components/base';
-import styles from './LocationsCard.scss';
+import styles from './LocationsCards.scss';
 
-class LocationsCard extends Component {
+class LocationsCards extends Component {
   state = { storeDistance: {} };
 
   componentDidMount = () => {
-    this.props.locations.map(location => {
-      return this.getDistanceToStore(location.title, location.location);
-    });
-  };
-
-  getTodayOpenHours = location => {
-    const currentDay = moment()
-      .format('dddd')
-      .toLowerCase();
-
-    const todayOpenHours = Object.keys(location).filter(
-      field => field === currentDay
-    );
-
-    return todayOpenHours;
-  };
-
-  getMilesFromcoordinate = (lat1, lon1, lat2, lon2) => {
-    const radlat1 = (Math.PI * lat1) / 180;
-    const radlat2 = (Math.PI * lat2) / 180;
-    const theta = lon1 - lon2;
-    const radtheta = (Math.PI * theta) / 180;
-    let dist =
-      Math.sin(radlat1) * Math.sin(radlat2) +
-      Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-
-    if (dist > 1) {
-      dist = 1;
-    }
-
-    dist = Math.acos(dist);
-    dist = (dist * 180) / Math.PI;
-    dist = dist * 60 * 1.1515;
-
-    return dist;
-  };
-
-  getDistanceToStore = (storeName, storeLocation) => {
     if ('geolocation' in window.navigator) {
-      new Promise((resolve, reject) => {
-        window.navigator.geolocation.getCurrentPosition(position => {
-          resolve({
-            lat: position.coords.latitude,
-            lon: position.coords.longitude
-          });
-        });
-      }).then(currentLocation => {
-        const distance = this.getMilesFromcoordinate(
-          storeLocation.lat,
-          storeLocation.lon,
-          currentLocation.lat,
-          currentLocation.lon
-        );
-        const rouded = Math.round(distance * 10) / 10;
-
-        this.setState(prevState => ({
-          storeDistance: {
-            ...prevState.storeDistance,
-            [storeName]: rouded
-          }
-        }));
+      this.props.locations.map(location => {
+        return this.getDistanceToStore(location.title, location.location);
       });
     } else {
       return 'location not available';
     }
+  };
+
+  getDistanceToStore = (storeName, storeLocation) => {
+    new Promise((resolve, reject) => {
+      window.navigator.geolocation.getCurrentPosition(position => {
+        resolve({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude
+        });
+      });
+    }).then(currentLocation => {
+      const distance = getDistanceBetweenLocations(
+        storeLocation.lat,
+        storeLocation.lon,
+        currentLocation.lat,
+        currentLocation.lon
+      );
+      const roundedDistance = Math.round(distance * 10) / 10;
+
+      this.setState(prevState => ({
+        storeDistance: {
+          ...prevState.storeDistance,
+          [storeName]: roundedDistance
+        }
+      }));
+    });
+  };
+
+  getCurrentOpenHours = location => {
+    const currentDay = moment()
+      .format('dddd')
+      .toLowerCase();
+
+    const todayOpenHours = Object.keys(location).find(
+      field => field === currentDay
+    );
+
+    return todayOpenHours;
   };
 
   render() {
@@ -83,34 +64,36 @@ class LocationsCard extends Component {
 
     return (
       <div
-        className={cx(styles['LocationsCard'], 'overflow-scroll bg-goldenrod')}
+        className={cx(styles['LocationsCards'], 'overflow-scroll bg-goldenrod')}
       >
-        <div className="mt3 mb4 col-11 md-col-10 mx-auto">
+        <div
+          className={cx(
+            styles['LocationsCards__cards-container'],
+            'mt3 mb4 mx-auto'
+          )}
+        >
           {locations.map(location => {
-            const locationOpenHours = this.getTodayOpenHours(location);
+            const locationOpenHours = this.getCurrentOpenHours(location);
             const imageUrl = get(location, 'image.fields.file.url');
-            const seasonalBackground = get(location, 'seasonal', true)
-              ? 'bg-pastel-pink'
-              : 'bg-pastel-blue';
 
             return (
               <div
                 key={location.id}
                 className={cx(
-                  styles['LocationsCard__card-container'],
+                  styles['LocationsCards__card-container'],
                   'bg-white my3 flex flex-column justify-between relative'
                 )}
               >
                 <div
                   className={cx(
-                    styles['LocationsCard__card-tag'],
+                    styles['LocationsCards__card-tag'],
                     'bg-peach bold text-white absolute m3'
                   )}
                 >
                   {this.state.storeDistance[location.title] ? (
                     <span
                       className={cx(
-                        styles['LocationsCard__card-text'],
+                        styles['LocationsCards__card-text'],
                         'uppercase info-text-big'
                       )}
                     >
@@ -150,27 +133,27 @@ class LocationsCard extends Component {
                 </div>
                 <div
                   className={cx(
-                    styles['LocationsCard__card-seasonal'],
+                    styles['LocationsCards__card-seasonal'],
                     'z-1 absolute flex flex-column items-center justify-center'
                   )}
                 >
                   <Image
                     className={cx(
-                      styles['LocationsCard__card-seasonal-image'],
+                      styles['LocationsCards__card-seasonal-image'],
                       'z-overlay'
                     )}
                     src={get(location, 'seasonalImage.fields.file.url', '')}
                   />
                   <div
                     className={cx(
-                      styles['LocationsCard__card-seasonal-circle'],
-                      seasonalBackground,
+                      styles['LocationsCards__card-seasonal-circle'],
+                      location.seasonal ? 'bg-pastel-pink' : 'bg-pastel-blue',
                       'circle flex flex-column items-center justify-center'
                     )}
                   >
                     <span
                       className={cx(
-                        styles['LocationsCard__card-seasonal-circle-text'],
+                        styles['LocationsCards__card-seasonal-circle-text'],
                         'text-white small bold'
                       )}
                     >
@@ -187,18 +170,18 @@ class LocationsCard extends Component {
                         }
                       : null
                   }
-                  className={cx(styles['LocationsCard__card-image'], {
+                  className={cx(styles['LocationsCards__card-image'], {
                     'bg-denim': !imageUrl
                   })}
                 />
-                <div className={cx(styles['LocationsCard__card-drip'], 'p3')}>
+                <div className={cx(styles['LocationsCards__card-drip'], 'p3')}>
                   <h2 className="big carter mb3">{location.title}</h2>
                   <div>
                     <div className="flex flex-column justify-between">
                       <span className="small">{location.address1}</span>
                       <span
                         className={cx(
-                          styles['LocationsCard__card-text'],
+                          styles['LocationsCards__card-text'],
                           'small'
                         )}
                       >{`${location.city}, ${location.state} ${
@@ -206,7 +189,7 @@ class LocationsCard extends Component {
                       }`}</span>
                       <span
                         className={cx(
-                          styles['LocationsCard__card-text'],
+                          styles['LocationsCards__card-text'],
                           'small'
                         )}
                       >
@@ -222,7 +205,7 @@ class LocationsCard extends Component {
                             Open today
                           </span>
                           <span className={cx('small')}>
-                            {location[locationOpenHours[0]]}
+                            {location[locationOpenHours]}
                           </span>
                         </div>
                       ) : (
@@ -233,7 +216,7 @@ class LocationsCard extends Component {
                       {location.delivery ? (
                         <div
                           className={cx(
-                            styles['LocationsCard__card-tag'],
+                            styles['LocationsCards__card-tag'],
                             'uppercase bold bg-madison-blue inline-block'
                           )}
                         >
@@ -254,7 +237,7 @@ class LocationsCard extends Component {
   }
 }
 
-LocationsCard.propTypes = {
+LocationsCards.propTypes = {
   locations: PropTypes.arrayOf(
     PropTypes.shape({
       adddress1: PropTypes.string,
@@ -298,7 +281,7 @@ LocationsCard.propTypes = {
   )
 };
 
-LocationsCard.defaultProps = {
+LocationsCards.defaultProps = {
   locations: [
     {
       adddress1: '',
@@ -342,4 +325,4 @@ LocationsCard.defaultProps = {
   ]
 };
 
-export default LocationsCard;
+export default LocationsCards;
