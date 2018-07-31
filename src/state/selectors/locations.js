@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import { DaysInOrder as Days } from 'constants/Days.js';
+import { Days } from 'constants/Days.js';
 import get from 'utils/get';
 
 export default createSelector(
