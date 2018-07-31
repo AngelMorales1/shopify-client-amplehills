@@ -39,16 +39,16 @@ const OurPledge = ({
         <div
           className={cx(
             styles['OurPledge__text-content-container'],
-            'flex col-9'
+            'flex col-8 md-col-9'
           )}
         >
-          <p className="col md-col-5 px2 block-subheadline carter nowrap">
+          <p className="col col-12 md-col-4 px2 block-subheadline carter nowrap">
             Our Pledge
           </p>
           <p
             className={cx(
               styles['OurPledge__text-description'],
-              'tout col col-12 md-col-7 px2 flex uppercase semi-bold flex'
+              'tout col col-12 md-col-8 px2 flex uppercase semi-bold flex'
             )}
           >
             Ice cream arrives fresh delicious, and frozen
