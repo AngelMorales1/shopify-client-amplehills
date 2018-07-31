@@ -11,7 +11,7 @@ class LocationsSideRail extends Component {
 
   componentDidMount = () => {
     this.props.locations.map(location => {
-      this.getDistanceToStore(location.title, location.location);
+      return this.getDistanceToStore(location.title, location.location);
     });
   };
 
@@ -257,11 +257,48 @@ class LocationsSideRail extends Component {
   }
 }
 
-// LocationsMap.propTypes = {
-//   locationGeoJSON: PropTypes.shape({
-//     type: PropTypes.string,
-//     features: PropTypes.arrayOf(PropTypes.object)
-//   })
-// };
+LocationsSideRail.propTypes = {
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      adddress1: PropTypes.string,
+      city: PropTypes.string,
+      delivery: PropTypes.bool,
+      id: PropTypes.string,
+      phone: PropTypes.string,
+      region: PropTypes.string,
+      seasonal: PropTypes.bool,
+      state: PropTypes.string,
+      title: PropTypes.string,
+      zip: PropTypes.string,
+      image: PropTypes.shape({
+        fileds: PropTypes.shape({
+          title: PropTypes.string,
+          file: PropTypes.shape({
+            url: PropTypes.string
+          })
+        })
+      }),
+      location: PropTypes.shape({
+        lat: PropTypes.number,
+        lon: PropTypes.number
+      }),
+      seasonalImage: PropTypes.shape({
+        fields: PropTypes.shape({
+          title: PropTypes.string,
+          file: PropTypes.shape({
+            url: PropTypes.string
+          })
+        })
+      }),
+      monday: PropTypes.string,
+      tuesday: PropTypes.string,
+      wednesday: PropTypes.string,
+      thursday: PropTypes.string,
+      friday: PropTypes.string,
+      saturday: PropTypes.string,
+      sunday: PropTypes.string
+    })
+  )
+};
 
 export default LocationsSideRail;
