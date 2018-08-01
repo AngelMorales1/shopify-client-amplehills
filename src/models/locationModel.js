@@ -14,7 +14,7 @@ export default {
     title: PropTypes.string,
     zip: PropTypes.string,
     image: PropTypes.string,
-    coordinate: PropTypes.shape({
+    coordinates: PropTypes.shape({
       lat: PropTypes.number,
       lon: PropTypes.number
     }),
@@ -43,7 +43,7 @@ export default {
     title: '',
     zip: '',
     image: '',
-    coordinate: {
+    coordinates: {
       lat: 0,
       lon: 0
     },
