@@ -1,4 +1,7 @@
-@import 'settings';
+@import 'settings', 'src/styles/utils';
+
+$transition-duration: 0.2;
+
 
 .LocationsCards {
   height: calc(100vh - #{$header-height-desktop});
@@ -82,32 +85,43 @@
   }
 }
 
-.dot {
-  opacity: 0;
-  animation: showHideDot 2.5s ease-in-out infinite;
+.loader,
+.loader:before,
+.loader:after {
+  margin-bottom: spacing(40);
+  border-radius: 50%;
+  width: spacing(8);
+  height: spacing(8);
+  animation: showHideDot 1.8s infinite ease-in-out;
+}
+.loader {
+  color: color('white');
+  position: relative;
+  animation-delay: -0.16s;
+}
 
-  &.one {
-    animation-delay: 0.2s;
-  }
-  &.two {
-    animation-delay: 0.4s;
-  }
-  &.three {
-    animation-delay: 0.6s;
-  }
+.loader:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: spacing(-12);
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: spacing(12);
 }
 
 @keyframes showHideDot {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
+  0%,
+  80% ,
   100% {
-    opacity: 0;
+    box-shadow: 0 spacing(10) 0 spacing(-5);
+  }
+  40% {
+    box-shadow: 0 spacing(10) 0 0;
   }
 }
