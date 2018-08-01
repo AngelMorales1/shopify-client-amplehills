@@ -1,0 +1,671 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Dropdown
+    className="foo"
+    label="foo"
+    name="foo"
+    options={
+        Array [
+            Object {
+              "label": "foo",
+              "value": "foo",
+            },
+          ]
+    }
+    placeholder="foo"
+    value="foo"
+    variant="small"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="w100 inline-block mb1 bold small"
+          htmlFor="foo"
+>
+          foo
+</label>,
+        <Select
+          arrowRenderer={[Function]}
+          autosize={true}
+          backspaceRemoves={true}
+          backspaceToRemoveMessage="Press backspace to remove {label}"
+          className="relative inline-block"
+          clearAllText="Clear all"
+          clearRenderer={[Function]}
+          clearValueText="Clear value"
+          clearable={false}
+          closeOnSelect={true}
+          deleteRemoves={true}
+          delimiter=","
+          disabled={false}
+          escapeClearsValue={true}
+          filterOptions={[Function]}
+          ignoreAccents={true}
+          ignoreCase={true}
+          inputProps={Object {}}
+          isLoading={false}
+          joinValues={false}
+          labelKey="label"
+          matchPos="any"
+          matchProp="any"
+          menuBuffer={0}
+          menuRenderer={[Function]}
+          multi={false}
+          name="foo"
+          noResultsText="No results found"
+          onBlurResetsInput={true}
+          onChange={[Function]}
+          onClose={[Function]}
+          onCloseResetsInput={true}
+          onOpen={[Function]}
+          onSelectResetsInput={true}
+          openOnClick={true}
+          optionComponent={[Function]}
+          options={
+                    Array [
+                              Object {
+                                "label": "foo",
+                                "value": "foo",
+                              },
+                            ]
+          }
+          pageSize={5}
+          placeholder="foo"
+          removeSelected={true}
+          required={false}
+          rtl={false}
+          scrollMenuIntoView={true}
+          searchable={false}
+          simpleValue={false}
+          tabSelectsValue={true}
+          trimFilter={true}
+          value="foo"
+          valueComponent={[Function]}
+          valueKey="value"
+/>,
+      ],
+      "className": "w-auto relative z-1 pointer foo undefined",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "foo",
+          "className": "w100 inline-block mb1 bold small",
+          "htmlFor": "foo",
+        },
+        "ref": null,
+        "rendered": "foo",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "arrowRenderer": [Function],
+          "autosize": true,
+          "backspaceRemoves": true,
+          "backspaceToRemoveMessage": "Press backspace to remove {label}",
+          "className": "relative inline-block",
+          "clearAllText": "Clear all",
+          "clearRenderer": [Function],
+          "clearValueText": "Clear value",
+          "clearable": false,
+          "closeOnSelect": true,
+          "deleteRemoves": true,
+          "delimiter": ",",
+          "disabled": false,
+          "escapeClearsValue": true,
+          "filterOptions": [Function],
+          "ignoreAccents": true,
+          "ignoreCase": true,
+          "inputProps": Object {},
+          "isLoading": false,
+          "joinValues": false,
+          "labelKey": "label",
+          "matchPos": "any",
+          "matchProp": "any",
+          "menuBuffer": 0,
+          "menuRenderer": [Function],
+          "multi": false,
+          "name": "foo",
+          "noResultsText": "No results found",
+          "onBlurResetsInput": true,
+          "onChange": [Function],
+          "onClose": [Function],
+          "onCloseResetsInput": true,
+          "onOpen": [Function],
+          "onSelectResetsInput": true,
+          "openOnClick": true,
+          "optionComponent": [Function],
+          "options": Array [
+            Object {
+              "label": "foo",
+              "value": "foo",
+            },
+          ],
+          "pageSize": 5,
+          "placeholder": "foo",
+          "removeSelected": true,
+          "required": false,
+          "rtl": false,
+          "scrollMenuIntoView": true,
+          "searchable": false,
+          "simpleValue": false,
+          "tabSelectsValue": true,
+          "trimFilter": true,
+          "value": "foo",
+          "valueComponent": [Function],
+          "valueKey": "value",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="w100 inline-block mb1 bold small"
+            htmlFor="foo"
+>
+            foo
+</label>,
+          <Select
+            arrowRenderer={[Function]}
+            autosize={true}
+            backspaceRemoves={true}
+            backspaceToRemoveMessage="Press backspace to remove {label}"
+            className="relative inline-block"
+            clearAllText="Clear all"
+            clearRenderer={[Function]}
+            clearValueText="Clear value"
+            clearable={false}
+            closeOnSelect={true}
+            deleteRemoves={true}
+            delimiter=","
+            disabled={false}
+            escapeClearsValue={true}
+            filterOptions={[Function]}
+            ignoreAccents={true}
+            ignoreCase={true}
+            inputProps={Object {}}
+            isLoading={false}
+            joinValues={false}
+            labelKey="label"
+            matchPos="any"
+            matchProp="any"
+            menuBuffer={0}
+            menuRenderer={[Function]}
+            multi={false}
+            name="foo"
+            noResultsText="No results found"
+            onBlurResetsInput={true}
+            onChange={[Function]}
+            onClose={[Function]}
+            onCloseResetsInput={true}
+            onOpen={[Function]}
+            onSelectResetsInput={true}
+            openOnClick={true}
+            optionComponent={[Function]}
+            options={
+                        Array [
+                                    Object {
+                                      "label": "foo",
+                                      "value": "foo",
+                                    },
+                                  ]
+            }
+            pageSize={5}
+            placeholder="foo"
+            removeSelected={true}
+            required={false}
+            rtl={false}
+            scrollMenuIntoView={true}
+            searchable={false}
+            simpleValue={false}
+            tabSelectsValue={true}
+            trimFilter={true}
+            value="foo"
+            valueComponent={[Function]}
+            valueKey="value"
+/>,
+        ],
+        "className": "w-auto relative z-1 pointer foo undefined",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "foo",
+            "className": "w100 inline-block mb1 bold small",
+            "htmlFor": "foo",
+          },
+          "ref": null,
+          "rendered": "foo",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "arrowRenderer": [Function],
+            "autosize": true,
+            "backspaceRemoves": true,
+            "backspaceToRemoveMessage": "Press backspace to remove {label}",
+            "className": "relative inline-block",
+            "clearAllText": "Clear all",
+            "clearRenderer": [Function],
+            "clearValueText": "Clear value",
+            "clearable": false,
+            "closeOnSelect": true,
+            "deleteRemoves": true,
+            "delimiter": ",",
+            "disabled": false,
+            "escapeClearsValue": true,
+            "filterOptions": [Function],
+            "ignoreAccents": true,
+            "ignoreCase": true,
+            "inputProps": Object {},
+            "isLoading": false,
+            "joinValues": false,
+            "labelKey": "label",
+            "matchPos": "any",
+            "matchProp": "any",
+            "menuBuffer": 0,
+            "menuRenderer": [Function],
+            "multi": false,
+            "name": "foo",
+            "noResultsText": "No results found",
+            "onBlurResetsInput": true,
+            "onChange": [Function],
+            "onClose": [Function],
+            "onCloseResetsInput": true,
+            "onOpen": [Function],
+            "onSelectResetsInput": true,
+            "openOnClick": true,
+            "optionComponent": [Function],
+            "options": Array [
+              Object {
+                "label": "foo",
+                "value": "foo",
+              },
+            ],
+            "pageSize": 5,
+            "placeholder": "foo",
+            "removeSelected": true,
+            "required": false,
+            "rtl": false,
+            "scrollMenuIntoView": true,
+            "searchable": false,
+            "simpleValue": false,
+            "tabSelectsValue": true,
+            "trimFilter": true,
+            "value": "foo",
+            "valueComponent": [Function],
+            "valueKey": "value",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Dropdown
+    className=""
+    label=""
+    name=""
+    options={Object {}}
+    placeholder="Select"
+    value=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="w100 inline-block mb1 bold small"
+          htmlFor=""
+/>,
+        <Select
+          arrowRenderer={[Function]}
+          autosize={true}
+          backspaceRemoves={true}
+          backspaceToRemoveMessage="Press backspace to remove {label}"
+          className="relative inline-block"
+          clearAllText="Clear all"
+          clearRenderer={[Function]}
+          clearValueText="Clear value"
+          clearable={false}
+          closeOnSelect={true}
+          deleteRemoves={true}
+          delimiter=","
+          disabled={false}
+          escapeClearsValue={true}
+          filterOptions={[Function]}
+          ignoreAccents={true}
+          ignoreCase={true}
+          inputProps={Object {}}
+          isLoading={false}
+          joinValues={false}
+          labelKey="label"
+          matchPos="any"
+          matchProp="any"
+          menuBuffer={0}
+          menuRenderer={[Function]}
+          multi={false}
+          name=""
+          noResultsText="No results found"
+          onBlurResetsInput={true}
+          onChange={[Function]}
+          onClose={[Function]}
+          onCloseResetsInput={true}
+          onOpen={[Function]}
+          onSelectResetsInput={true}
+          openOnClick={true}
+          optionComponent={[Function]}
+          options={Object {}}
+          pageSize={5}
+          placeholder="Select"
+          removeSelected={true}
+          required={false}
+          rtl={false}
+          scrollMenuIntoView={true}
+          searchable={false}
+          simpleValue={false}
+          tabSelectsValue={true}
+          trimFilter={true}
+          value=""
+          valueComponent={[Function]}
+          valueKey="value"
+/>,
+      ],
+      "className": "w-auto relative z-1 pointer",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "w100 inline-block mb1 bold small",
+          "htmlFor": "",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "arrowRenderer": [Function],
+          "autosize": true,
+          "backspaceRemoves": true,
+          "backspaceToRemoveMessage": "Press backspace to remove {label}",
+          "className": "relative inline-block",
+          "clearAllText": "Clear all",
+          "clearRenderer": [Function],
+          "clearValueText": "Clear value",
+          "clearable": false,
+          "closeOnSelect": true,
+          "deleteRemoves": true,
+          "delimiter": ",",
+          "disabled": false,
+          "escapeClearsValue": true,
+          "filterOptions": [Function],
+          "ignoreAccents": true,
+          "ignoreCase": true,
+          "inputProps": Object {},
+          "isLoading": false,
+          "joinValues": false,
+          "labelKey": "label",
+          "matchPos": "any",
+          "matchProp": "any",
+          "menuBuffer": 0,
+          "menuRenderer": [Function],
+          "multi": false,
+          "name": "",
+          "noResultsText": "No results found",
+          "onBlurResetsInput": true,
+          "onChange": [Function],
+          "onClose": [Function],
+          "onCloseResetsInput": true,
+          "onOpen": [Function],
+          "onSelectResetsInput": true,
+          "openOnClick": true,
+          "optionComponent": [Function],
+          "options": Object {},
+          "pageSize": 5,
+          "placeholder": "Select",
+          "removeSelected": true,
+          "required": false,
+          "rtl": false,
+          "scrollMenuIntoView": true,
+          "searchable": false,
+          "simpleValue": false,
+          "tabSelectsValue": true,
+          "trimFilter": true,
+          "value": "",
+          "valueComponent": [Function],
+          "valueKey": "value",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="w100 inline-block mb1 bold small"
+            htmlFor=""
+/>,
+          <Select
+            arrowRenderer={[Function]}
+            autosize={true}
+            backspaceRemoves={true}
+            backspaceToRemoveMessage="Press backspace to remove {label}"
+            className="relative inline-block"
+            clearAllText="Clear all"
+            clearRenderer={[Function]}
+            clearValueText="Clear value"
+            clearable={false}
+            closeOnSelect={true}
+            deleteRemoves={true}
+            delimiter=","
+            disabled={false}
+            escapeClearsValue={true}
+            filterOptions={[Function]}
+            ignoreAccents={true}
+            ignoreCase={true}
+            inputProps={Object {}}
+            isLoading={false}
+            joinValues={false}
+            labelKey="label"
+            matchPos="any"
+            matchProp="any"
+            menuBuffer={0}
+            menuRenderer={[Function]}
+            multi={false}
+            name=""
+            noResultsText="No results found"
+            onBlurResetsInput={true}
+            onChange={[Function]}
+            onClose={[Function]}
+            onCloseResetsInput={true}
+            onOpen={[Function]}
+            onSelectResetsInput={true}
+            openOnClick={true}
+            optionComponent={[Function]}
+            options={Object {}}
+            pageSize={5}
+            placeholder="Select"
+            removeSelected={true}
+            required={false}
+            rtl={false}
+            scrollMenuIntoView={true}
+            searchable={false}
+            simpleValue={false}
+            tabSelectsValue={true}
+            trimFilter={true}
+            value=""
+            valueComponent={[Function]}
+            valueKey="value"
+/>,
+        ],
+        "className": "w-auto relative z-1 pointer",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "w100 inline-block mb1 bold small",
+            "htmlFor": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "arrowRenderer": [Function],
+            "autosize": true,
+            "backspaceRemoves": true,
+            "backspaceToRemoveMessage": "Press backspace to remove {label}",
+            "className": "relative inline-block",
+            "clearAllText": "Clear all",
+            "clearRenderer": [Function],
+            "clearValueText": "Clear value",
+            "clearable": false,
+            "closeOnSelect": true,
+            "deleteRemoves": true,
+            "delimiter": ",",
+            "disabled": false,
+            "escapeClearsValue": true,
+            "filterOptions": [Function],
+            "ignoreAccents": true,
+            "ignoreCase": true,
+            "inputProps": Object {},
+            "isLoading": false,
+            "joinValues": false,
+            "labelKey": "label",
+            "matchPos": "any",
+            "matchProp": "any",
+            "menuBuffer": 0,
+            "menuRenderer": [Function],
+            "multi": false,
+            "name": "",
+            "noResultsText": "No results found",
+            "onBlurResetsInput": true,
+            "onChange": [Function],
+            "onClose": [Function],
+            "onCloseResetsInput": true,
+            "onOpen": [Function],
+            "onSelectResetsInput": true,
+            "openOnClick": true,
+            "optionComponent": [Function],
+            "options": Object {},
+            "pageSize": 5,
+            "placeholder": "Select",
+            "removeSelected": true,
+            "required": false,
+            "rtl": false,
+            "scrollMenuIntoView": true,
+            "searchable": false,
+            "simpleValue": false,
+            "tabSelectsValue": true,
+            "trimFilter": true,
+            "value": "",
+            "valueComponent": [Function],
+            "valueKey": "value",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

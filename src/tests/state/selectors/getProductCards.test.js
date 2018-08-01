@@ -1,19 +1,18 @@
 import getProductCards from 'state/selectors/getProductCards';
 
 it('getProductCards selector works as intended', () => {
-  const shopify = [
-    {
+  const shopify = {
+    'test-product': {
       handle: 'test-product',
       variants: [
         {
-          title: 'test-variant',
           available: true,
           price: 19.99,
           id: '9999'
         }
       ]
     }
-  ];
+  };
 
   const contentful = {
     items: [
@@ -36,15 +35,20 @@ it('getProductCards selector works as intended', () => {
     ]
   };
 
-  const mergedProducts = [
-    {
+  const mergedProducts = {
+    'Test Product': {
       handle: 'test-product',
-      id: '9999',
       image: 'test.jpg',
-      price: 19.99,
-      title: 'Test Product'
+      title: 'Test Product',
+      variants: [
+        {
+          available: true,
+          id: '9999',
+          price: 19.99
+        }
+      ]
     }
-  ];
+  };
 
   expect(getProductCards.resultFunc(shopify, contentful)).toEqual(
     mergedProducts

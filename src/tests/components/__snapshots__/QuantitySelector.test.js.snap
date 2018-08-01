@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <QuantitySelector
+    allowZero={false}
+    className="foo"
+    color="seafoam"
+    onChange={[Function]}
+    quantity={1}
+    variant="small"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Button
+          className=""
+          color="seafoam-madison-blue-border"
+          disabled={false}
+          fullWidth={false}
+          label="–"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="circle-small"
+/>,
+        <TextField
+          address=""
+          className="copy mx2"
+          color="seafoam-madison-blue-border"
+          name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder=""
+          required={false}
+          type="text"
+          value={1}
+          variant="quantity-small"
+/>,
+        <Button
+          className=""
+          color="seafoam-madison-blue-border"
+          disabled={false}
+          fullWidth={false}
+          label="+"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="circle-small"
+/>,
+      ],
+      "className": "flex items-center foo",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "",
+          "color": "seafoam-madison-blue-border",
+          "disabled": false,
+          "fullWidth": false,
+          "label": "–",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "circle-small",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "address": "",
+          "className": "copy mx2",
+          "color": "seafoam-madison-blue-border",
+          "name": "",
+          "onBlur": [Function],
+          "onChange": [Function],
+          "placeholder": "",
+          "required": false,
+          "type": "text",
+          "value": 1,
+          "variant": "quantity-small",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "",
+          "color": "seafoam-madison-blue-border",
+          "disabled": false,
+          "fullWidth": false,
+          "label": "+",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "circle-small",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Button
+            className=""
+            color="seafoam-madison-blue-border"
+            disabled={false}
+            fullWidth={false}
+            label="–"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="circle-small"
+/>,
+          <TextField
+            address=""
+            className="copy mx2"
+            color="seafoam-madison-blue-border"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            required={false}
+            type="text"
+            value={1}
+            variant="quantity-small"
+/>,
+          <Button
+            className=""
+            color="seafoam-madison-blue-border"
+            disabled={false}
+            fullWidth={false}
+            label="+"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="circle-small"
+/>,
+        ],
+        "className": "flex items-center foo",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "",
+            "color": "seafoam-madison-blue-border",
+            "disabled": false,
+            "fullWidth": false,
+            "label": "–",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "circle-small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "address": "",
+            "className": "copy mx2",
+            "color": "seafoam-madison-blue-border",
+            "name": "",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "placeholder": "",
+            "required": false,
+            "type": "text",
+            "value": 1,
+            "variant": "quantity-small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "",
+            "color": "seafoam-madison-blue-border",
+            "disabled": false,
+            "fullWidth": false,
+            "label": "+",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "circle-small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <QuantitySelector
+    allowZero={false}
+    className=""
+    color=""
+    onChange={[Function]}
+    quantity={1}
+    variant=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Button
+          className=""
+          color="white-madison-blue-border"
+          disabled={false}
+          fullWidth={false}
+          label="–"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="circle"
+/>,
+        <TextField
+          address=""
+          className="copy mx2"
+          color="madison-blue"
+          name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder=""
+          required={false}
+          type="text"
+          value={1}
+          variant="quantity"
+/>,
+        <Button
+          className=""
+          color="white-madison-blue-border"
+          disabled={false}
+          fullWidth={false}
+          label="+"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="circle"
+/>,
+      ],
+      "className": "flex items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "",
+          "color": "white-madison-blue-border",
+          "disabled": false,
+          "fullWidth": false,
+          "label": "–",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "circle",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "address": "",
+          "className": "copy mx2",
+          "color": "madison-blue",
+          "name": "",
+          "onBlur": [Function],
+          "onChange": [Function],
+          "placeholder": "",
+          "required": false,
+          "type": "text",
+          "value": 1,
+          "variant": "quantity",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "",
+          "color": "white-madison-blue-border",
+          "disabled": false,
+          "fullWidth": false,
+          "label": "+",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "circle",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Button
+            className=""
+            color="white-madison-blue-border"
+            disabled={false}
+            fullWidth={false}
+            label="–"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="circle"
+/>,
+          <TextField
+            address=""
+            className="copy mx2"
+            color="madison-blue"
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder=""
+            required={false}
+            type="text"
+            value={1}
+            variant="quantity"
+/>,
+          <Button
+            className=""
+            color="white-madison-blue-border"
+            disabled={false}
+            fullWidth={false}
+            label="+"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="circle"
+/>,
+        ],
+        "className": "flex items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "",
+            "color": "white-madison-blue-border",
+            "disabled": false,
+            "fullWidth": false,
+            "label": "–",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "circle",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "address": "",
+            "className": "copy mx2",
+            "color": "madison-blue",
+            "name": "",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "placeholder": "",
+            "required": false,
+            "type": "text",
+            "value": 1,
+            "variant": "quantity",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "",
+            "color": "white-madison-blue-border",
+            "disabled": false,
+            "fullWidth": false,
+            "label": "+",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "circle",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
