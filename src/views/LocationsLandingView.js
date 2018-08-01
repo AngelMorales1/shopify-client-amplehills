@@ -32,9 +32,9 @@ class LocationsLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="Locations">
+      <div className="Locations w100 inline-block">
         {this.state.currentBreakpoint !== 'small' ? (
-          <div className="col col-8">
+          <div className="col col-8" style={{ position: 'sticky', top: '0' }}>
             <LocationsMap {...this.props} />
           </div>
         ) : null}

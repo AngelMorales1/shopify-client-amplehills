@@ -9,14 +9,14 @@ import { Image } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
-  state = { storeDistance: {} };
+  state = { sortedLocations: {} };
 
   componentDidMount = () => {
     if ('geolocation' in window.navigator) {
       return this.getDistanceToStores(this.props.locations);
     } else {
       return this.setState({
-        storeDistance: { error: 'Location not available' }
+        sortedLocations: this.props.locations
       });
     }
   };
@@ -29,59 +29,44 @@ class LocationsCards extends Component {
           lon: position.coords.longitude
         };
 
-        const storeDistance = locations.reduce((distances, location) => {
-          const storeLocation = location.location;
-          distances[location.id] = getDistanceBetweenLocations(
-            storeLocation.lat,
-            storeLocation.lon,
+        const sortedLocations = locations.sort((location1, location2) => {
+          location1.distance = getDistanceBetweenLocations(
+            location1.location.lat,
+            location1.location.lon,
             currentLocation.lat,
             currentLocation.lon
           );
+          location2.distance = getDistanceBetweenLocations(
+            location2.location.lat,
+            location2.location.lon,
+            currentLocation.lat,
+            currentLocation.lon
+          );
+          return location1.distance - location2.distance;
+        });
 
-          return distances;
-        }, {});
-
-        this.setState({ storeDistance: storeDistance });
-        this.sortLocationsByDistance(this.state.storeDistance);
+        this.setState({ sortedLocations: sortedLocations });
       },
       error => {
-        this.setState({ storeDistance: { error: 'Location not available' } });
+        this.setState({ sortedLocations: locations });
       }
     );
   };
 
-  sortLocationsByDistance = storeDistance => {
-    const sortedLocationTitles = Object.keys(storeDistance).sort(
-      (distance1, distance2) =>
-        storeDistance[distance1] - storeDistance[distance2]
-    );
-
-    const sortedLocations = sortedLocationTitles.map(id => {
-      return this.props.locations.find(location => location.id === id);
-    });
-
-    return sortedLocations;
-  };
-
   render() {
     const locations = this.props.locations;
-    const storeDistance = this.state.storeDistance;
-    const isOrderedLocationAvailable = !storeDistance.error
-      ? this.sortLocationsByDistance(storeDistance)
-      : locations;
+    const sortedLocations = this.state.sortedLocations;
 
     return (
       <div
-        className={cx(styles['LocationsCards'], 'overflow-scroll bg-goldenrod')}
+        className={cx(
+          styles['LocationsCards'],
+          'flex flex-row justify-center bg-goldenrod pt3 pb4'
+        )}
       >
-        <div
-          className={cx(
-            styles['LocationsCards__cards-container'],
-            'mt3 mb4 mx-auto wh100'
-          )}
-        >
-          {Object.keys(storeDistance).length ? (
-            isOrderedLocationAvailable.map(location => {
+        <div className={cx(styles['LocationsCards__cards-container'], 'w100')}>
+          {sortedLocations.length ? (
+            sortedLocations.map(location => {
               const locationOpenHours = location.currentOpenHours;
               const imageUrl = get(location, 'image.fields.file.url');
 
@@ -93,32 +78,23 @@ class LocationsCards extends Component {
                     'bg-white my3 flex flex-column justify-between relative'
                   )}
                 >
-                  <div
-                    className={cx(
-                      styles['LocationsCards__card-tag'],
-                      'bg-peach bold text-white absolute m3'
-                    )}
-                  >
-                    {this.state.storeDistance[location.id] ? (
+                  {location.distance ? (
+                    <div
+                      className={cx(
+                        styles['LocationsCards__card-tag'],
+                        'bg-peach bold text-white absolute m3'
+                      )}
+                    >
                       <span
                         className={cx(
                           styles['LocationsCards__card-text'],
                           'uppercase info-text-big'
                         )}
                       >
-                        {this.state.storeDistance[location.id]} miles away
+                        {location.distance} miles away
                       </span>
-                    ) : (
-                      <span
-                        className={cx(
-                          styles['LocationsCards__card-text'],
-                          'info-text-big'
-                        )}
-                      >
-                        {this.state.storeDistance.error}
-                      </span>
-                    )}
-                  </div>
+                    </div>
+                  ) : null}
                   <div
                     className={cx(
                       styles['LocationsCards__card-seasonal'],
