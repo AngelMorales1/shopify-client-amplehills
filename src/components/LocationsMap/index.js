@@ -15,7 +15,7 @@ const LocationsMap = props => {
   return (
     <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
-        className="z-below"
+        className="z-0"
         featureCollection={props.locationGeoJSON}
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
