@@ -9,7 +9,10 @@ import { Image } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
-  state = { sortedLocations: [] };
+  state = {
+    position: null,
+    sortedLocations: []
+  };
 
   componentDidMount = () => {
     this.attemptToGetDistanceToStores();
@@ -33,36 +36,46 @@ class LocationsCards extends Component {
   };
 
   getDistanceToStores = locations => {
-    this.setState({ sortedLocations: [] });
-    window.navigator.geolocation.getCurrentPosition(
-      position => {
-        const currentLocation = {
-          lat: position.coords.latitude,
-          lon: position.coords.longitude
-        };
+    const { position } = this.state;
 
-        const sortedLocations = locations.sort((location1, location2) => {
-          location1.distance = getDistanceBetweenLocations(
-            location1.coordinates.lat,
-            location1.coordinates.lon,
-            currentLocation.lat,
-            currentLocation.lon
-          );
-          location2.distance = getDistanceBetweenLocations(
-            location2.coordinates.lat,
-            location2.coordinates.lon,
-            currentLocation.lat,
-            currentLocation.lon
-          );
-          return location1.distance - location2.distance;
-        });
+    if (position) {
+      this.sortLocationsByDistance(locations, position);
+    } else {
+      window.navigator.geolocation.getCurrentPosition(
+        position => {
+          this.setState({ position });
+          this.sortLocationsByDistance(locations, position);
+        },
+        error => {
+          this.setState({ sortedLocations: locations });
+        }
+      );
+    }
+  };
 
-        this.setState({ sortedLocations: sortedLocations });
-      },
-      error => {
-        this.setState({ sortedLocations: locations });
-      }
-    );
+  sortLocationsByDistance = (locations, position) => {
+    const currentLocation = {
+      lat: position.coords.latitude,
+      lon: position.coords.longitude
+    };
+
+    const sortedLocations = locations.sort((location1, location2) => {
+      location1.distance = getDistanceBetweenLocations(
+        location1.coordinates.lat,
+        location1.coordinates.lon,
+        currentLocation.lat,
+        currentLocation.lon
+      );
+      location2.distance = getDistanceBetweenLocations(
+        location2.coordinates.lat,
+        location2.coordinates.lon,
+        currentLocation.lat,
+        currentLocation.lon
+      );
+      return location1.distance - location2.distance;
+    });
+
+    this.setState({ sortedLocations: sortedLocations });
   };
 
   render() {
@@ -78,7 +91,7 @@ class LocationsCards extends Component {
         <div
           className={cx(
             styles['LocationsCards__cards-container'],
-            'w100 flex flex-wrap justify-center'
+            'w100 flex flex-wrap items-start justify-center'
           )}
         >
           {sortedLocations.length ? (

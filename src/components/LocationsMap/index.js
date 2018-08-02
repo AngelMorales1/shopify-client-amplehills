@@ -50,7 +50,7 @@ const LocationsMap = props => {
         clusterRadius={50}
         textSize={16}
         textColor="#ffffff"
-        mapPadding={200}
+        mapPadding={150}
       />
       <div className="absolute t0 l0 flex p3">
         <Button
