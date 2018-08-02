@@ -34,7 +34,7 @@ class LocationsLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="Locations w100 flex">
+      <div className="Locations w100 flex flex-row">
         {this.state.currentBreakpoint !== 'small' ? (
           <div
             className="self-start w100"
