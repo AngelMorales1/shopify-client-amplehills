@@ -61,13 +61,13 @@ class LocationsCards extends Component {
       <div
         className={cx(
           styles['LocationsCards'],
-          'flex flex-row justify-center bg-goldenrod py3'
+          'flex justify-center bg-goldenrod py3'
         )}
       >
         <div
           className={cx(
             styles['LocationsCards__cards-container'],
-            'w100 flex flex-column items-center'
+            'w100 flex flex-wrap justify-center'
           )}
         >
           {sortedLocations.length ? (
@@ -80,7 +80,7 @@ class LocationsCards extends Component {
                   key={location.id}
                   className={cx(
                     styles['LocationsCards__card-container'],
-                    'bg-white my3 flex flex-column justify-between relative w100'
+                    'bg-white my2 flex flex-column justify-between relative w100'
                   )}
                 >
                   {location.distance ? (
