@@ -11,7 +11,7 @@ import styles from './LocationsCards.scss';
 class LocationsCards extends Component {
   state = {
     position: null,
-    sortedLocations: []
+    sortedLocations: false
   };
 
   componentDidMount = () => {
@@ -94,7 +94,7 @@ class LocationsCards extends Component {
             'w100 flex flex-wrap items-start justify-center'
           )}
         >
-          {sortedLocations.length ? (
+          {sortedLocations ? (
             sortedLocations.map(location => {
               const locationOpenHours = location.currentOpenHours;
               const imageUrl = get(location, 'image.fields.file.url');
