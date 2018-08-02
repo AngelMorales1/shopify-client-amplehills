@@ -64,11 +64,13 @@ const FooterLocations = ({ locations }) => {
                   <h4 className="mb1 text-white bold small nowrap">
                     {location.title}
                   </h4>
-                  {Object.keys(hours).map((hour, i) => {
+                  {hours.map((hour, i) => {
+                    const hourKey = Object.keys(hour);
                     return (
-                      <p className="mb1 text-white small nowrap" key={i}>{`${
-                        hours[hour]
-                      }: ${hour}`}</p>
+                      <p
+                        className="mb1 text-white small nowrap"
+                        key={i}
+                      >{`${hourKey}: ${hour[hourKey]}`}</p>
                     );
                   })}
                   {location.delivery ? (
