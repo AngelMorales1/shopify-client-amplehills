@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import Global from 'constants/Global';
 
 import LocationsMap from 'components/LocationsMap';
+import LocationsCards from 'components/LocationsCards';
 
 class LocationsLandingView extends Component {
   state = {
-    currentBreakpoint: Global.breakpoints.small.label
+    currentBreakpoint: Global.breakpoints.small.label,
+    desktopHeaderHeight: Global.headerHeight.desktop,
+    locationSideRailWidth: Global.locationSideRailWidth
   };
 
   componentDidMount() {
@@ -31,12 +34,27 @@ class LocationsLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="Locations">
+      <div className="Locations w100 flex flex-row">
         {this.state.currentBreakpoint !== 'small' ? (
-          <div className="col col-8">
+          <div
+            className="self-start w100"
+            style={{
+              position: 'sticky',
+              top: `${this.state.desktopHeaderHeight}px`
+            }}
+          >
             <LocationsMap {...this.props} />
           </div>
         ) : null}
+        <div
+          style={
+            this.state.currentBreakpoint === 'small'
+              ? { width: '100%' }
+              : { width: `${this.state.locationSideRailWidth}px` }
+          }
+        >
+          <LocationsCards {...this.props} />
+        </div>
       </div>
     );
   }

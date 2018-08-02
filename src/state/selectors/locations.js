@@ -2,6 +2,19 @@ import { createSelector } from 'reselect';
 import { Days } from 'constants/Days.js';
 import get from 'utils/get';
 import sortHours from 'utils/sortHours';
+import moment from 'moment';
+
+const getCurrentOpenHours = location => {
+  const currentDay = moment()
+    .format('dddd')
+    .toLowerCase();
+
+  const todayOpenHours = Object.keys(location).find(
+    field => field === currentDay
+  );
+
+  return todayOpenHours;
+};
 
 export default createSelector(
   state => get(state, 'locations.locations'),
@@ -9,7 +22,6 @@ export default createSelector(
     const selectedLocations = get(locations, 'items', []).map(location => {
       const id = get(location, 'sys.id', '');
       const fields = get(location, 'fields', {});
-
       const title = get(fields, 'title', '');
       const image = get(fields, 'image.fields.file.url', '');
       const seasonalImage = get(fields, 'seasonalImage.fields.file.url', '');
@@ -31,6 +43,7 @@ export default createSelector(
         return accumulated;
       }, {});
       const sortedHours = sortHours(hours);
+      const currentOpenHours = getCurrentOpenHours(fields);
 
       return {
         id,
@@ -49,7 +62,9 @@ export default createSelector(
         hours,
         sortedHours,
         delivery,
-        seasonalImage
+        seasonalImage,
+        currentOpenHours,
+        ...fields
       };
     });
 
