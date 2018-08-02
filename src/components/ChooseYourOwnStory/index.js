@@ -129,16 +129,20 @@ class ChooseYourOwnStory extends Component {
     const fields = get(block, 'fields', {});
 
     const product =
-      products[get(this.props.product, 'handle', 'choose-your-own-story')];
+      products[get(this.props.product, 'handle', 'choose-your-own-story')] ||
+      {};
     const {
       overlayContentImage,
       shippingInformation,
       shippingPledge,
       calloutImage
     } = ourPledge;
-    const activeVariant = product.variants.find(
-      variant => getPintSizeFromTitle(variant.title) === size
-    );
+
+    const productVariant = get(product, 'variants', []);
+    const activeVariant =
+      productVariant.find(
+        variant => getPintSizeFromTitle(variant.title) === size
+      ) || {};
 
     const shoppableProducts = get(fields, 'products', []);
     const breadcrumbs = [
@@ -197,7 +201,7 @@ class ChooseYourOwnStory extends Component {
                 {get(fields, 'title')}
               </h1>
               <div className="w100 flex my3">
-                {product.variants.map(variant => (
+                {productVariant.map(variant => (
                   <Radio
                     label={variant.title}
                     className="mr3"
@@ -237,7 +241,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start xs-hide sm-hide md-hide'
               )}
             >
-              {product.variants.map(variant => (
+              {productVariant.map(variant => (
                 <Radio
                   label={variant.title}
                   className="mr3 small bold"

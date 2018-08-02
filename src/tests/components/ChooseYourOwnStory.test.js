@@ -1,45 +1,34 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import BlockSwitch from 'components/BlockSwitch';
+import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 
 it('renders without data', () => {
-  const component = shallow(<BlockSwitch />);
+  const component = shallow(<ChooseYourOwnStory />);
 
   expect(component).toMatchSnapshot();
 });
 
 it('renders with data', () => {
   const component = shallow(
-    <BlockSwitch
+    <ChooseYourOwnStory
       actions={{ foo: () => console.log('foo') }}
       addLineItemsStatus={'foo'}
       block={{
         fields: {
-          backgroundColor: 'foo',
-          image: {
-            sys: {
-              createdAt: 'foo',
-              environment: { foo: 'foo' },
-              id: 'foo',
-              locale: 'foo',
-              revision: 0,
-              space: { sys: {} },
-              type: 'Asset',
-              updatedAt: 'foo'
-            },
-            fields: {
-              file: {
-                url: 'foo'
-              },
-              title: 'foo'
+          description: 'foo',
+          products: [
+            {
+              fields: {
+                flavorDescription: 'foo',
+                image: { sys: {}, fields: {} },
+                pintImage: { sys: {}, fields: {} },
+                productHandle: 'foo',
+                productTitle: 'foo'
+              }
             }
-          },
-          text1: 'foo',
-          text2: 'foo',
-          title: 'foo',
-          title1: 'foo',
-          title2: 'foo'
+          ],
+          title: 'foo'
         },
         sys: {
           contentType: { sys: {} },

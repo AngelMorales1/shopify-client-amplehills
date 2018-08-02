@@ -10,7 +10,7 @@ import styles from './Breadcrumbs.scss';
 
 const Breadcrumbs = ({ breadcrumbs, className }) => {
   if (!breadcrumbs.length) return null;
-  console.log(breadcrumbs, className);
+
   return (
     <div className={cx(className, 'my3 px2 flex items-center text-peach')}>
       <div className="flex pr1 items-center">

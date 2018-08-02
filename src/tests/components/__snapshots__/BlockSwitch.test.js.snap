@@ -5,36 +5,199 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <BlockSwitch
-    data={
+    actions={
         Object {
-            "actions": Object {},
-            "addLineItemsStatus": "IDLE",
-            "block": Object {
-              "sys": Object {
-                "contentType": Object {
-                  "sys": Object {
-                    "id": "blockProductHero",
-                  },
-                },
-              },
-            },
-            "checkout": Object {},
-            "error": null,
-            "fields": Object {},
-            "globalSettings": Object {},
-            "history": Object {},
-            "location": Object {},
-            "match": Object {},
-            "model": Object {},
-            "ourPledge": Object {},
-            "ourPledgeOverlayIsOpen": false,
-            "product": Object {},
-            "products": Object {},
-            "staticContext": undefined,
-            "view": [Function],
-            "z": 1,
+            "foo": [Function],
           }
     }
+    addLineItemsStatus="foo"
+    block={
+        Object {
+            "fields": Object {
+              "backgroundColor": "foo",
+              "image": Object {
+                "fields": Object {
+                  "file": Object {
+                    "url": "foo",
+                  },
+                  "title": "foo",
+                },
+                "sys": Object {
+                  "createdAt": "foo",
+                  "environment": Object {
+                    "foo": "foo",
+                  },
+                  "id": "foo",
+                  "locale": "foo",
+                  "revision": 0,
+                  "space": Object {
+                    "sys": Object {},
+                  },
+                  "type": "Asset",
+                  "updatedAt": "foo",
+                },
+              },
+              "text1": "foo",
+              "text2": "foo",
+              "title": "foo",
+              "title1": "foo",
+              "title2": "foo",
+            },
+            "sys": Object {
+              "contentType": Object {
+                "sys": Object {},
+              },
+              "createdAt": "foo",
+              "environment": Object {
+                "sys": Object {},
+              },
+              "id": "foo",
+              "locale": "foo",
+              "revision": 0,
+              "space": Object {
+                "sys": Object {},
+              },
+              "type": "foo",
+              "updatedAt": "foo",
+            },
+          }
+    }
+    checkout={
+        Object {
+            "completedAt": null,
+            "currencyCode": "foo",
+            "id": "foo",
+            "lineItems": Array [
+              Object {
+                "foo": Object {},
+              },
+            ],
+            "note": null,
+            "subtotalPrice": "0",
+            "totalPrice": "0",
+          }
+    }
+    error={null}
+    globalSettings={
+        Object {
+            "facebookLink": "foo",
+            "footerIllustration": Object {
+              "fields": Object {},
+              "sys": Object {},
+            },
+            "instagramLink": "foo",
+            "ourPledgeIcon": Object {
+              "fields": Object {},
+              "sys": Object {},
+            },
+            "shipping2": "foo",
+            "shippingDates": "foo",
+            "title": "foo",
+            "twitterLink": "foo",
+          }
+    }
+    history={
+        Object {
+            "action": "foo",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 0,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "foo",
+              "pathname": "foo",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+    }
+    location={
+        Object {
+            "hash": "foo",
+            "key": "foo",
+            "pathname": "/foo",
+            "search": "foo",
+            "state": undefined,
+          }
+    }
+    match={
+        Object {
+            "isExact": true,
+            "params": Object {
+              "productHandle": "foo",
+            },
+            "path": "/foo",
+            "url": "/foo",
+          }
+    }
+    model={
+        Object {
+            "action": Object {
+              "payload": Object {},
+              "type": "foo",
+            },
+            "isError": false,
+            "value": Object {
+              "items": Array [],
+              "limit": 0,
+              "skip": 0,
+              "sys": Object {},
+              "total": 0,
+            },
+          }
+    }
+    ourPledge={
+        Object {
+            "calloutImage": Object {
+              "fields": Object {},
+              "sys": Object {},
+            },
+            "overlayContentImage": Object {
+              "fields": Object {},
+              "sys": Object {},
+            },
+            "shippingInformation": "foo",
+            "shippingPledge": "foo",
+            "title": "foo",
+          }
+    }
+    ourPledgeOverlayIsOpen={false}
+    product={
+        Object {
+            "available": true,
+            "blocks": Array [
+              Object {},
+            ],
+            "cartDetails": "foo",
+            "description": "foo",
+            "flavorDescription": "foo",
+            "gridImage": "foo",
+            "handle": "foo",
+            "id": "foo",
+            "pintImage": "foo",
+            "price": 0,
+            "subItems": Array [],
+            "subItemsAvailable": true,
+            "title": "foo",
+            "variants": Array [
+              Object {},
+            ],
+          }
+    }
+    products={
+        Object {
+            "foo": Object {},
+          }
+    }
+    staticContext={undefined}
+    view={[Function]}
+    z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
