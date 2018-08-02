@@ -12,6 +12,7 @@ import {
 
 import locations from 'state/selectors/locations';
 import locationGeoJSON from 'state/selectors/locationGeoJSON';
+import filteredLocations from 'state/selectors/filteredLocations';
 import filteredOutLocations from 'state/selectors/filteredOutLocations';
 
 class LocationsLandingContainer extends ContainerBase {
@@ -22,6 +23,7 @@ class LocationsLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
+    filteredLocations: filteredLocations(state),
     filteredOutLocations: filteredOutLocations(state),
     locationFilters: get(state, 'locationsUI.locationFilters'),
     locations: locations(state),
