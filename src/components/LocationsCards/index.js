@@ -88,7 +88,7 @@ class LocationsCards extends Component {
                       <span
                         className={cx(
                           styles['LocationsCards__card-text'],
-                          'uppercase info-text-big'
+                          'uppercase'
                         )}
                       >
                         {location.distance} miles away
@@ -183,12 +183,10 @@ class LocationsCards extends Component {
                           <div
                             className={cx(
                               styles['LocationsCards__card-tag'],
-                              'uppercase bold bg-madison-blue inline-block'
+                              'uppercase bold bg-madison-blue inline-block text-white'
                             )}
                           >
-                            <span className="info-text-big text-white">
-                              Delivery
-                            </span>
+                            <span className="text-white">Delivery</span>
                           </div>
                         ) : null}
                       </div>

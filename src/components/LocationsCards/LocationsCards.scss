@@ -63,6 +63,7 @@ $transition-duration: 0.2;
     padding: spacing(2) spacing(5);
     border-radius: radius('l');
     letter-spacing: spacing(0.2);
+    font-size: $font-2;
   }
 
   &__card-drip {
