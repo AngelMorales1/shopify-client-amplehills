@@ -38,6 +38,14 @@ Dimension classes
   max-width: 36rem;
 }
 
+.content-wrapper {
+  padding-top: $header-height-mobile;
+
+  @media ($medium-up) {
+    padding-top: $header-height-desktop;
+  }
+}
+
 .drip {
   position: relative;
 
