@@ -1,7 +1,7 @@
 import { Days } from 'constants/Days.js';
 import { abbreviateDay } from './abbreviateDay.js';
 
-const getPeriod = daysWithSameHours => {
+const getDayRange = daysWithSameHours => {
   return daysWithSameHours.length > 1
     ? `${abbreviateDay(daysWithSameHours.shift())}–${abbreviateDay(
         daysWithSameHours.pop()
@@ -14,14 +14,14 @@ export default openHours => {
 
   const sortByHours = Days.reduce((accumulated, day) => {
     let time = openHours[day];
-    let hours = Object.keys(accumulated)[0];
+    let timeRange = Object.keys(accumulated)[0];
 
-    if (hours) {
+    if (timeRange) {
       if (accumulated[time]) {
         accumulated[time].push(day);
       } else {
-        let sortedDays = getPeriod(accumulated[hours]);
-        allSortedDays.push({ [sortedDays]: hours });
+        let sortedDays = getDayRange(accumulated[timeRange]);
+        allSortedDays.push({ [sortedDays]: timeRange });
         accumulated = {};
         accumulated[time] = [day];
       }
@@ -29,20 +29,19 @@ export default openHours => {
       accumulated[time] = [day];
     }
 
-    if (accumulated[hours] && accumulated[hours].length === 7) {
-      allSortedDays.push({ Everyday: hours });
+    if (accumulated[timeRange] && accumulated[timeRange].length === 7) {
+      allSortedDays.push({ Everyday: timeRange });
     } else if (day === Days[Days.length - 1]) {
       if (!accumulated[time]) {
         accumulated[time] = [day];
       }
 
-      let sortedDays = getPeriod(accumulated[time]);
-      allSortedDays.push({ [sortedDays]: hours });
+      let sortedDays = getDayRange(accumulated[time]);
+      allSortedDays.push({ [sortedDays]: timeRange });
     }
 
     return accumulated;
   }, {});
 
-  console.log(allSortedDays);
   return allSortedDays;
 };
