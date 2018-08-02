@@ -1,8 +1,7 @@
 @import 'settings';
 
 .LocationsMap {
-  // height: calc(100vh - #{$header-height-desktop});
-  height: 100vh;
+  height: calc(100vh - #{$header-height-desktop});
 
   &__map-key-item {
     height: $button-small-height;
