@@ -9,7 +9,7 @@ const getPeriod = daysWithSameHours => {
     : abbreviateDay(daysWithSameHours.pop());
 };
 
-export const sortHours = openHours => {
+export default openHours => {
   let allSortedDays = [];
 
   const sortByHours = Days.reduce((accumulated, day) => {
@@ -43,5 +43,6 @@ export const sortHours = openHours => {
     return accumulated;
   }, {});
 
+  console.log(allSortedDays);
   return allSortedDays;
 };

@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 import { Days } from 'constants/Days.js';
 import get from 'utils/get';
+import sortHours from 'utils/sortHours';
 
 export default createSelector(
   state => get(state, 'locations.locations'),
@@ -29,6 +30,7 @@ export default createSelector(
         }
         return accumulated;
       }, {});
+      const sortedHours = sortHours(hours);
 
       return {
         id,
@@ -45,6 +47,7 @@ export default createSelector(
         phone,
         seasonal,
         hours,
+        sortedHours,
         delivery,
         seasonalImage
       };
