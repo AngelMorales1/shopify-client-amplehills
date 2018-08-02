@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BlockSwitch
+    data={
+        Object {
+            "actions": Object {},
+            "addLineItemsStatus": "IDLE",
+            "block": Object {
+              "sys": Object {
+                "contentType": Object {
+                  "sys": Object {
+                    "id": "blockProductHero",
+                  },
+                },
+              },
+            },
+            "checkout": Object {},
+            "error": null,
+            "fields": Object {},
+            "globalSettings": Object {},
+            "history": Object {},
+            "location": Object {},
+            "match": Object {},
+            "model": Object {},
+            "ourPledge": Object {},
+            "ourPledgeOverlayIsOpen": false,
+            "product": Object {},
+            "products": Object {},
+            "staticContext": undefined,
+            "view": [Function],
+            "z": 1,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): null,
+  Symbol(enzyme.__nodes__): Array [
+    null,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <BlockSwitch />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): null,
+  Symbol(enzyme.__nodes__): Array [
+    null,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

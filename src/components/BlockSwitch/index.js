@@ -13,7 +13,7 @@ import ComicStrip from 'components/ComicStrip';
 const BlockSwitch = props => {
   const { block } = props;
   const type = get(block, 'sys.contentType.sys.id');
-
+  console.log(block);
   switch (type) {
     case 'blockProductHero':
       return <ProductHero {...props} />;

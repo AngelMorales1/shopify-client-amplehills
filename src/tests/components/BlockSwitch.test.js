@@ -11,7 +11,7 @@ it('renders without data', () => {
 });
 
 it('renders with data', () => {
-  const component = shallow(<BlockSwitch data={contentful} z={1} />);
+  const component = shallow(<BlockSwitch data={contentful} />);
 
   expect(component).toMatchSnapshot();
 });
