@@ -31,14 +31,14 @@ class LocationsCards extends Component {
 
         const sortedLocations = locations.sort((location1, location2) => {
           location1.distance = getDistanceBetweenLocations(
-            location1.location.lat,
-            location1.location.lon,
+            location1.coordinates.lat,
+            location1.coordinates.lon,
             currentLocation.lat,
             currentLocation.lon
           );
           location2.distance = getDistanceBetweenLocations(
-            location2.location.lat,
-            location2.location.lon,
+            location2.coordinates.lat,
+            location2.coordinates.lon,
             currentLocation.lat,
             currentLocation.lon
           );
@@ -64,7 +64,12 @@ class LocationsCards extends Component {
           'flex flex-row justify-center bg-goldenrod py3'
         )}
       >
-        <div className={cx(styles['LocationsCards__cards-container'], 'w100')}>
+        <div
+          className={cx(
+            styles['LocationsCards__cards-container'],
+            'w100 flex flex-column items-center'
+          )}
+        >
           {sortedLocations.length ? (
             sortedLocations.map(location => {
               const locationOpenHours = location.currentOpenHours;
@@ -75,7 +80,7 @@ class LocationsCards extends Component {
                   key={location.id}
                   className={cx(
                     styles['LocationsCards__card-container'],
-                    'bg-white my3 flex flex-column justify-between relative'
+                    'bg-white my3 flex flex-column justify-between relative w100'
                   )}
                 >
                   {location.distance ? (
@@ -141,7 +146,7 @@ class LocationsCards extends Component {
                   <div
                     className={cx(styles['LocationsCards__card-drip'], 'p3')}
                   >
-                    <h2 className="big carter mb3">{location.title}</h2>
+                    <h2 className="big carter mb2">{location.title}</h2>
                     <div>
                       <div className="flex flex-column justify-between">
                         <span className="small">{location.address1}</span>
@@ -164,7 +169,7 @@ class LocationsCards extends Component {
                       </div>
                     </div>
                     <div>
-                      <div className="flex flex-row justify-between items-center mt2">
+                      <div className="flex flex-row flex-wrap justify-between items-center mt2">
                         {locationOpenHours.length ? (
                           <div className="flex flex-column">
                             <span className="block-subheadline bold">
@@ -183,7 +188,7 @@ class LocationsCards extends Component {
                           <div
                             className={cx(
                               styles['LocationsCards__card-tag'],
-                              'uppercase bold bg-madison-blue inline-block text-white'
+                              'uppercase bold bg-madison-blue inline-block text-white mt2'
                             )}
                           >
                             <span className="text-white">Delivery</span>

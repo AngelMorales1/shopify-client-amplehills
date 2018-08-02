@@ -16,6 +16,7 @@ $transition-duration: 0.2;
   &__card-container {
     border-radius: radius('s');
     min-height: spacing(96);
+    max-width: spacing(100);
 
     @media ($medium-up) {
       min-height: spacing(120);
@@ -56,11 +57,11 @@ $transition-duration: 0.2;
   }
 
   &__card-text {
-    margin-top: spacing(2);
+    margin-top: spacing(1.5);
   }
 
   &__card-tag {
-    padding: spacing(2) spacing(5);
+    padding: spacing(3) spacing(5) spacing(2);
     border-radius: radius('l');
     letter-spacing: spacing(0.2);
     font-size: $font-2;
