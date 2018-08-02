@@ -47,7 +47,10 @@ class Nav extends Component {
   render() {
     return (
       <div
-        className={cx(styles['Nav'], 'flex bg-peach text-white items-center')}
+        className={cx(
+          styles['Nav'],
+          'z-nav w100 fixed t0 l0 flex bg-peach text-white items-center'
+        )}
       >
         <div
           className={`col col-4 md-col-5 flex items-center ${

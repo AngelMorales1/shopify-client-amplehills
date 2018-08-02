@@ -2,9 +2,11 @@
 
 .Nav {
   animation: fade-in 0.3s;
+  height: $header-height-mobile;
   padding: spacing(4) spacing(4);
 
   @media ($medium-up) {
+    height: $header-height-desktop;
     padding: spacing(4) spacing(8);
   }
 

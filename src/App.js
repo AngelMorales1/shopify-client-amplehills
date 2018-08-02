@@ -54,13 +54,16 @@ class App extends Component {
         <div className="App">
           <Nav />
           <MiniCart />
-          <Routes location={get(this, 'props.location')} />
-          <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
-          <Footer
-            locations={locations}
-            footerIllustration={footerIllustration}
-            footerLinks={{ facebookLink, instagramLink, twitterLink }}
-          />
+
+          <div className="content-wrapper">
+            <Routes location={get(this, 'props.location')} />
+            <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
+            <Footer
+              locations={locations}
+              footerIllustration={footerIllustration}
+              footerLinks={{ facebookLink, instagramLink, twitterLink }}
+            />
+          </div>
         </div>
       );
     }
