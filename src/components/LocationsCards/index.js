@@ -61,7 +61,7 @@ class LocationsCards extends Component {
       <div
         className={cx(
           styles['LocationsCards'],
-          'flex flex-row justify-center bg-goldenrod pt3 pb4'
+          'flex flex-row justify-center bg-goldenrod py3'
         )}
       >
         <div className={cx(styles['LocationsCards__cards-container'], 'w100')}>

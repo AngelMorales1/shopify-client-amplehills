@@ -3,7 +3,8 @@
 $transition-duration: 0.2;
 
 .LocationsCards {
-  min-height: calc(100vh - #{$header-height-desktop});
+  // min-height: calc(100vh - #{$header-height-desktop});
+  min-height: 100vh;
 
   &__cards-container {
     padding: 0 spacing(6);
