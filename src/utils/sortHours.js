@@ -1,56 +1,47 @@
-import { DaysInOrder } from 'constants/Days.js';
+import { Days } from 'constants/Days.js';
 import { abbreviateDay } from './abbreviateDay.js';
 
-export const sortHours = fields => {
-  const openHours = Object.keys(fields)
-    .filter(field => field.includes('day'))
-    .reduce((accumulated, current) => {
-      accumulated[current] = fields[current];
-      return accumulated;
-    }, {});
+const getDayRange = daysWithSameHours => {
+  return daysWithSameHours.length > 1
+    ? `${abbreviateDay(daysWithSameHours.shift())}–${abbreviateDay(
+        daysWithSameHours.pop()
+      )}`
+    : abbreviateDay(daysWithSameHours.pop());
+};
 
-  const sortByOpenHours = DaysInOrder.reduce((accumulated, current) => {
-    let time = openHours[current];
-    accumulated[time]
-      ? (accumulated[time] = accumulated[time].concat([current]))
-      : (accumulated[time] = [current]);
+export default openHours => {
+  let allSortedDays = [];
+
+  const sortByHours = Days.reduce((accumulated, day) => {
+    let time = openHours[day];
+    let timeRange = Object.keys(accumulated)[0];
+
+    if (timeRange) {
+      if (accumulated[time]) {
+        accumulated[time].push(day);
+      } else {
+        let sortedDays = getDayRange(accumulated[timeRange]);
+        allSortedDays.push({ [sortedDays]: timeRange });
+        accumulated = {};
+        accumulated[time] = [day];
+      }
+    } else {
+      accumulated[time] = [day];
+    }
+
+    if (accumulated[timeRange] && accumulated[timeRange].length === 7) {
+      allSortedDays.push({ Everyday: timeRange });
+    } else if (day === Days[Days.length - 1]) {
+      if (!accumulated[time]) {
+        accumulated[time] = [day];
+      }
+
+      let sortedDays = getDayRange(accumulated[time]);
+      allSortedDays.push({ [sortedDays]: timeRange });
+    }
+
     return accumulated;
   }, {});
 
-  const sortAsPeriod = Object.keys(sortByOpenHours).reduce(
-    (accumulated, current) => {
-      let days = sortByOpenHours[current];
-
-      if (
-        days.includes(DaysInOrder[0]) &&
-        days.includes(DaysInOrder[DaysInOrder.length - 1]) &&
-        days.length < 7
-      ) {
-        days.forEach((day, i) => {
-          if (
-            DaysInOrder.indexOf(days[i + 1]) - DaysInOrder.indexOf(day) !== 1 &&
-            i !== days.length - 1
-          ) {
-            accumulated[current] = `${abbreviateDay(
-              days[i + 1]
-            )}–${abbreviateDay(day)}`;
-          }
-        });
-
-        return accumulated;
-      } else if (days.length === 7) {
-        accumulated[current] = 'Everyday';
-        return accumulated;
-      }
-      days.length > 1
-        ? (accumulated[current] = `${abbreviateDay(days[0])}–${abbreviateDay(
-            days[days.length - 1]
-          )}`)
-        : (accumulated[current] = abbreviateDay(days[0]));
-      return accumulated;
-    },
-    {}
-  );
-
-  return sortAsPeriod;
+  return allSortedDays;
 };

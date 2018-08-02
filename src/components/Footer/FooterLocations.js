@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { sortHours } from 'utils/sortHours';
 import FooterRegions from 'constants/FooterRegions';
 import locationModel from 'models/locationModel';
 
@@ -46,37 +45,37 @@ const FooterLocations = ({ locations }) => {
       >
         {Object.keys(regions).map(region => (
           <div
+            key={region}
             className={cx(
               'flex flex-column',
               styles['Footer__Regions-content']
             )}
           >
             <h3 className="my2 text-white callout">{region}</h3>
-            {regions[region].map(location => {
-              let hours = sortHours(location);
-              return (
-                <div
-                  className={cx('mb3', styles['Footer__Regions-store'])}
-                  key={location.id}
-                >
-                  <h4 className="mb1 text-white bold small nowrap">
-                    {location.title}
-                  </h4>
-                  {Object.keys(hours).map((hour, i) => {
-                    return (
-                      <p className="mb1 text-white small nowrap" key={i}>{`${
-                        hours[hour]
-                      }: ${hour}`}</p>
-                    );
-                  })}
-                  {location.delivery ? (
-                    <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
-                      Order Delivery
-                    </div>
-                  ) : null}
-                </div>
-              );
-            })}
+            {regions[region].map(location => (
+              <div
+                className={cx('mb3', styles['Footer__Regions-store'])}
+                key={location.id}
+              >
+                <h4 className="mb1 text-white bold small nowrap">
+                  {location.title}
+                </h4>
+                {location.sortedHours.map((hour, i) => {
+                  const hourKey = Object.keys(hour);
+                  return (
+                    <p
+                      className="mb1 text-white small nowrap"
+                      key={i}
+                    >{`${hourKey}: ${hour[hourKey]}`}</p>
+                  );
+                })}
+                {location.delivery ? (
+                  <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
+                    Order Delivery
+                  </div>
+                ) : null}
+              </div>
+            ))}
           </div>
         ))}
       </div>
