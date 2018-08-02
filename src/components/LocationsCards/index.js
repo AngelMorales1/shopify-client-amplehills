@@ -9,19 +9,31 @@ import { Image } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
-  state = { sortedLocations: {} };
+  state = { sortedLocations: [] };
 
   componentDidMount = () => {
+    this.attemptToGetDistanceToStores();
+  };
+
+  componentDidUpdate = prevProps => {
+    if (this.props.filteredLocations !== prevProps.filteredLocations) {
+      this.attemptToGetDistanceToStores();
+    }
+  };
+
+  attemptToGetDistanceToStores = () => {
+    const locations = this.props.filteredLocations;
     if ('geolocation' in window.navigator) {
-      return this.getDistanceToStores(this.props.locations);
+      return this.getDistanceToStores(locations);
     } else {
       return this.setState({
-        sortedLocations: this.props.locations
+        sortedLocations: locations
       });
     }
   };
 
   getDistanceToStores = locations => {
+    this.setState({ sortedLocations: [] });
     window.navigator.geolocation.getCurrentPosition(
       position => {
         const currentLocation = {
@@ -54,7 +66,6 @@ class LocationsCards extends Component {
   };
 
   render() {
-    const locations = this.props.locations;
     const sortedLocations = this.state.sortedLocations;
 
     return (
