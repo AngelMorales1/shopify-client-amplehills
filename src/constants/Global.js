@@ -20,5 +20,6 @@ export default {
   headerHeight: {
     mobile: 80,
     desktop: 92
-  }
+  },
+  locationSideRailWidth: 532
 };

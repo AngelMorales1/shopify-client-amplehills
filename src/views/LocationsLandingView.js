@@ -7,7 +7,8 @@ import LocationsCards from 'components/LocationsCards';
 class LocationsLandingView extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.small.label,
-    desktopHeaderHeight: Global.headerHeight.desktop
+    desktopHeaderHeight: Global.headerHeight.desktop,
+    locationSideRailWidth: Global.locationSideRailWidth
   };
 
   componentDidMount() {
@@ -33,10 +34,10 @@ class LocationsLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="Locations w100 inline-block">
+      <div className="Locations w100 flex">
         {this.state.currentBreakpoint !== 'small' ? (
           <div
-            className="col col-8"
+            className="self-start w100"
             style={{
               position: 'sticky',
               top: `${this.state.desktopHeaderHeight}px`
@@ -46,9 +47,11 @@ class LocationsLandingView extends Component {
           </div>
         ) : null}
         <div
-          className={`col ${
-            this.state.currentBreakpoint === 'small' ? 'col-12' : 'col-4'
-          }`}
+          style={
+            this.state.currentBreakpoint === 'small'
+              ? { width: '100%' }
+              : { width: `${this.state.locationSideRailWidth}px` }
+          }
         >
           <LocationsCards {...this.props} />
         </div>
