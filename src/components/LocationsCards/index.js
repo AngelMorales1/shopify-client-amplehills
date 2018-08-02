@@ -5,8 +5,9 @@ import get from 'utils/get';
 import getLocationsResults from 'utils/getLocationsResults';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
+import LocationsMapFilters from 'constants/LocationsMapFilters';
 
-import { Image } from 'components/base';
+import { Image, Dropdown } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
@@ -80,7 +81,12 @@ class LocationsCards extends Component {
   };
 
   render() {
+    const { actions, locationFilters } = this.props;
     const sortedLocations = this.state.sortedLocations;
+    const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
+    const activeStateFilter = locationFilters.find(
+      filter => filter.key === STATE_KEY
+    );
 
     return (
       <div
@@ -95,8 +101,28 @@ class LocationsCards extends Component {
             'w100 flex flex-wrap items-start justify-center'
           )}
         >
+          {console.log(this.props)}
           {sortedLocations ? (
             <div className="w100">
+              <div className="mb2">
+                <Dropdown
+                  value={
+                    activeStateFilter
+                      ? get(activeStateFilter, 'value', '')
+                      : null
+                  }
+                  options={LocationsMapFilters.STATE_FILTERS.map(filter => ({
+                    label: filter.label,
+                    value: filter.value
+                  }))}
+                  onChange={filter =>
+                    actions.addLocationFilter({
+                      key: STATE_KEY,
+                      value: filter.value
+                    })
+                  }
+                />
+              </div>
               <div className="mb2 center">
                 <span className="bold">
                   {getLocationsResults(sortedLocations.length)}

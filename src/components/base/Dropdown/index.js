@@ -117,7 +117,8 @@ Dropdown.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
-  label: PropTypes.string
+  label: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 Dropdown.defaultProps = {
@@ -126,7 +127,8 @@ Dropdown.defaultProps = {
   placeholder: 'Select',
   className: '',
   label: '',
-  value: ''
+  value: '',
+  onChange: () => {}
 };
 
 export default Dropdown;
