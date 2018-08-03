@@ -1,11 +1,13 @@
 import {
   ADD_LOCATION_FILTER,
   REMOVE_LOCATION_FILTER,
-  CLEAR_LOCATION_FILTERS
+  CLEAR_LOCATION_FILTERS,
+  UPDATE_SEARCH_FILTER
 } from 'state/actions/ui/locationsUIActions';
 
 const initialState = {
-  locationFilters: []
+  locationFilters: [],
+  searchFilter: ''
 };
 
 export default (state = initialState, action) => {
@@ -29,6 +31,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         locationFilters
+      };
+    case UPDATE_SEARCH_FILTER:
+      return {
+        ...state,
+        searchFilter: action.payload
       };
     default:
       return state;

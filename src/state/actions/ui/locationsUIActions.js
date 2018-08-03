@@ -20,3 +20,11 @@ export const clearLocationFilters = filter => {
     type: CLEAR_LOCATION_FILTERS
   };
 };
+
+export const UPDATE_SEARCH_FILTER = 'UPDATE_SEARCH_FILTER';
+export const updateSearchFilter = value => {
+  return {
+    type: UPDATE_SEARCH_FILTER,
+    payload: value
+  };
+};

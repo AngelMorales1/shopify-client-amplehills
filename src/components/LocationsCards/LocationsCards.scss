@@ -31,7 +31,17 @@ $transition-duration: 0.2;
     }
   }
 
-  &__search {
+  &__search-button {
+    top: spacing(5);
+    right: spacing(7);
+    color: color('peach');
+    opacity: 0;
+    transform: translate3d(0, spacing(4), 0);
+
+    &--active {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
   }
 
   &__card-seasonal {

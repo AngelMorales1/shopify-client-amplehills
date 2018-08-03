@@ -7,11 +7,12 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 
-import { Image, Dropdown, TextField } from 'components/base';
+import { Image, Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
   state = {
+    searchFilter: null,
     position: null,
     sortedLocations: false
   };
@@ -82,6 +83,7 @@ class LocationsCards extends Component {
 
   render() {
     const { actions, locationFilters } = this.props;
+    const { searchFilter } = this.state;
     const sortedLocations = this.state.sortedLocations;
     const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
     const activeStateFilter = locationFilters.find(
@@ -137,6 +139,7 @@ class LocationsCards extends Component {
               </div>
               <div className="mb3 relative">
                 <TextField
+                  value={searchFilter}
                   variant="primary"
                   className={styles['LocationsCards__search']}
                   placeholder={
@@ -148,7 +151,22 @@ class LocationsCards extends Component {
                         }`
                       : `Search locations`
                   }
-                  onChange={search => this.setState({ search })}
+                  onChange={searchFilter => this.setState({ searchFilter })}
+                />
+                <Button
+                  disabled={!searchFilter}
+                  className={cx(
+                    styles['LocationsCards__search-button'],
+                    'transition absolute t0 r0 small',
+                    {
+                      [styles[
+                        'LocationsCards__search-button--active'
+                      ]]: searchFilter
+                    }
+                  )}
+                  variant="no-style"
+                  label="Find"
+                  onClick={() => actions.updateSearchFilter(searchFilter)}
                 />
               </div>
               <div className="mb2 center">
