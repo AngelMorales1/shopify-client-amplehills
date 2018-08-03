@@ -12,7 +12,6 @@ import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
   state = {
-    searchFilter: null,
     position: null,
     sortedLocations: false
   };
@@ -82,8 +81,7 @@ class LocationsCards extends Component {
   };
 
   render() {
-    const { actions, locationFilters } = this.props;
-    const { searchFilter } = this.state;
+    const { actions, locationFilters, searchFilter } = this.props;
     const sortedLocations = this.state.sortedLocations;
     const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
     const activeStateFilter = locationFilters.find(
@@ -151,7 +149,9 @@ class LocationsCards extends Component {
                         }`
                       : `Search locations`
                   }
-                  onChange={searchFilter => this.setState({ searchFilter })}
+                  onChange={searchFilter =>
+                    actions.updateSearchFilter(searchFilter)
+                  }
                 />
                 <Button
                   disabled={!searchFilter}
@@ -165,13 +165,17 @@ class LocationsCards extends Component {
                     }
                   )}
                   variant="no-style"
-                  label="Find"
-                  onClick={() => actions.updateSearchFilter(searchFilter)}
+                  label="Clear"
+                  onClick={() => actions.updateSearchFilter('')}
                 />
               </div>
               <div className="mb2 center">
                 <span className="bold">
-                  {getLocationsResults(sortedLocations.length)}
+                  {getLocationsResults(
+                    sortedLocations.length,
+                    locationFilters,
+                    searchFilter
+                  )}
                 </span>
               </div>
               <div className="flex flex-column items-center">
