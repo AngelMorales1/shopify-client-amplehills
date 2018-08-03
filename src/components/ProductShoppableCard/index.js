@@ -5,6 +5,7 @@ import productModel from 'models/productModel';
 
 import { Button, QuantitySelector } from 'components/base';
 import styles from './ProductShoppableCard.scss';
+import get from 'utils/get';
 
 const ProductShoppableCard = ({
   product,
@@ -30,7 +31,7 @@ const ProductShoppableCard = ({
       <div
         className="card flex flex-column w100"
         style={{
-          background: `url(${product.gridImage}) no-repeat center`,
+          background: `url(${get(product, 'gridImage', '')}) no-repeat center`,
           backgroundSize: 'cover'
         }}
       >
@@ -42,10 +43,14 @@ const ProductShoppableCard = ({
           )}
         >
           <div>
-            <span className="w100 bold mt2 mb1 block">{product.title}</span>
-            <p className="detail mb3">{product.flavorDescription}</p>
+            <span className="w100 bold mt2 mb1 block">
+              {get(product, 'title', '')}
+            </span>
+            <p className="detail mb3">
+              {get(product, 'flavorDescription', '')}
+            </p>
           </div>
-          {product.available ? (
+          {get(product, 'available', false) ? (
             <div className={actionClasses}>
               <QuantitySelector
                 className={cx(
