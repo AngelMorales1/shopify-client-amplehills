@@ -60,7 +60,7 @@ const LocationsMap = props => {
           label="All"
           onClick={actions.clearLocationFilters}
         />
-        {LocationsMapFilters.STATE_FILTERS.map(filter => {
+        {Object.values(LocationsMapFilters.STATE_FILTERS).map(filter => {
           const filterIsActive = locationFilters.some(
             activeFilter =>
               activeFilter.key === filter.key &&

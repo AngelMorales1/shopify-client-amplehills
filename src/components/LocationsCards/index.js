@@ -87,7 +87,11 @@ class LocationsCards extends Component {
       locationResultsLabel
     } = this.props;
     const { sortedLocations } = this.state;
-    const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
+    const STATE_KEY = get(
+      Object.values(LocationsMapFilters.STATE_FILTERS),
+      '[0].key',
+      ''
+    );
     const activeStateFilter = locationFilters.find(
       filter => filter.key === STATE_KEY
     );
@@ -124,7 +128,7 @@ class LocationsCards extends Component {
                       : null
                   }
                   options={[{ label: 'All', value: 'All' }]
-                    .concat(LocationsMapFilters.STATE_FILTERS)
+                    .concat(Object.values(LocationsMapFilters.STATE_FILTERS))
                     .map(filter => ({
                       label: filter.label,
                       value: filter.value
@@ -147,9 +151,9 @@ class LocationsCards extends Component {
                   placeholder={
                     locationFilters.length
                       ? `Search locations in ${
-                          LocationsMapFilters.STATE_FILTERS.find(
-                            filter => filter.value === activeStateFilter.value
-                          ).label
+                          LocationsMapFilters.STATE_FILTERS[
+                            activeStateFilter.value
+                          ].label
                         }`
                       : `Search locations`
                   }
