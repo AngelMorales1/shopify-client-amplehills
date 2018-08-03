@@ -38,9 +38,11 @@ const TextField = ({
         }
       )}
     >
-      <label htmlFor={_id} className="small bold mb1">
-        {label}
-      </label>
+      {label ? (
+        <label htmlFor={_id} className="small bold mb1">
+          {label}
+        </label>
+      ) : null}
       {type === 'textarea' ? (
         <textarea
           id={_id}

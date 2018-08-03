@@ -7,7 +7,7 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 
-import { Image, Dropdown } from 'components/base';
+import { Image, Dropdown, TextField } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
@@ -133,6 +133,22 @@ class LocationsCards extends Component {
                           value: filter.value
                         })
                   }
+                />
+              </div>
+              <div className="mb3 relative">
+                <TextField
+                  variant="primary"
+                  className={styles['LocationsCards__search']}
+                  placeholder={
+                    locationFilters.length
+                      ? `Search locations in ${
+                          LocationsMapFilters.STATE_FILTERS.find(
+                            filter => filter.value === activeStateFilter.value
+                          ).label
+                        }`
+                      : `Search locations`
+                  }
+                  onChange={search => this.setState({ search })}
                 />
               </div>
               <div className="mb2 center">

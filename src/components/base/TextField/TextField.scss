@@ -25,6 +25,14 @@
     }
   }
 
+  &--primary {
+    input {
+      border-radius: radius('l');
+      color: color('madison-blue');
+      font-size: $font-3;
+    }
+  }
+
   &--madison-blue {
     input {
       @extend .bg-madison-blue;
