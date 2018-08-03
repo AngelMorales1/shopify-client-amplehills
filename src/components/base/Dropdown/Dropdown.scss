@@ -81,4 +81,42 @@
       }
     }
   }
+
+  &--secondary {
+    :global {
+      .Select {
+        background: color('white');
+        border-radius: radius('l');
+        height: auto;
+
+        &.w100 {
+          .Select-control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            padding: spacing(5) spacing(8) spacing(4);
+          }
+
+          .Select-menu {
+            width: 100%;
+            left: auto;
+            top: 1px;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        .Select-input {
+          display: none !important;
+        }
+
+        &.is-open {
+          .Select-input {
+            display: inherit;
+          }
+        }
+      }
+    }
+  }
 }

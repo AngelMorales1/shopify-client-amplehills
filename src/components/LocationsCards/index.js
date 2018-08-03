@@ -101,25 +101,37 @@ class LocationsCards extends Component {
             'w100 flex flex-wrap items-start justify-center'
           )}
         >
-          {console.log(this.props)}
           {sortedLocations ? (
             <div className="w100">
-              <div className="mb2">
+              <div
+                className={cx(
+                  styles['LocationsCards__states-dropdown'],
+                  'mb3 mx-auto'
+                )}
+              >
                 <Dropdown
+                  className="w100 flex"
+                  selectClassName="w100"
+                  variant="secondary"
+                  placeholder="All"
                   value={
                     activeStateFilter
                       ? get(activeStateFilter, 'value', '')
                       : null
                   }
-                  options={LocationsMapFilters.STATE_FILTERS.map(filter => ({
-                    label: filter.label,
-                    value: filter.value
-                  }))}
-                  onChange={filter =>
-                    actions.addLocationFilter({
-                      key: STATE_KEY,
+                  options={[{ label: 'All', value: 'All' }]
+                    .concat(LocationsMapFilters.STATE_FILTERS)
+                    .map(filter => ({
+                      label: filter.label,
                       value: filter.value
-                    })
+                    }))}
+                  onChange={filter =>
+                    filter.value === 'All'
+                      ? actions.clearLocationFilters()
+                      : actions.addLocationFilter({
+                          key: STATE_KEY,
+                          value: filter.value
+                        })
                   }
                 />
               </div>
