@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 
-import { deriveAddresses } from 'state/selectors/addresses.js';
 import { deriveLineItems } from 'state/selectors/lineItems.js';
 
 import get from 'utils/get';
@@ -15,7 +14,6 @@ export default createSelector(
     const lastName = get(customer, 'lastName', '');
     const phone = get(customer, 'phone', '');
 
-    const addresses = deriveAddresses(get(customer, 'addresses.edges', []));
     const accessToken = get(customer, 'accessToken', '');
 
     const orders = get(customer, 'orders.edges', []).map(order => {
@@ -46,7 +44,6 @@ export default createSelector(
       firstName,
       lastName,
       phone,
-      addresses,
       orders
     };
   }
