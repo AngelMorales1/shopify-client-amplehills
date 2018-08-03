@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getLocationsResults from 'utils/getLocationsResults';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
@@ -81,8 +80,13 @@ class LocationsCards extends Component {
   };
 
   render() {
-    const { actions, locationFilters, searchFilter } = this.props;
-    const sortedLocations = this.state.sortedLocations;
+    const {
+      actions,
+      locationFilters,
+      searchFilter,
+      locationResultsLabel
+    } = this.props;
+    const { sortedLocations } = this.state;
     const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
     const activeStateFilter = locationFilters.find(
       filter => filter.key === STATE_KEY
@@ -170,13 +174,7 @@ class LocationsCards extends Component {
                 />
               </div>
               <div className="mb2 center">
-                <span className="bold">
-                  {getLocationsResults(
-                    sortedLocations.length,
-                    locationFilters,
-                    searchFilter
-                  )}
-                </span>
+                <span className="bold">{locationResultsLabel}</span>
               </div>
               <div className="flex flex-column items-center">
                 {sortedLocations.map(location => (

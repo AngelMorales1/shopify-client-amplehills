@@ -13,6 +13,7 @@ import {
 
 import locations from 'state/selectors/locations';
 import locationGeoJSON from 'state/selectors/locationGeoJSON';
+import locationResultsLabel from 'state/selectors/locationResultsLabel';
 import filteredLocations from 'state/selectors/filteredLocations';
 import filteredOutLocations from 'state/selectors/filteredOutLocations';
 
@@ -29,6 +30,7 @@ const mapStateToProps = state => {
     locationFilters: get(state, 'locationsUI.locationFilters'),
     locations: locations(state),
     locationGeoJSON: locationGeoJSON(state),
+    locationResultsLabel: locationResultsLabel(state),
     searchFilter: get(state, 'locationsUI.searchFilter', '')
   };
 };
