@@ -4,18 +4,6 @@ import get from 'utils/get';
 import sortHours from 'utils/sortHours';
 import moment from 'moment';
 
-const getCurrentOpenHours = location => {
-  const currentDay = moment()
-    .format('dddd')
-    .toLowerCase();
-
-  const todayOpenHours = Object.keys(location).find(
-    field => field === currentDay
-  );
-
-  return todayOpenHours;
-};
-
 export default createSelector(
   state => get(state, 'locations.locations'),
   locations => {
@@ -37,13 +25,13 @@ export default createSelector(
       const delivery = get(fields, 'delivery', false);
 
       const hours = Object.keys(fields).reduce((accumulated, current) => {
-        if (Days.includes(current)) {
-          accumulated[current] = fields[current];
-        }
+        if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
       }, {});
       const sortedHours = sortHours(hours);
-      const currentOpenHours = getCurrentOpenHours(fields);
+      const currentOpenHours = moment()
+        .format('dddd')
+        .toLowerCase();
 
       return {
         id,
@@ -63,8 +51,7 @@ export default createSelector(
         sortedHours,
         delivery,
         seasonalImage,
-        currentOpenHours,
-        ...fields
+        currentOpenHours
       };
     });
 

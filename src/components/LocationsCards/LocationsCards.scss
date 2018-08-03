@@ -23,6 +23,14 @@ $transition-duration: 0.2;
     }
   }
 
+  &__states-dropdown {
+    max-width: 25rem;
+
+    @media ($large-up) {
+      display: none;
+    }
+  }
+
   &__card-seasonal {
     top: spacing(37);
     right: spacing(12);

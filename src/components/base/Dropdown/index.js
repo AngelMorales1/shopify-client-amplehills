@@ -58,7 +58,8 @@ class Dropdown extends Component {
       placeholder,
       variant,
       color,
-      className
+      className,
+      selectClassName
     } = this.props;
     return (
       <div
@@ -66,24 +67,32 @@ class Dropdown extends Component {
           styles['Dropdown'],
           'w-auto relative z-1 pointer',
           className,
+          styles[`Dropdown--${variant}`],
           {
             [styles['Dropdown--small']]: variant === 'small'
           }
         )}
       >
-        <label
-          className={cx(
-            styles['Dropdown--label'],
-            'w100 inline-block mb1 bold small'
-          )}
-          htmlFor={name}
-        >
-          {label}
-        </label>
+        {label ? (
+          <label
+            className={cx(
+              styles['Dropdown--label'],
+              'w100 inline-block mb1 bold small'
+            )}
+            htmlFor={name}
+          >
+            {label}
+          </label>
+        ) : null}
         <Select
-          className={cx(styles['Dropdown'], 'relative inline-block', {
-            [styles['Dropdown--open']]: this.state.menuIsOpen
-          })}
+          className={cx(
+            styles['Dropdown'],
+            'relative inline-block',
+            selectClassName,
+            {
+              [styles['Dropdown--open']]: this.state.menuIsOpen
+            }
+          )}
           name={name}
           value={value}
           options={options}
@@ -117,7 +126,10 @@ Dropdown.propTypes = {
   name: PropTypes.string,
   placeholder: PropTypes.string,
   className: PropTypes.string,
-  label: PropTypes.string
+  selectClassName: PropTypes.string,
+  label: PropTypes.string,
+  variant: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 Dropdown.defaultProps = {
@@ -125,8 +137,11 @@ Dropdown.defaultProps = {
   name: '',
   placeholder: 'Select',
   className: '',
+  selectClassName: '',
   label: '',
-  value: ''
+  value: '',
+  variant: 'primary',
+  onChange: () => {}
 };
 
 export default Dropdown;

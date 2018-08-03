@@ -21,5 +21,5 @@ export default {
     mobile: 80,
     desktop: 92
   },
-  locationSideRailWidth: 532
+  locationsCardsWidth: 532
 };

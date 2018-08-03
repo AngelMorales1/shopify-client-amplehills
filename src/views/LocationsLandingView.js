@@ -8,7 +8,7 @@ class LocationsLandingView extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.small.label,
     desktopHeaderHeight: Global.headerHeight.desktop,
-    locationSideRailWidth: Global.locationSideRailWidth
+    locationsCardsWidth: Global.locationsCardsWidth
   };
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class LocationsLandingView extends Component {
           style={
             this.state.currentBreakpoint === 'small'
               ? { width: '100%' }
-              : { width: `${this.state.locationSideRailWidth}px` }
+              : { width: `${this.state.locationsCardsWidth}px` }
           }
         >
           <LocationsCards {...this.props} />

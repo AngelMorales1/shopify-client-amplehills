@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export default {
   type: 'FeatureCollection',
   features: [
@@ -34,7 +36,10 @@ export default {
           friday: 'Noon–11pm',
           saturday: 'Noon–11pm'
         },
-        sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }]
+        sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }],
+        currentOpenHours: moment()
+          .format('dddd')
+          .toLowerCase()
       }
     },
     {
@@ -70,7 +75,10 @@ export default {
           friday: 'Noon–11pm',
           saturday: 'Noon–11pm'
         },
-        sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }]
+        sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }],
+        currentOpenHours: moment()
+          .format('dddd')
+          .toLowerCase()
       }
     }
   ]

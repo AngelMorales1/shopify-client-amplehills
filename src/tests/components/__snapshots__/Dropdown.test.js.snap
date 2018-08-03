@@ -8,6 +8,7 @@ ShallowWrapper {
     className="foo"
     label="foo"
     name="foo"
+    onChange={[Function]}
     options={
         Array [
             Object {
@@ -17,6 +18,7 @@ ShallowWrapper {
           ]
     }
     placeholder="foo"
+    selectClassName=""
     value="foo"
     variant="small"
 />,
@@ -361,9 +363,12 @@ ShallowWrapper {
     className=""
     label=""
     name=""
+    onChange={[Function]}
     options={Object {}}
     placeholder="Select"
+    selectClassName=""
     value=""
+    variant="primary"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -378,10 +383,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <label
-          className="w100 inline-block mb1 bold small"
-          htmlFor=""
-/>,
+        null,
         <Select
           arrowRenderer={[Function]}
           autosize={true}
@@ -439,19 +441,7 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-          "className": "w100 inline-block mb1 bold small",
-          "htmlFor": "",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "label",
-      },
+      null,
       Object {
         "instance": null,
         "key": undefined,
@@ -522,10 +512,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <label
-            className="w100 inline-block mb1 bold small"
-            htmlFor=""
-/>,
+          null,
           <Select
             arrowRenderer={[Function]}
             autosize={true}
@@ -583,19 +570,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
-            "className": "w100 inline-block mb1 bold small",
-            "htmlFor": "",
-          },
-          "ref": null,
-          "rendered": "",
-          "type": "label",
-        },
+        null,
         Object {
           "instance": null,
           "key": undefined,

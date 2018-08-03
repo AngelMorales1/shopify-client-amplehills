@@ -15,6 +15,7 @@ const LocationsMap = props => {
   return (
     <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
+        className="z-0"
         featureCollection={props.locationGeoJSON}
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
@@ -49,11 +50,11 @@ const LocationsMap = props => {
         clusterRadius={50}
         textSize={16}
         textColor="#ffffff"
-        mapPadding={200}
+        mapPadding={150}
       />
       <div className="absolute t0 l0 flex p3">
         <Button
-          className="mr2 flex items-center"
+          className="mr2 flex items-center drop-shadow"
           color={locationFilters.length ? 'white-denim' : 'madison-blue'}
           variant="primary-small"
           label="All"
@@ -68,7 +69,7 @@ const LocationsMap = props => {
 
           return (
             <Button
-              className="mr2 flex items-center"
+              className="mr2 flex items-center drop-shadow"
               color={filterIsActive ? 'madison-blue' : 'white-denim'}
               variant="primary-small"
               key={filter.value}
