@@ -31,6 +31,16 @@ export default [
     sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }],
     currentOpenHours: moment()
       .format('dddd')
-      .toLowerCase()
+      .toLowerCase(),
+    stringifiedSearchableFields: [
+      'Location 1',
+      '110 Bowery',
+      'Fl. 4',
+      'New York',
+      'Manhattan',
+      'NY',
+      '10013',
+      '8881234567'
+    ]
   }
 ];
