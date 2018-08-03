@@ -88,6 +88,7 @@ class LocationsCards extends Component {
       filter => filter.key === STATE_KEY
     );
 
+    console.log(this.state.sortedLocations);
     return (
       <div
         className={cx(
@@ -141,146 +142,134 @@ class LocationsCards extends Component {
                 </span>
               </div>
               <div className="flex flex-column items-center">
-                {sortedLocations.map(location => {
-                  const locationOpenHours = location.currentOpenHours;
-                  const imageUrl = get(location, 'image.fields.file.url');
-
-                  return (
-                    <div
-                      key={location.id}
-                      className={cx(
-                        styles['LocationsCards__card-container'],
-                        'bg-white my2 flex flex-column justify-between relative w100'
-                      )}
-                    >
-                      {location.distance ? (
-                        <div
-                          className={cx(
-                            styles['LocationsCards__card-tag'],
-                            'bg-peach bold text-white absolute m3'
-                          )}
-                        >
-                          <span
-                            className={cx(
-                              styles['LocationsCards__card-text'],
-                              'uppercase'
-                            )}
-                          >
-                            {location.distance} miles away
-                          </span>
-                        </div>
-                      ) : null}
+                {sortedLocations.map(location => (
+                  <div
+                    key={location.id}
+                    className={cx(
+                      styles['LocationsCards__card-container'],
+                      'bg-white my2 flex flex-column justify-between relative w100'
+                    )}
+                  >
+                    {location.distance ? (
                       <div
                         className={cx(
-                          styles['LocationsCards__card-seasonal'],
-                          'z-1 absolute flex flex-column items-center justify-center'
+                          styles['LocationsCards__card-tag'],
+                          'bg-peach bold text-white absolute m3'
                         )}
                       >
-                        <Image
+                        <span
                           className={cx(
-                            styles['LocationsCards__card-seasonal-image'],
-                            'z-overlay'
-                          )}
-                          src={get(
-                            location,
-                            'seasonalImage.fields.file.url',
-                            ''
-                          )}
-                        />
-                        <div
-                          className={cx(
-                            styles['LocationsCards__card-seasonal-circle'],
-                            location.seasonal
-                              ? 'bg-pastel-pink'
-                              : 'bg-pastel-blue',
-                            'circle flex flex-column items-center justify-center'
+                            styles['LocationsCards__card-text'],
+                            'uppercase'
                           )}
                         >
-                          <span
-                            className={cx(
-                              styles[
-                                'LocationsCards__card-seasonal-circle-text'
-                              ],
-                              'text-white small bold'
-                            )}
-                          >
-                            {location.seasonal ? 'S' : 'YR'}
-                          </span>
-                        </div>
+                          {location.distance} miles away
+                        </span>
                       </div>
-                      <div
-                        style={
-                          imageUrl
-                            ? {
-                                background: `url(${imageUrl}) no-repeat center`,
-                                backgroundSize: 'cover'
-                              }
-                            : null
-                        }
-                        className={cx(styles['LocationsCards__card-image'], {
-                          'bg-denim': !imageUrl
-                        })}
+                    ) : null}
+                    <div
+                      className={cx(
+                        styles['LocationsCards__card-seasonal'],
+                        'z-1 absolute flex flex-column items-center justify-center'
+                      )}
+                    >
+                      <Image
+                        className={cx(
+                          styles['LocationsCards__card-seasonal-image'],
+                          'z-overlay'
+                        )}
+                        src={get(location, 'seasonalImage.fields.file.url', '')}
                       />
                       <div
                         className={cx(
-                          styles['LocationsCards__card-drip'],
-                          'p3'
+                          styles['LocationsCards__card-seasonal-circle'],
+                          location.seasonal
+                            ? 'bg-pastel-pink'
+                            : 'bg-pastel-blue',
+                          'circle flex flex-column items-center justify-center'
                         )}
                       >
-                        <h2 className="big carter mb2">{location.title}</h2>
-                        <div>
-                          <div className="flex flex-column justify-between">
-                            <span className="small">{location.address1}</span>
-                            <span
+                        <span
+                          className={cx(
+                            styles['LocationsCards__card-seasonal-circle-text'],
+                            'text-white small bold'
+                          )}
+                        >
+                          {location.seasonal ? 'S' : 'YR'}
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      style={
+                        location.image
+                          ? {
+                              background: `url(${
+                                location.image
+                              }) no-repeat center`,
+                              backgroundSize: 'cover'
+                            }
+                          : null
+                      }
+                      className={cx(styles['LocationsCards__card-image'], {
+                        'bg-denim': !location.image
+                      })}
+                    />
+                    <div
+                      className={cx(styles['LocationsCards__card-drip'], 'p3')}
+                    >
+                      <h2 className="big carter mb2">{location.title}</h2>
+                      <div>
+                        <div className="flex flex-column justify-between">
+                          <span className="small">{location.address1}</span>
+                          <span
+                            className={cx(
+                              styles['LocationsCards__card-text'],
+                              'small'
+                            )}
+                          >{`${location.city}, ${location.state} ${
+                            location.zip
+                          }`}</span>
+                          <span
+                            className={cx(
+                              styles['LocationsCards__card-text'],
+                              'small'
+                            )}
+                          >
+                            {location.phone}
+                          </span>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex flex-row flex-wrap justify-between items-center mt2">
+                          {location.currentOpenHours ? (
+                            <div className="flex flex-column">
+                              <span className="block-subheadline bold">
+                                Open today
+                              </span>
+                              <span className={cx('small')}>
+                                {location.hours[location.currentOpenHours]}
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="block-subheadline bold">
+                              Closed today
+                            </span>
+                          )}
+                          {location.delivery ? (
+                            <div
                               className={cx(
-                                styles['LocationsCards__card-text'],
-                                'small'
-                              )}
-                            >{`${location.city}, ${location.state} ${
-                              location.zip
-                            }`}</span>
-                            <span
-                              className={cx(
-                                styles['LocationsCards__card-text'],
-                                'small'
+                                styles['LocationsCards__card-tag'],
+                                'uppercase bold bg-madison-blue inline-block text-white mt2'
                               )}
                             >
-                              {location.phone}
-                            </span>
-                          </div>
-                        </div>
-                        <div>
-                          <div className="flex flex-row flex-wrap justify-between items-center mt2">
-                            {locationOpenHours.length ? (
-                              <div className="flex flex-column">
-                                <span className="block-subheadline bold">
-                                  Open today
-                                </span>
-                                <span className={cx('small')}>
-                                  {location[locationOpenHours]}
-                                </span>
-                              </div>
-                            ) : (
-                              <span className="block-subheadline bold">
-                                Closed today
-                              </span>
-                            )}
-                            {location.delivery ? (
-                              <div
-                                className={cx(
-                                  styles['LocationsCards__card-tag'],
-                                  'uppercase bold bg-madison-blue inline-block text-white mt2'
-                                )}
-                              >
-                                <span className="text-white">Delivery</span>
-                              </div>
-                            ) : null}
-                          </div>
+                              <span className="text-white">Delivery</span>
+                            </div>
+                          ) : null}
                         </div>
                       </div>
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
           ) : (
