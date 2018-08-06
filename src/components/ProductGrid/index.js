@@ -18,9 +18,9 @@ const ProductGrid = ({ products }) => {
 export default ProductGrid;
 
 ProductGrid.propTypes = {
-  products: PropTypes.objectOf(productModel.propTypes)
+  products: PropTypes.arrayOf(productModel.propTypes)
 };
 
 ProductGrid.defaultProps = {
-  products: {}
+  products: []
 };
