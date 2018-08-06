@@ -412,7 +412,7 @@ Cart.propTypes = {
     updateLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  items: itemModel.propTypes,
+  items: PropTypes.arrayOf(itemModel.propTypes),
   products: PropTypes.objectOf(productModel.propTypes)
 };
 
@@ -422,7 +422,7 @@ Cart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  items: itemModel.default,
+  items: [],
   products: {}
 };
 

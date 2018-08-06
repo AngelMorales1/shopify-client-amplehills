@@ -59,7 +59,6 @@ export default createSelector(
         hours,
         sortedHours,
         delivery,
-        seasonalImage,
         currentOpenHours,
         stringifiedSearchableFields
       };
