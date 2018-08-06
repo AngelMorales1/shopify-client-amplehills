@@ -9,6 +9,10 @@ class ProductLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     const content = get(model, 'landing.items[0].fields', {});
+    const gridProducts = get(content, 'products', []).map(product => {
+      const handle = get(product, 'fields.productHandle', '');
+      return this.props.products[handle];
+    });
 
     return (
       <div className="ProductLanding mb3">
@@ -18,7 +22,7 @@ class ProductLandingView extends Component {
           </h2>
           <p className="block-subheadline">{get(content, 'description', '')}</p>
         </div>
-        <ProductGrid products={products} />
+        <ProductGrid products={gridProducts} />
       </div>
     );
   }
