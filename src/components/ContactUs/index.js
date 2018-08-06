@@ -84,7 +84,7 @@ class ContactUs extends Component {
       <div
         className={cx(
           styles['ContactUs'],
-          'flex flex-column justify-around items-center'
+          'transition-slide-up flex flex-column justify-around items-center'
         )}
       >
         <h2 className="block-headline my2 px2 center">Contact us</h2>

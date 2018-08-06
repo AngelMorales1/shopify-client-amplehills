@@ -110,7 +110,7 @@ class LocationsCards extends Component {
           )}
         >
           {sortedLocations ? (
-            <div className="w100">
+            <div className="transition-slide-up w100">
               <div
                 className={cx(
                   styles['LocationsCards__states-dropdown'],

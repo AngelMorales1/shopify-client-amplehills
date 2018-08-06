@@ -29,8 +29,8 @@ class ProfileView extends Component {
 
     return (
       <div className="Profile">
-        <div className="bg-iceberg drip">
-          <div className="container-width mx-auto pt4 px2 center">
+        <div className="bg-iceberg drip pb2">
+          <div className="transition-slide-up container-width mx-auto pt4 px2 center">
             <p className="block-headline">
               {firstName && lastName ? `${firstName} ${lastName}` : 'Profile'}
             </p>
@@ -45,7 +45,7 @@ class ProfileView extends Component {
             </div>
           </div>
         </div>
-        <div className="container-width mx-auto my3 px3">
+        <div className="container-width transition-slide-up mx-auto my3 px3">
           <div className="flex flex-wrap">
             <div className="col col-12 md-col-6">
               <div className="col col-12 md-col-9">

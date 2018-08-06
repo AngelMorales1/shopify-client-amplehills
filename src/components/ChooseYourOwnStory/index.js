@@ -163,9 +163,9 @@ class ChooseYourOwnStory extends Component {
       >
         <Breadcrumbs
           breadcrumbs={breadcrumbs}
-          className="mx-auto container-width"
+          className="transition-slide-up mx-auto container-width"
         />
-        <div className="mx-auto container-width flex flex-wrap items-start">
+        <div className="transition-slide-up mx-auto container-width flex flex-wrap items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
@@ -230,7 +230,7 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
+            'transition-slide-up z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
             this.state.menuPosition
           )}
         >

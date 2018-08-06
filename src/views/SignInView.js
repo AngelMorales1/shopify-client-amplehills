@@ -30,7 +30,7 @@ class SignInView extends Component {
     if (get(customer, 'id')) return <Redirect to="/profile" />;
 
     return (
-      <div className="SignIn text-container-width mx-auto p3">
+      <div className="SignIn text-container-width transition-slide-up mt3 mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
         {getUrlParam('new-account') === 'true' ? (
           <FormFlash
