@@ -20,7 +20,7 @@ const ProductGridCard = ({ product }) => {
               styles['ProductGridCard__image'],
               'transition card w100'
             )}
-            src={product.image}
+            src={product.gridImage}
           />
           <span className="bold mt2 mb1">{product.title}</span>
           <span>{`$${product.price.toFixed(2)}`}</span>
