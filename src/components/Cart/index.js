@@ -422,7 +422,7 @@ Cart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  items: [itemModel.default],
+  items: [],
   products: {}
 };
 
