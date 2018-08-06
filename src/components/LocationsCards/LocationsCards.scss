@@ -31,6 +31,10 @@ $transition-duration: 0.2;
     }
   }
 
+  &__search {
+    max-width: 25rem;
+  }
+
   &__search-button {
     top: spacing(5);
     right: spacing(7);
@@ -55,6 +59,7 @@ $transition-duration: 0.2;
 
   &__card-seasonal-image {
     width: spacing(8);
+    height: spacing(8);
     margin-bottom: spacing(-7);
   }
 
