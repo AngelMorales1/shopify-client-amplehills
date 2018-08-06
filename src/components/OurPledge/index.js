@@ -17,8 +17,6 @@ const OurPledge = ({
   calloutImage
 }) => {
   const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
-  const openOurPledge = get(actions, 'openOurPledge', () => {});
-  const closeOurPledge = get(actions, 'closeOurPledge', () => {});
 
   return (
     <div
@@ -60,7 +58,7 @@ const OurPledge = ({
           <div className={cx(styles['OurPledge__more-info'], 'ml-auto')}>
             <Button
               variant="style-none"
-              onClick={openOurPledge}
+              onClick={actions.openOurPledge}
               label="More Info"
               className={cx(
                 'uppercase info-text-wide bold nowrap text-madison-blue'
@@ -73,7 +71,7 @@ const OurPledge = ({
         overlayContentImage={overlayContentImage}
         shippingInformation={shippingInformation}
         shippingPledge={shippingPledge}
-        closeOurPledgeOverlay={closeOurPledge}
+        closeOurPledgeOverlay={actions.closeOurPledge}
         ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
       />
     </div>
@@ -87,7 +85,11 @@ OurPledge.propTypes = {
   overlayContentImage: PropTypes.object,
   shippingInformation: PropTypes.string,
   shippingPledge: PropTypes.string,
-  ourPledgeOverlayIsOpen: PropTypes.bool
+  ourPledgeOverlayIsOpen: PropTypes.bool,
+  actions: PropTypes.shape({
+    openOurPledge: PropTypes.func,
+    closeOurPledge: PropTypes.func
+  })
 };
 
 OurPledge.defaultProps = {
@@ -95,5 +97,9 @@ OurPledge.defaultProps = {
   calloutImage: imageModel.default,
   overlayContentImage: {},
   shippingInformation: '',
-  shippingPledge: ''
+  shippingPledge: '',
+  actions: {
+    openOurPledge: () => {},
+    closeOurPledge: () => {}
+  }
 };

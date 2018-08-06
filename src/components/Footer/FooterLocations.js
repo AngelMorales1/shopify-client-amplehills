@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'utils/get';
 
 import FooterRegions from 'constants/FooterRegions';
 import locationModel from 'models/locationModel';
@@ -44,7 +45,7 @@ const FooterLocations = ({ locations }) => {
         )}
       >
         {Object.keys(regions).map(region => {
-          const locations = regions[region] || [];
+          const locations = get(regions, region, []);
 
           return (
             <div

@@ -48,7 +48,7 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
                     {subItems.length ? (
                       <div className="w100">
                         <ul className="mt2 mb1">
-                          {item.subItems.map((subItem, i) => (
+                          {subItems.map((subItem, i) => (
                             <li
                               className="sub-line-item small"
                               key={`${subItem.handle} ${i}`}

@@ -31,7 +31,7 @@ const ProductShoppableCard = ({
       <div
         className="card flex flex-column w100"
         style={{
-          background: `url(${get(product, 'gridImage', '')}) no-repeat center`,
+          background: `url(${product.gridImage}) no-repeat center`,
           backgroundSize: 'cover'
         }}
       >
@@ -43,14 +43,10 @@ const ProductShoppableCard = ({
           )}
         >
           <div>
-            <span className="w100 bold mt2 mb1 block">
-              {get(product, 'title', '')}
-            </span>
-            <p className="detail mb3">
-              {get(product, 'flavorDescription', '')}
-            </p>
+            <span className="w100 bold mt2 mb1 block">{product.title}</span>
+            <p className="detail mb3">{product.flavorDescription}</p>
           </div>
-          {get(product, 'available', false) ? (
+          {product.available ? (
             <div className={actionClasses}>
               <QuantitySelector
                 className={cx(
@@ -101,7 +97,7 @@ ProductShoppableCard.propTypes = {
 };
 
 ProductShoppableCard.defaultProps = {
-  product: productModel.defaultProps,
+  product: productModel.default,
   quantity: 0,
   handleAddProduct: () => {},
   handleRemoveProduct: () => {}

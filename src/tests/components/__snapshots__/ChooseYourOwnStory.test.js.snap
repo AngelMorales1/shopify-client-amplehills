@@ -405,7 +405,7 @@ ShallowWrapper {
                                                   </span>
                                                   <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                                   </span>
                                         </Button>
                               </div>
@@ -856,7 +856,7 @@ ShallowWrapper {
                                                 </span>
                                                 <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                                 </span>
                                     </Button>
                         </div>
@@ -989,7 +989,7 @@ ShallowWrapper {
                                                 </span>
                                                 <span>
                                                                 $
-                                                                NaN
+                                                                0.00
                                                 </span>
                                 </Button>
                 </div>
@@ -1354,7 +1354,7 @@ ShallowWrapper {
                                         </span>
                                         <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                         </span>
                     </Button>
 </div>,
@@ -1479,7 +1479,7 @@ ShallowWrapper {
                       </span>
                       <span>
                                             $
-                                            NaN
+                                            0.00
                       </span>
 </Button>,
                     "className": "col",
@@ -1498,7 +1498,7 @@ ShallowWrapper {
 </span>,
                         <span>
                           $
-                          NaN
+                          0.00
 </span>,
                       ],
                       "className": "small",
@@ -1533,13 +1533,13 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             "$",
-                            "NaN",
+                            "0.00",
                           ],
                         },
                         "ref": null,
                         "rendered": Array [
                           "$",
-                          "NaN",
+                          "0.00",
                         ],
                         "type": "span",
                       },
@@ -1768,7 +1768,7 @@ ShallowWrapper {
                                                             </span>
                                                             <span>
                                                                         $
-                                                                        NaN
+                                                                        0.00
                                                             </span>
                                                 </Button>
                                     </div>
@@ -2219,7 +2219,7 @@ ShallowWrapper {
                                                         </span>
                                                         <span>
                                                                       $
-                                                                      NaN
+                                                                      0.00
                                                         </span>
                                           </Button>
                             </div>
@@ -2352,7 +2352,7 @@ ShallowWrapper {
                                                       </span>
                                                       <span>
                                                                         $
-                                                                        NaN
+                                                                        0.00
                                                       </span>
                                     </Button>
                   </div>
@@ -2717,7 +2717,7 @@ ShallowWrapper {
                                             </span>
                                             <span>
                                                                   $
-                                                                  NaN
+                                                                  0.00
                                             </span>
                       </Button>
 </div>,
@@ -2842,7 +2842,7 @@ ShallowWrapper {
                         </span>
                         <span>
                                                 $
-                                                NaN
+                                                0.00
                         </span>
 </Button>,
                       "className": "col",
@@ -2861,7 +2861,7 @@ ShallowWrapper {
 </span>,
                           <span>
                             $
-                            NaN
+                            0.00
 </span>,
                         ],
                         "className": "small",
@@ -2896,13 +2896,13 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               "$",
-                              "NaN",
+                              "0.00",
                             ],
                           },
                           "ref": null,
                           "rendered": Array [
                             "$",
-                            "NaN",
+                            "0.00",
                           ],
                           "type": "span",
                         },
@@ -3214,7 +3214,7 @@ ShallowWrapper {
                                                   </span>
                                                   <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                                   </span>
                                         </Button>
                               </div>
@@ -3688,7 +3688,7 @@ ShallowWrapper {
                                                 </span>
                                                 <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                                 </span>
                                     </Button>
                         </div>
@@ -3821,7 +3821,7 @@ ShallowWrapper {
                                                 </span>
                                                 <span>
                                                                 $
-                                                                NaN
+                                                                0.00
                                                 </span>
                                 </Button>
                 </div>
@@ -4186,7 +4186,7 @@ ShallowWrapper {
                                         </span>
                                         <span>
                                                             $
-                                                            NaN
+                                                            0.00
                                         </span>
                     </Button>
 </div>,
@@ -4311,7 +4311,7 @@ ShallowWrapper {
                       </span>
                       <span>
                                             $
-                                            NaN
+                                            0.00
                       </span>
 </Button>,
                     "className": "col",
@@ -4330,7 +4330,7 @@ ShallowWrapper {
 </span>,
                         <span>
                           $
-                          NaN
+                          0.00
 </span>,
                       ],
                       "className": "small",
@@ -4365,13 +4365,13 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             "$",
-                            "NaN",
+                            "0.00",
                           ],
                         },
                         "ref": null,
                         "rendered": Array [
                           "$",
-                          "NaN",
+                          "0.00",
                         ],
                         "type": "span",
                       },
@@ -4607,7 +4607,7 @@ ShallowWrapper {
                                                             </span>
                                                             <span>
                                                                         $
-                                                                        NaN
+                                                                        0.00
                                                             </span>
                                                 </Button>
                                     </div>
@@ -5081,7 +5081,7 @@ ShallowWrapper {
                                                         </span>
                                                         <span>
                                                                       $
-                                                                      NaN
+                                                                      0.00
                                                         </span>
                                           </Button>
                             </div>
@@ -5214,7 +5214,7 @@ ShallowWrapper {
                                                       </span>
                                                       <span>
                                                                         $
-                                                                        NaN
+                                                                        0.00
                                                       </span>
                                     </Button>
                   </div>
@@ -5579,7 +5579,7 @@ ShallowWrapper {
                                             </span>
                                             <span>
                                                                   $
-                                                                  NaN
+                                                                  0.00
                                             </span>
                       </Button>
 </div>,
@@ -5704,7 +5704,7 @@ ShallowWrapper {
                         </span>
                         <span>
                                                 $
-                                                NaN
+                                                0.00
                         </span>
 </Button>,
                       "className": "col",
@@ -5723,7 +5723,7 @@ ShallowWrapper {
 </span>,
                           <span>
                             $
-                            NaN
+                            0.00
 </span>,
                         ],
                         "className": "small",
@@ -5758,13 +5758,13 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               "$",
-                              "NaN",
+                              "0.00",
                             ],
                           },
                           "ref": null,
                           "rendered": Array [
                             "$",
-                            "NaN",
+                            "0.00",
                           ],
                           "type": "span",
                         },

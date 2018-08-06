@@ -2012,7 +2012,12 @@ ShallowWrapper {
                               </Button>
                     </form>
                     <OurPledge
-                              actions={undefined}
+                              actions={
+                                        Object {
+                                                  "closeOurPledge": [Function],
+                                                  "openOurPledge": [Function],
+                                                }
+                              }
                               calloutImage={
                                         Object {
                                                   "fields": Object {
@@ -2134,7 +2139,12 @@ ShallowWrapper {
                         </Button>
             </form>
             <OurPledge
-                        actions={undefined}
+                        actions={
+                                    Object {
+                                                "closeOurPledge": [Function],
+                                                "openOurPledge": [Function],
+                                              }
+                        }
                         calloutImage={
                                     Object {
                                                 "fields": Object {
@@ -2232,7 +2242,12 @@ ShallowWrapper {
                 </Button>
 </form>,
               <OurPledge
-                actions={undefined}
+                actions={
+                                Object {
+                                                "closeOurPledge": [Function],
+                                                "openOurPledge": [Function],
+                                              }
+                }
                 calloutImage={
                                 Object {
                                                 "fields": Object {
@@ -2477,7 +2492,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "actions": undefined,
+                "actions": Object {
+                  "closeOurPledge": [Function],
+                  "openOurPledge": [Function],
+                },
                 "calloutImage": Object {
                   "fields": Object {
                     "file": Object {
@@ -2596,7 +2614,12 @@ ShallowWrapper {
                                     </Button>
                         </form>
                         <OurPledge
-                                    actions={undefined}
+                                    actions={
+                                                Object {
+                                                            "closeOurPledge": [Function],
+                                                            "openOurPledge": [Function],
+                                                          }
+                                    }
                                     calloutImage={
                                                 Object {
                                                             "fields": Object {
@@ -2718,7 +2741,12 @@ ShallowWrapper {
                             </Button>
               </form>
               <OurPledge
-                            actions={undefined}
+                            actions={
+                                          Object {
+                                                        "closeOurPledge": [Function],
+                                                        "openOurPledge": [Function],
+                                                      }
+                            }
                             calloutImage={
                                           Object {
                                                         "fields": Object {
@@ -2816,7 +2844,12 @@ ShallowWrapper {
                   </Button>
 </form>,
                 <OurPledge
-                  actions={undefined}
+                  actions={
+                                    Object {
+                                                      "closeOurPledge": [Function],
+                                                      "openOurPledge": [Function],
+                                                    }
+                  }
                   calloutImage={
                                     Object {
                                                       "fields": Object {
@@ -3061,7 +3094,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "actions": undefined,
+                  "actions": Object {
+                    "closeOurPledge": [Function],
+                    "openOurPledge": [Function],
+                  },
                   "calloutImage": Object {
                     "fields": Object {
                       "file": Object {

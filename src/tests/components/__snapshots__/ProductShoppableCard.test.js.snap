@@ -661,7 +661,27 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <ProductShoppableCard
     handleAddProduct={[Function]}
     handleRemoveProduct={[Function]}
-    product={undefined}
+    product={
+        Object {
+            "available": false,
+            "blocks": Array [],
+            "flavorDescription": "",
+            "gridImage": "",
+            "handle": "",
+            "id": "",
+            "pintImage": "",
+            "price": 0,
+            "title": "",
+            "variants": Array [
+              Object {
+                "available": false,
+                "id": "",
+                "price": 0,
+                "title": "",
+              },
+            ],
+          }
+    }
     quantity={0}
 />,
   Symbol(enzyme.__renderer__): Object {
