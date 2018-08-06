@@ -1,0 +1,817 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FooterNewsletter
+    pathname="/foo"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex items-center"
+>
+          <p
+                    className="my2 text-peach center"
+          >
+                    Sign up for the latest news from us!
+          </p>
+          <Image
+                    alt="Decorative arrow"
+                    bg={false}
+                    className="my2 xs-hide sm-hide icon"
+                    onImgLoad={[Function]}
+                    src="/assets/images/arrow-straight-right.svg"
+                    style={Object {}}
+          />
+</div>,
+        <div
+          className="flex items-center"
+>
+          <TextField
+                    address=""
+                    className="my2 pb1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter your email address"
+                    required={false}
+                    type="text"
+                    variant="madison-blue-border-round"
+          />
+          <Button
+                    className="my2 px3"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Sign Up"
+                    onClick={[Function]}
+                    shadow={true}
+                    to=""
+                    type="button"
+                    variant="primary"
+          />
+</div>,
+      ],
+      "className": "mt4 py4 px3 flex items-center drip bg-white z-1",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="my2 text-peach center"
+>
+              Sign up for the latest news from us!
+</p>,
+            <Image
+              alt="Decorative arrow"
+              bg={false}
+              className="my2 xs-hide sm-hide icon"
+              onImgLoad={[Function]}
+              src="/assets/images/arrow-straight-right.svg"
+              style={Object {}}
+/>,
+          ],
+          "className": "flex items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign up for the latest news from us!",
+              "className": "my2 text-peach center",
+            },
+            "ref": null,
+            "rendered": "Sign up for the latest news from us!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "Decorative arrow",
+              "bg": false,
+              "children": null,
+              "className": "my2 xs-hide sm-hide icon",
+              "onImgLoad": [Function],
+              "src": "/assets/images/arrow-straight-right.svg",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TextField
+              address=""
+              className="my2 pb1"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Enter your email address"
+              required={false}
+              type="text"
+              variant="madison-blue-border-round"
+/>,
+            <Button
+              className="my2 px3"
+              color="madison-blue"
+              disabled={false}
+              fullWidth={false}
+              label="Sign Up"
+              onClick={[Function]}
+              shadow={true}
+              to=""
+              type="button"
+              variant="primary"
+/>,
+          ],
+          "className": "flex items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "address": "",
+              "className": "my2 pb1",
+              "name": "",
+              "onBlur": [Function],
+              "onChange": [Function],
+              "placeholder": "Enter your email address",
+              "required": false,
+              "type": "text",
+              "variant": "madison-blue-border-round",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "my2 px3",
+              "color": "madison-blue",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Sign Up",
+              "onClick": [Function],
+              "shadow": true,
+              "to": "",
+              "type": "button",
+              "variant": "primary",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex items-center"
+>
+            <p
+                        className="my2 text-peach center"
+            >
+                        Sign up for the latest news from us!
+            </p>
+            <Image
+                        alt="Decorative arrow"
+                        bg={false}
+                        className="my2 xs-hide sm-hide icon"
+                        onImgLoad={[Function]}
+                        src="/assets/images/arrow-straight-right.svg"
+                        style={Object {}}
+            />
+</div>,
+          <div
+            className="flex items-center"
+>
+            <TextField
+                        address=""
+                        className="my2 pb1"
+                        name=""
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your email address"
+                        required={false}
+                        type="text"
+                        variant="madison-blue-border-round"
+            />
+            <Button
+                        className="my2 px3"
+                        color="madison-blue"
+                        disabled={false}
+                        fullWidth={false}
+                        label="Sign Up"
+                        onClick={[Function]}
+                        shadow={true}
+                        to=""
+                        type="button"
+                        variant="primary"
+            />
+</div>,
+        ],
+        "className": "mt4 py4 px3 flex items-center drip bg-white z-1",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="my2 text-peach center"
+>
+                Sign up for the latest news from us!
+</p>,
+              <Image
+                alt="Decorative arrow"
+                bg={false}
+                className="my2 xs-hide sm-hide icon"
+                onImgLoad={[Function]}
+                src="/assets/images/arrow-straight-right.svg"
+                style={Object {}}
+/>,
+            ],
+            "className": "flex items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign up for the latest news from us!",
+                "className": "my2 text-peach center",
+              },
+              "ref": null,
+              "rendered": "Sign up for the latest news from us!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": "Decorative arrow",
+                "bg": false,
+                "children": null,
+                "className": "my2 xs-hide sm-hide icon",
+                "onImgLoad": [Function],
+                "src": "/assets/images/arrow-straight-right.svg",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TextField
+                address=""
+                className="my2 pb1"
+                name=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter your email address"
+                required={false}
+                type="text"
+                variant="madison-blue-border-round"
+/>,
+              <Button
+                className="my2 px3"
+                color="madison-blue"
+                disabled={false}
+                fullWidth={false}
+                label="Sign Up"
+                onClick={[Function]}
+                shadow={true}
+                to=""
+                type="button"
+                variant="primary"
+/>,
+            ],
+            "className": "flex items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "address": "",
+                "className": "my2 pb1",
+                "name": "",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "placeholder": "Enter your email address",
+                "required": false,
+                "type": "text",
+                "variant": "madison-blue-border-round",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "my2 px3",
+                "color": "madison-blue",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Sign Up",
+                "onClick": [Function],
+                "shadow": true,
+                "to": "",
+                "type": "button",
+                "variant": "primary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FooterNewsletter
+    pathname=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex items-center"
+>
+          <p
+                    className="my2 text-peach center"
+          >
+                    Sign up for the latest news from us!
+          </p>
+          <Image
+                    alt="Decorative arrow"
+                    bg={false}
+                    className="my2 xs-hide sm-hide icon"
+                    onImgLoad={[Function]}
+                    src="/assets/images/arrow-straight-right.svg"
+                    style={Object {}}
+          />
+</div>,
+        <div
+          className="flex items-center"
+>
+          <TextField
+                    address=""
+                    className="my2 pb1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Enter your email address"
+                    required={false}
+                    type="text"
+                    variant="madison-blue-border-round"
+          />
+          <Button
+                    className="my2 px3"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Sign Up"
+                    onClick={[Function]}
+                    shadow={true}
+                    to=""
+                    type="button"
+                    variant="primary"
+          />
+</div>,
+      ],
+      "className": "mt4 py4 px3 flex items-center drip bg-white z-1",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p
+              className="my2 text-peach center"
+>
+              Sign up for the latest news from us!
+</p>,
+            <Image
+              alt="Decorative arrow"
+              bg={false}
+              className="my2 xs-hide sm-hide icon"
+              onImgLoad={[Function]}
+              src="/assets/images/arrow-straight-right.svg"
+              style={Object {}}
+/>,
+          ],
+          "className": "flex items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sign up for the latest news from us!",
+              "className": "my2 text-peach center",
+            },
+            "ref": null,
+            "rendered": "Sign up for the latest news from us!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "Decorative arrow",
+              "bg": false,
+              "children": null,
+              "className": "my2 xs-hide sm-hide icon",
+              "onImgLoad": [Function],
+              "src": "/assets/images/arrow-straight-right.svg",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TextField
+              address=""
+              className="my2 pb1"
+              name=""
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Enter your email address"
+              required={false}
+              type="text"
+              variant="madison-blue-border-round"
+/>,
+            <Button
+              className="my2 px3"
+              color="madison-blue"
+              disabled={false}
+              fullWidth={false}
+              label="Sign Up"
+              onClick={[Function]}
+              shadow={true}
+              to=""
+              type="button"
+              variant="primary"
+/>,
+          ],
+          "className": "flex items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "address": "",
+              "className": "my2 pb1",
+              "name": "",
+              "onBlur": [Function],
+              "onChange": [Function],
+              "placeholder": "Enter your email address",
+              "required": false,
+              "type": "text",
+              "variant": "madison-blue-border-round",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "my2 px3",
+              "color": "madison-blue",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Sign Up",
+              "onClick": [Function],
+              "shadow": true,
+              "to": "",
+              "type": "button",
+              "variant": "primary",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex items-center"
+>
+            <p
+                        className="my2 text-peach center"
+            >
+                        Sign up for the latest news from us!
+            </p>
+            <Image
+                        alt="Decorative arrow"
+                        bg={false}
+                        className="my2 xs-hide sm-hide icon"
+                        onImgLoad={[Function]}
+                        src="/assets/images/arrow-straight-right.svg"
+                        style={Object {}}
+            />
+</div>,
+          <div
+            className="flex items-center"
+>
+            <TextField
+                        address=""
+                        className="my2 pb1"
+                        name=""
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        placeholder="Enter your email address"
+                        required={false}
+                        type="text"
+                        variant="madison-blue-border-round"
+            />
+            <Button
+                        className="my2 px3"
+                        color="madison-blue"
+                        disabled={false}
+                        fullWidth={false}
+                        label="Sign Up"
+                        onClick={[Function]}
+                        shadow={true}
+                        to=""
+                        type="button"
+                        variant="primary"
+            />
+</div>,
+        ],
+        "className": "mt4 py4 px3 flex items-center drip bg-white z-1",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p
+                className="my2 text-peach center"
+>
+                Sign up for the latest news from us!
+</p>,
+              <Image
+                alt="Decorative arrow"
+                bg={false}
+                className="my2 xs-hide sm-hide icon"
+                onImgLoad={[Function]}
+                src="/assets/images/arrow-straight-right.svg"
+                style={Object {}}
+/>,
+            ],
+            "className": "flex items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sign up for the latest news from us!",
+                "className": "my2 text-peach center",
+              },
+              "ref": null,
+              "rendered": "Sign up for the latest news from us!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": "Decorative arrow",
+                "bg": false,
+                "children": null,
+                "className": "my2 xs-hide sm-hide icon",
+                "onImgLoad": [Function],
+                "src": "/assets/images/arrow-straight-right.svg",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TextField
+                address=""
+                className="my2 pb1"
+                name=""
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter your email address"
+                required={false}
+                type="text"
+                variant="madison-blue-border-round"
+/>,
+              <Button
+                className="my2 px3"
+                color="madison-blue"
+                disabled={false}
+                fullWidth={false}
+                label="Sign Up"
+                onClick={[Function]}
+                shadow={true}
+                to=""
+                type="button"
+                variant="primary"
+/>,
+            ],
+            "className": "flex items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "address": "",
+                "className": "my2 pb1",
+                "name": "",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "placeholder": "Enter your email address",
+                "required": false,
+                "type": "text",
+                "variant": "madison-blue-border-round",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "my2 px3",
+                "color": "madison-blue",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Sign Up",
+                "onClick": [Function],
+                "shadow": true,
+                "to": "",
+                "type": "button",
+                "variant": "primary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

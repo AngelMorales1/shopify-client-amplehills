@@ -85,7 +85,11 @@ OurPledge.propTypes = {
   overlayContentImage: PropTypes.object,
   shippingInformation: PropTypes.string,
   shippingPledge: PropTypes.string,
-  ourPledgeOverlayIsOpen: PropTypes.bool
+  ourPledgeOverlayIsOpen: PropTypes.bool,
+  actions: PropTypes.shape({
+    openOurPledge: PropTypes.func,
+    closeOurPledge: PropTypes.func
+  })
 };
 
 OurPledge.defaultProps = {
@@ -93,5 +97,9 @@ OurPledge.defaultProps = {
   calloutImage: imageModel.default,
   overlayContentImage: {},
   shippingInformation: '',
-  shippingPledge: ''
+  shippingPledge: '',
+  actions: {
+    openOurPledge: () => {},
+    closeOurPledge: () => {}
+  }
 };

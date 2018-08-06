@@ -5,367 +5,278 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductDetails
+    actions={
+        Object {
+            "addLineItems": [Function],
+            "closeOurPledge": [Function],
+            "fetchOurPledge": [Function],
+            "openOurPledge": [Function],
+          }
+    }
+    addLineItemsStatus="foo"
     block={
         Object {
             "fields": Object {
-              "color": "Blue",
+              "color": "foo",
               "productDetails": Array [
                 Object {
                   "fields": Object {
-                    "description": "",
-                    "details": "",
+                    "description": "foo",
+                    "details": "foo",
                     "detailsImage": Object {
                       "fields": Object {
-                        "description": "",
                         "file": Object {
-                          "url": "",
+                          "contentType": "foo",
+                          "details": Object {
+                            "image": Object {
+                              "height": 0,
+                              "width": 0,
+                            },
+                            "size": 0,
+                          },
+                          "fileName": "foo",
+                          "url": "foo",
                         },
+                        "title": "foo",
+                      },
+                      "sys": Object {
+                        "createdAt": "foo",
+                        "environment": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "id": "foo",
+                        "locale": 0,
+                        "revision": 0,
+                        "space": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "type": "foo",
+                        "updatedAt": "foo",
                       },
                     },
-                    "flavorHighlight": "",
+                    "flavorHighlight": "foo",
                     "flavorHighlightImage": Object {
                       "fields": Object {
-                        "description": "",
                         "file": Object {
-                          "url": "",
+                          "contentType": "foo",
+                          "details": Object {
+                            "image": Object {
+                              "height": 0,
+                              "width": 0,
+                            },
+                            "size": 0,
+                          },
+                          "fileName": "foo",
+                          "url": "foo",
                         },
+                        "title": "foo",
+                      },
+                      "sys": Object {
+                        "createdAt": "foo",
+                        "environment": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "id": "foo",
+                        "locale": "foo",
+                        "revision": 0,
+                        "space": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "type": "foo",
+                        "updatedAt": "foo",
                       },
                     },
+                    "oneLineDescription": "foo",
                     "pintImage": Object {
                       "fields": Object {
-                        "description": "",
                         "file": Object {
-                          "url": "",
+                          "contentType": "foo",
+                          "details": Object {
+                            "image": Object {
+                              "height": 0,
+                              "width": 0,
+                            },
+                            "size": 0,
+                          },
+                          "fileName": "foo",
+                          "url": "foo",
                         },
+                        "title": "foo",
+                      },
+                      "sys": Object {
+                        "createdAt": "foo",
+                        "environment": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "id": "foo",
+                        "locale": "foo",
+                        "revision": 0,
+                        "space": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "type": "foo",
+                        "updatedAt": "foo",
                       },
                     },
-                    "title": "",
+                    "text1": "foo",
+                    "text1Image": Object {
+                      "fields": Object {
+                        "file": Object {
+                          "contentType": "foo",
+                          "details": Object {
+                            "image": Object {
+                              "height": 0,
+                              "width": 0,
+                            },
+                            "size": 0,
+                          },
+                          "fileName": "foo",
+                          "url": "foo",
+                        },
+                        "title": "foo",
+                      },
+                      "sys": Object {
+                        "createdAt": "foo",
+                        "environment": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "id": "foo",
+                        "locale": "foo",
+                        "revision": 0,
+                        "space": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "type": "foo",
+                        "updatedAt": "foo",
+                      },
+                    },
+                    "text2": "foo",
+                    "text2Image": Object {
+                      "fields": Object {
+                        "file": Object {
+                          "contentType": "foo",
+                          "details": Object {
+                            "image": Object {
+                              "height": 0,
+                              "width": 0,
+                            },
+                            "size": 0,
+                          },
+                          "fileName": "foo",
+                          "url": "foo",
+                        },
+                        "title": "foo",
+                      },
+                      "sys": Object {
+                        "createdAt": "foo",
+                        "environment": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "id": "foo",
+                        "locale": "foo",
+                        "revision": 0,
+                        "space": Object {
+                          "sys": Object {
+                            "id": "foo",
+                            "linkType": "foo",
+                            "type": "foo",
+                          },
+                        },
+                        "type": "foo",
+                        "updatedAt": "foo",
+                      },
+                    },
+                    "title": "foo",
                   },
                   "sys": Object {
-                    "id": "",
+                    "contentType": Object {
+                      "sys": Object {
+                        "id": "foo",
+                        "linkType": "foo",
+                        "type": "foo",
+                      },
+                    },
+                    "createdAt": "foo",
+                    "environment": Object {
+                      "sys": Object {
+                        "id": "foo",
+                        "linkType": "foo",
+                        "type": "foo",
+                      },
+                    },
+                    "id": "foo",
+                    "locale": "foo",
+                    "revision": 0,
+                    "space": Object {
+                      "sys": Object {
+                        "id": "foo",
+                        "linkType": "foo",
+                        "type": "foo",
+                      },
+                    },
+                    "type": "foo",
+                    "updatedAt": "foo",
                   },
                 },
               ],
+              "title": "foo",
+            },
+            "sys": Object {
+              "contentType": Object {
+                "sys": Object {},
+              },
+              "createdAt": "foo",
+              "environment": Object {
+                "sys": Object {},
+              },
+              "id": "foo",
+              "locale": "foo",
+              "revision": 0,
+              "space": Object {
+                "sys": Object {},
+              },
+              "type": "foo",
+              "updatedAt": "foo",
             },
           }
     }
-    data={
-        Object {
-            "color": "Blue",
-            "productDetails": Array [
-              Object {
-                "fields": Object {
-                  "description": "Inspired by the harmony and peaceful nature of the Jedi, The Force illustrates the precarious balance between the dark and light side with sweet cream ice cream, swirled with rich chocolate fudge, and set against a galaxy of white and dark chocolate pearls.",
-                  "details": "Housemade munchies mix-in",
-                  "detailsImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 258,
-                            "width": 234,
-                          },
-                          "size": 84469,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.34 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/1U89EfHNAcYGgoW6yM6qKA/9d8e1bdb12caa5283c48a466f88ca8e0/Screen_Shot_2018-06-07_at_5.57.34_PM.png",
-                      },
-                      "title": "PB Munchies detail photo",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T22:00:03.109Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "1U89EfHNAcYGgoW6yM6qKA",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T22:00:03.109Z",
-                    },
-                  },
-                  "flavorHighlight": "Blended rainbow splendor yay!",
-                  "flavorHighlightImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 730,
-                            "width": 654,
-                          },
-                          "size": 763798,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.41 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/2C9hEcZpk4IWwMU4eqakke/12d17e080d490bc9f0f30b0396ba3f7e/Screen_Shot_2018-06-07_at_5.57.41_PM.png",
-                      },
-                      "title": "PB Munchies flavor highlight",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T22:01:02.371Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "2C9hEcZpk4IWwMU4eqakke",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T22:01:02.371Z",
-                    },
-                  },
-                  "pintImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 282,
-                            "width": 232,
-                          },
-                          "size": 89251,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.30 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/3EokEYLPio8EKKS8K6eeOW/70e220695d2e8c29075a56737261cb63/Screen_Shot_2018-06-07_at_5.57.30_PM.png",
-                      },
-                      "title": "PB Munchies Pint",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T21:59:16.349Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "3EokEYLPio8EKKS8K6eeOW",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T21:59:16.349Z",
-                    },
-                  },
-                  "title": "The Munchies",
-                },
-                "sys": Object {
-                  "contentType": Object {
-                    "sys": Object {
-                      "id": "productDetails",
-                      "linkType": "ContentType",
-                      "type": "Link",
-                    },
-                  },
-                  "createdAt": "2018-06-07T22:01:09.471Z",
-                  "environment": Object {
-                    "sys": Object {
-                      "id": "master",
-                      "linkType": "Environment",
-                      "type": "Link",
-                    },
-                  },
-                  "id": "2qxLEa6moYEOGqgem0yomy",
-                  "locale": "en-US",
-                  "revision": 3,
-                  "space": Object {
-                    "sys": Object {
-                      "id": "8askpxhbyg64",
-                      "linkType": "Space",
-                      "type": "Link",
-                    },
-                  },
-                  "type": "Entry",
-                  "updatedAt": "2018-06-12T19:05:22.730Z",
-                },
-              },
-              Object {
-                "fields": Object {
-                  "description": "Inspired by the harmony and peaceful nature of the Jedi, The Force illustrates the precarious balance between the dark and light side with sweet cream ice cream, swirled with rich chocolate fudge, and set against a galaxy of white and dark chocolate pearls.",
-                  "details": "Delicious bites!",
-                  "detailsImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 258,
-                            "width": 234,
-                          },
-                          "size": 84469,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.34 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/1U89EfHNAcYGgoW6yM6qKA/9d8e1bdb12caa5283c48a466f88ca8e0/Screen_Shot_2018-06-07_at_5.57.34_PM.png",
-                      },
-                      "title": "PB Munchies detail photo",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T22:00:03.109Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "1U89EfHNAcYGgoW6yM6qKA",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T22:00:03.109Z",
-                    },
-                  },
-                  "flavorHighlight": "Mint green!",
-                  "flavorHighlightImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 730,
-                            "width": 654,
-                          },
-                          "size": 763798,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.41 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/2C9hEcZpk4IWwMU4eqakke/12d17e080d490bc9f0f30b0396ba3f7e/Screen_Shot_2018-06-07_at_5.57.41_PM.png",
-                      },
-                      "title": "PB Munchies flavor highlight",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T22:01:02.371Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "2C9hEcZpk4IWwMU4eqakke",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T22:01:02.371Z",
-                    },
-                  },
-                  "pintImage": Object {
-                    "fields": Object {
-                      "file": Object {
-                        "contentType": "image/png",
-                        "details": Object {
-                          "image": Object {
-                            "height": 282,
-                            "width": 232,
-                          },
-                          "size": 89251,
-                        },
-                        "fileName": "Screen Shot 2018-06-07 at 5.57.30 PM.png",
-                        "url": "//images.ctfassets.net/8askpxhbyg64/3EokEYLPio8EKKS8K6eeOW/70e220695d2e8c29075a56737261cb63/Screen_Shot_2018-06-07_at_5.57.30_PM.png",
-                      },
-                      "title": "PB Munchies Pint",
-                    },
-                    "sys": Object {
-                      "createdAt": "2018-06-07T21:59:16.349Z",
-                      "environment": Object {
-                        "sys": Object {
-                          "id": "master",
-                          "linkType": "Environment",
-                          "type": "Link",
-                        },
-                      },
-                      "id": "3EokEYLPio8EKKS8K6eeOW",
-                      "locale": "en-US",
-                      "revision": 1,
-                      "space": Object {
-                        "sys": Object {
-                          "id": "8askpxhbyg64",
-                          "linkType": "Space",
-                          "type": "Link",
-                        },
-                      },
-                      "type": "Asset",
-                      "updatedAt": "2018-06-07T21:59:16.349Z",
-                    },
-                  },
-                  "title": "Peppermint Patty",
-                },
-                "sys": Object {
-                  "contentType": Object {
-                    "sys": Object {
-                      "id": "productDetails",
-                      "linkType": "ContentType",
-                      "type": "Link",
-                    },
-                  },
-                  "createdAt": "2018-06-07T22:04:41.871Z",
-                  "environment": Object {
-                    "sys": Object {
-                      "id": "master",
-                      "linkType": "Environment",
-                      "type": "Link",
-                    },
-                  },
-                  "id": "6HC1913RW806I4cmESEY8C",
-                  "locale": "en-US",
-                  "revision": 2,
-                  "space": Object {
-                    "sys": Object {
-                      "id": "8askpxhbyg64",
-                      "linkType": "Space",
-                      "type": "Link",
-                    },
-                  },
-                  "type": "Entry",
-                  "updatedAt": "2018-06-12T19:05:31.068Z",
-                },
-              },
-            ],
-            "title": "Our Classics 4 Pack",
-          }
-    }
-    z={1}
+    z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -393,7 +304,7 @@ ShallowWrapper {
                     color="clear-madison-blue-border"
                     disabled={false}
                     fullWidth={false}
-                    label=""
+                    label="foo"
                     onClick={[Function]}
                     shadow={true}
                     to=""
@@ -417,11 +328,11 @@ ShallowWrapper {
                                                   className="col-3 md-col-2"
                                         >
                                                   <Image
-                                                            alt=" description image"
+                                                            alt="foo description image"
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src=""
+                                                            src="foo"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -430,7 +341,9 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
-                                                  />
+                                                  >
+                                                            foo
+                                                  </p>
                                         </div>
                               </div>
                               <div
@@ -440,11 +353,11 @@ ShallowWrapper {
                                                   className="col-3 md-col-2"
                                         >
                                                   <Image
-                                                            alt=" description image"
+                                                            alt="foo description image"
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src=""
+                                                            src="foo"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -453,7 +366,9 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
-                                                  />
+                                                  >
+                                                            foo
+                                                  </p>
                                         </div>
                               </div>
                     </div>
@@ -465,7 +380,9 @@ ShallowWrapper {
                               >
                                         <p
                                                   className="absolute center callout-small z-1"
-                                        />
+                                        >
+                                                  foo
+                                        </p>
                                         <div
                                                   className="undefined p3 circle square bg-goldenrod"
                                         />
@@ -475,7 +392,7 @@ ShallowWrapper {
                                                   className="circle square"
                                                   style={
                                                             Object {
-                                                                      "background": "url() no-repeat center",
+                                                                      "background": "url(foo) no-repeat center",
                                                                       "backgroundSize": "cover",
                                                                     }
                                                   }
@@ -487,7 +404,7 @@ ShallowWrapper {
       ],
       "className": "p2 drip",
       "style": Object {
-        "zIndex": 1,
+        "zIndex": 0,
       },
     },
     "ref": null,
@@ -509,7 +426,7 @@ ShallowWrapper {
                 color="clear-madison-blue-border"
                 disabled={false}
                 fullWidth={false}
-                label=""
+                label="foo"
                 onClick={[Function]}
                 shadow={true}
                 to=""
@@ -536,7 +453,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "foo",
             "nodeType": "function",
             "props": Object {
               "children": null,
@@ -544,7 +461,7 @@ ShallowWrapper {
               "color": "clear-madison-blue-border",
               "disabled": false,
               "fullWidth": false,
-              "label": "",
+              "label": "foo",
               "onClick": [Function],
               "shadow": true,
               "to": "",
@@ -577,11 +494,11 @@ ShallowWrapper {
                                                         className="col-3 md-col-2"
                                           >
                                                         <Image
-                                                                      alt=" description image"
+                                                                      alt="foo description image"
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src=""
+                                                                      src="foo"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -590,7 +507,9 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
-                                                        />
+                                                        >
+                                                                      foo
+                                                        </p>
                                           </div>
                             </div>
                             <div
@@ -600,11 +519,11 @@ ShallowWrapper {
                                                         className="col-3 md-col-2"
                                           >
                                                         <Image
-                                                                      alt=" description image"
+                                                                      alt="foo description image"
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src=""
+                                                                      src="foo"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -613,7 +532,9 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
-                                                        />
+                                                        >
+                                                                      foo
+                                                        </p>
                                           </div>
                             </div>
               </div>
@@ -625,7 +546,9 @@ ShallowWrapper {
                             >
                                           <p
                                                         className="absolute center callout-small z-1"
-                                          />
+                                          >
+                                                        foo
+                                          </p>
                                           <div
                                                         className="undefined p3 circle square bg-goldenrod"
                                           />
@@ -635,7 +558,7 @@ ShallowWrapper {
                                                         className="circle square"
                                                         style={
                                                                       Object {
-                                                                                    "background": "url() no-repeat center",
+                                                                                    "background": "url(foo) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                         }
@@ -650,7 +573,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "foo",
             "nodeType": "host",
             "props": Object {
               "children": Array [
@@ -664,11 +587,11 @@ ShallowWrapper {
                                                       className="col-3 md-col-2"
                                     >
                                                       <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -677,7 +600,9 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
-                                                      />
+                                                      >
+                                                                        foo
+                                                      </p>
                                     </div>
                   </div>
                   <div
@@ -687,11 +612,11 @@ ShallowWrapper {
                                                       className="col-3 md-col-2"
                                     >
                                                       <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -700,7 +625,9 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
-                                                      />
+                                                      >
+                                                                        foo
+                                                      </p>
                                     </div>
                   </div>
 </div>,
@@ -712,7 +639,9 @@ ShallowWrapper {
                   >
                                     <p
                                                       className="absolute center callout-small z-1"
-                                    />
+                                    >
+                                                      foo
+                                    </p>
                                     <div
                                                       className="undefined p3 circle square bg-goldenrod"
                                     />
@@ -722,7 +651,7 @@ ShallowWrapper {
                                                       className="circle square"
                                                       style={
                                                                         Object {
-                                                                                          "background": "url() no-repeat center",
+                                                                                          "background": "url(foo) no-repeat center",
                                                                                           "backgroundSize": "cover",
                                                                                         }
                                                       }
@@ -747,11 +676,11 @@ ShallowWrapper {
                                             className="col-3 md-col-2"
                       >
                                             <Image
-                                                                  alt=" description image"
+                                                                  alt="foo description image"
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src=""
+                                                                  src="foo"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -760,7 +689,9 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
-                                            />
+                                            >
+                                                                  foo
+                                            </p>
                       </div>
 </div>,
                     <div
@@ -770,11 +701,11 @@ ShallowWrapper {
                                             className="col-3 md-col-2"
                       >
                                             <Image
-                                                                  alt=" description image"
+                                                                  alt="foo description image"
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src=""
+                                                                  src="foo"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -783,7 +714,9 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
-                                            />
+                                            >
+                                                                  foo
+                                            </p>
                       </div>
 </div>,
                   ],
@@ -801,11 +734,11 @@ ShallowWrapper {
                           className="col-3 md-col-2"
 >
                           <Image
-                                                    alt=" description image"
+                                                    alt="foo description image"
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src=""
+                                                    src="foo"
                                                     style={Object {}}
                           />
 </div>,
@@ -814,7 +747,9 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
-                          />
+                          >
+                                                    foo
+                          </p>
 </div>,
                       ],
                       "className": "flex justify-center items-center mb4",
@@ -827,11 +762,11 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": <Image
-                            alt=" description image"
+                            alt="foo description image"
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src=""
+                            src="foo"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -842,12 +777,12 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "alt": " description image",
+                            "alt": "foo description image",
                             "bg": false,
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "",
+                            "src": "foo",
                             "style": Object {},
                           },
                           "ref": null,
@@ -863,7 +798,9 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
-/>,
+>
+                            foo
+</p>,
                           "className": "md-col-10",
                         },
                         "ref": null,
@@ -872,11 +809,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "",
+                            "children": "foo",
                             "className": "block-subheadline",
                           },
                           "ref": null,
-                          "rendered": "",
+                          "rendered": "foo",
                           "type": "p",
                         },
                         "type": "div",
@@ -894,11 +831,11 @@ ShallowWrapper {
                           className="col-3 md-col-2"
 >
                           <Image
-                                                    alt=" description image"
+                                                    alt="foo description image"
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src=""
+                                                    src="foo"
                                                     style={Object {}}
                           />
 </div>,
@@ -907,7 +844,9 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
-                          />
+                          >
+                                                    foo
+                          </p>
 </div>,
                       ],
                       "className": "flex items-center",
@@ -920,11 +859,11 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": <Image
-                            alt=" description image"
+                            alt="foo description image"
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src=""
+                            src="foo"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -935,12 +874,12 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "alt": " description image",
+                            "alt": "foo description image",
                             "bg": false,
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "",
+                            "src": "foo",
                             "style": Object {},
                           },
                           "ref": null,
@@ -956,7 +895,9 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
-/>,
+>
+                            foo
+</p>,
                           "className": "md-col-10",
                         },
                         "ref": null,
@@ -965,11 +906,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "",
+                            "children": "foo",
                             "className": "block-subheadline",
                           },
                           "ref": null,
-                          "rendered": "",
+                          "rendered": "foo",
                           "type": "p",
                         },
                         "type": "div",
@@ -991,7 +932,9 @@ ShallowWrapper {
 >
                       <p
                                             className="absolute center callout-small z-1"
-                      />
+                      >
+                                            foo
+                      </p>
                       <div
                                             className="undefined p3 circle square bg-goldenrod"
                       />
@@ -1001,7 +944,7 @@ ShallowWrapper {
                                             className="circle square"
                                             style={
                                                                   Object {
-                                                                                        "background": "url() no-repeat center",
+                                                                                        "background": "url(foo) no-repeat center",
                                                                                         "backgroundSize": "cover",
                                                                                       }
                                             }
@@ -1020,7 +963,9 @@ ShallowWrapper {
                       "children": Array [
                         <p
                           className="absolute center callout-small z-1"
-/>,
+>
+                          foo
+</p>,
                         <div
                           className="undefined p3 circle square bg-goldenrod"
 />,
@@ -1034,11 +979,11 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "",
+                          "children": "foo",
                           "className": "absolute center callout-small z-1",
                         },
                         "ref": null,
-                        "rendered": "",
+                        "rendered": "foo",
                         "type": "p",
                       },
                       Object {
@@ -1064,7 +1009,7 @@ ShallowWrapper {
                         className="circle square"
                         style={
                                                 Object {
-                                                                        "background": "url() no-repeat center",
+                                                                        "background": "url(foo) no-repeat center",
                                                                         "backgroundSize": "cover",
                                                                       }
                         }
@@ -1078,7 +1023,7 @@ ShallowWrapper {
                       "props": Object {
                         "className": "circle square",
                         "style": Object {
-                          "background": "url() no-repeat center",
+                          "background": "url(foo) no-repeat center",
                           "backgroundSize": "cover",
                         },
                       },
@@ -1120,7 +1065,7 @@ ShallowWrapper {
                         color="clear-madison-blue-border"
                         disabled={false}
                         fullWidth={false}
-                        label=""
+                        label="foo"
                         onClick={[Function]}
                         shadow={true}
                         to=""
@@ -1144,11 +1089,11 @@ ShallowWrapper {
                                                             className="col-3 md-col-2"
                                                 >
                                                             <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -1157,7 +1102,9 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
-                                                            />
+                                                            >
+                                                                        foo
+                                                            </p>
                                                 </div>
                                     </div>
                                     <div
@@ -1167,11 +1114,11 @@ ShallowWrapper {
                                                             className="col-3 md-col-2"
                                                 >
                                                             <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -1180,7 +1127,9 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
-                                                            />
+                                                            >
+                                                                        foo
+                                                            </p>
                                                 </div>
                                     </div>
                         </div>
@@ -1192,7 +1141,9 @@ ShallowWrapper {
                                     >
                                                 <p
                                                             className="absolute center callout-small z-1"
-                                                />
+                                                >
+                                                            foo
+                                                </p>
                                                 <div
                                                             className="undefined p3 circle square bg-goldenrod"
                                                 />
@@ -1202,7 +1153,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                         Object {
-                                                                                    "background": "url() no-repeat center",
+                                                                                    "background": "url(foo) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                             }
@@ -1214,7 +1165,7 @@ ShallowWrapper {
         ],
         "className": "p2 drip",
         "style": Object {
-          "zIndex": 1,
+          "zIndex": 0,
         },
       },
       "ref": null,
@@ -1236,7 +1187,7 @@ ShallowWrapper {
                   color="clear-madison-blue-border"
                   disabled={false}
                   fullWidth={false}
-                  label=""
+                  label="foo"
                   onClick={[Function]}
                   shadow={true}
                   to=""
@@ -1263,7 +1214,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "foo",
               "nodeType": "function",
               "props": Object {
                 "children": null,
@@ -1271,7 +1222,7 @@ ShallowWrapper {
                 "color": "clear-madison-blue-border",
                 "disabled": false,
                 "fullWidth": false,
-                "label": "",
+                "label": "foo",
                 "onClick": [Function],
                 "shadow": true,
                 "to": "",
@@ -1304,11 +1255,11 @@ ShallowWrapper {
                                                                 className="col-3 md-col-2"
                                                 >
                                                                 <Image
-                                                                                alt=" description image"
+                                                                                alt="foo description image"
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="foo"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -1317,7 +1268,9 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
-                                                                />
+                                                                >
+                                                                                foo
+                                                                </p>
                                                 </div>
                                 </div>
                                 <div
@@ -1327,11 +1280,11 @@ ShallowWrapper {
                                                                 className="col-3 md-col-2"
                                                 >
                                                                 <Image
-                                                                                alt=" description image"
+                                                                                alt="foo description image"
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="foo"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -1340,7 +1293,9 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
-                                                                />
+                                                                >
+                                                                                foo
+                                                                </p>
                                                 </div>
                                 </div>
                 </div>
@@ -1352,7 +1307,9 @@ ShallowWrapper {
                                 >
                                                 <p
                                                                 className="absolute center callout-small z-1"
-                                                />
+                                                >
+                                                                foo
+                                                </p>
                                                 <div
                                                                 className="undefined p3 circle square bg-goldenrod"
                                                 />
@@ -1362,7 +1319,7 @@ ShallowWrapper {
                                                                 className="circle square"
                                                                 style={
                                                                                 Object {
-                                                                                                "background": "url() no-repeat center",
+                                                                                                "background": "url(foo) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                                 }
@@ -1377,7 +1334,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "foo",
               "nodeType": "host",
               "props": Object {
                 "children": Array [
@@ -1391,11 +1348,11 @@ ShallowWrapper {
                                                             className="col-3 md-col-2"
                                         >
                                                             <Image
-                                                                                alt=" description image"
+                                                                                alt="foo description image"
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="foo"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -1404,7 +1361,9 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
-                                                            />
+                                                            >
+                                                                                foo
+                                                            </p>
                                         </div>
                     </div>
                     <div
@@ -1414,11 +1373,11 @@ ShallowWrapper {
                                                             className="col-3 md-col-2"
                                         >
                                                             <Image
-                                                                                alt=" description image"
+                                                                                alt="foo description image"
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="foo"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -1427,7 +1386,9 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
-                                                            />
+                                                            >
+                                                                                foo
+                                                            </p>
                                         </div>
                     </div>
 </div>,
@@ -1439,7 +1400,9 @@ ShallowWrapper {
                     >
                                         <p
                                                             className="absolute center callout-small z-1"
-                                        />
+                                        >
+                                                            foo
+                                        </p>
                                         <div
                                                             className="undefined p3 circle square bg-goldenrod"
                                         />
@@ -1449,7 +1412,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                                 Object {
-                                                                                                    "background": "url() no-repeat center",
+                                                                                                    "background": "url(foo) no-repeat center",
                                                                                                     "backgroundSize": "cover",
                                                                                                   }
                                                             }
@@ -1474,11 +1437,11 @@ ShallowWrapper {
                                                 className="col-3 md-col-2"
                         >
                                                 <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -1487,7 +1450,9 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
-                                                />
+                                                >
+                                                                        foo
+                                                </p>
                         </div>
 </div>,
                       <div
@@ -1497,11 +1462,11 @@ ShallowWrapper {
                                                 className="col-3 md-col-2"
                         >
                                                 <Image
-                                                                        alt=" description image"
+                                                                        alt="foo description image"
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="foo"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -1510,7 +1475,9 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
-                                                />
+                                                >
+                                                                        foo
+                                                </p>
                         </div>
 </div>,
                     ],
@@ -1528,11 +1495,11 @@ ShallowWrapper {
                             className="col-3 md-col-2"
 >
                             <Image
-                                                        alt=" description image"
+                                                        alt="foo description image"
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src=""
+                                                        src="foo"
                                                         style={Object {}}
                             />
 </div>,
@@ -1541,7 +1508,9 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
-                            />
+                            >
+                                                        foo
+                            </p>
 </div>,
                         ],
                         "className": "flex justify-center items-center mb4",
@@ -1554,11 +1523,11 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": <Image
-                              alt=" description image"
+                              alt="foo description image"
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src=""
+                              src="foo"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -1569,12 +1538,12 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "alt": " description image",
+                              "alt": "foo description image",
                               "bg": false,
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "",
+                              "src": "foo",
                               "style": Object {},
                             },
                             "ref": null,
@@ -1590,7 +1559,9 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
-/>,
+>
+                              foo
+</p>,
                             "className": "md-col-10",
                           },
                           "ref": null,
@@ -1599,11 +1570,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "",
+                              "children": "foo",
                               "className": "block-subheadline",
                             },
                             "ref": null,
-                            "rendered": "",
+                            "rendered": "foo",
                             "type": "p",
                           },
                           "type": "div",
@@ -1621,11 +1592,11 @@ ShallowWrapper {
                             className="col-3 md-col-2"
 >
                             <Image
-                                                        alt=" description image"
+                                                        alt="foo description image"
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src=""
+                                                        src="foo"
                                                         style={Object {}}
                             />
 </div>,
@@ -1634,7 +1605,9 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
-                            />
+                            >
+                                                        foo
+                            </p>
 </div>,
                         ],
                         "className": "flex items-center",
@@ -1647,11 +1620,11 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": <Image
-                              alt=" description image"
+                              alt="foo description image"
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src=""
+                              src="foo"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -1662,12 +1635,12 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "alt": " description image",
+                              "alt": "foo description image",
                               "bg": false,
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "",
+                              "src": "foo",
                               "style": Object {},
                             },
                             "ref": null,
@@ -1683,7 +1656,9 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
-/>,
+>
+                              foo
+</p>,
                             "className": "md-col-10",
                           },
                           "ref": null,
@@ -1692,11 +1667,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "",
+                              "children": "foo",
                               "className": "block-subheadline",
                             },
                             "ref": null,
-                            "rendered": "",
+                            "rendered": "foo",
                             "type": "p",
                           },
                           "type": "div",
@@ -1718,7 +1693,9 @@ ShallowWrapper {
 >
                         <p
                                                 className="absolute center callout-small z-1"
-                        />
+                        >
+                                                foo
+                        </p>
                         <div
                                                 className="undefined p3 circle square bg-goldenrod"
                         />
@@ -1728,7 +1705,7 @@ ShallowWrapper {
                                                 className="circle square"
                                                 style={
                                                                         Object {
-                                                                                                "background": "url() no-repeat center",
+                                                                                                "background": "url(foo) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                 }
@@ -1747,7 +1724,9 @@ ShallowWrapper {
                         "children": Array [
                           <p
                             className="absolute center callout-small z-1"
-/>,
+>
+                            foo
+</p>,
                           <div
                             className="undefined p3 circle square bg-goldenrod"
 />,
@@ -1761,11 +1740,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "",
+                            "children": "foo",
                             "className": "absolute center callout-small z-1",
                           },
                           "ref": null,
-                          "rendered": "",
+                          "rendered": "foo",
                           "type": "p",
                         },
                         Object {
@@ -1791,7 +1770,7 @@ ShallowWrapper {
                           className="circle square"
                           style={
                                                     Object {
-                                                                              "background": "url() no-repeat center",
+                                                                              "background": "url(foo) no-repeat center",
                                                                               "backgroundSize": "cover",
                                                                             }
                           }
@@ -1805,7 +1784,7 @@ ShallowWrapper {
                         "props": Object {
                           "className": "circle square",
                           "style": Object {
-                            "background": "url() no-repeat center",
+                            "background": "url(foo) no-repeat center",
                             "backgroundSize": "cover",
                           },
                         },

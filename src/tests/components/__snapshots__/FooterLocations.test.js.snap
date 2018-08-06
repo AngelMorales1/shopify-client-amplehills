@@ -1,0 +1,1285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FooterLocations
+    locations={
+        Array [
+            Object {
+              "address1": "foo",
+              "address2": "foo",
+              "city": "foo",
+              "coordinates": Object {
+                "lat": 0,
+                "lon": 0,
+              },
+              "delivery": false,
+              "hours": Object {
+                "friday": "foo",
+                "monday": "foo",
+                "saturday": "foo",
+                "sunday": "foo",
+                "thursday": "foo",
+                "tuesday": "foo",
+                "wednesday": "foo",
+              },
+              "id": "foo",
+              "image": "foo",
+              "phone": "foo",
+              "region": "foo",
+              "seasonal": false,
+              "seasonalImage": "foo",
+              "sortedHours": Array [
+                Object {
+                  "foo": "foo",
+                },
+              ],
+              "state": "foo",
+              "title": "foo",
+              "zip": "foo",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="mb2 text-white block-headline"
+>
+          Locations
+</h2>,
+        <div
+          className="flex flex-column flex-wrap"
+>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Brooklyn
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Manhattan
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Queens
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              New Jersey
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Florida
+                    </h3>
+          </div>
+</div>,
+      ],
+      "className": "flex flex-column m4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Locations",
+          "className": "mb2 text-white block-headline",
+        },
+        "ref": null,
+        "rendered": "Locations",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Brooklyn
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Manhattan
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Queens
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            New Jersey
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Florida
+              </h3>
+</div>,
+          ],
+          "className": "flex flex-column flex-wrap",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Brooklyn",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Brooklyn
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Brooklyn",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Brooklyn",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Manhattan",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Manhattan
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Manhattan",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Manhattan",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Queens",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Queens
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Queens",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Queens",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "New Jersey",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  New Jersey
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "New Jersey",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "New Jersey",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Florida",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Florida
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Florida",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Florida",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="mb2 text-white block-headline"
+>
+            Locations
+</h2>,
+          <div
+            className="flex flex-column flex-wrap"
+>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Brooklyn
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Manhattan
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Queens
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    New Jersey
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Florida
+                        </h3>
+            </div>
+</div>,
+        ],
+        "className": "flex flex-column m4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Locations",
+            "className": "mb2 text-white block-headline",
+          },
+          "ref": null,
+          "rendered": "Locations",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Brooklyn
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Manhattan
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Queens
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                New Jersey
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Florida
+                </h3>
+</div>,
+            ],
+            "className": "flex flex-column flex-wrap",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "Brooklyn",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Brooklyn
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Brooklyn",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Brooklyn",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Manhattan",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Manhattan
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Manhattan",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Manhattan",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Queens",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Queens
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Queens",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Queens",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "New Jersey",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    New Jersey
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "New Jersey",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "New Jersey",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Florida",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Florida
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Florida",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Florida",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FooterLocations
+    locations={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="mb2 text-white block-headline"
+>
+          Locations
+</h2>,
+        <div
+          className="flex flex-column flex-wrap"
+>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Brooklyn
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Manhattan
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Queens
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              New Jersey
+                    </h3>
+          </div>
+          <div
+                    className="flex flex-column"
+          >
+                    <h3
+                              className="my2 text-white callout"
+                    >
+                              Florida
+                    </h3>
+          </div>
+</div>,
+      ],
+      "className": "flex flex-column m4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Locations",
+          "className": "mb2 text-white block-headline",
+        },
+        "ref": null,
+        "rendered": "Locations",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Brooklyn
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Manhattan
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Queens
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            New Jersey
+              </h3>
+</div>,
+            <div
+              className="flex flex-column"
+>
+              <h3
+                            className="my2 text-white callout"
+              >
+                            Florida
+              </h3>
+</div>,
+          ],
+          "className": "flex flex-column flex-wrap",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "Brooklyn",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Brooklyn
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Brooklyn",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Brooklyn",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Manhattan",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Manhattan
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Manhattan",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Manhattan",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Queens",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Queens
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Queens",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Queens",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "New Jersey",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  New Jersey
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "New Jersey",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "New Jersey",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "Florida",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3
+                  className="my2 text-white callout"
+>
+                  Florida
+</h3>,
+                Array [],
+              ],
+              "className": "flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Florida",
+                  "className": "my2 text-white callout",
+                },
+                "ref": null,
+                "rendered": "Florida",
+                "type": "h3",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="mb2 text-white block-headline"
+>
+            Locations
+</h2>,
+          <div
+            className="flex flex-column flex-wrap"
+>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Brooklyn
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Manhattan
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Queens
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    New Jersey
+                        </h3>
+            </div>
+            <div
+                        className="flex flex-column"
+            >
+                        <h3
+                                    className="my2 text-white callout"
+                        >
+                                    Florida
+                        </h3>
+            </div>
+</div>,
+        ],
+        "className": "flex flex-column m4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Locations",
+            "className": "mb2 text-white block-headline",
+          },
+          "ref": null,
+          "rendered": "Locations",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Brooklyn
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Manhattan
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Queens
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                New Jersey
+                </h3>
+</div>,
+              <div
+                className="flex flex-column"
+>
+                <h3
+                                className="my2 text-white callout"
+                >
+                                Florida
+                </h3>
+</div>,
+            ],
+            "className": "flex flex-column flex-wrap",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "Brooklyn",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Brooklyn
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Brooklyn",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Brooklyn",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Manhattan",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Manhattan
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Manhattan",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Manhattan",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Queens",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Queens
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Queens",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Queens",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "New Jersey",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    New Jersey
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "New Jersey",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "New Jersey",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "Florida",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3
+                    className="my2 text-white callout"
+>
+                    Florida
+</h3>,
+                  Array [],
+                ],
+                "className": "flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Florida",
+                    "className": "my2 text-white callout",
+                  },
+                  "ref": null,
+                  "rendered": "Florida",
+                  "type": "h3",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -128,17 +128,21 @@ class ChooseYourOwnStory extends Component {
     } = this.props;
     const fields = get(block, 'fields', {});
 
-    const product =
-      products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const handle = get(this.props.product, 'handle', 'choose-your-own-story');
+    const product = get(products, handle, {});
     const {
       overlayContentImage,
       shippingInformation,
       shippingPledge,
       calloutImage
     } = ourPledge;
-    const activeVariant = product.variants.find(
+
+    const productVariant = get(product, 'variants', []);
+    const activeVariant = productVariant.find(
       variant => getPintSizeFromTitle(variant.title) === size
     );
+    const activeVariantPrice = get(activeVariant, 'price', 0);
+    const activeVariantId = get(activeVariant, 'id', '');
 
     const shoppableProducts = get(fields, 'products', []);
     const breadcrumbs = [
@@ -197,12 +201,12 @@ class ChooseYourOwnStory extends Component {
                 {get(fields, 'title')}
               </h1>
               <div className="w100 flex my3">
-                {product.variants.map(variant => (
+                {productVariant.map(variant => (
                   <Radio
                     label={variant.title}
                     className="mr3"
                     key={variant.id}
-                    checked={variant.id === activeVariant.id}
+                    checked={variant.id === activeVariantId}
                     onClick={() =>
                       this.handleSizeClick(parseInt(variant.title, 10))
                     }
@@ -237,12 +241,12 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start xs-hide sm-hide md-hide'
               )}
             >
-              {product.variants.map(variant => (
+              {productVariant.map(variant => (
                 <Radio
                   label={variant.title}
                   className="mr3 small bold"
                   key={variant.id}
-                  checked={variant.id === activeVariant.id}
+                  checked={variant.id === activeVariantId}
                   onClick={() =>
                     this.handleSizeClick(parseInt(variant.title, 10))
                   }
@@ -319,7 +323,7 @@ class ChooseYourOwnStory extends Component {
                   >
                     <span className="mr2">Add to Cart</span>
                     <span>
-                      ${getLineItemPrice(activeVariant.price, quantity)}
+                      ${getLineItemPrice(activeVariantPrice, quantity)}
                     </span>
                   </Button>
                 ) : (
@@ -331,7 +335,7 @@ class ChooseYourOwnStory extends Component {
                   >
                     <span className="mr2">Sold Out</span>
                     <span>
-                      ${getLineItemPrice(activeVariant.price, quantity)}
+                      ${getLineItemPrice(activeVariantPrice, quantity)}
                     </span>
                   </Button>
                 )}

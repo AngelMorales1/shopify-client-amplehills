@@ -5,6 +5,7 @@ import productModel from 'models/productModel';
 
 import { Button, QuantitySelector } from 'components/base';
 import styles from './ProductShoppableCard.scss';
+import get from 'utils/get';
 
 const ProductShoppableCard = ({
   product,
@@ -96,7 +97,7 @@ ProductShoppableCard.propTypes = {
 };
 
 ProductShoppableCard.defaultProps = {
-  product: productModel.defaultProps,
+  product: productModel.default,
   quantity: 0,
   handleAddProduct: () => {},
   handleRemoveProduct: () => {}

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'utils/get';
 
 import styles from './Footer.scss';
 import { Button, Image } from 'components/base';
@@ -42,7 +43,7 @@ const FooterLinks = ({ footerLinks }) => {
             className="icon"
           />
           <a
-            href={footerLinks.instagramLink}
+            href={get(footerLinks, 'instagramLink', '')}
             target="_blank"
             rel="noopener"
             className="bold text-white text-decoration-none ml3"
@@ -57,7 +58,7 @@ const FooterLinks = ({ footerLinks }) => {
             className="icon"
           />
           <a
-            href={footerLinks.twitterLink}
+            href={get(footerLinks, 'twitterLink', '')}
             target="_blank"
             rel="noopener"
             className="bold text-white text-decoration-none ml3"
@@ -72,7 +73,7 @@ const FooterLinks = ({ footerLinks }) => {
             className="icon"
           />
           <a
-            href={footerLinks.facebookLink}
+            href={get(footerLinks, 'facebookLink', '')}
             target="_blank"
             rel="noopener"
             className="bold text-white text-decoration-none ml3"

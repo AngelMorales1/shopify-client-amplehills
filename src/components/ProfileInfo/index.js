@@ -41,7 +41,7 @@ class ProfileInfo extends Component {
     this.setState({ [id]: value });
   };
 
-  renderSuccessMessage(successfullyEditedFields) {
+  renderSuccessMessage(successfullyEditedFields = []) {
     if (!successfullyEditedFields.length) return null;
 
     const field = Object.keys(successfullyEditedFields[0])[0];
@@ -63,7 +63,6 @@ class ProfileInfo extends Component {
       successfullyEditedFields,
       errors
     } = this.props;
-
     const editModal = customerFieldBeingEdited
       ? Object.values(UpdateCustomerForm).find(
           field => field.id === customerFieldBeingEdited
