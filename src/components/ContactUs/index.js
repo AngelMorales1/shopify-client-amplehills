@@ -93,6 +93,7 @@ class ContactUs extends Component {
           <div className="flex flex-wrap justify-center px2 my2">
             {Object.values(ContactUsForm.ADDRESSES).map(field => (
               <Radio
+                key={field.label}
                 checked={selectedAddress === field.bucket}
                 onClick={() => this.setState({ selectedAddress: field.bucket })}
                 className="mx2 my1 small"
@@ -103,6 +104,7 @@ class ContactUs extends Component {
           <div className="w100 flex flex-column">
             {Object.values(ContactUsForm.FIELDS).map(field => (
               <TextField
+                key={field.label}
                 className="m1"
                 variant={
                   field.type === 'textarea' ? 'light-gray-tall' : 'light-gray'
