@@ -12,7 +12,7 @@ const getDayRange = daysWithSameHours => {
 export default openHours => {
   let allSortedDays = [];
 
-  const sortByHours = Days.reduce((accumulated, day) => {
+  Days.reduce((accumulated, day) => {
     let time = openHours[day];
     let timeRange = Object.keys(accumulated)[0];
 
