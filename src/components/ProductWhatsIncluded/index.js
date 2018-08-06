@@ -34,7 +34,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
 
           return (
             <div
-              key={product.id}
+              key={handle}
               className={cx(
                 styles['ProductWhatsIncluded__flavor-container'],
                 'flex items-center my2 col-12'
