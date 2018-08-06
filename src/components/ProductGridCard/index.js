@@ -15,12 +15,15 @@ const ProductGridCard = ({ product }) => {
         to={`/products/${product.handle}`}
       >
         <div className="flex flex-column items-center">
-          <Image
+          <div
             className={cx(
               styles['ProductGridCard__image'],
-              'transition card w100'
+              'square transition card w100'
             )}
-            src={product.gridImage}
+            style={{
+              background: `url(${product.gridImage}) no-repeat center`,
+              backgroundSize: 'cover'
+            }}
           />
           <span className="bold mt2 mb1">{product.title}</span>
           <span>{`$${product.price.toFixed(2)}`}</span>
