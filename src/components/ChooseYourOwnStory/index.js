@@ -56,6 +56,7 @@ class ChooseYourOwnStory extends Component {
   };
 
   handleSizeClick = size => {
+    console.log(size);
     const pints = get(this.state, 'pints', []);
     if (size >= pints.length) return this.setState({ size });
 
@@ -118,6 +119,8 @@ class ChooseYourOwnStory extends Component {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
     const quantity = get(this.state, 'quantity', 1);
+
+    console.log(size);
 
     const {
       block,
@@ -230,7 +233,7 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
             this.state.menuPosition
           )}
         >
@@ -261,7 +264,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
-              <label className="small bold">Choose 4 Flavors</label>
+              <label className="small bold">Choose {size} Flavors</label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
                   <div
