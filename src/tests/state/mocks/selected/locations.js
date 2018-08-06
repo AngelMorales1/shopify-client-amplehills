@@ -31,7 +31,17 @@ export default [
     sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }],
     currentOpenHours: moment()
       .format('dddd')
-      .toLowerCase()
+      .toLowerCase(),
+    stringifiedSearchableFields: [
+      'Location 1',
+      '110 Bowery',
+      'Fl. 4',
+      'New York',
+      'Manhattan',
+      'NY',
+      '10013',
+      '8881234567'
+    ]
   },
   {
     id: '0002',
@@ -63,6 +73,16 @@ export default [
     sortedHours: [{ Sun: 'Noon–12am' }, { 'Mon–Sat': 'Noon–11pm' }],
     currentOpenHours: moment()
       .format('dddd')
-      .toLowerCase()
+      .toLowerCase(),
+    stringifiedSearchableFields: [
+      'Location 2',
+      '36 Westwood BLVD',
+      '',
+      'New Jersey',
+      'New Jersey',
+      'NJ',
+      '07654',
+      '8881234567'
+    ]
   }
 ];

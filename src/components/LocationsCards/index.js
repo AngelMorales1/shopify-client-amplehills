@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getLocationsResults from 'utils/getLocationsResults';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 
-import { Image, Dropdown } from 'components/base';
+import { Image, Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
@@ -81,9 +80,18 @@ class LocationsCards extends Component {
   };
 
   render() {
-    const { actions, locationFilters } = this.props;
-    const sortedLocations = this.state.sortedLocations;
-    const STATE_KEY = get(LocationsMapFilters, 'STATE_FILTERS[0].key', '');
+    const {
+      actions,
+      locationFilters,
+      searchFilter,
+      locationResultsLabel
+    } = this.props;
+    const { sortedLocations } = this.state;
+    const STATE_KEY = get(
+      Object.values(LocationsMapFilters.STATE_FILTERS),
+      '[0].key',
+      ''
+    );
     const activeStateFilter = locationFilters.find(
       filter => filter.key === STATE_KEY
     );
@@ -120,7 +128,7 @@ class LocationsCards extends Component {
                       : null
                   }
                   options={[{ label: 'All', value: 'All' }]
-                    .concat(LocationsMapFilters.STATE_FILTERS)
+                    .concat(Object.values(LocationsMapFilters.STATE_FILTERS))
                     .map(filter => ({
                       label: filter.label,
                       value: filter.value
@@ -135,10 +143,42 @@ class LocationsCards extends Component {
                   }
                 />
               </div>
+              <div className="mb3 relative">
+                <TextField
+                  value={searchFilter}
+                  variant="primary"
+                  className={styles['LocationsCards__search']}
+                  placeholder={
+                    locationFilters.length
+                      ? `Search locations in ${
+                          LocationsMapFilters.STATE_FILTERS[
+                            activeStateFilter.value
+                          ].label
+                        }`
+                      : `Search locations`
+                  }
+                  onChange={searchFilter =>
+                    actions.updateSearchFilter(searchFilter)
+                  }
+                />
+                <Button
+                  disabled={!searchFilter}
+                  className={cx(
+                    styles['LocationsCards__search-button'],
+                    'transition absolute t0 r0 small',
+                    {
+                      [styles[
+                        'LocationsCards__search-button--active'
+                      ]]: searchFilter
+                    }
+                  )}
+                  variant="no-style"
+                  label="Clear"
+                  onClick={() => actions.updateSearchFilter('')}
+                />
+              </div>
               <div className="mb2 center">
-                <span className="bold">
-                  {getLocationsResults(sortedLocations.length)}
-                </span>
+                <span className="bold">{locationResultsLabel}</span>
               </div>
               <div className="flex flex-column items-center">
                 {sortedLocations.map(location => (

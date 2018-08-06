@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 import { Days } from 'constants/Days.js';
 import get from 'utils/get';
+import recursivelyStringify from 'utils/recursivelyStringify';
 import sortHours from 'utils/sortHours';
 import moment from 'moment';
 
@@ -33,25 +34,34 @@ export default createSelector(
         .format('dddd')
         .toLowerCase();
 
-      return {
-        id,
+      const searchableFields = {
         title,
-        image,
-        seasonalImage,
         address1,
         address2,
         city,
         region,
         state,
         zip,
+        phone
+      };
+
+      const stringifiedSearchableFields = Object.values(searchableFields).map(
+        recursivelyStringify
+      );
+
+      return {
+        ...searchableFields,
+        id,
+        image,
+        seasonalImage,
         coordinates,
-        phone,
         seasonal,
         hours,
         sortedHours,
         delivery,
         seasonalImage,
-        currentOpenHours
+        currentOpenHours,
+        stringifiedSearchableFields
       };
     });
 

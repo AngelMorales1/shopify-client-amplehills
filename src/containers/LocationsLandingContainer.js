@@ -7,11 +7,13 @@ import get from 'utils/get';
 import {
   addLocationFilter,
   removeLocationFilter,
-  clearLocationFilters
+  clearLocationFilters,
+  updateSearchFilter
 } from 'state/actions/ui/locationsUIActions';
 
 import locations from 'state/selectors/locations';
 import locationGeoJSON from 'state/selectors/locationGeoJSON';
+import locationResultsLabel from 'state/selectors/locationResultsLabel';
 import filteredLocations from 'state/selectors/filteredLocations';
 import filteredOutLocations from 'state/selectors/filteredOutLocations';
 
@@ -27,7 +29,9 @@ const mapStateToProps = state => {
     filteredOutLocations: filteredOutLocations(state),
     locationFilters: get(state, 'locationsUI.locationFilters'),
     locations: locations(state),
-    locationGeoJSON: locationGeoJSON(state)
+    locationGeoJSON: locationGeoJSON(state),
+    locationResultsLabel: locationResultsLabel(state),
+    searchFilter: get(state, 'locationsUI.searchFilter', '')
   };
 };
 
@@ -37,7 +41,8 @@ const mapDispatchToProps = dispatch => {
       {
         addLocationFilter,
         removeLocationFilter,
-        clearLocationFilters
+        clearLocationFilters,
+        updateSearchFilter
       },
       dispatch
     )
