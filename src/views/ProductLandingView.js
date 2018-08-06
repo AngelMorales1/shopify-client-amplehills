@@ -10,7 +10,7 @@ class ProductLandingView extends Component {
 
     const content = get(model, 'landing.items[0].fields', {});
     const gridProducts = get(content, 'products', []).map(product => {
-      const handle = get(product, 'fields', {}).productHandle;
+      const handle = get(product, 'fields.productHandle', '');
       return this.props.products[handle];
     });
 
