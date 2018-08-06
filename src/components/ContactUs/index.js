@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import ContactUsForm from 'constants/forms/ContactUs';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { Dropdown, Radio, TextField, Button, FormFlash } from 'components/base';
+import { Radio, TextField, Button, FormFlash } from 'components/base';
 
 import cx from 'classnames';
 import styles from './ContactUs.scss';
