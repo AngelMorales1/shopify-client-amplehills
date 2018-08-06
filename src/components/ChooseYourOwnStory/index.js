@@ -56,7 +56,6 @@ class ChooseYourOwnStory extends Component {
   };
 
   handleSizeClick = size => {
-    console.log(size);
     const pints = get(this.state, 'pints', []);
     if (size >= pints.length) return this.setState({ size });
 
@@ -119,8 +118,6 @@ class ChooseYourOwnStory extends Component {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
     const quantity = get(this.state, 'quantity', 1);
-
-    console.log(size);
 
     const {
       block,
