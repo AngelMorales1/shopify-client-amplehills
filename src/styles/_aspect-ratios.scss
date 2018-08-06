@@ -7,3 +7,7 @@
 .aspect-5-4 {
   @include aspect-ratio(5, 4);
 }
+
+.aspect-3-4 {
+  @include aspect-ratio(3, 4);
+}
