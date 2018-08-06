@@ -282,7 +282,7 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
 >
           <div
                     className="flex content-width mx-auto w100"
@@ -298,7 +298,9 @@ ShallowWrapper {
                               <label
                                         className="small bold"
                               >
-                                        Choose 4 Flavors
+                                        Choose 
+                                        4
+                                         Flavors
                               </label>
                               <div
                                         className="flex justify-start w100 pt2"
@@ -749,7 +751,9 @@ ShallowWrapper {
                         <label
                                     className="small bold"
                         >
-                                    Choose 4 Flavors
+                                    Choose 
+                                    4
+                                     Flavors
                         </label>
                         <div
                                     className="flex justify-start w100 pt2"
@@ -862,7 +866,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
         },
         "ref": null,
         "rendered": Object {
@@ -882,7 +886,9 @@ ShallowWrapper {
                 <label
                                 className="small bold"
                 >
-                                Choose 4 Flavors
+                                Choose 
+                                4
+                                 Flavors
                 </label>
                 <div
                                 className="flex justify-start w100 pt2"
@@ -1020,7 +1026,9 @@ ShallowWrapper {
                   <label
                     className="small bold"
 >
-                    Choose 4 Flavors
+                    Choose 
+                    4
+                     Flavors
 </label>,
                   <div
                     className="flex justify-start w100 pt2"
@@ -1084,11 +1092,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Choose 4 Flavors",
+                    "children": Array [
+                      "Choose ",
+                      4,
+                      " Flavors",
+                    ],
                     "className": "small bold",
                   },
                   "ref": null,
-                  "rendered": "Choose 4 Flavors",
+                  "rendered": Array [
+                    "Choose ",
+                    4,
+                    " Flavors",
+                  ],
                   "type": "label",
                 },
                 Object {
@@ -1645,7 +1661,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
 >
             <div
                         className="flex content-width mx-auto w100"
@@ -1661,7 +1677,9 @@ ShallowWrapper {
                                     <label
                                                 className="small bold"
                                     >
-                                                Choose 4 Flavors
+                                                Choose 
+                                                4
+                                                 Flavors
                                     </label>
                                     <div
                                                 className="flex justify-start w100 pt2"
@@ -2112,7 +2130,9 @@ ShallowWrapper {
                             <label
                                           className="small bold"
                             >
-                                          Choose 4 Flavors
+                                          Choose 
+                                          4
+                                           Flavors
                             </label>
                             <div
                                           className="flex justify-start w100 pt2"
@@ -2225,7 +2245,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
           },
           "ref": null,
           "rendered": Object {
@@ -2245,7 +2265,9 @@ ShallowWrapper {
                   <label
                                     className="small bold"
                   >
-                                    Choose 4 Flavors
+                                    Choose 
+                                    4
+                                     Flavors
                   </label>
                   <div
                                     className="flex justify-start w100 pt2"
@@ -2383,7 +2405,9 @@ ShallowWrapper {
                     <label
                       className="small bold"
 >
-                      Choose 4 Flavors
+                      Choose 
+                      4
+                       Flavors
 </label>,
                     <div
                       className="flex justify-start w100 pt2"
@@ -2447,11 +2471,19 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Choose 4 Flavors",
+                      "children": Array [
+                        "Choose ",
+                        4,
+                        " Flavors",
+                      ],
                       "className": "small bold",
                     },
                     "ref": null,
-                    "rendered": "Choose 4 Flavors",
+                    "rendered": Array [
+                      "Choose ",
+                      4,
+                      " Flavors",
+                    ],
                     "type": "label",
                   },
                   Object {
@@ -3091,7 +3123,7 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
 >
           <div
                     className="flex content-width mx-auto w100"
@@ -3107,7 +3139,9 @@ ShallowWrapper {
                               <label
                                         className="small bold"
                               >
-                                        Choose 4 Flavors
+                                        Choose 
+                                        4
+                                         Flavors
                               </label>
                               <div
                                         className="flex justify-start w100 pt2"
@@ -3581,7 +3615,9 @@ ShallowWrapper {
                         <label
                                     className="small bold"
                         >
-                                    Choose 4 Flavors
+                                    Choose 
+                                    4
+                                     Flavors
                         </label>
                         <div
                                     className="flex justify-start w100 pt2"
@@ -3694,7 +3730,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
         },
         "ref": null,
         "rendered": Object {
@@ -3714,7 +3750,9 @@ ShallowWrapper {
                 <label
                                 className="small bold"
                 >
-                                Choose 4 Flavors
+                                Choose 
+                                4
+                                 Flavors
                 </label>
                 <div
                                 className="flex justify-start w100 pt2"
@@ -3852,7 +3890,9 @@ ShallowWrapper {
                   <label
                     className="small bold"
 >
-                    Choose 4 Flavors
+                    Choose 
+                    4
+                     Flavors
 </label>,
                   <div
                     className="flex justify-start w100 pt2"
@@ -3916,11 +3956,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Choose 4 Flavors",
+                    "children": Array [
+                      "Choose ",
+                      4,
+                      " Flavors",
+                    ],
                     "className": "small bold",
                   },
                   "ref": null,
-                  "rendered": "Choose 4 Flavors",
+                  "rendered": Array [
+                    "Choose ",
+                    4,
+                    " Flavors",
+                  ],
                   "type": "label",
                 },
                 Object {
@@ -4484,7 +4532,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
 >
             <div
                         className="flex content-width mx-auto w100"
@@ -4500,7 +4548,9 @@ ShallowWrapper {
                                     <label
                                                 className="small bold"
                                     >
-                                                Choose 4 Flavors
+                                                Choose 
+                                                4
+                                                 Flavors
                                     </label>
                                     <div
                                                 className="flex justify-start w100 pt2"
@@ -4974,7 +5024,9 @@ ShallowWrapper {
                             <label
                                           className="small bold"
                             >
-                                          Choose 4 Flavors
+                                          Choose 
+                                          4
+                                           Flavors
                             </label>
                             <div
                                           className="flex justify-start w100 pt2"
@@ -5087,7 +5139,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "z-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
           },
           "ref": null,
           "rendered": Object {
@@ -5107,7 +5159,9 @@ ShallowWrapper {
                   <label
                                     className="small bold"
                   >
-                                    Choose 4 Flavors
+                                    Choose 
+                                    4
+                                     Flavors
                   </label>
                   <div
                                     className="flex justify-start w100 pt2"
@@ -5245,7 +5299,9 @@ ShallowWrapper {
                     <label
                       className="small bold"
 >
-                      Choose 4 Flavors
+                      Choose 
+                      4
+                       Flavors
 </label>,
                     <div
                       className="flex justify-start w100 pt2"
@@ -5309,11 +5365,19 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Choose 4 Flavors",
+                      "children": Array [
+                        "Choose ",
+                        4,
+                        " Flavors",
+                      ],
                       "className": "small bold",
                     },
                     "ref": null,
-                    "rendered": "Choose 4 Flavors",
+                    "rendered": Array [
+                      "Choose ",
+                      4,
+                      " Flavors",
+                    ],
                     "type": "label",
                   },
                   Object {

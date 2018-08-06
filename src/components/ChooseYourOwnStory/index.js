@@ -230,7 +230,7 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
             this.state.menuPosition
           )}
         >
@@ -261,7 +261,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
-              <label className="small bold">Choose 4 Flavors</label>
+              <label className="small bold">Choose {size} Flavors</label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
                   <div

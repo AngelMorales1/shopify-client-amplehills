@@ -47,12 +47,14 @@ class SignInView extends Component {
         <div className="my3">
           <form onSubmit={e => this.signIn(e)}>
             <TextField
+              className="mb2"
               id="email"
               color="light-gray"
               placeholder="Email"
               onChange={this.handleEmailInputChange}
             />
             <TextField
+              className="mb2"
               id="password"
               color="light-gray"
               type="password"

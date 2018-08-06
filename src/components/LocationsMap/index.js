@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import locationModel from 'models/locationModel';
+
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationsMapKey from 'constants/LocationsMapKey';
 
@@ -110,10 +112,33 @@ const LocationsMap = props => {
 };
 
 LocationsMap.propTypes = {
+  actions: PropTypes.shape({
+    clearLocationFilters: PropTypes.func,
+    addLocationFilter: PropTypes.func,
+    removeLocationFilter: PropTypes.func
+  }),
   locationGeoJSON: PropTypes.shape({
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
-  })
+  }),
+  locations: PropTypes.arrayOf(locationModel.propTypes),
+  locationFilters: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string,
+      value: PropTypes.string
+    })
+  )
+};
+
+LocationsMap.defaultProps = {
+  actions: {
+    clearLocationFilters: () => {},
+    addLocationFilter: () => {},
+    removeLocationFilter: () => {}
+  },
+  locationGeoJSON: {},
+  locations: [],
+  locationFilters: []
 };
 
 export default LocationsMap;

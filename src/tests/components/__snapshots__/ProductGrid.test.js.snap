@@ -6,8 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGrid
     products={
-        Object {
-            "foo": Object {
+        Array [
+            Object {
+              "available": true,
               "blocks": Array [
                 Object {},
               ],
@@ -23,9 +24,8 @@ ShallowWrapper {
               "subItems": Array [],
               "subItemsAvailable": true,
               "title": "foo",
-              "vailable": true,
             },
-          }
+          ]
     }
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -46,6 +46,7 @@ ShallowWrapper {
         <ProductGridCard
                 product={
                         Object {
+                                "available": true,
                                 "blocks": Array [
                                   Object {},
                                 ],
@@ -61,7 +62,6 @@ ShallowWrapper {
                                 "subItems": Array [],
                                 "subItemsAvailable": true,
                                 "title": "foo",
-                                "vailable": true,
                               }
                 }
         />
@@ -78,6 +78,7 @@ ShallowWrapper {
           <ProductGridCard
             product={
                         Object {
+                                    "available": true,
                                     "blocks": Array [
                                       Object {},
                                     ],
@@ -93,7 +94,6 @@ ShallowWrapper {
                                     "subItems": Array [],
                                     "subItemsAvailable": true,
                                     "title": "foo",
-                                    "vailable": true,
                                   }
             }
 />,
@@ -108,6 +108,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "product": Object {
+              "available": true,
               "blocks": Array [
                 Object {},
               ],
@@ -123,7 +124,6 @@ ShallowWrapper {
               "subItems": Array [],
               "subItemsAvailable": true,
               "title": "foo",
-              "vailable": true,
             },
           },
           "ref": null,
@@ -147,6 +147,7 @@ ShallowWrapper {
           <ProductGridCard
                     product={
                               Object {
+                                        "available": true,
                                         "blocks": Array [
                                           Object {},
                                         ],
@@ -162,7 +163,6 @@ ShallowWrapper {
                                         "subItems": Array [],
                                         "subItemsAvailable": true,
                                         "title": "foo",
-                                        "vailable": true,
                                       }
                     }
           />
@@ -179,6 +179,7 @@ ShallowWrapper {
             <ProductGridCard
               product={
                             Object {
+                                          "available": true,
                                           "blocks": Array [
                                             Object {},
                                           ],
@@ -194,7 +195,6 @@ ShallowWrapper {
                                           "subItems": Array [],
                                           "subItemsAvailable": true,
                                           "title": "foo",
-                                          "vailable": true,
                                         }
               }
 />,
@@ -209,6 +209,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "product": Object {
+                "available": true,
                 "blocks": Array [
                   Object {},
                 ],
@@ -224,7 +225,6 @@ ShallowWrapper {
                 "subItems": Array [],
                 "subItemsAvailable": true,
                 "title": "foo",
-                "vailable": true,
               },
             },
             "ref": null,
@@ -252,7 +252,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGrid
-    products={Object {}}
+    products={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

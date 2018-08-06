@@ -43,15 +43,15 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="card flex flex-column w100"
-        style={
-                Object {
-                        "background": "url(foo) no-repeat center",
-                        "backgroundSize": "cover",
-                      }
-        }
 >
         <div
                 className="aspect-5-4 w100"
+                style={
+                        Object {
+                                "background": "url(foo) no-repeat center",
+                                "backgroundSize": "cover",
+                              }
+                }
         />
         <div
                 className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -105,6 +105,12 @@ ShallowWrapper {
         "children": Array [
           <div
             className="aspect-5-4 w100"
+            style={
+                        Object {
+                                    "background": "url(foo) no-repeat center",
+                                    "backgroundSize": "cover",
+                                  }
+            }
 />,
           <div
             className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -148,10 +154,6 @@ ShallowWrapper {
 </div>,
         ],
         "className": "card flex flex-column w100",
-        "style": Object {
-          "background": "url(foo) no-repeat center",
-          "backgroundSize": "cover",
-        },
       },
       "ref": null,
       "rendered": Array [
@@ -161,6 +163,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "aspect-5-4 w100",
+            "style": Object {
+              "background": "url(foo) no-repeat center",
+              "backgroundSize": "cover",
+            },
           },
           "ref": null,
           "rendered": null,
@@ -347,15 +353,15 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card flex flex-column w100"
-          style={
-                    Object {
-                              "background": "url(foo) no-repeat center",
-                              "backgroundSize": "cover",
-                            }
-          }
 >
           <div
                     className="aspect-5-4 w100"
+                    style={
+                              Object {
+                                        "background": "url(foo) no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
           />
           <div
                     className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -409,6 +415,12 @@ ShallowWrapper {
           "children": Array [
             <div
               className="aspect-5-4 w100"
+              style={
+                            Object {
+                                          "background": "url(foo) no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
 />,
             <div
               className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -452,10 +464,6 @@ ShallowWrapper {
 </div>,
           ],
           "className": "card flex flex-column w100",
-          "style": Object {
-            "background": "url(foo) no-repeat center",
-            "backgroundSize": "cover",
-          },
         },
         "ref": null,
         "rendered": Array [
@@ -465,6 +473,10 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "aspect-5-4 w100",
+              "style": Object {
+                "background": "url(foo) no-repeat center",
+                "backgroundSize": "cover",
+              },
             },
             "ref": null,
             "rendered": null,
@@ -698,15 +710,15 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="card flex flex-column w100"
-        style={
-                Object {
-                        "background": "url() no-repeat center",
-                        "backgroundSize": "cover",
-                      }
-        }
 >
         <div
                 className="aspect-5-4 w100"
+                style={
+                        Object {
+                                "background": "url() no-repeat center",
+                                "backgroundSize": "cover",
+                              }
+                }
         />
         <div
                 className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -748,6 +760,12 @@ ShallowWrapper {
         "children": Array [
           <div
             className="aspect-5-4 w100"
+            style={
+                        Object {
+                                    "background": "url() no-repeat center",
+                                    "backgroundSize": "cover",
+                                  }
+            }
 />,
           <div
             className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -779,10 +797,6 @@ ShallowWrapper {
 </div>,
         ],
         "className": "card flex flex-column w100",
-        "style": Object {
-          "background": "url() no-repeat center",
-          "backgroundSize": "cover",
-        },
       },
       "ref": null,
       "rendered": Array [
@@ -792,6 +806,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "className": "aspect-5-4 w100",
+            "style": Object {
+              "background": "url() no-repeat center",
+              "backgroundSize": "cover",
+            },
           },
           "ref": null,
           "rendered": null,
@@ -934,15 +952,15 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="card flex flex-column w100"
-          style={
-                    Object {
-                              "background": "url() no-repeat center",
-                              "backgroundSize": "cover",
-                            }
-          }
 >
           <div
                     className="aspect-5-4 w100"
+                    style={
+                              Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
           />
           <div
                     className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -984,6 +1002,12 @@ ShallowWrapper {
           "children": Array [
             <div
               className="aspect-5-4 w100"
+              style={
+                            Object {
+                                          "background": "url() no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
 />,
             <div
               className="flex flex-column justify-between bg-seafoam h100 relative"
@@ -1015,10 +1039,6 @@ ShallowWrapper {
 </div>,
           ],
           "className": "card flex flex-column w100",
-          "style": Object {
-            "background": "url() no-repeat center",
-            "backgroundSize": "cover",
-          },
         },
         "ref": null,
         "rendered": Array [
@@ -1028,6 +1048,10 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "aspect-5-4 w100",
+              "style": Object {
+                "background": "url() no-repeat center",
+                "backgroundSize": "cover",
+              },
             },
             "ref": null,
             "rendered": null,
