@@ -70,13 +70,14 @@ ShallowWrapper {
         <div
                 className="flex flex-column items-center"
         >
-                <Image
-                        alt=""
-                        bg={false}
-                        className="transition card w100"
-                        onImgLoad={[Function]}
-                        src=""
-                        style={Object {}}
+                <div
+                        className="square transition card w100"
+                        style={
+                                Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                        }
                 />
                 <span
                         className="bold mt2 mb1"
@@ -97,13 +98,14 @@ ShallowWrapper {
         "children": <div
           className="flex flex-column items-center"
 >
-          <Image
-                    alt=""
-                    bg={false}
-                    className="transition card w100"
-                    onImgLoad={[Function]}
-                    src=""
-                    style={Object {}}
+          <div
+                    className="square transition card w100"
+                    style={
+                              Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
           />
           <span
                     className="bold mt2 mb1"
@@ -124,13 +126,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Image
-              alt=""
-              bg={false}
-              className="transition card w100"
-              onImgLoad={[Function]}
-              src=""
-              style={Object {}}
+            <div
+              className="square transition card w100"
+              style={
+                            Object {
+                                          "background": "url() no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
 />,
             <span
               className="bold mt2 mb1"
@@ -146,19 +149,17 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "alt": "",
-              "bg": false,
-              "children": null,
-              "className": "transition card w100",
-              "onImgLoad": [Function],
-              "src": "",
-              "style": Object {},
+              "className": "square transition card w100",
+              "style": Object {
+                "background": "url() no-repeat center",
+                "backgroundSize": "cover",
+              },
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -205,13 +206,14 @@ ShallowWrapper {
           <div
                     className="flex flex-column items-center"
           >
-                    <Image
-                              alt=""
-                              bg={false}
-                              className="transition card w100"
-                              onImgLoad={[Function]}
-                              src=""
-                              style={Object {}}
+                    <div
+                              className="square transition card w100"
+                              style={
+                                        Object {
+                                                  "background": "url() no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
                     />
                     <span
                               className="bold mt2 mb1"
@@ -232,13 +234,14 @@ ShallowWrapper {
           "children": <div
             className="flex flex-column items-center"
 >
-            <Image
-                        alt=""
-                        bg={false}
-                        className="transition card w100"
-                        onImgLoad={[Function]}
-                        src=""
-                        style={Object {}}
+            <div
+                        className="square transition card w100"
+                        style={
+                                    Object {
+                                                "background": "url() no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                        }
             />
             <span
                         className="bold mt2 mb1"
@@ -259,13 +262,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Image
-                alt=""
-                bg={false}
-                className="transition card w100"
-                onImgLoad={[Function]}
-                src=""
-                style={Object {}}
+              <div
+                className="square transition card w100"
+                style={
+                                Object {
+                                                "background": "url() no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
 />,
               <span
                 className="bold mt2 mb1"
@@ -281,19 +285,17 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "alt": "",
-                "bg": false,
-                "children": null,
-                "className": "transition card w100",
-                "onImgLoad": [Function],
-                "src": "",
-                "style": Object {},
+                "className": "square transition card w100",
+                "style": Object {
+                  "background": "url() no-repeat center",
+                  "backgroundSize": "cover",
+                },
               },
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -384,13 +386,14 @@ ShallowWrapper {
         <div
                 className="flex flex-column items-center"
         >
-                <Image
-                        alt=""
-                        bg={false}
-                        className="transition card w100"
-                        onImgLoad={[Function]}
-                        src=""
-                        style={Object {}}
+                <div
+                        className="square transition card w100"
+                        style={
+                                Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                        }
                 />
                 <span
                         className="bold mt2 mb1"
@@ -411,13 +414,14 @@ ShallowWrapper {
         "children": <div
           className="flex flex-column items-center"
 >
-          <Image
-                    alt=""
-                    bg={false}
-                    className="transition card w100"
-                    onImgLoad={[Function]}
-                    src=""
-                    style={Object {}}
+          <div
+                    className="square transition card w100"
+                    style={
+                              Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
           />
           <span
                     className="bold mt2 mb1"
@@ -438,13 +442,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Image
-              alt=""
-              bg={false}
-              className="transition card w100"
-              onImgLoad={[Function]}
-              src=""
-              style={Object {}}
+            <div
+              className="square transition card w100"
+              style={
+                            Object {
+                                          "background": "url() no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
 />,
             <span
               className="bold mt2 mb1"
@@ -460,19 +465,17 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "host",
             "props": Object {
-              "alt": "",
-              "bg": false,
-              "children": null,
-              "className": "transition card w100",
-              "onImgLoad": [Function],
-              "src": "",
-              "style": Object {},
+              "className": "square transition card w100",
+              "style": Object {
+                "background": "url() no-repeat center",
+                "backgroundSize": "cover",
+              },
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -519,13 +522,14 @@ ShallowWrapper {
           <div
                     className="flex flex-column items-center"
           >
-                    <Image
-                              alt=""
-                              bg={false}
-                              className="transition card w100"
-                              onImgLoad={[Function]}
-                              src=""
-                              style={Object {}}
+                    <div
+                              className="square transition card w100"
+                              style={
+                                        Object {
+                                                  "background": "url() no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
                     />
                     <span
                               className="bold mt2 mb1"
@@ -546,13 +550,14 @@ ShallowWrapper {
           "children": <div
             className="flex flex-column items-center"
 >
-            <Image
-                        alt=""
-                        bg={false}
-                        className="transition card w100"
-                        onImgLoad={[Function]}
-                        src=""
-                        style={Object {}}
+            <div
+                        className="square transition card w100"
+                        style={
+                                    Object {
+                                                "background": "url() no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                        }
             />
             <span
                         className="bold mt2 mb1"
@@ -573,13 +578,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Image
-                alt=""
-                bg={false}
-                className="transition card w100"
-                onImgLoad={[Function]}
-                src=""
-                style={Object {}}
+              <div
+                className="square transition card w100"
+                style={
+                                Object {
+                                                "background": "url() no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
 />,
               <span
                 className="bold mt2 mb1"
@@ -595,19 +601,17 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "host",
               "props": Object {
-                "alt": "",
-                "bg": false,
-                "children": null,
-                "className": "transition card w100",
-                "onImgLoad": [Function],
-                "src": "",
-                "style": Object {},
+                "className": "square transition card w100",
+                "style": Object {
+                  "background": "url() no-repeat center",
+                  "backgroundSize": "cover",
+                },
               },
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": "div",
             },
             Object {
               "instance": null,

@@ -1,0 +1,1098 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LocationsMap
+    actions={
+        Object {
+            "addLocationFilter": [Function],
+            "clearLocationFilters": [Function],
+            "removeLocationFilter": [Function],
+          }
+    }
+    locationFilters={Array []}
+    locationGeoJSON={Object {}}
+    locations={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MapboxMap
+          className="z-0"
+          cluster={true}
+          clusterMaxZoom={14}
+          clusterRadius={50}
+          collections={
+                    Array [
+                              Object {
+                                "filter": Object {
+                                  "ids": Array [],
+                                },
+                                "icon": "selected-location-icon",
+                                "name": "Selected",
+                              },
+                              Object {
+                                "filter": Object {
+                                  "ids": Array [],
+                                },
+                                "icon": "seasonal-icon",
+                                "name": "SeasonalLocations",
+                              },
+                              Object {
+                                "filter": Object {
+                                  "ids": undefined,
+                                },
+                                "name": "HiddenByFilter",
+                                "visible": false,
+                              },
+                            ]
+          }
+          defaultIcon="year-round-icon"
+          featureCollection={Object {}}
+          hoverFade={false}
+          iconSize={1.4}
+          mapPadding={150}
+          onClickFeature={[Function]}
+          onLoad={[Function]}
+          styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+          textColor="#ffffff"
+          textSize={16}
+/>,
+        <div
+          className="absolute t0 l0 flex p3"
+>
+          <Button
+                    className="mr2 flex items-center drop-shadow"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    label="All"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+          <Button
+                    className="mr2 flex items-center drop-shadow"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    label="New York"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+          <Button
+                    className="mr2 flex items-center drop-shadow"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    label="New Jersey"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+          <Button
+                    className="mr2 flex items-center drop-shadow"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Florida"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+          <Button
+                    className="mr2 flex items-center drop-shadow"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    label="California"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+</div>,
+        <div
+          className="absolute b0 l0 flex p3"
+>
+          <div
+                    className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+          >
+                    <Image
+                              alt=""
+                              bg={false}
+                              className="mr2"
+                              onImgLoad={[Function]}
+                              src="/assets/images/year-round-icon.svg"
+                              style={Object {}}
+                    />
+                    <span>
+                              Open Year Round
+                    </span>
+          </div>
+          <div
+                    className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+          >
+                    <Image
+                              alt=""
+                              bg={false}
+                              className="mr2"
+                              onImgLoad={[Function]}
+                              src="/assets/images/seasonal-icon.svg"
+                              style={Object {}}
+                    />
+                    <span>
+                              Open Seasonally
+                    </span>
+          </div>
+</div>,
+      ],
+      "className": "relative",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "z-0",
+          "cluster": true,
+          "clusterMaxZoom": 14,
+          "clusterRadius": 50,
+          "collections": Array [
+            Object {
+              "filter": Object {
+                "ids": Array [],
+              },
+              "icon": "selected-location-icon",
+              "name": "Selected",
+            },
+            Object {
+              "filter": Object {
+                "ids": Array [],
+              },
+              "icon": "seasonal-icon",
+              "name": "SeasonalLocations",
+            },
+            Object {
+              "filter": Object {
+                "ids": undefined,
+              },
+              "name": "HiddenByFilter",
+              "visible": false,
+            },
+          ],
+          "defaultIcon": "year-round-icon",
+          "featureCollection": Object {},
+          "hoverFade": false,
+          "iconSize": 1.4,
+          "mapPadding": 150,
+          "onClickFeature": [Function],
+          "onLoad": [Function],
+          "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+          "textColor": "#ffffff",
+          "textSize": 16,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Button
+              className="mr2 flex items-center drop-shadow"
+              color="madison-blue"
+              disabled={false}
+              fullWidth={false}
+              label="All"
+              onClick={[Function]}
+              shadow={false}
+              to=""
+              type="button"
+              variant="primary-small"
+/>,
+            Array [
+              <Button
+                className="mr2 flex items-center drop-shadow"
+                color="white-denim"
+                disabled={false}
+                fullWidth={false}
+                label="New York"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+              <Button
+                className="mr2 flex items-center drop-shadow"
+                color="white-denim"
+                disabled={false}
+                fullWidth={false}
+                label="New Jersey"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+              <Button
+                className="mr2 flex items-center drop-shadow"
+                color="white-denim"
+                disabled={false}
+                fullWidth={false}
+                label="Florida"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+              <Button
+                className="mr2 flex items-center drop-shadow"
+                color="white-denim"
+                disabled={false}
+                fullWidth={false}
+                label="California"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+            ],
+          ],
+          "className": "absolute t0 l0 flex p3",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "mr2 flex items-center drop-shadow",
+              "color": "madison-blue",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "All",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "NY",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "mr2 flex items-center drop-shadow",
+              "color": "white-denim",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "New York",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "NJ",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "mr2 flex items-center drop-shadow",
+              "color": "white-denim",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "New Jersey",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "FL",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "mr2 flex items-center drop-shadow",
+              "color": "white-denim",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Florida",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "CA",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "mr2 flex items-center drop-shadow",
+              "color": "white-denim",
+              "disabled": false,
+              "fullWidth": false,
+              "label": "California",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+>
+              <Image
+                            alt=""
+                            bg={false}
+                            className="mr2"
+                            onImgLoad={[Function]}
+                            src="/assets/images/year-round-icon.svg"
+                            style={Object {}}
+              />
+              <span>
+                            Open Year Round
+              </span>
+</div>,
+            <div
+              className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+>
+              <Image
+                            alt=""
+                            bg={false}
+                            className="mr2"
+                            onImgLoad={[Function]}
+                            src="/assets/images/seasonal-icon.svg"
+                            style={Object {}}
+              />
+              <span>
+                            Open Seasonally
+              </span>
+</div>,
+          ],
+          "className": "absolute b0 l0 flex p3",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "false",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Image
+                  alt=""
+                  bg={false}
+                  className="mr2"
+                  onImgLoad={[Function]}
+                  src="/assets/images/year-round-icon.svg"
+                  style={Object {}}
+/>,
+                <span>
+                  Open Year Round
+</span>,
+              ],
+              "className": "mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "alt": "",
+                  "bg": false,
+                  "children": null,
+                  "className": "mr2",
+                  "onImgLoad": [Function],
+                  "src": "/assets/images/year-round-icon.svg",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Open Year Round",
+                },
+                "ref": null,
+                "rendered": "Open Year Round",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "true",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Image
+                  alt=""
+                  bg={false}
+                  className="mr2"
+                  onImgLoad={[Function]}
+                  src="/assets/images/seasonal-icon.svg"
+                  style={Object {}}
+/>,
+                <span>
+                  Open Seasonally
+</span>,
+              ],
+              "className": "mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "alt": "",
+                  "bg": false,
+                  "children": null,
+                  "className": "mr2",
+                  "onImgLoad": [Function],
+                  "src": "/assets/images/seasonal-icon.svg",
+                  "style": Object {},
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Open Seasonally",
+                },
+                "ref": null,
+                "rendered": "Open Seasonally",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MapboxMap
+            className="z-0"
+            cluster={true}
+            clusterMaxZoom={14}
+            clusterRadius={50}
+            collections={
+                        Array [
+                                    Object {
+                                      "filter": Object {
+                                        "ids": Array [],
+                                      },
+                                      "icon": "selected-location-icon",
+                                      "name": "Selected",
+                                    },
+                                    Object {
+                                      "filter": Object {
+                                        "ids": Array [],
+                                      },
+                                      "icon": "seasonal-icon",
+                                      "name": "SeasonalLocations",
+                                    },
+                                    Object {
+                                      "filter": Object {
+                                        "ids": undefined,
+                                      },
+                                      "name": "HiddenByFilter",
+                                      "visible": false,
+                                    },
+                                  ]
+            }
+            defaultIcon="year-round-icon"
+            featureCollection={Object {}}
+            hoverFade={false}
+            iconSize={1.4}
+            mapPadding={150}
+            onClickFeature={[Function]}
+            onLoad={[Function]}
+            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+            textColor="#ffffff"
+            textSize={16}
+/>,
+          <div
+            className="absolute t0 l0 flex p3"
+>
+            <Button
+                        className="mr2 flex items-center drop-shadow"
+                        color="madison-blue"
+                        disabled={false}
+                        fullWidth={false}
+                        label="All"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+            <Button
+                        className="mr2 flex items-center drop-shadow"
+                        color="white-denim"
+                        disabled={false}
+                        fullWidth={false}
+                        label="New York"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+            <Button
+                        className="mr2 flex items-center drop-shadow"
+                        color="white-denim"
+                        disabled={false}
+                        fullWidth={false}
+                        label="New Jersey"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+            <Button
+                        className="mr2 flex items-center drop-shadow"
+                        color="white-denim"
+                        disabled={false}
+                        fullWidth={false}
+                        label="Florida"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+            <Button
+                        className="mr2 flex items-center drop-shadow"
+                        color="white-denim"
+                        disabled={false}
+                        fullWidth={false}
+                        label="California"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+</div>,
+          <div
+            className="absolute b0 l0 flex p3"
+>
+            <div
+                        className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+            >
+                        <Image
+                                    alt=""
+                                    bg={false}
+                                    className="mr2"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/year-round-icon.svg"
+                                    style={Object {}}
+                        />
+                        <span>
+                                    Open Year Round
+                        </span>
+            </div>
+            <div
+                        className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+            >
+                        <Image
+                                    alt=""
+                                    bg={false}
+                                    className="mr2"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/seasonal-icon.svg"
+                                    style={Object {}}
+                        />
+                        <span>
+                                    Open Seasonally
+                        </span>
+            </div>
+</div>,
+        ],
+        "className": "relative",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "z-0",
+            "cluster": true,
+            "clusterMaxZoom": 14,
+            "clusterRadius": 50,
+            "collections": Array [
+              Object {
+                "filter": Object {
+                  "ids": Array [],
+                },
+                "icon": "selected-location-icon",
+                "name": "Selected",
+              },
+              Object {
+                "filter": Object {
+                  "ids": Array [],
+                },
+                "icon": "seasonal-icon",
+                "name": "SeasonalLocations",
+              },
+              Object {
+                "filter": Object {
+                  "ids": undefined,
+                },
+                "name": "HiddenByFilter",
+                "visible": false,
+              },
+            ],
+            "defaultIcon": "year-round-icon",
+            "featureCollection": Object {},
+            "hoverFade": false,
+            "iconSize": 1.4,
+            "mapPadding": 150,
+            "onClickFeature": [Function],
+            "onLoad": [Function],
+            "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+            "textColor": "#ffffff",
+            "textSize": 16,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Button
+                className="mr2 flex items-center drop-shadow"
+                color="madison-blue"
+                disabled={false}
+                fullWidth={false}
+                label="All"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+              Array [
+                <Button
+                  className="mr2 flex items-center drop-shadow"
+                  color="white-denim"
+                  disabled={false}
+                  fullWidth={false}
+                  label="New York"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                <Button
+                  className="mr2 flex items-center drop-shadow"
+                  color="white-denim"
+                  disabled={false}
+                  fullWidth={false}
+                  label="New Jersey"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                <Button
+                  className="mr2 flex items-center drop-shadow"
+                  color="white-denim"
+                  disabled={false}
+                  fullWidth={false}
+                  label="Florida"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                <Button
+                  className="mr2 flex items-center drop-shadow"
+                  color="white-denim"
+                  disabled={false}
+                  fullWidth={false}
+                  label="California"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+              ],
+            ],
+            "className": "absolute t0 l0 flex p3",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mr2 flex items-center drop-shadow",
+                "color": "madison-blue",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "All",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "NY",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mr2 flex items-center drop-shadow",
+                "color": "white-denim",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "New York",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "NJ",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mr2 flex items-center drop-shadow",
+                "color": "white-denim",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "New Jersey",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "FL",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mr2 flex items-center drop-shadow",
+                "color": "white-denim",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Florida",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "CA",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mr2 flex items-center drop-shadow",
+                "color": "white-denim",
+                "disabled": false,
+                "fullWidth": false,
+                "label": "California",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+>
+                <Image
+                                alt=""
+                                bg={false}
+                                className="mr2"
+                                onImgLoad={[Function]}
+                                src="/assets/images/year-round-icon.svg"
+                                style={Object {}}
+                />
+                <span>
+                                Open Year Round
+                </span>
+</div>,
+              <div
+                className="mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold"
+>
+                <Image
+                                alt=""
+                                bg={false}
+                                className="mr2"
+                                onImgLoad={[Function]}
+                                src="/assets/images/seasonal-icon.svg"
+                                style={Object {}}
+                />
+                <span>
+                                Open Seasonally
+                </span>
+</div>,
+            ],
+            "className": "absolute b0 l0 flex p3",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "false",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    alt=""
+                    bg={false}
+                    className="mr2"
+                    onImgLoad={[Function]}
+                    src="/assets/images/year-round-icon.svg"
+                    style={Object {}}
+/>,
+                  <span>
+                    Open Year Round
+</span>,
+                ],
+                "className": "mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "alt": "",
+                    "bg": false,
+                    "children": null,
+                    "className": "mr2",
+                    "onImgLoad": [Function],
+                    "src": "/assets/images/year-round-icon.svg",
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Open Year Round",
+                  },
+                  "ref": null,
+                  "rendered": "Open Year Round",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "true",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    alt=""
+                    bg={false}
+                    className="mr2"
+                    onImgLoad={[Function]}
+                    src="/assets/images/seasonal-icon.svg"
+                    style={Object {}}
+/>,
+                  <span>
+                    Open Seasonally
+</span>,
+                ],
+                "className": "mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "alt": "",
+                    "bg": false,
+                    "children": null,
+                    "className": "mr2",
+                    "onImgLoad": [Function],
+                    "src": "/assets/images/seasonal-icon.svg",
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Open Seasonally",
+                  },
+                  "ref": null,
+                  "rendered": "Open Seasonally",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

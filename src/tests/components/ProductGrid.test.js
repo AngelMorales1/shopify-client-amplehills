@@ -12,9 +12,9 @@ it('renders without data', () => {
 it('renders with data', () => {
   const component = shallow(
     <ProductGrid
-      products={{
-        foo: {
-          vailable: true,
+      products={[
+        {
+          available: true,
           blocks: [{}],
           cartDetails: 'foo',
           description: 'foo',
@@ -29,7 +29,7 @@ it('renders with data', () => {
           subItemsAvailable: true,
           title: 'foo'
         }
-      }}
+      ]}
     />
   );
 
