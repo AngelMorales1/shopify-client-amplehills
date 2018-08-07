@@ -1,4 +1,3 @@
-import get from 'utils/get';
 import {
   ADD_LOCATION_FILTER,
   REMOVE_LOCATION_FILTER,

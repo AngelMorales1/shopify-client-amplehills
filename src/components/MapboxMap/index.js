@@ -280,7 +280,7 @@ class MapboxMap extends Component {
   }
 
   handleFeatureClick = e => {
-    const { onClickFeature, cluster } = this.props;
+    const { onClickFeature } = this.props;
     const { map } = this.state;
     if (e.features[0].properties.cluster) {
       const clusterId = e.features[0].properties.cluster_id;
@@ -300,13 +300,11 @@ class MapboxMap extends Component {
   };
 
   bindClickListeners() {
-    const { onClickFeature, cluster } = this.props;
     const { map } = this.state;
     map.on('click', 'layer', this.handleFeatureClick);
   }
 
   unbindClickListeners() {
-    const { onClickFeature, cluster } = this.props;
     const { map } = this.state;
     map.off('click', 'layer', this.handleFeatureClick);
   }
