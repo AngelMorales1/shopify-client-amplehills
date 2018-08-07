@@ -37,22 +37,6 @@ export const customerFetch = gql`
       firstName
       lastName
       phone
-      addresses(first: 5) {
-        edges {
-          node {
-            address1
-            address2
-            city
-            company
-            country
-            countryCodeV2
-            firstName
-            lastName
-            province
-            zip
-          }
-        }
-      }
       orders(first: 20) {
         edges {
           node {
@@ -110,22 +94,6 @@ export const customerUpdate = gql`
         firstName
         lastName
         phone
-        addresses(first: 5) {
-          edges {
-            node {
-              address1
-              address2
-              city
-              company
-              country
-              countryCodeV2
-              firstName
-              lastName
-              province
-              zip
-            }
-          }
-        }
         orders(first: 20) {
           edges {
             node {

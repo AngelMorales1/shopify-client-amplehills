@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'utils/get';
 
-import { sortHours } from 'utils/sortHours';
 import FooterRegions from 'constants/FooterRegions';
 import locationModel from 'models/locationModel';
 
@@ -44,17 +44,19 @@ const FooterLocations = ({ locations }) => {
           styles['Footer__Regions-container']
         )}
       >
-        {Object.keys(regions).map(region => (
-          <div
-            className={cx(
-              'flex flex-column',
-              styles['Footer__Regions-content']
-            )}
-          >
-            <h3 className="my2 text-white callout">{region}</h3>
-            {regions[region].map(location => {
-              let hours = sortHours(location);
-              return (
+        {Object.keys(regions).map(region => {
+          const locations = get(regions, region, []);
+
+          return (
+            <div
+              key={region}
+              className={cx(
+                'flex flex-column',
+                styles['Footer__Regions-content']
+              )}
+            >
+              <h3 className="my2 text-white callout">{region}</h3>
+              {locations.map(location => (
                 <div
                   className={cx('mb3', styles['Footer__Regions-store'])}
                   key={location.id}
@@ -62,11 +64,13 @@ const FooterLocations = ({ locations }) => {
                   <h4 className="mb1 text-white bold small nowrap">
                     {location.title}
                   </h4>
-                  {Object.keys(hours).map((hour, i) => {
+                  {location.sortedHours.map((hour, i) => {
+                    const hourKey = Object.keys(hour);
                     return (
-                      <p className="mb1 text-white small nowrap" key={i}>{`${
-                        hours[hour]
-                      }: ${hour}`}</p>
+                      <p
+                        className="mb1 text-white small nowrap"
+                        key={i}
+                      >{`${hourKey}: ${hour[hourKey]}`}</p>
                     );
                   })}
                   {location.delivery ? (
@@ -75,10 +79,10 @@ const FooterLocations = ({ locations }) => {
                     </div>
                   ) : null}
                 </div>
-              );
-            })}
-          </div>
-        ))}
+              ))}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

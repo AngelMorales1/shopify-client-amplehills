@@ -7,7 +7,7 @@ const ProductGrid = ({ products }) => {
   return (
     <div className="ProductGrid">
       <div className="flex flex-wrap container-width mx-auto px2">
-        {Object.values(products).map(product => (
+        {products.map(product => (
           <ProductGridCard key={product.id} product={product} />
         ))}
       </div>
@@ -18,9 +18,9 @@ const ProductGrid = ({ products }) => {
 export default ProductGrid;
 
 ProductGrid.propTypes = {
-  products: PropTypes.objectOf(productModel.propTypes)
+  products: PropTypes.arrayOf(productModel.propTypes)
 };
 
 ProductGrid.defaultProps = {
-  products: {}
+  products: []
 };

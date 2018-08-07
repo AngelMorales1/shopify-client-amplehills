@@ -1,0 +1,1198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductShoppableCard
+    handleAddProduct={[Function]}
+    handleRemoveProduct={[Function]}
+    product={
+        Object {
+            "available": true,
+            "blocks": Array [],
+            "cartDetails": "foo",
+            "description": "foo",
+            "flavorDescription": "foo",
+            "gridImage": "foo",
+            "handle": "foo",
+            "id": "foo",
+            "pintImage": "foo",
+            "price": 0,
+            "subItems": Array [],
+            "subItemsAvailable": true,
+            "title": "foo",
+            "variants": Array [
+              Object {},
+            ],
+          }
+    }
+    quantity={0}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="card flex flex-column w100"
+>
+        <div
+                className="aspect-5-4 w100"
+                style={
+                        Object {
+                                "background": "url(foo) no-repeat center",
+                                "backgroundSize": "cover",
+                              }
+                }
+        />
+        <div
+                className="flex flex-column justify-between bg-seafoam h100 relative"
+        >
+                <div>
+                        <span
+                                className="w100 bold mt2 mb1 block"
+                        >
+                                foo
+                        </span>
+                        <p
+                                className="detail mb3"
+                        >
+                                foo
+                        </p>
+                </div>
+                <div
+                        className="relative"
+                >
+                        <QuantitySelector
+                                allowZero={true}
+                                className="absolute t0 l0 transition"
+                                color="seafoam"
+                                onChange={[Function]}
+                                quantity={0}
+                                variant=""
+                        />
+                        <Button
+                                className="small bg-seafoam absolute t0 l0"
+                                color="white-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                label="+ Add"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                        />
+                </div>
+        </div>
+</div>,
+      "className": "flex col-12 sm-col-6",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="aspect-5-4 w100"
+            style={
+                        Object {
+                                    "background": "url(foo) no-repeat center",
+                                    "backgroundSize": "cover",
+                                  }
+            }
+/>,
+          <div
+            className="flex flex-column justify-between bg-seafoam h100 relative"
+>
+            <div>
+                        <span
+                                    className="w100 bold mt2 mb1 block"
+                        >
+                                    foo
+                        </span>
+                        <p
+                                    className="detail mb3"
+                        >
+                                    foo
+                        </p>
+            </div>
+            <div
+                        className="relative"
+            >
+                        <QuantitySelector
+                                    allowZero={true}
+                                    className="absolute t0 l0 transition"
+                                    color="seafoam"
+                                    onChange={[Function]}
+                                    quantity={0}
+                                    variant=""
+                        />
+                        <Button
+                                    className="small bg-seafoam absolute t0 l0"
+                                    color="white-madison-blue-border"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    label="+ Add"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
+</div>,
+        ],
+        "className": "card flex flex-column w100",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "aspect-5-4 w100",
+            "style": Object {
+              "background": "url(foo) no-repeat center",
+              "backgroundSize": "cover",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <span
+                                className="w100 bold mt2 mb1 block"
+                >
+                                foo
+                </span>
+                <p
+                                className="detail mb3"
+                >
+                                foo
+                </p>
+</div>,
+              <div
+                className="relative"
+>
+                <QuantitySelector
+                                allowZero={true}
+                                className="absolute t0 l0 transition"
+                                color="seafoam"
+                                onChange={[Function]}
+                                quantity={0}
+                                variant=""
+                />
+                <Button
+                                className="small bg-seafoam absolute t0 l0"
+                                color="white-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                label="+ Add"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
+            ],
+            "className": "flex flex-column justify-between bg-seafoam h100 relative",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="w100 bold mt2 mb1 block"
+>
+                    foo
+</span>,
+                  <p
+                    className="detail mb3"
+>
+                    foo
+</p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "foo",
+                    "className": "w100 bold mt2 mb1 block",
+                  },
+                  "ref": null,
+                  "rendered": "foo",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "foo",
+                    "className": "detail mb3",
+                  },
+                  "ref": null,
+                  "rendered": "foo",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <QuantitySelector
+                    allowZero={true}
+                    className="absolute t0 l0 transition"
+                    color="seafoam"
+                    onChange={[Function]}
+                    quantity={0}
+                    variant=""
+/>,
+                  <Button
+                    className="small bg-seafoam absolute t0 l0"
+                    color="white-madison-blue-border"
+                    disabled={false}
+                    fullWidth={false}
+                    label="+ Add"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                ],
+                "className": "relative",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "allowZero": true,
+                    "className": "absolute t0 l0 transition",
+                    "color": "seafoam",
+                    "onChange": [Function],
+                    "quantity": 0,
+                    "variant": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "small bg-seafoam absolute t0 l0",
+                    "color": "white-madison-blue-border",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "label": "+ Add",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card flex flex-column w100"
+>
+          <div
+                    className="aspect-5-4 w100"
+                    style={
+                              Object {
+                                        "background": "url(foo) no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
+          />
+          <div
+                    className="flex flex-column justify-between bg-seafoam h100 relative"
+          >
+                    <div>
+                              <span
+                                        className="w100 bold mt2 mb1 block"
+                              >
+                                        foo
+                              </span>
+                              <p
+                                        className="detail mb3"
+                              >
+                                        foo
+                              </p>
+                    </div>
+                    <div
+                              className="relative"
+                    >
+                              <QuantitySelector
+                                        allowZero={true}
+                                        className="absolute t0 l0 transition"
+                                        color="seafoam"
+                                        onChange={[Function]}
+                                        quantity={0}
+                                        variant=""
+                              />
+                              <Button
+                                        className="small bg-seafoam absolute t0 l0"
+                                        color="white-madison-blue-border"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        label="+ Add"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </div>
+          </div>
+</div>,
+        "className": "flex col-12 sm-col-6",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="aspect-5-4 w100"
+              style={
+                            Object {
+                                          "background": "url(foo) no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
+/>,
+            <div
+              className="flex flex-column justify-between bg-seafoam h100 relative"
+>
+              <div>
+                            <span
+                                          className="w100 bold mt2 mb1 block"
+                            >
+                                          foo
+                            </span>
+                            <p
+                                          className="detail mb3"
+                            >
+                                          foo
+                            </p>
+              </div>
+              <div
+                            className="relative"
+              >
+                            <QuantitySelector
+                                          allowZero={true}
+                                          className="absolute t0 l0 transition"
+                                          color="seafoam"
+                                          onChange={[Function]}
+                                          quantity={0}
+                                          variant=""
+                            />
+                            <Button
+                                          className="small bg-seafoam absolute t0 l0"
+                                          color="white-madison-blue-border"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          label="+ Add"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </div>
+</div>,
+          ],
+          "className": "card flex flex-column w100",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "aspect-5-4 w100",
+              "style": Object {
+                "background": "url(foo) no-repeat center",
+                "backgroundSize": "cover",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <span
+                                    className="w100 bold mt2 mb1 block"
+                  >
+                                    foo
+                  </span>
+                  <p
+                                    className="detail mb3"
+                  >
+                                    foo
+                  </p>
+</div>,
+                <div
+                  className="relative"
+>
+                  <QuantitySelector
+                                    allowZero={true}
+                                    className="absolute t0 l0 transition"
+                                    color="seafoam"
+                                    onChange={[Function]}
+                                    quantity={0}
+                                    variant=""
+                  />
+                  <Button
+                                    className="small bg-seafoam absolute t0 l0"
+                                    color="white-madison-blue-border"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    label="+ Add"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</div>,
+              ],
+              "className": "flex flex-column justify-between bg-seafoam h100 relative",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="w100 bold mt2 mb1 block"
+>
+                      foo
+</span>,
+                    <p
+                      className="detail mb3"
+>
+                      foo
+</p>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "foo",
+                      "className": "w100 bold mt2 mb1 block",
+                    },
+                    "ref": null,
+                    "rendered": "foo",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "foo",
+                      "className": "detail mb3",
+                    },
+                    "ref": null,
+                    "rendered": "foo",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <QuantitySelector
+                      allowZero={true}
+                      className="absolute t0 l0 transition"
+                      color="seafoam"
+                      onChange={[Function]}
+                      quantity={0}
+                      variant=""
+/>,
+                    <Button
+                      className="small bg-seafoam absolute t0 l0"
+                      color="white-madison-blue-border"
+                      disabled={false}
+                      fullWidth={false}
+                      label="+ Add"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="primary-small"
+/>,
+                  ],
+                  "className": "relative",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "allowZero": true,
+                      "className": "absolute t0 l0 transition",
+                      "color": "seafoam",
+                      "onChange": [Function],
+                      "quantity": 0,
+                      "variant": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "small bg-seafoam absolute t0 l0",
+                      "color": "white-madison-blue-border",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "label": "+ Add",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductShoppableCard
+    handleAddProduct={[Function]}
+    handleRemoveProduct={[Function]}
+    product={
+        Object {
+            "available": false,
+            "blocks": Array [],
+            "flavorDescription": "",
+            "gridImage": "",
+            "handle": "",
+            "id": "",
+            "pintImage": "",
+            "price": 0,
+            "title": "",
+            "variants": Array [
+              Object {
+                "available": false,
+                "id": "",
+                "price": 0,
+                "title": "",
+              },
+            ],
+          }
+    }
+    quantity={0}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="card flex flex-column w100"
+>
+        <div
+                className="aspect-5-4 w100"
+                style={
+                        Object {
+                                "background": "url() no-repeat center",
+                                "backgroundSize": "cover",
+                              }
+                }
+        />
+        <div
+                className="flex flex-column justify-between bg-seafoam h100 relative"
+        >
+                <div>
+                        <span
+                                className="w100 bold mt2 mb1 block"
+                        />
+                        <p
+                                className="detail mb3"
+                        />
+                </div>
+                <div
+                        className="relative"
+                >
+                        <Button
+                                className="small bg-seafoam absolute t0 l0"
+                                color="white-madison-blue-border"
+                                disabled={true}
+                                fullWidth={false}
+                                label="Sold Out"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                        />
+                </div>
+        </div>
+</div>,
+      "className": "flex col-12 sm-col-6",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="aspect-5-4 w100"
+            style={
+                        Object {
+                                    "background": "url() no-repeat center",
+                                    "backgroundSize": "cover",
+                                  }
+            }
+/>,
+          <div
+            className="flex flex-column justify-between bg-seafoam h100 relative"
+>
+            <div>
+                        <span
+                                    className="w100 bold mt2 mb1 block"
+                        />
+                        <p
+                                    className="detail mb3"
+                        />
+            </div>
+            <div
+                        className="relative"
+            >
+                        <Button
+                                    className="small bg-seafoam absolute t0 l0"
+                                    color="white-madison-blue-border"
+                                    disabled={true}
+                                    fullWidth={false}
+                                    label="Sold Out"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
+</div>,
+        ],
+        "className": "card flex flex-column w100",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "aspect-5-4 w100",
+            "style": Object {
+              "background": "url() no-repeat center",
+              "backgroundSize": "cover",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <span
+                                className="w100 bold mt2 mb1 block"
+                />
+                <p
+                                className="detail mb3"
+                />
+</div>,
+              <div
+                className="relative"
+>
+                <Button
+                                className="small bg-seafoam absolute t0 l0"
+                                color="white-madison-blue-border"
+                                disabled={true}
+                                fullWidth={false}
+                                label="Sold Out"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
+            ],
+            "className": "flex flex-column justify-between bg-seafoam h100 relative",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="w100 bold mt2 mb1 block"
+/>,
+                  <p
+                    className="detail mb3"
+/>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                    "className": "w100 bold mt2 mb1 block",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                    "className": "detail mb3",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Button
+                  className="small bg-seafoam absolute t0 l0"
+                  color="white-madison-blue-border"
+                  disabled={true}
+                  fullWidth={false}
+                  label="Sold Out"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                "className": "relative",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "small bg-seafoam absolute t0 l0",
+                  "color": "white-madison-blue-border",
+                  "disabled": true,
+                  "fullWidth": false,
+                  "label": "Sold Out",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="card flex flex-column w100"
+>
+          <div
+                    className="aspect-5-4 w100"
+                    style={
+                              Object {
+                                        "background": "url() no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
+          />
+          <div
+                    className="flex flex-column justify-between bg-seafoam h100 relative"
+          >
+                    <div>
+                              <span
+                                        className="w100 bold mt2 mb1 block"
+                              />
+                              <p
+                                        className="detail mb3"
+                              />
+                    </div>
+                    <div
+                              className="relative"
+                    >
+                              <Button
+                                        className="small bg-seafoam absolute t0 l0"
+                                        color="white-madison-blue-border"
+                                        disabled={true}
+                                        fullWidth={false}
+                                        label="Sold Out"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </div>
+          </div>
+</div>,
+        "className": "flex col-12 sm-col-6",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="aspect-5-4 w100"
+              style={
+                            Object {
+                                          "background": "url() no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
+/>,
+            <div
+              className="flex flex-column justify-between bg-seafoam h100 relative"
+>
+              <div>
+                            <span
+                                          className="w100 bold mt2 mb1 block"
+                            />
+                            <p
+                                          className="detail mb3"
+                            />
+              </div>
+              <div
+                            className="relative"
+              >
+                            <Button
+                                          className="small bg-seafoam absolute t0 l0"
+                                          color="white-madison-blue-border"
+                                          disabled={true}
+                                          fullWidth={false}
+                                          label="Sold Out"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </div>
+</div>,
+          ],
+          "className": "card flex flex-column w100",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "aspect-5-4 w100",
+              "style": Object {
+                "background": "url() no-repeat center",
+                "backgroundSize": "cover",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div>
+                  <span
+                                    className="w100 bold mt2 mb1 block"
+                  />
+                  <p
+                                    className="detail mb3"
+                  />
+</div>,
+                <div
+                  className="relative"
+>
+                  <Button
+                                    className="small bg-seafoam absolute t0 l0"
+                                    color="white-madison-blue-border"
+                                    disabled={true}
+                                    fullWidth={false}
+                                    label="Sold Out"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</div>,
+              ],
+              "className": "flex flex-column justify-between bg-seafoam h100 relative",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="w100 bold mt2 mb1 block"
+/>,
+                    <p
+                      className="detail mb3"
+/>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "",
+                      "className": "w100 bold mt2 mb1 block",
+                    },
+                    "ref": null,
+                    "rendered": "",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "",
+                      "className": "detail mb3",
+                    },
+                    "ref": null,
+                    "rendered": "",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    className="small bg-seafoam absolute t0 l0"
+                    color="white-madison-blue-border"
+                    disabled={true}
+                    fullWidth={false}
+                    label="Sold Out"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "className": "relative",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "small bg-seafoam absolute t0 l0",
+                    "color": "white-madison-blue-border",
+                    "disabled": true,
+                    "fullWidth": false,
+                    "label": "Sold Out",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

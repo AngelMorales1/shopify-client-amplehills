@@ -67,7 +67,7 @@ class Cart extends Component {
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
 
     const cart = (
-      <div>
+      <div className="transition-slide-up">
         <Breadcrumbs
           breadcrumbs={breadcrumbs}
           className="mx-auto container-width"
@@ -412,7 +412,7 @@ Cart.propTypes = {
     updateLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  items: itemModel.propTypes,
+  items: PropTypes.arrayOf(itemModel.propTypes),
   products: PropTypes.objectOf(productModel.propTypes)
 };
 
@@ -422,7 +422,7 @@ Cart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  items: itemModel.default,
+  items: [],
   products: {}
 };
 

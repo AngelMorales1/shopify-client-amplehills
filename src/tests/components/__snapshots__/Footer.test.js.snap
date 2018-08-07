@@ -1,0 +1,997 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer
+    footerIllustration={
+        Object {
+            "fields": Object {
+              "description": "foo",
+              "file": Object {
+                "contentType": "foo",
+                "details": Object {
+                  "image": Object {},
+                  "size": 0,
+                },
+                "fileName": "foo",
+                "url": "/foo",
+              },
+              "title": "foo",
+            },
+          }
+    }
+    footerLinks={
+        Object {
+            "facebookLink": "foo",
+            "instagramLink": "foo",
+            "twitterLink": "foo",
+          }
+    }
+    locations={
+        Array [
+            Object {
+              "address1": "foo",
+              "address2": "foo",
+              "city": "foo",
+              "coordinates": Object {
+                "lat": 0,
+                "lon": 0,
+              },
+              "delivery": false,
+              "hours": Object {
+                "friday": "foo",
+                "monday": "foo",
+                "saturday": "foo",
+                "sunday": "foo",
+                "thursday": "foo",
+                "tuesday": "foo",
+                "wednesday": "foo",
+              },
+              "id": "foo",
+              "image": "foo",
+              "phone": "foo",
+              "region": "foo",
+              "seasonal": false,
+              "seasonalImage": "foo",
+              "sortedHours": Array [
+                Object {
+                  "foo": "foo",
+                },
+              ],
+              "state": "foo",
+              "title": "foo",
+              "zip": "foo",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex"
+>
+          <FooterLocations
+                    locations={
+                              Array [
+                                        Object {
+                                          "address1": "foo",
+                                          "address2": "foo",
+                                          "city": "foo",
+                                          "coordinates": Object {
+                                            "lat": 0,
+                                            "lon": 0,
+                                          },
+                                          "delivery": false,
+                                          "hours": Object {
+                                            "friday": "foo",
+                                            "monday": "foo",
+                                            "saturday": "foo",
+                                            "sunday": "foo",
+                                            "thursday": "foo",
+                                            "tuesday": "foo",
+                                            "wednesday": "foo",
+                                          },
+                                          "id": "foo",
+                                          "image": "foo",
+                                          "phone": "foo",
+                                          "region": "foo",
+                                          "seasonal": false,
+                                          "seasonalImage": "foo",
+                                          "sortedHours": Array [
+                                            Object {
+                                              "foo": "foo",
+                                            },
+                                          ],
+                                          "state": "foo",
+                                          "title": "foo",
+                                          "zip": "foo",
+                                        },
+                                      ]
+                    }
+          />
+          <FooterLinks
+                    facebookLink=""
+                    footerIllustration={
+                              Object {
+                                        "fields": Object {
+                                          "description": "foo",
+                                          "file": Object {
+                                            "contentType": "foo",
+                                            "details": Object {
+                                              "image": Object {},
+                                              "size": 0,
+                                            },
+                                            "fileName": "foo",
+                                            "url": "/foo",
+                                          },
+                                          "title": "foo",
+                                        },
+                                      }
+                    }
+                    footerLinks={
+                              Object {
+                                        "facebookLink": "foo",
+                                        "instagramLink": "foo",
+                                        "twitterLink": "foo",
+                                      }
+                    }
+                    instagramLink=""
+                    twitterLink=""
+          />
+</div>,
+        <span
+          className="bold small text-white center"
+>
+          © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+</span>,
+        <Image
+          alt=""
+          bg={false}
+          className="medium-down-display-none xs-hide sm-hide"
+          onImgLoad={[Function]}
+          src="/foo"
+          style={Object {}}
+/>,
+      ],
+      "className": "flex flex-column p4 bg-madison-blue",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <FooterLocations
+              locations={
+                            Array [
+                                          Object {
+                                            "address1": "foo",
+                                            "address2": "foo",
+                                            "city": "foo",
+                                            "coordinates": Object {
+                                              "lat": 0,
+                                              "lon": 0,
+                                            },
+                                            "delivery": false,
+                                            "hours": Object {
+                                              "friday": "foo",
+                                              "monday": "foo",
+                                              "saturday": "foo",
+                                              "sunday": "foo",
+                                              "thursday": "foo",
+                                              "tuesday": "foo",
+                                              "wednesday": "foo",
+                                            },
+                                            "id": "foo",
+                                            "image": "foo",
+                                            "phone": "foo",
+                                            "region": "foo",
+                                            "seasonal": false,
+                                            "seasonalImage": "foo",
+                                            "sortedHours": Array [
+                                              Object {
+                                                "foo": "foo",
+                                              },
+                                            ],
+                                            "state": "foo",
+                                            "title": "foo",
+                                            "zip": "foo",
+                                          },
+                                        ]
+              }
+/>,
+            <FooterLinks
+              facebookLink=""
+              footerIllustration={
+                            Object {
+                                          "fields": Object {
+                                            "description": "foo",
+                                            "file": Object {
+                                              "contentType": "foo",
+                                              "details": Object {
+                                                "image": Object {},
+                                                "size": 0,
+                                              },
+                                              "fileName": "foo",
+                                              "url": "/foo",
+                                            },
+                                            "title": "foo",
+                                          },
+                                        }
+              }
+              footerLinks={
+                            Object {
+                                          "facebookLink": "foo",
+                                          "instagramLink": "foo",
+                                          "twitterLink": "foo",
+                                        }
+              }
+              instagramLink=""
+              twitterLink=""
+/>,
+          ],
+          "className": "flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "locations": Array [
+                Object {
+                  "address1": "foo",
+                  "address2": "foo",
+                  "city": "foo",
+                  "coordinates": Object {
+                    "lat": 0,
+                    "lon": 0,
+                  },
+                  "delivery": false,
+                  "hours": Object {
+                    "friday": "foo",
+                    "monday": "foo",
+                    "saturday": "foo",
+                    "sunday": "foo",
+                    "thursday": "foo",
+                    "tuesday": "foo",
+                    "wednesday": "foo",
+                  },
+                  "id": "foo",
+                  "image": "foo",
+                  "phone": "foo",
+                  "region": "foo",
+                  "seasonal": false,
+                  "seasonalImage": "foo",
+                  "sortedHours": Array [
+                    Object {
+                      "foo": "foo",
+                    },
+                  ],
+                  "state": "foo",
+                  "title": "foo",
+                  "zip": "foo",
+                },
+              ],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "facebookLink": "",
+              "footerIllustration": Object {
+                "fields": Object {
+                  "description": "foo",
+                  "file": Object {
+                    "contentType": "foo",
+                    "details": Object {
+                      "image": Object {},
+                      "size": 0,
+                    },
+                    "fileName": "foo",
+                    "url": "/foo",
+                  },
+                  "title": "foo",
+                },
+              },
+              "footerLinks": Object {
+                "facebookLink": "foo",
+                "instagramLink": "foo",
+                "twitterLink": "foo",
+              },
+              "instagramLink": "",
+              "twitterLink": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "className": "bold small text-white center",
+        },
+        "ref": null,
+        "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "alt": "",
+          "bg": false,
+          "children": null,
+          "className": "medium-down-display-none xs-hide sm-hide",
+          "onImgLoad": [Function],
+          "src": "/foo",
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex"
+>
+            <FooterLocations
+                        locations={
+                                    Array [
+                                                Object {
+                                                  "address1": "foo",
+                                                  "address2": "foo",
+                                                  "city": "foo",
+                                                  "coordinates": Object {
+                                                    "lat": 0,
+                                                    "lon": 0,
+                                                  },
+                                                  "delivery": false,
+                                                  "hours": Object {
+                                                    "friday": "foo",
+                                                    "monday": "foo",
+                                                    "saturday": "foo",
+                                                    "sunday": "foo",
+                                                    "thursday": "foo",
+                                                    "tuesday": "foo",
+                                                    "wednesday": "foo",
+                                                  },
+                                                  "id": "foo",
+                                                  "image": "foo",
+                                                  "phone": "foo",
+                                                  "region": "foo",
+                                                  "seasonal": false,
+                                                  "seasonalImage": "foo",
+                                                  "sortedHours": Array [
+                                                    Object {
+                                                      "foo": "foo",
+                                                    },
+                                                  ],
+                                                  "state": "foo",
+                                                  "title": "foo",
+                                                  "zip": "foo",
+                                                },
+                                              ]
+                        }
+            />
+            <FooterLinks
+                        facebookLink=""
+                        footerIllustration={
+                                    Object {
+                                                "fields": Object {
+                                                  "description": "foo",
+                                                  "file": Object {
+                                                    "contentType": "foo",
+                                                    "details": Object {
+                                                      "image": Object {},
+                                                      "size": 0,
+                                                    },
+                                                    "fileName": "foo",
+                                                    "url": "/foo",
+                                                  },
+                                                  "title": "foo",
+                                                },
+                                              }
+                        }
+                        footerLinks={
+                                    Object {
+                                                "facebookLink": "foo",
+                                                "instagramLink": "foo",
+                                                "twitterLink": "foo",
+                                              }
+                        }
+                        instagramLink=""
+                        twitterLink=""
+            />
+</div>,
+          <span
+            className="bold small text-white center"
+>
+            © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+</span>,
+          <Image
+            alt=""
+            bg={false}
+            className="medium-down-display-none xs-hide sm-hide"
+            onImgLoad={[Function]}
+            src="/foo"
+            style={Object {}}
+/>,
+        ],
+        "className": "flex flex-column p4 bg-madison-blue",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <FooterLocations
+                locations={
+                                Array [
+                                                Object {
+                                                  "address1": "foo",
+                                                  "address2": "foo",
+                                                  "city": "foo",
+                                                  "coordinates": Object {
+                                                    "lat": 0,
+                                                    "lon": 0,
+                                                  },
+                                                  "delivery": false,
+                                                  "hours": Object {
+                                                    "friday": "foo",
+                                                    "monday": "foo",
+                                                    "saturday": "foo",
+                                                    "sunday": "foo",
+                                                    "thursday": "foo",
+                                                    "tuesday": "foo",
+                                                    "wednesday": "foo",
+                                                  },
+                                                  "id": "foo",
+                                                  "image": "foo",
+                                                  "phone": "foo",
+                                                  "region": "foo",
+                                                  "seasonal": false,
+                                                  "seasonalImage": "foo",
+                                                  "sortedHours": Array [
+                                                    Object {
+                                                      "foo": "foo",
+                                                    },
+                                                  ],
+                                                  "state": "foo",
+                                                  "title": "foo",
+                                                  "zip": "foo",
+                                                },
+                                              ]
+                }
+/>,
+              <FooterLinks
+                facebookLink=""
+                footerIllustration={
+                                Object {
+                                                "fields": Object {
+                                                  "description": "foo",
+                                                  "file": Object {
+                                                    "contentType": "foo",
+                                                    "details": Object {
+                                                      "image": Object {},
+                                                      "size": 0,
+                                                    },
+                                                    "fileName": "foo",
+                                                    "url": "/foo",
+                                                  },
+                                                  "title": "foo",
+                                                },
+                                              }
+                }
+                footerLinks={
+                                Object {
+                                                "facebookLink": "foo",
+                                                "instagramLink": "foo",
+                                                "twitterLink": "foo",
+                                              }
+                }
+                instagramLink=""
+                twitterLink=""
+/>,
+            ],
+            "className": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "locations": Array [
+                  Object {
+                    "address1": "foo",
+                    "address2": "foo",
+                    "city": "foo",
+                    "coordinates": Object {
+                      "lat": 0,
+                      "lon": 0,
+                    },
+                    "delivery": false,
+                    "hours": Object {
+                      "friday": "foo",
+                      "monday": "foo",
+                      "saturday": "foo",
+                      "sunday": "foo",
+                      "thursday": "foo",
+                      "tuesday": "foo",
+                      "wednesday": "foo",
+                    },
+                    "id": "foo",
+                    "image": "foo",
+                    "phone": "foo",
+                    "region": "foo",
+                    "seasonal": false,
+                    "seasonalImage": "foo",
+                    "sortedHours": Array [
+                      Object {
+                        "foo": "foo",
+                      },
+                    ],
+                    "state": "foo",
+                    "title": "foo",
+                    "zip": "foo",
+                  },
+                ],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "facebookLink": "",
+                "footerIllustration": Object {
+                  "fields": Object {
+                    "description": "foo",
+                    "file": Object {
+                      "contentType": "foo",
+                      "details": Object {
+                        "image": Object {},
+                        "size": 0,
+                      },
+                      "fileName": "foo",
+                      "url": "/foo",
+                    },
+                    "title": "foo",
+                  },
+                },
+                "footerLinks": Object {
+                  "facebookLink": "foo",
+                  "instagramLink": "foo",
+                  "twitterLink": "foo",
+                },
+                "instagramLink": "",
+                "twitterLink": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+            "className": "bold small text-white center",
+          },
+          "ref": null,
+          "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "",
+            "bg": false,
+            "children": null,
+            "className": "medium-down-display-none xs-hide sm-hide",
+            "onImgLoad": [Function],
+            "src": "/foo",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer
+    footerIllustration={
+        Object {
+            "fields": Object {
+              "description": "",
+              "file": Object {
+                "title": "",
+                "url": "",
+              },
+            },
+          }
+    }
+    footerLinks={Object {}}
+    locations={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex"
+>
+          <FooterLocations
+                    locations={Array []}
+          />
+          <FooterLinks
+                    facebookLink=""
+                    footerIllustration={
+                              Object {
+                                        "fields": Object {
+                                          "description": "",
+                                          "file": Object {
+                                            "title": "",
+                                            "url": "",
+                                          },
+                                        },
+                                      }
+                    }
+                    footerLinks={Object {}}
+                    instagramLink=""
+                    twitterLink=""
+          />
+</div>,
+        <span
+          className="bold small text-white center"
+>
+          © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+</span>,
+        <Image
+          alt=""
+          bg={false}
+          className="medium-down-display-none xs-hide sm-hide"
+          onImgLoad={[Function]}
+          src=""
+          style={Object {}}
+/>,
+      ],
+      "className": "flex flex-column p4 bg-madison-blue",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <FooterLocations
+              locations={Array []}
+/>,
+            <FooterLinks
+              facebookLink=""
+              footerIllustration={
+                            Object {
+                                          "fields": Object {
+                                            "description": "",
+                                            "file": Object {
+                                              "title": "",
+                                              "url": "",
+                                            },
+                                          },
+                                        }
+              }
+              footerLinks={Object {}}
+              instagramLink=""
+              twitterLink=""
+/>,
+          ],
+          "className": "flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "locations": Array [],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "facebookLink": "",
+              "footerIllustration": Object {
+                "fields": Object {
+                  "description": "",
+                  "file": Object {
+                    "title": "",
+                    "url": "",
+                  },
+                },
+              },
+              "footerLinks": Object {},
+              "instagramLink": "",
+              "twitterLink": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "className": "bold small text-white center",
+        },
+        "ref": null,
+        "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "alt": "",
+          "bg": false,
+          "children": null,
+          "className": "medium-down-display-none xs-hide sm-hide",
+          "onImgLoad": [Function],
+          "src": "",
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex"
+>
+            <FooterLocations
+                        locations={Array []}
+            />
+            <FooterLinks
+                        facebookLink=""
+                        footerIllustration={
+                                    Object {
+                                                "fields": Object {
+                                                  "description": "",
+                                                  "file": Object {
+                                                    "title": "",
+                                                    "url": "",
+                                                  },
+                                                },
+                                              }
+                        }
+                        footerLinks={Object {}}
+                        instagramLink=""
+                        twitterLink=""
+            />
+</div>,
+          <span
+            className="bold small text-white center"
+>
+            © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+</span>,
+          <Image
+            alt=""
+            bg={false}
+            className="medium-down-display-none xs-hide sm-hide"
+            onImgLoad={[Function]}
+            src=""
+            style={Object {}}
+/>,
+        ],
+        "className": "flex flex-column p4 bg-madison-blue",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <FooterLocations
+                locations={Array []}
+/>,
+              <FooterLinks
+                facebookLink=""
+                footerIllustration={
+                                Object {
+                                                "fields": Object {
+                                                  "description": "",
+                                                  "file": Object {
+                                                    "title": "",
+                                                    "url": "",
+                                                  },
+                                                },
+                                              }
+                }
+                footerLinks={Object {}}
+                instagramLink=""
+                twitterLink=""
+/>,
+            ],
+            "className": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "locations": Array [],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "facebookLink": "",
+                "footerIllustration": Object {
+                  "fields": Object {
+                    "description": "",
+                    "file": Object {
+                      "title": "",
+                      "url": "",
+                    },
+                  },
+                },
+                "footerLinks": Object {},
+                "instagramLink": "",
+                "twitterLink": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+            "className": "bold small text-white center",
+          },
+          "ref": null,
+          "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "",
+            "bg": false,
+            "children": null,
+            "className": "medium-down-display-none xs-hide sm-hide",
+            "onImgLoad": [Function],
+            "src": "",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

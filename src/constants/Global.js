@@ -16,5 +16,10 @@ export default {
       lowerbound: 1024,
       upperbound: 2100
     }
-  }
+  },
+  headerHeight: {
+    mobile: 80,
+    desktop: 92
+  },
+  locationsCardsWidth: 532
 };

@@ -1,0 +1,328 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductGrid
+    products={
+        Array [
+            Object {
+              "available": true,
+              "blocks": Array [
+                Object {},
+              ],
+              "cartDetails": "foo",
+              "description": "foo",
+              "flavorDescription": "foo",
+              "gridImage": "foo",
+              "handle": "foo",
+              "id": "foo",
+              "image": "foo",
+              "pintImage": "foo",
+              "price": 0,
+              "subItems": Array [],
+              "subItemsAvailable": true,
+              "title": "foo",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="flex flex-wrap container-width mx-auto px2"
+>
+        <ProductGridCard
+                product={
+                        Object {
+                                "available": true,
+                                "blocks": Array [
+                                  Object {},
+                                ],
+                                "cartDetails": "foo",
+                                "description": "foo",
+                                "flavorDescription": "foo",
+                                "gridImage": "foo",
+                                "handle": "foo",
+                                "id": "foo",
+                                "image": "foo",
+                                "pintImage": "foo",
+                                "price": 0,
+                                "subItems": Array [],
+                                "subItemsAvailable": true,
+                                "title": "foo",
+                              }
+                }
+        />
+</div>,
+      "className": "ProductGrid",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ProductGridCard
+            product={
+                        Object {
+                                    "available": true,
+                                    "blocks": Array [
+                                      Object {},
+                                    ],
+                                    "cartDetails": "foo",
+                                    "description": "foo",
+                                    "flavorDescription": "foo",
+                                    "gridImage": "foo",
+                                    "handle": "foo",
+                                    "id": "foo",
+                                    "image": "foo",
+                                    "pintImage": "foo",
+                                    "price": 0,
+                                    "subItems": Array [],
+                                    "subItemsAvailable": true,
+                                    "title": "foo",
+                                  }
+            }
+/>,
+        ],
+        "className": "flex flex-wrap container-width mx-auto px2",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "foo",
+          "nodeType": "function",
+          "props": Object {
+            "product": Object {
+              "available": true,
+              "blocks": Array [
+                Object {},
+              ],
+              "cartDetails": "foo",
+              "description": "foo",
+              "flavorDescription": "foo",
+              "gridImage": "foo",
+              "handle": "foo",
+              "id": "foo",
+              "image": "foo",
+              "pintImage": "foo",
+              "price": 0,
+              "subItems": Array [],
+              "subItemsAvailable": true,
+              "title": "foo",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex flex-wrap container-width mx-auto px2"
+>
+          <ProductGridCard
+                    product={
+                              Object {
+                                        "available": true,
+                                        "blocks": Array [
+                                          Object {},
+                                        ],
+                                        "cartDetails": "foo",
+                                        "description": "foo",
+                                        "flavorDescription": "foo",
+                                        "gridImage": "foo",
+                                        "handle": "foo",
+                                        "id": "foo",
+                                        "image": "foo",
+                                        "pintImage": "foo",
+                                        "price": 0,
+                                        "subItems": Array [],
+                                        "subItemsAvailable": true,
+                                        "title": "foo",
+                                      }
+                    }
+          />
+</div>,
+        "className": "ProductGrid",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ProductGridCard
+              product={
+                            Object {
+                                          "available": true,
+                                          "blocks": Array [
+                                            Object {},
+                                          ],
+                                          "cartDetails": "foo",
+                                          "description": "foo",
+                                          "flavorDescription": "foo",
+                                          "gridImage": "foo",
+                                          "handle": "foo",
+                                          "id": "foo",
+                                          "image": "foo",
+                                          "pintImage": "foo",
+                                          "price": 0,
+                                          "subItems": Array [],
+                                          "subItemsAvailable": true,
+                                          "title": "foo",
+                                        }
+              }
+/>,
+          ],
+          "className": "flex flex-wrap container-width mx-auto px2",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "foo",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "available": true,
+                "blocks": Array [
+                  Object {},
+                ],
+                "cartDetails": "foo",
+                "description": "foo",
+                "flavorDescription": "foo",
+                "gridImage": "foo",
+                "handle": "foo",
+                "id": "foo",
+                "image": "foo",
+                "pintImage": "foo",
+                "price": 0,
+                "subItems": Array [],
+                "subItemsAvailable": true,
+                "title": "foo",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductGrid
+    products={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="flex flex-wrap container-width mx-auto px2"
+>
+        
+</div>,
+      "className": "ProductGrid",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [],
+        "className": "flex flex-wrap container-width mx-auto px2",
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex flex-wrap container-width mx-auto px2"
+>
+          
+</div>,
+        "className": "ProductGrid",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "flex flex-wrap container-width mx-auto px2",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

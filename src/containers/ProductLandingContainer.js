@@ -5,7 +5,7 @@ import {
   fetchShopifyProducts,
   fetchProductLanding
 } from 'state/actions/productsActions';
-import getProductCards from 'state/selectors/getProductCards';
+import products from 'state/selectors/products';
 import get from 'utils/get';
 
 class ProductLandingContainer extends ContainerBase {
@@ -29,7 +29,7 @@ class ProductLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    products: getProductCards(state)
+    products: products(state)
   };
 };
 

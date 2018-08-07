@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextField
+    address=""
+    className="foo"
+    color="madison-blue"
+    error={false}
+    fullWidth={true}
+    id="foo"
+    label="foo"
+    name="foo"
+    onBlur={[Function]}
+    onChange={[Function]}
+    pattern="foo"
+    placeholder="foo"
+    required={false}
+    type="textarea"
+    value="foo"
+    variant="quantity-medium"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="small bold mb1"
+          htmlFor="foo"
+>
+          foo
+</label>,
+        <textarea
+          id="foo"
+          name="foo"
+          onBlur={[Function]}
+          onChange={[Function]}
+          pattern="foo"
+          placeholder="foo"
+          required={false}
+          value="foo"
+/>,
+      ],
+      "className": "field-group foo w100 undefined",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "foo",
+          "className": "small bold mb1",
+          "htmlFor": "foo",
+        },
+        "ref": null,
+        "rendered": "foo",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "foo",
+          "name": "foo",
+          "onBlur": [Function],
+          "onChange": [Function],
+          "pattern": "foo",
+          "placeholder": "foo",
+          "required": false,
+          "value": "foo",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="small bold mb1"
+            htmlFor="foo"
+>
+            foo
+</label>,
+          <textarea
+            id="foo"
+            name="foo"
+            onBlur={[Function]}
+            onChange={[Function]}
+            pattern="foo"
+            placeholder="foo"
+            required={false}
+            value="foo"
+/>,
+        ],
+        "className": "field-group foo w100 undefined",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "foo",
+            "className": "small bold mb1",
+            "htmlFor": "foo",
+          },
+          "ref": null,
+          "rendered": "foo",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "foo",
+            "name": "foo",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "pattern": "foo",
+            "placeholder": "foo",
+            "required": false,
+            "value": "foo",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TextField
+    address=""
+    className=""
+    name=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder=""
+    required={false}
+    type="text"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        <input
+          id=""
+          name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          pattern={undefined}
+          placeholder=""
+          required={false}
+          type="text"
+          value={undefined}
+/>,
+      ],
+      "className": "field-group",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "",
+          "name": "",
+          "onBlur": [Function],
+          "onChange": [Function],
+          "pattern": undefined,
+          "placeholder": "",
+          "required": false,
+          "type": "text",
+          "value": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <input
+            id=""
+            name=""
+            onBlur={[Function]}
+            onChange={[Function]}
+            pattern={undefined}
+            placeholder=""
+            required={false}
+            type="text"
+            value={undefined}
+/>,
+        ],
+        "className": "field-group",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "",
+            "name": "",
+            "onBlur": [Function],
+            "onChange": [Function],
+            "pattern": undefined,
+            "placeholder": "",
+            "required": false,
+            "type": "text",
+            "value": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

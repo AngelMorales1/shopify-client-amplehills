@@ -25,6 +25,21 @@
     }
   }
 
+  &--primary,
+  &--primary-search {
+    input {
+      border-radius: radius('l');
+      color: color('madison-blue');
+      font-size: $font-3;
+    }
+  }
+
+  &--primary-search {
+    input {
+      padding: spacing(4) spacing(7);
+    }
+  }
+
   &--madison-blue {
     input {
       @extend .bg-madison-blue;

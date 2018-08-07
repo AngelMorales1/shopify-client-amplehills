@@ -19,7 +19,7 @@ Dimension classes
 }
 
 .container {
-  min-height: 100vh;
+  min-height: calc(100vh - #{$header-height-desktop});
 }
 
 .content-width {
@@ -36,6 +36,18 @@ Dimension classes
 
 .text-container-width {
   max-width: 36rem;
+}
+
+.content-wrapper {
+  padding-top: $header-height-mobile;
+
+  @media ($medium-up) {
+    padding-top: $header-height-desktop;
+  }
+}
+
+.object-fit {
+  object-fit: cover;
 }
 
 .drip {

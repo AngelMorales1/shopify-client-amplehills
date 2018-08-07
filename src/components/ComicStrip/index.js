@@ -21,7 +21,11 @@ class ComicStrip extends Component {
     const { block, z } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
-    const colorClass = `ComicStrip--${get(fields, 'color', 'yellow')}`;
+    const colorClass = `ComicStrip--${get(
+      fields,
+      'backgroundColor',
+      'yellow'
+    )}`;
 
     return (
       <div
@@ -118,7 +122,7 @@ class ComicStrip extends Component {
                       key={i}
                       className={cx(
                         styles['ComicStrips__container__image'],
-                        'm2 xs-hide sm-hide'
+                        'transition-slide-up-large m2 xs-hide sm-hide'
                       )}
                     >
                       <Image

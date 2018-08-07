@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import whatInput from 'what-input';
+import 'what-input';
 
 import { initializeApplication } from 'state/actions/applicationActions';
 import locations from 'state/selectors/locations';
@@ -11,6 +11,7 @@ import checkout from 'state/selectors/checkout';
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
 import Routes from 'routes';
+import locationModel from 'models/locationModel';
 
 import Loader from 'components/Loader';
 import ErrorPage from 'components/ErrorPage';
@@ -54,13 +55,16 @@ class App extends Component {
         <div className="App">
           <Nav />
           <MiniCart />
-          <Routes location={get(this, 'props.location')} />
-          <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
-          <Footer
-            locations={locations}
-            footerIllustration={footerIllustration}
-            footerLinks={{ facebookLink, instagramLink, twitterLink }}
-          />
+
+          <div className="content-wrapper">
+            <Routes location={get(this, 'props.location')} />
+            <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
+            <Footer
+              locations={locations}
+              footerIllustration={footerIllustration}
+              footerLinks={{ facebookLink, instagramLink, twitterLink }}
+            />
+          </div>
         </div>
       );
     }
@@ -109,10 +113,10 @@ App.propTypes = {
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string
   }),
-  locations: PropTypes.object
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 App.defaultProps = {
   globalSettings: {},
-  locations: {}
+  locations: []
 };

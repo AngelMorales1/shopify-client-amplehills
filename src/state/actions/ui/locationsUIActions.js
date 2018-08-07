@@ -20,3 +20,26 @@ export const clearLocationFilters = filter => {
     type: CLEAR_LOCATION_FILTERS
   };
 };
+
+export const UPDATE_SEARCH_FILTER = 'UPDATE_SEARCH_FILTER';
+export const updateSearchFilter = value => {
+  return {
+    type: UPDATE_SEARCH_FILTER,
+    payload: value
+  };
+};
+
+export const SELECT_LOCATION = 'SELECT_LOCATION';
+export const selectLocation = location => {
+  return {
+    type: SELECT_LOCATION,
+    payload: location
+  };
+};
+
+export const CLEAR_LOCATION_SELECTION = 'CLEAR_LOCATION_SELECTION';
+export const clearLocationSelection = () => {
+  return {
+    type: CLEAR_LOCATION_SELECTION
+  };
+};

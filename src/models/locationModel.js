@@ -2,28 +2,60 @@ import PropTypes from 'prop-types';
 
 export default {
   propTypes: PropTypes.shape({
-    title: PropTypes.string,
+    address1: PropTypes.string,
+    address2: PropTypes.string,
+    city: PropTypes.string,
     delivery: PropTypes.bool,
-    monday: PropTypes.string,
-    tuesday: PropTypes.string,
-    wednesday: PropTypes.string,
-    thursday: PropTypes.string,
-    friday: PropTypes.string,
-    saturday: PropTypes.string,
-    sunday: PropTypes.string,
-    id: PropTypes.string
+    id: PropTypes.string,
+    phone: PropTypes.string,
+    region: PropTypes.string,
+    seasonal: PropTypes.bool,
+    state: PropTypes.string,
+    title: PropTypes.string,
+    zip: PropTypes.string,
+    image: PropTypes.string,
+    coordinates: PropTypes.shape({
+      lat: PropTypes.number,
+      lon: PropTypes.number
+    }),
+    seasonalImage: PropTypes.string,
+    hours: PropTypes.shape({
+      monday: PropTypes.string,
+      tuesday: PropTypes.string,
+      wednesday: PropTypes.string,
+      thursday: PropTypes.string,
+      friday: PropTypes.string,
+      saturday: PropTypes.string,
+      sunday: PropTypes.string
+    })
   }),
 
   default: {
-    title: '',
+    address1: '',
+    address2: '',
+    city: '',
     delivery: false,
-    monday: '',
-    tuesday: '',
-    wednesday: '',
-    thursday: '',
-    friday: '',
-    saturday: '',
-    sunday: '',
-    id: ''
+    id: '',
+    phone: '',
+    region: '',
+    seasonal: true,
+    state: '',
+    title: '',
+    zip: '',
+    image: '',
+    coordinates: {
+      lat: 0,
+      lon: 0
+    },
+    seasonalImage: '',
+    hours: {
+      monday: '',
+      tuesday: '',
+      wednesday: '',
+      thursday: '',
+      friday: '',
+      saturday: '',
+      sunday: ''
+    }
   }
 };

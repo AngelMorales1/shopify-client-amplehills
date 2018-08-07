@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import get from 'utils/get';
 
 import orderModel from 'models/orderModel';
 
@@ -35,29 +36,32 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
               <p className="bold text-peach mb3">
                 {moment(order.date).format('MMMM D, YYYY')}
               </p>
-              {order.items.map((item, i) => (
-                <div
-                  key={`${item.title} ${i}`}
-                  className="mb2 flex flex-wrap justify-between"
-                >
-                  <span className="line-item-title mr2">{item.title}</span>
-                  <span className="line-item-title">${item.price}</span>
-                  {item.subItems.length ? (
-                    <div className="w100">
-                      <ul className="mt2 mb1">
-                        {item.subItems.map((subItem, i) => (
-                          <li
-                            className="sub-line-item small"
-                            key={`${subItem.handle} ${i}`}
-                          >{`${subItem.quantity}x ${
-                            products[subItem.handle].title
-                          }`}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </div>
-              ))}
+              {order.items.map((item, i) => {
+                const subItems = get(item, 'subItems', []);
+                return (
+                  <div
+                    key={`${item.title} ${i}`}
+                    className="mb2 flex flex-wrap justify-between"
+                  >
+                    <span className="line-item-title mr2">{item.title}</span>
+                    <span className="line-item-title">${item.price}</span>
+                    {subItems.length ? (
+                      <div className="w100">
+                        <ul className="mt2 mb1">
+                          {subItems.map((subItem, i) => (
+                            <li
+                              className="sub-line-item small"
+                              key={`${subItem.handle} ${i}`}
+                            >{`${subItem.quantity}x ${
+                              products[subItem.handle].title
+                            }`}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
+                );
+              })}
               <div className="mt4 flex flex-wrap">
                 <Button
                   className="tag mb2 mr2 bg-peach text-white w-auto"

@@ -27,14 +27,14 @@ const ProductShoppableCard = ({
 
   return (
     <div className={cx(styles['ProductShoppableCard'], 'flex col-12 sm-col-6')}>
-      <div
-        className="card flex flex-column w100"
-        style={{
-          background: `url(${product.gridImage}) no-repeat center`,
-          backgroundSize: 'cover'
-        }}
-      >
-        <div className="aspect-5-4 w100" />
+      <div className="card flex flex-column w100">
+        <div
+          className="aspect-5-4 w100"
+          style={{
+            background: `url(${product.gridImage}) no-repeat center`,
+            backgroundSize: 'cover'
+          }}
+        />
         <div
           className={cx(
             styles['ProductShoppableCard__info'],
@@ -96,7 +96,7 @@ ProductShoppableCard.propTypes = {
 };
 
 ProductShoppableCard.defaultProps = {
-  product: productModel.defaultProps,
+  product: productModel.default,
   quantity: 0,
   handleAddProduct: () => {},
   handleRemoveProduct: () => {}

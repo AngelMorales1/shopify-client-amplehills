@@ -1,0 +1,2649 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactUs
+    actions={
+        Object {
+            "sendContactForm": [Function],
+          }
+    }
+    addLineItemsStatus="foo"
+    error={null}
+    formStatus="foo"
+    history={
+        Object {
+            "action": "foo",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 0,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "foo",
+              "pathname": "foo",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+    }
+    location={
+        Object {
+            "hash": "foo",
+            "key": "foo",
+            "pathname": "/foo",
+            "search": "foo",
+            "state": undefined,
+          }
+    }
+    match={
+        Object {
+            "isExact": true,
+            "params": Object {
+              "productHandle": "foo",
+            },
+            "path": "/foo",
+            "url": "/foo",
+          }
+    }
+    model={
+        Object {
+            "action": Object {
+              "payload": Object {},
+              "type": "foo",
+            },
+            "isError": false,
+            "value": Object {
+              "items": Array [],
+              "limit": 0,
+              "skip": 0,
+              "sys": Object {},
+              "total": 0,
+            },
+          }
+    }
+    staticContext={undefined}
+    view={[Function]}
+    z={0}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="block-headline my2 px2 center"
+>
+          Contact us
+</h2>,
+        <p
+          className="my2 px2 center"
+>
+          What can we help you with?
+</p>,
+        <form
+          className="flex flex-wrap justify-center text-container-width"
+>
+          <div
+                    className="flex flex-wrap justify-center px2 my2"
+          >
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="General Info"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Orders"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Off-Site Events"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Press"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Parties"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Comments & Concerns"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+          </div>
+          <div
+                    className="w100 flex flex-column"
+          >
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Name"
+                              required={false}
+                              type="text"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Email Address"
+                              required={false}
+                              type="email"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Phone Number"
+                              required={false}
+                              type="tel"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Message"
+                              required={false}
+                              type="textarea"
+                              value=""
+                              variant="light-gray-tall"
+                    />
+          </div>
+          <div
+                    className="w100 flex flex-wrap text-container-width my2 px1"
+          >
+                    <Button
+                              className="my1"
+                              color="madison-blue"
+                              disabled={false}
+                              fullWidth={false}
+                              label="Send Us a Message"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary"
+                    />
+          </div>
+</form>,
+      ],
+      "className": "transition-slide-up flex flex-column justify-around items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Contact us",
+          "className": "block-headline my2 px2 center",
+        },
+        "ref": null,
+        "rendered": "Contact us",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "What can we help you with?",
+          "className": "my2 px2 center",
+        },
+        "ref": null,
+        "rendered": "What can we help you with?",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-wrap justify-center px2 my2"
+>
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="General Info"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Orders"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Off-Site Events"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Press"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Parties"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Comments & Concerns"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+</div>,
+            <div
+              className="w100 flex flex-column"
+>
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Name"
+                            required={false}
+                            type="text"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Email Address"
+                            required={false}
+                            type="email"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Phone Number"
+                            required={false}
+                            type="tel"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Message"
+                            required={false}
+                            type="textarea"
+                            value=""
+                            variant="light-gray-tall"
+              />
+</div>,
+            <div
+              className="w100 flex flex-wrap text-container-width my2 px1"
+>
+              <Button
+                            className="my1"
+                            color="madison-blue"
+                            disabled={false}
+                            fullWidth={false}
+                            label="Send Us a Message"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary"
+              />
+</div>,
+          ],
+          "className": "flex flex-wrap justify-center text-container-width",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="General Info"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Orders"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Off-Site Events"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Press"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Parties"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Comments & Concerns"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+              ],
+              "className": "flex flex-wrap justify-center px2 my2",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "General Info",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "General Info",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Orders",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Orders",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Off-Site Events",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Off-Site Events",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Press",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Press",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Parties",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Parties",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Comments & Concerns",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Comments & Concerns",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Name"
+                  required={false}
+                  type="text"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Email Address"
+                  required={false}
+                  type="email"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Phone Number"
+                  required={false}
+                  type="tel"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Message"
+                  required={false}
+                  type="textarea"
+                  value=""
+                  variant="light-gray-tall"
+/>,
+              ],
+              "className": "w100 flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "Name",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Name",
+                  "required": false,
+                  "type": "text",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Email Address",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Email Address",
+                  "required": false,
+                  "type": "email",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Phone Number",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Phone Number",
+                  "required": false,
+                  "type": "tel",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Message",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Message",
+                  "required": false,
+                  "type": "textarea",
+                  "value": "",
+                  "variant": "light-gray-tall",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                null,
+                null,
+                <Button
+                  className="my1"
+                  color="madison-blue"
+                  disabled={false}
+                  fullWidth={false}
+                  label="Send Us a Message"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary"
+/>,
+              ],
+              "className": "w100 flex flex-wrap text-container-width my2 px1",
+            },
+            "ref": null,
+            "rendered": Array [
+              null,
+              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "my1",
+                  "color": "madison-blue",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "label": "Send Us a Message",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="block-headline my2 px2 center"
+>
+            Contact us
+</h2>,
+          <p
+            className="my2 px2 center"
+>
+            What can we help you with?
+</p>,
+          <form
+            className="flex flex-wrap justify-center text-container-width"
+>
+            <div
+                        className="flex flex-wrap justify-center px2 my2"
+            >
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="General Info"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Orders"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Off-Site Events"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Press"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Parties"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Comments & Concerns"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+            </div>
+            <div
+                        className="w100 flex flex-column"
+            >
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Name"
+                                    required={false}
+                                    type="text"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Email Address"
+                                    required={false}
+                                    type="email"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Phone Number"
+                                    required={false}
+                                    type="tel"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Message"
+                                    required={false}
+                                    type="textarea"
+                                    value=""
+                                    variant="light-gray-tall"
+                        />
+            </div>
+            <div
+                        className="w100 flex flex-wrap text-container-width my2 px1"
+            >
+                        <Button
+                                    className="my1"
+                                    color="madison-blue"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    label="Send Us a Message"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary"
+                        />
+            </div>
+</form>,
+        ],
+        "className": "transition-slide-up flex flex-column justify-around items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Contact us",
+            "className": "block-headline my2 px2 center",
+          },
+          "ref": null,
+          "rendered": "Contact us",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "What can we help you with?",
+            "className": "my2 px2 center",
+          },
+          "ref": null,
+          "rendered": "What can we help you with?",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="flex flex-wrap justify-center px2 my2"
+>
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="General Info"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Orders"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Off-Site Events"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Press"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Parties"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Comments & Concerns"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+</div>,
+              <div
+                className="w100 flex flex-column"
+>
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Name"
+                                required={false}
+                                type="text"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Email Address"
+                                required={false}
+                                type="email"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Phone Number"
+                                required={false}
+                                type="tel"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Message"
+                                required={false}
+                                type="textarea"
+                                value=""
+                                variant="light-gray-tall"
+                />
+</div>,
+              <div
+                className="w100 flex flex-wrap text-container-width my2 px1"
+>
+                <Button
+                                className="my1"
+                                color="madison-blue"
+                                disabled={false}
+                                fullWidth={false}
+                                label="Send Us a Message"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary"
+                />
+</div>,
+            ],
+            "className": "flex flex-wrap justify-center text-container-width",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="General Info"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Orders"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Off-Site Events"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Press"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Parties"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Comments & Concerns"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                ],
+                "className": "flex flex-wrap justify-center px2 my2",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "General Info",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "General Info",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Orders",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Orders",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Off-Site Events",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Off-Site Events",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Press",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Press",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Parties",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Parties",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Comments & Concerns",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Comments & Concerns",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Name"
+                    required={false}
+                    type="text"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Email Address"
+                    required={false}
+                    type="email"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Phone Number"
+                    required={false}
+                    type="tel"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Message"
+                    required={false}
+                    type="textarea"
+                    value=""
+                    variant="light-gray-tall"
+/>,
+                ],
+                "className": "w100 flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "Name",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Name",
+                    "required": false,
+                    "type": "text",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Email Address",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Email Address",
+                    "required": false,
+                    "type": "email",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Phone Number",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Phone Number",
+                    "required": false,
+                    "type": "tel",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Message",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Message",
+                    "required": false,
+                    "type": "textarea",
+                    "value": "",
+                    "variant": "light-gray-tall",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  null,
+                  null,
+                  <Button
+                    className="my1"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Send Us a Message"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary"
+/>,
+                ],
+                "className": "w100 flex flex-wrap text-container-width my2 px1",
+              },
+              "ref": null,
+              "rendered": Array [
+                null,
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "my1",
+                    "color": "madison-blue",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "label": "Send Us a Message",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactUs />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="block-headline my2 px2 center"
+>
+          Contact us
+</h2>,
+        <p
+          className="my2 px2 center"
+>
+          What can we help you with?
+</p>,
+        <form
+          className="flex flex-wrap justify-center text-container-width"
+>
+          <div
+                    className="flex flex-wrap justify-center px2 my2"
+          >
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="General Info"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Orders"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Off-Site Events"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Press"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Parties"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+                    <Radio
+                              checked={false}
+                              className="mx2 my1 small"
+                              label="Comments & Concerns"
+                              onClick={[Function]}
+                              variant="primary"
+                    />
+          </div>
+          <div
+                    className="w100 flex flex-column"
+          >
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Name"
+                              required={false}
+                              type="text"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Email Address"
+                              required={false}
+                              type="email"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Phone Number"
+                              required={false}
+                              type="tel"
+                              value=""
+                              variant="light-gray"
+                    />
+                    <TextField
+                              address=""
+                              className="m1"
+                              name=""
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              placeholder="Message"
+                              required={false}
+                              type="textarea"
+                              value=""
+                              variant="light-gray-tall"
+                    />
+          </div>
+          <div
+                    className="w100 flex flex-wrap text-container-width my2 px1"
+          >
+                    <Button
+                              className="my1"
+                              color="madison-blue"
+                              disabled={false}
+                              fullWidth={false}
+                              label="Send Us a Message"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary"
+                    />
+          </div>
+</form>,
+      ],
+      "className": "transition-slide-up flex flex-column justify-around items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Contact us",
+          "className": "block-headline my2 px2 center",
+        },
+        "ref": null,
+        "rendered": "Contact us",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "What can we help you with?",
+          "className": "my2 px2 center",
+        },
+        "ref": null,
+        "rendered": "What can we help you with?",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-wrap justify-center px2 my2"
+>
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="General Info"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Orders"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Off-Site Events"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Press"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Parties"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+              <Radio
+                            checked={false}
+                            className="mx2 my1 small"
+                            label="Comments & Concerns"
+                            onClick={[Function]}
+                            variant="primary"
+              />
+</div>,
+            <div
+              className="w100 flex flex-column"
+>
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Name"
+                            required={false}
+                            type="text"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Email Address"
+                            required={false}
+                            type="email"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Phone Number"
+                            required={false}
+                            type="tel"
+                            value=""
+                            variant="light-gray"
+              />
+              <TextField
+                            address=""
+                            className="m1"
+                            name=""
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            placeholder="Message"
+                            required={false}
+                            type="textarea"
+                            value=""
+                            variant="light-gray-tall"
+              />
+</div>,
+            <div
+              className="w100 flex flex-wrap text-container-width my2 px1"
+>
+              <Button
+                            className="my1"
+                            color="madison-blue"
+                            disabled={false}
+                            fullWidth={false}
+                            label="Send Us a Message"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary"
+              />
+</div>,
+          ],
+          "className": "flex flex-wrap justify-center text-container-width",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="General Info"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Orders"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Off-Site Events"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Press"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Parties"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+                <Radio
+                  checked={false}
+                  className="mx2 my1 small"
+                  label="Comments & Concerns"
+                  onClick={[Function]}
+                  variant="primary"
+/>,
+              ],
+              "className": "flex flex-wrap justify-center px2 my2",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "General Info",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "General Info",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Orders",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Orders",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Off-Site Events",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Off-Site Events",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Press",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Press",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Parties",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Parties",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Comments & Concerns",
+                "nodeType": "function",
+                "props": Object {
+                  "checked": false,
+                  "className": "mx2 my1 small",
+                  "label": "Comments & Concerns",
+                  "onClick": [Function],
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Name"
+                  required={false}
+                  type="text"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Email Address"
+                  required={false}
+                  type="email"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Phone Number"
+                  required={false}
+                  type="tel"
+                  value=""
+                  variant="light-gray"
+/>,
+                <TextField
+                  address=""
+                  className="m1"
+                  name=""
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  placeholder="Message"
+                  required={false}
+                  type="textarea"
+                  value=""
+                  variant="light-gray-tall"
+/>,
+              ],
+              "className": "w100 flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "Name",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Name",
+                  "required": false,
+                  "type": "text",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Email Address",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Email Address",
+                  "required": false,
+                  "type": "email",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Phone Number",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Phone Number",
+                  "required": false,
+                  "type": "tel",
+                  "value": "",
+                  "variant": "light-gray",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "Message",
+                "nodeType": "function",
+                "props": Object {
+                  "address": "",
+                  "className": "m1",
+                  "name": "",
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "placeholder": "Message",
+                  "required": false,
+                  "type": "textarea",
+                  "value": "",
+                  "variant": "light-gray-tall",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                null,
+                null,
+                <Button
+                  className="my1"
+                  color="madison-blue"
+                  disabled={false}
+                  fullWidth={false}
+                  label="Send Us a Message"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary"
+/>,
+              ],
+              "className": "w100 flex flex-wrap text-container-width my2 px1",
+            },
+            "ref": null,
+            "rendered": Array [
+              null,
+              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "my1",
+                  "color": "madison-blue",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "label": "Send Us a Message",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "form",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="block-headline my2 px2 center"
+>
+            Contact us
+</h2>,
+          <p
+            className="my2 px2 center"
+>
+            What can we help you with?
+</p>,
+          <form
+            className="flex flex-wrap justify-center text-container-width"
+>
+            <div
+                        className="flex flex-wrap justify-center px2 my2"
+            >
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="General Info"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Orders"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Off-Site Events"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Press"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Parties"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+                        <Radio
+                                    checked={false}
+                                    className="mx2 my1 small"
+                                    label="Comments & Concerns"
+                                    onClick={[Function]}
+                                    variant="primary"
+                        />
+            </div>
+            <div
+                        className="w100 flex flex-column"
+            >
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Name"
+                                    required={false}
+                                    type="text"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Email Address"
+                                    required={false}
+                                    type="email"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Phone Number"
+                                    required={false}
+                                    type="tel"
+                                    value=""
+                                    variant="light-gray"
+                        />
+                        <TextField
+                                    address=""
+                                    className="m1"
+                                    name=""
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    placeholder="Message"
+                                    required={false}
+                                    type="textarea"
+                                    value=""
+                                    variant="light-gray-tall"
+                        />
+            </div>
+            <div
+                        className="w100 flex flex-wrap text-container-width my2 px1"
+            >
+                        <Button
+                                    className="my1"
+                                    color="madison-blue"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    label="Send Us a Message"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary"
+                        />
+            </div>
+</form>,
+        ],
+        "className": "transition-slide-up flex flex-column justify-around items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Contact us",
+            "className": "block-headline my2 px2 center",
+          },
+          "ref": null,
+          "rendered": "Contact us",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "What can we help you with?",
+            "className": "my2 px2 center",
+          },
+          "ref": null,
+          "rendered": "What can we help you with?",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="flex flex-wrap justify-center px2 my2"
+>
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="General Info"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Orders"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Off-Site Events"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Press"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Parties"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+                <Radio
+                                checked={false}
+                                className="mx2 my1 small"
+                                label="Comments & Concerns"
+                                onClick={[Function]}
+                                variant="primary"
+                />
+</div>,
+              <div
+                className="w100 flex flex-column"
+>
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Name"
+                                required={false}
+                                type="text"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Email Address"
+                                required={false}
+                                type="email"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Phone Number"
+                                required={false}
+                                type="tel"
+                                value=""
+                                variant="light-gray"
+                />
+                <TextField
+                                address=""
+                                className="m1"
+                                name=""
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                placeholder="Message"
+                                required={false}
+                                type="textarea"
+                                value=""
+                                variant="light-gray-tall"
+                />
+</div>,
+              <div
+                className="w100 flex flex-wrap text-container-width my2 px1"
+>
+                <Button
+                                className="my1"
+                                color="madison-blue"
+                                disabled={false}
+                                fullWidth={false}
+                                label="Send Us a Message"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary"
+                />
+</div>,
+            ],
+            "className": "flex flex-wrap justify-center text-container-width",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="General Info"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Orders"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Off-Site Events"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Press"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Parties"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                  <Radio
+                    checked={false}
+                    className="mx2 my1 small"
+                    label="Comments & Concerns"
+                    onClick={[Function]}
+                    variant="primary"
+/>,
+                ],
+                "className": "flex flex-wrap justify-center px2 my2",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "General Info",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "General Info",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Orders",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Orders",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Off-Site Events",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Off-Site Events",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Press",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Press",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Parties",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Parties",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Comments & Concerns",
+                  "nodeType": "function",
+                  "props": Object {
+                    "checked": false,
+                    "className": "mx2 my1 small",
+                    "label": "Comments & Concerns",
+                    "onClick": [Function],
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Name"
+                    required={false}
+                    type="text"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Email Address"
+                    required={false}
+                    type="email"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Phone Number"
+                    required={false}
+                    type="tel"
+                    value=""
+                    variant="light-gray"
+/>,
+                  <TextField
+                    address=""
+                    className="m1"
+                    name=""
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    placeholder="Message"
+                    required={false}
+                    type="textarea"
+                    value=""
+                    variant="light-gray-tall"
+/>,
+                ],
+                "className": "w100 flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "Name",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Name",
+                    "required": false,
+                    "type": "text",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Email Address",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Email Address",
+                    "required": false,
+                    "type": "email",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Phone Number",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Phone Number",
+                    "required": false,
+                    "type": "tel",
+                    "value": "",
+                    "variant": "light-gray",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "Message",
+                  "nodeType": "function",
+                  "props": Object {
+                    "address": "",
+                    "className": "m1",
+                    "name": "",
+                    "onBlur": [Function],
+                    "onChange": [Function],
+                    "placeholder": "Message",
+                    "required": false,
+                    "type": "textarea",
+                    "value": "",
+                    "variant": "light-gray-tall",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  null,
+                  null,
+                  <Button
+                    className="my1"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    label="Send Us a Message"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary"
+/>,
+                ],
+                "className": "w100 flex flex-wrap text-container-width my2 px1",
+              },
+              "ref": null,
+              "rendered": Array [
+                null,
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "my1",
+                    "color": "madison-blue",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "label": "Send Us a Message",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "form",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

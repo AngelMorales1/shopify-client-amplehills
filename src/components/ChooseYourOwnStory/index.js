@@ -128,17 +128,21 @@ class ChooseYourOwnStory extends Component {
     } = this.props;
     const fields = get(block, 'fields', {});
 
-    const product =
-      products[get(this.props.product, 'handle', 'choose-your-own-story')];
+    const handle = get(this.props.product, 'handle', 'choose-your-own-story');
+    const product = get(products, handle, {});
     const {
       overlayContentImage,
       shippingInformation,
       shippingPledge,
       calloutImage
     } = ourPledge;
-    const activeVariant = product.variants.find(
+
+    const productVariant = get(product, 'variants', []);
+    const activeVariant = productVariant.find(
       variant => getPintSizeFromTitle(variant.title) === size
     );
+    const activeVariantPrice = get(activeVariant, 'price', 0);
+    const activeVariantId = get(activeVariant, 'id', '');
 
     const shoppableProducts = get(fields, 'products', []);
     const breadcrumbs = [
@@ -159,9 +163,9 @@ class ChooseYourOwnStory extends Component {
       >
         <Breadcrumbs
           breadcrumbs={breadcrumbs}
-          className="mx-auto container-width"
+          className="transition-slide-up mx-auto container-width"
         />
-        <div className="mx-auto container-width flex flex-wrap items-start">
+        <div className="transition-slide-up mx-auto container-width flex flex-wrap items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
@@ -197,12 +201,12 @@ class ChooseYourOwnStory extends Component {
                 {get(fields, 'title')}
               </h1>
               <div className="w100 flex my3">
-                {product.variants.map(variant => (
+                {productVariant.map(variant => (
                   <Radio
                     label={variant.title}
                     className="mr3"
                     key={variant.id}
-                    checked={variant.id === activeVariant.id}
+                    checked={variant.id === activeVariantId}
                     onClick={() =>
                       this.handleSizeClick(parseInt(variant.title, 10))
                     }
@@ -226,7 +230,7 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'z-nav b0 l0 w100 bg-madison-blue text-white p3',
+            'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
             this.state.menuPosition
           )}
         >
@@ -237,12 +241,12 @@ class ChooseYourOwnStory extends Component {
                 'col flex items-start xs-hide sm-hide md-hide'
               )}
             >
-              {product.variants.map(variant => (
+              {productVariant.map(variant => (
                 <Radio
                   label={variant.title}
                   className="mr3 small bold"
                   key={variant.id}
-                  checked={variant.id === activeVariant.id}
+                  checked={variant.id === activeVariantId}
                   onClick={() =>
                     this.handleSizeClick(parseInt(variant.title, 10))
                   }
@@ -257,7 +261,7 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
-              <label className="small bold">Choose 4 Flavors</label>
+              <label className="small bold">Choose {size} Flavors</label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
                   <div
@@ -319,7 +323,7 @@ class ChooseYourOwnStory extends Component {
                   >
                     <span className="mr2">Add to Cart</span>
                     <span>
-                      ${getLineItemPrice(activeVariant.price, quantity)}
+                      ${getLineItemPrice(activeVariantPrice, quantity)}
                     </span>
                   </Button>
                 ) : (
@@ -331,7 +335,7 @@ class ChooseYourOwnStory extends Component {
                   >
                     <span className="mr2">Sold Out</span>
                     <span>
-                      ${getLineItemPrice(activeVariant.price, quantity)}
+                      ${getLineItemPrice(activeVariantPrice, quantity)}
                     </span>
                   </Button>
                 )}

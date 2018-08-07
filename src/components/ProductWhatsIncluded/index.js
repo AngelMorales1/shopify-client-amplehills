@@ -26,7 +26,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
       )}
       style={{ zIndex: z }}
     >
-      <h2 className="block-headline m3 nowrap">What&rsquo;s included</h2>
+      <h2 className="block-headline my3 nowrap">What&rsquo;s included</h2>
       <div className="flex flex-column col-12 md-col-4">
         {includedItems.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');
@@ -34,17 +34,17 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
 
           return (
             <div
-              key={product.id}
+              key={handle}
               className={cx(
                 styles['ProductWhatsIncluded__flavor-container'],
-                'flex items-center my2 col-12'
+                'flex items-start my2 col-12'
               )}
             >
               <div className="mr3 col-2">
                 <Image alt={`${product.title} image`} src={product.pintImage} />
               </div>
               <div className="col-10">
-                <h3 className="description-title bold nowrap mb2">{`1x ${
+                <h3 className="description-title bold mb2">{`1x ${
                   product.title
                 }`}</h3>
                 <p className="block-subheadline">{product.flavorDescription}</p>
