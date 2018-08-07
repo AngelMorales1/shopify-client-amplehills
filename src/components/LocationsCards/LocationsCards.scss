@@ -21,6 +21,11 @@ $transition-duration: 0.2;
     @media ($medium-up) {
       min-height: spacing(120);
     }
+
+    &--selected {
+      box-shadow: $drop-shadow-large;
+      transform: scale(1.05);
+    }
   }
 
   &__states-dropdown {

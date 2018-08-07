@@ -220,7 +220,7 @@ ShallowWrapper {
           className="col col-12 md-col-6 py4 flex flex-column justify-around"
 >
           <div
-                    className="col-12 md-col-8 px2 mx-auto"
+                    className="col-12 md-col-8 px3 mx-auto"
           >
                     <div
                               className="relative inline-block"
@@ -376,7 +376,7 @@ ShallowWrapper {
           </div>
 </div>,
       ],
-      "className": "undefined flex flex-wrap",
+      "className": "flex flex-wrap transition-slide-up",
       "style": Object {
         "zIndex": 0,
       },
@@ -405,7 +405,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="col-12 md-col-8 px2 mx-auto"
+            className="col-12 md-col-8 px3 mx-auto"
 >
             <div
                         className="relative inline-block"
@@ -720,7 +720,7 @@ ShallowWrapper {
                 shippingPledge="foo"
 />,
             ],
-            "className": "col-12 md-col-8 px2 mx-auto",
+            "className": "col-12 md-col-8 px3 mx-auto",
           },
           "ref": null,
           "rendered": Array [
@@ -1054,7 +1054,7 @@ ShallowWrapper {
             className="col col-12 md-col-6 py4 flex flex-column justify-around"
 >
             <div
-                        className="col-12 md-col-8 px2 mx-auto"
+                        className="col-12 md-col-8 px3 mx-auto"
             >
                         <div
                                     className="relative inline-block"
@@ -1210,7 +1210,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "undefined flex flex-wrap",
+        "className": "flex flex-wrap transition-slide-up",
         "style": Object {
           "zIndex": 0,
         },
@@ -1239,7 +1239,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="col-12 md-col-8 px2 mx-auto"
+              className="col-12 md-col-8 px3 mx-auto"
 >
               <div
                             className="relative inline-block"
@@ -1554,7 +1554,7 @@ ShallowWrapper {
                   shippingPledge="foo"
 />,
               ],
-              "className": "col-12 md-col-8 px2 mx-auto",
+              "className": "col-12 md-col-8 px3 mx-auto",
             },
             "ref": null,
             "rendered": Array [
@@ -1953,7 +1953,7 @@ ShallowWrapper {
           className="col col-12 md-col-6 py4 flex flex-column justify-around"
 >
           <div
-                    className="col-12 md-col-8 px2 mx-auto"
+                    className="col-12 md-col-8 px3 mx-auto"
           >
                     <div
                               className="relative inline-block"
@@ -2051,7 +2051,7 @@ ShallowWrapper {
           </div>
 </div>,
       ],
-      "className": "undefined flex flex-wrap",
+      "className": "flex flex-wrap transition-slide-up",
       "style": Object {
         "zIndex": 1,
       },
@@ -2080,7 +2080,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="col-12 md-col-8 px2 mx-auto"
+            className="col-12 md-col-8 px3 mx-auto"
 >
             <div
                         className="relative inline-block"
@@ -2279,7 +2279,7 @@ ShallowWrapper {
                 shippingPledge=""
 />,
             ],
-            "className": "col-12 md-col-8 px2 mx-auto",
+            "className": "col-12 md-col-8 px3 mx-auto",
           },
           "ref": null,
           "rendered": Array [
@@ -2555,7 +2555,7 @@ ShallowWrapper {
             className="col col-12 md-col-6 py4 flex flex-column justify-around"
 >
             <div
-                        className="col-12 md-col-8 px2 mx-auto"
+                        className="col-12 md-col-8 px3 mx-auto"
             >
                         <div
                                     className="relative inline-block"
@@ -2653,7 +2653,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "undefined flex flex-wrap",
+        "className": "flex flex-wrap transition-slide-up",
         "style": Object {
           "zIndex": 1,
         },
@@ -2682,7 +2682,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="col-12 md-col-8 px2 mx-auto"
+              className="col-12 md-col-8 px3 mx-auto"
 >
               <div
                             className="relative inline-block"
@@ -2881,7 +2881,7 @@ ShallowWrapper {
                   shippingPledge=""
 />,
               ],
-              "className": "col-12 md-col-8 px2 mx-auto",
+              "className": "col-12 md-col-8 px3 mx-auto",
             },
             "ref": null,
             "rendered": Array [

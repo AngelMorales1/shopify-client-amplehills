@@ -2,12 +2,15 @@ import {
   ADD_LOCATION_FILTER,
   REMOVE_LOCATION_FILTER,
   CLEAR_LOCATION_FILTERS,
-  UPDATE_SEARCH_FILTER
+  UPDATE_SEARCH_FILTER,
+  SELECT_LOCATION,
+  CLEAR_LOCATION_SELECTION
 } from 'state/actions/ui/locationsUIActions';
 
 const initialState = {
   locationFilters: [],
-  searchFilter: ''
+  searchFilter: '',
+  selectedLocation: null
 };
 
 export default (state = initialState, action) => {
@@ -36,6 +39,17 @@ export default (state = initialState, action) => {
       return {
         ...state,
         searchFilter: action.payload
+      };
+    case SELECT_LOCATION:
+      return {
+        ...state,
+        selectedLocation: action.payload
+      };
+    case CLEAR_LOCATION_SELECTION:
+      const { selectedLocation } = initialState;
+      return {
+        ...state,
+        selectedLocation
       };
     default:
       return state;

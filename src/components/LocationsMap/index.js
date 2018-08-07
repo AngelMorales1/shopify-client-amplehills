@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import get from 'utils/get';
 import locationModel from 'models/locationModel';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
@@ -12,28 +13,44 @@ import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
-  const { filteredOutLocations, locationFilters, actions } = props;
+  const {
+    filteredOutLocations,
+    selectedLocation,
+    locationFilters,
+    locations,
+    locationGeoJSON,
+    actions
+  } = props;
+
+  const onClickFeature = feature => {
+    const featureLocationId = get(feature, 'properties.id', '');
+
+    featureLocationId === selectedLocation
+      ? actions.clearLocationSelection()
+      : actions.selectLocation(featureLocationId);
+  };
 
   return (
     <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
         className="z-0"
-        featureCollection={props.locationGeoJSON}
+        featureCollection={locationGeoJSON}
         defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
         collections={[
           {
             name: 'Selected',
             filter: {
-              ids: []
+              ids: selectedLocation ? [selectedLocation] : []
             },
             icon: 'selected-location-icon'
           },
           {
             name: 'SeasonalLocations',
             filter: {
-              ids: props.locations
+              ids: locations
                 .filter(location => location.seasonal)
+                .filter(location => location.id !== selectedLocation)
                 .map(location => location.id)
             },
             icon: 'seasonal-icon'
@@ -53,6 +70,9 @@ const LocationsMap = props => {
         textSize={16}
         textColor="#ffffff"
         mapPadding={150}
+        maxZoom={18}
+        onClickFeature={onClickFeature}
+        featureIdZoomTo={selectedLocation}
       />
       <div className="absolute t0 l0 flex p3">
         <Button
@@ -113,6 +133,8 @@ const LocationsMap = props => {
 
 LocationsMap.propTypes = {
   actions: PropTypes.shape({
+    selectLocation: PropTypes.func,
+    clearLocationSelection: PropTypes.func,
     clearLocationFilters: PropTypes.func,
     addLocationFilter: PropTypes.func,
     removeLocationFilter: PropTypes.func
@@ -127,11 +149,14 @@ LocationsMap.propTypes = {
       key: PropTypes.string,
       value: PropTypes.string
     })
-  )
+  ),
+  selectedLocation: PropTypes.string
 };
 
 LocationsMap.defaultProps = {
   actions: {
+    selectLocation: () => {},
+    clearLocationSelection: () => {},
     clearLocationFilters: () => {},
     addLocationFilter: () => {},
     removeLocationFilter: () => {}

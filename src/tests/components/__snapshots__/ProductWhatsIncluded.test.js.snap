@@ -55,7 +55,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h2
-          className="block-headline m3 nowrap"
+          className="block-headline my3 nowrap"
 >
           What’s included
 </h2>,
@@ -78,7 +78,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "What’s included",
-          "className": "block-headline m3 nowrap",
+          "className": "block-headline my3 nowrap",
         },
         "ref": null,
         "rendered": "What’s included",
@@ -107,7 +107,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="block-headline m3 nowrap"
+            className="block-headline my3 nowrap"
 >
             What’s included
 </h2>,
@@ -130,7 +130,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "What’s included",
-            "className": "block-headline m3 nowrap",
+            "className": "block-headline my3 nowrap",
           },
           "ref": null,
           "rendered": "What’s included",
@@ -198,7 +198,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h2
-          className="block-headline m3 nowrap"
+          className="block-headline my3 nowrap"
 >
           What’s included
 </h2>,
@@ -206,7 +206,7 @@ ShallowWrapper {
           className="flex flex-column col-12 md-col-4"
 >
           <div
-                    className="flex items-center my2 col-12"
+                    className="flex items-start my2 col-12"
           >
                     <div
                               className="mr3 col-2"
@@ -224,7 +224,7 @@ ShallowWrapper {
                               className="col-10"
                     >
                               <h3
-                                        className="description-title bold nowrap mb2"
+                                        className="description-title bold mb2"
                               >
                                         1x undefined
                               </h3>
@@ -248,7 +248,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "What’s included",
-          "className": "block-headline m3 nowrap",
+          "className": "block-headline my3 nowrap",
         },
         "ref": null,
         "rendered": "What’s included",
@@ -261,7 +261,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex items-center my2 col-12"
+              className="flex items-start my2 col-12"
 >
               <div
                             className="mr3 col-2"
@@ -279,7 +279,7 @@ ShallowWrapper {
                             className="col-10"
               >
                             <h3
-                                          className="description-title bold nowrap mb2"
+                                          className="description-title bold mb2"
                             >
                                           1x undefined
                             </h3>
@@ -315,7 +315,7 @@ ShallowWrapper {
                   className="col-10"
 >
                   <h3
-                                    className="description-title bold nowrap mb2"
+                                    className="description-title bold mb2"
                   >
                                     1x undefined
                   </h3>
@@ -324,7 +324,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "flex items-center my2 col-12",
+              "className": "flex items-start my2 col-12",
             },
             "ref": null,
             "rendered": Array [
@@ -370,7 +370,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <h3
-                      className="description-title bold nowrap mb2"
+                      className="description-title bold mb2"
 >
                       1x undefined
 </h3>,
@@ -388,7 +388,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "1x undefined",
-                      "className": "description-title bold nowrap mb2",
+                      "className": "description-title bold mb2",
                     },
                     "ref": null,
                     "rendered": "1x undefined",
@@ -426,7 +426,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="block-headline m3 nowrap"
+            className="block-headline my3 nowrap"
 >
             What’s included
 </h2>,
@@ -434,7 +434,7 @@ ShallowWrapper {
             className="flex flex-column col-12 md-col-4"
 >
             <div
-                        className="flex items-center my2 col-12"
+                        className="flex items-start my2 col-12"
             >
                         <div
                                     className="mr3 col-2"
@@ -452,7 +452,7 @@ ShallowWrapper {
                                     className="col-10"
                         >
                                     <h3
-                                                className="description-title bold nowrap mb2"
+                                                className="description-title bold mb2"
                                     >
                                                 1x undefined
                                     </h3>
@@ -476,7 +476,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "What’s included",
-            "className": "block-headline m3 nowrap",
+            "className": "block-headline my3 nowrap",
           },
           "ref": null,
           "rendered": "What’s included",
@@ -489,7 +489,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="flex items-center my2 col-12"
+                className="flex items-start my2 col-12"
 >
                 <div
                                 className="mr3 col-2"
@@ -507,7 +507,7 @@ ShallowWrapper {
                                 className="col-10"
                 >
                                 <h3
-                                                className="description-title bold nowrap mb2"
+                                                className="description-title bold mb2"
                                 >
                                                 1x undefined
                                 </h3>
@@ -543,7 +543,7 @@ ShallowWrapper {
                     className="col-10"
 >
                     <h3
-                                        className="description-title bold nowrap mb2"
+                                        className="description-title bold mb2"
                     >
                                         1x undefined
                     </h3>
@@ -552,7 +552,7 @@ ShallowWrapper {
                     />
 </div>,
                 ],
-                "className": "flex items-center my2 col-12",
+                "className": "flex items-start my2 col-12",
               },
               "ref": null,
               "rendered": Array [
@@ -598,7 +598,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <h3
-                        className="description-title bold nowrap mb2"
+                        className="description-title bold mb2"
 >
                         1x undefined
 </h3>,
@@ -616,7 +616,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "1x undefined",
-                        "className": "description-title bold nowrap mb2",
+                        "className": "description-title bold mb2",
                       },
                       "ref": null,
                       "rendered": "1x undefined",

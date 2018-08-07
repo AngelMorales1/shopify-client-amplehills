@@ -215,7 +215,7 @@ ShallowWrapper {
           </div>
 </form>,
       ],
-      "className": "flex flex-column justify-around items-center",
+      "className": "transition-slide-up flex flex-column justify-around items-center",
     },
     "ref": null,
     "rendered": Array [
@@ -849,7 +849,7 @@ ShallowWrapper {
             </div>
 </form>,
         ],
-        "className": "flex flex-column justify-around items-center",
+        "className": "transition-slide-up flex flex-column justify-around items-center",
       },
       "ref": null,
       "rendered": Array [
@@ -1505,7 +1505,7 @@ ShallowWrapper {
           </div>
 </form>,
       ],
-      "className": "flex flex-column justify-around items-center",
+      "className": "transition-slide-up flex flex-column justify-around items-center",
     },
     "ref": null,
     "rendered": Array [
@@ -2139,7 +2139,7 @@ ShallowWrapper {
             </div>
 </form>,
         ],
-        "className": "flex flex-column justify-around items-center",
+        "className": "transition-slide-up flex flex-column justify-around items-center",
       },
       "ref": null,
       "rendered": Array [

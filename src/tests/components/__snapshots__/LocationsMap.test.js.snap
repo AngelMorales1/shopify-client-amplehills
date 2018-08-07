@@ -9,7 +9,9 @@ ShallowWrapper {
         Object {
             "addLocationFilter": [Function],
             "clearLocationFilters": [Function],
+            "clearLocationSelection": [Function],
             "removeLocationFilter": [Function],
+            "selectLocation": [Function],
           }
     }
     locationFilters={Array []}
@@ -61,9 +63,11 @@ ShallowWrapper {
           }
           defaultIcon="year-round-icon"
           featureCollection={Object {}}
+          featureIdZoomTo={undefined}
           hoverFade={false}
           iconSize={1.4}
           mapPadding={150}
+          maxZoom={18}
           onClickFeature={[Function]}
           onLoad={[Function]}
           styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
@@ -207,9 +211,11 @@ ShallowWrapper {
           ],
           "defaultIcon": "year-round-icon",
           "featureCollection": Object {},
+          "featureIdZoomTo": undefined,
           "hoverFade": false,
           "iconSize": 1.4,
           "mapPadding": 150,
+          "maxZoom": 18,
           "onClickFeature": [Function],
           "onLoad": [Function],
           "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
@@ -593,9 +599,11 @@ ShallowWrapper {
             }
             defaultIcon="year-round-icon"
             featureCollection={Object {}}
+            featureIdZoomTo={undefined}
             hoverFade={false}
             iconSize={1.4}
             mapPadding={150}
+            maxZoom={18}
             onClickFeature={[Function]}
             onLoad={[Function]}
             styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
@@ -739,9 +747,11 @@ ShallowWrapper {
             ],
             "defaultIcon": "year-round-icon",
             "featureCollection": Object {},
+            "featureIdZoomTo": undefined,
             "hoverFade": false,
             "iconSize": 1.4,
             "mapPadding": 150,
+            "maxZoom": 18,
             "onClickFeature": [Function],
             "onLoad": [Function],
             "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",

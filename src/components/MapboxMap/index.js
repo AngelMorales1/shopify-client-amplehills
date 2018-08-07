@@ -31,13 +31,20 @@ class MapboxMap extends Component {
     });
   }
 
-  componentDidUpdate(prevProps) {
+  async componentDidUpdate(prevProps) {
     if (!this.state.loaded) return;
 
     if (prevProps.collections !== this.props.collections) {
       this.setMapProperties();
       if (prevProps.featureIdZoomTo === this.props.featureIdZoomTo) {
-        this.setBounds().then(this.zoomToBounds);
+        await this.setBounds();
+
+        if (this.props.featureIdZoomTo === null) {
+          this.zoomToBounds();
+        } else {
+          const feature = this.featureFromId(this.props.featureIdZoomTo);
+          this.zoomToFeature(feature);
+        }
       }
     }
 
@@ -49,6 +56,11 @@ class MapboxMap extends Component {
         if (feature) this.zoomToFeature(feature);
       }
     }
+
+    if (prevProps.onClickFeature !== this.props.onClickFeature) {
+      this.unbindClickListeners();
+      this.bindClickListeners();
+    }
   }
 
   componentWillUnmount() {
@@ -57,11 +69,12 @@ class MapboxMap extends Component {
 
   initializeMap() {
     return new Promise((resolve, reject) => {
-      const { styleUrl } = this.props;
+      const { styleUrl, maxZoom } = this.props;
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
-        style: styleUrl
+        style: styleUrl,
+        maxZoom
       });
       map.on('load', () => {
         this.setState({ map }, () => resolve(map));
@@ -70,19 +83,27 @@ class MapboxMap extends Component {
   }
 
   addSource() {
+    const { map } = this.state;
     const {
       featureCollection,
       cluster,
       clusterMaxZoom,
       clusterRadius
     } = this.props;
-    const source = this.state.map.addSource('source', {
-      type: 'geojson',
-      data: featureCollection,
-      cluster,
-      clusterMaxZoom,
-      clusterRadius
-    });
+
+    const source = cluster
+      ? map.addSource('source', {
+          type: 'geojson',
+          data: featureCollection,
+          cluster,
+          clusterMaxZoom,
+          clusterRadius
+        })
+      : map.addSource('source', {
+          type: 'geojson',
+          data: featureCollection
+        });
+
     this.setState({ source });
   }
 
@@ -254,11 +275,43 @@ class MapboxMap extends Component {
   }
 
   bindEventListeners() {
-    const { onClickFeature, hoverFade } = this.props;
+    this.bindClickListeners();
+    this.bindMouseListeners();
+  }
+
+  handleFeatureClick = e => {
+    const { onClickFeature } = this.props;
     const { map } = this.state;
-    map.on('click', 'layer', e => {
+    if (e.features[0].properties.cluster) {
+      const clusterId = e.features[0].properties.cluster_id;
+      map
+        .getSource('source')
+        .getClusterExpansionZoom(clusterId, (error, zoom) => {
+          if (error) return null;
+
+          map.easeTo({
+            center: e.lngLat,
+            zoom
+          });
+        });
+    } else {
       onClickFeature(e.features[0]);
-    });
+    }
+  };
+
+  bindClickListeners() {
+    const { map } = this.state;
+    map.on('click', 'layer', this.handleFeatureClick);
+  }
+
+  unbindClickListeners() {
+    const { map } = this.state;
+    map.off('click', 'layer', this.handleFeatureClick);
+  }
+
+  bindMouseListeners() {
+    const { hoverFade } = this.props;
+    const { map } = this.state;
     map.on('mouseenter', 'layer', () => {
       map.getCanvas().style.cursor = 'pointer';
     });
@@ -305,7 +358,7 @@ class MapboxMap extends Component {
 
   zoomToFeature(feature) {
     this.state.map.flyTo({
-      zoom: 10,
+      zoom: this.props.maxZoom,
       speed: 1,
       center: feature.geometry.coordinates
     });
@@ -344,7 +397,8 @@ MapboxMap.propTypes = {
   collections: PropTypes.arrayOf(PropTypes.object),
   hoverFade: PropTypes.bool,
   className: PropTypes.string,
-  onLoad: PropTypes.func
+  onLoad: PropTypes.func,
+  maxZoom: PropTypes.number
 };
 
 MapboxMap.defaultProps = {
@@ -365,7 +419,8 @@ MapboxMap.defaultProps = {
   styleUrl: 'mapbox://styles/mapbox/streets-v9',
   collections: [],
   hoverFade: false,
-  className: undefined
+  className: undefined,
+  maxZoom: null
 };
 
 export default MapboxMap;
