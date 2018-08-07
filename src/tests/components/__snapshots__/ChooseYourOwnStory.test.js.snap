@@ -216,10 +216,10 @@ ShallowWrapper {
                               },
                             ]
           }
-          className="mx-auto container-width"
+          className="transition-slide-up mx-auto container-width"
 />,
         <div
-          className="mx-auto container-width flex flex-wrap items-start"
+          className="transition-slide-up mx-auto container-width flex flex-wrap items-start"
 >
           <div
                     className="flex flex-wrap col-12 lg-col-6 px2"
@@ -434,7 +434,7 @@ ShallowWrapper {
               "to": "/products/choose-your-own-story",
             },
           ],
-          "className": "mx-auto container-width",
+          "className": "transition-slide-up mx-auto container-width",
         },
         "ref": null,
         "rendered": null,
@@ -506,7 +506,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "mx-auto container-width flex flex-wrap items-start",
+          "className": "transition-slide-up mx-auto container-width flex flex-wrap items-start",
         },
         "ref": null,
         "rendered": Array [
@@ -1595,10 +1595,10 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            className="mx-auto container-width"
+            className="transition-slide-up mx-auto container-width"
 />,
           <div
-            className="mx-auto container-width flex flex-wrap items-start"
+            className="transition-slide-up mx-auto container-width flex flex-wrap items-start"
 >
             <div
                         className="flex flex-wrap col-12 lg-col-6 px2"
@@ -1813,7 +1813,7 @@ ShallowWrapper {
                 "to": "/products/choose-your-own-story",
               },
             ],
-            "className": "mx-auto container-width",
+            "className": "transition-slide-up mx-auto container-width",
           },
           "ref": null,
           "rendered": null,
@@ -1885,7 +1885,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "mx-auto container-width flex flex-wrap items-start",
+            "className": "transition-slide-up mx-auto container-width flex flex-wrap items-start",
           },
           "ref": null,
           "rendered": Array [
@@ -3050,10 +3050,10 @@ ShallowWrapper {
                               },
                             ]
           }
-          className="mx-auto container-width"
+          className="transition-slide-up mx-auto container-width"
 />,
         <div
-          className="mx-auto container-width flex flex-wrap items-start"
+          className="transition-slide-up mx-auto container-width flex flex-wrap items-start"
 >
           <div
                     className="flex flex-wrap col-12 lg-col-6 px2"
@@ -3275,7 +3275,7 @@ ShallowWrapper {
               "to": "/products/choose-your-own-story",
             },
           ],
-          "className": "mx-auto container-width",
+          "className": "transition-slide-up mx-auto container-width",
         },
         "ref": null,
         "rendered": null,
@@ -3354,7 +3354,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "mx-auto container-width flex flex-wrap items-start",
+          "className": "transition-slide-up mx-auto container-width flex flex-wrap items-start",
         },
         "ref": null,
         "rendered": Array [
@@ -4459,10 +4459,10 @@ ShallowWrapper {
                                     },
                                   ]
             }
-            className="mx-auto container-width"
+            className="transition-slide-up mx-auto container-width"
 />,
           <div
-            className="mx-auto container-width flex flex-wrap items-start"
+            className="transition-slide-up mx-auto container-width flex flex-wrap items-start"
 >
             <div
                         className="flex flex-wrap col-12 lg-col-6 px2"
@@ -4684,7 +4684,7 @@ ShallowWrapper {
                 "to": "/products/choose-your-own-story",
               },
             ],
-            "className": "mx-auto container-width",
+            "className": "transition-slide-up mx-auto container-width",
           },
           "ref": null,
           "rendered": null,
@@ -4763,7 +4763,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "mx-auto container-width flex flex-wrap items-start",
+            "className": "transition-slide-up mx-auto container-width flex flex-wrap items-start",
           },
           "ref": null,
           "rendered": Array [

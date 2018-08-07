@@ -120,12 +120,12 @@ ShallowWrapper {
                     className="flex col col-8 md-col-9"
           >
                     <p
-                              className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                              className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                     >
                               Our Pledge
                     </p>
                     <p
-                              className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                              className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                     >
                               Ice cream arrives fresh delicious, and frozen
                     </p>
@@ -230,12 +230,12 @@ ShallowWrapper {
               className="flex col col-8 md-col-9"
 >
               <p
-                            className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                            className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
               >
                             Our Pledge
               </p>
               <p
-                            className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                            className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
               >
                             Ice cream arrives fresh delicious, and frozen
               </p>
@@ -272,12 +272,12 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                  className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
 >
                   Our Pledge
 </p>,
                 <p
-                  className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                  className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
 >
                   Ice cream arrives fresh delicious, and frozen
 </p>,
@@ -292,7 +292,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Our Pledge",
-                  "className": "col col-12 md-col-4 px2 block-subheadline carter nowrap",
+                  "className": "col col-12 md-col-5 px2 block-subheadline carter nowrap",
                 },
                 "ref": null,
                 "rendered": "Our Pledge",
@@ -304,7 +304,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Ice cream arrives fresh delicious, and frozen",
-                  "className": "tout col col-12 md-col-8 px2 flex uppercase semi-bold flex",
+                  "className": "tout col col-12 md-col-7 px2 flex uppercase semi-bold flex",
                 },
                 "ref": null,
                 "rendered": "Ice cream arrives fresh delicious, and frozen",
@@ -463,12 +463,12 @@ ShallowWrapper {
                         className="flex col col-8 md-col-9"
             >
                         <p
-                                    className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                                    className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                         >
                                     Our Pledge
                         </p>
                         <p
-                                    className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                                    className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                         >
                                     Ice cream arrives fresh delicious, and frozen
                         </p>
@@ -573,12 +573,12 @@ ShallowWrapper {
                 className="flex col col-8 md-col-9"
 >
                 <p
-                                className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                                className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                 >
                                 Our Pledge
                 </p>
                 <p
-                                className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                                className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                 >
                                 Ice cream arrives fresh delicious, and frozen
                 </p>
@@ -615,12 +615,12 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                    className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
 >
                     Our Pledge
 </p>,
                   <p
-                    className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                    className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
 >
                     Ice cream arrives fresh delicious, and frozen
 </p>,
@@ -635,7 +635,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Our Pledge",
-                    "className": "col col-12 md-col-4 px2 block-subheadline carter nowrap",
+                    "className": "col col-12 md-col-5 px2 block-subheadline carter nowrap",
                   },
                   "ref": null,
                   "rendered": "Our Pledge",
@@ -647,7 +647,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Ice cream arrives fresh delicious, and frozen",
-                    "className": "tout col col-12 md-col-8 px2 flex uppercase semi-bold flex",
+                    "className": "tout col col-12 md-col-7 px2 flex uppercase semi-bold flex",
                   },
                   "ref": null,
                   "rendered": "Ice cream arrives fresh delicious, and frozen",
@@ -852,12 +852,12 @@ ShallowWrapper {
                     className="flex col col-8 md-col-9"
           >
                     <p
-                              className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                              className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                     >
                               Our Pledge
                     </p>
                     <p
-                              className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                              className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                     >
                               Ice cream arrives fresh delicious, and frozen
                     </p>
@@ -922,12 +922,12 @@ ShallowWrapper {
               className="flex col col-8 md-col-9"
 >
               <p
-                            className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                            className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
               >
                             Our Pledge
               </p>
               <p
-                            className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                            className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
               >
                             Ice cream arrives fresh delicious, and frozen
               </p>
@@ -964,12 +964,12 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                  className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
 >
                   Our Pledge
 </p>,
                 <p
-                  className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                  className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
 >
                   Ice cream arrives fresh delicious, and frozen
 </p>,
@@ -984,7 +984,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Our Pledge",
-                  "className": "col col-12 md-col-4 px2 block-subheadline carter nowrap",
+                  "className": "col col-12 md-col-5 px2 block-subheadline carter nowrap",
                 },
                 "ref": null,
                 "rendered": "Our Pledge",
@@ -996,7 +996,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Ice cream arrives fresh delicious, and frozen",
-                  "className": "tout col col-12 md-col-8 px2 flex uppercase semi-bold flex",
+                  "className": "tout col col-12 md-col-7 px2 flex uppercase semi-bold flex",
                 },
                 "ref": null,
                 "rendered": "Ice cream arrives fresh delicious, and frozen",
@@ -1117,12 +1117,12 @@ ShallowWrapper {
                         className="flex col col-8 md-col-9"
             >
                         <p
-                                    className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                                    className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                         >
                                     Our Pledge
                         </p>
                         <p
-                                    className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                                    className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                         >
                                     Ice cream arrives fresh delicious, and frozen
                         </p>
@@ -1187,12 +1187,12 @@ ShallowWrapper {
                 className="flex col col-8 md-col-9"
 >
                 <p
-                                className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                                className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
                 >
                                 Our Pledge
                 </p>
                 <p
-                                className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                                className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
                 >
                                 Ice cream arrives fresh delicious, and frozen
                 </p>
@@ -1229,12 +1229,12 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="col col-12 md-col-4 px2 block-subheadline carter nowrap"
+                    className="col col-12 md-col-5 px2 block-subheadline carter nowrap"
 >
                     Our Pledge
 </p>,
                   <p
-                    className="tout col col-12 md-col-8 px2 flex uppercase semi-bold flex"
+                    className="tout col col-12 md-col-7 px2 flex uppercase semi-bold flex"
 >
                     Ice cream arrives fresh delicious, and frozen
 </p>,
@@ -1249,7 +1249,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Our Pledge",
-                    "className": "col col-12 md-col-4 px2 block-subheadline carter nowrap",
+                    "className": "col col-12 md-col-5 px2 block-subheadline carter nowrap",
                   },
                   "ref": null,
                   "rendered": "Our Pledge",
@@ -1261,7 +1261,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Ice cream arrives fresh delicious, and frozen",
-                    "className": "tout col col-12 md-col-8 px2 flex uppercase semi-bold flex",
+                    "className": "tout col col-12 md-col-7 px2 flex uppercase semi-bold flex",
                   },
                   "ref": null,
                   "rendered": "Ice cream arrives fresh delicious, and frozen",
