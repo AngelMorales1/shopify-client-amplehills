@@ -191,7 +191,7 @@ class LocationsCards extends Component {
                     key={location.id}
                     className={cx(
                       styles['LocationsCards__card-container'],
-                      'bg-white my2 flex flex-column justify-between relative w100'
+                      'transition-slide-up-large bg-white my2 flex flex-column justify-between relative w100'
                     )}
                   >
                     {location.distance ? (
