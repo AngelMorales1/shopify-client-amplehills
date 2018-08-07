@@ -60,9 +60,10 @@ class ProductHero extends Component {
 
     return (
       <div
-        className={`${
-          styles['ProductHero']
-        } flex flex-wrap transition-slide-up`}
+        className={cx(
+          styles['ProductHero'],
+          'flex flex-wrap transition-slide-up'
+        )}
         style={{ zIndex: z }}
       >
         {get(fields, 'alert', '') ? (
