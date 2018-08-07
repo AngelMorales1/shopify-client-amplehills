@@ -10,6 +10,7 @@ export const checkoutFetch = gql`
         note
         subtotalPrice
         totalPrice
+        webUrl
         lineItems(first: 250) {
           edges {
             node {
@@ -58,6 +59,7 @@ export const checkoutCreate = gql`
         note
         subtotalPrice
         totalPrice
+        webUrl
         lineItems(first: 250) {
           edges {
             node {
@@ -109,6 +111,7 @@ export const checkoutLineItemsAdd = gql`
         note
         subtotalPrice
         totalPrice
+        webUrl
         lineItems(first: 250) {
           edges {
             node {
@@ -160,6 +163,7 @@ export const checkoutLineItemsRemove = gql`
         note
         subtotalPrice
         totalPrice
+        webUrl
         lineItems(first: 250) {
           edges {
             node {
@@ -211,6 +215,7 @@ export const checkoutLineItemsUpdate = gql`
         note
         subtotalPrice
         totalPrice
+        webUrl
         lineItems(first: 250) {
           edges {
             node {

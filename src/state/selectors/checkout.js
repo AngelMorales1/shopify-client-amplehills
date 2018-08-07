@@ -11,6 +11,7 @@ export default createSelector(
     const note = get(checkout, 'note', '');
     const subtotalPrice = get(checkout, 'subtotalPrice', '');
     const totalPrice = get(checkout, 'totalPrice', '');
+    const webUrl = get(checkout, 'webUrl', '');
 
     return {
       id,
@@ -19,7 +20,8 @@ export default createSelector(
       currencyCode,
       note,
       subtotalPrice,
-      totalPrice
+      totalPrice,
+      webUrl
     };
   }
 );
