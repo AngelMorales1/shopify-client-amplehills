@@ -22,12 +22,12 @@ const LocationsMap = props => {
     actions
   } = props;
 
-  const onClickFeature = target => {
-    const targetLocationId = get(target, 'properties.id', '');
+  const onClickFeature = feature => {
+    const featureLocationId = get(feature, 'properties.id', '');
 
-    targetLocationId === selectedLocation
+    featureLocationId === selectedLocation
       ? actions.clearLocationSelection()
-      : actions.selectLocation(targetLocationId);
+      : actions.selectLocation(featureLocationId);
   };
 
   return (
@@ -71,7 +71,7 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={150}
         maxZoom={18}
-        onClickFeature={feature => onClickFeature(feature)}
+        onClickFeature={onClickFeature}
         featureIdZoomTo={selectedLocation}
       />
       <div className="absolute t0 l0 flex p3">
