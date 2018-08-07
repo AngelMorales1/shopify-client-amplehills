@@ -1,18 +1,19 @@
 @import 'settings';
 
 .ProductWhatsIncluded {
-  padding: spacing(10);
+  padding: spacing(10) spacing(4);
   flex-direction: column;
   align-items: center;
 
   @media ($medium-up) {
+    padding: spacing(20) spacing(4) spacing(10);
     flex-direction: row;
     justify-content: space-around;
   }
 
   &__flavor-container {
     @media ($medium-up) {
-      padding: spacing(3) 0;
+      padding: spacing(2) 0;
     }
   }
 

@@ -27,7 +27,7 @@ class SignUpView extends Component {
     if (get(customer, 'id')) return <Redirect to="/profile" />;
 
     return (
-      <div className="SignUp text-container-width mx-auto p3">
+      <div className="SignUp text-container-width transition-slide-up mt3 mx-auto p3">
         <h1 className="block-headline">Sign Up</h1>
         <div className="my3">
           <form onSubmit={e => this.SignUp(e)}>

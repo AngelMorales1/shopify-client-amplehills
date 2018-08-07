@@ -15,7 +15,7 @@ class ProductLandingView extends Component {
     });
 
     return (
-      <div className="ProductLanding mb3">
+      <div className="ProductLanding mb3 transition-slide-up">
         <div className="my4 px3 text-container-width mx-auto center">
           <h2 className="block-headline text-peach mb2">
             {get(content, 'title', '')}

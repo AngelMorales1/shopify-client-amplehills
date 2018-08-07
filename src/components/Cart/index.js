@@ -67,7 +67,7 @@ class Cart extends Component {
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
 
     const cart = (
-      <div>
+      <div className="transition-slide-up">
         <Breadcrumbs
           breadcrumbs={breadcrumbs}
           className="mx-auto container-width"

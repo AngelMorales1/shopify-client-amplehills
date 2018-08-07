@@ -1,9 +1,40 @@
-$transition-duration: 0.25s;
-$transition-duration-long: 1s;
+$transition-duration: 0.35s;
 $transition-duration-short: 0.125s;
-$transition-easing: ease-in-out;
+$transition-duration-medium: 0.5s;
+$transition-duration-long: 1s;
+$transition-easing: cubic-bezier(0.25, 0.2, 0, 1);
 $transition: $transition-duration $transition-easing;
 
 .transition {
   transition: $transition;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, spacing(4), 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: transform3d(0, 0, 0);
+  }
+}
+.transition-slide-up {
+  animation: slide-up $transition;
+}
+
+@keyframes slide-up-large {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, spacing(8), 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.transition-slide-up-large {
+  animation: slide-up-large $transition-duration-medium $transition-easing;
 }

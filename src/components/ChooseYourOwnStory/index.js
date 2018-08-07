@@ -163,9 +163,9 @@ class ChooseYourOwnStory extends Component {
       >
         <Breadcrumbs
           breadcrumbs={breadcrumbs}
-          className="mx-auto container-width"
+          className="transition-slide-up mx-auto container-width"
         />
-        <div className="mx-auto container-width flex flex-wrap items-start">
+        <div className="transition-slide-up mx-auto container-width flex flex-wrap items-start">
           <div
             className={cx(
               styles['ChooseYourOwnStory__product-cards'],
