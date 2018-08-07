@@ -57,11 +57,12 @@ class MapboxMap extends Component {
 
   initializeMap() {
     return new Promise((resolve, reject) => {
-      const { styleUrl } = this.props;
+      const { styleUrl, maxZoom } = this.props;
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
-        style: styleUrl
+        style: styleUrl,
+        maxZoom
       });
       map.on('load', () => {
         this.setState({ map }, () => resolve(map));
@@ -277,7 +278,6 @@ class MapboxMap extends Component {
 
     if (cluster) {
       map.on('click', 'cluster-count', e => {
-        console.log('clickccc');
         const features = map.queryRenderedFeatures(e.point, {
           layers: ['cluster-count']
         });
@@ -365,7 +365,8 @@ MapboxMap.propTypes = {
   collections: PropTypes.arrayOf(PropTypes.object),
   hoverFade: PropTypes.bool,
   className: PropTypes.string,
-  onLoad: PropTypes.func
+  onLoad: PropTypes.func,
+  maxZoom: PropTypes.number
 };
 
 MapboxMap.defaultProps = {
@@ -386,7 +387,8 @@ MapboxMap.defaultProps = {
   styleUrl: 'mapbox://styles/mapbox/streets-v9',
   collections: [],
   hoverFade: false,
-  className: undefined
+  className: undefined,
+  maxZoom: null
 };
 
 export default MapboxMap;

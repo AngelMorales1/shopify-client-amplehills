@@ -53,6 +53,7 @@ const LocationsMap = props => {
         textSize={16}
         textColor="#ffffff"
         mapPadding={150}
+        maxZoom={18}
       />
       <div className="absolute t0 l0 flex p3">
         <Button
