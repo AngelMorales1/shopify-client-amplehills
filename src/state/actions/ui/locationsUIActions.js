@@ -28,3 +28,11 @@ export const updateSearchFilter = value => {
     payload: value
   };
 };
+
+export const SELECT_LOCATION = 'SELECT_LOCATION';
+export const selectLocation = location => {
+  return {
+    type: SELECT_LOCATION,
+    payload: location
+  };
+};

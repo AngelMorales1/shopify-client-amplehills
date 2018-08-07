@@ -259,7 +259,21 @@ class MapboxMap extends Component {
     const { onClickFeature, hoverFade, cluster } = this.props;
     const { map } = this.state;
     map.on('click', 'layer', e => {
-      onClickFeature(e.features[0]);
+      if (e.features[0].properties.cluster) {
+        const clusterId = e.features[0].properties.cluster_id;
+        map
+          .getSource('source')
+          .getClusterExpansionZoom(clusterId, (error, zoom) => {
+            if (error) return null;
+
+            map.easeTo({
+              center: e.lngLat,
+              zoom
+            });
+          });
+      } else {
+        onClickFeature(e.features[0]);
+      }
     });
     map.on('mouseenter', 'layer', () => {
       map.getCanvas().style.cursor = 'pointer';
@@ -275,25 +289,6 @@ class MapboxMap extends Component {
         this.setFeatureHoverOpacityProperty('', 0.7);
       }
     });
-
-    if (cluster) {
-      map.on('click', 'cluster-count', e => {
-        const features = map.queryRenderedFeatures(e.point, {
-          layers: ['cluster-count']
-        });
-        const clusterId = features[0].properties.cluster_id;
-        map
-          .getSource('source')
-          .getClusterExpansionZoom(clusterId, (error, zoom) => {
-            if (error) return null;
-
-            map.easeTo({
-              center: features[0].geometry.coordinates,
-              zoom
-            });
-          });
-      });
-    }
   }
 
   setBounds() {

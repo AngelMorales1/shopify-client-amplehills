@@ -12,8 +12,13 @@ import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 
 const LocationsMap = props => {
-  const { filteredOutLocations, locationFilters, actions } = props;
-
+  const {
+    filteredOutLocations,
+    selectedLocation,
+    locationFilters,
+    actions
+  } = props;
+  console.log(selectedLocation);
   return (
     <div className={cx(styles['LocationsMap'], 'relative')}>
       <MapboxMap
@@ -54,6 +59,7 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={150}
         maxZoom={18}
+        onClickFeature={actions.selectLocation}
       />
       <div className="absolute t0 l0 flex p3">
         <Button
@@ -114,6 +120,7 @@ const LocationsMap = props => {
 
 LocationsMap.propTypes = {
   actions: PropTypes.shape({
+    selectLocation: PropTypes.func,
     clearLocationFilters: PropTypes.func,
     addLocationFilter: PropTypes.func,
     removeLocationFilter: PropTypes.func
@@ -133,13 +140,15 @@ LocationsMap.propTypes = {
 
 LocationsMap.defaultProps = {
   actions: {
+    selectLocation: () => {},
     clearLocationFilters: () => {},
     addLocationFilter: () => {},
     removeLocationFilter: () => {}
   },
   locationGeoJSON: {},
   locations: [],
-  locationFilters: []
+  locationFilters: [],
+  selectedLocation: null
 };
 
 export default LocationsMap;
