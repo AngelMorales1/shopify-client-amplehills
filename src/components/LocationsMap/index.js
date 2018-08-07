@@ -50,6 +50,7 @@ const LocationsMap = props => {
             filter: {
               ids: locations
                 .filter(location => location.seasonal)
+                .filter(location => location.id !== selectedLocation)
                 .map(location => location.id)
             },
             icon: 'seasonal-icon'
