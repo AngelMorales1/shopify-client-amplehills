@@ -23,6 +23,7 @@ const LocationsMap = props => {
   } = props;
 
   const onClickFeature = feature => {
+    console.log(feature);
     const featureLocationId = get(feature, 'properties.id', '');
 
     featureLocationId === selectedLocation

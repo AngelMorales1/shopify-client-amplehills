@@ -58,6 +58,7 @@ class MapboxMap extends Component {
     }
 
     if (prevProps.onClickFeature !== this.props.onClickFeature) {
+      this.unbindClickListeners();
       this.bindClickListeners();
     }
   }
@@ -278,26 +279,36 @@ class MapboxMap extends Component {
     this.bindMouseListeners();
   }
 
+  handleFeatureClick = e => {
+    const { onClickFeature, cluster } = this.props;
+    const { map } = this.state;
+    if (e.features[0].properties.cluster) {
+      const clusterId = e.features[0].properties.cluster_id;
+      map
+        .getSource('source')
+        .getClusterExpansionZoom(clusterId, (error, zoom) => {
+          if (error) return null;
+
+          map.easeTo({
+            center: e.lngLat,
+            zoom
+          });
+        });
+    } else {
+      onClickFeature(e.features[0]);
+    }
+  };
+
   bindClickListeners() {
     const { onClickFeature, cluster } = this.props;
     const { map } = this.state;
-    map.on('click', 'layer', e => {
-      if (e.features[0].properties.cluster) {
-        const clusterId = e.features[0].properties.cluster_id;
-        map
-          .getSource('source')
-          .getClusterExpansionZoom(clusterId, (error, zoom) => {
-            if (error) return null;
+    map.on('click', 'layer', this.handleFeatureClick);
+  }
 
-            map.easeTo({
-              center: e.lngLat,
-              zoom
-            });
-          });
-      } else {
-        onClickFeature(e.features[0]);
-      }
-    });
+  unbindClickListeners() {
+    const { onClickFeature, cluster } = this.props;
+    const { map } = this.state;
+    map.off('click', 'layer', this.handleFeatureClick);
   }
 
   bindMouseListeners() {
