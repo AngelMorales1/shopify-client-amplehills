@@ -151,7 +151,7 @@ class LocationsCards extends Component {
               >
                 <TextField
                   value={searchFilter}
-                  variant="primary"
+                  variant="primary-search"
                   className={styles['LocationsCards__search']}
                   placeholder={
                     locationFilters.length
