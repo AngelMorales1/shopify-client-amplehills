@@ -121,13 +121,13 @@ class LocationsCards extends Component {
                   className="w100 flex"
                   selectClassName="w100"
                   variant="secondary"
-                  placeholder="All"
+                  placeholder="All states"
                   value={
                     activeStateFilter
                       ? get(activeStateFilter, 'value', '')
                       : null
                   }
-                  options={[{ label: 'All', value: 'All' }]
+                  options={[{ label: 'All states', value: 'All' }]
                     .concat(Object.values(LocationsMapFilters.STATE_FILTERS))
                     .map(filter => ({
                       label: filter.label,
@@ -143,10 +143,15 @@ class LocationsCards extends Component {
                   }
                 />
               </div>
-              <div className="mb3 relative">
+              <div
+                className={cx(
+                  styles['LocationsCards__search'],
+                  'mx-auto mb3 relative'
+                )}
+              >
                 <TextField
                   value={searchFilter}
-                  variant="primary"
+                  variant="primary-search"
                   className={styles['LocationsCards__search']}
                   placeholder={
                     locationFilters.length
@@ -209,7 +214,7 @@ class LocationsCards extends Component {
                     <div
                       className={cx(
                         styles['LocationsCards__card-seasonal'],
-                        'z-1 absolute flex flex-column items-center justify-center'
+                        'absolute flex flex-column items-center justify-center z-1'
                       )}
                     >
                       <Image
@@ -217,7 +222,7 @@ class LocationsCards extends Component {
                           styles['LocationsCards__card-seasonal-image'],
                           'z-overlay'
                         )}
-                        src={get(location, 'seasonalImage.fields.file.url', '')}
+                        src={get(location, 'seasonalImage', '')}
                       />
                       <div
                         className={cx(
