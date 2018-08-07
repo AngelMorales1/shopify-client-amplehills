@@ -83,7 +83,7 @@ class ProductHero extends Component {
           }}
         />
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
-          <div className="col-12 md-col-8 px2 mx-auto">
+          <div className="col-12 md-col-8 px3 mx-auto">
             <div className="relative inline-block">
               <h1 className="block-headline mb4 relative z-1">
                 {get(fields, 'title', '')}

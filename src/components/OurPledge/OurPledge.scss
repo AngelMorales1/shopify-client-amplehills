@@ -3,11 +3,12 @@
 .OurPledge {
   &__content-container {
     border-radius: radius('m');
-    padding: spacing(6) spacing(4);
+    padding: spacing(6) spacing(4) spacing(6) spacing(2);
     flex-direction: row;
     justify-content: space-between;
 
     @media ($medium-up) {
+      padding: spacing(6) spacing(4);
       min-width: spacing(100);
       align-items: center;
     }
