@@ -230,7 +230,7 @@ class ChooseYourOwnStory extends Component {
         <div
           className={cx(
             styles['ChooseYourOwnStory__menu'],
-            'transition-slide-up z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
+            'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3',
             this.state.menuPosition
           )}
         >

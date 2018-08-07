@@ -60,7 +60,7 @@ class ProductDetails extends Component {
             const fields = get(detail, 'fields', {});
             const classes = cx(
               styles['ProductDetail'],
-              'container-width mx-auto flex items-center py3',
+              'transition-slide-up-large container-width mx-auto flex items-center py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
                   get(detail, 'sys.id', ''),
@@ -185,26 +185,26 @@ ProductDetails.propTypes = {
         PropTypes.shape({
           fields: PropTypes.shape({
             title: PropTypes.string,
-            description: PropTypes.string,
-            details: PropTypes.string,
             flavorHighlight: PropTypes.string,
-            pintImage: PropTypes.shape({
-              fields: PropTypes.shape({
-                description: PropTypes.string,
-                file: PropTypes.shape({
-                  url: PropTypes.string
-                })
-              })
-            }),
-            detailsImage: PropTypes.shape({
-              fields: PropTypes.shape({
-                description: PropTypes.string,
-                file: PropTypes.shape({
-                  url: PropTypes.string
-                })
-              })
-            }),
             flavorHighlightImage: PropTypes.shape({
+              fields: PropTypes.shape({
+                description: PropTypes.string,
+                file: PropTypes.shape({
+                  url: PropTypes.string
+                })
+              })
+            }),
+            text1: PropTypes.string,
+            text1Image: PropTypes.shape({
+              fields: PropTypes.shape({
+                description: PropTypes.string,
+                file: PropTypes.shape({
+                  url: PropTypes.string
+                })
+              })
+            }),
+            text2: PropTypes.string,
+            text2Image: PropTypes.shape({
               fields: PropTypes.shape({
                 description: PropTypes.string,
                 file: PropTypes.shape({
@@ -231,25 +231,7 @@ ProductDetails.defaultProps = {
         {
           fields: {
             title: '',
-            description: '',
-            details: '',
             flavorHighlight: '',
-            pintImage: {
-              fields: {
-                description: '',
-                file: {
-                  url: ''
-                }
-              }
-            },
-            detailsImage: {
-              fields: {
-                description: '',
-                file: {
-                  url: ''
-                }
-              }
-            },
             flavorHighlightImage: {
               fields: {
                 description: '',
