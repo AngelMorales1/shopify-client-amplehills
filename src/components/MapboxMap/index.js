@@ -70,13 +70,14 @@ class MapboxMap extends Component {
   }
 
   addSource() {
+    const { map } = this.state;
     const {
       featureCollection,
       cluster,
       clusterMaxZoom,
       clusterRadius
     } = this.props;
-    const source = this.state.map.addSource('source', {
+    const source = map.addSource('source', {
       type: 'geojson',
       data: featureCollection,
       cluster,
@@ -254,7 +255,7 @@ class MapboxMap extends Component {
   }
 
   bindEventListeners() {
-    const { onClickFeature, hoverFade } = this.props;
+    const { onClickFeature, hoverFade, cluster } = this.props;
     const { map } = this.state;
     map.on('click', 'layer', e => {
       onClickFeature(e.features[0]);
@@ -273,6 +274,26 @@ class MapboxMap extends Component {
         this.setFeatureHoverOpacityProperty('', 0.7);
       }
     });
+
+    if (cluster) {
+      map.on('click', 'cluster-count', e => {
+        console.log('clickccc');
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ['cluster-count']
+        });
+        const clusterId = features[0].properties.cluster_id;
+        map
+          .getSource('source')
+          .getClusterExpansionZoom(clusterId, (error, zoom) => {
+            if (error) return null;
+
+            map.easeTo({
+              center: features[0].geometry.coordinates,
+              zoom
+            });
+          });
+      });
+    }
   }
 
   setBounds() {
