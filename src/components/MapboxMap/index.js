@@ -89,13 +89,20 @@ class MapboxMap extends Component {
       clusterMaxZoom,
       clusterRadius
     } = this.props;
-    const source = map.addSource('source', {
-      type: 'geojson',
-      data: featureCollection,
-      cluster,
-      clusterMaxZoom,
-      clusterRadius
-    });
+
+    const source = cluster
+      ? map.addSource('source', {
+          type: 'geojson',
+          data: featureCollection,
+          cluster,
+          clusterMaxZoom,
+          clusterRadius
+        })
+      : map.addSource('source', {
+          type: 'geojson',
+          data: featureCollection
+        });
+
     this.setState({ source });
   }
 
