@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import scrollTo from 'react-scroll-to-component';
 import get from 'utils/get';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
@@ -15,6 +16,8 @@ class LocationsCards extends Component {
     sortedLocations: false
   };
 
+  $cards = {};
+
   componentDidMount = () => {
     this.attemptToGetDistanceToStores();
   };
@@ -22,6 +25,15 @@ class LocationsCards extends Component {
   componentDidUpdate = prevProps => {
     if (this.props.filteredLocations !== prevProps.filteredLocations) {
       this.attemptToGetDistanceToStores();
+    }
+
+    if (
+      prevProps.selectedLocation !== this.props.selectedLocation &&
+      this.props.selectedLocation !== null
+    ) {
+      scrollTo(this.$cards[this.props.selectedLocation], {
+        duration: 1500
+      });
     }
   };
 
@@ -190,6 +202,7 @@ class LocationsCards extends Component {
                 {sortedLocations.map(location => (
                   <div
                     key={location.id}
+                    ref={$card => (this.$cards[location.id] = $card)}
                     className={cx(
                       styles['LocationsCards__card-container'],
                       'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100',
