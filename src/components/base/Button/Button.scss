@@ -97,10 +97,15 @@
 
   &--circle {
     @extend .circle;
-    font-size: $font-5;
-    padding-top: 2px;
+    font-size: $font-4;
+    padding-top: spacing(1);
     height: spacing(10);
     width: spacing(10);
+
+    @media ($medium-up) {
+      font-size: $font-5;
+      padding-top: spacing(1);
+    }
   }
 
   &--circle-medium {
