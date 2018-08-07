@@ -4,7 +4,8 @@ import {
   REMOVE_LOCATION_FILTER,
   CLEAR_LOCATION_FILTERS,
   UPDATE_SEARCH_FILTER,
-  SELECT_LOCATION
+  SELECT_LOCATION,
+  CLEAR_LOCATION_SELECTION
 } from 'state/actions/ui/locationsUIActions';
 
 const initialState = {
@@ -43,7 +44,13 @@ export default (state = initialState, action) => {
     case SELECT_LOCATION:
       return {
         ...state,
-        selectedLocation: get(action.payload, 'properties.id', '')
+        selectedLocation: action.payload
+      };
+    case CLEAR_LOCATION_SELECTION:
+      const { selectedLocation } = initialState;
+      return {
+        ...state,
+        selectedLocation
       };
     default:
       return state;

@@ -31,13 +31,20 @@ class MapboxMap extends Component {
     });
   }
 
-  componentDidUpdate(prevProps) {
+  async componentDidUpdate(prevProps) {
     if (!this.state.loaded) return;
 
     if (prevProps.collections !== this.props.collections) {
       this.setMapProperties();
       if (prevProps.featureIdZoomTo === this.props.featureIdZoomTo) {
-        this.setBounds().then(this.zoomToBounds);
+        await this.setBounds();
+
+        if (this.props.featureIdZoomTo === null) {
+          this.zoomToBounds();
+        } else {
+          const feature = this.featureFromId(this.props.featureIdZoomTo);
+          this.zoomToFeature(feature);
+        }
       }
     }
 
@@ -48,6 +55,10 @@ class MapboxMap extends Component {
         const feature = this.featureFromId(this.props.featureIdZoomTo);
         if (feature) this.zoomToFeature(feature);
       }
+    }
+
+    if (prevProps.onClickFeature !== this.props.onClickFeature) {
+      this.bindClickListeners();
     }
   }
 
@@ -256,7 +267,12 @@ class MapboxMap extends Component {
   }
 
   bindEventListeners() {
-    const { onClickFeature, hoverFade, cluster } = this.props;
+    this.bindClickListeners();
+    this.bindMouseListeners();
+  }
+
+  bindClickListeners() {
+    const { onClickFeature, cluster } = this.props;
     const { map } = this.state;
     map.on('click', 'layer', e => {
       if (e.features[0].properties.cluster) {
@@ -275,6 +291,11 @@ class MapboxMap extends Component {
         onClickFeature(e.features[0]);
       }
     });
+  }
+
+  bindMouseListeners() {
+    const { hoverFade } = this.props;
+    const { map } = this.state;
     map.on('mouseenter', 'layer', () => {
       map.getCanvas().style.cursor = 'pointer';
     });
@@ -321,7 +342,7 @@ class MapboxMap extends Component {
 
   zoomToFeature(feature) {
     this.state.map.flyTo({
-      zoom: 10,
+      zoom: this.props.maxZoom,
       speed: 1,
       center: feature.geometry.coordinates
     });

@@ -36,3 +36,10 @@ export const selectLocation = location => {
     payload: location
   };
 };
+
+export const CLEAR_LOCATION_SELECTION = 'CLEAR_LOCATION_SELECTION';
+export const clearLocationSelection = () => {
+  return {
+    type: CLEAR_LOCATION_SELECTION
+  };
+};

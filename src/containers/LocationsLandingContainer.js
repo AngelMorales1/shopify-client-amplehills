@@ -9,7 +9,8 @@ import {
   removeLocationFilter,
   clearLocationFilters,
   updateSearchFilter,
-  selectLocation
+  selectLocation,
+  clearLocationSelection
 } from 'state/actions/ui/locationsUIActions';
 
 import locations from 'state/selectors/locations';
@@ -45,7 +46,8 @@ const mapDispatchToProps = dispatch => {
         removeLocationFilter,
         clearLocationFilters,
         updateSearchFilter,
-        selectLocation
+        selectLocation,
+        clearLocationSelection
       },
       dispatch
     )

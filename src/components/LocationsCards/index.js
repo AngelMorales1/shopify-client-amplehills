@@ -84,7 +84,8 @@ class LocationsCards extends Component {
       actions,
       locationFilters,
       searchFilter,
-      locationResultsLabel
+      locationResultsLabel,
+      selectedLocation
     } = this.props;
     const { sortedLocations } = this.state;
     const STATE_KEY = get(
@@ -191,7 +192,11 @@ class LocationsCards extends Component {
                     key={location.id}
                     className={cx(
                       styles['LocationsCards__card-container'],
-                      'transition-slide-up-large bg-white my2 flex flex-column justify-between relative w100'
+                      'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100',
+                      {
+                        [styles['LocationsCards__card-container--selected']]:
+                          location.id === selectedLocation
+                      }
                     )}
                   >
                     {location.distance ? (
@@ -328,11 +333,13 @@ class LocationsCards extends Component {
 }
 
 LocationsCards.propTypes = {
-  locations: PropTypes.arrayOf(locationModel.propTypes)
+  locations: PropTypes.arrayOf(locationModel.propTypes),
+  selectedLocation: PropTypes.string
 };
 
 LocationsCards.defaultProps = {
-  locations: []
+  locations: [],
+  selectedLocation: null
 };
 
 export default LocationsCards;
