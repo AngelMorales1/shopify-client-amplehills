@@ -88,3 +88,17 @@ $transition: $transition-duration $transition-easing;
 .transition-fade-in {
   animation: fade-in $transition-duration;
 }
+
+@keyframes fade-in-color {
+  0% {
+    background: color('white');
+  }
+
+  100% {
+    background: color('peach');
+  }
+}
+
+.transition-fade-in-color {
+  animation: fade-in $transition-duration;
+}
