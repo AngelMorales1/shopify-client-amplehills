@@ -135,8 +135,12 @@
   }
 
   &__update-button {
-    animation: slide-down 0.5s;
     opacity: 0;
+    // animation: slide-down 0.5s;
+
+    &--none-active {
+      animation: slide-down 0.5s;
+    }
 
     &--active {
       animation: slide-up 0.5s;
