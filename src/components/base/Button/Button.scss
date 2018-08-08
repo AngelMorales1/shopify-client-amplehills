@@ -98,7 +98,7 @@
   &--circle {
     @extend .circle;
     font-size: $font-4;
-    padding-top: 2px;
+    padding-bottom: 1px;
     height: spacing(10);
     width: spacing(10);
 
@@ -111,7 +111,6 @@
   &--circle-medium {
     @extend .circle;
     padding: 0;
-    padding-top: 0;
     font-size: $font-3;
     height: spacing(9);
     width: spacing(9);
