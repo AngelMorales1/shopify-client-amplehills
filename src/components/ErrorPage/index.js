@@ -11,9 +11,7 @@ const ErrorPage = ({ children }) => {
         children
       ) : (
         <div className="absolute-cover flex items-center justify-center">
-          <div
-            className={cx(styles['ErrorPage__container'], 'center text-white')}
-          >
+          <div className="center text-white transition-slide-up-large">
             <Image
               className={cx(styles['ErrorPage__logo'], 'w100')}
               src="/assets/images/ample-hills-logo.svg"

@@ -4,10 +4,15 @@ import cx from 'classnames';
 import styles from './FormFlash.scss';
 
 const FormFlash = ({ className, message, success, error }) => {
-  const classes = cx(styles['FormFlash'], className, 'py1 px2', {
-    [styles['FormFlash--success']]: success,
-    [styles['FormFlash--error']]: error
-  });
+  const classes = cx(
+    styles['FormFlash'],
+    className,
+    'py1 px2 transition-enter',
+    {
+      [styles['FormFlash--success']]: success,
+      [styles['FormFlash--error']]: error
+    }
+  );
   return (
     <div className={classes}>
       <p className="copy bold">{message}</p>
