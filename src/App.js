@@ -19,6 +19,7 @@ import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
+import Alert from 'components/Alert';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -53,6 +54,7 @@ class App extends Component {
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
+          <Alert />
           <Nav />
           <MiniCart />
 

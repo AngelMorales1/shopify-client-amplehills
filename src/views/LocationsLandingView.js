@@ -8,6 +8,7 @@ class LocationsLandingView extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.small.label,
     desktopHeaderHeight: Global.headerHeight.desktop,
+    desktopAlertHeight: Global.alertHeight.desktop,
     locationsCardsWidth: Global.locationsCardsWidth
   };
 
@@ -40,7 +41,8 @@ class LocationsLandingView extends Component {
             className="self-start w100"
             style={{
               position: 'sticky',
-              top: `${this.state.desktopHeaderHeight}px`
+              top: `${this.state.desktopHeaderHeight +
+                this.state.desktopAlertHeight}px`
             }}
           >
             <LocationsMap {...this.props} />

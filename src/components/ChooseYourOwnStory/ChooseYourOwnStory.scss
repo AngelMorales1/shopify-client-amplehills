@@ -14,7 +14,9 @@ $menu-height: spacing(37.5);
       padding: 0 spacing(16);
       position: sticky;
       margin-top: spacing(4);
-      top: calc(#{spacing(16)} + #{$header-height-desktop});
+      top: calc(
+        #{spacing(16)} + #{$header-height-desktop} + #{$alert-height-desktop}
+      );
     }
   }
 

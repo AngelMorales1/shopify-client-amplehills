@@ -39,10 +39,10 @@ Dimension classes
 }
 
 .content-wrapper {
-  padding-top: $header-height-mobile;
+  padding-top: calc(#{$header-height-mobile} + #{$alert-height-mobile});
 
   @media ($medium-up) {
-    padding-top: $header-height-desktop;
+    padding-top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
   }
 }
 
