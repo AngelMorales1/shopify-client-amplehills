@@ -107,7 +107,7 @@ class Nav extends Component {
             </Fragment>
           )}
           <Button
-            className=" flex items-center justify-center"
+            className="small flex items-center justify-center"
             variant="circle"
             color="madison-blue"
             to="/cart"
