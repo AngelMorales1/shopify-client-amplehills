@@ -136,13 +136,10 @@
 
   &__update-button {
     opacity: 0;
-    // animation: slide-down 0.5s;
-
-    &--none-active {
-      animation: slide-down 0.5s;
-    }
+    animation: slide-down 0.5s;
 
     &--active {
+      display: block;
       animation: slide-up 0.5s;
       opacity: 1;
     }

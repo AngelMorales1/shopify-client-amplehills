@@ -35,7 +35,8 @@ class Cart extends Component {
     super(...arguments);
 
     this.state = {
-      note: get(props.checkout, 'note') ? get(props.checkout, 'note') : ''
+      note: get(props.checkout, 'note') ? get(props.checkout, 'note') : '',
+      showUpdateButton: false
     };
   }
 
@@ -43,6 +44,7 @@ class Cart extends Component {
     const checkoutId = get(this.props, 'checkout.id', '');
     const { note } = this.state;
     const input = { note };
+    this.setState({ showUpdateButton: true });
 
     this.props.actions.updateNote(checkoutId, input);
   };
@@ -257,24 +259,27 @@ class Cart extends Component {
                     >
                       Gift Message
                     </h2>
-                    <Button
-                      disabled={
-                        this.state.note === currentNote ||
-                        updatingNote === PENDING
-                      }
-                      className={cx(
-                        styles['Cart__update-button'],
-                        {
-                          [styles['Cart__update-button--active']]:
-                            this.state.note !== currentNote
-                        },
-                        'md-hide lg-hide'
-                      )}
-                      variant="primary-small"
-                      color="peach"
-                      label="Update"
-                      onClick={this.updateNote}
-                    />
+                    {this.state.showUpdateButton ||
+                    this.state.note !== currentNote ? (
+                      <Button
+                        disabled={
+                          this.state.note === currentNote ||
+                          updatingNote === PENDING
+                        }
+                        className={cx(
+                          styles['Cart__update-button'],
+                          {
+                            [styles['Cart__update-button--active']]:
+                              this.state.note !== currentNote
+                          },
+                          'md-hide lg-hide'
+                        )}
+                        variant="primary-small"
+                        color="peach"
+                        label="Update"
+                        onClick={this.updateNote}
+                      />
+                    ) : null}
                   </div>
                   {updatingNote === FULFILLED ? (
                     <FormFlash
@@ -330,19 +335,22 @@ class Cart extends Component {
                     color="madison-blue"
                     to={get(checkout, 'webUrl', '')}
                   />
-                  <Button
-                    disabled={
-                      this.state.note === currentNote ||
-                      updatingNote === PENDING
-                    }
-                    className={cx(styles['Cart__update-button'], {
-                      [styles['Cart__update-button--active']]:
-                        this.state.note !== currentNote
-                    })}
-                    color="peach"
-                    label="Update"
-                    onClick={this.updateNote}
-                  />
+                  {this.state.showUpdateButton ||
+                  this.state.note !== currentNote ? (
+                    <Button
+                      disabled={
+                        this.state.note === currentNote ||
+                        updatingNote === PENDING
+                      }
+                      className={cx(styles['Cart__update-button'], {
+                        [styles['Cart__update-button--active']]:
+                          this.state.note !== currentNote
+                      })}
+                      color="peach"
+                      label="Update"
+                      onClick={this.updateNote}
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>
