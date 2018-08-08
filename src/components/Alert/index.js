@@ -1,8 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
-
-import { Image } from 'components/base';
 
 import styles from './Alert.scss';
 
@@ -25,7 +22,3 @@ const Alert = () => {
 };
 
 export default Alert;
-
-Alert.propTypes = {};
-
-Alert.defaultProps = {};
