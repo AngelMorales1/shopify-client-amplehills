@@ -119,11 +119,11 @@ $transition-duration: 0.2;
 .loader,
 .loader:before,
 .loader:after {
+  @extend .transition-show-hide-dots;
   margin-bottom: spacing(40);
   border-radius: 50%;
   width: spacing(8);
   height: spacing(8);
-  animation: showHideDot 1.8s infinite ease-in-out;
 }
 .loader {
   color: color('white');
@@ -144,15 +144,4 @@ $transition-duration: 0.2;
   position: absolute;
   top: 0;
   left: spacing(12);
-}
-
-@keyframes showHideDot {
-  0%,
-  80%,
-  100% {
-    box-shadow: 0 spacing(10) 0 spacing(-5);
-  }
-  40% {
-    box-shadow: 0 spacing(10) 0 0;
-  }
 }
