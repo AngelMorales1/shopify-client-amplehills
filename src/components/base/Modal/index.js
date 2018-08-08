@@ -1,23 +1,15 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from './Modal.scss';
-
 const Modal = ({ className, children }) => {
   return (
     <div
       className={cx(
-        styles['Modal'],
         className,
-        'fixed-cover bg-white-wash flex justify-center items-center'
+        'fixed-cover bg-white-wash flex justify-center items-center transition-fade-in'
       )}
     >
-      <div
-        className={cx(
-          styles['Modal__inner'],
-          'text-container-width w100 bg-white card drop-shadow p3'
-        )}
-      >
+      <div className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long">
         {children}
       </div>
     </div>
