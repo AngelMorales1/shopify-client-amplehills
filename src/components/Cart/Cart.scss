@@ -136,11 +136,12 @@
 
   &__update-button {
     opacity: 0;
-    animation: slide-down 0.5s;
+    transform: translate3d(0, spacing(4), 0);
+    animation-duration: $transition-duration-medium;
 
     &--active {
-      animation: slide-up 0.5s;
       opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
   }
 }
