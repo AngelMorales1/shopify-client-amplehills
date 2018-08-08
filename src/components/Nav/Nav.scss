@@ -9,6 +9,12 @@
     padding: spacing(4) spacing(8);
   }
 
+  &__cart-button {
+    @media ($medium-up) {
+      padding-top: 1px;
+    }
+  }
+
   .left-side {
     order: 2;
     justify-content: center;
