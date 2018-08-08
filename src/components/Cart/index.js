@@ -262,14 +262,7 @@ class Cart extends Component {
                         this.state.note === currentNote ||
                         updatingNote === PENDING
                       }
-                      className={cx(
-                        styles['Cart__update-button'],
-                        {
-                          [styles['Cart__update-button--active']]:
-                            this.state.note !== currentNote
-                        },
-                        'md-hide lg-hide'
-                      )}
+                      className="md-hide lg-hide"
                       variant="primary-small"
                       color="peach"
                       label="Update"
@@ -335,10 +328,6 @@ class Cart extends Component {
                       this.state.note === currentNote ||
                       updatingNote === PENDING
                     }
-                    className={cx(styles['Cart__update-button'], {
-                      [styles['Cart__update-button--active']]:
-                        this.state.note !== currentNote
-                    })}
                     color="peach"
                     label="Update"
                     onClick={this.updateNote}
