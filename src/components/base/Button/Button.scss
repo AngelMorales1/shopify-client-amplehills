@@ -206,4 +206,10 @@
       box-shadow: unset;
     }
   }
+
+  &--plus {
+    > div {
+      padding-top: 1px;
+    }
+  }
 }
