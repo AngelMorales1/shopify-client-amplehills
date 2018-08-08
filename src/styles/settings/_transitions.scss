@@ -43,6 +43,20 @@ $transition: $transition-duration $transition-easing;
   animation: slide-up-large $transition-duration-long;
 }
 
+@keyframes slide-up-menu {
+  0% {
+    transform: translateY(spacing(12));
+  }
+
+  100% {
+    transform: translateY(spacing(1));
+  }
+}
+
+.transition-slide-up-menu {
+  animation: slide-up-menu $transition-duration-medium $transition-easing;
+}
+
 @keyframes enter {
   0% {
     opacity: 0;
