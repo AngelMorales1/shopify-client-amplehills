@@ -9,6 +9,18 @@ $transition: $transition-duration $transition-easing;
   transition: $transition;
 }
 
+@keyframes slide-down {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, spacing(4), 0);
+  }
+}
+
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -20,6 +32,7 @@ $transition: $transition-duration $transition-easing;
     transform: transform3d(0, 0, 0);
   }
 }
+
 .transition-slide-up {
   animation: slide-up $transition;
 }
