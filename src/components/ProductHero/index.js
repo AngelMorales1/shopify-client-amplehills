@@ -91,7 +91,11 @@ class ProductHero extends Component {
               </h1>
               <Image
                 style={{
-                  left: `${get(block, 'fields.titleImagePosition', 0)}rem`
+                  transform: `translateX(${get(
+                    block,
+                    'fields.titleImagePosition',
+                    0
+                  )}%)`
                 }}
                 className={cx(
                   'absolute z-below',

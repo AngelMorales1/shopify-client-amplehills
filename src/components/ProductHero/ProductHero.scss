@@ -2,7 +2,7 @@
 
 .ProductHero {
   &__title-illustration {
-    top: -28%;
+    top: 0;
     width: spacing(72);
     @media ($medium-up) {
       width: spacing(90);
