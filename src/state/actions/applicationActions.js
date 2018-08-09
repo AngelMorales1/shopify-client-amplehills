@@ -1,5 +1,5 @@
 import Data from 'lib/Data';
-import ContentfulClient from 'lib/Contentful';
+import ContentfulClient, { PreviewClient } from 'lib/Contentful';
 import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
 
@@ -11,11 +11,11 @@ import {
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
-export const initializeApplication = checkoutID => dispatch => {
+export const initializeApplication = (checkoutID, isPreview) => dispatch => {
   return dispatch({
     type: INITIALIZE_APPLICATION,
     payload: new Promise((resolve, reject) => {
-      const Contentful = ContentfulClient();
+      const Contentful = isPreview ? PreviewClient() : ContentfulClient();
       Data.setRef('contentful', Contentful);
       return Promise.all([
         fetchOrCreateCheckout(checkoutID)(dispatch),

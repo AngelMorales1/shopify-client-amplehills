@@ -10,6 +10,7 @@ import checkout from 'state/selectors/checkout';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
+import isContentfulPreview from 'utils/isContentfulPreview';
 import Routes from 'routes';
 import locationModel from 'models/locationModel';
 
@@ -31,7 +32,10 @@ class App extends Component {
       actions: { initializeApplication }
     } = this.props;
     if (applicationStatus === IDLE) {
-      initializeApplication(get(checkout, 'id', false));
+      const checkoutId = get(checkout, 'id', false);
+      const isPreview = isContentfulPreview();
+
+      initializeApplication(checkoutId, isPreview);
     }
   }
 

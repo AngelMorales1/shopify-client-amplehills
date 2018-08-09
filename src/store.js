@@ -11,10 +11,15 @@ import createHistory from 'history/createBrowserHistory';
 import reducers from 'state/reducers';
 import session from 'state/reducers/session';
 
+import isContentfulPreview from 'utils/isContentfulPreview';
+
 const middleware = [thunk, promiseMiddleware()];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-if (localStorage.getItem('_ample_version') !== packageJSON.version) {
+if (
+  localStorage.getItem('_ample_version') !== packageJSON.version ||
+  isContentfulPreview()
+) {
   localStorage.removeItem('persist:root');
   localStorage.setItem('_ample_version', packageJSON.version);
 }
