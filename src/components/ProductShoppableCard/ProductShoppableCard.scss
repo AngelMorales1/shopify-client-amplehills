@@ -13,22 +13,5 @@
 
   &__actions {
     height: $button-small-height;
-
-    .ProductShoppableCard__quantity-selector {
-      opacity: 0;
-      transform: translate3d(0, spacing(-8), 0);
-    }
-
-    &--has-quantity {
-      .ProductShoppableCard__quantity-selector {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-
-      .ProductShoppableCard__button {
-        opacity: 0;
-        transform: translate3d(0, spacing(8), 0);
-      }
-    }
   }
 }
