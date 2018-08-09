@@ -2,7 +2,10 @@
 
 .ProductHero {
   &__title-illustration {
-    width: spacing(90);
-    top: -50%;
+    top: -28%;
+    width: spacing(72);
+    @media ($medium-up) {
+      width: spacing(90);
+    }
   }
 }
