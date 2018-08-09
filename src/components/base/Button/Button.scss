@@ -172,7 +172,8 @@
     border: spacing(1) solid color('madison-blue');
 
     &.Button--circle {
-      padding-top: 4px;
+      padding-top: 2px;
+
       @media ($medium-up) {
         padding: 0;
       }
