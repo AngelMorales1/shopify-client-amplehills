@@ -102,10 +102,7 @@ class ProductHero extends Component {
             </div>
             <form className="flex flex-wrap items-center">
               <QuantitySelector
-                className={cx(
-                  styles['ProductHero__quantity-selector'],
-                  'my3 mr3'
-                )}
+                className="my3 mr3"
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
