@@ -10,7 +10,16 @@
   }
 
   &__cart-button {
-    padding-top: 2px;
+    > span {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      @media ($medium-up) {
+        padding-bottom: 1px;
+      }
+    }
   }
 
   .left-side {
