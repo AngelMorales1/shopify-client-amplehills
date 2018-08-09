@@ -86,12 +86,15 @@ class ProductHero extends Component {
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px3 mx-auto">
             <div className="relative inline-block">
-              <h1 className="block-headline mb4 relative z-1">
+              <h1 className="block-headline mb4 relative">
                 {get(fields, 'title', '')}
               </h1>
               <Image
+                style={{
+                  left: `${get(block, 'fields.titleImagePosition', 0)}rem`
+                }}
                 className={cx(
-                  'absolute',
+                  'absolute z-below',
                   styles['ProductHero__title-illustration']
                 )}
                 src={get(fields, 'titleIllustration.fields.file.url', '')}
