@@ -103,20 +103,6 @@ $transition: $transition-duration $transition-easing;
   animation: fade-in $transition-duration;
 }
 
-@keyframes fade-in-white {
-  0% {
-    background: color('white');
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.transition-fade-in-white {
-  animation: fade-in-white $transition-duration;
-}
-
 @keyframes show-hide-dots {
   0%,
   80%,

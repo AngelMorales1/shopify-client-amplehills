@@ -11,7 +11,7 @@ const Alert = ({ alert }) => {
     <div
       className={cx(
         styles['Alert'],
-        'z-nav w100 fixed l0 t0 bg-madison-blue bold flex flex-row justify-center items-center transition-fade-in-white'
+        'z-nav w100 fixed l0 t0 bg-madison-blue bold flex flex-row justify-center items-center transition-fade-in'
       )}
     >
       <span className={cx(styles['Alert__text'], 'text-white')}>
