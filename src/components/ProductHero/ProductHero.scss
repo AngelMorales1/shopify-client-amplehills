@@ -1,6 +1,16 @@
+@import 'settings';
+
 .ProductHero {
   &__title-illustration {
     top: -0.5rem;
     right: 1rem;
+  }
+
+  &__quantity-selector {
+    > button {
+      @media ($medium-up) {
+        padding-top: 1px;
+      }
+    }
   }
 }
