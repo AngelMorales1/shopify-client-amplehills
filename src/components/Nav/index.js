@@ -107,7 +107,10 @@ class Nav extends Component {
             </Fragment>
           )}
           <Button
-            className="small flex items-center justify-center"
+            className={cx(
+              styles['Nav__cart-button'],
+              'small flex items-center justify-center'
+            )}
             variant="circle"
             color="madison-blue"
             to="/cart"
