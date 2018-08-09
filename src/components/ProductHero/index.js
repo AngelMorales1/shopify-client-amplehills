@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import moment from 'moment';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
@@ -105,6 +106,14 @@ class ProductHero extends Component {
             <div>
               <p className="copy pr2">{product.description}</p>
             </div>
+            {product.preOrderDate ? (
+              <div className="mt3 mb2">
+                <strong className="text-peach bold small">
+                  This product will ship on{' '}
+                  {moment(product.preOrderDate).format('MMMM Do YYYY')}.
+                </strong>
+              </div>
+            ) : null}
             <form className="flex flex-wrap items-center">
               <QuantitySelector
                 className="my3 mr3"
