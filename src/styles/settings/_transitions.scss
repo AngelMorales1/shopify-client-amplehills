@@ -120,7 +120,7 @@ $transition: $transition-duration $transition-easing;
   animation: fade-in $transition-duration;
 }
 
-@keyframes fade-in-color {
+@keyframes fade-in-color-peach {
   0% {
     background: color('white');
   }
@@ -130,8 +130,22 @@ $transition: $transition-duration $transition-easing;
   }
 }
 
-.transition-fade-in-color {
-  animation: fade-in $transition-duration;
+.transition-fade-in-color-peach {
+  animation: fade-in-color-peach $transition-duration;
+}
+
+@keyframes fade-in-color-madison-blue {
+  0% {
+    background: color('white');
+  }
+
+  100% {
+    background: color('madison-blue');
+  }
+}
+
+.transition-fade-in-color-madison-blue {
+  animation: fade-in-color-madison-blue $transition-duration;
 }
 
 @keyframes show-hide-dots {
