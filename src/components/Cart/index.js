@@ -266,7 +266,10 @@ class Cart extends Component {
                         this.state.note === currentNote ||
                         updatingNote === PENDING
                       }
-                      className={`md-hide lg-hide transition-slide-up-down ${isUpdateButtonActive}`}
+                      className={cx(
+                        'md-hide lg-hide transition-slide-up-down',
+                        isUpdateButtonActive
+                      )}
                       variant="primary-small"
                       color="peach"
                       label="Update"
@@ -332,7 +335,10 @@ class Cart extends Component {
                       this.state.note === currentNote ||
                       updatingNote === PENDING
                     }
-                    className={`transition-slide-up-down ${isUpdateButtonActive}`}
+                    className={cx(
+                      'transition-slide-up-down',
+                      isUpdateButtonActive
+                    )}
                     color="peach"
                     label="Update"
                     onClick={this.updateNote}
