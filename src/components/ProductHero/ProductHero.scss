@@ -5,14 +5,4 @@
     top: -0.5rem;
     right: 1rem;
   }
-
-  &__quantity-selector {
-    > button {
-      padding-bottom: 1px;
-
-      @media ($medium-up) {
-        padding: 0;
-      }
-    }
-  }
 }

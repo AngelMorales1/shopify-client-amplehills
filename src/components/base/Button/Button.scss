@@ -172,11 +172,7 @@
     border: spacing(1) solid color('madison-blue');
 
     &.Button--circle {
-      padding-top: 2px;
-
-      @media ($medium-up) {
-        padding: 0;
-      }
+      padding: 0;
     }
   }
 
@@ -208,12 +204,6 @@
 
     &:hover {
       box-shadow: unset;
-    }
-  }
-
-  &--plus {
-    > div {
-      padding-top: 2px;
     }
   }
 }

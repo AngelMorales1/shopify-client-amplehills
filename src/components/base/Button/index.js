@@ -30,8 +30,7 @@ const Button = ({
       [styles['Button--div']]: to
     },
     styles[`Button--${variant}`],
-    { [styles['Button--shadow']]: shadow },
-    { [styles['Button--plus']]: label === '+' && variant !== 'circle-small' }
+    { [styles['Button--shadow']]: shadow }
   );
 
   const linkedComponent = isExternalLink(to) ? (
