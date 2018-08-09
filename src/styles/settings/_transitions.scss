@@ -9,15 +9,33 @@ $transition: $transition-duration $transition-easing;
   transition: $transition;
 }
 
-@keyframes slide-down {
-  0% {
+.transition-slide-up-down {
+  opacity: 0;
+  transform: translate3d(0, spacing(4), 0);
+  animation-duration: $transition-duration-medium;
+  pointer-events: none;
+
+  &--active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    pointer-events: auto;
+  }
+}
+
+.transition-slide-swap {
+  opacity: 0;
+  transform: translate3d(0, spacing(-8), 0);
+}
+
+.transition-slide-swap--active {
+  .transition-slide-swap {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 
-  100% {
+  .transition-slide-swap-replace {
     opacity: 0;
-    transform: translate3d(0, spacing(4), 0);
+    transform: translate3d(0, spacing(8), 0);
   }
 }
 
