@@ -9,6 +9,17 @@
     padding: spacing(4) spacing(8);
   }
 
+  &__cart-button {
+    > span {
+      padding-top: 1px;
+
+      @media ($medium-up) {
+        padding: 0;
+        padding-bottom: 1px;
+      }
+    }
+  }
+
   .left-side {
     order: 2;
     justify-content: center;
