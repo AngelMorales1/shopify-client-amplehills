@@ -47,6 +47,7 @@ export default createSelector(
       const gridImage = get(product, 'fields.image.fields.file.url', '');
       const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
       const blocks = get(product, 'fields.contentBlocks', []);
+      const preOrderDate = get(product, 'fields.preOrderDate', false);
       const cartDetails = get(product, 'fields.cartDetails', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {
@@ -76,6 +77,7 @@ export default createSelector(
         blocks,
         subItems,
         subItemsAvailable,
+        preOrderDate,
         cartDetails,
         ...shopifyProduct
       };

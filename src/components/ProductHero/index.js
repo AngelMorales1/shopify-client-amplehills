@@ -111,13 +111,15 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {available && subItemsAvailable ? (
+              {(available && subItemsAvailable) || product.preOrderDate ? (
                 <Button
                   color="madison-blue"
                   shadow={true}
                   onClick={this.addToCart}
                 >
-                  <span className="mr2">Add to Cart</span>
+                  <span className="mr2">
+                    {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
+                  </span>
                   <span className="ml2">
                     ${(price * this.state.quantity).toFixed(2)}
                   </span>
