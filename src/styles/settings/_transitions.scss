@@ -22,23 +22,6 @@ $transition: $transition-duration $transition-easing;
   }
 }
 
-.transition-slide-swap {
-  opacity: 0;
-  transform: translate3d(0, spacing(-8), 0);
-}
-
-.transition-slide-swap--active {
-  .transition-slide-swap {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .transition-slide-swap-replace {
-    opacity: 0;
-    transform: translate3d(0, spacing(8), 0);
-  }
-}
-
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -120,32 +103,18 @@ $transition: $transition-duration $transition-easing;
   animation: fade-in $transition-duration;
 }
 
-@keyframes fade-in-color-peach {
+@keyframes fade-in-white {
   0% {
     background: color('white');
   }
 
   100% {
-    background: color('peach');
+    opacity: 1;
   }
 }
 
-.transition-fade-in-color-peach {
-  animation: fade-in-color-peach $transition-duration;
-}
-
-@keyframes fade-in-color-madison-blue {
-  0% {
-    background: color('white');
-  }
-
-  100% {
-    background: color('madison-blue');
-  }
-}
-
-.transition-fade-in-color-madison-blue {
-  animation: fade-in-color-madison-blue $transition-duration;
+.transition-fade-in-white {
+  animation: fade-in-white $transition-duration;
 }
 
 @keyframes show-hide-dots {

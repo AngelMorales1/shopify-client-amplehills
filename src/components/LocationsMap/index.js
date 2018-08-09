@@ -4,7 +4,6 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import locationModel from 'models/locationModel';
-import Global from 'constants/Global';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationsMapKey from 'constants/LocationsMapKey';
