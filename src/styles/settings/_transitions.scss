@@ -9,6 +9,17 @@ $transition: $transition-duration $transition-easing;
   transition: $transition;
 }
 
+.transition-slide-up-down {
+  opacity: 0;
+  transform: translate3d(0, spacing(4), 0);
+  animation-duration: $transition-duration-medium;
+
+  &--active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @keyframes slide-up {
   0% {
     opacity: 0;

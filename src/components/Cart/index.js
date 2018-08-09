@@ -65,6 +65,10 @@ class Cart extends Component {
     const { actions, checkout, items, products, updatingNote } = this.props;
     const currentNote = get(checkout, 'note') ? get(checkout, 'note') : '';
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
+    const isUpdateButtonActive =
+      this.state.note !== currentNote
+        ? 'transition-slide-up-down--active'
+        : null;
 
     const cart = (
       <div className="transition-slide-up">
@@ -262,14 +266,7 @@ class Cart extends Component {
                         this.state.note === currentNote ||
                         updatingNote === PENDING
                       }
-                      className={cx(
-                        styles['Cart__update-button'],
-                        {
-                          [styles['Cart__update-button--active']]:
-                            this.state.note !== currentNote
-                        },
-                        'md-hide lg-hide'
-                      )}
+                      className={`md-hide lg-hide transition-slide-up-down ${isUpdateButtonActive}`}
                       variant="primary-small"
                       color="peach"
                       label="Update"
@@ -335,10 +332,7 @@ class Cart extends Component {
                       this.state.note === currentNote ||
                       updatingNote === PENDING
                     }
-                    className={cx(styles['Cart__update-button'], {
-                      [styles['Cart__update-button--active']]:
-                        this.state.note !== currentNote
-                    })}
+                    className={`transition-slide-up-down ${isUpdateButtonActive}`}
                     color="peach"
                     label="Update"
                     onClick={this.updateNote}
