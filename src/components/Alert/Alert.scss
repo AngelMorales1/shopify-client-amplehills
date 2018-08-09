@@ -2,14 +2,20 @@
 
 .Alert {
   height: $alert-height-mobile;
-  font-size: $font-1;
 
   @media ($medium-up) {
     height: $alert-height-desktop;
-    font-size: $font-2;
+  }
+
+  &__text {
+    font-size: $font-1;
+
+    @media ($medium-up) {
+      font-size: $font-2;
+    }
   }
 
   &__order-now {
-    margin-left: spacing(1);
+    margin: spacing(1) spacing(1) 0;
   }
 }

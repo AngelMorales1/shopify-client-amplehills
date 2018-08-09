@@ -48,13 +48,14 @@ class App extends Component {
       facebookLink,
       instagramLink,
       twitterLink,
-      footerIllustration
+      footerIllustration,
+      alert
     } = globalSettings;
 
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
-          <Alert />
+          <Alert alert={alert} />
           <Nav />
           <MiniCart />
 
