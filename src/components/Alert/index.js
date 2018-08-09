@@ -18,16 +18,17 @@ const Alert = ({ alert }) => {
       <span className={cx(styles['Alert__text'], 'text-white')}>
         {fields.alertCopy}
       </span>
-      <Button
-        to={fields.linkUrl}
-        variant="style-none"
+      <a
         className={cx(
           styles['Alert__order-now'],
           styles['Alert__text'],
           'text-peach'
         )}
-        label={fields.linkCopy}
-      />
+        rel="noopener"
+        href={`${fields.linkUrl}`}
+      >
+        {fields.linkCopy}
+      </a>
     </div>
   );
 };

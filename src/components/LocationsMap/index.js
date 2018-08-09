@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import locationModel from 'models/locationModel';
+import Global from 'constants/Global';
 
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationsMapKey from 'constants/LocationsMapKey';
@@ -19,7 +20,8 @@ const LocationsMap = props => {
     locationFilters,
     locations,
     locationGeoJSON,
-    actions
+    actions,
+    appAlertIsActive
   } = props;
 
   const onClickFeature = feature => {
@@ -29,9 +31,12 @@ const LocationsMap = props => {
       ? actions.clearLocationSelection()
       : actions.selectLocation(featureLocationId);
   };
+  const mapHeight = appAlertIsActive
+    ? styles['LocationsMap__with-alert']
+    : styles['LocationsMap__without-alert'];
 
   return (
-    <div className={cx(styles['LocationsMap'], 'relative')}>
+    <div className={cx(styles['LocationsMap'], 'relative', mapHeight)}>
       <MapboxMap
         className="z-0"
         featureCollection={locationGeoJSON}

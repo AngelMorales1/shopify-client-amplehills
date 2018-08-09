@@ -48,19 +48,25 @@ class App extends Component {
       facebookLink,
       instagramLink,
       twitterLink,
-      footerIllustration,
-      alert
+      footerIllustration
     } = globalSettings;
+    const alert = get(globalSettings, 'alert', false);
 
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
-          <Alert alert={alert} />
-          <Nav />
+          {!!alert ? <Alert alert={alert} /> : null}
+          <Nav appAlertIsActive={!!alert} />
           <MiniCart />
-
-          <div className="content-wrapper">
-            <Routes location={get(this, 'props.location')} />
+          <div
+            className={
+              !!alert ? 'content-wrapper-with-alert' : 'content-wrapper'
+            }
+          >
+            <Routes
+              location={get(this, 'props.location')}
+              appAlertIsActive={!!alert}
+            />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
             <Footer
               locations={locations}

@@ -39,6 +39,14 @@ Dimension classes
 }
 
 .content-wrapper {
+  padding-top: $header-height-mobile;
+
+  @media ($medium-up) {
+    padding-top: $header-height-desktop;
+  }
+}
+
+.content-wrapper-with-alert {
   padding-top: calc(#{$header-height-mobile} + #{$alert-height-mobile});
 
   @media ($medium-up) {

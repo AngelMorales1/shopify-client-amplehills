@@ -1,7 +1,13 @@
 @import 'settings';
 
 .LocationsMap {
-  height: calc(100vh - #{$header-height-desktop} - #{$alert-height-desktop});
+  &__with-alert {
+    height: calc(100vh - #{$header-height-desktop} - #{$alert-height-desktop});
+  }
+
+  &__without-alert {
+    height: calc(100vh - #{$header-height-desktop});
+  }
 
   &__map-key-item {
     height: $button-small-height;

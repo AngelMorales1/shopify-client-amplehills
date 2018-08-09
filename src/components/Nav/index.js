@@ -49,6 +49,7 @@ class Nav extends Component {
       <div
         className={cx(
           styles['Nav'],
+          this.props.appAlertIsActive ? null : 't0',
           'z-nav w100 fixed l0 flex bg-peach text-white items-center transition-fade-in-color-peach'
         )}
       >
