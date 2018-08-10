@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
@@ -30,6 +31,28 @@ const Alert = ({ alert }) => {
       </a>
     </div>
   );
+};
+
+Alert.propTypes = {
+  alert: PropTypes.shape({
+    fields: PropTypes.shape({
+      alertCopy: PropTypes.string,
+      linkCopy: PropTypes.string,
+      linkUrl: PropTypes.string,
+      title: PropTypes.string
+    })
+  })
+};
+
+Alert.defaultProps = {
+  alert: {
+    fields: {
+      alertCopy: '',
+      linkCopy: '',
+      linkUrl: '',
+      title: ''
+    }
+  }
 };
 
 export default Alert;
