@@ -25,7 +25,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         fetchContentfulProducts()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
-        setTimeout(reject('Timeout'), 10000);
+        setTimeout(reject('Timeout'), 10);
       });
       return Promise.race([fetchData, timeout])
         .then(([checkout, locations, settings, products, contentfulProducts]) =>

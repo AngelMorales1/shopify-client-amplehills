@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import styles from './ErrorPage.scss';
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 
 const ErrorPage = ({ children }) => {
   return (
@@ -38,6 +38,13 @@ const ErrorPage = ({ children }) => {
                 </a>.
               </p>
             </div>
+            <Button
+              className="mx-auto"
+              color="white-peach"
+              variant="primary-small"
+              label="Refresh Page"
+              onClick={() => window.location.reload()}
+            />
           </div>
           <div className="absolute b0 l0 w100">
             <Image src="/assets/images/ample-hills-walt-walk-animation.gif" />
