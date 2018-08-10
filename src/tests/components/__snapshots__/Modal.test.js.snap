@@ -20,9 +20,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="text-container-width w100 bg-white card drop-shadow p3"
+        className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-      "className": "foo fixed-cover bg-white-wash flex justify-center items-center",
+      "className": "foo fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
     },
     "ref": null,
     "rendered": Object {
@@ -31,7 +31,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": "text-container-width w100 bg-white card drop-shadow p3",
+        "className": "text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long",
       },
       "ref": null,
       "rendered": null,
@@ -46,9 +46,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="text-container-width w100 bg-white card drop-shadow p3"
+          className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-        "className": "foo fixed-cover bg-white-wash flex justify-center items-center",
+        "className": "foo fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
       },
       "ref": null,
       "rendered": Object {
@@ -57,7 +57,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
-          "className": "text-container-width w100 bg-white card drop-shadow p3",
+          "className": "text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long",
         },
         "ref": null,
         "rendered": null,
@@ -94,9 +94,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="text-container-width w100 bg-white card drop-shadow p3"
+        className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-      "className": "fixed-cover bg-white-wash flex justify-center items-center",
+      "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
     },
     "ref": null,
     "rendered": Object {
@@ -105,7 +105,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": undefined,
-        "className": "text-container-width w100 bg-white card drop-shadow p3",
+        "className": "text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long",
       },
       "ref": null,
       "rendered": null,
@@ -120,9 +120,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="text-container-width w100 bg-white card drop-shadow p3"
+          className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-        "className": "fixed-cover bg-white-wash flex justify-center items-center",
+        "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
       },
       "ref": null,
       "rendered": Object {
@@ -131,7 +131,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
-          "className": "text-container-width w100 bg-white card drop-shadow p3",
+          "className": "text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long",
         },
         "ref": null,
         "rendered": null,

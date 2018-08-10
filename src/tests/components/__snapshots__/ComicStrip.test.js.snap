@@ -82,8 +82,6 @@ ShallowWrapper {
               "fields": Object {},
               "sys": Object {},
             },
-            "shipping2": "foo",
-            "shippingDates": "foo",
             "title": "foo",
             "twitterLink": "foo",
           }

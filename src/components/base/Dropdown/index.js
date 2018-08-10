@@ -133,7 +133,7 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  options: {},
+  options: [{}],
   name: '',
   placeholder: 'Select',
   className: '',

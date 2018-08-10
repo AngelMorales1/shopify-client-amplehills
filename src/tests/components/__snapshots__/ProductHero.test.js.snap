@@ -190,7 +190,6 @@ ShallowWrapper {
             "subItemsAvailable": true,
           }
     }
-    shippingDates={Array []}
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1923,7 +1922,6 @@ ShallowWrapper {
             ],
           }
     }
-    shippingDates={Array []}
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {

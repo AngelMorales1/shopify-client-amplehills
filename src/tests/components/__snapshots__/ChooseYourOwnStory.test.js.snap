@@ -81,8 +81,6 @@ ShallowWrapper {
               "fields": Object {},
               "sys": Object {},
             },
-            "shipping2": "foo",
-            "shippingDates": "foo",
             "title": "foo",
             "twitterLink": "foo",
           }
@@ -282,7 +280,7 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed"
 >
           <div
                     className="flex content-width mx-auto w100"
@@ -866,7 +864,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed",
         },
         "ref": null,
         "rendered": Object {
@@ -1661,7 +1659,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed"
 >
             <div
                         className="flex content-width mx-auto w100"
@@ -2245,7 +2243,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed",
           },
           "ref": null,
           "rendered": Object {
@@ -3123,7 +3121,7 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+          className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed"
 >
           <div
                     className="flex content-width mx-auto w100"
@@ -3730,7 +3728,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+          "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed",
         },
         "ref": null,
         "rendered": Object {
@@ -4532,7 +4530,7 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed"
+            className="z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed"
 >
             <div
                         className="flex content-width mx-auto w100"
@@ -5139,7 +5137,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 fixed",
+            "className": "z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu fixed",
           },
           "ref": null,
           "rendered": Object {
