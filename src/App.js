@@ -68,11 +68,7 @@ class App extends Component {
           {alertIsActive ? <Alert alert={alert} /> : null}
           <Nav alertIsActive={alertIsActive} />
           <MiniCart />
-          <div
-            className={
-              alertIsActive ? 'content-wrapper-with-alert' : 'content-wrapper'
-            }
-          >
+          <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
             <Footer
