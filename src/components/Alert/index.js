@@ -20,7 +20,7 @@ const Alert = ({ alert }) => {
       </span>
       <a
         className={cx(
-          styles['Alert__order-now'],
+          styles['Alert__linked-text'],
           styles['Alert__text'],
           'text-peach'
         )}

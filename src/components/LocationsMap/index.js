@@ -30,12 +30,12 @@ const LocationsMap = props => {
       ? actions.clearLocationSelection()
       : actions.selectLocation(featureLocationId);
   };
-  const mapHeight = alertIsActive
-    ? styles['LocationsMap__with-alert']
-    : styles['LocationsMap__without-alert'];
+  const LocationsMapClasses = cx(styles['LocationsMap'], 'relative', {
+    [styles['LocationsMap--with-alert']]: alertIsActive
+  });
 
   return (
-    <div className={cx(styles['LocationsMap'], 'relative', mapHeight)}>
+    <div className={LocationsMapClasses}>
       <MapboxMap
         className="z-0"
         featureCollection={locationGeoJSON}

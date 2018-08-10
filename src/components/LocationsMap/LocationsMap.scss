@@ -1,12 +1,10 @@
 @import 'settings';
 
 .LocationsMap {
-  &__with-alert {
-    height: calc(100vh - #{$header-height-desktop} - #{$alert-height-desktop});
-  }
+  height: calc(100vh - #{$header-height-desktop});
 
-  &__without-alert {
-    height: calc(100vh - #{$header-height-desktop});
+  &--with-alert {
+    height: calc(100vh - #{$header-height-desktop} - #{$alert-height-desktop});
   }
 
   &__map-key-item {
