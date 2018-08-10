@@ -6,4 +6,11 @@ global.URL = {
   createObjectURL: () => {}
 };
 
+global.localStorage = {
+  ...global.localStorage,
+  getItem: () => {},
+  removeItem: () => {},
+  setItem: () => {}
+};
+
 configure({ adapter: new Adapter() });

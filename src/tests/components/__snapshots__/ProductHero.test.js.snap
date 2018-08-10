@@ -222,18 +222,22 @@ ShallowWrapper {
                     className="col-12 md-col-8 px3 mx-auto"
           >
                     <div
-                              className="relative inline-block"
+                              className="mb4 relative inline-block"
                     >
                               <h1
-                                        className="block-headline mb4 relative z-1"
+                                        className="block-headline"
                               />
                               <Image
                                         alt=""
                                         bg={false}
-                                        className="absolute"
+                                        className="absolute z-below t0 b0 my-auto"
                                         onImgLoad={[Function]}
                                         src=""
-                                        style={Object {}}
+                                        style={
+                                                  Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                        }
                               />
                     </div>
                     <div>
@@ -407,18 +411,22 @@ ShallowWrapper {
             className="col-12 md-col-8 px3 mx-auto"
 >
             <div
-                        className="relative inline-block"
+                        className="mb4 relative inline-block"
             >
                         <h1
-                                    className="block-headline mb4 relative z-1"
+                                    className="block-headline"
                         />
                         <Image
                                     alt=""
                                     bg={false}
-                                    className="absolute"
+                                    className="absolute z-below t0 b0 my-auto"
                                     onImgLoad={[Function]}
                                     src=""
-                                    style={Object {}}
+                                    style={
+                                                Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                    }
                         />
             </div>
             <div>
@@ -568,18 +576,22 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="relative inline-block"
+                className="mb4 relative inline-block"
 >
                 <h1
-                                className="block-headline mb4 relative z-1"
+                                className="block-headline"
                 />
                 <Image
                                 alt=""
                                 bg={false}
-                                className="absolute"
+                                className="absolute z-below t0 b0 my-auto"
                                 onImgLoad={[Function]}
                                 src=""
-                                style={Object {}}
+                                style={
+                                                Object {
+                                                                "transform": "translateX(0%)",
+                                                              }
+                                }
                 />
 </div>,
               <div>
@@ -730,18 +742,22 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h1
-                    className="block-headline mb4 relative z-1"
+                    className="block-headline"
 />,
                   <Image
                     alt=""
                     bg={false}
-                    className="absolute"
+                    className="absolute z-below t0 b0 my-auto"
                     onImgLoad={[Function]}
                     src=""
-                    style={Object {}}
+                    style={
+                                        Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                    }
 />,
                 ],
-                "className": "relative inline-block",
+                "className": "mb4 relative inline-block",
               },
               "ref": null,
               "rendered": Array [
@@ -751,7 +767,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
-                    "className": "block-headline mb4 relative z-1",
+                    "className": "block-headline",
                   },
                   "ref": null,
                   "rendered": "",
@@ -765,10 +781,12 @@ ShallowWrapper {
                     "alt": "",
                     "bg": false,
                     "children": null,
-                    "className": "absolute",
+                    "className": "absolute z-below t0 b0 my-auto",
                     "onImgLoad": [Function],
                     "src": "",
-                    "style": Object {},
+                    "style": Object {
+                      "transform": "translateX(0%)",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -1056,18 +1074,22 @@ ShallowWrapper {
                         className="col-12 md-col-8 px3 mx-auto"
             >
                         <div
-                                    className="relative inline-block"
+                                    className="mb4 relative inline-block"
                         >
                                     <h1
-                                                className="block-headline mb4 relative z-1"
+                                                className="block-headline"
                                     />
                                     <Image
                                                 alt=""
                                                 bg={false}
-                                                className="absolute"
+                                                className="absolute z-below t0 b0 my-auto"
                                                 onImgLoad={[Function]}
                                                 src=""
-                                                style={Object {}}
+                                                style={
+                                                            Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                                }
                                     />
                         </div>
                         <div>
@@ -1241,18 +1263,22 @@ ShallowWrapper {
               className="col-12 md-col-8 px3 mx-auto"
 >
               <div
-                            className="relative inline-block"
+                            className="mb4 relative inline-block"
               >
                             <h1
-                                          className="block-headline mb4 relative z-1"
+                                          className="block-headline"
                             />
                             <Image
                                           alt=""
                                           bg={false}
-                                          className="absolute"
+                                          className="absolute z-below t0 b0 my-auto"
                                           onImgLoad={[Function]}
                                           src=""
-                                          style={Object {}}
+                                          style={
+                                                        Object {
+                                                                      "transform": "translateX(0%)",
+                                                                    }
+                                          }
                             />
               </div>
               <div>
@@ -1402,18 +1428,22 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="relative inline-block"
+                  className="mb4 relative inline-block"
 >
                   <h1
-                                    className="block-headline mb4 relative z-1"
+                                    className="block-headline"
                   />
                   <Image
                                     alt=""
                                     bg={false}
-                                    className="absolute"
+                                    className="absolute z-below t0 b0 my-auto"
                                     onImgLoad={[Function]}
                                     src=""
-                                    style={Object {}}
+                                    style={
+                                                      Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                    }
                   />
 </div>,
                 <div>
@@ -1564,18 +1594,22 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <h1
-                      className="block-headline mb4 relative z-1"
+                      className="block-headline"
 />,
                     <Image
                       alt=""
                       bg={false}
-                      className="absolute"
+                      className="absolute z-below t0 b0 my-auto"
                       onImgLoad={[Function]}
                       src=""
-                      style={Object {}}
+                      style={
+                                            Object {
+                                                                  "transform": "translateX(0%)",
+                                                                }
+                      }
 />,
                   ],
-                  "className": "relative inline-block",
+                  "className": "mb4 relative inline-block",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1585,7 +1619,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "",
-                      "className": "block-headline mb4 relative z-1",
+                      "className": "block-headline",
                     },
                     "ref": null,
                     "rendered": "",
@@ -1599,10 +1633,12 @@ ShallowWrapper {
                       "alt": "",
                       "bg": false,
                       "children": null,
-                      "className": "absolute",
+                      "className": "absolute z-below t0 b0 my-auto",
                       "onImgLoad": [Function],
                       "src": "",
-                      "style": Object {},
+                      "style": Object {
+                        "transform": "translateX(0%)",
+                      },
                     },
                     "ref": null,
                     "rendered": null,
@@ -1954,18 +1990,22 @@ ShallowWrapper {
                     className="col-12 md-col-8 px3 mx-auto"
           >
                     <div
-                              className="relative inline-block"
+                              className="mb4 relative inline-block"
                     >
                               <h1
-                                        className="block-headline mb4 relative z-1"
+                                        className="block-headline"
                               />
                               <Image
                                         alt=""
                                         bg={false}
-                                        className="absolute"
+                                        className="absolute z-below t0 b0 my-auto"
                                         onImgLoad={[Function]}
                                         src=""
-                                        style={Object {}}
+                                        style={
+                                                  Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                        }
                               />
                     </div>
                     <div>
@@ -2081,18 +2121,22 @@ ShallowWrapper {
             className="col-12 md-col-8 px3 mx-auto"
 >
             <div
-                        className="relative inline-block"
+                        className="mb4 relative inline-block"
             >
                         <h1
-                                    className="block-headline mb4 relative z-1"
+                                    className="block-headline"
                         />
                         <Image
                                     alt=""
                                     bg={false}
-                                    className="absolute"
+                                    className="absolute z-below t0 b0 my-auto"
                                     onImgLoad={[Function]}
                                     src=""
-                                    style={Object {}}
+                                    style={
+                                                Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                    }
                         />
             </div>
             <div>
@@ -2184,18 +2228,22 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="relative inline-block"
+                className="mb4 relative inline-block"
 >
                 <h1
-                                className="block-headline mb4 relative z-1"
+                                className="block-headline"
                 />
                 <Image
                                 alt=""
                                 bg={false}
-                                className="absolute"
+                                className="absolute z-below t0 b0 my-auto"
                                 onImgLoad={[Function]}
                                 src=""
-                                style={Object {}}
+                                style={
+                                                Object {
+                                                                "transform": "translateX(0%)",
+                                                              }
+                                }
                 />
 </div>,
               <div>
@@ -2288,18 +2336,22 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h1
-                    className="block-headline mb4 relative z-1"
+                    className="block-headline"
 />,
                   <Image
                     alt=""
                     bg={false}
-                    className="absolute"
+                    className="absolute z-below t0 b0 my-auto"
                     onImgLoad={[Function]}
                     src=""
-                    style={Object {}}
+                    style={
+                                        Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                    }
 />,
                 ],
-                "className": "relative inline-block",
+                "className": "mb4 relative inline-block",
               },
               "ref": null,
               "rendered": Array [
@@ -2309,7 +2361,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
-                    "className": "block-headline mb4 relative z-1",
+                    "className": "block-headline",
                   },
                   "ref": null,
                   "rendered": "",
@@ -2323,10 +2375,12 @@ ShallowWrapper {
                     "alt": "",
                     "bg": false,
                     "children": null,
-                    "className": "absolute",
+                    "className": "absolute z-below t0 b0 my-auto",
                     "onImgLoad": [Function],
                     "src": "",
-                    "style": Object {},
+                    "style": Object {
+                      "transform": "translateX(0%)",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
@@ -2556,18 +2610,22 @@ ShallowWrapper {
                         className="col-12 md-col-8 px3 mx-auto"
             >
                         <div
-                                    className="relative inline-block"
+                                    className="mb4 relative inline-block"
                         >
                                     <h1
-                                                className="block-headline mb4 relative z-1"
+                                                className="block-headline"
                                     />
                                     <Image
                                                 alt=""
                                                 bg={false}
-                                                className="absolute"
+                                                className="absolute z-below t0 b0 my-auto"
                                                 onImgLoad={[Function]}
                                                 src=""
-                                                style={Object {}}
+                                                style={
+                                                            Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                                }
                                     />
                         </div>
                         <div>
@@ -2683,18 +2741,22 @@ ShallowWrapper {
               className="col-12 md-col-8 px3 mx-auto"
 >
               <div
-                            className="relative inline-block"
+                            className="mb4 relative inline-block"
               >
                             <h1
-                                          className="block-headline mb4 relative z-1"
+                                          className="block-headline"
                             />
                             <Image
                                           alt=""
                                           bg={false}
-                                          className="absolute"
+                                          className="absolute z-below t0 b0 my-auto"
                                           onImgLoad={[Function]}
                                           src=""
-                                          style={Object {}}
+                                          style={
+                                                        Object {
+                                                                      "transform": "translateX(0%)",
+                                                                    }
+                                          }
                             />
               </div>
               <div>
@@ -2786,18 +2848,22 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="relative inline-block"
+                  className="mb4 relative inline-block"
 >
                   <h1
-                                    className="block-headline mb4 relative z-1"
+                                    className="block-headline"
                   />
                   <Image
                                     alt=""
                                     bg={false}
-                                    className="absolute"
+                                    className="absolute z-below t0 b0 my-auto"
                                     onImgLoad={[Function]}
                                     src=""
-                                    style={Object {}}
+                                    style={
+                                                      Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                    }
                   />
 </div>,
                 <div>
@@ -2890,18 +2956,22 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <h1
-                      className="block-headline mb4 relative z-1"
+                      className="block-headline"
 />,
                     <Image
                       alt=""
                       bg={false}
-                      className="absolute"
+                      className="absolute z-below t0 b0 my-auto"
                       onImgLoad={[Function]}
                       src=""
-                      style={Object {}}
+                      style={
+                                            Object {
+                                                                  "transform": "translateX(0%)",
+                                                                }
+                      }
 />,
                   ],
-                  "className": "relative inline-block",
+                  "className": "mb4 relative inline-block",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -2911,7 +2981,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "",
-                      "className": "block-headline mb4 relative z-1",
+                      "className": "block-headline",
                     },
                     "ref": null,
                     "rendered": "",
@@ -2925,10 +2995,12 @@ ShallowWrapper {
                       "alt": "",
                       "bg": false,
                       "children": null,
-                      "className": "absolute",
+                      "className": "absolute z-below t0 b0 my-auto",
                       "onImgLoad": [Function],
                       "src": "",
-                      "style": Object {},
+                      "style": Object {
+                        "transform": "translateX(0%)",
+                      },
                     },
                     "ref": null,
                     "rendered": null,

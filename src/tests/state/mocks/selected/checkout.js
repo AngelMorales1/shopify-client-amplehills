@@ -31,5 +31,6 @@ export default {
   currencyCode: 'USD',
   note: 'This is a gift message!',
   subtotalPrice: 39.98,
-  totalPrice: 39.98
+  totalPrice: 39.98,
+  webUrl: ''
 };
