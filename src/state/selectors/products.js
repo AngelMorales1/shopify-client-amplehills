@@ -49,7 +49,12 @@ export default createSelector(
       const blocks = get(product, 'fields.contentBlocks', []);
       const cartDetails = get(product, 'fields.cartDetails', '');
 
-      const shopifyProduct = get(shopifyProducts, handle, {});
+      const shopifyProduct = get(shopifyProducts, handle, {
+        id: null,
+        price: null,
+        variants: [],
+        available: false
+      });
       const subItems = get(product, 'fields.subItems', []).map(subItem => {
         return get(subItem, 'fields.productHandle', '');
       });
