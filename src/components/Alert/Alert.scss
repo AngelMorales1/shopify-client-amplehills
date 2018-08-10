@@ -29,4 +29,8 @@
     margin-left: spacing(1);
     text-decoration: none;
   }
+
+  &__linked-text:hover {
+    color: color('goldenrod');
+  }
 }
