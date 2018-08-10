@@ -264,15 +264,14 @@ class ChooseYourOwnStory extends Component {
               <label className="small bold">Choose {size} Flavors</label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
-                  <div
+                  <Image
                     key={i}
                     className={cx(
-                      styles['ChooseYourOwnStory__pint-image'],
+                      styles['ChooseYourOwnStory__pint-icon'],
                       'mr2'
                     )}
-                  >
-                    <Image src={get(products, `[${handle}].pintImage`, '')} />
-                  </div>
+                    src={get(products, `[${handle}].pintImage`, '')}
+                  />
                 ))}
                 {[...Array(size - pints.length)].map((pint, i) => (
                   <div
