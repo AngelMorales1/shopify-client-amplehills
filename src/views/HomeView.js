@@ -6,7 +6,7 @@ class HomeView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    return <Redirect to="/products/mickey-celebration" />;
+    return <Redirect to="/products/the-mickey-mouse-collection" />;
   }
 }
 
