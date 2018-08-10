@@ -11,7 +11,7 @@ import LocationsLandingContainer from 'containers/LocationsLandingContainer';
 import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 
-const Routes = ({ location, alertIsActive }) => (
+const Routes = ({ location }) => (
   <Switch location={location}>
     <Route exact path="/" component={HomeContainer} />
     <Route
