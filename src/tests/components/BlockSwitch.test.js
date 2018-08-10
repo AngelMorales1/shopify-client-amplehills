@@ -68,8 +68,6 @@ it('renders with data', () => {
         footerIllustration: { sys: {}, fields: {} },
         instagramLink: 'foo',
         ourPledgeIcon: { sys: {}, fields: {} },
-        shipping2: 'foo',
-        shippingDates: 'foo',
         title: 'foo',
         twitterLink: 'foo'
       }}

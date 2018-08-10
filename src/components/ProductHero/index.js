@@ -157,7 +157,6 @@ ProductHero.defaultProps = {
   data: {},
   z: 1,
   product: productModel.default,
-  shippingDates: [],
   ourPledge: {
     closeOurPledgeOverlay: () => {},
     overlayContentImage: imageModel.default,

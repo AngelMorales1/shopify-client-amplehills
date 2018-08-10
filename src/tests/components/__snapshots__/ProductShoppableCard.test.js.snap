@@ -73,14 +73,14 @@ ShallowWrapper {
                 >
                         <QuantitySelector
                                 allowZero={true}
-                                className="absolute t0 l0 transition"
+                                className="absolute t0 l0 transition transition-slide-swap"
                                 color="seafoam"
                                 onChange={[Function]}
                                 quantity={0}
                                 variant=""
                         />
                         <Button
-                                className="small bg-seafoam absolute t0 l0"
+                                className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                 color="white-madison-blue-border"
                                 disabled={false}
                                 fullWidth={false}
@@ -132,14 +132,14 @@ ShallowWrapper {
             >
                         <QuantitySelector
                                     allowZero={true}
-                                    className="absolute t0 l0 transition"
+                                    className="absolute t0 l0 transition transition-slide-swap"
                                     color="seafoam"
                                     onChange={[Function]}
                                     quantity={0}
                                     variant=""
                         />
                         <Button
-                                    className="small bg-seafoam absolute t0 l0"
+                                    className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                     color="white-madison-blue-border"
                                     disabled={false}
                                     fullWidth={false}
@@ -195,14 +195,14 @@ ShallowWrapper {
 >
                 <QuantitySelector
                                 allowZero={true}
-                                className="absolute t0 l0 transition"
+                                className="absolute t0 l0 transition transition-slide-swap"
                                 color="seafoam"
                                 onChange={[Function]}
                                 quantity={0}
                                 variant=""
                 />
                 <Button
-                                className="small bg-seafoam absolute t0 l0"
+                                className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                 color="white-madison-blue-border"
                                 disabled={false}
                                 fullWidth={false}
@@ -274,14 +274,14 @@ ShallowWrapper {
                 "children": Array [
                   <QuantitySelector
                     allowZero={true}
-                    className="absolute t0 l0 transition"
+                    className="absolute t0 l0 transition transition-slide-swap"
                     color="seafoam"
                     onChange={[Function]}
                     quantity={0}
                     variant=""
 />,
                   <Button
-                    className="small bg-seafoam absolute t0 l0"
+                    className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                     color="white-madison-blue-border"
                     disabled={false}
                     fullWidth={false}
@@ -303,7 +303,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "allowZero": true,
-                    "className": "absolute t0 l0 transition",
+                    "className": "absolute t0 l0 transition transition-slide-swap",
                     "color": "seafoam",
                     "onChange": [Function],
                     "quantity": 0,
@@ -319,7 +319,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
-                    "className": "small bg-seafoam absolute t0 l0",
+                    "className": "small bg-seafoam absolute t0 l0 transition-slide-swap-replace",
                     "color": "white-madison-blue-border",
                     "disabled": false,
                     "fullWidth": false,
@@ -383,14 +383,14 @@ ShallowWrapper {
                     >
                               <QuantitySelector
                                         allowZero={true}
-                                        className="absolute t0 l0 transition"
+                                        className="absolute t0 l0 transition transition-slide-swap"
                                         color="seafoam"
                                         onChange={[Function]}
                                         quantity={0}
                                         variant=""
                               />
                               <Button
-                                        className="small bg-seafoam absolute t0 l0"
+                                        className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                         color="white-madison-blue-border"
                                         disabled={false}
                                         fullWidth={false}
@@ -442,14 +442,14 @@ ShallowWrapper {
               >
                             <QuantitySelector
                                           allowZero={true}
-                                          className="absolute t0 l0 transition"
+                                          className="absolute t0 l0 transition transition-slide-swap"
                                           color="seafoam"
                                           onChange={[Function]}
                                           quantity={0}
                                           variant=""
                             />
                             <Button
-                                          className="small bg-seafoam absolute t0 l0"
+                                          className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                           color="white-madison-blue-border"
                                           disabled={false}
                                           fullWidth={false}
@@ -505,14 +505,14 @@ ShallowWrapper {
 >
                   <QuantitySelector
                                     allowZero={true}
-                                    className="absolute t0 l0 transition"
+                                    className="absolute t0 l0 transition transition-slide-swap"
                                     color="seafoam"
                                     onChange={[Function]}
                                     quantity={0}
                                     variant=""
                   />
                   <Button
-                                    className="small bg-seafoam absolute t0 l0"
+                                    className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                                     color="white-madison-blue-border"
                                     disabled={false}
                                     fullWidth={false}
@@ -584,14 +584,14 @@ ShallowWrapper {
                   "children": Array [
                     <QuantitySelector
                       allowZero={true}
-                      className="absolute t0 l0 transition"
+                      className="absolute t0 l0 transition transition-slide-swap"
                       color="seafoam"
                       onChange={[Function]}
                       quantity={0}
                       variant=""
 />,
                     <Button
-                      className="small bg-seafoam absolute t0 l0"
+                      className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
                       color="white-madison-blue-border"
                       disabled={false}
                       fullWidth={false}
@@ -613,7 +613,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "allowZero": true,
-                      "className": "absolute t0 l0 transition",
+                      "className": "absolute t0 l0 transition transition-slide-swap",
                       "color": "seafoam",
                       "onChange": [Function],
                       "quantity": 0,
@@ -629,7 +629,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
-                      "className": "small bg-seafoam absolute t0 l0",
+                      "className": "small bg-seafoam absolute t0 l0 transition-slide-swap-replace",
                       "color": "white-madison-blue-border",
                       "disabled": false,
                       "fullWidth": false,

@@ -24,7 +24,7 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
       <span className="bold small text-white center">
         &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
       </span>
-      {footerIllustration ? (
+      {footerIllustration.fields ? (
         <Image
           src={footerIllustration.fields.file.url}
           className={cx(

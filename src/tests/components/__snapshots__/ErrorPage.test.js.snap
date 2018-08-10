@@ -97,7 +97,7 @@ ShallowWrapper {
         className="absolute-cover flex items-center justify-center"
 >
         <div
-                className="center text-white"
+                className="center text-white transition-slide-up-large"
         >
                 <Image
                         alt=""
@@ -164,7 +164,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="center text-white"
+            className="center text-white transition-slide-up-large"
 >
             <Image
                         alt=""
@@ -273,7 +273,7 @@ ShallowWrapper {
                 </p>
 </div>,
             ],
-            "className": "center text-white",
+            "className": "center text-white transition-slide-up-large",
           },
           "ref": null,
           "rendered": Array [
@@ -470,7 +470,7 @@ ShallowWrapper {
           className="absolute-cover flex items-center justify-center"
 >
           <div
-                    className="center text-white"
+                    className="center text-white transition-slide-up-large"
           >
                     <Image
                               alt=""
@@ -537,7 +537,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="center text-white"
+              className="center text-white transition-slide-up-large"
 >
               <Image
                             alt=""
@@ -646,7 +646,7 @@ ShallowWrapper {
                   </p>
 </div>,
               ],
-              "className": "center text-white",
+              "className": "center text-white transition-slide-up-large",
             },
             "ref": null,
             "rendered": Array [

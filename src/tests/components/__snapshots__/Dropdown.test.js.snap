@@ -364,7 +364,11 @@ ShallowWrapper {
     label=""
     name=""
     onChange={[Function]}
-    options={Object {}}
+    options={
+        Array [
+            Object {},
+          ]
+    }
     placeholder="Select"
     selectClassName=""
     value=""
@@ -421,7 +425,11 @@ ShallowWrapper {
           onSelectResetsInput={true}
           openOnClick={true}
           optionComponent={[Function]}
-          options={Object {}}
+          options={
+                    Array [
+                              Object {},
+                            ]
+          }
           pageSize={5}
           placeholder="Select"
           removeSelected={true}
@@ -483,7 +491,9 @@ ShallowWrapper {
           "onSelectResetsInput": true,
           "openOnClick": true,
           "optionComponent": [Function],
-          "options": Object {},
+          "options": Array [
+            Object {},
+          ],
           "pageSize": 5,
           "placeholder": "Select",
           "removeSelected": true,
@@ -550,7 +560,11 @@ ShallowWrapper {
             onSelectResetsInput={true}
             openOnClick={true}
             optionComponent={[Function]}
-            options={Object {}}
+            options={
+                        Array [
+                                    Object {},
+                                  ]
+            }
             pageSize={5}
             placeholder="Select"
             removeSelected={true}
@@ -612,7 +626,9 @@ ShallowWrapper {
             "onSelectResetsInput": true,
             "openOnClick": true,
             "optionComponent": [Function],
-            "options": Object {},
+            "options": Array [
+              Object {},
+            ],
             "pageSize": 5,
             "placeholder": "Select",
             "removeSelected": true,

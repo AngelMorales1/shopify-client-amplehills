@@ -27,7 +27,7 @@ ShallowWrapper {
 >
         foo
 </p>,
-      "className": "foo py1 px2 undefined",
+      "className": "foo py1 px2 transition-enter undefined",
     },
     "ref": null,
     "rendered": Object {
@@ -55,7 +55,7 @@ ShallowWrapper {
 >
           foo
 </p>,
-        "className": "foo py1 px2 undefined",
+        "className": "foo py1 px2 transition-enter undefined",
       },
       "ref": null,
       "rendered": Object {
@@ -110,7 +110,7 @@ ShallowWrapper {
 >
         foo
 </p>,
-      "className": "foo py1 px2",
+      "className": "foo py1 px2 transition-enter",
     },
     "ref": null,
     "rendered": Object {
@@ -138,7 +138,7 @@ ShallowWrapper {
 >
           foo
 </p>,
-        "className": "foo py1 px2",
+        "className": "foo py1 px2 transition-enter",
       },
       "ref": null,
       "rendered": Object {
@@ -191,7 +191,7 @@ ShallowWrapper {
       "children": <p
         className="copy bold"
 />,
-      "className": "my3 py1 px2",
+      "className": "my3 py1 px2 transition-enter",
     },
     "ref": null,
     "rendered": Object {
@@ -217,7 +217,7 @@ ShallowWrapper {
         "children": <p
           className="copy bold"
 />,
-        "className": "my3 py1 px2",
+        "className": "my3 py1 px2 transition-enter",
       },
       "ref": null,
       "rendered": Object {
