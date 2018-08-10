@@ -100,7 +100,12 @@ class MiniCart extends Component {
                     ) : null}
                     {products[handle].cartDetails ? (
                       <div className="flex flex-column my1">
-                        <pre className={styles['MiniCart__product-details']}>
+                        <pre
+                          className={cx(
+                            styles['MiniCart__product-details'],
+                            'col-9'
+                          )}
+                        >
                           {products[handle].cartDetails}
                         </pre>
                       </div>

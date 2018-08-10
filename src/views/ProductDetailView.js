@@ -14,8 +14,6 @@ class ProductDetailView extends Component {
       product: { blocks }
     } = this.props;
 
-    console.log(this.props.product);
-
     return (
       <div className="ProductDetailView">
         <div>
