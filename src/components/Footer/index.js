@@ -7,7 +7,6 @@ import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
 import locationModel from 'models/locationModel';
-import get from 'utils/get';
 
 import styles from './Footer.scss';
 
