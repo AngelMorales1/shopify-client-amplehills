@@ -7,6 +7,16 @@
     height: $alert-height-desktop;
   }
 
+  &:global {
+    ~ .content-wrapper {
+      padding-top: calc(#{$header-height-mobile} + #{$alert-height-mobile});
+
+      @media ($medium-up) {
+        padding-top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
+      }
+    }
+  }
+
   &__text {
     font-size: $font-1;
 
