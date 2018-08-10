@@ -23,10 +23,7 @@ const Routes = ({ location, alertIsActive }) => (
     <Route path="/profile" component={ProfileContainer} />
     <Route path="/sign-in" component={SignInContainer} />
     <Route path="/sign-up" component={SignUpContainer} />
-    <Route
-      path="/locations"
-      render={() => <LocationsLandingContainer alertIsActive={alertIsActive} />}
-    />
+    <Route path="/locations" component={LocationsLandingContainer} />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />
   </Switch>
