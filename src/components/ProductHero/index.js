@@ -26,11 +26,20 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    const variant = this.props.product.id;
+    const { product } = this.props;
+    const variant = product.id;
     const items = [
       {
         variantId: variant,
-        quantity: this.state.quantity
+        quantity: this.state.quantity,
+        customAttributes: product.preOrderDate
+          ? [
+              {
+                key: 'Ship Date',
+                value: moment(product.preOrderDate).format('MMMM Do YYYY')
+              }
+            ]
+          : []
       }
     ];
 
