@@ -20,7 +20,7 @@ const LocationsMap = props => {
     locations,
     locationGeoJSON,
     actions,
-    appAlertIsActive
+    alertIsActive
   } = props;
 
   const onClickFeature = feature => {
@@ -30,7 +30,7 @@ const LocationsMap = props => {
       ? actions.clearLocationSelection()
       : actions.selectLocation(featureLocationId);
   };
-  const mapHeight = appAlertIsActive
+  const mapHeight = alertIsActive
     ? styles['LocationsMap__with-alert']
     : styles['LocationsMap__without-alert'];
 

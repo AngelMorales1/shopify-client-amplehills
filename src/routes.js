@@ -11,7 +11,7 @@ import LocationsLandingContainer from 'containers/LocationsLandingContainer';
 import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 
-const Routes = ({ location, appAlertIsActive }) => (
+const Routes = ({ location, alertIsActive }) => (
   <Switch location={location}>
     <Route exact path="/" component={HomeContainer} />
     <Route
@@ -25,9 +25,7 @@ const Routes = ({ location, appAlertIsActive }) => (
     <Route path="/sign-up" component={SignUpContainer} />
     <Route
       path="/locations"
-      render={() => (
-        <LocationsLandingContainer appAlertIsActive={appAlertIsActive} />
-      )}
+      render={() => <LocationsLandingContainer alertIsActive={alertIsActive} />}
     />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />

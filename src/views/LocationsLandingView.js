@@ -28,9 +28,11 @@ class LocationsLandingView extends Component {
   };
 
   render() {
-    const { model, appAlertIsActive } = this.props;
+    const { model, alertIsActive } = this.props;
+
     if (model.isError) return <h1>Error</h1>;
-    const mapPosition = appAlertIsActive
+
+    const mapPosition = alertIsActive
       ? Global.headerHeight.desktop + Global.alertHeight.desktop
       : Global.headerHeight.desktop;
 

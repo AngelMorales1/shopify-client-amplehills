@@ -57,7 +57,7 @@ class App extends Component {
       return (
         <div className="App">
           {alertIsActive ? <Alert alert={alert} /> : null}
-          <Nav appAlertIsActive={alertIsActive} />
+          <Nav alertIsActive={alertIsActive} />
           <MiniCart />
           <div
             className={
@@ -66,7 +66,7 @@ class App extends Component {
           >
             <Routes
               location={get(this, 'props.location')}
-              appAlertIsActive={alertIsActive}
+              alertIsActive={alertIsActive}
             />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
             <Footer
