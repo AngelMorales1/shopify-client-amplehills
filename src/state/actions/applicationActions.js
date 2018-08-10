@@ -17,13 +17,17 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
     payload: new Promise((resolve, reject) => {
       const Contentful = isPreview ? PreviewClient() : ContentfulClient();
       Data.setRef('contentful', Contentful);
-      return Promise.all([
+      const fetchData = Promise.all([
         fetchOrCreateCheckout(checkoutID)(dispatch),
         getLocationData()(dispatch),
         getGlobalSettings()(dispatch),
         fetchShopifyProducts()(dispatch),
         fetchContentfulProducts()(dispatch)
-      ])
+      ]);
+      const timeout = new Promise((resolve, reject) => {
+        setTimeout(reject('Timeout'), 10000);
+      });
+      return Promise.race([fetchData, timeout])
         .then(([checkout, locations, settings, products, contentfulProducts]) =>
           resolve()
         )
