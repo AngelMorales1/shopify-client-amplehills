@@ -21,5 +21,9 @@ export default {
     mobile: 80,
     desktop: 92
   },
-  locationsCardsWidth: 532
+  locationsCardsWidth: 532,
+  alertHeight: {
+    mobile: 36,
+    desktop: 40
+  }
 };

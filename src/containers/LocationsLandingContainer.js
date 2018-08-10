@@ -18,6 +18,7 @@ import locationGeoJSON from 'state/selectors/locationGeoJSON';
 import locationResultsLabel from 'state/selectors/locationResultsLabel';
 import filteredLocations from 'state/selectors/filteredLocations';
 import filteredOutLocations from 'state/selectors/filteredOutLocations';
+import alertIsActive from 'state/selectors/alertIsActive';
 
 class LocationsLandingContainer extends ContainerBase {
   view = import('views/LocationsLandingView');
@@ -34,7 +35,8 @@ const mapStateToProps = state => {
     locationGeoJSON: locationGeoJSON(state),
     locationResultsLabel: locationResultsLabel(state),
     searchFilter: get(state, 'locationsUI.searchFilter', ''),
-    selectedLocation: get(state, 'locationsUI.selectedLocation', null)
+    selectedLocation: get(state, 'locationsUI.selectedLocation', null),
+    alertIsActive: alertIsActive(state)
   };
 };
 

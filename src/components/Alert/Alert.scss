@@ -1,0 +1,22 @@
+@import 'settings';
+
+.Alert {
+  height: $alert-height-mobile;
+
+  @media ($medium-up) {
+    height: $alert-height-desktop;
+  }
+
+  &__text {
+    font-size: $font-1;
+
+    @media ($medium-up) {
+      font-size: $font-2;
+    }
+  }
+
+  &__linked-text {
+    margin-left: spacing(1);
+    text-decoration: none;
+  }
+}

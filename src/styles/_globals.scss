@@ -46,6 +46,14 @@ Dimension classes
   }
 }
 
+.content-wrapper-with-alert {
+  padding-top: calc(#{$header-height-mobile} + #{$alert-height-mobile});
+
+  @media ($medium-up) {
+    padding-top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
+  }
+}
+
 .object-fit {
   object-fit: cover;
 }

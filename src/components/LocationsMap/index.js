@@ -19,7 +19,8 @@ const LocationsMap = props => {
     locationFilters,
     locations,
     locationGeoJSON,
-    actions
+    actions,
+    alertIsActive
   } = props;
 
   const onClickFeature = feature => {
@@ -29,9 +30,12 @@ const LocationsMap = props => {
       ? actions.clearLocationSelection()
       : actions.selectLocation(featureLocationId);
   };
+  const LocationsMapClasses = cx(styles['LocationsMap'], 'relative', {
+    [styles['LocationsMap--with-alert']]: alertIsActive
+  });
 
   return (
-    <div className={cx(styles['LocationsMap'], 'relative')}>
+    <div className={LocationsMapClasses}>
       <MapboxMap
         className="z-0"
         featureCollection={locationGeoJSON}

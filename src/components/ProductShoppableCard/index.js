@@ -20,7 +20,9 @@ const ProductShoppableCard = ({
   const actionClasses = cx(
     styles['ProductShoppableCard__actions'],
     'relative',
-    quantity ? 'transition-slide-swap--active' : null
+    {
+      [styles['ProductShoppableCard__actions--has-quantity']]: quantity
+    }
   );
 
   return (
@@ -46,14 +48,20 @@ const ProductShoppableCard = ({
           {product.available ? (
             <div className={actionClasses}>
               <QuantitySelector
-                className="absolute t0 l0 transition transition-slide-swap"
+                className={cx(
+                  styles['ProductShoppableCard__quantity-selector'],
+                  'absolute t0 l0 transition'
+                )}
                 quantity={quantity}
                 color="seafoam"
                 allowZero={true}
                 onChange={newQuantity => handleQuantityChange(newQuantity)}
               />
               <Button
-                className="small bg-seafoam absolute t0 l0 transition-slide-swap-replace"
+                className={cx(
+                  styles['ProductShoppableCard__button'],
+                  'small bg-seafoam absolute t0 l0 transition-slide-swap-replace'
+                )}
                 variant="primary-small"
                 color="white-madison-blue-border"
                 label="+ Add"

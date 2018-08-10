@@ -7,6 +7,7 @@ import 'what-input';
 import { initializeApplication } from 'state/actions/applicationActions';
 import locations from 'state/selectors/locations';
 import checkout from 'state/selectors/checkout';
+import alertIsActive from 'state/selectors/alertIsActive';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
 import get from 'utils/get';
@@ -19,6 +20,7 @@ import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
 import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
+import Alert from 'components/Alert';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -42,21 +44,31 @@ class App extends Component {
   }
 
   render() {
-    const { applicationStatus, locations, globalSettings } = this.props;
+    const {
+      applicationStatus,
+      locations,
+      globalSettings,
+      alertIsActive
+    } = this.props;
     const {
       facebookLink,
       instagramLink,
       twitterLink,
       footerIllustration
     } = globalSettings;
+    const alert = get(globalSettings, 'alert', {});
 
     if (applicationStatus === FULFILLED) {
       return (
         <div className="App">
-          <Nav />
+          {alertIsActive ? <Alert alert={alert} /> : null}
+          <Nav alertIsActive={alertIsActive} />
           <MiniCart />
-
-          <div className="content-wrapper">
+          <div
+            className={
+              alertIsActive ? 'content-wrapper-with-alert' : 'content-wrapper'
+            }
+          >
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
             <Footer
@@ -86,7 +98,8 @@ const mapStateToProps = state => {
       state,
       'applicationUI.globalSettings.items[0].fields',
       {}
-    )
+    ),
+    alertIsActive: alertIsActive(state)
   };
 };
 

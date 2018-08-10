@@ -3,10 +3,12 @@
 .Nav {
   height: $header-height-mobile;
   padding: spacing(4) spacing(4);
+  top: $alert-height-mobile;
 
   @media ($medium-up) {
     height: $header-height-desktop;
     padding: spacing(4) spacing(8);
+    top: $alert-height-desktop;
   }
 
   &__cart-button {
