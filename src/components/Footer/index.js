@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'utils/get';
 
 import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
