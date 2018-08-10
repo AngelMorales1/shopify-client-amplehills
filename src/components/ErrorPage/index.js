@@ -41,7 +41,7 @@ const ErrorPage = ({ children }) => {
             <Button
               className="mx-auto"
               color="white-peach"
-              variant="primary-small"
+              variant="primary"
               label="Refresh Page"
               onClick={() => window.location.reload()}
             />
