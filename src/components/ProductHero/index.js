@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import moment from 'moment';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
@@ -25,11 +26,20 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    const variant = this.props.product.id;
+    const { product } = this.props;
+    const variant = product.id;
     const items = [
       {
         variantId: variant,
-        quantity: this.state.quantity
+        quantity: this.state.quantity,
+        customAttributes: product.preOrderDate
+          ? [
+              {
+                key: 'Ship Date',
+                value: moment(product.preOrderDate).format('MMMM Do YYYY')
+              }
+            ]
+          : []
       }
     ];
 
@@ -105,19 +115,29 @@ class ProductHero extends Component {
             <div>
               <p className="copy pr2">{product.description}</p>
             </div>
+            {product.preOrderDate ? (
+              <div className="mt3 mb2">
+                <strong className="text-peach bold small">
+                  This product will ship on{' '}
+                  {moment(product.preOrderDate).format('MMMM Do YYYY')}.
+                </strong>
+              </div>
+            ) : null}
             <form className="flex flex-wrap items-center">
               <QuantitySelector
                 className="my3 mr3"
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {available && subItemsAvailable ? (
+              {(available && subItemsAvailable) || product.preOrderDate ? (
                 <Button
                   color="madison-blue"
                   shadow={true}
                   onClick={this.addToCart}
                 >
-                  <span className="mr2">Add to Cart</span>
+                  <span className="mr2">
+                    {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
+                  </span>
                   <span className="ml2">
                     ${(price * this.state.quantity).toFixed(2)}
                   </span>
