@@ -267,7 +267,7 @@ class ChooseYourOwnStory extends Component {
                   <div
                     key={i}
                     className={cx(
-                      styles['ChooseYourOwnStory__pint-icon'],
+                      styles['ChooseYourOwnStory__pint-image'],
                       'mr2'
                     )}
                   >

@@ -38,6 +38,12 @@ $menu-height: spacing(37.5);
     width: spacing(9);
   }
 
+  &__pint-image {
+    height: spacing(13);
+    width: spacing(12);
+    margin-top: spacing(-1);
+  }
+
   &__menu-size {
     width: 20%;
   }
