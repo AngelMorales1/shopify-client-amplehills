@@ -85,13 +85,18 @@ class ProductHero extends Component {
         />
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px3 mx-auto">
-            <div className="relative inline-block">
-              <h1 className="block-headline mb4 relative z-1">
-                {get(fields, 'title', '')}
-              </h1>
+            <div className="mb4 relative inline-block">
+              <h1 className="block-headline">{get(fields, 'title', '')}</h1>
               <Image
+                style={{
+                  transform: `translateX(${get(
+                    block,
+                    'fields.titleImagePosition',
+                    0
+                  )}%)`
+                }}
                 className={cx(
-                  'absolute',
+                  'absolute z-below t0 b0 my-auto',
                   styles['ProductHero__title-illustration']
                 )}
                 src={get(fields, 'titleIllustration.fields.file.url', '')}

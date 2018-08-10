@@ -1,7 +1,11 @@
+@import 'settings';
+
 .ProductHero {
   &__title-illustration {
-    display: none;
-    top: -0.5rem;
-    right: 1rem;
+    width: spacing(72);
+
+    @media ($medium-up) {
+      width: spacing(90);
+    }
   }
 }

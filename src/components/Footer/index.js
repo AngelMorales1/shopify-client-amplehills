@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import get from 'utils/get';
 
 import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
 import locationModel from 'models/locationModel';
-import get from 'utils/get';
 
 import styles from './Footer.scss';
 
