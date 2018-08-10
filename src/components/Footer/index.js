@@ -6,6 +6,7 @@ import { Image } from 'components/base';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
 import locationModel from 'models/locationModel';
+import get from 'utils/get';
 
 import styles from './Footer.scss';
 
@@ -24,9 +25,9 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
       <span className="bold small text-white center">
         &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
       </span>
-      {footerIllustration ? (
+      {footerIllustration.fields ? (
         <Image
-          src={footerIllustration.fields.file.url}
+          src={get(footerIllustration, 'fields.file.url', '')}
           className={cx(
             styles['Footer__illustration'],
             'medium-down-display-none xs-hide sm-hide'
