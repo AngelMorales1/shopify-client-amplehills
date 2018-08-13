@@ -30,7 +30,7 @@ const ImageText = ({ block, z }) => {
           <p className="block-subheadline">{get(fields, 'text', '')}</p>
         </div>
         <Image
-          className={cx(styles['ImageText__image'], 'z-overlay col-4')}
+          className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}
           style={{ transform: `translateY(${position}%)` }}
           alt={`${get(fields, 'title', '')} illustration`}
           src={get(fields, 'image.fields.file.url', '')}
