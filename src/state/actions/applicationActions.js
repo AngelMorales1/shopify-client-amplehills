@@ -9,6 +9,7 @@ import {
 } from 'state/actions/productsActions';
 
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
+import { setTimeout } from 'timers';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
@@ -25,9 +26,11 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         fetchContentfulProducts()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
-        setTimeout(reject('Timeout'), 10);
+        setTimeout(() => reject('Timeout'), 10000);
       });
-      return Promise.race([fetchData, timeout])
+      const checkTimeout = Promise.race([fetchData, timeout]);
+
+      return checkTimeout
         .then(([checkout, locations, settings, products, contentfulProducts]) =>
           resolve()
         )
