@@ -22,6 +22,7 @@
   &__product-details {
     font-size: $font-3;
     line-height: $font-6;
+    white-space: pre-wrap;
   }
 
   &__content-container {

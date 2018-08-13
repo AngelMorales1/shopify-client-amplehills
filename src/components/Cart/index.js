@@ -138,6 +138,13 @@ class Cart extends Component {
                               }`}</span>
                             );
                           })}
+                          {products[handle].cartDetails ? (
+                            <div className="flex flex-column">
+                              <pre className={styles['Cart__product-details']}>
+                                {products[handle].cartDetails}
+                              </pre>
+                            </div>
+                          ) : null}
                         </div>
                       </div>
                       <span className="line-item-title my2 md-hide lg-hide">
@@ -147,7 +154,7 @@ class Cart extends Component {
                     <div
                       className={cx(
                         styles['Cart__title'],
-                        'xs-hide sm-hide flex flex-column mr-auto'
+                        'xs-hide sm-hide flex flex-column mr-auto col-5'
                       )}
                     >
                       <Link
@@ -165,7 +172,7 @@ class Cart extends Component {
                       })}
                       {products[handle].cartDetails ? (
                         <div className="flex flex-column">
-                          <pre className={styles['Cart__product-details']}>
+                          <pre className={cx(styles['Cart__product-details'])}>
                             {products[handle].cartDetails}
                           </pre>
                         </div>
@@ -174,7 +181,7 @@ class Cart extends Component {
                     <div
                       className={cx(
                         styles['Cart__content-inner-wrapper'],
-                        'mr2 flex'
+                        'mr2 flex col-12 md-col-5'
                       )}
                     >
                       <div
