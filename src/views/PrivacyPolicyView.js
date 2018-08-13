@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import get from 'utils/get';
+
 class PrivacyPolicy extends Component {
   render() {
     const { model, privacyPolicy } = this.props;
@@ -14,7 +16,7 @@ class PrivacyPolicy extends Component {
           </div>
         </div>
         <div className="container-width transition-slide-up mx-auto my3 px3">
-          {privacyPolicy.privacyPolicyContent}
+          {get(privacyPolicy, 'content', '')}
         </div>
       </div>
     );

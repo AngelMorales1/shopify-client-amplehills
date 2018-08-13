@@ -15,7 +15,7 @@ export const getPrivacyPolicy = payload => dispatch => {
   return dispatch({
     type: GET_PRIVACY_POLICY,
     payload: Data.getEntries({
-      content_type: 'privacyPolicy'
+      content_type: 'privacyPolicyPage'
     })
   });
 };

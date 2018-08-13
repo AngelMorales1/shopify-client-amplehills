@@ -11,9 +11,12 @@ class PrivacyPolicyContainer extends ContainerBase {
 }
 
 const mapStateToProps = state => {
-  console.log('>>>', state);
   return {
-    privacyPolicy: get(state, 'applicationUI.privacyPolicy.items[0].fields', {})
+    privacyPolicy: get(
+      state,
+      'applicationUI.privacyPolicy.items[0].fields.privacyPolicyContent[0].fields',
+      {}
+    )
   };
 };
 
