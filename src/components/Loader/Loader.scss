@@ -9,10 +9,9 @@
 
   &__bar {
     height: spacing(1);
-    width: 100%;
+    width: 90%;
     background: color('peach');
     animation: move 10s linear;
-    left: -15%;
 
     @media ($medium-up) {
       height: spacing(2);
@@ -28,21 +27,24 @@
 
 @keyframes move {
   0% {
-    left: -100%;
+    width: 0;
   }
   50% {
-    left: -40%;
+    width: 60%;
   }
-  70% {
-    left: -20%;
+  60% {
+    width: 75%;
+  }
+  65% {
+    width: 80%;
   }
   75% {
-    left: -16%;
+    width: 88%;
   }
   90% {
-    left: -15%;
+    width: 90%;
   }
   100% {
-    left: -15%;
+    width: 90%;
   }
 }
