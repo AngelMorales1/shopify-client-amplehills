@@ -9,7 +9,6 @@ import {
 } from 'state/actions/productsActions';
 
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
-import { setTimeout } from 'timers';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
