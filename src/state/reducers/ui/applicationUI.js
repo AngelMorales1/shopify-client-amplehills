@@ -1,7 +1,11 @@
-import { GET_GLOBAL_SETTINGS } from 'state/actions/ui/applicationUIActions';
+import {
+  GET_GLOBAL_SETTINGS,
+  GET_PRIVACY_POLICY
+} from 'state/actions/ui/applicationUIActions';
 
 const initialState = {
-  globalSettings: {}
+  globalSettings: {},
+  privacyPolicy: {}
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +15,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         globalSettings: action.payload
+      };
+    case `${GET_PRIVACY_POLICY}_FULFILLED`:
+      return {
+        ...state,
+        privacyPolicy: action.payload
       };
     default:
       return state;

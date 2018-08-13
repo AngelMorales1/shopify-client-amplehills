@@ -10,6 +10,7 @@ import SignUpContainer from 'containers/SignUpContainer';
 import LocationsLandingContainer from 'containers/LocationsLandingContainer';
 import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
+import PrivacyPolicyContainer from 'containers/PrivacyPolicyContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -26,6 +27,7 @@ const Routes = ({ location }) => (
     <Route path="/locations" component={LocationsLandingContainer} />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />
+    <Route path="/privacy-policy" component={PrivacyPolicyContainer} />
   </Switch>
 );
 
