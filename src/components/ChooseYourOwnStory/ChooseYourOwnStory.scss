@@ -36,6 +36,7 @@ $menu-height: spacing(37.5);
   &__pint-icon {
     height: spacing(10);
     width: spacing(9);
+    object-fit: cover;
   }
 
   &__menu-size {
