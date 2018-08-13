@@ -8,19 +8,17 @@
 
   &__container {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     margin: spacing(8);
 
     @media ($medium-up) {
       flex-direction: row;
-      justify-content: space-between;
       margin: spacing(16);
     }
   }
 
   &__image {
     min-width: spacing(65);
-    order: 2;
 
     @media ($medium-up) {
       order: 1;
@@ -30,12 +28,8 @@
   }
 
   &__text-content {
-    order: 1;
-    transform: translateY(35%);
-
     @media ($medium-up) {
       order: 2;
-      transform: none;
       margin-left: spacing(18);
     }
   }

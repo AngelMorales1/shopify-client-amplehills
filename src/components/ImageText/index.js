@@ -15,21 +15,11 @@ const ImageText = ({ block, z }) => {
   return (
     <div
       style={{ zIndex: z }}
-      className={cx(
-        styles['ImageText'],
-        styles[colorClass],
-        'flex justify-center drip'
-      )}
+      className={cx(styles['ImageText'], styles[colorClass], 'flex drip')}
     >
       <div
         className={cx('flex container-width', styles['ImageText__container'])}
       >
-        <Image
-          className={cx(styles['ImageText__image'], 'z-overlay col-4')}
-          style={{ transform: `translateY(${position}%)` }}
-          alt={`${get(fields, 'title', '')} illustration`}
-          src={get(fields, 'image.fields.file.url', '')}
-        />
         <div
           className={cx(
             styles['ImageText__text-content'],
@@ -39,6 +29,12 @@ const ImageText = ({ block, z }) => {
           <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
           <p className="block-subheadline">{get(fields, 'text', '')}</p>
         </div>
+        <Image
+          className={cx(styles['ImageText__image'], 'z-overlay col-4')}
+          style={{ transform: `translateY(${position}%)` }}
+          alt={`${get(fields, 'title', '')} illustration`}
+          src={get(fields, 'image.fields.file.url', '')}
+        />
       </div>
     </div>
   );
