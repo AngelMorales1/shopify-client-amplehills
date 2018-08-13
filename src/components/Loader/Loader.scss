@@ -7,9 +7,44 @@
     justify-content: center;
   }
 
+  &__bar {
+    height: spacing(1);
+    width: 90%;
+    background: color('peach');
+    animation: move 10s linear;
+
+    @media ($medium-up) {
+      height: spacing(2);
+    }
+  }
+
   &__image {
     @media ($medium-up) {
       width: 110px;
     }
+  }
+}
+
+@keyframes move {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 60%;
+  }
+  60% {
+    width: 75%;
+  }
+  65% {
+    width: 80%;
+  }
+  75% {
+    width: 88%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 90%;
   }
 }
