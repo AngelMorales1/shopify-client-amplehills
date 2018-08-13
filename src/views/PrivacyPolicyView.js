@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import marked from 'marked';
 
 import get from 'utils/get';
 
-class PrivacyPolicy extends Component {
+class PrivacyPolicyView extends Component {
+  createMarkup() {
+    return { __html: marked(get(this.props.privacyPolicy, 'content', '')) };
+  }
+
   render() {
-    const { model, privacyPolicy } = this.props;
+    const { model } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 
@@ -15,12 +20,13 @@ class PrivacyPolicy extends Component {
             <p className="block-headline pt3 pb4">Privacy Policy</p>
           </div>
         </div>
-        <div className="container-width transition-slide-up mx-auto my3 px3">
-          {get(privacyPolicy, 'content', '')}
-        </div>
+        <div
+          dangerouslySetInnerHTML={this.createMarkup()}
+          className="container-width transition-slide-up mx-auto my3 px3"
+        />
       </div>
     );
   }
 }
 
-export default PrivacyPolicy;
+export default PrivacyPolicyView;
