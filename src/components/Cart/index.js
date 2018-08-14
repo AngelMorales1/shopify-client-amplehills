@@ -110,7 +110,7 @@ class Cart extends Component {
                     variant => variant.id === item.productId
                   );
                 }).handle;
-
+                console.log(products[handle]);
                 return (
                   <div
                     key={item.id}
