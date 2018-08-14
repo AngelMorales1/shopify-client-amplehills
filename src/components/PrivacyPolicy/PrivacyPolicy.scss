@@ -1,0 +1,20 @@
+@import 'settings', 'typography';
+
+.PrivacyPolicy {
+  margin-top: spacing(16);
+  > p {
+    @extend .block-subheadline;
+    margin-bottom: spacing(8);
+
+    > a {
+      text-decoration: none;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
+  }
+
+  > h2 {
+    @extend .block-subheadline;
+    @extend .bold;
+    margin-bottom: spacing(2);
+  }
+}

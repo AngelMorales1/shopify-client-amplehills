@@ -1,6 +1,5 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import get from 'utils/get';
 
@@ -20,13 +19,4 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    actions: bindActionCreators(dispatch)
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PrivacyPolicyContainer);
+export default connect(mapStateToProps)(PrivacyPolicyContainer);

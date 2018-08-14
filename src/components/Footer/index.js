@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 
 import { Image } from 'components/base';
+import { NavLink } from 'react-router-dom';
 import FooterLocations from './FooterLocations.js';
 import FooterLinks from './FooterLinks.js';
 import locationModel from 'models/locationModel';
@@ -23,7 +24,17 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
         />
       </div>
       <span className="bold small text-white center">
-        &copy; 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+        &copy; 2018 Ample Hills Creamery.
+        <NavLink
+          exact
+          to="/privacy-policy"
+          className={cx(
+            styles['Footer__privacy-link'],
+            'text-decoration-none ml1'
+          )}
+        >
+          Privacy Policy & Accessibility
+        </NavLink>
       </span>
       {footerIllustration.fields ? (
         <Image
