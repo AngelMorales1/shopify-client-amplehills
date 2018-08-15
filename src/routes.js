@@ -27,10 +27,7 @@ const Routes = ({ location }) => (
     <Route path="/locations" component={LocationsLandingContainer} />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />
-    <Route
-      path="/privacy-policy"
-      render={() => <GenericPageContainer page="Privacy Policy" />}
-    />
+    <Route path="/privacy-policy" component={GenericPageContainer} />
   </Switch>
 );
 

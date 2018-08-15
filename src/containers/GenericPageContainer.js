@@ -9,17 +9,23 @@ class GenericPageContainer extends ContainerBase {
   view = import('views/GenericPageView');
 
   model = () => {
-    const {
-      actions: { getGenericPage }
-    } = this.props;
+    const { getGenericPage } = this.props.actions;
+    const { path } = this.props.match;
 
-    return getGenericPage(this.props.page);
+    const page = path
+      .slice(1)
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
+    return getGenericPage(page);
   };
 }
 
 const mapStateToProps = state => {
   return {
-    genericPage: get(state, 'genericPage.genericPage.items', [])
+    genericPage: get(state, 'genericPage.genericPage.items', []),
+    blocks: get(state, 'genericPage.genericPage.includes.Entry', [])
   };
 };
 
