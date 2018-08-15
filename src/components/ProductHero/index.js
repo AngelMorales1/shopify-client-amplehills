@@ -6,7 +6,7 @@ import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 
 import get from 'utils/get';
-import { Image, Button, QuantitySelector } from 'components/base';
+import { Image, Button, QuantitySelector, Carousel } from 'components/base';
 import OurPledge from 'components/OurPledge';
 
 import styles from './ProductHero.scss';
@@ -67,6 +67,8 @@ class ProductHero extends Component {
       calloutImage
     } = ourPledge;
 
+    const carouselImages = get(fields, 'carouselImages', []);
+
     return (
       <div
         className={cx(
@@ -81,17 +83,42 @@ class ProductHero extends Component {
           </div>
         ) : null}
 
-        <div
-          className="col col-12 md-col-6 square"
-          style={{
-            background: `url(${get(
-              fields,
-              'image.fields.file.url',
-              ''
-            )}) no-repeat center`,
-            backgroundSize: 'cover'
-          }}
-        />
+        {carouselImages.length > 1 ? (
+          <div className="col col-12 md-col-6 flex square">
+            <Carousel
+              className={cx(styles['ProductHero__carousel'], 'wh100')}
+              showArrows={false}
+              showDotsOnImage={true}
+              sliderClasses="h100"
+            >
+              {carouselImages.map(image => (
+                <div
+                  className="wh100 square"
+                  style={{
+                    background: `url(${get(
+                      image,
+                      'fields.file.url',
+                      ''
+                    )}) no-repeat center`,
+                    backgroundSize: 'cover'
+                  }}
+                />
+              ))}
+            </Carousel>
+          </div>
+        ) : (
+          <div
+            className="col col-12 md-col-6 square"
+            style={{
+              background: `url(${get(
+                carouselImages,
+                '[0]fields.file.url',
+                ''
+              )}) no-repeat center`,
+              backgroundSize: 'cover'
+            }}
+          />
+        )}
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px3 mx-auto">
             <div className="mb4 relative inline-block">

@@ -8,4 +8,17 @@
       width: spacing(90);
     }
   }
+
+  &__carousel {
+    height: 100% !important;
+
+    :global {
+      .slider,
+      .slider-slide,
+      .slider-frame,
+      .slider-list {
+        height: 100% !important;
+      }
+    }
+  }
 }

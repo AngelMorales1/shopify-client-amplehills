@@ -6,10 +6,6 @@ import { Image, Button, Carousel } from 'components/base';
 import styles from './ComicStrip.scss';
 
 class ComicStrip extends Component {
-  componentDidMount() {
-    window.dispatchEvent(new Event('resize'));
-  }
-
   state = {
     activeFlavor: 0,
     activeSlide: 0
