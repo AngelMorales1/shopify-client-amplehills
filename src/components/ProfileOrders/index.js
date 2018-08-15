@@ -47,14 +47,17 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
                     <span className="line-item-title">${item.price}</span>
                     {subItems.length ? (
                       <div className="w100">
+                        {console.log(subItems, products)}
                         <ul className="mt2 mb1">
                           {subItems.map((subItem, i) => (
                             <li
                               className="sub-line-item small"
                               key={`${subItem.handle} ${i}`}
-                            >{`${subItem.quantity}x ${
-                              products[subItem.handle].title
-                            }`}</li>
+                            >{`${subItem.quantity}x ${get(
+                              products,
+                              `[${subItem.handle}].title`,
+                              subItem.handle
+                            )}`}</li>
                           ))}
                         </ul>
                       </div>
