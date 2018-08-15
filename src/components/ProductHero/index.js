@@ -34,7 +34,7 @@ class ProductHero extends Component {
         customAttributes: product.preOrderDate
           ? [
               {
-                key: 'Ship Date',
+                key: 'Shipping Estimate',
                 value: product.preOrderDate
               }
             ]
