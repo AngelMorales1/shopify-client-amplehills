@@ -43,9 +43,10 @@
 
     &__logo {
       object-fit: contain;
+      max-width: spacing(30);
 
       @media ($medium-up) {
-        width: spacing(30);
+        max-width: spacing(40);
       }
     }
   }
