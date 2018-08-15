@@ -54,20 +54,31 @@ class App extends Component {
       globalSettings,
       alertIsActive
     } = this.props;
+
     const {
       facebookLink,
       instagramLink,
       twitterLink,
       footerIllustration,
-      forceErrorPage
+      forceErrorPage,
+      facebookIcon,
+      instagramIcon,
+      twitterIcon,
+      profileIcon,
+      logo
     } = globalSettings;
+
     const alert = get(globalSettings, 'alert', {});
 
     if (applicationStatus === FULFILLED && !forceErrorPage) {
       return (
         <div className="App">
           {alertIsActive ? <Alert alert={alert} /> : null}
-          <Nav alertIsActive={alertIsActive} />
+          <Nav
+            alertIsActive={alertIsActive}
+            logo={logo}
+            profileIcon={profileIcon}
+          />
           <MiniCart />
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
@@ -76,6 +87,7 @@ class App extends Component {
               locations={locations}
               footerIllustration={footerIllustration}
               footerLinks={{ facebookLink, instagramLink, twitterLink }}
+              footerIcons={{ facebookIcon, instagramIcon, twitterIcon }}
             />
           </div>
         </div>
