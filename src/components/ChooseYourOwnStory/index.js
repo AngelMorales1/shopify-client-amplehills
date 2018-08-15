@@ -117,6 +117,9 @@ class ChooseYourOwnStory extends Component {
   render() {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
+    const pintSize = Object.keys(PintSizes).find(
+      pintSize => PintSizes[pintSize].size === size
+    );
     const quantity = get(this.state, 'quantity', 1);
 
     const {
@@ -262,7 +265,7 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label className="small bold">
-                Choose {PintSizes.number[size]} Flavors
+                Choose {PintSizes[pintSize].label} Flavors
               </label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
@@ -297,7 +300,7 @@ class ChooseYourOwnStory extends Component {
               <div className="lg-hide xl-hide col col-7">
                 <div className="col col-12">
                   <span className="small bold">
-                    Choose {PintSizes.number[size]} Flavors
+                    Choose {PintSizes[pintSize].label} Flavors
                   </span>
                 </div>
               </div>
