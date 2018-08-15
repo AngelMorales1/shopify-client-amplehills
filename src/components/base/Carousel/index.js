@@ -7,6 +7,18 @@ import { Button, Image } from 'components/base';
 import styles from './Carousel.scss';
 
 class Carousel extends Component {
+  componentDidUpdate() {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
+  }
+
   state = {
     index: 0
   };
@@ -17,21 +29,20 @@ class Carousel extends Component {
       children,
       showArrows,
       showDots,
+      showDotsOnImage,
       arrowPreviousImage,
       arrowNextImage,
       onChange,
-      index
+      index,
+      sliderClasses
     } = this.props;
     return (
       <div
-        className={cx(
-          className,
-          'w100 flex flex-column items-center justify-center transition'
-        )}
+        className={cx(className, 'flex flex-column justify-center transition')}
       >
         <Nuka
-          className={cx('w100', {
-            pb4: showDots
+          className={cx('w100 flex', sliderClasses, {
+            pb4: showDots && !showDotsOnImage
           })}
           slideIndex={index}
           afterSlide={index => this.setState({ index }, onChange(index))}
@@ -91,21 +102,26 @@ Carousel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   showArrows: PropTypes.bool,
+  showDots: PropTypes.bool,
+  showDotsOnImage: PropTypes.bool,
   arrowNextImage: PropTypes.string,
   arrowPreviousImage: PropTypes.string,
   onChange: PropTypes.func,
-  index: PropTypes.number
+  index: PropTypes.number,
+  sliderClasses: PropTypes.string
 };
 
 Carousel.defaultProps = {
-  className: '',
+  className: 'w100',
   children: null,
   showArrows: true,
   showDots: true,
+  showOnImage: false,
   arrowPreviousImage: '/assets/images/icon-circle-left-arrow.svg',
   arrowNextImage: '/assets/images/icon-circle-right-arrow.svg',
   onChange: () => {},
-  index: 0
+  index: 0,
+  sliderClasses: ''
 };
 
 export default Carousel;
