@@ -52,9 +52,11 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
                             <li
                               className="sub-line-item small"
                               key={`${subItem.handle} ${i}`}
-                            >{`${subItem.quantity}x ${
-                              products[subItem.handle].title
-                            }`}</li>
+                            >{`${subItem.quantity}x ${get(
+                              products,
+                              `[${subItem.handle}].title`,
+                              subItem.handle
+                            )}`}</li>
                           ))}
                         </ul>
                       </div>
