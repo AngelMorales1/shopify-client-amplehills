@@ -40,8 +40,13 @@ $circle-background-offset-top-desktop: spacing(-80);
 
   &__text-content {
     margin-top: spacing(12);
+    overflow: scroll;
 
     @media ($medium-up) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
       margin-right: spacing(-10);
       width: 65%;
       min-width: spacing(100);

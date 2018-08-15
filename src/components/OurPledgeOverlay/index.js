@@ -50,12 +50,7 @@ const OurPledgeOverlay = ({
           >
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
-          <div
-            className={cx(
-              styles['OurPledgeOverlay__text-content'],
-              'flex flex-column justify-center'
-            )}
-          >
+          <div className={cx(styles['OurPledgeOverlay__text-content'])}>
             <h2 className="mb3 block-headline text-madison-blue">
               We Ship Nationwide
             </h2>
