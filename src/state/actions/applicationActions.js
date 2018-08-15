@@ -1,9 +1,6 @@
 import Data from 'lib/Data';
 import ContentfulClient, { PreviewClient } from 'lib/Contentful';
-import {
-  getGlobalSettings,
-  getPrivacyPolicy
-} from 'state/actions/ui/applicationUIActions';
+import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
 
 import {
@@ -25,8 +22,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         getLocationData()(dispatch),
         getGlobalSettings()(dispatch),
         fetchShopifyProducts()(dispatch),
-        fetchContentfulProducts()(dispatch),
-        getPrivacyPolicy()(dispatch)
+        fetchContentfulProducts()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -34,15 +30,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const checkTimeout = Promise.race([fetchData, timeout]);
 
       return checkTimeout
-        .then(
-          ([
-            checkout,
-            locations,
-            settings,
-            products,
-            contentfulProducts,
-            privacyPolicy
-          ]) => resolve()
+        .then(([checkout, locations, settings, products, contentfulProducts]) =>
+          resolve()
         )
         .catch(err => reject(err));
     })

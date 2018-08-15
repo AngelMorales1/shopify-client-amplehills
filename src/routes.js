@@ -10,7 +10,7 @@ import SignUpContainer from 'containers/SignUpContainer';
 import LocationsLandingContainer from 'containers/LocationsLandingContainer';
 import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
-import PrivacyPolicyContainer from 'containers/PrivacyPolicyContainer';
+import GenericPageContainer from 'containers/GenericPageContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -27,7 +27,10 @@ const Routes = ({ location }) => (
     <Route path="/locations" component={LocationsLandingContainer} />
     <Route path="/contact" component={ContactUsContainer} />
     <Route path="/cart" component={Cart} />
-    <Route path="/privacy-policy" component={PrivacyPolicyContainer} />
+    <Route
+      path="/privacy-policy"
+      render={() => <GenericPageContainer page="Privacy Policy" />}
+    />
   </Switch>
 );
 

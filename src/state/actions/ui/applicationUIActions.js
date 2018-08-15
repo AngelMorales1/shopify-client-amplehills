@@ -9,13 +9,3 @@ export const getGlobalSettings = payload => dispatch => {
     })
   });
 };
-
-export const GET_PRIVACY_POLICY = 'GET_PRIVACY_POLICY';
-export const getPrivacyPolicy = payload => dispatch => {
-  return dispatch({
-    type: GET_PRIVACY_POLICY,
-    payload: Data.getEntries({
-      content_type: 'privacyPolicyPage'
-    })
-  });
-};
