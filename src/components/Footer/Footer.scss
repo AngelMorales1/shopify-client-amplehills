@@ -72,6 +72,10 @@
     margin-top: spacing(-10);
   }
 
+  &__privacy-link:hover {
+    color: color('goldenrod');
+  }
+
   &__illustration {
     position: absolute;
     bottom: spacing(16);

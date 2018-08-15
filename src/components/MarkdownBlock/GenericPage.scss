@@ -1,0 +1,57 @@
+@import 'settings', 'typography';
+
+.MarkdownBlock {
+  margin-top: spacing(16);
+
+  > h1 {
+    @extend .title;
+    margin-bottom: spacing(4);
+  }
+
+  > h2 {
+    @extend .block-headline;
+    margin-bottom: spacing(4);
+  }
+
+  > h3 {
+    @extend .block-subheadline;
+    @extend .bold;
+    margin-bottom: spacing(2);
+  }
+
+  > p {
+    @extend .block-subheadline;
+    margin-bottom: spacing(8);
+
+    > a {
+      text-decoration: none;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
+
+    > strong {
+      @extend .bold;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  ol,
+  ul {
+    margin: spacing(10);
+
+    > li {
+      margin: spacing(3) 0;
+    }
+  }
+
+  blockquote {
+    width: 100%;
+
+    > p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

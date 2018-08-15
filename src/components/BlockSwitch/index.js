@@ -9,6 +9,7 @@ import ImageDoubleText from 'components/ImageDoubleText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import ComicStrip from 'components/ComicStrip';
+import MarkdownBlock from 'components/MarkdownBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -29,6 +30,8 @@ const BlockSwitch = props => {
       return <ChooseYourOwnStory {...props} />;
     case 'blockComicStrip':
       return <ComicStrip {...props} />;
+    case 'blockMarkdown':
+      return <MarkdownBlock {...props} />;
     default:
       return null;
   }
