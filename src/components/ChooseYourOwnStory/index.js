@@ -8,7 +8,6 @@ import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
-import Number from 'constants/Number';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -263,7 +262,7 @@ class ChooseYourOwnStory extends Component {
               )}
             >
               <label className="small bold">
-                Choose {Number[size]} Flavors
+                Choose {PintSizes.number[size]} Flavors
               </label>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
@@ -298,7 +297,7 @@ class ChooseYourOwnStory extends Component {
               <div className="lg-hide xl-hide col col-7">
                 <div className="col col-12">
                   <span className="small bold">
-                    Choose {Number[size]} Flavors
+                    Choose {PintSizes.number[size]} Flavors
                   </span>
                 </div>
               </div>

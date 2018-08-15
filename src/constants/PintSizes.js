@@ -10,5 +10,10 @@ export default {
   SIX: {
     name: '6-Pack',
     size: 6
+  },
+  number: {
+    4: 'Four',
+    5: 'Five',
+    6: 'Six'
   }
 };
