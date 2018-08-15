@@ -5,6 +5,7 @@ import get from 'utils/get';
 import styles from './Footer.scss';
 import { Button, Image } from 'components/base';
 import PropTypes from 'prop-types';
+import imageModel from 'models/imageModel';
 
 const FooterLinks = ({ footerLinks, footerIcons }) => {
   return (
@@ -95,9 +96,9 @@ FooterLinks.propTypes = {
     twitterLink: PropTypes.string
   }),
   footerIcons: PropTypes.shape({
-    facebookIcon: PropTypes.object,
-    instagramIcon: PropTypes.object,
-    twitterIcon: PropTypes.object
+    facebookIcon: imageModel.propTypes,
+    instagramIcon: imageModel.propTypes,
+    twitterIcon: imageModel.propTypes
   })
 };
 
@@ -108,8 +109,8 @@ FooterLinks.defaultProps = {
     twitterLink: ''
   },
   footerIcons: {
-    facebookIcon: {},
-    instagramIcon: {},
-    twitterIcon: {}
+    facebookIcon: imageModel.default,
+    instagramIcon: imageModel.default,
+    twitterIcon: imageModel.default
   }
 };

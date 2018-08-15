@@ -40,6 +40,14 @@
       order: 2;
       justify-content: center;
     }
+
+    &__logo {
+      object-fit: contain;
+
+      @media ($medium-up) {
+        width: spacing(30);
+      }
+    }
   }
 
   .right-side {

@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
 import Global from 'constants/Global';
+import imageModel from 'models/imageModel';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -45,6 +46,8 @@ class Nav extends Component {
   };
 
   render() {
+    const { logo, profileIcon } = this.props;
+
     return (
       <div
         className={cx(
@@ -77,9 +80,9 @@ class Nav extends Component {
         >
           <NavLink exact to="/" className="flex justify-center">
             <Image
-              className="col-12 md-col-10"
+              className={cx(styles['logo-container__logo'], 'col-12 md-col-10')}
               alt="Click the Ample Hills Logo to return to the homepage"
-              src="/assets/images/ample-hills-logo.svg"
+              src={get(logo, 'fields.file.url', '')}
             />
           </NavLink>
         </div>
@@ -87,7 +90,10 @@ class Nav extends Component {
           {this.state.currentBreakpoint === 'medium' ? (
             <Fragment>
               <NavLink exact to="/profile" className="mr3 link-text center">
-                <Image className="icon" src="/assets/images/bubble-icon.svg" />
+                <Image
+                  className="icon"
+                  src={get(profileIcon, 'fields.file.url', '')}
+                />
               </NavLink>
               <Button
                 className="mr3"
@@ -128,7 +134,9 @@ Nav.propTypes = {
     openMiniCart: PropTypes.func,
     closeMiniCart: PropTypes.func
   }),
-  miniCartIsOpen: PropTypes.bool
+  miniCartIsOpen: PropTypes.bool,
+  logo: imageModel.propTypes,
+  profileIcon: imageModel.propTypes
 };
 
 Nav.defaultProps = {
@@ -136,7 +144,9 @@ Nav.defaultProps = {
     openMiniCart: () => {},
     closeMiniCart: () => {}
   },
-  miniCartIsOpen: false
+  miniCartIsOpen: false,
+  logo: imageModel.default,
+  profileIcon: imageModel.default
 };
 
 const mapStateToProps = state => {
