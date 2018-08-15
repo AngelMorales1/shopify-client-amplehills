@@ -12,13 +12,7 @@ class GenericPageContainer extends ContainerBase {
     const { getGenericPage } = this.props.actions;
     const { path } = this.props.match;
 
-    const page = path
-      .slice(1)
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-
-    return getGenericPage(page);
+    return getGenericPage(path);
   };
 }
 
