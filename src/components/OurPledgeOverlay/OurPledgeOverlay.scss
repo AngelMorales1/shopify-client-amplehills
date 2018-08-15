@@ -1,5 +1,8 @@
 @import 'settings';
 
+$circle-background-size-desktop: spacing(300);
+$circle-background-offset-top-desktop: spacing(-80);
+
 .OurPledgeOverlay {
   pointer-events: none;
   opacity: 0;
@@ -17,11 +20,11 @@
     bottom: 0;
 
     @media ($medium-up) {
-      height: spacing(300);
-      width: spacing(300);
+      height: $circle-background-size-desktop;
+      width: $circle-background-size-desktop;
       border-radius: radius('circle');
       right: -15%;
-      top: spacing(-80);
+      top: $circle-background-offset-top-desktop;
     }
   }
 
@@ -36,17 +39,21 @@
   }
 
   &__text-content {
+    margin-top: spacing(12);
     overflow: scroll;
 
     @media ($medium-up) {
-      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
       margin-right: spacing(-10);
       width: 65%;
       min-width: spacing(100);
+      height: calc(
+        #{$circle-background-size-desktop} + #{$circle-background-offset-top-desktop} -
+          #{spacing(54)}
+      );
     }
-  }
-
-  &__image {
-    width: 45%;
   }
 }
