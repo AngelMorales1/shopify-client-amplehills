@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
 import styles from './Footer.scss';
 import { Button, Image } from 'components/base';
+import PropTypes from 'prop-types';
+import imageModel from 'models/imageModel';
 
-const FooterLinks = ({ footerLinks }) => {
+const FooterLinks = ({ footerLinks, footerIcons }) => {
   return (
     <div
       className={cx(
@@ -39,7 +40,7 @@ const FooterLinks = ({ footerLinks }) => {
         <div className="my3 flex items-center">
           <Image
             alt="Instagram icon"
-            src="/assets/images/bubble-icon.svg"
+            src={get(footerIcons, 'instagramIcon.fields.file.url', '')}
             className="icon"
           />
           <a
@@ -53,8 +54,8 @@ const FooterLinks = ({ footerLinks }) => {
         </div>
         <div className="my3 flex items-center">
           <Image
-            alt="Instagram icon"
-            src="/assets/images/bubble-icon.svg"
+            alt="Twitter icon"
+            src={get(footerIcons, 'twitterIcon.fields.file.url', '')}
             className="icon"
           />
           <a
@@ -68,8 +69,8 @@ const FooterLinks = ({ footerLinks }) => {
         </div>
         <div className="my3 flex items-center">
           <Image
-            alt="Instagram icon"
-            src="/assets/images/bubble-icon.svg"
+            alt="Facebook icon"
+            src={get(footerIcons, 'facebookIcon.fields.file.url', '')}
             className="icon"
           />
           <a
@@ -89,13 +90,27 @@ const FooterLinks = ({ footerLinks }) => {
 export default FooterLinks;
 
 FooterLinks.propTypes = {
-  facebookLink: PropTypes.string,
-  instagramLink: PropTypes.string,
-  twitterLink: PropTypes.string
+  footerLinks: PropTypes.shape({
+    facebookLink: PropTypes.string,
+    instagramLink: PropTypes.string,
+    twitterLink: PropTypes.string
+  }),
+  footerIcons: PropTypes.shape({
+    facebookIcon: imageModel.propTypes,
+    instagramIcon: imageModel.propTypes,
+    twitterIcon: imageModel.propTypes
+  })
 };
 
 FooterLinks.defaultProps = {
-  facebookLink: '',
-  instagramLink: '',
-  twitterLink: ''
+  footerLinks: {
+    facebookLink: '',
+    instagramLink: '',
+    twitterLink: ''
+  },
+  footerIcons: {
+    facebookIcon: imageModel.default,
+    instagramIcon: imageModel.default,
+    twitterIcon: imageModel.default
+  }
 };

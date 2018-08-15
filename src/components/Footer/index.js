@@ -11,7 +11,12 @@ import locationModel from 'models/locationModel';
 
 import styles from './Footer.scss';
 
-const Footer = ({ footerIllustration, footerLinks, locations }) => {
+const Footer = ({
+  footerIllustration,
+  footerLinks,
+  locations,
+  footerIcons
+}) => {
   return (
     <div
       className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
@@ -21,6 +26,7 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
         <FooterLinks
           footerIllustration={footerIllustration}
           footerLinks={footerLinks}
+          footerIcons={footerIcons}
         />
       </div>
       <span className="bold small text-white center">
@@ -59,6 +65,7 @@ Footer.propTypes = {
     })
   }),
   footerLinks: PropTypes.object,
+  footerIcons: PropTypes.object,
   locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
@@ -73,5 +80,6 @@ Footer.defaultProps = {
     }
   },
   footerLinks: {},
+  footerIcons: {},
   locations: []
 };
