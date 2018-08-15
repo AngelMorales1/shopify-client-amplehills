@@ -28,13 +28,10 @@ const Footer = ({ footerIllustration, footerLinks, locations }) => {
         <NavLink
           exact
           to="/privacy-policy"
-          className={cx(
-            styles['Footer__privacy-link'],
-            'text-decoration-none ml1'
-          )}
+          className={cx(styles['Footer__privacy-link'], 'text-decoration-none')}
         >
-          Privacy Policy & Accessibility
-        </NavLink>
+          {' Privacy Policy '}
+        </NavLink>& Accessibility
       </span>
       {footerIllustration.fields ? (
         <Image
