@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import moment from 'moment';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
@@ -35,8 +34,8 @@ class ProductHero extends Component {
         customAttributes: product.preOrderDate
           ? [
               {
-                key: 'Ship Date',
-                value: moment(product.preOrderDate).format('MMMM Do YYYY')
+                key: 'Shipping Estimate',
+                value: product.preOrderDate
               }
             ]
           : []
@@ -118,8 +117,7 @@ class ProductHero extends Component {
             {product.preOrderDate ? (
               <div className="mt3 mb2">
                 <strong className="text-peach bold small">
-                  This product will ship on{' '}
-                  {moment(product.preOrderDate).format('MMMM Do YYYY')}.
+                  {product.preOrderDate}
                 </strong>
               </div>
             ) : null}
