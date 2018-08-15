@@ -67,6 +67,8 @@ class ProductHero extends Component {
       calloutImage
     } = ourPledge;
 
+    const carouselImages = get(fields, 'carouselImages', []);
+
     return (
       <div
         className={cx(
@@ -81,7 +83,7 @@ class ProductHero extends Component {
           </div>
         ) : null}
 
-        {fields.carouselImages.length > 1 ? (
+        {carouselImages.length > 1 ? (
           <div className="col col-12 md-col-6 flex square">
             <Carousel
               className={cx(styles['ProductHero__carousel'], 'wh100')}
@@ -89,7 +91,7 @@ class ProductHero extends Component {
               showDotsOnImage={true}
               sliderClasses="h100"
             >
-              {fields.carouselImages.map(image => (
+              {carouselImages.map(image => (
                 <div
                   className="wh100 square"
                   style={{
@@ -109,8 +111,8 @@ class ProductHero extends Component {
             className="col col-12 md-col-6 square"
             style={{
               background: `url(${get(
-                fields,
-                'carouselImages[0]fields.file.url',
+                carouselImages,
+                '[0]fields.file.url',
                 ''
               )}) no-repeat center`,
               backgroundSize: 'cover'
