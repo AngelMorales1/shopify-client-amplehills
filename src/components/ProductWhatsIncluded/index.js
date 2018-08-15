@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
@@ -14,6 +15,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
     'backgroundColor',
     'light-pink'
   )}`;
+  const illustration = get(fields, 'illustration.fields.file.url', '');
 
   const includedItems = get(fields, 'products', []);
 
@@ -26,8 +28,18 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
       )}
       style={{ zIndex: z }}
     >
-      <h2 className="block-headline my3 nowrap">What&rsquo;s included</h2>
-      <div className="flex flex-column col-12 md-col-4">
+      <div className="flex flex-column items-center col-12 md-col-6">
+        <h2 className="block-headline my3 nowrap">What&rsquo;s included</h2>
+        <Image
+          className={cx(
+            styles['ProductWhatsIncluded__illustration'],
+            'col-3 xs-hide sm-hide'
+          )}
+          alt="what&rsquo;s included image"
+          src={illustration}
+        />
+      </div>
+      <div className="flex flex-column col-12 md-col-6">
         {includedItems.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');
           const product = get(products, handle, {});
@@ -53,6 +65,14 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           );
         })}
       </div>
+      <Image
+        className={cx(
+          styles['ProductWhatsIncluded__illustration'],
+          'col-5 mt3 md-hide lg-hide'
+        )}
+        alt="what&rsquo;s included image"
+        src={illustration}
+      />
     </div>
   );
 };
@@ -69,7 +89,8 @@ ProductWhatsIncluded.propTypes = {
             productHandle: PropTypes.string
           })
         })
-      )
+      ),
+      illustration: imageModel.propTypes
     })
   }),
   z: PropTypes.number,
@@ -86,7 +107,8 @@ ProductWhatsIncluded.defaultProps = {
             productHandle: ''
           }
         }
-      ]
+      ],
+      illustration: imageModel.default
     }
   },
   z: 1,
