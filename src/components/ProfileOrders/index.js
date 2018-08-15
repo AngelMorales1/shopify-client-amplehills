@@ -47,7 +47,6 @@ const ProfileOrders = ({ actions, checkout, orders, products }) => {
                     <span className="line-item-title">${item.price}</span>
                     {subItems.length ? (
                       <div className="w100">
-                        {console.log(subItems, products)}
                         <ul className="mt2 mb1">
                           {subItems.map((subItem, i) => (
                             <li
