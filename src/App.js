@@ -58,11 +58,12 @@ class App extends Component {
       facebookLink,
       instagramLink,
       twitterLink,
-      footerIllustration
+      footerIllustration,
+      forceErrorPage
     } = globalSettings;
     const alert = get(globalSettings, 'alert', {});
 
-    if (applicationStatus === FULFILLED) {
+    if (applicationStatus === FULFILLED && !forceErrorPage) {
       return (
         <div className="App">
           {alertIsActive ? <Alert alert={alert} /> : null}
@@ -80,7 +81,7 @@ class App extends Component {
         </div>
       );
     }
-    if (applicationStatus === REJECTED) {
+    if (applicationStatus === REJECTED || forceErrorPage) {
       return <ErrorPage />;
     }
 
@@ -126,10 +127,12 @@ App.propTypes = {
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string
   }),
-  locations: PropTypes.arrayOf(locationModel.propTypes)
+  locations: PropTypes.arrayOf(locationModel.propTypes),
+  forceErrorPage: PropTypes.bool
 };
 
 App.defaultProps = {
   globalSettings: {},
-  locations: []
+  locations: [],
+  forceErrorPage: false
 };
