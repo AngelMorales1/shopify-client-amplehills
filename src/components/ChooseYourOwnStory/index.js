@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import marked from 'marked';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import productModel from 'models/productModel';
@@ -214,7 +215,12 @@ class ChooseYourOwnStory extends Component {
                 ))}
               </div>
               <div className="mb4">
-                <p className="copy pr2">{get(fields, 'description', '')}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: marked(get(fields, 'description', ''))
+                  }}
+                  className="copy pr2"
+                />
               </div>
               <OurPledge
                 actions={actions}

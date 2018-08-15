@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import marked from 'marked';
 
 import get from 'utils/get';
 import ProductGrid from 'components/ProductGrid';
@@ -20,7 +21,12 @@ class ProductLandingView extends Component {
           <h2 className="block-headline text-peach mb2">
             {get(content, 'title', '')}
           </h2>
-          <p className="block-subheadline">{get(content, 'description', '')}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: marked(get(content, 'description', ''))
+            }}
+            className="block-subheadline"
+          />
         </div>
         <ProductGrid products={gridProducts} />
       </div>

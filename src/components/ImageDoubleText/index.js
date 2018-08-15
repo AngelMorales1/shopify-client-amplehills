@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
@@ -48,11 +49,21 @@ const ImageDoubleText = ({ block, z }) => {
         >
           <div className="mb3">
             <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>
-            <p className="block-subheadline">{get(fields, 'text1', '')}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: marked(get(fields, 'text1', ''))
+              }}
+              className="block-subheadline"
+            />
           </div>
           <div>
             <h2 className="block-headline mb2">{get(fields, 'title2', '')}</h2>
-            <p className="block-subheadline">{get(fields, 'text2', '')}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: marked(get(fields, 'text2', ''))
+              }}
+              className="block-subheadline"
+            />
           </div>
         </div>
       </div>
