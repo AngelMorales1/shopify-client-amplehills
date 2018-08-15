@@ -43,12 +43,11 @@ $circle-background-offset-top-desktop: spacing(-80);
 
     @media ($medium-up) {
       margin-right: spacing(-10);
-      padding-bottom: spacing(16);
       width: 65%;
       min-width: spacing(100);
       height: calc(
         #{$circle-background-size-desktop} + #{$circle-background-offset-top-desktop} -
-          #{spacing(60)}
+          #{spacing(54)}
       );
     }
   }
