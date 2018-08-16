@@ -9,6 +9,19 @@
     }
   }
 
+  &__button {
+    padding: spacing(2) spacing(4);
+
+    @media ($medium-up) {
+      padding: spacing(2) spacing(6);
+    }
+  }
+
+  &__shipping {
+    font-size: $font-2;
+    letter-spacing: spacing(0.1);
+  }
+
   &__carousel {
     height: 100% !important;
 
