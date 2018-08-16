@@ -27,13 +27,13 @@ const ImageText = ({ block, z }) => {
             'flex flex-column justify-center col-12 md-col-6'
           )}
         >
-          <h2
+          <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+          <p
             dangerouslySetInnerHTML={{
-              __html: marked(get(fields, 'title', ''))
+              __html: marked(get(fields, 'text', ''))
             }}
-            className="block-headline mb3"
+            className="block-subheadline"
           />
-          <p className="block-subheadline">{get(fields, 'text', '')}</p>
         </div>
         <Image
           className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}
