@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import cx from 'classnames';
 import styles from './OurPledgeOverlay.scss';
 
@@ -49,15 +50,19 @@ const OurPledgeOverlay = ({
               <h2 className="my2 callout text-madison-blue">
                 Shipping information
               </h2>
-              <p className="mb2 block-subheadline text-madison-blue">
-                {shippingInformation}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: marked(shippingInformation)
+                }}
+                className="mb2 block-subheadline text-madison-blue"
+              />
             </div>
             <div>
               <h2 className="my2 callout text-madison-blue">Shipping Pledge</h2>
-              <p className="block-subheadline text-madison-blue">
-                {shippingPledge}
-              </p>
+              <p
+                dangerouslySetInnerHTML={{ __html: marked(shippingPledge) }}
+                className="block-subheadline text-madison-blue"
+              />
             </div>
           </div>
         </div>

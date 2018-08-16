@@ -22,6 +22,10 @@ em {
   font-style: italic;
 }
 
+strong {
+  @extend .bold;
+}
+
 .carter {
   font-family: $font-carter;
 }

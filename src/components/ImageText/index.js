@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
@@ -27,7 +28,12 @@ const ImageText = ({ block, z }) => {
           )}
         >
           <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-          <p className="block-subheadline">{get(fields, 'text', '')}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: marked(get(fields, 'text', ''))
+            }}
+            className="block-subheadline"
+          />
         </div>
         <Image
           className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}

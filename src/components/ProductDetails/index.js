@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 
@@ -91,13 +92,14 @@ class ProductDetails extends Component {
                     </div>
                     <div className="md-col-10">
                       <p
+                        dangerouslySetInnerHTML={{
+                          __html: marked(get(fields, 'text1', ''))
+                        }}
                         className={cx(
                           styles['ProductDetail--description-text'],
                           'block-subheadline'
                         )}
-                      >
-                        {get(fields, 'text1', '')}
-                      </p>
+                      />
                     </div>
                   </div>
                   <div
@@ -119,13 +121,14 @@ class ProductDetails extends Component {
                     </div>
                     <div className="md-col-10">
                       <p
+                        dangerouslySetInnerHTML={{
+                          __html: marked(get(fields, 'text2', ''))
+                        }}
                         className={cx(
                           styles['ProductDetail--description-text'],
                           'block-subheadline'
                         )}
-                      >
-                        {get(fields, 'text2', '')}
-                      </p>
+                      />
                     </div>
                   </div>
                 </div>

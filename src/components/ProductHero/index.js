@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import cx from 'classnames';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
@@ -139,7 +140,12 @@ class ProductHero extends Component {
               />
             </div>
             <div>
-              <p className="copy pr2">{product.description}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: marked(product.description)
+                }}
+                className="copy pr2"
+              />
             </div>
             {product.preOrderDate ? (
               <div className="mt3 mb2">
