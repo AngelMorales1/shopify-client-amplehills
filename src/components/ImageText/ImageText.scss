@@ -9,11 +9,11 @@
   &__container {
     flex-direction: column;
     justify-content: space-between;
-    margin: spacing(8);
+    margin: 0 spacing(8);
 
     @media ($medium-up) {
       flex-direction: row;
-      margin: spacing(16);
+      margin: 0 spacing(16);
     }
   }
 
