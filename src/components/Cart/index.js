@@ -158,7 +158,9 @@ class Cart extends Component {
                       )}
                     >
                       <Link
-                        className="text-decoration-none mb2"
+                        className={`text-decoration-none ${
+                          item.subitems ? 'mb2' : 'my-auto'
+                        }`}
                         to={`/products/${handle}`}
                       >
                         <span className="small bold">{item.title}</span>
