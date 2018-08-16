@@ -26,6 +26,21 @@ strong {
   @extend .bold;
 }
 
+.text-hover {
+  &:hover {
+    color: inherit;
+    position: relative;
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-bottom: spacing(0.5) solid color('white');
+    }
+  }
+}
+
 .carter {
   font-family: $font-carter;
 }

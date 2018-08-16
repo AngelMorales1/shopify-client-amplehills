@@ -61,13 +61,17 @@ class Nav extends Component {
             styles['left-side']
           }`}
         >
-          <NavLink exact to="/locations" className="link-text center">
+          <NavLink
+            exact
+            to="/locations"
+            className="link-text center text-hover"
+          >
             Locations
           </NavLink>
           <NavLink
             exact
             to="/contact"
-            className="ml3 link-text center xs-hide sm-hide"
+            className="text-hover ml3 link-text center xs-hide sm-hide"
           >
             Contact
           </NavLink>
@@ -89,23 +93,28 @@ class Nav extends Component {
         <div className={`col col-5 flex items-center ${styles['right-side']}`}>
           {this.state.currentBreakpoint === 'medium' ? (
             <Fragment>
-              <NavLink exact to="/profile" className="mr3 link-text center">
+              <NavLink exact to="/profile" className="mr2 link-text center">
                 <Image
                   className="icon"
                   src={get(profileIcon, 'fields.file.url', '')}
                 />
               </NavLink>
               <Button
-                className="mr3"
+                className="mr2"
                 to="/products"
                 variant="primary-small"
                 color="white-peach"
                 label="Shop Online"
+                hover="clear-white-border"
               />
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink exact to="/products" className="link-text center">
+              <NavLink
+                exact
+                to="/products"
+                className="text-hover link-text center"
+              >
                 Shop
               </NavLink>
               <NavLink exact to="/profile" className="link-text center">
@@ -122,6 +131,7 @@ class Nav extends Component {
             color="madison-blue"
             to="/cart"
             label={this.props.totalItems.toString()}
+            hover="clear-white-border"
           />
         </div>
       </div>
