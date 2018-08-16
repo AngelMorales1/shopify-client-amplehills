@@ -155,18 +155,23 @@ class ProductHero extends Component {
                 onChange={value => this.setState({ quantity: value })}
               />
               {(available && subItemsAvailable) || product.preOrderDate ? (
-                <Button
-                  color="madison-blue"
-                  shadow={true}
-                  onClick={this.addToCart}
-                >
-                  <span className="mr2">
-                    {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
-                  </span>
-                  <span className="ml2">
-                    ${(price * this.state.quantity).toFixed(2)}
-                  </span>
-                </Button>
+                <div className="relative">
+                  <Button
+                    color="madison-blue"
+                    shadow={true}
+                    onClick={this.addToCart}
+                  >
+                    <span className="mr2">
+                      {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
+                    </span>
+                    <span className="ml2">
+                      ${(price * this.state.quantity).toFixed(2)}
+                    </span>
+                  </Button>
+                  <div className="absolute w100 mt2 center">
+                    <span className="line-item-title">Shipping Included</span>
+                  </div>
+                </div>
               ) : (
                 <Button color="peach" onClick={this.addToCart} disabled={true}>
                   <span className="mr2">Sold Out</span>
