@@ -5,7 +5,8 @@
     display: block;
   }
 
-  input {
+  input,
+  textarea {
     @extend .bold;
     border: spacing(1) solid color('madison-blue');
     padding: spacing(4);
@@ -13,6 +14,7 @@
     appearance: none;
     border-radius: radius('0');
     border: spacing(1) solid transparent;
+    font-family: $font-avenir;
 
     &::placeholder {
       @extend .bold;
