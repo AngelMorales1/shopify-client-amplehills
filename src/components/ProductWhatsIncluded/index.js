@@ -24,21 +24,18 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
       className={cx(
         styles['ProductWhatsIncluded'],
         styles[colorClass],
-        'flex justify-between drip'
+        'flex justify-between drip relative'
       )}
       style={{ zIndex: z }}
     >
-      <div className="flex flex-column items-center col-12 md-col-6">
-        <h2 className="block-headline my3 nowrap">What&rsquo;s included</h2>
-        <Image
-          className={cx(
-            styles['ProductWhatsIncluded__illustration'],
-            'col-3 xs-hide sm-hide'
-          )}
-          alt="what&rsquo;s included image"
-          src={illustration}
-        />
-      </div>
+      <h2
+        className={cx(
+          styles['ProductWhatsIncluded__block-title'],
+          'block-headline my3 nowrap col-12 md-col-6 center'
+        )}
+      >
+        What&rsquo;s included
+      </h2>
       <div className="flex flex-column col-12 md-col-6">
         {includedItems.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');
@@ -65,14 +62,18 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           );
         })}
       </div>
-      <Image
+      <div
         className={cx(
           styles['ProductWhatsIncluded__illustration'],
-          'col-5 mt3 md-hide lg-hide'
+          'col-12 md-col-6 center'
         )}
-        alt="what&rsquo;s included image"
-        src={illustration}
-      />
+      >
+        <Image
+          className="col-5 md-col-4 mt3"
+          alt="what&rsquo;s included image"
+          src={illustration}
+        />
+      </div>
     </div>
   );
 };
@@ -108,7 +109,7 @@ ProductWhatsIncluded.defaultProps = {
           }
         }
       ],
-      illustration: imageModel.default
+      illustration: {}
     }
   },
   z: 1,
