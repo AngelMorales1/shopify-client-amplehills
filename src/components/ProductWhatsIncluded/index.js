@@ -15,7 +15,6 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
     'backgroundColor',
     'light-pink'
   )}`;
-  const illustration = get(fields, 'illustration.fields.file.url', '');
 
   const includedItems = get(fields, 'products', []);
 
@@ -62,18 +61,20 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           );
         })}
       </div>
-      <div
-        className={cx(
-          styles['ProductWhatsIncluded__illustration'],
-          'col-12 md-col-6 center'
-        )}
-      >
-        <Image
-          className="col-5 md-col-4 mt3"
-          alt="what&rsquo;s included image"
-          src={illustration}
-        />
-      </div>
+      {fields.illustration ? (
+        <div
+          className={cx(
+            styles['ProductWhatsIncluded__illustration'],
+            'col-12 md-col-6 center'
+          )}
+        >
+          <Image
+            className="col-5 md-col-4 mt3"
+            alt="what&rsquo;s included image"
+            src={get(fields, 'illustration.fields.file.url', '')}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
@@ -109,7 +110,7 @@ ProductWhatsIncluded.defaultProps = {
           }
         }
       ],
-      illustration: {}
+      illustration: null
     }
   },
   z: 1,
