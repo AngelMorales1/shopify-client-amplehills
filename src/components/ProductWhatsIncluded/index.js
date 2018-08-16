@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import productModel from 'models/productModel';
+import imageModel from 'models/imageModel';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
@@ -22,12 +23,19 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
       className={cx(
         styles['ProductWhatsIncluded'],
         styles[colorClass],
-        'flex justify-between drip'
+        'flex justify-between drip relative'
       )}
       style={{ zIndex: z }}
     >
-      <h2 className="block-headline my3 nowrap">What&rsquo;s included</h2>
-      <div className="flex flex-column col-12 md-col-4">
+      <h2
+        className={cx(
+          styles['ProductWhatsIncluded__block-title'],
+          'block-headline my3 nowrap col-12 md-col-6 center'
+        )}
+      >
+        What&rsquo;s included
+      </h2>
+      <div className="flex flex-column col-12 md-col-6">
         {includedItems.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');
           const product = get(products, handle, {});
@@ -53,6 +61,20 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           );
         })}
       </div>
+      {fields.illustration ? (
+        <div
+          className={cx(
+            styles['ProductWhatsIncluded__illustration'],
+            'col-12 md-col-6 center'
+          )}
+        >
+          <Image
+            className="col-5 md-col-4 mt3"
+            alt="what&rsquo;s included image"
+            src={get(fields, 'illustration.fields.file.url', '')}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };
@@ -69,7 +91,8 @@ ProductWhatsIncluded.propTypes = {
             productHandle: PropTypes.string
           })
         })
-      )
+      ),
+      illustration: imageModel.propTypes
     })
   }),
   z: PropTypes.number,
@@ -86,7 +109,8 @@ ProductWhatsIncluded.defaultProps = {
             productHandle: ''
           }
         }
-      ]
+      ],
+      illustration: null
     }
   },
   z: 1,

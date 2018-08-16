@@ -8,12 +8,29 @@
   @media ($medium-up) {
     padding: spacing(20) spacing(4) spacing(10);
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+  }
+
+  &__block-title {
+    @media ($medium-up) {
+      position: absolute;
+      left: 0;
+      transform: translate(0, spacing(-30));
+    }
+  }
+
+  &__illustration {
+    @media ($medium-up) {
+      position: absolute;
+      left: 0;
+      transform: translate(0, spacing(30));
+    }
   }
 
   &__flavor-container {
     @media ($medium-up) {
       padding: spacing(2) 0;
+      max-width: spacing(150);
     }
   }
 
