@@ -37,51 +37,45 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
         />
       </div>
       <div className="mt2">
-        <div className="my3 flex items-center">
+        <a
+          href={get(footerLinks, 'instagramLink', '')}
+          target="_blank"
+          rel="noopener"
+          className="my3 flex items-center bold text-white text-decoration-none"
+        >
           <Image
             alt="Instagram icon"
             src={get(footerIcons, 'instagramIcon.fields.file.url', '')}
-            className="icon"
+            className="icon mr3"
           />
-          <a
-            href={get(footerLinks, 'instagramLink', '')}
-            target="_blank"
-            rel="noopener"
-            className="bold text-white text-decoration-none ml3"
-          >
-            Instagram
-          </a>
-        </div>
-        <div className="my3 flex items-center">
+          Instagram
+        </a>
+        <a
+          href={get(footerLinks, 'twitterLink', '')}
+          target="_blank"
+          rel="noopener"
+          className="my3 flex items-center bold text-white text-decoration-none"
+        >
           <Image
             alt="Twitter icon"
             src={get(footerIcons, 'twitterIcon.fields.file.url', '')}
-            className="icon"
+            className="icon mr3"
           />
-          <a
-            href={get(footerLinks, 'twitterLink', '')}
-            target="_blank"
-            rel="noopener"
-            className="bold text-white text-decoration-none ml3"
-          >
-            Twitter
-          </a>
-        </div>
-        <div className="my3 flex items-center">
+          Twitter
+        </a>
+        <a
+          href={get(footerLinks, 'facebookLink', '')}
+          target="_blank"
+          rel="noopener"
+          className="my3 flex items-center bold text-white text-decoration-none"
+        >
           <Image
             alt="Facebook icon"
             src={get(footerIcons, 'facebookIcon.fields.file.url', '')}
-            className="icon"
+            className="icon mr3"
           />
-          <a
-            href={get(footerLinks, 'facebookLink', '')}
-            target="_blank"
-            rel="noopener"
-            className="bold text-white text-decoration-none ml3"
-          >
-            Facebook
-          </a>
-        </div>
+          Facebook
+        </a>
       </div>
     </div>
   );
