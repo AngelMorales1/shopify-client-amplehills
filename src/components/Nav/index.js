@@ -61,13 +61,17 @@ class Nav extends Component {
             styles['left-side']
           }`}
         >
-          <NavLink exact to="/locations" className="link-text center">
+          <NavLink
+            exact
+            to="/locations"
+            className="link-text center text-hover"
+          >
             Locations
           </NavLink>
           <NavLink
             exact
             to="/contact"
-            className="ml3 link-text center xs-hide sm-hide"
+            className="text-hover ml3 link-text center xs-hide sm-hide"
           >
             Contact
           </NavLink>
