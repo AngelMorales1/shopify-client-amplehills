@@ -222,7 +222,7 @@ class ChooseYourOwnStory extends Component {
                   dangerouslySetInnerHTML={{
                     __html: marked(get(fields, 'description', ''))
                   }}
-                  className="copy"
+                  className="block-subheadline"
                 />
               </div>
               <OurPledge
