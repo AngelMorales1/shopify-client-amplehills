@@ -5,6 +5,7 @@ import cx from 'classnames';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
+import Global from 'constants/Global';
 
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Carousel } from 'components/base';
@@ -14,8 +15,14 @@ import styles from './ProductHero.scss';
 
 class ProductHero extends Component {
   state = {
-    quantity: 1
+    quantity: 1,
+    currentBreakpoint: Global.breakpoints.small.label
   };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+  }
 
   componentDidUpdate(prevProps) {
     if (
@@ -48,6 +55,15 @@ class ProductHero extends Component {
 
   didAddToCart = () => {
     this.setState({ quantity: 1 });
+  };
+
+  updateWindow = () => {
+    const { small, medium } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
   };
 
   render() {
@@ -154,27 +170,54 @@ class ProductHero extends Component {
                 </strong>
               </div>
             ) : null}
-            <form className="flex flex-wrap items-center">
+            <form className="flex flex-wrap items-center justify-between">
               <QuantitySelector
-                className="my3 mr3"
+                variant={
+                  this.state.currentBreakpoint === 'small' ? 'small' : null
+                }
+                className="my3 mr1"
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
               {(available && subItemsAvailable) || product.preOrderDate ? (
-                <Button
-                  color="madison-blue"
-                  shadow={true}
-                  onClick={this.addToCart}
-                >
-                  <span className="mr2">
-                    {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
-                  </span>
-                  <span className="ml2">
-                    ${(price * this.state.quantity).toFixed(2)}
-                  </span>
-                </Button>
+                <div className="relative">
+                  <Button
+                    className={cx(styles['ProductHero__button'])}
+                    color="madison-blue"
+                    variant={
+                      this.state.currentBreakpoint === 'small'
+                        ? 'primary-small'
+                        : 'primary'
+                    }
+                    shadow={true}
+                    onClick={this.addToCart}
+                  >
+                    <span>
+                      {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
+                    </span>
+                    <span className="ml2">
+                      ${(price * this.state.quantity).toFixed(2)}
+                    </span>
+                  </Button>
+                  <div className="absolute w100 mt1 center">
+                    <span
+                      className={cx(styles['ProductHero__shipping'], 'bold')}
+                    >
+                      Shipping Included
+                    </span>
+                  </div>
+                </div>
               ) : (
-                <Button color="peach" onClick={this.addToCart} disabled={true}>
+                <Button
+                  color="peach"
+                  variant={
+                    this.state.currentBreakpoint === 'small'
+                      ? 'primary-small'
+                      : 'primary'
+                  }
+                  onClick={this.addToCart}
+                  disabled={true}
+                >
                   <span className="mr2">Sold Out</span>
                   <span className="ml2">
                     ${(price * this.state.quantity).toFixed(2)}
