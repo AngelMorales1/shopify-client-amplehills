@@ -22,7 +22,10 @@ const OurPledgeOverlay = ({
 
   return (
     <div className={classes}>
-      <div className="wh100 t0 l0 bg-white low-opacity fixed" />
+      <div
+        onClick={closeOurPledgeOverlay}
+        className="wh100 t0 l0 bg-white-wash-blur fixed"
+      />
       <div
         className={cx(
           'fixed bg-island-spice',
