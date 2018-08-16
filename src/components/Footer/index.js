@@ -37,7 +37,15 @@ const Footer = ({
           className={cx(styles['Footer__privacy-link'], 'text-decoration-none')}
         >
           {' Privacy Policy '}
-        </NavLink>& Accessibility
+        </NavLink>
+        &
+        <NavLink
+          exact
+          to="/web-accessibility"
+          className={cx(styles['Footer__privacy-link'], 'text-decoration-none')}
+        >
+          {' Accessibility'}
+        </NavLink>
       </span>
       {footerIllustration.fields ? (
         <Image
