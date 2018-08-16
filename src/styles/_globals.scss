@@ -64,19 +64,15 @@ Dimension classes
 
   &:nth-child(3n + 0) {
     &::after {
-      mask: url('/assets/images/polygon.svg') no-repeat;
-      mask-position: center;
-      mask-size: cover;
-      bottom: -120px;
-      height: 120px;
+      mask: url('/assets/images/polygon.svg') repeat-x;
+      bottom: -62px;
+      height: 62px;
     }
   }
 
   &:nth-child(3n + 1) {
     &::after {
-      mask: url('/assets/images/polygon-1.svg') no-repeat;
-      mask-position: center;
-      mask-size: cover;
+      mask: url('/assets/images/polygon-1.svg') repeat-x;
       bottom: -105px;
       height: 105px;
     }
@@ -84,11 +80,9 @@ Dimension classes
 
   &:nth-child(3n + 2) {
     &::after {
-      mask: url('/assets/images/polygon-2.svg') no-repeat;
-      mask-position: center;
-      mask-size: cover;
-      bottom: -120px;
-      height: 120px;
+      mask: url('/assets/images/polygon-2.svg') repeat-x;
+      bottom: -105px;
+      height: 105px;
     }
   }
 
