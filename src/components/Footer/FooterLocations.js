@@ -74,9 +74,15 @@ const FooterLocations = ({ locations }) => {
                     );
                   })}
                   {location.delivery ? (
-                    <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
-                      Order Delivery
-                    </div>
+                    <a
+                      href={location.orderDeliveryLink}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
+                        Order Delivery
+                      </div>
+                    </a>
                   ) : null}
                 </div>
               ))}
