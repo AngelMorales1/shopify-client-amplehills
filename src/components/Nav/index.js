@@ -89,14 +89,14 @@ class Nav extends Component {
         <div className={`col col-5 flex items-center ${styles['right-side']}`}>
           {this.state.currentBreakpoint === 'medium' ? (
             <Fragment>
-              <NavLink exact to="/profile" className="mr3 link-text center">
+              <NavLink exact to="/profile" className="mr2 link-text center">
                 <Image
                   className="icon"
                   src={get(profileIcon, 'fields.file.url', '')}
                 />
               </NavLink>
               <Button
-                className="mr3"
+                className="mr2"
                 to="/products"
                 variant="primary-small"
                 color="white-peach"
