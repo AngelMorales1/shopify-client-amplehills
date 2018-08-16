@@ -10,14 +10,24 @@
   transition: $transition;
   border: spacing(1) solid transparent;
 
-  &:hover {
-    box-shadow: $drop-shadow;
-    transform: translate3d(0, spacing(-0.25), 0);
-  }
-
   &:active {
     box-shadow: 0 0 0 0;
     transform: translate3d(0, spacing(0.25), 0);
+  }
+
+  &--hover-shadow {
+    &:hover {
+      box-shadow: $drop-shadow;
+      transform: translate3d(0, spacing(-0.25), 0);
+    }
+  }
+
+  &--hover-clear-white-border {
+    &:hover {
+      background-color: transparent;
+      border: spacing(1) solid color('white');
+      color: color('white');
+    }
   }
 
   &--shadow {

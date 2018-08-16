@@ -18,7 +18,8 @@ const Button = ({
   fullWidth,
   type,
   to,
-  shadow
+  shadow,
+  hover
 }) => {
   const classes = cx(
     className,
@@ -30,7 +31,8 @@ const Button = ({
       [styles['Button--div']]: to
     },
     styles[`Button--${variant}`],
-    { [styles['Button--shadow']]: shadow }
+    { [styles['Button--shadow']]: shadow },
+    styles[`Button--hover-${hover}`]
   );
 
   const linkedComponent = isExternalLink(to) ? (
@@ -85,7 +87,8 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   type: PropTypes.string,
   to: PropTypes.string,
-  shadow: PropTypes.bool
+  shadow: PropTypes.bool,
+  hover: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -99,7 +102,8 @@ Button.defaultProps = {
   disabled: false,
   type: 'button',
   to: '',
-  shadow: false
+  shadow: false,
+  hover: 'shadow'
 };
 
 export default Button;

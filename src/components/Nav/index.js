@@ -105,11 +105,16 @@ class Nav extends Component {
                 variant="primary-small"
                 color="white-peach"
                 label="Shop Online"
+                hover="clear-white-border"
               />
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink exact to="/products" className="link-text center">
+              <NavLink
+                exact
+                to="/products"
+                className="text-hover link-text center"
+              >
                 Shop
               </NavLink>
               <NavLink exact to="/profile" className="link-text center">
@@ -126,6 +131,7 @@ class Nav extends Component {
             color="madison-blue"
             to="/cart"
             label={this.props.totalItems.toString()}
+            hover="clear-white-border"
           />
         </div>
       </div>
