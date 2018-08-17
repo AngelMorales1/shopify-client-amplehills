@@ -63,16 +63,13 @@ class ComicStrip extends Component {
             );
           })}
           <Carousel
+            className="w100 mx-auto md-hide lg-hide"
             showDots={false}
             onChange={activeFlavor => {
               this.setState({ activeFlavor, activeSlide: 0 }, () =>
                 window.dispatchEvent(new Event('resize'))
               );
             }}
-            className={cx(
-              styles['ComicStrip--button-container'],
-              'md-hide lg-hide'
-            )}
           >
             {products.map((product, i) => (
               <div key={i} className="flex justify-center">
@@ -80,7 +77,6 @@ class ComicStrip extends Component {
                   className="m1"
                   color="madison-blue"
                   variant="primary-small"
-                  shadow={true}
                   key={i}
                   label={get(product, 'fields.title', '')}
                   onClick={() =>
@@ -103,7 +99,7 @@ class ComicStrip extends Component {
             const comics = get(product, 'fields.comics', []);
             const classes = cx(
               styles['ComicStrip'],
-              'py3 flex justify-center w100 container-width mx-auto',
+              'py3 flex flex-column justify-center w100 container-width mx-auto',
               {
                 [styles['ComicStrip--active']]: this.flavorIsActive(i)
               }
@@ -111,38 +107,18 @@ class ComicStrip extends Component {
 
             return (
               <div className={classes} key={i}>
-                {comics.map((comic, i) => {
-                  const comicUrl = get(comic, 'fields.file.url', '');
-                  return (
-                    <div
-                      key={i}
-                      className={cx(
-                        styles['ComicStrips__container__image'],
-                        'transition-slide-up-large m2 xs-hide sm-hide'
-                      )}
-                    >
-                      <Image
-                        alt={`${get(comic, 'fields.title', '')}`}
-                        src={comicUrl}
-                      />
-                    </div>
-                  );
-                })}
-                <Carousel
-                  className="w-auto md-hide lg-hide"
-                  showArrows={false}
-                  index={this.state.activeSlide}
-                  onChange={activeSlide => this.setState({ activeSlide })}
-                >
+                <span className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width">
+                  {get(product, 'fields.text', '')}
+                </span>
+                <div className="flex flex-row">
                   {comics.map((comic, i) => {
                     const comicUrl = get(comic, 'fields.file.url', '');
-
                     return (
                       <div
                         key={`${i}-${get(comic, 'sys.id', '')}`}
                         className={cx(
                           styles['ComicStrips__container__image'],
-                          'w-auto mx-auto'
+                          'transition-slide-up-large m2 xs-hide sm-hide'
                         )}
                       >
                         <Image
@@ -152,7 +128,32 @@ class ComicStrip extends Component {
                       </div>
                     );
                   })}
-                </Carousel>
+                  <Carousel
+                    className="w100 mx-auto md-hide lg-hide"
+                    showArrows={false}
+                    index={this.state.activeSlide}
+                    onChange={activeSlide => this.setState({ activeSlide })}
+                  >
+                    {comics.map((comic, i) => {
+                      const comicUrl = get(comic, 'fields.file.url', '');
+
+                      return (
+                        <div
+                          key={`${i}-${get(comic, 'sys.id', '')}`}
+                          className={cx(
+                            styles['ComicStrips__container__image'],
+                            'w-auto mx-auto'
+                          )}
+                        >
+                          <Image
+                            alt={`${get(comic, 'fields.title', '')}`}
+                            src={comicUrl}
+                          />
+                        </div>
+                      );
+                    })}
+                  </Carousel>
+                </div>
               </div>
             );
           })}
