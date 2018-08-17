@@ -158,7 +158,9 @@ class Cart extends Component {
                       )}
                     >
                       <Link
-                        className="text-decoration-none mb2"
+                        className={`text-decoration-none ${
+                          item.subitems ? 'mb2' : 'my-auto'
+                        }`}
                         to={`/products/${handle}`}
                       >
                         <span className="small bold">{item.title}</span>
@@ -226,7 +228,7 @@ class Cart extends Component {
               <div
                 className={cx(styles['Cart__shipping-info__container'], 'flex')}
               >
-                <div className="col-12 md-col-4">
+                <div className="col-12 md-col-6">
                   <p className="uppercase info-text-small">
                     When the shipping label is created you will receive an email
                     with your tracking number.
