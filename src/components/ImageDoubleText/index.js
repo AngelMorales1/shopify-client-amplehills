@@ -28,14 +28,17 @@ const ImageDoubleText = ({ block, z }) => {
       <div
         className={cx(
           styles['ImageDoubleText--container'],
+          {
+            [styles[
+              'ImageDoubleText--container--reverse'
+            ]]: isReverseArrangement
+          },
           'container-width flex items-center justify-between'
         )}
       >
         <div
           className={cx(
-            isReverseArrangement
-              ? styles['ImageDoubleText--image-container--reverse']
-              : styles['ImageDoubleText--image-container'],
+            styles['ImageDoubleText--image-container'],
             'circle square'
           )}
           style={{
@@ -48,12 +51,7 @@ const ImageDoubleText = ({ block, z }) => {
           }}
         />
         <div
-          className={cx(
-            isReverseArrangement
-              ? styles['ImageDoubleText--text-container--reverse']
-              : styles['ImageDoubleText--text-container'],
-            'md-col-6'
-          )}
+          className={cx(styles['ImageDoubleText--text-container'], 'md-col-6')}
         >
           <div className="mb3">
             <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>

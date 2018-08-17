@@ -20,13 +20,13 @@ const ImageText = ({ block, z }) => {
       className={cx(styles['ImageText'], styles[colorClass], 'flex drip')}
     >
       <div
-        className={cx('flex container-width', styles['ImageText__container'])}
+        className={cx('flex container-width', styles['ImageText__container'], {
+          [styles['ImageText__container--reverse']]: isReverseArrangement
+        })}
       >
         <div
           className={cx(
-            isReverseArrangement
-              ? styles['ImageText__text-content']
-              : styles['ImageText__text-content--reverse'],
+            styles['ImageText__text-content'],
             'flex flex-column justify-center col-12 md-col-6'
           )}
         >
@@ -39,12 +39,7 @@ const ImageText = ({ block, z }) => {
           />
         </div>
         <Image
-          className={cx(
-            isReverseArrangement
-              ? styles['ImageText__image']
-              : styles['ImageText__image--reverse'],
-            'z-overlay col-4 mt2'
-          )}
+          className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}
           style={{ transform: `translateY(${position}%)` }}
           alt={`${get(fields, 'title', '')} illustration`}
           src={get(fields, 'image.fields.file.url', '')}
