@@ -326,14 +326,19 @@ class ChooseYourOwnStory extends Component {
               <div className="col">
                 {product.available ? (
                   <Button
-                    className="small"
+                    className={cx(
+                      styles['ChooseYourOwnStory__button-text'],
+                      'small flex flex-row justify-between'
+                    )}
                     disabled={size !== pints.length}
                     variant="primary-small"
                     color="white-madison-blue"
                     shadow={true}
                     onClick={this.handleAddToCart}
                   >
-                    <span className="mr2">Add to Cart</span>
+                    <span className="mr-auto">
+                      {size !== pints.length ? 'Keep Choosing!' : 'Add to Cart'}
+                    </span>
                     <span>
                       ${getLineItemPrice(activeVariantPrice, quantity)}
                     </span>
