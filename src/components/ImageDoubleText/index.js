@@ -50,7 +50,7 @@ const ImageDoubleText = ({ block, z }) => {
         <div
           className={cx(
             isReverseArrangement
-              ? styles['ImageDoubleText--text-container-reverse']
+              ? styles['ImageDoubleText--text-container--reverse']
               : styles['ImageDoubleText--text-container'],
             'md-col-6'
           )}
