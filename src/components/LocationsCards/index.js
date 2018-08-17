@@ -229,38 +229,31 @@ class LocationsCards extends Component {
                         </span>
                       </div>
                     ) : null}
-                    <div
-                      className={cx(
-                        styles['LocationsCards__card-seasonal'],
-                        'absolute flex flex-column items-center justify-center z-1'
-                      )}
-                    >
-                      <Image
-                        className={cx(
-                          styles['LocationsCards__card-seasonal-image'],
-                          'z-overlay'
-                        )}
-                        src={get(location, 'seasonalImage', '')}
-                      />
+                    {location.seasonal ? (
                       <div
                         className={cx(
-                          styles['LocationsCards__card-seasonal-circle'],
-                          location.seasonal
-                            ? 'bg-pastel-pink'
-                            : 'bg-pastel-blue',
-                          'circle flex flex-column items-center justify-center'
+                          styles['LocationsCards__card-seasonal-image'],
+                          'z-1 absolute'
                         )}
-                      >
-                        <span
-                          className={cx(
-                            styles['LocationsCards__card-seasonal-circle-text'],
-                            'text-white small bold'
-                          )}
-                        >
-                          {location.seasonal ? 'S' : 'YR'}
-                        </span>
-                      </div>
-                    </div>
+                        style={{
+                          background:
+                            'url(assets/images/seasonal-icon.png) no-repeat center',
+                          backgroundSize: 'cover'
+                        }}
+                      />
+                    ) : (
+                      <div
+                        className={cx(
+                          styles['LocationsCards__card-seasonal-image'],
+                          'z-1 absolute'
+                        )}
+                        style={{
+                          background:
+                            'url(assets/images/year-round-icon.png) no-repeat center',
+                          backgroundSize: 'cover'
+                        }}
+                      />
+                    )}
                     <div
                       style={
                         location.image
