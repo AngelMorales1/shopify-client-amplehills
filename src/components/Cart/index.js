@@ -314,7 +314,7 @@ class Cart extends Component {
                     className="mb2 xs-hide sm-hide"
                     variant="light-gray-tall"
                     type={'textarea'}
-                    placeholder={`Write a message.`}
+                    placeholder={`Write a message (don't forget to include your name!)`}
                     value={this.state.note}
                     onChange={note =>
                       note
