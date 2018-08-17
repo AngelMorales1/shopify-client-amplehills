@@ -114,7 +114,9 @@ class ProfileOrders extends Component {
         {this.state.itemNotAvailable ? (
           <Modal>
             <div className="mb3 flex flex-row justify-center">
-              <span className="sub-title">Below item is not available</span>
+              <span className="sub-title">
+                This item is no longer available
+              </span>
             </div>
             <div className="mb2 flex flex-wrap justify-between">
               <span className="line-item-title mr2">
