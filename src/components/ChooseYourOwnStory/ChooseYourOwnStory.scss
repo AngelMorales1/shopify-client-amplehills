@@ -80,4 +80,12 @@ $menu-height: spacing(37.5);
       }
     }
   }
+
+  &__button-text {
+    min-width: spacing(58);
+
+    > div {
+      width: 100%;
+    }
+  }
 }
