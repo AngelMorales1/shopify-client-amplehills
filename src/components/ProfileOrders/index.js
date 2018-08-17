@@ -19,7 +19,6 @@ class ProfileOrders extends Component {
   handleReorder = order => {
     const items = order.items.map(item => {
       if (item.productId.length < 1) {
-        console.log(item);
         this.setState({ itemNotAvailable: item });
       }
       return {
