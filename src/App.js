@@ -10,7 +10,9 @@ import checkout from 'state/selectors/checkout';
 import alertIsActive from 'state/selectors/alertIsActive';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
+import Environments from 'constants/Environments';
 import get from 'utils/get';
+import getSubdomain from 'utils/getSubdomain';
 import isContentfulPreview from 'utils/isContentfulPreview';
 import Routes from 'routes';
 import locationModel from 'models/locationModel';
@@ -61,6 +63,7 @@ class App extends Component {
       twitterLink,
       footerIllustration,
       forceErrorPage,
+      forceErrorPageOnProduction,
       facebookIcon,
       instagramIcon,
       twitterIcon,
@@ -93,7 +96,12 @@ class App extends Component {
         </div>
       );
     }
-    if (applicationStatus === REJECTED || forceErrorPage) {
+    if (
+      applicationStatus === REJECTED ||
+      forceErrorPage ||
+      (forceErrorPageOnProduction &&
+        getSubdomain() === Environments.MVP.subdomain)
+    ) {
       return <ErrorPage />;
     }
 
