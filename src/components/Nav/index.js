@@ -96,7 +96,11 @@ class Nav extends Component {
               <NavLink exact to="/profile" className="mr2 link-text center">
                 <Image
                   className="icon"
-                  src={get(profileIcon, 'fields.file.url', '')}
+                  src={get(
+                    profileIcon,
+                    'fields.file.url',
+                    'assets/images/bubble-icon.svg'
+                  )}
                 />
               </NavLink>
               <Button
