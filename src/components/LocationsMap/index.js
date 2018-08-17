@@ -34,6 +34,22 @@ const LocationsMap = props => {
     [styles['LocationsMap--with-alert']]: alertIsActive
   });
 
+  const handleRegionClick = (filter, filterIsActive) => {
+    if (filterIsActive) {
+      actions.removeLocationFilter({
+        key: filter.key,
+        value: filter.value
+      });
+    } else {
+      actions.addLocationFilter({
+        key: filter.key,
+        value: filter.value
+      });
+    }
+
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className={LocationsMapClasses}>
       <MapboxMap
@@ -100,19 +116,7 @@ const LocationsMap = props => {
               variant="primary-small"
               key={filter.value}
               label={filter.label}
-              onClick={
-                filterIsActive
-                  ? () =>
-                      actions.removeLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-                  : () =>
-                      actions.addLocationFilter({
-                        key: filter.key,
-                        value: filter.value
-                      })
-              }
+              onClick={() => handleRegionClick(filter, filterIsActive)}
             />
           );
         })}
