@@ -172,10 +172,11 @@ class ProfileInfo extends Component {
               </div>
               <div className="flex justify-end">
                 <Button
-                  color="peach"
+                  variant="style-none"
                   label="Cancel"
+                  className="text-peach mr2"
+                  hover={'underline-peach'}
                   onClick={actions.cancelEditCustomerFields}
-                  className="mr2"
                 />
                 <Button
                   color="madison-blue"
