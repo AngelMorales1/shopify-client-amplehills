@@ -14,11 +14,6 @@ export default {
       key: 'state',
       value: 'FL',
       label: 'Florida'
-    },
-    CA: {
-      key: 'state',
-      value: 'CA',
-      label: 'California'
     }
   }
 };
