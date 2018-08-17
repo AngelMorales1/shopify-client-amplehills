@@ -39,7 +39,7 @@ const LocationsMap = props => {
       <MapboxMap
         className="z-0"
         featureCollection={locationGeoJSON}
-        defaultIcon="year-round-icon-color"
+        defaultIcon="year-round-icon"
         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
         collections={[
           {
@@ -57,7 +57,7 @@ const LocationsMap = props => {
                 .filter(location => location.id !== selectedLocation)
                 .map(location => location.id)
             },
-            icon: 'seasonal-icon-color'
+            icon: 'seasonal-icon'
           },
           {
             name: 'HiddenByFilter',
