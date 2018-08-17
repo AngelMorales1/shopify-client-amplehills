@@ -115,7 +115,7 @@ class ComicStrip extends Component {
                     const comicUrl = get(comic, 'fields.file.url', '');
                     return (
                       <div
-                        key={i}
+                        key={`${i}-${get(comic, 'sys.id', '')}`}
                         className={cx(
                           styles['ComicStrips__container__image'],
                           'transition-slide-up-large m2 xs-hide sm-hide'
