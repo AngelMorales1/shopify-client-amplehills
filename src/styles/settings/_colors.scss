@@ -20,7 +20,8 @@ $colors: (
   'yellow': #fce8b6,
   'varden': #fff6dc,
   'island-spice': #fffaed,
-  'white-wash': rgba(255, 255, 255, 0.5)
+  'white-wash': rgba(255, 255, 255, 0.5),
+  'white-wash-blur': rgba(255, 255, 255, 0.8)
 );
 
 @function color($color-name) {

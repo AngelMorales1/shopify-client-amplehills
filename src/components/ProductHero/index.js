@@ -160,7 +160,7 @@ class ProductHero extends Component {
                 dangerouslySetInnerHTML={{
                   __html: marked(product.description)
                 }}
-                className="copy pr2"
+                className="block-subheadline"
               />
             </div>
             {product.preOrderDate ? (
