@@ -34,7 +34,7 @@ const LocationsMap = props => {
     [styles['LocationsMap--with-alert']]: alertIsActive
   });
 
-  const onClickRegion = (filter, filterIsActive) => {
+  const handleRegionClick = (filter, filterIsActive) => {
     if (filterIsActive) {
       actions.removeLocationFilter({
         key: filter.key,
@@ -116,7 +116,7 @@ const LocationsMap = props => {
               variant="primary-small"
               key={filter.value}
               label={filter.label}
-              onClick={() => onClickRegion(filter, filterIsActive)}
+              onClick={() => handleRegionClick(filter, filterIsActive)}
             />
           );
         })}
