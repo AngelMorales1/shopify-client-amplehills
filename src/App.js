@@ -56,6 +56,7 @@ class App extends Component {
       globalSettings,
       alertIsActive
     } = this.props;
+    console.log(applicationStatus);
 
     const {
       facebookLink,
@@ -76,8 +77,10 @@ class App extends Component {
     if (
       applicationStatus === FULFILLED &&
       !forceErrorPage &&
-      (!forceErrorPageOnProduction &&
-        getSubdomain !== Environments.MVP.subdomain)
+      !(
+        forceErrorPageOnProduction &&
+        getSubdomain() === Environments.MVP.subdomain
+      )
     ) {
       return (
         <div className="App">
