@@ -14,7 +14,7 @@ const ImageDoubleText = ({ block, z }) => {
     'backgroundColor',
     'light-yellow'
   )}`;
-
+  console.log(fields);
   return (
     <div
       style={{ zIndex: z }}
@@ -80,7 +80,8 @@ ImageDoubleText.propTypes = {
       text2: PropTypes.string,
       title1: PropTypes.string,
       title2: PropTypes.string,
-      image: imageModel.propTypes
+      image: imageModel.propTypes,
+      changeContentArrangement: PropTypes.bool
     })
   })
 };
@@ -94,7 +95,8 @@ ImageDoubleText.defaultProps = {
       text2: '',
       title1: '',
       title2: '',
-      image: imageModel.default
+      image: imageModel.default,
+      changeContentArrangement: false
     }
   }
 };
