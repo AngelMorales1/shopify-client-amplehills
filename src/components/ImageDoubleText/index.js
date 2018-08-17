@@ -14,6 +14,7 @@ const ImageDoubleText = ({ block, z }) => {
     'backgroundColor',
     'light-yellow'
   )}`;
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
 
   return (
     <div
@@ -27,6 +28,11 @@ const ImageDoubleText = ({ block, z }) => {
       <div
         className={cx(
           styles['ImageDoubleText--container'],
+          {
+            [styles[
+              'ImageDoubleText--container--reverse'
+            ]]: isReverseArrangement
+          },
           'container-width flex items-center justify-between'
         )}
       >
@@ -80,7 +86,8 @@ ImageDoubleText.propTypes = {
       text2: PropTypes.string,
       title1: PropTypes.string,
       title2: PropTypes.string,
-      image: imageModel.propTypes
+      image: imageModel.propTypes,
+      isReverseArrangement: PropTypes.bool
     })
   })
 };
@@ -94,7 +101,8 @@ ImageDoubleText.defaultProps = {
       text2: '',
       title1: '',
       title2: '',
-      image: imageModel.default
+      image: imageModel.default,
+      isReverseArrangement: false
     }
   }
 };

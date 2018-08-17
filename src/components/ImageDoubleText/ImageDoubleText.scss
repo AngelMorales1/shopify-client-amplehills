@@ -12,25 +12,47 @@
     @media ($medium-up) {
       flex-direction: row;
     }
-  }
 
-  &--image-container {
-    width: 65%;
-    min-width: spacing(100);
-    margin-top: spacing(-24);
-    margin-left: spacing(-55);
+    .ImageDoubleText--image-container {
+      width: 65%;
+      min-width: spacing(100);
+      margin-top: spacing(-24);
+      margin-left: spacing(-55);
 
-    @media ($medium-up) {
-      margin-top: spacing(-40);
-      margin-left: spacing(-84);
+      @media ($medium-up) {
+        margin-top: spacing(-40);
+        margin-left: spacing(-84);
+      }
+    }
+
+    .ImageDoubleText--text-container {
+      margin: spacing(8);
+
+      @media ($medium-up) {
+        margin: spacing(12);
+      }
     }
   }
 
-  &--text-container {
-    margin: spacing(8);
+  &--container--reverse {
+    .ImageDoubleText--image-container {
+      margin-left: 0;
+      margin-right: spacing(-55);
 
-    @media ($medium-up) {
-      margin: spacing(12);
+      @media ($medium-up) {
+        order: 2;
+        margin-left: 0;
+        margin-right: spacing(-84);
+      }
+    }
+
+    .ImageDoubleText--text-container {
+      margin: spacing(8);
+
+      @media ($medium-up) {
+        order: 1;
+        margin: spacing(12);
+      }
     }
   }
 }

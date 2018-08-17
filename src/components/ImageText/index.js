@@ -12,6 +12,7 @@ const ImageText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
   const position = get(fields, 'imagePosition', 0);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
 
   return (
     <div
@@ -19,7 +20,9 @@ const ImageText = ({ block, z }) => {
       className={cx(styles['ImageText'], styles[colorClass], 'flex drip')}
     >
       <div
-        className={cx('flex container-width', styles['ImageText__container'])}
+        className={cx('flex container-width', styles['ImageText__container'], {
+          [styles['ImageText__container--reverse']]: isReverseArrangement
+        })}
       >
         <div
           className={cx(
@@ -56,7 +59,8 @@ ImageText.propTypes = {
       image: imageModel.propTypes,
       imagePosition: PropTypes.number,
       text: PropTypes.string,
-      title: PropTypes.string
+      title: PropTypes.string,
+      isReverseArrangement: PropTypes.bool
     })
   })
 };
@@ -69,7 +73,8 @@ ImageText.defaultProps = {
       image: imageModel.default,
       imagePosition: 0,
       text: '',
-      title: ''
+      title: '',
+      isReverseArrangement: false
     }
   }
 };
