@@ -56,7 +56,6 @@ class App extends Component {
       globalSettings,
       alertIsActive
     } = this.props;
-    console.log(applicationStatus);
 
     const {
       facebookLink,
