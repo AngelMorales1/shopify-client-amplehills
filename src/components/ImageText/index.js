@@ -12,6 +12,7 @@ const ImageText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
   const position = get(fields, 'imagePosition', 0);
+  const isReverseArrangement = get(fields, 'changeContentArrangement', false);
 
   return (
     <div
@@ -23,7 +24,9 @@ const ImageText = ({ block, z }) => {
       >
         <div
           className={cx(
-            styles['ImageText__text-content'],
+            isReverseArrangement
+              ? styles['ImageText__text-content']
+              : styles['ImageText__text-content--reverse'],
             'flex flex-column justify-center col-12 md-col-6'
           )}
         >
@@ -36,7 +39,12 @@ const ImageText = ({ block, z }) => {
           />
         </div>
         <Image
-          className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}
+          className={cx(
+            isReverseArrangement
+              ? styles['ImageText__image']
+              : styles['ImageText__image--reverse'],
+            'z-overlay col-4 mt2'
+          )}
           style={{ transform: `translateY(${position}%)` }}
           alt={`${get(fields, 'title', '')} illustration`}
           src={get(fields, 'image.fields.file.url', '')}
@@ -56,7 +64,8 @@ ImageText.propTypes = {
       image: imageModel.propTypes,
       imagePosition: PropTypes.number,
       text: PropTypes.string,
-      title: PropTypes.string
+      title: PropTypes.string,
+      changeContentArrangement: PropTypes.bool
     })
   })
 };
@@ -69,7 +78,8 @@ ImageText.defaultProps = {
       image: imageModel.default,
       imagePosition: 0,
       text: '',
-      title: ''
+      title: '',
+      changeContentArrangement: false
     }
   }
 };

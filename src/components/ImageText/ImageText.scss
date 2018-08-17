@@ -27,10 +27,28 @@
     }
   }
 
+  &__image--reverse {
+    min-width: spacing(65);
+    margin-left: auto;
+
+    @media ($medium-up) {
+      order: 2;
+      margin-right: spacing(20);
+      align-self: flex-end;
+    }
+  }
+
   &__text-content {
     @media ($medium-up) {
       order: 2;
       margin-left: spacing(18);
+    }
+  }
+
+  &__text-content--reverse {
+    @media ($medium-up) {
+      order: 1;
+      margin-right: spacing(18);
     }
   }
 }

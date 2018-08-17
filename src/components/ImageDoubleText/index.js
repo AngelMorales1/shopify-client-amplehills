@@ -34,7 +34,7 @@ const ImageDoubleText = ({ block, z }) => {
         <div
           className={cx(
             isReverseArrangement
-              ? styles['ImageDoubleText--image-container-reverse']
+              ? styles['ImageDoubleText--image-container--reverse']
               : styles['ImageDoubleText--image-container'],
             'circle square'
           )}
