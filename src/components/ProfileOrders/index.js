@@ -79,13 +79,13 @@ class ProfileOrders extends Component {
                 })}
                 <div className="mt4 flex flex-wrap">
                   <Button
-                    className="tag mb2 mr2 bg-peach text-white w-auto"
+                    className="tag bold mb2 mr2 bg-peach text-white w-auto"
                     variant="secondary"
                     label="View Receipt"
                     to={order.receipt}
                   />
                   <Button
-                    className="tag mb2 bg-peach text-white"
+                    className="tag bold mb2 bg-peach text-white"
                     variant="secondary"
                     label="Re-order"
                     onClick={() => this.handleReorder(order)}
