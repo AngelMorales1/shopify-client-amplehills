@@ -87,7 +87,7 @@ ImageDoubleText.propTypes = {
       title1: PropTypes.string,
       title2: PropTypes.string,
       image: imageModel.propTypes,
-      changeContentArrangement: PropTypes.bool
+      isReverseArrangement: PropTypes.bool
     })
   })
 };
@@ -102,7 +102,7 @@ ImageDoubleText.defaultProps = {
       title1: '',
       title2: '',
       image: imageModel.default,
-      changeContentArrangement: false
+      isReverseArrangement: false
     }
   }
 };

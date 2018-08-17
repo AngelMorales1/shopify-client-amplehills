@@ -60,7 +60,7 @@ ImageText.propTypes = {
       imagePosition: PropTypes.number,
       text: PropTypes.string,
       title: PropTypes.string,
-      changeContentArrangement: PropTypes.bool
+      isReverseArrangement: PropTypes.bool
     })
   })
 };
@@ -74,7 +74,7 @@ ImageText.defaultProps = {
       imagePosition: 0,
       text: '',
       title: '',
-      changeContentArrangement: false
+      isReverseArrangement: false
     }
   }
 };
