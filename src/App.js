@@ -73,7 +73,12 @@ class App extends Component {
 
     const alert = get(globalSettings, 'alert', {});
 
-    if (applicationStatus === FULFILLED && !forceErrorPage) {
+    if (
+      applicationStatus === FULFILLED &&
+      !forceErrorPage &&
+      (!forceErrorPageOnProduction &&
+        getSubdomain !== Environments.MVP.subdomain)
+    ) {
       return (
         <div className="App">
           {alertIsActive ? <Alert alert={alert} /> : null}
