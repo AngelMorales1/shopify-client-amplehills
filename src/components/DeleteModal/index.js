@@ -43,8 +43,9 @@ const DeleteModal = props => {
         </div>
         <div className="flex justify-end items-center">
           <Button
-            variant="no-style"
+            variant="style-none"
             label="Cancel"
+            hover={'underline-peach'}
             className="mr3 text-peach"
             onClick={() => props.actions.cancelRemoveLineItems(id)}
           />

@@ -37,8 +37,8 @@ $radius: (
 Global element shapes
 */
 $viewport-height: 100vh;
-$drop-shadow: 0 spacing(0.5) spacing(1) 0 rgba(0, 0, 0, 0.2);
-$drop-shadow-large: 0 spacing(1) spacing(2) 0 rgba(0, 0, 0, 0.2);
+$drop-shadow: 0 0 3rem 5px rgba(0, 0, 0, 0.1);
+$drop-shadow-large: 0 0 4rem 5px rgba(0, 0, 0, 0.1);
 $drop-shadow-xlarge: 0 spacing(1) spacing(6) 0 rgba(0, 0, 0, 0.2);
 $header-height-mobile: spacing(20);
 $header-height-desktop: spacing(23);
