@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 
 import { Button, Modal, TextField, FormFlash } from 'components/base';
 import UpdateCustomerForm from 'constants/forms/UpdateCustomer';
 import get from 'utils/get';
-
-import styles from './ProfileInfo.scss';
 
 class ProfileInfo extends Component {
   constructor(props) {
