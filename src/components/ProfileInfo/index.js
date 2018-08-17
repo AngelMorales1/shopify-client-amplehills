@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import { Button, Modal, TextField, FormFlash } from 'components/base';
 import UpdateCustomerForm from 'constants/forms/UpdateCustomer';
 import get from 'utils/get';
+
+import styles from './ProfileInfo.scss';
 
 class ProfileInfo extends Component {
   constructor(props) {
@@ -78,52 +81,60 @@ class ProfileInfo extends Component {
           <FormFlash error={true} message={`Unexpected Error: ${errors}`} />
         ) : null}
         <div className="card card--light-gray-border p3 my2">
-          <div className="relative">
-            <strong className="bold block mb2">Email Address</strong>
-            <p>{email}</p>
-
-            <Button
-              variant="no-style"
-              label="Edit"
-              className="text-peach absolute t0 r0"
-              onClick={() =>
-                actions.activateEditCustomerField(UpdateCustomerForm.EMAIL.id)
-              }
-            />
+          <div className="flex flex-column">
+            <div className="w100 flex flex-row justify-between">
+              <strong className="bold block mb2">Email Address</strong>
+              <Button
+                variant="style-none"
+                label="Edit"
+                className="text-peach"
+                hover={'underline-peach'}
+                onClick={() =>
+                  actions.activateEditCustomerField(UpdateCustomerForm.EMAIL.id)
+                }
+              />
+            </div>
+            <p className="wrap">{email}</p>
           </div>
         </div>
         {phone ? (
           <div className="card card--light-gray-border p3 my2">
-            <div className="relative">
-              <strong className="bold block mb2">Phone Number</strong>
+            <div className="flex flex-column">
+              <div className="w100 flex flex-row justify-between">
+                <strong className="bold block mb2">Phone Number</strong>
+                <Button
+                  variant="style-none"
+                  label="Edit"
+                  className="text-peach"
+                  hover={'underline-peach'}
+                  onClick={() =>
+                    actions.activateEditCustomerField(
+                      UpdateCustomerForm.PHONE.id
+                    )
+                  }
+                />
+              </div>
               <p>{phone}</p>
-
-              <Button
-                variant="no-style"
-                label="Edit"
-                className="text-peach absolute t0 r0"
-                onClick={() =>
-                  actions.activateEditCustomerField(UpdateCustomerForm.PHONE.id)
-                }
-              />
             </div>
           </div>
         ) : null}
         <div className="card card--light-gray-border p3 my2">
-          <div className="relative">
-            <strong className="bold block mb2">Password</strong>
+          <div className="flex flex-column">
+            <div className="w100 flex flex-row justify-between">
+              <strong className="bold block mb2">Password</strong>
+              <Button
+                variant="style-none"
+                label="Edit"
+                className="text-peach"
+                hover={'underline-peach'}
+                onClick={() =>
+                  actions.activateEditCustomerField(
+                    UpdateCustomerForm.PASSWORD.id
+                  )
+                }
+              />
+            </div>
             <p>• • • • • • • • • •</p>
-
-            <Button
-              variant="no-style"
-              label="Edit"
-              className="text-peach absolute t0 r0"
-              onClick={() =>
-                actions.activateEditCustomerField(
-                  UpdateCustomerForm.PASSWORD.id
-                )
-              }
-            />
           </div>
         </div>
         {editModal ? (
