@@ -14,7 +14,7 @@ const ImageDoubleText = ({ block, z }) => {
     'backgroundColor',
     'light-yellow'
   )}`;
-  const isReverseArrangement = get(fields, 'changeContentArrangement', false);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
 
   return (
     <div

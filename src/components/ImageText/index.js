@@ -12,7 +12,7 @@ const ImageText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
   const position = get(fields, 'imagePosition', 0);
-  const isReverseArrangement = get(fields, 'changeContentArrangement', false);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
 
   return (
     <div
