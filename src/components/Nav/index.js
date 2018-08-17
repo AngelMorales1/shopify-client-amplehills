@@ -99,7 +99,7 @@ class Nav extends Component {
                   src={get(
                     profileIcon,
                     'fields.file.url',
-                    'assets/images/bubble-icon.svg'
+                    '/assets/images/bubble-icon.svg'
                   )}
                 />
               </NavLink>
@@ -160,7 +160,7 @@ Nav.defaultProps = {
   },
   miniCartIsOpen: false,
   logo: imageModel.default,
-  profileIcon: imageModel.default
+  profileIcon: null
 };
 
 const mapStateToProps = state => {
