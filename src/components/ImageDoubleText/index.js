@@ -22,7 +22,7 @@ const ImageDoubleText = ({ block, z }) => {
       className={cx(
         styles['ImageDoubleText'],
         styles[colorClass],
-        'drip flex justify-center items-center'
+        'drip flex justify-center items-center overflow-hidden'
       )}
     >
       <div
