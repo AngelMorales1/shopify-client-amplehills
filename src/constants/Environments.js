@@ -4,5 +4,8 @@ export default {
   },
   STAGING: {
     subdomain: 'staging'
+  },
+  PRODUCTION: {
+    subdomain: 'production'
   }
 };
