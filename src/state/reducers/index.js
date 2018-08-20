@@ -8,6 +8,7 @@ import locations from './locations';
 import products from './products';
 import customer from './customer';
 import genericPage from './genericPage';
+import pressPage from './pressPage';
 
 export default {
   status,
@@ -19,5 +20,6 @@ export default {
   locations,
   products,
   customer,
-  genericPage
+  genericPage,
+  pressPage
 };
