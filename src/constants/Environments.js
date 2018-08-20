@@ -6,6 +6,6 @@ export default {
     subdomain: 'staging'
   },
   PRODUCTION: {
-    subdomain: 'production'
+    subdomain: 'www'
   }
 };
