@@ -35,6 +35,8 @@ const LocationsMap = props => {
   });
 
   const handleRegionClick = (filter, filterIsActive) => {
+    actions.clearLocationSelection();
+
     if (filterIsActive) {
       actions.removeLocationFilter({
         key: filter.key,
