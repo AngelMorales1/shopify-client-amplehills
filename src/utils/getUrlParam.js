@@ -1,1 +1,8 @@
-export default param => new URL(window.location.href).searchParams.get(param);
+export default param => {
+  const searchParams = new URL(window.location.href).searchParams;
+  if (!!searchParams) {
+    return searchParams.get(param);
+  } else {
+    return '';
+  }
+};
