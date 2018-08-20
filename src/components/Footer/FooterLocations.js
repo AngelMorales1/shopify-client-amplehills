@@ -78,8 +78,14 @@ const FooterLocations = ({ locations }) => {
                       href={location.orderDeliveryLink}
                       target="_blank"
                       rel="noopener"
+                      className="text-decoration-none"
                     >
-                      <div className="bg-white text-madison-blue inline-block mt1 nowrap tag">
+                      <div
+                        className={cx(
+                          styles['Footer__delivery-button'],
+                          'bg-white text-madison-blue inline-block mt1 nowrap tag transition'
+                        )}
+                      >
                         Order Delivery
                       </div>
                     </a>

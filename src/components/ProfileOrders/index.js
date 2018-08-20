@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import get from 'utils/get';
+import cx from 'classnames';
 
 import orderModel from 'models/orderModel';
+import styles from './ProfileOrders.scss';
 
 import { Button, Modal } from 'components/base';
 
@@ -79,13 +81,19 @@ class ProfileOrders extends Component {
                 })}
                 <div className="mt4 flex flex-wrap">
                   <Button
-                    className="tag bold mb2 mr2 bg-peach text-white w-auto"
+                    className={cx(
+                      styles['ProfileOrders__button-text'],
+                      'tag mb2 mr2 bg-peach text-white w-auto'
+                    )}
                     variant="secondary"
                     label="View Receipt"
                     to={order.receipt}
                   />
                   <Button
-                    className="tag bold mb2 bg-peach text-white"
+                    className={cx(
+                      styles['ProfileOrders__button-text'],
+                      'tag mb2 bg-peach text-white'
+                    )}
                     variant="secondary"
                     label="Re-order"
                     onClick={() => this.handleReorder(order)}
