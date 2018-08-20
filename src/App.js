@@ -10,9 +10,8 @@ import checkout from 'state/selectors/checkout';
 import alertIsActive from 'state/selectors/alertIsActive';
 
 import { IDLE, FULFILLED, REJECTED } from 'constants/Status';
-import Environments from 'constants/Environments';
 import get from 'utils/get';
-import getSubdomain from 'utils/getSubdomain';
+import isProd from 'utils/isProd';
 import isContentfulPreview from 'utils/isContentfulPreview';
 import Routes from 'routes';
 import locationModel from 'models/locationModel';
@@ -76,10 +75,7 @@ class App extends Component {
     if (
       applicationStatus === FULFILLED &&
       !forceErrorPage &&
-      !(
-        forceErrorPageOnProduction &&
-        getSubdomain() === Environments.MVP.subdomain
-      )
+      !(forceErrorPageOnProduction && isProd())
     ) {
       return (
         <div className="App">
@@ -106,8 +102,7 @@ class App extends Component {
     if (
       applicationStatus === REJECTED ||
       forceErrorPage ||
-      (forceErrorPageOnProduction &&
-        getSubdomain() === Environments.MVP.subdomain)
+      (forceErrorPageOnProduction && isProd())
     ) {
       return <ErrorPage />;
     }
