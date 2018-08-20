@@ -36,6 +36,7 @@ const Routes = ({ location }) => (
       <Route path="/style-guide" component={GenericPageContainer} />
     ) : null}
     <Route path="/our-story" component={GenericPageContainer} />
+    <Route path="/press" component={PressPageContainer} />
   </Switch>
 );
 
