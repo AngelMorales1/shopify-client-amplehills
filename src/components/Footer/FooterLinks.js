@@ -41,40 +41,49 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
           href={get(footerLinks, 'instagramLink', '')}
           target="_blank"
           rel="noopener"
-          className="my3 flex items-center bold text-white text-decoration-none"
+          className={cx(
+            styles['Footer__link'],
+            'my3 flex items-center bold text-white text-decoration-none'
+          )}
         >
           <Image
             alt="Instagram icon"
             src={get(footerIcons, 'instagramIcon.fields.file.url', '')}
             className="icon mr3"
           />
-          Instagram
+          <span className={cx(styles['Footer__link-text'])}>Instagram</span>
         </a>
         <a
           href={get(footerLinks, 'twitterLink', '')}
           target="_blank"
           rel="noopener"
-          className="my3 flex items-center bold text-white text-decoration-none"
+          className={cx(
+            styles['Footer__link'],
+            'my3 flex items-center bold text-white text-decoration-none'
+          )}
         >
           <Image
             alt="Twitter icon"
             src={get(footerIcons, 'twitterIcon.fields.file.url', '')}
             className="icon mr3"
           />
-          Twitter
+          <span className={cx(styles['Footer__link-text'])}>Twitter</span>
         </a>
         <a
           href={get(footerLinks, 'facebookLink', '')}
           target="_blank"
           rel="noopener"
-          className="my3 flex items-center bold text-white text-decoration-none"
+          className={cx(
+            styles['Footer__link'],
+            'my3 flex items-center bold text-white text-decoration-none'
+          )}
         >
           <Image
             alt="Facebook icon"
             src={get(footerIcons, 'facebookIcon.fields.file.url', '')}
             className="icon mr3"
           />
-          Facebook
+          <span className={cx(styles['Footer__link-text'])}>Facebook</span>
         </a>
       </div>
     </div>
