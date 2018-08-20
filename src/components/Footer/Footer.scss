@@ -37,7 +37,7 @@
 
   &__Regions-container {
     @media ($medium-up) {
-      max-height: spacing(210);
+      max-height: spacing(230);
     }
   }
 
@@ -72,8 +72,27 @@
     margin-top: spacing(-10);
   }
 
-  &__privacy-link:hover {
-    color: color('goldenrod');
+  &__link {
+    .Footer__link-text {
+      border-bottom: spacing(0.5) solid transparent;
+    }
+
+    &:hover {
+      .Footer__link-text {
+        color: color('white');
+        border-bottom: spacing(0.5) solid color('white');
+      }
+    }
+  }
+
+  &__privacy-link {
+    padding-bottom: spacing(1);
+    border-bottom: spacing(0.5) solid transparent;
+
+    &:hover {
+      color: color('white');
+      border-bottom: spacing(0.5) solid color('white');
+    }
   }
 
   &__illustration {
