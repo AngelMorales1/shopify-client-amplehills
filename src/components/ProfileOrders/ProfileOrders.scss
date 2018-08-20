@@ -1,0 +1,10 @@
+@import 'settings', 'src/styles/typography';
+
+.ProfileOrders {
+  &__button-text {
+    > span,
+    div {
+      @extend .bold;
+    }
+  }
+}
