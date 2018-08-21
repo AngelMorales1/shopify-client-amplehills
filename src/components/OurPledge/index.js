@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './OurPledge.scss';
 import { Image, Button } from 'components/base';
@@ -27,7 +28,7 @@ const OurPledge = ({
     >
       <Image
         alt="Our pledge icon"
-        src={calloutImageUrl}
+        src={contentfulImgUtil(calloutImageUrl, '200', 'png')}
         className={cx('icon z-1', styles['OurPledge__icon'])}
       />
       <div
