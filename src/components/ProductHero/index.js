@@ -6,6 +6,7 @@ import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Carousel } from 'components/base';
@@ -112,10 +113,9 @@ class ProductHero extends Component {
                 <div
                   className="wh100 square"
                   style={{
-                    background: `url(${get(
-                      image,
-                      'fields.file.url',
-                      ''
+                    background: `url(${contentfulImgUtil(
+                      get(image, 'fields.file.url', ''),
+                      '1600'
                     )}) no-repeat center`,
                     backgroundSize: 'cover'
                   }}
@@ -127,10 +127,9 @@ class ProductHero extends Component {
           <div
             className="col col-12 md-col-6 square"
             style={{
-              background: `url(${get(
-                carouselImages,
-                '[0]fields.file.url',
-                ''
+              background: `url(${contentfulImgUtil(
+                get(carouselImages, '[0]fields.file.url', ''),
+                '1600'
               )}) no-repeat center`,
               backgroundSize: 'cover'
             }}
@@ -152,7 +151,11 @@ class ProductHero extends Component {
                   'absolute z-below t0 b0 my-auto',
                   styles['ProductHero__title-illustration']
                 )}
-                src={get(fields, 'titleIllustration.fields.file.url', '')}
+                src={contentfulImgUtil(
+                  get(fields, 'titleIllustration.fields.file.url', ''),
+                  '1000',
+                  'png'
+                )}
               />
             </div>
             <div>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
@@ -42,10 +43,9 @@ const ImageDoubleText = ({ block, z }) => {
             'circle square'
           )}
           style={{
-            background: `url(${get(
-              fields,
-              'image.fields.file.url',
-              ''
+            background: `url(${contentfulImgUtil(
+              get(fields, 'image.fields.file.url', ''),
+              '1400'
             )}) no-repeat center`,
             backgroundSize: 'cover'
           }}

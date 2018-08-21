@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import productModel from 'models/productModel';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ProductGridCard.scss';
 
@@ -20,7 +21,10 @@ const ProductGridCard = ({ product }) => {
               'square transition card w100'
             )}
             style={{
-              background: `url(${product.gridImage}) no-repeat center`,
+              background: `url(${contentfulImgUtil(
+                product.gridImage,
+                '500'
+              )}) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />

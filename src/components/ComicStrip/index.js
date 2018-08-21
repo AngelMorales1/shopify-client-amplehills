@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
 import get from 'utils/get';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import { Image, Button, Carousel } from 'components/base';
 import styles from './ComicStrip.scss';
@@ -123,7 +124,7 @@ class ComicStrip extends Component {
                       >
                         <Image
                           alt={`${get(comic, 'fields.title', '')}`}
-                          src={comicUrl}
+                          src={contentfulImgUtil(comicUrl, '1200')}
                         />
                       </div>
                     );
@@ -147,7 +148,7 @@ class ComicStrip extends Component {
                         >
                           <Image
                             alt={`${get(comic, 'fields.title', '')}`}
-                            src={comicUrl}
+                            src={contentfulImgUtil(comicUrl, '1200')}
                           />
                         </div>
                       );

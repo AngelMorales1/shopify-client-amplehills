@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
@@ -49,7 +50,10 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
               )}
             >
               <div className="mr3 col-2">
-                <Image alt={`${product.title} image`} src={product.pintImage} />
+                <Image
+                  alt={`${product.title} image`}
+                  src={contentfulImgUtil(product.pintImage, '500', 'png')}
+                />
               </div>
               <div className="col-10">
                 <h3 className="description-title bold mb2">{`1x ${
@@ -71,7 +75,11 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           <Image
             className="col-5 md-col-4 mt3"
             alt="what&rsquo;s included image"
-            src={get(fields, 'illustration.fields.file.url', '')}
+            src={contentfulImgUtil(
+              get(fields, 'illustration.fields.file.url', ''),
+              '600',
+              'png'
+            )}
           />
         </div>
       ) : null}

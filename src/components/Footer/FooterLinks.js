@@ -6,6 +6,7 @@ import styles from './Footer.scss';
 import { Button, Image } from 'components/base';
 import PropTypes from 'prop-types';
 import imageModel from 'models/imageModel';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 const FooterLinks = ({ footerLinks, footerIcons }) => {
   return (
@@ -48,7 +49,11 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
         >
           <Image
             alt="Instagram icon"
-            src={get(footerIcons, 'instagramIcon.fields.file.url', '')}
+            src={contentfulImgUtil(
+              get(footerIcons, 'instagramIcon.fields.file.url', ''),
+              '200',
+              'png'
+            )}
             className="icon mr3"
           />
           <span className={cx(styles['Footer__link-text'])}>Instagram</span>
@@ -64,7 +69,11 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
         >
           <Image
             alt="Twitter icon"
-            src={get(footerIcons, 'twitterIcon.fields.file.url', '')}
+            src={contentfulImgUtil(
+              get(footerIcons, 'twitterIcon.fields.file.url', ''),
+              '200',
+              'png'
+            )}
             className="icon mr3"
           />
           <span className={cx(styles['Footer__link-text'])}>Twitter</span>
@@ -80,7 +89,11 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
         >
           <Image
             alt="Facebook icon"
-            src={get(footerIcons, 'facebookIcon.fields.file.url', '')}
+            src={contentfulImgUtil(
+              get(footerIcons, 'facebookIcon.fields.file.url', ''),
+              '200',
+              'png'
+            )}
             className="icon mr3"
           />
           <span className={cx(styles['Footer__link-text'])}>Facebook</span>
