@@ -31,12 +31,14 @@ if (isProd()) {
 }
 
 /* Flush Localstorage when PackageJSON version changes */
-if (
-  localStorage.getItem('_ample_version') !== packageJSON.version ||
-  isContentfulPreview()
-) {
-  localStorage.removeItem('persist:root');
-  localStorage.setItem('_ample_version', packageJSON.version);
+if (!!localStorage) {
+  if (
+    localStorage.getItem('_ample_version') !== packageJSON.version ||
+    isContentfulPreview()
+  ) {
+    localStorage.removeItem('persist:root');
+    localStorage.setItem('_ample_version', packageJSON.version);
+  }
 }
 
 const persistConfig = {
