@@ -26,8 +26,12 @@ const mapStateToProps = (state, props) => {
   return {
     image: get(fields, 'image', {}),
     title: get(fields, 'title', ''),
+<<<<<<< HEAD
     color: get(fields, 'color', 'yellow'),
     blocks: get(fields, 'contentBlock', [])
+=======
+    block: get(fields, 'contentBlock', [])
+>>>>>>> Get data from contentful
   };
 };
 
