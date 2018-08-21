@@ -1,4 +1,4 @@
-import { GET_OUR_STORY_DATA } from 'state/actions/ourStoryActions';
+import { GET_OUR_STORY_PAGE } from 'state/actions/ourStoryPageActions';
 
 const initialState = {
   ourStory: {}
