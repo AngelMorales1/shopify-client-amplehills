@@ -2,7 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { getOurStoryPage } from 'state/actions/ourStoryPageActions';
+import { getOurStoryData } from 'state/actions/ourStoryActions';
 
 import get from 'utils/get';
 
@@ -10,18 +10,14 @@ class OurStoryPageContainer extends ContainerBase {
   view = import('views/OurStoryPageView');
 
   model = () => {
-    const { getOurStoryPage } = this.props.actions;
+    const { getOurStoryData } = this.props.actions;
 
-    return getOurStoryPage();
+    return getOurStoryData();
   };
 }
 
 const mapStateToProps = (state, props) => {
-  const fields = get(
-    state,
-    'ourStoragePage.ourStoragePage.items[0].fields',
-    {}
-  );
+  const fields = get(state, 'ourStory.ourStory.items[0].fields', {});
 
   return {
     image: get(fields, 'image', {}),
@@ -44,7 +40,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        getOurStoryPage
+        getOurStoryData
       },
       dispatch
     )
