@@ -5,6 +5,8 @@ import styles from './ErrorPage.scss';
 import { Image, Button } from 'components/base';
 
 const ErrorPage = ({ children }) => {
+  console.log('Error page rendered');
+
   return (
     <div className={cx(styles['ErrorPage'], 'fixed-cover bg-peach')}>
       {children ? (
