@@ -9,7 +9,7 @@ class OurStoryPageView extends Component {
     const { title, image, color, blocks } = this.props;
     const heroClasses = `${
       color === 'yellow' ? 'bg-bees-wax' : null
-    } flex flex-column items-center py4 px2 drip`;
+    } flex flex-column items-center py4 px2 drip z-sub-nav`;
 
     return (
       <div>
