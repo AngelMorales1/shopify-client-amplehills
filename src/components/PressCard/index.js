@@ -7,8 +7,8 @@ import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
 import imageModel from 'models/imageModel';
 
-const PressCard = ({ pressCard }) => {
-  const fields = get(pressCard, 'fields', {});
+const PressCard = ({ pressBlock }) => {
+  const fields = get(pressBlock, 'fields', {});
 
   return (
     <div
@@ -19,7 +19,7 @@ const PressCard = ({ pressCard }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={fields.logoImage.fields.file.url}
+        src={fields.image.fields.file.url}
         alt={`${fields.title} logo`}
       />
       <span
@@ -40,9 +40,9 @@ const PressCard = ({ pressCard }) => {
 };
 
 PressCard.propTypes = {
-  pressCard: PropTypes.shape({
+  pressBlock: PropTypes.shape({
     fields: PropTypes.shape({
-      logoImage: imageModel.propTypes,
+      image: imageModel.propTypes,
       linkUrl: PropTypes.string,
       quote: PropTypes.string,
       title: PropTypes.string
@@ -51,9 +51,9 @@ PressCard.propTypes = {
 };
 
 PressCard.defaultProps = {
-  pressCard: {
+  pressBlock: {
     fields: {
-      logoImage: imageModel.default,
+      image: imageModel.default,
       linkUrl: '',
       quote: '',
       title: ''
