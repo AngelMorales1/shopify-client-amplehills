@@ -40,7 +40,7 @@ const PressCard = ({ pressCard }) => {console.log(pressCard)
 PressCard.propTypes = {
   pressBlock: PropTypes.shape({
     fields: PropTypes.shape({
-      image: imageModel.propTypes,
+      logoImage: imageModel.propTypes,
       linkUrl: PropTypes.string,
       quote: PropTypes.string,
       title: PropTypes.string
@@ -51,7 +51,7 @@ PressCard.propTypes = {
 PressCard.defaultProps = {
   pressBlock: {
     fields: {
-      image: imageModel.default,
+      logoImage: imageModel.default,
       linkUrl: '',
       quote: '',
       title: ''
