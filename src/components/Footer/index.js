@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import { Image } from 'components/base';
 import { NavLink } from 'react-router-dom';
@@ -17,6 +18,7 @@ const Footer = ({
   locations,
   footerIcons
 }) => {
+  console.log(footerIllustration);
   return (
     <div
       className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
@@ -49,7 +51,11 @@ const Footer = ({
       </span>
       {footerIllustration.fields ? (
         <Image
-          src={get(footerIllustration, 'fields.file.url', '')}
+          src={contentfulImgUtil(
+            get(footerIllustration, 'fields.file.url', ''),
+            '1000',
+            'png'
+          )}
           className={cx(
             styles['Footer__illustration'],
             'medium-down-display-none xs-hide sm-hide'
