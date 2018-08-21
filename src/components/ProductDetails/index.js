@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import { Image, Button } from 'components/base';
 import styles from './ProductDetails.scss';
@@ -87,7 +88,11 @@ class ProductDetails extends Component {
                     >
                       <Image
                         alt={`${get(fields, 'title', '')} description image`}
-                        src={get(fields, 'text1Image.fields.file.url', '')}
+                        src={contentfulImgUtil(
+                          get(fields, 'text1Image.fields.file.url', ''),
+                          '500',
+                          'png'
+                        )}
                       />
                     </div>
                     <div className="md-col-10">
@@ -116,7 +121,11 @@ class ProductDetails extends Component {
                     >
                       <Image
                         alt={`${get(fields, 'title', '')} description image`}
-                        src={get(fields, 'text2Image.fields.file.url', '')}
+                        src={contentfulImgUtil(
+                          get(fields, 'text2Image.fields.file.url', ''),
+                          '500',
+                          'png'
+                        )}
                       />
                     </div>
                     <div className="md-col-10">
@@ -160,10 +169,13 @@ class ProductDetails extends Component {
                     <div
                       className="circle square"
                       style={{
-                        background: `url(${get(
-                          fields,
-                          'flavorHighlightImage.fields.file.url',
-                          ''
+                        background: `url(${contentfulImgUtil(
+                          get(
+                            fields,
+                            'flavorHighlightImage.fields.file.url',
+                            ''
+                          ),
+                          '1400'
                         )}) no-repeat center`,
                         backgroundSize: 'cover'
                       }}
