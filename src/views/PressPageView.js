@@ -33,7 +33,7 @@ class PressPageView extends Component {
               key={get(pressCard, 'sys.id', '') + i}
               pressCard={pressCard}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     );
