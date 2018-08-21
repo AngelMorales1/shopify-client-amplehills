@@ -7,9 +7,9 @@ import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
 import imageModel from 'models/imageModel';
 
-const PressCard = ({ pressBlock }) => {
-  const fields = get(pressBlock, 'fields', {});
-
+const PressCard = ({ pressCard }) => {
+  const fields = get(pressCard, 'fields', {});
+  console.log(pressCard);
   return (
     <div
       className={cx(
@@ -40,7 +40,7 @@ const PressCard = ({ pressBlock }) => {
 };
 
 PressCard.propTypes = {
-  pressBlock: PropTypes.shape({
+  pressCard: PropTypes.shape({
     fields: PropTypes.shape({
       logoImage: imageModel.propTypes,
       linkUrl: PropTypes.string,
@@ -51,7 +51,7 @@ PressCard.propTypes = {
 };
 
 PressCard.defaultProps = {
-  pressBlock: {
+  pressCard: {
     fields: {
       logoImage: imageModel.default,
       linkUrl: '',

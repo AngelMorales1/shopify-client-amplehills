@@ -17,7 +17,7 @@ class PressPageContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    pressBlocks: get(state, 'press.press.items', [])
+    pressCards: get(state, 'press.press.items', [])
   };
 };
 
