@@ -24,6 +24,7 @@ const mapStateToProps = (state, props) => {
     title: get(fields, 'title', ''),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: get(fields, 'color', 'yellow'),
     blocks: get(fields, 'contentBlock', [])
 =======
@@ -33,6 +34,10 @@ const mapStateToProps = (state, props) => {
     color: get(fields, 'color', 'yellow'),
     blocks: get(fields, 'contentBlock', [])
 >>>>>>> get blocks from contentful
+=======
+    color: get(fields, 'color', 'yellow'),
+    blocks: get(fields, 'contentBlock', [])
+>>>>>>> clean up
   };
 };
 
