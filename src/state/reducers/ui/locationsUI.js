@@ -17,14 +17,17 @@ export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
     case ADD_LOCATION_FILTER:
+      const { selectedLocation } = initialState;
       return {
         ...state,
+        selectedLocation: initialState.selectedLocation,
         locationFilters: [action.payload]
       };
     case REMOVE_LOCATION_FILTER:
       const { key, value } = action.payload;
       return {
         ...state,
+        selectedLocation: initialState.selectedLocation,
         locationFilters: state.locationFilters.filter(filter => {
           return filter.key !== key || filter.value !== value;
         })
@@ -46,10 +49,9 @@ export default (state = initialState, action) => {
         selectedLocation: action.payload
       };
     case CLEAR_LOCATION_SELECTION:
-      const { selectedLocation } = initialState;
       return {
         ...state,
-        selectedLocation
+        selectedLocation: initialState.selectedLocation
       };
     default:
       return state;
