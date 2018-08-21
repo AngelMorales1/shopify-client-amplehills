@@ -1,7 +1,7 @@
-import { GET_OUR_STORY_DATA } from 'state/actions/ourStoryPageActions';
+import { GET_OUR_STORY_DATA } from 'state/actions/ourStoryActions';
 
 const initialState = {
-  ourStoragePage: {}
+  ourStory: {}
 };
 
 export default (state = initialState, action) => {
@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case `${GET_OUR_STORY_DATA}_FULFILLED`:
       return {
         ...state,
-        ourStoragePage: action.payload
+        ourStory: action.payload
       };
     default:
       return state;
