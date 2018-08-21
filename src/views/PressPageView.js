@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import get from 'utils/get';
 
+import { Image } from 'components/base';
 import PressGrid from 'components/PressGrid';
 
 class PressPageView extends Component {
@@ -16,8 +17,24 @@ class PressPageView extends Component {
             <p className="block-headline pt3 pb4">Press</p>
           </div>
         </div>
-        <div>
-          {pressBlocks.map(pressBlock => <PressGrid pressBlock={pressBlock} />)}
+        <div className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center">
+          <span className="block-headline text-peach center">{`"${get(
+            pressBlocks[0],
+            'fields.quote',
+            ''
+          )}"`}</span>
+          <Image
+            className="col-3 my2"
+            src={get(pressBlocks[0], 'fields.image.fields.file.url', '')}
+          />
+        </div>
+        <div className="p3 flex flex-row justify-center flex-wrap">
+          {pressBlocks.map((pressBlock, i) => (
+            <PressGrid
+              key={get(pressBlock, 'sys.id', '') + i}
+              pressBlock={pressBlock}
+            />
+          ))}
         </div>
       </div>
     );
