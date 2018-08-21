@@ -127,10 +127,9 @@ class ProductHero extends Component {
           <div
             className="col col-12 md-col-6 square"
             style={{
-              background: `url(${get(
-                carouselImages,
-                '[0]fields.file.url',
-                ''
+              background: `url(${contentfulImgUtil(
+                get(carouselImages, '[0]fields.file.url', ''),
+                '1600'
               )}) no-repeat center`,
               backgroundSize: 'cover'
             }}
