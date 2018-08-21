@@ -9,6 +9,7 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
@@ -86,7 +87,11 @@ class Nav extends Component {
             <Image
               className={cx(styles['logo-container__logo'], 'col-12 md-col-10')}
               alt="Click the Ample Hills Logo to return to the homepage"
-              src={get(logo, 'fields.file.url', '')}
+              src={contentfulImgUtil(
+                get(logo, 'fields.file.url', ''),
+                '500',
+                'png'
+              )}
             />
           </NavLink>
         </div>
@@ -96,10 +101,14 @@ class Nav extends Component {
               <NavLink exact to="/profile" className="mr2 link-text center">
                 <Image
                   className="icon"
-                  src={get(
-                    profileIcon,
-                    'fields.file.url',
-                    '/assets/images/bubble-icon.svg'
+                  src={contentfulImgUtil(
+                    get(
+                      profileIcon,
+                      'fields.file.url',
+                      '/assets/images/bubble-icon.svg'
+                    ),
+                    '200',
+                    'png'
                   )}
                 />
               </NavLink>
