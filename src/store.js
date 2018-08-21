@@ -31,13 +31,18 @@ if (isProd()) {
 }
 
 /* Flush Localstorage when PackageJSON version changes */
-if (!!localStorage) {
-  if (
-    localStorage.getItem('_ample_version') !== packageJSON.version ||
-    isContentfulPreview()
-  ) {
-    localStorage.removeItem('persist:root');
-    localStorage.setItem('_ample_version', packageJSON.version);
+if (typeof localStorage === 'object') {
+  try {
+    if (
+      localStorage.getItem('_ample_version') !== packageJSON.version ||
+      isContentfulPreview()
+    ) {
+      localStorage.removeItem('persist:root');
+      localStorage.setItem('_ample_version', packageJSON.version);
+    }
+  } catch (e) {
+    Storage.prototype._setItem = Storage.prototype.setItem;
+    Storage.prototype.setItem = function() {};
   }
 }
 
