@@ -9,7 +9,7 @@ class PressPageView extends Component {
     const { model, pressBlocks } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
-    console.log(pressBlocks);
+
     return (
       <div>
         <div className="bg-iceberg drip pb2">
