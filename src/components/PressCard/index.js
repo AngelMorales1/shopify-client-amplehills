@@ -38,9 +38,9 @@ const PressCard = ({ pressCard }) => {
 };
 
 PressCard.propTypes = {
-  pressCard: PropTypes.shape({
+  pressBlock: PropTypes.shape({
     fields: PropTypes.shape({
-      logoImage: imageModel.propTypes,
+      image: imageModel.propTypes,
       linkUrl: PropTypes.string,
       quote: PropTypes.string,
       title: PropTypes.string
@@ -49,9 +49,9 @@ PressCard.propTypes = {
 };
 
 PressCard.defaultProps = {
-  pressCard: {
+  pressBlock: {
     fields: {
-      logoImage: imageModel.default,
+      image: imageModel.default,
       linkUrl: '',
       quote: '',
       title: ''
