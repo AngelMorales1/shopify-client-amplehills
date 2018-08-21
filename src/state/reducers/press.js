@@ -1,16 +1,16 @@
-import { GET_PRESS_PAGE } from 'state/actions/pressPageActions';
+import { GET_PRESS_DATA } from 'state/actions/pressActions';
 
 const initialState = {
-  pressPage: {}
+  press: {}
 };
 
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case `${GET_PRESS_PAGE}_FULFILLED`:
+    case `${GET_PRESS_DATA}_FULFILLED`:
       return {
         ...state,
-        pressPage: action.payload
+        press: action.payload
       };
     default:
       return state;

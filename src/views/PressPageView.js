@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import get from 'utils/get';
 
 import { Image } from 'components/base';
-import PressGrid from 'components/PressGrid';
+import PressCard from 'components/PressCard';
 
 class PressPageView extends Component {
   render() {
@@ -29,12 +29,12 @@ class PressPageView extends Component {
           />
         </div>
         <div className="p3 flex flex-row justify-center flex-wrap">
-          {pressBlocks.map((pressBlock, i) => (
-            <PressGrid
+          {/* {pressBlocks.map((pressBlock, i) => (
+            <PressCard
               key={get(pressBlock, 'sys.id', '') + i}
               pressBlock={pressBlock}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     );

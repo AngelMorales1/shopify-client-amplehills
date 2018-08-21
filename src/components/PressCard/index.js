@@ -4,32 +4,32 @@ import get from 'utils/get';
 import cx from 'classnames';
 
 import { Image, Button } from 'components/base';
-import styles from './PressGrid.scss';
+import styles from './PressCard.scss';
 import imageModel from 'models/imageModel';
 
-const PressGrid = ({ pressBlock }) => {
+const PressCard = ({ pressBlock }) => {
   const fields = get(pressBlock, 'fields', {});
 
   return (
     <div
       className={cx(
-        styles['PressGrid'],
+        styles['PressCard'],
         'm2 pt4 pb3 px3 flex flex-column justify-center items-center'
       )}
     >
       <Image
-        className={cx(styles['PressGrid__logo'])}
+        className={cx(styles['PressCard__logo'])}
         src={fields.image.fields.file.url}
         alt={`${fields.title} logo`}
       />
       <span
         className={cx(
-          styles['PressGrid__quote'],
+          styles['PressCard__quote'],
           'carter text-peach center py3 mb4'
         )}
       >{`"${fields.quote}"`}</span>
       <Button
-        className={cx(styles['PressGrid__button'], 'uppercase')}
+        className={cx(styles['PressCard__button'], 'uppercase')}
         to={fields.linkUrl}
         label="Read about it"
         variant="primary-small"
@@ -39,9 +39,7 @@ const PressGrid = ({ pressBlock }) => {
   );
 };
 
-export default PressGrid;
-
-PressGrid.propTypes = {
+PressCard.propTypes = {
   pressBlock: PropTypes.shape({
     fields: PropTypes.shape({
       image: imageModel.propTypes,
@@ -52,7 +50,7 @@ PressGrid.propTypes = {
   })
 };
 
-PressGrid.defaultProps = {
+PressCard.defaultProps = {
   pressBlock: {
     fields: {
       image: imageModel.default,
@@ -62,3 +60,5 @@ PressGrid.defaultProps = {
     }
   }
 };
+
+export default PressCard;

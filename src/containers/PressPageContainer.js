@@ -1,7 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getPressPage } from 'state/actions/pressPageActions';
+import { getPressData } from 'state/actions/pressActions';
 
 import get from 'utils/get';
 
@@ -9,19 +9,16 @@ class PressPageContainer extends ContainerBase {
   view = import('views/PressPageView');
 
   model = () => {
-    const { getPressPage } = this.props.actions;
+    const { getPressData } = this.props.actions;
 
-    return getPressPage();
+    return getPressData();
   };
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
-    pressBlocks: get(
-      state,
-      'pressPage.pressPage.items[0].fields.pressBlock',
-      {}
-    )
+    pressBlocks: get(state, 'press.press.items[0].fields.pressBlock', {})
   };
 };
 
@@ -29,7 +26,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        getPressPage
+        getPressData
       },
       dispatch
     )
