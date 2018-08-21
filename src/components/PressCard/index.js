@@ -7,6 +7,7 @@ import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
 
 const PressCard = ({ pressCard }) => {
+
   const title = get(pressCard, 'title', '');
 
   return (
