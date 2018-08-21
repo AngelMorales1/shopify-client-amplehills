@@ -1,4 +1,4 @@
-import { GET_OUR_STORY_PAGE } from 'state/actions/ourStoryPageActions';
+import { GET_OUR_STORY_DATA } from 'state/actions/ourStoryPageActions';
 
 const initialState = {
   ourStoragePage: {}
@@ -7,7 +7,7 @@ const initialState = {
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case `${GET_OUR_STORY_PAGE}_FULFILLED`:
+    case `${GET_OUR_STORY_DATA}_FULFILLED`:
       return {
         ...state,
         ourStoragePage: action.payload
