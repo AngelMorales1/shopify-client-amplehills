@@ -9,7 +9,7 @@ import products from './products';
 import customer from './customer';
 import genericPage from './genericPage';
 import press from './press';
-import ourStoragePage from './ourStoryPage';
+import ourStory from './ourStory';
 
 export default {
   status,
@@ -23,5 +23,5 @@ export default {
   customer,
   genericPage,
   press,
-  ourStoragePage
+  ourStory
 };
