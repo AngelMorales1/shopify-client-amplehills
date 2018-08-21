@@ -114,6 +114,18 @@
     }
   }
 
+  &__button-container {
+    justify-content: space-between;
+
+    @media ($medium-up) {
+      justify-content: start;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+  }
+
   &__text {
     h2 {
       @extend .carter;

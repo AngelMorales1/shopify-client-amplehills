@@ -23,6 +23,9 @@ const ImageText = ({ block, z }) => {
   const buttonLink = get(fields, 'buttonLink', '');
   const blockHasButton = !!buttonLabel && !!buttonLink;
   const buttonColor = get(fields, 'buttonColor', 'peach');
+  const linkedTextLabel = get(fields, 'linkedTextLabel', '');
+  const linkedTextLink = get(fields, 'linkedTextLink', '');
+  const blockHasLinkedText = linkedTextLabel && linkedTextLink;
 
   const getButtonColor = colorName => {
     switch (colorName) {
@@ -75,22 +78,35 @@ const ImageText = ({ block, z }) => {
           )}
         >
           <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: marked(get(fields, 'text', ''))
             }}
-            className={cx(styles['ImageText__text'], 'block-subheadline')}
+            className="markdown-block"
           />
-          {blockHasButton ? (
-            <div>
+          <div
+            className={cx(
+              styles['ImageText__button-container'],
+              'flex flex-row flex-wrap items-center'
+            )}
+          >
+            {blockHasButton ? (
               <Button
-                className={cx(styles['ImageText__button'], 'mt3')}
+                className={cx(styles['ImageText__button'], 'mt3 mr2')}
                 label={buttonLabel}
                 to={buttonLink}
                 color={getButtonColor(buttonColor)}
               />
-            </div>
-          ) : null}
+            ) : null}
+            {blockHasLinkedText ? (
+              <Button
+                className="mt3 mr1 text-madison-blue"
+                label={linkedTextLabel}
+                to={linkedTextLink}
+                variant="underline-peach"
+              />
+            ) : null}
+          </div>
         </div>
         {!isFullImage ? (
           <Image
