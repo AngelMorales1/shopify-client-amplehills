@@ -9,6 +9,7 @@ import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -281,7 +282,11 @@ class ChooseYourOwnStory extends Component {
                       styles['ChooseYourOwnStory__pint-icon'],
                       'mr2'
                     )}
-                    src={get(products, `[${handle}].pintImage`, '')}
+                    src={contentfulImgUtil(
+                      get(products, `[${handle}].pintImage`, ''),
+                      '200',
+                      'png'
+                    )}
                   />
                 ))}
                 {[...Array(size - pints.length)].map((pint, i) => (
