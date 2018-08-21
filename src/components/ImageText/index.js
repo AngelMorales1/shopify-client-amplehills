@@ -4,6 +4,7 @@ import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
@@ -42,7 +43,11 @@ const ImageText = ({ block, z }) => {
           className={cx(styles['ImageText__image'], 'z-overlay col-4 mt2')}
           style={{ transform: `translateY(${position}%)` }}
           alt={`${get(fields, 'title', '')} illustration`}
-          src={get(fields, 'image.fields.file.url', '')}
+          src={contentfulImgUtil(
+            get(fields, 'image.fields.file.url', ''),
+            '1400',
+            'png'
+          )}
         />
       </div>
     </div>
