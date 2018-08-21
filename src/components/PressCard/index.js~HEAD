@@ -5,10 +5,10 @@ import cx from 'classnames';
 
 import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
-import imageModel from 'models/imageModel';
 
-const PressCard = ({ pressBlock }) => {
-  const fields = get(pressBlock, 'fields', {});
+const PressCard = ({ pressCard }) => {
+
+  const title = get(pressCard, 'title', '');
 
   return (
     <div
@@ -19,18 +19,20 @@ const PressCard = ({ pressBlock }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={fields.image.fields.file.url}
-        alt={`${fields.title} logo`}
+        src={get(pressCard, 'logoImage.data', '')}
+        alt={`${title} logo`}
       />
       <span
         className={cx(
           styles['PressCard__quote'],
           'carter text-peach center py3 mb4'
         )}
-      >{`"${fields.quote}"`}</span>
+      >
+        {pressCard.quote}
+      </span>
       <Button
         className={cx(styles['PressCard__button'], 'uppercase')}
-        to={fields.linkUrl}
+        to={pressCard.linkUrl}
         label="Read about it"
         variant="primary-small"
         color="peach"
@@ -40,24 +42,24 @@ const PressCard = ({ pressBlock }) => {
 };
 
 PressCard.propTypes = {
-  pressBlock: PropTypes.shape({
-    fields: PropTypes.shape({
-      image: imageModel.propTypes,
-      linkUrl: PropTypes.string,
-      quote: PropTypes.string,
-      title: PropTypes.string
-    })
+  pressCard: PropTypes.shape({
+    logoImage: PropTypes.shape({
+      data: PropTypes.string
+    }),
+    linkUrl: PropTypes.string,
+    quote: PropTypes.string,
+    title: PropTypes.string
   })
 };
 
 PressCard.defaultProps = {
-  pressBlock: {
-    fields: {
-      image: imageModel.default,
-      linkUrl: '',
-      quote: '',
-      title: ''
-    }
+  pressCard: {
+    logoImage: {
+      data: ''
+    },
+    linkUrl: '',
+    quote: '',
+    title: ''
   }
 };
 
