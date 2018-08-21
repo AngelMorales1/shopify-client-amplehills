@@ -13,6 +13,7 @@ import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
+import OurStoryPageContainer from 'containers/OurStoryPageContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -36,6 +37,7 @@ const Routes = ({ location }) => (
     {isStaging() ? (
       <Route path="/style-guide" component={GenericPageContainer} />
     ) : null}
+    <Route path="/our-story" component={OurStoryPageContainer} />
   </Switch>
 );
 
