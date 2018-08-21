@@ -19,7 +19,7 @@ const PressCard = ({ pressBlock }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={fields.image.fields.file.url}
+        src={fields.logoImage.fields.file.url}
         alt={`${fields.title} logo`}
       />
       <span
@@ -42,7 +42,7 @@ const PressCard = ({ pressBlock }) => {
 PressCard.propTypes = {
   pressBlock: PropTypes.shape({
     fields: PropTypes.shape({
-      image: imageModel.propTypes,
+      logoImage: imageModel.propTypes,
       linkUrl: PropTypes.string,
       quote: PropTypes.string,
       title: PropTypes.string
@@ -53,7 +53,7 @@ PressCard.propTypes = {
 PressCard.defaultProps = {
   pressBlock: {
     fields: {
-      image: imageModel.default,
+      logoImage: imageModel.default,
       linkUrl: '',
       quote: '',
       title: ''

@@ -5,7 +5,7 @@ export const getPressData = payload => dispatch => {
   return dispatch({
     type: GET_PRESS_DATA,
     payload: Data.getEntries({
-      content_type: 'press'
+      content_type: 'pressCard'
     })
   });
 };

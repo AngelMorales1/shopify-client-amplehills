@@ -9,7 +9,7 @@ class PressPageView extends Component {
     const { model, pressBlocks } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
-
+    console.log(pressBlocks);
     return (
       <div>
         <div className="bg-iceberg drip pb2">
@@ -25,16 +25,16 @@ class PressPageView extends Component {
           )}"`}</span>
           <Image
             className="col-3 my2"
-            src={get(pressBlocks[0], 'fields.image.fields.file.url', '')}
+            src={get(pressBlocks[0], 'fields.logoImage.fields.file.url', '')}
           />
         </div>
         <div className="p3 flex flex-row justify-center flex-wrap">
-          {/* {pressBlocks.map((pressBlock, i) => (
+          {pressBlocks.map((pressBlock, i) => (
             <PressCard
               key={get(pressBlock, 'sys.id', '') + i}
               pressBlock={pressBlock}
             />
-          ))} */}
+          ))}
         </div>
       </div>
     );
