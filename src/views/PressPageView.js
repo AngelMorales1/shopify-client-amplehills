@@ -24,7 +24,7 @@ class PressPageView extends Component {
             ''
           )}"`}</span>
           <Image
-            className="col-3 my2"
+            className="col-3 mt4 mb2"
             src={get(pressCards[0], 'fields.logoImage.fields.file.url', '')}
           />
         </div>
