@@ -46,6 +46,7 @@ class ImageText extends Component {
     const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
     const textDesktopSize =
       imageTextRatio === '50:50' ? 'md-col-5' : 'md-col-6';
+    const imageSize = imageTextRatio === '50:50' ? 'col-6' : 'col-4';
     const isDripOn = get(fields, 'drip', false);
 
     return (
@@ -85,7 +86,8 @@ class ImageText extends Component {
           <Image
             className={cx(
               styles['ImageText__image'],
-              'z-sub-nav col-4 mt2 mx-auto'
+              imageSize,
+              'z-sub-nav mt2 mx-auto'
             )}
             style={{
               transform: `translate(${positionX}%, ${position}%)`
