@@ -75,12 +75,7 @@ const ImageText = ({ block, z }) => {
               style={{
                 transform: `translate(${positionX}%, ${position}%)`
               }}
-              alt={`${get(fields, 'title', '')} illustration`}
-              src={contentfulImgUtil(
-                get(fields, 'image.fields.file.url', ''),
-                '1400',
-                'png'
-              )}
+              className={cx(styles['ImageText__text'], 'block-subheadline')}
             />
           </div>
           <Image
@@ -91,7 +86,12 @@ const ImageText = ({ block, z }) => {
             style={{
               transform: `translate(${positionX}%, ${position}%)`
             }}
-            className={cx(styles['ImageText__text'], 'block-subheadline')}
+            alt={`${get(fields, 'title', '')} illustration`}
+            src={contentfulImgUtil(
+              get(fields, 'image.fields.file.url', ''),
+              '1400',
+              'png'
+            )}
           />
         </div>
         <Image
