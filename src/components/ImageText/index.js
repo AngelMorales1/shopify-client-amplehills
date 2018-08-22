@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
-import Global from 'constants/Global';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
@@ -86,12 +85,7 @@ const ImageText = ({ block, z }) => {
             style={{
               transform: `translate(${positionX}%, ${position}%)`
             }}
-            alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400',
-              'png'
-            )}
+            className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
         </div>
         <Image
