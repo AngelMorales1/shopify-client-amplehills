@@ -18,7 +18,6 @@ const Footer = ({
   locations,
   footerIcons
 }) => {
-  console.log(footerIllustration);
   return (
     <div
       className={cx('flex flex-column p4 bg-madison-blue', styles['Footer'])}
