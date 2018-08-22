@@ -7,7 +7,7 @@ const initialState = {
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case `${GET_OUR_STORY_PAGE}_FULFILLED`:
+    case `${GET_OUR_STORY_DATA}_FULFILLED`:
       return {
         ...state,
         ourStory: action.payload
