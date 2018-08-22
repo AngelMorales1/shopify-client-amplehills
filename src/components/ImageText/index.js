@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import Global from 'constants/Global';
 
 import styles from './ImageText.scss';
 import { Image, Button } from 'components/base';
@@ -145,7 +146,7 @@ const ImageText = ({ block, z, setRef }) => {
       ) : null}
     </div>
   );
-};
+}
 
 ImageText.propTypes = {
   z: PropTypes.number,
