@@ -9,7 +9,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import styles from './ImageText.scss';
 import { Image, Button } from 'components/base';
 
-const ImageText = ({ block, z }) => {
+const ImageText = ({ block, z, setRef }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'white')}`;
   const positionY = get(fields, 'imagePositionY', 0);
@@ -21,8 +21,11 @@ const ImageText = ({ block, z }) => {
   const imageTextRatioIs5050 = imageTextRatio === '50:50';
   const buttonLabel = get(fields, 'buttonLabel', '');
   const buttonLink = get(fields, 'buttonLink', '');
-  const blockHasButton = !!buttonLabel && !!buttonLink;
+  const blockHasButton = buttonLabel && buttonLink;
   const buttonColor = get(fields, 'buttonColor', 'peach');
+  const linkedTextLabel = get(fields, 'linkedTextLabel', '');
+  const linkedTextLink = get(fields, 'linkedTextLink', '');
+  const blockHasLinkedText = linkedTextLabel && linkedTextLink;
 
   const getButtonColor = colorName => {
     switch (colorName) {
@@ -35,6 +38,7 @@ const ImageText = ({ block, z }) => {
 
   return (
     <div
+      ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
       className={cx(
         styles['ImageText'],
@@ -75,22 +79,35 @@ const ImageText = ({ block, z }) => {
           )}
         >
           <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: marked(get(fields, 'text', ''))
             }}
-            className={cx(styles['ImageText__text'], 'block-subheadline')}
+            className="markdown-block"
           />
-          {blockHasButton ? (
-            <div>
+          <div
+            className={cx(
+              styles['ImageText__button-container'],
+              'flex flex-row flex-wrap items-center'
+            )}
+          >
+            {blockHasButton ? (
               <Button
-                className={cx(styles['ImageText__button'], 'mt3')}
+                className={cx(styles['ImageText__button'], 'mt3 mr2')}
                 label={buttonLabel}
                 to={buttonLink}
                 color={getButtonColor(buttonColor)}
               />
-            </div>
-          ) : null}
+            ) : null}
+            {blockHasLinkedText ? (
+              <Button
+                className="mt3 mr1 text-madison-blue"
+                label={linkedTextLabel}
+                to={linkedTextLink}
+                variant="underline-peach"
+              />
+            ) : null}
+          </div>
         </div>
         {!isFullImage ? (
           <Image
@@ -146,9 +163,12 @@ ImageText.propTypes = {
       fullImage: PropTypes.bool,
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      buttonColor: PropTypes.string
+      buttonColor: PropTypes.string,
+      linkedTextLabel: PropTypes.string,
+      linkedTextLink: PropTypes.string
     })
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 ImageText.defaultProps = {
@@ -167,9 +187,12 @@ ImageText.defaultProps = {
       fullImage: false,
       buttonLabel: '',
       buttonLink: '',
-      buttonColor: 'peach'
+      buttonColor: 'peach',
+      linkedTextLabel: '',
+      linkedTextLink: ''
     }
-  }
+  },
+  setRef: () => {}
 };
 
 export default ImageText;
