@@ -8,6 +8,7 @@ import styles from './GenericPage.scss';
 
 const MarkdownBlock = props => {
   const markdown = get(props, 'block.fields.content', '');
+  const isDripOn = get(props, 'block.fields.drip', false);
 
   return (
     <div
