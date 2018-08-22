@@ -32,9 +32,8 @@ export default () => {
   };
 
   const setData = data => {
-    // Convert data into JSON and encode to accommodate for special characters.
     data = encodeURIComponent(JSON.stringify(data));
-    // Create cookie.
+
     createCookie('localStorage', data, 365);
   };
 
@@ -43,13 +42,11 @@ export default () => {
   };
 
   const getData = () => {
-    // Get cookie data.
     const data = readCookie('localStorage');
-    // If we have some data decode, parse and return it.
+
     return data ? JSON.parse(decodeURIComponent(data)) : {};
   };
 
-  // Initialise if there's already data.
   let data = getData();
 
   return {
@@ -63,7 +60,6 @@ export default () => {
       return data[key] === undefined ? null : data[key];
     },
     key: i => {
-      // not perfect, but works
       var ctr = 0;
       for (var k in data) {
         if (ctr == i) return k;
@@ -77,7 +73,7 @@ export default () => {
       setData(data);
     },
     setItem: (key, value) => {
-      data[key] = value + ''; // forces the value to a string
+      data[key] = value + '';
       this.length++;
       setData(data);
     }

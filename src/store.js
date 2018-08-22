@@ -41,12 +41,7 @@ try {
     localStorage.setItem('_ample_version', packageJSON.version);
   }
 } catch (e) {
-  // Replace window.localStorage and window.sessionStorage with out custom
-  // implementation.
   const localStorage = new customLocalStorage();
-  window.localStorage = localStorage;
-  // For Safari private browsing need to also set the proto value.
-  window.localStorage.__proto__ = localStorage;
 
   if (
     localStorage.getItem('_ample_version') !== packageJSON.version ||
