@@ -7,17 +7,31 @@ import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ImageText.scss';
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 
 const ImageText = ({ block, z }) => {
   const fields = get(block, 'fields', {});
-  const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
-  const position = get(fields, 'imagePosition', 0);
+  const colorClass = `ImageText--${get(fields, 'backgroundColor', 'white')}`;
+  const positionY = get(fields, 'imagePositionY', 0);
   const positionX = get(fields, 'imagePositionX', 0);
   const isReverseArrangement = get(fields, 'isReverseArrangement', false);
-  const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
-  const isimageTextRatio5050 = imageTextRatio === '50:50';
   const isDripOn = get(fields, 'drip', false);
+  const isFullImage = get(fields, 'fullImage', false);
+  const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
+  const imageTextRatioIs5050 = imageTextRatio === '50:50';
+  const buttonLabel = get(fields, 'buttonLabel', '');
+  const buttonLink = get(fields, 'buttonLink', '');
+  const blockHasButton = !!buttonLabel && !!buttonLink;
+  const buttonColor = get(fields, 'buttonColor', 'peach');
+
+  const getButtonColor = colorName => {
+    switch (colorName) {
+      case 'navy':
+        return 'madison-blue';
+      default:
+        return 'peach';
+    }
+  };
 
   return (
     <div
@@ -25,8 +39,14 @@ const ImageText = ({ block, z }) => {
       className={cx(
         styles['ImageText'],
         styles[colorClass],
-        { drip: isDripOn },
-        'flex flex-row justify-center'
+        {
+          drip: isDripOn,
+          'drip-padding-on-children': isFullImage,
+          [styles['ImageText__full-image']]: isFullImage,
+          [styles['ImageText__full-image--reverse']]:
+            isFullImage && isReverseArrangement
+        },
+        'flex justify-center'
       )}
     >
       <div
@@ -34,16 +54,24 @@ const ImageText = ({ block, z }) => {
           'flex container-width py4',
           styles['ImageText__container'],
           {
-            [styles['ImageText__container--reverse']]: isReverseArrangement
+            [styles['ImageText__container--full-image']]: isFullImage,
+            [styles['ImageText__container--reverse']]: isReverseArrangement,
+            'col-12 md-col6': isFullImage
           }
         )}
       >
         <div
           className={cx(
+            'flex flex-column justify-center col-12',
             styles['ImageText__text-content'],
-            { 'md-col-5': isimageTextRatio5050 },
-            { 'md-col-6': !isimageTextRatio5050 },
-            'flex flex-column justify-center col-12'
+            {
+              [styles[
+                'ImageText__text-content--reverse'
+              ]]: isReverseArrangement,
+              'md-col-5': imageTextRatioIs5050 && !isFullImage,
+              'md-col-6': !imageTextRatioIs5050 && !isFullImage,
+              'md-col-9': isFullImage
+            }
           )}
         >
           <div
@@ -87,30 +115,49 @@ const ImageText = ({ block, z }) => {
             }}
             className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
+          {blockHasButton ? (
+            <Button
+              className="inline-block mt3"
+              label={buttonLabel}
+              to={buttonLink}
+              color={getButtonColor(buttonColor)}
+            />
+          ) : null}
         </div>
-        <Image
+        {!isFullImage ? (
+          <Image
           className={cx(
             styles['ImageText__image'],
-            { 'col-6': isimageTextRatio5050 },
-            { 'col-4': !isimageTextRatio5050 },
-            'z-sub-nav mt2 mx-auto'
+            { 'col-6': imageTextRatioIs5050 && !isFullImage, 'col-4': !imageTextRatioIs5050 && !isFullImage },
+            'z-sub-nav mt2 mx-auto my-auto'
           )}
           style={{
-            transform: `translate(${positionX}%, ${position}%)`
-          }}
-          alt={`${get(fields, 'title', '')} illustration`}
-          src={contentfulImgUtil(
-            get(fields, 'image.fields.file.url', ''),
-            '1400',
-            'png'
-          )}
-        />
+            transform: `translate(${positionX}%, ${positionY}%)`
+            }}
+            alt={`${get(fields, 'title', '')} illustration`}
+            src={contentfulImgUtil(
+              get(fields, 'image.fields.file.url', ''),
+              '1400',
+              'png'
+            )}
+          />
+        ) : null}
       </div>
+      {isFullImage ? (
+        <div
+          className="w100 square col-12 md-col-6"
+          style={{
+            background: `url(${contentfulImgUtil(
+              get(fields, 'image.fields.file.url', ''),
+              '1600'
+            )}) no-repeat center`,
+            backgroundSize: 'cover'
+          }}
+        />
+      ) : null}
     </div>
   );
 }
-
-export default ImageText;
 
 ImageText.propTypes = {
   z: PropTypes.number,
@@ -118,14 +165,17 @@ ImageText.propTypes = {
     fields: PropTypes.shape({
       backgroundColor: PropTypes.string,
       image: imageModel.propTypes,
-      imagePosition: PropTypes.number,
+      imagePositionY: PropTypes.number,
       imagePositionX: PropTypes.number,
       text: PropTypes.string,
       title: PropTypes.string,
       isReverseArrangement: PropTypes.bool,
       imageTextRatio: PropTypes.string,
       drip: PropTypes.bool,
-      fullImage: PropTypes.bool
+      fullImage: PropTypes.bool,
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      buttonColor: PropTypes.string
     })
   })
 };
@@ -134,16 +184,21 @@ ImageText.defaultProps = {
   z: 1,
   block: {
     fields: {
-      backgroundColor: 'Pink',
+      backgroundColor: 'pink',
       image: imageModel.default,
-      imagePosition: 0,
+      imagePositionY: 0,
       imagePositionX: 0,
       text: '',
       title: '',
       isReverseArrangement: false,
       imageTextRatio: '50:50',
       drip: false,
-      fullImage: false
+      fullImage: false,
+      buttonLabel: '',
+      buttonLink: '',
+      buttonColor: 'peach'
     }
   }
 };
+
+export default ImageText;
