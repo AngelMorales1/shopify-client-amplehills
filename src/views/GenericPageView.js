@@ -18,15 +18,18 @@ class GenericPageView extends Component {
     const color = get(fields, 'color', 'blue');
     const isDripOn = get(fields, 'drip', false);
 
-    const ourStoryClasses = cx(
-      color === 'yellow' ? 'bg-bees-wax' : 'bg-iceberg',
-      isDripOn ? 'drip' : null,
+    const classes = cx(
+      {
+        'bg-iceberg': color === 'blue',
+        'bg-bees-wax': color === 'yellow',
+        drip: isDripOn
+      },
       'pb2 z-sub-nav'
     );
 
     return (
       <div>
-        <div className={ourStoryClasses}>
+        <div className={classes}>
           <div className="transition-slide-up container-width mx-auto pt4 px2 center">
             <p className="block-headline pt3 pb4">{title}</p>
             {image ? (
