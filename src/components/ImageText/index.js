@@ -56,49 +56,51 @@ class ImageText extends Component {
           styles['ImageText'],
           styles[colorClass],
           { drip: isDripOn },
-          'flex flex-row justify-center'
+          'drip-padding-on-children'
         )}
       >
-        <div
-          className={cx(
-            'flex container-width py4',
-            styles['ImageText__container'],
-            {
-              [styles['ImageText__container--reverse']]: isReverseArrangement
-            }
-          )}
-        >
+        <div className="flex flex-row justify-center overflow-hidden">
           <div
             className={cx(
-              styles['ImageText__text-content'],
-              textDesktopSize,
-              'flex flex-column justify-center col-12'
+              'flex container-width py4',
+              styles['ImageText__container'],
+              {
+                [styles['ImageText__container--reverse']]: isReverseArrangement
+              }
             )}
           >
-            <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: marked(get(fields, 'text', ''))
+            <div
+              className={cx(
+                styles['ImageText__text-content'],
+                textDesktopSize,
+                'flex flex-column justify-center col-12'
+              )}
+            >
+              <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: marked(get(fields, 'text', ''))
+                }}
+                className={cx(styles['ImageText__text'], 'block-subheadline')}
+              />
+            </div>
+            <Image
+              className={cx(
+                styles['ImageText__image'],
+                imageSize,
+                'z-sub-nav mt2 mx-auto'
+              )}
+              style={{
+                transform: `translate(${positionX}%, ${position}%)`
               }}
-              className={cx(styles['ImageText__text'], 'block-subheadline')}
+              alt={`${get(fields, 'title', '')} illustration`}
+              src={contentfulImgUtil(
+                get(fields, 'image.fields.file.url', ''),
+                '1400',
+                'png'
+              )}
             />
           </div>
-          <Image
-            className={cx(
-              styles['ImageText__image'],
-              imageSize,
-              'z-sub-nav mt2 mx-auto'
-            )}
-            style={{
-              transform: `translate(${positionX}%, ${position}%)`
-            }}
-            alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400',
-              'png'
-            )}
-          />
         </div>
       </div>
     );
