@@ -23,7 +23,7 @@ const ImageDoubleText = ({ block, z }) => {
       className={cx(
         styles['ImageDoubleText'],
         styles[colorClass],
-        'drip move-drip-padding-to-child-element'
+        'drip drip-padding-on-children'
       )}
     >
       <div className="wh100 flex justify-center items-center overflow-hidden">

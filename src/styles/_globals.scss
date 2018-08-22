@@ -89,7 +89,7 @@ Dimension classes
   & + div {
     padding-top: spacing(32);
 
-    &.move-drip-padding-to-child-element {
+    &.drip-padding-on-children {
       padding-top: 0;
 
       > div {
