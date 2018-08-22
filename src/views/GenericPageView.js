@@ -11,11 +11,19 @@ class GenericPageView extends Component {
 
     if (model.isError) return <h1>Error</h1>;
 
-    const title = get(this.props, 'genericPage[0].fields.title', '');
-    const image = get(this.props, 'genericPage[0].fields.image', null);
+    const fields = get(this.props, 'genericPage[0].fields', {});
+    const title = get(fields, 'title', '');
+    const image = get(fields, 'image', null);
+    const color = get(fields, 'color', 'blue');
+    const isDripOn = get(fields, 'drip', false);
+
+    const ourStoryClasses = `${
+      color === 'yellow' ? 'bg-bees-wax' : 'bg-iceberg'
+    } ${isDripOn ? 'drip' : null} pb2 z-sub-nav`;
+
     return (
       <div>
-        <div className="bg-iceberg pb2 drip z-sub-nav">
+        <div className={ourStoryClasses}>
           <div className="transition-slide-up container-width mx-auto pt4 px2 center">
             <p className="block-headline pt3 pb4">{title}</p>
             {image ? (
