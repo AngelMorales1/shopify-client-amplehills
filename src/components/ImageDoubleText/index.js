@@ -23,53 +23,62 @@ const ImageDoubleText = ({ block, z }) => {
       className={cx(
         styles['ImageDoubleText'],
         styles[colorClass],
-        'drip flex justify-center items-center overflow-hidden'
+        'drip drip-padding-on-children'
       )}
     >
-      <div
-        className={cx(
-          styles['ImageDoubleText--container'],
-          {
-            [styles[
-              'ImageDoubleText--container--reverse'
-            ]]: isReverseArrangement
-          },
-          'container-width flex items-center justify-between'
-        )}
-      >
+      <div className="wh100 flex justify-center items-center overflow-hidden">
         <div
           className={cx(
-            styles['ImageDoubleText--image-container'],
-            'circle square'
+            styles['ImageDoubleText--container'],
+            {
+              [styles[
+                'ImageDoubleText--container--reverse'
+              ]]: isReverseArrangement
+            },
+            'container-width flex items-center justify-between'
           )}
-          style={{
-            background: `url(${contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400'
-            )}) no-repeat center`,
-            backgroundSize: 'cover'
-          }}
-        />
-        <div
-          className={cx(styles['ImageDoubleText--text-container'], 'md-col-6')}
         >
-          <div className="mb3">
-            <h2 className="block-headline mb2">{get(fields, 'title1', '')}</h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: marked(get(fields, 'text1', ''))
-              }}
-              className="block-subheadline"
-            />
-          </div>
-          <div>
-            <h2 className="block-headline mb2">{get(fields, 'title2', '')}</h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: marked(get(fields, 'text2', ''))
-              }}
-              className="block-subheadline"
-            />
+          <div
+            className={cx(
+              styles['ImageDoubleText--image-container'],
+              'circle square'
+            )}
+            style={{
+              background: `url(${contentfulImgUtil(
+                get(fields, 'image.fields.file.url', ''),
+                '1400'
+              )}) no-repeat center`,
+              backgroundSize: 'cover'
+            }}
+          />
+          <div
+            className={cx(
+              styles['ImageDoubleText--text-container'],
+              'md-col-6'
+            )}
+          >
+            <div className="mb3">
+              <h2 className="block-headline mb2">
+                {get(fields, 'title1', '')}
+              </h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: marked(get(fields, 'text1', ''))
+                }}
+                className="block-subheadline"
+              />
+            </div>
+            <div>
+              <h2 className="block-headline mb2">
+                {get(fields, 'title2', '')}
+              </h2>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: marked(get(fields, 'text2', ''))
+                }}
+                className="block-subheadline"
+              />
+            </div>
           </div>
         </div>
       </div>

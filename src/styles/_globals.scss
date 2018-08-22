@@ -88,6 +88,14 @@ Dimension classes
 
   & + div {
     padding-top: spacing(32);
+
+    &.drip-padding-on-children {
+      padding-top: 0;
+
+      > div {
+        padding-top: spacing(32);
+      }
+    }
   }
 }
 
