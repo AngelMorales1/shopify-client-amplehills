@@ -1,109 +1,80 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
-import Global from 'constants/Global';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
 
-class ImageText extends Component {
-  state = {
-    currentBreakpoint: Global.breakpoints.small.label
-  };
+const ImageText = ({ block, z }) => {
+  const fields = get(block, 'fields', {});
+  const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
+  const position = get(fields, 'imagePosition', 0);
+  const positionX = get(fields, 'imagePositionX', 0);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
+  const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
+  const isimageTextRatio5050 = imageTextRatio === '50:50';
+  const isDripOn = get(fields, 'drip', false);
 
-  componentDidMount() {
-    window.addEventListener('resize', this.updateWindow);
-    this.updateWindow();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindow);
-  }
-
-  updateWindow = () => {
-    const { small, large } = Global.breakpoints;
-    const currentBreakpoint =
-      window.innerWidth <= small.upperbound ? small.label : large.label;
-
-    if (this.state.currentBreakpoint !== currentBreakpoint)
-      this.setState({ currentBreakpoint });
-  };
-
-  render() {
-    const { block, z } = this.props;
-    const fields = get(block, 'fields', {});
-    const colorClass = `ImageText--${get(fields, 'backgroundColor', 'pink')}`;
-    const position =
-      this.state.currentBreakpoint === 'small'
-        ? 0
-        : get(fields, 'imagePosition', 0);
-    const positionX = get(fields, 'imagePositionX', 0);
-    const isReverseArrangement = get(fields, 'isReverseArrangement', false);
-    const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
-    const textDesktopSize =
-      imageTextRatio === '50:50' ? 'md-col-5' : 'md-col-6';
-    const imageSize = imageTextRatio === '50:50' ? 'col-6' : 'col-4';
-    const isDripOn = get(fields, 'drip', false);
-
-    return (
+  return (
+    <div
+      style={{ zIndex: z }}
+      className={cx(
+        styles['ImageText'],
+        styles[colorClass],
+        { drip: isDripOn },
+        'flex flex-row justify-center'
+      )}
+    >
       <div
-        style={{ zIndex: z }}
         className={cx(
-          styles['ImageText'],
-          styles[colorClass],
-          { drip: isDripOn },
-          'flex flex-row justify-center'
+          'flex container-width py4',
+          styles['ImageText__container'],
+          {
+            [styles['ImageText__container--reverse']]: isReverseArrangement
+          }
         )}
       >
         <div
           className={cx(
-            'flex container-width py4',
-            styles['ImageText__container'],
-            {
-              [styles['ImageText__container--reverse']]: isReverseArrangement
-            }
+            styles['ImageText__text-content'],
+            { 'md-col-5': isimageTextRatio5050 },
+            { 'md-col-6': !isimageTextRatio5050 },
+            'flex flex-column justify-center col-12'
           )}
         >
-          <div
-            className={cx(
-              styles['ImageText__text-content'],
-              textDesktopSize,
-              'flex flex-column justify-center col-12'
-            )}
-          >
-            <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: marked(get(fields, 'text', ''))
-              }}
-              className={cx(styles['ImageText__text'], 'block-subheadline')}
-            />
-          </div>
-          <Image
-            className={cx(
-              styles['ImageText__image'],
-              imageSize,
-              'z-sub-nav mt2 mx-auto'
-            )}
-            style={{
-              transform: `translate(${positionX}%, ${position}%)`
+          <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: marked(get(fields, 'text', ''))
             }}
-            alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400',
-              'png'
-            )}
+            className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
         </div>
+        <Image
+          className={cx(
+            styles['ImageText__image'],
+            { 'col-6': isimageTextRatio5050 },
+            { 'col-4': !isimageTextRatio5050 },
+            'z-sub-nav mt2 mx-auto'
+          )}
+          style={{
+            transform: `translate(${positionX}%, ${position}%)`
+          }}
+          alt={`${get(fields, 'title', '')} illustration`}
+          src={contentfulImgUtil(
+            get(fields, 'image.fields.file.url', ''),
+            '1400',
+            'png'
+          )}
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ImageText;
 
