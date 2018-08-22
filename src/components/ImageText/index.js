@@ -46,6 +46,7 @@ class ImageText extends Component {
     const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
     const textDesktopSize =
       imageTextRatio === '50:50' ? 'md-col-5' : 'md-col-6';
+    const isDripOn = get(fields, 'drip', false);
 
     return (
       <div
@@ -53,12 +54,13 @@ class ImageText extends Component {
         className={cx(
           styles['ImageText'],
           styles[colorClass],
-          'flex flex-row justify-center drip'
+          { drip: isDripOn },
+          'flex flex-row justify-center'
         )}
       >
         <div
           className={cx(
-            'flex container-width',
+            'flex container-width py4',
             styles['ImageText__container'],
             {
               [styles['ImageText__container--reverse']]: isReverseArrangement
@@ -83,7 +85,7 @@ class ImageText extends Component {
           <Image
             className={cx(
               styles['ImageText__image'],
-              'z-overlay col-4 mt2 mx-auto'
+              'z-sub-nav col-4 mt2 mx-auto'
             )}
             style={{
               transform: `translate(${positionX}%, ${position}%)`
