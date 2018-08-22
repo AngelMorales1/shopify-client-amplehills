@@ -23,7 +23,7 @@ const mapStateToProps = (state, props) => {
     image: get(fields, 'image', {}),
     title: get(fields, 'title', ''),
     color: get(fields, 'color', 'yellow'),
-    blocks: get(fields, 'contentBlock', [])
+    blocks: get(fields, 'contentBlocks', [])
   };
 };
 
