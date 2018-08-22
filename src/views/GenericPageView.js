@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import cx from 'classnames';
 
 import BlockSwitch from 'components/BlockSwitch';
 import { Image } from 'components/base';
@@ -17,9 +18,11 @@ class GenericPageView extends Component {
     const color = get(fields, 'color', 'blue');
     const isDripOn = get(fields, 'drip', false);
 
-    const ourStoryClasses = `${
-      color === 'yellow' ? 'bg-bees-wax' : 'bg-iceberg'
-    } ${isDripOn ? 'drip' : null} pb2 z-sub-nav`;
+    const ourStoryClasses = cx(
+      color === 'yellow' ? 'bg-bees-wax' : 'bg-iceberg',
+      isDripOn ? 'drip' : null,
+      'pb2 z-sub-nav'
+    );
 
     return (
       <div>
