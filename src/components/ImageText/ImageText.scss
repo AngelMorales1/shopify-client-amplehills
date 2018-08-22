@@ -49,6 +49,7 @@
     .ImageText__text-content {
       @media ($medium-up) {
         order: 1;
+        margin-left: 0;
         margin-right: spacing(18);
       }
     }

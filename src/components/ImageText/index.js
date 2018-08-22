@@ -18,7 +18,11 @@ const ImageText = ({ block, z }) => {
   return (
     <div
       style={{ zIndex: z }}
-      className={cx(styles['ImageText'], styles[colorClass], 'flex drip')}
+      className={cx(
+        styles['ImageText'],
+        styles[colorClass],
+        'flex flex-row justify-center drip'
+      )}
     >
       <div
         className={cx('flex container-width', styles['ImageText__container'], {
