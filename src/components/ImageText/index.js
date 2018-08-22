@@ -64,7 +64,7 @@ const ImageText = ({ block, z }) => {
           <Image
             className={cx(
               styles['ImageText__image'],
-              'z-sub-nav col-4 mt2 mx-auto'
+              'z-sub-nav mt2 mx-auto'
             )}
             style={{
               transform: `translate(${positionX}%, ${position}%)`
