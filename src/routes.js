@@ -12,7 +12,6 @@ import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
-import OurStoryPageContainer from 'containers/OurStoryPageContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -33,7 +32,6 @@ const Routes = ({ location }) => (
     <Route path="/web-accessibility" component={GenericPageContainer} />
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/press" component={PressPageContainer} />
-    <Route path="/our-story" component={OurStoryPageContainer} />
   </Switch>
 );
 
