@@ -134,12 +134,7 @@ const ImageText = ({ block, z }) => {
           style={{
             transform: `translate(${positionX}%, ${positionY}%)`
             }}
-            alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400',
-              'png'
-            )}
+            className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
         ) : null}
       </div>
