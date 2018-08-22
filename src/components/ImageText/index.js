@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import Global from 'constants/Global';
 
 import styles from './ImageText.scss';
 import { Image } from 'components/base';
@@ -46,10 +47,28 @@ const ImageText = ({ block, z }) => {
             'flex flex-column justify-center col-12'
           )}
         >
-          <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: marked(get(fields, 'text', ''))
+          <div
+            className={cx(
+              styles['ImageText__text-content'],
+              textDesktopSize,
+              'flex flex-column justify-center col-12'
+            )}
+          >
+            <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: marked(get(fields, 'text', ''))
+              }}
+              className={cx(styles['ImageText__text'], 'block-subheadline')}
+            />
+          </div>
+          <Image
+            className={cx(
+              styles['ImageText__image'],
+              'z-overlay col-4 mt2 mx-auto'
+            )}
+            style={{
+              transform: `translate(${positionX}%, ${position}%)`
             }}
             className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
@@ -74,7 +93,7 @@ const ImageText = ({ block, z }) => {
       </div>
     </div>
   );
-};
+}
 
 export default ImageText;
 
