@@ -1,8 +1,13 @@
-@import 'settings';
+@import 'settings', 'typography';
 
 .ImageText {
   &--pink {
     @extend .bg-light-pink;
+    @extend .text-madison-blue;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
     @extend .text-madison-blue;
   }
 
@@ -21,7 +26,6 @@
 
       @media ($medium-up) {
         order: 1;
-        margin-left: spacing(20);
         align-self: flex-end;
       }
     }
@@ -41,7 +45,6 @@
 
       @media ($medium-up) {
         order: 2;
-        margin-right: spacing(20);
         align-self: flex-end;
       }
     }
@@ -52,6 +55,24 @@
         margin-left: 0;
         margin-right: spacing(18);
       }
+    }
+  }
+
+  &__text {
+    h2 {
+      @extend .carter;
+      font-size: $font-6;
+      margin-bottom: spacing(10);
+    }
+
+    > h3 {
+      @extend .block-subheadline;
+      @extend .bold;
+      margin-bottom: spacing(2);
+    }
+
+    ul > li::before {
+      content: '- ';
     }
   }
 }
