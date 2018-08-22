@@ -50,7 +50,6 @@ const ImageText = ({ block, z }) => {
           <div
             className={cx(
               styles['ImageText__text-content'],
-              textDesktopSize,
               'flex flex-column justify-center col-12'
             )}
           >
@@ -65,7 +64,7 @@ const ImageText = ({ block, z }) => {
           <Image
             className={cx(
               styles['ImageText__image'],
-              'z-overlay col-4 mt2 mx-auto'
+              'z-sub-nav col-4 mt2 mx-auto'
             )}
             style={{
               transform: `translate(${positionX}%, ${position}%)`
