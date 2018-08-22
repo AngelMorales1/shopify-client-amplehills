@@ -13,7 +13,6 @@ import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
-import OurStoryPageContainer from 'containers/OurStoryPageContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -32,12 +31,11 @@ const Routes = ({ location }) => (
     <Route path="/cart" component={Cart} />
     <Route path="/privacy-policy" component={GenericPageContainer} />
     <Route path="/web-accessibility" component={GenericPageContainer} />
-    <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/press" component={PressPageContainer} />
     {isStaging() ? (
       <Route path="/style-guide" component={GenericPageContainer} />
     ) : null}
-    <Route path="/our-story" component={OurStoryPageContainer} />
+    <Route path="/our-story" component={GenericPageContainer} />
   </Switch>
 );
 
