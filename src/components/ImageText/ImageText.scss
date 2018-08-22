@@ -62,6 +62,10 @@
         transform: translate(0, 0) !important;
       }
 
+      @media ($small-down) {
+        transform: translate(0, 0) !important;
+      }
+
       @media ($medium-up) {
         order: 1;
         align-self: flex-end;
