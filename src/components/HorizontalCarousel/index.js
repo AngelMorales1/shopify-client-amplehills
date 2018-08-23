@@ -15,12 +15,26 @@ const HorizontalCarousel = ({ block, z, press }) => {
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const customOrder = get(fields, 'customOrder', false);
+  const showCardNumber = get(fields, 'showCardNumber', null);
+  const cardItems = get(fields, 'cardItems', []);
+  const isSortByLatest = get(fields, 'sortByLatest', true);
 
-  const getCardItems = () => {
-    switch (type) {
-      case 'blockPressHorizontalCarousel':
-        return customOrder ? get(fields, 'cardItems', []) : press;
+  const sortCardItems = (customOrderCards, everyCards) => {
+    let selectedCards = [];
+
+    if (customOrder) {
+      selectedCards = customOrderCards;
+    } else {
+      selectedCards = everyCards.sort();
+
+      if (isSortByLatest) {
+        selectedCards = selectedCards.reverse();
+      }
     }
+
+    return typeof showCardNumber === 'number'
+      ? selectedCards.slice(0, showCardNumber)
+      : selectedCards;
   };
 
   return (
@@ -60,45 +74,47 @@ const HorizontalCarousel = ({ block, z, press }) => {
             'flex flex-row my4'
           )}
         >
-          {getCardItems().map((cardItem, i) => {
-            const fields = get(cardItem, 'fields', {});
+          {type === 'blockPressHorizontalCarousel'
+            ? sortCardItems(cardItems, press).map((cardItem, i) => {
+                const fields = get(cardItem, 'fields', {});
 
-            return (
-              <div
-                key={get(cardItem, 'sys.id', '') + i}
-                className={cx(
-                  styles['HorizontalCarousel__card'],
-                  'bg-white p3 flex flex-column justify-center items-center'
-                )}
-              >
-                <Image
-                  className={cx(styles['HorizontalCarousel__logo'])}
-                  src={contentfulImgUtil(
-                    fields.logoImage.fields.file.url,
-                    '200',
-                    'png'
-                  )}
-                  alt={`${fields.title} logo`}
-                />
-                <span
-                  className={cx(
-                    styles['HorizontalCarousel__quote'],
-                    'carter text-peach center py3'
-                  )}
-                >{`"${fields.quote}"`}</span>
-                <Button
-                  className={cx(
-                    styles['HorizontalCarousel__button'],
-                    'uppercase detail'
-                  )}
-                  to={fields.linkUrl}
-                  label="Read about it"
-                  variant="primary-small"
-                  color="peach"
-                />
-              </div>
-            );
-          })}
+                return (
+                  <div
+                    key={get(cardItem, 'sys.id', '') + i}
+                    className={cx(
+                      styles['HorizontalCarousel__card'],
+                      'bg-white p3 flex flex-column justify-center items-center'
+                    )}
+                  >
+                    <Image
+                      className={cx(styles['HorizontalCarousel__logo'])}
+                      src={contentfulImgUtil(
+                        fields.logoImage.fields.file.url,
+                        '200',
+                        'png'
+                      )}
+                      alt={`${fields.title} logo`}
+                    />
+                    <span
+                      className={cx(
+                        styles['HorizontalCarousel__quote'],
+                        'carter text-peach center py3'
+                      )}
+                    >{`"${fields.quote}"`}</span>
+                    <Button
+                      className={cx(
+                        styles['HorizontalCarousel__button'],
+                        'uppercase detail'
+                      )}
+                      to={fields.linkUrl}
+                      label="Read about it"
+                      variant="primary-small"
+                      color="peach"
+                    />
+                  </div>
+                );
+              })
+            : null}
         </div>
       </div>
     </div>
