@@ -9,7 +9,7 @@ import imageModel from 'models/imageModel';
 
 const PressCard = ({ pressCard }) => {
   const fields = get(pressCard, 'fields', {});
-  console.log(pressCard);
+
   return (
     <div
       className={cx(
