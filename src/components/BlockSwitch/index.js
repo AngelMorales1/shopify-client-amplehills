@@ -9,7 +9,6 @@ import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 import ComicStrip from 'components/ComicStrip';
 import MarkdownBlock from 'components/MarkdownBlock';
 import GenericHero from 'components/GenericHero';
-import CenterImageText from 'components/CenterImageText';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -30,8 +29,6 @@ const BlockSwitch = props => {
       return <MarkdownBlock {...props} />;
     case 'blockGenericHero':
       return <GenericHero {...props} />;
-    case 'blockCenterImageText':
-      return <CenterImageText {...props} />;
     default:
       return null;
   }
