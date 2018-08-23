@@ -19,7 +19,7 @@ const HorizontalCarousel = ({ block, z, press }) => {
   const getCardItems = () => {
     switch (type) {
       case 'blockPressHorizontalCarousel':
-        return customOrder ? get(fields, 'cardItems', []) : [];
+        return customOrder ? get(fields, 'cardItems', []) : press;
     }
   };
 
@@ -73,7 +73,11 @@ const HorizontalCarousel = ({ block, z, press }) => {
               >
                 <Image
                   className={cx(styles['HorizontalCarousel__logo'])}
-                  src={fields.logoImage.fields.file.url}
+                  src={contentfulImgUtil(
+                    fields.logoImage.fields.file.url,
+                    '200',
+                    'png'
+                  )}
                   alt={`${fields.title} logo`}
                 />
                 <span
