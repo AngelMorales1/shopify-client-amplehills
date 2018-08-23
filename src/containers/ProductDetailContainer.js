@@ -10,6 +10,7 @@ import {
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
+import { getPressData } from 'state/actions/pressActions';
 
 import get from 'utils/get';
 
@@ -39,7 +40,8 @@ const mapStateToProps = (state, props) => {
       state,
       'productUI.ourPledgeOverlayIsOpen',
       false
-    )
+    ),
+    press: get(state, 'press.press.items', [])
   };
 };
 
@@ -49,7 +51,8 @@ const mapDispatchToProps = dispatch => {
       {
         addLineItems,
         openOurPledge,
-        closeOurPledge
+        closeOurPledge,
+        getPressData
       },
       dispatch
     )
