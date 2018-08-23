@@ -6,10 +6,22 @@ import cx from 'classnames';
 import styles from './HorizontalCarousel.scss';
 import { Image, Button } from 'components/base';
 
-const HorizontalCarousel = ({ block, z }) => {
+const HorizontalCarousel = ({ block, z, press }) => {
+  const type = get(
+    block,
+    'sys.contentType.sys.id',
+    'blockPressHorizontalCarousel'
+  );
   const fields = get(block, 'fields', {});
-  const cardItems = get(fields, 'cardItems', []);
   const isDripOn = get(fields, 'drip', false);
+  const customOrder = get(fields, 'customOrder', false);
+
+  const getCardItems = () => {
+    switch (type) {
+      case 'blockPressHorizontalCarousel':
+        return customOrder ? get(fields, 'cardItems', []) : [];
+    }
+  };
 
   return (
     <div
@@ -48,7 +60,7 @@ const HorizontalCarousel = ({ block, z }) => {
             'flex flex-row my4'
           )}
         >
-          {cardItems.map((cardItem, i) => {
+          {getCardItems().map((cardItem, i) => {
             const fields = get(cardItem, 'fields', {});
 
             return (
@@ -73,7 +85,7 @@ const HorizontalCarousel = ({ block, z }) => {
                 <Button
                   className={cx(
                     styles['HorizontalCarousel__button'],
-                    'uppercase'
+                    'uppercase detail'
                   )}
                   to={fields.linkUrl}
                   label="Read about it"
