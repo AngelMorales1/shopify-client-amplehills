@@ -25,10 +25,17 @@
 
   &__card {
     margin: spacing(4);
+<<<<<<< HEAD
     min-width: spacing(60);
 
     @media ($medium-up) {
       min-width: spacing(75);
+=======
+    width: spacing(60);
+
+    @media ($medium-up) {
+      width: spacing(75);
+>>>>>>> Add function to sort cards by latest and ability to set number of card you want to show
     }
   }
 
