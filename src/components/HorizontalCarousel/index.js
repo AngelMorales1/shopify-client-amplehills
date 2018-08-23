@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import imageModel from 'models/imageModel';
 
 import styles from './HorizontalCarousel.scss';
 import { Image, Button } from 'components/base';
@@ -16,7 +18,7 @@ const HorizontalCarousel = ({ block, z, press }) => {
   const isDripOn = get(fields, 'drip', false);
   const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
-  const cardItems = get(fields, 'cardItems', []);
+  const pressItems = get(fields, 'pressItems', []);
   const isSortByLatest = get(fields, 'sortByLatest', true);
 
   const sortCardItems = (customOrderCards, everyCards) => {
@@ -49,7 +51,7 @@ const HorizontalCarousel = ({ block, z, press }) => {
       <div className={cx(styles['HorizontalCarousel__wrapper'], 'flex')}>
         <div
           className={cx(
-            styles['HorizontalCarousel__title-container'],
+            styles['HorizontalCarousel__text-container'],
             'flex flex-column justify-center'
           )}
         >
@@ -74,12 +76,12 @@ const HorizontalCarousel = ({ block, z, press }) => {
           )}
         >
           {type === 'blockPressHorizontalCarousel'
-            ? sortCardItems(cardItems, press).map((cardItem, i) => {
-                const fields = get(cardItem, 'fields', {});
+            ? sortCardItems(pressItems, press).map((pressItem, i) => {
+                const fields = get(pressItem, 'fields', {});
 
                 return (
                   <div
-                    key={get(cardItem, 'sys.id', '') + i}
+                    key={get(pressItem, 'sys.id', '') + i}
                     className={cx(
                       styles['HorizontalCarousel__card'],
                       'bg-white p3 flex flex-column justify-center items-center'
@@ -88,7 +90,7 @@ const HorizontalCarousel = ({ block, z, press }) => {
                     <Image
                       className={cx(styles['HorizontalCarousel__logo'])}
                       src={contentfulImgUtil(
-                        fields.logoImage.fields.file.url,
+                        get(fields, 'logoImage.fields.file.url', ''),
                         '200',
                         'png'
                       )}
@@ -121,3 +123,87 @@ const HorizontalCarousel = ({ block, z, press }) => {
 };
 
 export default HorizontalCarousel;
+
+HorizontalCarousel.propTypes = {
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      pressItems: PropTypes.arrayOf(
+        PropTypes.shape({
+          fields: PropTypes.shape({
+            linkUrl: PropTypes.string,
+            logoImage: imageModel.propTypes,
+            quote: PropTypes.string,
+            title: PropTypes.string
+          }),
+          sys: PropTypes.shape({
+            id: PropTypes.string
+          })
+        })
+      ),
+      customOrder: PropTypes.bool,
+      drip: PropTypes.bool,
+      sortByLatest: PropTypes.bool,
+      title: PropTypes.string
+    }),
+    sys: PropTypes.shape({
+      id: PropTypes.string
+    })
+  }),
+  z: PropTypes.number,
+  press: PropTypes.arrayOf(
+    PropTypes.shape({
+      fields: PropTypes.shape({
+        linkUrl: PropTypes.string,
+        logoImage: imageModel.propTypes,
+        quote: PropTypes.string,
+        title: PropTypes.string
+      }),
+      sys: PropTypes.shape({
+        id: PropTypes.string
+      })
+    })
+  )
+};
+
+HorizontalCarousel.defaultProps = {
+  block: {
+    fields: {
+      buttonLabel: '',
+      buttonLink: '',
+      pressItems: [
+        {
+          fields: {
+            linkUrl: '',
+            logoImage: imageModel.default,
+            quote: '',
+            title: ''
+          },
+          sys: {
+            id: ''
+          }
+        }
+      ],
+      customOrder: false,
+      drip: false,
+      sortByLatest: true,
+      title: ''
+    },
+    sys: {
+      id: ''
+    }
+  },
+  z: 0
+  // press: [{
+  //   fields: {
+  //     linkUrl: '',
+  //     logoImage: imageModel.default,
+  //     quote: '',
+  //     title: ''
+  //   },
+  //   sys: {
+  //     id: ''
+  //   }
+  // }]
+};
