@@ -194,16 +194,18 @@ HorizontalCarousel.defaultProps = {
       id: ''
     }
   },
-  z: 0
-  // press: [{
-  //   fields: {
-  //     linkUrl: '',
-  //     logoImage: imageModel.default,
-  //     quote: '',
-  //     title: ''
-  //   },
-  //   sys: {
-  //     id: ''
-  //   }
-  // }]
+  z: 0,
+  press: [
+    {
+      fields: {
+        linkUrl: '',
+        logoImage: imageModel.default,
+        quote: '',
+        title: ''
+      },
+      sys: {
+        id: ''
+      }
+    }
+  ]
 };
