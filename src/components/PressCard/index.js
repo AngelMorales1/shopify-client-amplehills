@@ -7,7 +7,7 @@ import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
 import imageModel from 'models/imageModel';
 
-const PressCard = ({ pressCard }) => {
+const PressCard = ({ pressCard }) => {console.log(pressCard)
   return (
     <div
       className={cx(
@@ -17,7 +17,7 @@ const PressCard = ({ pressCard }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={pressCard.logoImage.data}
+        src={get(pressCard, 'logoImage.data', '')}
         alt={`${pressCard.title} logo`}
       />
       <span
