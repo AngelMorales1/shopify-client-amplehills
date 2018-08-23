@@ -41,6 +41,7 @@
   }
 
   &__card {
+    border-radius: radius('s');
     margin: spacing(4);
     min-width: spacing(65);
 
