@@ -182,12 +182,11 @@ ImageText.defaultProps = {
       fullImage: false,
       buttonLabel: '',
       buttonLink: '',
-      buttonColor: 'peach',
       linkedTextLabel: '',
       linkedTextLink: ''
     }
   },
   setRef: () => {}
-};
+}
 
 export default ImageText;
