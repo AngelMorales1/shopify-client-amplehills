@@ -31,10 +31,17 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     }
   };
 
-  const getCardItems = () => {
-    switch (type) {
-      case 'blockPressHorizontalCarousel':
-        return customOrder ? get(fields, 'cardItems', []) : press;
+  const sortCardItems = (customOrderCards, everyCards) => {
+    let selectedCards = [];
+
+    if (customOrder) {
+      selectedCards = customOrderCards;
+    } else {
+      selectedCards = everyCards.sort();
+
+      if (isSortByLatest) {
+        selectedCards = selectedCards.reverse();
+      }
     }
 
     if (isSortByLatest) {
@@ -83,8 +90,9 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
             'flex flex-row my4'
           )}
         >
-          {getCardItems().map((cardItem, i) => {
-            const fields = get(cardItem, 'fields', {});
+          {type === 'blockPressHorizontalCarousel'
+            ? sortCardItems(cardItems, press).map((cardItem, i) => {
+                const fields = get(cardItem, 'fields', {});
 
             return (
               <div
