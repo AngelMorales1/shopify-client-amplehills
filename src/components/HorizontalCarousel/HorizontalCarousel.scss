@@ -25,10 +25,10 @@
 
   &__card {
     margin: spacing(4);
-    min-width: spacing(60);
+    width: spacing(60);
 
     @media ($medium-up) {
-      min-width: spacing(75);
+      width: spacing(75);
     }
   }
 
