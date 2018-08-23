@@ -24,7 +24,7 @@
 
   &--hover-underline-peach {
     &:hover {
-      color: inherit;
+      color: color('peach');
       position: relative;
 
       &::after {
