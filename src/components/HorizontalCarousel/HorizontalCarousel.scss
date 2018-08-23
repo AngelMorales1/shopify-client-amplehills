@@ -23,15 +23,6 @@
     width: spacing(90);
   }
 
-  &__card {
-    margin: spacing(4);
-    width: spacing(60);
-
-    @media ($medium-up) {
-      width: spacing(75);
-    }
-  }
-
   &__carousel-container {
     overflow: scroll;
 
@@ -49,6 +40,15 @@
     }
   }
 
+  &__card {
+    margin: spacing(4);
+    min-width: spacing(65);
+
+    @media ($medium-up) {
+      min-width: spacing(75);
+    }
+  }
+
   &__logo {
     width: spacing(21);
     height: spacing(10);
@@ -62,6 +62,12 @@
     @media ($medium-up) {
       font-size: $font-6;
       margin-bottom: spacing(16);
+    }
+  }
+
+  &__button {
+    > span {
+      margin-bottom: 1px;
     }
   }
 }
