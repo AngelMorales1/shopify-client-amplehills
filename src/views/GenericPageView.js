@@ -3,7 +3,6 @@ import get from 'utils/get';
 import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
 
-import styles from './GenericPageView.scss';
 import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
 
