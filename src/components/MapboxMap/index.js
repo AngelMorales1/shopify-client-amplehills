@@ -49,6 +49,7 @@ class MapboxMap extends Component {
     }
 
     if (prevProps.featureIdZoomTo !== this.props.featureIdZoomTo) {
+      await this.setBounds();
       if (this.props.featureIdZoomTo === null) {
         this.zoomToBounds();
       } else {
