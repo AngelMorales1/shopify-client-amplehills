@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 
-import imageModel from 'models/imageModel';
 import styles from './GenericHero.scss';
 import { Image, Button } from 'components/base';
 
@@ -31,26 +29,26 @@ const GenericHero = ({ block, z }) => {
 
   return (
     <div style={{ zIndex: z }} className={classes}>
-      <div
-        className={cx(
-          styles['GenericHero__content-container'],
-          'flex justify-center',
-          {
-            'justify-between': imageRight,
-            [styles['GenericHero__content-container--reverse']]:
-              imageRight && isReverseArrangement
-          }
-        )}
-      >
-        <div className="col-12 md-col-6 flex justify-center">
-          <div
-            className={cx(
-              {
-                [styles['GenericHero__text-container--image-right']]: imageRight
-              },
-              'transition-slide-up py4 px2 col-10 md-col-8 center'
-            )}
-          >
+    <div
+      className={cx(
+        styles['GenericHero__content-container'],
+        'flex justify-center',
+        {
+          'justify-between': imageRight,
+          [styles['GenericHero__content-container--reverse']]:
+            imageRight && isReverseArrangement
+        }
+      )}
+    >
+      <div className="col-12 md-col-6 flex justify-center">
+        <div
+          className={cx(
+            {
+              [styles['GenericHero__text-container--image-right']]: imageRight
+            },
+            'transition-slide-up py4 px2 col-10 md-col-8 center'
+          )}
+        >
             <p className="block-headline pb3">{title}</p>
             {text ? <div className="block-subheadline">{text}</div> : null}
             {image1 && !imageRight ? (
@@ -92,36 +90,6 @@ const GenericHero = ({ block, z }) => {
       </div>
     </div>
   );
-};
-
-GenericHero.propTypes = {
-  z: PropTypes.number,
-  block: PropTypes.shape({
-    fields: PropTypes.shape({
-      color: PropTypes.string,
-      drip: PropTypes.bool,
-      image1: imageModel.propTypes,
-      title: PropTypes.string,
-      text: PropTypes.string,
-      buttonLink: PropTypes.string,
-      buttonLabel: PropTypes.string
-    })
-  })
-};
-
-GenericHero.defaultProps = {
-  z: 1,
-  block: {
-    fields: PropTypes.shape({
-      color: 'blue',
-      drip: false,
-      image1: null,
-      title: '',
-      text: '',
-      buttonLink: '',
-      buttonLabel: ''
-    })
-  }
 };
 
 export default GenericHero;
