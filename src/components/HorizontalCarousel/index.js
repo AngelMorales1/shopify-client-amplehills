@@ -91,8 +91,8 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
           )}
         >
           {type === 'blockPressHorizontalCarousel'
-            ? sortCardItems(cardItems, press).map((cardItem, i) => {
-                const fields = get(cardItem, 'fields', {});
+            ? sortCardItems(pressItems, press).map((pressItem, i) => {
+                const fields = get(pressItem, 'fields', {});
 
             return (
               <div
@@ -266,3 +266,87 @@ HorizontalCarousel.defaultProps = {
 };
 
 export default HorizontalCarousel;
+
+HorizontalCarousel.propTypes = {
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      pressItems: PropTypes.arrayOf(
+        PropTypes.shape({
+          fields: PropTypes.shape({
+            linkUrl: PropTypes.string,
+            logoImage: imageModel.propTypes,
+            quote: PropTypes.string,
+            title: PropTypes.string
+          }),
+          sys: PropTypes.shape({
+            id: PropTypes.string
+          })
+        })
+      ),
+      customOrder: PropTypes.bool,
+      drip: PropTypes.bool,
+      sortByLatest: PropTypes.bool,
+      title: PropTypes.string
+    }),
+    sys: PropTypes.shape({
+      id: PropTypes.string
+    })
+  }),
+  z: PropTypes.number,
+  press: PropTypes.arrayOf(
+    PropTypes.shape({
+      fields: PropTypes.shape({
+        linkUrl: PropTypes.string,
+        logoImage: imageModel.propTypes,
+        quote: PropTypes.string,
+        title: PropTypes.string
+      }),
+      sys: PropTypes.shape({
+        id: PropTypes.string
+      })
+    })
+  )
+};
+
+HorizontalCarousel.defaultProps = {
+  block: {
+    fields: {
+      buttonLabel: '',
+      buttonLink: '',
+      pressItems: [
+        {
+          fields: {
+            linkUrl: '',
+            logoImage: imageModel.default,
+            quote: '',
+            title: ''
+          },
+          sys: {
+            id: ''
+          }
+        }
+      ],
+      customOrder: false,
+      drip: false,
+      sortByLatest: true,
+      title: ''
+    },
+    sys: {
+      id: ''
+    }
+  },
+  z: 0
+  // press: [{
+  //   fields: {
+  //     linkUrl: '',
+  //     logoImage: imageModel.default,
+  //     quote: '',
+  //     title: ''
+  //   },
+  //   sys: {
+  //     id: ''
+  //   }
+  // }]
+};
