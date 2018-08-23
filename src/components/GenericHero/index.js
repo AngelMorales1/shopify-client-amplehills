@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 
-import imageModel from 'models/imageModel';
 import styles from './GenericHero.scss';
 import { Image, Button } from 'components/base';
 
@@ -125,27 +123,3 @@ GenericHero.defaultProps = {
 };
 
 export default GenericHero;
-
-GenericHero.propTypes = {
-  z: PropTypes.number,
-  block: PropTypes.shape({
-    fields: PropTypes.shape({
-      color: PropTypes.string,
-      drip: PropTypes.bool,
-      image1: imageModel.propTypes,
-      title: PropTypes.string
-    })
-  })
-};
-
-GenericHero.defaultProps = {
-  z: 1,
-  block: {
-    fields: PropTypes.shape({
-      color: 'blue',
-      drip: false,
-      image1: null,
-      title: ''
-    })
-  }
-};
