@@ -85,9 +85,13 @@ ImageText.propTypes = {
       backgroundColor: PropTypes.string,
       image: imageModel.propTypes,
       imagePosition: PropTypes.number,
+      imagePositionX: PropTypes.number,
       text: PropTypes.string,
       title: PropTypes.string,
-      isReverseArrangement: PropTypes.bool
+      isReverseArrangement: PropTypes.bool,
+      imageTextRatio: PropTypes.string,
+      drip: PropTypes.bool,
+      fullImage: PropTypes.bool
     })
   })
 };
@@ -99,9 +103,13 @@ ImageText.defaultProps = {
       backgroundColor: 'Pink',
       image: imageModel.default,
       imagePosition: 0,
+      imagePositionX: 0,
       text: '',
       title: '',
-      isReverseArrangement: false
+      isReverseArrangement: false,
+      imageTextRatio: '50:50',
+      drip: false,
+      fullImage: false
     }
   }
 };
