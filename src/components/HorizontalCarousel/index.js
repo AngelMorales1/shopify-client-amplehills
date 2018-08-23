@@ -15,7 +15,6 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     'blockPressHorizontalCarousel'
   );
   const fields = get(block, 'fields', {});
-  const cardItems = get(fields, 'cardItems', []);
   const isDripOn = get(fields, 'drip', false);
   const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
@@ -84,7 +83,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
             'flex flex-row my4'
           )}
         >
-          {cardItems.map((cardItem, i) => {
+          {getCardItems().map((cardItem, i) => {
             const fields = get(cardItem, 'fields', {});
 
             return (
@@ -109,7 +108,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
                 <Button
                   className={cx(
                     styles['HorizontalCarousel__button'],
-                    'uppercase'
+                    'uppercase detail'
                   )}
                   to={fields.linkUrl}
                   label="Read about it"
