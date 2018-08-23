@@ -62,7 +62,6 @@ const HorizontalCarousel = ({ block, z, press }) => {
             {get(fields, 'title', '')}
           </span>
           <Button
-            className="inline-block"
             to={get(fields, 'buttonLink', '')}
             label={get(fields, 'buttonLabel', '')}
             color="peach"
