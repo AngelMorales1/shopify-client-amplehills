@@ -10,7 +10,6 @@ import ComicStrip from 'components/ComicStrip';
 import MarkdownBlock from 'components/MarkdownBlock';
 import GenericHero from 'components/GenericHero';
 import PressCarousel from 'components/PressCarousel';
-import CenterImageText from 'components/CenterImageText';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -33,8 +32,6 @@ const BlockSwitch = props => {
       return <GenericHero {...props} />;
     case 'blockPressHorizontalCarousel':
       return <PressCarousel {...props} />;
-    case 'blockCenterImageText':
-      return <CenterImageText {...props} />;
     default:
       return null;
   }
