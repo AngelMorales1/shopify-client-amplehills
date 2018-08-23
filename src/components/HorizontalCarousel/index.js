@@ -31,27 +31,6 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     }
   };
 
-  const sortCardItems = (customOrderCards, everyCards) => {
-    let selectedCards = [];
-
-    if (customOrder) {
-      selectedCards = customOrderCards;
-    } else {
-      selectedCards = everyCards.sort();
-
-      if (isSortByLatest) {
-        selectedCards = selectedCards.reverse();
-      }
-    }
-
-    if (isSortByLatest) {
-      selectedCards = selectedCards.reverse();
-    }
-
-    return typeof showCardNumber === 'number'
-      ? selectedCards.slice(0, showCardNumber)
-      : selectedCards;
-  };
 
   return (
     <div
