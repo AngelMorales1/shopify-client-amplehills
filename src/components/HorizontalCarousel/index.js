@@ -19,6 +19,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
   const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const customPressItems = get(fields, 'pressItems', []);
+  const cardItems = get(fields, 'cardItems', []);
   const isSortByLatest = get(fields, 'sortByLatest', true);
 
   const sortCardItems = (customOrderCards, everyCards) => {
@@ -29,6 +30,14 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     } else {
       selectedCards = everyCards.sort();
     }
+      if (isSortByLatest) {
+        selectedCards = selectedCards.reverse();
+      }
+    }
+
+    return typeof showCardNumber === 'number'
+      ? selectedCards.slice(0, showCardNumber)
+      : selectedCards;
   };
 
   return (

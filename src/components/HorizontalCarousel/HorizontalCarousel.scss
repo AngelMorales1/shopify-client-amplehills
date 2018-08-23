@@ -23,6 +23,15 @@
     width: spacing(90);
   }
 
+  &__card {
+    margin: spacing(4);
+    width: spacing(60);
+
+    @media ($medium-up) {
+      width: spacing(75);
+    }
+  }
+
   &__carousel-container {
     overflow: scroll;
 
