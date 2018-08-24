@@ -95,47 +95,6 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
                 (pressItem, i) => {
                   const fields = get(pressItem, 'fields', {});
 
-            return (
-              <div
-                key={get(cardItem, 'sys.id', i)}
-                className={cx(
-                  styles['HorizontalCarousel__card'],
-                  'bg-white p3 flex flex-column justify-center items-center'
-                )}
-              >
-                <Image
-                  className={cx(styles['HorizontalCarousel__logo'])}
-                  src={contentfulImgUtil(
-                    fields.logoImage.fields.file.url,
-                    '200',
-                    'png'
-                  )}
-                  alt={`${fields.title} logo`}
-                />
-                <span
-                  className={cx(
-                    styles['HorizontalCarousel__quote'],
-                    'carter text-peach center py3'
-                  )}
-                >{`"${fields.quote}"`}</span>
-                <Button
-                  className={cx(
-                    styles['HorizontalCarousel__button'],
-                    'uppercase detail'
-                  )}
-                  to={fields.linkUrl}
-                  label="Read about it"
-                  variant="primary-small"
-                  color="peach"
-                />
-              </div>
-            );
-          })}
-          {type === 'blockPressHorizontalCarousel'
-            ? sortCardItems(customPressItems, pressItems).map(
-                (pressItem, i) => {
-                  const fields = get(pressItem, 'fields', {});
-
                   return (
                     <div
                       key={get(pressItem, 'sys.id', i)}

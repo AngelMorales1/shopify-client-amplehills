@@ -41,14 +41,10 @@ const mapStateToProps = (state, props) => {
       'productUI.ourPledgeOverlayIsOpen',
       false
     ),
-<<<<<<< HEAD
     pressItems: get(
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
     )
-=======
-    pressItems: get(state, 'pressItems.pressItems.items', [])
->>>>>>> Change pressCard to pressItems
   };
 };
 

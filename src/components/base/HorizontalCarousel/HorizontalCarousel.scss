@@ -21,26 +21,23 @@
 
   &__title {
     width: spacing(90);
-    text-align: center;
-
-    @media ($medium-up) {
-      text-align: left;
-    }
-  }
-
-  &__carousel-cards-container {
-    overflow: scroll;
-
-    @media ($medium-up) {
-      overflow: visible;
-    }
   }
 
   &__carousel-container {
+    overflow: scroll;
     flex-direction: row;
 
     @media ($medium-up) {
       margin-left: spacing(32);
+      overflow: visible;
+    }
+
+    > .HorizontalCarousel__card:first-child {
+      margin-left: spacing(8);
+    }
+
+    > .HorizontalCarousel__card:last-child {
+      margin-right: spacing(8);
     }
   }
 
