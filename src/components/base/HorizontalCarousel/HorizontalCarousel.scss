@@ -58,6 +58,14 @@
     > .HorizontalCarousel__card:last-child {
       margin-right: spacing(8);
     }
+
+    > .HorizontalCarousel__card:first-child {
+      margin-left: spacing(8);
+    }
+
+    > .HorizontalCarousel__card:last-child {
+      margin-right: spacing(8);
+    }
   }
 
   &__carousel-container--reverse {
