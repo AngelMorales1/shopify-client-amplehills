@@ -2,7 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
-import { getPressData } from 'state/actions/pressActions';
+import { getPressItems } from 'state/actions/pressActions';
 
 import get from 'utils/get';
 
@@ -10,14 +10,14 @@ class GenericPageContainer extends ContainerBase {
   view = import('views/GenericPageView');
 
   model = () => {
-    const { getGenericPage, getPressData } = this.props.actions;
+    const { getGenericPage, getPressItems } = this.props.actions;
     const { path } = this.props.match;
 
-    return Promise.all([getGenericPage(path), getPressData()]).then(
-      ([genericPage, press]) => {
+    return Promise.all([getGenericPage(path), getPressItems()]).then(
+      ([genericPage, pressItems]) => {
         return {
           genericPage: get(genericPage, 'value'),
-          press: get(press, 'value')
+          pressItems: get(pressItems, 'value')
         };
       }
     );
@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         getGenericPage,
-        getPressData
+        getPressItems
       },
       dispatch
     )
