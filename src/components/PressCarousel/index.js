@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
-<<<<<<< HEAD
 import pressItemModel from 'models/pressItemModel';
-=======
-import imageModel from 'models/imageModel';
->>>>>>> Make HorizontalCarousel base component
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
 
 const PressCarousel = ({ block, z, latestPressItems }) => {
-<<<<<<< HEAD
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
@@ -24,22 +19,6 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
     : latestPressItems;
   if (typeof showCardNumber === 'number') {
     selectedPressItems = latestPressItems.slice(0, showCardNumber);
-=======
-  const type = get(
-    block,
-    'sys.contentType.sys.id',
-    'blockPressHorizontalCarousel'
-  );
-  const fields = get(block, 'fields', {});
-  const isDripOn = get(fields, 'drip', false);
-  const customOrder = get(fields, 'customOrder', false);
-  const showCardNumber = get(fields, 'showCardNumber', null);
-  const sortByLatest = get(fields, 'sortByLatest', true);
-  let pressItems = customOrder ? get(fields, 'pressItems') : latestPressItems;
-
-  if (typeof showCardNumber === 'number') {
-    pressItems = pressItems.slice(0, showCardNumber);
->>>>>>> Make HorizontalCarousel base component
   }
 
   return (
@@ -51,15 +30,9 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
         title={get(fields, 'title', '')}
         buttonLink={get(fields, 'buttonLink', '')}
         buttonLabel={get(fields, 'buttonLabel', '')}
-<<<<<<< HEAD
         isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
       >
         {selectedPressItems.map((pressItem, i) => {
-=======
-        isReverseOrder={!customOrder && !sortByLatest ? true : false}
-      >
-        {pressItems.map((pressItem, i) => {
->>>>>>> Make HorizontalCarousel base component
           const fields = get(pressItem, 'fields', {});
 
           return (
@@ -103,7 +76,6 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
   );
 };
 
-<<<<<<< HEAD
 HorizontalCarousel.propTypes = {
   block: PropTypes.shape({
     fields: PropTypes.shape({
@@ -143,92 +115,3 @@ HorizontalCarousel.defaultProps = {
 };
 
 export default PressCarousel;
-=======
-export default PressCarousel;
-
-// HorizontalCarousel.propTypes = {
-//   block: PropTypes.shape({
-//     fields: PropTypes.shape({
-//       buttonLabel: PropTypes.string,
-//       buttonLink: PropTypes.string,
-//       pressItems: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           fields: PropTypes.shape({
-//             linkUrl: PropTypes.string,
-//             logoImage: imageModel.propTypes,
-//             quote: PropTypes.string,
-//             title: PropTypes.string
-//           }),
-//           sys: PropTypes.shape({
-//             id: PropTypes.string
-//           })
-//         })
-//       ),
-//       customOrder: PropTypes.bool,
-//       drip: PropTypes.bool,
-//       sortByLatest: PropTypes.bool,
-//       title: PropTypes.string
-//     }),
-//     sys: PropTypes.shape({
-//       id: PropTypes.string
-//     })
-//   }),
-//   z: PropTypes.number,
-//   press: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       fields: PropTypes.shape({
-//         linkUrl: PropTypes.string,
-//         logoImage: imageModel.propTypes,
-//         quote: PropTypes.string,
-//         title: PropTypes.string
-//       }),
-//       sys: PropTypes.shape({
-//         id: PropTypes.string
-//       })
-//     })
-//   )
-// };
-
-// HorizontalCarousel.defaultProps = {
-//   block: {
-//     fields: {
-//       buttonLabel: '',
-//       buttonLink: '',
-//       pressItems: [
-//         {
-//           fields: {
-//             linkUrl: '',
-//             logoImage: imageModel.default,
-//             quote: '',
-//             title: ''
-//           },
-//           sys: {
-//             id: ''
-//           }
-//         }
-//       ],
-//       customOrder: false,
-//       drip: false,
-//       sortByLatest: true,
-//       title: ''
-//     },
-//     sys: {
-//       id: ''
-//     }
-//   },
-//   z: 0,
-//   press: [
-//     {
-//       fields: {
-//         linkUrl: '',
-//         logoImage: imageModel.default,
-//         quote: '',
-//         title: ''
-//       },
-//       sys: {
-//         id: ''
-//       }
-//     }
-//   ]
-// };
->>>>>>> Make HorizontalCarousel base component
