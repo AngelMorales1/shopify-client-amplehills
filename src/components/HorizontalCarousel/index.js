@@ -18,7 +18,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
   const isDripOn = get(fields, 'drip', false);
   const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
-  const pressItems = get(fields, 'pressItems', []);
+  const customPressItems = get(fields, 'pressItems', []);
   const isSortByLatest = get(fields, 'sortByLatest', true);
 
   const sortCardItems = (customOrderCards, everyCards) => {
