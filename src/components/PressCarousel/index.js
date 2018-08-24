@@ -4,6 +4,7 @@ import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import imageModel from 'models/imageModel';
+import pressItemsModel from 'models/pressItemsModel';
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
@@ -82,88 +83,40 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
 
 export default PressCarousel;
 
-// HorizontalCarousel.propTypes = {
-//   block: PropTypes.shape({
-//     fields: PropTypes.shape({
-//       buttonLabel: PropTypes.string,
-//       buttonLink: PropTypes.string,
-//       pressItems: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           fields: PropTypes.shape({
-//             linkUrl: PropTypes.string,
-//             logoImage: imageModel.propTypes,
-//             quote: PropTypes.string,
-//             title: PropTypes.string
-//           }),
-//           sys: PropTypes.shape({
-//             id: PropTypes.string
-//           })
-//         })
-//       ),
-//       customOrder: PropTypes.bool,
-//       drip: PropTypes.bool,
-//       sortByLatest: PropTypes.bool,
-//       title: PropTypes.string
-//     }),
-//     sys: PropTypes.shape({
-//       id: PropTypes.string
-//     })
-//   }),
-//   z: PropTypes.number,
-//   press: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       fields: PropTypes.shape({
-//         linkUrl: PropTypes.string,
-//         logoImage: imageModel.propTypes,
-//         quote: PropTypes.string,
-//         title: PropTypes.string
-//       }),
-//       sys: PropTypes.shape({
-//         id: PropTypes.string
-//       })
-//     })
-//   )
-// };
+HorizontalCarousel.propTypes = {
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      pressItems: pressItemsModel.propTypes,
+      customOrder: PropTypes.bool,
+      drip: PropTypes.bool,
+      sortByLatest: PropTypes.bool,
+      title: PropTypes.string
+    }),
+    sys: PropTypes.shape({
+      id: PropTypes.string
+    })
+  }),
+  z: PropTypes.number,
+  latestPressItems: pressItemsModel.propTypes
+};
 
-// HorizontalCarousel.defaultProps = {
-//   block: {
-//     fields: {
-//       buttonLabel: '',
-//       buttonLink: '',
-//       pressItems: [
-//         {
-//           fields: {
-//             linkUrl: '',
-//             logoImage: imageModel.default,
-//             quote: '',
-//             title: ''
-//           },
-//           sys: {
-//             id: ''
-//           }
-//         }
-//       ],
-//       customOrder: false,
-//       drip: false,
-//       sortByLatest: true,
-//       title: ''
-//     },
-//     sys: {
-//       id: ''
-//     }
-//   },
-//   z: 0,
-//   press: [
-//     {
-//       fields: {
-//         linkUrl: '',
-//         logoImage: imageModel.default,
-//         quote: '',
-//         title: ''
-//       },
-//       sys: {
-//         id: ''
-//       }
-//     }
-//   ]
-// };
+HorizontalCarousel.defaultProps = {
+  block: {
+    fields: {
+      buttonLabel: '',
+      buttonLink: '',
+      pressItems: pressItemsModel.default,
+      customOrder: false,
+      drip: false,
+      sortByLatest: true,
+      title: ''
+    },
+    sys: {
+      id: ''
+    }
+  },
+  z: 0,
+  latestPressItems: pressItemsModel.default
+};
