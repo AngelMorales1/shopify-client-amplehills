@@ -4,10 +4,17 @@
   &__card {
     border-radius: radius('s');
     margin: spacing(4);
+<<<<<<< HEAD
     width: spacing(65);
 
     @media ($medium-up) {
       width: spacing(75);
+=======
+    min-width: spacing(65);
+
+    @media ($medium-up) {
+      min-width: spacing(75);
+>>>>>>> Make HorizontalCarousel base component
     }
   }
 

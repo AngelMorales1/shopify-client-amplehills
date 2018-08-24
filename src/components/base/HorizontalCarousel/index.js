@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
 import cx from 'classnames';
 
 import styles from './HorizontalCarousel.scss';
 import { Button } from 'components/base';
+=======
+import get from 'utils/get';
+import cx from 'classnames';
+import imageModel from 'models/imageModel';
+
+import styles from './HorizontalCarousel.scss';
+import { Image, Button } from 'components/base';
+>>>>>>> Make HorizontalCarousel base component
 
 const HorizontalCarousel = ({
   className,
@@ -38,6 +47,7 @@ const HorizontalCarousel = ({
           color="peach"
         />
       </div>
+<<<<<<< HEAD
       <div className="px3">
         <div
           className={cx(
@@ -52,11 +62,30 @@ const HorizontalCarousel = ({
         >
           {children}
         </div>
+=======
+      <div
+        className={cx(
+          styles['HorizontalCarousel__carousel-container'],
+          {
+            [styles[
+              'HorizontalCarousel__carousel-container--reverse'
+            ]]: isReverseOrder
+          },
+          'flex my4'
+        )}
+      >
+        {children}
+>>>>>>> Make HorizontalCarousel base component
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+export default HorizontalCarousel;
+
+>>>>>>> Make HorizontalCarousel base component
 HorizontalCarousel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -76,5 +105,8 @@ HorizontalCarousel.defaultProps = {
   buttonLink: '',
   isReverseOrder: false
 };
+<<<<<<< HEAD
 
 export default HorizontalCarousel;
+=======
+>>>>>>> Make HorizontalCarousel base component
