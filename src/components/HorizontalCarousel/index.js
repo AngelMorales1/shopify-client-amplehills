@@ -31,7 +31,6 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     }
   };
 
-
   return (
     <div
       style={{ zIndex: z }}
