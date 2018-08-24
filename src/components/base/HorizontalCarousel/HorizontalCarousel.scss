@@ -25,6 +25,7 @@
 
   &__carousel-container {
     overflow: scroll;
+    flex-direction: row;
 
     @media ($medium-up) {
       margin-left: spacing(32);
@@ -40,35 +41,7 @@
     }
   }
 
-  &__card {
-    border-radius: radius('s');
-    margin: spacing(4);
-    min-width: spacing(65);
-
-    @media ($medium-up) {
-      min-width: spacing(75);
-    }
-  }
-
-  &__logo {
-    width: spacing(21);
-    height: spacing(10);
-    object-fit: contain;
-  }
-
-  &__quote {
-    font-size: $font-5;
-    margin-bottom: spacing(6);
-
-    @media ($medium-up) {
-      font-size: $font-6;
-      margin-bottom: spacing(16);
-    }
-  }
-
-  &__button {
-    > span {
-      margin-bottom: 1px;
-    }
+  &__carousel-container--reverse {
+    flex-direction: row-reverse;
   }
 }

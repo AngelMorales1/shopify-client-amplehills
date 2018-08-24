@@ -30,7 +30,8 @@ const mapStateToProps = state => {
       state,
       'genericPage.genericPage.items[0].fields.contentBlocks',
       []
-    )
+    ),
+    latestPressItems: get(state, 'press.pressItems.items', [])
   };
 };
 

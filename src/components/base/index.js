@@ -7,6 +7,7 @@ import Dropdown from './Dropdown';
 import FormFlash from './FormFlash';
 import Modal from './Modal';
 import Carousel from './Carousel';
+import HorizontalCarousel from './HorizontalCarousel';
 
 export {
   Button,
@@ -17,5 +18,6 @@ export {
   Dropdown,
   FormFlash,
   Modal,
-  Carousel
+  Carousel,
+  HorizontalCarousel
 };

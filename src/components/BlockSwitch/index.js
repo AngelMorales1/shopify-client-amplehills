@@ -9,7 +9,7 @@ import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 import ComicStrip from 'components/ComicStrip';
 import MarkdownBlock from 'components/MarkdownBlock';
 import GenericHero from 'components/GenericHero';
-import HorizontalCarousel from 'components/HorizontalCarousel';
+import PressCarousel from 'components/PressCarousel';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -31,8 +31,7 @@ const BlockSwitch = props => {
     case 'blockGenericHero':
       return <GenericHero {...props} />;
     case 'blockPressHorizontalCarousel':
-    case 'blockFlavorHorizontalCarousel':
-      return <HorizontalCarousel {...props} />;
+      return <PressCarousel {...props} />;
     default:
       return null;
   }
