@@ -6,10 +6,34 @@ import cx from 'classnames';
 import styles from './HorizontalCarousel.scss';
 import { Image, Button } from 'components/base';
 
-const HorizontalCarousel = ({ block, z }) => {
+const HorizontalCarousel = ({ block, z, pressItems }) => {
+  const type = get(
+    block,
+    'sys.contentType.sys.id',
+    'blockPressHorizontalCarousel'
+  );
   const fields = get(block, 'fields', {});
   const cardItems = get(fields, 'cardItems', []);
   const isDripOn = get(fields, 'drip', false);
+  const customOrder = get(fields, 'customOrder', false);
+  const showCardNumber = get(fields, 'showCardNumber', null);
+  const customPressItems = get(fields, 'pressItems', []);
+  const isSortByLatest = get(fields, 'sortByLatest', true);
+
+  const sortCardItems = (customOrderCards, everyCards) => {
+    let selectedCards = [];
+
+    if (customOrder) {
+      selectedCards = customOrderCards;
+    } else {
+      selectedCards = everyCards.sort();
+
+  const getCardItems = () => {
+    switch (type) {
+      case 'blockPressHorizontalCarousel':
+        return customOrder ? get(fields, 'cardItems', []) : [];
+    }
+  };
 
   return (
     <div
