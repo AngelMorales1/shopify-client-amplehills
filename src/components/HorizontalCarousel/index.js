@@ -91,8 +91,9 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
           )}
         >
           {type === 'blockPressHorizontalCarousel'
-            ? sortCardItems(pressItems, press).map((pressItem, i) => {
-                const fields = get(pressItem, 'fields', {});
+            ? sortCardItems(customPressItems, pressItems).map(
+                (pressItem, i) => {
+                  const fields = get(pressItem, 'fields', {});
 
             return (
               <div

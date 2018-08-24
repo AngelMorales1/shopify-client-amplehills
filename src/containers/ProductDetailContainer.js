@@ -10,7 +10,7 @@ import {
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
-import { getPressData } from 'state/actions/pressActions';
+import { getPressItems } from 'state/actions/pressActions';
 
 import get from 'utils/get';
 
@@ -41,10 +41,14 @@ const mapStateToProps = (state, props) => {
       'productUI.ourPledgeOverlayIsOpen',
       false
     ),
+<<<<<<< HEAD
     pressItems: get(
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
     )
+=======
+    pressItems: get(state, 'pressItems.pressItems.items', [])
+>>>>>>> Change pressCard to pressItems
   };
 };
 
@@ -55,7 +59,7 @@ const mapDispatchToProps = dispatch => {
         addLineItems,
         openOurPledge,
         closeOurPledge,
-        getPressData
+        getPressItems
       },
       dispatch
     )

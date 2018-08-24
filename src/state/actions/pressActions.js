@@ -1,11 +1,11 @@
 import Data from 'lib/Data';
 
-export const GET_PRESS_DATA = 'GET_PRESS_DATA';
-export const getPressData = payload => dispatch => {
+export const GET_PRESS_ITEMS = 'GET_PRESS_ITEMS';
+export const getPressItems = payload => dispatch => {
   return dispatch({
-    type: GET_PRESS_DATA,
+    type: GET_PRESS_ITEMS,
     payload: Data.getEntries({
-      content_type: 'pressCard'
+      content_type: 'pressItem'
     })
   });
 };
