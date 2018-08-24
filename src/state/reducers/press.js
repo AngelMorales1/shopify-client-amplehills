@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case `${GET_PRESS_ITEMS}_FULFILLED`:
       return {
         ...state,
-        press: action.payload
+        pressItems: action.payload
       };
     default:
       return state;

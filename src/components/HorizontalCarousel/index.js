@@ -8,7 +8,7 @@ import imageModel from 'models/imageModel';
 import styles from './HorizontalCarousel.scss';
 import { Image, Button } from 'components/base';
 
-const HorizontalCarousel = ({ block, z, press }) => {
+const HorizontalCarousel = ({ block, z, pressItems }) => {
   const type = get(
     block,
     'sys.contentType.sys.id',
@@ -18,7 +18,7 @@ const HorizontalCarousel = ({ block, z, press }) => {
   const isDripOn = get(fields, 'drip', false);
   const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
-  const pressItems = get(fields, 'pressItems', []);
+  const customPressItems = get(fields, 'pressItems', []);
   const isSortByLatest = get(fields, 'sortByLatest', true);
 
   const sortCardItems = (customOrderCards, everyCards) => {
@@ -76,45 +76,47 @@ const HorizontalCarousel = ({ block, z, press }) => {
           )}
         >
           {type === 'blockPressHorizontalCarousel'
-            ? sortCardItems(pressItems, press).map((pressItem, i) => {
-                const fields = get(pressItem, 'fields', {});
+            ? sortCardItems(customPressItems, pressItems).map(
+                (pressItem, i) => {
+                  const fields = get(pressItem, 'fields', {});
 
-                return (
-                  <div
-                    key={get(pressItem, 'sys.id', '') + i}
-                    className={cx(
-                      styles['HorizontalCarousel__card'],
-                      'bg-white p3 flex flex-column justify-center items-center'
-                    )}
-                  >
-                    <Image
-                      className={cx(styles['HorizontalCarousel__logo'])}
-                      src={contentfulImgUtil(
-                        get(fields, 'logoImage.fields.file.url', ''),
-                        '200',
-                        'png'
-                      )}
-                      alt={`${fields.title} logo`}
-                    />
-                    <span
+                  return (
+                    <div
+                      key={get(pressItem, 'sys.id', '') + i}
                       className={cx(
-                        styles['HorizontalCarousel__quote'],
-                        'carter text-peach center py3'
+                        styles['HorizontalCarousel__card'],
+                        'bg-white p3 flex flex-column justify-center items-center'
                       )}
-                    >{`"${fields.quote}"`}</span>
-                    <Button
-                      className={cx(
-                        styles['HorizontalCarousel__button'],
-                        'uppercase detail'
-                      )}
-                      to={fields.linkUrl}
-                      label="Read about it"
-                      variant="primary-small"
-                      color="peach"
-                    />
-                  </div>
-                );
-              })
+                    >
+                      <Image
+                        className={cx(styles['HorizontalCarousel__logo'])}
+                        src={contentfulImgUtil(
+                          get(fields, 'logoImage.fields.file.url', ''),
+                          '200',
+                          'png'
+                        )}
+                        alt={`${fields.title} logo`}
+                      />
+                      <span
+                        className={cx(
+                          styles['HorizontalCarousel__quote'],
+                          'carter text-peach center py3'
+                        )}
+                      >{`"${fields.quote}"`}</span>
+                      <Button
+                        className={cx(
+                          styles['HorizontalCarousel__button'],
+                          'uppercase detail'
+                        )}
+                        to={fields.linkUrl}
+                        label="Read about it"
+                        variant="primary-small"
+                        color="peach"
+                      />
+                    </div>
+                  );
+                }
+              )
             : null}
         </div>
       </div>
