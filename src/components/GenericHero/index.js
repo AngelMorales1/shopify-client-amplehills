@@ -125,3 +125,27 @@ GenericHero.defaultProps = {
 };
 
 export default GenericHero;
+
+GenericHero.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      color: PropTypes.string,
+      drip: PropTypes.bool,
+      image1: imageModel.propTypes,
+      title: PropTypes.string
+    })
+  })
+};
+
+GenericHero.defaultProps = {
+  z: 1,
+  block: {
+    fields: PropTypes.shape({
+      color: 'blue',
+      drip: false,
+      image1: null,
+      title: ''
+    })
+  }
+};
