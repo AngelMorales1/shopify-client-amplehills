@@ -3,5 +3,5 @@ import get from 'utils/get';
 
 export default createSelector(
   state => get(state, 'press', {}),
-  pressItems => get(pressItems, 'pressItems.items', {})
+  pressItems => get(pressItems, 'pressItems.items', [])
 );
