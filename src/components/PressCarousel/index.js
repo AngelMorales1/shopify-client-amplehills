@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
-import imageModel from 'models/imageModel';
 import pressItemsModel from 'models/pressItemsModel';
+import pressItems from 'state/selectors/pressItems';
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
@@ -17,13 +17,14 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
   );
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
-  const customOrder = get(fields, 'customOrder', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
-  let pressItems = customOrder ? get(fields, 'pressItems') : latestPressItems;
-
+  const isCustomOrder = !get(fields, 'pressItems', []).length;
+  let selectedPressItems = isCustomOrder
+    ? get(fields, 'pressItems')
+    : latestPressItems;
   if (typeof showCardNumber === 'number') {
-    pressItems = pressItems.slice(0, showCardNumber);
+    selectedPressItems = pressItems.slice(0, showCardNumber);
   }
 
   return (
@@ -35,9 +36,9 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
         title={get(fields, 'title', '')}
         buttonLink={get(fields, 'buttonLink', '')}
         buttonLabel={get(fields, 'buttonLabel', '')}
-        isReverseOrder={!customOrder && !sortByLatest ? true : false}
+        isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
       >
-        {pressItems.map((pressItem, i) => {
+        {selectedPressItems.map((pressItem, i) => {
           const fields = get(pressItem, 'fields', {});
 
           return (

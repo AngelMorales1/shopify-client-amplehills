@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
 import { getPressItems } from 'state/actions/pressActions';
+import pressItems from 'state/selectors/pressItems';
 
 import get from 'utils/get';
 
@@ -17,7 +18,7 @@ class GenericPageContainer extends ContainerBase {
       ([genericPage, pressItems]) => {
         return {
           genericPage: get(genericPage, 'value'),
-          pressItems: get(pressItems, 'value')
+          latestPressItems: get(pressItems, 'value')
         };
       }
     );
@@ -31,7 +32,7 @@ const mapStateToProps = state => {
       'genericPage.genericPage.items[0].fields.contentBlocks',
       []
     ),
-    latestPressItems: get(state, 'press.pressItems.items', [])
+    latestPressItems: pressItems(state)
   };
 };
 
