@@ -11,6 +11,7 @@ import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
 import { getPressItems } from 'state/actions/pressActions';
+import pressItems from 'state/selectors/pressItems';
 
 import get from 'utils/get';
 
