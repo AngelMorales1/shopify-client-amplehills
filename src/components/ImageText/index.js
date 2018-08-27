@@ -57,6 +57,7 @@ const ImageText = ({ block, z, setRef }) => {
         className={cx(
           'flex container-width py4',
           styles['ImageText__container'],
+          { [styles['ImageText__container--full-image']]: isFullImage },
           {
             [styles['ImageText__container--full-image']]: isFullImage,
             [styles['ImageText__container--reverse']]: isReverseArrangement,

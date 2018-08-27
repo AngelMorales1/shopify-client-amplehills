@@ -39,16 +39,6 @@
     @extend .bg-bees-wax;
   }
 
-  &--blue {
-    @extend .bg-sky-blue;
-    @extend .text-madison-blue;
-  }
-
-  &--peach {
-    @extend .bg-light-peach;
-    @extend .text-madison-blue;
-  }
-
   &__container {
     flex-direction: column;
     justify-content: space-between;
@@ -62,10 +52,6 @@
     .ImageText__image {
       min-width: spacing(65);
       margin-top: spacing(12);
-
-      @media ($small-down) {
-        transform: translate(0, 0) !important;
-      }
 
       @media ($small-down) {
         transform: translate(0, 0) !important;
