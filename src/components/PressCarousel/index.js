@@ -4,27 +4,21 @@ import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import pressItemsModel from 'models/pressItemsModel';
-import pressItems from 'state/selectors/pressItems';
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
 
 const PressCarousel = ({ block, z, latestPressItems }) => {
-  const type = get(
-    block,
-    'sys.contentType.sys.id',
-    'blockPressHorizontalCarousel'
-  );
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
-  const isCustomOrder = !get(fields, 'pressItems', []).length;
+  const isCustomOrder = !!get(fields, 'pressItems', []).length;
   let selectedPressItems = isCustomOrder
     ? get(fields, 'pressItems')
     : latestPressItems;
   if (typeof showCardNumber === 'number') {
-    selectedPressItems = pressItems.slice(0, showCardNumber);
+    selectedPressItems = latestPressItems.slice(0, showCardNumber);
   }
 
   return (
