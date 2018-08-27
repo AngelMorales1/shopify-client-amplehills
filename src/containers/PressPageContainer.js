@@ -2,6 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getPressItems } from 'state/actions/pressActions';
+import pressItems from 'state/selectors/pressItems';
 
 import get from 'utils/get';
 
@@ -17,7 +18,7 @@ class PressPageContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    pressCards: get(state, 'press.press.items', [])
+    pressItems: pressItems(state)
   };
 };
 
