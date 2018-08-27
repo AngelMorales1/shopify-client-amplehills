@@ -1,6 +1,11 @@
 @import 'settings', 'typography';
 
 .ImageText {
+  &--white {
+    @extend .bg-white;
+    @extend .text-madison-blue;
+  }
+
   &--pink {
     @extend .bg-light-pink;
     @extend .text-madison-blue;
@@ -90,5 +95,46 @@
     ul > li::before {
       content: '- ';
     }
+  }
+
+  &__container--full-image {
+    margin: 0;
+
+    @media ($medium-up) {
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ImageText__text-content {
+      padding: 0 spacing(8);
+
+      @media ($medium-up) {
+        order: 1;
+        margin: 0;
+        padding: 0 spacing(16) 0 0;
+      }
+    }
+
+    .ImageText__text-content--reverse {
+      @media ($medium-up) {
+        padding: 0 0 0 spacing(16);
+      }
+    }
+  }
+}
+
+.ImageText__full-image {
+  flex-direction: column-reverse;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+}
+
+.ImageText__full-image--reverse {
+  @media ($medium-up) {
+    flex-direction: row-reverse;
   }
 }
