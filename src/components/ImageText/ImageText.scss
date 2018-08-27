@@ -44,6 +44,11 @@
     @extend .text-madison-blue;
   }
 
+  &--peach {
+    @extend .bg-light-peach;
+    @extend .text-madison-blue;
+  }
+
   &__container {
     flex-direction: column;
     justify-content: space-between;
