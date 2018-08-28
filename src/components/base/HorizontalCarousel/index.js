@@ -38,18 +38,20 @@ const HorizontalCarousel = ({
           color="peach"
         />
       </div>
-      <div
-        className={cx(
-          styles['HorizontalCarousel__carousel-container'],
-          {
-            [styles[
-              'HorizontalCarousel__carousel-container--reverse'
-            ]]: isReverseOrder
-          },
-          'flex my4'
-        )}
-      >
-        {children}
+      <div className="px3">
+        <div
+          className={cx(
+            styles['HorizontalCarousel__carousel-container'],
+            {
+              [styles[
+                'HorizontalCarousel__carousel-container--reverse'
+              ]]: isReverseOrder
+            },
+            'flex my4'
+          )}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

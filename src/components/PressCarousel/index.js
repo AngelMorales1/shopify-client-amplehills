@@ -76,8 +76,6 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
   );
 };
 
-export default PressCarousel;
-
 HorizontalCarousel.propTypes = {
   block: PropTypes.shape({
     fields: PropTypes.shape({
@@ -115,3 +113,5 @@ HorizontalCarousel.defaultProps = {
   z: 0,
   latestPressItems: [pressItemModel.default]
 };
+
+export default PressCarousel;

@@ -31,14 +31,6 @@
       margin-left: spacing(32);
       overflow: visible;
     }
-
-    > div:first-child {
-      margin-left: spacing(8);
-    }
-
-    > div:last-child {
-      margin-right: spacing(8);
-    }
   }
 
   &__carousel-container--reverse {
