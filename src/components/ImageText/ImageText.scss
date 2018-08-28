@@ -19,6 +19,18 @@
     @extend .bg-light-peach;
   }
 
+  &--yellow {
+    @extend .bg-marigold-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-bees-wax;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
   &__container {
     flex-direction: column;
     justify-content: space-between;
