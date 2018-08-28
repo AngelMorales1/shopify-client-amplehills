@@ -65,24 +65,6 @@
     }
   }
 
-  &__container--multiple-image {
-    flex-direction: column-reverse;
-
-    @media ($medium-up) {
-      flex-direction: inherit;
-    }
-
-    .ImageText__image {
-      height: spacing(100);
-      margin-bottom: spacing(16);
-
-      @media ($medium-up) {
-        height: 100%;
-        margin-bottom: 0;
-      }
-    }
-  }
-
   &__text {
     p {
       margin-bottom: spacing(8);
