@@ -83,7 +83,7 @@ HorizontalCarousel.propTypes = {
     fields: PropTypes.shape({
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      pressItems: pressItemModel.propTypes,
+      pressItems: PropTypes.arrayOf(pressItemModel.propTypes),
       customOrder: PropTypes.bool,
       drip: PropTypes.bool,
       sortByLatest: PropTypes.bool,
@@ -94,7 +94,7 @@ HorizontalCarousel.propTypes = {
     })
   }),
   z: PropTypes.number,
-  latestPressItems: pressItemModel.propTypes
+  latestPressItems: PropTypes.arrayOf(pressItemModel.propTypes)
 };
 
 HorizontalCarousel.defaultProps = {
@@ -102,7 +102,7 @@ HorizontalCarousel.defaultProps = {
     fields: {
       buttonLabel: '',
       buttonLink: '',
-      pressItems: pressItemModel.default,
+      pressItems: [pressItemModel.default],
       customOrder: false,
       drip: false,
       sortByLatest: true,
@@ -113,5 +113,5 @@ HorizontalCarousel.defaultProps = {
     }
   },
   z: 0,
-  latestPressItems: pressItemModel.default
+  latestPressItems: [pressItemModel.default]
 };
