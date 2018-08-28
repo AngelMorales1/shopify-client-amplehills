@@ -1,7 +1,23 @@
 @import 'settings', 'typography';
 
 .MarkdownBlock {
-  margin-top: spacing(16);
+  @extend .text-madison-blue;
+
+  &--white {
+    @extend .bg-white;
+  }
+
+  &--yellow {
+    @extend .bg-marigold-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-off-yellow;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
 
   > h1 {
     @extend .title;
@@ -52,6 +68,22 @@
     > p {
       width: 100%;
       text-align: center;
+    }
+  }
+}
+
+.MarkdownBlock--title-left {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+
+  .MarkdownBlock__title-container {
+    padding: spacing(16) 0 0;
+
+    @media ($medium-up) {
+      padding: spacing(16) 0;
     }
   }
 }
