@@ -100,7 +100,7 @@ const ImageText = ({ block, z }) => {
                 'z-sub-nav mt2 mx-auto'
               )}
               style={{
-                transform: `translate(${positionX}%, ${position}%)`
+                transform: `translate(${positionX}%, ${positionY}%)`
               }}
               className={cx(styles['ImageText__text'], 'block-subheadline')}
             />
@@ -111,7 +111,7 @@ const ImageText = ({ block, z }) => {
               'z-sub-nav mt2 mx-auto'
             )}
             style={{
-              transform: `translate(${positionX}%, ${position}%)`
+              transform: `translate(${positionX}%, ${positionY}%)`
             }}
             className={cx(styles['ImageText__text'], 'block-subheadline')}
           />

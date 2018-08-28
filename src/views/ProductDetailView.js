@@ -46,7 +46,6 @@ class ProductDetailView extends Component {
                 product={product}
                 ourPledge={ourPledge}
                 z={blocks.length - i}
-                latestPressItems={latestPressItems}
                 {...this.props}
               />
             ))}
