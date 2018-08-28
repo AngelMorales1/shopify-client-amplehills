@@ -1,24 +1,22 @@
 @import 'settings', 'typography';
 
 .ImageText {
+  @extend .text-madison-blue;
+
   &--white {
     @extend .bg-white;
-    @extend .text-madison-blue;
   }
 
   &--pink {
     @extend .bg-light-pink;
-    @extend .text-madison-blue;
   }
 
   &--blue {
     @extend .bg-sky-blue;
-    @extend .text-madison-blue;
   }
 
   &--peach {
     @extend .bg-light-peach;
-    @extend .text-madison-blue;
   }
 
   &__container {
