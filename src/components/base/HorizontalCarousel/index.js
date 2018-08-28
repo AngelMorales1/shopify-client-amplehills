@@ -76,4 +76,5 @@ HorizontalCarousel.defaultProps = {
   buttonLink: '',
   isReverseOrder: false
 };
+
 export default HorizontalCarousel;
