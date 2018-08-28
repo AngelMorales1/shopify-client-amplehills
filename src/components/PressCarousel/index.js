@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
-import pressItemsModel from 'models/pressItemsModel';
+import pressItemModel from 'models/pressItemModel';
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
@@ -83,7 +83,7 @@ HorizontalCarousel.propTypes = {
     fields: PropTypes.shape({
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      pressItems: pressItemsModel.propTypes,
+      pressItems: pressItemModel.propTypes,
       customOrder: PropTypes.bool,
       drip: PropTypes.bool,
       sortByLatest: PropTypes.bool,
@@ -94,7 +94,7 @@ HorizontalCarousel.propTypes = {
     })
   }),
   z: PropTypes.number,
-  latestPressItems: pressItemsModel.propTypes
+  latestPressItems: pressItemModel.propTypes
 };
 
 HorizontalCarousel.defaultProps = {
@@ -102,7 +102,7 @@ HorizontalCarousel.defaultProps = {
     fields: {
       buttonLabel: '',
       buttonLink: '',
-      pressItems: pressItemsModel.default,
+      pressItems: pressItemModel.default,
       customOrder: false,
       drip: false,
       sortByLatest: true,
@@ -113,5 +113,5 @@ HorizontalCarousel.defaultProps = {
     }
   },
   z: 0,
-  latestPressItems: pressItemsModel.default
+  latestPressItems: pressItemModel.default
 };
