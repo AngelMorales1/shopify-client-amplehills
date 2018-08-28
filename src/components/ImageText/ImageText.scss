@@ -127,6 +127,10 @@
   }
 
   &__text {
+    p {
+      margin-bottom: spacing(8);
+    }
+
     h2 {
       @extend .carter;
       font-size: $font-6;
