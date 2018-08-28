@@ -5,7 +5,7 @@ import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 
-import styles from './GenericPage.scss';
+import styles from './MarkdownBlock.scss';
 
 const MarkdownBlock = props => {
   const { z, block } = props;
