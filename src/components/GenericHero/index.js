@@ -1,8 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 
+import imageModel from 'models/imageModel';
 import styles from './GenericHero.scss';
 import { Image } from 'components/base';
 
@@ -12,6 +14,9 @@ const GenericHero = ({ block, z }) => {
   const image1 = get(fields, 'image1', null);
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `GenericHero--${get(fields, 'color', 'blue')}`;
+  const text = get(fields, 'text', '');
+  const imageRight = get(fields, 'imageRight', false);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
   const classes = cx(
     styles[colorClass],
     {
@@ -23,22 +28,88 @@ const GenericHero = ({ block, z }) => {
 
   return (
     <div style={{ zIndex: z }} className={classes}>
-      <div className="transition-slide-up container-width mx-auto pt4 pb2 px2 center">
-        <p className="block-headline pt3">{title}</p>
-        {image1 ? (
-          <Image
-            className={cx(styles['GenericHero__image'], 'col-8 md-col-6 mt4')}
-            alt={`${title} image`}
-            src={contentfulImgUtil(
-              get(image1, 'fields.file.url', ''),
-              '1400',
-              'png'
+      <div
+        className={cx(
+          styles['GenericHero__content-container'],
+          'flex justify-center',
+          {
+            'justify-between': imageRight,
+            [styles['GenericHero__content-container--reverse']]:
+              imageRight && isReverseArrangement
+          }
+        )}
+      >
+        <div className="col-12 md-col-6 flex justify-center">
+          <div
+            className={cx(
+              {
+                [styles['GenericHero__text-container--image-right']]: imageRight
+              },
+              'transition-slide-up py4 px2 col-10 md-col-8 center'
             )}
-          />
+          >
+            <p className="block-headline pb3">{title}</p>
+            {text ? (
+              <div className="block-subheadline">{text}</div>
+            ) : (
+              <Image
+                className="w100"
+                alt={`${title} image`}
+                src={contentfulImgUtil(
+                  get(image1, 'fields.file.url', ''),
+                  '1400',
+                  'png'
+                )}
+              />
+            )}
+          </div>
+        </div>
+        {imageRight ? (
+          <div className="col-12 md-col-6 flex flex-row items-center justify-center">
+            <Image
+              className="col-10 my4"
+              alt={`${title} image`}
+              src={contentfulImgUtil(
+                get(image1, 'fields.file.url', ''),
+                '1400',
+                'png'
+              )}
+            />
+          </div>
         ) : null}
       </div>
     </div>
   );
+};
+
+GenericHero.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      color: PropTypes.string,
+      drip: PropTypes.bool,
+      image1: imageModel.propTypes,
+      title: PropTypes.string,
+      text: PropTypes.string,
+      buttonLink: PropTypes.string,
+      buttonLabel: PropTypes.string
+    })
+  })
+};
+
+GenericHero.defaultProps = {
+  z: 1,
+  block: {
+    fields: PropTypes.shape({
+      color: 'blue',
+      drip: false,
+      image1: null,
+      title: '',
+      text: '',
+      buttonLink: '',
+      buttonLabel: ''
+    })
+  }
 };
 
 export default GenericHero;
