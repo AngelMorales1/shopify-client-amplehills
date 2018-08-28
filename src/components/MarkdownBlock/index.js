@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import marked from 'marked';
 
 import cx from 'classnames';
@@ -47,6 +48,32 @@ const MarkdownBlock = props => {
       />
     </div>
   );
+};
+
+MarkdownBlock.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      backgroudColor: PropTypes.string,
+      content: PropTypes.string,
+      title: PropTypes.string,
+      titleLeft: PropTypes.bool,
+      drip: PropTypes.bool
+    })
+  })
+};
+
+MarkdownBlock.defaultProps = {
+  z: 0,
+  block: {
+    fields: {
+      backgroudColor: 'white',
+      content: '',
+      title: '',
+      titleLeft: false,
+      drip: false
+    }
+  }
 };
 
 export default MarkdownBlock;
