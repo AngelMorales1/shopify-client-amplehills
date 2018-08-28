@@ -57,8 +57,6 @@ const HorizontalCarousel = ({
   );
 };
 
-export default HorizontalCarousel;
-
 HorizontalCarousel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -78,3 +76,5 @@ HorizontalCarousel.defaultProps = {
   buttonLink: '',
   isReverseOrder: false
 };
+
+export default HorizontalCarousel;
