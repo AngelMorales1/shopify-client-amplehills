@@ -1,4 +1,4 @@
-@import 'settings', 'typography', 'utils';
+@import 'settings', 'typography';
 
 .MarkdownBlock {
   @extend .text-madison-blue;
@@ -19,34 +19,71 @@
     @extend .bg-light-pink;
   }
 
-  &--title-left {
-    flex-direction: column;
+  > h1 {
+    @extend .title;
+    margin-bottom: spacing(4);
+  }
 
-    @media ($medium-up) {
-      flex-direction: row;
-      padding: 0 spacing(20) 0 0;
+  > h2 {
+    @extend .block-headline;
+    margin-bottom: spacing(4);
+  }
+
+  > h3 {
+    @extend .block-subheadline;
+    @extend .bold;
+    margin-bottom: spacing(2);
+  }
+
+  > p {
+    @extend .block-subheadline;
+    margin-bottom: spacing(8);
+
+    > a {
+      text-decoration: none;
+      border-bottom: spacing(0.5) solid color('peach');
     }
 
-    .MarkdownBlock__title-container {
-      padding: spacing(16) 0 0;
+    > strong {
+      @extend .bold;
+    }
 
-      @media ($medium-up) {
-        padding: spacing(16) 0;
-      }
+    > img {
+      width: 100%;
     }
   }
 
-  &__content-container--two-column {
-    display: flex;
-    flex-direction: column;
+  ol,
+  ul {
+    margin: spacing(10);
+
+    > li {
+      margin: spacing(3) 0;
+    }
+  }
+
+  blockquote {
+    width: 100%;
+
+    > p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.MarkdownBlock--title-left {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+
+  .MarkdownBlock__title-container {
+    padding: spacing(16) 0 0;
 
     @media ($medium-up) {
-      flex-direction: row;
-      justify-content: space-between;
-
-      > .MarkdownBlock__content {
-        margin: 0 spacing(12);
-      }
+      padding: spacing(16) 0;
     }
   }
 }
