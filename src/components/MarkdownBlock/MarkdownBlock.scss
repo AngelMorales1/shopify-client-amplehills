@@ -19,90 +19,93 @@
     @extend .bg-light-pink;
   }
 
-  > h1 {
-    @extend .title;
-    margin-bottom: spacing(4);
-  }
-
-  > h2 {
-    @extend .block-headline;
-    margin-bottom: spacing(4);
-  }
-
-  > h3 {
-    @extend .block-subheadline;
-    @extend .bold;
-    margin-bottom: spacing(2);
-  }
-
-  > p {
-    @extend .block-subheadline;
-    margin-bottom: spacing(8);
-
-    > a {
-      text-decoration: none;
-      border-bottom: spacing(0.5) solid color('peach');
-    }
-
-    > strong {
-      @extend .bold;
-    }
-
-    > img {
-      width: 100%;
-    }
-  }
-
-  ol,
-  ul {
-    margin: spacing(10);
-
-    > li {
-      margin: spacing(2) 0;
-    }
-  }
-
-  ul {
-    > li {
-      position: relative;
-    }
-    > li::before {
-      @extend .circle;
-
-      background-color: color('peach');
-      content: ' ';
-      display: block;
-      position: absolute;
-      left: spacing(-6);
-      top: calc(50% - #{6px});
-      margin-bottom: 2px;
-      width: 6px;
-      height: 6px;
-    }
-  }
-
-  blockquote {
-    width: 100%;
-
-    > p {
-      width: 100%;
-      text-align: center;
-    }
-  }
-}
-
-.MarkdownBlock--title-left {
-  flex-direction: column;
-
-  @media ($medium-up) {
-    flex-direction: row;
-  }
-
-  .MarkdownBlock__title-container {
-    padding: spacing(16) 0 0;
+  &--title-left {
+    flex-direction: column;
 
     @media ($medium-up) {
-      padding: spacing(16) 0;
+      flex-direction: row;
+      padding: 0 spacing(20) 0 0;
+    }
+
+    .MarkdownBlock__title-container {
+      padding: spacing(16) 0 0;
+
+      @media ($medium-up) {
+        padding: spacing(16) 0;
+      }
+    }
+  }
+
+  &__content {
+    > h1 {
+      @extend .title;
+      margin-bottom: spacing(4);
+    }
+
+    > h2 {
+      @extend .block-headline;
+      margin-bottom: spacing(4);
+    }
+
+    > h3 {
+      @extend .block-subheadline;
+      @extend .bold;
+      margin-bottom: spacing(2);
+    }
+
+    > p {
+      @extend .block-subheadline;
+      margin-bottom: spacing(8);
+
+      > a {
+        text-decoration: none;
+        border-bottom: spacing(0.5) solid color('peach');
+      }
+
+      > strong {
+        @extend .bold;
+      }
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    ol,
+    ul {
+      margin: spacing(10);
+
+      > li {
+        margin: spacing(2) 0;
+      }
+    }
+
+    ul {
+      > li {
+        position: relative;
+      }
+      > li::before {
+        @extend .circle;
+
+        background-color: color('peach');
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: spacing(-6);
+        top: calc(50% - #{6px});
+        margin-bottom: 2px;
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    blockquote {
+      width: 100%;
+
+      > p {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }
