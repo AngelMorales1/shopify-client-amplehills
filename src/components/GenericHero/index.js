@@ -4,7 +4,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 
 import styles from './GenericHero.scss';
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 
 const GenericHero = ({ block, z }) => {
   const fields = get(block, 'fields', {});
@@ -12,6 +12,12 @@ const GenericHero = ({ block, z }) => {
   const image1 = get(fields, 'image1', null);
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `GenericHero--${get(fields, 'color', 'blue')}`;
+  const text = get(fields, 'text', '');
+  const imageRight = get(fields, 'imageRight', false);
+  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
+  const buttonLabel = get(fields, 'buttonLabel', '');
+  const buttonLink = get(fields, 'buttonLink', '');
+  const blockHasButton = !!buttonLabel && !!buttonLink;
   const classes = cx(
     styles[colorClass],
     {
