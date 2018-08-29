@@ -8,10 +8,6 @@ import { Image, Button, TextField, FormFlash } from 'components/base';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 class FooterNewsletter extends Component {
-  componentDidMount() {
-    if (this.routeOmitsNewsletter()) return null;
-  }
-
   state = {
     emailAddress: ''
   };
@@ -21,6 +17,8 @@ class FooterNewsletter extends Component {
   };
 
   render() {
+    if (this.routeOmitsNewsletter()) return null;
+
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
     return (
