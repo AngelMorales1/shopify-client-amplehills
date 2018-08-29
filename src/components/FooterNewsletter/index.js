@@ -20,8 +20,6 @@ class FooterNewsletter extends Component {
     return RoutesWithoutNewsletter.includes(this.props.pathname);
   };
 
-  resetForm = () => this.setState({ emailAddress: '' });
-
   render() {
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
