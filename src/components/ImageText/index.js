@@ -93,6 +93,14 @@ const ImageText = ({ block, z }) => {
                 }}
                 className={cx(styles['ImageText__text'], 'block-subheadline')}
               />
+              {blockHasButton ? (
+                <Button
+                  className="inline-block mt3"
+                  label={buttonLabel}
+                  to={buttonLink}
+                  color={getButtonColor(buttonColor)}
+                />
+              ) : null}
             </div>
             <Image
               className={cx(
@@ -112,14 +120,6 @@ const ImageText = ({ block, z }) => {
             }}
             className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
-          {blockHasButton ? (
-            <Button
-              className="inline-block mt3"
-              label={buttonLabel}
-              to={buttonLink}
-              color={getButtonColor(buttonColor)}
-            />
-          ) : null}
         </div>
         {!isFullImage ? (
           <Image

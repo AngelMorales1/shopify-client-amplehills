@@ -43,6 +43,7 @@
 
     .ImageText__image {
       min-width: spacing(65);
+      margin-top: spacing(12);
 
       @media ($small-down) {
         transform: translate(0, 0) !important;
@@ -52,6 +53,7 @@
         order: 1;
         align-self: flex-end;
         margin-right: spacing(18);
+        margin-top: auto;
       }
     }
 
