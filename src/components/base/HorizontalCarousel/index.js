@@ -38,7 +38,12 @@ const HorizontalCarousel = ({
           color="peach"
         />
       </div>
-      <div className="px3">
+      <div
+        className={cx(
+          styles['HorizontalCarousel__carousel-cards-container'],
+          'px3'
+        )}
+      >
         <div
           className={cx(
             styles['HorizontalCarousel__carousel-container'],
