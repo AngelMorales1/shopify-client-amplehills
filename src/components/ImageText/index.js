@@ -146,7 +146,7 @@ const ImageText = ({ block, z, setRef }) => {
       ) : null}
     </div>
   );
-}
+};
 
 ImageText.propTypes = {
   z: PropTypes.number,
