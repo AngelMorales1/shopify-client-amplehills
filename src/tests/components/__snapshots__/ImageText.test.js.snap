@@ -69,10 +69,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex container-width"
+        className="flex container-width py4"
 >
         <div
-                className="flex flex-column justify-center col-12 md-col-6"
+                className="md-col-6 flex flex-column justify-center col-12"
         >
                 <h2
                         className="block-headline mb3"
@@ -115,7 +115,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-center col-12 md-col-6"
+            className="md-col-6 flex flex-column justify-center col-12"
 >
             <h2
                         className="block-headline mb3"
@@ -145,7 +145,7 @@ ShallowWrapper {
             }
 />,
         ],
-        "className": "flex container-width",
+        "className": "flex container-width py4",
       },
       "ref": null,
       "rendered": Array [
@@ -170,7 +170,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": "flex flex-column justify-center col-12 md-col-6",
+            "className": "md-col-6 flex flex-column justify-center col-12",
           },
           "ref": null,
           "rendered": Array [
@@ -235,10 +235,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex container-width"
+          className="flex container-width py4"
 >
           <div
-                    className="flex flex-column justify-center col-12 md-col-6"
+                    className="md-col-6 flex flex-column justify-center col-12"
           >
                     <h2
                               className="block-headline mb3"
@@ -283,7 +283,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-center col-12 md-col-6"
+              className="md-col-6 flex flex-column justify-center col-12"
 >
               <h2
                             className="block-headline mb3"
@@ -338,7 +338,7 @@ ShallowWrapper {
                   }
 />,
               ],
-              "className": "flex flex-column justify-center col-12 md-col-6",
+              "className": "md-col-6 flex flex-column justify-center col-12",
             },
             "ref": null,
             "rendered": Array [
@@ -631,10 +631,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex container-width"
+        className="flex container-width py4"
 >
         <div
-                className="flex flex-column justify-center col-12 md-col-6"
+                className="md-col-5 flex flex-column justify-center col-12"
         >
                 <h2
                         className="block-headline mb3"
@@ -674,7 +674,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-center col-12 md-col-6"
+            className="md-col-5 flex flex-column justify-center col-12"
 >
             <h2
                         className="block-headline mb3"
@@ -696,12 +696,9 @@ ShallowWrapper {
             src="?w=1400&fm=png&q=90"
             style={
                         Object {
-                                    "transform": "translateY(0%)",
+                                    "transform": "translate(0%, 0%)",
                                   }
-            }
-/>,
-        ],
-        "className": "flex container-width",
+        "className": "flex container-width py4",
       },
       "ref": null,
       "rendered": Array [
@@ -723,7 +720,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": "flex flex-column justify-center col-12 md-col-6",
+            "className": "md-col-5 flex flex-column justify-center col-12",
           },
           "ref": null,
           "rendered": Array [
@@ -787,7 +784,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex container-width"
+          className="flex container-width py4"
 >
           <div
                     className="flex flex-column justify-center col-12 md-col-5"
@@ -817,11 +814,8 @@ ShallowWrapper {
                     }
           />
 </div>,
-        "className": "flex flex-row justify-center drip",
+        "className": "flex flex-row justify-center",
         "style": Object {
-          "zIndex": 1,
-        },
-      },
     },
     "ref": null,
     "rendered": Array [
