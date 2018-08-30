@@ -74,52 +74,23 @@ const ImageText = ({ block, z }) => {
             }
           )}
         >
-          <div
-            className={cx(
-              styles['ImageText__text-content'],
-              'flex flex-column justify-center col-12'
-            )}
-          >
-            <div
-              className={cx(
-                styles['ImageText__text-content'],
-                'flex flex-column justify-center col-12'
-              )}
-            >
-              <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: marked(get(fields, 'text', ''))
-                }}
-                className={cx(styles['ImageText__text'], 'block-subheadline')}
-              />
-              {blockHasButton ? (
-                <Button
-                  className="inline-block mt3"
-                  label={buttonLabel}
-                  to={buttonLink}
-                  color={getButtonColor(buttonColor)}
-                />
-              ) : null}
-            </div>
-            <Image
-              className={cx(
-                styles['ImageText__image'],
-                'z-sub-nav mt2 mx-auto'
-              )}
-              style={{
-                transform: `translate(${positionX}%, ${positionY}%)`
-              }}
-              className={cx(styles['ImageText__text'], 'block-subheadline')}
-            />
-          </div>
-          <Image
-            className={cx(styles['ImageText__image'], 'z-sub-nav mt2 mx-auto')}
-            style={{
-              transform: `translate(${positionX}%, ${positionY}%)`
+          <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: marked(get(fields, 'text', ''))
             }}
             className={cx(styles['ImageText__text'], 'block-subheadline')}
           />
+          {blockHasButton ? (
+            <div>
+              <Button
+                className="inline-block mt3"
+                label={buttonLabel}
+                to={buttonLink}
+                color={getButtonColor(buttonColor)}
+              />
+            </div>
+          ) : null}
         </div>
         {!isFullImage ? (
           <Image
