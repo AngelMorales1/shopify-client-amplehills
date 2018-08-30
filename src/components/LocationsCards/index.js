@@ -126,7 +126,7 @@ class LocationsCards extends Component {
             'w100 flex flex-wrap items-start justify-center'
           )}
         >
-          {!!sortedLocations.length ? (
+          {sortedLocations.length ? (
             <div className="transition-slide-up w100">
               <div
                 className={cx(
