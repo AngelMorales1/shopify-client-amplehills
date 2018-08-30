@@ -25,7 +25,7 @@ const GenericHero = ({ block, z }) => {
   return (
     <div style={{ zIndex: z }} className={classes}>
       <div className="transition-slide-up container-width mx-auto pt4 px2 center">
-        <p className="block-headline pt3 pb4">{title}</p>
+        <p className="block-headline pt3">{title}</p>
         {image1 ? (
           <Image
             className="col-8 md-col-6 mt4"
