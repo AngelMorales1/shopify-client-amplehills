@@ -36,7 +36,7 @@ class ProfileOrders extends Component {
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };
   render() {
-    const { actions, checkout, orders, products } = this.props;
+    const { orders, products } = this.props;
 
     return (
       <div className="my3">

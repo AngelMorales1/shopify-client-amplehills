@@ -199,7 +199,7 @@ ProfileInfo.propTypes = {
     editCustomerPhone: PropTypes.func,
     editCustomerPassword: PropTypes.func
   }),
-  customerFieldBeingEdited: PropTypes.arrayOf(PropTypes.object)
+  customerFieldBeingEdited: PropTypes.string
 };
 
 ProfileInfo.defaultProps = {
@@ -210,7 +210,7 @@ ProfileInfo.defaultProps = {
     editCustomerPhone: () => {},
     editCustomerPassword: () => {}
   },
-  customerFieldBeingEdited: [{}]
+  customerFieldBeingEdited: ''
 };
 
 export default ProfileInfo;
