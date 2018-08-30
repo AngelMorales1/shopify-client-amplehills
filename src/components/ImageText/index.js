@@ -106,10 +106,7 @@ const ImageText = ({ block, z }) => {
             />
           </div>
           <Image
-            className={cx(
-              styles['ImageText__image'],
-              'z-sub-nav mt2 mx-auto'
-            )}
+            className={cx(styles['ImageText__image'], 'z-sub-nav mt2 mx-auto')}
             style={{
               transform: `translate(${positionX}%, ${positionY}%)`
             }}
@@ -126,13 +123,16 @@ const ImageText = ({ block, z }) => {
         </div>
         {!isFullImage ? (
           <Image
-          className={cx(
-            styles['ImageText__image'],
-            { 'col-6': imageTextRatioIs5050 && !isFullImage, 'col-4': !imageTextRatioIs5050 && !isFullImage },
-            'z-sub-nav mt2 mx-auto my-auto'
-          )}
-          style={{
-            transform: `translate(${positionX}%, ${positionY}%)`
+            className={cx(
+              styles['ImageText__image'],
+              {
+                'col-6': imageTextRatioIs5050 && !isFullImage,
+                'col-4': !imageTextRatioIs5050 && !isFullImage
+              },
+              'z-sub-nav mt2 mx-auto my-auto'
+            )}
+            style={{
+              transform: `translate(${positionX}%, ${positionY}%)`
             }}
             alt={`${get(fields, 'title', '')} illustration`}
             src={contentfulImgUtil(
@@ -157,7 +157,7 @@ const ImageText = ({ block, z }) => {
       ) : null}
     </div>
   );
-}
+};
 
 ImageText.propTypes = {
   z: PropTypes.number,
