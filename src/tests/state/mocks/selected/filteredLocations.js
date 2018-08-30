@@ -16,6 +16,7 @@ export default [
       lon: 80.123,
       lat: 40.789
     },
+    orderDeliveryLink: '',
     phone: '8881234567',
     seasonal: false,
     delivery: false,
