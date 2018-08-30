@@ -33,7 +33,10 @@ ShallowWrapper {
             },
           }
     }
+<<<<<<< HEAD
     setRef={[Function]}
+=======
+>>>>>>> Add MarkdownBlock test
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -60,6 +63,7 @@ ShallowWrapper {
 </div>,
         <div
           className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
+<<<<<<< HEAD
 >
           <div
                     className="col-12 markdown-block form-container-width "
@@ -71,13 +75,26 @@ ShallowWrapper {
                     }
           />
 </div>,
+=======
+          dangerouslySetInnerHTML={
+                    Object {
+                              "__html": "<p>foo</p>
+                    ",
+                            }
+          }
+/>,
+>>>>>>> Add MarkdownBlock test
       ],
       "className": "flex justify-center undefined",
       "style": Object {
         "zIndex": 0,
       },
     },
+<<<<<<< HEAD
     "ref": [Function],
+=======
+    "ref": null,
+>>>>>>> Add MarkdownBlock test
     "rendered": Array [
       Object {
         "instance": null,
@@ -111,6 +128,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+<<<<<<< HEAD
           "children": Array [
             <div
               className="col-12 markdown-block form-container-width "
@@ -144,6 +162,16 @@ ShallowWrapper {
           },
           null,
         ],
+=======
+          "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+          "dangerouslySetInnerHTML": Object {
+            "__html": "<p>foo</p>
+",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+>>>>>>> Add MarkdownBlock test
         "type": "div",
       },
     ],
@@ -167,6 +195,7 @@ ShallowWrapper {
 </div>,
           <div
             className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
+<<<<<<< HEAD
 >
             <div
                         className="col-12 markdown-block form-container-width "
@@ -178,13 +207,26 @@ ShallowWrapper {
                         }
             />
 </div>,
+=======
+            dangerouslySetInnerHTML={
+                        Object {
+                                    "__html": "<p>foo</p>
+                        ",
+                                  }
+            }
+/>,
+>>>>>>> Add MarkdownBlock test
         ],
         "className": "flex justify-center undefined",
         "style": Object {
           "zIndex": 0,
         },
       },
+<<<<<<< HEAD
       "ref": [Function],
+=======
+      "ref": null,
+>>>>>>> Add MarkdownBlock test
       "rendered": Array [
         Object {
           "instance": null,
@@ -218,6 +260,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+<<<<<<< HEAD
             "children": Array [
               <div
                 className="col-12 markdown-block form-container-width "
@@ -251,6 +294,16 @@ ShallowWrapper {
             },
             null,
           ],
+=======
+            "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+            "dangerouslySetInnerHTML": Object {
+              "__html": "<p>foo</p>
+",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+>>>>>>> Add MarkdownBlock test
           "type": "div",
         },
       ],
@@ -283,7 +336,10 @@ ShallowWrapper {
             },
           }
     }
+<<<<<<< HEAD
     setRef={[Function]}
+=======
+>>>>>>> Add MarkdownBlock test
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -301,6 +357,7 @@ ShallowWrapper {
       "children": Array [
         null,
         <div
+<<<<<<< HEAD
           className="transition-slide-up mx-auto px3 py4"
 >
           <div
@@ -312,13 +369,26 @@ ShallowWrapper {
                     }
           />
 </div>,
+=======
+          className="transition-slide-up mx-auto px3 py4 form-container-width"
+          dangerouslySetInnerHTML={
+                    Object {
+                              "__html": "",
+                            }
+          }
+/>,
+>>>>>>> Add MarkdownBlock test
       ],
       "className": "flex justify-center",
       "style": Object {
         "zIndex": 0,
       },
     },
+<<<<<<< HEAD
     "ref": [Function],
+=======
+    "ref": null,
+>>>>>>> Add MarkdownBlock test
     "rendered": Array [
       null,
       Object {
@@ -326,6 +396,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+<<<<<<< HEAD
           "children": Array [
             <div
               className="col-12 markdown-block form-container-width "
@@ -357,6 +428,15 @@ ShallowWrapper {
           },
           null,
         ],
+=======
+          "className": "transition-slide-up mx-auto px3 py4 form-container-width",
+          "dangerouslySetInnerHTML": Object {
+            "__html": "",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+>>>>>>> Add MarkdownBlock test
         "type": "div",
       },
     ],
@@ -371,6 +451,7 @@ ShallowWrapper {
         "children": Array [
           null,
           <div
+<<<<<<< HEAD
             className="transition-slide-up mx-auto px3 py4"
 >
             <div
@@ -382,13 +463,26 @@ ShallowWrapper {
                         }
             />
 </div>,
+=======
+            className="transition-slide-up mx-auto px3 py4 form-container-width"
+            dangerouslySetInnerHTML={
+                        Object {
+                                    "__html": "",
+                                  }
+            }
+/>,
+>>>>>>> Add MarkdownBlock test
         ],
         "className": "flex justify-center",
         "style": Object {
           "zIndex": 0,
         },
       },
+<<<<<<< HEAD
       "ref": [Function],
+=======
+      "ref": null,
+>>>>>>> Add MarkdownBlock test
       "rendered": Array [
         null,
         Object {
@@ -396,6 +490,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+<<<<<<< HEAD
             "children": Array [
               <div
                 className="col-12 markdown-block form-container-width "
@@ -427,6 +522,15 @@ ShallowWrapper {
             },
             null,
           ],
+=======
+            "className": "transition-slide-up mx-auto px3 py4 form-container-width",
+            "dangerouslySetInnerHTML": Object {
+              "__html": "",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+>>>>>>> Add MarkdownBlock test
           "type": "div",
         },
       ],
