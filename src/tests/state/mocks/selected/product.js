@@ -14,6 +14,7 @@ export default {
       id: '9999'
     }
   ],
+  preOrderDate: false,
   gridImage: 'test.jpg',
   pintImage: 'pint.jpg',
   blocks: ['test-block'],
