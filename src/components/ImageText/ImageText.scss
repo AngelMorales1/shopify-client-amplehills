@@ -135,6 +135,10 @@
     padding-top: calc(#{spacing(4)} + 0.125rem);
     padding-bottom: calc(#{spacing(4)} - 0.125rem);
   }
+
+  &__button {
+    display: inline-flex;
+  }
 }
 
 .ImageText__full-image {
