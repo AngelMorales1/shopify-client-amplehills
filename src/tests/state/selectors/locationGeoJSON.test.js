@@ -5,6 +5,7 @@ import locationGeoJSON from 'state/selectors/locationGeoJSON';
 
 it('locationGeoJSON selector works as intended', () => {
   const selectedLocations = locations.resultFunc(unselectedLocations);
+
   expect(locationGeoJSON.resultFunc(selectedLocations)).toEqual(
     selectedLocationGeoJSON
   );

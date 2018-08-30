@@ -5,5 +5,6 @@ import lineItems from 'state/selectors/lineItems';
 
 it('lineItems selector works as intended', () => {
   const selectedCheckout = checkout.resultFunc(unselectedCheckout);
+
   expect(lineItems.resultFunc(selectedCheckout)).toEqual(selectedLineItems);
 });

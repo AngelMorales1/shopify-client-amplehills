@@ -1,10 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import GenericHero from 'components/GenericHero';
+
 it('renders without data', () => {
   const component = shallow(<GenericHero />);
+
   expect(component).toMatchSnapshot();
 });
+
 it('renders with data', () => {
   const component = shallow(
     <GenericHero

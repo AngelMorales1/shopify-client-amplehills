@@ -14,7 +14,7 @@ import styles from './LocationsCards.scss';
 class LocationsCards extends Component {
   state = {
     position: null,
-    sortedLocations: false
+    sortedLocations: []
   };
 
   $cards = {};
@@ -101,7 +101,9 @@ class LocationsCards extends Component {
       selectedLocation,
       states
     } = this.props;
+
     const { sortedLocations } = this.state;
+
     const STATE_KEY = get(
       Object.values(LocationsMapFilters.STATE_FILTERS),
       '[0].key',
@@ -124,7 +126,7 @@ class LocationsCards extends Component {
             'w100 flex flex-wrap items-start justify-center'
           )}
         >
-          {sortedLocations ? (
+          {!!sortedLocations.length ? (
             <div className="transition-slide-up w100">
               <div
                 className={cx(
@@ -172,7 +174,7 @@ class LocationsCards extends Component {
                     locationFilters.length
                       ? `Search locations in ${
                           LocationsMapFilters.STATE_FILTERS[
-                            activeStateFilter.value
+                            get(activeStateFilter, 'value', 'NY')
                           ].label
                         }`
                       : `Search locations`
@@ -224,12 +226,114 @@ class LocationsCards extends Component {
 
 LocationsCards.propTypes = {
   locations: PropTypes.arrayOf(locationModel.propTypes),
+  selectedLocation: PropTypes.string,
+  filteredLocations: PropTypes.arrayOf(
+    PropTypes.shape({
+      address1: PropTypes.string,
+      address2: PropTypes.string,
+      city: PropTypes.string,
+      coordinates: {
+        lon: PropTypes.number,
+        lat: PropTypes.number
+      },
+      currentOpenHours: PropTypes.string,
+      delivery: PropTypes.bool,
+      hours: {
+        monday: PropTypes.string,
+        tuesday: PropTypes.string,
+        wednesday: PropTypes.string,
+        thursday: PropTypes.string,
+        friday: PropTypes.string,
+        saturday: PropTypes.string,
+        sunday: PropTypes.string
+      },
+      id: PropTypes.string,
+      image: PropTypes.string,
+      orderDeliveryLink: PropTypes.string,
+      phone: PropTypes.string,
+      region: PropTypes.string,
+      seasonal: PropTypes.bool,
+      seasonalImage: PropTypes.string,
+      sortedHours: PropTypes.arrayOf(PropTypes.Object),
+      state: PropTypes.string,
+      stringifiedSearchableFields: PropTypes.arrayOf(PropTypes.string),
+      title: PropTypes.string,
+      zip: PropTypes.string
+    })
+  ),
+  actions: PropTypes.shape({
+    addLocationFilter: PropTypes.func,
+    clearLocationFilters: PropTypes.func,
+    clearLocationSelection: PropTypes.func,
+    removeLocationFilter: PropTypes.func,
+    selectLocation: PropTypes.func,
+    updateSearchFilter: PropTypes.func
+  }),
+  locationFilters: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string,
+      value: PropTypes.string
+    })
+  ),
+  searchFilter: PropTypes.string,
+  locationResultsLabel: PropTypes.string,
   selectedLocation: PropTypes.string
 };
 
 LocationsCards.defaultProps = {
   locations: [],
-  selectedLocation: null
+  selectedLocation: null,
+  filteredLocations: [
+    {
+      address1: '',
+      address2: '',
+      city: '',
+      coordinates: {
+        lon: 0,
+        lat: 0
+      },
+      currentOpenHours: '',
+      delivery: false,
+      hours: {
+        monday: '',
+        tuesday: '',
+        wednesday: '',
+        thursday: '',
+        friday: '',
+        saturday: '',
+        sunday: ''
+      },
+      id: '',
+      image: '',
+      orderDeliveryLink: '',
+      phone: '',
+      region: '',
+      seasonal: true,
+      seasonalImage: '',
+      sortedHours: [{}],
+      state: '',
+      stringifiedSearchableFields: [''],
+      title: '',
+      zip: ''
+    }
+  ],
+  actions: {
+    addLocationFilter: () => {},
+    clearLocationFilters: () => {},
+    clearLocationSelection: () => {},
+    removeLocationFilter: () => {},
+    selectLocation: () => {},
+    updateSearchFilter: () => {}
+  },
+  locationFilters: [
+    {
+      key: '',
+      value: ''
+    }
+  ],
+  searchFilter: '',
+  locationResultsLabel: '',
+  selectedLocation: ''
 };
 
 export default LocationsCards;

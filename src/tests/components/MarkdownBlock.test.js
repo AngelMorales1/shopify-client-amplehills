@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+
 import MarkdownBlock from 'components/MarkdownBlock';
+
 it('renders without data', () => {
   const component = shallow(<MarkdownBlock />);
   expect(component).toMatchSnapshot();
