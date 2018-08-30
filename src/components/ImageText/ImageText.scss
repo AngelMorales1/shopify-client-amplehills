@@ -131,6 +131,10 @@
       content: '- ';
     }
   }
+
+  &__button {
+    display: inline-flex;
+  }
 }
 
 .ImageText__full-image {

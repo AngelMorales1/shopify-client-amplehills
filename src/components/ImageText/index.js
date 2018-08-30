@@ -84,7 +84,7 @@ const ImageText = ({ block, z }) => {
           {blockHasButton ? (
             <div>
               <Button
-                className="inline-block mt3"
+                className={cx(styles['ImageText__button'], 'mt3')}
                 label={buttonLabel}
                 to={buttonLink}
                 color={getButtonColor(buttonColor)}
