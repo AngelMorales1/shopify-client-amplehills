@@ -28,13 +28,19 @@
     }
   }
 
-  &__carousel-container {
+  &__carousel-cards-container {
     overflow: scroll;
+
+    @media ($medium-up) {
+      overflow: visible;
+    }
+  }
+
+  &__carousel-container {
     flex-direction: row;
 
     @media ($medium-up) {
       margin-left: spacing(32);
-      overflow: visible;
     }
 
     > .HorizontalCarousel__card:first-child {
