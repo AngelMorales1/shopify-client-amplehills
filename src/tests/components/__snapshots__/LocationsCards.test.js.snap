@@ -124,7 +124,10 @@ ShallowWrapper {
                                 }
                                 placeholder="All states"
                                 selectClassName="w100"
+<<<<<<< HEAD
                                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                 value={null}
                                 variant="secondary"
                         />
@@ -170,9 +173,14 @@ ShallowWrapper {
                 <div
                         className="flex flex-column items-center"
                 >
+<<<<<<< HEAD
                         <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                 href="/location/undefined"
+=======
+                        <div
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                         >
                                 <div
                                         className="z-1 absolute"
@@ -240,7 +248,11 @@ ShallowWrapper {
                                                 </div>
                                         </div>
                                 </div>
+<<<<<<< HEAD
                         </a>
+=======
+                        </div>
+>>>>>>> Add locationCards component test
                 </div>
         </div>
 </div>,
@@ -285,7 +297,10 @@ ShallowWrapper {
                               }
                               placeholder="All states"
                               selectClassName="w100"
+<<<<<<< HEAD
                               shadow={false}
+=======
+>>>>>>> Add locationCards component test
                               value={null}
                               variant="secondary"
                     />
@@ -331,9 +346,14 @@ ShallowWrapper {
           <div
                     className="flex flex-column items-center"
           >
+<<<<<<< HEAD
                     <a
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                               href="/location/undefined"
+=======
+                    <div
+                              className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                     >
                               <div
                                         className="z-1 absolute"
@@ -401,7 +421,11 @@ ShallowWrapper {
                                                   </div>
                                         </div>
                               </div>
+<<<<<<< HEAD
                     </a>
+=======
+                    </div>
+>>>>>>> Add locationCards component test
           </div>
 </div>,
         "className": "w100 flex flex-wrap items-start justify-center",
@@ -443,7 +467,10 @@ ShallowWrapper {
                             }
                             placeholder="All states"
                             selectClassName="w100"
+<<<<<<< HEAD
                             shadow={false}
+=======
+>>>>>>> Add locationCards component test
                             value={null}
                             variant="secondary"
               />
@@ -489,9 +516,14 @@ ShallowWrapper {
             <div
               className="flex flex-column items-center"
 >
+<<<<<<< HEAD
               <a
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                             href="/location/undefined"
+=======
+              <div
+                            className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
               >
                             <div
                                           className="z-1 absolute"
@@ -559,7 +591,11 @@ ShallowWrapper {
                                                         </div>
                                           </div>
                             </div>
+<<<<<<< HEAD
               </a>
+=======
+              </div>
+>>>>>>> Add locationCards component test
 </div>,
           ],
           "className": "transition-slide-up w100",
@@ -598,7 +634,10 @@ ShallowWrapper {
                 }
                 placeholder="All states"
                 selectClassName="w100"
+<<<<<<< HEAD
                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                 value={null}
                 variant="secondary"
 />,
@@ -634,7 +673,10 @@ ShallowWrapper {
                 ],
                 "placeholder": "All states",
                 "selectClassName": "w100",
+<<<<<<< HEAD
                 "shadow": false,
+=======
+>>>>>>> Add locationCards component test
                 "value": null,
                 "variant": "secondary",
               },
@@ -758,9 +800,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+<<<<<<< HEAD
                 <a
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                   href="/location/undefined"
+=======
+                <div
+                  className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
 >
                   <div
                                     className="z-1 absolute"
@@ -828,7 +875,11 @@ ShallowWrapper {
                                                       </div>
                                     </div>
                   </div>
+<<<<<<< HEAD
 </a>,
+=======
+</div>,
+>>>>>>> Add locationCards component test
               ],
               "className": "flex flex-column items-center",
             },
@@ -909,7 +960,10 @@ ShallowWrapper {
 </div>,
                   ],
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
+<<<<<<< HEAD
                   "href": "/location/undefined",
+=======
+>>>>>>> Add locationCards component test
                 },
                 "ref": [Function],
                 "rendered": Array [
@@ -1207,7 +1261,11 @@ ShallowWrapper {
                     "type": "div",
                   },
                 ],
+<<<<<<< HEAD
                 "type": "a",
+=======
+                "type": "div",
+>>>>>>> Add locationCards component test
               },
             ],
             "type": "div",
@@ -1261,7 +1319,10 @@ ShallowWrapper {
                                         }
                                         placeholder="All states"
                                         selectClassName="w100"
+<<<<<<< HEAD
                                         shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                         value={null}
                                         variant="secondary"
                               />
@@ -1307,9 +1368,14 @@ ShallowWrapper {
                     <div
                               className="flex flex-column items-center"
                     >
+<<<<<<< HEAD
                               <a
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                         href="/location/undefined"
+=======
+                              <div
+                                        className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                               >
                                         <div
                                                   className="z-1 absolute"
@@ -1377,7 +1443,11 @@ ShallowWrapper {
                                                             </div>
                                                   </div>
                                         </div>
+<<<<<<< HEAD
                               </a>
+=======
+                              </div>
+>>>>>>> Add locationCards component test
                     </div>
           </div>
 </div>,
@@ -1422,7 +1492,10 @@ ShallowWrapper {
                                     }
                                     placeholder="All states"
                                     selectClassName="w100"
+<<<<<<< HEAD
                                     shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                     value={null}
                                     variant="secondary"
                         />
@@ -1468,9 +1541,14 @@ ShallowWrapper {
             <div
                         className="flex flex-column items-center"
             >
+<<<<<<< HEAD
                         <a
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                     href="/location/undefined"
+=======
+                        <div
+                                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                         >
                                     <div
                                                 className="z-1 absolute"
@@ -1538,7 +1616,11 @@ ShallowWrapper {
                                                             </div>
                                                 </div>
                                     </div>
+<<<<<<< HEAD
                         </a>
+=======
+                        </div>
+>>>>>>> Add locationCards component test
             </div>
 </div>,
           "className": "w100 flex flex-wrap items-start justify-center",
@@ -1580,7 +1662,10 @@ ShallowWrapper {
                                 }
                                 placeholder="All states"
                                 selectClassName="w100"
+<<<<<<< HEAD
                                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                 value={null}
                                 variant="secondary"
                 />
@@ -1626,9 +1711,14 @@ ShallowWrapper {
               <div
                 className="flex flex-column items-center"
 >
+<<<<<<< HEAD
                 <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                 href="/location/undefined"
+=======
+                <div
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                 >
                                 <div
                                                 className="z-1 absolute"
@@ -1696,7 +1786,11 @@ ShallowWrapper {
                                                                 </div>
                                                 </div>
                                 </div>
+<<<<<<< HEAD
                 </a>
+=======
+                </div>
+>>>>>>> Add locationCards component test
 </div>,
             ],
             "className": "transition-slide-up w100",
@@ -1735,7 +1829,10 @@ ShallowWrapper {
                   }
                   placeholder="All states"
                   selectClassName="w100"
+<<<<<<< HEAD
                   shadow={false}
+=======
+>>>>>>> Add locationCards component test
                   value={null}
                   variant="secondary"
 />,
@@ -1771,7 +1868,10 @@ ShallowWrapper {
                   ],
                   "placeholder": "All states",
                   "selectClassName": "w100",
+<<<<<<< HEAD
                   "shadow": false,
+=======
+>>>>>>> Add locationCards component test
                   "value": null,
                   "variant": "secondary",
                 },
@@ -1895,9 +1995,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+<<<<<<< HEAD
                   <a
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                     href="/location/undefined"
+=======
+                  <div
+                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
 >
                     <div
                                         className="z-1 absolute"
@@ -1965,7 +2070,11 @@ ShallowWrapper {
                                                             </div>
                                         </div>
                     </div>
+<<<<<<< HEAD
 </a>,
+=======
+</div>,
+>>>>>>> Add locationCards component test
                 ],
                 "className": "flex flex-column items-center",
               },
@@ -2046,7 +2155,10 @@ ShallowWrapper {
 </div>,
                     ],
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
+<<<<<<< HEAD
                     "href": "/location/undefined",
+=======
+>>>>>>> Add locationCards component test
                   },
                   "ref": [Function],
                   "rendered": Array [
@@ -2344,7 +2456,11 @@ ShallowWrapper {
                       "type": "div",
                     },
                   ],
+<<<<<<< HEAD
                   "type": "a",
+=======
+                  "type": "div",
+>>>>>>> Add locationCards component test
                 },
               ],
               "type": "div",
@@ -2433,7 +2549,11 @@ ShallowWrapper {
     locationResultsLabel=""
     locations={Array []}
     searchFilter=""
+<<<<<<< HEAD
     selectedLocation={null}
+=======
+    selectedLocation=""
+>>>>>>> Add locationCards component test
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2483,7 +2603,10 @@ ShallowWrapper {
                                 }
                                 placeholder="All states"
                                 selectClassName="w100"
+<<<<<<< HEAD
                                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                 value={null}
                                 variant="secondary"
                         />
@@ -2527,9 +2650,14 @@ ShallowWrapper {
                 <div
                         className="flex flex-column items-center"
                 >
+<<<<<<< HEAD
                         <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                 href="/location/undefined"
+=======
+                        <div
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                         >
                                 <div
                                         className="z-1 absolute"
@@ -2579,7 +2707,11 @@ ShallowWrapper {
                                                 </div>
                                         </div>
                                 </div>
+<<<<<<< HEAD
                         </a>
+=======
+                        </div>
+>>>>>>> Add locationCards component test
                 </div>
         </div>
 </div>,
@@ -2624,7 +2756,10 @@ ShallowWrapper {
                               }
                               placeholder="All states"
                               selectClassName="w100"
+<<<<<<< HEAD
                               shadow={false}
+=======
+>>>>>>> Add locationCards component test
                               value={null}
                               variant="secondary"
                     />
@@ -2668,9 +2803,14 @@ ShallowWrapper {
           <div
                     className="flex flex-column items-center"
           >
+<<<<<<< HEAD
                     <a
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                               href="/location/undefined"
+=======
+                    <div
+                              className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                     >
                               <div
                                         className="z-1 absolute"
@@ -2720,7 +2860,11 @@ ShallowWrapper {
                                                   </div>
                                         </div>
                               </div>
+<<<<<<< HEAD
                     </a>
+=======
+                    </div>
+>>>>>>> Add locationCards component test
           </div>
 </div>,
         "className": "w100 flex flex-wrap items-start justify-center",
@@ -2762,7 +2906,10 @@ ShallowWrapper {
                             }
                             placeholder="All states"
                             selectClassName="w100"
+<<<<<<< HEAD
                             shadow={false}
+=======
+>>>>>>> Add locationCards component test
                             value={null}
                             variant="secondary"
               />
@@ -2806,9 +2953,14 @@ ShallowWrapper {
             <div
               className="flex flex-column items-center"
 >
+<<<<<<< HEAD
               <a
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                             href="/location/undefined"
+=======
+              <div
+                            className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
               >
                             <div
                                           className="z-1 absolute"
@@ -2858,7 +3010,11 @@ ShallowWrapper {
                                                         </div>
                                           </div>
                             </div>
+<<<<<<< HEAD
               </a>
+=======
+              </div>
+>>>>>>> Add locationCards component test
 </div>,
           ],
           "className": "transition-slide-up w100",
@@ -2897,7 +3053,10 @@ ShallowWrapper {
                 }
                 placeholder="All states"
                 selectClassName="w100"
+<<<<<<< HEAD
                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                 value={null}
                 variant="secondary"
 />,
@@ -2933,7 +3092,10 @@ ShallowWrapper {
                 ],
                 "placeholder": "All states",
                 "selectClassName": "w100",
+<<<<<<< HEAD
                 "shadow": false,
+=======
+>>>>>>> Add locationCards component test
                 "value": null,
                 "variant": "secondary",
               },
@@ -3055,9 +3217,14 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+<<<<<<< HEAD
                 <a
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                   href="/location/undefined"
+=======
+                <div
+                  className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
 >
                   <div
                                     className="z-1 absolute"
@@ -3107,7 +3274,11 @@ ShallowWrapper {
                                                       </div>
                                     </div>
                   </div>
+<<<<<<< HEAD
 </a>,
+=======
+</div>,
+>>>>>>> Add locationCards component test
               ],
               "className": "flex flex-column items-center",
             },
@@ -3169,8 +3340,12 @@ ShallowWrapper {
                       </div>
 </div>,
                   ],
+<<<<<<< HEAD
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
                   "href": "/location/undefined",
+=======
+                  "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
+>>>>>>> Add locationCards component test
                 },
                 "ref": [Function],
                 "rendered": Array [
@@ -3396,7 +3571,11 @@ ShallowWrapper {
                     "type": "div",
                   },
                 ],
+<<<<<<< HEAD
                 "type": "a",
+=======
+                "type": "div",
+>>>>>>> Add locationCards component test
               },
             ],
             "type": "div",
@@ -3450,7 +3629,10 @@ ShallowWrapper {
                                         }
                                         placeholder="All states"
                                         selectClassName="w100"
+<<<<<<< HEAD
                                         shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                         value={null}
                                         variant="secondary"
                               />
@@ -3494,9 +3676,14 @@ ShallowWrapper {
                     <div
                               className="flex flex-column items-center"
                     >
+<<<<<<< HEAD
                               <a
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                         href="/location/undefined"
+=======
+                              <div
+                                        className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                               >
                                         <div
                                                   className="z-1 absolute"
@@ -3546,7 +3733,11 @@ ShallowWrapper {
                                                             </div>
                                                   </div>
                                         </div>
+<<<<<<< HEAD
                               </a>
+=======
+                              </div>
+>>>>>>> Add locationCards component test
                     </div>
           </div>
 </div>,
@@ -3591,7 +3782,10 @@ ShallowWrapper {
                                     }
                                     placeholder="All states"
                                     selectClassName="w100"
+<<<<<<< HEAD
                                     shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                     value={null}
                                     variant="secondary"
                         />
@@ -3635,9 +3829,14 @@ ShallowWrapper {
             <div
                         className="flex flex-column items-center"
             >
+<<<<<<< HEAD
                         <a
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                     href="/location/undefined"
+=======
+                        <div
+                                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                         >
                                     <div
                                                 className="z-1 absolute"
@@ -3687,7 +3886,11 @@ ShallowWrapper {
                                                             </div>
                                                 </div>
                                     </div>
+<<<<<<< HEAD
                         </a>
+=======
+                        </div>
+>>>>>>> Add locationCards component test
             </div>
 </div>,
           "className": "w100 flex flex-wrap items-start justify-center",
@@ -3729,7 +3932,10 @@ ShallowWrapper {
                                 }
                                 placeholder="All states"
                                 selectClassName="w100"
+<<<<<<< HEAD
                                 shadow={false}
+=======
+>>>>>>> Add locationCards component test
                                 value={null}
                                 variant="secondary"
                 />
@@ -3773,9 +3979,14 @@ ShallowWrapper {
               <div
                 className="flex flex-column items-center"
 >
+<<<<<<< HEAD
                 <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                 href="/location/undefined"
+=======
+                <div
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
                 >
                                 <div
                                                 className="z-1 absolute"
@@ -3825,7 +4036,11 @@ ShallowWrapper {
                                                                 </div>
                                                 </div>
                                 </div>
+<<<<<<< HEAD
                 </a>
+=======
+                </div>
+>>>>>>> Add locationCards component test
 </div>,
             ],
             "className": "transition-slide-up w100",
@@ -3864,7 +4079,10 @@ ShallowWrapper {
                   }
                   placeholder="All states"
                   selectClassName="w100"
+<<<<<<< HEAD
                   shadow={false}
+=======
+>>>>>>> Add locationCards component test
                   value={null}
                   variant="secondary"
 />,
@@ -3900,7 +4118,10 @@ ShallowWrapper {
                   ],
                   "placeholder": "All states",
                   "selectClassName": "w100",
+<<<<<<< HEAD
                   "shadow": false,
+=======
+>>>>>>> Add locationCards component test
                   "value": null,
                   "variant": "secondary",
                 },
@@ -4022,9 +4243,14 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+<<<<<<< HEAD
                   <a
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                     href="/location/undefined"
+=======
+                  <div
+                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+>>>>>>> Add locationCards component test
 >
                     <div
                                         className="z-1 absolute"
@@ -4074,7 +4300,11 @@ ShallowWrapper {
                                                             </div>
                                         </div>
                     </div>
+<<<<<<< HEAD
 </a>,
+=======
+</div>,
+>>>>>>> Add locationCards component test
                 ],
                 "className": "flex flex-column items-center",
               },
@@ -4136,8 +4366,12 @@ ShallowWrapper {
                         </div>
 </div>,
                     ],
+<<<<<<< HEAD
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
                     "href": "/location/undefined",
+=======
+                    "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
+>>>>>>> Add locationCards component test
                   },
                   "ref": [Function],
                   "rendered": Array [
@@ -4363,7 +4597,11 @@ ShallowWrapper {
                       "type": "div",
                     },
                   ],
+<<<<<<< HEAD
                   "type": "a",
+=======
+                  "type": "div",
+>>>>>>> Add locationCards component test
                 },
               ],
               "type": "div",
