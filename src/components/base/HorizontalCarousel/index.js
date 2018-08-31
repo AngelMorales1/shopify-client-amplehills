@@ -41,7 +41,7 @@ const HorizontalCarousel = ({
       <div
         className={cx(
           styles['HorizontalCarousel__carousel-cards-container'],
-          'px3'
+          'px3 flex flex-row'
         )}
       >
         <div
@@ -52,7 +52,7 @@ const HorizontalCarousel = ({
                 'HorizontalCarousel__carousel-container--reverse'
               ]]: isReverseOrder
             },
-            'flex my4'
+            'flex my4 pr3'
           )}
         >
           {children}
