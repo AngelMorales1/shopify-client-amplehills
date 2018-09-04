@@ -1,0 +1,17 @@
+@import 'settings', 'typography', 'utils';
+
+.MarkdownBlock {
+  @extend .text-madison-blue;
+
+  &--white {
+    @extend .bg-white;
+  }
+
+  &--yellow {
+    @extend .bg-marigold-yellow;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+}
