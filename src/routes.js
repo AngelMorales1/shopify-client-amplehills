@@ -38,15 +38,15 @@ const Routes = ({ location }) => (
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/press" component={PressPageContainer} />
     <Route path="/classes-and-socials" component={GenericPageContainer} />
-    <Route path="/classes" component={GenericPageContainer} />
-    <Route path="/socials" component={GenericPageContainer} />
-    <Route path="/event" component={GenericPageContainer} />
+    <Route path="/ice-cream-classes" component={GenericPageContainer} />
+    <Route path="/ice-cream-socials" component={GenericPageContainer} />
+    <Route path="/events" component={GenericPageContainer} />
     <Route path="/weddings" component={GenericPageContainer} />
     <Route path="/parties" component={GenericPageContainer} />
     <Route path="/field-trips" component={GenericPageContainer} />
     <Route path="/pints-and-postcards" component={GenericPageContainer} />
     <Route path="/catering" component={GenericPageContainer} />
-    <Route path="/cakes" component={GenericPageContainer} />
+    <Route path="/ice-cream-cakes" component={GenericPageContainer} />
   </Switch>
 );
 
