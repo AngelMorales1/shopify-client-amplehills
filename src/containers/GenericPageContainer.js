@@ -2,6 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
+import { getEvents } from 'state/actions/eventActions';
 
 import get from 'utils/get';
 
@@ -9,12 +10,15 @@ class GenericPageContainer extends ContainerBase {
   view = import('views/GenericPageView');
 
   model = () => {
-    const { getGenericPage } = this.props.actions;
+    const { getGenericPage, getEvents } = this.props.actions;
     const { path } = this.props.match;
 
-    return getGenericPage(path).then(genericPage => {
+    return Promise.all(
+      [getGenericPage(path), getEvents()]
+    ).then(([genericPage, events]) => {
       return {
-        genericPage: get(genericPage, 'value')
+        genericPage: get(genericPage, 'value'),
+        events: get(events, 'value')
       };
     });
   };
@@ -38,7 +42,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        getGenericPage
+        getGenericPage,
+        getEvents
       },
       dispatch
     )

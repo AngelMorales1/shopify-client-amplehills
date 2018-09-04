@@ -12,7 +12,6 @@ const EventsBlock = props => {
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `EventsBlock--${get(fields, 'backgroundColor', 'white')}`;
-  const titleOnLeft = get(fields, 'titleLeft', false);
   const title = get(fields, 'title', '');
 
   return (

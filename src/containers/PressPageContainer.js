@@ -1,6 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import get from 'utils/get'
 
 class PressPageContainer extends ContainerBase {
   view = import('views/PressPageView');
