@@ -1,6 +1,9 @@
 @import 'settings', 'typography', 'utils';
 
 .EventCard {
+  @extend .transition;
+  display: none;
+  opacity: 0;
   border-radius: radius('s');
   height: spacing(144);
   max-width: spacing(86);
@@ -11,6 +14,11 @@
     min-width: spacing(200);
     height: spacing(96);
     flex-direction: row;
+  }
+
+  &--active {
+    display: flex;
+    opacity: 1;
   }
 
   &__image {

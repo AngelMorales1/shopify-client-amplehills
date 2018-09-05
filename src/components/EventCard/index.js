@@ -8,18 +8,21 @@ import moment from 'moment';
 import styles from './EventCard.scss';
 import { Image, Button } from 'components/base';
 
-const EventCard = ({ event }) => {
-  console.log(event);
+const EventCard = ({ event, active }) => {
   const fields = get(event, 'fields', {});
   const image = get(fields, 'image.fields.file.url', '');
   const title = get(fields, 'title', '');
   const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
   const time = get(fields, 'time', '');
   const location = get(fields, 'location.fields.title', '');
-
+  console.log(event);
   return (
     <div
-      className={cx(styles['EventCard'], 'bg-white mb3 flex col-12 md-col-7')}
+      className={cx(
+        styles['EventCard'],
+        'transition-slide-up-large bg-white mb3 flex col-12 md-col-7',
+        { [styles['EventCard--active']]: active }
+      )}
     >
       <div
         className={cx(styles['EventCard__image'], 'col-12 md-col-6')}

@@ -14,4 +14,12 @@
   &--pink {
     @extend .bg-light-pink;
   }
+
+  &__button-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
 }
