@@ -27,9 +27,9 @@ class EventsBlock extends Component {
   isActiveCard = (filterByUpcomingOrPastIsOn, event) => {
     if (filterByUpcomingOrPastIsOn) {
       const today = moment(new Date()).format('X');
-      const eventDateAndTime = `${moment(event.datesAndTimes[0].Date).format(
-        'MMMM D YYYY'
-      )} ${get(event, 'datesAndTimes[0].Time', '')
+      const eventDateAndTime = `${moment(
+        get(event, 'datesAndTimes[0].Date', '')
+      ).format('MMMM D YYYY')} ${get(event, 'datesAndTimes[0].Time', '')
         .replace(/\s+/g, '')
         .split('-')[0]
         .slice(0, -2)}`;
