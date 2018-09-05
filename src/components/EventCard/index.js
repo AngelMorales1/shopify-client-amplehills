@@ -16,6 +16,7 @@ const EventCard = ({ event, active }) => {
   const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
   const time = get(fields, 'time', '');
   const location = get(fields, 'location.fields.title', '');
+  const eventType = get(fields, 'eventType', '');
 
   return (
     <div
@@ -45,7 +46,7 @@ const EventCard = ({ event, active }) => {
           <span className="tout xs-hide sm-hide">{`${date}, ${time} at ${location}`}</span>
           <h2 className={cx(styles['EventCard__title'], 'mt2')}>{title}</h2>
         </div>
-        <Button color="peach" label="RSVP" />
+        <Button color="peach" label={label} />
       </div>
     </div>
   );
