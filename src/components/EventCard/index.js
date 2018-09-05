@@ -8,19 +8,17 @@ import moment from 'moment';
 import eventModel from 'models/eventModel';
 
 import styles from './EventCard.scss';
-import { Image, Button } from 'components/base';
+import { Button } from 'components/base';
 
 const EventCard = ({ event, active }) => {
-  const fields = get(event, 'fields', {});
-  const image = get(fields, 'image.fields.file.url', '');
-  const title = get(fields, 'title', '');
-  const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
-  const time = getShortTimeFormat(get(fields, 'time', ''));
-  const location = get(fields, 'location.fields.title', '');
-  const eventType = get(fields, 'eventType', '');
-  const eventTypeIsClass = eventType === 'Ice Cream Classes';
+  const dates = event.datesAndTimes.map(dateAndTime => {
+    return moment(get(dateAndTime, 'Date', '')).format('MMMM D YYYY');
+  });
+  const times = event.datesAndTimes.map(dateAndTime => {
+    return getShortTimeFormat(get(dateAndTime, 'Time', ''));
+  });
+  const eventTypeIsClass = event.eventType === 'Ice Cream Classes';
   const label = eventTypeIsClass ? 'More Info' : 'RSVP';
-  const text = get(fields, 'blockCardText', '');
 
   return (
     <div
@@ -34,7 +32,7 @@ const EventCard = ({ event, active }) => {
         className={cx(styles['EventCard__image'], 'col-12 md-col-6')}
         style={{
           background: `url(${contentfulImgUtil(
-            image,
+            event.image,
             '900'
           )}) no-repeat center`,
           backgroundSize: 'cover'
@@ -47,19 +45,25 @@ const EventCard = ({ event, active }) => {
         )}
       >
         <div>
-          {!eventTypeIsClass ? (
+          {event.datesAndTimes.length === 1 ? (
             <p
               className={cx(styles['EventCard__text'], 'xs-hide sm-hide mb2')}
-            >{`${date}, ${time} at ${location}`}</p>
+            >{`${dates[0]}, ${times[0]} at ${event.locationTitle}`}</p>
           ) : null}
-          <h2 className={cx(styles['EventCard__title'])}>{title}</h2>
-          {eventTypeIsClass ? (
-            <p className={cx(styles['EventCard__text'], 'mt2 mb1')}>
-              ////////date and time should be here ////////
+          <h2 className={cx(styles['EventCard__title'])}>{event.title}</h2>
+          {event.datesAndTimes.length > 1 ? (
+            <div className="mt2">
+              {dates.map((date, i) => (
+                <p className={cx(styles['EventCard__text'])}>{`${moment(
+                  date
+                ).format('MM/DD/YY')} - ${times[i]}`}</p>
+              ))}
+            </div>
+          ) : null}
+          {event.text ? (
+            <p className={cx(styles['EventCard__text'], 'mt2 mb3')}>
+              {event.blockCardText}
             </p>
-          ) : null}
-          {text ? (
-            <p className={cx(styles['EventCard__text'], 'mt2 mb3')}>{text}</p>
           ) : null}
         </div>
         <div>

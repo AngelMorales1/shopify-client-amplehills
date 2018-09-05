@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
 import { getEvents } from 'state/actions/eventActions';
+import events from 'state/selectors/events';
 
 import get from 'utils/get';
 
@@ -34,7 +35,8 @@ const mapStateToProps = state => {
     pressItems: get(
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
-    )
+    ),
+    events: events(state)
   };
 };
 

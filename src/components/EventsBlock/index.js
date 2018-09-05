@@ -27,14 +27,20 @@ class EventsBlock extends Component {
   isActiveCard = (filterByUpcomingOrPastIsOn, event) => {
     if (filterByUpcomingOrPastIsOn) {
       const today = moment(new Date()).format('X');
-      const eventDate = moment(get(event, 'fields.date', '')).format('X');
+      const eventDateAndTime = `${moment(event.datesAndTimes[0].Date).format(
+        'MMMM D YYYY'
+      )} ${get(event, 'datesAndTimes[0].Time', '')
+        .replace(/\s+/g, '')
+        .split('-')[0]
+        .slice(0, -2)}`;
+      const eventDate = moment(eventDateAndTime).format('X');
       const eventInPast = today >= eventDate;
       const eventStatus = eventInPast ? 'Past' : 'Upcoming';
 
       return this.state.activeFilter === eventStatus;
     }
 
-    const eventLocation = get(event, 'fields.location.fields.title', '');
+    const eventLocation = get(event, 'locationTitle', '');
 
     return this.state.activeFilter.split(':')[0] === eventLocation;
   };
@@ -43,7 +49,7 @@ class EventsBlock extends Component {
     let locationButtonLabel = {};
 
     selectedEvents.forEach(event => {
-      let location = get(event, 'fields.location.fields.title', '');
+      let location = get(event, 'locationTitle', '');
 
       locationButtonLabel[location]
         ? (locationButtonLabel[location] = ++locationButtonLabel[location])
@@ -55,7 +61,7 @@ class EventsBlock extends Component {
   };
 
   render() {
-    const { z, block } = this.props;
+    const { z, block, events } = this.props;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
     const colorClass = `EventsBlock--${get(
@@ -72,11 +78,16 @@ class EventsBlock extends Component {
       true
     );
     const blockEventType = get(fields, 'eventType', '');
-    const events = get(fields, 'events', []);
-    let selectedEvents = events.length
-      ? events
-      : get(this.props, 'events', []).filter(event => {
-          let eventType = get(event, 'fields.eventType', '');
+    const allEvents = get(this.props, 'events', {});
+    const customEvents = get(fields, 'events', []);
+    let selectedEvents = customEvents.length
+      ? customEvents.map(customEvent => {
+          const id = get(customEvent, 'sys.id', '');
+          return allEvents.find(event => event.id === id);
+        })
+      : allEvents.filter(event => {
+          let eventType = get(event, 'eventType', '');
+
           if (!blockEventType || blockEventType === 'All Events') {
             return event;
           } else if (blockEventType === 'All Socials') {
@@ -121,7 +132,7 @@ class EventsBlock extends Component {
                   className="m1"
                   color={color}
                   variant="primary-small"
-                  key={label + i}
+                  key={`${label}-${i}`}
                   label={label}
                   onClick={() =>
                     this.setState({
@@ -142,7 +153,7 @@ class EventsBlock extends Component {
                     ? this.isActiveCard(filterByUpcomingOrPastIsOn, event)
                     : true
                 }
-                key={get(event, 'sys.id') + i}
+                key={`${get(event, 'id')}-${i}`}
                 event={event}
               />
             );
