@@ -85,4 +85,8 @@
       font-size: $font-6;
     }
   }
+
+  &__button {
+    display: inline-flex;
+  }
 }
