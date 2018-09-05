@@ -134,7 +134,11 @@ class EventsBlock extends Component {
           {selectedEvents.map((event, i) => {
             return (
               <EventCard
-                active={this.isActiveCard(filterByUpcomingOrPastIsOn, event)}
+                active={
+                  filterButtonIsOn
+                    ? this.isActiveCard(filterByUpcomingOrPastIsOn, event)
+                    : true
+                }
                 key={get(event, 'sys.id') + i}
                 event={event}
               />

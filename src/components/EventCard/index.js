@@ -17,6 +17,8 @@ const EventCard = ({ event, active }) => {
   const time = get(fields, 'time', '');
   const location = get(fields, 'location.fields.title', '');
   const eventType = get(fields, 'eventType', '');
+  const eventTypeIsClass = eventType === 'Ice Cream Classes';
+  const label = eventTypeIsClass ? 'More Info' : 'RSVP';
 
   return (
     <div
@@ -43,7 +45,9 @@ const EventCard = ({ event, active }) => {
         )}
       >
         <div>
-          <span className="tout xs-hide sm-hide">{`${date}, ${time} at ${location}`}</span>
+          {!eventTypeIsClass ? (
+            <span className="tout xs-hide sm-hide">{`${date}, ${time} at ${location}`}</span>
+          ) : null}
           <h2 className={cx(styles['EventCard__title'], 'mt2')}>{title}</h2>
         </div>
         <Button color="peach" label={label} />
