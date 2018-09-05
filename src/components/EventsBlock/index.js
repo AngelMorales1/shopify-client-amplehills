@@ -21,9 +21,17 @@ class EventsBlock extends Component {
     )}`;
     const title = get(fields, 'title', '');
     const text = get(fields, 'text', '');
+    const blockEventType = get(fields, 'eventType', '');
     const events = get(fields, 'events', []);
-    let selectedEvents = events.length ? events : this.props.events;
-    console.log(this.props);
+    let selectedEvents = events.length
+      ? events
+      : this.props.events.filter(event => {
+          let eventType = get(event, 'fields.eventType', '');
+          if (!blockEventType) {
+            return events;
+          }
+          return eventType === blockEventType;
+        });
     return (
       <div
         style={{ zIndex: z }}
