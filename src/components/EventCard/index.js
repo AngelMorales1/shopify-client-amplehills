@@ -10,11 +10,39 @@ import styles from './EventCard.scss';
 import { Image, Button } from 'components/base';
 
 const EventCard = ({ event, active }) => {
+  const getTimeFormat = time => {
+    if (time && time.length) {
+      return get(fields, 'time', '')
+        .replace(/\s+/g, '')
+        .split('-')
+        .map((time, i) => {
+          let hourAndMin = time.replace(/\s+/g, '').split(':');
+          const isExactTime = hourAndMin[1].slice(0, 2) === '00';
+
+          if (isExactTime) {
+            if (i === 0) {
+              return hourAndMin[0];
+            } else {
+              const getAmPm = hourAndMin[1].slice(-2);
+              return `${hourAndMin[0]}${getAmPm}`;
+            }
+          } else {
+            if (i === 0) {
+              const removeAmPm = hourAndMin[1].slice(0, -2);
+              return `${hourAndMin[0]}:${removeAmPm}`;
+            } else {
+              return `${hourAndMin[0]}:${hourAndMin[1]}`;
+            }
+          }
+        })
+        .join('-');
+    }
+  };
   const fields = get(event, 'fields', {});
   const image = get(fields, 'image.fields.file.url', '');
   const title = get(fields, 'title', '');
   const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
-  const time = get(fields, 'time', '');
+  const time = getTimeFormat(get(fields, 'time', ''));
   const location = get(fields, 'location.fields.title', '');
   const eventType = get(fields, 'eventType', '');
   const eventTypeIsClass = eventType === 'Ice Cream Classes';
@@ -46,11 +74,22 @@ const EventCard = ({ event, active }) => {
       >
         <div>
           {!eventTypeIsClass ? (
-            <span className="tout xs-hide sm-hide">{`${date}, ${time} at ${location}`}</span>
+            <p className="tout xs-hide sm-hide mb2">{`${date}, ${time} at ${location}`}</p>
           ) : null}
-          <h2 className={cx(styles['EventCard__title'], 'mt2')}>{title}</h2>
+          <h2 className={cx(styles['EventCard__title'])}>{title}</h2>
+          {eventTypeIsClass ? (
+            <p className="tout mt2 mb1">
+              ////////date and time should be render here ////////
+            </p>
+          ) : null}
         </div>
-        <Button color="peach" label={label} />
+        <div>
+          <Button
+            className={cx(styles['EventCard__button'])}
+            color="peach"
+            label={label}
+          />
+        </div>
       </div>
     </div>
   );
