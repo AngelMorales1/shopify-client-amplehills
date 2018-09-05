@@ -12,7 +12,7 @@ import styles from './EventsBlock.scss';
 
 class EventsBlock extends Component {
   state = {
-    activeFilter: false
+    activeFilter: ''
   };
 
   isActiveFilter = (filter, index) => {
@@ -36,11 +36,25 @@ class EventsBlock extends Component {
 
     const eventLocation = get(event, 'fields.location.fields.title', '');
 
-    return this.state.activeFilter === eventLocation;
+    return this.state.activeFilter.slice(0, -3) === eventLocation;
+  };
+
+  getLocationButtonLabel = selectedEvents => {
+    let locationButtonLabel = {};
+
+    selectedEvents.forEach(event => {
+      let location = get(event, 'fields.location.fields.title', '');
+
+      locationButtonLabel[location]
+        ? (locationButtonLabel[location] = ++locationButtonLabel[location])
+        : (locationButtonLabel[location] = 1);
+    });
+    return Object.keys(locationButtonLabel).map(
+      key => `${key}: ${locationButtonLabel[key]}`
+    );
   };
 
   render() {
-    console.log(this.props);
     const { z, block } = this.props;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
@@ -70,9 +84,7 @@ class EventsBlock extends Component {
         });
     let buttonLabels = filterByUpcomingOrPastIsOn
       ? ['Upcoming', 'Past']
-      : selectedEvents.map(event =>
-          get(event, 'fields.location.fields.title', '')
-        );
+      : this.getLocationButtonLabel(selectedEvents);
 
     return (
       <div
