@@ -4,6 +4,7 @@ import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import moment from 'moment';
+import eventModel from 'models/eventModel';
 
 import styles from './EventCard.scss';
 import { Image, Button } from 'components/base';
@@ -15,7 +16,7 @@ const EventCard = ({ event, active }) => {
   const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
   const time = get(fields, 'time', '');
   const location = get(fields, 'location.fields.title', '');
-  console.log(event);
+
   return (
     <div
       className={cx(
@@ -50,8 +51,14 @@ const EventCard = ({ event, active }) => {
   );
 };
 
-EventCard.propTypes = {};
+EventCard.propTypes = {
+  active: PropTypes.bool,
+  event: eventModel.propTypes
+};
 
-EventCard.defaultProps = {};
+EventCard.defaultProps = {
+  active: false,
+  event: eventModel.default
+};
 
 export default EventCard;

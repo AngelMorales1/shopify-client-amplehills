@@ -5,6 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import moment from 'moment';
 import EventCard from 'components/EventCard';
+import eventModel from 'models/eventModel';
 
 import { Button } from 'components/base';
 import styles from './EventsBlock.scss';
@@ -39,6 +40,7 @@ class EventsBlock extends Component {
   };
 
   render() {
+    console.log(this.props);
     const { z, block } = this.props;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
@@ -62,7 +64,7 @@ class EventsBlock extends Component {
       : get(this.props, 'events', []).filter(event => {
           let eventType = get(event, 'fields.eventType', '');
           if (!blockEventType) {
-            return events;
+            return event;
           }
           return eventType === blockEventType;
         });
@@ -136,11 +138,17 @@ EventsBlock.propTypes = {
   z: PropTypes.number,
   block: PropTypes.shape({
     fields: PropTypes.shape({
-      backgroudColor: PropTypes.string,
+      backgroudColor: '',
       title: PropTypes.string,
-      drip: PropTypes.bool
+      drip: PropTypes.bool,
+      addFilterButton: PropTypes.bool,
+      eventType: PropTypes.string,
+      filterByUpcomingOrPastIsOn: PropTypes.bool,
+      text: PropTypes.string,
+      events: PropTypes.arrayOf(eventModel.propTypes)
     })
-  })
+  }),
+  events: PropTypes.arrayOf(eventModel.propTypes)
 };
 
 EventsBlock.defaultProps = {
@@ -149,9 +157,15 @@ EventsBlock.defaultProps = {
     fields: {
       backgroudColor: 'white',
       title: '',
-      drip: false
+      drip: false,
+      addFilterButton: false,
+      eventType: '',
+      filterByUpcomingOrPastIsOn: true,
+      text: '',
+      events: []
     }
-  }
+  },
+  events: [eventModel.default]
 };
 
 export default EventsBlock;
