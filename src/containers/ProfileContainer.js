@@ -13,6 +13,7 @@ import {
 
 import products from 'state/selectors/products';
 import customer from 'state/selectors/customer';
+import checkout from 'state/selectors/checkout';
 
 import get from 'utils/get';
 
@@ -33,7 +34,7 @@ const mapStateToProps = state => {
       []
     ),
     errors: get(state, 'customerUI.errors', ''),
-    checkout: get(state, 'session.checkout', {}),
+    checkout: checkout(state), //get(state, 'session.checkout', {}),
     products: products(state),
     customer: customer(state)
   };
