@@ -13,7 +13,8 @@ export default {
         })
       }),
       time: PropTypes.string,
-      title: PropTypes.string
+      title: PropTypes.string,
+      blockCardText: PropTypes.string
     })
   }),
 
@@ -28,7 +29,8 @@ export default {
         }
       },
       time: '',
-      title: ''
+      title: '',
+      blockCardText: ''
     }
   }
 };

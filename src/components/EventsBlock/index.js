@@ -36,7 +36,7 @@ class EventsBlock extends Component {
 
     const eventLocation = get(event, 'fields.location.fields.title', '');
 
-    return this.state.activeFilter.slice(0, -3) === eventLocation;
+    return this.state.activeFilter.split(':')[0] === eventLocation;
   };
 
   getLocationButtonLabel = selectedEvents => {
@@ -77,9 +77,12 @@ class EventsBlock extends Component {
       ? events
       : get(this.props, 'events', []).filter(event => {
           let eventType = get(event, 'fields.eventType', '');
-          if (!blockEventType) {
+          if (!blockEventType || blockEventType === 'All Events') {
             return event;
+          } else if (blockEventType === 'All Socials') {
+            return eventType !== 'Ice Cream Classes';
           }
+
           return eventType === blockEventType;
         });
     let buttonLabels = filterByUpcomingOrPastIsOn

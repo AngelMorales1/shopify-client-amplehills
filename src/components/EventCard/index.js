@@ -55,7 +55,7 @@ const EventCard = ({ event, active }) => {
           <h2 className={cx(styles['EventCard__title'])}>{title}</h2>
           {eventTypeIsClass ? (
             <p className={cx(styles['EventCard__text'], 'mt2 mb1')}>
-              ////////date and time should be render here ////////
+              ////////date and time should be here ////////
             </p>
           ) : null}
           {text ? (
