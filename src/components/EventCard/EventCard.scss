@@ -3,10 +3,11 @@
 .EventCard {
   border-radius: radius('s');
   height: spacing(144);
-  min-width: spacing(86);
+  max-width: spacing(86);
   flex-direction: column;
 
   @media ($medium-up) {
+    max-width: inherit;
     min-width: spacing(200);
     height: spacing(96);
     flex-direction: row;
@@ -22,6 +23,16 @@
       border-top-left-radius: radius('s');
       border-bottom-left-radius: radius('s');
       height: spacing(96);
+    }
+  }
+
+  &__text-container {
+    padding: spacing(8);
+    height: spacing(72);
+
+    @media ($medium-up) {
+      padding: spacing(16);
+      height: 100%;
     }
   }
 

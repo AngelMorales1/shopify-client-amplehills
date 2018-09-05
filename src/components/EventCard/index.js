@@ -31,9 +31,14 @@ const EventCard = ({ event }) => {
           backgroundSize: 'cover'
         }}
       />
-      <div className="flex flex-column justify-between col-12 md-col-6 p4">
+      <div
+        className={cx(
+          styles['EventCard__text-container'],
+          'flex flex-column justify-between col-12 md-col-6'
+        )}
+      >
         <div>
-          <span className="tout">{`${date}, ${time} at ${location}`}</span>
+          <span className="tout xs-hide sm-hide">{`${date}, ${time} at ${location}`}</span>
           <h2 className={cx(styles['EventCard__title'], 'mt2')}>{title}</h2>
         </div>
         <Button color="peach" label="RSVP" />
