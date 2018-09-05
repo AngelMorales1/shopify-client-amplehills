@@ -22,4 +22,12 @@
       flex-direction: row;
     }
   }
+
+  &__button-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
 }

@@ -169,11 +169,6 @@ class EventsBlock extends Component {
             );
           })}
         </div>
-        <div className="w100 flex flex-column items-center mt3 px2">
-          {selectedEvents.map((event, i) => (
-            <EventCard key={get(event, 'sys.id') + i} event={event} />
-          ))}
-        </div>
       </div>
     );
   }
