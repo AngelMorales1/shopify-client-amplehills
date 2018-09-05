@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import moment from 'moment';
 
 export default createSelector(
   state => get(state, 'event.events'),

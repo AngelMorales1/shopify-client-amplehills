@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 import get from 'utils/get';
 import getShortTimeFormat from 'utils/getShortTimeFormat';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
@@ -54,16 +55,20 @@ const EventCard = ({ event, active }) => {
           {event.datesAndTimes.length > 1 ? (
             <div className="mt2">
               {dates.map((date, i) => (
-                <p className={cx(styles['EventCard__text'])}>{`${moment(
-                  date
-                ).format('MM/DD/YY')} - ${times[i]}`}</p>
+                <p
+                  key={`${date}-${i}`}
+                  className={cx(styles['EventCard__text'])}
+                >{`${moment(date).format('MM/DD/YY')} - ${times[i]}`}</p>
               ))}
             </div>
           ) : null}
-          {event.text ? (
-            <p className={cx(styles['EventCard__text'], 'mt2 mb3')}>
-              {event.blockCardText}
-            </p>
+          {event.blockCardText ? (
+            <p
+              dangerouslySetInnerHTML={{
+                __html: marked(event.blockCardText)
+              }}
+              className={cx(styles['EventCard__text'], 'mt1 mb3')}
+            />
           ) : null}
         </div>
         <div>

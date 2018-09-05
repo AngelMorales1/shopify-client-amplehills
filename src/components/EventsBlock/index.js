@@ -61,7 +61,7 @@ class EventsBlock extends Component {
   };
 
   render() {
-    const { z, block, events } = this.props;
+    const { z, block } = this.props;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
     const colorClass = `EventsBlock--${get(
@@ -113,7 +113,12 @@ class EventsBlock extends Component {
       >
         <div className="px2 text-container-width center">
           <h2 className="block-headline mt4 mb3">{title}</h2>
-          <span className="block-subheadline">{text}</span>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: marked(text)
+            }}
+            className="block-subheadline"
+          />
         </div>
         {filterButtonIsOn ? (
           <div
