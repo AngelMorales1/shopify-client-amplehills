@@ -68,13 +68,13 @@ const EventCard = ({ event, active }) => {
               dangerouslySetInnerHTML={{
                 __html: marked(event.blockCardText)
               }}
-              className={cx(styles['EventCard__text'], 'mt1 mb3')}
+              className={cx(styles['EventCard__text'], 'mt1')}
             />
           ) : null}
         </div>
         <div>
           <Button
-            className="inline-flex"
+            className="inline-flex mt3"
             color="peach"
             label={label}
             to={`/events/${event.handle}`}
