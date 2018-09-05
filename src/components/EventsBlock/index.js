@@ -180,7 +180,7 @@ EventsBlock.propTypes = {
       eventType: PropTypes.string,
       filterByUpcomingOrPastIsOn: PropTypes.bool,
       text: PropTypes.string,
-      events: PropTypes.arrayOf(eventModel.propTypes)
+      events: PropTypes.array
     })
   }),
   events: PropTypes.arrayOf(eventModel.propTypes)

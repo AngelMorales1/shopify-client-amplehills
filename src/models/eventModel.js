@@ -1,36 +1,35 @@
 import PropTypes from 'prop-types';
-import imageModel from './imageModel.js';
 
 export default {
   propTypes: PropTypes.shape({
-    fields: PropTypes.shape({
-      date: PropTypes.string,
-      eventType: PropTypes.string,
-      image: imageModel.propTypes,
-      location: PropTypes.shape({
-        fields: PropTypes.shape({
-          title: PropTypes.string
-        })
-      }),
-      time: PropTypes.string,
-      title: PropTypes.string,
-      blockCardText: PropTypes.string
-    })
+    id: PropTypes.string,
+    blockCardText: PropTypes.string,
+    eventType: PropTypes.string,
+    image: PropTypes.string,
+    locationTitle: PropTypes.string,
+    title: PropTypes.string,
+    datesAndTimes: PropTypes.arrayOf(
+      PropTypes.shape({
+        uuid: PropTypes.string,
+        Date: PropTypes.string,
+        Time: PropTypes.string
+      })
+    )
   }),
 
   default: {
-    fields: {
-      date: '',
-      eventType: '',
-      image: imageModel.propTypes,
-      location: {
-        fields: {
-          title: ''
-        }
-      },
-      time: '',
-      title: '',
-      blockCardText: ''
-    }
+    id: '',
+    blockCardText: '',
+    eventType: '',
+    image: '',
+    locationTitle: '',
+    title: '',
+    datesAndTimes: [
+      {
+        uuid: '',
+        Date: '',
+        Time: ''
+      }
+    ]
   }
 };
