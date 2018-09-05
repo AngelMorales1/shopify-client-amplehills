@@ -1,0 +1,36 @@
+@import 'settings', 'typography', 'utils';
+
+.EventCard {
+  border-radius: radius('s');
+  height: spacing(144);
+  min-width: spacing(86);
+  flex-direction: column;
+
+  @media ($medium-up) {
+    min-width: spacing(200);
+    height: spacing(96);
+    flex-direction: row;
+  }
+
+  &__image {
+    border-top-left-radius: radius('s');
+    border-top-right-radius: radius('s');
+    height: spacing(72);
+
+    @media ($medium-up) {
+      border-radius: 0;
+      border-top-left-radius: radius('s');
+      border-bottom-left-radius: radius('s');
+      height: spacing(96);
+    }
+  }
+
+  &__title {
+    font-family: $font-carter;
+    font-size: $font-5;
+
+    @media ($medium-up) {
+      font-size: $font-6;
+    }
+  }
+}
