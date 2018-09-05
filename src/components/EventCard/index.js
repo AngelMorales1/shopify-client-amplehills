@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import getShortTimeFormat from 'utils/getShortTimeFormat';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import moment from 'moment';
@@ -10,43 +11,16 @@ import styles from './EventCard.scss';
 import { Image, Button } from 'components/base';
 
 const EventCard = ({ event, active }) => {
-  const getTimeFormat = time => {
-    if (time && time.length) {
-      return get(fields, 'time', '')
-        .replace(/\s+/g, '')
-        .split('-')
-        .map((time, i) => {
-          let hourAndMin = time.replace(/\s+/g, '').split(':');
-          const isExactTime = hourAndMin[1].slice(0, 2) === '00';
-
-          if (isExactTime) {
-            if (i === 0) {
-              return hourAndMin[0];
-            } else {
-              const getAmPm = hourAndMin[1].slice(-2);
-              return `${hourAndMin[0]}${getAmPm}`;
-            }
-          } else {
-            if (i === 0) {
-              const removeAmPm = hourAndMin[1].slice(0, -2);
-              return `${hourAndMin[0]}:${removeAmPm}`;
-            } else {
-              return `${hourAndMin[0]}:${hourAndMin[1]}`;
-            }
-          }
-        })
-        .join('-');
-    }
-  };
   const fields = get(event, 'fields', {});
   const image = get(fields, 'image.fields.file.url', '');
   const title = get(fields, 'title', '');
   const date = moment(get(fields, 'date', '')).format('MMMM D YYYY');
-  const time = getTimeFormat(get(fields, 'time', ''));
+  const time = getShortTimeFormat(get(fields, 'time', ''));
   const location = get(fields, 'location.fields.title', '');
   const eventType = get(fields, 'eventType', '');
   const eventTypeIsClass = eventType === 'Ice Cream Classes';
   const label = eventTypeIsClass ? 'More Info' : 'RSVP';
+  const text = get(fields, 'blockCardText', '');
 
   return (
     <div
@@ -74,13 +48,18 @@ const EventCard = ({ event, active }) => {
       >
         <div>
           {!eventTypeIsClass ? (
-            <p className="tout xs-hide sm-hide mb2">{`${date}, ${time} at ${location}`}</p>
+            <p
+              className={cx(styles['EventCard__text'], 'xs-hide sm-hide mb2')}
+            >{`${date}, ${time} at ${location}`}</p>
           ) : null}
           <h2 className={cx(styles['EventCard__title'])}>{title}</h2>
           {eventTypeIsClass ? (
-            <p className="tout mt2 mb1">
+            <p className={cx(styles['EventCard__text'], 'mt2 mb1')}>
               ////////date and time should be render here ////////
             </p>
+          ) : null}
+          {text ? (
+            <p className={cx(styles['EventCard__text'], 'mt2 mb3')}>{text}</p>
           ) : null}
         </div>
         <div>
