@@ -67,6 +67,16 @@
     }
   }
 
+  &__text-container {
+    padding: spacing(8);
+    height: spacing(72);
+
+    @media ($medium-up) {
+      padding: spacing(16);
+      height: 100%;
+    }
+  }
+
   &__title {
     font-family: $font-carter;
     font-size: $font-5;
