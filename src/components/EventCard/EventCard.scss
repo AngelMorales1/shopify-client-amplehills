@@ -69,11 +69,10 @@
 
   &__text-container {
     padding: spacing(8);
-    height: spacing(72);
+    flex: auto;
 
     @media ($medium-up) {
       padding: spacing(12);
-      height: 100%;
     }
   }
 
