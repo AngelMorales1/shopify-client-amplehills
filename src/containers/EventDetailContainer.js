@@ -13,7 +13,6 @@ class EventDetailContainer extends ContainerBase {
     const {
       actions: { getEventPage }
     } = this.props;
-    console.log('>>>', this.props);
     // const { path } = this.props.match;
 
     return getEventPage();
@@ -21,9 +20,9 @@ class EventDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(props);
+  console.log(state);
   return {
-    eventPageData: get(state, '')
+    eventPageData: get(state, 'eventPage.eventPageData', {})
   };
 };
 
