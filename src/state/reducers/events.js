@@ -1,4 +1,4 @@
-import { GET_EVENTS } from 'state/actions/eventActions';
+import { GET_EVENTS } from 'state/actions/eventsActions';
 
 const initialState = {
   events: {}

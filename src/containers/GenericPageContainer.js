@@ -2,7 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
-import { getEvents } from 'state/actions/eventActions';
+import { getEvents } from 'state/actions/eventsActions';
 import events from 'state/selectors/events';
 
 import get from 'utils/get';

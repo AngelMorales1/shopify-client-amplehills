@@ -15,13 +15,13 @@ class EventsBlock extends Component {
     activeFilter: ''
   };
 
-  isActiveFilter = (filter, index) => {
+  filterIsActive = (filter, index) => {
     return (
       this.state.activeFilter === filter || (!index && !this.state.activeFilter)
     );
   };
 
-  isActiveCard = event => {
+  cardIsActive = event => {
     const eventLocation = get(event, 'locationTitle', '');
 
     return this.state.activeFilter.split(':')[0] === eventLocation;
@@ -111,7 +111,7 @@ class EventsBlock extends Component {
             )}
           >
             {buttonLabels.map((label, i) => {
-              const color = this.isActiveFilter(label, i)
+              const color = this.filterIsActive(label, i)
                 ? 'clear-madison-blue-border'
                 : 'madison-blue';
 
@@ -137,7 +137,7 @@ class EventsBlock extends Component {
             return (
               <EventCard
                 active={
-                  locationFilterButtonIsOn ? this.isActiveCard(event) : true
+                  locationFilterButtonIsOn ? this.cardIsActive(event) : true
                 }
                 key={`${get(event, 'id')}-${i}`}
                 event={event}

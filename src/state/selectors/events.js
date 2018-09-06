@@ -2,7 +2,7 @@ import { createSelector } from 'reselect';
 import get from 'utils/get';
 
 export default createSelector(
-  state => get(state, 'event.events'),
+  state => get(state, 'events.events'),
   events => {
     const selectedEvents = get(events, 'items', []).map(event => {
       const fields = get(event, 'fields', {});
