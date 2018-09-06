@@ -13,6 +13,7 @@ import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
+import EventDetailContainer from 'containers/EventDetailContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -22,6 +23,8 @@ const Routes = ({ location }) => (
       path="/products/:productHandle"
       component={ProductDetailContainer}
     />
+    <Route exact path="/events/:eventId" component={EventDetailContainer} />
+    <Route path="/eventtest" component={EventDetailContainer} />
     <Route path="/products" component={ProductLandingContainer} />
     <Route path="/profile" component={ProfileContainer} />
     <Route path="/sign-in" component={SignInContainer} />
