@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case `${GET_EVENT_PAGE}_FULFILLED`:
       return {
         ...state,
-        events: action.payload
+        eventPageData: action.payload
       };
     default:
       return state;

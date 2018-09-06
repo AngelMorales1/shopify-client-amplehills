@@ -2,7 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getEventPage } from 'state/actions/eventPageActions';
-// import pressItems from 'state/selectors/pressItems';
+import event from 'state/selectors/event';
 
 import get from 'utils/get';
 
@@ -13,16 +13,15 @@ class EventDetailContainer extends ContainerBase {
     const {
       actions: { getEventPage }
     } = this.props;
-    // const { path } = this.props.match;
 
     return getEventPage();
   };
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(state);
   return {
-    eventPageData: get(state, 'eventPage.eventPageData', {})
+    eventPageData: get(state, 'eventPage.eventPageData', {}),
+    event: event(state, props)
   };
 };
 

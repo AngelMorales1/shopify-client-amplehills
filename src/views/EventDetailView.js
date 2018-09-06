@@ -8,14 +8,10 @@ class EventDetailView extends Component {
     const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    // const {
-    //   product: { blocks }
-    // } = this.props;
-
     return (
       <div className="EventDetailView">
-        {/* <div>
-          {blocks &&
+        <div>
+          {/* {blocks &&
             blocks.map((block, i) => (
               <BlockSwitch
                 key={`${i}-${get(block, 'sys.id', i)}`}
@@ -23,8 +19,8 @@ class EventDetailView extends Component {
                 z={blocks.length - i}
                 {...this.props}
               />
-            ))}
-        </div> */}
+            ))} */}
+        </div>
       </div>
     );
   }

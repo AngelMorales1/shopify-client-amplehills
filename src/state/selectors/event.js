@@ -3,7 +3,7 @@ import get from 'utils/get';
 import events from 'state/selectors/events';
 
 export default createSelector(
-  state => events(state),
+  state => get(state, 'eventPage.eventPageData.items', []),
   (state, props) => get(props, 'match.params.eventId', ''),
-  (events, id) => events[id]
+  (events, id) => events.find(event => get(event, 'sys.id', '') === id)
 );
