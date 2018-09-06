@@ -27,7 +27,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         getEvents()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
-        setTimeout(() => reject('Timeout'), 10000);
+        // setTimeout(() => reject('Timeout'), 10000);
       });
       const checkTimeout = Promise.race([fetchData, timeout]);
 

@@ -5,7 +5,8 @@ export const getEventPage = payload => dispatch => {
   return dispatch({
     type: GET_EVENT_PAGE,
     payload: Data.getEntries({
-      content_type: 'eventPage'
+      content_type: 'eventPage',
+      include: 4
     })
   });
 };
