@@ -48,9 +48,9 @@ const EventCard = ({ event, active }) => {
       >
         <div>
           {datesAndTimes.length === 1 ? (
-            <p
-              className={cx(styles['EventCard__text'], 'xs-hide sm-hide mb2')}
-            >{`${dates[0]}, ${times[0]} at ${event.locationTitle}`}</p>
+            <p className={cx(styles['EventCard__date-text'], 'mb2')}>{`${
+              dates[0]
+            }, ${times[0]} at ${event.locationTitle}`}</p>
           ) : null}
           <h2 className={cx(styles['EventCard__title'])}>{event.title}</h2>
           {datesAndTimes.length > 1 ? (

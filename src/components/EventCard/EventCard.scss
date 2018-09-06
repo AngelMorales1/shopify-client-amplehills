@@ -44,6 +44,20 @@
     }
   }
 
+  &__date-text {
+    font-size: $font-2;
+    letter-spacing: spacing(0.2);
+    line-height: $font-6;
+    color: color('peach');
+    font-weight: 800;
+
+    @media ($medium-up) {
+      font-size: $font-3;
+      color: color('madison-blue');
+      font-weight: inherit;
+    }
+  }
+
   &__text {
     @extend .tout;
     line-height: $font-6;
