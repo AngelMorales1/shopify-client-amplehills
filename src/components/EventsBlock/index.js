@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
-import moment from 'moment';
 import EventCard from 'components/EventCard';
 import eventModel from 'models/eventModel';
 import EventTypes from 'constants/EventTypes';
@@ -97,9 +96,7 @@ class EventsBlock extends Component {
     )}`;
     const title = get(fields, 'title', '');
     const text = get(fields, 'text', '');
-    const filterButtonIsOn = get(fields, 'addFilterButton', false);
     const locationFilterButtonIsOn = get(fields, 'locationFilterButton', false);
-    const blockEventType = get(fields, 'eventType', '');
 
     return (
       <div

@@ -5,14 +5,14 @@
   display: none;
   opacity: 0;
   border-radius: radius('s');
-  height: spacing(144);
+  min-height: spacing(144);
   max-width: spacing(86);
   flex-direction: column;
 
   @media ($medium-up) {
     max-width: inherit;
     min-width: spacing(200);
-    height: spacing(96);
+    min-height: spacing(96);
     flex-direction: row;
   }
 
@@ -30,17 +30,17 @@
       border-radius: 0;
       border-top-left-radius: radius('s');
       border-bottom-left-radius: radius('s');
-      height: spacing(96);
+      height: inherit;
+      flex: auto;
     }
   }
 
   &__text-container {
     padding: spacing(8);
-    height: spacing(72);
+    flex: auto;
 
     @media ($medium-up) {
       padding: spacing(12);
-      height: 100%;
     }
   }
 

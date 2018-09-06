@@ -43,7 +43,7 @@ const EventCard = ({ event, active }) => {
       <div
         className={cx(
           styles['EventCard__text-container'],
-          'flex flex-column justify-between col-12 md-col-6'
+          'col-12 md-col-6 flex flex-column justify-between'
         )}
       >
         <div>
