@@ -1,0 +1,28 @@
+@import 'settings', 'typography';
+
+.EventDetailHero {
+  &__button {
+    display: inline-flex;
+  }
+
+  &__content-container {
+    flex-direction: column;
+    padding: 0 spacing(8);
+
+    @media ($medium-up) {
+      flex-direction: row;
+      padding: 0 spacing(16);
+    }
+  }
+
+  &__content-text {
+    @extend .bold;
+    font-size: $font-6;
+  }
+
+  &__text-container {
+    @media ($medium-up) {
+      padding: 0 spacing(16);
+    }
+  }
+}
