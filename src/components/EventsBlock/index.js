@@ -6,6 +6,7 @@ import get from 'utils/get';
 import moment from 'moment';
 import EventCard from 'components/EventCard';
 import eventModel from 'models/eventModel';
+import EventTypes from 'constants/EventTypes';
 
 import { Button } from 'components/base';
 import styles from './EventsBlock.scss';
@@ -16,9 +17,7 @@ class EventsBlock extends Component {
   };
 
   filterIsActive = (filter, index) => {
-    return (
-      this.state.activeFilter === filter || (!index && !this.state.activeFilter)
-    );
+    return this.state.activeFilter === filter;
   };
 
   cardIsActive = event => {
@@ -69,19 +68,17 @@ class EventsBlock extends Component {
       : allEvents.filter(event => {
           let eventType = get(event, 'eventType', '');
 
-          if (!blockEventType || blockEventType === 'All Events') {
+          if (!blockEventType || blockEventType === EventTypes.ALL_EVENTS) {
             return event;
-          } else if (blockEventType === 'All Socials') {
-            return eventType !== 'Ice Cream Classes';
           }
 
           return eventType === blockEventType;
         });
     let buttonLabels = this.getLocationButtonLabel(selectedEvents);
 
-    locationFilterButtonIsOn && !this.state.activeFilter
-      ? this.setState({ activeFilter: buttonLabels[0] })
-      : null;
+    if (locationFilterButtonIsOn && !this.state.activeFilter) {
+      this.setState({ activeFilter: buttonLabels[0] });
+    }
 
     return (
       <div
