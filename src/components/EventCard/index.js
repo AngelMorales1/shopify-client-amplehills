@@ -47,13 +47,13 @@ const EventCard = ({ event, active }) => {
         )}
       >
         <div>
-          {event.datesAndTimes.length === 1 ? (
+          {datesAndTimes.length === 1 ? (
             <p
               className={cx(styles['EventCard__text'], 'xs-hide sm-hide mb2')}
             >{`${dates[0]}, ${times[0]} at ${event.locationTitle}`}</p>
           ) : null}
           <h2 className={cx(styles['EventCard__title'])}>{event.title}</h2>
-          {event.datesAndTimes.length > 1 ? (
+          {datesAndTimes.length > 1 ? (
             <div className="mt2">
               {dates.map((date, i) => (
                 <p
