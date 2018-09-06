@@ -12,10 +12,11 @@ import styles from './EventCard.scss';
 import { Button } from 'components/base';
 
 const EventCard = ({ event, active }) => {
-  const dates = event.datesAndTimes.map(dateAndTime => {
+  const datesAndTimes = event.datesAndTimes;
+  const dates = datesAndTimes.map(dateAndTime => {
     return moment(get(dateAndTime, 'Date', '')).format('MMMM D YYYY');
   });
-  const times = event.datesAndTimes.map(dateAndTime => {
+  const times = datesAndTimes.map(dateAndTime => {
     return getShortTimeFormat(get(dateAndTime, 'Time', ''));
   });
   const eventTypeIsClass = event.eventType === 'Ice Cream Classes';
