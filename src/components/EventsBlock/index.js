@@ -17,29 +17,11 @@ class EventsBlock extends Component {
 
   isActiveFilter = (filter, index) => {
     return (
-      this.state.activeFilter === filter ||
-      (!index &&
-        !this.state.activeFilter &&
-        this.setState({ activeFilter: filter }))
+      this.state.activeFilter === filter || (!index && !this.state.activeFilter)
     );
   };
 
-  isActiveCard = (filterByUpcomingOrPastIsOn, event) => {
-    if (filterByUpcomingOrPastIsOn) {
-      const today = moment(new Date()).format('X');
-      const eventDateAndTime = `${moment(
-        get(event, 'datesAndTimes[0].Date', '')
-      ).format('MMMM D YYYY')} ${get(event, 'datesAndTimes[0].Time', '')
-        .replace(/\s+/g, '')
-        .split('-')[0]
-        .slice(0, -2)}`;
-      const eventDate = moment(eventDateAndTime).format('X');
-      const eventInPast = today >= eventDate;
-      const eventStatus = eventInPast ? 'Past' : 'Upcoming';
-
-      return this.state.activeFilter === eventStatus;
-    }
-
+  isActiveCard = event => {
     const eventLocation = get(event, 'locationTitle', '');
 
     return this.state.activeFilter.split(':')[0] === eventLocation;
@@ -72,11 +54,7 @@ class EventsBlock extends Component {
     const title = get(fields, 'title', '');
     const text = get(fields, 'text', '');
     const filterButtonIsOn = get(fields, 'addFilterButton', false);
-    const filterByUpcomingOrPastIsOn = get(
-      fields,
-      'filterByUpcomingOrPast',
-      true
-    );
+    const locationFilterButtonIsOn = get(fields, 'locationFilterButton', false);
     const blockEventType = get(fields, 'eventType', '');
     const allEvents = get(this.props, 'events', {});
     const customEvents = get(fields, 'events', []);
@@ -96,9 +74,10 @@ class EventsBlock extends Component {
 
           return eventType === blockEventType;
         });
-    let buttonLabels = filterByUpcomingOrPastIsOn
-      ? ['Upcoming', 'Past']
-      : this.getLocationButtonLabel(selectedEvents);
+    let buttonLabels = this.getLocationButtonLabel(selectedEvents);
+    locationFilterButtonIsOn && !this.state.activeFilter
+      ? this.setState({ activeFilter: buttonLabels[0] })
+      : null;
 
     return (
       <div
@@ -120,7 +99,7 @@ class EventsBlock extends Component {
             className="block-subheadline"
           />
         </div>
-        {filterButtonIsOn ? (
+        {locationFilterButtonIsOn ? (
           <div
             className={cx(
               styles['EventsBlock__button-container'],
@@ -154,9 +133,7 @@ class EventsBlock extends Component {
             return (
               <EventCard
                 active={
-                  filterButtonIsOn
-                    ? this.isActiveCard(filterByUpcomingOrPastIsOn, event)
-                    : true
+                  locationFilterButtonIsOn ? this.isActiveCard(event) : true
                 }
                 key={`${get(event, 'id')}-${i}`}
                 event={event}
@@ -176,11 +153,10 @@ EventsBlock.propTypes = {
       backgroudColor: '',
       title: PropTypes.string,
       drip: PropTypes.bool,
-      addFilterButton: PropTypes.bool,
       eventType: PropTypes.string,
-      filterByUpcomingOrPastIsOn: PropTypes.bool,
       text: PropTypes.string,
-      events: PropTypes.array
+      events: PropTypes.array,
+      locationFilterButton: PropTypes.bool
     })
   }),
   events: PropTypes.arrayOf(eventModel.propTypes)
@@ -193,11 +169,10 @@ EventsBlock.defaultProps = {
       backgroudColor: 'white',
       title: '',
       drip: false,
-      addFilterButton: false,
       eventType: '',
-      filterByUpcomingOrPastIsOn: true,
       text: '',
-      events: []
+      events: [],
+      locationFilterButton: false
     }
   },
   events: [eventModel.default]
