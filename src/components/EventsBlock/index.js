@@ -13,8 +13,24 @@ import styles from './EventsBlock.scss';
 
 class EventsBlock extends Component {
   state = {
+    selectedEvents: [],
+    buttonLabels: [],
     activeFilter: ''
   };
+
+  componentDidMount() {
+    const selectedEvents = get(this, 'props.block.fields.events', []).length
+      ? this.getCustomEvents()
+      : this.getAllEvents();
+
+    const buttonLabels = this.getLocationButtonLabel(selectedEvents);
+
+    this.setState({
+      selectedEvents,
+      buttonLabels,
+      activeFilter: buttonLabels[0]
+    });
+  }
 
   filterIsActive = (filter, index) => {
     return this.state.activeFilter === filter;
@@ -44,8 +60,34 @@ class EventsBlock extends Component {
     );
   };
 
+  getAllEvents = () => {
+    const allEvents = get(this, 'props.events', {});
+    const blockEventType = get(this, 'props.block.fields.eventType', '');
+
+    return allEvents.filter(event => {
+      const eventType = get(event, 'eventType', '');
+
+      if (!blockEventType || blockEventType === EventTypes.ALL_EVENTS) {
+        return event;
+      }
+
+      return eventType === blockEventType;
+    });
+  };
+
+  getCustomEvents = () => {
+    const customEvents = get(this, 'props.block.fields.events', []);
+    const allEvents = get(this, 'props.events', {});
+
+    return customEvents.map(customEvent => {
+      const id = get(customEvent, 'sys.id', '');
+      return allEvents.find(event => event.id === id);
+    });
+  };
+
   render() {
     const { z, block } = this.props;
+    const { buttonLabels, selectedEvents } = this.state;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
     const colorClass = `EventsBlock--${get(
@@ -58,27 +100,6 @@ class EventsBlock extends Component {
     const filterButtonIsOn = get(fields, 'addFilterButton', false);
     const locationFilterButtonIsOn = get(fields, 'locationFilterButton', false);
     const blockEventType = get(fields, 'eventType', '');
-    const allEvents = get(this.props, 'events', {});
-    const customEvents = get(fields, 'events', []);
-    let selectedEvents = customEvents.length
-      ? customEvents.map(customEvent => {
-          const id = get(customEvent, 'sys.id', '');
-          return allEvents.find(event => event.id === id);
-        })
-      : allEvents.filter(event => {
-          let eventType = get(event, 'eventType', '');
-
-          if (!blockEventType || blockEventType === EventTypes.ALL_EVENTS) {
-            return event;
-          }
-
-          return eventType === blockEventType;
-        });
-    let buttonLabels = this.getLocationButtonLabel(selectedEvents);
-
-    if (locationFilterButtonIsOn && !this.state.activeFilter) {
-      this.setState({ activeFilter: buttonLabels[0] });
-    }
 
     return (
       <div
