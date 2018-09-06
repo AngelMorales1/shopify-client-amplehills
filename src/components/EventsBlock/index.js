@@ -28,15 +28,18 @@ class EventsBlock extends Component {
   };
 
   getLocationButtonLabel = selectedEvents => {
-    let locationButtonLabel = {};
+    const locationButtonLabel = selectedEvents.reduce((acc, cur) => {
+      let location = get(cur, 'locationTitle', '');
 
-    selectedEvents.forEach(event => {
-      let location = get(event, 'locationTitle', '');
+      if (acc[location]) {
+        acc[location]++;
+      } else {
+        acc[location] = 1;
+      }
 
-      locationButtonLabel[location]
-        ? (locationButtonLabel[location] = ++locationButtonLabel[location])
-        : (locationButtonLabel[location] = 1);
-    });
+      return acc;
+    }, {});
+
     return Object.keys(locationButtonLabel).map(
       key => `${key}: ${locationButtonLabel[key]}`
     );
@@ -75,6 +78,7 @@ class EventsBlock extends Component {
           return eventType === blockEventType;
         });
     let buttonLabels = this.getLocationButtonLabel(selectedEvents);
+
     locationFilterButtonIsOn && !this.state.activeFilter
       ? this.setState({ activeFilter: buttonLabels[0] })
       : null;
