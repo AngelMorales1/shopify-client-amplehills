@@ -5,6 +5,7 @@ import cx from 'classnames';
 import moment from 'moment';
 import marked from 'marked';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import eventModel from 'models/eventModel';
 
 import { Image, Button } from 'components/base';
 import styles from './EventDetailHero.scss';
@@ -120,8 +121,12 @@ const EventDetailHero = ({ event }) => {
   );
 };
 
-EventDetailHero.propTypes = {};
+EventDetailHero.propTypes = {
+  event: eventModel.propTypes
+};
 
-EventDetailHero.defaultProps = {};
+EventDetailHero.defaultProps = {
+  event: eventModel.default
+};
 
 export default EventDetailHero;
