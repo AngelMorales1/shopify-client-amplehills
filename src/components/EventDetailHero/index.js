@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
 import moment from 'moment';
+import marked from 'marked';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import { Image, Button } from 'components/base';
 import styles from './EventDetailHero.scss';
@@ -10,7 +12,7 @@ import imageModel from 'models/imageModel';
 
 const EventDetailHero = ({ event }) => {
   return (
-    <div className={cx(styles['EventDetailHero'], 'flex flex-column')}>
+    <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
       <div className="flex flex-column justify-center items-center w100 mt4">
         <h2 className="block-headline">{event.title}</h2>
         <div className="mt3">
@@ -25,8 +27,19 @@ const EventDetailHero = ({ event }) => {
       <div
         className={cx(styles['EventDetailHero__content-container'], 'flex mt4')}
       >
-        <div className="col-12 md-col-6">
-          <Image src={event.image} />
+        <div
+          className={cx(styles['EventDetailHero__image'], 'col-12 md-col-6')}
+        >
+          <div
+            className="aspect-4-3 w100"
+            style={{
+              background: `url(${contentfulImgUtil(
+                event.image,
+                '1600'
+              )}) no-repeat center`,
+              backgroundSize: 'cover'
+            }}
+          />
         </div>
         <div
           className={cx(
@@ -63,7 +76,12 @@ const EventDetailHero = ({ event }) => {
                     {get(event, 'datesAndTimes[0].Time', '')}
                   </p>
                 </div>
-                <div className="flex flex-row justify-between items-center mt3">
+                <div
+                  className={cx(
+                    styles['EventDetailHero__location-container'],
+                    'flex mt3'
+                  )}
+                >
                   <div>
                     <p className="copy">Location</p>
                     <p
@@ -77,7 +95,7 @@ const EventDetailHero = ({ event }) => {
                   </div>
                   <div>
                     <Button
-                      className={cx(styles['EventDetailHero__button'])}
+                      className={cx(styles['EventDetailHero__map-button'])}
                       variant="primary-small"
                       color="clear-madison-blue-border"
                       label="Map"
@@ -86,8 +104,15 @@ const EventDetailHero = ({ event }) => {
                 </div>
               </div>
             )}
-            <Button className="mt4" color="peach" label="Call to Action" />
-            <p className="block-subheadline mt4">{event.text}</p>
+            <Button
+              className={cx(styles['EventDetailHero__action-button'], 'mt4')}
+              color="peach"
+              label="Call to Action"
+            />
+            <div
+              dangerouslySetInnerHTML={{ __html: marked(event.text) }}
+              className={cx(styles['EventDetailHero__markdown'], 'mt4')}
+            />
           </div>
         </div>
       </div>

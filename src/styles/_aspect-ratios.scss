@@ -11,3 +11,7 @@
 .aspect-3-4 {
   @include aspect-ratio(3, 4);
 }
+
+.aspect-4-3 {
+  @include aspect-ratio(4, 3);
+}

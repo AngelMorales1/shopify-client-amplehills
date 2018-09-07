@@ -12,7 +12,7 @@ class EventDetailView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div className="EventDetailView py4">
+      <div className="EventDetailView">
         <EventDetailHero event={event} {...this.props} />
         {blocks &&
           blocks.map((block, i) => (
