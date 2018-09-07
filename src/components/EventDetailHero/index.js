@@ -9,26 +9,10 @@ import styles from './EventDetailHero.scss';
 import imageModel from 'models/imageModel';
 
 const EventDetailHero = ({ event }) => {
-  const eventData = get(event, 'fields.event.fields', {});
-  const image = get(eventData, 'image.fields.file.url', '');
-  const datesAndTimes = get(eventData, 'datesAndTimes.fragments', []).map(
-    fragment => {
-      return fragment.reduce((accumulated, current) => {
-        accumulated[current.key] = current.value;
-
-        return accumulated;
-      }, {});
-    }
-  );
-  const location = get(eventData, 'location.fields', {});
-  const locationTitle = get(location, 'title', '');
-  const title = get(eventData, 'title', '');
-  const text = get(eventData, 'text', '');
-
   return (
     <div className={cx(styles['EventDetailHero'], 'flex flex-column')}>
       <div className="flex flex-column justify-center items-center w100 mt4">
-        <h2 className="block-headline">{title}</h2>
+        <h2 className="block-headline">{event.title}</h2>
         <div className="mt3">
           <Button
             className={cx(styles['EventDetailHero__button'])}
@@ -42,7 +26,7 @@ const EventDetailHero = ({ event }) => {
         className={cx(styles['EventDetailHero__content-container'], 'flex mt4')}
       >
         <div className="col-12 md-col-6">
-          <Image src={image} />
+          <Image src={event.image} />
         </div>
         <div
           className={cx(
@@ -51,7 +35,7 @@ const EventDetailHero = ({ event }) => {
           )}
         >
           <div className="text-container-width">
-            {datesAndTimes.length > 1 ? (
+            {event.datesAndTimes.length > 1 ? (
               <div>dates list</div>
             ) : (
               <div>
@@ -63,7 +47,9 @@ const EventDetailHero = ({ event }) => {
                       'mt1'
                     )}
                   >
-                    {moment(datesAndTimes[0].Date).format('dddd, MMMM Do')}
+                    {moment(get(event, 'datesAndTimes[0].Date', '')).format(
+                      'dddd, MMMM Do'
+                    )}
                   </p>
                 </div>
                 <div>
@@ -74,7 +60,7 @@ const EventDetailHero = ({ event }) => {
                       'mt1'
                     )}
                   >
-                    {datesAndTimes[0].Time}
+                    {get(event, 'datesAndTimes[0].Time', '')}
                   </p>
                 </div>
                 <div className="flex flex-row justify-between items-center mt3">
@@ -86,7 +72,7 @@ const EventDetailHero = ({ event }) => {
                         'mt1'
                       )}
                     >
-                      {locationTitle}
+                      {event.locationTitle}
                     </p>
                   </div>
                   <div>
@@ -101,7 +87,7 @@ const EventDetailHero = ({ event }) => {
               </div>
             )}
             <Button className="mt4" color="peach" label="Call to Action" />
-            <p className="block-subheadline mt4">{text}</p>
+            <p className="block-subheadline mt4">{event.text}</p>
           </div>
         </div>
       </div>

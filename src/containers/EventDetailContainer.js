@@ -1,7 +1,8 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getEventPage } from 'state/actions/eventPageActions';
+import { getEvents } from 'state/actions/eventsActions';
+import events from 'state/selectors/events';
 import event from 'state/selectors/event';
 
 import get from 'utils/get';
@@ -11,17 +12,17 @@ class EventDetailContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { getEventPage }
+      actions: { getEvents }
     } = this.props;
 
-    return getEventPage();
+    return getEvents();
   };
 }
 
 const mapStateToProps = (state, props) => {
   return {
-    eventPageData: get(state, 'eventPage.eventPageData', {}),
-    event: event(state, props)
+    event: event(state, props),
+    events: events(state)
   };
 };
 
@@ -29,7 +30,7 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        getEventPage
+        getEvents
       },
       dispatch
     )

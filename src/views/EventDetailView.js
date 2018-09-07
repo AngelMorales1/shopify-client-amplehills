@@ -7,15 +7,14 @@ import EventDetailHero from 'components/EventDetailHero';
 class EventDetailView extends Component {
   render() {
     const { model, event } = this.props;
-    const fields = get(event, 'fields', {});
-    const blocks = get(fields, 'contentBlocks', []);
+    const blocks = get(event, 'contentBlocks', []);
 
     if (model.isError) return <h1>Error</h1>;
 
     return (
       <div className="EventDetailView py4">
-        <EventDetailHero event={get(fields, 'event', {})} {...this.props} />
-        {/* {blocks &&
+        <EventDetailHero event={event} {...this.props} />
+        {blocks &&
           blocks.map((block, i) => (
             <BlockSwitch
               key={`${i}-${get(block, 'sys.id', i)}`}
@@ -23,7 +22,7 @@ class EventDetailView extends Component {
               z={blocks.length - i}
               {...this.props}
             />
-          ))} */}
+          ))}
       </div>
     );
   }

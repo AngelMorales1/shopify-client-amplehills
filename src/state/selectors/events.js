@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
+import events from 'state/selectors/events';
 
 export default createSelector(
   state => get(state, 'events.events'),
@@ -12,6 +13,8 @@ export default createSelector(
       const image = get(fields, 'image.fields.file.url', '');
       const locationTitle = get(fields, 'location.fields.title', '');
       const title = get(fields, 'title', '');
+      const contentBlocks = get(fields, 'contentBlocks', []);
+      const text = get(fields, 'text', '');
       const datesAndTimes = get(fields, 'datesAndTimes.fragments', []).map(
         fragment => {
           return fragment.reduce((accumulated, current) => {
@@ -29,6 +32,8 @@ export default createSelector(
         image,
         locationTitle,
         title,
+        contentBlocks,
+        text,
         datesAndTimes
       };
     });

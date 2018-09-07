@@ -1,8 +1,9 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
+import events from 'state/selectors/events';
 
 export default createSelector(
-  state => get(state, 'eventPage.eventPageData.items', []),
+  state => events(state),
   (state, props) => get(props, 'match.params.eventId', ''),
-  (events, id) => events.find(event => get(event, 'sys.id', '') === id)
+  (events, eventId) => events.find(event => get(event, 'id', '') === eventId)
 );
