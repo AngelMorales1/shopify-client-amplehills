@@ -31,19 +31,29 @@ class EventsBlock extends Component {
     });
   }
 
-  filterIsActive = (filter, index) => {
+  filterIsActive = filter => {
     return this.state.activeFilter === filter;
   };
 
   cardIsActive = event => {
-    const eventLocation = get(event, 'locationTitle', '');
+    const locationFilterButtonIsOn = get(
+      this,
+      'props.block.fields.locationFilterButton',
+      false
+    );
 
-    return this.state.activeFilter.split(':')[0] === eventLocation;
+    if (locationFilterButtonIsOn) {
+      const eventLocation = get(event, 'locationTitle', '');
+
+      return this.state.activeFilter.split(':')[0] === eventLocation;
+    }
+
+    return true;
   };
 
   getLocationButtonLabel = selectedEvents => {
     const locationButtonLabel = selectedEvents.reduce((acc, cur) => {
-      let location = get(cur, 'locationTitle', '');
+      const location = get(cur, 'locationTitle', '');
 
       if (acc[location]) {
         acc[location]++;
@@ -60,7 +70,7 @@ class EventsBlock extends Component {
   };
 
   getAllEvents = () => {
-    const allEvents = get(this, 'props.events', {});
+    const allEvents = get(this, 'props.events', []);
     const blockEventType = get(this, 'props.block.fields.eventType', '');
 
     return allEvents.filter(event => {
@@ -76,7 +86,7 @@ class EventsBlock extends Component {
 
   getCustomEvents = () => {
     const customEvents = get(this, 'props.block.fields.events', []);
-    const allEvents = get(this, 'props.events', {});
+    const allEvents = get(this, 'props.events', []);
 
     return customEvents.map(customEvent => {
       const id = get(customEvent, 'sys.id', '');
@@ -126,7 +136,7 @@ class EventsBlock extends Component {
             )}
           >
             {buttonLabels.map((label, i) => {
-              const color = this.filterIsActive(label, i)
+              const color = this.filterIsActive(label)
                 ? 'clear-madison-blue-border'
                 : 'madison-blue';
 
@@ -151,9 +161,7 @@ class EventsBlock extends Component {
           {selectedEvents.map((event, i) => {
             return (
               <EventCard
-                active={
-                  locationFilterButtonIsOn ? this.cardIsActive(event) : true
-                }
+                active={this.cardIsActive(event)}
                 key={`${get(event, 'id')}-${i}`}
                 event={event}
               />
