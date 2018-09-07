@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import get from 'utils/get';
+import getUrlParam from 'utils/getUrlParam';
 import locationModel from 'models/locationModel';
 
 import LocationsMapKey from 'constants/LocationsMapKey';
