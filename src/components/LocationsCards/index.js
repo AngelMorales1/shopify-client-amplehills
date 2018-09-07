@@ -7,6 +7,7 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationCard from 'components/LocationCard';
+import getUrlParam from 'utils/getUrlParam';
 
 import { Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
@@ -23,7 +24,7 @@ class LocationsCards extends Component {
     this.attemptToGetDistanceToStores();
   };
 
-  componentDidUpdate = prevProps => {
+  componentDidUpdate = (prevProps, prevState) => {
     if (this.props.filteredLocations !== prevProps.filteredLocations) {
       this.attemptToGetDistanceToStores();
     }
@@ -43,9 +44,12 @@ class LocationsCards extends Component {
     if ('geolocation' in window.navigator) {
       return this.getDistanceToStores(locations);
     } else {
-      return this.setState({
-        sortedLocations: locations
-      });
+      this.setState(
+        {
+          sortedLocations: locations
+        },
+        this.props.locationsCardHasLoaded
+      );
     }
   };
 
@@ -61,7 +65,10 @@ class LocationsCards extends Component {
           this.sortLocationsByDistance(locations, position);
         },
         error => {
-          this.setState({ sortedLocations: locations });
+          this.setState(
+            { sortedLocations: locations },
+            this.props.locationsCardHasLoaded
+          );
         }
       );
     }
@@ -89,7 +96,8 @@ class LocationsCards extends Component {
       return location1.distance - location2.distance;
     });
 
-    this.setState({ sortedLocations: sortedLocations });
+    this.setState({ sortedLocations });
+    this.props.locationsCardHasLoaded();
   };
 
   render() {

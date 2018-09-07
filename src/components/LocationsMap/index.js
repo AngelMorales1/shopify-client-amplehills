@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import get from 'utils/get';
+import getUrlParam from 'utils/getUrlParam';
 import locationModel from 'models/locationModel';
 
 import LocationsMapKey from 'constants/LocationsMapKey';
@@ -92,6 +93,7 @@ const LocationsMap = props => {
         mapPadding={150}
         maxZoom={18}
         onClickFeature={onClickFeature}
+        onLoad={() => setTimeout(() => props.locationsMapHasLoaded(), 1000)}
         featureIdZoomTo={selectedLocation}
       />
       <div className="absolute t0 l0 flex p3">

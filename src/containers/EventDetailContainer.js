@@ -1,6 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 import { getEvents } from 'state/actions/eventsActions';
 import events from 'state/selectors/events';
 import event from 'state/selectors/event';

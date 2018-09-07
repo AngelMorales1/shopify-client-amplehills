@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
 import cx from 'classnames';
 import moment from 'moment';
@@ -11,18 +12,22 @@ import { Image, Button } from 'components/base';
 import styles from './EventDetailHero.scss';
 import imageModel from 'models/imageModel';
 
-const EventDetailHero = ({ event }) => {
+const EventDetailHero = ({ event, actions }) => {
+  const url = new URL(window.location.href).href;
+
   return (
     <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
       <div className="flex flex-column justify-center items-center w100 mt4">
         <h2 className="block-headline">{event.title}</h2>
         <div className="mt3">
-          <Button
-            className={cx(styles['EventDetailHero__button'])}
-            variant="primary-small"
-            color="clear-madison-blue-border"
-            label={'Share'.toUpperCase()}
-          />
+          <FacebookShareButton url={url}>
+            <Button
+              className={cx(styles['EventDetailHero__button'])}
+              variant="primary-small"
+              color="clear-madison-blue-border"
+              label={'Share'.toUpperCase()}
+            />
+          </FacebookShareButton>
         </div>
       </div>
       <div
@@ -99,6 +104,7 @@ const EventDetailHero = ({ event }) => {
                       className={cx(styles['EventDetailHero__map-button'])}
                       variant="primary-small"
                       color="clear-madison-blue-border"
+                      to={`/locations/?location=${event.locationId}`}
                       label="Map"
                     />
                   </div>

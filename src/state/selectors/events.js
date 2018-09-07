@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import events from 'state/selectors/events';
 
 export default createSelector(
   state => get(state, 'events.events'),
@@ -12,6 +11,7 @@ export default createSelector(
       const eventType = get(fields, 'eventType', '');
       const image = get(fields, 'image.fields.file.url', '');
       const locationTitle = get(fields, 'location.fields.title', '');
+      const locationId = get(fields, 'location.sys.id', '');
       const title = get(fields, 'title', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
       const text = get(fields, 'text', '');
@@ -31,6 +31,7 @@ export default createSelector(
         eventType,
         image,
         locationTitle,
+        locationId,
         title,
         contentBlocks,
         text,

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Global from 'constants/Global';
+import getUrlParam from 'utils/getUrlParam';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import get from 'utils/get';
 
@@ -8,7 +9,9 @@ import LocationsCards from 'components/LocationsCards';
 
 class LocationsLandingView extends Component {
   state = {
-    currentBreakpoint: Global.breakpoints.small.label
+    currentBreakpoint: Global.breakpoints.small.label,
+    mapHasLoaded: false,
+    cardHasLoaded: false
   };
 
   componentDidMount() {
@@ -27,6 +30,23 @@ class LocationsLandingView extends Component {
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
+  };
+
+  locationsMapHasLoaded = () => {
+    this.setState({ mapHasLoaded: true }, this.setSelectedLocaion);
+  };
+
+  locationsCardHasLoaded = () => {
+    this.setState({ cardHasLoaded: true }, this.setSelectedLocaion);
+  };
+
+  setSelectedLocaion = () => {
+    const param = getUrlParam('location');
+
+    if (param && this.state.mapHasLoaded && this.state.cardHasLoaded) {
+      const actions = get(this, 'props.actions', {});
+      actions.selectLocation(param);
+    }
   };
 
   render() {
@@ -57,7 +77,11 @@ class LocationsLandingView extends Component {
               top: `${mapPosition}px`
             }}
           >
-            <LocationsMap {...this.props} states={states} />
+            <LocationsMap
+              states={states}
+              locationsMapHasLoaded={this.locationsMapHasLoaded}
+              {...this.props}
+            />
           </div>
         ) : null}
         <div
@@ -67,7 +91,11 @@ class LocationsLandingView extends Component {
               : { width: `${Global.locationsCardsWidth}px` }
           }
         >
-          <LocationsCards {...this.props} states={states} />
+          <LocationsCards
+            states={states}
+            locationsCardHasLoaded={this.locationsCardHasLoaded}
+            {...this.props}
+          />
         </div>
       </div>
     );
