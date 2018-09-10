@@ -60,22 +60,6 @@
   }
 
   &__markdown {
-    > h1 {
-      @extend .title;
-      margin-bottom: spacing(4);
-    }
-
-    > h2 {
-      @extend .block-headline;
-      margin-bottom: spacing(4);
-    }
-
-    > h3 {
-      @extend .block-subheadline;
-      @extend .bold;
-      margin-bottom: spacing(2);
-    }
-
     > p {
       @extend .block-subheadline;
       margin-bottom: spacing(4);
