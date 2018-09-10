@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
 import cx from 'classnames';
@@ -8,9 +7,8 @@ import marked from 'marked';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import eventModel from 'models/eventModel';
 
-import { Image, Button } from 'components/base';
+import { Button } from 'components/base';
 import styles from './EventDetailHero.scss';
-import imageModel from 'models/imageModel';
 
 const EventDetailHero = ({ event, actions }) => {
   const url = new URL(window.location.href).href;

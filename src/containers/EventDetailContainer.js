@@ -6,8 +6,6 @@ import { getEvents } from 'state/actions/eventsActions';
 import events from 'state/selectors/events';
 import event from 'state/selectors/event';
 
-import get from 'utils/get';
-
 class EventDetailContainer extends ContainerBase {
   view = import('views/EventDetailView');
 
