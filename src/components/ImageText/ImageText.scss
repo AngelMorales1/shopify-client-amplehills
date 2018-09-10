@@ -15,8 +15,20 @@
     @extend .bg-sky-blue;
   }
 
-  &--peach {
+  &--light-peach {
     @extend .bg-light-peach;
+  }
+
+  &--peach {
+    @extend .bg-peach-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--mustard {
+    @extend .bg-goldenrod;
   }
 
   &--yellow {
@@ -25,10 +37,6 @@
 
   &--light-yellow {
     @extend .bg-bees-wax;
-  }
-
-  &--light-pink {
-    @extend .bg-baby-pink;
   }
 
   &__container {
