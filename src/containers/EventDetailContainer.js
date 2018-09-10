@@ -2,6 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { sendContactForm } from 'state/actions/ui/contactUIActions';
+import get from 'utils/get';
 
 import { getEvents } from 'state/actions/eventsActions';
 import { addLineItems } from 'state/actions/checkoutActions';
