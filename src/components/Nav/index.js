@@ -76,6 +76,13 @@ class Nav extends Component {
           >
             Contact
           </NavLink>
+          <NavLink
+            exact
+            to="/events"
+            className="text-hover ml3 link-text center xs-hide sm-hide"
+          >
+            Events
+          </NavLink>
         </div>
         <div
           className={cx(

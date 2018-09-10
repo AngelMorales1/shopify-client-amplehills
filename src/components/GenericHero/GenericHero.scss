@@ -1,14 +1,45 @@
 @import 'settings', 'typography';
 
 .GenericHero {
+  @extend .text-madison-blue;
+  
   &--blue {
     @extend .bg-sky-blue;
-    @extend .text-madison-blue;
   }
 
   &--yellow {
     @extend .bg-bees-wax;
-    @extend .text-madison-blue;
+  }
+
+  &--mustard {
+    @extend .bg-goldenrod;
+  }
+
+  &--peach {
+    @extend .bg-light-peach;
+  }
+
+  &__content-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__content-container--reverse {
+    @media ($medium-up) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__text-container--image-right {
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: left;
+    }
   }
 
   &__image {
