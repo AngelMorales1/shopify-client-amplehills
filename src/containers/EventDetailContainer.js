@@ -10,8 +10,6 @@ import event from 'state/selectors/event';
 import checkout from 'state/selectors/checkout';
 import { IDLE } from 'constants/Status';
 
-import get from 'utils/get';
-
 class EventDetailContainer extends ContainerBase {
   view = import('views/EventDetailView');
 
