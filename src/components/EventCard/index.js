@@ -74,7 +74,7 @@ const EventCard = ({ event, active }) => {
         </div>
         <div>
           <Button
-            className={cx(styles['EventCard__button'])}
+            className="inline-flex"
             color="peach"
             label={label}
             to={`/events/${event.id}`}

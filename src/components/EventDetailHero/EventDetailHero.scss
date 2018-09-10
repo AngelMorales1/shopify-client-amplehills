@@ -1,10 +1,6 @@
 @import 'settings', 'typography';
 
 .EventDetailHero {
-  &__button {
-    display: inline-flex;
-  }
-
   &__content-container {
     flex-direction: column;
     padding: 0 spacing(8);
@@ -49,7 +45,6 @@
   }
 
   &__map-button {
-    display: inline-flex;
     margin-top: spacing(4);
 
     @media ($medium-up) {

@@ -20,7 +20,7 @@ const EventDetailHero = ({ event, actions }) => {
         <div className="mt3">
           <FacebookShareButton url={url}>
             <Button
-              className={cx(styles['EventDetailHero__button'])}
+              className="inline-flex"
               variant="primary-small"
               color="clear-madison-blue-border"
               label={'Share'.toUpperCase()}
@@ -48,10 +48,10 @@ const EventDetailHero = ({ event, actions }) => {
         <div
           className={cx(
             styles['EventDetailHero__text-container'],
-            'col-12 md-col-6 flex flex-column items-center'
+            'col-12 md-col-6 flex flex-column items-center text-container-width mx-auto'
           )}
         >
-          <div className="text-container-width">
+          <div className="w100">
             {event.datesAndTimes.length > 1 ? (
               <div>dates list</div>
             ) : (
@@ -83,7 +83,7 @@ const EventDetailHero = ({ event, actions }) => {
                 <div
                   className={cx(
                     styles['EventDetailHero__location-container'],
-                    'flex mt3'
+                    'flex mt3 w100'
                   )}
                 >
                   <div>
@@ -99,7 +99,10 @@ const EventDetailHero = ({ event, actions }) => {
                   </div>
                   <div>
                     <Button
-                      className={cx(styles['EventDetailHero__map-button'])}
+                      className={cx(
+                        styles['EventDetailHero__map-button'],
+                        'inline-flex'
+                      )}
                       variant="primary-small"
                       color="clear-madison-blue-border"
                       to={`/locations/?location=${event.locationId}`}
