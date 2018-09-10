@@ -20,10 +20,10 @@ const EventDetailHero = ({ event, actions }) => {
         <div className="mt3">
           <FacebookShareButton url={url}>
             <Button
-              className="inline-flex"
+              className="inline-flex uppercase"
               variant="primary-small"
               color="clear-madison-blue-border"
-              label={'Share'.toUpperCase()}
+              label="Share"
             />
           </FacebookShareButton>
         </div>
@@ -119,7 +119,7 @@ const EventDetailHero = ({ event, actions }) => {
             />
             <div
               dangerouslySetInnerHTML={{ __html: marked(event.text) }}
-              className={cx(styles['EventDetailHero__markdown'], 'mt4')}
+              className="mt4 markdown-styles"
             />
           </div>
         </div>

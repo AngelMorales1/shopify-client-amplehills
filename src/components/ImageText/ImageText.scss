@@ -134,28 +134,6 @@
     display: inline-flex;
   }
 
-  &__text {
-    p {
-      margin-bottom: spacing(8);
-    }
-
-    h2 {
-      @extend .carter;
-      font-size: $font-6;
-      margin-bottom: spacing(10);
-    }
-
-    > h3 {
-      @extend .block-subheadline;
-      @extend .bold;
-      margin-bottom: spacing(2);
-    }
-
-    ul > li::before {
-      content: '- ';
-    }
-  }
-
   &__button {
     display: inline-flex;
   }

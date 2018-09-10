@@ -153,3 +153,82 @@ UI elements
 .icon-small {
   width: spacing(6);
 }
+
+.markdown-block {
+  > h1 {
+    @extend .carter;
+    font-size: $font-6;
+    margin-bottom: spacing(10);
+  }
+
+  > h2 {
+    @extend .block-headline;
+    margin-bottom: spacing(4);
+  }
+
+  > h3 {
+    @extend .block-subheadline;
+    @extend .bold;
+    margin-bottom: spacing(2);
+  }
+
+  > p {
+    @extend .block-subheadline;
+    margin-bottom: spacing(8);
+
+    > a {
+      text-decoration: none;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
+
+    > strong {
+      @extend .bold;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  ol,
+  ul {
+    margin: spacing(10) 0;
+
+    > li {
+      margin: spacing(2) 0;
+    }
+  }
+
+  ul > li::before {
+    content: '- ';
+  }
+
+  ol {
+    > li {
+      margin: spacing(10);
+      position: relative;
+    }
+    > li::before {
+      @extend .circle;
+
+      background-color: color('peach');
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: spacing(-6);
+      top: calc(50% - #{6px});
+      margin-bottom: 2px;
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  blockquote {
+    width: 100%;
+
+    > p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

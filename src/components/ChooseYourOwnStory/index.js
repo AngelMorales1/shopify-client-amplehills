@@ -213,11 +213,11 @@ class ChooseYourOwnStory extends Component {
                 ))}
               </div>
               <div className="mb4">
-                <p
+                <div
                   dangerouslySetInnerHTML={{
                     __html: marked(get(fields, 'description', ''))
                   }}
-                  className="block-subheadline"
+                  className="markdown-styles"
                 />
               </div>
               <OurPledge

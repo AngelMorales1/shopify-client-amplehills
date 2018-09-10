@@ -61,22 +61,22 @@ const ImageDoubleText = ({ block, z }) => {
               <h2 className="block-headline mb2">
                 {get(fields, 'title1', '')}
               </h2>
-              <p
+              <div
                 dangerouslySetInnerHTML={{
                   __html: marked(get(fields, 'text1', ''))
                 }}
-                className="block-subheadline"
+                className="markdown-styles"
               />
             </div>
             <div>
               <h2 className="block-headline mb2">
                 {get(fields, 'title2', '')}
               </h2>
-              <p
+              <div
                 dangerouslySetInnerHTML={{
                   __html: marked(get(fields, 'text2', ''))
                 }}
-                className="block-subheadline"
+                className="markdown-styles"
               />
             </div>
           </div>

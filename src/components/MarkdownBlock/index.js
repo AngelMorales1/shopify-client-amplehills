@@ -41,8 +41,7 @@ const MarkdownBlock = props => {
       <div
         dangerouslySetInnerHTML={{ __html: marked(markdown) }}
         className={cx(
-          styles['MarkdownBlock__content'],
-          'transition-slide-up mx-auto px3 py4 form-container-width',
+          'transition-slide-up mx-auto px3 py4 form-container-width markdown-block',
           {
             'col-12 md-col-8': titleOnLeft
           }

@@ -61,6 +61,10 @@
   &__text {
     @extend .tout;
     line-height: $font-6;
+
+    > strong {
+      @extend .bold;
+    }
   }
 
   &__title {

@@ -121,11 +121,11 @@ class EventsBlock extends Component {
       >
         <div className="px2 text-container-width center">
           <h2 className="block-headline mt4 mb3">{title}</h2>
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: marked(text)
             }}
-            className="block-subheadline"
+            className="markdown-styles"
           />
         </div>
         {locationFilterButtonIsOn ? (

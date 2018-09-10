@@ -102,7 +102,7 @@ class ProductDetails extends Component {
                         }}
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'block-subheadline'
+                          'markdown-styles'
                         )}
                       />
                     </div>
@@ -129,13 +129,13 @@ class ProductDetails extends Component {
                       />
                     </div>
                     <div className="md-col-10">
-                      <p
+                      <div
                         dangerouslySetInnerHTML={{
                           __html: marked(get(fields, 'text2', ''))
                         }}
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'block-subheadline'
+                          'markdown-styles'
                         )}
                       />
                     </div>

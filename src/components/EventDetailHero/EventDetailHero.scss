@@ -58,15 +58,4 @@
       margin-left: inherit;
     }
   }
-
-  &__markdown {
-    > p {
-      @extend .block-subheadline;
-      margin-bottom: spacing(4);
-
-      > strong {
-        @extend .bold;
-      }
-    }
-  }
 }
