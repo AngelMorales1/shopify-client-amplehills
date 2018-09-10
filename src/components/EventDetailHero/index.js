@@ -1,6 +1,7 @@
 import React from 'react';
 import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
+import getShortTimeFormat from 'utils/getShortTimeFormat';
 import cx from 'classnames';
 import moment from 'moment';
 import marked from 'marked';
@@ -53,7 +54,19 @@ const EventDetailHero = ({ event, actions }) => {
         >
           <div className="w100">
             {event.datesAndTimes.length > 1 ? (
-              <div>dates list</div>
+              <div>
+                <p className="copy text-peach bold mb2">Date</p>
+                {event.datesAndTimes.map(dateAndTime => {
+                  const startTime = dateAndTime.Time.split('-')[0];
+                  return (
+                    <p className="block-sub-headline bold text-peach mb2 lowercase">{`${moment(
+                      dateAndTime.Date
+                    ).format('DD/MM/YY')}- ${getShortTimeFormat(
+                      startTime
+                    )}`}</p>
+                  );
+                })}
+              </div>
             ) : (
               <div>
                 <div>
@@ -113,13 +126,16 @@ const EventDetailHero = ({ event, actions }) => {
               </div>
             )}
             <Button
-              className={cx(styles['EventDetailHero__action-button'], 'mt4')}
+              className={cx(styles['EventDetailHero__action-button'], 'my4')}
               color="peach"
               label="Call to Action"
             />
+            {event.datesAndTimes.length > 1 && event.text ? (
+              <p className="copy text-peach bold mb1">Details</p>
+            ) : null}
             <div
               dangerouslySetInnerHTML={{ __html: marked(event.text) }}
-              className="mt4 markdown-styles"
+              className="markdown-styles"
             />
           </div>
         </div>
