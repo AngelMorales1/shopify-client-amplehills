@@ -20,11 +20,11 @@ class LocationsCards extends Component {
 
   $cards = {};
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.attemptToGetDistanceToStores();
-  };
+  }
 
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate(prevProps, prevState) {
     if (this.props.filteredLocations !== prevProps.filteredLocations) {
       this.attemptToGetDistanceToStores();
     }
@@ -37,7 +37,7 @@ class LocationsCards extends Component {
         duration: 1500
       });
     }
-  };
+  }
 
   attemptToGetDistanceToStores = () => {
     const locations = this.props.filteredLocations;

@@ -33,14 +33,14 @@ class LocationsLandingView extends Component {
   };
 
   locationsMapHasLoaded = () => {
-    this.setState({ mapHasLoaded: true }, this.setSelectedLocaion);
+    this.setState({ mapHasLoaded: true }, this.setSelectedLocation);
   };
 
   locationsCardHasLoaded = () => {
-    this.setState({ cardHasLoaded: true }, this.setSelectedLocaion);
+    this.setState({ cardHasLoaded: true }, this.setSelectedLocation);
   };
 
-  setSelectedLocaion = () => {
+  setSelectedLocation = () => {
     const param = getUrlParam('location');
 
     if (param && this.state.mapHasLoaded && this.state.cardHasLoaded) {

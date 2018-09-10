@@ -92,7 +92,7 @@ const LocationsMap = props => {
         mapPadding={150}
         maxZoom={18}
         onClickFeature={onClickFeature}
-        onLoad={() => setTimeout(() => props.locationsMapHasLoaded(), 1000)}
+        onLoad={() => setTimeout(() => props.locationsMapHasLoaded(), 0)}
         featureIdZoomTo={selectedLocation}
       />
       <div className="absolute t0 l0 flex p3">
