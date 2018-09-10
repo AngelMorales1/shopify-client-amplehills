@@ -1,0 +1,12 @@
+@import 'settings', 'src/styles/utils';
+
+.SubNav {
+  &__button {
+    border-radius: radius('l');
+    height: $button-primary-height;
+    box-shadow: $drop-shadow;
+  }
+
+  &__menu {
+  }
+}

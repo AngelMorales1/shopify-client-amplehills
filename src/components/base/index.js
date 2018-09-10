@@ -8,6 +8,7 @@ import FormFlash from './FormFlash';
 import Modal from './Modal';
 import Carousel from './Carousel';
 import HorizontalCarousel from './HorizontalCarousel';
+import SubNav from './SubNav';
 
 export {
   Button,
@@ -19,5 +20,6 @@ export {
   FormFlash,
   Modal,
   Carousel,
-  HorizontalCarousel
+  HorizontalCarousel,
+  SubNav
 };

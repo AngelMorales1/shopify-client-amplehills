@@ -36,6 +36,11 @@ const mapStateToProps = state => {
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
     ),
+    subNavIsOn: get(
+      state,
+      'genericPage.genericPage.items[0].fields.subNavigation',
+      false
+    ),
     events: events(state)
   };
 };
