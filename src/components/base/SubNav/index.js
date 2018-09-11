@@ -100,8 +100,16 @@ class SubNav extends Component {
   }
 }
 
-SubNav.propTypes = {};
+SubNav.propTypes = {
+  className: PropTypes.string,
+  menuList: PropTypes.arrayOf(PropTypes.string),
+  onClick: PropTypes.func
+};
 
-SubNav.defaultProps = {};
+SubNav.defaultProps = {
+  className: '',
+  menuList: [''],
+  onClick: () => {}
+};
 
 export default SubNav;

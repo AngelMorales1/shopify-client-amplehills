@@ -5,8 +5,14 @@
   position: sticky;
   height: 0;
   top: calc(
-    #{spacing(16)} + #{$header-height-desktop} + #{$alert-height-desktop}
+    #{spacing(8)} + #{$header-height-desktop} + #{$alert-height-desktop}
   );
+
+  @media ($medium-up) {
+    top: calc(
+      #{spacing(16)} + #{$header-height-desktop} + #{$alert-height-desktop}
+    );
+  }
 
   &__button {
     border-radius: radius('l');
