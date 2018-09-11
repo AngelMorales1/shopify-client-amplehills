@@ -14,6 +14,7 @@ import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
 import EventDetailContainer from 'containers/EventDetailContainer';
+import LocationDetailContainer from 'containers/LocationDetailContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -24,6 +25,11 @@ const Routes = ({ location }) => (
       component={ProductDetailContainer}
     />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
+    <Route
+      exact
+      path="/location/:locationTitle"
+      component={LocationDetailContainer}
+    />
     <Route path="/products" component={ProductLandingContainer} />
     <Route path="/profile" component={ProfileContainer} />
     <Route path="/sign-in" component={SignInContainer} />

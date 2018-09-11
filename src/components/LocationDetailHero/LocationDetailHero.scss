@@ -1,0 +1,30 @@
+@import 'settings', 'typography';
+
+.LocationDetailHero {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+
+  &__content-detail-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__button-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__button {
+    font-size: $font-2;
+    letter-spacing: spacing(0.2);
+  }
+}
