@@ -65,7 +65,7 @@ const ImageDoubleText = ({ block, z }) => {
                 dangerouslySetInnerHTML={{
                   __html: marked(get(fields, 'text1', ''))
                 }}
-                className="markdown-styles"
+                className="markdown-block"
               />
             </div>
             <div>
@@ -76,7 +76,7 @@ const ImageDoubleText = ({ block, z }) => {
                 dangerouslySetInnerHTML={{
                   __html: marked(get(fields, 'text2', ''))
                 }}
-                className="markdown-styles"
+                className="markdown-block"
               />
             </div>
           </div>

@@ -217,7 +217,7 @@ class ChooseYourOwnStory extends Component {
                   dangerouslySetInnerHTML={{
                     __html: marked(get(fields, 'description', ''))
                   }}
-                  className="markdown-styles"
+                  className="markdown-block"
                 />
               </div>
               <OurPledge

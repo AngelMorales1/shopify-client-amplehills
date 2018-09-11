@@ -102,7 +102,7 @@ class ProductDetails extends Component {
                         }}
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'markdown-styles'
+                          'markdown-block'
                         )}
                       />
                     </div>
@@ -135,7 +135,7 @@ class ProductDetails extends Component {
                         }}
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'markdown-styles'
+                          'markdown-block'
                         )}
                       />
                     </div>

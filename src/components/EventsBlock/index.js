@@ -125,7 +125,7 @@ class EventsBlock extends Component {
             dangerouslySetInnerHTML={{
               __html: marked(text)
             }}
-            className="markdown-styles"
+            className="markdown-block"
           />
         </div>
         {locationFilterButtonIsOn ? (

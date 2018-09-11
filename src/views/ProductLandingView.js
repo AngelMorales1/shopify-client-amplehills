@@ -25,7 +25,7 @@ class ProductLandingView extends Component {
             dangerouslySetInnerHTML={{
               __html: marked(get(content, 'description', ''))
             }}
-            className="markdown-styles"
+            className="markdown-block"
           />
         </div>
         <ProductGrid products={gridProducts} />

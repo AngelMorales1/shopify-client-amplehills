@@ -57,14 +57,14 @@ const OurPledgeOverlay = ({
                 dangerouslySetInnerHTML={{
                   __html: marked(shippingInformation)
                 }}
-                className="mb2 markdown-styles text-madison-blue"
+                className="mb2 markdown-block text-madison-blue"
               />
             </div>
             <div>
               <h2 className="my2 callout text-madison-blue">Shipping Pledge</h2>
               <p
                 dangerouslySetInnerHTML={{ __html: marked(shippingPledge) }}
-                className="markdown-styles text-madison-blue"
+                className="markdown-block text-madison-blue"
               />
             </div>
           </div>

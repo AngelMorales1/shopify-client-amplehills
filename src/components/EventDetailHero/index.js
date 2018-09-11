@@ -135,7 +135,7 @@ const EventDetailHero = ({ event, actions }) => {
             ) : null}
             <div
               dangerouslySetInnerHTML={{ __html: marked(event.text) }}
-              className="markdown-styles"
+              className="markdown-block"
             />
           </div>
         </div>
