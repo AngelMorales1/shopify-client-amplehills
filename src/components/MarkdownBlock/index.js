@@ -8,7 +8,7 @@ import get from 'utils/get';
 import styles from './MarkdownBlock.scss';
 
 const MarkdownBlock = props => {
-  const { z, block } = props;
+  const { z, block, setRef } = props;
   const fields = get(block, 'fields', {});
   const markdown = get(fields, 'content', '');
   const isDripOn = get(fields, 'drip', false);
@@ -22,6 +22,7 @@ const MarkdownBlock = props => {
 
   return (
     <div
+      ref={$block => setRef($block)}
       style={{ zIndex: z }}
       className={cx(styles[colorClass], 'flex justify-center', {
         [styles['MarkdownBlock--title-left']]: titleOnLeft,
@@ -61,7 +62,8 @@ MarkdownBlock.propTypes = {
       titleLeft: PropTypes.bool,
       drip: PropTypes.bool
     })
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 MarkdownBlock.defaultProps = {
@@ -74,7 +76,8 @@ MarkdownBlock.defaultProps = {
       titleLeft: false,
       drip: false
     }
-  }
+  },
+  setRef: () => {}
 };
 
 export default MarkdownBlock;

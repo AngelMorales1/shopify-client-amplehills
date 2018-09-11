@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes, { shape } from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
@@ -15,7 +16,7 @@ class ComicStrip extends Component {
   flavorIsActive = index => this.state.activeFlavor === index;
 
   render() {
-    const { block, z } = this.props;
+    const { block, z, setRef } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
     const colorClass = `ComicStrip--${get(
@@ -26,6 +27,7 @@ class ComicStrip extends Component {
 
     return (
       <div
+        ref={$block => setRef($block)}
         style={{ zIndex: z }}
         className={cx(
           styles[colorClass],
@@ -163,5 +165,51 @@ class ComicStrip extends Component {
     );
   }
 }
+
+ComicStrip.propTypes = {
+  z: PropTypes.number,
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      backgroundColor: PropTypes.string,
+      title: PropTypes.string,
+      products: PropTypes.arrayOf({
+        title: PropTypes.string,
+        comics: PropTypes.arrayOf({
+          fields: PropTypes.shape({
+            file: PropTypes.shape({
+              url: PropTypes.string
+            })
+          })
+        })
+      })
+    })
+  }),
+  setRef: PropTypes.func
+};
+
+ComicStrip.defaultProps = {
+  z: 1,
+  block: {
+    fields: {
+      backgroundColor: '',
+      title: '',
+      products: [
+        {
+          title: '',
+          comics: [
+            {
+              fields: {
+                file: {
+                  url: ''
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  setRef: () => {}
+};
 
 export default ComicStrip;

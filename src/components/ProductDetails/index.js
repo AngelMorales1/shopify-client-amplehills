@@ -5,7 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
-import { Image, Button } from 'components/base';
+import { Image, Button, setRef } from 'components/base';
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
@@ -24,12 +24,13 @@ class ProductDetails extends Component {
   }
 
   render() {
-    const { block, z } = this.props;
+    const { block, z, setRef } = this.props;
     const fields = get(block, 'fields', {});
     const details = get(fields, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div
+        ref={$block => setRef($block)}
         className={cx(styles['ProductDetails'], styles[colorClass], 'p2 drip')}
         style={{ zIndex: z }}
       >
@@ -234,7 +235,8 @@ ProductDetails.propTypes = {
         })
       )
     })
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 ProductDetails.defaultProps = {
@@ -262,7 +264,8 @@ ProductDetails.defaultProps = {
         }
       ]
     }
-  }
+  },
+  setRef: () => {}
 };
 
 export default ProductDetails;

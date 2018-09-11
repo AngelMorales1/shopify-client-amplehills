@@ -95,7 +95,7 @@ class EventsBlock extends Component {
   };
 
   render() {
-    const { z, block } = this.props;
+    const { z, block, setRef } = this.props;
     const { buttonLabels, selectedEvents } = this.state;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
@@ -110,6 +110,7 @@ class EventsBlock extends Component {
 
     return (
       <div
+        ref={$block => setRef($block)}
         style={{ zIndex: z }}
         className={cx(
           styles[colorClass],
@@ -186,7 +187,8 @@ EventsBlock.propTypes = {
       locationFilterButton: PropTypes.bool
     })
   }),
-  events: PropTypes.arrayOf(eventModel.propTypes)
+  events: PropTypes.arrayOf(eventModel.propTypes),
+  setRef: PropTypes.func
 };
 
 EventsBlock.defaultProps = {
@@ -202,7 +204,8 @@ EventsBlock.defaultProps = {
       locationFilterButton: false
     }
   },
-  events: [eventModel.default]
+  events: [eventModel.default],
+  setRef: () => {}
 };
 
 export default EventsBlock;

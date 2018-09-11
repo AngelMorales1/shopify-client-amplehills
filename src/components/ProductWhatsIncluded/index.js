@@ -17,7 +17,7 @@ const ProductWhatsIncluded = ({
     whatsIncludedDrip,
     whatsIncludedIllustration,
     whatsIncludedProducts
-  }
+  }, setRef 
 }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(
@@ -28,6 +28,7 @@ const ProductWhatsIncluded = ({
 
   return (
     <div
+      ref={$block => setRef($block)}
       className={cx(
         styles['ProductWhatsIncluded'],
         styles[colorClass],
@@ -119,7 +120,8 @@ ProductWhatsIncluded.propTypes = {
     whatsIncludedProducts: PropTypes.array
   }),
   z: PropTypes.number,
-  products: PropTypes.objectOf(productModel.propTypes)
+  products: PropTypes.objectOf(productModel.propTypes),
+  setRef: PropTypes.func
 };
 
 ProductWhatsIncluded.defaultProps = {
@@ -142,5 +144,6 @@ ProductWhatsIncluded.defaultProps = {
     whatsIncludedProducts: []
   },
   z: 1,
-  products: {}
+  products: {},
+  setRef: () => {}
 };

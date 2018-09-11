@@ -8,7 +8,7 @@ import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
 
-const ImageDoubleText = ({ block, z }) => {
+const ImageDoubleText = ({ block, z, setRef }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageDoubleText--${get(
     fields,
@@ -19,6 +19,7 @@ const ImageDoubleText = ({ block, z }) => {
 
   return (
     <div
+      ref={$block => setRef($block)}
       style={{ zIndex: z }}
       className={cx(
         styles['ImageDoubleText'],
@@ -98,7 +99,8 @@ ImageDoubleText.propTypes = {
       image: imageModel.propTypes,
       isReverseArrangement: PropTypes.bool
     })
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 ImageDoubleText.defaultProps = {
@@ -113,7 +115,8 @@ ImageDoubleText.defaultProps = {
       image: imageModel.default,
       isReverseArrangement: false
     }
-  }
+  },
+  setRef: () => {}
 };
 
 export default ImageDoubleText;

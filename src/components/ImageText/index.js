@@ -9,7 +9,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import styles from './ImageText.scss';
 import { Image, Button } from 'components/base';
 
-const ImageText = ({ block, z }) => {
+const ImageText = ({ block, z, setRef }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ImageText--${get(fields, 'backgroundColor', 'white')}`;
   const positionY = get(fields, 'imagePositionY', 0);
@@ -38,6 +38,7 @@ const ImageText = ({ block, z }) => {
 
   return (
     <div
+      ref={$block => setRef($block)}
       style={{ zIndex: z }}
       className={cx(
         styles['ImageText'],
@@ -164,7 +165,8 @@ ImageText.propTypes = {
       buttonLink: PropTypes.string,
       buttonColor: PropTypes.string
     })
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 ImageText.defaultProps = {
@@ -185,7 +187,8 @@ ImageText.defaultProps = {
       buttonLink: '',
       buttonColor: 'peach'
     }
-  }
+  },
+  setRef: () => {}
 };
 
 export default ImageText;

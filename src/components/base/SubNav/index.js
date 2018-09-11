@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import styles from './SubNav.scss';
+import { Button } from 'components/base';
 
 class SubNav extends Component {
   constructor() {
@@ -10,7 +11,7 @@ class SubNav extends Component {
   }
 
   render() {
-    const { className, menuList } = this.props;
+    const { className, menuList, onClick } = this.props;
     return (
       <div className="w100 flex flex-row justify-center fixed z-sub-nav">
         <div
@@ -20,12 +21,14 @@ class SubNav extends Component {
             'bg-white inline-flex flex-row items-center justify-center px2'
           )}
         >
-          {menuList.map(menu => (
-            <p
+          {menuList.map((menu, i) => (
+            <Button
+              key={`${menu}-${i}`}
+              variant="no-style"
               className={cx(styles['SubNav__menu'], 'copy text-peach bold px2')}
-            >
-              {menu}
-            </p>
+              onClick={() => onClick(menu)}
+              label={menu}
+            />
           ))}
         </div>
       </div>

@@ -6,7 +6,7 @@ import cx from 'classnames';
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
 
-const PressCarousel = ({ block, z, pressItems }) => {
+const PressCarousel = ({ block, z, pressItems, setRef }) => {
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
@@ -26,6 +26,7 @@ const PressCarousel = ({ block, z, pressItems }) => {
 
   return (
     <div
+      ref={$block => setRef($block)}
       style={{ zIndex: z }}
       className={cx(styles['PressCarousel'], { drip: isDripOn }, 'bg-bees-wax')}
     >
@@ -106,7 +107,8 @@ HorizontalCarousel.propTypes = {
   pressItems: PropTypes.shape({
     fragments: PropTypes.arrayOf(PropTypes.array),
     simpleFragments: PropTypes.object
-  })
+  }),
+  setRef: PropTypes.func
 };
 
 HorizontalCarousel.defaultProps = {
@@ -131,7 +133,8 @@ HorizontalCarousel.defaultProps = {
   pressItems: {
     fragments: [],
     simpleFragments: {}
-  }
+  },
+  setRef: () => {}
 };
 
 export default PressCarousel;
