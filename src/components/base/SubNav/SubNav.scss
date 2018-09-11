@@ -1,12 +1,16 @@
 @import 'settings', 'src/styles/utils';
 
 .SubNav {
+  display: flex;
+  position: sticky;
+  height: 0;
+  top: calc(
+    #{spacing(16)} + #{$header-height-desktop} + #{$alert-height-desktop}
+  );
+
   &__button {
     border-radius: radius('l');
     height: $button-primary-height;
     box-shadow: $drop-shadow;
-  }
-
-  &__menu {
   }
 }

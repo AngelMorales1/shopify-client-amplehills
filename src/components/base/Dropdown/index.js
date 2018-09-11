@@ -59,7 +59,8 @@ class Dropdown extends Component {
       variant,
       color,
       className,
-      selectClassName
+      selectClassName,
+      shadow
     } = this.props;
     return (
       <div
@@ -90,7 +91,8 @@ class Dropdown extends Component {
             'relative inline-block',
             selectClassName,
             {
-              [styles['Dropdown--open']]: this.state.menuIsOpen
+              [styles['Dropdown--open']]: this.state.menuIsOpen,
+              [styles['Dropdown--shadow']]: shadow
             }
           )}
           name={name}
@@ -129,7 +131,8 @@ Dropdown.propTypes = {
   selectClassName: PropTypes.string,
   label: PropTypes.string,
   variant: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  shadow: PropTypes.bool
 };
 
 Dropdown.defaultProps = {
@@ -141,7 +144,8 @@ Dropdown.defaultProps = {
   label: '',
   value: '',
   variant: 'primary',
-  onChange: () => {}
+  onChange: () => {},
+  shadow: false
 };
 
 export default Dropdown;

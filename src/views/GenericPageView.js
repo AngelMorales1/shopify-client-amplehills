@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import scrollTo from 'react-scroll-to-component';
 
@@ -6,19 +6,7 @@ import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
 
 class GenericPageView extends Component {
-  state = {
-    selectedMenu: ''
-  };
-
   $blocks = {};
-
-  componentDidUpdate = (prevProps, prevState) => {
-    if (prevState.selectedMenu !== this.state.selectedMenu) {
-      scrollTo(this.$blocks[this.state.selectedMenu], {
-        duration: 1000
-      });
-    }
-  };
 
   render() {
     const { model, blocks, subNavIsOn } = this.props;
@@ -38,28 +26,35 @@ class GenericPageView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     return (
-      <div>
+      <Fragment>
         {subNavIsOn ? (
           <SubNav
-            onClick={menuTitle => this.setState({ selectedMenu: menuTitle })}
+            onClick={menuTitle =>
+              scrollTo(this.$blocks[menuTitle], {
+                ease: 'inOutQuint',
+                duration: 1000
+              })
+            }
             menuList={menuList}
           />
         ) : null}
-        {blocks &&
-          blocks.map((block, i) => {
-            const title = get(block, 'fields.title', '');
+        <div>
+          {blocks &&
+            blocks.map((block, i) => {
+              const title = get(block, 'fields.title', '');
 
-            return (
-              <BlockSwitch
-                setRef={$block => (this.$blocks[title] = $block)}
-                key={`${i}-${get(block, 'sys.id', i)}`}
-                block={block}
-                z={blocks.length - i}
-                {...this.props}
-              />
-            );
-          })}
-      </div>
+              return (
+                <BlockSwitch
+                  setRef={$block => (this.$blocks[title] = $block)}
+                  key={`${i}-${get(block, 'sys.id', i)}`}
+                  block={block}
+                  z={blocks.length - i}
+                  {...this.props}
+                />
+              );
+            })}
+        </div>
+      </Fragment>
     );
   }
 }

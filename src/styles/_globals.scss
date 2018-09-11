@@ -234,3 +234,11 @@ UI elements
     }
   }
 }
+
+.subnav {
+  & ~ div {
+    > div:first-child {
+      padding-top: spacing(28);
+    }
+  }
+}
