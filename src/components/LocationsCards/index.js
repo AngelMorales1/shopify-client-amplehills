@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import scrollTo from 'react-scroll-to-component';
 import get from 'utils/get';
+import getLocationUrl from 'utils/getLocationUrl';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
