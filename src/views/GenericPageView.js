@@ -1,39 +1,37 @@
 import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import scrollTo from 'react-scroll-to-component';
+import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
 
 class GenericPageView extends Component {
-  $blocks = {};
+  refBlocks = {};
 
   render() {
     const { model, blocks, subNavIsOn } = this.props;
 
-    const menuList = blocks.reduce((acc, cur) => {
-      const blockType = get(cur, 'sys.contentType.sys.id', '');
+    if (model.isError) return <h1>Error</h1>;
+
+    const menuList = get(this, 'props.blocks', []).reduce((menu, block) => {
+      const blockType = get(block, 'sys.contentType.sys.id', '');
       if (blockType === 'blockGenericHero') {
-        return acc;
+        return menu;
       }
 
-      const title = get(cur, 'fields.title', '');
-      acc.push(title);
+      const title = get(block, 'fields.title', '');
+      menu.push(title);
 
-      return acc;
+      return menu;
     }, []);
-
-    if (model.isError) return <h1>Error</h1>;
 
     return (
       <Fragment>
         {subNavIsOn ? (
           <SubNav
             onClick={menuTitle =>
-              scrollTo(this.$blocks[menuTitle], {
-                ease: 'inOutQuint',
-                duration: 1000
-              })
+              scrollTo(this.refBlocks[menuTitle], SubNavScrollOption)
             }
             menuList={menuList}
           />
@@ -45,7 +43,7 @@ class GenericPageView extends Component {
 
               return (
                 <BlockSwitch
-                  setRef={$block => (this.$blocks[title] = $block)}
+                  setRef={refBlock => (this.refBlocks[title] = refBlock)}
                   key={`${i}-${get(block, 'sys.id', i)}`}
                   block={block}
                   z={blocks.length - i}

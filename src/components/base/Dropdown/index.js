@@ -92,7 +92,7 @@ class Dropdown extends Component {
             selectClassName,
             {
               [styles['Dropdown--open']]: this.state.menuIsOpen,
-              [styles['Dropdown--shadow']]: shadow
+              'drop-shadow': shadow
             }
           )}
           name={name}

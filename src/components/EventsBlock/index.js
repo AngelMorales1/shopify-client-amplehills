@@ -110,7 +110,7 @@ class EventsBlock extends Component {
 
     return (
       <div
-        ref={$block => setRef($block)}
+        ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
         className={cx(
           styles[colorClass],

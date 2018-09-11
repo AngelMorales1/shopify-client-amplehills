@@ -28,7 +28,7 @@ const ProductWhatsIncluded = ({
 
   return (
     <div
-      ref={$block => setRef($block)}
+      ref={refBlock => setRef(refBlock)}
       className={cx(
         styles['ProductWhatsIncluded'],
         styles[colorClass],

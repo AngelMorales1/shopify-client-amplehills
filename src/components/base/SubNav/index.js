@@ -18,13 +18,19 @@ class SubNav extends Component {
     this.updateWindow();
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+    window.removeEventListener('scroll', this.updateMenu);
+  }
+
   updateWindow = () => {
     const { small, large } = Global.breakpoints;
     const currentBreakpoint =
       window.innerWidth <= large.lowerbound ? small.label : large.label;
 
-    if (this.state.currentBreakpoint !== currentBreakpoint)
+    if (this.state.currentBreakpoint !== currentBreakpoint) {
       this.setState({ currentBreakpoint });
+    }
   };
 
   updateMenu = () => {

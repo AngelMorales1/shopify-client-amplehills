@@ -30,7 +30,7 @@ class ProductDetails extends Component {
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
     return (
       <div
-        ref={$block => setRef($block)}
+        ref={refBlock => setRef(refBlock)}
         className={cx(styles['ProductDetails'], styles[colorClass], 'p2 drip')}
         style={{ zIndex: z }}
       >

@@ -22,7 +22,7 @@ const MarkdownBlock = props => {
 
   return (
     <div
-      ref={$block => setRef($block)}
+      ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
       className={cx(styles[colorClass], 'flex justify-center', {
         [styles['MarkdownBlock--title-left']]: titleOnLeft,

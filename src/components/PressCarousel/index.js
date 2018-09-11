@@ -26,7 +26,7 @@ const PressCarousel = ({ block, z, pressItems, setRef }) => {
 
   return (
     <div
-      ref={$block => setRef($block)}
+      ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
       className={cx(styles['PressCarousel'], { drip: isDripOn }, 'bg-bees-wax')}
     >
