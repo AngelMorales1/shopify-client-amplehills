@@ -49,7 +49,7 @@ class SubNav extends Component {
 
   render() {
     const { className, menuList, onClick, removePaddingOnChild } = this.props;
-    const { small, large } = Global.breakpoints;
+    const { large } = Global.breakpoints;
     const currentBreakpointIsLarge =
       this.state.currentBreakpoint === large.label;
 

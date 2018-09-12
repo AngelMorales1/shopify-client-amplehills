@@ -35,8 +35,7 @@ export default createSelector(
         title,
         contentBlocks,
         text,
-        datesAndTimes,
-        locationId
+        datesAndTimes
       };
     });
 

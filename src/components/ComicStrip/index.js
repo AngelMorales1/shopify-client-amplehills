@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes, { shape } from 'prop-types';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
@@ -172,16 +172,22 @@ ComicStrip.propTypes = {
     fields: PropTypes.shape({
       backgroundColor: PropTypes.string,
       title: PropTypes.string,
-      products: PropTypes.arrayOf({
-        title: PropTypes.string,
-        comics: PropTypes.arrayOf({
+      products: PropTypes.arrayOf(
+        PropTypes.shape({
           fields: PropTypes.shape({
-            file: PropTypes.shape({
-              url: PropTypes.string
-            })
+            title: PropTypes.string,
+            comics: PropTypes.arrayOf(
+              PropTypes.shape({
+                fields: PropTypes.shape({
+                  file: PropTypes.shape({
+                    url: PropTypes.string
+                  })
+                })
+              })
+            )
           })
         })
-      })
+      )
     })
   }),
   setRef: PropTypes.func
@@ -195,16 +201,18 @@ ComicStrip.defaultProps = {
       title: '',
       products: [
         {
-          title: '',
-          comics: [
-            {
-              fields: {
-                file: {
-                  url: ''
+          fields: {
+            title: '',
+            comics: [
+              {
+                fields: {
+                  file: {
+                    url: ''
+                  }
                 }
               }
-            }
-          ]
+            ]
+          }
         }
       ]
     }

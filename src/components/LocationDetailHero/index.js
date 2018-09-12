@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
-import scrollTo from 'react-scroll-to-component';
-import SubNavScrollOption from 'constants/SubNavScrollOption';
 
-import imageModel from 'models/imageModel';
 import styles from './LocationDetailHero.scss';
-import { Image, Button } from 'components/base';
+import { Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 
 const LocationDetailHero = ({ location, locationGeoJSON, events }) => {
-  let currentLocation = null;
   locationGeoJSON.features = [
     locationGeoJSON.features.find(
       feature => get(feature, 'properties.id', '') === location.id
