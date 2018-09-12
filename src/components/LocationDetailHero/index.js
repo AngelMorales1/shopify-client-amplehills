@@ -7,10 +7,20 @@ import cx from 'classnames';
 import imageModel from 'models/imageModel';
 import styles from './LocationDetailHero.scss';
 import { Image, Button } from 'components/base';
+import MapboxMap from 'components/MapboxMap';
 
-const LocationDetailHero = ({ location }) => {
+const LocationDetailHero = ({ location, locationGeoJSON }) => {
+  let currentLocation = null;
+  locationGeoJSON.features = [
+    locationGeoJSON.features.find(
+      feature => get(feature, 'properties.id', '') === location.id
+    )
+  ];
+
   return (
-    <div className={cx(styles['LocationDetailHero'], 'flex bg-bees-wax')}>
+    <div
+      className={cx(styles['LocationDetailHero'], 'flex bg-bees-wax relative')}
+    >
       <div
         className="col col-12 md-col-6 square"
         style={{
@@ -35,12 +45,39 @@ const LocationDetailHero = ({ location }) => {
               'flex'
             )}
           >
-            <div className="col-6 pr2 mb3">
-              <p className="uppercase text-peach bold copy mb1">info</p>
-              <p className="block-subheadline">{location.address1}</p>
-              <p className="block-subheadline">{`${location.city}, ${
-                location.state
-              } ${location.zip}`}</p>
+            <div className="col-12 md-col-6 mb4 flex flex-row justify-between items-center">
+              <div className="mr1">
+                <p className="uppercase text-peach bold copy mb1">info</p>
+                <p className="block-subheadline">{location.address1}</p>
+                <p className="block-subheadline">{`${location.city}, ${
+                  location.state
+                } ${location.zip}`}</p>
+              </div>
+              <div
+                className={cx(
+                  styles['LocationDetailHero__map'],
+                  'circle z-1 bg-white'
+                )}
+              >
+                <MapboxMap
+                  className="z-0 wh100"
+                  featureCollection={locationGeoJSON}
+                  defaultIcon="year-round-icon"
+                  styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                  iconSize={0.8}
+                  mapPadding={10}
+                  maxZoom={15}
+                  collections={[
+                    {
+                      name: 'SeasonalLocations',
+                      filter: {
+                        ids: location.seasonal ? [location.id] : []
+                      },
+                      icon: 'seasonal-icon'
+                    }
+                  ]}
+                />
+              </div>
             </div>
             <div className="col-12 md-col-6 mb4">
               <p className="uppercase text-peach bold copy mb1">hours</p>

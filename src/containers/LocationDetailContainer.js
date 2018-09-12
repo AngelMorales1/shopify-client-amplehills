@@ -6,6 +6,7 @@ import get from 'utils/get';
 
 import location from 'state/selectors/location';
 import locations from 'state/selectors/locations';
+import locationGeoJSON from 'state/selectors/locationGeoJSON';
 
 class LocationDetailContainer extends ContainerBase {
   view = import('views/LocationDetailView');
@@ -17,7 +18,8 @@ const mapStateToProps = (state, props) => {
   return {
     location: location(state, props),
     locations: locations(state),
-    blocks: []
+    locationGeoJSON: locationGeoJSON(state),
+    blocks: get(location(state, props), 'contentBlocks', [])
   };
 };
 

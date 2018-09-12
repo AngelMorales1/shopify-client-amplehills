@@ -7,6 +7,22 @@
     flex-direction: row;
   }
 
+  &__map {
+    border: spacing(1) solid color('peach');
+    width: spacing(30);
+    height: spacing(30);
+    min-width: spacing(30);
+    min-height: spacing(30);
+
+    @media ($medium-up) {
+      position: absolute;
+      width: spacing(46);
+      height: spacing(46);
+      top: 80%;
+      left: 10%;
+    }
+  }
+
   &__content-detail-container {
     flex-direction: column;
 
