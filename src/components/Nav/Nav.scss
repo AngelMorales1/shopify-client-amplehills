@@ -23,23 +23,11 @@
   }
 
   .left-side {
-    order: 2;
-    justify-content: center;
-
-    @media ($medium-up) {
-      order: 1;
-      justify-content: flex-start;
-    }
+    justify-content: flex-start;
   }
 
   .logo-container {
-    order: 1;
-    justify-content: flex-start;
-
-    @media ($medium-up) {
-      order: 2;
-      justify-content: center;
-    }
+    justify-content: center;
 
     &__logo {
       object-fit: contain;
@@ -52,11 +40,6 @@
   }
 
   .right-side {
-    order: 3;
-    justify-content: space-between;
-
-    @media ($medium-up) {
-      justify-content: flex-end;
-    }
+    justify-content: flex-end;
   }
 }

@@ -58,36 +58,54 @@ class Nav extends Component {
         )}
       >
         <div
-          className={`col col-3 md-col-5 flex items-center ${
+          className={`col col-4 md-col-5 flex items-center ${
             styles['left-side']
           }`}
         >
-          <NavLink
-            exact
-            to="/locations"
-            className="link-text center text-hover"
-          >
-            Locations
-          </NavLink>
-          <NavLink
-            exact
-            to="/contact"
-            className="text-hover ml3 link-text center xs-hide sm-hide"
-          >
-            Contact
-          </NavLink>
-          <NavLink
-            exact
-            to="/events"
-            className="text-hover ml3 link-text center xs-hide sm-hide"
-          >
-            Events
-          </NavLink>
+          {this.state.currentBreakpoint === 'medium' ? (
+            <Fragment>
+              <NavLink
+                exact
+                to="/locations"
+                className="link-text center text-hover"
+              >
+                Locations
+              </NavLink>
+              <NavLink
+                exact
+                to="/events"
+                className="text-hover ml3 link-text center xs-hide sm-hide"
+              >
+                Events
+              </NavLink>
+              <NavLink
+                exact
+                to="/classes-and-socials"
+                className="text-hover ml3 link-text center xs-hide sm-hide"
+              >
+                Classes & Socials
+              </NavLink>
+              <NavLink
+                exact
+                to="/parties"
+                className="text-hover ml3 link-text center xs-hide sm-hide"
+              >
+                Parties
+              </NavLink>
+            </Fragment>
+          ) : (
+            <Button variant="style-none">
+              <Image
+                alt="menu icon"
+                src="/assets/images/icon-mobile-menu.svg"
+              />
+            </Button>
+          )}
         </div>
         <div
           className={cx(
             styles['logo-container'],
-            'col col-3 md-col-4 h100 flex items-center'
+            'col col-4 md-col-4 h100 flex items-center'
           )}
         >
           <NavLink exact to="/" className="flex justify-center">
@@ -103,7 +121,7 @@ class Nav extends Component {
           </NavLink>
         </div>
         <div
-          className={`col col-6 md-col-5 flex items-center ${
+          className={`col col-4 md-col-5 flex items-center ${
             styles['right-side']
           }`}
         >
@@ -141,21 +159,7 @@ class Nav extends Component {
             </Fragment>
           ) : (
             <Fragment>
-              <NavLink
-                exact
-                to="/products"
-                className="text-hover link-text center"
-              >
-                Shop
-              </NavLink>
-              <NavLink
-                exact
-                to="/our-story"
-                className="text-hover link-text center"
-              >
-                Our Story
-              </NavLink>
-              <NavLink exact to="/profile" className="link-text center">
+              <NavLink exact to="/profile" className="link-text center mx2">
                 <Image src="/assets/images/icon-profile.svg" />
               </NavLink>
             </Fragment>
