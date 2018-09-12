@@ -5,7 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
-import { Image, Button, setRef } from 'components/base';
+import { Image, Button } from 'components/base';
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
