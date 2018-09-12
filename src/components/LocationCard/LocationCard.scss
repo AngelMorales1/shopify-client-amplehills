@@ -4,8 +4,22 @@ $transition-duration: 0.2;
 
 .LocationCard {
   &__card-container {
+    @extend .pointer;
+    text-decoration: none;
     border-radius: radius('s');
     max-width: spacing(100);
+    transform: translate3d(0, spacing(-0.5), 0);
+    transition: $transition;
+
+    &:hover {
+      color: inherit;
+      box-shadow: $drop-shadow;
+      transform: translate3d(0, spacing(-0.25), 0);
+    }
+
+    &:active {
+      transform: translate3d(0, spacing(0.25), 0);
+    }
 
     &--selected {
       box-shadow: $drop-shadow-large;
