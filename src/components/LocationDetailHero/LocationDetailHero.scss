@@ -23,6 +23,12 @@
     }
   }
 
+  &__content-container-with-subnav {
+    @media ($medium-up) {
+      padding-top: spacing(20);
+    }
+  }
+
   &__content-detail-container {
     flex-direction: column;
 

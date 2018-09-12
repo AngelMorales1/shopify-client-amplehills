@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import scrollTo from 'react-scroll-to-component';
+import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import imageModel from 'models/imageModel';
 import styles from './LocationDetailHero.scss';
@@ -40,8 +42,11 @@ const LocationDetailHero = ({ location, locationGeoJSON, events }) => {
       <div className="flex flex-column items-center justify-center col col-12 md-col-6 py4 px3">
         <div
           className={cx(
-            styles['LocationDetailHero__content-container'],
-            'col-12 md-col-9 mx-auto flex-column justify-around items-center'
+            'col-12 md-col-9 mx-auto flex-column justify-around items-center',
+            {
+              [styles['LocationDetailHero__content-container-with-subnav']]:
+                location.contentBlocks.length
+            }
           )}
         >
           <h2 className="block-headline my4">{location.title}</h2>
