@@ -9,13 +9,19 @@ import styles from './LocationDetailHero.scss';
 import { Image, Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 
-const LocationDetailHero = ({ location, locationGeoJSON }) => {
+const LocationDetailHero = ({ location, locationGeoJSON, events }) => {
   let currentLocation = null;
   locationGeoJSON.features = [
     locationGeoJSON.features.find(
       feature => get(feature, 'properties.id', '') === location.id
     )
   ];
+
+  const eventId = get(
+    events.find(event => event.locationId === location.id),
+    'id',
+    ''
+  );
 
   return (
     <div
@@ -102,15 +108,19 @@ const LocationDetailHero = ({ location, locationGeoJSON }) => {
             'flex flex-wrap justify-center col-12 md-col-11 mx-auto'
           )}
         >
-          <div className={cx(styles['LocationDetailHero__button'], 'my1 mx1')}>
-            <Button
-              className="uppercase justify-center"
-              color="madison-blue"
-              variant="primary-small"
-              label="book a class"
-              to="/contact"
-            />
-          </div>
+          {eventId ? (
+            <div
+              className={cx(styles['LocationDetailHero__button'], 'my1 mx1')}
+            >
+              <Button
+                className="uppercase justify-center"
+                color="madison-blue"
+                variant="primary-small"
+                label="book a class"
+                to={`/events/${eventId}`}
+              />
+            </div>
+          ) : null}
           <div className={cx(styles['LocationDetailHero__button'], 'my1 mx1')}>
             <Button
               className="uppercase justify-center"

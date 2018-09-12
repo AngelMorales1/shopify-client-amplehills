@@ -6,7 +6,7 @@ import BlockSwitch from 'components/BlockSwitch';
 
 class LocationDetailView extends Component {
   render() {
-    const { model, blocks, location, locationGeoJSON } = this.props;
+    const { model, blocks, location, locationGeoJSON, events } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 
@@ -15,6 +15,7 @@ class LocationDetailView extends Component {
         <LocationDetailHero
           location={location}
           locationGeoJSON={locationGeoJSON}
+          events={events}
         />
         {blocks &&
           blocks.map((block, i) => (
