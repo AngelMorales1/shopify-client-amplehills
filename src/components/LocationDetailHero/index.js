@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import eventModel from 'models/eventModel';
+import locationModel from 'models/locationModel';
 
 import styles from './LocationDetailHero.scss';
 import { Button } from 'components/base';
@@ -146,8 +148,19 @@ const LocationDetailHero = ({ location, locationGeoJSON, events }) => {
   );
 };
 
-LocationDetailHero.propTypes = {};
+LocationDetailHero.propTypes = {
+  location: locationModel.propTypes,
+  locationGeoJSON: PropTypes.shape({
+    type: PropTypes.string,
+    features: PropTypes.arrayOf(PropTypes.object)
+  }),
+  events: PropTypes.arrayOf(eventModel.propTypes)
+};
 
-LocationDetailHero.defaultProps = {};
+LocationDetailHero.defaultProps = {
+  location: locationModel.default,
+  locationGeoJSON: {},
+  events: eventModel.default
+};
 
 export default LocationDetailHero;
