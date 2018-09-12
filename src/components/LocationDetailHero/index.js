@@ -6,6 +6,8 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import eventModel from 'models/eventModel';
 import locationModel from 'models/locationModel';
+import scrollTo from 'react-scroll-to-component';
+import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import styles from './LocationDetailHero.scss';
 import { Button } from 'components/base';

@@ -48,8 +48,8 @@ class SubNav extends Component {
   };
 
   render() {
-    const { className, menuList, onClick } = this.props;
-    const { large } = Global.breakpoints;
+    const { className, menuList, onClick, removePaddingOnChild } = this.props;
+    const { small, large } = Global.breakpoints;
     const currentBreakpointIsLarge =
       this.state.currentBreakpoint === large.label;
 
@@ -58,7 +58,8 @@ class SubNav extends Component {
         className={cx(
           styles['SubNav'],
           'w100 flex-row justify-center z-sub-nav',
-          className
+          className,
+          { subnav: !removePaddingOnChild }
         )}
       >
         {currentBreakpointIsLarge ? (
@@ -109,13 +110,15 @@ class SubNav extends Component {
 SubNav.propTypes = {
   className: PropTypes.string,
   menuList: PropTypes.arrayOf(PropTypes.string),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  removePaddingOnChild: PropTypes.bool
 };
 
 SubNav.defaultProps = {
   className: '',
   menuList: [''],
-  onClick: () => {}
+  onClick: () => {},
+  removePaddingOnChild: false
 };
 
 export default SubNav;
