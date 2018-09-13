@@ -57,7 +57,7 @@ const EventCard = ({ event, active }) => {
             <div className="mt2">
               {dates.map((date, i) => (
                 <p
-                  key={`${date}-${i}`}
+                  key={date}
                   className={cx(styles['EventCard__text'])}
                 >{`${moment(date).format('MM/DD/YY')} - ${times[i]}`}</p>
               ))}

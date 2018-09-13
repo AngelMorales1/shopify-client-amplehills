@@ -103,10 +103,7 @@ class LocationDetailHero extends PureComponent {
                 {location.sortedHours.map((hour, i) => {
                   const key = Object.keys(hour);
                   return (
-                    <div
-                      key={`${key}-${i}`}
-                      className="flex flex-row justify-between"
-                    >
+                    <div key={key} className="flex flex-row justify-between">
                       <p className="bold block-subheadline mr1">{key}</p>
                       <p className="block-subheadline">{hour[key]}</p>
                     </div>

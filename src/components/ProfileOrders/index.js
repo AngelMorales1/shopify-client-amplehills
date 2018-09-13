@@ -55,7 +55,7 @@ class ProfileOrders extends Component {
                   const subItems = get(item, 'subItems', []);
                   return (
                     <div
-                      key={`${item.title} ${i}`}
+                      key={item.title}
                       className="mb2 flex flex-wrap justify-between"
                     >
                       <span className="line-item-title mr2">{item.title}</span>
@@ -66,7 +66,7 @@ class ProfileOrders extends Component {
                             {subItems.map((subItem, i) => (
                               <li
                                 className="sub-line-item small"
-                                key={`${subItem.handle} ${i}`}
+                                key={subItem.handle}
                               >{`${subItem.quantity}x ${get(
                                 products,
                                 `[${subItem.handle}].title`,
@@ -140,7 +140,7 @@ class ProfileOrders extends Component {
                   {this.state.itemNotAvailable.subItems.map((subItem, i) => (
                     <li
                       className="sub-line-item small"
-                      key={`${subItem.handle} ${i}`}
+                      key={subItem.handle}
                     >{`${subItem.quantity}x ${get(
                       products,
                       `[${subItem.handle}].title`,

@@ -55,7 +55,7 @@ class ComicStrip extends Component {
                 color={color}
                 variant="primary-small"
                 shadow={true}
-                key={i}
+                key={get(product, 'sys.id', '')}
                 label={get(product, 'fields.title', '')}
                 onClick={() =>
                   this.setState({
@@ -75,12 +75,14 @@ class ComicStrip extends Component {
             }}
           >
             {products.map((product, i) => (
-              <div key={i} className="flex justify-center">
+              <div
+                key={get(product, 'sys.id', i)}
+                className="flex justify-center"
+              >
                 <Button
                   className="m1"
                   color="madison-blue"
                   variant="primary-small"
-                  key={i}
                   label={get(product, 'fields.title', '')}
                   onClick={() =>
                     this.setState({
@@ -109,7 +111,7 @@ class ComicStrip extends Component {
             );
 
             return (
-              <div className={classes} key={i}>
+              <div className={classes} key={get(product, 'sys.id', i)}>
                 <span className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width">
                   {get(product, 'fields.text', '')}
                 </span>
@@ -118,7 +120,7 @@ class ComicStrip extends Component {
                     const comicUrl = get(comic, 'fields.file.url', '');
                     return (
                       <div
-                        key={`${i}-${get(comic, 'sys.id', '')}`}
+                        key={get(comic, 'sys.id', i)}
                         className={cx(
                           styles['ComicStrips__container__image'],
                           'transition-slide-up-large m2 xs-hide sm-hide'
@@ -142,7 +144,7 @@ class ComicStrip extends Component {
 
                       return (
                         <div
-                          key={`${i}-${get(comic, 'sys.id', '')}`}
+                          key={get(comic, 'sys.id', i)}
                           className={cx(
                             styles['ComicStrips__container__image'],
                             'w-auto mx-auto'

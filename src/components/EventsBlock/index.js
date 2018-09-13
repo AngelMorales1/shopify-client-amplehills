@@ -146,7 +146,7 @@ class EventsBlock extends Component {
                   className="m1"
                   color={color}
                   variant="primary-small"
-                  key={`${label}-${i}`}
+                  key={label}
                   label={label}
                   onClick={() =>
                     this.setState({
@@ -163,7 +163,7 @@ class EventsBlock extends Component {
             return (
               <EventCard
                 active={this.cardIsActive(event)}
-                key={`${get(event, 'id')}-${i}`}
+                key={get(event, 'id', i)}
                 event={event}
               />
             );

@@ -29,15 +29,17 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
       selectedCards = customOrderCards;
     } else {
       selectedCards = everyCards.sort();
+    }
+  };
 
   const getCardItems = () => {
     switch (type) {
       case 'blockPressHorizontalCarousel':
         return customOrder ? get(fields, 'cardItems', []) : [];
     }
-      if (isSortByLatest) {
-        selectedCards = selectedCards.reverse();
-      }
+
+    if (isSortByLatest) {
+      selectedCards = selectedCards.reverse();
     }
 
     return typeof showCardNumber === 'number'
@@ -87,7 +89,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
 
             return (
               <div
-                key={get(cardItem, 'sys.id', '') + i}
+                key={get(cardItem, 'sys.id', i)}
                 className={cx(
                   styles['HorizontalCarousel__card'],
                   'bg-white p3 flex flex-column justify-center items-center'
@@ -124,7 +126,7 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
 
                   return (
                     <div
-                      key={get(pressItem, 'sys.id', '') + i}
+                      key={get(pressItem, 'sys.id', i)}
                       className={cx(
                         styles['HorizontalCarousel__card'],
                         'bg-white p3 flex flex-column justify-center items-center'
@@ -165,8 +167,6 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     </div>
   );
 };
-
-export default HorizontalCarousel;
 
 HorizontalCarousel.propTypes = {
   block: PropTypes.shape({
@@ -238,16 +238,20 @@ HorizontalCarousel.defaultProps = {
       id: ''
     }
   },
-  z: 0
-  // press: [{
-  //   fields: {
-  //     linkUrl: '',
-  //     logoImage: imageModel.default,
-  //     quote: '',
-  //     title: ''
-  //   },
-  //   sys: {
-  //     id: ''
-  //   }
-  // }]
+  z: 0,
+  press: [
+    {
+      fields: {
+        linkUrl: '',
+        logoImage: imageModel.default,
+        quote: '',
+        title: ''
+      },
+      sys: {
+        id: ''
+      }
+    }
+  ]
 };
+
+export default HorizontalCarousel;

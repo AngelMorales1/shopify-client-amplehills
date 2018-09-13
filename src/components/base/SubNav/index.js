@@ -70,7 +70,7 @@ class SubNav extends Component {
           >
             {menuList.map((menu, i) => (
               <Button
-                key={`${menu}-${i}`}
+                key={menu}
                 variant="no-style"
                 className={cx(
                   styles['SubNav__menu'],

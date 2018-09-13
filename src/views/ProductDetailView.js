@@ -41,7 +41,7 @@ class ProductDetailView extends Component {
           {blocks &&
             blocks.map((block, i) => (
               <BlockSwitch
-                key={`${i}-${get(block, 'sys.id', i)}`}
+                key={get(block, 'sys.id', i)}
                 block={block}
                 product={product}
                 ourPledge={ourPledge}

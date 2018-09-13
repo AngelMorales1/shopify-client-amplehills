@@ -45,7 +45,7 @@ class GenericPageView extends Component {
               return (
                 <BlockSwitch
                   setRef={refBlock => (this.refBlocks[title] = refBlock)}
-                  key={`${i}-${get(block, 'sys.id', i)}`}
+                  key={get(block, 'sys.id', i)}
                   block={block}
                   z={blocks.length - i}
                   {...this.props}
