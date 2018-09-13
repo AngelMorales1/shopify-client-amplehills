@@ -7,12 +7,17 @@ import Global from 'constants/Global';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import locations from 'state/selectors/locations';
+import FooterRegions from 'constants/FooterRegions';
 
 import { NavLink } from 'react-router-dom';
 import { Button, Image } from 'components/base';
 import styles from './MobileNavModal.scss';
 
 class MobileNavModal extends Component {
+  state = {
+    dropdownIsOpen: false
+  };
   componentDidMount() {
     window.addEventListener('resize', this.closeMobileNavOnDesktopView);
     this.closeMobileNavOnDesktopView();
@@ -25,12 +30,34 @@ class MobileNavModal extends Component {
     }
   };
 
-  render() {
-    const {
-      mobileNavIsOpen,
-      actions: { closeMobileNav }
-    } = this.props;
+  handleMenuClick = () => {
+    this.props.actions.closeMobileNav();
+    this.setState({ dropdownIsOpen: false });
+  };
 
+  render() {
+    const { mobileNavIsOpen, locations } = this.props;
+
+    const locationsSortedByRegion = (locations = []) => {
+      const regions = locations.reduce((accumulated, current) => {
+        let region = current.region;
+        accumulated[region] = accumulated[region]
+          ? accumulated[region].concat([current])
+          : [current];
+
+        return accumulated;
+      }, {});
+
+      return FooterRegions.reduce(
+        (accumulated, region) => ({
+          ...accumulated,
+          [region]: regions[region]
+        }),
+        {}
+      );
+    };
+
+    const regions = locationsSortedByRegion(locations);
     const classes = cx(styles['MobileNavModal'], 'fixed w100 bg-white', {
       [styles['MobileNavModal--open']]: mobileNavIsOpen
     });
@@ -40,25 +67,82 @@ class MobileNavModal extends Component {
         <div className={classes}>
           <Button
             variant="style-none"
-            onClick={() => closeMobileNav()}
+            onClick={() => this.handleMenuClick()}
             className="m3"
           >
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
           <div className="flex flex-column justify-start">
-            <NavLink
-              exact
-              to="/locations"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
-            >
-              Locations
-            </NavLink>
+            <div className="ml4 my2">
+              <NavLink
+                exact
+                to="/locations"
+                className={cx(styles['MobileNavModal__link-text'])}
+                onClick={() => this.handleMenuClick()}
+              >
+                Locations
+              </NavLink>
+              <Button
+                className={cx(
+                  { 'display-none': this.state.dropdownIsOpen },
+                  'ml1 transition-slide-up'
+                )}
+                variant="style-none"
+                onClick={() =>
+                  this.state.dropdownIsOpen
+                    ? this.setState({ dropdownIsOpen: false })
+                    : this.setState({ dropdownIsOpen: true })
+                }
+              >
+                <Image src="/assets/images/arrow-dropdown-open.svg" />
+              </Button>
+              <Button
+                className={cx(
+                  { 'display-none': !this.state.dropdownIsOpen },
+                  'ml1 transition-slide-up'
+                )}
+                variant="style-none"
+                onClick={() =>
+                  this.state.dropdownIsOpen
+                    ? this.setState({ dropdownIsOpen: false })
+                    : this.setState({ dropdownIsOpen: true })
+                }
+              >
+                <Image src="/assets/images/arrow-dropdown-close.svg" />
+              </Button>
+            </div>
+            <div className="ml4">
+              {Object.keys(regions).map(region => {
+                const locations = get(regions, region, []);
+
+                return (
+                  <div
+                    className={cx(
+                      styles['MobileNavModal__location-detail'],
+                      'my3 transition-slide-up-large flex flex-column',
+                      { 'display-none': !this.state.dropdownIsOpen }
+                    )}
+                  >
+                    <p className="bold mb1">{region}</p>
+                    {locations.map(location => (
+                      <NavLink
+                        onClick={() => this.handleMenuClick()}
+                        exact
+                        to={`/locations/${location.slug}`}
+                        className="mb1 text-decoration-none"
+                      >
+                        {location.title}
+                      </NavLink>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
             <NavLink
               exact
               to="/classes-and-socials"
               className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             >
               Classes & Socials
             </NavLink>
@@ -66,7 +150,7 @@ class MobileNavModal extends Component {
               exact
               to="/parties"
               className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             >
               Parties
             </NavLink>
@@ -74,7 +158,7 @@ class MobileNavModal extends Component {
               exact
               to="/events"
               className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             >
               Events
             </NavLink>
@@ -82,7 +166,7 @@ class MobileNavModal extends Component {
               exact
               to="/our-story"
               className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             >
               Our Story
             </NavLink>
@@ -90,7 +174,7 @@ class MobileNavModal extends Component {
               exact
               to="/contact-us"
               className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             >
               Contact Us
             </NavLink>
@@ -101,7 +185,7 @@ class MobileNavModal extends Component {
               color="peach"
               label="Shop Online"
               hover="clear-peach-border"
-              onClick={() => closeMobileNav()}
+              onClick={() => this.handleMenuClick()}
             />
           </div>
         </div>
@@ -127,7 +211,8 @@ MobileNavModal.defaultProps = {
 const mapStateToProps = state => {
   return {
     ...state,
-    mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen')
+    mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
+    locations: locations(state)
   };
 };
 
