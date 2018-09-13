@@ -19,7 +19,6 @@ class MobileNavModal extends Component {
   state = {
     dropdownIsOpen: false
   };
-
   componentDidMount() {
     window.addEventListener('resize', this.closeMobileNavOnDesktopView);
     this.closeMobileNavOnDesktopView();
