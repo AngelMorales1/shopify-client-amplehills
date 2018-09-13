@@ -21,7 +21,7 @@ const ImageText = ({ block, z, setRef }) => {
   const imageTextRatioIs5050 = imageTextRatio === '50:50';
   const buttonLabel = get(fields, 'buttonLabel', '');
   const buttonLink = get(fields, 'buttonLink', '');
-  const blockHasButton = !!buttonLabel && !!buttonLink;
+  const blockHasButton = buttonLabel && buttonLink;
   const buttonColor = get(fields, 'buttonColor', 'peach');
   const linkedTextLabel = get(fields, 'linkedTextLabel', '');
   const linkedTextLink = get(fields, 'linkedTextLink', '');
@@ -163,7 +163,9 @@ ImageText.propTypes = {
       fullImage: PropTypes.bool,
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      buttonColor: PropTypes.string
+      buttonColor: PropTypes.string,
+      linkedTextLabel: PropTypes.string,
+      linkedTextLink: PropTypes.string
     })
   }),
   setRef: PropTypes.func
@@ -185,7 +187,9 @@ ImageText.defaultProps = {
       fullImage: false,
       buttonLabel: '',
       buttonLink: '',
-      buttonColor: 'peach'
+      buttonColor: 'peach',
+      linkedTextLabel: '',
+      linkedTextLink: ''
     }
   },
   setRef: () => {}

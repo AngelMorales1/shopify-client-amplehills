@@ -239,4 +239,33 @@
       box-shadow: unset;
     }
   }
+
+  &--underline-peach {
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: radius('0');
+    padding: 0;
+    color: color('peach');
+    position: relative;
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
+
+    &:hover {
+      box-shadow: unset;
+
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: unset;
+      }
+    }
+  }
 }
