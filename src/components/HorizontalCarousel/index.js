@@ -29,9 +29,9 @@ const HorizontalCarousel = ({ block, z, pressItems }) => {
     } else {
       selectedCards = everyCards.sort();
     }
-      if (isSortByLatest) {
-        selectedCards = selectedCards.reverse();
-      }
+
+    if (isSortByLatest) {
+      selectedCards = selectedCards.reverse();
     }
 
     return typeof showCardNumber === 'number'
@@ -283,16 +283,20 @@ HorizontalCarousel.defaultProps = {
       id: ''
     }
   },
-  z: 0
-  // press: [{
-  //   fields: {
-  //     linkUrl: '',
-  //     logoImage: imageModel.default,
-  //     quote: '',
-  //     title: ''
-  //   },
-  //   sys: {
-  //     id: ''
-  //   }
-  // }]
+  z: 0,
+  press: [
+    {
+      fields: {
+        linkUrl: '',
+        logoImage: imageModel.default,
+        quote: '',
+        title: ''
+      },
+      sys: {
+        id: ''
+      }
+    }
+  ]
 };
+
+export default HorizontalCarousel;
