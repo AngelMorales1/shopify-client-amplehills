@@ -27,7 +27,6 @@ class LocationDetailView extends Component {
               scrollTo(this.refBlocks[menuTitle], SubNavScrollOption)
             }
             menuList={menuList}
-            removePaddingOnChild={true}
           />
         ) : null}
         <div className="subnav-padding-on-last-child">
@@ -39,13 +38,14 @@ class LocationDetailView extends Component {
           {blocks &&
             blocks.map((block, i) => {
               const title = get(block, 'fields.title', '');
+              const blockZIndex = blocks.length - i;
 
               return (
                 <BlockSwitch
                   setRef={refBlock => (this.refBlocks[title] = refBlock)}
                   key={`${i}-${get(block, 'sys.id', i)}`}
                   block={block}
-                  z={blocks.length - i}
+                  z={blockZIndex}
                   {...this.props}
                 />
               );

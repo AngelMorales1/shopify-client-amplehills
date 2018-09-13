@@ -27,7 +27,7 @@ const Routes = ({ location }) => (
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
     <Route
       exact
-      path="/location/:locationTitle"
+      path="/location/:locationId"
       component={LocationDetailContainer}
     />
     <Route path="/products" component={ProductLandingContainer} />

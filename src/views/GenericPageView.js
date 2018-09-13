@@ -34,6 +34,7 @@ class GenericPageView extends Component {
               scrollTo(this.refBlocks[menuTitle], SubNavScrollOption)
             }
             menuList={menuList}
+            className="subnav"
           />
         ) : null}
         <div>

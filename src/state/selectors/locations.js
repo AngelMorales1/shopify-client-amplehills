@@ -31,6 +31,7 @@ export default createSelector(
         false
       );
       const contentBlocks = get(fields, 'contentBlocks', []);
+      const slug = get(fields, 'slug', '');
 
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
@@ -70,7 +71,8 @@ export default createSelector(
         closeLocationForTheSeason,
         currentOpenHours,
         stringifiedSearchableFields,
-        contentBlocks
+        contentBlocks,
+        slug
       };
     });
 

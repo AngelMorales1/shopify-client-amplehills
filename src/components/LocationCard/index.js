@@ -22,13 +22,15 @@ const LocationCard = ({ location, selectedLocation, getRef }) => {
       openStatus = 'Open today';
     }
   }
+  const locationUrl = `/location/${location.slug}`;
 
   return (
-    <div
+    <a
+      href={locationUrl}
       ref={getRef}
       className={cx(
         styles['LocationCard__card-container'],
-        'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100',
+        'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 text-decoration-none',
         {
           [styles['LocationCard__card-container--selected']]:
             location.id === selectedLocation
@@ -118,7 +120,7 @@ const LocationCard = ({ location, selectedLocation, getRef }) => {
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
