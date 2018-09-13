@@ -211,14 +211,19 @@ class LocationsCards extends Component {
                 <span className="bold">{locationResultsLabel}</span>
               </div>
               <div className="flex flex-column items-center">
-                {sortedLocations.map(location => (
-                  <LocationCard
-                    getRef={$card => (this.$cards[location.id] = $card)}
-                    key={location.id}
-                    selectedLocation={selectedLocation}
-                    location={location}
-                  />
-                ))}
+                {sortedLocations.map(location => {
+                  const locationUrl = `/location/${location.slug}`;
+
+                  return (
+                    <LocationCard
+                      locationUrl={locationUrl}
+                      getRef={$card => (this.$cards[location.id] = $card)}
+                      key={location.id}
+                      selectedLocation={selectedLocation}
+                      location={location}
+                    />
+                  )
+                })}
               </div>
             </div>
           ) : (
