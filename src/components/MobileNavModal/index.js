@@ -9,6 +9,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import locations from 'state/selectors/locations';
 import FooterRegions from 'constants/FooterRegions';
+import locationModel from 'models/locationModel';
 
 import { NavLink } from 'react-router-dom';
 import { Button, Image } from 'components/base';
@@ -117,6 +118,7 @@ class MobileNavModal extends Component {
 
                 return (
                   <div
+                    key={region}
                     className={cx(
                       styles['MobileNavModal__location-detail'],
                       'my3 transition-slide-up-large flex flex-column',
@@ -126,9 +128,10 @@ class MobileNavModal extends Component {
                     <p className="bold mb1">{region}</p>
                     {locations.map(location => (
                       <NavLink
+                        key={location.id}
                         onClick={() => this.handleMenuClick()}
                         exact
-                        to={`/locations/${location.slug}`}
+                        to={`/location/${location.slug}`}
                         className="mb1 text-decoration-none"
                       >
                         {location.title}
@@ -198,14 +201,16 @@ MobileNavModal.propTypes = {
   actions: PropTypes.shape({
     closeMobileNav: PropTypes.func
   }),
-  mobileNavIsOpen: PropTypes.bool
+  mobileNavIsOpen: PropTypes.bool,
+  locations: PropTypes.arrayOf(locationModel.propTypes)
 };
 
 MobileNavModal.defaultProps = {
   actions: {
     closeMobileNav: () => {}
   },
-  mobileNavIsOpen: false
+  mobileNavIsOpen: false,
+  locations: []
 };
 
 const mapStateToProps = state => {
