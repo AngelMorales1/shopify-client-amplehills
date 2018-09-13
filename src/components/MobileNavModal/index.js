@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import locations from 'state/selectors/locations';
-import FooterRegions from 'constants/FooterRegions';
+import locationsByRegions from 'state/selectors/locationsByRegions';
 import locationModel from 'models/locationModel';
 
 import { NavLink } from 'react-router-dom';
@@ -19,6 +19,7 @@ class MobileNavModal extends Component {
   state = {
     dropdownIsOpen: false
   };
+
   componentDidMount() {
     window.addEventListener('resize', this.closeMobileNavOnDesktopView);
     this.closeMobileNavOnDesktopView();
@@ -37,28 +38,8 @@ class MobileNavModal extends Component {
   };
 
   render() {
-    const { mobileNavIsOpen, locations } = this.props;
+    const { mobileNavIsOpen, locations, locationsByRegions } = this.props;
 
-    const locationsSortedByRegion = (locations = []) => {
-      const regions = locations.reduce((accumulated, current) => {
-        let region = current.region;
-        accumulated[region] = accumulated[region]
-          ? accumulated[region].concat([current])
-          : [current];
-
-        return accumulated;
-      }, {});
-
-      return FooterRegions.reduce(
-        (accumulated, region) => ({
-          ...accumulated,
-          [region]: regions[region]
-        }),
-        {}
-      );
-    };
-
-    const regions = locationsSortedByRegion(locations);
     const classes = cx(
       styles['MobileNavModal'],
       'fixed flex wh100 bg-white-wash z-nav',
@@ -77,8 +58,8 @@ class MobileNavModal extends Component {
           >
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
-          <div className="flex flex-column justify-start">
-            <div className="ml4 my2">
+          <div className="flex flex-column justify-start pl4">
+            <div className="my2">
               <NavLink
                 exact
                 to="/locations"
@@ -116,9 +97,9 @@ class MobileNavModal extends Component {
                 <Image src="/assets/images/arrow-dropdown-close.svg" />
               </Button>
             </div>
-            <div className="ml4">
-              {Object.keys(regions).map(region => {
-                const locations = get(regions, region, []);
+            <div>
+              {Object.keys(locationsByRegions).map(region => {
+                const locations = get(locationsByRegions, region, []);
 
                 return (
                   <div
@@ -148,10 +129,7 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/classes-and-socials"
-              className={cx(
-                styles['MobileNavModal__link-text'],
-                'ml4 my2 mr-auto'
-              )}
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={() => this.handleMenuClick()}
             >
               Classes & Socials
@@ -159,10 +137,7 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/parties"
-              className={cx(
-                styles['MobileNavModal__link-text'],
-                'ml4 my2 mr-auto'
-              )}
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={() => this.handleMenuClick()}
             >
               Parties
@@ -170,10 +145,7 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/events"
-              className={cx(
-                styles['MobileNavModal__link-text'],
-                'ml4 my2 mr-auto'
-              )}
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={() => this.handleMenuClick()}
             >
               Events
@@ -181,10 +153,7 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/our-story"
-              className={cx(
-                styles['MobileNavModal__link-text'],
-                'ml4 my2 mr-auto'
-              )}
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={() => this.handleMenuClick()}
             >
               Our Story
@@ -192,16 +161,13 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/contact-us"
-              className={cx(
-                styles['MobileNavModal__link-text'],
-                'ml4 my2 mr-auto'
-              )}
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={() => this.handleMenuClick()}
             >
               Contact Us
             </NavLink>
             <Button
-              className="ml4 my2 inline-flex"
+              className="my2 inline-flex"
               to="/products"
               variant="primary-small"
               color="peach"
@@ -221,7 +187,8 @@ MobileNavModal.propTypes = {
     closeMobileNav: PropTypes.func
   }),
   mobileNavIsOpen: PropTypes.bool,
-  locations: PropTypes.arrayOf(locationModel.propTypes)
+  locations: PropTypes.arrayOf(locationModel.propTypes),
+  locationsByRegions: PropTypes.Object
 };
 
 MobileNavModal.defaultProps = {
@@ -229,14 +196,16 @@ MobileNavModal.defaultProps = {
     closeMobileNav: () => {}
   },
   mobileNavIsOpen: false,
-  locations: []
+  locations: [],
+  locationsByRegions: {}
 };
 
 const mapStateToProps = state => {
   return {
     ...state,
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
-    locations: locations(state)
+    locations: locations(state),
+    locationsByRegions: locationsByRegions(state)
   };
 };
 

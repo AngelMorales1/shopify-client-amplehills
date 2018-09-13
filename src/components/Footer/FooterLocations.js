@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
-import FooterRegions from 'constants/FooterRegions';
+import Regions from 'constants/Regions';
 import locationModel from 'models/locationModel';
 
 import styles from './Footer.scss';
@@ -19,7 +19,7 @@ const FooterLocations = ({ locations }) => {
       return accumulated;
     }, {});
 
-    return FooterRegions.reduce(
+    return Regions.reduce(
       (accumulated, region) => ({
         ...accumulated,
         [region]: regions[region]

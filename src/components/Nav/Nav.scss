@@ -22,7 +22,7 @@
     }
   }
 
-  .left-side {
+  &__left-menu {
     justify-content: flex-start;
   }
 
@@ -39,7 +39,7 @@
     }
   }
 
-  .right-side {
+  &__right-menu {
     justify-content: flex-end;
   }
 }

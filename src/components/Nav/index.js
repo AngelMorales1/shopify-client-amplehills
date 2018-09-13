@@ -73,7 +73,7 @@ class Nav extends Component {
       >
         <div
           className={`col col-4 md-col-5 flex items-center ${
-            styles['left-side']
+            styles['Nav__left-menu']
           }`}
         >
           {this.state.currentBreakpoint === 'medium' ? (
@@ -136,7 +136,7 @@ class Nav extends Component {
         </div>
         <div
           className={`col col-4 md-col-5 flex items-center ${
-            styles['right-side']
+            styles['Nav__right-menu']
           }`}
         >
           {this.state.currentBreakpoint === 'medium' ? (
