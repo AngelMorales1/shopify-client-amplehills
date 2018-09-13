@@ -18,8 +18,8 @@
     font-size: 1.75rem;
     text-decoration: none;
 
-    &:active {
-      color: inherit;
+    &:hover {
+      color: color('peach');
       position: relative;
 
       &::after {
@@ -27,7 +27,7 @@
         display: block;
         position: absolute;
         width: 100%;
-        border-bottom: spacing(0.5) solid color('white');
+        border-bottom: spacing(0.5) solid color('peach');
       }
     }
   }

@@ -144,7 +144,10 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/classes-and-socials"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
+              className={cx(
+                styles['MobileNavModal__link-text'],
+                'ml4 my2 mr-auto'
+              )}
               onClick={() => this.handleMenuClick()}
             >
               Classes & Socials
@@ -152,7 +155,10 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/parties"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
+              className={cx(
+                styles['MobileNavModal__link-text'],
+                'ml4 my2 mr-auto'
+              )}
               onClick={() => this.handleMenuClick()}
             >
               Parties
@@ -160,7 +166,10 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/events"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
+              className={cx(
+                styles['MobileNavModal__link-text'],
+                'ml4 my2 mr-auto'
+              )}
               onClick={() => this.handleMenuClick()}
             >
               Events
@@ -168,7 +177,10 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/our-story"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
+              className={cx(
+                styles['MobileNavModal__link-text'],
+                'ml4 my2 mr-auto'
+              )}
               onClick={() => this.handleMenuClick()}
             >
               Our Story
@@ -176,7 +188,10 @@ class MobileNavModal extends Component {
             <NavLink
               exact
               to="/contact-us"
-              className={cx(styles['MobileNavModal__link-text'], 'ml4 my2')}
+              className={cx(
+                styles['MobileNavModal__link-text'],
+                'ml4 my2 mr-auto'
+              )}
               onClick={() => this.handleMenuClick()}
             >
               Contact Us
