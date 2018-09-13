@@ -59,13 +59,17 @@ class MobileNavModal extends Component {
     };
 
     const regions = locationsSortedByRegion(locations);
-    const classes = cx(styles['MobileNavModal'], 'fixed w100 bg-white', {
-      [styles['MobileNavModal--open']]: mobileNavIsOpen
-    });
+    const classes = cx(
+      styles['MobileNavModal'],
+      'fixed flex wh100 bg-white-wash z-nav',
+      {
+        [styles['MobileNavModal--open']]: mobileNavIsOpen
+      }
+    );
 
     return (
-      <div className="relative w100 bg-white-wash z-nav">
-        <div className={classes}>
+      <div className={classes}>
+        <div className="overflow-scroll w100 bg-white">
           <Button
             variant="style-none"
             onClick={() => this.handleMenuClick()}
