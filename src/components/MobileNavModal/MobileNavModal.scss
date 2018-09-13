@@ -1,13 +1,34 @@
-@import 'settings';
+@import 'settings', 'typography';
 
 .MobileNavModal {
   @extend .transition;
   top: 0;
   left: 0;
   transform: translate3d(-100%, 0, 0);
-  height: 100vh;
+  min-height: 100vh;
 
   &--open {
     transform: translate3d(0, 0, 0);
+  }
+
+  &__link-text {
+    @extend .detail;
+    @extend .semi-bold;
+    @extend .text-peach;
+    font-size: 1.75rem;
+    text-decoration: none;
+
+    &:active {
+      color: inherit;
+      position: relative;
+
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: spacing(0.5) solid color('white');
+      }
+    }
   }
 }

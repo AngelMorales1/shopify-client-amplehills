@@ -45,6 +45,14 @@
     }
   }
 
+  &--hover-clear-peach-border {
+    &:hover {
+      background-color: transparent;
+      border: spacing(1) solid color('peach');
+      color: color('peach');
+    }
+  }
+
   &--shadow {
     box-shadow: $drop-shadow;
   }
