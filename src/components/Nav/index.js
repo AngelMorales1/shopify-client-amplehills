@@ -6,6 +6,10 @@ import {
   openMiniCart,
   closeMiniCart
 } from 'state/actions/ui/miniCartUIActions';
+import {
+  openMobileNav,
+  closeMobileNav
+} from 'state/actions/ui/mobileNavUIActions';
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
@@ -20,7 +24,8 @@ import styles from './Nav.scss';
 
 class Nav extends Component {
   state = {
-    currentBreakpoint: Global.breakpoints.medium.label
+    currentBreakpoint: Global.breakpoints.medium.label,
+    mobileNavIsOpen: false
   };
 
   componentDidMount() {
@@ -44,6 +49,15 @@ class Nav extends Component {
     } = this.props;
 
     return miniCartIsOpen ? closeMiniCart() : openMiniCart();
+  };
+
+  toggleMobileNav = () => {
+    const {
+      mobileNavIsOpen,
+      actions: { openMobileNav, closeMobileNav }
+    } = this.props;
+
+    return mobileNavIsOpen ? closeMobileNav() : openMobileNav();
   };
 
   render() {
@@ -94,7 +108,7 @@ class Nav extends Component {
               </NavLink>
             </Fragment>
           ) : (
-            <Button variant="style-none">
+            <Button variant="style-none" onClick={() => this.toggleMobileNav()}>
               <Image
                 alt="menu icon"
                 src="/assets/images/icon-mobile-menu.svg"
@@ -184,9 +198,12 @@ class Nav extends Component {
 Nav.propTypes = {
   actions: PropTypes.shape({
     openMiniCart: PropTypes.func,
-    closeMiniCart: PropTypes.func
+    closeMiniCart: PropTypes.func,
+    openMobileNav: PropTypes.func,
+    closeMobileNav: PropTypes.func
   }),
   miniCartIsOpen: PropTypes.bool,
+  mobileNavIsOpen: PropTypes.bool,
   logo: imageModel.propTypes,
   profileIcon: imageModel.propTypes
 };
@@ -194,9 +211,12 @@ Nav.propTypes = {
 Nav.defaultProps = {
   actions: {
     openMiniCart: () => {},
-    closeMiniCart: () => {}
+    closeMiniCart: () => {},
+    openMobileNav: () => {},
+    closeMobileNav: () => {}
   },
   miniCartIsOpen: false,
+  mobileNavIsOpen: false,
   logo: imageModel.default,
   profileIcon: null
 };
@@ -205,6 +225,7 @@ const mapStateToProps = state => {
   return {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
+    mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
     totalItems: totalItems(state)
   };
 };
@@ -214,7 +235,9 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         openMiniCart,
-        closeMiniCart
+        closeMiniCart,
+        openMobileNav,
+        closeMobileNav
       },
       dispatch
     )

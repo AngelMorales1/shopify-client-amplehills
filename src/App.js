@@ -20,6 +20,7 @@ import Loader from 'components/Loader';
 import ErrorPage from 'components/ErrorPage';
 import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
+import MobileNavModal from 'components/MobileNavModal';
 import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
 import Alert from 'components/Alert';
@@ -88,6 +89,7 @@ class App extends Component {
             profileIcon={profileIcon}
           />
           <MiniCart />
+          <MobileNavModal />
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />

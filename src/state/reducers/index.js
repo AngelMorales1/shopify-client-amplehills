@@ -1,6 +1,7 @@
 import status from './status';
 import applicationUI from './ui/applicationUI';
 import miniCartUI from './ui/miniCartUI';
+import mobileNavUI from './ui/mobileNavUI';
 import customerUI from './ui/customerUI';
 import productUI from './ui/productUI';
 import locationsUI from './ui/locationsUI';
@@ -21,5 +22,6 @@ export default {
   products,
   customer,
   genericPage,
-  events
+  events,
+  mobileNavUI
 };
