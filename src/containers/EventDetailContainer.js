@@ -24,6 +24,7 @@ class EventDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
+  console.log(event(state, props));
   return {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
