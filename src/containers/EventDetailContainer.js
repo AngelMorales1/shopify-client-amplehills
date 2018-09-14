@@ -19,7 +19,6 @@ class EventDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(event(state, props));
   return {
     event: event(state, props),
     events: events(state)
