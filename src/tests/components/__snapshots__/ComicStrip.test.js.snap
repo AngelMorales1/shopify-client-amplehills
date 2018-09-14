@@ -1044,6 +1044,7 @@ ShallowWrapper {
               "backgroundColor": "",
               "products": Array [
                 Object {
+<<<<<<< HEAD
                   "fields": Object {
                     "comics": Array [
                       Object {
@@ -1056,6 +1057,18 @@ ShallowWrapper {
                     ],
                     "title": "",
                   },
+=======
+                  "comics": Array [
+                    Object {
+                      "fields": Object {
+                        "file": Object {
+                          "url": "",
+                        },
+                      },
+                    },
+                  ],
+                  "title": "",
+>>>>>>> Add test
                 },
               ],
               "title": "",
@@ -1142,6 +1155,7 @@ ShallowWrapper {
                     <div
                               className="flex flex-row"
                     >
+<<<<<<< HEAD
                               <div
                                         className="transition-slide-up-large m2 xs-hide sm-hide"
                               >
@@ -1154,11 +1168,16 @@ ShallowWrapper {
                                                   style={Object {}}
                                         />
                               </div>
+=======
+>>>>>>> Add test
                               <Carousel
                                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                         dotColor=""
+=======
+>>>>>>> Add test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -1166,6 +1185,7 @@ ShallowWrapper {
                                         showOnImage={false}
                                         sliderClasses=""
                               >
+<<<<<<< HEAD
                                         <div
                                                   className="w-auto mx-auto"
                                         >
@@ -1178,6 +1198,9 @@ ShallowWrapper {
                                                             style={Object {}}
                                                   />
                                         </div>
+=======
+                                        
+>>>>>>> Add test
                               </Carousel>
                     </div>
           </div>
@@ -1260,6 +1283,28 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "m1 xs-hide sm-hide ",
+              "color": "madison-blue",
+              "disabled": false,
+              "fullWidth": false,
+              "hover": "shadow",
+              "label": "",
+              "onClick": [Function],
+              "shadow": true,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
             "key": undefined,
             "nodeType": "function",
             "props": Object {
@@ -1340,7 +1385,11 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
+<<<<<<< HEAD
                   "key": undefined,
+=======
+                  "key": "0",
+>>>>>>> Add test
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
@@ -1383,6 +1432,7 @@ ShallowWrapper {
               <div
                             className="flex flex-row"
               >
+<<<<<<< HEAD
                             <div
                                           className="transition-slide-up-large m2 xs-hide sm-hide"
                             >
@@ -1395,11 +1445,16 @@ ShallowWrapper {
                                                         style={Object {}}
                                           />
                             </div>
+=======
+>>>>>>> Add test
                             <Carousel
                                           arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                           arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                           className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                           dotColor=""
+=======
+>>>>>>> Add test
                                           index={0}
                                           onChange={[Function]}
                                           showArrows={false}
@@ -1407,6 +1462,7 @@ ShallowWrapper {
                                           showOnImage={false}
                                           sliderClasses=""
                             >
+<<<<<<< HEAD
                                           <div
                                                         className="w-auto mx-auto"
                                           >
@@ -1419,6 +1475,9 @@ ShallowWrapper {
                                                                       style={Object {}}
                                                         />
                                           </div>
+=======
+                                          
+>>>>>>> Add test
                             </Carousel>
               </div>
 </div>,
@@ -1439,6 +1498,7 @@ ShallowWrapper {
                 <div
                   className="flex flex-row"
 >
+<<<<<<< HEAD
                   <div
                                     className="transition-slide-up-large m2 xs-hide sm-hide"
                   >
@@ -1451,11 +1511,16 @@ ShallowWrapper {
                                                       style={Object {}}
                                     />
                   </div>
+=======
+>>>>>>> Add test
                   <Carousel
                                     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                     className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                     dotColor=""
+=======
+>>>>>>> Add test
                                     index={0}
                                     onChange={[Function]}
                                     showArrows={false}
@@ -1463,6 +1528,7 @@ ShallowWrapper {
                                     showOnImage={false}
                                     sliderClasses=""
                   >
+<<<<<<< HEAD
                                     <div
                                                       className="w-auto mx-auto"
                                     >
@@ -1475,6 +1541,9 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                       />
                                     </div>
+=======
+                                    
+>>>>>>> Add test
                   </Carousel>
 </div>,
               ],
@@ -1500,6 +1569,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
+<<<<<<< HEAD
                     Array [
                       <div
                         className="transition-slide-up-large m2 xs-hide sm-hide"
@@ -1514,11 +1584,17 @@ ShallowWrapper {
                         />
 </div>,
                     ],
+=======
+                    Array [],
+>>>>>>> Add test
                     <Carousel
                       arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                       arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                       className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                       dotColor=""
+=======
+>>>>>>> Add test
                       index={0}
                       onChange={[Function]}
                       showArrows={false}
@@ -1526,6 +1602,7 @@ ShallowWrapper {
                       showOnImage={false}
                       sliderClasses=""
 >
+<<<<<<< HEAD
                       <div
                                             className="w-auto mx-auto"
                       >
@@ -1538,6 +1615,9 @@ ShallowWrapper {
                                                                   style={Object {}}
                                             />
                       </div>
+=======
+                      
+>>>>>>> Add test
 </Carousel>,
                   ],
                   "className": "flex flex-row",
@@ -1546,6 +1626,7 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
+<<<<<<< HEAD
                     "key": "0",
                     "nodeType": "host",
                     "props": Object {
@@ -1581,11 +1662,14 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
+=======
+>>>>>>> Add test
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
                       "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
+<<<<<<< HEAD
                       "children": Array [
                         <div
                           className="w-auto mx-auto"
@@ -1602,6 +1686,10 @@ ShallowWrapper {
                       ],
                       "className": "w100 mx-auto md-hide lg-hide",
                       "dotColor": "",
+=======
+                      "children": Array [],
+                      "className": "w100 mx-auto md-hide lg-hide",
+>>>>>>> Add test
                       "index": 0,
                       "onChange": [Function],
                       "showArrows": false,
@@ -1610,6 +1698,7 @@ ShallowWrapper {
                       "sliderClasses": "",
                     },
                     "ref": null,
+<<<<<<< HEAD
                     "rendered": Array [
                       Object {
                         "instance": null,
@@ -1647,6 +1736,9 @@ ShallowWrapper {
                         "type": "div",
                       },
                     ],
+=======
+                    "rendered": Array [],
+>>>>>>> Add test
                     "type": [Function],
                   },
                 ],
@@ -1693,7 +1785,10 @@ ShallowWrapper {
                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                         dotColor=""
+=======
+>>>>>>> Add test
                         index={0}
                         onChange={[Function]}
                         showArrows={true}
@@ -1732,6 +1827,7 @@ ShallowWrapper {
                         <div
                                     className="flex flex-row"
                         >
+<<<<<<< HEAD
                                     <div
                                                 className="transition-slide-up-large m2 xs-hide sm-hide"
                                     >
@@ -1744,11 +1840,16 @@ ShallowWrapper {
                                                             style={Object {}}
                                                 />
                                     </div>
+=======
+>>>>>>> Add test
                                     <Carousel
                                                 arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                                 dotColor=""
+=======
+>>>>>>> Add test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -1756,6 +1857,7 @@ ShallowWrapper {
                                                 showOnImage={false}
                                                 sliderClasses=""
                                     >
+<<<<<<< HEAD
                                                 <div
                                                             className="w-auto mx-auto"
                                                 >
@@ -1768,6 +1870,9 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                             />
                                                 </div>
+=======
+                                                
+>>>>>>> Add test
                                     </Carousel>
                         </div>
             </div>
@@ -1850,6 +1955,28 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "m1 xs-hide sm-hide ",
+                "color": "madison-blue",
+                "disabled": false,
+                "fullWidth": false,
+                "hover": "shadow",
+                "label": "",
+                "onClick": [Function],
+                "shadow": true,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
@@ -1930,7 +2057,11 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
+<<<<<<< HEAD
                     "key": undefined,
+=======
+                    "key": "0",
+>>>>>>> Add test
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
@@ -1973,6 +2104,7 @@ ShallowWrapper {
                 <div
                                 className="flex flex-row"
                 >
+<<<<<<< HEAD
                                 <div
                                                 className="transition-slide-up-large m2 xs-hide sm-hide"
                                 >
@@ -1985,11 +2117,16 @@ ShallowWrapper {
                                                                 style={Object {}}
                                                 />
                                 </div>
+=======
+>>>>>>> Add test
                                 <Carousel
                                                 arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                                 dotColor=""
+=======
+>>>>>>> Add test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -1997,6 +2134,7 @@ ShallowWrapper {
                                                 showOnImage={false}
                                                 sliderClasses=""
                                 >
+<<<<<<< HEAD
                                                 <div
                                                                 className="w-auto mx-auto"
                                                 >
@@ -2009,6 +2147,9 @@ ShallowWrapper {
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
+=======
+                                                
+>>>>>>> Add test
                                 </Carousel>
                 </div>
 </div>,
@@ -2029,6 +2170,7 @@ ShallowWrapper {
                   <div
                     className="flex flex-row"
 >
+<<<<<<< HEAD
                     <div
                                         className="transition-slide-up-large m2 xs-hide sm-hide"
                     >
@@ -2041,11 +2183,16 @@ ShallowWrapper {
                                                             style={Object {}}
                                         />
                     </div>
+=======
+>>>>>>> Add test
                     <Carousel
                                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                                         dotColor=""
+=======
+>>>>>>> Add test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -2053,6 +2200,7 @@ ShallowWrapper {
                                         showOnImage={false}
                                         sliderClasses=""
                     >
+<<<<<<< HEAD
                                         <div
                                                             className="w-auto mx-auto"
                                         >
@@ -2065,6 +2213,9 @@ ShallowWrapper {
                                                                                 style={Object {}}
                                                             />
                                         </div>
+=======
+                                        
+>>>>>>> Add test
                     </Carousel>
 </div>,
                 ],
@@ -2090,6 +2241,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
+<<<<<<< HEAD
                       Array [
                         <div
                           className="transition-slide-up-large m2 xs-hide sm-hide"
@@ -2104,11 +2256,17 @@ ShallowWrapper {
                           />
 </div>,
                       ],
+=======
+                      Array [],
+>>>>>>> Add test
                       <Carousel
                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
+<<<<<<< HEAD
                         dotColor=""
+=======
+>>>>>>> Add test
                         index={0}
                         onChange={[Function]}
                         showArrows={false}
@@ -2116,6 +2274,7 @@ ShallowWrapper {
                         showOnImage={false}
                         sliderClasses=""
 >
+<<<<<<< HEAD
                         <div
                                                 className="w-auto mx-auto"
                         >
@@ -2128,6 +2287,9 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                 />
                         </div>
+=======
+                        
+>>>>>>> Add test
 </Carousel>,
                     ],
                     "className": "flex flex-row",
@@ -2136,6 +2298,7 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
+<<<<<<< HEAD
                       "key": "0",
                       "nodeType": "host",
                       "props": Object {
@@ -2171,11 +2334,14 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
+=======
+>>>>>>> Add test
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
                         "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
+<<<<<<< HEAD
                         "children": Array [
                           <div
                             className="w-auto mx-auto"
@@ -2192,6 +2358,10 @@ ShallowWrapper {
                         ],
                         "className": "w100 mx-auto md-hide lg-hide",
                         "dotColor": "",
+=======
+                        "children": Array [],
+                        "className": "w100 mx-auto md-hide lg-hide",
+>>>>>>> Add test
                         "index": 0,
                         "onChange": [Function],
                         "showArrows": false,
@@ -2200,6 +2370,7 @@ ShallowWrapper {
                         "sliderClasses": "",
                       },
                       "ref": null,
+<<<<<<< HEAD
                       "rendered": Array [
                         Object {
                           "instance": null,
@@ -2237,6 +2408,9 @@ ShallowWrapper {
                           "type": "div",
                         },
                       ],
+=======
+                      "rendered": Array [],
+>>>>>>> Add test
                       "type": [Function],
                     },
                   ],

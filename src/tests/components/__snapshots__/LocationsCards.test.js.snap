@@ -125,9 +125,13 @@ ShallowWrapper {
                                 placeholder="All states"
                                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                shadow={false}
+>>>>>>> Add test
                                 value={null}
                                 variant="secondary"
                         />
@@ -298,9 +302,13 @@ ShallowWrapper {
                               placeholder="All states"
                               selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                               shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                              shadow={false}
+>>>>>>> Add test
                               value={null}
                               variant="secondary"
                     />
@@ -468,9 +476,13 @@ ShallowWrapper {
                             placeholder="All states"
                             selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                            shadow={false}
+>>>>>>> Add test
                             value={null}
                             variant="secondary"
               />
@@ -635,9 +647,13 @@ ShallowWrapper {
                 placeholder="All states"
                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                shadow={false}
+>>>>>>> Add test
                 value={null}
                 variant="secondary"
 />,
@@ -674,9 +690,13 @@ ShallowWrapper {
                 "placeholder": "All states",
                 "selectClassName": "w100",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "shadow": false,
 =======
 >>>>>>> Add locationCards component test
+=======
+                "shadow": false,
+>>>>>>> Add test
                 "value": null,
                 "variant": "secondary",
               },
@@ -1320,9 +1340,13 @@ ShallowWrapper {
                                         placeholder="All states"
                                         selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                        shadow={false}
+>>>>>>> Add test
                                         value={null}
                                         variant="secondary"
                               />
@@ -1493,9 +1517,13 @@ ShallowWrapper {
                                     placeholder="All states"
                                     selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                    shadow={false}
+>>>>>>> Add test
                                     value={null}
                                     variant="secondary"
                         />
@@ -1663,9 +1691,13 @@ ShallowWrapper {
                                 placeholder="All states"
                                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                shadow={false}
+>>>>>>> Add test
                                 value={null}
                                 variant="secondary"
                 />
@@ -1830,9 +1862,13 @@ ShallowWrapper {
                   placeholder="All states"
                   selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                  shadow={false}
+>>>>>>> Add test
                   value={null}
                   variant="secondary"
 />,
@@ -1869,9 +1905,13 @@ ShallowWrapper {
                   "placeholder": "All states",
                   "selectClassName": "w100",
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "shadow": false,
 =======
 >>>>>>> Add locationCards component test
+=======
+                  "shadow": false,
+>>>>>>> Add test
                   "value": null,
                   "variant": "secondary",
                 },
@@ -2550,10 +2590,14 @@ ShallowWrapper {
     locations={Array []}
     searchFilter=""
 <<<<<<< HEAD
+<<<<<<< HEAD
     selectedLocation={null}
 =======
     selectedLocation=""
 >>>>>>> Add locationCards component test
+=======
+    selectedLocation={null}
+>>>>>>> Add test
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2604,9 +2648,13 @@ ShallowWrapper {
                                 placeholder="All states"
                                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                shadow={false}
+>>>>>>> Add test
                                 value={null}
                                 variant="secondary"
                         />
@@ -2656,8 +2704,12 @@ ShallowWrapper {
                                 href="/location/undefined"
 =======
                         <div
+<<<<<<< HEAD
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
                         >
                                 <div
                                         className="z-1 absolute"
@@ -2757,9 +2809,13 @@ ShallowWrapper {
                               placeholder="All states"
                               selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                               shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                              shadow={false}
+>>>>>>> Add test
                               value={null}
                               variant="secondary"
                     />
@@ -2809,8 +2865,12 @@ ShallowWrapper {
                               href="/location/undefined"
 =======
                     <div
+<<<<<<< HEAD
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                              className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
                     >
                               <div
                                         className="z-1 absolute"
@@ -2907,9 +2967,13 @@ ShallowWrapper {
                             placeholder="All states"
                             selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                             shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                            shadow={false}
+>>>>>>> Add test
                             value={null}
                             variant="secondary"
               />
@@ -2959,8 +3023,12 @@ ShallowWrapper {
                             href="/location/undefined"
 =======
               <div
+<<<<<<< HEAD
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                            className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
               >
                             <div
                                           className="z-1 absolute"
@@ -3054,9 +3122,13 @@ ShallowWrapper {
                 placeholder="All states"
                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                shadow={false}
+>>>>>>> Add test
                 value={null}
                 variant="secondary"
 />,
@@ -3093,9 +3165,13 @@ ShallowWrapper {
                 "placeholder": "All states",
                 "selectClassName": "w100",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "shadow": false,
 =======
 >>>>>>> Add locationCards component test
+=======
+                "shadow": false,
+>>>>>>> Add test
                 "value": null,
                 "variant": "secondary",
               },
@@ -3223,8 +3299,12 @@ ShallowWrapper {
                   href="/location/undefined"
 =======
                 <div
+<<<<<<< HEAD
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                  className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
 >
                   <div
                                     className="z-1 absolute"
@@ -3341,11 +3421,15 @@ ShallowWrapper {
 </div>,
                   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
                   "href": "/location/undefined",
 =======
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
 >>>>>>> Add locationCards component test
+=======
+                  "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
+>>>>>>> Add test
                 },
                 "ref": [Function],
                 "rendered": Array [
@@ -3630,9 +3714,13 @@ ShallowWrapper {
                                         placeholder="All states"
                                         selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                        shadow={false}
+>>>>>>> Add test
                                         value={null}
                                         variant="secondary"
                               />
@@ -3682,8 +3770,12 @@ ShallowWrapper {
                                         href="/location/undefined"
 =======
                               <div
+<<<<<<< HEAD
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                                        className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
                               >
                                         <div
                                                   className="z-1 absolute"
@@ -3783,9 +3875,13 @@ ShallowWrapper {
                                     placeholder="All states"
                                     selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                    shadow={false}
+>>>>>>> Add test
                                     value={null}
                                     variant="secondary"
                         />
@@ -3835,8 +3931,12 @@ ShallowWrapper {
                                     href="/location/undefined"
 =======
                         <div
+<<<<<<< HEAD
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
                         >
                                     <div
                                                 className="z-1 absolute"
@@ -3933,9 +4033,13 @@ ShallowWrapper {
                                 placeholder="All states"
                                 selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                                shadow={false}
+>>>>>>> Add test
                                 value={null}
                                 variant="secondary"
                 />
@@ -3985,8 +4089,12 @@ ShallowWrapper {
                                 href="/location/undefined"
 =======
                 <div
+<<<<<<< HEAD
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
                 >
                                 <div
                                                 className="z-1 absolute"
@@ -4080,9 +4188,13 @@ ShallowWrapper {
                   placeholder="All states"
                   selectClassName="w100"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   shadow={false}
 =======
 >>>>>>> Add locationCards component test
+=======
+                  shadow={false}
+>>>>>>> Add test
                   value={null}
                   variant="secondary"
 />,
@@ -4119,9 +4231,13 @@ ShallowWrapper {
                   "placeholder": "All states",
                   "selectClassName": "w100",
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "shadow": false,
 =======
 >>>>>>> Add locationCards component test
+=======
+                  "shadow": false,
+>>>>>>> Add test
                   "value": null,
                   "variant": "secondary",
                 },
@@ -4249,8 +4365,12 @@ ShallowWrapper {
                     href="/location/undefined"
 =======
                   <div
+<<<<<<< HEAD
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+>>>>>>> Add test
 >
                     <div
                                         className="z-1 absolute"
@@ -4367,11 +4487,15 @@ ShallowWrapper {
 </div>,
                     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
                     "href": "/location/undefined",
 =======
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
 >>>>>>> Add locationCards component test
+=======
+                    "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
+>>>>>>> Add test
                   },
                   "ref": [Function],
                   "rendered": Array [

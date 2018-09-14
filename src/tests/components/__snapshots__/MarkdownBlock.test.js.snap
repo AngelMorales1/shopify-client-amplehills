@@ -34,9 +34,13 @@ ShallowWrapper {
           }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     setRef={[Function]}
 =======
 >>>>>>> Add MarkdownBlock test
+=======
+    setRef={[Function]}
+>>>>>>> Add test
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -62,6 +66,7 @@ ShallowWrapper {
           </span>
 </div>,
         <div
+<<<<<<< HEAD
           className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
 <<<<<<< HEAD
 >
@@ -76,6 +81,9 @@ ShallowWrapper {
           />
 </div>,
 =======
+=======
+          className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8"
+>>>>>>> Add test
           dangerouslySetInnerHTML={
                     Object {
                               "__html": "<p>foo</p>
@@ -91,10 +99,14 @@ ShallowWrapper {
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ref": [Function],
 =======
     "ref": null,
 >>>>>>> Add MarkdownBlock test
+=======
+    "ref": [Function],
+>>>>>>> Add test
     "rendered": Array [
       Object {
         "instance": null,
@@ -128,6 +140,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+<<<<<<< HEAD
 <<<<<<< HEAD
           "children": Array [
             <div
@@ -164,6 +177,9 @@ ShallowWrapper {
         ],
 =======
           "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+=======
+          "className": "transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8",
+>>>>>>> Add test
           "dangerouslySetInnerHTML": Object {
             "__html": "<p>foo</p>
 ",
@@ -194,6 +210,7 @@ ShallowWrapper {
             </span>
 </div>,
           <div
+<<<<<<< HEAD
             className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
 <<<<<<< HEAD
 >
@@ -208,6 +225,9 @@ ShallowWrapper {
             />
 </div>,
 =======
+=======
+            className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8"
+>>>>>>> Add test
             dangerouslySetInnerHTML={
                         Object {
                                     "__html": "<p>foo</p>
@@ -223,10 +243,14 @@ ShallowWrapper {
         },
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       "ref": [Function],
 =======
       "ref": null,
 >>>>>>> Add MarkdownBlock test
+=======
+      "ref": [Function],
+>>>>>>> Add test
       "rendered": Array [
         Object {
           "instance": null,
@@ -260,6 +284,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "children": Array [
               <div
@@ -296,6 +321,9 @@ ShallowWrapper {
           ],
 =======
             "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+=======
+            "className": "transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8",
+>>>>>>> Add test
             "dangerouslySetInnerHTML": Object {
               "__html": "<p>foo</p>
 ",
@@ -337,9 +365,13 @@ ShallowWrapper {
           }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     setRef={[Function]}
 =======
 >>>>>>> Add MarkdownBlock test
+=======
+    setRef={[Function]}
+>>>>>>> Add test
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -358,6 +390,7 @@ ShallowWrapper {
         null,
         <div
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="transition-slide-up mx-auto px3 py4"
 >
           <div
@@ -371,6 +404,9 @@ ShallowWrapper {
 </div>,
 =======
           className="transition-slide-up mx-auto px3 py4 form-container-width"
+=======
+          className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block"
+>>>>>>> Add test
           dangerouslySetInnerHTML={
                     Object {
                               "__html": "",
@@ -385,10 +421,14 @@ ShallowWrapper {
       },
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ref": [Function],
 =======
     "ref": null,
 >>>>>>> Add MarkdownBlock test
+=======
+    "ref": [Function],
+>>>>>>> Add test
     "rendered": Array [
       null,
       Object {
@@ -396,6 +436,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+<<<<<<< HEAD
 <<<<<<< HEAD
           "children": Array [
             <div
@@ -430,6 +471,9 @@ ShallowWrapper {
         ],
 =======
           "className": "transition-slide-up mx-auto px3 py4 form-container-width",
+=======
+          "className": "transition-slide-up mx-auto px3 py4 form-container-width markdown-block",
+>>>>>>> Add test
           "dangerouslySetInnerHTML": Object {
             "__html": "",
           },
@@ -452,6 +496,7 @@ ShallowWrapper {
           null,
           <div
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="transition-slide-up mx-auto px3 py4"
 >
             <div
@@ -465,6 +510,9 @@ ShallowWrapper {
 </div>,
 =======
             className="transition-slide-up mx-auto px3 py4 form-container-width"
+=======
+            className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block"
+>>>>>>> Add test
             dangerouslySetInnerHTML={
                         Object {
                                     "__html": "",
@@ -479,10 +527,14 @@ ShallowWrapper {
         },
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       "ref": [Function],
 =======
       "ref": null,
 >>>>>>> Add MarkdownBlock test
+=======
+      "ref": [Function],
+>>>>>>> Add test
       "rendered": Array [
         null,
         Object {
@@ -490,6 +542,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+<<<<<<< HEAD
 <<<<<<< HEAD
             "children": Array [
               <div
@@ -524,6 +577,9 @@ ShallowWrapper {
           ],
 =======
             "className": "transition-slide-up mx-auto px3 py4 form-container-width",
+=======
+            "className": "transition-slide-up mx-auto px3 py4 form-container-width markdown-block",
+>>>>>>> Add test
             "dangerouslySetInnerHTML": Object {
               "__html": "",
             },

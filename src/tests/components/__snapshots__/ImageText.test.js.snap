@@ -69,9 +69,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="flex container-width py4"
->
+      "children": Array [
         <div
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -282,7 +280,7 @@ ShallowWrapper {
 >>>>>>> Fix ProductHero test
 >
           <div
-                    className="md-col-6 flex flex-column justify-center col-12"
+                    className="flex flex-column justify-center col-12 md-col-6"
           >
                     <h2
                               className="block-headline mb3"
@@ -332,7 +330,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="md-col-6 flex flex-column justify-center col-12"
+              className="flex flex-column justify-center col-12 md-col-6"
 >
               <h2
                             className="block-headline mb3"
@@ -393,6 +391,7 @@ ShallowWrapper {
 />,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div
                   className="flex flex-row flex-wrap items-center"
 >
@@ -403,8 +402,11 @@ ShallowWrapper {
 >>>>>>> Add PressCard test
 =======
 >>>>>>> Fix test according to data change
+=======
+                null,
+>>>>>>> Add test
               ],
-              "className": "md-col-6 flex flex-column justify-center col-12",
+              "className": "flex flex-column justify-center col-12 md-col-6",
             },
             "ref": null,
             "rendered": Array [
@@ -434,6 +436,7 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": "div",
+<<<<<<< HEAD
               },
               Object {
                 "instance": null,
@@ -452,6 +455,8 @@ ShallowWrapper {
                   null,
                 ],
                 "type": "div",
+=======
+>>>>>>> Add test
               },
               null,
             ],
@@ -1036,6 +1041,7 @@ ShallowWrapper {
             },
           }
     }
+    setRef={[Function]}
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1050,9 +1056,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <div
-        className="flex container-width py4"
->
+      "children": Array [
         <div
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1245,24 +1249,36 @@ ShallowWrapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="z-overlay col-4 mt2"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
                     className="z-overlay col-4 mt2"
 =======
+=======
+                    className="z-overlay col-4 mt2"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    className="z-overlay col-4 mt2"
+=======
+>>>>>>> Add test
                     className="col-6 z-sub-nav mt2 mx-auto"
 >>>>>>> Fix ProductHero test
 =======
                     className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add test
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
                     className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add PressCard test
 =======
                     className="z-overlay col-4 mt2"
 >>>>>>> Fix test according to data change
+=======
+>>>>>>> Add test
                     onImgLoad={[Function]}
                     src="?w=1400&fm=png&q=90"
                     style={
@@ -1276,6 +1292,9 @@ ShallowWrapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1291,19 +1310,26 @@ ShallowWrapper {
           "zIndex": 1,
         },
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> Add PressCard test
+=======
+>>>>>>> Add test
         null,
       ],
       "className": "flex justify-center",
       "style": Object {
         "zIndex": 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
 >>>>>>> Add test
       },
     },
     "ref": [Function],
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
 =======
         "className": "flex flex-row justify-center drip",
@@ -1319,6 +1345,8 @@ ShallowWrapper {
     },
     "ref": null,
 >>>>>>> Add PressCard test
+=======
+>>>>>>> Add test
     "rendered": Array [
       Object {
         "instance": null,
@@ -1352,6 +1380,9 @@ ShallowWrapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
               className="z-overlay col-4 mt2"
 =======
 <<<<<<< HEAD
@@ -1364,12 +1395,15 @@ ShallowWrapper {
               className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add test
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
               className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add PressCard test
 =======
               className="z-overlay col-4 mt2"
 >>>>>>> Fix test according to data change
+=======
+>>>>>>> Add test
               onImgLoad={[Function]}
               src="?w=1400&fm=png&q=90"
               style={
@@ -1439,6 +1473,7 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": "div",
+<<<<<<< HEAD
               },
               Object {
                 "instance": null,
@@ -1457,6 +1492,8 @@ ShallowWrapper {
                   null,
                 ],
                 "type": "div",
+=======
+>>>>>>> Add test
               },
               null,
             ],
@@ -1473,6 +1510,9 @@ ShallowWrapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1495,6 +1535,7 @@ ShallowWrapper {
                 "transform": "translate(0%, 0%)",
 >>>>>>> Fix ProductHero test
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
               "className": "col-6 z-sub-nav mt2 mx-auto my-auto",
               "onImgLoad": [Function],
@@ -1509,6 +1550,8 @@ ShallowWrapper {
               "style": Object {
                 "transform": "translateY(0%)",
 >>>>>>> Fix test according to data change
+=======
+>>>>>>> Add test
               },
             },
             "ref": null,
@@ -1540,6 +1583,7 @@ ShallowWrapper {
                         />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <p
                                     className="block-subheadline"
 =======
@@ -1550,6 +1594,14 @@ ShallowWrapper {
                         <p
                                     className="block-subheadline"
 >>>>>>> Add PressCard test
+=======
+                        <p
+                                    className="block-subheadline"
+=======
+                        <div
+                                    className="markdown-block"
+>>>>>>> Add test
+>>>>>>> Add test
                                     dangerouslySetInnerHTML={
                                                 Object {
                                                             "__html": "",
@@ -1587,6 +1639,7 @@ ShallowWrapper {
       },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "ref": null,
 =======
       "ref": [Function],
@@ -1594,6 +1647,12 @@ ShallowWrapper {
 =======
       "ref": null,
 >>>>>>> Add PressCard test
+=======
+      "ref": null,
+=======
+      "ref": [Function],
+>>>>>>> Add test
+>>>>>>> Add test
       "rendered": Array [
         Object {
           "instance": null,
@@ -1609,16 +1668,22 @@ ShallowWrapper {
                 />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
                 <p
                                 className="block-subheadline"
 =======
                 <div
                                 className="markdown-block"
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
                 <p
                                 className="block-subheadline"
 >>>>>>> Add PressCard test
+=======
+>>>>>>> Add test
                                 dangerouslySetInnerHTML={
                                                 Object {
                                                                 "__html": "",
@@ -1662,16 +1727,22 @@ ShallowWrapper {
 />,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add test
                   <p
                     className="block-subheadline"
 =======
                   <div
                     className="markdown-block"
 >>>>>>> Add test
+<<<<<<< HEAD
 =======
                   <p
                     className="block-subheadline"
 >>>>>>> Add PressCard test
+=======
+>>>>>>> Add test
                     dangerouslySetInnerHTML={
                                         Object {
                                                             "__html": "",
@@ -1711,6 +1782,7 @@ ShallowWrapper {
                   "props": Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "className": "block-subheadline",
 =======
                     "className": "markdown-block",
@@ -1718,12 +1790,19 @@ ShallowWrapper {
 =======
                     "className": "block-subheadline",
 >>>>>>> Add PressCard test
+=======
+                    "className": "block-subheadline",
+=======
+                    "className": "markdown-block",
+>>>>>>> Add test
+>>>>>>> Add test
                     "dangerouslySetInnerHTML": Object {
                       "__html": "",
                     },
                   },
                   "ref": null,
                   "rendered": null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   "type": "p",
@@ -1750,7 +1829,12 @@ ShallowWrapper {
                   "type": "div",
                 },
 =======
+=======
+>>>>>>> Add test
                   "type": "p",
+=======
+                  "type": "div",
+>>>>>>> Add test
                 },
                 null,
 >>>>>>> Add PressCard test
