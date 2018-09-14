@@ -70,7 +70,7 @@ ShallowWrapper {
                                                   Shipping information
                                         </h2>
                                         <p
-                                                  className="mb2 block-subheadline text-madison-blue"
+                                                  className="mb2 markdown-block text-madison-blue"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "<p>foo</p>
@@ -86,7 +86,7 @@ ShallowWrapper {
                                                   Shipping Pledge
                                         </h2>
                                         <p
-                                                  className="block-subheadline text-madison-blue"
+                                                  className="markdown-block text-madison-blue"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "<p>foo</p>
@@ -160,7 +160,7 @@ ShallowWrapper {
                                                 Shipping information
                                     </h2>
                                     <p
-                                                className="mb2 block-subheadline text-madison-blue"
+                                                className="mb2 markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "<p>foo</p>
@@ -176,7 +176,7 @@ ShallowWrapper {
                                                 Shipping Pledge
                                     </h2>
                                     <p
-                                                className="block-subheadline text-madison-blue"
+                                                className="markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "<p>foo</p>
@@ -233,7 +233,7 @@ ShallowWrapper {
                                                 Shipping information
                                 </h2>
                                 <p
-                                                className="mb2 block-subheadline text-madison-blue"
+                                                className="mb2 markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "<p>foo</p>
@@ -249,7 +249,7 @@ ShallowWrapper {
                                                 Shipping Pledge
                                 </h2>
                                 <p
-                                                className="block-subheadline text-madison-blue"
+                                                className="markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "<p>foo</p>
@@ -327,7 +327,7 @@ ShallowWrapper {
                                         Shipping information
                     </h2>
                     <p
-                                        className="mb2 block-subheadline text-madison-blue"
+                                        className="mb2 markdown-block text-madison-blue"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "<p>foo</p>
@@ -343,7 +343,7 @@ ShallowWrapper {
                                         Shipping Pledge
                     </h2>
                     <p
-                                        className="block-subheadline text-madison-blue"
+                                        className="markdown-block text-madison-blue"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "<p>foo</p>
@@ -381,7 +381,7 @@ ShallowWrapper {
                         Shipping information
 </h2>,
                       <p
-                        className="mb2 block-subheadline text-madison-blue"
+                        className="mb2 markdown-block text-madison-blue"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "<p>foo</p>
@@ -410,7 +410,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "mb2 block-subheadline text-madison-blue",
+                        "className": "mb2 markdown-block text-madison-blue",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "<p>foo</p>
 ",
@@ -435,7 +435,7 @@ ShallowWrapper {
                         Shipping Pledge
 </h2>,
                       <p
-                        className="block-subheadline text-madison-blue"
+                        className="markdown-block text-madison-blue"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "<p>foo</p>
@@ -464,7 +464,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline text-madison-blue",
+                        "className": "markdown-block text-madison-blue",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "<p>foo</p>
 ",
@@ -542,7 +542,7 @@ ShallowWrapper {
                                                             Shipping information
                                                 </h2>
                                                 <p
-                                                            className="mb2 block-subheadline text-madison-blue"
+                                                            className="mb2 markdown-block text-madison-blue"
                                                             dangerouslySetInnerHTML={
                                                                         Object {
                                                                                     "__html": "<p>foo</p>
@@ -558,7 +558,7 @@ ShallowWrapper {
                                                             Shipping Pledge
                                                 </h2>
                                                 <p
-                                                            className="block-subheadline text-madison-blue"
+                                                            className="markdown-block text-madison-blue"
                                                             dangerouslySetInnerHTML={
                                                                         Object {
                                                                                     "__html": "<p>foo</p>
@@ -632,7 +632,7 @@ ShallowWrapper {
                                                         Shipping information
                                           </h2>
                                           <p
-                                                        className="mb2 block-subheadline text-madison-blue"
+                                                        className="mb2 markdown-block text-madison-blue"
                                                         dangerouslySetInnerHTML={
                                                                       Object {
                                                                                     "__html": "<p>foo</p>
@@ -648,7 +648,7 @@ ShallowWrapper {
                                                         Shipping Pledge
                                           </h2>
                                           <p
-                                                        className="block-subheadline text-madison-blue"
+                                                        className="markdown-block text-madison-blue"
                                                         dangerouslySetInnerHTML={
                                                                       Object {
                                                                                     "__html": "<p>foo</p>
@@ -705,7 +705,7 @@ ShallowWrapper {
                                                       Shipping information
                                     </h2>
                                     <p
-                                                      className="mb2 block-subheadline text-madison-blue"
+                                                      className="mb2 markdown-block text-madison-blue"
                                                       dangerouslySetInnerHTML={
                                                                         Object {
                                                                                           "__html": "<p>foo</p>
@@ -721,7 +721,7 @@ ShallowWrapper {
                                                       Shipping Pledge
                                     </h2>
                                     <p
-                                                      className="block-subheadline text-madison-blue"
+                                                      className="markdown-block text-madison-blue"
                                                       dangerouslySetInnerHTML={
                                                                         Object {
                                                                                           "__html": "<p>foo</p>
@@ -799,7 +799,7 @@ ShallowWrapper {
                                             Shipping information
                       </h2>
                       <p
-                                            className="mb2 block-subheadline text-madison-blue"
+                                            className="mb2 markdown-block text-madison-blue"
                                             dangerouslySetInnerHTML={
                                                                   Object {
                                                                                         "__html": "<p>foo</p>
@@ -815,7 +815,7 @@ ShallowWrapper {
                                             Shipping Pledge
                       </h2>
                       <p
-                                            className="block-subheadline text-madison-blue"
+                                            className="markdown-block text-madison-blue"
                                             dangerouslySetInnerHTML={
                                                                   Object {
                                                                                         "__html": "<p>foo</p>
@@ -853,7 +853,7 @@ ShallowWrapper {
                           Shipping information
 </h2>,
                         <p
-                          className="mb2 block-subheadline text-madison-blue"
+                          className="mb2 markdown-block text-madison-blue"
                           dangerouslySetInnerHTML={
                                                     Object {
                                                                               "__html": "<p>foo</p>
@@ -882,7 +882,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "mb2 block-subheadline text-madison-blue",
+                          "className": "mb2 markdown-block text-madison-blue",
                           "dangerouslySetInnerHTML": Object {
                             "__html": "<p>foo</p>
 ",
@@ -907,7 +907,7 @@ ShallowWrapper {
                           Shipping Pledge
 </h2>,
                         <p
-                          className="block-subheadline text-madison-blue"
+                          className="markdown-block text-madison-blue"
                           dangerouslySetInnerHTML={
                                                     Object {
                                                                               "__html": "<p>foo</p>
@@ -936,7 +936,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "block-subheadline text-madison-blue",
+                          "className": "markdown-block text-madison-blue",
                           "dangerouslySetInnerHTML": Object {
                             "__html": "<p>foo</p>
 ",
@@ -1041,7 +1041,7 @@ ShallowWrapper {
                                                   Shipping information
                                         </h2>
                                         <p
-                                                  className="mb2 block-subheadline text-madison-blue"
+                                                  className="mb2 markdown-block text-madison-blue"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -1056,7 +1056,7 @@ ShallowWrapper {
                                                   Shipping Pledge
                                         </h2>
                                         <p
-                                                  className="block-subheadline text-madison-blue"
+                                                  className="markdown-block text-madison-blue"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -1129,7 +1129,7 @@ ShallowWrapper {
                                                 Shipping information
                                     </h2>
                                     <p
-                                                className="mb2 block-subheadline text-madison-blue"
+                                                className="mb2 markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -1144,7 +1144,7 @@ ShallowWrapper {
                                                 Shipping Pledge
                                     </h2>
                                     <p
-                                                className="block-subheadline text-madison-blue"
+                                                className="markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -1200,7 +1200,7 @@ ShallowWrapper {
                                                 Shipping information
                                 </h2>
                                 <p
-                                                className="mb2 block-subheadline text-madison-blue"
+                                                className="mb2 markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -1215,7 +1215,7 @@ ShallowWrapper {
                                                 Shipping Pledge
                                 </h2>
                                 <p
-                                                className="block-subheadline text-madison-blue"
+                                                className="markdown-block text-madison-blue"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -1292,7 +1292,7 @@ ShallowWrapper {
                                         Shipping information
                     </h2>
                     <p
-                                        className="mb2 block-subheadline text-madison-blue"
+                                        className="mb2 markdown-block text-madison-blue"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -1307,7 +1307,7 @@ ShallowWrapper {
                                         Shipping Pledge
                     </h2>
                     <p
-                                        className="block-subheadline text-madison-blue"
+                                        className="markdown-block text-madison-blue"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -1344,7 +1344,7 @@ ShallowWrapper {
                         Shipping information
 </h2>,
                       <p
-                        className="mb2 block-subheadline text-madison-blue"
+                        className="mb2 markdown-block text-madison-blue"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -1372,7 +1372,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "mb2 block-subheadline text-madison-blue",
+                        "className": "mb2 markdown-block text-madison-blue",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
@@ -1396,7 +1396,7 @@ ShallowWrapper {
                         Shipping Pledge
 </h2>,
                       <p
-                        className="block-subheadline text-madison-blue"
+                        className="markdown-block text-madison-blue"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -1424,7 +1424,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline text-madison-blue",
+                        "className": "markdown-block text-madison-blue",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
@@ -1501,7 +1501,7 @@ ShallowWrapper {
                                                             Shipping information
                                                 </h2>
                                                 <p
-                                                            className="mb2 block-subheadline text-madison-blue"
+                                                            className="mb2 markdown-block text-madison-blue"
                                                             dangerouslySetInnerHTML={
                                                                         Object {
                                                                                     "__html": "",
@@ -1516,7 +1516,7 @@ ShallowWrapper {
                                                             Shipping Pledge
                                                 </h2>
                                                 <p
-                                                            className="block-subheadline text-madison-blue"
+                                                            className="markdown-block text-madison-blue"
                                                             dangerouslySetInnerHTML={
                                                                         Object {
                                                                                     "__html": "",
@@ -1589,7 +1589,7 @@ ShallowWrapper {
                                                         Shipping information
                                           </h2>
                                           <p
-                                                        className="mb2 block-subheadline text-madison-blue"
+                                                        className="mb2 markdown-block text-madison-blue"
                                                         dangerouslySetInnerHTML={
                                                                       Object {
                                                                                     "__html": "",
@@ -1604,7 +1604,7 @@ ShallowWrapper {
                                                         Shipping Pledge
                                           </h2>
                                           <p
-                                                        className="block-subheadline text-madison-blue"
+                                                        className="markdown-block text-madison-blue"
                                                         dangerouslySetInnerHTML={
                                                                       Object {
                                                                                     "__html": "",
@@ -1660,7 +1660,7 @@ ShallowWrapper {
                                                       Shipping information
                                     </h2>
                                     <p
-                                                      className="mb2 block-subheadline text-madison-blue"
+                                                      className="mb2 markdown-block text-madison-blue"
                                                       dangerouslySetInnerHTML={
                                                                         Object {
                                                                                           "__html": "",
@@ -1675,7 +1675,7 @@ ShallowWrapper {
                                                       Shipping Pledge
                                     </h2>
                                     <p
-                                                      className="block-subheadline text-madison-blue"
+                                                      className="markdown-block text-madison-blue"
                                                       dangerouslySetInnerHTML={
                                                                         Object {
                                                                                           "__html": "",
@@ -1752,7 +1752,7 @@ ShallowWrapper {
                                             Shipping information
                       </h2>
                       <p
-                                            className="mb2 block-subheadline text-madison-blue"
+                                            className="mb2 markdown-block text-madison-blue"
                                             dangerouslySetInnerHTML={
                                                                   Object {
                                                                                         "__html": "",
@@ -1767,7 +1767,7 @@ ShallowWrapper {
                                             Shipping Pledge
                       </h2>
                       <p
-                                            className="block-subheadline text-madison-blue"
+                                            className="markdown-block text-madison-blue"
                                             dangerouslySetInnerHTML={
                                                                   Object {
                                                                                         "__html": "",
@@ -1804,7 +1804,7 @@ ShallowWrapper {
                           Shipping information
 </h2>,
                         <p
-                          className="mb2 block-subheadline text-madison-blue"
+                          className="mb2 markdown-block text-madison-blue"
                           dangerouslySetInnerHTML={
                                                     Object {
                                                                               "__html": "",
@@ -1832,7 +1832,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "mb2 block-subheadline text-madison-blue",
+                          "className": "mb2 markdown-block text-madison-blue",
                           "dangerouslySetInnerHTML": Object {
                             "__html": "",
                           },
@@ -1856,7 +1856,7 @@ ShallowWrapper {
                           Shipping Pledge
 </h2>,
                         <p
-                          className="block-subheadline text-madison-blue"
+                          className="markdown-block text-madison-blue"
                           dangerouslySetInnerHTML={
                                                     Object {
                                                                               "__html": "",
@@ -1884,7 +1884,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "block-subheadline text-madison-blue",
+                          "className": "markdown-block text-madison-blue",
                           "dangerouslySetInnerHTML": Object {
                             "__html": "",
                           },

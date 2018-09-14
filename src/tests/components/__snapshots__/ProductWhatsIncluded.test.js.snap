@@ -39,6 +39,7 @@ ShallowWrapper {
           }
     }
     products={Object {}}
+    setRef={[Function]}
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -75,7 +76,7 @@ ShallowWrapper {
         "zIndex": 0,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -147,7 +148,7 @@ ShallowWrapper {
           "zIndex": 0,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,
@@ -223,6 +224,7 @@ ShallowWrapper {
           }
     }
     products={Object {}}
+    setRef={[Function]}
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -286,7 +288,7 @@ ShallowWrapper {
         "zIndex": 1,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -533,7 +535,7 @@ ShallowWrapper {
           "zIndex": 1,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,

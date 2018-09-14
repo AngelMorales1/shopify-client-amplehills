@@ -19,6 +19,7 @@ ShallowWrapper {
     }
     placeholder="foo"
     selectClassName=""
+    shadow={false}
     value="foo"
     variant="small"
 />,
@@ -371,6 +372,7 @@ ShallowWrapper {
     }
     placeholder="Select"
     selectClassName=""
+    shadow={false}
     value=""
     variant="primary"
 />,

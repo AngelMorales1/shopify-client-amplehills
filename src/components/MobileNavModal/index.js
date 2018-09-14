@@ -39,7 +39,7 @@ class MobileNavModal extends Component {
 
   render() {
     const { mobileNavIsOpen, locations, locationsByRegions } = this.props;
-
+    console.log(locations);
     const classes = cx(
       styles['MobileNavModal'],
       'fixed flex wh100 bg-white-wash z-nav',

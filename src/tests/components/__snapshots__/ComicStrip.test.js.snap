@@ -185,6 +185,7 @@ ShallowWrapper {
             "foo": Object {},
           }
     }
+    setRef={[Function]}
     staticContext={undefined}
     view={[Function]}
     z={0}
@@ -287,7 +288,7 @@ ShallowWrapper {
         "zIndex": 0,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -692,7 +693,7 @@ ShallowWrapper {
           "zIndex": 0,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,
@@ -1020,7 +1021,32 @@ exports[`renders without data 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ComicStrip />,
+  Symbol(enzyme.__unrendered__): <ComicStrip
+    block={
+        Object {
+            "fields": Object {
+              "backgroundColor": "",
+              "products": Array [
+                Object {
+                  "comics": Array [
+                    Object {
+                      "fields": Object {
+                        "file": Object {
+                          "url": "",
+                        },
+                      },
+                    },
+                  ],
+                  "title": "",
+                },
+              ],
+              "title": "",
+            },
+          }
+    }
+    setRef={[Function]}
+    z={1}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -1042,6 +1068,19 @@ ShallowWrapper {
         <div
           className="w100 flex justify-center"
 >
+          <Button
+                    className="m1 xs-hide sm-hide "
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label=""
+                    onClick={[Function]}
+                    shadow={true}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
           <Carousel
                     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
@@ -1053,21 +1092,60 @@ ShallowWrapper {
                     showOnImage={false}
                     sliderClasses=""
           >
-                    
+                    <div
+                              className="flex justify-center"
+                    >
+                              <Button
+                                        className="m1"
+                                        color="madison-blue"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label=""
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </div>
           </Carousel>
 </div>,
         <div
           className="flex justify-center w100"
 >
-          
+          <div
+                    className="py3 flex flex-column justify-center w100 container-width mx-auto undefined"
+          >
+                    <span
+                              className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+                    />
+                    <div
+                              className="flex flex-row"
+                    >
+                              <Carousel
+                                        arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                        arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                        className="w100 mx-auto md-hide lg-hide"
+                                        index={0}
+                                        onChange={[Function]}
+                                        showArrows={false}
+                                        showDots={true}
+                                        showOnImage={false}
+                                        sliderClasses=""
+                              >
+                                        
+                              </Carousel>
+                    </div>
+          </div>
 </div>,
       ],
       "className": "flex flex-column justify-center items-center py3",
       "style": Object {
-        "zIndex": undefined,
+        "zIndex": 1,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -1087,7 +1165,21 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            Array [],
+            Array [
+              <Button
+                className="m1 xs-hide sm-hide "
+                color="madison-blue"
+                disabled={false}
+                fullWidth={false}
+                hover="shadow"
+                label=""
+                onClick={[Function]}
+                shadow={true}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+            ],
             <Carousel
               arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
               arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
@@ -1099,7 +1191,23 @@ ShallowWrapper {
               showOnImage={false}
               sliderClasses=""
 >
-              
+              <div
+                            className="flex justify-center"
+              >
+                            <Button
+                                          className="m1"
+                                          color="madison-blue"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label=""
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </div>
 </Carousel>,
           ],
           "className": "w100 flex justify-center",
@@ -1108,12 +1216,52 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+            "key": "0",
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "m1 xs-hide sm-hide ",
+              "color": "madison-blue",
+              "disabled": false,
+              "fullWidth": false,
+              "hover": "shadow",
+              "label": "",
+              "onClick": [Function],
+              "shadow": true,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
             "key": undefined,
             "nodeType": "class",
             "props": Object {
               "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
               "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
-              "children": Array [],
+              "children": Array [
+                <div
+                  className="flex justify-center"
+>
+                  <Button
+                                    className="m1"
+                                    color="madison-blue"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label=""
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</div>,
+              ],
               "className": "w100 mx-auto md-hide lg-hide",
               "index": 0,
               "onChange": [Function],
@@ -1123,7 +1271,53 @@ ShallowWrapper {
               "sliderClasses": "",
             },
             "ref": null,
-            "rendered": Array [],
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    className="m1"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label=""
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "className": "flex justify-center",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "m1",
+                    "color": "madison-blue",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
             "type": [Function],
           },
         ],
@@ -1134,11 +1328,131 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [],
+          "children": Array [
+            <div
+              className="py3 flex flex-column justify-center w100 container-width mx-auto undefined"
+>
+              <span
+                            className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+              />
+              <div
+                            className="flex flex-row"
+              >
+                            <Carousel
+                                          arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                          arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                          className="w100 mx-auto md-hide lg-hide"
+                                          index={0}
+                                          onChange={[Function]}
+                                          showArrows={false}
+                                          showDots={true}
+                                          showOnImage={false}
+                                          sliderClasses=""
+                            >
+                                          
+                            </Carousel>
+              </div>
+</div>,
+          ],
           "className": "flex justify-center w100",
         },
         "ref": null,
-        "rendered": Array [],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+/>,
+                <div
+                  className="flex flex-row"
+>
+                  <Carousel
+                                    arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                    arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                    className="w100 mx-auto md-hide lg-hide"
+                                    index={0}
+                                    onChange={[Function]}
+                                    showArrows={false}
+                                    showDots={true}
+                                    showOnImage={false}
+                                    sliderClasses=""
+                  >
+                                    
+                  </Carousel>
+</div>,
+              ],
+              "className": "py3 flex flex-column justify-center w100 container-width mx-auto undefined",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                  "className": "mt3 mb4 mx-auto px3 block-subheadline center text-container-width",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    Array [],
+                    <Carousel
+                      arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                      arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                      className="w100 mx-auto md-hide lg-hide"
+                      index={0}
+                      onChange={[Function]}
+                      showArrows={false}
+                      showDots={true}
+                      showOnImage={false}
+                      sliderClasses=""
+>
+                      
+</Carousel>,
+                  ],
+                  "className": "flex flex-row",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
+                      "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
+                      "children": Array [],
+                      "className": "w100 mx-auto md-hide lg-hide",
+                      "index": 0,
+                      "onChange": [Function],
+                      "showArrows": false,
+                      "showDots": true,
+                      "showOnImage": false,
+                      "sliderClasses": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [],
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
         "type": "div",
       },
     ],
@@ -1159,6 +1473,19 @@ ShallowWrapper {
           <div
             className="w100 flex justify-center"
 >
+            <Button
+                        className="m1 xs-hide sm-hide "
+                        color="madison-blue"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label=""
+                        onClick={[Function]}
+                        shadow={true}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
             <Carousel
                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
@@ -1170,21 +1497,60 @@ ShallowWrapper {
                         showOnImage={false}
                         sliderClasses=""
             >
-                        
+                        <div
+                                    className="flex justify-center"
+                        >
+                                    <Button
+                                                className="m1"
+                                                color="madison-blue"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label=""
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                    />
+                        </div>
             </Carousel>
 </div>,
           <div
             className="flex justify-center w100"
 >
-            
+            <div
+                        className="py3 flex flex-column justify-center w100 container-width mx-auto undefined"
+            >
+                        <span
+                                    className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+                        />
+                        <div
+                                    className="flex flex-row"
+                        >
+                                    <Carousel
+                                                arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                                arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                                className="w100 mx-auto md-hide lg-hide"
+                                                index={0}
+                                                onChange={[Function]}
+                                                showArrows={false}
+                                                showDots={true}
+                                                showOnImage={false}
+                                                sliderClasses=""
+                                    >
+                                                
+                                    </Carousel>
+                        </div>
+            </div>
 </div>,
         ],
         "className": "flex flex-column justify-center items-center py3",
         "style": Object {
-          "zIndex": undefined,
+          "zIndex": 1,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,
@@ -1204,7 +1570,21 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              Array [],
+              Array [
+                <Button
+                  className="m1 xs-hide sm-hide "
+                  color="madison-blue"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label=""
+                  onClick={[Function]}
+                  shadow={true}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+              ],
               <Carousel
                 arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
@@ -1216,7 +1596,23 @@ ShallowWrapper {
                 showOnImage={false}
                 sliderClasses=""
 >
-                
+                <div
+                                className="flex justify-center"
+                >
+                                <Button
+                                                className="m1"
+                                                color="madison-blue"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label=""
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                />
+                </div>
 </Carousel>,
             ],
             "className": "w100 flex justify-center",
@@ -1225,12 +1621,52 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
+              "key": "0",
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "m1 xs-hide sm-hide ",
+                "color": "madison-blue",
+                "disabled": false,
+                "fullWidth": false,
+                "hover": "shadow",
+                "label": "",
+                "onClick": [Function],
+                "shadow": true,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
               "key": undefined,
               "nodeType": "class",
               "props": Object {
                 "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
                 "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
-                "children": Array [],
+                "children": Array [
+                  <div
+                    className="flex justify-center"
+>
+                    <Button
+                                        className="m1"
+                                        color="madison-blue"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label=""
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                    />
+</div>,
+                ],
                 "className": "w100 mx-auto md-hide lg-hide",
                 "index": 0,
                 "onChange": [Function],
@@ -1240,7 +1676,53 @@ ShallowWrapper {
                 "sliderClasses": "",
               },
               "ref": null,
-              "rendered": Array [],
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Button
+                      className="m1"
+                      color="madison-blue"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label=""
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="primary-small"
+/>,
+                    "className": "flex justify-center",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": "0",
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "m1",
+                      "color": "madison-blue",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
               "type": [Function],
             },
           ],
@@ -1251,11 +1733,131 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": Array [
+              <div
+                className="py3 flex flex-column justify-center w100 container-width mx-auto undefined"
+>
+                <span
+                                className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+                />
+                <div
+                                className="flex flex-row"
+                >
+                                <Carousel
+                                                arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                                arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                                className="w100 mx-auto md-hide lg-hide"
+                                                index={0}
+                                                onChange={[Function]}
+                                                showArrows={false}
+                                                showDots={true}
+                                                showOnImage={false}
+                                                sliderClasses=""
+                                >
+                                                
+                                </Carousel>
+                </div>
+</div>,
+            ],
             "className": "flex justify-center w100",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="mt3 mb4 mx-auto px3 block-subheadline center text-container-width"
+/>,
+                  <div
+                    className="flex flex-row"
+>
+                    <Carousel
+                                        arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                                        arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                                        className="w100 mx-auto md-hide lg-hide"
+                                        index={0}
+                                        onChange={[Function]}
+                                        showArrows={false}
+                                        showDots={true}
+                                        showOnImage={false}
+                                        sliderClasses=""
+                    >
+                                        
+                    </Carousel>
+</div>,
+                ],
+                "className": "py3 flex flex-column justify-center w100 container-width mx-auto undefined",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                    "className": "mt3 mb4 mx-auto px3 block-subheadline center text-container-width",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      Array [],
+                      <Carousel
+                        arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
+                        arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
+                        className="w100 mx-auto md-hide lg-hide"
+                        index={0}
+                        onChange={[Function]}
+                        showArrows={false}
+                        showDots={true}
+                        showOnImage={false}
+                        sliderClasses=""
+>
+                        
+</Carousel>,
+                    ],
+                    "className": "flex flex-row",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
+                        "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
+                        "children": Array [],
+                        "className": "w100 mx-auto md-hide lg-hide",
+                        "index": 0,
+                        "onChange": [Function],
+                        "showArrows": false,
+                        "showDots": true,
+                        "showOnImage": false,
+                        "sliderClasses": "",
+                      },
+                      "ref": null,
+                      "rendered": Array [],
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
           "type": "div",
         },
       ],

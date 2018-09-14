@@ -15,12 +15,17 @@ export default createSelector(
       return accumulated;
     }, {});
 
-    return Regions.reduce(
-      (accumulated, region) => ({
+    return Regions.reduce((accumulated, region) => {
+      if (!regions[region]) {
+        return {
+          ...accumulated,
+          [region]: []
+        };
+      }
+      return {
         ...accumulated,
         [region]: regions[region]
-      }),
-      {}
-    );
+      };
+    }, {});
   }
 );

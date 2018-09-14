@@ -1347,11 +1347,7 @@ ShallowWrapper {
             "editCustomerPhone": [Function],
           }
     }
-    customerFieldBeingEdited={
-        Array [
-            Object {},
-          ]
-    }
+    customerFieldBeingEdited=""
     email=""
     phone=""
 />,

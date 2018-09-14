@@ -50,6 +50,7 @@ ShallowWrapper {
             "title2": "foo",
           }
     }
+    setRef={[Function]}
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -88,8 +89,8 @@ ShallowWrapper {
                                 <h2
                                         className="block-headline mb2"
                                 />
-                                <p
-                                        className="block-subheadline"
+                                <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                 Object {
                                                         "__html": "",
@@ -101,8 +102,8 @@ ShallowWrapper {
                                 <h2
                                         className="block-headline mb2"
                                 />
-                                <p
-                                        className="block-subheadline"
+                                <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                 Object {
                                                         "__html": "",
@@ -118,7 +119,7 @@ ShallowWrapper {
         "zIndex": 0,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Object {
       "instance": null,
       "key": undefined,
@@ -145,8 +146,8 @@ ShallowWrapper {
                               <h2
                                         className="block-headline mb2"
                               />
-                              <p
-                                        className="block-subheadline"
+                              <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                   Object {
                                                             "__html": "",
@@ -158,8 +159,8 @@ ShallowWrapper {
                               <h2
                                         className="block-headline mb2"
                               />
-                              <p
-                                        className="block-subheadline"
+                              <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                   Object {
                                                             "__html": "",
@@ -196,8 +197,8 @@ ShallowWrapper {
                             <h2
                                           className="block-headline mb2"
                             />
-                            <p
-                                          className="block-subheadline"
+                            <div
+                                          className="markdown-block"
                                           dangerouslySetInnerHTML={
                                                         Object {
                                                                       "__html": "",
@@ -209,8 +210,8 @@ ShallowWrapper {
                             <h2
                                           className="block-headline mb2"
                             />
-                            <p
-                                          className="block-subheadline"
+                            <div
+                                          className="markdown-block"
                                           dangerouslySetInnerHTML={
                                                         Object {
                                                                       "__html": "",
@@ -251,8 +252,8 @@ ShallowWrapper {
                   <h2
                                     className="block-headline mb2"
                   />
-                  <p
-                                    className="block-subheadline"
+                  <div
+                                    className="markdown-block"
                                     dangerouslySetInnerHTML={
                                                       Object {
                                                                         "__html": "",
@@ -264,8 +265,8 @@ ShallowWrapper {
                   <h2
                                     className="block-headline mb2"
                   />
-                  <p
-                                    className="block-subheadline"
+                  <div
+                                    className="markdown-block"
                                     dangerouslySetInnerHTML={
                                                       Object {
                                                                         "__html": "",
@@ -287,8 +288,8 @@ ShallowWrapper {
                     <h2
                       className="block-headline mb2"
 />,
-                    <p
-                      className="block-subheadline"
+                    <div
+                      className="markdown-block"
                       dangerouslySetInnerHTML={
                                             Object {
                                                                   "__html": "",
@@ -317,14 +318,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "block-subheadline",
+                      "className": "markdown-block",
                       "dangerouslySetInnerHTML": Object {
                         "__html": "",
                       },
                     },
                     "ref": null,
                     "rendered": null,
-                    "type": "p",
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -338,8 +339,8 @@ ShallowWrapper {
                     <h2
                       className="block-headline mb2"
 />,
-                    <p
-                      className="block-subheadline"
+                    <div
+                      className="markdown-block"
                       dangerouslySetInnerHTML={
                                             Object {
                                                                   "__html": "",
@@ -367,14 +368,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "block-subheadline",
+                      "className": "markdown-block",
                       "dangerouslySetInnerHTML": Object {
                         "__html": "",
                       },
                     },
                     "ref": null,
                     "rendered": null,
-                    "type": "p",
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -419,8 +420,8 @@ ShallowWrapper {
                                         <h2
                                                   className="block-headline mb2"
                                         />
-                                        <p
-                                                  className="block-subheadline"
+                                        <div
+                                                  className="markdown-block"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -432,8 +433,8 @@ ShallowWrapper {
                                         <h2
                                                   className="block-headline mb2"
                                         />
-                                        <p
-                                                  className="block-subheadline"
+                                        <div
+                                                  className="markdown-block"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -449,7 +450,7 @@ ShallowWrapper {
           "zIndex": 0,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Object {
         "instance": null,
         "key": undefined,
@@ -476,8 +477,8 @@ ShallowWrapper {
                                     <h2
                                                 className="block-headline mb2"
                                     />
-                                    <p
-                                                className="block-subheadline"
+                                    <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -489,8 +490,8 @@ ShallowWrapper {
                                     <h2
                                                 className="block-headline mb2"
                                     />
-                                    <p
-                                                className="block-subheadline"
+                                    <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -527,8 +528,8 @@ ShallowWrapper {
                                 <h2
                                                 className="block-headline mb2"
                                 />
-                                <p
-                                                className="block-subheadline"
+                                <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -540,8 +541,8 @@ ShallowWrapper {
                                 <h2
                                                 className="block-headline mb2"
                                 />
-                                <p
-                                                className="block-subheadline"
+                                <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -582,8 +583,8 @@ ShallowWrapper {
                     <h2
                                         className="block-headline mb2"
                     />
-                    <p
-                                        className="block-subheadline"
+                    <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -595,8 +596,8 @@ ShallowWrapper {
                     <h2
                                         className="block-headline mb2"
                     />
-                    <p
-                                        className="block-subheadline"
+                    <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -618,8 +619,8 @@ ShallowWrapper {
                       <h2
                         className="block-headline mb2"
 />,
-                      <p
-                        className="block-subheadline"
+                      <div
+                        className="markdown-block"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -648,14 +649,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline",
+                        "className": "markdown-block",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
                       },
                       "ref": null,
                       "rendered": null,
-                      "type": "p",
+                      "type": "div",
                     },
                   ],
                   "type": "div",
@@ -669,8 +670,8 @@ ShallowWrapper {
                       <h2
                         className="block-headline mb2"
 />,
-                      <p
-                        className="block-subheadline"
+                      <div
+                        className="markdown-block"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -698,14 +699,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline",
+                        "className": "markdown-block",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
                       },
                       "ref": null,
                       "rendered": null,
-                      "type": "p",
+                      "type": "div",
                     },
                   ],
                   "type": "div",
@@ -759,6 +760,7 @@ ShallowWrapper {
             },
           }
     }
+    setRef={[Function]}
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -797,8 +799,8 @@ ShallowWrapper {
                                 <h2
                                         className="block-headline mb2"
                                 />
-                                <p
-                                        className="block-subheadline"
+                                <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                 Object {
                                                         "__html": "",
@@ -810,8 +812,8 @@ ShallowWrapper {
                                 <h2
                                         className="block-headline mb2"
                                 />
-                                <p
-                                        className="block-subheadline"
+                                <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                 Object {
                                                         "__html": "",
@@ -827,7 +829,7 @@ ShallowWrapper {
         "zIndex": 1,
       },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Object {
       "instance": null,
       "key": undefined,
@@ -854,8 +856,8 @@ ShallowWrapper {
                               <h2
                                         className="block-headline mb2"
                               />
-                              <p
-                                        className="block-subheadline"
+                              <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                   Object {
                                                             "__html": "",
@@ -867,8 +869,8 @@ ShallowWrapper {
                               <h2
                                         className="block-headline mb2"
                               />
-                              <p
-                                        className="block-subheadline"
+                              <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                   Object {
                                                             "__html": "",
@@ -905,8 +907,8 @@ ShallowWrapper {
                             <h2
                                           className="block-headline mb2"
                             />
-                            <p
-                                          className="block-subheadline"
+                            <div
+                                          className="markdown-block"
                                           dangerouslySetInnerHTML={
                                                         Object {
                                                                       "__html": "",
@@ -918,8 +920,8 @@ ShallowWrapper {
                             <h2
                                           className="block-headline mb2"
                             />
-                            <p
-                                          className="block-subheadline"
+                            <div
+                                          className="markdown-block"
                                           dangerouslySetInnerHTML={
                                                         Object {
                                                                       "__html": "",
@@ -960,8 +962,8 @@ ShallowWrapper {
                   <h2
                                     className="block-headline mb2"
                   />
-                  <p
-                                    className="block-subheadline"
+                  <div
+                                    className="markdown-block"
                                     dangerouslySetInnerHTML={
                                                       Object {
                                                                         "__html": "",
@@ -973,8 +975,8 @@ ShallowWrapper {
                   <h2
                                     className="block-headline mb2"
                   />
-                  <p
-                                    className="block-subheadline"
+                  <div
+                                    className="markdown-block"
                                     dangerouslySetInnerHTML={
                                                       Object {
                                                                         "__html": "",
@@ -996,8 +998,8 @@ ShallowWrapper {
                     <h2
                       className="block-headline mb2"
 />,
-                    <p
-                      className="block-subheadline"
+                    <div
+                      className="markdown-block"
                       dangerouslySetInnerHTML={
                                             Object {
                                                                   "__html": "",
@@ -1026,14 +1028,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "block-subheadline",
+                      "className": "markdown-block",
                       "dangerouslySetInnerHTML": Object {
                         "__html": "",
                       },
                     },
                     "ref": null,
                     "rendered": null,
-                    "type": "p",
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -1047,8 +1049,8 @@ ShallowWrapper {
                     <h2
                       className="block-headline mb2"
 />,
-                    <p
-                      className="block-subheadline"
+                    <div
+                      className="markdown-block"
                       dangerouslySetInnerHTML={
                                             Object {
                                                                   "__html": "",
@@ -1076,14 +1078,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "className": "block-subheadline",
+                      "className": "markdown-block",
                       "dangerouslySetInnerHTML": Object {
                         "__html": "",
                       },
                     },
                     "ref": null,
                     "rendered": null,
-                    "type": "p",
+                    "type": "div",
                   },
                 ],
                 "type": "div",
@@ -1128,8 +1130,8 @@ ShallowWrapper {
                                         <h2
                                                   className="block-headline mb2"
                                         />
-                                        <p
-                                                  className="block-subheadline"
+                                        <div
+                                                  className="markdown-block"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -1141,8 +1143,8 @@ ShallowWrapper {
                                         <h2
                                                   className="block-headline mb2"
                                         />
-                                        <p
-                                                  className="block-subheadline"
+                                        <div
+                                                  className="markdown-block"
                                                   dangerouslySetInnerHTML={
                                                             Object {
                                                                       "__html": "",
@@ -1158,7 +1160,7 @@ ShallowWrapper {
           "zIndex": 1,
         },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Object {
         "instance": null,
         "key": undefined,
@@ -1185,8 +1187,8 @@ ShallowWrapper {
                                     <h2
                                                 className="block-headline mb2"
                                     />
-                                    <p
-                                                className="block-subheadline"
+                                    <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -1198,8 +1200,8 @@ ShallowWrapper {
                                     <h2
                                                 className="block-headline mb2"
                                     />
-                                    <p
-                                                className="block-subheadline"
+                                    <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                             Object {
                                                                         "__html": "",
@@ -1236,8 +1238,8 @@ ShallowWrapper {
                                 <h2
                                                 className="block-headline mb2"
                                 />
-                                <p
-                                                className="block-subheadline"
+                                <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -1249,8 +1251,8 @@ ShallowWrapper {
                                 <h2
                                                 className="block-headline mb2"
                                 />
-                                <p
-                                                className="block-subheadline"
+                                <div
+                                                className="markdown-block"
                                                 dangerouslySetInnerHTML={
                                                                 Object {
                                                                                 "__html": "",
@@ -1291,8 +1293,8 @@ ShallowWrapper {
                     <h2
                                         className="block-headline mb2"
                     />
-                    <p
-                                        className="block-subheadline"
+                    <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -1304,8 +1306,8 @@ ShallowWrapper {
                     <h2
                                         className="block-headline mb2"
                     />
-                    <p
-                                        className="block-subheadline"
+                    <div
+                                        className="markdown-block"
                                         dangerouslySetInnerHTML={
                                                             Object {
                                                                                 "__html": "",
@@ -1327,8 +1329,8 @@ ShallowWrapper {
                       <h2
                         className="block-headline mb2"
 />,
-                      <p
-                        className="block-subheadline"
+                      <div
+                        className="markdown-block"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -1357,14 +1359,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline",
+                        "className": "markdown-block",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
                       },
                       "ref": null,
                       "rendered": null,
-                      "type": "p",
+                      "type": "div",
                     },
                   ],
                   "type": "div",
@@ -1378,8 +1380,8 @@ ShallowWrapper {
                       <h2
                         className="block-headline mb2"
 />,
-                      <p
-                        className="block-subheadline"
+                      <div
+                        className="markdown-block"
                         dangerouslySetInnerHTML={
                                                 Object {
                                                                         "__html": "",
@@ -1407,14 +1409,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "className": "block-subheadline",
+                        "className": "markdown-block",
                         "dangerouslySetInnerHTML": Object {
                           "__html": "",
                         },
                       },
                       "ref": null,
                       "rendered": null,
-                      "type": "p",
+                      "type": "div",
                     },
                   ],
                   "type": "div",
