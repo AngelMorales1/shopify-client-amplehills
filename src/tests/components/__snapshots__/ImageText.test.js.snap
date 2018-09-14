@@ -253,6 +253,11 @@ ShallowWrapper {
                                                 }
                               }
                     />
+                    <div
+                              className="flex flex-row items-center"
+                    >
+                              
+                    </div>
           </div>
           <Image
                     alt="foo illustration"
@@ -298,6 +303,11 @@ ShallowWrapper {
                                                       }
                             }
               />
+              <div
+                            className="flex flex-row items-center"
+              >
+                            
+              </div>
 </div>,
             <Image
               alt="foo illustration"
@@ -336,7 +346,11 @@ ShallowWrapper {
                                                     }
                   }
 />,
-                null,
+                <div
+                  className="flex flex-row items-center"
+>
+                  
+</div>,
               ],
               "className": "flex flex-column justify-center col-12 md-col-6",
             },
@@ -367,6 +381,24 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    null,
+                  ],
+                  "className": "flex flex-row items-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  null,
+                ],
                 "type": "div",
               },
               null,
@@ -426,6 +458,11 @@ ShallowWrapper {
                                                           }
                                     }
                         />
+                        <div
+                                    className="flex flex-row items-center"
+                        >
+                                    
+                        </div>
             </div>
             <Image
                         alt="foo illustration"
@@ -472,6 +509,11 @@ ShallowWrapper {
                                                               }
                                 }
                 />
+                <div
+                                className="flex flex-row items-center"
+                >
+                                
+                </div>
 </div>,
               <Image
                 alt="foo illustration"
@@ -510,7 +552,11 @@ ShallowWrapper {
                                                           }
                     }
 />,
-                  null,
+                  <div
+                    className="flex flex-row items-center"
+>
+                    
+</div>,
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-6",
               },
@@ -543,7 +589,24 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "p",
                 },
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      null,
+                    ],
+                    "className": "flex flex-row items-center",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    null,
+                  ],
+                  "type": "div",
+                },
               ],
               "type": "div",
             },
@@ -611,6 +674,8 @@ ShallowWrapper {
               },
               "imagePosition": 0,
               "isReverseArrangement": false,
+              "linkedTextLabel": "",
+              "linkedTextLink": "",
               "text": "",
               "title": "",
             },
@@ -799,6 +864,11 @@ ShallowWrapper {
                                                 }
                               }
                     />
+                    <div
+                              className="flex flex-row items-center"
+                    >
+                              
+                    </div>
           </div>
           <Image
                     alt=" illustration"
@@ -872,6 +942,11 @@ ShallowWrapper {
                                                       }
                             }
               />
+              <div
+                            className="flex flex-row items-center"
+              >
+                            
+              </div>
 </div>,
             <Image
               alt=" illustration"
@@ -919,7 +994,11 @@ ShallowWrapper {
                                                     }
                   }
 />,
-                null,
+                <div
+                  className="flex flex-row items-center"
+>
+                  
+</div>,
               ],
               "className": "flex flex-column justify-center col-12 md-col-5",
             },
@@ -949,6 +1028,24 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    null,
+                  ],
+                  "className": "flex flex-row items-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  null,
+                ],
                 "type": "div",
               },
               null,
@@ -1028,6 +1125,11 @@ ShallowWrapper {
                                                           }
                                     }
                         />
+                        <div
+                                    className="flex flex-row items-center"
+                        >
+                                    
+                        </div>
             </div>
             <Image
                         alt=" illustration"
@@ -1080,6 +1182,11 @@ ShallowWrapper {
                                                               }
                                 }
                 />
+                <div
+                                className="flex flex-row items-center"
+                >
+                                
+                </div>
 </div>,
               <Image
                 alt=" illustration"
@@ -1120,7 +1227,11 @@ ShallowWrapper {
                                                           }
                     }
 />,
-                  null,
+                  <div
+                    className="flex flex-row items-center"
+>
+                    
+</div>,
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-5",
               },
@@ -1160,7 +1271,24 @@ ShallowWrapper {
                   "type": "div",
 >>>>>>> Add test
                 },
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      null,
+                    ],
+                    "className": "flex flex-row items-center",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    null,
+                  ],
+                  "type": "div",
+                },
               ],
               "type": "div",
             },

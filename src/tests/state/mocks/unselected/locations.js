@@ -20,6 +20,8 @@ export default {
             }
           }
         },
+        slug: '',
+        contentBlocks: [],
         address1: '110 Bowery',
         address2: 'Fl. 4',
         city: 'New York',

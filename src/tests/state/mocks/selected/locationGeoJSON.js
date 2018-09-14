@@ -14,12 +14,14 @@ export default {
         title: 'Location 1',
         image: 'path-to-image.jpg',
         seasonalImage: 'path-to-image.jpg',
+        slug: '',
         address1: '110 Bowery',
         address2: 'Fl. 4',
         city: 'New York',
         region: 'Manhattan',
         state: 'NY',
         zip: '10013',
+        contentBlocks: [],
         coordinates: {
           lon: 80.123,
           lat: 40.789
@@ -64,11 +66,13 @@ export default {
         title: 'Location 2',
         image: 'path-to-image.jpg',
         seasonalImage: 'path-to-image.jpg',
+        slug: '',
         address1: '36 Westwood BLVD',
         address2: '',
         city: 'New Jersey',
         region: 'New Jersey',
         state: 'NJ',
+        contentBlocks: [],
         zip: '07654',
         coordinates: {
           lon: 80.123,

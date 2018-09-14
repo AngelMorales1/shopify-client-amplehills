@@ -5,6 +5,8 @@ export default [
     id: '0001',
     title: 'Location 1',
     image: 'path-to-image.jpg',
+    contentBlocks: [],
+    slug: '',
     seasonalImage: 'path-to-image.jpg',
     address1: '110 Bowery',
     address2: 'Fl. 4',
