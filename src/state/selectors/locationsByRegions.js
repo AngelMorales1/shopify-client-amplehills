@@ -6,24 +6,24 @@ import Regions from 'constants/Regions';
 export default createSelector(
   state => locations(state),
   locations => {
-    const regions = locations.reduce((accumulated, current) => {
-      let region = current.region;
-      accumulated[region] = accumulated[region]
-        ? accumulated[region].concat([current])
-        : [current];
+    const regions = locations.reduce((locationsByRegions, location) => {
+      let region = location.region;
+      locationsByRegions[region] = locationsByRegions[region]
+        ? locationsByRegions[region].concat([location])
+        : [location];
 
-      return accumulated;
+      return locationsByRegions;
     }, {});
 
-    return Regions.reduce((accumulated, region) => {
+    return Regions.reduce((locationsByRegions, region) => {
       if (!regions[region]) {
         return {
-          ...accumulated,
+          ...locationsByRegions,
           [region]: []
         };
       }
       return {
-        ...accumulated,
+        ...locationsByRegions,
         [region]: regions[region]
       };
     }, {});

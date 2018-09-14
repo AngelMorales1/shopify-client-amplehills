@@ -22,10 +22,6 @@
     }
   }
 
-  &__left-menu {
-    justify-content: flex-start;
-  }
-
   .logo-container {
     justify-content: center;
 
@@ -37,9 +33,5 @@
         max-width: spacing(40);
       }
     }
-  }
-
-  &__right-menu {
-    justify-content: flex-end;
   }
 }

@@ -25,6 +25,10 @@ class MobileNavModal extends Component {
     this.closeMobileNavOnDesktopView();
   }
 
+  componentWillMount() {
+    window.removeEventListener('resize', this.closeMobileNavOnDesktopView);
+  }
+
   closeMobileNavOnDesktopView = () => {
     const { medium } = Global.breakpoints;
     if (window.innerWidth >= medium.lowerbound && this.props.mobileNavIsOpen) {
@@ -39,7 +43,7 @@ class MobileNavModal extends Component {
 
   render() {
     const { mobileNavIsOpen, locations, locationsByRegions } = this.props;
-    console.log(locations);
+
     const classes = cx(
       styles['MobileNavModal'],
       'fixed flex wh100 bg-white-wash z-nav',
@@ -53,7 +57,7 @@ class MobileNavModal extends Component {
         <div className="overflow-scroll w100 bg-white">
           <Button
             variant="style-none"
-            onClick={() => this.handleMenuClick()}
+            onClick={this.handleMenuClick}
             className="m3"
           >
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
@@ -64,7 +68,7 @@ class MobileNavModal extends Component {
                 exact
                 to="/locations"
                 className={cx(styles['MobileNavModal__link-text'])}
-                onClick={() => this.handleMenuClick()}
+                onClick={this.handleMenuClick}
               >
                 Locations
               </NavLink>
@@ -75,9 +79,7 @@ class MobileNavModal extends Component {
                 )}
                 variant="style-none"
                 onClick={() =>
-                  this.state.dropdownIsOpen
-                    ? this.setState({ dropdownIsOpen: false })
-                    : this.setState({ dropdownIsOpen: true })
+                  this.setState({ dropdownIsOpen: !this.state.dropdownIsOpen })
                 }
               >
                 <Image src="/assets/images/arrow-dropdown-open.svg" />
@@ -114,7 +116,7 @@ class MobileNavModal extends Component {
                     {locations.map(location => (
                       <NavLink
                         key={location.id}
-                        onClick={() => this.handleMenuClick()}
+                        onClick={this.handleMenuClick}
                         exact
                         to={`/location/${location.slug}`}
                         className="mb1 text-decoration-none"
@@ -130,7 +132,7 @@ class MobileNavModal extends Component {
               exact
               to="/classes-and-socials"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             >
               Classes & Socials
             </NavLink>
@@ -138,7 +140,7 @@ class MobileNavModal extends Component {
               exact
               to="/parties"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             >
               Parties
             </NavLink>
@@ -146,7 +148,7 @@ class MobileNavModal extends Component {
               exact
               to="/events"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             >
               Events
             </NavLink>
@@ -154,7 +156,7 @@ class MobileNavModal extends Component {
               exact
               to="/our-story"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             >
               Our Story
             </NavLink>
@@ -162,7 +164,7 @@ class MobileNavModal extends Component {
               exact
               to="/contact-us"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             >
               Contact Us
             </NavLink>
@@ -173,7 +175,7 @@ class MobileNavModal extends Component {
               color="peach"
               label="Shop Online"
               hover="clear-peach-border"
-              onClick={() => this.handleMenuClick()}
+              onClick={this.handleMenuClick}
             />
           </div>
         </div>

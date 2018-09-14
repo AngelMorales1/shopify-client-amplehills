@@ -71,11 +71,7 @@ class Nav extends Component {
           'z-nav w100 fixed l0 flex bg-peach text-white items-center transition-fade-in'
         )}
       >
-        <div
-          className={`col col-4 md-col-5 flex items-center ${
-            styles['Nav__left-menu']
-          }`}
-        >
+        <div className="col col-4 md-col-5 flex items-center justify-start">
           {this.state.currentBreakpoint === 'medium' ? (
             <Fragment>
               <NavLink
@@ -134,11 +130,7 @@ class Nav extends Component {
             />
           </NavLink>
         </div>
-        <div
-          className={`col col-4 md-col-5 flex items-center ${
-            styles['Nav__right-menu']
-          }`}
-        >
+        <div className="col col-4 md-col-5 flex items-center justify-end">
           {this.state.currentBreakpoint === 'medium' ? (
             <Fragment>
               <NavLink
