@@ -20,7 +20,7 @@ export default {
             }
           }
         },
-        slug: '',
+        slug: 'test-location',
         contentBlocks: [],
         address1: '110 Bowery',
         address2: 'Fl. 4',

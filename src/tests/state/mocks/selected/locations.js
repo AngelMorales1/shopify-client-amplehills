@@ -6,7 +6,7 @@ export default [
     title: 'Location 1',
     image: 'path-to-image.jpg',
     seasonalImage: 'path-to-image.jpg',
-    slug: '',
+    slug: 'test-location',
     address1: '110 Bowery',
     address2: 'Fl. 4',
     city: 'New York',

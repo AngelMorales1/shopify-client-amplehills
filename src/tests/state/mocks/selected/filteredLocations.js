@@ -6,7 +6,7 @@ export default [
     title: 'Location 1',
     image: 'path-to-image.jpg',
     contentBlocks: [],
-    slug: '',
+    slug: 'test-location',
     seasonalImage: 'path-to-image.jpg',
     address1: '110 Bowery',
     address2: 'Fl. 4',
