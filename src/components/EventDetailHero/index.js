@@ -55,14 +55,16 @@ const EventDetailHero = ({ event, actions }) => {
             {event.datesAndTimes.length > 1 ? (
               <div>
                 <p className="copy text-peach bold mb2">Date</p>
-                {event.datesAndTimes.map(dateAndTime => {
+                {event.datesAndTimes.map((dateAndTime, i) => {
                   const startTime = dateAndTime.Time.split('-')[0];
+
                   return (
-                    <p className="block-sub-headline bold text-peach mb2 lowercase">{`${moment(
-                      dateAndTime.Date
-                    ).format('DD/MM/YY')}- ${getShortTimeFormat(
-                      startTime
-                    )}`}</p>
+                    <p
+                      key={get(dateAndTime, 'uuid', i)}
+                      className="block-sub-headline bold text-peach mb2 lowercase"
+                    >{`${moment(dateAndTime.Date).format(
+                      'DD/MM/YY'
+                    )}- ${getShortTimeFormat(startTime)}`}</p>
                   );
                 })}
               </div>

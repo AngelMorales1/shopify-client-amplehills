@@ -28,6 +28,7 @@ class ProductDetails extends Component {
     const fields = get(block, 'fields', {});
     const details = get(fields, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
+
     return (
       <div
         ref={refBlock => setRef(refBlock)}
