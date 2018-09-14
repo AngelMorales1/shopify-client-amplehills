@@ -297,7 +297,11 @@ ShallowWrapper {
                               }
                     />
                     <div
+<<<<<<< HEAD
                               className="flex flex-row flex-wrap items-center"
+=======
+                              className="flex flex-row items-center"
+>>>>>>> Add subNav test and fix location related selectors
                     >
                               
                     </div>
@@ -347,7 +351,11 @@ ShallowWrapper {
                             }
               />
               <div
+<<<<<<< HEAD
                             className="flex flex-row flex-wrap items-center"
+=======
+                            className="flex flex-row items-center"
+>>>>>>> Add subNav test and fix location related selectors
               >
                             
               </div>
@@ -392,6 +400,7 @@ ShallowWrapper {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div
                   className="flex flex-row flex-wrap items-center"
 >
@@ -405,6 +414,13 @@ ShallowWrapper {
 =======
                 null,
 >>>>>>> Add test
+=======
+                <div
+                  className="flex flex-row items-center"
+>
+                  
+</div>,
+>>>>>>> Add subNav test and fix location related selectors
               ],
               "className": "flex flex-column justify-center col-12 md-col-6",
             },
@@ -457,6 +473,24 @@ ShallowWrapper {
                 "type": "div",
 =======
 >>>>>>> Add test
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    null,
+                  ],
+                  "className": "flex flex-row items-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  null,
+                ],
+                "type": "div",
               },
               null,
             ],
@@ -824,6 +858,11 @@ ShallowWrapper {
                                                           }
                                     }
                         />
+                        <div
+                                    className="flex flex-row items-center"
+                        >
+                                    
+                        </div>
             </div>
             <Image
                         alt="foo illustration"
@@ -884,6 +923,11 @@ ShallowWrapper {
                                                               }
                                 }
                 />
+                <div
+                                className="flex flex-row items-center"
+                >
+                                
+                </div>
 </div>,
               <Image
                 alt="foo illustration"
@@ -926,7 +970,11 @@ ShallowWrapper {
                                                           }
                     }
 />,
-                  null,
+                  <div
+                    className="flex flex-row items-center"
+>
+                    
+</div>,
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-6",
               },
@@ -959,7 +1007,24 @@ ShallowWrapper {
                   "rendered": null,
                   "type": "p",
                 },
-                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      null,
+                    ],
+                    "className": "flex flex-row items-center",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    null,
+                  ],
+                  "type": "div",
+                },
               ],
               "type": "div",
             },
@@ -1036,6 +1101,8 @@ ShallowWrapper {
               },
               "imagePosition": 0,
               "isReverseArrangement": false,
+              "linkedTextLabel": "",
+              "linkedTextLink": "",
               "text": "",
               "title": "",
             },
@@ -1238,7 +1305,11 @@ ShallowWrapper {
                               }
                     />
                     <div
+<<<<<<< HEAD
                               className="flex flex-row flex-wrap items-center"
+=======
+                              className="flex flex-row items-center"
+>>>>>>> Add subNav test and fix location related selectors
                     >
                               
                     </div>
@@ -1369,7 +1440,11 @@ ShallowWrapper {
                             }
               />
               <div
+<<<<<<< HEAD
                             className="flex flex-row flex-wrap items-center"
+=======
+                            className="flex flex-row items-center"
+>>>>>>> Add subNav test and fix location related selectors
               >
                             
               </div>
@@ -1435,6 +1510,7 @@ ShallowWrapper {
                   }
 />,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div
                   className="flex flex-row flex-wrap items-center"
 >
@@ -1443,6 +1519,13 @@ ShallowWrapper {
 =======
                 null,
 >>>>>>> Add PressCard test
+=======
+                <div
+                  className="flex flex-row items-center"
+>
+                  
+</div>,
+>>>>>>> Add subNav test and fix location related selectors
               ],
               "className": "flex flex-column justify-center col-12 md-col-5",
             },
@@ -1494,6 +1577,24 @@ ShallowWrapper {
                 "type": "div",
 =======
 >>>>>>> Add test
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    null,
+                  ],
+                  "className": "flex flex-row items-center",
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  null,
+                ],
+                "type": "div",
               },
               null,
             ],
@@ -1609,6 +1710,7 @@ ShallowWrapper {
                                     }
                         />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <div
                                     className="flex flex-row flex-wrap items-center"
                         >
@@ -1616,6 +1718,13 @@ ShallowWrapper {
                         </div>
 =======
 >>>>>>> Add PressCard test
+=======
+                        <div
+                                    className="flex flex-row items-center"
+                        >
+                                    
+                        </div>
+>>>>>>> Add subNav test and fix location related selectors
             </div>
             <Image
                         alt=" illustration"
@@ -1691,6 +1800,7 @@ ShallowWrapper {
                                 }
                 />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div
                                 className="flex flex-row flex-wrap items-center"
                 >
@@ -1698,6 +1808,13 @@ ShallowWrapper {
                 </div>
 =======
 >>>>>>> Add PressCard test
+=======
+                <div
+                                className="flex flex-row items-center"
+                >
+                                
+                </div>
+>>>>>>> Add subNav test and fix location related selectors
 </div>,
               <Image
                 alt=" illustration"
@@ -1750,6 +1867,7 @@ ShallowWrapper {
                     }
 />,
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div
                     className="flex flex-row flex-wrap items-center"
 >
@@ -1758,6 +1876,13 @@ ShallowWrapper {
 =======
                   null,
 >>>>>>> Add PressCard test
+=======
+                  <div
+                    className="flex flex-row items-center"
+>
+                    
+</div>,
+>>>>>>> Add subNav test and fix location related selectors
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-5",
               },
@@ -1836,8 +1961,29 @@ ShallowWrapper {
                   "type": "div",
 >>>>>>> Add test
                 },
+<<<<<<< HEAD
                 null,
 >>>>>>> Add PressCard test
+=======
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      null,
+                    ],
+                    "className": "flex flex-row items-center",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    null,
+                  ],
+                  "type": "div",
+                },
+>>>>>>> Add subNav test and fix location related selectors
               ],
               "type": "div",
             },

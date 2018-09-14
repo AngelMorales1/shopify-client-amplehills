@@ -178,6 +178,7 @@ ShallowWrapper {
                         className="flex flex-column items-center"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                 href="/location/undefined"
@@ -185,6 +186,11 @@ ShallowWrapper {
                         <div
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                        <a
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                                href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                         >
                                 <div
                                         className="z-1 absolute"
@@ -253,10 +259,14 @@ ShallowWrapper {
                                         </div>
                                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </a>
 =======
                         </div>
 >>>>>>> Add locationCards component test
+=======
+                        </a>
+>>>>>>> Add subNav test and fix location related selectors
                 </div>
         </div>
 </div>,
@@ -355,6 +365,7 @@ ShallowWrapper {
                     className="flex flex-column items-center"
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                               href="/location/undefined"
@@ -362,6 +373,11 @@ ShallowWrapper {
                     <div
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                    <a
+                              className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                              href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                     >
                               <div
                                         className="z-1 absolute"
@@ -430,10 +446,14 @@ ShallowWrapper {
                                         </div>
                               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </a>
 =======
                     </div>
 >>>>>>> Add locationCards component test
+=======
+                    </a>
+>>>>>>> Add subNav test and fix location related selectors
           </div>
 </div>,
         "className": "w100 flex flex-wrap items-start justify-center",
@@ -529,6 +549,7 @@ ShallowWrapper {
               className="flex flex-column items-center"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                             href="/location/undefined"
@@ -536,6 +557,11 @@ ShallowWrapper {
               <div
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+              <a
+                            className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                            href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
               >
                             <div
                                           className="z-1 absolute"
@@ -604,10 +630,14 @@ ShallowWrapper {
                                           </div>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </div>
 >>>>>>> Add locationCards component test
+=======
+              </a>
+>>>>>>> Add subNav test and fix location related selectors
 </div>,
           ],
           "className": "transition-slide-up w100",
@@ -821,6 +851,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                   href="/location/undefined"
@@ -828,6 +859,11 @@ ShallowWrapper {
                 <div
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                <a
+                  className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                  href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
 >
                   <div
                                     className="z-1 absolute"
@@ -896,10 +932,14 @@ ShallowWrapper {
                                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </a>,
 =======
 </div>,
 >>>>>>> Add locationCards component test
+=======
+</a>,
+>>>>>>> Add subNav test and fix location related selectors
               ],
               "className": "flex flex-column items-center",
             },
@@ -981,9 +1021,13 @@ ShallowWrapper {
                   ],
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "href": "/location/undefined",
 =======
 >>>>>>> Add locationCards component test
+=======
+                  "href": "/location/undefined",
+>>>>>>> Add subNav test and fix location related selectors
                 },
                 "ref": [Function],
                 "rendered": Array [
@@ -1282,10 +1326,14 @@ ShallowWrapper {
                   },
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "type": "a",
 =======
                 "type": "div",
 >>>>>>> Add locationCards component test
+=======
+                "type": "a",
+>>>>>>> Add subNav test and fix location related selectors
               },
             ],
             "type": "div",
@@ -1393,6 +1441,7 @@ ShallowWrapper {
                               className="flex flex-column items-center"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <a
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                         href="/location/undefined"
@@ -1400,6 +1449,11 @@ ShallowWrapper {
                               <div
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                              <a
+                                        className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                                        href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                               >
                                         <div
                                                   className="z-1 absolute"
@@ -1468,10 +1522,14 @@ ShallowWrapper {
                                                   </div>
                                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                               </a>
 =======
                               </div>
 >>>>>>> Add locationCards component test
+=======
+                              </a>
+>>>>>>> Add subNav test and fix location related selectors
                     </div>
           </div>
 </div>,
@@ -1570,6 +1628,7 @@ ShallowWrapper {
                         className="flex flex-column items-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                     href="/location/undefined"
@@ -1577,6 +1636,11 @@ ShallowWrapper {
                         <div
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                        <a
+                                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                                    href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                         >
                                     <div
                                                 className="z-1 absolute"
@@ -1645,10 +1709,14 @@ ShallowWrapper {
                                                 </div>
                                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </a>
 =======
                         </div>
 >>>>>>> Add locationCards component test
+=======
+                        </a>
+>>>>>>> Add subNav test and fix location related selectors
             </div>
 </div>,
           "className": "w100 flex flex-wrap items-start justify-center",
@@ -1744,6 +1812,7 @@ ShallowWrapper {
                 className="flex flex-column items-center"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                                 href="/location/undefined"
@@ -1751,6 +1820,11 @@ ShallowWrapper {
                 <div
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                <a
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                                href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                 >
                                 <div
                                                 className="z-1 absolute"
@@ -1819,10 +1893,14 @@ ShallowWrapper {
                                                 </div>
                                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </a>
 =======
                 </div>
 >>>>>>> Add locationCards component test
+=======
+                </a>
+>>>>>>> Add subNav test and fix location related selectors
 </div>,
             ],
             "className": "transition-slide-up w100",
@@ -2036,6 +2114,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <a
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
                     href="/location/undefined"
@@ -2043,6 +2122,11 @@ ShallowWrapper {
                   <div
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
 >>>>>>> Add locationCards component test
+=======
+                  <a
+                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined"
+                    href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
 >
                     <div
                                         className="z-1 absolute"
@@ -2111,10 +2195,14 @@ ShallowWrapper {
                                         </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </a>,
 =======
 </div>,
 >>>>>>> Add locationCards component test
+=======
+</a>,
+>>>>>>> Add subNav test and fix location related selectors
                 ],
                 "className": "flex flex-column items-center",
               },
@@ -2196,9 +2284,13 @@ ShallowWrapper {
                     ],
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100 undefined",
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "href": "/location/undefined",
 =======
 >>>>>>> Add locationCards component test
+=======
+                    "href": "/location/undefined",
+>>>>>>> Add subNav test and fix location related selectors
                   },
                   "ref": [Function],
                   "rendered": Array [
@@ -2497,10 +2589,14 @@ ShallowWrapper {
                     },
                   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "type": "a",
 =======
                   "type": "div",
 >>>>>>> Add locationCards component test
+=======
+                  "type": "a",
+>>>>>>> Add subNav test and fix location related selectors
                 },
               ],
               "type": "div",
@@ -2699,6 +2795,7 @@ ShallowWrapper {
                         className="flex flex-column items-center"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                 href="/location/undefined"
@@ -2710,6 +2807,11 @@ ShallowWrapper {
 =======
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                        <a
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                                href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                         >
                                 <div
                                         className="z-1 absolute"
@@ -2760,10 +2862,14 @@ ShallowWrapper {
                                         </div>
                                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </a>
 =======
                         </div>
 >>>>>>> Add locationCards component test
+=======
+                        </a>
+>>>>>>> Add subNav test and fix location related selectors
                 </div>
         </div>
 </div>,
@@ -2860,6 +2966,7 @@ ShallowWrapper {
                     className="flex flex-column items-center"
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                               href="/location/undefined"
@@ -2871,6 +2978,11 @@ ShallowWrapper {
 =======
                               className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                    <a
+                              className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                              href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                     >
                               <div
                                         className="z-1 absolute"
@@ -2921,10 +3033,14 @@ ShallowWrapper {
                                         </div>
                               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </a>
 =======
                     </div>
 >>>>>>> Add locationCards component test
+=======
+                    </a>
+>>>>>>> Add subNav test and fix location related selectors
           </div>
 </div>,
         "className": "w100 flex flex-wrap items-start justify-center",
@@ -3018,6 +3134,7 @@ ShallowWrapper {
               className="flex flex-column items-center"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                             href="/location/undefined"
@@ -3029,6 +3146,11 @@ ShallowWrapper {
 =======
                             className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+              <a
+                            className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                            href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
               >
                             <div
                                           className="z-1 absolute"
@@ -3079,10 +3201,14 @@ ShallowWrapper {
                                           </div>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </div>
 >>>>>>> Add locationCards component test
+=======
+              </a>
+>>>>>>> Add subNav test and fix location related selectors
 </div>,
           ],
           "className": "transition-slide-up w100",
@@ -3294,6 +3420,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                   href="/location/undefined"
@@ -3305,6 +3432,11 @@ ShallowWrapper {
 =======
                   className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                <a
+                  className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                  href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
 >
                   <div
                                     className="z-1 absolute"
@@ -3355,10 +3487,14 @@ ShallowWrapper {
                                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </a>,
 =======
 </div>,
 >>>>>>> Add locationCards component test
+=======
+</a>,
+>>>>>>> Add subNav test and fix location related selectors
               ],
               "className": "flex flex-column items-center",
             },
@@ -3429,7 +3565,11 @@ ShallowWrapper {
 >>>>>>> Add locationCards component test
 =======
                   "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
+<<<<<<< HEAD
 >>>>>>> Add test
+=======
+                  "href": "/location/undefined",
+>>>>>>> Add subNav test and fix location related selectors
                 },
                 "ref": [Function],
                 "rendered": Array [
@@ -3656,10 +3796,14 @@ ShallowWrapper {
                   },
                 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "type": "a",
 =======
                 "type": "div",
 >>>>>>> Add locationCards component test
+=======
+                "type": "a",
+>>>>>>> Add subNav test and fix location related selectors
               },
             ],
             "type": "div",
@@ -3765,6 +3909,7 @@ ShallowWrapper {
                               className="flex flex-column items-center"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <a
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                         href="/location/undefined"
@@ -3776,6 +3921,11 @@ ShallowWrapper {
 =======
                                         className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                              <a
+                                        className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                                        href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                               >
                                         <div
                                                   className="z-1 absolute"
@@ -3826,10 +3976,14 @@ ShallowWrapper {
                                                   </div>
                                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                               </a>
 =======
                               </div>
 >>>>>>> Add locationCards component test
+=======
+                              </a>
+>>>>>>> Add subNav test and fix location related selectors
                     </div>
           </div>
 </div>,
@@ -3926,6 +4080,7 @@ ShallowWrapper {
                         className="flex flex-column items-center"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                     href="/location/undefined"
@@ -3937,6 +4092,11 @@ ShallowWrapper {
 =======
                                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                        <a
+                                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                                    href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                         >
                                     <div
                                                 className="z-1 absolute"
@@ -3987,10 +4147,14 @@ ShallowWrapper {
                                                 </div>
                                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         </a>
 =======
                         </div>
 >>>>>>> Add locationCards component test
+=======
+                        </a>
+>>>>>>> Add subNav test and fix location related selectors
             </div>
 </div>,
           "className": "w100 flex flex-wrap items-start justify-center",
@@ -4084,6 +4248,7 @@ ShallowWrapper {
                 className="flex flex-column items-center"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                                 href="/location/undefined"
@@ -4095,6 +4260,11 @@ ShallowWrapper {
 =======
                                 className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                <a
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                                href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
                 >
                                 <div
                                                 className="z-1 absolute"
@@ -4145,10 +4315,14 @@ ShallowWrapper {
                                                 </div>
                                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </a>
 =======
                 </div>
 >>>>>>> Add locationCards component test
+=======
+                </a>
+>>>>>>> Add subNav test and fix location related selectors
 </div>,
             ],
             "className": "transition-slide-up w100",
@@ -4360,6 +4534,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <a
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
                     href="/location/undefined"
@@ -4371,6 +4546,11 @@ ShallowWrapper {
 =======
                     className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
 >>>>>>> Add test
+=======
+                  <a
+                    className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                    href="/location/undefined"
+>>>>>>> Add subNav test and fix location related selectors
 >
                     <div
                                         className="z-1 absolute"
@@ -4421,10 +4601,14 @@ ShallowWrapper {
                                         </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </a>,
 =======
 </div>,
 >>>>>>> Add locationCards component test
+=======
+</a>,
+>>>>>>> Add subNav test and fix location related selectors
                 ],
                 "className": "flex flex-column items-center",
               },
@@ -4495,7 +4679,11 @@ ShallowWrapper {
 >>>>>>> Add locationCards component test
 =======
                     "className": "transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100",
+<<<<<<< HEAD
 >>>>>>> Add test
+=======
+                    "href": "/location/undefined",
+>>>>>>> Add subNav test and fix location related selectors
                   },
                   "ref": [Function],
                   "rendered": Array [
@@ -4722,10 +4910,14 @@ ShallowWrapper {
                     },
                   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "type": "a",
 =======
                   "type": "div",
 >>>>>>> Add locationCards component test
+=======
+                  "type": "a",
+>>>>>>> Add subNav test and fix location related selectors
                 },
               ],
               "type": "div",
