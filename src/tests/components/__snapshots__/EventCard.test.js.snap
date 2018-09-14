@@ -53,7 +53,11 @@ ShallowWrapper {
                     <p
                               className="mb2"
                     >
+<<<<<<< HEAD
                               Invalid date, undefined at foo
+=======
+                              Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
                     </p>
                     <h2
                               className=""
@@ -80,7 +84,11 @@ ShallowWrapper {
                               label="RSVP"
                               onClick={[Function]}
                               shadow={false}
+<<<<<<< HEAD
                               to="/events/undefined"
+=======
+                              to="/events/foo"
+>>>>>>> Add EventDetailHero text
                               type="button"
                               variant="primary"
                     />
@@ -116,7 +124,11 @@ ShallowWrapper {
               <p
                             className="mb2"
               >
+<<<<<<< HEAD
                             Invalid date, undefined at foo
+=======
+                            Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
               </p>
               <h2
                             className=""
@@ -143,7 +155,11 @@ ShallowWrapper {
                             label="RSVP"
                             onClick={[Function]}
                             shadow={false}
+<<<<<<< HEAD
                             to="/events/undefined"
+=======
+                            to="/events/foo"
+>>>>>>> Add EventDetailHero text
                             type="button"
                             variant="primary"
               />
@@ -162,7 +178,11 @@ ShallowWrapper {
                 <p
                   className="mb2"
 >
+<<<<<<< HEAD
                   Invalid date, undefined at foo
+=======
+                  Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
 </p>,
                 <h2
                   className=""
@@ -188,11 +208,19 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+<<<<<<< HEAD
                   "children": "Invalid date, undefined at foo",
                   "className": "mb2",
                 },
                 "ref": null,
                 "rendered": "Invalid date, undefined at foo",
+=======
+                  "children": "Invalid date, foo: at foo",
+                  "className": "mb2",
+                },
+                "ref": null,
+                "rendered": "Invalid date, foo: at foo",
+>>>>>>> Add EventDetailHero text
                 "type": "p",
               },
               Object {
@@ -240,7 +268,11 @@ ShallowWrapper {
                 label="RSVP"
                 onClick={[Function]}
                 shadow={false}
+<<<<<<< HEAD
                 to="/events/undefined"
+=======
+                to="/events/foo"
+>>>>>>> Add EventDetailHero text
                 type="button"
                 variant="primary"
 />,
@@ -260,7 +292,11 @@ ShallowWrapper {
                 "label": "RSVP",
                 "onClick": [Function],
                 "shadow": false,
+<<<<<<< HEAD
                 "to": "/events/undefined",
+=======
+                "to": "/events/foo",
+>>>>>>> Add EventDetailHero text
                 "type": "button",
                 "variant": "primary",
               },
@@ -299,7 +335,11 @@ ShallowWrapper {
                         <p
                                     className="mb2"
                         >
+<<<<<<< HEAD
                                     Invalid date, undefined at foo
+=======
+                                    Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
                         </p>
                         <h2
                                     className=""
@@ -326,7 +366,11 @@ ShallowWrapper {
                                     label="RSVP"
                                     onClick={[Function]}
                                     shadow={false}
+<<<<<<< HEAD
                                     to="/events/undefined"
+=======
+                                    to="/events/foo"
+>>>>>>> Add EventDetailHero text
                                     type="button"
                                     variant="primary"
                         />
@@ -362,7 +406,11 @@ ShallowWrapper {
                 <p
                                 className="mb2"
                 >
+<<<<<<< HEAD
                                 Invalid date, undefined at foo
+=======
+                                Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
                 </p>
                 <h2
                                 className=""
@@ -389,7 +437,11 @@ ShallowWrapper {
                                 label="RSVP"
                                 onClick={[Function]}
                                 shadow={false}
+<<<<<<< HEAD
                                 to="/events/undefined"
+=======
+                                to="/events/foo"
+>>>>>>> Add EventDetailHero text
                                 type="button"
                                 variant="primary"
                 />
@@ -408,7 +460,11 @@ ShallowWrapper {
                   <p
                     className="mb2"
 >
+<<<<<<< HEAD
                     Invalid date, undefined at foo
+=======
+                    Invalid date, foo: at foo
+>>>>>>> Add EventDetailHero text
 </p>,
                   <h2
                     className=""
@@ -434,11 +490,19 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+<<<<<<< HEAD
                     "children": "Invalid date, undefined at foo",
                     "className": "mb2",
                   },
                   "ref": null,
                   "rendered": "Invalid date, undefined at foo",
+=======
+                    "children": "Invalid date, foo: at foo",
+                    "className": "mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Invalid date, foo: at foo",
+>>>>>>> Add EventDetailHero text
                   "type": "p",
                 },
                 Object {
@@ -486,7 +550,11 @@ ShallowWrapper {
                   label="RSVP"
                   onClick={[Function]}
                   shadow={false}
+<<<<<<< HEAD
                   to="/events/undefined"
+=======
+                  to="/events/foo"
+>>>>>>> Add EventDetailHero text
                   type="button"
                   variant="primary"
 />,
@@ -506,7 +574,11 @@ ShallowWrapper {
                   "label": "RSVP",
                   "onClick": [Function],
                   "shadow": false,
+<<<<<<< HEAD
                   "to": "/events/undefined",
+=======
+                  "to": "/events/foo",
+>>>>>>> Add EventDetailHero text
                   "type": "button",
                   "variant": "primary",
                 },
@@ -602,7 +674,11 @@ ShallowWrapper {
                               label="RSVP"
                               onClick={[Function]}
                               shadow={false}
+<<<<<<< HEAD
                               to="/events/undefined"
+=======
+                              to="/events/"
+>>>>>>> Add EventDetailHero text
                               type="button"
                               variant="primary"
                     />
@@ -654,7 +730,11 @@ ShallowWrapper {
                             label="RSVP"
                             onClick={[Function]}
                             shadow={false}
+<<<<<<< HEAD
                             to="/events/undefined"
+=======
+                            to="/events/"
+>>>>>>> Add EventDetailHero text
                             type="button"
                             variant="primary"
               />
@@ -727,7 +807,11 @@ ShallowWrapper {
                 label="RSVP"
                 onClick={[Function]}
                 shadow={false}
+<<<<<<< HEAD
                 to="/events/undefined"
+=======
+                to="/events/"
+>>>>>>> Add EventDetailHero text
                 type="button"
                 variant="primary"
 />,
@@ -747,7 +831,11 @@ ShallowWrapper {
                 "label": "RSVP",
                 "onClick": [Function],
                 "shadow": false,
+<<<<<<< HEAD
                 "to": "/events/undefined",
+=======
+                "to": "/events/",
+>>>>>>> Add EventDetailHero text
                 "type": "button",
                 "variant": "primary",
               },
@@ -802,7 +890,11 @@ ShallowWrapper {
                                     label="RSVP"
                                     onClick={[Function]}
                                     shadow={false}
+<<<<<<< HEAD
                                     to="/events/undefined"
+=======
+                                    to="/events/"
+>>>>>>> Add EventDetailHero text
                                     type="button"
                                     variant="primary"
                         />
@@ -854,7 +946,11 @@ ShallowWrapper {
                                 label="RSVP"
                                 onClick={[Function]}
                                 shadow={false}
+<<<<<<< HEAD
                                 to="/events/undefined"
+=======
+                                to="/events/"
+>>>>>>> Add EventDetailHero text
                                 type="button"
                                 variant="primary"
                 />
@@ -927,7 +1023,11 @@ ShallowWrapper {
                   label="RSVP"
                   onClick={[Function]}
                   shadow={false}
+<<<<<<< HEAD
                   to="/events/undefined"
+=======
+                  to="/events/"
+>>>>>>> Add EventDetailHero text
                   type="button"
                   variant="primary"
 />,
@@ -947,7 +1047,11 @@ ShallowWrapper {
                   "label": "RSVP",
                   "onClick": [Function],
                   "shadow": false,
+<<<<<<< HEAD
                   "to": "/events/undefined",
+=======
+                  "to": "/events/",
+>>>>>>> Add EventDetailHero text
                   "type": "button",
                   "variant": "primary",
                 },

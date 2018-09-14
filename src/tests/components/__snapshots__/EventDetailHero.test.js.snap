@@ -25,6 +25,7 @@ ShallowWrapper {
             "image": "foo",
             "locationTitle": "foo",
             "title": "foo",
+<<<<<<< HEAD
             "variants": Array [
               Object {
                 "available": true,
@@ -32,6 +33,8 @@ ShallowWrapper {
                 "price": "0.00",
               },
             ],
+=======
+>>>>>>> Add EventDetailHero text
           }
     }
 />,
@@ -111,7 +114,13 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
+<<<<<<< HEAD
                                                   />
+=======
+                                                  >
+                                                            Invalid date
+                                                  </p>
+>>>>>>> Add EventDetailHero text
                                         </div>
                                         <div>
                                                   <p
@@ -121,7 +130,13 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
+<<<<<<< HEAD
                                                   />
+=======
+                                                  >
+                                                            foo
+                                                  </p>
+>>>>>>> Add EventDetailHero text
                                         </div>
                                         <div
                                                   className="flex mt3 w100"
@@ -157,16 +172,25 @@ ShallowWrapper {
                               </div>
                               <Button
                                         className="my4"
+<<<<<<< HEAD
                                         color="madison-blue"
                                         disabled={true}
                                         fullWidth={false}
                                         hover="shadow"
                                         label=""
+=======
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
+<<<<<<< HEAD
                               >
                                         <span
                                                   className="mr-auto"
@@ -180,6 +204,9 @@ ShallowWrapper {
                                                   0.00
                                         </span>
                               </Button>
+=======
+                              />
+>>>>>>> Add EventDetailHero text
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -191,7 +218,10 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> Add EventDetailHero text
       ],
       "className": "flex flex-column mb4",
     },
@@ -361,7 +391,13 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
+<<<<<<< HEAD
                                                         />
+=======
+                                                        >
+                                                                      Invalid date
+                                                        </p>
+>>>>>>> Add EventDetailHero text
                                           </div>
                                           <div>
                                                         <p
@@ -371,7 +407,13 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
+<<<<<<< HEAD
                                                         />
+=======
+                                                        >
+                                                                      foo
+                                                        </p>
+>>>>>>> Add EventDetailHero text
                                           </div>
                                           <div
                                                         className="flex mt3 w100"
@@ -407,16 +449,25 @@ ShallowWrapper {
                             </div>
                             <Button
                                           className="my4"
+<<<<<<< HEAD
                                           color="madison-blue"
                                           disabled={true}
                                           fullWidth={false}
                                           hover="shadow"
                                           label=""
+=======
+                                          color="peach"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
+<<<<<<< HEAD
                             >
                                           <span
                                                         className="mr-auto"
@@ -430,6 +481,9 @@ ShallowWrapper {
                                                         0.00
                                           </span>
                             </Button>
+=======
+                            />
+>>>>>>> Add EventDetailHero text
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -496,7 +550,13 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
+<<<<<<< HEAD
                                                 />
+=======
+                                                >
+                                                                Invalid date
+                                                </p>
+>>>>>>> Add EventDetailHero text
                                 </div>
                                 <div>
                                                 <p
@@ -506,7 +566,13 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
+<<<<<<< HEAD
                                                 />
+=======
+                                                >
+                                                                foo
+                                                </p>
+>>>>>>> Add EventDetailHero text
                                 </div>
                                 <div
                                                 className="flex mt3 w100"
@@ -542,16 +608,25 @@ ShallowWrapper {
                 </div>
                 <Button
                                 className="my4"
+<<<<<<< HEAD
                                 color="madison-blue"
                                 disabled={true}
                                 fullWidth={false}
                                 hover="shadow"
                                 label=""
+=======
+                                color="peach"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
+<<<<<<< HEAD
                 >
                                 <span
                                                 className="mr-auto"
@@ -565,6 +640,9 @@ ShallowWrapper {
                                                 0.00
                                 </span>
                 </Button>
+=======
+                />
+>>>>>>> Add EventDetailHero text
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -592,7 +670,13 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
+<<<<<<< HEAD
                                         />
+=======
+                                        >
+                                                            Invalid date
+                                        </p>
+>>>>>>> Add EventDetailHero text
                     </div>
                     <div>
                                         <p
@@ -602,7 +686,13 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
+<<<<<<< HEAD
                                         />
+=======
+                                        >
+                                                            foo
+                                        </p>
+>>>>>>> Add EventDetailHero text
                     </div>
                     <div
                                         className="flex mt3 w100"
@@ -638,16 +728,25 @@ ShallowWrapper {
 </div>,
                   <Button
                     className="my4"
+<<<<<<< HEAD
                     color="madison-blue"
                     disabled={true}
                     fullWidth={false}
                     hover="shadow"
                     label=""
+=======
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Call to Action"
+>>>>>>> Add EventDetailHero text
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
+<<<<<<< HEAD
 >
                     <span
                                         className="mr-auto"
@@ -661,6 +760,9 @@ ShallowWrapper {
                                         0.00
                     </span>
 </Button>,
+=======
+/>,
+>>>>>>> Add EventDetailHero text
                   null,
                   <div
                     className="markdown-block"
@@ -689,7 +791,13 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
+<<<<<<< HEAD
                         />
+=======
+                        >
+                                                Invalid date
+                        </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                       <div>
                         <p
@@ -699,7 +807,13 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
+<<<<<<< HEAD
                         />
+=======
+                        >
+                                                foo
+                        </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                       <div
                         className="flex mt3 w100"
@@ -749,7 +863,13 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                            Invalid date
+</p>,
+>>>>>>> Add EventDetailHero text
                         ],
                       },
                       "ref": null,
@@ -771,11 +891,19 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
+<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
+=======
+                            "children": "Invalid date",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "Invalid date",
+>>>>>>> Add EventDetailHero text
                           "type": "p",
                         },
                       ],
@@ -794,7 +922,13 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                            foo
+</p>,
+>>>>>>> Add EventDetailHero text
                         ],
                       },
                       "ref": null,
@@ -816,11 +950,19 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
+<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
+=======
+                            "children": "foo",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "foo",
+>>>>>>> Add EventDetailHero text
                           "type": "p",
                         },
                       ],
@@ -966,6 +1108,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
+<<<<<<< HEAD
                     "children": Array [
                       <span
                         className="mr-auto"
@@ -985,6 +1128,15 @@ ShallowWrapper {
                     "fullWidth": false,
                     "hover": "shadow",
                     "label": "",
+=======
+                    "children": null,
+                    "className": "my4",
+                    "color": "peach",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Call to Action",
+>>>>>>> Add EventDetailHero text
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -992,6 +1144,7 @@ ShallowWrapper {
                     "variant": "primary",
                   },
                   "ref": null,
+<<<<<<< HEAD
                   "rendered": Array [
                     Object {
                       "instance": null,
@@ -1024,6 +1177,9 @@ ShallowWrapper {
                       "type": "span",
                     },
                   ],
+=======
+                  "rendered": null,
+>>>>>>> Add EventDetailHero text
                   "type": [Function],
                 },
                 null,
@@ -1049,7 +1205,10 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+<<<<<<< HEAD
       null,
+=======
+>>>>>>> Add EventDetailHero text
     ],
     "type": "div",
   },
@@ -1123,7 +1282,13 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                             />
+=======
+                                                            >
+                                                                        Invalid date
+                                                            </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div>
                                                             <p
@@ -1133,7 +1298,13 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                             />
+=======
+                                                            >
+                                                                        foo
+                                                            </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div
                                                             className="flex mt3 w100"
@@ -1169,16 +1340,25 @@ ShallowWrapper {
                                     </div>
                                     <Button
                                                 className="my4"
+<<<<<<< HEAD
                                                 color="madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
+=======
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
+<<<<<<< HEAD
                                     >
                                                 <span
                                                             className="mr-auto"
@@ -1192,6 +1372,9 @@ ShallowWrapper {
                                                             0.00
                                                 </span>
                                     </Button>
+=======
+                                    />
+>>>>>>> Add EventDetailHero text
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1203,7 +1386,10 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
+<<<<<<< HEAD
           null,
+=======
+>>>>>>> Add EventDetailHero text
         ],
         "className": "flex flex-column mb4",
       },
@@ -1373,7 +1559,13 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
+<<<<<<< HEAD
                                                                 />
+=======
+                                                                >
+                                                                                Invalid date
+                                                                </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div>
                                                                 <p
@@ -1383,7 +1575,13 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
+<<<<<<< HEAD
                                                                 />
+=======
+                                                                >
+                                                                                foo
+                                                                </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div
                                                                 className="flex mt3 w100"
@@ -1419,16 +1617,25 @@ ShallowWrapper {
                                 </div>
                                 <Button
                                                 className="my4"
+<<<<<<< HEAD
                                                 color="madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
+=======
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
+<<<<<<< HEAD
                                 >
                                                 <span
                                                                 className="mr-auto"
@@ -1442,6 +1649,9 @@ ShallowWrapper {
                                                                 0.00
                                                 </span>
                                 </Button>
+=======
+                                />
+>>>>>>> Add EventDetailHero text
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1508,7 +1718,13 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                       />
+=======
+                                                      >
+                                                                        Invalid date
+                                                      </p>
+>>>>>>> Add EventDetailHero text
                                     </div>
                                     <div>
                                                       <p
@@ -1518,7 +1734,13 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                       />
+=======
+                                                      >
+                                                                        foo
+                                                      </p>
+>>>>>>> Add EventDetailHero text
                                     </div>
                                     <div
                                                       className="flex mt3 w100"
@@ -1554,16 +1776,25 @@ ShallowWrapper {
                   </div>
                   <Button
                                     className="my4"
+<<<<<<< HEAD
                                     color="madison-blue"
                                     disabled={true}
                                     fullWidth={false}
                                     hover="shadow"
                                     label=""
+=======
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
+<<<<<<< HEAD
                   >
                                     <span
                                                       className="mr-auto"
@@ -1577,6 +1808,9 @@ ShallowWrapper {
                                                       0.00
                                     </span>
                   </Button>
+=======
+                  />
+>>>>>>> Add EventDetailHero text
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -1604,7 +1838,13 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
+<<<<<<< HEAD
                                             />
+=======
+                                            >
+                                                                  Invalid date
+                                            </p>
+>>>>>>> Add EventDetailHero text
                       </div>
                       <div>
                                             <p
@@ -1614,7 +1854,13 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
+<<<<<<< HEAD
                                             />
+=======
+                                            >
+                                                                  foo
+                                            </p>
+>>>>>>> Add EventDetailHero text
                       </div>
                       <div
                                             className="flex mt3 w100"
@@ -1650,16 +1896,25 @@ ShallowWrapper {
 </div>,
                     <Button
                       className="my4"
+<<<<<<< HEAD
                       color="madison-blue"
                       disabled={true}
                       fullWidth={false}
                       hover="shadow"
                       label=""
+=======
+                      color="peach"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Call to Action"
+>>>>>>> Add EventDetailHero text
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
+<<<<<<< HEAD
 >
                       <span
                                             className="mr-auto"
@@ -1673,6 +1928,9 @@ ShallowWrapper {
                                             0.00
                       </span>
 </Button>,
+=======
+/>,
+>>>>>>> Add EventDetailHero text
                     null,
                     <div
                       className="markdown-block"
@@ -1701,7 +1959,13 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
+<<<<<<< HEAD
                           />
+=======
+                          >
+                                                    Invalid date
+                          </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                         <div>
                           <p
@@ -1711,7 +1975,13 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
+<<<<<<< HEAD
                           />
+=======
+                          >
+                                                    foo
+                          </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                         <div
                           className="flex mt3 w100"
@@ -1761,7 +2031,13 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                              Invalid date
+</p>,
+>>>>>>> Add EventDetailHero text
                           ],
                         },
                         "ref": null,
@@ -1783,11 +2059,19 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
+<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
+=======
+                              "children": "Invalid date",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "Invalid date",
+>>>>>>> Add EventDetailHero text
                             "type": "p",
                           },
                         ],
@@ -1806,7 +2090,13 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                              foo
+</p>,
+>>>>>>> Add EventDetailHero text
                           ],
                         },
                         "ref": null,
@@ -1828,11 +2118,19 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
+<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
+=======
+                              "children": "foo",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "foo",
+>>>>>>> Add EventDetailHero text
                             "type": "p",
                           },
                         ],
@@ -1978,6 +2276,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
+<<<<<<< HEAD
                       "children": Array [
                         <span
                           className="mr-auto"
@@ -1997,6 +2296,15 @@ ShallowWrapper {
                       "fullWidth": false,
                       "hover": "shadow",
                       "label": "",
+=======
+                      "children": null,
+                      "className": "my4",
+                      "color": "peach",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Call to Action",
+>>>>>>> Add EventDetailHero text
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -2004,6 +2312,7 @@ ShallowWrapper {
                       "variant": "primary",
                     },
                     "ref": null,
+<<<<<<< HEAD
                     "rendered": Array [
                       Object {
                         "instance": null,
@@ -2036,6 +2345,9 @@ ShallowWrapper {
                         "type": "span",
                       },
                     ],
+=======
+                    "rendered": null,
+>>>>>>> Add EventDetailHero text
                     "type": [Function],
                   },
                   null,
@@ -2061,7 +2373,10 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> Add EventDetailHero text
       ],
       "type": "div",
     },
@@ -2178,7 +2493,13 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
+<<<<<<< HEAD
                                                   />
+=======
+                                                  >
+                                                            Invalid date
+                                                  </p>
+>>>>>>> Add EventDetailHero text
                                         </div>
                                         <div>
                                                   <p
@@ -2226,12 +2547,17 @@ ShallowWrapper {
                                         disabled={false}
                                         fullWidth={false}
                                         hover="shadow"
+<<<<<<< HEAD
                                         label=""
+=======
+                                        label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
+<<<<<<< HEAD
                               >
                                         <span
                                                   className="mr-auto"
@@ -2239,6 +2565,9 @@ ShallowWrapper {
                                                   RSVP
                                         </span>
                               </Button>
+=======
+                              />
+>>>>>>> Add EventDetailHero text
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -2250,7 +2579,10 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> Add EventDetailHero text
       ],
       "className": "flex flex-column mb4",
     },
@@ -2418,7 +2750,13 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
+<<<<<<< HEAD
                                                         />
+=======
+                                                        >
+                                                                      Invalid date
+                                                        </p>
+>>>>>>> Add EventDetailHero text
                                           </div>
                                           <div>
                                                         <p
@@ -2466,12 +2804,17 @@ ShallowWrapper {
                                           disabled={false}
                                           fullWidth={false}
                                           hover="shadow"
+<<<<<<< HEAD
                                           label=""
+=======
+                                          label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
+<<<<<<< HEAD
                             >
                                           <span
                                                         className="mr-auto"
@@ -2479,6 +2822,9 @@ ShallowWrapper {
                                                         RSVP
                                           </span>
                             </Button>
+=======
+                            />
+>>>>>>> Add EventDetailHero text
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -2545,7 +2891,13 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
+<<<<<<< HEAD
                                                 />
+=======
+                                                >
+                                                                Invalid date
+                                                </p>
+>>>>>>> Add EventDetailHero text
                                 </div>
                                 <div>
                                                 <p
@@ -2593,12 +2945,17 @@ ShallowWrapper {
                                 disabled={false}
                                 fullWidth={false}
                                 hover="shadow"
+<<<<<<< HEAD
                                 label=""
+=======
+                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
+<<<<<<< HEAD
                 >
                                 <span
                                                 className="mr-auto"
@@ -2606,6 +2963,9 @@ ShallowWrapper {
                                                 RSVP
                                 </span>
                 </Button>
+=======
+                />
+>>>>>>> Add EventDetailHero text
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -2633,7 +2993,13 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
+<<<<<<< HEAD
                                         />
+=======
+                                        >
+                                                            Invalid date
+                                        </p>
+>>>>>>> Add EventDetailHero text
                     </div>
                     <div>
                                         <p
@@ -2681,12 +3047,17 @@ ShallowWrapper {
                     disabled={false}
                     fullWidth={false}
                     hover="shadow"
+<<<<<<< HEAD
                     label=""
+=======
+                    label="Call to Action"
+>>>>>>> Add EventDetailHero text
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
+<<<<<<< HEAD
 >
                     <span
                                         className="mr-auto"
@@ -2694,6 +3065,9 @@ ShallowWrapper {
                                         RSVP
                     </span>
 </Button>,
+=======
+/>,
+>>>>>>> Add EventDetailHero text
                   null,
                   <div
                     className="markdown-block"
@@ -2722,7 +3096,13 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
+<<<<<<< HEAD
                         />
+=======
+                        >
+                                                Invalid date
+                        </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                       <div>
                         <p
@@ -2780,7 +3160,13 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                            Invalid date
+</p>,
+>>>>>>> Add EventDetailHero text
                         ],
                       },
                       "ref": null,
@@ -2802,11 +3188,19 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
+<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
+=======
+                            "children": "Invalid date",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "Invalid date",
+>>>>>>> Add EventDetailHero text
                           "type": "p",
                         },
                       ],
@@ -2993,6 +3387,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
+<<<<<<< HEAD
                     "children": Array [
                       <span
                         className="mr-auto"
@@ -3001,12 +3396,19 @@ ShallowWrapper {
 </span>,
                       null,
                     ],
+=======
+                    "children": null,
+>>>>>>> Add EventDetailHero text
                     "className": "my4",
                     "color": "peach",
                     "disabled": false,
                     "fullWidth": false,
                     "hover": "shadow",
+<<<<<<< HEAD
                     "label": "",
+=======
+                    "label": "Call to Action",
+>>>>>>> Add EventDetailHero text
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -3014,6 +3416,7 @@ ShallowWrapper {
                     "variant": "primary",
                   },
                   "ref": null,
+<<<<<<< HEAD
                   "rendered": Array [
                     Object {
                       "instance": null,
@@ -3029,6 +3432,9 @@ ShallowWrapper {
                     },
                     null,
                   ],
+=======
+                  "rendered": null,
+>>>>>>> Add EventDetailHero text
                   "type": [Function],
                 },
                 null,
@@ -3054,7 +3460,10 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+<<<<<<< HEAD
       null,
+=======
+>>>>>>> Add EventDetailHero text
     ],
     "type": "div",
   },
@@ -3126,7 +3535,13 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                             />
+=======
+                                                            >
+                                                                        Invalid date
+                                                            </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div>
                                                             <p
@@ -3174,12 +3589,17 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
+<<<<<<< HEAD
                                                 label=""
+=======
+                                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
+<<<<<<< HEAD
                                     >
                                                 <span
                                                             className="mr-auto"
@@ -3187,6 +3607,9 @@ ShallowWrapper {
                                                             RSVP
                                                 </span>
                                     </Button>
+=======
+                                    />
+>>>>>>> Add EventDetailHero text
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -3198,7 +3621,10 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
+<<<<<<< HEAD
           null,
+=======
+>>>>>>> Add EventDetailHero text
         ],
         "className": "flex flex-column mb4",
       },
@@ -3366,7 +3792,13 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
+<<<<<<< HEAD
                                                                 />
+=======
+                                                                >
+                                                                                Invalid date
+                                                                </p>
+>>>>>>> Add EventDetailHero text
                                                 </div>
                                                 <div>
                                                                 <p
@@ -3414,12 +3846,17 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
+<<<<<<< HEAD
                                                 label=""
+=======
+                                                label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
+<<<<<<< HEAD
                                 >
                                                 <span
                                                                 className="mr-auto"
@@ -3427,6 +3864,9 @@ ShallowWrapper {
                                                                 RSVP
                                                 </span>
                                 </Button>
+=======
+                                />
+>>>>>>> Add EventDetailHero text
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -3493,7 +3933,13 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
+<<<<<<< HEAD
                                                       />
+=======
+                                                      >
+                                                                        Invalid date
+                                                      </p>
+>>>>>>> Add EventDetailHero text
                                     </div>
                                     <div>
                                                       <p
@@ -3541,12 +3987,17 @@ ShallowWrapper {
                                     disabled={false}
                                     fullWidth={false}
                                     hover="shadow"
+<<<<<<< HEAD
                                     label=""
+=======
+                                    label="Call to Action"
+>>>>>>> Add EventDetailHero text
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
+<<<<<<< HEAD
                   >
                                     <span
                                                       className="mr-auto"
@@ -3554,6 +4005,9 @@ ShallowWrapper {
                                                       RSVP
                                     </span>
                   </Button>
+=======
+                  />
+>>>>>>> Add EventDetailHero text
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -3581,7 +4035,13 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
+<<<<<<< HEAD
                                             />
+=======
+                                            >
+                                                                  Invalid date
+                                            </p>
+>>>>>>> Add EventDetailHero text
                       </div>
                       <div>
                                             <p
@@ -3629,12 +4089,17 @@ ShallowWrapper {
                       disabled={false}
                       fullWidth={false}
                       hover="shadow"
+<<<<<<< HEAD
                       label=""
+=======
+                      label="Call to Action"
+>>>>>>> Add EventDetailHero text
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
+<<<<<<< HEAD
 >
                       <span
                                             className="mr-auto"
@@ -3642,6 +4107,9 @@ ShallowWrapper {
                                             RSVP
                       </span>
 </Button>,
+=======
+/>,
+>>>>>>> Add EventDetailHero text
                     null,
                     <div
                       className="markdown-block"
@@ -3670,7 +4138,13 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
+<<<<<<< HEAD
                           />
+=======
+                          >
+                                                    Invalid date
+                          </p>
+>>>>>>> Add EventDetailHero text
 </div>,
                         <div>
                           <p
@@ -3728,7 +4202,13 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
+<<<<<<< HEAD
 />,
+=======
+>
+                              Invalid date
+</p>,
+>>>>>>> Add EventDetailHero text
                           ],
                         },
                         "ref": null,
@@ -3750,11 +4230,19 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
+<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
+=======
+                              "children": "Invalid date",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "Invalid date",
+>>>>>>> Add EventDetailHero text
                             "type": "p",
                           },
                         ],
@@ -3941,6 +4429,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
+<<<<<<< HEAD
                       "children": Array [
                         <span
                           className="mr-auto"
@@ -3949,12 +4438,19 @@ ShallowWrapper {
 </span>,
                         null,
                       ],
+=======
+                      "children": null,
+>>>>>>> Add EventDetailHero text
                       "className": "my4",
                       "color": "peach",
                       "disabled": false,
                       "fullWidth": false,
                       "hover": "shadow",
+<<<<<<< HEAD
                       "label": "",
+=======
+                      "label": "Call to Action",
+>>>>>>> Add EventDetailHero text
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -3962,6 +4458,7 @@ ShallowWrapper {
                       "variant": "primary",
                     },
                     "ref": null,
+<<<<<<< HEAD
                     "rendered": Array [
                       Object {
                         "instance": null,
@@ -3977,6 +4474,9 @@ ShallowWrapper {
                       },
                       null,
                     ],
+=======
+                    "rendered": null,
+>>>>>>> Add EventDetailHero text
                     "type": [Function],
                   },
                   null,
@@ -4002,7 +4502,10 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> Add EventDetailHero text
       ],
       "type": "div",
     },
