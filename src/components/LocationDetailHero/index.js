@@ -16,7 +16,7 @@ class LocationDetailHero extends PureComponent {
     const { location, locationGeoJSON, events } = this.props;
 
     locationGeoJSON.features = [
-      locationGeoJSON.features.find(
+      get(locationGeoJSON, 'features', []).find(
         feature => get(feature, 'properties.id', '') === location.id
       )
     ];
@@ -49,8 +49,9 @@ class LocationDetailHero extends PureComponent {
             className={cx(
               'col-12 md-col-9 mx-auto flex-column justify-around items-center',
               {
-                [styles['LocationDetailHero__content-container-with-subnav']]:
-                  location.contentBlocks.length
+                [styles[
+                  'LocationDetailHero__content-container-with-subnav'
+                ]]: get(location, 'contentBlocks', []).length
               }
             )}
           >
@@ -100,7 +101,7 @@ class LocationDetailHero extends PureComponent {
               </div>
               <div className="col-12 md-col-6 mb4">
                 <p className="uppercase text-peach bold copy mb1">hours</p>
-                {location.sortedHours.map((hour, i) => {
+                {get(location, 'sortedHours', []).map((hour, i) => {
                   const key = Object.keys(hour);
                   return (
                     <div key={key} className="flex flex-row justify-between">
@@ -166,7 +167,7 @@ LocationDetailHero.propTypes = {
 LocationDetailHero.defaultProps = {
   location: locationModel.default,
   locationGeoJSON: {},
-  events: eventModel.default
+  events: [eventModel.default]
 };
 
 export default LocationDetailHero;
