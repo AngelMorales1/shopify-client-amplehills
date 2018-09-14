@@ -16,27 +16,6 @@ const FooterLinks = ({ footerLinks, footerIcons }) => {
         styles['Footer__Links-container']
       )}
     >
-      <h2 className="text-white nowrap block-headline">
-        We would love to talk!
-      </h2>
-      <div className="my3 flex">
-        <Button
-          exact
-          to="/contact"
-          label="Contact Us"
-          color="white-madison-blue"
-          shadow={true}
-          className="nowrap"
-        />
-        <Image
-          alt="Decorative left down arrow icon"
-          src="/assets/images/arrow-left-down.svg"
-          className={cx(
-            'arrow mx3 medium-down-display-none xs-hide sm-hide',
-            styles['Footer__arrow']
-          )}
-        />
-      </div>
       <div className="mt2">
         <a
           href={get(footerLinks, 'instagramLink', '')}
