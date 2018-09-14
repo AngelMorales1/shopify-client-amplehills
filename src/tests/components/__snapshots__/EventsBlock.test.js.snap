@@ -193,7 +193,11 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+<<<<<<< HEAD
             "key": "0",
+=======
+            "key": "foo",
+>>>>>>> Add EventBlock test
             "nodeType": "function",
             "props": Object {
               "active": true,
@@ -370,7 +374,11 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
+<<<<<<< HEAD
               "key": "0",
+=======
+              "key": "foo",
+>>>>>>> Add EventBlock test
               "nodeType": "function",
               "props": Object {
                 "active": true,
@@ -597,7 +605,11 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
+<<<<<<< HEAD
             "key": "0",
+=======
+            "key": undefined,
+>>>>>>> Add EventBlock test
             "nodeType": "function",
             "props": Object {
               "active": true,
@@ -767,7 +779,11 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
+<<<<<<< HEAD
               "key": "0",
+=======
+              "key": undefined,
+>>>>>>> Add EventBlock test
               "nodeType": "function",
               "props": Object {
                 "active": true,
