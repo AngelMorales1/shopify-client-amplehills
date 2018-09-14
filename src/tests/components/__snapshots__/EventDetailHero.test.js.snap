@@ -1,0 +1,3803 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EventDetailHero
+    actions={
+        Object {
+            "getEvents": [Function],
+          }
+    }
+    event={
+        Object {
+            "blockCardText": "foo",
+            "datesAndTimes": Array [
+              Object {
+                "Date": "foo",
+                "Time": "foo",
+                "uuid": "foo",
+              },
+            ],
+            "eventType": "foo",
+            "id": "foo",
+            "image": "foo",
+            "locationTitle": "foo",
+            "title": "foo",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex flex-column justify-center items-center w100 mt4"
+>
+          <h2
+                    className="block-headline"
+          >
+                    foo
+          </h2>
+          <div
+                    className="mt3"
+          >
+                    <CreatedButton
+                              url="http://localhost/"
+                              windowHeight={400}
+                              windowWidth={550}
+                    >
+                              <Button
+                                        className="inline-flex uppercase"
+                                        color="clear-madison-blue-border"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Share"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </CreatedButton>
+          </div>
+</div>,
+        <div
+          className="flex mt4"
+>
+          <div
+                    className="col-12 md-col-6"
+          >
+                    <div
+                              className="aspect-4-3 w100"
+                              style={
+                                        Object {
+                                                  "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
+                    />
+          </div>
+          <div
+                    className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+          >
+                    <div
+                              className="w100"
+                    >
+                              <div>
+                                        <div>
+                                                  <p
+                                                            className="copy"
+                                                  >
+                                                            Date
+                                                  </p>
+                                                  <p
+                                                            className="mt1"
+                                                  >
+                                                            Invalid date
+                                                  </p>
+                                        </div>
+                                        <div>
+                                                  <p
+                                                            className="copy mt3"
+                                                  >
+                                                            Time
+                                                  </p>
+                                                  <p
+                                                            className="mt1"
+                                                  >
+                                                            foo
+                                                  </p>
+                                        </div>
+                                        <div
+                                                  className="flex mt3 w100"
+                                        >
+                                                  <div>
+                                                            <p
+                                                                      className="copy"
+                                                            >
+                                                                      Location
+                                                            </p>
+                                                            <p
+                                                                      className="mt1"
+                                                            >
+                                                                      foo
+                                                            </p>
+                                                  </div>
+                                                  <div>
+                                                            <Button
+                                                                      className="inline-flex"
+                                                                      color="clear-madison-blue-border"
+                                                                      disabled={false}
+                                                                      fullWidth={false}
+                                                                      hover="shadow"
+                                                                      label="Map"
+                                                                      onClick={[Function]}
+                                                                      shadow={false}
+                                                                      to="/locations/?location=undefined"
+                                                                      type="button"
+                                                                      variant="primary-small"
+                                                            />
+                                                  </div>
+                                        </div>
+                              </div>
+                              <Button
+                                        className="my4"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Call to Action"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary"
+                              />
+                              <div
+                                        className="markdown-block"
+                                        dangerouslySetInnerHTML={
+                                                  Object {
+                                                            "__html": "",
+                                                          }
+                                        }
+                              />
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "flex flex-column mb4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="block-headline"
+>
+              foo
+</h2>,
+            <div
+              className="mt3"
+>
+              <CreatedButton
+                            url="http://localhost/"
+                            windowHeight={400}
+                            windowWidth={550}
+              >
+                            <Button
+                                          className="inline-flex uppercase"
+                                          color="clear-madison-blue-border"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Share"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </CreatedButton>
+</div>,
+          ],
+          "className": "flex flex-column justify-center items-center w100 mt4",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "foo",
+              "className": "block-headline",
+            },
+            "ref": null,
+            "rendered": "foo",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <CreatedButton
+                url="http://localhost/"
+                windowHeight={400}
+                windowWidth={550}
+>
+                <Button
+                                className="inline-flex uppercase"
+                                color="clear-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Share"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</CreatedButton>,
+              "className": "mt3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Button
+                  className="inline-flex uppercase"
+                  color="clear-madison-blue-border"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="Share"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                "url": "http://localhost/",
+                "windowHeight": 400,
+                "windowWidth": 550,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "inline-flex uppercase",
+                  "color": "clear-madison-blue-border",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "Share",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-12 md-col-6"
+>
+              <div
+                            className="aspect-4-3 w100"
+                            style={
+                                          Object {
+                                                        "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+</div>,
+            <div
+              className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+>
+              <div
+                            className="w100"
+              >
+                            <div>
+                                          <div>
+                                                        <p
+                                                                      className="copy"
+                                                        >
+                                                                      Date
+                                                        </p>
+                                                        <p
+                                                                      className="mt1"
+                                                        >
+                                                                      Invalid date
+                                                        </p>
+                                          </div>
+                                          <div>
+                                                        <p
+                                                                      className="copy mt3"
+                                                        >
+                                                                      Time
+                                                        </p>
+                                                        <p
+                                                                      className="mt1"
+                                                        >
+                                                                      foo
+                                                        </p>
+                                          </div>
+                                          <div
+                                                        className="flex mt3 w100"
+                                          >
+                                                        <div>
+                                                                      <p
+                                                                                    className="copy"
+                                                                      >
+                                                                                    Location
+                                                                      </p>
+                                                                      <p
+                                                                                    className="mt1"
+                                                                      >
+                                                                                    foo
+                                                                      </p>
+                                                        </div>
+                                                        <div>
+                                                                      <Button
+                                                                                    className="inline-flex"
+                                                                                    color="clear-madison-blue-border"
+                                                                                    disabled={false}
+                                                                                    fullWidth={false}
+                                                                                    hover="shadow"
+                                                                                    label="Map"
+                                                                                    onClick={[Function]}
+                                                                                    shadow={false}
+                                                                                    to="/locations/?location=undefined"
+                                                                                    type="button"
+                                                                                    variant="primary-small"
+                                                                      />
+                                                        </div>
+                                          </div>
+                            </div>
+                            <Button
+                                          className="my4"
+                                          color="peach"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Call to Action"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary"
+                            />
+                            <div
+                                          className="markdown-block"
+                                          dangerouslySetInnerHTML={
+                                                        Object {
+                                                                      "__html": "",
+                                                                    }
+                                          }
+                            />
+              </div>
+</div>,
+          ],
+          "className": "flex mt4",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="aspect-4-3 w100"
+                style={
+                                Object {
+                                                "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
+/>,
+              "className": "col-12 md-col-6",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "aspect-4-3 w100",
+                "style": Object {
+                  "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                  "backgroundSize": "cover",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="w100"
+>
+                <div>
+                                <div>
+                                                <p
+                                                                className="copy"
+                                                >
+                                                                Date
+                                                </p>
+                                                <p
+                                                                className="mt1"
+                                                >
+                                                                Invalid date
+                                                </p>
+                                </div>
+                                <div>
+                                                <p
+                                                                className="copy mt3"
+                                                >
+                                                                Time
+                                                </p>
+                                                <p
+                                                                className="mt1"
+                                                >
+                                                                foo
+                                                </p>
+                                </div>
+                                <div
+                                                className="flex mt3 w100"
+                                >
+                                                <div>
+                                                                <p
+                                                                                className="copy"
+                                                                >
+                                                                                Location
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                >
+                                                                                foo
+                                                                </p>
+                                                </div>
+                                                <div>
+                                                                <Button
+                                                                                className="inline-flex"
+                                                                                color="clear-madison-blue-border"
+                                                                                disabled={false}
+                                                                                fullWidth={false}
+                                                                                hover="shadow"
+                                                                                label="Map"
+                                                                                onClick={[Function]}
+                                                                                shadow={false}
+                                                                                to="/locations/?location=undefined"
+                                                                                type="button"
+                                                                                variant="primary-small"
+                                                                />
+                                                </div>
+                                </div>
+                </div>
+                <Button
+                                className="my4"
+                                color="peach"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Call to Action"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary"
+                />
+                <div
+                                className="markdown-block"
+                                dangerouslySetInnerHTML={
+                                                Object {
+                                                                "__html": "",
+                                                              }
+                                }
+                />
+</div>,
+              "className": "col-12 md-col-6 flex flex-column items-center text-container-width mx-auto",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <div>
+                                        <p
+                                                            className="copy"
+                                        >
+                                                            Date
+                                        </p>
+                                        <p
+                                                            className="mt1"
+                                        >
+                                                            Invalid date
+                                        </p>
+                    </div>
+                    <div>
+                                        <p
+                                                            className="copy mt3"
+                                        >
+                                                            Time
+                                        </p>
+                                        <p
+                                                            className="mt1"
+                                        >
+                                                            foo
+                                        </p>
+                    </div>
+                    <div
+                                        className="flex mt3 w100"
+                    >
+                                        <div>
+                                                            <p
+                                                                                className="copy"
+                                                            >
+                                                                                Location
+                                                            </p>
+                                                            <p
+                                                                                className="mt1"
+                                                            >
+                                                                                foo
+                                                            </p>
+                                        </div>
+                                        <div>
+                                                            <Button
+                                                                                className="inline-flex"
+                                                                                color="clear-madison-blue-border"
+                                                                                disabled={false}
+                                                                                fullWidth={false}
+                                                                                hover="shadow"
+                                                                                label="Map"
+                                                                                onClick={[Function]}
+                                                                                shadow={false}
+                                                                                to="/locations/?location=undefined"
+                                                                                type="button"
+                                                                                variant="primary-small"
+                                                            />
+                                        </div>
+                    </div>
+</div>,
+                  <Button
+                    className="my4"
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Call to Action"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary"
+/>,
+                  null,
+                  <div
+                    className="markdown-block"
+                    dangerouslySetInnerHTML={
+                                        Object {
+                                                            "__html": "",
+                                                          }
+                    }
+/>,
+                ],
+                "className": "w100",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        <p
+                                                className="copy"
+                        >
+                                                Date
+                        </p>
+                        <p
+                                                className="mt1"
+                        >
+                                                Invalid date
+                        </p>
+</div>,
+                      <div>
+                        <p
+                                                className="copy mt3"
+                        >
+                                                Time
+                        </p>
+                        <p
+                                                className="mt1"
+                        >
+                                                foo
+                        </p>
+</div>,
+                      <div
+                        className="flex mt3 w100"
+>
+                        <div>
+                                                <p
+                                                                        className="copy"
+                                                >
+                                                                        Location
+                                                </p>
+                                                <p
+                                                                        className="mt1"
+                                                >
+                                                                        foo
+                                                </p>
+                        </div>
+                        <div>
+                                                <Button
+                                                                        className="inline-flex"
+                                                                        color="clear-madison-blue-border"
+                                                                        disabled={false}
+                                                                        fullWidth={false}
+                                                                        hover="shadow"
+                                                                        label="Map"
+                                                                        onClick={[Function]}
+                                                                        shadow={false}
+                                                                        to="/locations/?location=undefined"
+                                                                        type="button"
+                                                                        variant="primary-small"
+                                                />
+                        </div>
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p
+                            className="copy"
+>
+                            Date
+</p>,
+                          <p
+                            className="mt1"
+>
+                            Invalid date
+</p>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Date",
+                            "className": "copy",
+                          },
+                          "ref": null,
+                          "rendered": "Date",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Invalid date",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "Invalid date",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p
+                            className="copy mt3"
+>
+                            Time
+</p>,
+                          <p
+                            className="mt1"
+>
+                            foo
+</p>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Time",
+                            "className": "copy mt3",
+                          },
+                          "ref": null,
+                          "rendered": "Time",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "foo",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "foo",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div>
+                            <p
+                                                        className="copy"
+                            >
+                                                        Location
+                            </p>
+                            <p
+                                                        className="mt1"
+                            >
+                                                        foo
+                            </p>
+</div>,
+                          <div>
+                            <Button
+                                                        className="inline-flex"
+                                                        color="clear-madison-blue-border"
+                                                        disabled={false}
+                                                        fullWidth={false}
+                                                        hover="shadow"
+                                                        label="Map"
+                                                        onClick={[Function]}
+                                                        shadow={false}
+                                                        to="/locations/?location=undefined"
+                                                        type="button"
+                                                        variant="primary-small"
+                            />
+</div>,
+                        ],
+                        "className": "flex mt3 w100",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <p
+                                className="copy"
+>
+                                Location
+</p>,
+                              <p
+                                className="mt1"
+>
+                                foo
+</p>,
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Location",
+                                "className": "copy",
+                              },
+                              "ref": null,
+                              "rendered": "Location",
+                              "type": "p",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "foo",
+                                "className": "mt1",
+                              },
+                              "ref": null,
+                              "rendered": "foo",
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <Button
+                              className="inline-flex"
+                              color="clear-madison-blue-border"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="Map"
+                              onClick={[Function]}
+                              shadow={false}
+                              to="/locations/?location=undefined"
+                              type="button"
+                              variant="primary-small"
+/>,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "children": null,
+                              "className": "inline-flex",
+                              "color": "clear-madison-blue-border",
+                              "disabled": false,
+                              "fullWidth": false,
+                              "hover": "shadow",
+                              "label": "Map",
+                              "onClick": [Function],
+                              "shadow": false,
+                              "to": "/locations/?location=undefined",
+                              "type": "button",
+                              "variant": "primary-small",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": "div",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "my4",
+                    "color": "peach",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Call to Action",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "markdown-block",
+                    "dangerouslySetInnerHTML": Object {
+                      "__html": "",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex flex-column justify-center items-center w100 mt4"
+>
+            <h2
+                        className="block-headline"
+            >
+                        foo
+            </h2>
+            <div
+                        className="mt3"
+            >
+                        <CreatedButton
+                                    url="http://localhost/"
+                                    windowHeight={400}
+                                    windowWidth={550}
+                        >
+                                    <Button
+                                                className="inline-flex uppercase"
+                                                color="clear-madison-blue-border"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Share"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                    />
+                        </CreatedButton>
+            </div>
+</div>,
+          <div
+            className="flex mt4"
+>
+            <div
+                        className="col-12 md-col-6"
+            >
+                        <div
+                                    className="aspect-4-3 w100"
+                                    style={
+                                                Object {
+                                                            "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+            </div>
+            <div
+                        className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+            >
+                        <div
+                                    className="w100"
+                        >
+                                    <div>
+                                                <div>
+                                                            <p
+                                                                        className="copy"
+                                                            >
+                                                                        Date
+                                                            </p>
+                                                            <p
+                                                                        className="mt1"
+                                                            >
+                                                                        Invalid date
+                                                            </p>
+                                                </div>
+                                                <div>
+                                                            <p
+                                                                        className="copy mt3"
+                                                            >
+                                                                        Time
+                                                            </p>
+                                                            <p
+                                                                        className="mt1"
+                                                            >
+                                                                        foo
+                                                            </p>
+                                                </div>
+                                                <div
+                                                            className="flex mt3 w100"
+                                                >
+                                                            <div>
+                                                                        <p
+                                                                                    className="copy"
+                                                                        >
+                                                                                    Location
+                                                                        </p>
+                                                                        <p
+                                                                                    className="mt1"
+                                                                        >
+                                                                                    foo
+                                                                        </p>
+                                                            </div>
+                                                            <div>
+                                                                        <Button
+                                                                                    className="inline-flex"
+                                                                                    color="clear-madison-blue-border"
+                                                                                    disabled={false}
+                                                                                    fullWidth={false}
+                                                                                    hover="shadow"
+                                                                                    label="Map"
+                                                                                    onClick={[Function]}
+                                                                                    shadow={false}
+                                                                                    to="/locations/?location=undefined"
+                                                                                    type="button"
+                                                                                    variant="primary-small"
+                                                                        />
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <Button
+                                                className="my4"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
+                                    />
+                                    <div
+                                                className="markdown-block"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "",
+                                                                      }
+                                                }
+                                    />
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "flex flex-column mb4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline"
+>
+                foo
+</h2>,
+              <div
+                className="mt3"
+>
+                <CreatedButton
+                                url="http://localhost/"
+                                windowHeight={400}
+                                windowWidth={550}
+                >
+                                <Button
+                                                className="inline-flex uppercase"
+                                                color="clear-madison-blue-border"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Share"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                />
+                </CreatedButton>
+</div>,
+            ],
+            "className": "flex flex-column justify-center items-center w100 mt4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "foo",
+                "className": "block-headline",
+              },
+              "ref": null,
+              "rendered": "foo",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <CreatedButton
+                  url="http://localhost/"
+                  windowHeight={400}
+                  windowWidth={550}
+>
+                  <Button
+                                    className="inline-flex uppercase"
+                                    color="clear-madison-blue-border"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Share"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</CreatedButton>,
+                "className": "mt3",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Button
+                    className="inline-flex uppercase"
+                    color="clear-madison-blue-border"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Share"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "url": "http://localhost/",
+                  "windowHeight": 400,
+                  "windowWidth": 550,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "inline-flex uppercase",
+                    "color": "clear-madison-blue-border",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Share",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-12 md-col-6"
+>
+                <div
+                                className="aspect-4-3 w100"
+                                style={
+                                                Object {
+                                                                "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                "backgroundSize": "cover",
+                                                              }
+                                }
+                />
+</div>,
+              <div
+                className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+>
+                <div
+                                className="w100"
+                >
+                                <div>
+                                                <div>
+                                                                <p
+                                                                                className="copy"
+                                                                >
+                                                                                Date
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                >
+                                                                                Invalid date
+                                                                </p>
+                                                </div>
+                                                <div>
+                                                                <p
+                                                                                className="copy mt3"
+                                                                >
+                                                                                Time
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                >
+                                                                                foo
+                                                                </p>
+                                                </div>
+                                                <div
+                                                                className="flex mt3 w100"
+                                                >
+                                                                <div>
+                                                                                <p
+                                                                                                className="copy"
+                                                                                >
+                                                                                                Location
+                                                                                </p>
+                                                                                <p
+                                                                                                className="mt1"
+                                                                                >
+                                                                                                foo
+                                                                                </p>
+                                                                </div>
+                                                                <div>
+                                                                                <Button
+                                                                                                className="inline-flex"
+                                                                                                color="clear-madison-blue-border"
+                                                                                                disabled={false}
+                                                                                                fullWidth={false}
+                                                                                                hover="shadow"
+                                                                                                label="Map"
+                                                                                                onClick={[Function]}
+                                                                                                shadow={false}
+                                                                                                to="/locations/?location=undefined"
+                                                                                                type="button"
+                                                                                                variant="primary-small"
+                                                                                />
+                                                                </div>
+                                                </div>
+                                </div>
+                                <Button
+                                                className="my4"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
+                                />
+                                <div
+                                                className="markdown-block"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "",
+                                                                              }
+                                                }
+                                />
+                </div>
+</div>,
+            ],
+            "className": "flex mt4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="aspect-4-3 w100"
+                  style={
+                                    Object {
+                                                      "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                "className": "col-12 md-col-6",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-3 w100",
+                  "style": Object {
+                    "background": "url(foo?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="w100"
+>
+                  <div>
+                                    <div>
+                                                      <p
+                                                                        className="copy"
+                                                      >
+                                                                        Date
+                                                      </p>
+                                                      <p
+                                                                        className="mt1"
+                                                      >
+                                                                        Invalid date
+                                                      </p>
+                                    </div>
+                                    <div>
+                                                      <p
+                                                                        className="copy mt3"
+                                                      >
+                                                                        Time
+                                                      </p>
+                                                      <p
+                                                                        className="mt1"
+                                                      >
+                                                                        foo
+                                                      </p>
+                                    </div>
+                                    <div
+                                                      className="flex mt3 w100"
+                                    >
+                                                      <div>
+                                                                        <p
+                                                                                          className="copy"
+                                                                        >
+                                                                                          Location
+                                                                        </p>
+                                                                        <p
+                                                                                          className="mt1"
+                                                                        >
+                                                                                          foo
+                                                                        </p>
+                                                      </div>
+                                                      <div>
+                                                                        <Button
+                                                                                          className="inline-flex"
+                                                                                          color="clear-madison-blue-border"
+                                                                                          disabled={false}
+                                                                                          fullWidth={false}
+                                                                                          hover="shadow"
+                                                                                          label="Map"
+                                                                                          onClick={[Function]}
+                                                                                          shadow={false}
+                                                                                          to="/locations/?location=undefined"
+                                                                                          type="button"
+                                                                                          variant="primary-small"
+                                                                        />
+                                                      </div>
+                                    </div>
+                  </div>
+                  <Button
+                                    className="my4"
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Call to Action"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary"
+                  />
+                  <div
+                                    className="markdown-block"
+                                    dangerouslySetInnerHTML={
+                                                      Object {
+                                                                        "__html": "",
+                                                                      }
+                                    }
+                  />
+</div>,
+                "className": "col-12 md-col-6 flex flex-column items-center text-container-width mx-auto",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      <div>
+                                            <p
+                                                                  className="copy"
+                                            >
+                                                                  Date
+                                            </p>
+                                            <p
+                                                                  className="mt1"
+                                            >
+                                                                  Invalid date
+                                            </p>
+                      </div>
+                      <div>
+                                            <p
+                                                                  className="copy mt3"
+                                            >
+                                                                  Time
+                                            </p>
+                                            <p
+                                                                  className="mt1"
+                                            >
+                                                                  foo
+                                            </p>
+                      </div>
+                      <div
+                                            className="flex mt3 w100"
+                      >
+                                            <div>
+                                                                  <p
+                                                                                        className="copy"
+                                                                  >
+                                                                                        Location
+                                                                  </p>
+                                                                  <p
+                                                                                        className="mt1"
+                                                                  >
+                                                                                        foo
+                                                                  </p>
+                                            </div>
+                                            <div>
+                                                                  <Button
+                                                                                        className="inline-flex"
+                                                                                        color="clear-madison-blue-border"
+                                                                                        disabled={false}
+                                                                                        fullWidth={false}
+                                                                                        hover="shadow"
+                                                                                        label="Map"
+                                                                                        onClick={[Function]}
+                                                                                        shadow={false}
+                                                                                        to="/locations/?location=undefined"
+                                                                                        type="button"
+                                                                                        variant="primary-small"
+                                                                  />
+                                            </div>
+                      </div>
+</div>,
+                    <Button
+                      className="my4"
+                      color="peach"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Call to Action"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="primary"
+/>,
+                    null,
+                    <div
+                      className="markdown-block"
+                      dangerouslySetInnerHTML={
+                                            Object {
+                                                                  "__html": "",
+                                                                }
+                      }
+/>,
+                  ],
+                  "className": "w100",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div>
+                          <p
+                                                    className="copy"
+                          >
+                                                    Date
+                          </p>
+                          <p
+                                                    className="mt1"
+                          >
+                                                    Invalid date
+                          </p>
+</div>,
+                        <div>
+                          <p
+                                                    className="copy mt3"
+                          >
+                                                    Time
+                          </p>
+                          <p
+                                                    className="mt1"
+                          >
+                                                    foo
+                          </p>
+</div>,
+                        <div
+                          className="flex mt3 w100"
+>
+                          <div>
+                                                    <p
+                                                                              className="copy"
+                                                    >
+                                                                              Location
+                                                    </p>
+                                                    <p
+                                                                              className="mt1"
+                                                    >
+                                                                              foo
+                                                    </p>
+                          </div>
+                          <div>
+                                                    <Button
+                                                                              className="inline-flex"
+                                                                              color="clear-madison-blue-border"
+                                                                              disabled={false}
+                                                                              fullWidth={false}
+                                                                              hover="shadow"
+                                                                              label="Map"
+                                                                              onClick={[Function]}
+                                                                              shadow={false}
+                                                                              to="/locations/?location=undefined"
+                                                                              type="button"
+                                                                              variant="primary-small"
+                                                    />
+                          </div>
+</div>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p
+                              className="copy"
+>
+                              Date
+</p>,
+                            <p
+                              className="mt1"
+>
+                              Invalid date
+</p>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Date",
+                              "className": "copy",
+                            },
+                            "ref": null,
+                            "rendered": "Date",
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Invalid date",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "Invalid date",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p
+                              className="copy mt3"
+>
+                              Time
+</p>,
+                            <p
+                              className="mt1"
+>
+                              foo
+</p>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Time",
+                              "className": "copy mt3",
+                            },
+                            "ref": null,
+                            "rendered": "Time",
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "foo",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "foo",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <div>
+                              <p
+                                                            className="copy"
+                              >
+                                                            Location
+                              </p>
+                              <p
+                                                            className="mt1"
+                              >
+                                                            foo
+                              </p>
+</div>,
+                            <div>
+                              <Button
+                                                            className="inline-flex"
+                                                            color="clear-madison-blue-border"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label="Map"
+                                                            onClick={[Function]}
+                                                            shadow={false}
+                                                            to="/locations/?location=undefined"
+                                                            type="button"
+                                                            variant="primary-small"
+                              />
+</div>,
+                          ],
+                          "className": "flex mt3 w100",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <p
+                                  className="copy"
+>
+                                  Location
+</p>,
+                                <p
+                                  className="mt1"
+>
+                                  foo
+</p>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Location",
+                                  "className": "copy",
+                                },
+                                "ref": null,
+                                "rendered": "Location",
+                                "type": "p",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "foo",
+                                  "className": "mt1",
+                                },
+                                "ref": null,
+                                "rendered": "foo",
+                                "type": "p",
+                              },
+                            ],
+                            "type": "div",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": <Button
+                                className="inline-flex"
+                                color="clear-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Map"
+                                onClick={[Function]}
+                                shadow={false}
+                                to="/locations/?location=undefined"
+                                type="button"
+                                variant="primary-small"
+/>,
+                            },
+                            "ref": null,
+                            "rendered": Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {
+                                "children": null,
+                                "className": "inline-flex",
+                                "color": "clear-madison-blue-border",
+                                "disabled": false,
+                                "fullWidth": false,
+                                "hover": "shadow",
+                                "label": "Map",
+                                "onClick": [Function],
+                                "shadow": false,
+                                "to": "/locations/?location=undefined",
+                                "type": "button",
+                                "variant": "primary-small",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            "type": "div",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "my4",
+                      "color": "peach",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Call to Action",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "markdown-block",
+                      "dangerouslySetInnerHTML": Object {
+                        "__html": "",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EventDetailHero
+    actions={
+        Object {
+            "getEvents": [Function],
+          }
+    }
+    event={
+        Object {
+            "blockCardText": "",
+            "datesAndTimes": Array [
+              Object {
+                "Date": "",
+                "Time": "",
+                "uuid": "",
+              },
+            ],
+            "eventType": "",
+            "id": "",
+            "image": "",
+            "locationTitle": "",
+            "title": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="flex flex-column justify-center items-center w100 mt4"
+>
+          <h2
+                    className="block-headline"
+          />
+          <div
+                    className="mt3"
+          >
+                    <CreatedButton
+                              url="http://localhost/"
+                              windowHeight={400}
+                              windowWidth={550}
+                    >
+                              <Button
+                                        className="inline-flex uppercase"
+                                        color="clear-madison-blue-border"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Share"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </CreatedButton>
+          </div>
+</div>,
+        <div
+          className="flex mt4"
+>
+          <div
+                    className="col-12 md-col-6"
+          >
+                    <div
+                              className="aspect-4-3 w100"
+                              style={
+                                        Object {
+                                                  "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
+                    />
+          </div>
+          <div
+                    className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+          >
+                    <div
+                              className="w100"
+                    >
+                              <div>
+                                        <div>
+                                                  <p
+                                                            className="copy"
+                                                  >
+                                                            Date
+                                                  </p>
+                                                  <p
+                                                            className="mt1"
+                                                  >
+                                                            Invalid date
+                                                  </p>
+                                        </div>
+                                        <div>
+                                                  <p
+                                                            className="copy mt3"
+                                                  >
+                                                            Time
+                                                  </p>
+                                                  <p
+                                                            className="mt1"
+                                                  />
+                                        </div>
+                                        <div
+                                                  className="flex mt3 w100"
+                                        >
+                                                  <div>
+                                                            <p
+                                                                      className="copy"
+                                                            >
+                                                                      Location
+                                                            </p>
+                                                            <p
+                                                                      className="mt1"
+                                                            />
+                                                  </div>
+                                                  <div>
+                                                            <Button
+                                                                      className="inline-flex"
+                                                                      color="clear-madison-blue-border"
+                                                                      disabled={false}
+                                                                      fullWidth={false}
+                                                                      hover="shadow"
+                                                                      label="Map"
+                                                                      onClick={[Function]}
+                                                                      shadow={false}
+                                                                      to="/locations/?location=undefined"
+                                                                      type="button"
+                                                                      variant="primary-small"
+                                                            />
+                                                  </div>
+                                        </div>
+                              </div>
+                              <Button
+                                        className="my4"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Call to Action"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary"
+                              />
+                              <div
+                                        className="markdown-block"
+                                        dangerouslySetInnerHTML={
+                                                  Object {
+                                                            "__html": "",
+                                                          }
+                                        }
+                              />
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "flex flex-column mb4",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="block-headline"
+/>,
+            <div
+              className="mt3"
+>
+              <CreatedButton
+                            url="http://localhost/"
+                            windowHeight={400}
+                            windowWidth={550}
+              >
+                            <Button
+                                          className="inline-flex uppercase"
+                                          color="clear-madison-blue-border"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Share"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </CreatedButton>
+</div>,
+          ],
+          "className": "flex flex-column justify-center items-center w100 mt4",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+              "className": "block-headline",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <CreatedButton
+                url="http://localhost/"
+                windowHeight={400}
+                windowWidth={550}
+>
+                <Button
+                                className="inline-flex uppercase"
+                                color="clear-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Share"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</CreatedButton>,
+              "className": "mt3",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Button
+                  className="inline-flex uppercase"
+                  color="clear-madison-blue-border"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="Share"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                "url": "http://localhost/",
+                "windowHeight": 400,
+                "windowWidth": 550,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "inline-flex uppercase",
+                  "color": "clear-madison-blue-border",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "Share",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-12 md-col-6"
+>
+              <div
+                            className="aspect-4-3 w100"
+                            style={
+                                          Object {
+                                                        "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+</div>,
+            <div
+              className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+>
+              <div
+                            className="w100"
+              >
+                            <div>
+                                          <div>
+                                                        <p
+                                                                      className="copy"
+                                                        >
+                                                                      Date
+                                                        </p>
+                                                        <p
+                                                                      className="mt1"
+                                                        >
+                                                                      Invalid date
+                                                        </p>
+                                          </div>
+                                          <div>
+                                                        <p
+                                                                      className="copy mt3"
+                                                        >
+                                                                      Time
+                                                        </p>
+                                                        <p
+                                                                      className="mt1"
+                                                        />
+                                          </div>
+                                          <div
+                                                        className="flex mt3 w100"
+                                          >
+                                                        <div>
+                                                                      <p
+                                                                                    className="copy"
+                                                                      >
+                                                                                    Location
+                                                                      </p>
+                                                                      <p
+                                                                                    className="mt1"
+                                                                      />
+                                                        </div>
+                                                        <div>
+                                                                      <Button
+                                                                                    className="inline-flex"
+                                                                                    color="clear-madison-blue-border"
+                                                                                    disabled={false}
+                                                                                    fullWidth={false}
+                                                                                    hover="shadow"
+                                                                                    label="Map"
+                                                                                    onClick={[Function]}
+                                                                                    shadow={false}
+                                                                                    to="/locations/?location=undefined"
+                                                                                    type="button"
+                                                                                    variant="primary-small"
+                                                                      />
+                                                        </div>
+                                          </div>
+                            </div>
+                            <Button
+                                          className="my4"
+                                          color="peach"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Call to Action"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="primary"
+                            />
+                            <div
+                                          className="markdown-block"
+                                          dangerouslySetInnerHTML={
+                                                        Object {
+                                                                      "__html": "",
+                                                                    }
+                                          }
+                            />
+              </div>
+</div>,
+          ],
+          "className": "flex mt4",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="aspect-4-3 w100"
+                style={
+                                Object {
+                                                "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
+/>,
+              "className": "col-12 md-col-6",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "aspect-4-3 w100",
+                "style": Object {
+                  "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                  "backgroundSize": "cover",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="w100"
+>
+                <div>
+                                <div>
+                                                <p
+                                                                className="copy"
+                                                >
+                                                                Date
+                                                </p>
+                                                <p
+                                                                className="mt1"
+                                                >
+                                                                Invalid date
+                                                </p>
+                                </div>
+                                <div>
+                                                <p
+                                                                className="copy mt3"
+                                                >
+                                                                Time
+                                                </p>
+                                                <p
+                                                                className="mt1"
+                                                />
+                                </div>
+                                <div
+                                                className="flex mt3 w100"
+                                >
+                                                <div>
+                                                                <p
+                                                                                className="copy"
+                                                                >
+                                                                                Location
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                />
+                                                </div>
+                                                <div>
+                                                                <Button
+                                                                                className="inline-flex"
+                                                                                color="clear-madison-blue-border"
+                                                                                disabled={false}
+                                                                                fullWidth={false}
+                                                                                hover="shadow"
+                                                                                label="Map"
+                                                                                onClick={[Function]}
+                                                                                shadow={false}
+                                                                                to="/locations/?location=undefined"
+                                                                                type="button"
+                                                                                variant="primary-small"
+                                                                />
+                                                </div>
+                                </div>
+                </div>
+                <Button
+                                className="my4"
+                                color="peach"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Call to Action"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary"
+                />
+                <div
+                                className="markdown-block"
+                                dangerouslySetInnerHTML={
+                                                Object {
+                                                                "__html": "",
+                                                              }
+                                }
+                />
+</div>,
+              "className": "col-12 md-col-6 flex flex-column items-center text-container-width mx-auto",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div>
+                    <div>
+                                        <p
+                                                            className="copy"
+                                        >
+                                                            Date
+                                        </p>
+                                        <p
+                                                            className="mt1"
+                                        >
+                                                            Invalid date
+                                        </p>
+                    </div>
+                    <div>
+                                        <p
+                                                            className="copy mt3"
+                                        >
+                                                            Time
+                                        </p>
+                                        <p
+                                                            className="mt1"
+                                        />
+                    </div>
+                    <div
+                                        className="flex mt3 w100"
+                    >
+                                        <div>
+                                                            <p
+                                                                                className="copy"
+                                                            >
+                                                                                Location
+                                                            </p>
+                                                            <p
+                                                                                className="mt1"
+                                                            />
+                                        </div>
+                                        <div>
+                                                            <Button
+                                                                                className="inline-flex"
+                                                                                color="clear-madison-blue-border"
+                                                                                disabled={false}
+                                                                                fullWidth={false}
+                                                                                hover="shadow"
+                                                                                label="Map"
+                                                                                onClick={[Function]}
+                                                                                shadow={false}
+                                                                                to="/locations/?location=undefined"
+                                                                                type="button"
+                                                                                variant="primary-small"
+                                                            />
+                                        </div>
+                    </div>
+</div>,
+                  <Button
+                    className="my4"
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Call to Action"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary"
+/>,
+                  null,
+                  <div
+                    className="markdown-block"
+                    dangerouslySetInnerHTML={
+                                        Object {
+                                                            "__html": "",
+                                                          }
+                    }
+/>,
+                ],
+                "className": "w100",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        <p
+                                                className="copy"
+                        >
+                                                Date
+                        </p>
+                        <p
+                                                className="mt1"
+                        >
+                                                Invalid date
+                        </p>
+</div>,
+                      <div>
+                        <p
+                                                className="copy mt3"
+                        >
+                                                Time
+                        </p>
+                        <p
+                                                className="mt1"
+                        />
+</div>,
+                      <div
+                        className="flex mt3 w100"
+>
+                        <div>
+                                                <p
+                                                                        className="copy"
+                                                >
+                                                                        Location
+                                                </p>
+                                                <p
+                                                                        className="mt1"
+                                                />
+                        </div>
+                        <div>
+                                                <Button
+                                                                        className="inline-flex"
+                                                                        color="clear-madison-blue-border"
+                                                                        disabled={false}
+                                                                        fullWidth={false}
+                                                                        hover="shadow"
+                                                                        label="Map"
+                                                                        onClick={[Function]}
+                                                                        shadow={false}
+                                                                        to="/locations/?location=undefined"
+                                                                        type="button"
+                                                                        variant="primary-small"
+                                                />
+                        </div>
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p
+                            className="copy"
+>
+                            Date
+</p>,
+                          <p
+                            className="mt1"
+>
+                            Invalid date
+</p>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Date",
+                            "className": "copy",
+                          },
+                          "ref": null,
+                          "rendered": "Date",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Invalid date",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "Invalid date",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <p
+                            className="copy mt3"
+>
+                            Time
+</p>,
+                          <p
+                            className="mt1"
+/>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Time",
+                            "className": "copy mt3",
+                          },
+                          "ref": null,
+                          "rendered": "Time",
+                          "type": "p",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "",
+                          "type": "p",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div>
+                            <p
+                                                        className="copy"
+                            >
+                                                        Location
+                            </p>
+                            <p
+                                                        className="mt1"
+                            />
+</div>,
+                          <div>
+                            <Button
+                                                        className="inline-flex"
+                                                        color="clear-madison-blue-border"
+                                                        disabled={false}
+                                                        fullWidth={false}
+                                                        hover="shadow"
+                                                        label="Map"
+                                                        onClick={[Function]}
+                                                        shadow={false}
+                                                        to="/locations/?location=undefined"
+                                                        type="button"
+                                                        variant="primary-small"
+                            />
+</div>,
+                        ],
+                        "className": "flex mt3 w100",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <p
+                                className="copy"
+>
+                                Location
+</p>,
+                              <p
+                                className="mt1"
+/>,
+                            ],
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Location",
+                                "className": "copy",
+                              },
+                              "ref": null,
+                              "rendered": "Location",
+                              "type": "p",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "",
+                                "className": "mt1",
+                              },
+                              "ref": null,
+                              "rendered": "",
+                              "type": "p",
+                            },
+                          ],
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": <Button
+                              className="inline-flex"
+                              color="clear-madison-blue-border"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="Map"
+                              onClick={[Function]}
+                              shadow={false}
+                              to="/locations/?location=undefined"
+                              type="button"
+                              variant="primary-small"
+/>,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "function",
+                            "props": Object {
+                              "children": null,
+                              "className": "inline-flex",
+                              "color": "clear-madison-blue-border",
+                              "disabled": false,
+                              "fullWidth": false,
+                              "hover": "shadow",
+                              "label": "Map",
+                              "onClick": [Function],
+                              "shadow": false,
+                              "to": "/locations/?location=undefined",
+                              "type": "button",
+                              "variant": "primary-small",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": "div",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "my4",
+                    "color": "peach",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Call to Action",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "markdown-block",
+                    "dangerouslySetInnerHTML": Object {
+                      "__html": "",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex flex-column justify-center items-center w100 mt4"
+>
+            <h2
+                        className="block-headline"
+            />
+            <div
+                        className="mt3"
+            >
+                        <CreatedButton
+                                    url="http://localhost/"
+                                    windowHeight={400}
+                                    windowWidth={550}
+                        >
+                                    <Button
+                                                className="inline-flex uppercase"
+                                                color="clear-madison-blue-border"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Share"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                    />
+                        </CreatedButton>
+            </div>
+</div>,
+          <div
+            className="flex mt4"
+>
+            <div
+                        className="col-12 md-col-6"
+            >
+                        <div
+                                    className="aspect-4-3 w100"
+                                    style={
+                                                Object {
+                                                            "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+            </div>
+            <div
+                        className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+            >
+                        <div
+                                    className="w100"
+                        >
+                                    <div>
+                                                <div>
+                                                            <p
+                                                                        className="copy"
+                                                            >
+                                                                        Date
+                                                            </p>
+                                                            <p
+                                                                        className="mt1"
+                                                            >
+                                                                        Invalid date
+                                                            </p>
+                                                </div>
+                                                <div>
+                                                            <p
+                                                                        className="copy mt3"
+                                                            >
+                                                                        Time
+                                                            </p>
+                                                            <p
+                                                                        className="mt1"
+                                                            />
+                                                </div>
+                                                <div
+                                                            className="flex mt3 w100"
+                                                >
+                                                            <div>
+                                                                        <p
+                                                                                    className="copy"
+                                                                        >
+                                                                                    Location
+                                                                        </p>
+                                                                        <p
+                                                                                    className="mt1"
+                                                                        />
+                                                            </div>
+                                                            <div>
+                                                                        <Button
+                                                                                    className="inline-flex"
+                                                                                    color="clear-madison-blue-border"
+                                                                                    disabled={false}
+                                                                                    fullWidth={false}
+                                                                                    hover="shadow"
+                                                                                    label="Map"
+                                                                                    onClick={[Function]}
+                                                                                    shadow={false}
+                                                                                    to="/locations/?location=undefined"
+                                                                                    type="button"
+                                                                                    variant="primary-small"
+                                                                        />
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <Button
+                                                className="my4"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
+                                    />
+                                    <div
+                                                className="markdown-block"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "",
+                                                                      }
+                                                }
+                                    />
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "flex flex-column mb4",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline"
+/>,
+              <div
+                className="mt3"
+>
+                <CreatedButton
+                                url="http://localhost/"
+                                windowHeight={400}
+                                windowWidth={550}
+                >
+                                <Button
+                                                className="inline-flex uppercase"
+                                                color="clear-madison-blue-border"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Share"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary-small"
+                                />
+                </CreatedButton>
+</div>,
+            ],
+            "className": "flex flex-column justify-center items-center w100 mt4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "block-headline",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <CreatedButton
+                  url="http://localhost/"
+                  windowHeight={400}
+                  windowWidth={550}
+>
+                  <Button
+                                    className="inline-flex uppercase"
+                                    color="clear-madison-blue-border"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Share"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</CreatedButton>,
+                "className": "mt3",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Button
+                    className="inline-flex uppercase"
+                    color="clear-madison-blue-border"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Share"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "url": "http://localhost/",
+                  "windowHeight": 400,
+                  "windowWidth": 550,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "inline-flex uppercase",
+                    "color": "clear-madison-blue-border",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Share",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-12 md-col-6"
+>
+                <div
+                                className="aspect-4-3 w100"
+                                style={
+                                                Object {
+                                                                "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                "backgroundSize": "cover",
+                                                              }
+                                }
+                />
+</div>,
+              <div
+                className="col-12 md-col-6 flex flex-column items-center text-container-width mx-auto"
+>
+                <div
+                                className="w100"
+                >
+                                <div>
+                                                <div>
+                                                                <p
+                                                                                className="copy"
+                                                                >
+                                                                                Date
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                >
+                                                                                Invalid date
+                                                                </p>
+                                                </div>
+                                                <div>
+                                                                <p
+                                                                                className="copy mt3"
+                                                                >
+                                                                                Time
+                                                                </p>
+                                                                <p
+                                                                                className="mt1"
+                                                                />
+                                                </div>
+                                                <div
+                                                                className="flex mt3 w100"
+                                                >
+                                                                <div>
+                                                                                <p
+                                                                                                className="copy"
+                                                                                >
+                                                                                                Location
+                                                                                </p>
+                                                                                <p
+                                                                                                className="mt1"
+                                                                                />
+                                                                </div>
+                                                                <div>
+                                                                                <Button
+                                                                                                className="inline-flex"
+                                                                                                color="clear-madison-blue-border"
+                                                                                                disabled={false}
+                                                                                                fullWidth={false}
+                                                                                                hover="shadow"
+                                                                                                label="Map"
+                                                                                                onClick={[Function]}
+                                                                                                shadow={false}
+                                                                                                to="/locations/?location=undefined"
+                                                                                                type="button"
+                                                                                                variant="primary-small"
+                                                                                />
+                                                                </div>
+                                                </div>
+                                </div>
+                                <Button
+                                                className="my4"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Call to Action"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
+                                />
+                                <div
+                                                className="markdown-block"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "",
+                                                                              }
+                                                }
+                                />
+                </div>
+</div>,
+            ],
+            "className": "flex mt4",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="aspect-4-3 w100"
+                  style={
+                                    Object {
+                                                      "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                "className": "col-12 md-col-6",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-3 w100",
+                  "style": Object {
+                    "background": "url(?w=1600&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="w100"
+>
+                  <div>
+                                    <div>
+                                                      <p
+                                                                        className="copy"
+                                                      >
+                                                                        Date
+                                                      </p>
+                                                      <p
+                                                                        className="mt1"
+                                                      >
+                                                                        Invalid date
+                                                      </p>
+                                    </div>
+                                    <div>
+                                                      <p
+                                                                        className="copy mt3"
+                                                      >
+                                                                        Time
+                                                      </p>
+                                                      <p
+                                                                        className="mt1"
+                                                      />
+                                    </div>
+                                    <div
+                                                      className="flex mt3 w100"
+                                    >
+                                                      <div>
+                                                                        <p
+                                                                                          className="copy"
+                                                                        >
+                                                                                          Location
+                                                                        </p>
+                                                                        <p
+                                                                                          className="mt1"
+                                                                        />
+                                                      </div>
+                                                      <div>
+                                                                        <Button
+                                                                                          className="inline-flex"
+                                                                                          color="clear-madison-blue-border"
+                                                                                          disabled={false}
+                                                                                          fullWidth={false}
+                                                                                          hover="shadow"
+                                                                                          label="Map"
+                                                                                          onClick={[Function]}
+                                                                                          shadow={false}
+                                                                                          to="/locations/?location=undefined"
+                                                                                          type="button"
+                                                                                          variant="primary-small"
+                                                                        />
+                                                      </div>
+                                    </div>
+                  </div>
+                  <Button
+                                    className="my4"
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Call to Action"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary"
+                  />
+                  <div
+                                    className="markdown-block"
+                                    dangerouslySetInnerHTML={
+                                                      Object {
+                                                                        "__html": "",
+                                                                      }
+                                    }
+                  />
+</div>,
+                "className": "col-12 md-col-6 flex flex-column items-center text-container-width mx-auto",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      <div>
+                                            <p
+                                                                  className="copy"
+                                            >
+                                                                  Date
+                                            </p>
+                                            <p
+                                                                  className="mt1"
+                                            >
+                                                                  Invalid date
+                                            </p>
+                      </div>
+                      <div>
+                                            <p
+                                                                  className="copy mt3"
+                                            >
+                                                                  Time
+                                            </p>
+                                            <p
+                                                                  className="mt1"
+                                            />
+                      </div>
+                      <div
+                                            className="flex mt3 w100"
+                      >
+                                            <div>
+                                                                  <p
+                                                                                        className="copy"
+                                                                  >
+                                                                                        Location
+                                                                  </p>
+                                                                  <p
+                                                                                        className="mt1"
+                                                                  />
+                                            </div>
+                                            <div>
+                                                                  <Button
+                                                                                        className="inline-flex"
+                                                                                        color="clear-madison-blue-border"
+                                                                                        disabled={false}
+                                                                                        fullWidth={false}
+                                                                                        hover="shadow"
+                                                                                        label="Map"
+                                                                                        onClick={[Function]}
+                                                                                        shadow={false}
+                                                                                        to="/locations/?location=undefined"
+                                                                                        type="button"
+                                                                                        variant="primary-small"
+                                                                  />
+                                            </div>
+                      </div>
+</div>,
+                    <Button
+                      className="my4"
+                      color="peach"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Call to Action"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="primary"
+/>,
+                    null,
+                    <div
+                      className="markdown-block"
+                      dangerouslySetInnerHTML={
+                                            Object {
+                                                                  "__html": "",
+                                                                }
+                      }
+/>,
+                  ],
+                  "className": "w100",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div>
+                          <p
+                                                    className="copy"
+                          >
+                                                    Date
+                          </p>
+                          <p
+                                                    className="mt1"
+                          >
+                                                    Invalid date
+                          </p>
+</div>,
+                        <div>
+                          <p
+                                                    className="copy mt3"
+                          >
+                                                    Time
+                          </p>
+                          <p
+                                                    className="mt1"
+                          />
+</div>,
+                        <div
+                          className="flex mt3 w100"
+>
+                          <div>
+                                                    <p
+                                                                              className="copy"
+                                                    >
+                                                                              Location
+                                                    </p>
+                                                    <p
+                                                                              className="mt1"
+                                                    />
+                          </div>
+                          <div>
+                                                    <Button
+                                                                              className="inline-flex"
+                                                                              color="clear-madison-blue-border"
+                                                                              disabled={false}
+                                                                              fullWidth={false}
+                                                                              hover="shadow"
+                                                                              label="Map"
+                                                                              onClick={[Function]}
+                                                                              shadow={false}
+                                                                              to="/locations/?location=undefined"
+                                                                              type="button"
+                                                                              variant="primary-small"
+                                                    />
+                          </div>
+</div>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p
+                              className="copy"
+>
+                              Date
+</p>,
+                            <p
+                              className="mt1"
+>
+                              Invalid date
+</p>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Date",
+                              "className": "copy",
+                            },
+                            "ref": null,
+                            "rendered": "Date",
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Invalid date",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "Invalid date",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <p
+                              className="copy mt3"
+>
+                              Time
+</p>,
+                            <p
+                              className="mt1"
+/>,
+                          ],
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Time",
+                              "className": "copy mt3",
+                            },
+                            "ref": null,
+                            "rendered": "Time",
+                            "type": "p",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "",
+                            "type": "p",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <div>
+                              <p
+                                                            className="copy"
+                              >
+                                                            Location
+                              </p>
+                              <p
+                                                            className="mt1"
+                              />
+</div>,
+                            <div>
+                              <Button
+                                                            className="inline-flex"
+                                                            color="clear-madison-blue-border"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label="Map"
+                                                            onClick={[Function]}
+                                                            shadow={false}
+                                                            to="/locations/?location=undefined"
+                                                            type="button"
+                                                            variant="primary-small"
+                              />
+</div>,
+                          ],
+                          "className": "flex mt3 w100",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                <p
+                                  className="copy"
+>
+                                  Location
+</p>,
+                                <p
+                                  className="mt1"
+/>,
+                              ],
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "Location",
+                                  "className": "copy",
+                                },
+                                "ref": null,
+                                "rendered": "Location",
+                                "type": "p",
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "host",
+                                "props": Object {
+                                  "children": "",
+                                  "className": "mt1",
+                                },
+                                "ref": null,
+                                "rendered": "",
+                                "type": "p",
+                              },
+                            ],
+                            "type": "div",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": <Button
+                                className="inline-flex"
+                                color="clear-madison-blue-border"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Map"
+                                onClick={[Function]}
+                                shadow={false}
+                                to="/locations/?location=undefined"
+                                type="button"
+                                variant="primary-small"
+/>,
+                            },
+                            "ref": null,
+                            "rendered": Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "function",
+                              "props": Object {
+                                "children": null,
+                                "className": "inline-flex",
+                                "color": "clear-madison-blue-border",
+                                "disabled": false,
+                                "fullWidth": false,
+                                "hover": "shadow",
+                                "label": "Map",
+                                "onClick": [Function],
+                                "shadow": false,
+                                "to": "/locations/?location=undefined",
+                                "type": "button",
+                                "variant": "primary-small",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            "type": "div",
+                          },
+                        ],
+                        "type": "div",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "my4",
+                      "color": "peach",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Call to Action",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "markdown-block",
+                      "dangerouslySetInnerHTML": Object {
+                        "__html": "",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "div",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

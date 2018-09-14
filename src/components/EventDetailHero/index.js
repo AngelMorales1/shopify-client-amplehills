@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
 import getShortTimeFormat from 'utils/getShortTimeFormat';
@@ -12,14 +13,12 @@ import { Button } from 'components/base';
 import styles from './EventDetailHero.scss';
 
 const EventDetailHero = ({ event, actions }) => {
-  const url = new URL(window.location.href).href;
-
   return (
     <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
       <div className="flex flex-column justify-center items-center w100 mt4">
         <h2 className="block-headline">{event.title}</h2>
         <div className="mt3">
-          <FacebookShareButton url={url}>
+          <FacebookShareButton url={get(window, 'location.href', '')}>
             <Button
               className="inline-flex uppercase"
               variant="primary-small"
@@ -134,7 +133,9 @@ const EventDetailHero = ({ event, actions }) => {
               <p className="copy text-peach bold mb1">Details</p>
             ) : null}
             <div
-              dangerouslySetInnerHTML={{ __html: marked(event.text) }}
+              dangerouslySetInnerHTML={{
+                __html: marked(get(event, 'text', ''))
+              }}
               className="markdown-block"
             />
           </div>
@@ -145,11 +146,17 @@ const EventDetailHero = ({ event, actions }) => {
 };
 
 EventDetailHero.propTypes = {
-  event: eventModel.propTypes
+  event: eventModel.propTypes,
+  actions: PropTypes.shape({
+    getEvents: PropTypes.func
+  })
 };
 
 EventDetailHero.defaultProps = {
-  event: eventModel.default
+  event: eventModel.default,
+  actions: {
+    getEvents: () => {}
+  }
 };
 
 export default EventDetailHero;
