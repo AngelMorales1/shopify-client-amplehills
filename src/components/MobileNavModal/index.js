@@ -184,24 +184,6 @@ class MobileNavModal extends Component {
   }
 }
 
-MobileNavModal.propTypes = {
-  actions: PropTypes.shape({
-    closeMobileNav: PropTypes.func
-  }),
-  mobileNavIsOpen: PropTypes.bool,
-  locations: PropTypes.arrayOf(locationModel.propTypes),
-  locationsByRegions: PropTypes.Object
-};
-
-MobileNavModal.defaultProps = {
-  actions: {
-    closeMobileNav: () => {}
-  },
-  mobileNavIsOpen: false,
-  locations: [],
-  locationsByRegions: {}
-};
-
 const mapStateToProps = state => {
   return {
     ...state,
@@ -220,6 +202,24 @@ const mapDispatchToProps = dispatch => {
       dispatch
     )
   };
+};
+
+MobileNavModal.propTypes = {
+  actions: PropTypes.shape({
+    closeMobileNav: PropTypes.func
+  }),
+  mobileNavIsOpen: PropTypes.bool,
+  locations: PropTypes.arrayOf(locationModel.propTypes),
+  locationsByRegions: PropTypes.object
+};
+
+MobileNavModal.defaultProps = {
+  actions: {
+    closeMobileNav: () => {}
+  },
+  mobileNavIsOpen: false,
+  locations: [],
+  locationsByRegions: {}
 };
 
 export default connect(
