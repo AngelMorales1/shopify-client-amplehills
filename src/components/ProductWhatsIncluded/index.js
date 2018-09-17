@@ -36,14 +36,24 @@ const ProductWhatsIncluded = ({
       )}
       style={{ zIndex: z }}
     >
-      <h2
-        className={cx(
-          styles['ProductWhatsIncluded__block-title'],
-          'block-headline my3 nowrap col-12 md-col-6 center'
-        )}
-      >
-        What&rsquo;s included
-      </h2>
+      <div className="col-12 md-col-6">
+        <h2 className="block-headline my3 nowrap center flex flex-column items-center justify-center">
+          What&rsquo;s included
+        </h2>
+        {fields.illustration ? (
+          <div className="center xs-hide sm-hide mx-auto">
+            <Image
+              className="col-4 mt3"
+              alt="what&rsquo;s included image"
+              src={contentfulImgUtil(
+                get(fields, 'illustration.fields.file.url', ''),
+                '600',
+                'png'
+              )}
+            />
+          </div>
+        ) : null}
+      </div>
       <div className="flex flex-column col-12 md-col-6">
         {whatsIncludedProducts.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');

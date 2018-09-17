@@ -1,30 +1,17 @@
 @import 'settings';
 
 .ProductWhatsIncluded {
+  &--light-pink {
+    @extend .bg-baby-pink;
+    @extend .text-madison-blue;
+  }
+
   padding: spacing(10) spacing(4);
   flex-direction: column;
-  align-items: center;
 
   @media ($medium-up) {
     padding: spacing(20) spacing(4) spacing(10);
     flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  &__block-title {
-    @media ($medium-up) {
-      position: absolute;
-      left: 0;
-      transform: translate(0, spacing(-30));
-    }
-  }
-
-  &__illustration {
-    @media ($medium-up) {
-      position: absolute;
-      left: 0;
-      transform: translate(0, spacing(30));
-    }
   }
 
   &__flavor-container {
@@ -32,10 +19,5 @@
       padding: spacing(2) 0;
       max-width: spacing(150);
     }
-  }
-
-  &--light-pink {
-    @extend .bg-baby-pink;
-    @extend .text-madison-blue;
   }
 }

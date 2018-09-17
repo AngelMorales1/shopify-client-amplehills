@@ -17,6 +17,7 @@ const GenericHero = ({ block, z }) => {
   const classes = cx(
     styles[colorClass],
     {
+      pb4: !isDripOn,
       drip: isDripOn
     },
     'pb2 z-sub-nav'
@@ -24,7 +25,7 @@ const GenericHero = ({ block, z }) => {
 
   return (
     <div style={{ zIndex: z }} className={classes}>
-      <div className="transition-slide-up container-width mx-auto pt4 px2 center">
+      <div className="transition-slide-up container-width mx-auto pt4 pb2 px2 center">
         <p className="block-headline pt3">{title}</p>
         {image1 ? (
           <Image

@@ -1,6 +1,7 @@
 @import 'settings';
 
 .FooterNewsletter {
+  margin-top: spacing(28);
   flex-direction: column;
 
   @media ($medium-up) {

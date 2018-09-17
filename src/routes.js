@@ -32,6 +32,7 @@ const Routes = ({ location }) => (
     <Route path="/web-accessibility" component={GenericPageContainer} />
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/press" component={PressPageContainer} />
+    <Route path="/style-guide" component={GenericPageContainer} />
   </Switch>
 );
 

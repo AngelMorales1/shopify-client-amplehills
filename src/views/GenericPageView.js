@@ -11,15 +11,17 @@ class GenericPageView extends Component {
 
     return (
       <div>
-        {blocks &&
-          blocks.map((block, i) => (
-            <BlockSwitch
-              key={`${i}-${get(block, 'sys.id', i)}`}
-              block={block}
-              z={blocks.length - i}
-              {...this.props}
-            />
-          ))}
+        <div>
+          {blocks &&
+            blocks.map((block, i) => (
+              <BlockSwitch
+                key={`${i}-${get(block, 'sys.id', i)}`}
+                block={block}
+                z={blocks.length - i}
+                {...this.props}
+              />
+            ))}
+        </div>
       </div>
     );
   }

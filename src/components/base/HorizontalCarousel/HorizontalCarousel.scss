@@ -21,6 +21,11 @@
 
   &__title {
     width: spacing(90);
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: left;
+    }
   }
 
   &__carousel-cards-container {
