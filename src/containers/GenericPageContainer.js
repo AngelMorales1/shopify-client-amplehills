@@ -18,8 +18,11 @@ class GenericPageContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    genericPage: get(state, 'genericPage.genericPage.items', []),
-    blocks: get(state, 'genericPage.genericPage.includes.Entry', [])
+    blocks: get(
+      state,
+      'genericPage.genericPage.items[0].fields.contentBlocks',
+      []
+    )
   };
 };
 

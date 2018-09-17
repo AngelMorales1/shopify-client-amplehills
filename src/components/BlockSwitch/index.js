@@ -10,6 +10,7 @@ import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import ComicStrip from 'components/ComicStrip';
 import MarkdownBlock from 'components/MarkdownBlock';
+import GenericHero from 'components/GenericHero';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -32,6 +33,8 @@ const BlockSwitch = props => {
       return <ComicStrip {...props} />;
     case 'blockMarkdown':
       return <MarkdownBlock {...props} />;
+    case 'blockGenericHero':
+      return <GenericHero {...props} />;
     default:
       return null;
   }

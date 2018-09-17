@@ -1,0 +1,13 @@
+@import 'settings', 'typography';
+
+.GenericHero {
+  &--blue {
+    @extend .bg-sky-blue;
+    @extend .text-madison-blue;
+  }
+
+  &--yellow {
+    @extend .bg-bees-wax;
+    @extend .text-madison-blue;
+  }
+}
