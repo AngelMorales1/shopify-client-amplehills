@@ -11,6 +11,7 @@ const MarkdownBlock = props => {
   const { z, block, setRef } = props;
   const fields = get(block, 'fields', {});
   const markdown = get(fields, 'content', '');
+  const markdown2 = get(fields, 'content2', '');
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `MarkdownBlock--${get(
     fields,
@@ -19,6 +20,7 @@ const MarkdownBlock = props => {
   )}`;
   const titleOnLeft = get(fields, 'titleLeft', false);
   const title = get(fields, 'title', '');
+  const twoColumnContentIsTrue = get(fields, 'twoColumnContent', false);
 
   return (
     <div
@@ -40,14 +42,37 @@ const MarkdownBlock = props => {
         </div>
       ) : null}
       <div
-        dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-        className={cx(
-          'transition-slide-up mx-auto px3 py4 form-container-width markdown-block',
-          {
-            'col-12 md-col-8': titleOnLeft
-          }
-        )}
-      />
+        className={cx('transition-slide-up mx-auto px3 py4', {
+          'col-12 md-col-8': titleOnLeft,
+          'content-width': twoColumnContentIsTrue,
+          [styles[
+            'MarkdownBlock__content-container--two-column'
+          ]]: twoColumnContentIsTrue
+        })}
+      >
+        <div
+          dangerouslySetInnerHTML={{ __html: marked(markdown) }}
+          className={cx(
+            styles['MarkdownBlock__content'],
+            'col-12 markdown-block form-container-width ',
+            {
+              'md-col-6': twoColumnContentIsTrue
+            }
+          )}
+        />
+        {twoColumnContentIsTrue ? (
+          <div
+            dangerouslySetInnerHTML={{ __html: marked(markdown2) }}
+            className={cx(
+              styles['MarkdownBlock__content'],
+              'col-12 markdown-block form-container-width ',
+              {
+                'md-col-6': twoColumnContentIsTrue
+              }
+            )}
+          />
+        ) : null}
+      </div>
     </div>
   );
 };

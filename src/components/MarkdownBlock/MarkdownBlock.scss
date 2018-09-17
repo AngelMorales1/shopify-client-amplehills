@@ -35,4 +35,18 @@
       }
     }
   }
+
+  &__content-container--two-column {
+    display: flex;
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      > .MarkdownBlock__content {
+        margin: 0 spacing(12);
+      }
+    }
+  }
 }
