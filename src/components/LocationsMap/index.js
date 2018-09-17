@@ -50,6 +50,15 @@ const LocationsMap = props => {
     window.scrollTo(0, 0);
   };
 
+  const locationsState = locations.reduce((states, location) => {
+    const state = get(location, 'state', '');
+    states[state] = true;
+    return states;
+  }, {});
+  const states = Object.keys(locationsState).map(
+    state => LocationsMapFilters.STATE_FILTERS[state]
+  );
+
   return (
     <div className={LocationsMapClasses}>
       <MapboxMap
@@ -96,13 +105,13 @@ const LocationsMap = props => {
       />
       <div className="absolute t0 l0 flex p3">
         <Button
-          className="mr2 flex items-center drop-shadow"
+          className="mr2 flex flex-wrap items-center drop-shadow"
           color={locationFilters.length ? 'white-denim' : 'madison-blue'}
           variant="primary-small"
           label="All"
           onClick={actions.clearLocationFilters}
         />
-        {Object.values(LocationsMapFilters.STATE_FILTERS).map(filter => {
+        {states.map(filter => {
           const filterIsActive = locationFilters.some(
             activeFilter =>
               activeFilter.key === filter.key &&
@@ -111,7 +120,7 @@ const LocationsMap = props => {
 
           return (
             <Button
-              className="mr2 flex items-center drop-shadow"
+              className="mr2 flex items-center drop-shadow mb2"
               color={filterIsActive ? 'madison-blue' : 'white-denim'}
               variant="primary-small"
               key={filter.value}
