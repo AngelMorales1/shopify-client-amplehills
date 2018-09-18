@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import isStaging from 'utils/isStaging';
 
 import HomeContainer from 'containers/HomeContainer';
 import ProductLandingContainer from 'containers/ProductLandingContainer';
@@ -32,7 +33,9 @@ const Routes = ({ location }) => (
     <Route path="/web-accessibility" component={GenericPageContainer} />
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/press" component={PressPageContainer} />
-    <Route path="/style-guide" component={GenericPageContainer} />
+    {isStaging() ? (
+      <Route path="/style-guide" component={GenericPageContainer} />
+    ) : null}
   </Switch>
 );
 
