@@ -67,8 +67,12 @@ ShallowWrapper {
 </div>,
         <div
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
 <<<<<<< HEAD
+=======
+          className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
+>>>>>>> Add ImageVideoCarousel test
 >
           <div
                     className="col-12 markdown-block form-container-width "
@@ -80,6 +84,7 @@ ShallowWrapper {
                     }
           />
 </div>,
+<<<<<<< HEAD
 =======
 =======
           className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8"
@@ -92,6 +97,8 @@ ShallowWrapper {
           }
 />,
 >>>>>>> Add MarkdownBlock test
+=======
+>>>>>>> Add ImageVideoCarousel test
       ],
       "className": "flex justify-center undefined",
       "style": Object {
@@ -142,6 +149,9 @@ ShallowWrapper {
         "props": Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
           "children": Array [
             <div
               className="col-12 markdown-block form-container-width "
@@ -155,6 +165,7 @@ ShallowWrapper {
             null,
           ],
           "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+<<<<<<< HEAD
         },
         "ref": null,
         "rendered": Array [
@@ -188,6 +199,28 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
 >>>>>>> Add MarkdownBlock test
+=======
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "col-12 markdown-block form-container-width ",
+              "dangerouslySetInnerHTML": Object {
+                "__html": "<p>foo</p>
+",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          null,
+        ],
+>>>>>>> Add ImageVideoCarousel test
         "type": "div",
       },
     ],
@@ -211,8 +244,12 @@ ShallowWrapper {
 </div>,
           <div
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
 <<<<<<< HEAD
+=======
+            className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
+>>>>>>> Add ImageVideoCarousel test
 >
             <div
                         className="col-12 markdown-block form-container-width "
@@ -224,6 +261,7 @@ ShallowWrapper {
                         }
             />
 </div>,
+<<<<<<< HEAD
 =======
 =======
             className="transition-slide-up mx-auto px3 py4 form-container-width markdown-block col-12 md-col-8"
@@ -236,6 +274,8 @@ ShallowWrapper {
             }
 />,
 >>>>>>> Add MarkdownBlock test
+=======
+>>>>>>> Add ImageVideoCarousel test
         ],
         "className": "flex justify-center undefined",
         "style": Object {
@@ -286,6 +326,9 @@ ShallowWrapper {
           "props": Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
             "children": Array [
               <div
                 className="col-12 markdown-block form-container-width "
@@ -299,6 +342,7 @@ ShallowWrapper {
               null,
             ],
             "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+<<<<<<< HEAD
           },
           "ref": null,
           "rendered": Array [
@@ -332,6 +376,28 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
 >>>>>>> Add MarkdownBlock test
+=======
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "col-12 markdown-block form-container-width ",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "<p>foo</p>
+",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            null,
+          ],
+>>>>>>> Add ImageVideoCarousel test
           "type": "div",
         },
       ],
@@ -391,6 +457,9 @@ ShallowWrapper {
         <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
           className="transition-slide-up mx-auto px3 py4"
 >
           <div
@@ -402,6 +471,7 @@ ShallowWrapper {
                     }
           />
 </div>,
+<<<<<<< HEAD
 =======
           className="transition-slide-up mx-auto px3 py4 form-container-width"
 =======
@@ -414,6 +484,8 @@ ShallowWrapper {
           }
 />,
 >>>>>>> Add MarkdownBlock test
+=======
+>>>>>>> Add ImageVideoCarousel test
       ],
       "className": "flex justify-center",
       "style": Object {
@@ -438,6 +510,9 @@ ShallowWrapper {
         "props": Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
           "children": Array [
             <div
               className="col-12 markdown-block form-container-width "
@@ -450,6 +525,7 @@ ShallowWrapper {
             null,
           ],
           "className": "transition-slide-up mx-auto px3 py4",
+<<<<<<< HEAD
         },
         "ref": null,
         "rendered": Array [
@@ -481,6 +557,27 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
 >>>>>>> Add MarkdownBlock test
+=======
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "col-12 markdown-block form-container-width ",
+              "dangerouslySetInnerHTML": Object {
+                "__html": "",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          null,
+        ],
+>>>>>>> Add ImageVideoCarousel test
         "type": "div",
       },
     ],
@@ -497,6 +594,9 @@ ShallowWrapper {
           <div
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
             className="transition-slide-up mx-auto px3 py4"
 >
             <div
@@ -508,6 +608,7 @@ ShallowWrapper {
                         }
             />
 </div>,
+<<<<<<< HEAD
 =======
             className="transition-slide-up mx-auto px3 py4 form-container-width"
 =======
@@ -520,6 +621,8 @@ ShallowWrapper {
             }
 />,
 >>>>>>> Add MarkdownBlock test
+=======
+>>>>>>> Add ImageVideoCarousel test
         ],
         "className": "flex justify-center",
         "style": Object {
@@ -544,6 +647,9 @@ ShallowWrapper {
           "props": Object {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add ImageVideoCarousel test
             "children": Array [
               <div
                 className="col-12 markdown-block form-container-width "
@@ -556,6 +662,7 @@ ShallowWrapper {
               null,
             ],
             "className": "transition-slide-up mx-auto px3 py4",
+<<<<<<< HEAD
           },
           "ref": null,
           "rendered": Array [
@@ -587,6 +694,27 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
 >>>>>>> Add MarkdownBlock test
+=======
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "col-12 markdown-block form-container-width ",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            null,
+          ],
+>>>>>>> Add ImageVideoCarousel test
           "type": "div",
         },
       ],

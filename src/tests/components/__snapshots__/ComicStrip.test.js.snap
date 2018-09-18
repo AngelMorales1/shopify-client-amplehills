@@ -1192,9 +1192,13 @@ ShallowWrapper {
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                        dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -1304,28 +1308,6 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "0",
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "m1 xs-hide sm-hide ",
-              "color": "madison-blue",
-              "disabled": false,
-              "fullWidth": false,
-              "hover": "shadow",
-              "label": "",
-              "onClick": [Function],
-              "shadow": true,
-              "to": "",
-              "type": "button",
-              "variant": "primary-small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
           Object {
             "instance": null,
             "key": undefined,
@@ -1485,9 +1467,13 @@ ShallowWrapper {
                                           arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                           className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                           dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                          dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                           index={0}
                                           onChange={[Function]}
                                           showArrows={false}
@@ -1563,9 +1549,13 @@ ShallowWrapper {
                                     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                     className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                    dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                     index={0}
                                     onChange={[Function]}
                                     showArrows={false}
@@ -1649,9 +1639,13 @@ ShallowWrapper {
                       arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                       className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                       dotColor=""
 =======
 >>>>>>> Add test
+=======
+                      dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                       index={0}
                       onChange={[Function]}
                       showArrows={false}
@@ -1764,7 +1758,11 @@ ShallowWrapper {
 =======
 >>>>>>> Add subNav test and fix location related selectors
                       "className": "w100 mx-auto md-hide lg-hide",
+<<<<<<< HEAD
 >>>>>>> Add test
+=======
+                      "dotColor": "",
+>>>>>>> Add ImageVideoCarousel test
                       "index": 0,
                       "onChange": [Function],
                       "showArrows": false,
@@ -1867,9 +1865,13 @@ ShallowWrapper {
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         dotColor=""
 =======
 >>>>>>> Add test
+=======
+                        dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                         index={0}
                         onChange={[Function]}
                         showArrows={true}
@@ -1934,9 +1936,13 @@ ShallowWrapper {
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                                dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -2046,28 +2052,6 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "m1 xs-hide sm-hide ",
-                "color": "madison-blue",
-                "disabled": false,
-                "fullWidth": false,
-                "hover": "shadow",
-                "label": "",
-                "onClick": [Function],
-                "shadow": true,
-                "to": "",
-                "type": "button",
-                "variant": "primary-small",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
             Object {
               "instance": null,
               "key": undefined,
@@ -2227,9 +2211,13 @@ ShallowWrapper {
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                                dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -2305,9 +2293,13 @@ ShallowWrapper {
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         dotColor=""
 =======
 >>>>>>> Add test
+=======
+                                        dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -2391,9 +2383,13 @@ ShallowWrapper {
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         dotColor=""
 =======
 >>>>>>> Add test
+=======
+                        dotColor=""
+>>>>>>> Add ImageVideoCarousel test
                         index={0}
                         onChange={[Function]}
                         showArrows={false}
@@ -2501,12 +2497,15 @@ ShallowWrapper {
 <<<<<<< HEAD
                         "className": "w100 mx-auto md-hide lg-hide",
                         "dotColor": "",
+<<<<<<< HEAD
 =======
                         "children": Array [],
 =======
 >>>>>>> Add subNav test and fix location related selectors
                         "className": "w100 mx-auto md-hide lg-hide",
 >>>>>>> Add test
+=======
+>>>>>>> Add ImageVideoCarousel test
                         "index": 0,
                         "onChange": [Function],
                         "showArrows": false,
