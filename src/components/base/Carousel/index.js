@@ -7,6 +7,10 @@ import { Button, Image } from 'components/base';
 import styles from './Carousel.scss';
 
 class Carousel extends Component {
+  state = {
+    index: 0
+  };
+
   componentDidUpdate() {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -19,9 +23,12 @@ class Carousel extends Component {
     }, 0);
   }
 
-  state = {
-    index: 0
-  };
+  shouldComponentUpdate(prevProps) {
+    if (prevProps.showArrows != this.props.showArrows) {
+      console.log(prevProps.showArrows, this.props.showArrows);
+      return true;
+    }
+  }
 
   render() {
     const {
@@ -34,8 +41,10 @@ class Carousel extends Component {
       arrowNextImage,
       onChange,
       index,
-      sliderClasses
+      sliderClasses,
+      dotColorWhite
     } = this.props;
+
     return (
       <div
         className={cx(className, 'flex flex-column justify-center transition')}
@@ -78,7 +87,10 @@ class Carousel extends Component {
                 {[...Array(props.slideCount)].map((dot, i) => (
                   <li key={i} className="inline-block p1">
                     <Button
-                      className="big text-peach"
+                      className={cx('big', {
+                        'text-peach': !dotColorWhite,
+                        'text-white': dotColorWhite
+                      })}
                       variant="no-style"
                       label={i === this.state.index ? '\u26AC' : '\u2022'}
                       onClick={() => {
@@ -108,7 +120,8 @@ Carousel.propTypes = {
   arrowPreviousImage: PropTypes.string,
   onChange: PropTypes.func,
   index: PropTypes.number,
-  sliderClasses: PropTypes.string
+  sliderClasses: PropTypes.string,
+  dotColorWhite: PropTypes.bool
 };
 
 Carousel.defaultProps = {
@@ -121,7 +134,8 @@ Carousel.defaultProps = {
   arrowNextImage: '/assets/images/icon-circle-right-arrow.svg',
   onChange: () => {},
   index: 0,
-  sliderClasses: ''
+  sliderClasses: '',
+  dotColorWhite: false
 };
 
 export default Carousel;

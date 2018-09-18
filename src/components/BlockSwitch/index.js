@@ -11,6 +11,7 @@ import MarkdownBlock from 'components/MarkdownBlock';
 import GenericHero from 'components/GenericHero';
 import PressCarousel from 'components/PressCarousel';
 import EventsBlock from 'components/EventsBlock';
+import ImageVideoCarousel from 'components/ImageVideoCarousel';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -35,6 +36,8 @@ const BlockSwitch = props => {
       return <PressCarousel {...props} />;
     case 'blockUpcomingEvents':
       return <EventsBlock {...props} />;
+    case 'blockImageVideoCarousel':
+      return <ImageVideoCarousel {...props} />;
     default:
       return null;
   }
