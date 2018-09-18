@@ -8,6 +8,7 @@ ShallowWrapper {
     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
     className="foo"
+    dotColor=""
     index={0}
     onChange={[Function]}
     showArrows={true}
@@ -29,6 +30,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Carousel
         afterSlide={[Function]}
+        autoGenerateStyleTag={true}
         autoplay={false}
         autoplayInterval={3000}
         beforeSlide={[Function]}
@@ -42,6 +44,7 @@ ShallowWrapper {
         framePadding="0px"
         heightMode="max"
         onResize={[Function]}
+        pauseOnHover={true}
         renderBottomCenterControls={[Function]}
         renderCenterLeftControls={[Function]}
         renderCenterRightControls={[Function]}
@@ -55,6 +58,7 @@ ShallowWrapper {
         transitionMode="scroll"
         vertical={false}
         width="100%"
+        withoutControls={false}
         wrapAround={false}
 />,
       "className": "foo flex flex-column justify-center transition",
@@ -66,6 +70,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "afterSlide": [Function],
+        "autoGenerateStyleTag": true,
         "autoplay": false,
         "autoplayInterval": 3000,
         "beforeSlide": [Function],
@@ -80,6 +85,7 @@ ShallowWrapper {
         "framePadding": "0px",
         "heightMode": "max",
         "onResize": [Function],
+        "pauseOnHover": true,
         "renderBottomCenterControls": [Function],
         "renderCenterLeftControls": [Function],
         "renderCenterRightControls": [Function],
@@ -93,6 +99,7 @@ ShallowWrapper {
         "transitionMode": "scroll",
         "vertical": false,
         "width": "100%",
+        "withoutControls": false,
         "wrapAround": false,
       },
       "ref": null,
@@ -109,6 +116,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Carousel
           afterSlide={[Function]}
+          autoGenerateStyleTag={true}
           autoplay={false}
           autoplayInterval={3000}
           beforeSlide={[Function]}
@@ -122,6 +130,7 @@ ShallowWrapper {
           framePadding="0px"
           heightMode="max"
           onResize={[Function]}
+          pauseOnHover={true}
           renderBottomCenterControls={[Function]}
           renderCenterLeftControls={[Function]}
           renderCenterRightControls={[Function]}
@@ -135,6 +144,7 @@ ShallowWrapper {
           transitionMode="scroll"
           vertical={false}
           width="100%"
+          withoutControls={false}
           wrapAround={false}
 />,
         "className": "foo flex flex-column justify-center transition",
@@ -146,6 +156,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "afterSlide": [Function],
+          "autoGenerateStyleTag": true,
           "autoplay": false,
           "autoplayInterval": 3000,
           "beforeSlide": [Function],
@@ -160,6 +171,7 @@ ShallowWrapper {
           "framePadding": "0px",
           "heightMode": "max",
           "onResize": [Function],
+          "pauseOnHover": true,
           "renderBottomCenterControls": [Function],
           "renderCenterLeftControls": [Function],
           "renderCenterRightControls": [Function],
@@ -173,6 +185,7 @@ ShallowWrapper {
           "transitionMode": "scroll",
           "vertical": false,
           "width": "100%",
+          "withoutControls": false,
           "wrapAround": false,
         },
         "ref": null,
@@ -200,6 +213,7 @@ ShallowWrapper {
     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
     className="w100"
+    dotColor=""
     index={0}
     onChange={[Function]}
     showArrows={true}
@@ -221,6 +235,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Carousel
         afterSlide={[Function]}
+        autoGenerateStyleTag={true}
         autoplay={false}
         autoplayInterval={3000}
         beforeSlide={[Function]}
@@ -234,6 +249,7 @@ ShallowWrapper {
         framePadding="0px"
         heightMode="max"
         onResize={[Function]}
+        pauseOnHover={true}
         renderBottomCenterControls={[Function]}
         renderCenterLeftControls={[Function]}
         renderCenterRightControls={[Function]}
@@ -247,6 +263,7 @@ ShallowWrapper {
         transitionMode="scroll"
         vertical={false}
         width="100%"
+        withoutControls={false}
         wrapAround={false}
 />,
       "className": "w100 flex flex-column justify-center transition",
@@ -258,6 +275,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "afterSlide": [Function],
+        "autoGenerateStyleTag": true,
         "autoplay": false,
         "autoplayInterval": 3000,
         "beforeSlide": [Function],
@@ -272,6 +290,7 @@ ShallowWrapper {
         "framePadding": "0px",
         "heightMode": "max",
         "onResize": [Function],
+        "pauseOnHover": true,
         "renderBottomCenterControls": [Function],
         "renderCenterLeftControls": [Function],
         "renderCenterRightControls": [Function],
@@ -285,6 +304,7 @@ ShallowWrapper {
         "transitionMode": "scroll",
         "vertical": false,
         "width": "100%",
+        "withoutControls": false,
         "wrapAround": false,
       },
       "ref": null,
@@ -301,6 +321,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Carousel
           afterSlide={[Function]}
+          autoGenerateStyleTag={true}
           autoplay={false}
           autoplayInterval={3000}
           beforeSlide={[Function]}
@@ -314,6 +335,7 @@ ShallowWrapper {
           framePadding="0px"
           heightMode="max"
           onResize={[Function]}
+          pauseOnHover={true}
           renderBottomCenterControls={[Function]}
           renderCenterLeftControls={[Function]}
           renderCenterRightControls={[Function]}
@@ -327,6 +349,7 @@ ShallowWrapper {
           transitionMode="scroll"
           vertical={false}
           width="100%"
+          withoutControls={false}
           wrapAround={false}
 />,
         "className": "w100 flex flex-column justify-center transition",
@@ -338,6 +361,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "afterSlide": [Function],
+          "autoGenerateStyleTag": true,
           "autoplay": false,
           "autoplayInterval": 3000,
           "beforeSlide": [Function],
@@ -352,6 +376,7 @@ ShallowWrapper {
           "framePadding": "0px",
           "heightMode": "max",
           "onResize": [Function],
+          "pauseOnHover": true,
           "renderBottomCenterControls": [Function],
           "renderCenterLeftControls": [Function],
           "renderCenterRightControls": [Function],
@@ -365,6 +390,7 @@ ShallowWrapper {
           "transitionMode": "scroll",
           "vertical": false,
           "width": "100%",
+          "withoutControls": false,
           "wrapAround": false,
         },
         "ref": null,

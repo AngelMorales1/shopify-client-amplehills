@@ -254,7 +254,7 @@ ShallowWrapper {
                               }
                     />
                     <div
-                              className="flex flex-row items-center"
+                              className="flex flex-row flex-wrap items-center"
                     >
                               
                     </div>
@@ -304,7 +304,7 @@ ShallowWrapper {
                             }
               />
               <div
-                            className="flex flex-row items-center"
+                            className="flex flex-row flex-wrap items-center"
               >
                             
               </div>
@@ -347,7 +347,7 @@ ShallowWrapper {
                   }
 />,
                 <div
-                  className="flex flex-row items-center"
+                  className="flex flex-row flex-wrap items-center"
 >
                   
 </div>,
@@ -392,7 +392,7 @@ ShallowWrapper {
                     null,
                     null,
                   ],
-                  "className": "flex flex-row items-center",
+                  "className": "flex flex-row flex-wrap items-center",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -401,7 +401,6 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
-              null,
             ],
             "type": "div",
           },
@@ -459,7 +458,7 @@ ShallowWrapper {
                                     }
                         />
                         <div
-                                    className="flex flex-row items-center"
+                                    className="flex flex-row flex-wrap items-center"
                         >
                                     
                         </div>
@@ -510,7 +509,7 @@ ShallowWrapper {
                                 }
                 />
                 <div
-                                className="flex flex-row items-center"
+                                className="flex flex-row flex-wrap items-center"
                 >
                                 
                 </div>
@@ -553,7 +552,7 @@ ShallowWrapper {
                     }
 />,
                   <div
-                    className="flex flex-row items-center"
+                    className="flex flex-row flex-wrap items-center"
 >
                     
 </div>,
@@ -598,7 +597,7 @@ ShallowWrapper {
                       null,
                       null,
                     ],
-                    "className": "flex flex-row items-center",
+                    "className": "flex flex-row flex-wrap items-center",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -865,7 +864,7 @@ ShallowWrapper {
                               }
                     />
                     <div
-                              className="flex flex-row items-center"
+                              className="flex flex-row flex-wrap items-center"
                     >
                               
                     </div>
@@ -943,7 +942,7 @@ ShallowWrapper {
                             }
               />
               <div
-                            className="flex flex-row items-center"
+                            className="flex flex-row flex-wrap items-center"
               >
                             
               </div>
@@ -995,7 +994,7 @@ ShallowWrapper {
                   }
 />,
                 <div
-                  className="flex flex-row items-center"
+                  className="flex flex-row flex-wrap items-center"
 >
                   
 </div>,
@@ -1039,7 +1038,7 @@ ShallowWrapper {
                     null,
                     null,
                   ],
-                  "className": "flex flex-row items-center",
+                  "className": "flex flex-row flex-wrap items-center",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1048,7 +1047,6 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
-              null,
             ],
             "type": "div",
           },
@@ -1126,7 +1124,7 @@ ShallowWrapper {
                                     }
                         />
                         <div
-                                    className="flex flex-row items-center"
+                                    className="flex flex-row flex-wrap items-center"
                         >
                                     
                         </div>
@@ -1183,7 +1181,7 @@ ShallowWrapper {
                                 }
                 />
                 <div
-                                className="flex flex-row items-center"
+                                className="flex flex-row flex-wrap items-center"
                 >
                                 
                 </div>
@@ -1228,7 +1226,7 @@ ShallowWrapper {
                     }
 />,
                   <div
-                    className="flex flex-row items-center"
+                    className="flex flex-row flex-wrap items-center"
 >
                     
 </div>,
@@ -1280,7 +1278,7 @@ ShallowWrapper {
                       null,
                       null,
                     ],
-                    "className": "flex flex-row items-center",
+                    "className": "flex flex-row flex-wrap items-center",
                   },
                   "ref": null,
                   "rendered": Array [

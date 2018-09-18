@@ -80,469 +80,251 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="flex container-width"
+>
         <div
-          className="flex"
->
-          <FooterLocations
-                    locations={
-                              Array [
-                                        Object {
-                                          "address1": "foo",
-                                          "address2": "foo",
-                                          "city": "foo",
-                                          "coordinates": Object {
-                                            "lat": 0,
-                                            "lon": 0,
-                                          },
-                                          "delivery": false,
-                                          "hours": Object {
-                                            "friday": "foo",
-                                            "monday": "foo",
-                                            "saturday": "foo",
-                                            "sunday": "foo",
-                                            "thursday": "foo",
-                                            "tuesday": "foo",
-                                            "wednesday": "foo",
-                                          },
-                                          "id": "foo",
-                                          "image": "foo",
-                                          "phone": "foo",
-                                          "region": "foo",
-                                          "seasonal": false,
-                                          "seasonalImage": "foo",
-                                          "sortedHours": Array [
-                                            Object {
-                                              "foo": "foo",
-                                            },
-                                          ],
-                                          "state": "foo",
-                                          "title": "foo",
-                                          "zip": "foo",
-                                        },
-                                      ]
-                    }
-          />
-          <FooterLinks
-                    footerIcons={Object {}}
-                    footerIllustration={
-                              Object {
-                                        "fields": Object {
-                                          "description": "foo",
-                                          "file": Object {
-                                            "contentType": "foo",
-                                            "details": Object {
-                                              "image": Object {},
-                                              "size": 0,
-                                            },
-                                            "fileName": "foo",
-                                            "url": "/foo",
-                                          },
-                                          "title": "foo",
-                                        },
-                                      }
-                    }
-                    footerLinks={
-                              Object {
-                                        "facebookLink": "foo",
-                                        "instagramLink": "foo",
-                                        "twitterLink": "foo",
-                                      }
-                    }
-          />
+                className="flex flex-column justify-between col-12 md-col-5 pt3"
+        >
+                <h2
+                        className="text-white block-headline"
+                >
+                        Need help? Wanna chat? We would love to talk!
+                </h2>
+                <div
+                        className="inline-flex"
+                >
+                        <Button
+                                className="nowrap inline-flex"
+                                color="white-peach"
+                                disabled={false}
+                                exact={true}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Contact Us"
+                                onClick={[Function]}
+                                shadow={true}
+                                to="/contact"
+                                type="button"
+                                variant="primary-small"
+                        />
+                </div>
+        </div>
+        <div
+                className="flex flex-column justify-start col-12 md-col-5"
+        >
+                <div
+                        className="col-3 flex flex-column mb4"
+                >
+                        <div>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Instagram icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Instagram
+                                        </span>
+                                </a>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Twitter icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Twitter
+                                        </span>
+                                </a>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Facebook icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Facebook
+                                        </span>
+                                </a>
+                        </div>
+                </div>
+                <span
+                        className="bold small text-white"
+                >
+                        © 2018 Ample Hills Creamery.
+                        <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/privacy-policy"
+                        >
+                                Privacy Policy
+                        </NavLink>
+                        &
+                        <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/web-accessibility"
+                        >
+                                Accessibility
+                        </NavLink>
+                </span>
+        </div>
 </div>,
-        <span
-          className="bold small text-white center"
->
-          © 2018 Ample Hills Creamery.
-          <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="text-decoration-none"
-                    exact={true}
-                    to="/privacy-policy"
-          >
-                     Privacy Policy 
-          </NavLink>
-          &
-          <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="text-decoration-none"
-                    exact={true}
-                    to="/web-accessibility"
-          >
-                     Accessibility
-          </NavLink>
-</span>,
-        <Image
-          alt=""
-          bg={false}
-          className="medium-down-display-none xs-hide sm-hide"
-          onImgLoad={[Function]}
-          src="/foo?w=1000&fm=png&q=90"
-          style={Object {}}
-/>,
-      ],
-      "className": "flex flex-column p4 bg-madison-blue",
+      "className": "py4 bg-peach flex items-center justify-center",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <FooterLocations
-              locations={
-                            Array [
-                                          Object {
-                                            "address1": "foo",
-                                            "address2": "foo",
-                                            "city": "foo",
-                                            "coordinates": Object {
-                                              "lat": 0,
-                                              "lon": 0,
-                                            },
-                                            "delivery": false,
-                                            "hours": Object {
-                                              "friday": "foo",
-                                              "monday": "foo",
-                                              "saturday": "foo",
-                                              "sunday": "foo",
-                                              "thursday": "foo",
-                                              "tuesday": "foo",
-                                              "wednesday": "foo",
-                                            },
-                                            "id": "foo",
-                                            "image": "foo",
-                                            "phone": "foo",
-                                            "region": "foo",
-                                            "seasonal": false,
-                                            "seasonalImage": "foo",
-                                            "sortedHours": Array [
-                                              Object {
-                                                "foo": "foo",
-                                              },
-                                            ],
-                                            "state": "foo",
-                                            "title": "foo",
-                                            "zip": "foo",
-                                          },
-                                        ]
-              }
-/>,
-            <FooterLinks
-              footerIcons={Object {}}
-              footerIllustration={
-                            Object {
-                                          "fields": Object {
-                                            "description": "foo",
-                                            "file": Object {
-                                              "contentType": "foo",
-                                              "details": Object {
-                                                "image": Object {},
-                                                "size": 0,
-                                              },
-                                              "fileName": "foo",
-                                              "url": "/foo",
-                                            },
-                                            "title": "foo",
-                                          },
-                                        }
-              }
-              footerLinks={
-                            Object {
-                                          "facebookLink": "foo",
-                                          "instagramLink": "foo",
-                                          "twitterLink": "foo",
-                                        }
-              }
-/>,
-          ],
-          "className": "flex",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "locations": Array [
-                Object {
-                  "address1": "foo",
-                  "address2": "foo",
-                  "city": "foo",
-                  "coordinates": Object {
-                    "lat": 0,
-                    "lon": 0,
-                  },
-                  "delivery": false,
-                  "hours": Object {
-                    "friday": "foo",
-                    "monday": "foo",
-                    "saturday": "foo",
-                    "sunday": "foo",
-                    "thursday": "foo",
-                    "tuesday": "foo",
-                    "wednesday": "foo",
-                  },
-                  "id": "foo",
-                  "image": "foo",
-                  "phone": "foo",
-                  "region": "foo",
-                  "seasonal": false,
-                  "seasonalImage": "foo",
-                  "sortedHours": Array [
-                    Object {
-                      "foo": "foo",
-                    },
-                  ],
-                  "state": "foo",
-                  "title": "foo",
-                  "zip": "foo",
-                },
-              ],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "footerIcons": Object {},
-              "footerIllustration": Object {
-                "fields": Object {
-                  "description": "foo",
-                  "file": Object {
-                    "contentType": "foo",
-                    "details": Object {
-                      "image": Object {},
-                      "size": 0,
-                    },
-                    "fileName": "foo",
-                    "url": "/foo",
-                  },
-                  "title": "foo",
-                },
-              },
-              "footerLinks": Object {
-                "facebookLink": "foo",
-                "instagramLink": "foo",
-                "twitterLink": "foo",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "© 2018 Ample Hills Creamery.",
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="text-decoration-none"
-              exact={true}
-              to="/privacy-policy"
->
-               Privacy Policy 
-</NavLink>,
-            "&",
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="text-decoration-none"
-              exact={true}
-              to="/web-accessibility"
->
-               Accessibility
-</NavLink>,
-          ],
-          "className": "bold small text-white center",
-        },
-        "ref": null,
-        "rendered": Array [
-          "© 2018 Ample Hills Creamery.",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": " Privacy Policy ",
-              "className": "text-decoration-none",
-              "exact": true,
-              "to": "/privacy-policy",
-            },
-            "ref": null,
-            "rendered": " Privacy Policy ",
-            "type": [Function],
-          },
-          "&",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": " Accessibility",
-              "className": "text-decoration-none",
-              "exact": true,
-              "to": "/web-accessibility",
-            },
-            "ref": null,
-            "rendered": " Accessibility",
-            "type": [Function],
-          },
-        ],
-        "type": "span",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "alt": "",
-          "bg": false,
-          "children": null,
-          "className": "medium-down-display-none xs-hide sm-hide",
-          "onImgLoad": [Function],
-          "src": "/foo?w=1000&fm=png&q=90",
-          "style": Object {},
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="flex"
+            className="flex flex-column justify-between col-12 md-col-5 pt3"
 >
-            <FooterLocations
-                        locations={
-                                    Array [
-                                                Object {
-                                                  "address1": "foo",
-                                                  "address2": "foo",
-                                                  "city": "foo",
-                                                  "coordinates": Object {
-                                                    "lat": 0,
-                                                    "lon": 0,
-                                                  },
-                                                  "delivery": false,
-                                                  "hours": Object {
-                                                    "friday": "foo",
-                                                    "monday": "foo",
-                                                    "saturday": "foo",
-                                                    "sunday": "foo",
-                                                    "thursday": "foo",
-                                                    "tuesday": "foo",
-                                                    "wednesday": "foo",
-                                                  },
-                                                  "id": "foo",
-                                                  "image": "foo",
-                                                  "phone": "foo",
-                                                  "region": "foo",
-                                                  "seasonal": false,
-                                                  "seasonalImage": "foo",
-                                                  "sortedHours": Array [
-                                                    Object {
-                                                      "foo": "foo",
-                                                    },
-                                                  ],
-                                                  "state": "foo",
-                                                  "title": "foo",
-                                                  "zip": "foo",
-                                                },
-                                              ]
-                        }
-            />
-            <FooterLinks
-                        footerIcons={Object {}}
-                        footerIllustration={
-                                    Object {
-                                                "fields": Object {
-                                                  "description": "foo",
-                                                  "file": Object {
-                                                    "contentType": "foo",
-                                                    "details": Object {
-                                                      "image": Object {},
-                                                      "size": 0,
-                                                    },
-                                                    "fileName": "foo",
-                                                    "url": "/foo",
-                                                  },
-                                                  "title": "foo",
-                                                },
-                                              }
-                        }
-                        footerLinks={
-                                    Object {
-                                                "facebookLink": "foo",
-                                                "instagramLink": "foo",
-                                                "twitterLink": "foo",
-                                              }
-                        }
-            />
+            <h2
+                        className="text-white block-headline"
+            >
+                        Need help? Wanna chat? We would love to talk!
+            </h2>
+            <div
+                        className="inline-flex"
+            >
+                        <Button
+                                    className="nowrap inline-flex"
+                                    color="white-peach"
+                                    disabled={false}
+                                    exact={true}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Contact Us"
+                                    onClick={[Function]}
+                                    shadow={true}
+                                    to="/contact"
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
 </div>,
-          <span
-            className="bold small text-white center"
+          <div
+            className="flex flex-column justify-start col-12 md-col-5"
 >
-            © 2018 Ample Hills Creamery.
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="text-decoration-none"
-                        exact={true}
-                        to="/privacy-policy"
+            <div
+                        className="col-3 flex flex-column mb4"
             >
-                         Privacy Policy 
-            </NavLink>
-            &
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="text-decoration-none"
-                        exact={true}
-                        to="/web-accessibility"
+                        <div>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Instagram
+                                                </span>
+                                    </a>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Twitter
+                                                </span>
+                                    </a>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Facebook
+                                                </span>
+                                    </a>
+                        </div>
+            </div>
+            <span
+                        className="bold small text-white"
             >
-                         Accessibility
-            </NavLink>
-</span>,
-          <Image
-            alt=""
-            bg={false}
-            className="medium-down-display-none xs-hide sm-hide"
-            onImgLoad={[Function]}
-            src="/foo?w=1000&fm=png&q=90"
-            style={Object {}}
-/>,
+                        © 2018 Ample Hills Creamery.
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/privacy-policy"
+                        >
+                                    Privacy Policy
+                        </NavLink>
+                        &
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/web-accessibility"
+                        >
+                                    Accessibility
+                        </NavLink>
+            </span>
+</div>,
         ],
-        "className": "flex flex-column p4 bg-madison-blue",
+        "className": "flex container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -552,152 +334,92 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <FooterLocations
-                locations={
-                                Array [
-                                                Object {
-                                                  "address1": "foo",
-                                                  "address2": "foo",
-                                                  "city": "foo",
-                                                  "coordinates": Object {
-                                                    "lat": 0,
-                                                    "lon": 0,
-                                                  },
-                                                  "delivery": false,
-                                                  "hours": Object {
-                                                    "friday": "foo",
-                                                    "monday": "foo",
-                                                    "saturday": "foo",
-                                                    "sunday": "foo",
-                                                    "thursday": "foo",
-                                                    "tuesday": "foo",
-                                                    "wednesday": "foo",
-                                                  },
-                                                  "id": "foo",
-                                                  "image": "foo",
-                                                  "phone": "foo",
-                                                  "region": "foo",
-                                                  "seasonal": false,
-                                                  "seasonalImage": "foo",
-                                                  "sortedHours": Array [
-                                                    Object {
-                                                      "foo": "foo",
-                                                    },
-                                                  ],
-                                                  "state": "foo",
-                                                  "title": "foo",
-                                                  "zip": "foo",
-                                                },
-                                              ]
-                }
-/>,
-              <FooterLinks
-                footerIcons={Object {}}
-                footerIllustration={
-                                Object {
-                                                "fields": Object {
-                                                  "description": "foo",
-                                                  "file": Object {
-                                                    "contentType": "foo",
-                                                    "details": Object {
-                                                      "image": Object {},
-                                                      "size": 0,
-                                                    },
-                                                    "fileName": "foo",
-                                                    "url": "/foo",
-                                                  },
-                                                  "title": "foo",
-                                                },
-                                              }
-                }
-                footerLinks={
-                                Object {
-                                                "facebookLink": "foo",
-                                                "instagramLink": "foo",
-                                                "twitterLink": "foo",
-                                              }
-                }
-/>,
+              <h2
+                className="text-white block-headline"
+>
+                Need help? Wanna chat? We would love to talk!
+</h2>,
+              <div
+                className="inline-flex"
+>
+                <Button
+                                className="nowrap inline-flex"
+                                color="white-peach"
+                                disabled={false}
+                                exact={true}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Contact Us"
+                                onClick={[Function]}
+                                shadow={true}
+                                to="/contact"
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
             ],
-            "className": "flex",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "locations": Array [
-                  Object {
-                    "address1": "foo",
-                    "address2": "foo",
-                    "city": "foo",
-                    "coordinates": Object {
-                      "lat": 0,
-                      "lon": 0,
-                    },
-                    "delivery": false,
-                    "hours": Object {
-                      "friday": "foo",
-                      "monday": "foo",
-                      "saturday": "foo",
-                      "sunday": "foo",
-                      "thursday": "foo",
-                      "tuesday": "foo",
-                      "wednesday": "foo",
-                    },
-                    "id": "foo",
-                    "image": "foo",
-                    "phone": "foo",
-                    "region": "foo",
-                    "seasonal": false,
-                    "seasonalImage": "foo",
-                    "sortedHours": Array [
-                      Object {
-                        "foo": "foo",
-                      },
-                    ],
-                    "state": "foo",
-                    "title": "foo",
-                    "zip": "foo",
-                  },
-                ],
+                "children": "Need help? Wanna chat? We would love to talk!",
+                "className": "text-white block-headline",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": "Need help? Wanna chat? We would love to talk!",
+              "type": "h2",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "footerIcons": Object {},
-                "footerIllustration": Object {
-                  "fields": Object {
-                    "description": "foo",
-                    "file": Object {
-                      "contentType": "foo",
-                      "details": Object {
-                        "image": Object {},
-                        "size": 0,
-                      },
-                      "fileName": "foo",
-                      "url": "/foo",
-                    },
-                    "title": "foo",
-                  },
-                },
-                "footerLinks": Object {
-                  "facebookLink": "foo",
-                  "instagramLink": "foo",
-                  "twitterLink": "foo",
-                },
+                "children": <Button
+                  className="nowrap inline-flex"
+                  color="white-peach"
+                  disabled={false}
+                  exact={true}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="Contact Us"
+                  onClick={[Function]}
+                  shadow={true}
+                  to="/contact"
+                  type="button"
+                  variant="primary-small"
+/>,
+                "className": "inline-flex",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "nowrap inline-flex",
+                  "color": "white-peach",
+                  "disabled": false,
+                  "exact": true,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "Contact Us",
+                  "onClick": [Function],
+                  "shadow": true,
+                  "to": "/contact",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
             },
           ],
           "type": "div",
@@ -708,86 +430,1292 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "© 2018 Ample Hills Creamery.",
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="text-decoration-none"
-                exact={true}
-                to="/privacy-policy"
+              <div
+                className="col-3 flex flex-column mb4"
 >
-                 Privacy Policy 
-</NavLink>,
-              "&",
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="text-decoration-none"
-                exact={true}
-                to="/web-accessibility"
+                <div>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Instagram icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Instagram
+                                                </span>
+                                </a>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Twitter icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Twitter
+                                                </span>
+                                </a>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href="foo"
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Facebook icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Facebook
+                                                </span>
+                                </a>
+                </div>
+</div>,
+              <span
+                className="bold small text-white"
 >
-                 Accessibility
-</NavLink>,
+                © 2018 Ample Hills Creamery.
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/privacy-policy"
+                >
+                                Privacy Policy
+                </NavLink>
+                &
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/web-accessibility"
+                >
+                                Accessibility
+                </NavLink>
+</span>,
             ],
-            "className": "bold small text-white center",
+            "className": "flex flex-column justify-start col-12 md-col-5",
           },
           "ref": null,
           "rendered": Array [
-            "© 2018 Ample Hills Creamery.",
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": " Privacy Policy ",
-                "className": "text-decoration-none",
-                "exact": true,
-                "to": "/privacy-policy",
+                "children": <div>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href="foo"
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Instagram icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Instagram
+                                    </span>
+                  </a>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href="foo"
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Twitter icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Twitter
+                                    </span>
+                  </a>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href="foo"
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Facebook icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Facebook
+                                    </span>
+                  </a>
+</div>,
+                "className": "col-3 flex flex-column mb4",
               },
               "ref": null,
-              "rendered": " Privacy Policy ",
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href="foo"
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Instagram icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Instagram
+                      </span>
+</a>,
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href="foo"
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Twitter icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Twitter
+                      </span>
+</a>,
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href="foo"
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Facebook icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Facebook
+                      </span>
+</a>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Instagram icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Instagram
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "foo",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Instagram icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Instagram",
+                        },
+                        "ref": null,
+                        "rendered": "Instagram",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Twitter icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Twitter
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "foo",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Twitter icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Twitter",
+                        },
+                        "ref": null,
+                        "rendered": "Twitter",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Facebook icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Facebook
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "foo",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Facebook icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Facebook",
+                        },
+                        "ref": null,
+                        "rendered": "Facebook",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
             },
-            "&",
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": " Accessibility",
-                "className": "text-decoration-none",
-                "exact": true,
-                "to": "/web-accessibility",
+                "children": Array [
+                  "© 2018 Ample Hills Creamery.",
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none mx1"
+                    exact={true}
+                    to="/privacy-policy"
+>
+                    Privacy Policy
+</NavLink>,
+                  "&",
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none mx1"
+                    exact={true}
+                    to="/web-accessibility"
+>
+                    Accessibility
+</NavLink>,
+                ],
+                "className": "bold small text-white",
               },
               "ref": null,
-              "rendered": " Accessibility",
-              "type": [Function],
+              "rendered": Array [
+                "© 2018 Ample Hills Creamery.",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": "Privacy Policy",
+                    "className": "text-decoration-none mx1",
+                    "exact": true,
+                    "to": "/privacy-policy",
+                  },
+                  "ref": null,
+                  "rendered": "Privacy Policy",
+                  "type": [Function],
+                },
+                "&",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": "Accessibility",
+                    "className": "text-decoration-none mx1",
+                    "exact": true,
+                    "to": "/web-accessibility",
+                  },
+                  "ref": null,
+                  "rendered": "Accessibility",
+                  "type": [Function],
+                },
+              ],
+              "type": "span",
             },
           ],
-          "type": "span",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "alt": "",
-            "bg": false,
-            "children": null,
-            "className": "medium-down-display-none xs-hide sm-hide",
-            "onImgLoad": [Function],
-            "src": "/foo?w=1000&fm=png&q=90",
-            "style": Object {},
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex container-width"
+>
+          <div
+                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+          >
+                    <h2
+                              className="text-white block-headline"
+                    >
+                              Need help? Wanna chat? We would love to talk!
+                    </h2>
+                    <div
+                              className="inline-flex"
+                    >
+                              <Button
+                                        className="nowrap inline-flex"
+                                        color="white-peach"
+                                        disabled={false}
+                                        exact={true}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Contact Us"
+                                        onClick={[Function]}
+                                        shadow={true}
+                                        to="/contact"
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </div>
+          </div>
+          <div
+                    className="flex flex-column justify-start col-12 md-col-5"
+          >
+                    <div
+                              className="col-3 flex flex-column mb4"
+                    >
+                              <div>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href="foo"
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Instagram
+                                                  </span>
+                                        </a>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href="foo"
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Twitter
+                                                  </span>
+                                        </a>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href="foo"
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Facebook
+                                                  </span>
+                                        </a>
+                              </div>
+                    </div>
+                    <span
+                              className="bold small text-white"
+                    >
+                              © 2018 Ample Hills Creamery.
+                              <NavLink
+                                        activeClassName="active"
+                                        aria-current="page"
+                                        className="text-decoration-none mx1"
+                                        exact={true}
+                                        to="/privacy-policy"
+                              >
+                                        Privacy Policy
+                              </NavLink>
+                              &
+                              <NavLink
+                                        activeClassName="active"
+                                        aria-current="page"
+                                        className="text-decoration-none mx1"
+                                        exact={true}
+                                        to="/web-accessibility"
+                              >
+                                        Accessibility
+                              </NavLink>
+                    </span>
+          </div>
+</div>,
+        "className": "py4 bg-peach flex items-center justify-center",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-column justify-between col-12 md-col-5 pt3"
+>
+              <h2
+                            className="text-white block-headline"
+              >
+                            Need help? Wanna chat? We would love to talk!
+              </h2>
+              <div
+                            className="inline-flex"
+              >
+                            <Button
+                                          className="nowrap inline-flex"
+                                          color="white-peach"
+                                          disabled={false}
+                                          exact={true}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Contact Us"
+                                          onClick={[Function]}
+                                          shadow={true}
+                                          to="/contact"
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </div>
+</div>,
+            <div
+              className="flex flex-column justify-start col-12 md-col-5"
+>
+              <div
+                            className="col-3 flex flex-column mb4"
+              >
+                            <div>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href="foo"
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Instagram icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Instagram
+                                                        </span>
+                                          </a>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href="foo"
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Twitter icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Twitter
+                                                        </span>
+                                          </a>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href="foo"
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Facebook icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Facebook
+                                                        </span>
+                                          </a>
+                            </div>
+              </div>
+              <span
+                            className="bold small text-white"
+              >
+                            © 2018 Ample Hills Creamery.
+                            <NavLink
+                                          activeClassName="active"
+                                          aria-current="page"
+                                          className="text-decoration-none mx1"
+                                          exact={true}
+                                          to="/privacy-policy"
+                            >
+                                          Privacy Policy
+                            </NavLink>
+                            &
+                            <NavLink
+                                          activeClassName="active"
+                                          aria-current="page"
+                                          className="text-decoration-none mx1"
+                                          exact={true}
+                                          to="/web-accessibility"
+                            >
+                                          Accessibility
+                            </NavLink>
+              </span>
+</div>,
+          ],
+          "className": "flex container-width",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="text-white block-headline"
+>
+                  Need help? Wanna chat? We would love to talk!
+</h2>,
+                <div
+                  className="inline-flex"
+>
+                  <Button
+                                    className="nowrap inline-flex"
+                                    color="white-peach"
+                                    disabled={false}
+                                    exact={true}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Contact Us"
+                                    onClick={[Function]}
+                                    shadow={true}
+                                    to="/contact"
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</div>,
+              ],
+              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Need help? Wanna chat? We would love to talk!",
+                  "className": "text-white block-headline",
+                },
+                "ref": null,
+                "rendered": "Need help? Wanna chat? We would love to talk!",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    className="nowrap inline-flex"
+                    color="white-peach"
+                    disabled={false}
+                    exact={true}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Contact Us"
+                    onClick={[Function]}
+                    shadow={true}
+                    to="/contact"
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "className": "inline-flex",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "nowrap inline-flex",
+                    "color": "white-peach",
+                    "disabled": false,
+                    "exact": true,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Contact Us",
+                    "onClick": [Function],
+                    "shadow": true,
+                    "to": "/contact",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-3 flex flex-column mb4"
+>
+                  <div>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href="foo"
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Instagram icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Instagram
+                                                      </span>
+                                    </a>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href="foo"
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Twitter icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Twitter
+                                                      </span>
+                                    </a>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href="foo"
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Facebook icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Facebook
+                                                      </span>
+                                    </a>
+                  </div>
+</div>,
+                <span
+                  className="bold small text-white"
+>
+                  © 2018 Ample Hills Creamery.
+                  <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/privacy-policy"
+                  >
+                                    Privacy Policy
+                  </NavLink>
+                  &
+                  <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/web-accessibility"
+                  >
+                                    Accessibility
+                  </NavLink>
+</span>,
+              ],
+              "className": "flex flex-column justify-start col-12 md-col-5",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Instagram
+                                        </span>
+                    </a>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Twitter
+                                        </span>
+                    </a>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href="foo"
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Facebook
+                                        </span>
+                    </a>
+</div>,
+                  "className": "col-3 flex flex-column mb4",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="foo"
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Instagram icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Instagram
+                        </span>
+</a>,
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="foo"
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Twitter icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Twitter
+                        </span>
+</a>,
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="foo"
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Facebook icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Facebook
+                        </span>
+</a>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Instagram icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Instagram
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "foo",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Instagram icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Instagram",
+                          },
+                          "ref": null,
+                          "rendered": "Instagram",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Twitter icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Twitter
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "foo",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Twitter icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Twitter",
+                          },
+                          "ref": null,
+                          "rendered": "Twitter",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Facebook icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Facebook
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "foo",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Facebook icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Facebook",
+                          },
+                          "ref": null,
+                          "rendered": "Facebook",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "© 2018 Ample Hills Creamery.",
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="text-decoration-none mx1"
+                      exact={true}
+                      to="/privacy-policy"
+>
+                      Privacy Policy
+</NavLink>,
+                    "&",
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="text-decoration-none mx1"
+                      exact={true}
+                      to="/web-accessibility"
+>
+                      Accessibility
+</NavLink>,
+                  ],
+                  "className": "bold small text-white",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "© 2018 Ample Hills Creamery.",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "Privacy Policy",
+                      "className": "text-decoration-none mx1",
+                      "exact": true,
+                      "to": "/privacy-policy",
+                    },
+                    "ref": null,
+                    "rendered": "Privacy Policy",
+                    "type": [Function],
+                  },
+                  "&",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "Accessibility",
+                      "className": "text-decoration-none mx1",
+                      "exact": true,
+                      "to": "/web-accessibility",
+                    },
+                    "ref": null,
+                    "rendered": "Accessibility",
+                    "type": [Function],
+                  },
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
@@ -807,17 +1735,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Footer
     footerIcons={Object {}}
-    footerIllustration={
-        Object {
-            "fields": Object {
-              "description": "",
-              "file": Object {
-                "title": "",
-                "url": "",
-              },
-            },
-          }
-    }
     footerLinks={Object {}}
     locations={Array []}
 />,
@@ -833,281 +1750,251 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="flex container-width"
+>
         <div
-          className="flex"
->
-          <FooterLocations
-                    locations={Array []}
-          />
-          <FooterLinks
-                    footerIcons={Object {}}
-                    footerIllustration={
-                              Object {
-                                        "fields": Object {
-                                          "description": "",
-                                          "file": Object {
-                                            "title": "",
-                                            "url": "",
-                                          },
-                                        },
-                                      }
-                    }
-                    footerLinks={Object {}}
-          />
+                className="flex flex-column justify-between col-12 md-col-5 pt3"
+        >
+                <h2
+                        className="text-white block-headline"
+                >
+                        Need help? Wanna chat? We would love to talk!
+                </h2>
+                <div
+                        className="inline-flex"
+                >
+                        <Button
+                                className="nowrap inline-flex"
+                                color="white-peach"
+                                disabled={false}
+                                exact={true}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Contact Us"
+                                onClick={[Function]}
+                                shadow={true}
+                                to="/contact"
+                                type="button"
+                                variant="primary-small"
+                        />
+                </div>
+        </div>
+        <div
+                className="flex flex-column justify-start col-12 md-col-5"
+        >
+                <div
+                        className="col-3 flex flex-column mb4"
+                >
+                        <div>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Instagram icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Instagram
+                                        </span>
+                                </a>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Twitter icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Twitter
+                                        </span>
+                                </a>
+                                <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                                >
+                                        <Image
+                                                alt="Facebook icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                                        />
+                                        <span>
+                                                Facebook
+                                        </span>
+                                </a>
+                        </div>
+                </div>
+                <span
+                        className="bold small text-white"
+                >
+                        © 2018 Ample Hills Creamery.
+                        <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/privacy-policy"
+                        >
+                                Privacy Policy
+                        </NavLink>
+                        &
+                        <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/web-accessibility"
+                        >
+                                Accessibility
+                        </NavLink>
+                </span>
+        </div>
 </div>,
-        <span
-          className="bold small text-white center"
->
-          © 2018 Ample Hills Creamery.
-          <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="text-decoration-none"
-                    exact={true}
-                    to="/privacy-policy"
-          >
-                     Privacy Policy 
-          </NavLink>
-          &
-          <NavLink
-                    activeClassName="active"
-                    aria-current="page"
-                    className="text-decoration-none"
-                    exact={true}
-                    to="/web-accessibility"
-          >
-                     Accessibility
-          </NavLink>
-</span>,
-        <Image
-          alt=""
-          bg={false}
-          className="medium-down-display-none xs-hide sm-hide"
-          onImgLoad={[Function]}
-          src="?w=1000&fm=png&q=90"
-          style={Object {}}
-/>,
-      ],
-      "className": "flex flex-column p4 bg-madison-blue",
+      "className": "py4 bg-peach flex items-center justify-center",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <FooterLocations
-              locations={Array []}
-/>,
-            <FooterLinks
-              footerIcons={Object {}}
-              footerIllustration={
-                            Object {
-                                          "fields": Object {
-                                            "description": "",
-                                            "file": Object {
-                                              "title": "",
-                                              "url": "",
-                                            },
-                                          },
-                                        }
-              }
-              footerLinks={Object {}}
-/>,
-          ],
-          "className": "flex",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "locations": Array [],
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "footerIcons": Object {},
-              "footerIllustration": Object {
-                "fields": Object {
-                  "description": "",
-                  "file": Object {
-                    "title": "",
-                    "url": "",
-                  },
-                },
-              },
-              "footerLinks": Object {},
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            "© 2018 Ample Hills Creamery.",
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="text-decoration-none"
-              exact={true}
-              to="/privacy-policy"
->
-               Privacy Policy 
-</NavLink>,
-            "&",
-            <NavLink
-              activeClassName="active"
-              aria-current="page"
-              className="text-decoration-none"
-              exact={true}
-              to="/web-accessibility"
->
-               Accessibility
-</NavLink>,
-          ],
-          "className": "bold small text-white center",
-        },
-        "ref": null,
-        "rendered": Array [
-          "© 2018 Ample Hills Creamery.",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": " Privacy Policy ",
-              "className": "text-decoration-none",
-              "exact": true,
-              "to": "/privacy-policy",
-            },
-            "ref": null,
-            "rendered": " Privacy Policy ",
-            "type": [Function],
-          },
-          "&",
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "activeClassName": "active",
-              "aria-current": "page",
-              "children": " Accessibility",
-              "className": "text-decoration-none",
-              "exact": true,
-              "to": "/web-accessibility",
-            },
-            "ref": null,
-            "rendered": " Accessibility",
-            "type": [Function],
-          },
-        ],
-        "type": "span",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "alt": "",
-          "bg": false,
-          "children": null,
-          "className": "medium-down-display-none xs-hide sm-hide",
-          "onImgLoad": [Function],
-          "src": "?w=1000&fm=png&q=90",
-          "style": Object {},
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="flex"
+            className="flex flex-column justify-between col-12 md-col-5 pt3"
 >
-            <FooterLocations
-                        locations={Array []}
-            />
-            <FooterLinks
-                        footerIcons={Object {}}
-                        footerIllustration={
-                                    Object {
-                                                "fields": Object {
-                                                  "description": "",
-                                                  "file": Object {
-                                                    "title": "",
-                                                    "url": "",
-                                                  },
-                                                },
-                                              }
-                        }
-                        footerLinks={Object {}}
-            />
+            <h2
+                        className="text-white block-headline"
+            >
+                        Need help? Wanna chat? We would love to talk!
+            </h2>
+            <div
+                        className="inline-flex"
+            >
+                        <Button
+                                    className="nowrap inline-flex"
+                                    color="white-peach"
+                                    disabled={false}
+                                    exact={true}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Contact Us"
+                                    onClick={[Function]}
+                                    shadow={true}
+                                    to="/contact"
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
 </div>,
-          <span
-            className="bold small text-white center"
+          <div
+            className="flex flex-column justify-start col-12 md-col-5"
 >
-            © 2018 Ample Hills Creamery.
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="text-decoration-none"
-                        exact={true}
-                        to="/privacy-policy"
+            <div
+                        className="col-3 flex flex-column mb4"
             >
-                         Privacy Policy 
-            </NavLink>
-            &
-            <NavLink
-                        activeClassName="active"
-                        aria-current="page"
-                        className="text-decoration-none"
-                        exact={true}
-                        to="/web-accessibility"
+                        <div>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Instagram
+                                                </span>
+                                    </a>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Twitter
+                                                </span>
+                                    </a>
+                                    <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                    >
+                                                <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                />
+                                                <span>
+                                                            Facebook
+                                                </span>
+                                    </a>
+                        </div>
+            </div>
+            <span
+                        className="bold small text-white"
             >
-                         Accessibility
-            </NavLink>
-</span>,
-          <Image
-            alt=""
-            bg={false}
-            className="medium-down-display-none xs-hide sm-hide"
-            onImgLoad={[Function]}
-            src="?w=1000&fm=png&q=90"
-            style={Object {}}
-/>,
+                        © 2018 Ample Hills Creamery.
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/privacy-policy"
+                        >
+                                    Privacy Policy
+                        </NavLink>
+                        &
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/web-accessibility"
+                        >
+                                    Accessibility
+                        </NavLink>
+            </span>
+</div>,
         ],
-        "className": "flex flex-column p4 bg-madison-blue",
+        "className": "flex container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -1117,60 +2004,92 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <FooterLocations
-                locations={Array []}
-/>,
-              <FooterLinks
-                footerIcons={Object {}}
-                footerIllustration={
-                                Object {
-                                                "fields": Object {
-                                                  "description": "",
-                                                  "file": Object {
-                                                    "title": "",
-                                                    "url": "",
-                                                  },
-                                                },
-                                              }
-                }
-                footerLinks={Object {}}
-/>,
+              <h2
+                className="text-white block-headline"
+>
+                Need help? Wanna chat? We would love to talk!
+</h2>,
+              <div
+                className="inline-flex"
+>
+                <Button
+                                className="nowrap inline-flex"
+                                color="white-peach"
+                                disabled={false}
+                                exact={true}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="Contact Us"
+                                onClick={[Function]}
+                                shadow={true}
+                                to="/contact"
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
             ],
-            "className": "flex",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "locations": Array [],
+                "children": "Need help? Wanna chat? We would love to talk!",
+                "className": "text-white block-headline",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": "Need help? Wanna chat? We would love to talk!",
+              "type": "h2",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "footerIcons": Object {},
-                "footerIllustration": Object {
-                  "fields": Object {
-                    "description": "",
-                    "file": Object {
-                      "title": "",
-                      "url": "",
-                    },
-                  },
-                },
-                "footerLinks": Object {},
+                "children": <Button
+                  className="nowrap inline-flex"
+                  color="white-peach"
+                  disabled={false}
+                  exact={true}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="Contact Us"
+                  onClick={[Function]}
+                  shadow={true}
+                  to="/contact"
+                  type="button"
+                  variant="primary-small"
+/>,
+                "className": "inline-flex",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "nowrap inline-flex",
+                  "color": "white-peach",
+                  "disabled": false,
+                  "exact": true,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "Contact Us",
+                  "onClick": [Function],
+                  "shadow": true,
+                  "to": "/contact",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
             },
           ],
           "type": "div",
@@ -1181,86 +2100,1292 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "© 2018 Ample Hills Creamery.",
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="text-decoration-none"
-                exact={true}
-                to="/privacy-policy"
+              <div
+                className="col-3 flex flex-column mb4"
 >
-                 Privacy Policy 
-</NavLink>,
-              "&",
-              <NavLink
-                activeClassName="active"
-                aria-current="page"
-                className="text-decoration-none"
-                exact={true}
-                to="/web-accessibility"
+                <div>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Instagram icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Instagram
+                                                </span>
+                                </a>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Twitter icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Twitter
+                                                </span>
+                                </a>
+                                <a
+                                                className="my3 flex items-center bold text-white text-decoration-none"
+                                                href=""
+                                                rel="noopener"
+                                                target="_blank"
+                                >
+                                                <Image
+                                                                alt="Facebook icon"
+                                                                bg={false}
+                                                                className="icon mr3"
+                                                                onImgLoad={[Function]}
+                                                                src="?w=200&fm=png&q=90"
+                                                                style={Object {}}
+                                                />
+                                                <span>
+                                                                Facebook
+                                                </span>
+                                </a>
+                </div>
+</div>,
+              <span
+                className="bold small text-white"
 >
-                 Accessibility
-</NavLink>,
+                © 2018 Ample Hills Creamery.
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/privacy-policy"
+                >
+                                Privacy Policy
+                </NavLink>
+                &
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="text-decoration-none mx1"
+                                exact={true}
+                                to="/web-accessibility"
+                >
+                                Accessibility
+                </NavLink>
+</span>,
             ],
-            "className": "bold small text-white center",
+            "className": "flex flex-column justify-start col-12 md-col-5",
           },
           "ref": null,
           "rendered": Array [
-            "© 2018 Ample Hills Creamery.",
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": " Privacy Policy ",
-                "className": "text-decoration-none",
-                "exact": true,
-                "to": "/privacy-policy",
+                "children": <div>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href=""
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Instagram icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Instagram
+                                    </span>
+                  </a>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href=""
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Twitter icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Twitter
+                                    </span>
+                  </a>
+                  <a
+                                    className="my3 flex items-center bold text-white text-decoration-none"
+                                    href=""
+                                    rel="noopener"
+                                    target="_blank"
+                  >
+                                    <Image
+                                                      alt="Facebook icon"
+                                                      bg={false}
+                                                      className="icon mr3"
+                                                      onImgLoad={[Function]}
+                                                      src="?w=200&fm=png&q=90"
+                                                      style={Object {}}
+                                    />
+                                    <span>
+                                                      Facebook
+                                    </span>
+                  </a>
+</div>,
+                "className": "col-3 flex flex-column mb4",
               },
               "ref": null,
-              "rendered": " Privacy Policy ",
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href=""
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Instagram icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Instagram
+                      </span>
+</a>,
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href=""
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Twitter icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Twitter
+                      </span>
+</a>,
+                    <a
+                      className="my3 flex items-center bold text-white text-decoration-none"
+                      href=""
+                      rel="noopener"
+                      target="_blank"
+>
+                      <Image
+                                            alt="Facebook icon"
+                                            bg={false}
+                                            className="icon mr3"
+                                            onImgLoad={[Function]}
+                                            src="?w=200&fm=png&q=90"
+                                            style={Object {}}
+                      />
+                      <span>
+                                            Facebook
+                      </span>
+</a>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Instagram icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Instagram
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Instagram icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Instagram",
+                        },
+                        "ref": null,
+                        "rendered": "Instagram",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Twitter icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Twitter
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Twitter icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Twitter",
+                        },
+                        "ref": null,
+                        "rendered": "Twitter",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <Image
+                          alt="Facebook icon"
+                          bg={false}
+                          className="icon mr3"
+                          onImgLoad={[Function]}
+                          src="?w=200&fm=png&q=90"
+                          style={Object {}}
+/>,
+                        <span>
+                          Facebook
+</span>,
+                      ],
+                      "className": "my3 flex items-center bold text-white text-decoration-none",
+                      "href": "",
+                      "rel": "noopener",
+                      "target": "_blank",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "alt": "Facebook icon",
+                          "bg": false,
+                          "children": null,
+                          "className": "icon mr3",
+                          "onImgLoad": [Function],
+                          "src": "?w=200&fm=png&q=90",
+                          "style": Object {},
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Facebook",
+                        },
+                        "ref": null,
+                        "rendered": "Facebook",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "a",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
             },
-            "&",
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "function",
+              "nodeType": "host",
               "props": Object {
-                "activeClassName": "active",
-                "aria-current": "page",
-                "children": " Accessibility",
-                "className": "text-decoration-none",
-                "exact": true,
-                "to": "/web-accessibility",
+                "children": Array [
+                  "© 2018 Ample Hills Creamery.",
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none mx1"
+                    exact={true}
+                    to="/privacy-policy"
+>
+                    Privacy Policy
+</NavLink>,
+                  "&",
+                  <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none mx1"
+                    exact={true}
+                    to="/web-accessibility"
+>
+                    Accessibility
+</NavLink>,
+                ],
+                "className": "bold small text-white",
               },
               "ref": null,
-              "rendered": " Accessibility",
-              "type": [Function],
+              "rendered": Array [
+                "© 2018 Ample Hills Creamery.",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": "Privacy Policy",
+                    "className": "text-decoration-none mx1",
+                    "exact": true,
+                    "to": "/privacy-policy",
+                  },
+                  "ref": null,
+                  "rendered": "Privacy Policy",
+                  "type": [Function],
+                },
+                "&",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "activeClassName": "active",
+                    "aria-current": "page",
+                    "children": "Accessibility",
+                    "className": "text-decoration-none mx1",
+                    "exact": true,
+                    "to": "/web-accessibility",
+                  },
+                  "ref": null,
+                  "rendered": "Accessibility",
+                  "type": [Function],
+                },
+              ],
+              "type": "span",
             },
           ],
-          "type": "span",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "alt": "",
-            "bg": false,
-            "children": null,
-            "className": "medium-down-display-none xs-hide sm-hide",
-            "onImgLoad": [Function],
-            "src": "?w=1000&fm=png&q=90",
-            "style": Object {},
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex container-width"
+>
+          <div
+                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+          >
+                    <h2
+                              className="text-white block-headline"
+                    >
+                              Need help? Wanna chat? We would love to talk!
+                    </h2>
+                    <div
+                              className="inline-flex"
+                    >
+                              <Button
+                                        className="nowrap inline-flex"
+                                        color="white-peach"
+                                        disabled={false}
+                                        exact={true}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Contact Us"
+                                        onClick={[Function]}
+                                        shadow={true}
+                                        to="/contact"
+                                        type="button"
+                                        variant="primary-small"
+                              />
+                    </div>
+          </div>
+          <div
+                    className="flex flex-column justify-start col-12 md-col-5"
+          >
+                    <div
+                              className="col-3 flex flex-column mb4"
+                    >
+                              <div>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href=""
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Instagram
+                                                  </span>
+                                        </a>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href=""
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Twitter
+                                                  </span>
+                                        </a>
+                                        <a
+                                                  className="my3 flex items-center bold text-white text-decoration-none"
+                                                  href=""
+                                                  rel="noopener"
+                                                  target="_blank"
+                                        >
+                                                  <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                                  />
+                                                  <span>
+                                                            Facebook
+                                                  </span>
+                                        </a>
+                              </div>
+                    </div>
+                    <span
+                              className="bold small text-white"
+                    >
+                              © 2018 Ample Hills Creamery.
+                              <NavLink
+                                        activeClassName="active"
+                                        aria-current="page"
+                                        className="text-decoration-none mx1"
+                                        exact={true}
+                                        to="/privacy-policy"
+                              >
+                                        Privacy Policy
+                              </NavLink>
+                              &
+                              <NavLink
+                                        activeClassName="active"
+                                        aria-current="page"
+                                        className="text-decoration-none mx1"
+                                        exact={true}
+                                        to="/web-accessibility"
+                              >
+                                        Accessibility
+                              </NavLink>
+                    </span>
+          </div>
+</div>,
+        "className": "py4 bg-peach flex items-center justify-center",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex flex-column justify-between col-12 md-col-5 pt3"
+>
+              <h2
+                            className="text-white block-headline"
+              >
+                            Need help? Wanna chat? We would love to talk!
+              </h2>
+              <div
+                            className="inline-flex"
+              >
+                            <Button
+                                          className="nowrap inline-flex"
+                                          color="white-peach"
+                                          disabled={false}
+                                          exact={true}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Contact Us"
+                                          onClick={[Function]}
+                                          shadow={true}
+                                          to="/contact"
+                                          type="button"
+                                          variant="primary-small"
+                            />
+              </div>
+</div>,
+            <div
+              className="flex flex-column justify-start col-12 md-col-5"
+>
+              <div
+                            className="col-3 flex flex-column mb4"
+              >
+                            <div>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href=""
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Instagram icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Instagram
+                                                        </span>
+                                          </a>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href=""
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Twitter icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Twitter
+                                                        </span>
+                                          </a>
+                                          <a
+                                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                                        href=""
+                                                        rel="noopener"
+                                                        target="_blank"
+                                          >
+                                                        <Image
+                                                                      alt="Facebook icon"
+                                                                      bg={false}
+                                                                      className="icon mr3"
+                                                                      onImgLoad={[Function]}
+                                                                      src="?w=200&fm=png&q=90"
+                                                                      style={Object {}}
+                                                        />
+                                                        <span>
+                                                                      Facebook
+                                                        </span>
+                                          </a>
+                            </div>
+              </div>
+              <span
+                            className="bold small text-white"
+              >
+                            © 2018 Ample Hills Creamery.
+                            <NavLink
+                                          activeClassName="active"
+                                          aria-current="page"
+                                          className="text-decoration-none mx1"
+                                          exact={true}
+                                          to="/privacy-policy"
+                            >
+                                          Privacy Policy
+                            </NavLink>
+                            &
+                            <NavLink
+                                          activeClassName="active"
+                                          aria-current="page"
+                                          className="text-decoration-none mx1"
+                                          exact={true}
+                                          to="/web-accessibility"
+                            >
+                                          Accessibility
+                            </NavLink>
+              </span>
+</div>,
+          ],
+          "className": "flex container-width",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="text-white block-headline"
+>
+                  Need help? Wanna chat? We would love to talk!
+</h2>,
+                <div
+                  className="inline-flex"
+>
+                  <Button
+                                    className="nowrap inline-flex"
+                                    color="white-peach"
+                                    disabled={false}
+                                    exact={true}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Contact Us"
+                                    onClick={[Function]}
+                                    shadow={true}
+                                    to="/contact"
+                                    type="button"
+                                    variant="primary-small"
+                  />
+</div>,
+              ],
+              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Need help? Wanna chat? We would love to talk!",
+                  "className": "text-white block-headline",
+                },
+                "ref": null,
+                "rendered": "Need help? Wanna chat? We would love to talk!",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Button
+                    className="nowrap inline-flex"
+                    color="white-peach"
+                    disabled={false}
+                    exact={true}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Contact Us"
+                    onClick={[Function]}
+                    shadow={true}
+                    to="/contact"
+                    type="button"
+                    variant="primary-small"
+/>,
+                  "className": "inline-flex",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "nowrap inline-flex",
+                    "color": "white-peach",
+                    "disabled": false,
+                    "exact": true,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Contact Us",
+                    "onClick": [Function],
+                    "shadow": true,
+                    "to": "/contact",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-3 flex flex-column mb4"
+>
+                  <div>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href=""
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Instagram icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Instagram
+                                                      </span>
+                                    </a>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href=""
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Twitter icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Twitter
+                                                      </span>
+                                    </a>
+                                    <a
+                                                      className="my3 flex items-center bold text-white text-decoration-none"
+                                                      href=""
+                                                      rel="noopener"
+                                                      target="_blank"
+                                    >
+                                                      <Image
+                                                                        alt="Facebook icon"
+                                                                        bg={false}
+                                                                        className="icon mr3"
+                                                                        onImgLoad={[Function]}
+                                                                        src="?w=200&fm=png&q=90"
+                                                                        style={Object {}}
+                                                      />
+                                                      <span>
+                                                                        Facebook
+                                                      </span>
+                                    </a>
+                  </div>
+</div>,
+                <span
+                  className="bold small text-white"
+>
+                  © 2018 Ample Hills Creamery.
+                  <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/privacy-policy"
+                  >
+                                    Privacy Policy
+                  </NavLink>
+                  &
+                  <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="text-decoration-none mx1"
+                                    exact={true}
+                                    to="/web-accessibility"
+                  >
+                                    Accessibility
+                  </NavLink>
+</span>,
+              ],
+              "className": "flex flex-column justify-start col-12 md-col-5",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Instagram icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Instagram
+                                        </span>
+                    </a>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Twitter icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Twitter
+                                        </span>
+                    </a>
+                    <a
+                                        className="my3 flex items-center bold text-white text-decoration-none"
+                                        href=""
+                                        rel="noopener"
+                                        target="_blank"
+                    >
+                                        <Image
+                                                            alt="Facebook icon"
+                                                            bg={false}
+                                                            className="icon mr3"
+                                                            onImgLoad={[Function]}
+                                                            src="?w=200&fm=png&q=90"
+                                                            style={Object {}}
+                                        />
+                                        <span>
+                                                            Facebook
+                                        </span>
+                    </a>
+</div>,
+                  "className": "col-3 flex flex-column mb4",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Instagram icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Instagram
+                        </span>
+</a>,
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Twitter icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Twitter
+                        </span>
+</a>,
+                      <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
+>
+                        <Image
+                                                alt="Facebook icon"
+                                                bg={false}
+                                                className="icon mr3"
+                                                onImgLoad={[Function]}
+                                                src="?w=200&fm=png&q=90"
+                                                style={Object {}}
+                        />
+                        <span>
+                                                Facebook
+                        </span>
+</a>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Instagram icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Instagram
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Instagram icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Instagram",
+                          },
+                          "ref": null,
+                          "rendered": "Instagram",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Twitter icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Twitter
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Twitter icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Twitter",
+                          },
+                          "ref": null,
+                          "rendered": "Twitter",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <Image
+                            alt="Facebook icon"
+                            bg={false}
+                            className="icon mr3"
+                            onImgLoad={[Function]}
+                            src="?w=200&fm=png&q=90"
+                            style={Object {}}
+/>,
+                          <span>
+                            Facebook
+</span>,
+                        ],
+                        "className": "my3 flex items-center bold text-white text-decoration-none",
+                        "href": "",
+                        "rel": "noopener",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "alt": "Facebook icon",
+                            "bg": false,
+                            "children": null,
+                            "className": "icon mr3",
+                            "onImgLoad": [Function],
+                            "src": "?w=200&fm=png&q=90",
+                            "style": Object {},
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Facebook",
+                          },
+                          "ref": null,
+                          "rendered": "Facebook",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "a",
+                    },
+                  ],
+                  "type": "div",
+                },
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "© 2018 Ample Hills Creamery.",
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="text-decoration-none mx1"
+                      exact={true}
+                      to="/privacy-policy"
+>
+                      Privacy Policy
+</NavLink>,
+                    "&",
+                    <NavLink
+                      activeClassName="active"
+                      aria-current="page"
+                      className="text-decoration-none mx1"
+                      exact={true}
+                      to="/web-accessibility"
+>
+                      Accessibility
+</NavLink>,
+                  ],
+                  "className": "bold small text-white",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "© 2018 Ample Hills Creamery.",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "Privacy Policy",
+                      "className": "text-decoration-none mx1",
+                      "exact": true,
+                      "to": "/privacy-policy",
+                    },
+                    "ref": null,
+                    "rendered": "Privacy Policy",
+                    "type": [Function],
+                  },
+                  "&",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "activeClassName": "active",
+                      "aria-current": "page",
+                      "children": "Accessibility",
+                      "className": "text-decoration-none mx1",
+                      "exact": true,
+                      "to": "/web-accessibility",
+                    },
+                    "ref": null,
+                    "rendered": "Accessibility",
+                    "type": [Function],
+                  },
+                ],
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
