@@ -1,12 +1,7 @@
-@import 'settings', 'typography';
+@import 'settings', 'typography', 'settings/aspect';
 
 .ImageVideoCarousel {
-  &__iframe-conteiner {
-    //Calculation is to keep 9:16 iframe ratio
-    padding-top: calc(9 / 16 * 100%);
-  }
-
-  iframe {
-    border: 0;
+  &__iframe-container {
+    @include aspect-ratio(16, 9);
   }
 }

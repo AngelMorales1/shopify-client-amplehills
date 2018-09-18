@@ -48,7 +48,7 @@ class ImageVideoCarousel extends Component {
     const contents = get(fields, 'contents', []);
     const isDripOn = get(fields, 'drip', false);
     const currentBreakpointIsSmall = this.state.currentBreakpoint === 'small';
-    console.log(contents);
+
     return (
       <div
         ref={refBlock => setRef(refBlock)}
@@ -82,7 +82,7 @@ class ImageVideoCarousel extends Component {
                   {contentIsYoutube || contentIsVimeo ? (
                     <div
                       className={cx(
-                        styles['ImageVideoCarousel__iframe-conteiner'],
+                        styles['ImageVideoCarousel__iframe-container'],
                         'relative'
                       )}
                     >
