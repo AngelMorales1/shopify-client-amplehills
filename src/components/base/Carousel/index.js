@@ -7,6 +7,10 @@ import { Button, Image } from 'components/base';
 import styles from './Carousel.scss';
 
 class Carousel extends Component {
+  state = {
+    index: 0
+  };
+
   componentDidUpdate() {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -19,9 +23,12 @@ class Carousel extends Component {
     }, 0);
   }
 
-  state = {
-    index: 0
-  };
+  shouldComponentUpdate(prevProps) {
+    if (prevProps.showArrows != this.props.showArrows) {
+      console.log(prevProps.showArrows, this.props.showArrows);
+      return true;
+    }
+  }
 
   render() {
     const {
