@@ -112,7 +112,9 @@ ImageVideoCarousel.propTypes = {
   z: PropTypes.number,
   block: PropTypes.shape({
     fields: PropTypes.shape({
-      title: PropTypes.string
+      title: PropTypes.string,
+      drip: PropTypes.bool,
+      contents: PropTypes.array
     })
   }),
   setRef: PropTypes.func
@@ -122,7 +124,9 @@ ImageVideoCarousel.defaultProps = {
   z: 1,
   block: {
     fields: {
-      title: ''
+      title: '',
+      drip: false,
+      contents: []
     }
   },
   setRef: () => {}
