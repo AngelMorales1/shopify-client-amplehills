@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { getEvents } from 'state/actions/eventsActions';
 import events from 'state/selectors/events';
 import event from 'state/selectors/event';
-// import eventProducts from 'state/selectors/eventProducts';
+import eventProducts from 'state/selectors/eventProducts';
 
 class EventDetailContainer extends ContainerBase {
   view = import('views/EventDetailView');
@@ -22,8 +22,8 @@ class EventDetailContainer extends ContainerBase {
 const mapStateToProps = (state, props) => {
   return {
     event: event(state, props),
-    events: events(state)
-    // eventProducts: eventProducts(state)
+    events: events(state),
+    eventProducts: eventProducts(state)
   };
 };
 

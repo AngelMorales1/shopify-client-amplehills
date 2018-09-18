@@ -15,6 +15,7 @@ export default createSelector(
       const title = get(fields, 'title', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
       const text = get(fields, 'text', '');
+      const eventHandle = get(fields, 'eventHandle', '');
       const datesAndTimes = get(fields, 'datesAndTimes.fragments', []).map(
         fragment => {
           return fragment.reduce((accumulated, current) => {
@@ -35,6 +36,7 @@ export default createSelector(
         title,
         contentBlocks,
         text,
+        eventHandle,
         datesAndTimes
       };
     });
