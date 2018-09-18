@@ -7,10 +7,6 @@ import { Button, Image } from 'components/base';
 import styles from './Carousel.scss';
 
 class Carousel extends Component {
-  state = {
-    index: 0
-  };
-
   componentDidUpdate() {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -22,6 +18,10 @@ class Carousel extends Component {
       window.dispatchEvent(new Event('resize'));
     }, 0);
   }
+
+  state = {
+    index: 0
+  };
 
   render() {
     const {
@@ -35,7 +35,7 @@ class Carousel extends Component {
       onChange,
       index,
       sliderClasses,
-      dotColorWhite
+      dotColor
     } = this.props;
 
     return (
@@ -81,8 +81,8 @@ class Carousel extends Component {
                   <li key={i} className="inline-block p1">
                     <Button
                       className={cx('big', {
-                        'text-peach': !dotColorWhite,
-                        'text-white': dotColorWhite
+                        'text-peach': !dotColor,
+                        'text-white': dotColor === 'white'
                       })}
                       variant="no-style"
                       label={i === this.state.index ? '\u26AC' : '\u2022'}
@@ -114,7 +114,7 @@ Carousel.propTypes = {
   onChange: PropTypes.func,
   index: PropTypes.number,
   sliderClasses: PropTypes.string,
-  dotColorWhite: PropTypes.bool
+  dotColor: PropTypes.string
 };
 
 Carousel.defaultProps = {
@@ -128,7 +128,7 @@ Carousel.defaultProps = {
   onChange: () => {},
   index: 0,
   sliderClasses: '',
-  dotColorWhite: false
+  dotColor: ''
 };
 
 export default Carousel;

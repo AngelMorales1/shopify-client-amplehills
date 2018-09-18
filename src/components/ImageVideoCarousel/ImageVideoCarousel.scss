@@ -1,4 +1,12 @@
 @import 'settings', 'typography';
 
 .ImageVideoCarousel {
+  &__iframe-conteiner {
+    //Calculation is to keep 9:16 iframe ratio
+    padding-top: calc(9 / 16 * 100%);
+  }
+
+  iframe {
+    border: 0;
+  }
 }
