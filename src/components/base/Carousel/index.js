@@ -7,10 +7,6 @@ import { Button, Image } from 'components/base';
 import styles from './Carousel.scss';
 
 class Carousel extends Component {
-  state = {
-    index: 0
-  };
-
   componentDidUpdate() {
     setTimeout(() => {
       window.dispatchEvent(new Event('resize'));
@@ -22,6 +18,10 @@ class Carousel extends Component {
       window.dispatchEvent(new Event('resize'));
     }, 0);
   }
+
+  state = {
+    index: 0
+  };
 
   render() {
     const {
