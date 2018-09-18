@@ -23,13 +23,6 @@ class Carousel extends Component {
     }, 0);
   }
 
-  shouldComponentUpdate(prevProps) {
-    if (prevProps.showArrows != this.props.showArrows) {
-      console.log(prevProps.showArrows, this.props.showArrows);
-      return true;
-    }
-  }
-
   render() {
     const {
       className,

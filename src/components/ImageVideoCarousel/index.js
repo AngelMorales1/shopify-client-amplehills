@@ -38,7 +38,7 @@ class ImageVideoCarousel extends Component {
     const contents = get(fields, 'contents', []);
     const isDripOn = get(fields, 'drip', false);
     const currentBreakpointIsSmall = this.state.currentBreakpoint == 'small';
-    console.log('ImageVideoCarousel', currentBreakpointIsSmall);
+
     return (
       <div
         ref={refBlock => setRef(refBlock)}
