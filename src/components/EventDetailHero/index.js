@@ -15,20 +15,42 @@ import styles from './EventDetailHero.scss';
 
 class EventDetailHero extends Component {
   state = {
-    selectedItem: ''
+    selectedItem: '',
+    selectedItemDateAndTime: ''
   };
 
   componentDidMount() {
-    const eventDatesAndTimes = get(this, 'props.event.datesAndTimes', []);
+    const event = get(this, 'props.event', {});
+    const eventDatesAndTimes = get(event, 'datesAndTimes', []);
+    if (event.handle) {
+      if (eventDatesAndTimes.length > 1) {
+        const firstAvailableItem = eventDatesAndTimes.find(eventDateAndTime => {
+          return get(eventDateAndTime, 'available', false) === true;
+        });
 
-    if (eventDatesAndTimes.length > 1) {
-      const firstAvailableItem = eventDatesAndTimes.find(eventDateAndTime => {
-        return get(eventDateAndTime, 'available', false) === true;
-      });
+        this.setState({
+          selectedItem: get(firstAvailableItem, 'id', ''),
+          selectedItemDateAndTime: this.getDateAndTimeFormat(firstAvailableItem)
+        });
+      } else {
+        const dateAndTime = get(event, 'datesAndTimes[0]', {});
 
-      this.setState({ selectedItem: get(firstAvailableItem, 'id', '') });
+        this.setState({
+          selectedItem: get(event, 'id', ''),
+          selectedItemDateAndTime: this.getDateAndTimeFormat(dateAndTime)
+        });
+      }
     }
   }
+
+  getDateAndTimeFormat = dateAndTime => {
+    const startTime = dateAndTime.Time.split('-')[0];
+    const sortedDateAndTime = `${moment(dateAndTime.Date).format(
+      'MM/DD/YY'
+    )}- ${getShortTimeFormat(startTime)}`;
+
+    return sortedDateAndTime;
+  };
 
   getItemPrice = () => {
     const eventDatesAndTimes = get(this, 'props.event.datesAndTimes', []);
@@ -44,11 +66,33 @@ class EventDetailHero extends Component {
     return getLineItemPrice(get(this, 'props.event.price', 0), 1);
   };
 
+  handleAddToCart = () => {
+    const quantity = get(this.state, 'quantity', 1);
+    const item = [
+      {
+        variantId: get(this, 'state.selectedItem', ''),
+        quantity: 1,
+        customAttributes: [
+          {
+            key: 'eventTime',
+            value: get(this, 'state.selectedItemDateAndTime', '')
+          }
+        ]
+      }
+    ];
+
+    this.props.actions.addLineItems(this.props.checkout.id, item);
+  };
+
   render() {
     const { event, actions } = this.props;
     const { selectedItem } = this.state;
     const eventIsAvailable = event.available;
-    console.log(event);
+    const variant = get(this, 'props.event.datesAndTimes', []).find(
+      eventDateAndTime =>
+        get(eventDateAndTime, 'id', '') === get(this, 'state.selectedItem', '')
+    );
+
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
         <div className="flex flex-column justify-center items-center w100 mt4">
@@ -95,10 +139,7 @@ class EventDetailHero extends Component {
                 <div>
                   <p className="copy text-peach bold mb2">Date</p>
                   {event.datesAndTimes.map((dateAndTime, i) => {
-                    const startTime = dateAndTime.Time.split('-')[0];
-                    const dateVariant = `${moment(dateAndTime.Date).format(
-                      'MM/DD/YY'
-                    )}- ${getShortTimeFormat(startTime)}`;
+                    const dateVariant = this.getDateAndTimeFormat(dateAndTime);
                     const classIsAvailable = get(
                       dateAndTime,
                       'available',
@@ -119,7 +160,8 @@ class EventDetailHero extends Component {
                             }
                             onClick={() => {
                               this.setState({
-                                selectedItem: dateAndTime.id
+                                selectedItem: dateAndTime.id,
+                                selectedItemDateAndTime: dateVariant
                               });
                             }}
                             color={classIsAvailable ? 'peach' : 'ghost-gray'}
@@ -196,6 +238,7 @@ class EventDetailHero extends Component {
                 className={cx(styles['EventDetailHero__action-button'], 'my4')}
                 color={event.handle ? 'madison-blue' : 'peach'}
                 disabled={event.handle ? !eventIsAvailable : false}
+                onClick={event.handle ? this.handleAddToCart : () => {}}
               >
                 <span className="mr-auto">
                   {event.handle ? 'Add to Cart' : 'Call to Action'}

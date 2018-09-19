@@ -9,6 +9,7 @@ import {
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
+import events from 'state/selectors/events';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -37,6 +38,7 @@ class MiniCart extends Component {
       checkout,
       items,
       products,
+      events,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -64,11 +66,15 @@ class MiniCart extends Component {
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
-              const handle = Object.values(products).find(product => {
-                return product.variants.some(
-                  variant => variant.id === item.productId
-                );
-              }).handle;
+              const handle = Object.values(products)
+                .concat(events)
+                .find(product => {
+                  return product.variants.some(
+                    variant => variant.id === item.productId
+                  );
+                }).handle;
+              const productIsEvent = !products[handle];
+              const event = events.find(event => event.id === item.productId);
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
@@ -91,14 +97,18 @@ class MiniCart extends Component {
                             <li
                               className="sub-line-item small"
                               key={subItem.handle}
-                            >{`${subItem.quantity}x ${
-                              products[subItem.handle].title
-                            }`}</li>
+                            >
+                              {productIsEvent
+                                ? subItem.handle
+                                : `${subItem.quantity}x ${
+                                    products[subItem.handle].title
+                                  }`}
+                            </li>
                           ))}
                         </ul>
                       </div>
                     ) : null}
-                    {products[handle].cartDetails ? (
+                    {get(products, handle, {}).cartDetails ? (
                       <div className="flex flex-column my1">
                         <pre
                           className={cx(
@@ -179,6 +189,7 @@ const mapStateToProps = state => {
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen', false),
     checkout: checkout(state),
     products: products(state),
+    events: events(state),
     items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])

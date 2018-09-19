@@ -111,7 +111,6 @@ class ChooseYourOwnStory extends Component {
         })
       }
     ];
-    console.log(this.props.checkout.id, items);
 
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };

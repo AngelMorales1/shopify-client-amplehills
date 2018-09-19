@@ -14,6 +14,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import products from 'state/selectors/products';
+import events from 'state/selectors/events';
 import lineItems from 'state/selectors/lineItems';
 import checkoutModel from 'models/checkoutModel';
 import itemModel from 'models/itemModel';
@@ -62,7 +63,14 @@ class Cart extends Component {
   };
 
   render() {
-    const { actions, checkout, items, products, updatingNote } = this.props;
+    const {
+      actions,
+      checkout,
+      items,
+      products,
+      updatingNote,
+      events
+    } = this.props;
     const currentNote = get(checkout, 'note') ? get(checkout, 'note') : '';
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const isUpdateButtonActive =
@@ -105,11 +113,15 @@ class Cart extends Component {
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {items.map(item => {
-                const handle = Object.values(products).find(product => {
-                  return product.variants.some(
-                    variant => variant.id === item.productId
-                  );
-                }).handle;
+                const handle = Object.values(products)
+                  .concat(events)
+                  .find(product => {
+                    return product.variants.some(
+                      variant => variant.id === item.productId
+                    );
+                  }).handle;
+                const productIsEvent = !products[handle];
+                const event = events.find(event => event.id === item.productId);
 
                 return (
                   <div
@@ -123,25 +135,30 @@ class Cart extends Component {
                       <div className="my2">
                         <Link
                           className="text-decoration-none"
-                          to={`/products/${handle}`}
+                          to={
+                            productIsEvent
+                              ? `/events/${get(event, 'contentfulId', '')}`
+                              : `/products/${handle}`
+                          }
                         >
                           <span className="small bold">{item.title}</span>
                         </Link>
                         <div className="flex flex-column mt2">
                           {item.subItems.map(subItem => {
                             return (
-                              <span
-                                key={subItem.handle}
-                                className="small mb1"
-                              >{`${subItem.quantity}x ${
-                                products[subItem.handle].title
-                              }`}</span>
+                              <span key={subItem.handle} className="small mb1">
+                                {productIsEvent
+                                  ? subItem.handle
+                                  : `${subItem.quantity}x ${
+                                      products[subItem.handle].title
+                                    }`}
+                              </span>
                             );
                           })}
-                          {products[handle].cartDetails ? (
+                          {get(products, handle, {}).cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
-                                {products[handle].cartDetails}
+                                {get(products, handle, {}).cartDetails}
                               </pre>
                             </div>
                           ) : null}
@@ -161,18 +178,26 @@ class Cart extends Component {
                         className={`text-decoration-none ${
                           item.subitems ? 'mb2' : 'my-auto'
                         }`}
-                        to={`/products/${handle}`}
+                        to={
+                          productIsEvent
+                            ? `/events/${get(event, 'contentfulId', '')}`
+                            : `/products/${handle}`
+                        }
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
                       {item.subItems.map(subItem => {
                         return (
-                          <span key={subItem.handle} className="small mb1">{`${
-                            subItem.quantity
-                          }x ${products[subItem.handle].title}`}</span>
+                          <span key={subItem.handle} className="small mb1">
+                            {productIsEvent
+                              ? subItem.handle
+                              : `${subItem.quantity}x ${
+                                  products[subItem.handle].title
+                                }`}
+                          </span>
                         );
                       })}
-                      {products[handle].cartDetails ? (
+                      {get(products, handle, {}).cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
                             {products[handle].cartDetails}
@@ -398,7 +423,8 @@ const mapStateToProps = state => {
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', []),
     updatingNote: get(state, 'status.updatingNote', IDLE),
     items: lineItems(state),
-    products: products(state)
+    products: products(state),
+    events: events(state)
   };
 };
 
