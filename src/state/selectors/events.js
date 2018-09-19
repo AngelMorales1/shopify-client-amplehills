@@ -74,7 +74,7 @@ export default createSelector(
 
           const startTime = get(sortedFragment, 'Time', '').split('-')[0];
           const title = `${moment(get(sortedFragment, 'Date', '')).format(
-            'DD/MM/YY'
+            'MM/DD/YY'
           )}-${getShortTimeFormat(startTime)}`;
 
           const shopifyDateAndTime = get(shopifyProduct, 'variants', []).find(

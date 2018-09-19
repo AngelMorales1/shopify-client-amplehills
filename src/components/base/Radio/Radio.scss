@@ -36,6 +36,16 @@
     }
   }
 
+  &--ghost-gray {
+    label {
+      color: color('ghost-gray');
+    }
+
+    &::before {
+      border-color: color('ghost-gray');
+    }
+  }
+
   &--vertical {
     display: flex;
     flex-direction: column-reverse;

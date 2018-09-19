@@ -20,7 +20,7 @@ class EventDetailHero extends Component {
   render() {
     const { event, actions } = this.props;
     const { selectedDate } = this.state;
-    // console.log(event)
+
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
         <div className="flex flex-column justify-center items-center w100 mt4">
@@ -69,19 +69,30 @@ class EventDetailHero extends Component {
                   {event.datesAndTimes.map((dateAndTime, i) => {
                     const startTime = dateAndTime.Time.split('-')[0];
                     const dateVariant = `${moment(dateAndTime.Date).format(
-                      'DD/MM/YY'
+                      'MM/DD/YY'
                     )}- ${getShortTimeFormat(startTime)}`;
+                    const classIsAvailable = get(
+                      dateAndTime,
+                      'available',
+                      false
+                    );
 
                     return (
                       <Radio
+                        disabled={classIsAvailable ? false : true}
                         key={get(dateAndTime, 'uuid', i)}
                         className="block-sub-headline bold text-peach mb2 lowercase"
-                        label={dateVariant}
+                        label={
+                          classIsAvailable
+                            ? dateVariant
+                            : `${dateVariant} (Sold Out)`
+                        }
                         onClick={() =>
                           this.setState({
                             selectedDate: dateVariant.replace(/\s/g, '')
                           })
                         }
+                        color={classIsAvailable ? 'peach' : 'ghost-gray'}
                         checked={
                           selectedDate === dateVariant.replace(/\s/g, '')
                         }

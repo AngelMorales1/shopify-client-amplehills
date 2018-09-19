@@ -6,7 +6,15 @@ import styles from './Radio.scss';
 
 import { Image, Button } from 'components/base';
 
-const Radio = ({ variant, color, className, label, checked, onClick }) => {
+const Radio = ({
+  variant,
+  color,
+  className,
+  label,
+  checked,
+  onClick,
+  disabled
+}) => {
   const checkImage = color => {
     switch (color) {
       case 'white':
@@ -18,6 +26,7 @@ const Radio = ({ variant, color, className, label, checked, onClick }) => {
 
   return (
     <Button
+      disabled={disabled}
       variant="style-none"
       onClick={onClick}
       className={cx(
@@ -44,14 +53,16 @@ Radio.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   checked: PropTypes.bool,
-  variant: PropTypes.string
+  variant: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 Radio.defaultProps = {
   className: '',
   label: '',
   checked: false,
-  variant: 'primary'
+  variant: 'primary',
+  disabled: false
 };
 
 export default Radio;
