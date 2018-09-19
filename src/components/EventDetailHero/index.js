@@ -123,7 +123,6 @@ class EventDetailHero extends Component {
   };
 
   handleAddToCart = () => {
-    const quantity = get(this.state, 'quantity', 1);
     const item = [
       {
         variantId: get(this, 'state.selectedItem', ''),
