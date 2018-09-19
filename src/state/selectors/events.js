@@ -51,6 +51,7 @@ export default createSelector(
       const image = get(fields, 'image.fields.file.url', '');
       const locationTitle = get(fields, 'location.fields.title', '');
       const locationId = get(fields, 'location.sys.id', '');
+      const locationNumber = get(fields, 'location.fields.phone', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
       const text = get(fields, 'text', '');
 
@@ -97,6 +98,7 @@ export default createSelector(
         contentBlocks,
         text,
         datesAndTimes,
+        locationNumber,
         ...shopifyProduct
       };
     });

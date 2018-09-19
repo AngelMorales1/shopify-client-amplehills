@@ -10,13 +10,14 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import eventModel from 'models/eventModel';
 
-import { Button, Radio } from 'components/base';
+import { Button, Radio, Modal, Image } from 'components/base';
 import styles from './EventDetailHero.scss';
 
 class EventDetailHero extends Component {
   state = {
     selectedItem: '',
-    selectedItemDateAndTime: ''
+    selectedItemDateAndTime: '',
+    modalIsOpen: false
   };
 
   componentDidMount() {
@@ -24,13 +25,17 @@ class EventDetailHero extends Component {
     const eventDatesAndTimes = get(event, 'datesAndTimes', []);
     if (event.handle) {
       if (eventDatesAndTimes.length > 1) {
-        const firstAvailableItem = eventDatesAndTimes.find(eventDateAndTime => {
-          return get(eventDateAndTime, 'available', false) === true;
-        });
+        const firstAvailableDateAndTime = eventDatesAndTimes.find(
+          eventDateAndTime => {
+            return get(eventDateAndTime, 'available', false) === true;
+          }
+        );
 
         this.setState({
-          selectedItem: get(firstAvailableItem, 'id', ''),
-          selectedItemDateAndTime: this.getDateAndTimeFormat(firstAvailableItem)
+          selectedItem: get(firstAvailableDateAndTime, 'id', ''),
+          selectedItemDateAndTime: this.getDateAndTimeFormat(
+            firstAvailableDateAndTime
+          )
         });
       } else {
         const dateAndTime = get(event, 'datesAndTimes[0]', {});
@@ -67,7 +72,6 @@ class EventDetailHero extends Component {
   };
 
   handleAddToCart = () => {
-    const quantity = get(this.state, 'quantity', 1);
     const item = [
       {
         variantId: get(this, 'state.selectedItem', ''),
@@ -85,13 +89,9 @@ class EventDetailHero extends Component {
   };
 
   render() {
-    const { event, actions } = this.props;
+    const { event } = this.props;
     const { selectedItem } = this.state;
     const eventIsAvailable = event.available;
-    const variant = get(this, 'props.event.datesAndTimes', []).find(
-      eventDateAndTime =>
-        get(eventDateAndTime, 'id', '') === get(this, 'state.selectedItem', '')
-    );
 
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
@@ -139,7 +139,7 @@ class EventDetailHero extends Component {
                 <div>
                   <p className="copy text-peach bold mb2">Date</p>
                   {event.datesAndTimes.map((dateAndTime, i) => {
-                    const dateVariant = this.getDateAndTimeFormat(dateAndTime);
+                    const eventTime = this.getDateAndTimeFormat(dateAndTime);
                     const classIsAvailable = get(
                       dateAndTime,
                       'available',
@@ -147,21 +147,20 @@ class EventDetailHero extends Component {
                     );
 
                     return (
-                      <Fragment>
+                      <Fragment key={get(dateAndTime, 'uuid', i)}>
                         {event.handle ? (
                           <Radio
                             disabled={classIsAvailable ? false : true}
-                            key={get(dateAndTime, 'uuid', i)}
                             className="block-sub-headline bold text-peach mb2 lowercase"
                             label={
                               classIsAvailable
-                                ? dateVariant
-                                : `${dateVariant} (Sold Out)`
+                                ? eventTime
+                                : `${eventTime} (Sold Out)`
                             }
                             onClick={() => {
                               this.setState({
                                 selectedItem: dateAndTime.id,
-                                selectedItemDateAndTime: dateVariant
+                                selectedItemDateAndTime: eventTime
                               });
                             }}
                             color={classIsAvailable ? 'peach' : 'ghost-gray'}
@@ -169,7 +168,7 @@ class EventDetailHero extends Component {
                           />
                         ) : (
                           <p className="block-sub-headline bold text-peach mb2 lowercase">
-                            {dateVariant}
+                            {eventTime}
                           </p>
                         )}
                       </Fragment>
@@ -238,7 +237,11 @@ class EventDetailHero extends Component {
                 className={cx(styles['EventDetailHero__action-button'], 'my4')}
                 color={event.handle ? 'madison-blue' : 'peach'}
                 disabled={event.handle ? !eventIsAvailable : false}
-                onClick={event.handle ? this.handleAddToCart : () => {}}
+                onClick={
+                  event.handle
+                    ? this.handleAddToCart
+                    : () => this.setState({ modalIsOpen: true })
+                }
               >
                 <span className="mr-auto">
                   {event.handle ? 'Add to Cart' : 'Call to Action'}
@@ -259,6 +262,25 @@ class EventDetailHero extends Component {
             </div>
           </div>
         </div>
+        {this.state.modalIsOpen ? (
+          <Modal className="relative">
+            <div className="relative wh100 flex flex-column mb3">
+              <Button
+                className="absolute r0 t0"
+                variant="icon-small"
+                onClick={() => this.setState({ modalIsOpen: false })}
+              >
+                <Image src="/assets/images/icon-close.svg" />
+              </Button>
+              <h2 className="sub-title m3 mx-auto center">
+                {event.locationTitle}
+              </h2>
+              <p className="block-subheadline mx-auto">
+                {event.locationNumber}
+              </p>
+            </div>
+          </Modal>
+        ) : null}
       </div>
     );
   }

@@ -74,7 +74,6 @@ class MiniCart extends Component {
                   );
                 }).handle;
               const productIsEvent = !products[handle];
-              const event = events.find(event => event.id === item.productId);
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
