@@ -20,7 +20,7 @@ class EventDetailHero extends Component {
   render() {
     const { event, actions } = this.props;
     const { selectedDate } = this.state;
-
+    // console.log(event)
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
         <div className="flex flex-column justify-center items-center w100 mt4">
