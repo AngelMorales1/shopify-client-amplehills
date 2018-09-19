@@ -67,12 +67,15 @@ class MiniCart extends Component {
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
-              const handle = getProductHandleFromVariantId(
-                products,
-                events,
-                item
-              );
+              const handle = Object.values(products)
+                .concat(events)
+                .find(product => {
+                  return product.variants.some(
+                    variant => variant.id === item.productId
+                  );
+                }).handle;
               const productIsEvent = !products[handle];
+              const event = events.find(event => event.id === item.productId);
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,

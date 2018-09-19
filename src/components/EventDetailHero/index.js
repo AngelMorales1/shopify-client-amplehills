@@ -122,6 +122,24 @@ class EventDetailHero extends Component {
     });
   };
 
+  handleAddToCart = () => {
+    const quantity = get(this.state, 'quantity', 1);
+    const item = [
+      {
+        variantId: get(this, 'state.selectedItem', ''),
+        quantity: 1,
+        customAttributes: [
+          {
+            key: 'eventTime',
+            value: get(this, 'state.selectedItemDateAndTime', '')
+          }
+        ]
+      }
+    ];
+
+    this.props.actions.addLineItems(this.props.checkout.id, item);
+  };
+
   render() {
     const { event, formStatus } = this.props;
     const { selectedItem, error } = this.state;

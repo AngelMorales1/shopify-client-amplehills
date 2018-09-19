@@ -72,7 +72,11 @@ class Cart extends Component {
       updatingNote,
       events
     } = this.props;
+<<<<<<< HEAD
     const currentNote = get(checkout, 'note', '');
+=======
+    const currentNote = get(checkout, 'note') ? get(checkout, 'note') : '';
+>>>>>>> Add add to cart function to EventDetailHero
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const isUpdateButtonActive =
       this.state.note !== currentNote
@@ -113,6 +117,7 @@ class Cart extends Component {
             </div>
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
+<<<<<<< HEAD
               {get(this, 'props.items', []).map(item => {
                 const handle = getProductHandleFromVariantId(
                   products,
@@ -126,6 +131,18 @@ class Cart extends Component {
                   );
                 });
                 const cartDetails = get(products, handle, {}).cartDetails;
+=======
+              {items.map(item => {
+                const handle = Object.values(products)
+                  .concat(events)
+                  .find(product => {
+                    return product.variants.some(
+                      variant => variant.id === item.productId
+                    );
+                  }).handle;
+                const productIsEvent = !products[handle];
+                const event = events.find(event => event.id === item.productId);
+>>>>>>> Add add to cart function to EventDetailHero
 
                 return (
                   <div
@@ -141,7 +158,11 @@ class Cart extends Component {
                           className="text-decoration-none"
                           to={
                             productIsEvent
+<<<<<<< HEAD
                               ? `/events/${get(event, 'handle', '')}`
+=======
+                              ? `/events/${get(event, 'contentfulId', '')}`
+>>>>>>> Add add to cart function to EventDetailHero
                               : `/products/${handle}`
                           }
                         >
@@ -159,10 +180,17 @@ class Cart extends Component {
                               </span>
                             );
                           })}
+<<<<<<< HEAD
                           {productIsEvent && cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
                                 {cartDetails}
+=======
+                          {get(products, handle, {}).cartDetails ? (
+                            <div className="flex flex-column">
+                              <pre className={styles['Cart__product-details']}>
+                                {get(products, handle, {}).cartDetails}
+>>>>>>> Add add to cart function to EventDetailHero
                               </pre>
                             </div>
                           ) : null}
@@ -184,7 +212,11 @@ class Cart extends Component {
                         }`}
                         to={
                           productIsEvent
+<<<<<<< HEAD
                             ? `/events/${get(event, 'handle', '')}`
+=======
+                            ? `/events/${get(event, 'contentfulId', '')}`
+>>>>>>> Add add to cart function to EventDetailHero
                             : `/products/${handle}`
                         }
                       >
@@ -201,7 +233,11 @@ class Cart extends Component {
                           </span>
                         );
                       })}
+<<<<<<< HEAD
                       {productIsEvent && cartDetails ? (
+=======
+                      {get(products, handle, {}).cartDetails ? (
+>>>>>>> Add add to cart function to EventDetailHero
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
                             {cartDetails}
