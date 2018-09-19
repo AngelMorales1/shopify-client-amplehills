@@ -77,7 +77,7 @@ const EventCard = ({ event, active }) => {
             className="inline-flex"
             color="peach"
             label={label}
-            to={`/events/${event.id}`}
+            to={`/events/${event.contentfulId}`}
           />
         </div>
       </div>

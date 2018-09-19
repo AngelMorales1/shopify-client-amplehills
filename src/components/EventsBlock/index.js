@@ -90,7 +90,7 @@ class EventsBlock extends Component {
 
     return customEvents.map(customEvent => {
       const id = get(customEvent, 'sys.id', '');
-      return allEvents.find(event => event.id === id);
+      return allEvents.find(event => event.contentfulId === id);
     });
   };
 
