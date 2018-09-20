@@ -23,7 +23,7 @@ class LocationDetailHero extends PureComponent {
 
     const eventId = get(
       events.find(event => event.locationId === location.id),
-      'id',
+      'contentfulId',
       ''
     );
 

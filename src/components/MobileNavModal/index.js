@@ -162,7 +162,7 @@ class MobileNavModal extends Component {
             </NavLink>
             <NavLink
               exact
-              to="/contact-us"
+              to="/contact"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={this.handleMenuClick}
             >

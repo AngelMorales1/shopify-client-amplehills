@@ -156,7 +156,7 @@ class Cart extends Component {
                               </span>
                             );
                           })}
-                          {cartDetails && cartDetails ? (
+                          {productIsEvent && cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
                                 {cartDetails}
