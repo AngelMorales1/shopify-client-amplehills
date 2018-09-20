@@ -71,7 +71,7 @@ class Cart extends Component {
       updatingNote,
       events
     } = this.props;
-    const currentNote = get(checkout, 'note') ? get(checkout, 'note') : '';
+    const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const isUpdateButtonActive =
       this.state.note !== currentNote
@@ -112,7 +112,7 @@ class Cart extends Component {
             </div>
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
-              {items.map(item => {
+              {get(this, 'props.items', []).map(item => {
                 const handle = Object.values(products)
                   .concat(events)
                   .find(product => {
@@ -122,6 +122,7 @@ class Cart extends Component {
                   }).handle;
                 const productIsEvent = !products[handle];
                 const event = events.find(event => event.id === item.productId);
+                const cartDetails = get(products, handle, {}).cartDetails;
 
                 return (
                   <div
@@ -155,10 +156,10 @@ class Cart extends Component {
                               </span>
                             );
                           })}
-                          {get(products, handle, {}).cartDetails ? (
+                          {cartDetails && cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
-                                {get(products, handle, {}).cartDetails}
+                                {cartDetails}
                               </pre>
                             </div>
                           ) : null}
@@ -197,10 +198,10 @@ class Cart extends Component {
                           </span>
                         );
                       })}
-                      {get(products, handle, {}).cartDetails ? (
+                      {productIsEvent && cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
-                            {products[handle].cartDetails}
+                            {cartDetails}
                           </pre>
                         </div>
                       ) : null}

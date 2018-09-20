@@ -275,9 +275,7 @@ class EventDetailHero extends Component {
               <h2 className="sub-title m3 mx-auto center">
                 {event.locationTitle}
               </h2>
-              <p className="block-subheadline mx-auto">
-                {event.locationNumber}
-              </p>
+              <p className="block-subheadline mx-auto">{event.locationPhone}</p>
             </div>
           </Modal>
         ) : null}

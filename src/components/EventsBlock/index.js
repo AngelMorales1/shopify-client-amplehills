@@ -163,7 +163,7 @@ class EventsBlock extends Component {
             return (
               <EventCard
                 active={this.cardIsActive(event)}
-                key={get(event, 'id', i)}
+                key={get(event, 'contentfulId', i)}
                 event={event}
               />
             );
