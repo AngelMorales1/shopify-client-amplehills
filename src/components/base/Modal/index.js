@@ -5,8 +5,8 @@ const Modal = ({ className, children }) => {
   return (
     <div
       className={cx(
-        className,
-        'fixed-cover bg-white-wash flex justify-center items-center transition-fade-in px3'
+        'fixed-cover bg-white-wash flex justify-center items-center transition-fade-in',
+        className
       )}
     >
       <div className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long">
