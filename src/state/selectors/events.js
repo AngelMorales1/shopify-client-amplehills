@@ -18,7 +18,7 @@ export default createSelector(
       const variants = get(node, 'variants.edges', []).map(variant => {
         const variantNode = get(variant, 'node', {});
         const { id, price, title, availableForSale } = variantNode;
-        return { id, price, title, available: availableForSale };
+        return { id, price, date: title, available: availableForSale };
       });
 
       const available = variants.some(variant => variant.available);
@@ -62,29 +62,35 @@ export default createSelector(
         available: false
       });
 
-      const datesAndTimes = get(fields, 'datesAndTimes.fragments', []).map(
-        fragment => {
-          const sortedFragment = fragment.reduce(
-            (sortedDateAndTime, dateAndTime) => {
-              sortedDateAndTime[dateAndTime.key] = dateAndTime.value;
+      const datesAndTimes = shopifyProduct.id
+        ? shopifyProduct.variants.map(variant => {
+            const dateAndTime = variant.date.split(', ');
+            const Time = dateAndTime[1];
+            const Date = dateAndTime[0];
+            const sortedDate = moment(Date).format('dddd, MMMM Do');
+            const sortedTime = getShortTimeFormat(Time);
 
-              return sortedDateAndTime;
-            },
-            {}
-          );
+            return { Time, Date, sortedDate, sortedTime };
+          })
+        : get(fields, 'datesAndTimes.fragments', []).map(fragment => {
+            const sortedFragment = fragment.reduce(
+              (sortedDateAndTime, dateAndTime) => {
+                sortedDateAndTime[dateAndTime.key] = dateAndTime.value;
 
-          const startTime = get(sortedFragment, 'Time', '').split('-')[0];
-          const title = `${moment(get(sortedFragment, 'Date', '')).format(
-            'MM/DD/YY'
-          )}-${getShortTimeFormat(startTime)}`;
+                return sortedDateAndTime;
+              },
+              {}
+            );
 
-          const shopifyDateAndTime = get(shopifyProduct, 'variants', []).find(
-            dateAndTime => get(dateAndTime, 'title', '') === title
-          );
+            const sortedDate = moment(get(sortedFragment, 'Date', '')).format(
+              'dddd, MMMM Do'
+            );
+            const sortedTime = getShortTimeFormat(
+              get(sortedFragment, 'Time', '')
+            );
 
-          return { ...sortedFragment, ...shopifyDateAndTime };
-        }
-      );
+            return { ...sortedFragment, sortedDate, sortedTime };
+          });
 
       return {
         title,

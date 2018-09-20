@@ -1,12 +1,14 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { sendContactForm } from 'state/actions/ui/contactUIActions';
 
 import { getEvents } from 'state/actions/eventsActions';
 import { addLineItems } from 'state/actions/checkoutActions';
 import events from 'state/selectors/events';
 import event from 'state/selectors/event';
 import checkout from 'state/selectors/checkout';
+import { IDLE } from 'constants/Status';
 
 import get from 'utils/get';
 
@@ -27,7 +29,8 @@ const mapStateToProps = (state, props) => {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     event: event(state, props),
-    events: events(state)
+    events: events(state),
+    formStatus: get(state, 'status.contactUsFormStatus', IDLE)
   };
 };
 
@@ -36,7 +39,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         addLineItems,
-        getEvents
+        getEvents,
+        sendContactForm
       },
       dispatch
     )

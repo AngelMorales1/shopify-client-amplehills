@@ -1,74 +1,64 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
-import getShortTimeFormat from 'utils/getShortTimeFormat';
+import isValidEmailAddress from 'utils/isValidEmailAddress';
 import cx from 'classnames';
-import moment from 'moment';
 import marked from 'marked';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import eventModel from 'models/eventModel';
+import ContactUsForm from 'constants/forms/ContactUs';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 
-import { Button, Radio, Modal, Image } from 'components/base';
+import { Button, Radio, Image, FormFlash, TextField } from 'components/base';
 import styles from './EventDetailHero.scss';
 
 class EventDetailHero extends Component {
   state = {
     selectedItem: '',
     selectedItemDateAndTime: '',
-    modalIsOpen: false
+    modalIsOpen: false,
+    selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket,
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
   };
 
   componentDidMount() {
     const event = get(this, 'props.event', {});
-    const eventDatesAndTimes = get(event, 'datesAndTimes', []);
-    if (event.handle) {
-      if (eventDatesAndTimes.length > 1) {
-        const firstAvailableDateAndTime = eventDatesAndTimes.find(
-          eventDateAndTime => {
-            return get(eventDateAndTime, 'available', false) === true;
-          }
-        );
+    const shoppableItem = !!event.id;
+    const eventVariant = get(event, 'variants', []);
 
-        this.setState({
-          selectedItem: get(firstAvailableDateAndTime, 'id', ''),
-          selectedItemDateAndTime: this.getDateAndTimeFormat(
-            firstAvailableDateAndTime
-          )
-        });
-      } else {
-        const dateAndTime = get(event, 'datesAndTimes[0]', {});
+    if (shoppableItem) {
+      const firstAvailableDateAndTime = eventVariant.find(variant => {
+        return get(variant, 'available', false) === true;
+      });
 
-        this.setState({
-          selectedItem: get(event, 'id', ''),
-          selectedItemDateAndTime: this.getDateAndTimeFormat(dateAndTime)
-        });
-      }
+      this.setState({
+        selectedItem: get(firstAvailableDateAndTime, 'id', ''),
+        selectedItemDateAndTime: get(firstAvailableDateAndTime, 'date', '')
+      });
+    } else {
+      const firstDateAndTime = get(event, 'datesAndTimes[0]', {});
+
+      this.setState({
+        selectedItem: get(firstDateAndTime, 'uuid', ''),
+        selectedItemDateAndTime: `${get(
+          firstDateAndTime,
+          'sortedDate',
+          ''
+        )}, ${get(firstDateAndTime, 'sortedTime', '')}`
+      });
     }
   }
 
-  getDateAndTimeFormat = dateAndTime => {
-    const startTime = dateAndTime.Time.split('-')[0];
-    const sortedDateAndTime = `${moment(dateAndTime.Date).format(
-      'MM/DD/YY'
-    )}- ${getShortTimeFormat(startTime)}`;
+  getItemPrice = itemId => {
+    const eventVariants = get(this, 'props.event.variants', {});
+    const selectedEvent = eventVariants.find(variant => variant.id === itemId);
 
-    return sortedDateAndTime;
-  };
-
-  getItemPrice = () => {
-    const eventDatesAndTimes = get(this, 'props.event.datesAndTimes', []);
-
-    if (eventDatesAndTimes.length > 1) {
-      const item = eventDatesAndTimes.find(
-        eventDateAndTime =>
-          get(eventDateAndTime, 'id', '') ===
-          get(this, 'state.selectedItem', '')
-      );
-      return getLineItemPrice(get(item, 'price', ''), 1);
-    }
-    return getLineItemPrice(get(this, 'props.event.price', 0), 1);
+    return getLineItemPrice(get(selectedEvent, 'price', 0), 1);
   };
 
   handleAddToCart = () => {
@@ -88,10 +78,59 @@ class EventDetailHero extends Component {
     this.props.actions.addLineItems(this.props.checkout.id, item);
   };
 
+  formHasErrors = () => {
+    const { name, email, message } = this.state;
+
+    if (!name) {
+      const error = 'Please enter your full name.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!email || !isValidEmailAddress(email)) {
+      const error = 'Please enter a valid email address.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!message) {
+      const error = 'Please write a message.';
+      this.setState({ error });
+      return true;
+    }
+
+    return false;
+  };
+
+  submitContactForm = () => {
+    const eventLocation = get(this, 'props.event.locationTitle', '');
+    if (this.formHasErrors()) return null;
+
+    const { selectedAddress, name, email, phone, message } = this.state;
+
+    const eventInfoApendedMessage = `Event location: ${eventLocation}, Event time: ${
+      this.state.selectedItemDateAndTime
+    }  Message: ${message}`;
+
+    this.setState({ error: '' });
+    this.props.actions.sendContactForm({
+      selectedAddress,
+      name,
+      email,
+      phone,
+      message: eventInfoApendedMessage
+    });
+  };
+
   render() {
-    const { event } = this.props;
-    const { selectedItem } = this.state;
-    const eventIsAvailable = event.available;
+    const { event, formStatus } = this.props;
+    const { selectedItem, error } = this.state;
+    const eventVariants = get(event, 'variants', []);
+    const selectedEvent = eventVariants.find(
+      variant => variant.id === this.state.selectedItem
+    );
+    const selectedEventIsAvailable = get(selectedEvent, 'available', false);
+    const shoppableItem = !!event.id;
 
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
@@ -135,43 +174,49 @@ class EventDetailHero extends Component {
             )}
           >
             <div className="w100">
-              {event.datesAndTimes.length > 1 ? (
+              {event.datesAndTimes.length > 1 || event.variants.length > 1 ? (
                 <div>
                   <p className="copy text-peach bold mb2">Date</p>
                   {event.datesAndTimes.map((dateAndTime, i) => {
-                    const eventTime = this.getDateAndTimeFormat(dateAndTime);
-                    const classIsAvailable = get(
-                      dateAndTime,
+                    const eventTime = `${dateAndTime.sortedDate}, ${
+                      dateAndTime.sortedTime
+                    }`;
+                    const eventVariants = get(event, 'variants', []);
+                    const eventVariant = eventVariants[i];
+                    const eventIsAvailable = get(
+                      eventVariant,
                       'available',
                       false
                     );
+                    const currentItemId = shoppableItem
+                      ? eventVariant.id
+                      : dateAndTime.uuid;
 
                     return (
-                      <Fragment key={get(dateAndTime, 'uuid', i)}>
-                        {event.handle ? (
-                          <Radio
-                            disabled={classIsAvailable ? false : true}
-                            className="block-sub-headline bold text-peach mb2 lowercase"
-                            label={
-                              classIsAvailable
-                                ? eventTime
-                                : `${eventTime} (Sold Out)`
-                            }
-                            onClick={() => {
-                              this.setState({
-                                selectedItem: dateAndTime.id,
-                                selectedItemDateAndTime: eventTime
-                              });
-                            }}
-                            color={classIsAvailable ? 'peach' : 'ghost-gray'}
-                            checked={selectedItem === dateAndTime.id}
-                          />
-                        ) : (
-                          <p className="block-sub-headline bold text-peach mb2 lowercase">
-                            {eventTime}
-                          </p>
-                        )}
-                      </Fragment>
+                      <Radio
+                        key={get(dateAndTime, 'uuid', i)}
+                        disabled={
+                          eventIsAvailable || !shoppableItem ? false : true
+                        }
+                        className="block-sub-headline bold text-peach mb2 lowercase"
+                        label={
+                          eventIsAvailable || !shoppableItem
+                            ? eventTime
+                            : `${eventTime} (Sold Out)`
+                        }
+                        onClick={() => {
+                          this.setState({
+                            selectedItem: currentItemId,
+                            selectedItemDateAndTime: eventTime
+                          });
+                        }}
+                        color={
+                          eventIsAvailable || !shoppableItem
+                            ? 'peach'
+                            : 'ghost-gray'
+                        }
+                        checked={selectedItem === currentItemId}
+                      />
                     );
                   })}
                 </div>
@@ -185,9 +230,7 @@ class EventDetailHero extends Component {
                         'mt1'
                       )}
                     >
-                      {moment(get(event, 'datesAndTimes[0].Date', '')).format(
-                        'dddd, MMMM Do'
-                      )}
+                      {get(event, 'datesAndTimes[0].sortedDate', '')}
                     </p>
                   </div>
                   <div>
@@ -235,19 +278,21 @@ class EventDetailHero extends Component {
               )}
               <Button
                 className={cx(styles['EventDetailHero__action-button'], 'my4')}
-                color={event.handle ? 'madison-blue' : 'peach'}
-                disabled={event.handle ? !eventIsAvailable : false}
+                color={shoppableItem ? 'madison-blue' : 'peach'}
+                disabled={shoppableItem ? !selectedEventIsAvailable : false}
                 onClick={
-                  event.handle
+                  shoppableItem
                     ? this.handleAddToCart
                     : () => this.setState({ modalIsOpen: true })
                 }
               >
                 <span className="mr-auto">
-                  {event.handle ? 'Add to Cart' : 'Call to Action'}
+                  {shoppableItem ? 'Add to Cart' : 'RSVP'}
                 </span>
-                {event.handle ? (
-                  <span className="ml2">${this.getItemPrice()}</span>
+                {shoppableItem ? (
+                  <span className="ml2">
+                    ${this.getItemPrice(this.state.selectedItem)}
+                  </span>
                 ) : null}
               </Button>
               {event.datesAndTimes.length > 1 && event.text ? (
@@ -263,21 +308,93 @@ class EventDetailHero extends Component {
           </div>
         </div>
         {this.state.modalIsOpen ? (
-          <Modal className="relative">
-            <div className="relative wh100 flex flex-column mb3">
-              <Button
-                className="absolute r0 t0"
-                variant="icon-small"
-                onClick={() => this.setState({ modalIsOpen: false })}
-              >
-                <Image src="/assets/images/icon-close.svg" />
-              </Button>
-              <h2 className="sub-title m3 mx-auto center">
-                {event.locationTitle}
-              </h2>
-              <p className="block-subheadline mx-auto">{event.locationPhone}</p>
+          <div
+            className={cx(
+              styles['EventDetailHero__modal'],
+              'overflow-scroll fixed-cover bg-white-wash flex justify-center items-center transition-fade-in'
+            )}
+          >
+            <div
+              className={cx(
+                styles['EventDetailHero__modal-content-container'],
+                'relative bg-white drop-shadow transition-slide-up-large-long'
+              )}
+            >
+              <div className="wh100 mx-auto flex flex-column mb3 justify-center">
+                <Button
+                  className={cx(
+                    styles['EventDetailHero__modal-close-button'],
+                    'absolute r0 t0'
+                  )}
+                  variant="icon-small"
+                  onClick={() => this.setState({ modalIsOpen: false })}
+                >
+                  <Image src="/assets/images/icon-close.svg" />
+                </Button>
+                <h2 className="sub-title m3 pt3 mx-auto center">Contact us</h2>
+                <div
+                  className={cx(
+                    styles['ContactUs'],
+                    'transition-slide-up flex flex-column justify-around items-center'
+                  )}
+                >
+                  <form className="flex flex-wrap justify-center text-container-width">
+                    <div className="w100 flex flex-column">
+                      {Object.values(ContactUsForm.FIELDS).map(field => (
+                        <TextField
+                          key={field.label}
+                          className="m1"
+                          variant={
+                            field.type === 'textarea'
+                              ? 'light-gray-tall'
+                              : 'light-gray'
+                          }
+                          type={field.type}
+                          value={this.state[field.id]}
+                          onChange={value =>
+                            this.setState({ [field.id]: value })
+                          }
+                          placeholder={field.label}
+                        />
+                      ))}
+                    </div>
+                    <div
+                      className={cx(
+                        styles['ContactUs__button-container'],
+                        'w100 flex flex-wrap text-container-width my2 px1'
+                      )}
+                    >
+                      {error || formStatus === REJECTED ? (
+                        <FormFlash
+                          className="w100 mb2"
+                          error={true}
+                          message={
+                            error
+                              ? error
+                              : 'There was an unexpected problem while submitting your message. Please reach out directly to info@amplehills.com'
+                          }
+                        />
+                      ) : null}
+                      {formStatus === FULFILLED ? (
+                        <FormFlash
+                          className="w100 mb2"
+                          success={true}
+                          message="Your message has been sent!"
+                        />
+                      ) : null}
+                      <Button
+                        disabled={formStatus === PENDING}
+                        label="Send Us a Message"
+                        color="madison-blue"
+                        className="my1"
+                        onClick={this.submitContactForm}
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-          </Modal>
+          </div>
         ) : null}
       </div>
     );

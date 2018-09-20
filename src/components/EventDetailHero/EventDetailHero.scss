@@ -53,9 +53,39 @@
   }
 
   &__action-button {
+    letter-spacing: spacing(0.2);
     margin-left: auto;
     @media ($medium-up) {
       margin-left: inherit;
+    }
+  }
+
+  &__modal {
+    align-items: flex-start;
+
+    @media ($medium-up) {
+      align-items: center;
+    }
+  }
+
+  &__modal-content-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 spacing(4);
+
+    @media ($medium-up) {
+      //.text-container-width
+      max-width: 36rem;
+      height: inherit;
+      border-radius: radius('m');
+    }
+  }
+
+  &__modal-close-button {
+    margin: spacing(4);
+
+    @media ($medium-up) {
+      margin: spacing(8);
     }
   }
 }
