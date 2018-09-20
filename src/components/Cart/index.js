@@ -13,6 +13,7 @@ import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
 import lineItems from 'state/selectors/lineItems';
@@ -113,15 +114,17 @@ class Cart extends Component {
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {get(this, 'props.items', []).map(item => {
-                const handle = Object.values(products)
-                  .concat(events)
-                  .find(product => {
-                    return product.variants.some(
-                      variant => variant.id === item.productId
-                    );
-                  }).handle;
+                const handle = getProductHandleFromVariantId(
+                  products,
+                  events,
+                  item
+                );
                 const productIsEvent = !products[handle];
-                const event = events.find(event => event.id === item.productId);
+                const event = events.find(event => {
+                  return get(event, 'variants', []).find(
+                    variant => variant.id === item.productId
+                  );
+                });
                 const cartDetails = get(products, handle, {}).cartDetails;
 
                 return (
@@ -138,7 +141,7 @@ class Cart extends Component {
                           className="text-decoration-none"
                           to={
                             productIsEvent
-                              ? `/events/${get(event, 'contentfulId', '')}`
+                              ? `/events/${get(event, 'handle', '')}`
                               : `/products/${handle}`
                           }
                         >
@@ -181,7 +184,7 @@ class Cart extends Component {
                         }`}
                         to={
                           productIsEvent
-                            ? `/events/${get(event, 'contentfulId', '')}`
+                            ? `/events/${get(event, 'handle', '')}`
                             : `/products/${handle}`
                         }
                       >

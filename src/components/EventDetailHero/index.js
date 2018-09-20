@@ -207,7 +207,11 @@ class EventDetailHero extends Component {
                         onClick={() => {
                           this.setState({
                             selectedItem: currentItemId,
-                            selectedItemDateAndTime: eventTime
+                            selectedItemDateAndTime: `${get(
+                              dateAndTime,
+                              'Date',
+                              ''
+                            )}, ${get(dateAndTime, 'Time', '')}`
                           });
                         }}
                         color={
