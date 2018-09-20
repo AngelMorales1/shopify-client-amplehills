@@ -4,7 +4,10 @@ import events from 'state/selectors/events';
 
 export default createSelector(
   state => events(state),
-  (state, props) => get(props, 'match.params.eventId', ''),
-  (events, eventId) =>
-    events.find(event => get(event, 'contentfulId', '') === eventId)
+  (state, props) => {
+    console.log(props);
+    return get(props, 'match.params.eventHandle', '');
+  },
+  (events, eventHandle) =>
+    events.find(event => get(event, 'handle', '') === eventHandle)
 );

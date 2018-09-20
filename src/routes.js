@@ -24,7 +24,7 @@ const Routes = ({ location }) => (
       path="/products/:productHandle"
       component={ProductDetailContainer}
     />
-    <Route exact path="/events/:eventId" component={EventDetailContainer} />
+    <Route exact path="/events/:eventHandle" component={EventDetailContainer} />
     <Route
       exact
       path="/location/:locationId"
