@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
@@ -120,23 +120,6 @@ class EventDetailHero extends Component {
       phone,
       message: messageWithEventInfo
     });
-  };
-
-  handleAddToCart = () => {
-    const item = [
-      {
-        variantId: get(this, 'state.selectedItem', ''),
-        quantity: 1,
-        customAttributes: [
-          {
-            key: 'eventTime',
-            value: get(this, 'state.selectedItemDateAndTime', '')
-          }
-        ]
-      }
-    ];
-
-    this.props.actions.addLineItems(this.props.checkout.id, item);
   };
 
   render() {
