@@ -65,7 +65,7 @@ class SubNav extends Component {
           <div
             className={cx(
               styles['SubNav__button'],
-              'bg-white inline-flex flex-row items-center justify-center px2'
+              'bg-white inline-flex flex-row items-center justify-center px2 pt1'
             )}
           >
             {menuList.map((menu, i) => (
