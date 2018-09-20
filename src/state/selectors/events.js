@@ -85,6 +85,21 @@ export default createSelector(
           return { ...sortedFragment, ...shopifyDateAndTime };
         }
       );
+      console.log({
+        title,
+        handle,
+        contentfulId,
+        blockCardText,
+        eventType,
+        image,
+        locationTitle,
+        locationId,
+        contentBlocks,
+        text,
+        datesAndTimes,
+        locationPhone,
+        ...shopifyProduct
+      });
 
       return {
         title,

@@ -1,5 +1,17 @@
 export default {
-  id: 'test-event',
+  variants: [
+    {
+      available: true,
+      id: '9999',
+      price: 19.99
+    }
+  ],
+  available: true,
+  price: 19.99,
+  contentfulId: 'test-event-1',
+  handle: 'test-event-1',
+  id: '9999',
+  locationPhone: '000-000-0000',
   blockCardText: '',
   eventType: 'Ice Cream Socials',
   image:

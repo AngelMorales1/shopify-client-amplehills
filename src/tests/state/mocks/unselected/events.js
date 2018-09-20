@@ -1,8 +1,50 @@
-export default {
+export const shopifyProducts = {
+  'test-event-1': {
+    handle: 'test-event-1',
+    available: true,
+    price: 19.99,
+    id: '9999',
+    variants: [
+      {
+        available: true,
+        price: 19.99,
+        id: '9999'
+      }
+    ]
+  },
+  'test-event-2': {
+    handle: 'test-event-2',
+    available: false,
+    price: 19.99,
+    id: '9999',
+    variants: [
+      {
+        available: false,
+        price: 19.99,
+        id: '9999'
+      }
+    ]
+  },
+  'test-event-3': {
+    handle: 'test-event-3',
+    available: true,
+    price: 19.99,
+    id: '9999',
+    variants: [
+      {
+        available: true,
+        price: 19.99,
+        id: '9999'
+      }
+    ]
+  }
+};
+
+export const contentProducts = {
   items: [
     {
       sys: {
-        id: 'test-event'
+        id: 'test-event-1'
       },
       fields: {
         datesAndTimes: {
@@ -39,6 +81,7 @@ export default {
             ]
           ]
         },
+        eventHandle: 'test-event-1',
         image: {
           fields: {
             file: {
@@ -49,6 +92,7 @@ export default {
         },
         location: {
           fields: {
+            phone: '000-000-0000',
             title: "At Bubby's High Line"
           },
           sys: {
@@ -65,7 +109,7 @@ export default {
     },
     {
       sys: {
-        id: 'test-event2'
+        id: 'test-event-2'
       },
       fields: {
         datesAndTimes: {
@@ -87,6 +131,7 @@ export default {
             ]
           ]
         },
+        eventHandle: 'test-event-2',
         blockCardText:
           'You’ll make a special ice cream flavor the old-fashioned way, taking turns riding our ice cream bicycle, churning with pedal-power! ',
         eventType: 'Ice Cream Socials',
@@ -101,6 +146,7 @@ export default {
         },
         location: {
           fields: {
+            phone: '000-000-0000',
             title: 'Gowanus scoop shop'
           },
           sys: {

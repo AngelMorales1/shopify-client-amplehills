@@ -8,6 +8,7 @@ ShallowWrapper {
     checked={false}
     className="foo"
     color="white"
+    disabled={false}
     label="foo"
     onClick={[Function]}
     variant="primary"
@@ -124,6 +125,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Radio
     checked={false}
     className=""
+    disabled={false}
     label=""
     variant="primary"
 />,

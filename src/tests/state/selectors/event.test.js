@@ -4,7 +4,7 @@ import events from 'state/selectors/events';
 import event from 'state/selectors/event';
 
 it('event selector works as intended', () => {
-  const eventId = 'test-event';
+  const eventId = 'test-event-1';
 
   expect(event.resultFunc(selectedevents, eventId)).toEqual(selectedevent);
 });

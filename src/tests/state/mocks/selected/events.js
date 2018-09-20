@@ -1,6 +1,18 @@
 export default [
   {
-    id: 'test-event',
+    variants: [
+      {
+        available: true,
+        id: '9999',
+        price: 19.99
+      }
+    ],
+    available: true,
+    price: 19.99,
+    contentfulId: 'test-event-1',
+    handle: 'test-event-1',
+    id: '9999',
+    locationPhone: '000-000-0000',
     blockCardText: '',
     eventType: 'Ice Cream Socials',
     image:
@@ -25,7 +37,19 @@ export default [
     ]
   },
   {
-    id: 'test-event2',
+    variants: [
+      {
+        available: false,
+        id: '9999',
+        price: 19.99
+      }
+    ],
+    available: false,
+    price: 19.99,
+    contentfulId: 'test-event-2',
+    handle: 'test-event-2',
+    id: '9999',
+    locationPhone: '000-000-0000',
     blockCardText:
       'You’ll make a special ice cream flavor the old-fashioned way, taking turns riding our ice cream bicycle, churning with pedal-power! ',
     eventType: 'Ice Cream Socials',
