@@ -22,7 +22,11 @@ ShallowWrapper {
       "children": <div
         className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
+<<<<<<< HEAD
       "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in foo",
+=======
+      "className": "foo fixed-cover bg-white-wash flex justify-center items-center transition-fade-in px3",
+>>>>>>> Fix event selector corresponding to change
     },
     "ref": null,
     "rendered": Object {
@@ -48,7 +52,11 @@ ShallowWrapper {
         "children": <div
           className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
+<<<<<<< HEAD
         "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in foo",
+=======
+        "className": "foo fixed-cover bg-white-wash flex justify-center items-center transition-fade-in px3",
+>>>>>>> Fix event selector corresponding to change
       },
       "ref": null,
       "rendered": Object {
@@ -96,7 +104,7 @@ ShallowWrapper {
       "children": <div
         className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-      "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
+      "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in px3",
     },
     "ref": null,
     "rendered": Object {
@@ -122,7 +130,7 @@ ShallowWrapper {
         "children": <div
           className="text-container-width w100 bg-white card drop-shadow p3 transition-slide-up-large-long"
 />,
-        "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in",
+        "className": "fixed-cover bg-white-wash flex justify-center items-center transition-fade-in px3",
       },
       "ref": null,
       "rendered": Object {

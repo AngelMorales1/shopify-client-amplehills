@@ -84,10 +84,7 @@ export const contentProducts = {
             ]
           ]
         },
-<<<<<<< HEAD
         eventHandle: 'test-event-1',
-=======
->>>>>>> Add events selector test
         image: {
           fields: {
             file: {
@@ -98,10 +95,7 @@ export const contentProducts = {
         },
         location: {
           fields: {
-<<<<<<< HEAD
             phone: '000-000-0000',
-=======
->>>>>>> Add events selector test
             title: "At Bubby's High Line"
           },
           sys: {
@@ -118,11 +112,7 @@ export const contentProducts = {
     },
     {
       sys: {
-<<<<<<< HEAD
         id: 'test-event-2'
-=======
-        id: 'test-event2'
->>>>>>> Add events selector test
       },
       fields: {
         datesAndTimes: {
@@ -144,10 +134,7 @@ export const contentProducts = {
             ]
           ]
         },
-<<<<<<< HEAD
         eventHandle: 'test-event-2',
-=======
->>>>>>> Add events selector test
         blockCardText:
           'You’ll make a special ice cream flavor the old-fashioned way, taking turns riding our ice cream bicycle, churning with pedal-power! ',
         eventType: 'Ice Cream Socials',
@@ -162,10 +149,7 @@ export const contentProducts = {
         },
         location: {
           fields: {
-<<<<<<< HEAD
             phone: '000-000-0000',
-=======
->>>>>>> Add events selector test
             title: 'Gowanus scoop shop'
           },
           sys: {

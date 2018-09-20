@@ -183,18 +183,26 @@ ShallowWrapper {
                                         disabled={false}
                                         fullWidth={false}
                                         hover="shadow"
+<<<<<<< HEAD
                                         label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                        label=""
+>>>>>>> Fix event selector corresponding to change
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                               >
                                         <span
                                                   className="mr-auto"
                                         >
+<<<<<<< HEAD
                                                   Add to Cart
                                         </span>
                                         <span
@@ -207,6 +215,11 @@ ShallowWrapper {
 =======
                               />
 >>>>>>> Add EventDetailHero text
+=======
+                                                  Call to Action
+                                        </span>
+                              </Button>
+>>>>>>> Fix event selector corresponding to change
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -219,9 +232,13 @@ ShallowWrapper {
           </div>
 </div>,
 <<<<<<< HEAD
+<<<<<<< HEAD
         null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+        null,
+>>>>>>> Fix event selector corresponding to change
       ],
       "className": "flex flex-column mb4",
     },
@@ -460,18 +477,26 @@ ShallowWrapper {
                                           disabled={false}
                                           fullWidth={false}
                                           hover="shadow"
+<<<<<<< HEAD
                                           label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                          label=""
+>>>>>>> Fix event selector corresponding to change
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                             >
                                           <span
                                                         className="mr-auto"
                                           >
+<<<<<<< HEAD
                                                         Add to Cart
                                           </span>
                                           <span
@@ -484,6 +509,11 @@ ShallowWrapper {
 =======
                             />
 >>>>>>> Add EventDetailHero text
+=======
+                                                        Call to Action
+                                          </span>
+                            </Button>
+>>>>>>> Fix event selector corresponding to change
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -619,18 +649,26 @@ ShallowWrapper {
                                 disabled={false}
                                 fullWidth={false}
                                 hover="shadow"
+<<<<<<< HEAD
                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                label=""
+>>>>>>> Fix event selector corresponding to change
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                 >
                                 <span
                                                 className="mr-auto"
                                 >
+<<<<<<< HEAD
                                                 Add to Cart
                                 </span>
                                 <span
@@ -643,6 +681,11 @@ ShallowWrapper {
 =======
                 />
 >>>>>>> Add EventDetailHero text
+=======
+                                                Call to Action
+                                </span>
+                </Button>
+>>>>>>> Fix event selector corresponding to change
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -739,18 +782,26 @@ ShallowWrapper {
                     disabled={false}
                     fullWidth={false}
                     hover="shadow"
+<<<<<<< HEAD
                     label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                    label=""
+>>>>>>> Fix event selector corresponding to change
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
 >
                     <span
                                         className="mr-auto"
                     >
+<<<<<<< HEAD
                                         Add to Cart
                     </span>
                     <span
@@ -763,6 +814,11 @@ ShallowWrapper {
 =======
 />,
 >>>>>>> Add EventDetailHero text
+=======
+                                        Call to Action
+                    </span>
+</Button>,
+>>>>>>> Fix event selector corresponding to change
                   null,
                   <div
                     className="markdown-block"
@@ -1109,10 +1165,14 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                     "children": Array [
                       <span
                         className="mr-auto"
 >
+<<<<<<< HEAD
                         Add to Cart
 </span>,
                       <span
@@ -1130,13 +1190,23 @@ ShallowWrapper {
                     "label": "",
 =======
                     "children": null,
+=======
+                        Call to Action
+</span>,
+                      null,
+                    ],
+>>>>>>> Fix event selector corresponding to change
                     "className": "my4",
                     "color": "peach",
                     "disabled": false,
                     "fullWidth": false,
                     "hover": "shadow",
+<<<<<<< HEAD
                     "label": "Call to Action",
 >>>>>>> Add EventDetailHero text
+=======
+                    "label": "",
+>>>>>>> Fix event selector corresponding to change
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -1145,12 +1215,16 @@ ShallowWrapper {
                   },
                   "ref": null,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                   "rendered": Array [
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
+<<<<<<< HEAD
                         "children": "Add to Cart",
                         "className": "mr-auto",
                       },
@@ -1180,6 +1254,17 @@ ShallowWrapper {
 =======
                   "rendered": null,
 >>>>>>> Add EventDetailHero text
+=======
+                        "children": "Call to Action",
+                        "className": "mr-auto",
+                      },
+                      "ref": null,
+                      "rendered": "Call to Action",
+                      "type": "span",
+                    },
+                    null,
+                  ],
+>>>>>>> Fix event selector corresponding to change
                   "type": [Function],
                 },
                 null,
@@ -1206,9 +1291,13 @@ ShallowWrapper {
         "type": "div",
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+      null,
+>>>>>>> Fix event selector corresponding to change
     ],
     "type": "div",
   },
@@ -1351,18 +1440,26 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
+<<<<<<< HEAD
                                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                                label=""
+>>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                                     >
                                                 <span
                                                             className="mr-auto"
                                                 >
+<<<<<<< HEAD
                                                             Add to Cart
                                                 </span>
                                                 <span
@@ -1375,6 +1472,11 @@ ShallowWrapper {
 =======
                                     />
 >>>>>>> Add EventDetailHero text
+=======
+                                                            Call to Action
+                                                </span>
+                                    </Button>
+>>>>>>> Fix event selector corresponding to change
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1387,9 +1489,13 @@ ShallowWrapper {
             </div>
 </div>,
 <<<<<<< HEAD
+<<<<<<< HEAD
           null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+          null,
+>>>>>>> Fix event selector corresponding to change
         ],
         "className": "flex flex-column mb4",
       },
@@ -1628,18 +1734,26 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
+<<<<<<< HEAD
                                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                                label=""
+>>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                                 >
                                                 <span
                                                                 className="mr-auto"
                                                 >
+<<<<<<< HEAD
                                                                 Add to Cart
                                                 </span>
                                                 <span
@@ -1652,6 +1766,11 @@ ShallowWrapper {
 =======
                                 />
 >>>>>>> Add EventDetailHero text
+=======
+                                                                Call to Action
+                                                </span>
+                                </Button>
+>>>>>>> Fix event selector corresponding to change
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1787,18 +1906,26 @@ ShallowWrapper {
                                     disabled={false}
                                     fullWidth={false}
                                     hover="shadow"
+<<<<<<< HEAD
                                     label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                    label=""
+>>>>>>> Fix event selector corresponding to change
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                   >
                                     <span
                                                       className="mr-auto"
                                     >
+<<<<<<< HEAD
                                                       Add to Cart
                                     </span>
                                     <span
@@ -1811,6 +1938,11 @@ ShallowWrapper {
 =======
                   />
 >>>>>>> Add EventDetailHero text
+=======
+                                                      Call to Action
+                                    </span>
+                  </Button>
+>>>>>>> Fix event selector corresponding to change
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -1907,18 +2039,26 @@ ShallowWrapper {
                       disabled={false}
                       fullWidth={false}
                       hover="shadow"
+<<<<<<< HEAD
                       label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                      label=""
+>>>>>>> Fix event selector corresponding to change
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
 >
                       <span
                                             className="mr-auto"
                       >
+<<<<<<< HEAD
                                             Add to Cart
                       </span>
                       <span
@@ -1931,6 +2071,11 @@ ShallowWrapper {
 =======
 />,
 >>>>>>> Add EventDetailHero text
+=======
+                                            Call to Action
+                      </span>
+</Button>,
+>>>>>>> Fix event selector corresponding to change
                     null,
                     <div
                       className="markdown-block"
@@ -2277,10 +2422,14 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                       "children": Array [
                         <span
                           className="mr-auto"
 >
+<<<<<<< HEAD
                           Add to Cart
 </span>,
                         <span
@@ -2298,13 +2447,23 @@ ShallowWrapper {
                       "label": "",
 =======
                       "children": null,
+=======
+                          Call to Action
+</span>,
+                        null,
+                      ],
+>>>>>>> Fix event selector corresponding to change
                       "className": "my4",
                       "color": "peach",
                       "disabled": false,
                       "fullWidth": false,
                       "hover": "shadow",
+<<<<<<< HEAD
                       "label": "Call to Action",
 >>>>>>> Add EventDetailHero text
+=======
+                      "label": "",
+>>>>>>> Fix event selector corresponding to change
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -2313,12 +2472,16 @@ ShallowWrapper {
                     },
                     "ref": null,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                     "rendered": Array [
                       Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+<<<<<<< HEAD
                           "children": "Add to Cart",
                           "className": "mr-auto",
                         },
@@ -2348,6 +2511,17 @@ ShallowWrapper {
 =======
                     "rendered": null,
 >>>>>>> Add EventDetailHero text
+=======
+                          "children": "Call to Action",
+                          "className": "mr-auto",
+                        },
+                        "ref": null,
+                        "rendered": "Call to Action",
+                        "type": "span",
+                      },
+                      null,
+                    ],
+>>>>>>> Fix event selector corresponding to change
                     "type": [Function],
                   },
                   null,
@@ -2374,9 +2548,13 @@ ShallowWrapper {
           "type": "div",
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+        null,
+>>>>>>> Fix event selector corresponding to change
       ],
       "type": "div",
     },
@@ -2548,26 +2726,39 @@ ShallowWrapper {
                                         fullWidth={false}
                                         hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         label=""
 =======
                                         label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                        label=""
+>>>>>>> Fix event selector corresponding to change
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                               >
                                         <span
                                                   className="mr-auto"
                                         >
+<<<<<<< HEAD
                                                   RSVP
                                         </span>
                               </Button>
 =======
                               />
 >>>>>>> Add EventDetailHero text
+=======
+                                                  Call to Action
+                                        </span>
+                              </Button>
+>>>>>>> Fix event selector corresponding to change
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -2580,9 +2771,13 @@ ShallowWrapper {
           </div>
 </div>,
 <<<<<<< HEAD
+<<<<<<< HEAD
         null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+        null,
+>>>>>>> Fix event selector corresponding to change
       ],
       "className": "flex flex-column mb4",
     },
@@ -2805,26 +3000,39 @@ ShallowWrapper {
                                           fullWidth={false}
                                           hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                           label=""
 =======
                                           label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                          label=""
+>>>>>>> Fix event selector corresponding to change
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                             >
                                           <span
                                                         className="mr-auto"
                                           >
+<<<<<<< HEAD
                                                         RSVP
                                           </span>
                             </Button>
 =======
                             />
 >>>>>>> Add EventDetailHero text
+=======
+                                                        Call to Action
+                                          </span>
+                            </Button>
+>>>>>>> Fix event selector corresponding to change
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -2946,26 +3154,39 @@ ShallowWrapper {
                                 fullWidth={false}
                                 hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 label=""
 =======
                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                label=""
+>>>>>>> Fix event selector corresponding to change
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                 >
                                 <span
                                                 className="mr-auto"
                                 >
+<<<<<<< HEAD
                                                 RSVP
                                 </span>
                 </Button>
 =======
                 />
 >>>>>>> Add EventDetailHero text
+=======
+                                                Call to Action
+                                </span>
+                </Button>
+>>>>>>> Fix event selector corresponding to change
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -3048,26 +3269,39 @@ ShallowWrapper {
                     fullWidth={false}
                     hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                     label=""
 =======
                     label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                    label=""
+>>>>>>> Fix event selector corresponding to change
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
 >
                     <span
                                         className="mr-auto"
                     >
+<<<<<<< HEAD
                                         RSVP
                     </span>
 </Button>,
 =======
 />,
 >>>>>>> Add EventDetailHero text
+=======
+                                        Call to Action
+                    </span>
+</Button>,
+>>>>>>> Fix event selector corresponding to change
                   null,
                   <div
                     className="markdown-block"
@@ -3388,10 +3622,14 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                     "children": Array [
                       <span
                         className="mr-auto"
 >
+<<<<<<< HEAD
                         RSVP
 </span>,
                       null,
@@ -3399,16 +3637,26 @@ ShallowWrapper {
 =======
                     "children": null,
 >>>>>>> Add EventDetailHero text
+=======
+                        Call to Action
+</span>,
+                      null,
+                    ],
+>>>>>>> Fix event selector corresponding to change
                     "className": "my4",
                     "color": "peach",
                     "disabled": false,
                     "fullWidth": false,
                     "hover": "shadow",
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "label": "",
 =======
                     "label": "Call to Action",
 >>>>>>> Add EventDetailHero text
+=======
+                    "label": "",
+>>>>>>> Fix event selector corresponding to change
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -3417,24 +3665,38 @@ ShallowWrapper {
                   },
                   "ref": null,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                   "rendered": Array [
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
+<<<<<<< HEAD
                         "children": "RSVP",
                         "className": "mr-auto",
                       },
                       "ref": null,
                       "rendered": "RSVP",
+=======
+                        "children": "Call to Action",
+                        "className": "mr-auto",
+                      },
+                      "ref": null,
+                      "rendered": "Call to Action",
+>>>>>>> Fix event selector corresponding to change
                       "type": "span",
                     },
                     null,
                   ],
+<<<<<<< HEAD
 =======
                   "rendered": null,
 >>>>>>> Add EventDetailHero text
+=======
+>>>>>>> Fix event selector corresponding to change
                   "type": [Function],
                 },
                 null,
@@ -3461,9 +3723,13 @@ ShallowWrapper {
         "type": "div",
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+      null,
+>>>>>>> Fix event selector corresponding to change
     ],
     "type": "div",
   },
@@ -3590,26 +3856,39 @@ ShallowWrapper {
                                                 fullWidth={false}
                                                 hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 label=""
 =======
                                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                                label=""
+>>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                                     >
                                                 <span
                                                             className="mr-auto"
                                                 >
+<<<<<<< HEAD
                                                             RSVP
                                                 </span>
                                     </Button>
 =======
                                     />
 >>>>>>> Add EventDetailHero text
+=======
+                                                            Call to Action
+                                                </span>
+                                    </Button>
+>>>>>>> Fix event selector corresponding to change
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -3622,9 +3901,13 @@ ShallowWrapper {
             </div>
 </div>,
 <<<<<<< HEAD
+<<<<<<< HEAD
           null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+          null,
+>>>>>>> Fix event selector corresponding to change
         ],
         "className": "flex flex-column mb4",
       },
@@ -3847,26 +4130,39 @@ ShallowWrapper {
                                                 fullWidth={false}
                                                 hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 label=""
 =======
                                                 label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                                label=""
+>>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                                 >
                                                 <span
                                                                 className="mr-auto"
                                                 >
+<<<<<<< HEAD
                                                                 RSVP
                                                 </span>
                                 </Button>
 =======
                                 />
 >>>>>>> Add EventDetailHero text
+=======
+                                                                Call to Action
+                                                </span>
+                                </Button>
+>>>>>>> Fix event selector corresponding to change
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -3988,26 +4284,39 @@ ShallowWrapper {
                                     fullWidth={false}
                                     hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     label=""
 =======
                                     label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                                    label=""
+>>>>>>> Fix event selector corresponding to change
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                   >
                                     <span
                                                       className="mr-auto"
                                     >
+<<<<<<< HEAD
                                                       RSVP
                                     </span>
                   </Button>
 =======
                   />
 >>>>>>> Add EventDetailHero text
+=======
+                                                      Call to Action
+                                    </span>
+                  </Button>
+>>>>>>> Fix event selector corresponding to change
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -4090,26 +4399,39 @@ ShallowWrapper {
                       fullWidth={false}
                       hover="shadow"
 <<<<<<< HEAD
+<<<<<<< HEAD
                       label=""
 =======
                       label="Call to Action"
 >>>>>>> Add EventDetailHero text
+=======
+                      label=""
+>>>>>>> Fix event selector corresponding to change
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
 >
                       <span
                                             className="mr-auto"
                       >
+<<<<<<< HEAD
                                             RSVP
                       </span>
 </Button>,
 =======
 />,
 >>>>>>> Add EventDetailHero text
+=======
+                                            Call to Action
+                      </span>
+</Button>,
+>>>>>>> Fix event selector corresponding to change
                     null,
                     <div
                       className="markdown-block"
@@ -4430,10 +4752,14 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                       "children": Array [
                         <span
                           className="mr-auto"
 >
+<<<<<<< HEAD
                           RSVP
 </span>,
                         null,
@@ -4441,16 +4767,26 @@ ShallowWrapper {
 =======
                       "children": null,
 >>>>>>> Add EventDetailHero text
+=======
+                          Call to Action
+</span>,
+                        null,
+                      ],
+>>>>>>> Fix event selector corresponding to change
                       "className": "my4",
                       "color": "peach",
                       "disabled": false,
                       "fullWidth": false,
                       "hover": "shadow",
 <<<<<<< HEAD
+<<<<<<< HEAD
                       "label": "",
 =======
                       "label": "Call to Action",
 >>>>>>> Add EventDetailHero text
+=======
+                      "label": "",
+>>>>>>> Fix event selector corresponding to change
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -4459,24 +4795,38 @@ ShallowWrapper {
                     },
                     "ref": null,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Fix event selector corresponding to change
                     "rendered": Array [
                       Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
+<<<<<<< HEAD
                           "children": "RSVP",
                           "className": "mr-auto",
                         },
                         "ref": null,
                         "rendered": "RSVP",
+=======
+                          "children": "Call to Action",
+                          "className": "mr-auto",
+                        },
+                        "ref": null,
+                        "rendered": "Call to Action",
+>>>>>>> Fix event selector corresponding to change
                         "type": "span",
                       },
                       null,
                     ],
+<<<<<<< HEAD
 =======
                     "rendered": null,
 >>>>>>> Add EventDetailHero text
+=======
+>>>>>>> Fix event selector corresponding to change
                     "type": [Function],
                   },
                   null,
@@ -4503,9 +4853,13 @@ ShallowWrapper {
           "type": "div",
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         null,
 =======
 >>>>>>> Add EventDetailHero text
+=======
+        null,
+>>>>>>> Fix event selector corresponding to change
       ],
       "type": "div",
     },

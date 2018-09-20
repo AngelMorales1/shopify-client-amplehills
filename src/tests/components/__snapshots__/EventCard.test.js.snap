@@ -85,10 +85,14 @@ ShallowWrapper {
                               onClick={[Function]}
                               shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               to="/events/undefined"
 =======
                               to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                              to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                               type="button"
                               variant="primary"
                     />
@@ -156,10 +160,14 @@ ShallowWrapper {
                             onClick={[Function]}
                             shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             to="/events/undefined"
 =======
                             to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                            to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                             type="button"
                             variant="primary"
               />
@@ -269,10 +277,14 @@ ShallowWrapper {
                 onClick={[Function]}
                 shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 to="/events/undefined"
 =======
                 to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                 type="button"
                 variant="primary"
 />,
@@ -293,10 +305,14 @@ ShallowWrapper {
                 "onClick": [Function],
                 "shadow": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "to": "/events/undefined",
 =======
                 "to": "/events/foo",
 >>>>>>> Add EventDetailHero text
+=======
+                "to": "/events/undefined",
+>>>>>>> Fix event selector corresponding to change
                 "type": "button",
                 "variant": "primary",
               },
@@ -367,10 +383,14 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     to="/events/undefined"
 =======
                                     to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                                    to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                                     type="button"
                                     variant="primary"
                         />
@@ -438,10 +458,14 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 to="/events/undefined"
 =======
                                 to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                                to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                                 type="button"
                                 variant="primary"
                 />
@@ -551,10 +575,14 @@ ShallowWrapper {
                   onClick={[Function]}
                   shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   to="/events/undefined"
 =======
                   to="/events/foo"
 >>>>>>> Add EventDetailHero text
+=======
+                  to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                   type="button"
                   variant="primary"
 />,
@@ -575,10 +603,14 @@ ShallowWrapper {
                   "onClick": [Function],
                   "shadow": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "to": "/events/undefined",
 =======
                   "to": "/events/foo",
 >>>>>>> Add EventDetailHero text
+=======
+                  "to": "/events/undefined",
+>>>>>>> Fix event selector corresponding to change
                   "type": "button",
                   "variant": "primary",
                 },
@@ -675,10 +707,14 @@ ShallowWrapper {
                               onClick={[Function]}
                               shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               to="/events/undefined"
 =======
                               to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                              to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                               type="button"
                               variant="primary"
                     />
@@ -731,10 +767,14 @@ ShallowWrapper {
                             onClick={[Function]}
                             shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                             to="/events/undefined"
 =======
                             to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                            to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                             type="button"
                             variant="primary"
               />
@@ -808,10 +848,14 @@ ShallowWrapper {
                 onClick={[Function]}
                 shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 to="/events/undefined"
 =======
                 to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                 type="button"
                 variant="primary"
 />,
@@ -832,10 +876,14 @@ ShallowWrapper {
                 "onClick": [Function],
                 "shadow": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "to": "/events/undefined",
 =======
                 "to": "/events/",
 >>>>>>> Add EventDetailHero text
+=======
+                "to": "/events/undefined",
+>>>>>>> Fix event selector corresponding to change
                 "type": "button",
                 "variant": "primary",
               },
@@ -891,10 +939,14 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     to="/events/undefined"
 =======
                                     to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                                    to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                                     type="button"
                                     variant="primary"
                         />
@@ -947,10 +999,14 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 to="/events/undefined"
 =======
                                 to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                                to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                                 type="button"
                                 variant="primary"
                 />
@@ -1024,10 +1080,14 @@ ShallowWrapper {
                   onClick={[Function]}
                   shadow={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   to="/events/undefined"
 =======
                   to="/events/"
 >>>>>>> Add EventDetailHero text
+=======
+                  to="/events/undefined"
+>>>>>>> Fix event selector corresponding to change
                   type="button"
                   variant="primary"
 />,
@@ -1048,10 +1108,14 @@ ShallowWrapper {
                   "onClick": [Function],
                   "shadow": false,
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "to": "/events/undefined",
 =======
                   "to": "/events/",
 >>>>>>> Add EventDetailHero text
+=======
+                  "to": "/events/undefined",
+>>>>>>> Fix event selector corresponding to change
                   "type": "button",
                   "variant": "primary",
                 },
