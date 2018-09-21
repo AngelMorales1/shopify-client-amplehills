@@ -148,7 +148,13 @@ class FAQBlock extends Component {
 FAQBlock.propTypes = {
   z: PropTypes.number,
   block: PropTypes.shape({
-    fields: PropTypes.shape({})
+    fields: PropTypes.shape({
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      headingAndQa: PropTypes.shape({
+        fragments: PropTypes.array
+      })
+    })
   }),
   setRef: PropTypes.func
 };
@@ -156,7 +162,13 @@ FAQBlock.propTypes = {
 FAQBlock.defaultProps = {
   z: 0,
   block: {
-    fields: {}
+    fields: {
+      buttonLabel: '',
+      buttonLink: '',
+      headingAndQa: {
+        fragments: []
+      }
+    }
   },
   setRef: () => {}
 };
