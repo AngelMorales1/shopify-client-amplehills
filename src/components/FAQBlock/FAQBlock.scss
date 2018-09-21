@@ -1,0 +1,56 @@
+@import 'settings', 'typography', 'utils';
+
+.FAQBlock {
+  padding: spacing(16) spacing(8);
+  flex-direction: column;
+
+  @media ($medium-up) {
+    padding: spacing(16) spacing(16);
+    flex-direction: row;
+  }
+
+  &__block-title-container {
+    justify-content: flex-start;
+
+    @media ($medium-up) {
+      justify-content: center;
+    }
+  }
+
+  &__block-title {
+    max-width: spacing(80);
+  }
+
+  &__title {
+    margin-top: spacing(16);
+  }
+
+  .FAQBlock__title:first-child {
+    margin-top: 0;
+  }
+
+  &__arrow {
+    width: spacing(4);
+    margin-top: spacing(4);
+
+    @media ($medium-up) {
+      margin-top: spacing(2);
+    }
+  }
+
+  &__question {
+    border: 0;
+    white-space: normal;
+    text-align: start;
+    margin: spacing(2) 0;
+    line-height: $font-7;
+
+    @media ($medium-up) {
+      margin: 0;
+    }
+  }
+
+  &__answer {
+    border-bottom: solid 1px color('gray');
+  }
+}

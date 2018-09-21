@@ -12,6 +12,7 @@ import GenericHero from 'components/GenericHero';
 import PressCarousel from 'components/PressCarousel';
 import EventsBlock from 'components/EventsBlock';
 import ImageVideoCarousel from 'components/ImageVideoCarousel';
+import FAQBlock from 'components/FAQBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -38,6 +39,8 @@ const BlockSwitch = props => {
       return <EventsBlock {...props} />;
     case 'blockImageVideoCarousel':
       return <ImageVideoCarousel {...props} />;
+    case 'blockFaq':
+      return <FAQBlock {...props} />;
     default:
       return null;
   }
