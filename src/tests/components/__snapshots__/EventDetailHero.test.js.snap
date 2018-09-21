@@ -2672,12 +2672,16 @@ ShallowWrapper {
                                                   <p
                                                             className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                   />
 =======
                                                   >
                                                             Invalid date
                                                   </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                  />
+>>>>>>> fix DatesAndTimes key to be lower case
                                         </div>
                                         <div>
                                                   <p
@@ -2748,6 +2752,7 @@ ShallowWrapper {
                                                   className="mr-auto"
                                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                   RSVP
                                         </span>
                               </Button>
@@ -2756,6 +2761,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                   Call to Action
+=======
+                                                  RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                         </span>
                               </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -2946,12 +2954,16 @@ ShallowWrapper {
                                                         <p
                                                                       className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         />
 =======
                                                         >
                                                                       Invalid date
                                                         </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                        />
+>>>>>>> fix DatesAndTimes key to be lower case
                                           </div>
                                           <div>
                                                         <p
@@ -3022,6 +3034,7 @@ ShallowWrapper {
                                                         className="mr-auto"
                                           >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         RSVP
                                           </span>
                             </Button>
@@ -3030,6 +3043,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                         Call to Action
+=======
+                                                        RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                           </span>
                             </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -3100,12 +3116,16 @@ ShallowWrapper {
                                                 <p
                                                                 className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 />
 =======
                                                 >
                                                                 Invalid date
                                                 </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                />
+>>>>>>> fix DatesAndTimes key to be lower case
                                 </div>
                                 <div>
                                                 <p
@@ -3176,6 +3196,7 @@ ShallowWrapper {
                                                 className="mr-auto"
                                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                 RSVP
                                 </span>
                 </Button>
@@ -3184,6 +3205,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                 Call to Action
+=======
+                                                RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                 </span>
                 </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -3215,12 +3239,16 @@ ShallowWrapper {
                                         <p
                                                             className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         />
 =======
                                         >
                                                             Invalid date
                                         </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                        />
+>>>>>>> fix DatesAndTimes key to be lower case
                     </div>
                     <div>
                                         <p
@@ -3291,6 +3319,7 @@ ShallowWrapper {
                                         className="mr-auto"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         RSVP
                     </span>
 </Button>,
@@ -3299,6 +3328,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                         Call to Action
+=======
+                                        RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                     </span>
 </Button>,
 >>>>>>> Fix event selector corresponding to change
@@ -3331,12 +3363,16 @@ ShallowWrapper {
                         <p
                                                 className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         />
 =======
                         >
                                                 Invalid date
                         </p>
 >>>>>>> Add EventDetailHero text
+=======
+                        />
+>>>>>>> fix DatesAndTimes key to be lower case
 </div>,
                       <div>
                         <p
@@ -3395,12 +3431,16 @@ ShallowWrapper {
                           <p
                             className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 />,
 =======
 >
                             Invalid date
 </p>,
 >>>>>>> Add EventDetailHero text
+=======
+/>,
+>>>>>>> fix DatesAndTimes key to be lower case
                         ],
                       },
                       "ref": null,
@@ -3423,6 +3463,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
@@ -3435,6 +3476,13 @@ ShallowWrapper {
                           "ref": null,
                           "rendered": "Invalid date",
 >>>>>>> Add EventDetailHero text
+=======
+                            "children": "",
+                            "className": "mt1",
+                          },
+                          "ref": null,
+                          "rendered": "",
+>>>>>>> fix DatesAndTimes key to be lower case
                           "type": "p",
                         },
                       ],
@@ -3630,6 +3678,7 @@ ShallowWrapper {
                         className="mr-auto"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                         RSVP
 </span>,
                       null,
@@ -3639,6 +3688,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                         Call to Action
+=======
+                        RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
 </span>,
                       null,
                     ],
@@ -3675,6 +3727,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                         "children": "RSVP",
                         "className": "mr-auto",
                       },
@@ -3687,6 +3740,13 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": "Call to Action",
 >>>>>>> Fix event selector corresponding to change
+=======
+                        "children": "RSVP",
+                        "className": "mr-auto",
+                      },
+                      "ref": null,
+                      "rendered": "RSVP",
+>>>>>>> fix DatesAndTimes key to be lower case
                       "type": "span",
                     },
                     null,
@@ -3802,12 +3862,16 @@ ShallowWrapper {
                                                             <p
                                                                         className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                             />
 =======
                                                             >
                                                                         Invalid date
                                                             </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                            />
+>>>>>>> fix DatesAndTimes key to be lower case
                                                 </div>
                                                 <div>
                                                             <p
@@ -3878,6 +3942,7 @@ ShallowWrapper {
                                                             className="mr-auto"
                                                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                             RSVP
                                                 </span>
                                     </Button>
@@ -3886,6 +3951,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                             Call to Action
+=======
+                                                            RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                                 </span>
                                     </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -4076,12 +4144,16 @@ ShallowWrapper {
                                                                 <p
                                                                                 className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                 />
 =======
                                                                 >
                                                                                 Invalid date
                                                                 </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                                />
+>>>>>>> fix DatesAndTimes key to be lower case
                                                 </div>
                                                 <div>
                                                                 <p
@@ -4152,6 +4224,7 @@ ShallowWrapper {
                                                                 className="mr-auto"
                                                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                 RSVP
                                                 </span>
                                 </Button>
@@ -4160,6 +4233,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                                 Call to Action
+=======
+                                                                RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                                 </span>
                                 </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -4230,12 +4306,16 @@ ShallowWrapper {
                                                       <p
                                                                         className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                       />
 =======
                                                       >
                                                                         Invalid date
                                                       </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                                      />
+>>>>>>> fix DatesAndTimes key to be lower case
                                     </div>
                                     <div>
                                                       <p
@@ -4306,6 +4386,7 @@ ShallowWrapper {
                                                       className="mr-auto"
                                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                       RSVP
                                     </span>
                   </Button>
@@ -4314,6 +4395,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                                       Call to Action
+=======
+                                                      RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                                     </span>
                   </Button>
 >>>>>>> Fix event selector corresponding to change
@@ -4345,12 +4429,16 @@ ShallowWrapper {
                                             <p
                                                                   className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             />
 =======
                                             >
                                                                   Invalid date
                                             </p>
 >>>>>>> Add EventDetailHero text
+=======
+                                            />
+>>>>>>> fix DatesAndTimes key to be lower case
                       </div>
                       <div>
                                             <p
@@ -4421,6 +4509,7 @@ ShallowWrapper {
                                             className="mr-auto"
                       >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                             RSVP
                       </span>
 </Button>,
@@ -4429,6 +4518,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                                             Call to Action
+=======
+                                            RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
                       </span>
 </Button>,
 >>>>>>> Fix event selector corresponding to change
@@ -4461,12 +4553,16 @@ ShallowWrapper {
                           <p
                                                     className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                           />
 =======
                           >
                                                     Invalid date
                           </p>
 >>>>>>> Add EventDetailHero text
+=======
+                          />
+>>>>>>> fix DatesAndTimes key to be lower case
 </div>,
                         <div>
                           <p
@@ -4525,12 +4621,16 @@ ShallowWrapper {
                             <p
                               className="mt1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 />,
 =======
 >
                               Invalid date
 </p>,
 >>>>>>> Add EventDetailHero text
+=======
+/>,
+>>>>>>> fix DatesAndTimes key to be lower case
                           ],
                         },
                         "ref": null,
@@ -4553,6 +4653,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
@@ -4565,6 +4666,13 @@ ShallowWrapper {
                             "ref": null,
                             "rendered": "Invalid date",
 >>>>>>> Add EventDetailHero text
+=======
+                              "children": "",
+                              "className": "mt1",
+                            },
+                            "ref": null,
+                            "rendered": "",
+>>>>>>> fix DatesAndTimes key to be lower case
                             "type": "p",
                           },
                         ],
@@ -4760,6 +4868,7 @@ ShallowWrapper {
                           className="mr-auto"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                           RSVP
 </span>,
                         null,
@@ -4769,6 +4878,9 @@ ShallowWrapper {
 >>>>>>> Add EventDetailHero text
 =======
                           Call to Action
+=======
+                          RSVP
+>>>>>>> fix DatesAndTimes key to be lower case
 </span>,
                         null,
                       ],
@@ -4805,6 +4917,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                           "children": "RSVP",
                           "className": "mr-auto",
                         },
@@ -4817,6 +4930,13 @@ ShallowWrapper {
                         "ref": null,
                         "rendered": "Call to Action",
 >>>>>>> Fix event selector corresponding to change
+=======
+                          "children": "RSVP",
+                          "className": "mr-auto",
+                        },
+                        "ref": null,
+                        "rendered": "RSVP",
+>>>>>>> fix DatesAndTimes key to be lower case
                         "type": "span",
                       },
                       null,
