@@ -210,9 +210,9 @@ class EventDetailHero extends Component {
                             selectedItem: currentItemId,
                             selectedItemDateAndTime: `${get(
                               dateAndTime,
-                              'Date',
+                              'date',
                               ''
-                            )}, ${get(dateAndTime, 'Time', '')}`
+                            )}, ${get(dateAndTime, 'time', '')}`
                           });
                         }}
                         color={
@@ -246,7 +246,7 @@ class EventDetailHero extends Component {
                         'mt1'
                       )}
                     >
-                      {get(event, 'datesAndTimes[0].Time', '')}
+                      {get(event, 'datesAndTimes[0].time', '')}
                     </p>
                   </div>
                   <div

@@ -65,28 +65,30 @@ export default createSelector(
       const datesAndTimes = shopifyProduct.id
         ? shopifyProduct.variants.map(variant => {
             const dateAndTime = variant.date.split(', ');
-            const Time = dateAndTime[1];
-            const Date = dateAndTime[0];
-            const sortedDate = moment(Date).format('dddd, MMMM Do');
-            const sortedTime = getShortTimeFormat(Time);
+            const time = dateAndTime[1];
+            const date = dateAndTime[0];
+            const sortedDate = moment(date).format('dddd, MMMM Do');
+            const sortedTime = getShortTimeFormat(time);
 
-            return { Time, Date, sortedDate, sortedTime };
+            return { time, date, sortedDate, sortedTime };
           })
         : get(fields, 'datesAndTimes.fragments', []).map(fragment => {
             const sortedFragment = fragment.reduce(
               (sortedDateAndTime, dateAndTime) => {
-                sortedDateAndTime[dateAndTime.key] = dateAndTime.value;
+                const key = dateAndTime.key.toLowerCase();
+
+                sortedDateAndTime[key] = dateAndTime.value;
 
                 return sortedDateAndTime;
               },
               {}
             );
 
-            const sortedDate = moment(get(sortedFragment, 'Date', '')).format(
+            const sortedDate = moment(get(sortedFragment, 'date', '')).format(
               'dddd, MMMM Do'
             );
             const sortedTime = getShortTimeFormat(
-              get(sortedFragment, 'Time', '')
+              get(sortedFragment, 'time', '')
             );
 
             return { ...sortedFragment, sortedDate, sortedTime };

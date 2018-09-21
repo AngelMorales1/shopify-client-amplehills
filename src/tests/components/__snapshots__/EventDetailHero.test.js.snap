@@ -2127,9 +2127,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-                                                  >
-                                                            Invalid date
-                                                  </p>
+                                                  />
                                         </div>
                                         <div>
                                                   <p
@@ -2187,7 +2185,7 @@ ShallowWrapper {
                                         <span
                                                   className="mr-auto"
                                         >
-                                                  Call to Action
+                                                  RSVP
                                         </span>
                               </Button>
                               <div
@@ -2369,9 +2367,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-                                                        >
-                                                                      Invalid date
-                                                        </p>
+                                                        />
                                           </div>
                                           <div>
                                                         <p
@@ -2429,7 +2425,7 @@ ShallowWrapper {
                                           <span
                                                         className="mr-auto"
                                           >
-                                                        Call to Action
+                                                        RSVP
                                           </span>
                             </Button>
                             <div
@@ -2498,9 +2494,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-                                                >
-                                                                Invalid date
-                                                </p>
+                                                />
                                 </div>
                                 <div>
                                                 <p
@@ -2558,7 +2552,7 @@ ShallowWrapper {
                                 <span
                                                 className="mr-auto"
                                 >
-                                                Call to Action
+                                                RSVP
                                 </span>
                 </Button>
                 <div
@@ -2588,9 +2582,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-                                        >
-                                                            Invalid date
-                                        </p>
+                                        />
                     </div>
                     <div>
                                         <p
@@ -2648,7 +2640,7 @@ ShallowWrapper {
                     <span
                                         className="mr-auto"
                     >
-                                        Call to Action
+                                        RSVP
                     </span>
 </Button>,
                   null,
@@ -2679,9 +2671,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-                        >
-                                                Invalid date
-                        </p>
+                        />
 </div>,
                       <div>
                         <p
@@ -2739,9 +2729,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
->
-                            Invalid date
-</p>,
+/>,
                         ],
                       },
                       "ref": null,
@@ -2763,11 +2751,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "Invalid date",
+                            "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
-                          "rendered": "Invalid date",
+                          "rendered": "",
                           "type": "p",
                         },
                       ],
@@ -2958,7 +2946,7 @@ ShallowWrapper {
                       <span
                         className="mr-auto"
 >
-                        Call to Action
+                        RSVP
 </span>,
                       null,
                     ],
@@ -2981,11 +2969,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Call to Action",
+                        "children": "RSVP",
                         "className": "mr-auto",
                       },
                       "ref": null,
-                      "rendered": "Call to Action",
+                      "rendered": "RSVP",
                       "type": "span",
                     },
                     null,
@@ -3087,9 +3075,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-                                                            >
-                                                                        Invalid date
-                                                            </p>
+                                                            />
                                                 </div>
                                                 <div>
                                                             <p
@@ -3147,7 +3133,7 @@ ShallowWrapper {
                                                 <span
                                                             className="mr-auto"
                                                 >
-                                                            Call to Action
+                                                            RSVP
                                                 </span>
                                     </Button>
                                     <div
@@ -3329,9 +3315,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-                                                                >
-                                                                                Invalid date
-                                                                </p>
+                                                                />
                                                 </div>
                                                 <div>
                                                                 <p
@@ -3389,7 +3373,7 @@ ShallowWrapper {
                                                 <span
                                                                 className="mr-auto"
                                                 >
-                                                                Call to Action
+                                                                RSVP
                                                 </span>
                                 </Button>
                                 <div
@@ -3458,9 +3442,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-                                                      >
-                                                                        Invalid date
-                                                      </p>
+                                                      />
                                     </div>
                                     <div>
                                                       <p
@@ -3518,7 +3500,7 @@ ShallowWrapper {
                                     <span
                                                       className="mr-auto"
                                     >
-                                                      Call to Action
+                                                      RSVP
                                     </span>
                   </Button>
                   <div
@@ -3548,9 +3530,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-                                            >
-                                                                  Invalid date
-                                            </p>
+                                            />
                       </div>
                       <div>
                                             <p
@@ -3608,7 +3588,7 @@ ShallowWrapper {
                       <span
                                             className="mr-auto"
                       >
-                                            Call to Action
+                                            RSVP
                       </span>
 </Button>,
                     null,
@@ -3639,9 +3619,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-                          >
-                                                    Invalid date
-                          </p>
+                          />
 </div>,
                         <div>
                           <p
@@ -3699,9 +3677,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
->
-                              Invalid date
-</p>,
+/>,
                           ],
                         },
                         "ref": null,
@@ -3723,11 +3699,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Invalid date",
+                              "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
-                            "rendered": "Invalid date",
+                            "rendered": "",
                             "type": "p",
                           },
                         ],
@@ -3918,7 +3894,7 @@ ShallowWrapper {
                         <span
                           className="mr-auto"
 >
-                          Call to Action
+                          RSVP
 </span>,
                         null,
                       ],
@@ -3941,11 +3917,11 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "Call to Action",
+                          "children": "RSVP",
                           "className": "mr-auto",
                         },
                         "ref": null,
-                        "rendered": "Call to Action",
+                        "rendered": "RSVP",
                         "type": "span",
                       },
                       null,

@@ -14,10 +14,10 @@ import { Button } from 'components/base';
 const EventCard = ({ event, active }) => {
   const datesAndTimes = event.datesAndTimes;
   const dates = datesAndTimes.map(dateAndTime => {
-    return moment(get(dateAndTime, 'Date', '')).format('MMMM D YYYY');
+    return moment(get(dateAndTime, 'date', '')).format('MMMM D YYYY');
   });
   const times = datesAndTimes.map(dateAndTime => {
-    return getShortTimeFormat(get(dateAndTime, 'Time', ''));
+    return getShortTimeFormat(get(dateAndTime, 'time', ''));
   });
   const eventTypeIsClass = event.eventType === 'Ice Cream Classes';
   const label = eventTypeIsClass ? 'More Info' : 'RSVP';
