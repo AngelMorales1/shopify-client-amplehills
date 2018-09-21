@@ -15,7 +15,6 @@ it('renders with data', () => {
       event={{
         id: 'foo',
         blockCardText: 'foo',
-<<<<<<< HEAD
         variants: [
           {
             available: true,
@@ -23,8 +22,6 @@ it('renders with data', () => {
             price: '0.00'
           }
         ],
-=======
->>>>>>> Add EventDetailHero text
         eventType: 'foo',
         image: 'foo',
         locationTitle: 'foo',

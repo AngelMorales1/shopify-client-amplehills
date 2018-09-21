@@ -54,10 +54,14 @@ ShallowWrapper {
                               className="mb2"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
                               Invalid date, undefined at foo
 =======
                               Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                              Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
                     </p>
                     <h2
                               className=""
@@ -129,10 +133,14 @@ ShallowWrapper {
                             className="mb2"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                             Invalid date, undefined at foo
 =======
                             Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                            Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
               </p>
               <h2
                             className=""
@@ -187,10 +195,14 @@ ShallowWrapper {
                   className="mb2"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Invalid date, undefined at foo
 =======
                   Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                  Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
 </p>,
                 <h2
                   className=""
@@ -217,6 +229,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                   "children": "Invalid date, undefined at foo",
                   "className": "mb2",
                 },
@@ -229,6 +242,13 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "Invalid date, foo: at foo",
 >>>>>>> Add EventDetailHero text
+=======
+                  "children": "Invalid date, undefined at foo",
+                  "className": "mb2",
+                },
+                "ref": null,
+                "rendered": "Invalid date, undefined at foo",
+>>>>>>> Fix event detail hero test
                 "type": "p",
               },
               Object {
@@ -352,10 +372,14 @@ ShallowWrapper {
                                     className="mb2"
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     Invalid date, undefined at foo
 =======
                                     Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                                    Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
                         </p>
                         <h2
                                     className=""
@@ -427,10 +451,14 @@ ShallowWrapper {
                                 className="mb2"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 Invalid date, undefined at foo
 =======
                                 Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                                Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
                 </p>
                 <h2
                                 className=""
@@ -485,10 +513,14 @@ ShallowWrapper {
                     className="mb2"
 >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Invalid date, undefined at foo
 =======
                     Invalid date, foo: at foo
 >>>>>>> Add EventDetailHero text
+=======
+                    Invalid date, undefined at foo
+>>>>>>> Fix event detail hero test
 </p>,
                   <h2
                     className=""
@@ -515,6 +547,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "children": "Invalid date, undefined at foo",
                     "className": "mb2",
                   },
@@ -527,6 +560,13 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": "Invalid date, foo: at foo",
 >>>>>>> Add EventDetailHero text
+=======
+                    "children": "Invalid date, undefined at foo",
+                    "className": "mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Invalid date, undefined at foo",
+>>>>>>> Fix event detail hero test
                   "type": "p",
                 },
                 Object {
