@@ -199,6 +199,7 @@ UI elements
     margin: spacing(10) 0;
 
     > li {
+      @extend .block-subheadline;
       margin: spacing(2) 0;
     }
   }
@@ -220,10 +221,13 @@ UI elements
       display: block;
       position: absolute;
       left: spacing(-6);
-      top: calc((#{$font-4} / 2) - 4px);
-      margin-bottom: 2px;
       width: 6px;
       height: 6px;
+      top: calc((#{$font-6} / 2) - 4px);
+
+      @media ($medium-up) {
+        top: calc((#{$font-7} / 2) - 4px);
+      }
     }
   }
 
