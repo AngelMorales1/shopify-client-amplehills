@@ -68,7 +68,7 @@ class EventDetailHero extends Component {
         quantity: 1,
         customAttributes: [
           {
-            key: 'eventTime',
+            key: 'Event Time',
             value: get(this, 'state.selectedItemDateAndTime', '')
           }
         ]
@@ -108,7 +108,7 @@ class EventDetailHero extends Component {
 
     const { selectedAddress, name, email, phone, message } = this.state;
 
-    const eventInfoApendedMessage = `Event location: ${eventLocation}, Event time: ${
+    const messageWithEventInfo = `Event location: ${eventLocation}, Event time: ${
       this.state.selectedItemDateAndTime
     }  Message: ${message}`;
 
@@ -118,7 +118,7 @@ class EventDetailHero extends Component {
       name,
       email,
       phone,
-      message: eventInfoApendedMessage
+      message: messageWithEventInfo
     });
   };
 
@@ -174,7 +174,8 @@ class EventDetailHero extends Component {
             )}
           >
             <div className="w100">
-              {event.datesAndTimes.length > 1 || event.variants.length > 1 ? (
+              {get(event, 'datesAndTimes', []).length > 1 ||
+              get(event, 'variants', []).length > 1 ? (
                 <div>
                   <p className="copy text-peach bold mb2">Date</p>
                   {event.datesAndTimes.map((dateAndTime, i) => {
@@ -321,10 +322,10 @@ class EventDetailHero extends Component {
             <div
               className={cx(
                 styles['EventDetailHero__modal-content-container'],
-                'relative bg-white drop-shadow transition-slide-up-large-long'
+                'relative flex items-center justify-center bg-white drop-shadow transition-slide-up-large-long'
               )}
             >
-              <div className="wh100 mx-auto flex flex-column mb3 justify-center">
+              <div className="wh100 m-auto flex flex-column mb3 justify-center">
                 <Button
                   className={cx(
                     styles['EventDetailHero__modal-close-button'],
@@ -335,11 +336,11 @@ class EventDetailHero extends Component {
                 >
                   <Image src="/assets/images/icon-close.svg" />
                 </Button>
-                <h2 className="sub-title m3 pt3 mx-auto center">Contact us</h2>
+                <h2 className="block-headline m3 pt3 mx-auto center">RSVP</h2>
                 <div
                   className={cx(
                     styles['ContactUs'],
-                    'transition-slide-up flex flex-column justify-around items-center'
+                    'transition-slide-up flex flex-column justify-center items-center'
                   )}
                 >
                   <form className="flex flex-wrap justify-center text-container-width">

@@ -13,12 +13,12 @@ export const deriveLineItems = checkout =>
     const price = getLineItemPrice(get(item, 'variant.price', 0.0), quantity);
 
     const attributes = get(item, 'customAttributes', []);
-    const itemIsEvent = get(attributes[0], 'key', '').includes('eventTime');
+    const itemIsEvent = get(attributes[0], 'key', '').includes('Event Time');
 
     const allSubItems = attributes.filter(attribute => {
       return itemIsEvent
-        ? get(attribute, 'key', '').includes('eventTime')
-        : get(attribute, 'key', '').includes('Item ');
+        ? get(attribute, 'key', '').includes('Event Time')
+        : get(attribute, 'key', '').includes('Item');
     });
 
     const subItemsObject = allSubItems.reduce((uniqueSubItems, subItem) => {
