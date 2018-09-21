@@ -135,8 +135,7 @@ class MiniCart extends Component {
             <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
             <Button
               disabled={!items.length}
-              // TODO: redirect to amplehills.com/checkout
-              to={checkout.webUrl}
+              to="/cart"
               color="madison-blue"
               onClick={() => closeMiniCart()}
               label="Checkout"
