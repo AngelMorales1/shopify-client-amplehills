@@ -39,7 +39,7 @@ class FAQBlock extends Component {
           <div
             className={cx(
               styles['FAQBlock__block-title-container'],
-              'flex col-12 md-col-5 pr-3 mb4'
+              'flex col-12 md-col-4 pr3 mb4'
             )}
           >
             <div>
@@ -62,82 +62,79 @@ class FAQBlock extends Component {
               ) : null}
             </div>
           </div>
-          <div className="col-12 md-col-7">
-            <div className="form-container-width mx-auto">
-              {fragments.map(fragment => {
-                const uuid = get(fragment, 'uuid', '');
-                const dropdownIsOpen = this.state.selectedItem === uuid;
+          <div className="col-12 md-col-8 form-container-width">
+            {fragments.map(fragment => {
+              const uuid = get(fragment, 'uuid', '');
+              const dropdownIsOpen = this.state.selectedItem === uuid;
 
-                return get(fragment, 'type', '') === 'Heading' ? (
+              return get(fragment, 'type', '') === 'Heading' ? (
+                <p
+                  key={uuid}
+                  className={cx(
+                    styles['FAQBlock__title'],
+                    'uppercase bold text-peach mb3'
+                  )}
+                >
+                  {get(fragment, 'heading', '')}
+                </p>
+              ) : (
+                <div key={uuid} className="my2 w100">
+                  <div className="flex flex-row justify-between items-start">
+                    <Button
+                      className={cx(
+                        styles['FAQBlock__question'],
+                        'col-10 flex flex-start'
+                      )}
+                      variant="style-none"
+                      onClick={() =>
+                        this.state.selectedItem === uuid
+                          ? this.setState({ selectedItem: '' })
+                          : this.setState({ selectedItem: uuid })
+                      }
+                    >
+                      <p className="text-madison-blue semi-bold">
+                        {get(fragment, 'question', '')}
+                      </p>
+                    </Button>
+                    <Button
+                      className={cx(
+                        { 'display-none': dropdownIsOpen },
+                        'transition-slide-up col-2'
+                      )}
+                      variant="style-none"
+                      onClick={() => this.setState({ selectedItem: uuid })}
+                    >
+                      <Image
+                        className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
+                        src="/assets/images/arrow-dropdown-active-peach.svg"
+                      />
+                    </Button>
+                    <Button
+                      className={cx(
+                        { 'display-none': !dropdownIsOpen },
+                        'transition-slide-up col-2'
+                      )}
+                      variant="style-none"
+                      onClick={() => this.setState({ selectedItem: '' })}
+                    >
+                      <Image
+                        className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
+                        src="/assets/images/arrow-dropdown-inactive-peach.svg"
+                      />
+                    </Button>
+                  </div>
                   <p
                     className={cx(
-                      styles['FAQBlock__title'],
-                      'uppercase bold text-peach mb3'
+                      styles['FAQBlock__answer'],
+                      { 'display-none': !dropdownIsOpen },
+                      'block-subheadline pt4 pb4 mb3 transition-slide-up'
                     )}
                   >
-                    {get(fragment, 'heading', '')}
+                    {get(fragment, 'answer', '')}
                   </p>
-                ) : (
-                  <div className="my2">
-                    <div className="w100">
-                      <div className="flex flex-row justify-between items-start">
-                        <Button
-                          className={cx(
-                            styles['FAQBlock__question'],
-                            'col-10 flex flex-start'
-                          )}
-                          variant="style-none"
-                          onClick={() =>
-                            this.state.selectedItem === uuid
-                              ? this.setState({ selectedItem: '' })
-                              : this.setState({ selectedItem: uuid })
-                          }
-                        >
-                          <p className="text-madison-blue semi-bold">
-                            {get(fragment, 'question', '')}
-                          </p>
-                        </Button>
-                        <Button
-                          className={cx(
-                            { 'display-none': dropdownIsOpen },
-                            'transition-slide-up col-2'
-                          )}
-                          variant="style-none"
-                          onClick={() => this.setState({ selectedItem: uuid })}
-                        >
-                          <Image
-                            className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
-                            src="/assets/images/arrow-dropdown-active-peach.svg"
-                          />
-                        </Button>
-                        <Button
-                          className={cx(
-                            { 'display-none': !dropdownIsOpen },
-                            'transition-slide-up col-2'
-                          )}
-                          variant="style-none"
-                          onClick={() => this.setState({ selectedItem: '' })}
-                        >
-                          <Image
-                            className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
-                            src="/assets/images/arrow-dropdown-inactive-peach.svg"
-                          />
-                        </Button>
-                      </div>
-                    </div>
-                    <p
-                      className={cx(
-                        styles['FAQBlock__answer'],
-                        { 'display-none': !dropdownIsOpen },
-                        'block-subheadline pt4 pb4 mb3 transition-slide-up'
-                      )}
-                    >
-                      {get(fragment, 'answer', '')}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
