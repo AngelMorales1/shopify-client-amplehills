@@ -15,6 +15,13 @@ it('renders with data', () => {
       event={{
         id: 'foo',
         blockCardText: 'foo',
+        variants: [
+          {
+            available: true,
+            date: 'foo',
+            price: '0.00'
+          }
+        ],
         eventType: 'foo',
         image: 'foo',
         locationTitle: 'foo',

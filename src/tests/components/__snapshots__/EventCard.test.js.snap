@@ -53,7 +53,7 @@ ShallowWrapper {
                     <p
                               className="mb2"
                     >
-                              Invalid date, foo: at foo
+                              Invalid date, undefined at foo
                     </p>
                     <h2
                               className=""
@@ -116,7 +116,7 @@ ShallowWrapper {
               <p
                             className="mb2"
               >
-                            Invalid date, foo: at foo
+                            Invalid date, undefined at foo
               </p>
               <h2
                             className=""
@@ -162,7 +162,7 @@ ShallowWrapper {
                 <p
                   className="mb2"
 >
-                  Invalid date, foo: at foo
+                  Invalid date, undefined at foo
 </p>,
                 <h2
                   className=""
@@ -188,11 +188,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Invalid date, foo: at foo",
+                  "children": "Invalid date, undefined at foo",
                   "className": "mb2",
                 },
                 "ref": null,
-                "rendered": "Invalid date, foo: at foo",
+                "rendered": "Invalid date, undefined at foo",
                 "type": "p",
               },
               Object {
@@ -299,7 +299,7 @@ ShallowWrapper {
                         <p
                                     className="mb2"
                         >
-                                    Invalid date, foo: at foo
+                                    Invalid date, undefined at foo
                         </p>
                         <h2
                                     className=""
@@ -362,7 +362,7 @@ ShallowWrapper {
                 <p
                                 className="mb2"
                 >
-                                Invalid date, foo: at foo
+                                Invalid date, undefined at foo
                 </p>
                 <h2
                                 className=""
@@ -408,7 +408,7 @@ ShallowWrapper {
                   <p
                     className="mb2"
 >
-                    Invalid date, foo: at foo
+                    Invalid date, undefined at foo
 </p>,
                   <h2
                     className=""
@@ -434,11 +434,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Invalid date, foo: at foo",
+                    "children": "Invalid date, undefined at foo",
                     "className": "mb2",
                   },
                   "ref": null,
-                  "rendered": "Invalid date, foo: at foo",
+                  "rendered": "Invalid date, undefined at foo",
                   "type": "p",
                 },
                 Object {

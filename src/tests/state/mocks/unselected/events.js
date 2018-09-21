@@ -7,6 +7,7 @@ export const shopifyProducts = {
     variants: [
       {
         available: true,
+        date: '09/19/18, 6:00pm-10:00pm',
         price: 19.99,
         id: '9999'
       }
@@ -20,6 +21,7 @@ export const shopifyProducts = {
     variants: [
       {
         available: false,
+        date: '09/19/18, 6:00pm-10:00pm',
         price: 19.99,
         id: '9999'
       }
@@ -33,6 +35,7 @@ export const shopifyProducts = {
     variants: [
       {
         available: true,
+        date: '09/19/18, 6:00pm-10:00pm',
         price: 19.99,
         id: '9999'
       }

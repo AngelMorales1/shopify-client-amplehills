@@ -3,6 +3,7 @@ export default [
     variants: [
       {
         available: true,
+        date: '09/19/18, 6:00pm-10:00pm',
         id: '9999',
         price: 19.99
       }
@@ -25,14 +26,10 @@ export default [
       "Join us for a postcard writing and crafting ice cream gathering benefiting Brooklyn Pride. We'll craft postcards, hear from our friends at Brooklyn Pride and indulge on ice cream with a pay-as-you-wish sundae bar.\n\nAll are always welcome!\n\nFor every pre-packed pint (at all our NY/NJ scoop shops) purchased on June 6th, we’ll donate $1 to Brooklyn Pride. #icecreamforgood",
     datesAndTimes: [
       {
-        uuid: '4d0e79',
-        Date: '2018-09-18T00:00:00.000Z',
-        Time: '6:00PM - 7:00pm'
-      },
-      {
-        uuid: 'd8671e',
-        Date: '2018-09-21T00:00:00.000Z',
-        Time: '4:00pm - 6:00pm'
+        date: '09/19/18',
+        sortedDate: 'Wednesday, September 19th',
+        sortedTime: '6-10pm',
+        time: '6:00pm-10:00pm'
       }
     ]
   },
@@ -41,6 +38,7 @@ export default [
       {
         available: false,
         id: '9999',
+        date: '09/19/18, 6:00pm-10:00pm',
         price: 19.99
       }
     ],
@@ -222,9 +220,10 @@ export default [
       "Join us for a postcard writing and crafting ice cream gathering benefiting Brooklyn Pride. We'll craft postcards, hear from our friends at Brooklyn Pride and indulge on ice cream with a pay-as-you-wish sundae bar.\n\nAll are always welcome!\n\nFor every pre-packed pint (at all our NY/NJ scoop shops) purchased on June 6th, we’ll donate $1 to Brooklyn Pride. #icecreamforgood",
     datesAndTimes: [
       {
-        uuid: '1ee9bd',
-        Date: '2018-09-22T00:00:00.000Z',
-        Time: '6:00pm - 10:00pm'
+        date: '09/19/18',
+        sortedDate: 'Wednesday, September 19th',
+        sortedTime: '6-10pm',
+        time: '6:00pm-10:00pm'
       }
     ]
   }

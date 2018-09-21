@@ -25,6 +25,13 @@ ShallowWrapper {
             "image": "foo",
             "locationTitle": "foo",
             "title": "foo",
+            "variants": Array [
+              Object {
+                "available": true,
+                "date": "foo",
+                "price": "0.00",
+              },
+            ],
           }
     }
 />,
@@ -104,9 +111,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-                                                  >
-                                                            Invalid date
-                                                  </p>
+                                                  />
                                         </div>
                                         <div>
                                                   <p
@@ -116,9 +121,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-                                                  >
-                                                            foo
-                                                  </p>
+                                                  />
                                         </div>
                                         <div
                                                   className="flex mt3 w100"
@@ -154,8 +157,8 @@ ShallowWrapper {
                               </div>
                               <Button
                                         className="my4"
-                                        color="peach"
-                                        disabled={false}
+                                        color="madison-blue"
+                                        disabled={true}
                                         fullWidth={false}
                                         hover="shadow"
                                         label=""
@@ -168,7 +171,13 @@ ShallowWrapper {
                                         <span
                                                   className="mr-auto"
                                         >
-                                                  Call to Action
+                                                  Add to Cart
+                                        </span>
+                                        <span
+                                                  className="ml2"
+                                        >
+                                                  $
+                                                  0.00
                                         </span>
                               </Button>
                               <div
@@ -352,9 +361,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-                                                        >
-                                                                      Invalid date
-                                                        </p>
+                                                        />
                                           </div>
                                           <div>
                                                         <p
@@ -364,9 +371,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-                                                        >
-                                                                      foo
-                                                        </p>
+                                                        />
                                           </div>
                                           <div
                                                         className="flex mt3 w100"
@@ -402,8 +407,8 @@ ShallowWrapper {
                             </div>
                             <Button
                                           className="my4"
-                                          color="peach"
-                                          disabled={false}
+                                          color="madison-blue"
+                                          disabled={true}
                                           fullWidth={false}
                                           hover="shadow"
                                           label=""
@@ -416,7 +421,13 @@ ShallowWrapper {
                                           <span
                                                         className="mr-auto"
                                           >
-                                                        Call to Action
+                                                        Add to Cart
+                                          </span>
+                                          <span
+                                                        className="ml2"
+                                          >
+                                                        $
+                                                        0.00
                                           </span>
                             </Button>
                             <div
@@ -485,9 +496,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-                                                >
-                                                                Invalid date
-                                                </p>
+                                                />
                                 </div>
                                 <div>
                                                 <p
@@ -497,9 +506,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-                                                >
-                                                                foo
-                                                </p>
+                                                />
                                 </div>
                                 <div
                                                 className="flex mt3 w100"
@@ -535,8 +542,8 @@ ShallowWrapper {
                 </div>
                 <Button
                                 className="my4"
-                                color="peach"
-                                disabled={false}
+                                color="madison-blue"
+                                disabled={true}
                                 fullWidth={false}
                                 hover="shadow"
                                 label=""
@@ -549,7 +556,13 @@ ShallowWrapper {
                                 <span
                                                 className="mr-auto"
                                 >
-                                                Call to Action
+                                                Add to Cart
+                                </span>
+                                <span
+                                                className="ml2"
+                                >
+                                                $
+                                                0.00
                                 </span>
                 </Button>
                 <div
@@ -579,9 +592,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-                                        >
-                                                            Invalid date
-                                        </p>
+                                        />
                     </div>
                     <div>
                                         <p
@@ -591,9 +602,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-                                        >
-                                                            foo
-                                        </p>
+                                        />
                     </div>
                     <div
                                         className="flex mt3 w100"
@@ -629,8 +638,8 @@ ShallowWrapper {
 </div>,
                   <Button
                     className="my4"
-                    color="peach"
-                    disabled={false}
+                    color="madison-blue"
+                    disabled={true}
                     fullWidth={false}
                     hover="shadow"
                     label=""
@@ -643,7 +652,13 @@ ShallowWrapper {
                     <span
                                         className="mr-auto"
                     >
-                                        Call to Action
+                                        Add to Cart
+                    </span>
+                    <span
+                                        className="ml2"
+                    >
+                                        $
+                                        0.00
                     </span>
 </Button>,
                   null,
@@ -674,9 +689,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-                        >
-                                                Invalid date
-                        </p>
+                        />
 </div>,
                       <div>
                         <p
@@ -686,9 +699,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-                        >
-                                                foo
-                        </p>
+                        />
 </div>,
                       <div
                         className="flex mt3 w100"
@@ -738,9 +749,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
->
-                            Invalid date
-</p>,
+/>,
                         ],
                       },
                       "ref": null,
@@ -762,11 +771,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "Invalid date",
+                            "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
-                          "rendered": "Invalid date",
+                          "rendered": "",
                           "type": "p",
                         },
                       ],
@@ -785,9 +794,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
->
-                            foo
-</p>,
+/>,
                         ],
                       },
                       "ref": null,
@@ -809,11 +816,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "foo",
+                            "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
-                          "rendered": "foo",
+                          "rendered": "",
                           "type": "p",
                         },
                       ],
@@ -963,13 +970,18 @@ ShallowWrapper {
                       <span
                         className="mr-auto"
 >
-                        Call to Action
+                        Add to Cart
 </span>,
-                      null,
+                      <span
+                        className="ml2"
+>
+                        $
+                        0.00
+</span>,
                     ],
                     "className": "my4",
-                    "color": "peach",
-                    "disabled": false,
+                    "color": "madison-blue",
+                    "disabled": true,
                     "fullWidth": false,
                     "hover": "shadow",
                     "label": "",
@@ -986,14 +998,31 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Call to Action",
+                        "children": "Add to Cart",
                         "className": "mr-auto",
                       },
                       "ref": null,
-                      "rendered": "Call to Action",
+                      "rendered": "Add to Cart",
                       "type": "span",
                     },
-                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          "$",
+                          "0.00",
+                        ],
+                        "className": "ml2",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        "$",
+                        "0.00",
+                      ],
+                      "type": "span",
+                    },
                   ],
                   "type": [Function],
                 },
@@ -1094,9 +1123,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-                                                            >
-                                                                        Invalid date
-                                                            </p>
+                                                            />
                                                 </div>
                                                 <div>
                                                             <p
@@ -1106,9 +1133,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-                                                            >
-                                                                        foo
-                                                            </p>
+                                                            />
                                                 </div>
                                                 <div
                                                             className="flex mt3 w100"
@@ -1144,8 +1169,8 @@ ShallowWrapper {
                                     </div>
                                     <Button
                                                 className="my4"
-                                                color="peach"
-                                                disabled={false}
+                                                color="madison-blue"
+                                                disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
@@ -1158,7 +1183,13 @@ ShallowWrapper {
                                                 <span
                                                             className="mr-auto"
                                                 >
-                                                            Call to Action
+                                                            Add to Cart
+                                                </span>
+                                                <span
+                                                            className="ml2"
+                                                >
+                                                            $
+                                                            0.00
                                                 </span>
                                     </Button>
                                     <div
@@ -1342,9 +1373,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-                                                                >
-                                                                                Invalid date
-                                                                </p>
+                                                                />
                                                 </div>
                                                 <div>
                                                                 <p
@@ -1354,9 +1383,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-                                                                >
-                                                                                foo
-                                                                </p>
+                                                                />
                                                 </div>
                                                 <div
                                                                 className="flex mt3 w100"
@@ -1392,8 +1419,8 @@ ShallowWrapper {
                                 </div>
                                 <Button
                                                 className="my4"
-                                                color="peach"
-                                                disabled={false}
+                                                color="madison-blue"
+                                                disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
@@ -1406,7 +1433,13 @@ ShallowWrapper {
                                                 <span
                                                                 className="mr-auto"
                                                 >
-                                                                Call to Action
+                                                                Add to Cart
+                                                </span>
+                                                <span
+                                                                className="ml2"
+                                                >
+                                                                $
+                                                                0.00
                                                 </span>
                                 </Button>
                                 <div
@@ -1475,9 +1508,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-                                                      >
-                                                                        Invalid date
-                                                      </p>
+                                                      />
                                     </div>
                                     <div>
                                                       <p
@@ -1487,9 +1518,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-                                                      >
-                                                                        foo
-                                                      </p>
+                                                      />
                                     </div>
                                     <div
                                                       className="flex mt3 w100"
@@ -1525,8 +1554,8 @@ ShallowWrapper {
                   </div>
                   <Button
                                     className="my4"
-                                    color="peach"
-                                    disabled={false}
+                                    color="madison-blue"
+                                    disabled={true}
                                     fullWidth={false}
                                     hover="shadow"
                                     label=""
@@ -1539,7 +1568,13 @@ ShallowWrapper {
                                     <span
                                                       className="mr-auto"
                                     >
-                                                      Call to Action
+                                                      Add to Cart
+                                    </span>
+                                    <span
+                                                      className="ml2"
+                                    >
+                                                      $
+                                                      0.00
                                     </span>
                   </Button>
                   <div
@@ -1569,9 +1604,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-                                            >
-                                                                  Invalid date
-                                            </p>
+                                            />
                       </div>
                       <div>
                                             <p
@@ -1581,9 +1614,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-                                            >
-                                                                  foo
-                                            </p>
+                                            />
                       </div>
                       <div
                                             className="flex mt3 w100"
@@ -1619,8 +1650,8 @@ ShallowWrapper {
 </div>,
                     <Button
                       className="my4"
-                      color="peach"
-                      disabled={false}
+                      color="madison-blue"
+                      disabled={true}
                       fullWidth={false}
                       hover="shadow"
                       label=""
@@ -1633,7 +1664,13 @@ ShallowWrapper {
                       <span
                                             className="mr-auto"
                       >
-                                            Call to Action
+                                            Add to Cart
+                      </span>
+                      <span
+                                            className="ml2"
+                      >
+                                            $
+                                            0.00
                       </span>
 </Button>,
                     null,
@@ -1664,9 +1701,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-                          >
-                                                    Invalid date
-                          </p>
+                          />
 </div>,
                         <div>
                           <p
@@ -1676,9 +1711,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-                          >
-                                                    foo
-                          </p>
+                          />
 </div>,
                         <div
                           className="flex mt3 w100"
@@ -1728,9 +1761,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
->
-                              Invalid date
-</p>,
+/>,
                           ],
                         },
                         "ref": null,
@@ -1752,11 +1783,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Invalid date",
+                              "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
-                            "rendered": "Invalid date",
+                            "rendered": "",
                             "type": "p",
                           },
                         ],
@@ -1775,9 +1806,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
->
-                              foo
-</p>,
+/>,
                           ],
                         },
                         "ref": null,
@@ -1799,11 +1828,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "foo",
+                              "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
-                            "rendered": "foo",
+                            "rendered": "",
                             "type": "p",
                           },
                         ],
@@ -1953,13 +1982,18 @@ ShallowWrapper {
                         <span
                           className="mr-auto"
 >
-                          Call to Action
+                          Add to Cart
 </span>,
-                        null,
+                        <span
+                          className="ml2"
+>
+                          $
+                          0.00
+</span>,
                       ],
                       "className": "my4",
-                      "color": "peach",
-                      "disabled": false,
+                      "color": "madison-blue",
+                      "disabled": true,
                       "fullWidth": false,
                       "hover": "shadow",
                       "label": "",
@@ -1976,14 +2010,31 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "Call to Action",
+                          "children": "Add to Cart",
                           "className": "mr-auto",
                         },
                         "ref": null,
-                        "rendered": "Call to Action",
+                        "rendered": "Add to Cart",
                         "type": "span",
                       },
-                      null,
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "$",
+                            "0.00",
+                          ],
+                          "className": "ml2",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "$",
+                          "0.00",
+                        ],
+                        "type": "span",
+                      },
                     ],
                     "type": [Function],
                   },
