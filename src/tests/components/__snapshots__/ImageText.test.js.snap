@@ -68,9 +68,174 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="flex container-width"
+>
         <div
-          className="flex container-width py4"
+                className="flex flex-column justify-center col-12 md-col-6"
+        >
+                <h2
+                        className="block-headline mb3"
+                >
+                        foo
+                </h2>
+                <p
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                Object {
+                                        "__html": "<p>foo</p>
+                                ",
+                                      }
+                        }
+                />
+        </div>
+        <Image
+                alt="foo illustration"
+                bg={false}
+                className="z-overlay col-4 mt2"
+                onImgLoad={[Function]}
+                src="foo?w=1400&fm=png&q=90"
+                style={
+                        Object {
+                                "transform": "translateY(0%)",
+                              }
+                }
+        />
+</div>,
+      "className": "flex flex-row justify-center drip",
+      "style": Object {
+        "zIndex": 0,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex flex-column justify-center col-12 md-col-6"
+>
+            <h2
+                        className="block-headline mb3"
+            >
+                        foo
+            </h2>
+            <p
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                    Object {
+                                                "__html": "<p>foo</p>
+                                    ",
+                                              }
+                        }
+            />
+</div>,
+          <Image
+            alt="foo illustration"
+            bg={false}
+            className="z-overlay col-4 mt2"
+            onImgLoad={[Function]}
+            src="foo?w=1400&fm=png&q=90"
+            style={
+                        Object {
+                                    "transform": "translateY(0%)",
+                                  }
+            }
+/>,
+        ],
+        "className": "flex container-width",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline mb3"
+>
+                foo
+</h2>,
+              <p
+                className="block-subheadline"
+                dangerouslySetInnerHTML={
+                                Object {
+                                                "__html": "<p>foo</p>
+                                ",
+                                              }
+                }
+/>,
+            ],
+            "className": "flex flex-column justify-center col-12 md-col-6",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "foo",
+                "className": "block-headline mb3",
+              },
+              "ref": null,
+              "rendered": "foo",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "block-subheadline",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "<p>foo</p>
+",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "foo illustration",
+            "bg": false,
+            "children": null,
+            "className": "z-overlay col-4 mt2",
+            "onImgLoad": [Function],
+            "src": "foo?w=1400&fm=png&q=90",
+            "style": Object {
+              "transform": "translateY(0%)",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex container-width"
 >
           <div
                     className="flex flex-column justify-center col-12 md-col-6"
@@ -93,21 +258,20 @@ ShallowWrapper {
           <Image
                     alt="foo illustration"
                     bg={false}
-                    className="col-4 z-sub-nav mt2 mx-auto my-auto"
+                    className="z-overlay col-4 mt2"
                     onImgLoad={[Function]}
                     src="foo?w=1400&fm=png&q=90"
                     style={
                               Object {
-                                        "transform": "translate(0%, 0%)",
+                                        "transform": "translateY(0%)",
                                       }
                     }
           />
 </div>,
-        null,
-      ],
-      "className": "flex justify-center",
-      "style": Object {
-        "zIndex": 0,
+        "className": "flex flex-row justify-center drip",
+        "style": Object {
+          "zIndex": 0,
+        },
       },
     },
     "ref": null,
@@ -139,12 +303,12 @@ ShallowWrapper {
             <Image
               alt="foo illustration"
               bg={false}
-              className="col-4 z-sub-nav mt2 mx-auto my-auto"
+              className="z-overlay col-4 mt2"
               onImgLoad={[Function]}
               src="foo?w=1400&fm=png&q=90"
               style={
                             Object {
-                                          "transform": "translate(0%, 0%)",
+                                          "transform": "translateY(0%)",
                                         }
               }
 />,
@@ -173,7 +337,6 @@ ShallowWrapper {
                                                     }
                   }
 />,
-                null,
               ],
               "className": "flex flex-column justify-center col-12 md-col-6",
             },
@@ -218,11 +381,11 @@ ShallowWrapper {
               "alt": "foo illustration",
               "bg": false,
               "children": null,
-              "className": "col-4 z-sub-nav mt2 mx-auto my-auto",
+              "className": "z-overlay col-4 mt2",
               "onImgLoad": [Function],
               "src": "foo?w=1400&fm=png&q=90",
               "style": Object {
-                "transform": "translate(0%, 0%)",
+                "transform": "translateY(0%)",
               },
             },
             "ref": null,
@@ -446,9 +609,7 @@ ShallowWrapper {
                   "id": "",
                 },
               },
-              "imagePositionX": 0,
-              "imagePositionY": 0,
-              "imageTextRatio": "50:50",
+              "imagePosition": 0,
               "isReverseArrangement": false,
               "text": "",
               "title": "",
@@ -469,9 +630,164 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <div
+        className="flex container-width"
+>
         <div
-          className="flex container-width py4"
+                className="flex flex-column justify-center col-12 md-col-6"
+        >
+                <h2
+                        className="block-headline mb3"
+                />
+                <p
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                Object {
+                                        "__html": "",
+                                      }
+                        }
+                />
+        </div>
+        <Image
+                alt=" illustration"
+                bg={false}
+                className="z-overlay col-4 mt2"
+                onImgLoad={[Function]}
+                src="?w=1400&fm=png&q=90"
+                style={
+                        Object {
+                                "transform": "translateY(0%)",
+                              }
+                }
+        />
+</div>,
+      "className": "flex flex-row justify-center drip",
+      "style": Object {
+        "zIndex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="flex flex-column justify-center col-12 md-col-6"
+>
+            <h2
+                        className="block-headline mb3"
+            />
+            <p
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                    Object {
+                                                "__html": "",
+                                              }
+                        }
+            />
+</div>,
+          <Image
+            alt=" illustration"
+            bg={false}
+            className="z-overlay col-4 mt2"
+            onImgLoad={[Function]}
+            src="?w=1400&fm=png&q=90"
+            style={
+                        Object {
+                                    "transform": "translateY(0%)",
+                                  }
+            }
+/>,
+        ],
+        "className": "flex container-width",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline mb3"
+/>,
+              <p
+                className="block-subheadline"
+                dangerouslySetInnerHTML={
+                                Object {
+                                                "__html": "",
+                                              }
+                }
+/>,
+            ],
+            "className": "flex flex-column justify-center col-12 md-col-6",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "block-headline mb3",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "block-subheadline",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": " illustration",
+            "bg": false,
+            "children": null,
+            "className": "z-overlay col-4 mt2",
+            "onImgLoad": [Function],
+            "src": "?w=1400&fm=png&q=90",
+            "style": Object {
+              "transform": "translateY(0%)",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="flex container-width"
 >
           <div
                     className="flex flex-column justify-center col-12 md-col-5"
@@ -491,21 +807,20 @@ ShallowWrapper {
           <Image
                     alt=" illustration"
                     bg={false}
-                    className="col-6 z-sub-nav mt2 mx-auto my-auto"
+                    className="z-overlay col-4 mt2"
                     onImgLoad={[Function]}
                     src="?w=1400&fm=png&q=90"
                     style={
                               Object {
-                                        "transform": "translate(0%, 0%)",
+                                        "transform": "translateY(0%)",
                                       }
                     }
           />
 </div>,
-        null,
-      ],
-      "className": "flex justify-center",
-      "style": Object {
-        "zIndex": 1,
+        "className": "flex flex-row justify-center drip",
+        "style": Object {
+          "zIndex": 1,
+        },
       },
     },
     "ref": null,
@@ -534,12 +849,12 @@ ShallowWrapper {
             <Image
               alt=" illustration"
               bg={false}
-              className="col-6 z-sub-nav mt2 mx-auto my-auto"
+              className="z-overlay col-4 mt2"
               onImgLoad={[Function]}
               src="?w=1400&fm=png&q=90"
               style={
                             Object {
-                                          "transform": "translate(0%, 0%)",
+                                          "transform": "translateY(0%)",
                                         }
               }
 />,
@@ -609,11 +924,11 @@ ShallowWrapper {
               "alt": " illustration",
               "bg": false,
               "children": null,
-              "className": "col-6 z-sub-nav mt2 mx-auto my-auto",
+              "className": "z-overlay col-4 mt2",
               "onImgLoad": [Function],
               "src": "?w=1400&fm=png&q=90",
               "style": Object {
-                "transform": "translate(0%, 0%)",
+                "transform": "translateY(0%)",
               },
             },
             "ref": null,
