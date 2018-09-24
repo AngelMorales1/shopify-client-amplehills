@@ -8,7 +8,7 @@ import styles from './PressCard.scss';
 import imageModel from 'models/imageModel';
 
 const PressCard = ({ pressCard }) => {
-  const fields = get(pressCard, 'fields', {});
+  const title = get(pressCard, 'title', '');
 
   return (
     <div
@@ -19,18 +19,18 @@ const PressCard = ({ pressCard }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={fields.logoImage.fields.file.url}
-        alt={`${fields.title} logo`}
+        src={get(pressCard, 'logoImage.data', '')}
+        alt={`${title} logo`}
       />
       <span
         className={cx(
           styles['PressCard__quote'],
           'carter text-peach center py3 mb4'
         )}
-      >{`"${fields.quote}"`}</span>
+      >{`"${pressCard.quote}"`}</span>
       <Button
         className={cx(styles['PressCard__button'], 'uppercase')}
-        to={fields.linkUrl}
+        to={pressCard.linkUrl}
         label="Read about it"
         variant="primary-small"
         color="peach"

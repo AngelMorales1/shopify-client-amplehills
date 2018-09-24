@@ -8,17 +8,21 @@ import pressItemModel from 'models/pressItemModel';
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
 
-const PressCarousel = ({ block, z, latestPressItems }) => {
+const PressCarousel = ({ block, z, pressItems }) => {
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
-  const isCustomOrder = !!get(fields, 'pressItems', []).length;
-  let selectedPressItems = isCustomOrder
-    ? get(fields, 'pressItems')
-    : latestPressItems;
+  const pressItemsIdInBlock = Object.keys(
+    get(fields, 'pressItems.simpleFragments', {})
+  );
+  const isCustomOrder = !!pressItemsIdInBlock.length;
+  let selectedPressItemsId = isCustomOrder
+    ? pressItemsIdInBlock
+    : Object.keys(pressItems);
+
   if (typeof showCardNumber === 'number') {
-    selectedPressItems = latestPressItems.slice(0, showCardNumber);
+    selectedPressItemsId = selectedPressItemsId.slice(0, showCardNumber);
   }
 
   return (
@@ -32,12 +36,15 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
         buttonLabel={get(fields, 'buttonLabel', '')}
         isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
       >
-        {selectedPressItems.map((pressItem, i) => {
-          const fields = get(pressItem, 'fields', {});
+        {selectedPressItemsId.map((pressItemId, i) => {
+          const selectedPressItems = isCustomOrder
+            ? get(fields, 'pressItems.simpleFragments', {})
+            : pressItems;
+          const selectedPressItem = get(selectedPressItems, pressItemId, {});
 
           return (
             <div
-              key={get(pressItem, 'sys.id', '') + i}
+              key={pressItemId}
               className={cx(
                 styles['PressCarousel__card'],
                 'bg-white p3 flex flex-column justify-center items-center'
@@ -45,25 +52,21 @@ const PressCarousel = ({ block, z, latestPressItems }) => {
             >
               <Image
                 className={cx(styles['PressCarousel__logo'])}
-                src={contentfulImgUtil(
-                  get(fields, 'logoImage.fields.file.url', ''),
-                  '200',
-                  'png'
-                )}
-                alt={`${fields.title} logo`}
+                src={get(selectedPressItem, 'logoImage.data', '')}
+                alt={`${get(selectedPressItem, 'title', '')} logo`}
               />
               <span
                 className={cx(
                   styles['PressCarousel__quote'],
                   'carter text-peach center py3'
                 )}
-              >{`"${fields.quote}"`}</span>
+              >{`"${get(selectedPressItem, 'quote', '')}"`}</span>
               <Button
                 className={cx(
                   styles['PressCarousel__button'],
                   'uppercase detail'
                 )}
-                to={fields.linkUrl}
+                to={get(selectedPressItem, 'linkUrl', '')}
                 label="Read about it"
                 variant="primary-small"
                 color="peach"

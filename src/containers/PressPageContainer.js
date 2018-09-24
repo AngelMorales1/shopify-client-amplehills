@@ -1,35 +1,27 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getPressItems } from 'state/actions/pressActions';
-import pressItems from 'state/selectors/pressItems';
 
 import get from 'utils/get';
 
 class PressPageContainer extends ContainerBase {
   view = import('views/PressPageView');
 
-  model = () => {
-    const { getPressItems } = this.props.actions;
-
-    return getPressItems();
-  };
+  model = () => {};
 }
 
 const mapStateToProps = state => {
   return {
-    pressItems: pressItems(state)
+    pressItems: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.pressItems.simpleFragments'
+    )
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators(
-      {
-        getPressItems
-      },
-      dispatch
-    )
+    actions: bindActionCreators({}, dispatch)
   };
 };
 

@@ -10,6 +10,9 @@ class PressPageView extends Component {
 
     if (model.isError) return <h1>Error</h1>;
 
+    const pressItemsId = Object.keys(pressItems);
+    const firstPressItem = get(pressItems, pressItemsId[0], {});
+
     return (
       <div>
         <div className="bg-iceberg drip pb2">
@@ -19,20 +22,20 @@ class PressPageView extends Component {
         </div>
         <div className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center">
           <span className="block-headline text-peach center">{`"${get(
-            pressItems[0],
-            'fields.quote',
+            firstPressItem,
+            'quote',
             ''
           )}"`}</span>
           <Image
             className="col-3 mt4 mb2"
-            src={get(pressItems[0], 'fields.logoImage.fields.file.url', '')}
+            src={get(firstPressItem, 'logoImage.data', '')}
           />
         </div>
         <div className="p3 flex flex-row justify-center flex-wrap">
-          {pressItems.map((pressCard, i) => (
+          {pressItemsId.map((pressItemId, i) => (
             <PressCard
-              key={get(pressCard, 'sys.id', '') + i}
-              pressCard={pressCard}
+              key={pressItemId}
+              pressCard={get(pressItems, pressItemId, {})}
             />
           ))}
         </div>
