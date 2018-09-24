@@ -88,7 +88,10 @@ HorizontalCarousel.propTypes = {
     fields: PropTypes.shape({
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      pressItems: PropTypes.object,
+      pressItems: PropTypes.shape({
+        fragments: PropTypes.arrayOf(PropTypes.array),
+        simpleFragments: PropTypes.object
+      }),
       customOrder: PropTypes.bool,
       drip: PropTypes.bool,
       sortByLatest: PropTypes.bool,
@@ -99,7 +102,10 @@ HorizontalCarousel.propTypes = {
     })
   }),
   z: PropTypes.number,
-  pressItems: PropTypes.object
+  pressItems: PropTypes.shape({
+    fragments: PropTypes.arrayOf(PropTypes.array),
+    simpleFragments: PropTypes.object
+  })
 };
 
 HorizontalCarousel.defaultProps = {
@@ -107,7 +113,10 @@ HorizontalCarousel.defaultProps = {
     fields: {
       buttonLabel: '',
       buttonLink: '',
-      pressItems: {},
+      pressItems: {
+        fragments: [],
+        simpleFragments: {}
+      },
       customOrder: false,
       drip: false,
       sortByLatest: true,
@@ -118,7 +127,10 @@ HorizontalCarousel.defaultProps = {
     }
   },
   z: 0,
-  pressItems: {}
+  pressItems: {
+    fragments: [],
+    simpleFragments: {}
+  }
 };
 
 export default PressCarousel;
