@@ -71,6 +71,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
+<<<<<<< HEAD
                 className="md-col-6 flex flex-column justify-center col-12"
         >
                 <h2
@@ -234,6 +235,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
+=======
+>>>>>>> Add PressCard test
           className="flex container-width py4"
 >
           <div
@@ -262,20 +265,21 @@ ShallowWrapper {
           <Image
                     alt="foo illustration"
                     bg={false}
-                    className="z-overlay col-4 mt2"
+                    className="col-4 z-sub-nav mt2 mx-auto my-auto"
                     onImgLoad={[Function]}
                     src="foo?w=1400&fm=png&q=90"
                     style={
                               Object {
-                                        "transform": "translateY(0%)",
+                                        "transform": "translate(0%, 0%)",
                                       }
                     }
           />
 </div>,
-        "className": "flex flex-row justify-center drip",
-        "style": Object {
-          "zIndex": 0,
-        },
+        null,
+      ],
+      "className": "flex justify-center",
+      "style": Object {
+        "zIndex": 0,
       },
     },
     "ref": null,
@@ -312,12 +316,12 @@ ShallowWrapper {
             <Image
               alt="foo illustration"
               bg={false}
-              className="z-overlay col-4 mt2"
+              className="col-4 z-sub-nav mt2 mx-auto my-auto"
               onImgLoad={[Function]}
               src="foo?w=1400&fm=png&q=90"
               style={
                             Object {
-                                          "transform": "translateY(0%)",
+                                          "transform": "translate(0%, 0%)",
                                         }
               }
 />,
@@ -346,11 +350,15 @@ ShallowWrapper {
                                                     }
                   }
 />,
+<<<<<<< HEAD
                 <div
                   className="flex flex-row flex-wrap items-center"
 >
                   
 </div>,
+=======
+                null,
+>>>>>>> Add PressCard test
               ],
               "className": "flex flex-column justify-center col-12 md-col-6",
             },
@@ -401,6 +409,7 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
+              null,
             ],
             "type": "div",
           },
@@ -412,11 +421,11 @@ ShallowWrapper {
               "alt": "foo illustration",
               "bg": false,
               "children": null,
-              "className": "z-overlay col-4 mt2",
+              "className": "col-4 z-sub-nav mt2 mx-auto my-auto",
               "onImgLoad": [Function],
               "src": "foo?w=1400&fm=png&q=90",
               "style": Object {
-                "transform": "translateY(0%)",
+                "transform": "translate(0%, 0%)",
               },
             },
             "ref": null,
@@ -429,6 +438,7 @@ ShallowWrapper {
       null,
     ],
     "type": "div",
+<<<<<<< HEAD
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -731,26 +741,55 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Object {
+=======
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+>>>>>>> Add PressCard test
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
+<<<<<<< HEAD
             className="md-col-5 flex flex-column justify-center col-12"
+=======
+            className="flex container-width py4"
+>>>>>>> Add PressCard test
 >
-            <h2
-                        className="block-headline mb3"
-            />
-            <p
-                        className="block-subheadline"
-                        dangerouslySetInnerHTML={
+            <div
+                        className="flex flex-column justify-center col-12 md-col-6"
+            >
+                        <h2
+                                    className="block-headline mb3"
+                        >
+                                    foo
+                        </h2>
+                        <p
+                                    className="block-subheadline"
+                                    dangerouslySetInnerHTML={
+                                                Object {
+                                                            "__html": "<p>foo</p>
+                                                ",
+                                                          }
+                                    }
+                        />
+            </div>
+            <Image
+                        alt="foo illustration"
+                        bg={false}
+                        className="col-4 z-sub-nav mt2 mx-auto my-auto"
+                        onImgLoad={[Function]}
+                        src="foo?w=1400&fm=png&q=90"
+                        style={
                                     Object {
-                                                "__html": "",
+                                                "transform": "translate(0%, 0%)",
                                               }
                         }
             />
 </div>,
+<<<<<<< HEAD
           <Image
             alt=" illustration"
             bg={false}
@@ -762,6 +801,14 @@ ShallowWrapper {
                                     "transform": "translate(0%, 0%)",
                                   }
         "className": "flex container-width py4",
+=======
+          null,
+        ],
+        "className": "flex justify-center",
+        "style": Object {
+          "zIndex": 0,
+        },
+>>>>>>> Add PressCard test
       },
       "ref": null,
       "rendered": Array [
@@ -771,19 +818,42 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2
-                className="block-headline mb3"
-/>,
-              <p
-                className="block-subheadline"
-                dangerouslySetInnerHTML={
+              <div
+                className="flex flex-column justify-center col-12 md-col-6"
+>
+                <h2
+                                className="block-headline mb3"
+                >
+                                foo
+                </h2>
+                <p
+                                className="block-subheadline"
+                                dangerouslySetInnerHTML={
+                                                Object {
+                                                                "__html": "<p>foo</p>
+                                                ",
+                                                              }
+                                }
+                />
+</div>,
+              <Image
+                alt="foo illustration"
+                bg={false}
+                className="col-4 z-sub-nav mt2 mx-auto my-auto"
+                onImgLoad={[Function]}
+                src="foo?w=1400&fm=png&q=90"
+                style={
                                 Object {
-                                                "__html": "",
+                                                "transform": "translate(0%, 0%)",
                                               }
                 }
 />,
             ],
+<<<<<<< HEAD
             "className": "md-col-5 flex flex-column justify-center col-12",
+=======
+            "className": "flex container-width py4",
+>>>>>>> Add PressCard test
           },
           "ref": null,
           "rendered": Array [
@@ -792,54 +862,93 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "",
-                "className": "block-headline mb3",
+                "children": Array [
+                  <h2
+                    className="block-headline mb3"
+>
+                    foo
+</h2>,
+                  <p
+                    className="block-subheadline"
+                    dangerouslySetInnerHTML={
+                                        Object {
+                                                            "__html": "<p>foo</p>
+                                        ",
+                                                          }
+                    }
+/>,
+                  null,
+                ],
+                "className": "flex flex-column justify-center col-12 md-col-6",
               },
               "ref": null,
-              "rendered": "",
-              "type": "h2",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "foo",
+                    "className": "block-headline mb3",
+                  },
+                  "ref": null,
+                  "rendered": "foo",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "block-subheadline",
+                    "dangerouslySetInnerHTML": Object {
+                      "__html": "<p>foo</p>
+",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "p",
+                },
+                null,
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "class",
               "props": Object {
-                "className": "block-subheadline",
-                "dangerouslySetInnerHTML": Object {
-                  "__html": "",
+                "alt": "foo illustration",
+                "bg": false,
+                "children": null,
+                "className": "col-4 z-sub-nav mt2 mx-auto my-auto",
+                "onImgLoad": [Function],
+                "src": "foo?w=1400&fm=png&q=90",
+                "style": Object {
+                  "transform": "translate(0%, 0%)",
                 },
               },
               "ref": null,
               "rendered": null,
-              "type": "p",
+              "type": [Function],
             },
           ],
           "type": "div",
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "alt": " illustration",
-            "bg": false,
-            "children": null,
-            "className": "z-overlay col-4 mt2",
-            "onImgLoad": [Function],
-            "src": "?w=1400&fm=png&q=90",
-            "style": Object {
-              "transform": "translateY(0%)",
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        null,
       ],
       "type": "div",
     },
-    "type": "div",
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
   },
+<<<<<<< HEAD
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
@@ -847,6 +956,61 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
+=======
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ImageText
+    block={
+        Object {
+            "fields": Object {
+              "backgroundColor": "pink",
+              "buttonColor": "peach",
+              "buttonLabel": "",
+              "buttonLink": "",
+              "drip": false,
+              "fullImage": false,
+              "image": Object {
+                "fields": Object {
+                  "file": Object {
+                    "url": "",
+                  },
+                  "title": "",
+                },
+                "sys": Object {
+                  "id": "",
+                },
+              },
+              "imagePositionX": 0,
+              "imagePositionY": 0,
+              "imageTextRatio": "50:50",
+              "isReverseArrangement": false,
+              "text": "",
+              "title": "",
+            },
+          }
+    }
+    z={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+>>>>>>> Add PressCard test
           className="flex container-width py4"
 >
           <div
@@ -873,6 +1037,7 @@ ShallowWrapper {
                     alt=" illustration"
                     bg={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="z-overlay col-4 mt2"
 =======
 <<<<<<< HEAD
@@ -885,15 +1050,19 @@ ShallowWrapper {
                     className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add test
 >>>>>>> Add test
+=======
+                    className="col-6 z-sub-nav mt2 mx-auto my-auto"
+>>>>>>> Add PressCard test
                     onImgLoad={[Function]}
                     src="?w=1400&fm=png&q=90"
                     style={
                               Object {
-                                        "transform": "translateY(0%)",
+                                        "transform": "translate(0%, 0%)",
                                       }
                     }
           />
 </div>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -910,16 +1079,24 @@ ShallowWrapper {
           "zIndex": 1,
         },
 =======
+=======
+>>>>>>> Add PressCard test
         null,
       ],
       "className": "flex justify-center",
       "style": Object {
         "zIndex": 1,
+<<<<<<< HEAD
 >>>>>>> Add test
       },
     },
     "ref": [Function],
 >>>>>>> Add test
+=======
+      },
+    },
+    "ref": null,
+>>>>>>> Add PressCard test
     "rendered": Array [
       Object {
         "instance": null,
@@ -951,6 +1128,7 @@ ShallowWrapper {
               alt=" illustration"
               bg={false}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="z-overlay col-4 mt2"
 =======
 <<<<<<< HEAD
@@ -963,11 +1141,14 @@ ShallowWrapper {
               className="col-6 z-sub-nav mt2 mx-auto my-auto"
 >>>>>>> Add test
 >>>>>>> Add test
+=======
+              className="col-6 z-sub-nav mt2 mx-auto my-auto"
+>>>>>>> Add PressCard test
               onImgLoad={[Function]}
               src="?w=1400&fm=png&q=90"
               style={
                             Object {
-                                          "transform": "translateY(0%)",
+                                          "transform": "translate(0%, 0%)",
                                         }
               }
 />,
@@ -993,11 +1174,15 @@ ShallowWrapper {
                                                     }
                   }
 />,
+<<<<<<< HEAD
                 <div
                   className="flex flex-row flex-wrap items-center"
 >
                   
 </div>,
+=======
+                null,
+>>>>>>> Add PressCard test
               ],
               "className": "flex flex-column justify-center col-12 md-col-5",
             },
@@ -1047,6 +1232,7 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
+              null,
             ],
             "type": "div",
           },
@@ -1058,6 +1244,7 @@ ShallowWrapper {
               "alt": " illustration",
               "bg": false,
               "children": null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1081,6 +1268,13 @@ ShallowWrapper {
                 "transform": "translate(0%, 0%)",
 >>>>>>> Fix ProductHero test
 >>>>>>> Add test
+=======
+              "className": "col-6 z-sub-nav mt2 mx-auto my-auto",
+              "onImgLoad": [Function],
+              "src": "?w=1400&fm=png&q=90",
+              "style": Object {
+                "transform": "translate(0%, 0%)",
+>>>>>>> Add PressCard test
               },
             },
             "ref": null,
@@ -1111,23 +1305,31 @@ ShallowWrapper {
                                     className="block-headline mb3"
                         />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <p
                                     className="block-subheadline"
 =======
                         <div
                                     className="markdown-block"
 >>>>>>> Add test
+=======
+                        <p
+                                    className="block-subheadline"
+>>>>>>> Add PressCard test
                                     dangerouslySetInnerHTML={
                                                 Object {
                                                             "__html": "",
                                                           }
                                     }
                         />
+<<<<<<< HEAD
                         <div
                                     className="flex flex-row flex-wrap items-center"
                         >
                                     
                         </div>
+=======
+>>>>>>> Add PressCard test
             </div>
             <Image
                         alt=" illustration"
@@ -1150,10 +1352,14 @@ ShallowWrapper {
         },
       },
 <<<<<<< HEAD
+<<<<<<< HEAD
       "ref": null,
 =======
       "ref": [Function],
 >>>>>>> Add test
+=======
+      "ref": null,
+>>>>>>> Add PressCard test
       "rendered": Array [
         Object {
           "instance": null,
@@ -1168,23 +1374,31 @@ ShallowWrapper {
                                 className="block-headline mb3"
                 />
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p
                                 className="block-subheadline"
 =======
                 <div
                                 className="markdown-block"
 >>>>>>> Add test
+=======
+                <p
+                                className="block-subheadline"
+>>>>>>> Add PressCard test
                                 dangerouslySetInnerHTML={
                                                 Object {
                                                                 "__html": "",
                                                               }
                                 }
                 />
+<<<<<<< HEAD
                 <div
                                 className="flex flex-row flex-wrap items-center"
                 >
                                 
                 </div>
+=======
+>>>>>>> Add PressCard test
 </div>,
               <Image
                 alt=" illustration"
@@ -1213,23 +1427,32 @@ ShallowWrapper {
                     className="block-headline mb3"
 />,
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <p
                     className="block-subheadline"
 =======
                   <div
                     className="markdown-block"
 >>>>>>> Add test
+=======
+                  <p
+                    className="block-subheadline"
+>>>>>>> Add PressCard test
                     dangerouslySetInnerHTML={
                                         Object {
                                                             "__html": "",
                                                           }
                     }
 />,
+<<<<<<< HEAD
                   <div
                     className="flex flex-row flex-wrap items-center"
 >
                     
 </div>,
+=======
+                  null,
+>>>>>>> Add PressCard test
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-5",
               },
@@ -1253,16 +1476,21 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "className": "block-subheadline",
 =======
                     "className": "markdown-block",
 >>>>>>> Add test
+=======
+                    "className": "block-subheadline",
+>>>>>>> Add PressCard test
                     "dangerouslySetInnerHTML": Object {
                       "__html": "",
                     },
                   },
                   "ref": null,
                   "rendered": null,
+<<<<<<< HEAD
 <<<<<<< HEAD
                   "type": "p",
 =======
@@ -1287,6 +1515,11 @@ ShallowWrapper {
                   ],
                   "type": "div",
                 },
+=======
+                  "type": "p",
+                },
+                null,
+>>>>>>> Add PressCard test
               ],
               "type": "div",
             },

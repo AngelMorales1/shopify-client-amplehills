@@ -55,8 +55,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="block-headline my3 nowrap col-12 md-col-6 center"
+        <div
+          className="col-12 md-col-6"
 >
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -71,7 +71,7 @@ ShallowWrapper {
 </div>,
         null,
       ],
-      "className": "flex justify-between drip relative",
+      "className": "flex justify-between items-center drip",
       "style": Object {
         "zIndex": 0,
       },
@@ -83,8 +83,15 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What’s included",
-          "className": "block-headline my3 nowrap col-12 md-col-6 center",
+          "children": Array [
+            <h2
+              className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+              What’s included
+</h2>,
+            null,
+          ],
+          "className": "col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [
@@ -127,8 +134,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="block-headline my3 nowrap col-12 md-col-6 center"
+          <div
+            className="col-12 md-col-6"
 >
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -143,7 +150,7 @@ ShallowWrapper {
 </div>,
           null,
         ],
-        "className": "flex justify-between drip relative",
+        "className": "flex justify-between items-center drip",
         "style": Object {
           "zIndex": 0,
         },
@@ -155,8 +162,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What’s included",
-            "className": "block-headline my3 nowrap col-12 md-col-6 center",
+            "children": Array [
+              <h2
+                className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+                What’s included
+</h2>,
+              null,
+            ],
+            "className": "col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [
@@ -240,8 +254,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="block-headline my3 nowrap col-12 md-col-6 center"
+        <div
+          className="col-12 md-col-6"
 >
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -283,7 +297,7 @@ ShallowWrapper {
 </div>,
         null,
       ],
-      "className": "flex justify-between drip relative",
+      "className": "flex justify-between items-center drip",
       "style": Object {
         "zIndex": 1,
       },
@@ -295,8 +309,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What’s included",
-          "className": "block-headline my3 nowrap col-12 md-col-6 center",
+              What’s included
+</h2>,
+            null,
+          ],
+          "className": "col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [
@@ -487,8 +504,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="block-headline my3 nowrap col-12 md-col-6 center"
+          <div
+            className="col-12 md-col-6"
 >
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -530,7 +547,7 @@ ShallowWrapper {
 </div>,
           null,
         ],
-        "className": "flex justify-between drip relative",
+        "className": "flex justify-between items-center drip",
         "style": Object {
           "zIndex": 1,
         },
@@ -542,8 +559,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What’s included",
-            "className": "block-headline my3 nowrap col-12 md-col-6 center",
+            "children": Array [
+              <h2
+                className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+                What’s included
+</h2>,
+              null,
+            ],
+            "className": "col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [
