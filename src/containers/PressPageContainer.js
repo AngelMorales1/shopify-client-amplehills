@@ -14,7 +14,7 @@ const mapStateToProps = state => {
   return {
     pressItems: get(
       state,
-      'applicationUI.globalSettings.items[0].fields.pressItems.simpleFragments'
+      'applicationUI.globalSettings.items[0].fields.pressItems'
     )
   };
 };

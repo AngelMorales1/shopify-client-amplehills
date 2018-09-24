@@ -21,7 +21,6 @@ class GenericPageContainer extends ContainerBase {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     blocks: get(
       state,
@@ -30,7 +29,7 @@ const mapStateToProps = state => {
     ),
     pressItems: get(
       state,
-      'applicationUI.globalSettings.items[0].fields.pressItems.simpleFragments'
+      'applicationUI.globalSettings.items[0].fields.pressItems'
     )
   };
 };

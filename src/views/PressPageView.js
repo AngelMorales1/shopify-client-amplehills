@@ -10,8 +10,14 @@ class PressPageView extends Component {
 
     if (model.isError) return <h1>Error</h1>;
 
-    const pressItemsId = Object.keys(pressItems);
-    const firstPressItem = get(pressItems, pressItemsId[0], {});
+    const pressItemsId = get(pressItems, 'fragments', []).map(fragment =>
+      get(fragment[0], 'value', '')
+    );
+    const firstPressItem = get(
+      pressItems,
+      `simpleFragments.${pressItemsId[0]}`,
+      {}
+    );
 
     return (
       <div>
@@ -35,7 +41,7 @@ class PressPageView extends Component {
           {pressItemsId.map((pressItemId, i) => (
             <PressCard
               key={pressItemId}
-              pressCard={get(pressItems, pressItemId, {})}
+              pressCard={get(pressItems, `simpleFragments.${pressItemId}`, {})}
             />
           ))}
         </div>

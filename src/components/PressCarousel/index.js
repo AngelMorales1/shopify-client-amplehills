@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import pressItemModel from 'models/pressItemModel';
 
@@ -13,13 +12,14 @@ const PressCarousel = ({ block, z, pressItems }) => {
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
-  const pressItemsIdInBlock = Object.keys(
-    get(fields, 'pressItems.simpleFragments', {})
-  );
+  const pressItemsIdInBlock = get(fields, 'pressItems.fragments', []);
   const isCustomOrder = !!pressItemsIdInBlock.length;
-  let selectedPressItemsId = isCustomOrder
+  const selectedPressItems = isCustomOrder
     ? pressItemsIdInBlock
-    : Object.keys(pressItems);
+    : get(pressItems, 'fragments', []);
+  let selectedPressItemsId = selectedPressItems.map(fragment =>
+    get(fragment[0], 'value', '')
+  );
 
   if (typeof showCardNumber === 'number') {
     selectedPressItemsId = selectedPressItemsId.slice(0, showCardNumber);
@@ -37,10 +37,14 @@ const PressCarousel = ({ block, z, pressItems }) => {
         isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
       >
         {selectedPressItemsId.map((pressItemId, i) => {
-          const selectedPressItems = isCustomOrder
+          const selectedPressItemsSimpleFragments = isCustomOrder
             ? get(fields, 'pressItems.simpleFragments', {})
-            : pressItems;
-          const selectedPressItem = get(selectedPressItems, pressItemId, {});
+            : get(pressItems, 'simpleFragments', {});
+          const selectedPressItem = get(
+            selectedPressItemsSimpleFragments,
+            pressItemId,
+            {}
+          );
 
           return (
             <div
@@ -84,7 +88,7 @@ HorizontalCarousel.propTypes = {
     fields: PropTypes.shape({
       buttonLabel: PropTypes.string,
       buttonLink: PropTypes.string,
-      pressItems: PropTypes.arrayOf(pressItemModel.propTypes),
+      pressItems: PropTypes.object,
       customOrder: PropTypes.bool,
       drip: PropTypes.bool,
       sortByLatest: PropTypes.bool,
@@ -95,7 +99,7 @@ HorizontalCarousel.propTypes = {
     })
   }),
   z: PropTypes.number,
-  latestPressItems: PropTypes.arrayOf(pressItemModel.propTypes)
+  pressItems: PropTypes.object
 };
 
 HorizontalCarousel.defaultProps = {
@@ -103,7 +107,7 @@ HorizontalCarousel.defaultProps = {
     fields: {
       buttonLabel: '',
       buttonLink: '',
-      pressItems: [pressItemModel.default],
+      pressItems: {},
       customOrder: false,
       drip: false,
       sortByLatest: true,
@@ -114,7 +118,7 @@ HorizontalCarousel.defaultProps = {
     }
   },
   z: 0,
-  latestPressItems: [pressItemModel.default]
+  pressItems: {}
 };
 
 export default PressCarousel;

@@ -5,7 +5,6 @@ import cx from 'classnames';
 
 import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
-import imageModel from 'models/imageModel';
 
 const PressCard = ({ pressCard }) => {
   const title = get(pressCard, 'title', '');
@@ -41,23 +40,23 @@ const PressCard = ({ pressCard }) => {
 
 PressCard.propTypes = {
   pressCard: PropTypes.shape({
-    fields: PropTypes.shape({
-      logoImage: imageModel.propTypes,
-      linkUrl: PropTypes.string,
-      quote: PropTypes.string,
-      title: PropTypes.string
-    })
+    logoImage: PropTypes.shape({
+      data: PropTypes.string
+    }),
+    linkUrl: PropTypes.string,
+    quote: PropTypes.string,
+    title: PropTypes.string
   })
 };
 
 PressCard.defaultProps = {
   pressCard: {
-    fields: {
-      logoImage: imageModel.default,
-      linkUrl: '',
-      quote: '',
-      title: ''
-    }
+    logoImage: {
+      data: ''
+    },
+    linkUrl: '',
+    quote: '',
+    title: ''
   }
 };
 

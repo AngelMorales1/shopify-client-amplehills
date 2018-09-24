@@ -42,7 +42,7 @@ const mapStateToProps = (state, props) => {
     ),
     pressItems: get(
       state,
-      'applicationUI.globalSettings.items[0].fields.pressItems.simpleFragments'
+      'applicationUI.globalSettings.items[0].fields.pressItems'
     )
   };
 };
