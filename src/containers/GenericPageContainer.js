@@ -12,7 +12,7 @@ class GenericPageContainer extends ContainerBase {
     const { getGenericPage } = this.props.actions;
     const { path } = this.props.match;
 
-    return Promise.all([getGenericPage(path)]).then(([genericPage]) => {
+    return getGenericPage(path).then(genericPage => {
       return {
         genericPage: get(genericPage, 'value')
       };

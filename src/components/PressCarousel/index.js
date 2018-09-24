@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
-import pressItemModel from 'models/pressItemModel';
 
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
@@ -12,17 +11,17 @@ const PressCarousel = ({ block, z, pressItems }) => {
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
-  const pressItemsIdInBlock = get(fields, 'pressItems.fragments', []);
-  const isCustomOrder = !!pressItemsIdInBlock.length;
+  const pressItemsInBlock = get(fields, 'pressItems.fragments', []);
+  const isCustomOrder = !!pressItemsInBlock.length;
   const selectedPressItems = isCustomOrder
-    ? pressItemsIdInBlock
+    ? pressItemsInBlock
     : get(pressItems, 'fragments', []);
-  let selectedPressItemsId = selectedPressItems.map(fragment =>
+  let selectedPressItemsIds = selectedPressItems.map(fragment =>
     get(fragment[0], 'value', '')
   );
 
   if (typeof showCardNumber === 'number') {
-    selectedPressItemsId = selectedPressItemsId.slice(0, showCardNumber);
+    selectedPressItemsIds = selectedPressItemsIds.slice(0, showCardNumber);
   }
 
   return (
@@ -36,7 +35,7 @@ const PressCarousel = ({ block, z, pressItems }) => {
         buttonLabel={get(fields, 'buttonLabel', '')}
         isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
       >
-        {selectedPressItemsId.map((pressItemId, i) => {
+        {selectedPressItemsIds.map((pressItemId, i) => {
           const selectedPressItemsSimpleFragments = isCustomOrder
             ? get(fields, 'pressItems.simpleFragments', {})
             : get(pressItems, 'simpleFragments', {});
@@ -64,7 +63,9 @@ const PressCarousel = ({ block, z, pressItems }) => {
                   styles['PressCarousel__quote'],
                   'carter text-peach center py3'
                 )}
-              >{`"${get(selectedPressItem, 'quote', '')}"`}</span>
+              >
+                {get(selectedPressItem, 'quote', '')}
+              </span>
               <Button
                 className={cx(
                   styles['PressCarousel__button'],
