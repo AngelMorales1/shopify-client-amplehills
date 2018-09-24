@@ -30,7 +30,7 @@ const BlockSwitch = props => {
       return <MarkdownBlock {...props} />;
     case 'blockGenericHero':
       return <GenericHero {...props} />;
-    case 'blockPressHorizontalCarousel':
+    case 'blockHorizontalCarousel':
       return <PressCarousel {...props} />;
     default:
       return null;
