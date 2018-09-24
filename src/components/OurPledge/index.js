@@ -12,13 +12,10 @@ import OurPledgeOverlay from 'components/OurPledgeOverlay';
 const OurPledge = ({
   actions,
   ourPledgeOverlayIsOpen,
-  overlayContentImage,
   shippingInformation,
   shippingPledge,
   calloutImage
 }) => {
-  const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
-
   return (
     <div
       className={cx(
@@ -28,7 +25,7 @@ const OurPledge = ({
     >
       <Image
         alt="Our pledge icon"
-        src={contentfulImgUtil(calloutImageUrl, '200', 'png')}
+        src={calloutImage}
         className={cx('icon z-1', styles['OurPledge__icon'])}
       />
       <div
@@ -69,7 +66,6 @@ const OurPledge = ({
         </div>
       </div>
       <OurPledgeOverlay
-        overlayContentImage={overlayContentImage}
         shippingInformation={shippingInformation}
         shippingPledge={shippingPledge}
         closeOurPledgeOverlay={actions.closeOurPledge}

@@ -86,6 +86,7 @@ class ProductHero extends Component {
     } = ourPledge;
 
     const carouselImages = get(fields, 'carouselImages', []);
+    const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
     return (
       <div
@@ -231,10 +232,13 @@ class ProductHero extends Component {
             <OurPledge
               actions={actions}
               ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
-              overlayContentImage={overlayContentImage}
-              shippingInformation={shippingInformation}
-              shippingPledge={shippingPledge}
-              calloutImage={calloutImage}
+              shippingInformation={get(
+                ourPledgeData,
+                'shippingInformation',
+                ''
+              )}
+              shippingPledge={get(ourPledgeData, 'shippingPledge', '')}
+              calloutImage={get(ourPledgeData, 'calloutImage.data', '')}
             />
           </div>
         </div>
@@ -249,7 +253,9 @@ ProductHero.propTypes = {
   product: productModel.propTypes,
   ourPledge: PropTypes.shape({
     closeOurPledgeOverlay: PropTypes.func,
-    overlayContentImage: imageModel.propTypes,
+    calloutImage: PropTypes.shape({
+      data: PropTypes.string
+    }),
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
   })
@@ -261,7 +267,9 @@ ProductHero.defaultProps = {
   product: productModel.default,
   ourPledge: {
     closeOurPledgeOverlay: () => {},
-    overlayContentImage: imageModel.default,
+    calloutImage: {
+      data: ''
+    },
     shippingInformation: '',
     shippingPledge: ''
   }
