@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import get from 'utils/get';
 
 import styles from './Alert.scss';
 
 const Alert = ({ alert }) => {
-  const fields = get(alert, 'fields', {});
-
   return (
     <div
       className={cx(
@@ -16,7 +13,7 @@ const Alert = ({ alert }) => {
       )}
     >
       <span className={cx(styles['Alert__text'], 'text-white')}>
-        {fields.alertCopy}
+        {alert.alertCopy}
       </span>
       <a
         className={cx(
@@ -25,9 +22,9 @@ const Alert = ({ alert }) => {
           'text-peach'
         )}
         rel="noopener"
-        href={`${fields.linkUrl}`}
+        href={`${alert.linkUrl}`}
       >
-        {fields.linkCopy}
+        {alert.linkCopy}
       </a>
     </div>
   );
@@ -35,23 +32,19 @@ const Alert = ({ alert }) => {
 
 Alert.propTypes = {
   alert: PropTypes.shape({
-    fields: PropTypes.shape({
-      alertCopy: PropTypes.string,
-      linkCopy: PropTypes.string,
-      linkUrl: PropTypes.string,
-      title: PropTypes.string
-    })
+    alertCopy: PropTypes.string,
+    linkCopy: PropTypes.string,
+    linkUrl: PropTypes.string,
+    title: PropTypes.string
   })
 };
 
 Alert.defaultProps = {
   alert: {
-    fields: {
-      alertCopy: '',
-      linkCopy: '',
-      linkUrl: '',
-      title: ''
-    }
+    alertCopy: '',
+    linkCopy: '',
+    linkUrl: '',
+    title: ''
   }
 };
 

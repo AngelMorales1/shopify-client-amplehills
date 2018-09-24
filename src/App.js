@@ -70,7 +70,9 @@ class App extends Component {
       logo
     } = globalSettings;
 
-    const alert = get(globalSettings, 'alert', {});
+    const alert = Object.values(
+      get(globalSettings, 'alertBanner.simpleFragments', {})
+    )[0];
 
     if (
       applicationStatus === FULFILLED &&
