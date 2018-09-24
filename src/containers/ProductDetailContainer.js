@@ -10,8 +10,6 @@ import {
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
-import { getPressItems } from 'state/actions/pressActions';
-import pressItems from 'state/selectors/pressItems';
 
 import get from 'utils/get';
 
@@ -44,7 +42,7 @@ const mapStateToProps = (state, props) => {
     ),
     pressItems: get(
       state,
-      'applicationUI.globalSettings.items[0].fields.pressItems'
+      'applicationUI.globalSettings.items[0].fields.pressItems.simpleFragments'
     )
   };
 };
@@ -55,8 +53,7 @@ const mapDispatchToProps = dispatch => {
       {
         addLineItems,
         openOurPledge,
-        closeOurPledge,
-        getPressItems
+        closeOurPledge
       },
       dispatch
     )
