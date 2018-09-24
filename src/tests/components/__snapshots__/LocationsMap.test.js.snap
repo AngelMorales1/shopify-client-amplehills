@@ -78,59 +78,12 @@ ShallowWrapper {
           className="absolute t0 l0 flex p3"
 >
           <Button
-                    className="mr2 flex items-center drop-shadow"
+                    className="mr2 flex flex-wrap items-center drop-shadow"
                     color="madison-blue"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="All"
-                    onClick={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary-small"
-          />
-          <Button
-                    className="mr2 flex items-center drop-shadow"
-                    color="white-denim"
-                    disabled={false}
-                    fullWidth={false}
-                    label="New York"
-                    onClick={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary-small"
-          />
-          <Button
-                    className="mr2 flex items-center drop-shadow"
-                    color="white-denim"
-                    disabled={false}
-                    fullWidth={false}
-                    label="New Jersey"
-                    onClick={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary-small"
-          />
-          <Button
-                    className="mr2 flex items-center drop-shadow"
-                    color="white-denim"
-                    disabled={false}
-                    fullWidth={false}
-                    label="Florida"
-                    onClick={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary-small"
-          />
-          <Button
-                    className="mr2 flex items-center drop-shadow"
-                    color="white-denim"
-                    disabled={false}
-                    fullWidth={false}
-                    label="California"
                     onClick={[Function]}
                     shadow={false}
                     to=""
@@ -149,7 +102,7 @@ ShallowWrapper {
                               bg={false}
                               className="mr2"
                               onImgLoad={[Function]}
-                              src="/assets/images/year-round-icon.svg"
+                              src="/assets/images/year-round-icon-color.svg"
                               style={Object {}}
                     />
                     <span>
@@ -164,7 +117,7 @@ ShallowWrapper {
                               bg={false}
                               className="mr2"
                               onImgLoad={[Function]}
-                              src="/assets/images/seasonal-icon.svg"
+                              src="/assets/images/seasonal-icon-color.svg"
                               style={Object {}}
                     />
                     <span>
@@ -233,10 +186,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Button
-              className="mr2 flex items-center drop-shadow"
+              className="mr2 flex flex-wrap items-center drop-shadow"
               color="madison-blue"
               disabled={false}
               fullWidth={false}
+              hover="shadow"
               label="All"
               onClick={[Function]}
               shadow={false}
@@ -244,56 +198,7 @@ ShallowWrapper {
               type="button"
               variant="primary-small"
 />,
-            Array [
-              <Button
-                className="mr2 flex items-center drop-shadow"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="New York"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="primary-small"
-/>,
-              <Button
-                className="mr2 flex items-center drop-shadow"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="New Jersey"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="primary-small"
-/>,
-              <Button
-                className="mr2 flex items-center drop-shadow"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Florida"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="primary-small"
-/>,
-              <Button
-                className="mr2 flex items-center drop-shadow"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="California"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="primary-small"
-/>,
-            ],
+            Array [],
           ],
           "className": "absolute t0 l0 flex p3",
         },
@@ -305,95 +210,12 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
-              "className": "mr2 flex items-center drop-shadow",
+              "className": "mr2 flex flex-wrap items-center drop-shadow",
               "color": "madison-blue",
               "disabled": false,
               "fullWidth": false,
+              "hover": "shadow",
               "label": "All",
-              "onClick": [Function],
-              "shadow": false,
-              "to": "",
-              "type": "button",
-              "variant": "primary-small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "NY",
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "mr2 flex items-center drop-shadow",
-              "color": "white-denim",
-              "disabled": false,
-              "fullWidth": false,
-              "label": "New York",
-              "onClick": [Function],
-              "shadow": false,
-              "to": "",
-              "type": "button",
-              "variant": "primary-small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "NJ",
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "mr2 flex items-center drop-shadow",
-              "color": "white-denim",
-              "disabled": false,
-              "fullWidth": false,
-              "label": "New Jersey",
-              "onClick": [Function],
-              "shadow": false,
-              "to": "",
-              "type": "button",
-              "variant": "primary-small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "FL",
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "mr2 flex items-center drop-shadow",
-              "color": "white-denim",
-              "disabled": false,
-              "fullWidth": false,
-              "label": "Florida",
-              "onClick": [Function],
-              "shadow": false,
-              "to": "",
-              "type": "button",
-              "variant": "primary-small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": "CA",
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "mr2 flex items-center drop-shadow",
-              "color": "white-denim",
-              "disabled": false,
-              "fullWidth": false,
-              "label": "California",
               "onClick": [Function],
               "shadow": false,
               "to": "",
@@ -421,7 +243,7 @@ ShallowWrapper {
                             bg={false}
                             className="mr2"
                             onImgLoad={[Function]}
-                            src="/assets/images/year-round-icon.svg"
+                            src="/assets/images/year-round-icon-color.svg"
                             style={Object {}}
               />
               <span>
@@ -436,7 +258,7 @@ ShallowWrapper {
                             bg={false}
                             className="mr2"
                             onImgLoad={[Function]}
-                            src="/assets/images/seasonal-icon.svg"
+                            src="/assets/images/seasonal-icon-color.svg"
                             style={Object {}}
               />
               <span>
@@ -459,7 +281,7 @@ ShallowWrapper {
                   bg={false}
                   className="mr2"
                   onImgLoad={[Function]}
-                  src="/assets/images/year-round-icon.svg"
+                  src="/assets/images/year-round-icon-color.svg"
                   style={Object {}}
 />,
                 <span>
@@ -480,7 +302,7 @@ ShallowWrapper {
                   "children": null,
                   "className": "mr2",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/year-round-icon.svg",
+                  "src": "/assets/images/year-round-icon-color.svg",
                   "style": Object {},
                 },
                 "ref": null,
@@ -512,7 +334,7 @@ ShallowWrapper {
                   bg={false}
                   className="mr2"
                   onImgLoad={[Function]}
-                  src="/assets/images/seasonal-icon.svg"
+                  src="/assets/images/seasonal-icon-color.svg"
                   style={Object {}}
 />,
                 <span>
@@ -533,7 +355,7 @@ ShallowWrapper {
                   "children": null,
                   "className": "mr2",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/seasonal-icon.svg",
+                  "src": "/assets/images/seasonal-icon-color.svg",
                   "style": Object {},
                 },
                 "ref": null,
@@ -614,59 +436,12 @@ ShallowWrapper {
             className="absolute t0 l0 flex p3"
 >
             <Button
-                        className="mr2 flex items-center drop-shadow"
+                        className="mr2 flex flex-wrap items-center drop-shadow"
                         color="madison-blue"
                         disabled={false}
                         fullWidth={false}
+                        hover="shadow"
                         label="All"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="primary-small"
-            />
-            <Button
-                        className="mr2 flex items-center drop-shadow"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="New York"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="primary-small"
-            />
-            <Button
-                        className="mr2 flex items-center drop-shadow"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="New Jersey"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="primary-small"
-            />
-            <Button
-                        className="mr2 flex items-center drop-shadow"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Florida"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="primary-small"
-            />
-            <Button
-                        className="mr2 flex items-center drop-shadow"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="California"
                         onClick={[Function]}
                         shadow={false}
                         to=""
@@ -685,7 +460,7 @@ ShallowWrapper {
                                     bg={false}
                                     className="mr2"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/year-round-icon.svg"
+                                    src="/assets/images/year-round-icon-color.svg"
                                     style={Object {}}
                         />
                         <span>
@@ -700,7 +475,7 @@ ShallowWrapper {
                                     bg={false}
                                     className="mr2"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/seasonal-icon.svg"
+                                    src="/assets/images/seasonal-icon-color.svg"
                                     style={Object {}}
                         />
                         <span>
@@ -769,10 +544,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
-                className="mr2 flex items-center drop-shadow"
+                className="mr2 flex flex-wrap items-center drop-shadow"
                 color="madison-blue"
                 disabled={false}
                 fullWidth={false}
+                hover="shadow"
                 label="All"
                 onClick={[Function]}
                 shadow={false}
@@ -780,56 +556,7 @@ ShallowWrapper {
                 type="button"
                 variant="primary-small"
 />,
-              Array [
-                <Button
-                  className="mr2 flex items-center drop-shadow"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="New York"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="primary-small"
-/>,
-                <Button
-                  className="mr2 flex items-center drop-shadow"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="New Jersey"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="primary-small"
-/>,
-                <Button
-                  className="mr2 flex items-center drop-shadow"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Florida"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="primary-small"
-/>,
-                <Button
-                  className="mr2 flex items-center drop-shadow"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="California"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="primary-small"
-/>,
-              ],
+              Array [],
             ],
             "className": "absolute t0 l0 flex p3",
           },
@@ -841,95 +568,12 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "mr2 flex items-center drop-shadow",
+                "className": "mr2 flex flex-wrap items-center drop-shadow",
                 "color": "madison-blue",
                 "disabled": false,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "All",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "primary-small",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "NY",
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "mr2 flex items-center drop-shadow",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "New York",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "primary-small",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "NJ",
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "mr2 flex items-center drop-shadow",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "New Jersey",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "primary-small",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "FL",
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "mr2 flex items-center drop-shadow",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Florida",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "primary-small",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": "CA",
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "mr2 flex items-center drop-shadow",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "California",
                 "onClick": [Function],
                 "shadow": false,
                 "to": "",
@@ -957,7 +601,7 @@ ShallowWrapper {
                                 bg={false}
                                 className="mr2"
                                 onImgLoad={[Function]}
-                                src="/assets/images/year-round-icon.svg"
+                                src="/assets/images/year-round-icon-color.svg"
                                 style={Object {}}
                 />
                 <span>
@@ -972,7 +616,7 @@ ShallowWrapper {
                                 bg={false}
                                 className="mr2"
                                 onImgLoad={[Function]}
-                                src="/assets/images/seasonal-icon.svg"
+                                src="/assets/images/seasonal-icon-color.svg"
                                 style={Object {}}
                 />
                 <span>
@@ -995,7 +639,7 @@ ShallowWrapper {
                     bg={false}
                     className="mr2"
                     onImgLoad={[Function]}
-                    src="/assets/images/year-round-icon.svg"
+                    src="/assets/images/year-round-icon-color.svg"
                     style={Object {}}
 />,
                   <span>
@@ -1016,7 +660,7 @@ ShallowWrapper {
                     "children": null,
                     "className": "mr2",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/year-round-icon.svg",
+                    "src": "/assets/images/year-round-icon-color.svg",
                     "style": Object {},
                   },
                   "ref": null,
@@ -1048,7 +692,7 @@ ShallowWrapper {
                     bg={false}
                     className="mr2"
                     onImgLoad={[Function]}
-                    src="/assets/images/seasonal-icon.svg"
+                    src="/assets/images/seasonal-icon-color.svg"
                     style={Object {}}
 />,
                   <span>
@@ -1069,7 +713,7 @@ ShallowWrapper {
                     "children": null,
                     "className": "mr2",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/seasonal-icon.svg",
+                    "src": "/assets/images/seasonal-icon-color.svg",
                     "style": Object {},
                   },
                   "ref": null,

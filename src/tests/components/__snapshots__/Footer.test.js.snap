@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Footer
+    footerIcons={Object {}}
     footerIllustration={
         Object {
             "fields": Object {
@@ -123,7 +124,7 @@ ShallowWrapper {
                     }
           />
           <FooterLinks
-                    facebookLink=""
+                    footerIcons={Object {}}
                     footerIllustration={
                               Object {
                                         "fields": Object {
@@ -148,21 +149,38 @@ ShallowWrapper {
                                         "twitterLink": "foo",
                                       }
                     }
-                    instagramLink=""
-                    twitterLink=""
           />
 </div>,
         <span
           className="bold small text-white center"
 >
-          © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+          © 2018 Ample Hills Creamery.
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none"
+                    exact={true}
+                    to="/privacy-policy"
+          >
+                     Privacy Policy 
+          </NavLink>
+          &
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none"
+                    exact={true}
+                    to="/web-accessibility"
+          >
+                     Accessibility
+          </NavLink>
 </span>,
         <Image
           alt=""
           bg={false}
           className="medium-down-display-none xs-hide sm-hide"
           onImgLoad={[Function]}
-          src="/foo"
+          src="/foo?w=1000&fm=png&q=90"
           style={Object {}}
 />,
       ],
@@ -216,7 +234,7 @@ ShallowWrapper {
               }
 />,
             <FooterLinks
-              facebookLink=""
+              footerIcons={Object {}}
               footerIllustration={
                             Object {
                                           "fields": Object {
@@ -241,8 +259,6 @@ ShallowWrapper {
                                           "twitterLink": "foo",
                                         }
               }
-              instagramLink=""
-              twitterLink=""
 />,
           ],
           "className": "flex",
@@ -299,7 +315,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "facebookLink": "",
+              "footerIcons": Object {},
               "footerIllustration": Object {
                 "fields": Object {
                   "description": "foo",
@@ -320,8 +336,6 @@ ShallowWrapper {
                 "instagramLink": "foo",
                 "twitterLink": "foo",
               },
-              "instagramLink": "",
-              "twitterLink": "",
             },
             "ref": null,
             "rendered": null,
@@ -335,11 +349,67 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "children": Array [
+            "© 2018 Ample Hills Creamery.",
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="text-decoration-none"
+              exact={true}
+              to="/privacy-policy"
+>
+               Privacy Policy 
+</NavLink>,
+            "&",
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="text-decoration-none"
+              exact={true}
+              to="/web-accessibility"
+>
+               Accessibility
+</NavLink>,
+          ],
           "className": "bold small text-white center",
         },
         "ref": null,
-        "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+        "rendered": Array [
+          "© 2018 Ample Hills Creamery.",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": " Privacy Policy ",
+              "className": "text-decoration-none",
+              "exact": true,
+              "to": "/privacy-policy",
+            },
+            "ref": null,
+            "rendered": " Privacy Policy ",
+            "type": [Function],
+          },
+          "&",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": " Accessibility",
+              "className": "text-decoration-none",
+              "exact": true,
+              "to": "/web-accessibility",
+            },
+            "ref": null,
+            "rendered": " Accessibility",
+            "type": [Function],
+          },
+        ],
         "type": "span",
       },
       Object {
@@ -352,7 +422,7 @@ ShallowWrapper {
           "children": null,
           "className": "medium-down-display-none xs-hide sm-hide",
           "onImgLoad": [Function],
-          "src": "/foo",
+          "src": "/foo?w=1000&fm=png&q=90",
           "style": Object {},
         },
         "ref": null,
@@ -412,7 +482,7 @@ ShallowWrapper {
                         }
             />
             <FooterLinks
-                        facebookLink=""
+                        footerIcons={Object {}}
                         footerIllustration={
                                     Object {
                                                 "fields": Object {
@@ -437,21 +507,38 @@ ShallowWrapper {
                                                 "twitterLink": "foo",
                                               }
                         }
-                        instagramLink=""
-                        twitterLink=""
             />
 </div>,
           <span
             className="bold small text-white center"
 >
-            © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+            © 2018 Ample Hills Creamery.
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="text-decoration-none"
+                        exact={true}
+                        to="/privacy-policy"
+            >
+                         Privacy Policy 
+            </NavLink>
+            &
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="text-decoration-none"
+                        exact={true}
+                        to="/web-accessibility"
+            >
+                         Accessibility
+            </NavLink>
 </span>,
           <Image
             alt=""
             bg={false}
             className="medium-down-display-none xs-hide sm-hide"
             onImgLoad={[Function]}
-            src="/foo"
+            src="/foo?w=1000&fm=png&q=90"
             style={Object {}}
 />,
         ],
@@ -505,7 +592,7 @@ ShallowWrapper {
                 }
 />,
               <FooterLinks
-                facebookLink=""
+                footerIcons={Object {}}
                 footerIllustration={
                                 Object {
                                                 "fields": Object {
@@ -530,8 +617,6 @@ ShallowWrapper {
                                                 "twitterLink": "foo",
                                               }
                 }
-                instagramLink=""
-                twitterLink=""
 />,
             ],
             "className": "flex",
@@ -588,7 +673,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "facebookLink": "",
+                "footerIcons": Object {},
                 "footerIllustration": Object {
                   "fields": Object {
                     "description": "foo",
@@ -609,8 +694,6 @@ ShallowWrapper {
                   "instagramLink": "foo",
                   "twitterLink": "foo",
                 },
-                "instagramLink": "",
-                "twitterLink": "",
               },
               "ref": null,
               "rendered": null,
@@ -624,11 +707,67 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+            "children": Array [
+              "© 2018 Ample Hills Creamery.",
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="text-decoration-none"
+                exact={true}
+                to="/privacy-policy"
+>
+                 Privacy Policy 
+</NavLink>,
+              "&",
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="text-decoration-none"
+                exact={true}
+                to="/web-accessibility"
+>
+                 Accessibility
+</NavLink>,
+            ],
             "className": "bold small text-white center",
           },
           "ref": null,
-          "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "rendered": Array [
+            "© 2018 Ample Hills Creamery.",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": " Privacy Policy ",
+                "className": "text-decoration-none",
+                "exact": true,
+                "to": "/privacy-policy",
+              },
+              "ref": null,
+              "rendered": " Privacy Policy ",
+              "type": [Function],
+            },
+            "&",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": " Accessibility",
+                "className": "text-decoration-none",
+                "exact": true,
+                "to": "/web-accessibility",
+              },
+              "ref": null,
+              "rendered": " Accessibility",
+              "type": [Function],
+            },
+          ],
           "type": "span",
         },
         Object {
@@ -641,7 +780,7 @@ ShallowWrapper {
             "children": null,
             "className": "medium-down-display-none xs-hide sm-hide",
             "onImgLoad": [Function],
-            "src": "/foo",
+            "src": "/foo?w=1000&fm=png&q=90",
             "style": Object {},
           },
           "ref": null,
@@ -667,6 +806,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Footer
+    footerIcons={Object {}}
     footerIllustration={
         Object {
             "fields": Object {
@@ -701,7 +841,7 @@ ShallowWrapper {
                     locations={Array []}
           />
           <FooterLinks
-                    facebookLink=""
+                    footerIcons={Object {}}
                     footerIllustration={
                               Object {
                                         "fields": Object {
@@ -714,21 +854,38 @@ ShallowWrapper {
                                       }
                     }
                     footerLinks={Object {}}
-                    instagramLink=""
-                    twitterLink=""
           />
 </div>,
         <span
           className="bold small text-white center"
 >
-          © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+          © 2018 Ample Hills Creamery.
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none"
+                    exact={true}
+                    to="/privacy-policy"
+          >
+                     Privacy Policy 
+          </NavLink>
+          &
+          <NavLink
+                    activeClassName="active"
+                    aria-current="page"
+                    className="text-decoration-none"
+                    exact={true}
+                    to="/web-accessibility"
+          >
+                     Accessibility
+          </NavLink>
 </span>,
         <Image
           alt=""
           bg={false}
           className="medium-down-display-none xs-hide sm-hide"
           onImgLoad={[Function]}
-          src=""
+          src="?w=1000&fm=png&q=90"
           style={Object {}}
 />,
       ],
@@ -746,7 +903,7 @@ ShallowWrapper {
               locations={Array []}
 />,
             <FooterLinks
-              facebookLink=""
+              footerIcons={Object {}}
               footerIllustration={
                             Object {
                                           "fields": Object {
@@ -759,8 +916,6 @@ ShallowWrapper {
                                         }
               }
               footerLinks={Object {}}
-              instagramLink=""
-              twitterLink=""
 />,
           ],
           "className": "flex",
@@ -783,7 +938,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "facebookLink": "",
+              "footerIcons": Object {},
               "footerIllustration": Object {
                 "fields": Object {
                   "description": "",
@@ -794,8 +949,6 @@ ShallowWrapper {
                 },
               },
               "footerLinks": Object {},
-              "instagramLink": "",
-              "twitterLink": "",
             },
             "ref": null,
             "rendered": null,
@@ -809,11 +962,67 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "children": Array [
+            "© 2018 Ample Hills Creamery.",
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="text-decoration-none"
+              exact={true}
+              to="/privacy-policy"
+>
+               Privacy Policy 
+</NavLink>,
+            "&",
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              className="text-decoration-none"
+              exact={true}
+              to="/web-accessibility"
+>
+               Accessibility
+</NavLink>,
+          ],
           "className": "bold small text-white center",
         },
         "ref": null,
-        "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+        "rendered": Array [
+          "© 2018 Ample Hills Creamery.",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": " Privacy Policy ",
+              "className": "text-decoration-none",
+              "exact": true,
+              "to": "/privacy-policy",
+            },
+            "ref": null,
+            "rendered": " Privacy Policy ",
+            "type": [Function],
+          },
+          "&",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "aria-current": "page",
+              "children": " Accessibility",
+              "className": "text-decoration-none",
+              "exact": true,
+              "to": "/web-accessibility",
+            },
+            "ref": null,
+            "rendered": " Accessibility",
+            "type": [Function],
+          },
+        ],
         "type": "span",
       },
       Object {
@@ -826,7 +1035,7 @@ ShallowWrapper {
           "children": null,
           "className": "medium-down-display-none xs-hide sm-hide",
           "onImgLoad": [Function],
-          "src": "",
+          "src": "?w=1000&fm=png&q=90",
           "style": Object {},
         },
         "ref": null,
@@ -850,7 +1059,7 @@ ShallowWrapper {
                         locations={Array []}
             />
             <FooterLinks
-                        facebookLink=""
+                        footerIcons={Object {}}
                         footerIllustration={
                                     Object {
                                                 "fields": Object {
@@ -863,21 +1072,38 @@ ShallowWrapper {
                                               }
                         }
                         footerLinks={Object {}}
-                        instagramLink=""
-                        twitterLink=""
             />
 </div>,
           <span
             className="bold small text-white center"
 >
-            © 2018 Ample Hills Creamery. Privacy Policy & Accessibility
+            © 2018 Ample Hills Creamery.
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="text-decoration-none"
+                        exact={true}
+                        to="/privacy-policy"
+            >
+                         Privacy Policy 
+            </NavLink>
+            &
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="text-decoration-none"
+                        exact={true}
+                        to="/web-accessibility"
+            >
+                         Accessibility
+            </NavLink>
 </span>,
           <Image
             alt=""
             bg={false}
             className="medium-down-display-none xs-hide sm-hide"
             onImgLoad={[Function]}
-            src=""
+            src="?w=1000&fm=png&q=90"
             style={Object {}}
 />,
         ],
@@ -895,7 +1121,7 @@ ShallowWrapper {
                 locations={Array []}
 />,
               <FooterLinks
-                facebookLink=""
+                footerIcons={Object {}}
                 footerIllustration={
                                 Object {
                                                 "fields": Object {
@@ -908,8 +1134,6 @@ ShallowWrapper {
                                               }
                 }
                 footerLinks={Object {}}
-                instagramLink=""
-                twitterLink=""
 />,
             ],
             "className": "flex",
@@ -932,7 +1156,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "facebookLink": "",
+                "footerIcons": Object {},
                 "footerIllustration": Object {
                   "fields": Object {
                     "description": "",
@@ -943,8 +1167,6 @@ ShallowWrapper {
                   },
                 },
                 "footerLinks": Object {},
-                "instagramLink": "",
-                "twitterLink": "",
               },
               "ref": null,
               "rendered": null,
@@ -958,11 +1180,67 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+            "children": Array [
+              "© 2018 Ample Hills Creamery.",
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="text-decoration-none"
+                exact={true}
+                to="/privacy-policy"
+>
+                 Privacy Policy 
+</NavLink>,
+              "&",
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="text-decoration-none"
+                exact={true}
+                to="/web-accessibility"
+>
+                 Accessibility
+</NavLink>,
+            ],
             "className": "bold small text-white center",
           },
           "ref": null,
-          "rendered": "© 2018 Ample Hills Creamery. Privacy Policy & Accessibility",
+          "rendered": Array [
+            "© 2018 Ample Hills Creamery.",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": " Privacy Policy ",
+                "className": "text-decoration-none",
+                "exact": true,
+                "to": "/privacy-policy",
+              },
+              "ref": null,
+              "rendered": " Privacy Policy ",
+              "type": [Function],
+            },
+            "&",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": " Accessibility",
+                "className": "text-decoration-none",
+                "exact": true,
+                "to": "/web-accessibility",
+              },
+              "ref": null,
+              "rendered": " Accessibility",
+              "type": [Function],
+            },
+          ],
           "type": "span",
         },
         Object {
@@ -975,7 +1253,7 @@ ShallowWrapper {
             "children": null,
             "className": "medium-down-display-none xs-hide sm-hide",
             "onImgLoad": [Function],
-            "src": "",
+            "src": "?w=1000&fm=png&q=90",
             "style": Object {},
           },
           "ref": null,

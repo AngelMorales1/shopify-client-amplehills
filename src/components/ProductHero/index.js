@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import productModel from 'models/productModel';
-import imageModel from 'models/imageModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
@@ -78,12 +77,6 @@ class ProductHero extends Component {
     } = this.props;
     const { available, subItemsAvailable, price } = product;
     const fields = get(block, 'fields', {});
-    const {
-      overlayContentImage,
-      shippingInformation,
-      shippingPledge,
-      calloutImage
-    } = ourPledge;
 
     const carouselImages = get(fields, 'carouselImages', []);
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
@@ -162,7 +155,7 @@ class ProductHero extends Component {
             <div>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: marked(product.description)
+                  __html: marked(get(product, 'description', ''))
                 }}
                 className="block-subheadline"
               />

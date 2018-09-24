@@ -304,6 +304,7 @@ ShallowWrapper {
                     color="clear-madison-blue-border"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="foo"
                     onClick={[Function]}
                     shadow={true}
@@ -332,7 +333,7 @@ ShallowWrapper {
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src="foo"
+                                                            src="foo?w=500&fm=png&q=90"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -341,9 +342,13 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
-                                                  >
-                                                            foo
-                                                  </p>
+                                                            dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                "__html": "<p>foo</p>
+                                                                      ",
+                                                                              }
+                                                            }
+                                                  />
                                         </div>
                               </div>
                               <div
@@ -357,7 +362,7 @@ ShallowWrapper {
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src="foo"
+                                                            src="foo?w=500&fm=png&q=90"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -366,9 +371,13 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
-                                                  >
-                                                            foo
-                                                  </p>
+                                                            dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                "__html": "<p>foo</p>
+                                                                      ",
+                                                                              }
+                                                            }
+                                                  />
                                         </div>
                               </div>
                     </div>
@@ -392,7 +401,7 @@ ShallowWrapper {
                                                   className="circle square"
                                                   style={
                                                             Object {
-                                                                      "background": "url(foo) no-repeat center",
+                                                                      "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                       "backgroundSize": "cover",
                                                                     }
                                                   }
@@ -426,6 +435,7 @@ ShallowWrapper {
                 color="clear-madison-blue-border"
                 disabled={false}
                 fullWidth={false}
+                hover="shadow"
                 label="foo"
                 onClick={[Function]}
                 shadow={true}
@@ -461,6 +471,7 @@ ShallowWrapper {
               "color": "clear-madison-blue-border",
               "disabled": false,
               "fullWidth": false,
+              "hover": "shadow",
               "label": "foo",
               "onClick": [Function],
               "shadow": true,
@@ -498,7 +509,7 @@ ShallowWrapper {
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src="foo"
+                                                                      src="foo?w=500&fm=png&q=90"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -507,9 +518,13 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
-                                                        >
-                                                                      foo
-                                                        </p>
+                                                                      dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                  "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                                }
+                                                                      }
+                                                        />
                                           </div>
                             </div>
                             <div
@@ -523,7 +538,7 @@ ShallowWrapper {
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src="foo"
+                                                                      src="foo?w=500&fm=png&q=90"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -532,9 +547,13 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
-                                                        >
-                                                                      foo
-                                                        </p>
+                                                                      dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                  "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                                }
+                                                                      }
+                                                        />
                                           </div>
                             </div>
               </div>
@@ -558,7 +577,7 @@ ShallowWrapper {
                                                         className="circle square"
                                                         style={
                                                                       Object {
-                                                                                    "background": "url(foo) no-repeat center",
+                                                                                    "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                         }
@@ -591,7 +610,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -600,9 +619,13 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
-                                                      >
-                                                                        foo
-                                                      </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                          Object {
+                                                                                                            "__html": "<p>foo</p>
+                                                                                          ",
+                                                                                                          }
+                                                                        }
+                                                      />
                                     </div>
                   </div>
                   <div
@@ -616,7 +639,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -625,9 +648,13 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
-                                                      >
-                                                                        foo
-                                                      </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                          Object {
+                                                                                                            "__html": "<p>foo</p>
+                                                                                          ",
+                                                                                                          }
+                                                                        }
+                                                      />
                                     </div>
                   </div>
 </div>,
@@ -651,7 +678,7 @@ ShallowWrapper {
                                                       className="circle square"
                                                       style={
                                                                         Object {
-                                                                                          "background": "url(foo) no-repeat center",
+                                                                                          "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                           "backgroundSize": "cover",
                                                                                         }
                                                       }
@@ -680,7 +707,7 @@ ShallowWrapper {
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src="foo"
+                                                                  src="foo?w=500&fm=png&q=90"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -689,9 +716,13 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
-                                            >
-                                                                  foo
-                                            </p>
+                                                                  dangerouslySetInnerHTML={
+                                                                                        Object {
+                                                                                                              "__html": "<p>foo</p>
+                                                                                        ",
+                                                                                                            }
+                                                                  }
+                                            />
                       </div>
 </div>,
                     <div
@@ -705,7 +736,7 @@ ShallowWrapper {
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src="foo"
+                                                                  src="foo?w=500&fm=png&q=90"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -714,9 +745,13 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
-                                            >
-                                                                  foo
-                                            </p>
+                                                                  dangerouslySetInnerHTML={
+                                                                                        Object {
+                                                                                                              "__html": "<p>foo</p>
+                                                                                        ",
+                                                                                                            }
+                                                                  }
+                                            />
                       </div>
 </div>,
                   ],
@@ -738,7 +773,7 @@ ShallowWrapper {
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src="foo"
+                                                    src="foo?w=500&fm=png&q=90"
                                                     style={Object {}}
                           />
 </div>,
@@ -747,9 +782,13 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
-                          >
-                                                    foo
-                          </p>
+                                                    dangerouslySetInnerHTML={
+                                                                              Object {
+                                                                                                        "__html": "<p>foo</p>
+                                                                              ",
+                                                                                                      }
+                                                    }
+                          />
 </div>,
                       ],
                       "className": "flex justify-center items-center mb4",
@@ -766,7 +805,7 @@ ShallowWrapper {
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src="foo"
+                            src="foo?w=500&fm=png&q=90"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -782,7 +821,7 @@ ShallowWrapper {
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "foo",
+                            "src": "foo?w=500&fm=png&q=90",
                             "style": Object {},
                           },
                           "ref": null,
@@ -798,9 +837,13 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
->
-                            foo
-</p>,
+                            dangerouslySetInnerHTML={
+                                                        Object {
+                                                                                    "__html": "<p>foo</p>
+                                                        ",
+                                                                                  }
+                            }
+/>,
                           "className": "md-col-10",
                         },
                         "ref": null,
@@ -809,11 +852,14 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "foo",
                             "className": "block-subheadline",
+                            "dangerouslySetInnerHTML": Object {
+                              "__html": "<p>foo</p>
+",
+                            },
                           },
                           "ref": null,
-                          "rendered": "foo",
+                          "rendered": null,
                           "type": "p",
                         },
                         "type": "div",
@@ -835,7 +881,7 @@ ShallowWrapper {
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src="foo"
+                                                    src="foo?w=500&fm=png&q=90"
                                                     style={Object {}}
                           />
 </div>,
@@ -844,9 +890,13 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
-                          >
-                                                    foo
-                          </p>
+                                                    dangerouslySetInnerHTML={
+                                                                              Object {
+                                                                                                        "__html": "<p>foo</p>
+                                                                              ",
+                                                                                                      }
+                                                    }
+                          />
 </div>,
                       ],
                       "className": "flex items-center",
@@ -863,7 +913,7 @@ ShallowWrapper {
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src="foo"
+                            src="foo?w=500&fm=png&q=90"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -879,7 +929,7 @@ ShallowWrapper {
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "foo",
+                            "src": "foo?w=500&fm=png&q=90",
                             "style": Object {},
                           },
                           "ref": null,
@@ -895,9 +945,13 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
->
-                            foo
-</p>,
+                            dangerouslySetInnerHTML={
+                                                        Object {
+                                                                                    "__html": "<p>foo</p>
+                                                        ",
+                                                                                  }
+                            }
+/>,
                           "className": "md-col-10",
                         },
                         "ref": null,
@@ -906,11 +960,14 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "foo",
                             "className": "block-subheadline",
+                            "dangerouslySetInnerHTML": Object {
+                              "__html": "<p>foo</p>
+",
+                            },
                           },
                           "ref": null,
-                          "rendered": "foo",
+                          "rendered": null,
                           "type": "p",
                         },
                         "type": "div",
@@ -944,7 +1001,7 @@ ShallowWrapper {
                                             className="circle square"
                                             style={
                                                                   Object {
-                                                                                        "background": "url(foo) no-repeat center",
+                                                                                        "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                         "backgroundSize": "cover",
                                                                                       }
                                             }
@@ -1009,7 +1066,7 @@ ShallowWrapper {
                         className="circle square"
                         style={
                                                 Object {
-                                                                        "background": "url(foo) no-repeat center",
+                                                                        "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                         "backgroundSize": "cover",
                                                                       }
                         }
@@ -1023,7 +1080,7 @@ ShallowWrapper {
                       "props": Object {
                         "className": "circle square",
                         "style": Object {
-                          "background": "url(foo) no-repeat center",
+                          "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                           "backgroundSize": "cover",
                         },
                       },
@@ -1065,6 +1122,7 @@ ShallowWrapper {
                         color="clear-madison-blue-border"
                         disabled={false}
                         fullWidth={false}
+                        hover="shadow"
                         label="foo"
                         onClick={[Function]}
                         shadow={true}
@@ -1093,7 +1151,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -1102,9 +1160,13 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
-                                                            >
-                                                                        foo
-                                                            </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                              }
+                                                                        }
+                                                            />
                                                 </div>
                                     </div>
                                     <div
@@ -1118,7 +1180,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -1127,9 +1189,13 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
-                                                            >
-                                                                        foo
-                                                            </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                              }
+                                                                        }
+                                                            />
                                                 </div>
                                     </div>
                         </div>
@@ -1153,7 +1219,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                         Object {
-                                                                                    "background": "url(foo) no-repeat center",
+                                                                                    "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                             }
@@ -1187,6 +1253,7 @@ ShallowWrapper {
                   color="clear-madison-blue-border"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label="foo"
                   onClick={[Function]}
                   shadow={true}
@@ -1222,6 +1289,7 @@ ShallowWrapper {
                 "color": "clear-madison-blue-border",
                 "disabled": false,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "foo",
                 "onClick": [Function],
                 "shadow": true,
@@ -1259,7 +1327,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src="foo"
+                                                                                src="foo?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -1268,9 +1336,13 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
-                                                                >
-                                                                                foo
-                                                                </p>
+                                                                                dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                "__html": "<p>foo</p>
+                                                                                                ",
+                                                                                                              }
+                                                                                }
+                                                                />
                                                 </div>
                                 </div>
                                 <div
@@ -1284,7 +1356,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src="foo"
+                                                                                src="foo?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -1293,9 +1365,13 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
-                                                                >
-                                                                                foo
-                                                                </p>
+                                                                                dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                "__html": "<p>foo</p>
+                                                                                                ",
+                                                                                                              }
+                                                                                }
+                                                                />
                                                 </div>
                                 </div>
                 </div>
@@ -1319,7 +1395,7 @@ ShallowWrapper {
                                                                 className="circle square"
                                                                 style={
                                                                                 Object {
-                                                                                                "background": "url(foo) no-repeat center",
+                                                                                                "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                                 }
@@ -1352,7 +1428,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src="foo"
+                                                                                src="foo?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -1361,9 +1437,13 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
-                                                            >
-                                                                                foo
-                                                            </p>
+                                                                                dangerouslySetInnerHTML={
+                                                                                                    Object {
+                                                                                                                        "__html": "<p>foo</p>
+                                                                                                    ",
+                                                                                                                      }
+                                                                                }
+                                                            />
                                         </div>
                     </div>
                     <div
@@ -1377,7 +1457,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src="foo"
+                                                                                src="foo?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -1386,9 +1466,13 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
-                                                            >
-                                                                                foo
-                                                            </p>
+                                                                                dangerouslySetInnerHTML={
+                                                                                                    Object {
+                                                                                                                        "__html": "<p>foo</p>
+                                                                                                    ",
+                                                                                                                      }
+                                                                                }
+                                                            />
                                         </div>
                     </div>
 </div>,
@@ -1412,7 +1496,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                                 Object {
-                                                                                                    "background": "url(foo) no-repeat center",
+                                                                                                    "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                     "backgroundSize": "cover",
                                                                                                   }
                                                             }
@@ -1441,7 +1525,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -1450,9 +1534,13 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
-                                                >
-                                                                        foo
-                                                </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                        "__html": "<p>foo</p>
+                                                                                                ",
+                                                                                                                      }
+                                                                        }
+                                                />
                         </div>
 </div>,
                       <div
@@ -1466,7 +1554,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src="foo"
+                                                                        src="foo?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -1475,9 +1563,13 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
-                                                >
-                                                                        foo
-                                                </p>
+                                                                        dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                        "__html": "<p>foo</p>
+                                                                                                ",
+                                                                                                                      }
+                                                                        }
+                                                />
                         </div>
 </div>,
                     ],
@@ -1499,7 +1591,7 @@ ShallowWrapper {
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src="foo"
+                                                        src="foo?w=500&fm=png&q=90"
                                                         style={Object {}}
                             />
 </div>,
@@ -1508,9 +1600,13 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
-                            >
-                                                        foo
-                            </p>
+                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                                "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                                              }
+                                                        }
+                            />
 </div>,
                         ],
                         "className": "flex justify-center items-center mb4",
@@ -1527,7 +1623,7 @@ ShallowWrapper {
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src="foo"
+                              src="foo?w=500&fm=png&q=90"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -1543,7 +1639,7 @@ ShallowWrapper {
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "foo",
+                              "src": "foo?w=500&fm=png&q=90",
                               "style": Object {},
                             },
                             "ref": null,
@@ -1559,9 +1655,13 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
->
-                              foo
-</p>,
+                              dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                          "__html": "<p>foo</p>
+                                                            ",
+                                                                                        }
+                              }
+/>,
                             "className": "md-col-10",
                           },
                           "ref": null,
@@ -1570,11 +1670,14 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "foo",
                               "className": "block-subheadline",
+                              "dangerouslySetInnerHTML": Object {
+                                "__html": "<p>foo</p>
+",
+                              },
                             },
                             "ref": null,
-                            "rendered": "foo",
+                            "rendered": null,
                             "type": "p",
                           },
                           "type": "div",
@@ -1596,7 +1699,7 @@ ShallowWrapper {
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src="foo"
+                                                        src="foo?w=500&fm=png&q=90"
                                                         style={Object {}}
                             />
 </div>,
@@ -1605,9 +1708,13 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
-                            >
-                                                        foo
-                            </p>
+                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                                "__html": "<p>foo</p>
+                                                                                    ",
+                                                                                                              }
+                                                        }
+                            />
 </div>,
                         ],
                         "className": "flex items-center",
@@ -1624,7 +1731,7 @@ ShallowWrapper {
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src="foo"
+                              src="foo?w=500&fm=png&q=90"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -1640,7 +1747,7 @@ ShallowWrapper {
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "foo",
+                              "src": "foo?w=500&fm=png&q=90",
                               "style": Object {},
                             },
                             "ref": null,
@@ -1656,9 +1763,13 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
->
-                              foo
-</p>,
+                              dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                          "__html": "<p>foo</p>
+                                                            ",
+                                                                                        }
+                              }
+/>,
                             "className": "md-col-10",
                           },
                           "ref": null,
@@ -1667,11 +1778,14 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "foo",
                               "className": "block-subheadline",
+                              "dangerouslySetInnerHTML": Object {
+                                "__html": "<p>foo</p>
+",
+                              },
                             },
                             "ref": null,
-                            "rendered": "foo",
+                            "rendered": null,
                             "type": "p",
                           },
                           "type": "div",
@@ -1705,7 +1819,7 @@ ShallowWrapper {
                                                 className="circle square"
                                                 style={
                                                                         Object {
-                                                                                                "background": "url(foo) no-repeat center",
+                                                                                                "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                 }
@@ -1770,7 +1884,7 @@ ShallowWrapper {
                           className="circle square"
                           style={
                                                     Object {
-                                                                              "background": "url(foo) no-repeat center",
+                                                                              "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                               "backgroundSize": "cover",
                                                                             }
                           }
@@ -1784,7 +1898,7 @@ ShallowWrapper {
                         "props": Object {
                           "className": "circle square",
                           "style": Object {
-                            "background": "url(foo) no-repeat center",
+                            "background": "url(foo?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                             "backgroundSize": "cover",
                           },
                         },
@@ -1876,6 +1990,7 @@ ShallowWrapper {
                     color="clear-madison-blue-border"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label=""
                     onClick={[Function]}
                     shadow={true}
@@ -1904,7 +2019,7 @@ ShallowWrapper {
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src=""
+                                                            src="?w=500&fm=png&q=90"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -1913,6 +2028,11 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
+                                                            dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                "__html": "",
+                                                                              }
+                                                            }
                                                   />
                                         </div>
                               </div>
@@ -1927,7 +2047,7 @@ ShallowWrapper {
                                                             bg={false}
                                                             className="w100"
                                                             onImgLoad={[Function]}
-                                                            src=""
+                                                            src="?w=500&fm=png&q=90"
                                                             style={Object {}}
                                                   />
                                         </div>
@@ -1936,6 +2056,11 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="block-subheadline"
+                                                            dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                "__html": "",
+                                                                              }
+                                                            }
                                                   />
                                         </div>
                               </div>
@@ -1958,7 +2083,7 @@ ShallowWrapper {
                                                   className="circle square"
                                                   style={
                                                             Object {
-                                                                      "background": "url() no-repeat center",
+                                                                      "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                       "backgroundSize": "cover",
                                                                     }
                                                   }
@@ -1992,6 +2117,7 @@ ShallowWrapper {
                 color="clear-madison-blue-border"
                 disabled={false}
                 fullWidth={false}
+                hover="shadow"
                 label=""
                 onClick={[Function]}
                 shadow={true}
@@ -2027,6 +2153,7 @@ ShallowWrapper {
               "color": "clear-madison-blue-border",
               "disabled": false,
               "fullWidth": false,
+              "hover": "shadow",
               "label": "",
               "onClick": [Function],
               "shadow": true,
@@ -2064,7 +2191,7 @@ ShallowWrapper {
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src=""
+                                                                      src="?w=500&fm=png&q=90"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -2073,6 +2200,11 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
+                                                                      dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                  "__html": "",
+                                                                                                }
+                                                                      }
                                                         />
                                           </div>
                             </div>
@@ -2087,7 +2219,7 @@ ShallowWrapper {
                                                                       bg={false}
                                                                       className="w100"
                                                                       onImgLoad={[Function]}
-                                                                      src=""
+                                                                      src="?w=500&fm=png&q=90"
                                                                       style={Object {}}
                                                         />
                                           </div>
@@ -2096,6 +2228,11 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="block-subheadline"
+                                                                      dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                  "__html": "",
+                                                                                                }
+                                                                      }
                                                         />
                                           </div>
                             </div>
@@ -2118,7 +2255,7 @@ ShallowWrapper {
                                                         className="circle square"
                                                         style={
                                                                       Object {
-                                                                                    "background": "url() no-repeat center",
+                                                                                    "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                         }
@@ -2151,7 +2288,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -2160,6 +2297,11 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                          Object {
+                                                                                                            "__html": "",
+                                                                                                          }
+                                                                        }
                                                       />
                                     </div>
                   </div>
@@ -2174,7 +2316,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                       />
                                     </div>
@@ -2183,6 +2325,11 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                          Object {
+                                                                                                            "__html": "",
+                                                                                                          }
+                                                                        }
                                                       />
                                     </div>
                   </div>
@@ -2205,7 +2352,7 @@ ShallowWrapper {
                                                       className="circle square"
                                                       style={
                                                                         Object {
-                                                                                          "background": "url() no-repeat center",
+                                                                                          "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                           "backgroundSize": "cover",
                                                                                         }
                                                       }
@@ -2234,7 +2381,7 @@ ShallowWrapper {
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src=""
+                                                                  src="?w=500&fm=png&q=90"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -2243,6 +2390,11 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
+                                                                  dangerouslySetInnerHTML={
+                                                                                        Object {
+                                                                                                              "__html": "",
+                                                                                                            }
+                                                                  }
                                             />
                       </div>
 </div>,
@@ -2257,7 +2409,7 @@ ShallowWrapper {
                                                                   bg={false}
                                                                   className="w100"
                                                                   onImgLoad={[Function]}
-                                                                  src=""
+                                                                  src="?w=500&fm=png&q=90"
                                                                   style={Object {}}
                                             />
                       </div>
@@ -2266,6 +2418,11 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="block-subheadline"
+                                                                  dangerouslySetInnerHTML={
+                                                                                        Object {
+                                                                                                              "__html": "",
+                                                                                                            }
+                                                                  }
                                             />
                       </div>
 </div>,
@@ -2288,7 +2445,7 @@ ShallowWrapper {
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src=""
+                                                    src="?w=500&fm=png&q=90"
                                                     style={Object {}}
                           />
 </div>,
@@ -2297,6 +2454,11 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
+                                                    dangerouslySetInnerHTML={
+                                                                              Object {
+                                                                                                        "__html": "",
+                                                                                                      }
+                                                    }
                           />
 </div>,
                       ],
@@ -2314,7 +2476,7 @@ ShallowWrapper {
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src=""
+                            src="?w=500&fm=png&q=90"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -2330,7 +2492,7 @@ ShallowWrapper {
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "",
+                            "src": "?w=500&fm=png&q=90",
                             "style": Object {},
                           },
                           "ref": null,
@@ -2346,6 +2508,11 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
+                            dangerouslySetInnerHTML={
+                                                        Object {
+                                                                                    "__html": "",
+                                                                                  }
+                            }
 />,
                           "className": "md-col-10",
                         },
@@ -2355,11 +2522,13 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "",
                             "className": "block-subheadline",
+                            "dangerouslySetInnerHTML": Object {
+                              "__html": "",
+                            },
                           },
                           "ref": null,
-                          "rendered": "",
+                          "rendered": null,
                           "type": "p",
                         },
                         "type": "div",
@@ -2381,7 +2550,7 @@ ShallowWrapper {
                                                     bg={false}
                                                     className="w100"
                                                     onImgLoad={[Function]}
-                                                    src=""
+                                                    src="?w=500&fm=png&q=90"
                                                     style={Object {}}
                           />
 </div>,
@@ -2390,6 +2559,11 @@ ShallowWrapper {
 >
                           <p
                                                     className="block-subheadline"
+                                                    dangerouslySetInnerHTML={
+                                                                              Object {
+                                                                                                        "__html": "",
+                                                                                                      }
+                                                    }
                           />
 </div>,
                       ],
@@ -2407,7 +2581,7 @@ ShallowWrapper {
                             bg={false}
                             className="w100"
                             onImgLoad={[Function]}
-                            src=""
+                            src="?w=500&fm=png&q=90"
                             style={Object {}}
 />,
                           "className": "col-3 md-col-2",
@@ -2423,7 +2597,7 @@ ShallowWrapper {
                             "children": null,
                             "className": "w100",
                             "onImgLoad": [Function],
-                            "src": "",
+                            "src": "?w=500&fm=png&q=90",
                             "style": Object {},
                           },
                           "ref": null,
@@ -2439,6 +2613,11 @@ ShallowWrapper {
                         "props": Object {
                           "children": <p
                             className="block-subheadline"
+                            dangerouslySetInnerHTML={
+                                                        Object {
+                                                                                    "__html": "",
+                                                                                  }
+                            }
 />,
                           "className": "md-col-10",
                         },
@@ -2448,11 +2627,13 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "",
                             "className": "block-subheadline",
+                            "dangerouslySetInnerHTML": Object {
+                              "__html": "",
+                            },
                           },
                           "ref": null,
-                          "rendered": "",
+                          "rendered": null,
                           "type": "p",
                         },
                         "type": "div",
@@ -2484,7 +2665,7 @@ ShallowWrapper {
                                             className="circle square"
                                             style={
                                                                   Object {
-                                                                                        "background": "url() no-repeat center",
+                                                                                        "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                         "backgroundSize": "cover",
                                                                                       }
                                             }
@@ -2547,7 +2728,7 @@ ShallowWrapper {
                         className="circle square"
                         style={
                                                 Object {
-                                                                        "background": "url() no-repeat center",
+                                                                        "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                         "backgroundSize": "cover",
                                                                       }
                         }
@@ -2561,7 +2742,7 @@ ShallowWrapper {
                       "props": Object {
                         "className": "circle square",
                         "style": Object {
-                          "background": "url() no-repeat center",
+                          "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                           "backgroundSize": "cover",
                         },
                       },
@@ -2603,6 +2784,7 @@ ShallowWrapper {
                         color="clear-madison-blue-border"
                         disabled={false}
                         fullWidth={false}
+                        hover="shadow"
                         label=""
                         onClick={[Function]}
                         shadow={true}
@@ -2631,7 +2813,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -2640,6 +2822,11 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                "__html": "",
+                                                                                              }
+                                                                        }
                                                             />
                                                 </div>
                                     </div>
@@ -2654,7 +2841,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                             />
                                                 </div>
@@ -2663,6 +2850,11 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                "__html": "",
+                                                                                              }
+                                                                        }
                                                             />
                                                 </div>
                                     </div>
@@ -2685,7 +2877,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                         Object {
-                                                                                    "background": "url() no-repeat center",
+                                                                                    "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                     "backgroundSize": "cover",
                                                                                   }
                                                             }
@@ -2719,6 +2911,7 @@ ShallowWrapper {
                   color="clear-madison-blue-border"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label=""
                   onClick={[Function]}
                   shadow={true}
@@ -2754,6 +2947,7 @@ ShallowWrapper {
                 "color": "clear-madison-blue-border",
                 "disabled": false,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "",
                 "onClick": [Function],
                 "shadow": true,
@@ -2791,7 +2985,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -2800,6 +2994,11 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
+                                                                                dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                "__html": "",
+                                                                                                              }
+                                                                                }
                                                                 />
                                                 </div>
                                 </div>
@@ -2814,7 +3013,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
@@ -2823,6 +3022,11 @@ ShallowWrapper {
                                                 >
                                                                 <p
                                                                                 className="block-subheadline"
+                                                                                dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                "__html": "",
+                                                                                                              }
+                                                                                }
                                                                 />
                                                 </div>
                                 </div>
@@ -2845,7 +3049,7 @@ ShallowWrapper {
                                                                 className="circle square"
                                                                 style={
                                                                                 Object {
-                                                                                                "background": "url() no-repeat center",
+                                                                                                "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                                 }
@@ -2878,7 +3082,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -2887,6 +3091,11 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
+                                                                                dangerouslySetInnerHTML={
+                                                                                                    Object {
+                                                                                                                        "__html": "",
+                                                                                                                      }
+                                                                                }
                                                             />
                                         </div>
                     </div>
@@ -2901,7 +3110,7 @@ ShallowWrapper {
                                                                                 bg={false}
                                                                                 className="w100"
                                                                                 onImgLoad={[Function]}
-                                                                                src=""
+                                                                                src="?w=500&fm=png&q=90"
                                                                                 style={Object {}}
                                                             />
                                         </div>
@@ -2910,6 +3119,11 @@ ShallowWrapper {
                                         >
                                                             <p
                                                                                 className="block-subheadline"
+                                                                                dangerouslySetInnerHTML={
+                                                                                                    Object {
+                                                                                                                        "__html": "",
+                                                                                                                      }
+                                                                                }
                                                             />
                                         </div>
                     </div>
@@ -2932,7 +3146,7 @@ ShallowWrapper {
                                                             className="circle square"
                                                             style={
                                                                                 Object {
-                                                                                                    "background": "url() no-repeat center",
+                                                                                                    "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                     "backgroundSize": "cover",
                                                                                                   }
                                                             }
@@ -2961,7 +3175,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -2970,6 +3184,11 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                        "__html": "",
+                                                                                                                      }
+                                                                        }
                                                 />
                         </div>
 </div>,
@@ -2984,7 +3203,7 @@ ShallowWrapper {
                                                                         bg={false}
                                                                         className="w100"
                                                                         onImgLoad={[Function]}
-                                                                        src=""
+                                                                        src="?w=500&fm=png&q=90"
                                                                         style={Object {}}
                                                 />
                         </div>
@@ -2993,6 +3212,11 @@ ShallowWrapper {
                         >
                                                 <p
                                                                         className="block-subheadline"
+                                                                        dangerouslySetInnerHTML={
+                                                                                                Object {
+                                                                                                                        "__html": "",
+                                                                                                                      }
+                                                                        }
                                                 />
                         </div>
 </div>,
@@ -3015,7 +3239,7 @@ ShallowWrapper {
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src=""
+                                                        src="?w=500&fm=png&q=90"
                                                         style={Object {}}
                             />
 </div>,
@@ -3024,6 +3248,11 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
+                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                                "__html": "",
+                                                                                                              }
+                                                        }
                             />
 </div>,
                         ],
@@ -3041,7 +3270,7 @@ ShallowWrapper {
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src=""
+                              src="?w=500&fm=png&q=90"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -3057,7 +3286,7 @@ ShallowWrapper {
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "",
+                              "src": "?w=500&fm=png&q=90",
                               "style": Object {},
                             },
                             "ref": null,
@@ -3073,6 +3302,11 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
+                              dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                          "__html": "",
+                                                                                        }
+                              }
 />,
                             "className": "md-col-10",
                           },
@@ -3082,11 +3316,13 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "",
                               "className": "block-subheadline",
+                              "dangerouslySetInnerHTML": Object {
+                                "__html": "",
+                              },
                             },
                             "ref": null,
-                            "rendered": "",
+                            "rendered": null,
                             "type": "p",
                           },
                           "type": "div",
@@ -3108,7 +3344,7 @@ ShallowWrapper {
                                                         bg={false}
                                                         className="w100"
                                                         onImgLoad={[Function]}
-                                                        src=""
+                                                        src="?w=500&fm=png&q=90"
                                                         style={Object {}}
                             />
 </div>,
@@ -3117,6 +3353,11 @@ ShallowWrapper {
 >
                             <p
                                                         className="block-subheadline"
+                                                        dangerouslySetInnerHTML={
+                                                                                    Object {
+                                                                                                                "__html": "",
+                                                                                                              }
+                                                        }
                             />
 </div>,
                         ],
@@ -3134,7 +3375,7 @@ ShallowWrapper {
                               bg={false}
                               className="w100"
                               onImgLoad={[Function]}
-                              src=""
+                              src="?w=500&fm=png&q=90"
                               style={Object {}}
 />,
                             "className": "col-3 md-col-2",
@@ -3150,7 +3391,7 @@ ShallowWrapper {
                               "children": null,
                               "className": "w100",
                               "onImgLoad": [Function],
-                              "src": "",
+                              "src": "?w=500&fm=png&q=90",
                               "style": Object {},
                             },
                             "ref": null,
@@ -3166,6 +3407,11 @@ ShallowWrapper {
                           "props": Object {
                             "children": <p
                               className="block-subheadline"
+                              dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                          "__html": "",
+                                                                                        }
+                              }
 />,
                             "className": "md-col-10",
                           },
@@ -3175,11 +3421,13 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "",
                               "className": "block-subheadline",
+                              "dangerouslySetInnerHTML": Object {
+                                "__html": "",
+                              },
                             },
                             "ref": null,
-                            "rendered": "",
+                            "rendered": null,
                             "type": "p",
                           },
                           "type": "div",
@@ -3211,7 +3459,7 @@ ShallowWrapper {
                                                 className="circle square"
                                                 style={
                                                                         Object {
-                                                                                                "background": "url() no-repeat center",
+                                                                                                "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                                                 "backgroundSize": "cover",
                                                                                               }
                                                 }
@@ -3274,7 +3522,7 @@ ShallowWrapper {
                           className="circle square"
                           style={
                                                     Object {
-                                                                              "background": "url() no-repeat center",
+                                                                              "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                                                                               "backgroundSize": "cover",
                                                                             }
                           }
@@ -3288,7 +3536,7 @@ ShallowWrapper {
                         "props": Object {
                           "className": "circle square",
                           "style": Object {
-                            "background": "url() no-repeat center",
+                            "background": "url(?w=1400&fm=jpg&fl=progressive&q=90) no-repeat center",
                             "backgroundSize": "cover",
                           },
                         },

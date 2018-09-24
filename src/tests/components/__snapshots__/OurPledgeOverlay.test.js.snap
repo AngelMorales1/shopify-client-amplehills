@@ -7,47 +7,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <OurPledgeOverlay
     closeOurPledgeOverlay={[Function]}
     ourPledgeOverlayIsOpen={false}
-    overlayContentImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "contentType": "foo",
-                "details": Object {
-                  "image": Object {
-                    "height": 0,
-                    "width": 0,
-                  },
-                  "size": 0,
-                },
-                "fileName": "foo",
-                "url": "foo",
-              },
-              "title": "foo",
-            },
-            "sys": Object {
-              "createdAt": "foo",
-              "environment": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "id": "foo",
-              "locale": "foo",
-              "revision": 0,
-              "space": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "type": "foo",
-              "updatedAt": "foo",
-            },
-          }
-    }
     shippingInformation="foo"
     shippingPledge="foo"
 />,
@@ -65,7 +24,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="wh100 t0 l0 bg-white low-opacity fixed"
+          className="wh100 t0 l0 bg-white-wash-blur fixed"
+          onClick={[Function]}
 />,
         <div
           className="fixed bg-island-spice"
@@ -78,6 +38,7 @@ ShallowWrapper {
                               color="white-denim"
                               disabled={false}
                               fullWidth={false}
+                              hover="shadow"
                               label=""
                               onClick={[Function]}
                               shadow={false}
@@ -98,29 +59,25 @@ ShallowWrapper {
                               className=""
                     >
                               <h2
-                                        className="my2 callout text-madison-blue"
+                                        className="mb3 block-headline text-madison-blue"
                               >
                                         We Ship Nationwide
                               </h2>
                               <div>
-                                        <Image
-                                                  alt="Our pledge image"
-                                                  bg={false}
-                                                  className="my3"
-                                                  onImgLoad={[Function]}
-                                                  src="foo"
-                                                  style={Object {}}
-                                        />
                                         <h2
                                                   className="my2 callout text-madison-blue"
                                         >
                                                   Shipping information
                                         </h2>
                                         <p
-                                                  className="mb4 small text-madison-blue"
-                                        >
-                                                  foo
-                                        </p>
+                                                  className="mb2 block-subheadline text-madison-blue"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "<p>foo</p>
+                                                            ",
+                                                                    }
+                                                  }
+                                        />
                               </div>
                               <div>
                                         <h2
@@ -129,10 +86,14 @@ ShallowWrapper {
                                                   Shipping Pledge
                                         </h2>
                                         <p
-                                                  className="small text-madison-blue"
-                                        >
-                                                  foo
-                                        </p>
+                                                  className="block-subheadline text-madison-blue"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "<p>foo</p>
+                                                            ",
+                                                                    }
+                                                  }
+                                        />
                               </div>
                     </div>
           </div>
@@ -147,7 +108,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "wh100 t0 l0 bg-white low-opacity fixed",
+          "className": "wh100 t0 l0 bg-white-wash-blur fixed",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -166,6 +128,7 @@ ShallowWrapper {
                         color="white-denim"
                         disabled={false}
                         fullWidth={false}
+                        hover="shadow"
                         label=""
                         onClick={[Function]}
                         shadow={false}
@@ -186,29 +149,25 @@ ShallowWrapper {
                         className=""
             >
                         <h2
-                                    className="my2 callout text-madison-blue"
+                                    className="mb3 block-headline text-madison-blue"
                         >
                                     We Ship Nationwide
                         </h2>
                         <div>
-                                    <Image
-                                                alt="Our pledge image"
-                                                bg={false}
-                                                className="my3"
-                                                onImgLoad={[Function]}
-                                                src="foo"
-                                                style={Object {}}
-                                    />
                                     <h2
                                                 className="my2 callout text-madison-blue"
                                     >
                                                 Shipping information
                                     </h2>
                                     <p
-                                                className="mb4 small text-madison-blue"
-                                    >
-                                                foo
-                                    </p>
+                                                className="mb2 block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "<p>foo</p>
+                                                            ",
+                                                                      }
+                                                }
+                                    />
                         </div>
                         <div>
                                     <h2
@@ -217,10 +176,14 @@ ShallowWrapper {
                                                 Shipping Pledge
                                     </h2>
                                     <p
-                                                className="small text-madison-blue"
-                                    >
-                                                foo
-                                    </p>
+                                                className="block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "<p>foo</p>
+                                                            ",
+                                                                      }
+                                                }
+                                    />
                         </div>
             </div>
 </div>,
@@ -238,6 +201,7 @@ ShallowWrapper {
                 color="white-denim"
                 disabled={false}
                 fullWidth={false}
+                hover="shadow"
                 label=""
                 onClick={[Function]}
                 shadow={false}
@@ -258,29 +222,25 @@ ShallowWrapper {
                 className=""
 >
                 <h2
-                                className="my2 callout text-madison-blue"
+                                className="mb3 block-headline text-madison-blue"
                 >
                                 We Ship Nationwide
                 </h2>
                 <div>
-                                <Image
-                                                alt="Our pledge image"
-                                                bg={false}
-                                                className="my3"
-                                                onImgLoad={[Function]}
-                                                src="foo"
-                                                style={Object {}}
-                                />
                                 <h2
                                                 className="my2 callout text-madison-blue"
                                 >
                                                 Shipping information
                                 </h2>
                                 <p
-                                                className="mb4 small text-madison-blue"
-                                >
-                                                foo
-                                </p>
+                                                className="mb2 block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "<p>foo</p>
+                                                                ",
+                                                                              }
+                                                }
+                                />
                 </div>
                 <div>
                                 <h2
@@ -289,10 +249,14 @@ ShallowWrapper {
                                                 Shipping Pledge
                                 </h2>
                                 <p
-                                                className="small text-madison-blue"
-                                >
-                                                foo
-                                </p>
+                                                className="block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "<p>foo</p>
+                                                                ",
+                                                                              }
+                                                }
+                                />
                 </div>
 </div>,
             ],
@@ -317,6 +281,7 @@ ShallowWrapper {
                 "color": "white-denim",
                 "disabled": false,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "",
                 "onClick": [Function],
                 "shadow": false,
@@ -351,29 +316,25 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h2
-                    className="my2 callout text-madison-blue"
+                    className="mb3 block-headline text-madison-blue"
 >
                     We Ship Nationwide
 </h2>,
                   <div>
-                    <Image
-                                        alt="Our pledge image"
-                                        bg={false}
-                                        className="my3"
-                                        onImgLoad={[Function]}
-                                        src="foo"
-                                        style={Object {}}
-                    />
                     <h2
                                         className="my2 callout text-madison-blue"
                     >
                                         Shipping information
                     </h2>
                     <p
-                                        className="mb4 small text-madison-blue"
-                    >
-                                        foo
-                    </p>
+                                        className="mb2 block-subheadline text-madison-blue"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "<p>foo</p>
+                                                            ",
+                                                                              }
+                                        }
+                    />
 </div>,
                   <div>
                     <h2
@@ -382,10 +343,14 @@ ShallowWrapper {
                                         Shipping Pledge
                     </h2>
                     <p
-                                        className="small text-madison-blue"
-                    >
-                                        foo
-                    </p>
+                                        className="block-subheadline text-madison-blue"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "<p>foo</p>
+                                                            ",
+                                                                              }
+                                        }
+                    />
 </div>,
                 ],
                 "className": "",
@@ -398,7 +363,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "We Ship Nationwide",
-                    "className": "my2 callout text-madison-blue",
+                    "className": "mb3 block-headline text-madison-blue",
                   },
                   "ref": null,
                   "rendered": "We Ship Nationwide",
@@ -410,45 +375,24 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <Image
-                        alt="Our pledge image"
-                        bg={false}
-                        className="my3"
-                        onImgLoad={[Function]}
-                        src="foo"
-                        style={Object {}}
-/>,
                       <h2
                         className="my2 callout text-madison-blue"
 >
                         Shipping information
 </h2>,
                       <p
-                        className="mb4 small text-madison-blue"
->
-                        foo
-</p>,
+                        className="mb2 block-subheadline text-madison-blue"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "<p>foo</p>
+                                                ",
+                                                                      }
+                        }
+/>,
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "alt": "Our pledge image",
-                        "bg": false,
-                        "children": null,
-                        "className": "my3",
-                        "onImgLoad": [Function],
-                        "src": "foo",
-                        "style": Object {},
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -466,11 +410,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "foo",
-                        "className": "mb4 small text-madison-blue",
+                        "className": "mb2 block-subheadline text-madison-blue",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "<p>foo</p>
+",
+                        },
                       },
                       "ref": null,
-                      "rendered": "foo",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -488,10 +435,14 @@ ShallowWrapper {
                         Shipping Pledge
 </h2>,
                       <p
-                        className="small text-madison-blue"
->
-                        foo
-</p>,
+                        className="block-subheadline text-madison-blue"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "<p>foo</p>
+                                                ",
+                                                                      }
+                        }
+/>,
                     ],
                   },
                   "ref": null,
@@ -513,11 +464,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "foo",
-                        "className": "small text-madison-blue",
+                        "className": "block-subheadline text-madison-blue",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "<p>foo</p>
+",
+                        },
                       },
                       "ref": null,
-                      "rendered": "foo",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -542,7 +496,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="wh100 t0 l0 bg-white low-opacity fixed"
+            className="wh100 t0 l0 bg-white-wash-blur fixed"
+            onClick={[Function]}
 />,
           <div
             className="fixed bg-island-spice"
@@ -555,6 +510,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label=""
                                     onClick={[Function]}
                                     shadow={false}
@@ -575,29 +531,25 @@ ShallowWrapper {
                                     className=""
                         >
                                     <h2
-                                                className="my2 callout text-madison-blue"
+                                                className="mb3 block-headline text-madison-blue"
                                     >
                                                 We Ship Nationwide
                                     </h2>
                                     <div>
-                                                <Image
-                                                            alt="Our pledge image"
-                                                            bg={false}
-                                                            className="my3"
-                                                            onImgLoad={[Function]}
-                                                            src="foo"
-                                                            style={Object {}}
-                                                />
                                                 <h2
                                                             className="my2 callout text-madison-blue"
                                                 >
                                                             Shipping information
                                                 </h2>
                                                 <p
-                                                            className="mb4 small text-madison-blue"
-                                                >
-                                                            foo
-                                                </p>
+                                                            className="mb2 block-subheadline text-madison-blue"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                        ",
+                                                                                  }
+                                                            }
+                                                />
                                     </div>
                                     <div>
                                                 <h2
@@ -606,10 +558,14 @@ ShallowWrapper {
                                                             Shipping Pledge
                                                 </h2>
                                                 <p
-                                                            className="small text-madison-blue"
-                                                >
-                                                            foo
-                                                </p>
+                                                            className="block-subheadline text-madison-blue"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                        ",
+                                                                                  }
+                                                            }
+                                                />
                                     </div>
                         </div>
             </div>
@@ -624,7 +580,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "wh100 t0 l0 bg-white low-opacity fixed",
+            "className": "wh100 t0 l0 bg-white-wash-blur fixed",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -643,6 +600,7 @@ ShallowWrapper {
                             color="white-denim"
                             disabled={false}
                             fullWidth={false}
+                            hover="shadow"
                             label=""
                             onClick={[Function]}
                             shadow={false}
@@ -663,29 +621,25 @@ ShallowWrapper {
                             className=""
               >
                             <h2
-                                          className="my2 callout text-madison-blue"
+                                          className="mb3 block-headline text-madison-blue"
                             >
                                           We Ship Nationwide
                             </h2>
                             <div>
-                                          <Image
-                                                        alt="Our pledge image"
-                                                        bg={false}
-                                                        className="my3"
-                                                        onImgLoad={[Function]}
-                                                        src="foo"
-                                                        style={Object {}}
-                                          />
                                           <h2
                                                         className="my2 callout text-madison-blue"
                                           >
                                                         Shipping information
                                           </h2>
                                           <p
-                                                        className="mb4 small text-madison-blue"
-                                          >
-                                                        foo
-                                          </p>
+                                                        className="mb2 block-subheadline text-madison-blue"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                      ",
+                                                                                  }
+                                                        }
+                                          />
                             </div>
                             <div>
                                           <h2
@@ -694,10 +648,14 @@ ShallowWrapper {
                                                         Shipping Pledge
                                           </h2>
                                           <p
-                                                        className="small text-madison-blue"
-                                          >
-                                                        foo
-                                          </p>
+                                                        className="block-subheadline text-madison-blue"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                      ",
+                                                                                  }
+                                                        }
+                                          />
                             </div>
               </div>
 </div>,
@@ -715,6 +673,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label=""
                   onClick={[Function]}
                   shadow={false}
@@ -735,29 +694,25 @@ ShallowWrapper {
                   className=""
 >
                   <h2
-                                    className="my2 callout text-madison-blue"
+                                    className="mb3 block-headline text-madison-blue"
                   >
                                     We Ship Nationwide
                   </h2>
                   <div>
-                                    <Image
-                                                      alt="Our pledge image"
-                                                      bg={false}
-                                                      className="my3"
-                                                      onImgLoad={[Function]}
-                                                      src="foo"
-                                                      style={Object {}}
-                                    />
                                     <h2
                                                       className="my2 callout text-madison-blue"
                                     >
                                                       Shipping information
                                     </h2>
                                     <p
-                                                      className="mb4 small text-madison-blue"
-                                    >
-                                                      foo
-                                    </p>
+                                                      className="mb2 block-subheadline text-madison-blue"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "<p>foo</p>
+                                                                        ",
+                                                                                        }
+                                                      }
+                                    />
                   </div>
                   <div>
                                     <h2
@@ -766,10 +721,14 @@ ShallowWrapper {
                                                       Shipping Pledge
                                     </h2>
                                     <p
-                                                      className="small text-madison-blue"
-                                    >
-                                                      foo
-                                    </p>
+                                                      className="block-subheadline text-madison-blue"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "<p>foo</p>
+                                                                        ",
+                                                                                        }
+                                                      }
+                                    />
                   </div>
 </div>,
               ],
@@ -794,6 +753,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "",
                   "onClick": [Function],
                   "shadow": false,
@@ -828,29 +788,25 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <h2
-                      className="my2 callout text-madison-blue"
+                      className="mb3 block-headline text-madison-blue"
 >
                       We Ship Nationwide
 </h2>,
                     <div>
-                      <Image
-                                            alt="Our pledge image"
-                                            bg={false}
-                                            className="my3"
-                                            onImgLoad={[Function]}
-                                            src="foo"
-                                            style={Object {}}
-                      />
                       <h2
                                             className="my2 callout text-madison-blue"
                       >
                                             Shipping information
                       </h2>
                       <p
-                                            className="mb4 small text-madison-blue"
-                      >
-                                            foo
-                      </p>
+                                            className="mb2 block-subheadline text-madison-blue"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "<p>foo</p>
+                                                                  ",
+                                                                                      }
+                                            }
+                      />
 </div>,
                     <div>
                       <h2
@@ -859,10 +815,14 @@ ShallowWrapper {
                                             Shipping Pledge
                       </h2>
                       <p
-                                            className="small text-madison-blue"
-                      >
-                                            foo
-                      </p>
+                                            className="block-subheadline text-madison-blue"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "<p>foo</p>
+                                                                  ",
+                                                                                      }
+                                            }
+                      />
 </div>,
                   ],
                   "className": "",
@@ -875,7 +835,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "We Ship Nationwide",
-                      "className": "my2 callout text-madison-blue",
+                      "className": "mb3 block-headline text-madison-blue",
                     },
                     "ref": null,
                     "rendered": "We Ship Nationwide",
@@ -887,45 +847,24 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <Image
-                          alt="Our pledge image"
-                          bg={false}
-                          className="my3"
-                          onImgLoad={[Function]}
-                          src="foo"
-                          style={Object {}}
-/>,
                         <h2
                           className="my2 callout text-madison-blue"
 >
                           Shipping information
 </h2>,
                         <p
-                          className="mb4 small text-madison-blue"
->
-                          foo
-</p>,
+                          className="mb2 block-subheadline text-madison-blue"
+                          dangerouslySetInnerHTML={
+                                                    Object {
+                                                                              "__html": "<p>foo</p>
+                                                    ",
+                                                                            }
+                          }
+/>,
                       ],
                     },
                     "ref": null,
                     "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "alt": "Our pledge image",
-                          "bg": false,
-                          "children": null,
-                          "className": "my3",
-                          "onImgLoad": [Function],
-                          "src": "foo",
-                          "style": Object {},
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -943,11 +882,14 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "foo",
-                          "className": "mb4 small text-madison-blue",
+                          "className": "mb2 block-subheadline text-madison-blue",
+                          "dangerouslySetInnerHTML": Object {
+                            "__html": "<p>foo</p>
+",
+                          },
                         },
                         "ref": null,
-                        "rendered": "foo",
+                        "rendered": null,
                         "type": "p",
                       },
                     ],
@@ -965,10 +907,14 @@ ShallowWrapper {
                           Shipping Pledge
 </h2>,
                         <p
-                          className="small text-madison-blue"
->
-                          foo
-</p>,
+                          className="block-subheadline text-madison-blue"
+                          dangerouslySetInnerHTML={
+                                                    Object {
+                                                                              "__html": "<p>foo</p>
+                                                    ",
+                                                                            }
+                          }
+/>,
                       ],
                     },
                     "ref": null,
@@ -990,11 +936,14 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "foo",
-                          "className": "small text-madison-blue",
+                          "className": "block-subheadline text-madison-blue",
+                          "dangerouslySetInnerHTML": Object {
+                            "__html": "<p>foo</p>
+",
+                          },
                         },
                         "ref": null,
-                        "rendered": "foo",
+                        "rendered": null,
                         "type": "p",
                       },
                     ],
@@ -1029,19 +978,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <OurPledgeOverlay
     closeOurPledgeOverlay={[Function]}
     ourPledgeOverlayIsOpen={false}
-    overlayContentImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "url": "",
-              },
-              "title": "",
-            },
-            "sys": Object {
-              "id": "",
-            },
-          }
-    }
     shippingInformation=""
     shippingPledge=""
 />,
@@ -1059,7 +995,8 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="wh100 t0 l0 bg-white low-opacity fixed"
+          className="wh100 t0 l0 bg-white-wash-blur fixed"
+          onClick={[Function]}
 />,
         <div
           className="fixed bg-island-spice"
@@ -1072,6 +1009,7 @@ ShallowWrapper {
                               color="white-denim"
                               disabled={false}
                               fullWidth={false}
+                              hover="shadow"
                               label=""
                               onClick={[Function]}
                               shadow={false}
@@ -1092,26 +1030,23 @@ ShallowWrapper {
                               className=""
                     >
                               <h2
-                                        className="my2 callout text-madison-blue"
+                                        className="mb3 block-headline text-madison-blue"
                               >
                                         We Ship Nationwide
                               </h2>
                               <div>
-                                        <Image
-                                                  alt="Our pledge image"
-                                                  bg={false}
-                                                  className="my3"
-                                                  onImgLoad={[Function]}
-                                                  src=""
-                                                  style={Object {}}
-                                        />
                                         <h2
                                                   className="my2 callout text-madison-blue"
                                         >
                                                   Shipping information
                                         </h2>
                                         <p
-                                                  className="mb4 small text-madison-blue"
+                                                  className="mb2 block-subheadline text-madison-blue"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "",
+                                                                    }
+                                                  }
                                         />
                               </div>
                               <div>
@@ -1121,7 +1056,12 @@ ShallowWrapper {
                                                   Shipping Pledge
                                         </h2>
                                         <p
-                                                  className="small text-madison-blue"
+                                                  className="block-subheadline text-madison-blue"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "",
+                                                                    }
+                                                  }
                                         />
                               </div>
                     </div>
@@ -1137,7 +1077,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "wh100 t0 l0 bg-white low-opacity fixed",
+          "className": "wh100 t0 l0 bg-white-wash-blur fixed",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -1156,6 +1097,7 @@ ShallowWrapper {
                         color="white-denim"
                         disabled={false}
                         fullWidth={false}
+                        hover="shadow"
                         label=""
                         onClick={[Function]}
                         shadow={false}
@@ -1176,26 +1118,23 @@ ShallowWrapper {
                         className=""
             >
                         <h2
-                                    className="my2 callout text-madison-blue"
+                                    className="mb3 block-headline text-madison-blue"
                         >
                                     We Ship Nationwide
                         </h2>
                         <div>
-                                    <Image
-                                                alt="Our pledge image"
-                                                bg={false}
-                                                className="my3"
-                                                onImgLoad={[Function]}
-                                                src=""
-                                                style={Object {}}
-                                    />
                                     <h2
                                                 className="my2 callout text-madison-blue"
                                     >
                                                 Shipping information
                                     </h2>
                                     <p
-                                                className="mb4 small text-madison-blue"
+                                                className="mb2 block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "",
+                                                                      }
+                                                }
                                     />
                         </div>
                         <div>
@@ -1205,7 +1144,12 @@ ShallowWrapper {
                                                 Shipping Pledge
                                     </h2>
                                     <p
-                                                className="small text-madison-blue"
+                                                className="block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                            Object {
+                                                                        "__html": "",
+                                                                      }
+                                                }
                                     />
                         </div>
             </div>
@@ -1224,6 +1168,7 @@ ShallowWrapper {
                 color="white-denim"
                 disabled={false}
                 fullWidth={false}
+                hover="shadow"
                 label=""
                 onClick={[Function]}
                 shadow={false}
@@ -1244,26 +1189,23 @@ ShallowWrapper {
                 className=""
 >
                 <h2
-                                className="my2 callout text-madison-blue"
+                                className="mb3 block-headline text-madison-blue"
                 >
                                 We Ship Nationwide
                 </h2>
                 <div>
-                                <Image
-                                                alt="Our pledge image"
-                                                bg={false}
-                                                className="my3"
-                                                onImgLoad={[Function]}
-                                                src=""
-                                                style={Object {}}
-                                />
                                 <h2
                                                 className="my2 callout text-madison-blue"
                                 >
                                                 Shipping information
                                 </h2>
                                 <p
-                                                className="mb4 small text-madison-blue"
+                                                className="mb2 block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "",
+                                                                              }
+                                                }
                                 />
                 </div>
                 <div>
@@ -1273,7 +1215,12 @@ ShallowWrapper {
                                                 Shipping Pledge
                                 </h2>
                                 <p
-                                                className="small text-madison-blue"
+                                                className="block-subheadline text-madison-blue"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "",
+                                                                              }
+                                                }
                                 />
                 </div>
 </div>,
@@ -1299,6 +1246,7 @@ ShallowWrapper {
                 "color": "white-denim",
                 "disabled": false,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "",
                 "onClick": [Function],
                 "shadow": false,
@@ -1333,26 +1281,23 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h2
-                    className="my2 callout text-madison-blue"
+                    className="mb3 block-headline text-madison-blue"
 >
                     We Ship Nationwide
 </h2>,
                   <div>
-                    <Image
-                                        alt="Our pledge image"
-                                        bg={false}
-                                        className="my3"
-                                        onImgLoad={[Function]}
-                                        src=""
-                                        style={Object {}}
-                    />
                     <h2
                                         className="my2 callout text-madison-blue"
                     >
                                         Shipping information
                     </h2>
                     <p
-                                        className="mb4 small text-madison-blue"
+                                        className="mb2 block-subheadline text-madison-blue"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "",
+                                                                              }
+                                        }
                     />
 </div>,
                   <div>
@@ -1362,7 +1307,12 @@ ShallowWrapper {
                                         Shipping Pledge
                     </h2>
                     <p
-                                        className="small text-madison-blue"
+                                        className="block-subheadline text-madison-blue"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "",
+                                                                              }
+                                        }
                     />
 </div>,
                 ],
@@ -1376,7 +1326,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "We Ship Nationwide",
-                    "className": "my2 callout text-madison-blue",
+                    "className": "mb3 block-headline text-madison-blue",
                   },
                   "ref": null,
                   "rendered": "We Ship Nationwide",
@@ -1388,43 +1338,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <Image
-                        alt="Our pledge image"
-                        bg={false}
-                        className="my3"
-                        onImgLoad={[Function]}
-                        src=""
-                        style={Object {}}
-/>,
                       <h2
                         className="my2 callout text-madison-blue"
 >
                         Shipping information
 </h2>,
                       <p
-                        className="mb4 small text-madison-blue"
+                        className="mb2 block-subheadline text-madison-blue"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "",
+                                                                      }
+                        }
 />,
                     ],
                   },
                   "ref": null,
                   "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "alt": "Our pledge image",
-                        "bg": false,
-                        "children": null,
-                        "className": "my3",
-                        "onImgLoad": [Function],
-                        "src": "",
-                        "style": Object {},
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": [Function],
-                    },
                     Object {
                       "instance": null,
                       "key": undefined,
@@ -1442,11 +1372,13 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "",
-                        "className": "mb4 small text-madison-blue",
+                        "className": "mb2 block-subheadline text-madison-blue",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "",
+                        },
                       },
                       "ref": null,
-                      "rendered": "",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -1464,7 +1396,12 @@ ShallowWrapper {
                         Shipping Pledge
 </h2>,
                       <p
-                        className="small text-madison-blue"
+                        className="block-subheadline text-madison-blue"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "",
+                                                                      }
+                        }
 />,
                     ],
                   },
@@ -1487,11 +1424,13 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "",
-                        "className": "small text-madison-blue",
+                        "className": "block-subheadline text-madison-blue",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "",
+                        },
                       },
                       "ref": null,
-                      "rendered": "",
+                      "rendered": null,
                       "type": "p",
                     },
                   ],
@@ -1516,7 +1455,8 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="wh100 t0 l0 bg-white low-opacity fixed"
+            className="wh100 t0 l0 bg-white-wash-blur fixed"
+            onClick={[Function]}
 />,
           <div
             className="fixed bg-island-spice"
@@ -1529,6 +1469,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label=""
                                     onClick={[Function]}
                                     shadow={false}
@@ -1549,26 +1490,23 @@ ShallowWrapper {
                                     className=""
                         >
                                     <h2
-                                                className="my2 callout text-madison-blue"
+                                                className="mb3 block-headline text-madison-blue"
                                     >
                                                 We Ship Nationwide
                                     </h2>
                                     <div>
-                                                <Image
-                                                            alt="Our pledge image"
-                                                            bg={false}
-                                                            className="my3"
-                                                            onImgLoad={[Function]}
-                                                            src=""
-                                                            style={Object {}}
-                                                />
                                                 <h2
                                                             className="my2 callout text-madison-blue"
                                                 >
                                                             Shipping information
                                                 </h2>
                                                 <p
-                                                            className="mb4 small text-madison-blue"
+                                                            className="mb2 block-subheadline text-madison-blue"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                            }
                                                 />
                                     </div>
                                     <div>
@@ -1578,7 +1516,12 @@ ShallowWrapper {
                                                             Shipping Pledge
                                                 </h2>
                                                 <p
-                                                            className="small text-madison-blue"
+                                                            className="block-subheadline text-madison-blue"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                            }
                                                 />
                                     </div>
                         </div>
@@ -1594,7 +1537,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "wh100 t0 l0 bg-white low-opacity fixed",
+            "className": "wh100 t0 l0 bg-white-wash-blur fixed",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -1613,6 +1557,7 @@ ShallowWrapper {
                             color="white-denim"
                             disabled={false}
                             fullWidth={false}
+                            hover="shadow"
                             label=""
                             onClick={[Function]}
                             shadow={false}
@@ -1633,26 +1578,23 @@ ShallowWrapper {
                             className=""
               >
                             <h2
-                                          className="my2 callout text-madison-blue"
+                                          className="mb3 block-headline text-madison-blue"
                             >
                                           We Ship Nationwide
                             </h2>
                             <div>
-                                          <Image
-                                                        alt="Our pledge image"
-                                                        bg={false}
-                                                        className="my3"
-                                                        onImgLoad={[Function]}
-                                                        src=""
-                                                        style={Object {}}
-                                          />
                                           <h2
                                                         className="my2 callout text-madison-blue"
                                           >
                                                         Shipping information
                                           </h2>
                                           <p
-                                                        className="mb4 small text-madison-blue"
+                                                        className="mb2 block-subheadline text-madison-blue"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                        }
                                           />
                             </div>
                             <div>
@@ -1662,7 +1604,12 @@ ShallowWrapper {
                                                         Shipping Pledge
                                           </h2>
                                           <p
-                                                        className="small text-madison-blue"
+                                                        className="block-subheadline text-madison-blue"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                        }
                                           />
                             </div>
               </div>
@@ -1681,6 +1628,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label=""
                   onClick={[Function]}
                   shadow={false}
@@ -1701,26 +1649,23 @@ ShallowWrapper {
                   className=""
 >
                   <h2
-                                    className="my2 callout text-madison-blue"
+                                    className="mb3 block-headline text-madison-blue"
                   >
                                     We Ship Nationwide
                   </h2>
                   <div>
-                                    <Image
-                                                      alt="Our pledge image"
-                                                      bg={false}
-                                                      className="my3"
-                                                      onImgLoad={[Function]}
-                                                      src=""
-                                                      style={Object {}}
-                                    />
                                     <h2
                                                       className="my2 callout text-madison-blue"
                                     >
                                                       Shipping information
                                     </h2>
                                     <p
-                                                      className="mb4 small text-madison-blue"
+                                                      className="mb2 block-subheadline text-madison-blue"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "",
+                                                                                        }
+                                                      }
                                     />
                   </div>
                   <div>
@@ -1730,7 +1675,12 @@ ShallowWrapper {
                                                       Shipping Pledge
                                     </h2>
                                     <p
-                                                      className="small text-madison-blue"
+                                                      className="block-subheadline text-madison-blue"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "",
+                                                                                        }
+                                                      }
                                     />
                   </div>
 </div>,
@@ -1756,6 +1706,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "",
                   "onClick": [Function],
                   "shadow": false,
@@ -1790,26 +1741,23 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <h2
-                      className="my2 callout text-madison-blue"
+                      className="mb3 block-headline text-madison-blue"
 >
                       We Ship Nationwide
 </h2>,
                     <div>
-                      <Image
-                                            alt="Our pledge image"
-                                            bg={false}
-                                            className="my3"
-                                            onImgLoad={[Function]}
-                                            src=""
-                                            style={Object {}}
-                      />
                       <h2
                                             className="my2 callout text-madison-blue"
                       >
                                             Shipping information
                       </h2>
                       <p
-                                            className="mb4 small text-madison-blue"
+                                            className="mb2 block-subheadline text-madison-blue"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "",
+                                                                                      }
+                                            }
                       />
 </div>,
                     <div>
@@ -1819,7 +1767,12 @@ ShallowWrapper {
                                             Shipping Pledge
                       </h2>
                       <p
-                                            className="small text-madison-blue"
+                                            className="block-subheadline text-madison-blue"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "",
+                                                                                      }
+                                            }
                       />
 </div>,
                   ],
@@ -1833,7 +1786,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "We Ship Nationwide",
-                      "className": "my2 callout text-madison-blue",
+                      "className": "mb3 block-headline text-madison-blue",
                     },
                     "ref": null,
                     "rendered": "We Ship Nationwide",
@@ -1845,43 +1798,23 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <Image
-                          alt="Our pledge image"
-                          bg={false}
-                          className="my3"
-                          onImgLoad={[Function]}
-                          src=""
-                          style={Object {}}
-/>,
                         <h2
                           className="my2 callout text-madison-blue"
 >
                           Shipping information
 </h2>,
                         <p
-                          className="mb4 small text-madison-blue"
+                          className="mb2 block-subheadline text-madison-blue"
+                          dangerouslySetInnerHTML={
+                                                    Object {
+                                                                              "__html": "",
+                                                                            }
+                          }
 />,
                       ],
                     },
                     "ref": null,
                     "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "alt": "Our pledge image",
-                          "bg": false,
-                          "children": null,
-                          "className": "my3",
-                          "onImgLoad": [Function],
-                          "src": "",
-                          "style": Object {},
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": [Function],
-                      },
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -1899,11 +1832,13 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "",
-                          "className": "mb4 small text-madison-blue",
+                          "className": "mb2 block-subheadline text-madison-blue",
+                          "dangerouslySetInnerHTML": Object {
+                            "__html": "",
+                          },
                         },
                         "ref": null,
-                        "rendered": "",
+                        "rendered": null,
                         "type": "p",
                       },
                     ],
@@ -1921,7 +1856,12 @@ ShallowWrapper {
                           Shipping Pledge
 </h2>,
                         <p
-                          className="small text-madison-blue"
+                          className="block-subheadline text-madison-blue"
+                          dangerouslySetInnerHTML={
+                                                    Object {
+                                                                              "__html": "",
+                                                                            }
+                          }
 />,
                       ],
                     },
@@ -1944,11 +1884,13 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "",
-                          "className": "small text-madison-blue",
+                          "className": "block-subheadline text-madison-blue",
+                          "dangerouslySetInnerHTML": Object {
+                            "__html": "",
+                          },
                         },
                         "ref": null,
-                        "rendered": "",
+                        "rendered": null,
                         "type": "p",
                       },
                     ],

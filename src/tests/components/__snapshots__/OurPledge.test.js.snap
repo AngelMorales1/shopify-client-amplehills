@@ -6,89 +6,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <OurPledge
     actions={Object {}}
-    calloutImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "contentType": "foo",
-                "details": Object {
-                  "image": Object {
-                    "height": 0,
-                    "width": 0,
-                  },
-                  "size": 0,
-                },
-                "fileName": "foo",
-                "url": "foo",
-              },
-              "title": "foo",
-            },
-            "sys": Object {
-              "createdAt": "foo",
-              "environment": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "id": "foo",
-              "locale": "foo",
-              "revision": 0,
-              "space": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "type": "foo",
-              "updatedAt": "foo",
-            },
-          }
-    }
+    calloutImage="foo"
     ourPledgeOverlayIsOpen={false}
-    overlayContentImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "contentType": "foo",
-                "details": Object {
-                  "image": Object {
-                    "height": 0,
-                    "width": 0,
-                  },
-                  "size": 0,
-                },
-                "fileName": "foo",
-                "url": "foo",
-              },
-              "title": "foo",
-            },
-            "sys": Object {
-              "createdAt": "foo",
-              "environment": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "id": "foo",
-              "locale": "foo",
-              "revision": 0,
-              "space": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "type": "foo",
-              "updatedAt": "foo",
-            },
-          }
-    }
     shippingInformation="foo"
     shippingPledge="foo"
 />,
@@ -141,6 +60,7 @@ ShallowWrapper {
                                         color="white-denim"
                                         disabled={false}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="More Info"
                                         onClick={[Function]}
                                         shadow={false}
@@ -154,47 +74,6 @@ ShallowWrapper {
         <OurPledgeOverlay
           closeOurPledgeOverlay={[Function]}
           ourPledgeOverlayIsOpen={false}
-          overlayContentImage={
-                    Object {
-                              "fields": Object {
-                                "file": Object {
-                                  "contentType": "foo",
-                                  "details": Object {
-                                    "image": Object {
-                                      "height": 0,
-                                      "width": 0,
-                                    },
-                                    "size": 0,
-                                  },
-                                  "fileName": "foo",
-                                  "url": "foo",
-                                },
-                                "title": "foo",
-                              },
-                              "sys": Object {
-                                "createdAt": "foo",
-                                "environment": Object {
-                                  "sys": Object {
-                                    "id": "foo",
-                                    "linkType": "foo",
-                                    "type": "foo",
-                                  },
-                                },
-                                "id": "foo",
-                                "locale": "foo",
-                                "revision": 0,
-                                "space": Object {
-                                  "sys": Object {
-                                    "id": "foo",
-                                    "linkType": "foo",
-                                    "type": "foo",
-                                  },
-                                },
-                                "type": "foo",
-                                "updatedAt": "foo",
-                              },
-                            }
-          }
           shippingInformation="foo"
           shippingPledge="foo"
 />,
@@ -251,6 +130,7 @@ ShallowWrapper {
                                           color="white-denim"
                                           disabled={false}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="More Info"
                                           onClick={[Function]}
                                           shadow={false}
@@ -326,6 +206,7 @@ ShallowWrapper {
                                 color="white-denim"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
@@ -347,6 +228,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label="More Info"
                   onClick={[Function]}
                   shadow={false}
@@ -367,6 +249,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
@@ -392,45 +275,6 @@ ShallowWrapper {
         "props": Object {
           "closeOurPledgeOverlay": [Function],
           "ourPledgeOverlayIsOpen": false,
-          "overlayContentImage": Object {
-            "fields": Object {
-              "file": Object {
-                "contentType": "foo",
-                "details": Object {
-                  "image": Object {
-                    "height": 0,
-                    "width": 0,
-                  },
-                  "size": 0,
-                },
-                "fileName": "foo",
-                "url": "foo",
-              },
-              "title": "foo",
-            },
-            "sys": Object {
-              "createdAt": "foo",
-              "environment": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "id": "foo",
-              "locale": "foo",
-              "revision": 0,
-              "space": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "type": "foo",
-              "updatedAt": "foo",
-            },
-          },
           "shippingInformation": "foo",
           "shippingPledge": "foo",
         },
@@ -484,6 +328,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -497,47 +342,6 @@ ShallowWrapper {
           <OurPledgeOverlay
             closeOurPledgeOverlay={[Function]}
             ourPledgeOverlayIsOpen={false}
-            overlayContentImage={
-                        Object {
-                                    "fields": Object {
-                                      "file": Object {
-                                        "contentType": "foo",
-                                        "details": Object {
-                                          "image": Object {
-                                            "height": 0,
-                                            "width": 0,
-                                          },
-                                          "size": 0,
-                                        },
-                                        "fileName": "foo",
-                                        "url": "foo",
-                                      },
-                                      "title": "foo",
-                                    },
-                                    "sys": Object {
-                                      "createdAt": "foo",
-                                      "environment": Object {
-                                        "sys": Object {
-                                          "id": "foo",
-                                          "linkType": "foo",
-                                          "type": "foo",
-                                        },
-                                      },
-                                      "id": "foo",
-                                      "locale": "foo",
-                                      "revision": 0,
-                                      "space": Object {
-                                        "sys": Object {
-                                          "id": "foo",
-                                          "linkType": "foo",
-                                          "type": "foo",
-                                        },
-                                      },
-                                      "type": "foo",
-                                      "updatedAt": "foo",
-                                    },
-                                  }
-            }
             shippingInformation="foo"
             shippingPledge="foo"
 />,
@@ -594,6 +398,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -669,6 +474,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
@@ -690,6 +496,7 @@ ShallowWrapper {
                     color="white-denim"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="More Info"
                     onClick={[Function]}
                     shadow={false}
@@ -710,6 +517,7 @@ ShallowWrapper {
                     "color": "white-denim",
                     "disabled": false,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "More Info",
                     "onClick": [Function],
                     "shadow": false,
@@ -735,45 +543,6 @@ ShallowWrapper {
           "props": Object {
             "closeOurPledgeOverlay": [Function],
             "ourPledgeOverlayIsOpen": false,
-            "overlayContentImage": Object {
-              "fields": Object {
-                "file": Object {
-                  "contentType": "foo",
-                  "details": Object {
-                    "image": Object {
-                      "height": 0,
-                      "width": 0,
-                    },
-                    "size": 0,
-                  },
-                  "fileName": "foo",
-                  "url": "foo",
-                },
-                "title": "foo",
-              },
-              "sys": Object {
-                "createdAt": "foo",
-                "environment": Object {
-                  "sys": Object {
-                    "id": "foo",
-                    "linkType": "foo",
-                    "type": "foo",
-                  },
-                },
-                "id": "foo",
-                "locale": "foo",
-                "revision": 0,
-                "space": Object {
-                  "sys": Object {
-                    "id": "foo",
-                    "linkType": "foo",
-                    "type": "foo",
-                  },
-                },
-                "type": "foo",
-                "updatedAt": "foo",
-              },
-            },
             "shippingInformation": "foo",
             "shippingPledge": "foo",
           },
@@ -806,21 +575,8 @@ ShallowWrapper {
             "openOurPledge": [Function],
           }
     }
-    calloutImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "url": "",
-              },
-              "title": "",
-            },
-            "sys": Object {
-              "id": "",
-            },
-          }
-    }
+    calloutImage=""
     ourPledgeOverlayIsOpen={false}
-    overlayContentImage={Object {}}
     shippingInformation=""
     shippingPledge=""
 />,
@@ -873,6 +629,7 @@ ShallowWrapper {
                                         color="white-denim"
                                         disabled={false}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="More Info"
                                         onClick={[Function]}
                                         shadow={false}
@@ -886,7 +643,6 @@ ShallowWrapper {
         <OurPledgeOverlay
           closeOurPledgeOverlay={[Function]}
           ourPledgeOverlayIsOpen={false}
-          overlayContentImage={Object {}}
           shippingInformation=""
           shippingPledge=""
 />,
@@ -943,6 +699,7 @@ ShallowWrapper {
                                           color="white-denim"
                                           disabled={false}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="More Info"
                                           onClick={[Function]}
                                           shadow={false}
@@ -1018,6 +775,7 @@ ShallowWrapper {
                                 color="white-denim"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
@@ -1039,6 +797,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label="More Info"
                   onClick={[Function]}
                   shadow={false}
@@ -1059,6 +818,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
@@ -1084,7 +844,6 @@ ShallowWrapper {
         "props": Object {
           "closeOurPledgeOverlay": [Function],
           "ourPledgeOverlayIsOpen": false,
-          "overlayContentImage": Object {},
           "shippingInformation": "",
           "shippingPledge": "",
         },
@@ -1138,6 +897,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -1151,7 +911,6 @@ ShallowWrapper {
           <OurPledgeOverlay
             closeOurPledgeOverlay={[Function]}
             ourPledgeOverlayIsOpen={false}
-            overlayContentImage={Object {}}
             shippingInformation=""
             shippingPledge=""
 />,
@@ -1208,6 +967,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -1283,6 +1043,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
@@ -1304,6 +1065,7 @@ ShallowWrapper {
                     color="white-denim"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="More Info"
                     onClick={[Function]}
                     shadow={false}
@@ -1324,6 +1086,7 @@ ShallowWrapper {
                     "color": "white-denim",
                     "disabled": false,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "More Info",
                     "onClick": [Function],
                     "shadow": false,
@@ -1349,7 +1112,6 @@ ShallowWrapper {
           "props": Object {
             "closeOurPledgeOverlay": [Function],
             "ourPledgeOverlayIsOpen": false,
-            "overlayContentImage": Object {},
             "shippingInformation": "",
             "shippingPledge": "",
           },

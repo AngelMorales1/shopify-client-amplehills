@@ -12,6 +12,8 @@ ShallowWrapper {
     onChange={[Function]}
     showArrows={true}
     showDots={true}
+    showOnImage={false}
+    sliderClasses=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -32,7 +34,7 @@ ShallowWrapper {
         beforeSlide={[Function]}
         cellAlign="left"
         cellSpacing={0}
-        className="w100 pb4"
+        className="w100 flex pb4"
         dragging={true}
         easing="easeCircleOut"
         edgeEasing="easeElasticOut"
@@ -55,7 +57,7 @@ ShallowWrapper {
         width="100%"
         wrapAround={false}
 />,
-      "className": "foo w100 flex flex-column items-center justify-center transition",
+      "className": "foo flex flex-column justify-center transition",
     },
     "ref": null,
     "rendered": Object {
@@ -70,7 +72,7 @@ ShallowWrapper {
         "cellAlign": "left",
         "cellSpacing": 0,
         "children": null,
-        "className": "w100 pb4",
+        "className": "w100 flex pb4",
         "dragging": true,
         "easing": "easeCircleOut",
         "edgeEasing": "easeElasticOut",
@@ -112,7 +114,7 @@ ShallowWrapper {
           beforeSlide={[Function]}
           cellAlign="left"
           cellSpacing={0}
-          className="w100 pb4"
+          className="w100 flex pb4"
           dragging={true}
           easing="easeCircleOut"
           edgeEasing="easeElasticOut"
@@ -135,7 +137,7 @@ ShallowWrapper {
           width="100%"
           wrapAround={false}
 />,
-        "className": "foo w100 flex flex-column items-center justify-center transition",
+        "className": "foo flex flex-column justify-center transition",
       },
       "ref": null,
       "rendered": Object {
@@ -150,7 +152,7 @@ ShallowWrapper {
           "cellAlign": "left",
           "cellSpacing": 0,
           "children": null,
-          "className": "w100 pb4",
+          "className": "w100 flex pb4",
           "dragging": true,
           "easing": "easeCircleOut",
           "edgeEasing": "easeElasticOut",
@@ -197,11 +199,13 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Carousel
     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
-    className=""
+    className="w100"
     index={0}
     onChange={[Function]}
     showArrows={true}
     showDots={true}
+    showOnImage={false}
+    sliderClasses=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -222,7 +226,7 @@ ShallowWrapper {
         beforeSlide={[Function]}
         cellAlign="left"
         cellSpacing={0}
-        className="w100 pb4"
+        className="w100 flex pb4"
         dragging={true}
         easing="easeCircleOut"
         edgeEasing="easeElasticOut"
@@ -245,7 +249,7 @@ ShallowWrapper {
         width="100%"
         wrapAround={false}
 />,
-      "className": "w100 flex flex-column items-center justify-center transition",
+      "className": "w100 flex flex-column justify-center transition",
     },
     "ref": null,
     "rendered": Object {
@@ -260,7 +264,7 @@ ShallowWrapper {
         "cellAlign": "left",
         "cellSpacing": 0,
         "children": null,
-        "className": "w100 pb4",
+        "className": "w100 flex pb4",
         "dragging": true,
         "easing": "easeCircleOut",
         "edgeEasing": "easeElasticOut",
@@ -302,7 +306,7 @@ ShallowWrapper {
           beforeSlide={[Function]}
           cellAlign="left"
           cellSpacing={0}
-          className="w100 pb4"
+          className="w100 flex pb4"
           dragging={true}
           easing="easeCircleOut"
           edgeEasing="easeElasticOut"
@@ -325,7 +329,7 @@ ShallowWrapper {
           width="100%"
           wrapAround={false}
 />,
-        "className": "w100 flex flex-column items-center justify-center transition",
+        "className": "w100 flex flex-column justify-center transition",
       },
       "ref": null,
       "rendered": Object {
@@ -340,7 +344,7 @@ ShallowWrapper {
           "cellAlign": "left",
           "cellSpacing": 0,
           "children": null,
-          "className": "w100 pb4",
+          "className": "w100 flex pb4",
           "dragging": true,
           "easing": "easeCircleOut",
           "edgeEasing": "easeElasticOut",
