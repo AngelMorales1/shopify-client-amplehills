@@ -24,7 +24,9 @@ const PressCard = ({ pressCard }) => {console.log(pressCard)
           styles['PressCard__quote'],
           'carter text-peach center py3 mb4'
         )}
-      >{`"${pressCard.quote}"`}</span>
+      >
+        {pressCard.quote}
+      </span>
       <Button
         className={cx(styles['PressCard__button'], 'uppercase')}
         to={pressCard.linkUrl}
