@@ -55,17 +55,18 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h2
-          className="block-headline my3 nowrap"
+          className="block-headline my3 nowrap col-12 md-col-6 center"
 >
           What’s included
 </h2>,
         <div
-          className="flex flex-column col-12 md-col-4"
+          className="flex flex-column col-12 md-col-6"
 >
           
 </div>,
+        null,
       ],
-      "className": "flex justify-between drip",
+      "className": "flex justify-between drip relative",
       "style": Object {
         "zIndex": 0,
       },
@@ -78,7 +79,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "What’s included",
-          "className": "block-headline my3 nowrap",
+          "className": "block-headline my3 nowrap col-12 md-col-6 center",
         },
         "ref": null,
         "rendered": "What’s included",
@@ -90,12 +91,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [],
-          "className": "flex flex-column col-12 md-col-4",
+          "className": "flex flex-column col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [],
         "type": "div",
       },
+      null,
     ],
     "type": "div",
   },
@@ -107,17 +109,18 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="block-headline my3 nowrap"
+            className="block-headline my3 nowrap col-12 md-col-6 center"
 >
             What’s included
 </h2>,
           <div
-            className="flex flex-column col-12 md-col-4"
+            className="flex flex-column col-12 md-col-6"
 >
             
 </div>,
+          null,
         ],
-        "className": "flex justify-between drip",
+        "className": "flex justify-between drip relative",
         "style": Object {
           "zIndex": 0,
         },
@@ -130,7 +133,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "What’s included",
-            "className": "block-headline my3 nowrap",
+            "className": "block-headline my3 nowrap col-12 md-col-6 center",
           },
           "ref": null,
           "rendered": "What’s included",
@@ -142,12 +145,13 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [],
-            "className": "flex flex-column col-12 md-col-4",
+            "className": "flex flex-column col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [],
           "type": "div",
         },
+        null,
       ],
       "type": "div",
     },
@@ -171,6 +175,7 @@ ShallowWrapper {
         Object {
             "fields": Object {
               "backgroundColor": "light-pink",
+              "illustration": null,
               "products": Array [
                 Object {
                   "fields": Object {
@@ -198,12 +203,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <h2
-          className="block-headline my3 nowrap"
+          className="block-headline my3 nowrap col-12 md-col-6 center"
 >
           What’s included
 </h2>,
         <div
-          className="flex flex-column col-12 md-col-4"
+          className="flex flex-column col-12 md-col-6"
 >
           <div
                     className="flex items-start my2 col-12"
@@ -216,7 +221,7 @@ ShallowWrapper {
                                         bg={false}
                                         className="w100"
                                         onImgLoad={[Function]}
-                                        src=""
+                                        src="undefined?w=500&fm=png&q=90"
                                         style={Object {}}
                               />
                     </div>
@@ -234,8 +239,9 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
+        null,
       ],
-      "className": "flex justify-between drip",
+      "className": "flex justify-between drip relative",
       "style": Object {
         "zIndex": 1,
       },
@@ -248,7 +254,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "What’s included",
-          "className": "block-headline my3 nowrap",
+          "className": "block-headline my3 nowrap col-12 md-col-6 center",
         },
         "ref": null,
         "rendered": "What’s included",
@@ -271,7 +277,7 @@ ShallowWrapper {
                                           bg={false}
                                           className="w100"
                                           onImgLoad={[Function]}
-                                          src=""
+                                          src="undefined?w=500&fm=png&q=90"
                                           style={Object {}}
                             />
               </div>
@@ -289,7 +295,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "flex flex-column col-12 md-col-4",
+          "className": "flex flex-column col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [
@@ -307,7 +313,7 @@ ShallowWrapper {
                                     bg={false}
                                     className="w100"
                                     onImgLoad={[Function]}
-                                    src=""
+                                    src="undefined?w=500&fm=png&q=90"
                                     style={Object {}}
                   />
 </div>,
@@ -338,7 +344,7 @@ ShallowWrapper {
                     bg={false}
                     className="w100"
                     onImgLoad={[Function]}
-                    src=""
+                    src="undefined?w=500&fm=png&q=90"
                     style={Object {}}
 />,
                   "className": "mr3 col-2",
@@ -354,7 +360,7 @@ ShallowWrapper {
                     "children": null,
                     "className": "w100",
                     "onImgLoad": [Function],
-                    "src": "",
+                    "src": "undefined?w=500&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -415,6 +421,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
+      null,
     ],
     "type": "div",
   },
@@ -426,12 +433,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <h2
-            className="block-headline my3 nowrap"
+            className="block-headline my3 nowrap col-12 md-col-6 center"
 >
             What’s included
 </h2>,
           <div
-            className="flex flex-column col-12 md-col-4"
+            className="flex flex-column col-12 md-col-6"
 >
             <div
                         className="flex items-start my2 col-12"
@@ -444,7 +451,7 @@ ShallowWrapper {
                                                 bg={false}
                                                 className="w100"
                                                 onImgLoad={[Function]}
-                                                src=""
+                                                src="undefined?w=500&fm=png&q=90"
                                                 style={Object {}}
                                     />
                         </div>
@@ -462,8 +469,9 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
+          null,
         ],
-        "className": "flex justify-between drip",
+        "className": "flex justify-between drip relative",
         "style": Object {
           "zIndex": 1,
         },
@@ -476,7 +484,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "What’s included",
-            "className": "block-headline my3 nowrap",
+            "className": "block-headline my3 nowrap col-12 md-col-6 center",
           },
           "ref": null,
           "rendered": "What’s included",
@@ -499,7 +507,7 @@ ShallowWrapper {
                                                 bg={false}
                                                 className="w100"
                                                 onImgLoad={[Function]}
-                                                src=""
+                                                src="undefined?w=500&fm=png&q=90"
                                                 style={Object {}}
                                 />
                 </div>
@@ -517,7 +525,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "flex flex-column col-12 md-col-4",
+            "className": "flex flex-column col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [
@@ -535,7 +543,7 @@ ShallowWrapper {
                                         bg={false}
                                         className="w100"
                                         onImgLoad={[Function]}
-                                        src=""
+                                        src="undefined?w=500&fm=png&q=90"
                                         style={Object {}}
                     />
 </div>,
@@ -566,7 +574,7 @@ ShallowWrapper {
                       bg={false}
                       className="w100"
                       onImgLoad={[Function]}
-                      src=""
+                      src="undefined?w=500&fm=png&q=90"
                       style={Object {}}
 />,
                     "className": "mr3 col-2",
@@ -582,7 +590,7 @@ ShallowWrapper {
                       "children": null,
                       "className": "w100",
                       "onImgLoad": [Function],
-                      "src": "",
+                      "src": "undefined?w=500&fm=png&q=90",
                       "style": Object {},
                     },
                     "ref": null,
@@ -643,6 +651,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        null,
       ],
       "type": "div",
     },

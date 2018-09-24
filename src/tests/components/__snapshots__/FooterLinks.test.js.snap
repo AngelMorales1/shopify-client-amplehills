@@ -5,7 +5,43 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FooterLinks
-    facebookLink=""
+    footerIcons={
+        Object {
+            "facebookIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "instagramIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "twitterIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+          }
+    }
     footerLinks={
         Object {
             "facebookLink": "/foo",
@@ -13,8 +49,6 @@ ShallowWrapper {
             "twitterLink": "/foo",
           }
     }
-    instagramLink=""
-    twitterLink=""
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -43,6 +77,7 @@ ShallowWrapper {
                     disabled={false}
                     exact={true}
                     fullWidth={false}
+                    hover="shadow"
                     label="Contact Us"
                     onClick={[Function]}
                     shadow={true}
@@ -62,66 +97,66 @@ ShallowWrapper {
         <div
           className="mt2"
 >
-          <div
-                    className="my3 flex items-center"
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href="/foo"
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
                               alt="Instagram icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href="/foo"
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Instagram
-                    </a>
-          </div>
-          <div
-                    className="my3 flex items-center"
+                    </span>
+          </a>
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href="/foo"
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
-                              alt="Instagram icon"
+                              alt="Twitter icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href="/foo"
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Twitter
-                    </a>
-          </div>
-          <div
-                    className="my3 flex items-center"
+                    </span>
+          </a>
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href="/foo"
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
-                              alt="Instagram icon"
+                              alt="Facebook icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href="/foo"
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Facebook
-                    </a>
-          </div>
+                    </span>
+          </a>
 </div>,
       ],
       "className": "col-3 flex flex-column",
@@ -152,6 +187,7 @@ ShallowWrapper {
               disabled={false}
               exact={true}
               fullWidth={false}
+              hover="shadow"
               label="Contact Us"
               onClick={[Function]}
               shadow={true}
@@ -183,6 +219,7 @@ ShallowWrapper {
               "disabled": false,
               "exact": true,
               "fullWidth": false,
+              "hover": "shadow",
               "label": "Contact Us",
               "onClick": [Function],
               "shadow": true,
@@ -220,66 +257,66 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
-              className="my3 flex items-center"
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href="/foo"
+              rel="noopener"
+              target="_blank"
 >
               <Image
                             alt="Instagram icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href="/foo"
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Instagram
-              </a>
-</div>,
-            <div
-              className="my3 flex items-center"
+              </span>
+</a>,
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href="/foo"
+              rel="noopener"
+              target="_blank"
 >
               <Image
-                            alt="Instagram icon"
+                            alt="Twitter icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href="/foo"
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Twitter
-              </a>
-</div>,
-            <div
-              className="my3 flex items-center"
+              </span>
+</a>,
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href="/foo"
+              rel="noopener"
+              target="_blank"
 >
               <Image
-                            alt="Instagram icon"
+                            alt="Facebook icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href="/foo"
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Facebook
-              </a>
-</div>,
+              </span>
+</a>,
           ],
           "className": "mt2",
         },
@@ -294,21 +331,21 @@ ShallowWrapper {
                 <Image
                   alt="Instagram icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href="/foo"
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Instagram
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "/foo",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -320,9 +357,9 @@ ShallowWrapper {
                   "alt": "Instagram icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -335,17 +372,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Instagram",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "/foo",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Instagram",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
           Object {
             "instance": null,
@@ -354,23 +388,23 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Image
-                  alt="Instagram icon"
+                  alt="Twitter icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href="/foo"
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Twitter
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "/foo",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -379,12 +413,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "alt": "Instagram icon",
+                  "alt": "Twitter icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -397,17 +431,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Twitter",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "/foo",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Twitter",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
           Object {
             "instance": null,
@@ -416,23 +447,23 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Image
-                  alt="Instagram icon"
+                  alt="Facebook icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href="/foo"
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Facebook
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "/foo",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -441,12 +472,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "alt": "Instagram icon",
+                  "alt": "Facebook icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -459,17 +490,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Facebook",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "/foo",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Facebook",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
         ],
         "type": "div",
@@ -498,6 +526,7 @@ ShallowWrapper {
                         disabled={false}
                         exact={true}
                         fullWidth={false}
+                        hover="shadow"
                         label="Contact Us"
                         onClick={[Function]}
                         shadow={true}
@@ -517,66 +546,66 @@ ShallowWrapper {
           <div
             className="mt2"
 >
-            <div
-                        className="my3 flex items-center"
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="/foo"
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
                                     alt="Instagram icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href="/foo"
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Instagram
-                        </a>
-            </div>
-            <div
-                        className="my3 flex items-center"
+                        </span>
+            </a>
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="/foo"
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
-                                    alt="Instagram icon"
+                                    alt="Twitter icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href="/foo"
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Twitter
-                        </a>
-            </div>
-            <div
-                        className="my3 flex items-center"
+                        </span>
+            </a>
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href="/foo"
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
-                                    alt="Instagram icon"
+                                    alt="Facebook icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href="/foo"
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Facebook
-                        </a>
-            </div>
+                        </span>
+            </a>
 </div>,
         ],
         "className": "col-3 flex flex-column",
@@ -607,6 +636,7 @@ ShallowWrapper {
                 disabled={false}
                 exact={true}
                 fullWidth={false}
+                hover="shadow"
                 label="Contact Us"
                 onClick={[Function]}
                 shadow={true}
@@ -638,6 +668,7 @@ ShallowWrapper {
                 "disabled": false,
                 "exact": true,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "Contact Us",
                 "onClick": [Function],
                 "shadow": true,
@@ -675,66 +706,66 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
-                className="my3 flex items-center"
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href="/foo"
+                rel="noopener"
+                target="_blank"
 >
                 <Image
                                 alt="Instagram icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href="/foo"
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Instagram
-                </a>
-</div>,
-              <div
-                className="my3 flex items-center"
+                </span>
+</a>,
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href="/foo"
+                rel="noopener"
+                target="_blank"
 >
                 <Image
-                                alt="Instagram icon"
+                                alt="Twitter icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href="/foo"
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Twitter
-                </a>
-</div>,
-              <div
-                className="my3 flex items-center"
+                </span>
+</a>,
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href="/foo"
+                rel="noopener"
+                target="_blank"
 >
                 <Image
-                                alt="Instagram icon"
+                                alt="Facebook icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href="/foo"
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Facebook
-                </a>
-</div>,
+                </span>
+</a>,
             ],
             "className": "mt2",
           },
@@ -749,21 +780,21 @@ ShallowWrapper {
                   <Image
                     alt="Instagram icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href="/foo"
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Instagram
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "/foo",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -775,9 +806,9 @@ ShallowWrapper {
                     "alt": "Instagram icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -790,17 +821,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Instagram",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "/foo",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Instagram",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
             Object {
               "instance": null,
@@ -809,23 +837,23 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Image
-                    alt="Instagram icon"
+                    alt="Twitter icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href="/foo"
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Twitter
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "/foo",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -834,12 +862,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "alt": "Instagram icon",
+                    "alt": "Twitter icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -852,17 +880,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Twitter",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "/foo",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Twitter",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
             Object {
               "instance": null,
@@ -871,23 +896,23 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Image
-                    alt="Instagram icon"
+                    alt="Facebook icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href="/foo"
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Facebook
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "/foo",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -896,12 +921,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "alt": "Instagram icon",
+                    "alt": "Facebook icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -914,17 +939,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Facebook",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "/foo",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Facebook",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
           ],
           "type": "div",
@@ -948,9 +970,50 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FooterLinks
-    facebookLink=""
-    instagramLink=""
-    twitterLink=""
+    footerIcons={
+        Object {
+            "facebookIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "instagramIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "twitterIcon": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+          }
+    }
+    footerLinks={
+        Object {
+            "facebookLink": "",
+            "instagramLink": "",
+            "twitterLink": "",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -979,6 +1042,7 @@ ShallowWrapper {
                     disabled={false}
                     exact={true}
                     fullWidth={false}
+                    hover="shadow"
                     label="Contact Us"
                     onClick={[Function]}
                     shadow={true}
@@ -998,66 +1062,66 @@ ShallowWrapper {
         <div
           className="mt2"
 >
-          <div
-                    className="my3 flex items-center"
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href=""
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
                               alt="Instagram icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href=""
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Instagram
-                    </a>
-          </div>
-          <div
-                    className="my3 flex items-center"
+                    </span>
+          </a>
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href=""
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
-                              alt="Instagram icon"
+                              alt="Twitter icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href=""
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Twitter
-                    </a>
-          </div>
-          <div
-                    className="my3 flex items-center"
+                    </span>
+          </a>
+          <a
+                    className="my3 flex items-center bold text-white text-decoration-none"
+                    href=""
+                    rel="noopener"
+                    target="_blank"
           >
                     <Image
-                              alt="Instagram icon"
+                              alt="Facebook icon"
                               bg={false}
-                              className="icon"
+                              className="icon mr3"
                               onImgLoad={[Function]}
-                              src="/assets/images/bubble-icon.svg"
+                              src="?w=200&fm=png&q=90"
                               style={Object {}}
                     />
-                    <a
-                              className="bold text-white text-decoration-none ml3"
-                              href=""
-                              rel="noopener"
-                              target="_blank"
+                    <span
+                              className=""
                     >
                               Facebook
-                    </a>
-          </div>
+                    </span>
+          </a>
 </div>,
       ],
       "className": "col-3 flex flex-column",
@@ -1088,6 +1152,7 @@ ShallowWrapper {
               disabled={false}
               exact={true}
               fullWidth={false}
+              hover="shadow"
               label="Contact Us"
               onClick={[Function]}
               shadow={true}
@@ -1119,6 +1184,7 @@ ShallowWrapper {
               "disabled": false,
               "exact": true,
               "fullWidth": false,
+              "hover": "shadow",
               "label": "Contact Us",
               "onClick": [Function],
               "shadow": true,
@@ -1156,66 +1222,66 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div
-              className="my3 flex items-center"
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href=""
+              rel="noopener"
+              target="_blank"
 >
               <Image
                             alt="Instagram icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href=""
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Instagram
-              </a>
-</div>,
-            <div
-              className="my3 flex items-center"
+              </span>
+</a>,
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href=""
+              rel="noopener"
+              target="_blank"
 >
               <Image
-                            alt="Instagram icon"
+                            alt="Twitter icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href=""
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Twitter
-              </a>
-</div>,
-            <div
-              className="my3 flex items-center"
+              </span>
+</a>,
+            <a
+              className="my3 flex items-center bold text-white text-decoration-none"
+              href=""
+              rel="noopener"
+              target="_blank"
 >
               <Image
-                            alt="Instagram icon"
+                            alt="Facebook icon"
                             bg={false}
-                            className="icon"
+                            className="icon mr3"
                             onImgLoad={[Function]}
-                            src="/assets/images/bubble-icon.svg"
+                            src="?w=200&fm=png&q=90"
                             style={Object {}}
               />
-              <a
-                            className="bold text-white text-decoration-none ml3"
-                            href=""
-                            rel="noopener"
-                            target="_blank"
+              <span
+                            className=""
               >
                             Facebook
-              </a>
-</div>,
+              </span>
+</a>,
           ],
           "className": "mt2",
         },
@@ -1230,21 +1296,21 @@ ShallowWrapper {
                 <Image
                   alt="Instagram icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href=""
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Instagram
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -1256,9 +1322,9 @@ ShallowWrapper {
                   "alt": "Instagram icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -1271,17 +1337,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Instagram",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Instagram",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
           Object {
             "instance": null,
@@ -1290,23 +1353,23 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Image
-                  alt="Instagram icon"
+                  alt="Twitter icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href=""
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Twitter
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -1315,12 +1378,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "alt": "Instagram icon",
+                  "alt": "Twitter icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -1333,17 +1396,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Twitter",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Twitter",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
           Object {
             "instance": null,
@@ -1352,23 +1412,23 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Image
-                  alt="Instagram icon"
+                  alt="Facebook icon"
                   bg={false}
-                  className="icon"
+                  className="icon mr3"
                   onImgLoad={[Function]}
-                  src="/assets/images/bubble-icon.svg"
+                  src="?w=200&fm=png&q=90"
                   style={Object {}}
 />,
-                <a
-                  className="bold text-white text-decoration-none ml3"
-                  href=""
-                  rel="noopener"
-                  target="_blank"
+                <span
+                  className=""
 >
                   Facebook
-</a>,
+</span>,
               ],
-              "className": "my3 flex items-center",
+              "className": "my3 flex items-center bold text-white text-decoration-none",
+              "href": "",
+              "rel": "noopener",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Array [
@@ -1377,12 +1437,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "alt": "Instagram icon",
+                  "alt": "Facebook icon",
                   "bg": false,
                   "children": null,
-                  "className": "icon",
+                  "className": "icon mr3",
                   "onImgLoad": [Function],
-                  "src": "/assets/images/bubble-icon.svg",
+                  "src": "?w=200&fm=png&q=90",
                   "style": Object {},
                 },
                 "ref": null,
@@ -1395,17 +1455,14 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Facebook",
-                  "className": "bold text-white text-decoration-none ml3",
-                  "href": "",
-                  "rel": "noopener",
-                  "target": "_blank",
+                  "className": "",
                 },
                 "ref": null,
                 "rendered": "Facebook",
-                "type": "a",
+                "type": "span",
               },
             ],
-            "type": "div",
+            "type": "a",
           },
         ],
         "type": "div",
@@ -1434,6 +1491,7 @@ ShallowWrapper {
                         disabled={false}
                         exact={true}
                         fullWidth={false}
+                        hover="shadow"
                         label="Contact Us"
                         onClick={[Function]}
                         shadow={true}
@@ -1453,66 +1511,66 @@ ShallowWrapper {
           <div
             className="mt2"
 >
-            <div
-                        className="my3 flex items-center"
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
                                     alt="Instagram icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href=""
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Instagram
-                        </a>
-            </div>
-            <div
-                        className="my3 flex items-center"
+                        </span>
+            </a>
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
-                                    alt="Instagram icon"
+                                    alt="Twitter icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href=""
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Twitter
-                        </a>
-            </div>
-            <div
-                        className="my3 flex items-center"
+                        </span>
+            </a>
+            <a
+                        className="my3 flex items-center bold text-white text-decoration-none"
+                        href=""
+                        rel="noopener"
+                        target="_blank"
             >
                         <Image
-                                    alt="Instagram icon"
+                                    alt="Facebook icon"
                                     bg={false}
-                                    className="icon"
+                                    className="icon mr3"
                                     onImgLoad={[Function]}
-                                    src="/assets/images/bubble-icon.svg"
+                                    src="?w=200&fm=png&q=90"
                                     style={Object {}}
                         />
-                        <a
-                                    className="bold text-white text-decoration-none ml3"
-                                    href=""
-                                    rel="noopener"
-                                    target="_blank"
+                        <span
+                                    className=""
                         >
                                     Facebook
-                        </a>
-            </div>
+                        </span>
+            </a>
 </div>,
         ],
         "className": "col-3 flex flex-column",
@@ -1543,6 +1601,7 @@ ShallowWrapper {
                 disabled={false}
                 exact={true}
                 fullWidth={false}
+                hover="shadow"
                 label="Contact Us"
                 onClick={[Function]}
                 shadow={true}
@@ -1574,6 +1633,7 @@ ShallowWrapper {
                 "disabled": false,
                 "exact": true,
                 "fullWidth": false,
+                "hover": "shadow",
                 "label": "Contact Us",
                 "onClick": [Function],
                 "shadow": true,
@@ -1611,66 +1671,66 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
-                className="my3 flex items-center"
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href=""
+                rel="noopener"
+                target="_blank"
 >
                 <Image
                                 alt="Instagram icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href=""
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Instagram
-                </a>
-</div>,
-              <div
-                className="my3 flex items-center"
+                </span>
+</a>,
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href=""
+                rel="noopener"
+                target="_blank"
 >
                 <Image
-                                alt="Instagram icon"
+                                alt="Twitter icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href=""
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Twitter
-                </a>
-</div>,
-              <div
-                className="my3 flex items-center"
+                </span>
+</a>,
+              <a
+                className="my3 flex items-center bold text-white text-decoration-none"
+                href=""
+                rel="noopener"
+                target="_blank"
 >
                 <Image
-                                alt="Instagram icon"
+                                alt="Facebook icon"
                                 bg={false}
-                                className="icon"
+                                className="icon mr3"
                                 onImgLoad={[Function]}
-                                src="/assets/images/bubble-icon.svg"
+                                src="?w=200&fm=png&q=90"
                                 style={Object {}}
                 />
-                <a
-                                className="bold text-white text-decoration-none ml3"
-                                href=""
-                                rel="noopener"
-                                target="_blank"
+                <span
+                                className=""
                 >
                                 Facebook
-                </a>
-</div>,
+                </span>
+</a>,
             ],
             "className": "mt2",
           },
@@ -1685,21 +1745,21 @@ ShallowWrapper {
                   <Image
                     alt="Instagram icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href=""
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Instagram
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -1711,9 +1771,9 @@ ShallowWrapper {
                     "alt": "Instagram icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -1726,17 +1786,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Instagram",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Instagram",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
             Object {
               "instance": null,
@@ -1745,23 +1802,23 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Image
-                    alt="Instagram icon"
+                    alt="Twitter icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href=""
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Twitter
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -1770,12 +1827,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "alt": "Instagram icon",
+                    "alt": "Twitter icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -1788,17 +1845,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Twitter",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Twitter",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
             Object {
               "instance": null,
@@ -1807,23 +1861,23 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Image
-                    alt="Instagram icon"
+                    alt="Facebook icon"
                     bg={false}
-                    className="icon"
+                    className="icon mr3"
                     onImgLoad={[Function]}
-                    src="/assets/images/bubble-icon.svg"
+                    src="?w=200&fm=png&q=90"
                     style={Object {}}
 />,
-                  <a
-                    className="bold text-white text-decoration-none ml3"
-                    href=""
-                    rel="noopener"
-                    target="_blank"
+                  <span
+                    className=""
 >
                     Facebook
-</a>,
+</span>,
                 ],
-                "className": "my3 flex items-center",
+                "className": "my3 flex items-center bold text-white text-decoration-none",
+                "href": "",
+                "rel": "noopener",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Array [
@@ -1832,12 +1886,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "alt": "Instagram icon",
+                    "alt": "Facebook icon",
                     "bg": false,
                     "children": null,
-                    "className": "icon",
+                    "className": "icon mr3",
                     "onImgLoad": [Function],
-                    "src": "/assets/images/bubble-icon.svg",
+                    "src": "?w=200&fm=png&q=90",
                     "style": Object {},
                   },
                   "ref": null,
@@ -1850,17 +1904,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Facebook",
-                    "className": "bold text-white text-decoration-none ml3",
-                    "href": "",
-                    "rel": "noopener",
-                    "target": "_blank",
+                    "className": "",
                   },
                   "ref": null,
                   "rendered": "Facebook",
-                  "type": "a",
+                  "type": "span",
                 },
               ],
-              "type": "div",
+              "type": "a",
             },
           ],
           "type": "div",

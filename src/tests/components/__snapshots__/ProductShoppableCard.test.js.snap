@@ -48,7 +48,7 @@ ShallowWrapper {
                 className="aspect-5-4 w100"
                 style={
                         Object {
-                                "background": "url(foo) no-repeat center",
+                                "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                 "backgroundSize": "cover",
                               }
                 }
@@ -73,7 +73,7 @@ ShallowWrapper {
                 >
                         <QuantitySelector
                                 allowZero={true}
-                                className="absolute t0 l0 transition transition-slide-swap"
+                                className="absolute t0 l0 transition"
                                 color="seafoam"
                                 onChange={[Function]}
                                 quantity={0}
@@ -84,6 +84,7 @@ ShallowWrapper {
                                 color="white-madison-blue-border"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="+ Add"
                                 onClick={[Function]}
                                 shadow={false}
@@ -107,7 +108,7 @@ ShallowWrapper {
             className="aspect-5-4 w100"
             style={
                         Object {
-                                    "background": "url(foo) no-repeat center",
+                                    "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                     "backgroundSize": "cover",
                                   }
             }
@@ -132,7 +133,7 @@ ShallowWrapper {
             >
                         <QuantitySelector
                                     allowZero={true}
-                                    className="absolute t0 l0 transition transition-slide-swap"
+                                    className="absolute t0 l0 transition"
                                     color="seafoam"
                                     onChange={[Function]}
                                     quantity={0}
@@ -143,6 +144,7 @@ ShallowWrapper {
                                     color="white-madison-blue-border"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="+ Add"
                                     onClick={[Function]}
                                     shadow={false}
@@ -164,7 +166,7 @@ ShallowWrapper {
           "props": Object {
             "className": "aspect-5-4 w100",
             "style": Object {
-              "background": "url(foo) no-repeat center",
+              "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
               "backgroundSize": "cover",
             },
           },
@@ -195,7 +197,7 @@ ShallowWrapper {
 >
                 <QuantitySelector
                                 allowZero={true}
-                                className="absolute t0 l0 transition transition-slide-swap"
+                                className="absolute t0 l0 transition"
                                 color="seafoam"
                                 onChange={[Function]}
                                 quantity={0}
@@ -206,6 +208,7 @@ ShallowWrapper {
                                 color="white-madison-blue-border"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="+ Add"
                                 onClick={[Function]}
                                 shadow={false}
@@ -274,7 +277,7 @@ ShallowWrapper {
                 "children": Array [
                   <QuantitySelector
                     allowZero={true}
-                    className="absolute t0 l0 transition transition-slide-swap"
+                    className="absolute t0 l0 transition"
                     color="seafoam"
                     onChange={[Function]}
                     quantity={0}
@@ -285,6 +288,7 @@ ShallowWrapper {
                     color="white-madison-blue-border"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="+ Add"
                     onClick={[Function]}
                     shadow={false}
@@ -303,7 +307,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "allowZero": true,
-                    "className": "absolute t0 l0 transition transition-slide-swap",
+                    "className": "absolute t0 l0 transition",
                     "color": "seafoam",
                     "onChange": [Function],
                     "quantity": 0,
@@ -323,6 +327,7 @@ ShallowWrapper {
                     "color": "white-madison-blue-border",
                     "disabled": false,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "+ Add",
                     "onClick": [Function],
                     "shadow": false,
@@ -358,7 +363,7 @@ ShallowWrapper {
                     className="aspect-5-4 w100"
                     style={
                               Object {
-                                        "background": "url(foo) no-repeat center",
+                                        "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                         "backgroundSize": "cover",
                                       }
                     }
@@ -383,7 +388,7 @@ ShallowWrapper {
                     >
                               <QuantitySelector
                                         allowZero={true}
-                                        className="absolute t0 l0 transition transition-slide-swap"
+                                        className="absolute t0 l0 transition"
                                         color="seafoam"
                                         onChange={[Function]}
                                         quantity={0}
@@ -394,6 +399,7 @@ ShallowWrapper {
                                         color="white-madison-blue-border"
                                         disabled={false}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="+ Add"
                                         onClick={[Function]}
                                         shadow={false}
@@ -417,7 +423,7 @@ ShallowWrapper {
               className="aspect-5-4 w100"
               style={
                             Object {
-                                          "background": "url(foo) no-repeat center",
+                                          "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                           "backgroundSize": "cover",
                                         }
               }
@@ -442,7 +448,7 @@ ShallowWrapper {
               >
                             <QuantitySelector
                                           allowZero={true}
-                                          className="absolute t0 l0 transition transition-slide-swap"
+                                          className="absolute t0 l0 transition"
                                           color="seafoam"
                                           onChange={[Function]}
                                           quantity={0}
@@ -453,6 +459,7 @@ ShallowWrapper {
                                           color="white-madison-blue-border"
                                           disabled={false}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="+ Add"
                                           onClick={[Function]}
                                           shadow={false}
@@ -474,7 +481,7 @@ ShallowWrapper {
             "props": Object {
               "className": "aspect-5-4 w100",
               "style": Object {
-                "background": "url(foo) no-repeat center",
+                "background": "url(foo?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                 "backgroundSize": "cover",
               },
             },
@@ -505,7 +512,7 @@ ShallowWrapper {
 >
                   <QuantitySelector
                                     allowZero={true}
-                                    className="absolute t0 l0 transition transition-slide-swap"
+                                    className="absolute t0 l0 transition"
                                     color="seafoam"
                                     onChange={[Function]}
                                     quantity={0}
@@ -516,6 +523,7 @@ ShallowWrapper {
                                     color="white-madison-blue-border"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="+ Add"
                                     onClick={[Function]}
                                     shadow={false}
@@ -584,7 +592,7 @@ ShallowWrapper {
                   "children": Array [
                     <QuantitySelector
                       allowZero={true}
-                      className="absolute t0 l0 transition transition-slide-swap"
+                      className="absolute t0 l0 transition"
                       color="seafoam"
                       onChange={[Function]}
                       quantity={0}
@@ -595,6 +603,7 @@ ShallowWrapper {
                       color="white-madison-blue-border"
                       disabled={false}
                       fullWidth={false}
+                      hover="shadow"
                       label="+ Add"
                       onClick={[Function]}
                       shadow={false}
@@ -613,7 +622,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "allowZero": true,
-                      "className": "absolute t0 l0 transition transition-slide-swap",
+                      "className": "absolute t0 l0 transition",
                       "color": "seafoam",
                       "onChange": [Function],
                       "quantity": 0,
@@ -633,6 +642,7 @@ ShallowWrapper {
                       "color": "white-madison-blue-border",
                       "disabled": false,
                       "fullWidth": false,
+                      "hover": "shadow",
                       "label": "+ Add",
                       "onClick": [Function],
                       "shadow": false,
@@ -715,7 +725,7 @@ ShallowWrapper {
                 className="aspect-5-4 w100"
                 style={
                         Object {
-                                "background": "url() no-repeat center",
+                                "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                 "backgroundSize": "cover",
                               }
                 }
@@ -739,6 +749,7 @@ ShallowWrapper {
                                 color="white-madison-blue-border"
                                 disabled={true}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="Sold Out"
                                 onClick={[Function]}
                                 shadow={false}
@@ -762,7 +773,7 @@ ShallowWrapper {
             className="aspect-5-4 w100"
             style={
                         Object {
-                                    "background": "url() no-repeat center",
+                                    "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                     "backgroundSize": "cover",
                                   }
             }
@@ -786,6 +797,7 @@ ShallowWrapper {
                                     color="white-madison-blue-border"
                                     disabled={true}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="Sold Out"
                                     onClick={[Function]}
                                     shadow={false}
@@ -807,7 +819,7 @@ ShallowWrapper {
           "props": Object {
             "className": "aspect-5-4 w100",
             "style": Object {
-              "background": "url() no-repeat center",
+              "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
               "backgroundSize": "cover",
             },
           },
@@ -837,6 +849,7 @@ ShallowWrapper {
                                 color="white-madison-blue-border"
                                 disabled={true}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="Sold Out"
                                 onClick={[Function]}
                                 shadow={false}
@@ -903,6 +916,7 @@ ShallowWrapper {
                   color="white-madison-blue-border"
                   disabled={true}
                   fullWidth={false}
+                  hover="shadow"
                   label="Sold Out"
                   onClick={[Function]}
                   shadow={false}
@@ -923,6 +937,7 @@ ShallowWrapper {
                   "color": "white-madison-blue-border",
                   "disabled": true,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "Sold Out",
                   "onClick": [Function],
                   "shadow": false,
@@ -957,7 +972,7 @@ ShallowWrapper {
                     className="aspect-5-4 w100"
                     style={
                               Object {
-                                        "background": "url() no-repeat center",
+                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                         "backgroundSize": "cover",
                                       }
                     }
@@ -981,6 +996,7 @@ ShallowWrapper {
                                         color="white-madison-blue-border"
                                         disabled={true}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="Sold Out"
                                         onClick={[Function]}
                                         shadow={false}
@@ -1004,7 +1020,7 @@ ShallowWrapper {
               className="aspect-5-4 w100"
               style={
                             Object {
-                                          "background": "url() no-repeat center",
+                                          "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                                           "backgroundSize": "cover",
                                         }
               }
@@ -1028,6 +1044,7 @@ ShallowWrapper {
                                           color="white-madison-blue-border"
                                           disabled={true}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="Sold Out"
                                           onClick={[Function]}
                                           shadow={false}
@@ -1049,7 +1066,7 @@ ShallowWrapper {
             "props": Object {
               "className": "aspect-5-4 w100",
               "style": Object {
-                "background": "url() no-repeat center",
+                "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                 "backgroundSize": "cover",
               },
             },
@@ -1079,6 +1096,7 @@ ShallowWrapper {
                                     color="white-madison-blue-border"
                                     disabled={true}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="Sold Out"
                                     onClick={[Function]}
                                     shadow={false}
@@ -1145,6 +1163,7 @@ ShallowWrapper {
                     color="white-madison-blue-border"
                     disabled={true}
                     fullWidth={false}
+                    hover="shadow"
                     label="Sold Out"
                     onClick={[Function]}
                     shadow={false}
@@ -1165,6 +1184,7 @@ ShallowWrapper {
                     "color": "white-madison-blue-border",
                     "disabled": true,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "Sold Out",
                     "onClick": [Function],
                     "shadow": false,
