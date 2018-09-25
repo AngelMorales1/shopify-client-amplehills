@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import productHasHero from 'utils/productHasHero';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
+import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 class ProductDetailView extends Component {
   render() {
@@ -13,20 +14,29 @@ class ProductDetailView extends Component {
     const {
       ourPledge,
       product,
-      product: { blocks, productHero }
+      product: { blocks, productHero, whatsIncluded }
     } = this.props;
 
     return (
       <div className="ProductDetailView">
         <div>
           {productHasHero(product) ? (
-            <ProductHero
-              product={product}
-              ourPledge={ourPledge}
-              productHero={productHero}
-              z={blocks.length + 1}
-              {...this.props}
-            />
+            <Fragment>
+              <ProductHero
+                product={product}
+                ourPledge={ourPledge}
+                productHero={productHero}
+                z={blocks.length + 2}
+                {...this.props}
+              />
+              <ProductWhatsIncluded
+                product={product}
+                ourPledge={ourPledge}
+                whatsIncluded={whatsIncluded}
+                z={blocks.length + 1}
+                {...this.props}
+              />
+            </Fragment>
           ) : null}
           {blocks &&
             blocks.map((block, i) => (

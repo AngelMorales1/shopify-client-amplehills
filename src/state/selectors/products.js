@@ -79,6 +79,22 @@ export default createSelector(
         productHeroTitleBackgroundImagePosition,
         productHeroAlert
       };
+      const whatsIncludedDrip = get(product, 'fields.whatsIncludedDrip', false);
+      const whatsIncludedIllustration = get(
+        product,
+        'fields.whatsIncludedIllustration.fields.file.url',
+        ''
+      );
+      const whatsIncludedProducts = get(
+        product,
+        'fields.whatsIncludedProducts',
+        []
+      );
+      const whatsIncluded = {
+        whatsIncludedDrip,
+        whatsIncludedIllustration,
+        whatsIncludedProducts
+      };
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -110,6 +126,7 @@ export default createSelector(
         preOrderDate,
         cartDetails,
         productHero,
+        whatsIncluded,
         ...shopifyProduct
       };
 

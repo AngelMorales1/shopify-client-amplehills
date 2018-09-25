@@ -9,7 +9,16 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
 
-const ProductWhatsIncluded = ({ block, z, products }) => {
+const ProductWhatsIncluded = ({
+  block,
+  z,
+  products,
+  whatsIncluded: {
+    whatsIncludedDrip,
+    whatsIncludedIllustration,
+    whatsIncludedProducts
+  }
+}) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(
     fields,
@@ -17,14 +26,13 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
     'light-pink'
   )}`;
 
-  const includedItems = get(fields, 'products', []);
-
   return (
     <div
       className={cx(
         styles['ProductWhatsIncluded'],
         styles[colorClass],
-        'flex justify-between drip relative'
+        'flex justify-between relative',
+        { drip: whatsIncludedDrip }
       )}
       style={{ zIndex: z }}
     >
@@ -37,7 +45,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
         What&rsquo;s included
       </h2>
       <div className="flex flex-column col-12 md-col-6">
-        {includedItems.map(includedItem => {
+        {whatsIncludedProducts.map(includedItem => {
           const handle = get(includedItem, 'fields.productHandle', '');
           const product = get(products, handle, {});
 
@@ -65,7 +73,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           );
         })}
       </div>
-      {fields.illustration ? (
+      {whatsIncludedIllustration ? (
         <div
           className={cx(
             styles['ProductWhatsIncluded__illustration'],
@@ -75,11 +83,7 @@ const ProductWhatsIncluded = ({ block, z, products }) => {
           <Image
             className="col-5 md-col-4 mt3"
             alt="what&rsquo;s included image"
-            src={contentfulImgUtil(
-              get(fields, 'illustration.fields.file.url', ''),
-              '600',
-              'png'
-            )}
+            src={contentfulImgUtil(whatsIncludedIllustration, '600', 'png')}
           />
         </div>
       ) : null}
@@ -103,6 +107,11 @@ ProductWhatsIncluded.propTypes = {
       illustration: imageModel.propTypes
     })
   }),
+  whatsIncluded: PropTypes.shape({
+    whatsIncludedDrip: PropTypes.bool,
+    whatsIncludedIllustration: PropTypes.string,
+    whatsIncludedProducts: PropTypes.array
+  }),
   z: PropTypes.number,
   products: PropTypes.objectOf(productModel.propTypes)
 };
@@ -120,6 +129,11 @@ ProductWhatsIncluded.defaultProps = {
       ],
       illustration: null
     }
+  },
+  whatsIncluded: {
+    whatsIncludedDrip: false,
+    whatsIncludedIllustration: '',
+    whatsIncludedProducts: []
   },
   z: 1,
   products: {}
