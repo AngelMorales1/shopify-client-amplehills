@@ -6,7 +6,6 @@ import ProductDetails from 'components/ProductDetails';
 import ImageText from 'components/ImageText';
 import ImageDoubleText from 'components/ImageDoubleText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
-import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import ComicStrip from 'components/ComicStrip';
 import MarkdownBlock from 'components/MarkdownBlock';
 import GenericHero from 'components/GenericHero';
@@ -16,8 +15,6 @@ const BlockSwitch = props => {
   const type = get(block, 'sys.contentType.sys.id');
 
   switch (type) {
-    case 'blockWhatsIncluded':
-      return <ProductWhatsIncluded {...props} />;
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
     case 'blockImageText':
