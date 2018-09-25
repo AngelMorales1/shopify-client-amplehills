@@ -30,6 +30,7 @@ ShallowWrapper {
           color="seafoam-madison-blue-border"
           disabled={false}
           fullWidth={false}
+          hover="shadow"
           label="–"
           onClick={[Function]}
           shadow={false}
@@ -55,6 +56,7 @@ ShallowWrapper {
           color="seafoam-madison-blue-border"
           disabled={false}
           fullWidth={false}
+          hover="shadow"
           label="+"
           onClick={[Function]}
           shadow={false}
@@ -77,6 +79,7 @@ ShallowWrapper {
           "color": "seafoam-madison-blue-border",
           "disabled": false,
           "fullWidth": false,
+          "hover": "shadow",
           "label": "–",
           "onClick": [Function],
           "shadow": false,
@@ -119,6 +122,7 @@ ShallowWrapper {
           "color": "seafoam-madison-blue-border",
           "disabled": false,
           "fullWidth": false,
+          "hover": "shadow",
           "label": "+",
           "onClick": [Function],
           "shadow": false,
@@ -145,6 +149,7 @@ ShallowWrapper {
             color="seafoam-madison-blue-border"
             disabled={false}
             fullWidth={false}
+            hover="shadow"
             label="–"
             onClick={[Function]}
             shadow={false}
@@ -170,6 +175,7 @@ ShallowWrapper {
             color="seafoam-madison-blue-border"
             disabled={false}
             fullWidth={false}
+            hover="shadow"
             label="+"
             onClick={[Function]}
             shadow={false}
@@ -192,6 +198,7 @@ ShallowWrapper {
             "color": "seafoam-madison-blue-border",
             "disabled": false,
             "fullWidth": false,
+            "hover": "shadow",
             "label": "–",
             "onClick": [Function],
             "shadow": false,
@@ -234,6 +241,7 @@ ShallowWrapper {
             "color": "seafoam-madison-blue-border",
             "disabled": false,
             "fullWidth": false,
+            "hover": "shadow",
             "label": "+",
             "onClick": [Function],
             "shadow": false,
@@ -289,6 +297,7 @@ ShallowWrapper {
           color="white-madison-blue-border"
           disabled={false}
           fullWidth={false}
+          hover="shadow"
           label="–"
           onClick={[Function]}
           shadow={false}
@@ -314,6 +323,7 @@ ShallowWrapper {
           color="white-madison-blue-border"
           disabled={false}
           fullWidth={false}
+          hover="shadow"
           label="+"
           onClick={[Function]}
           shadow={false}
@@ -336,6 +346,7 @@ ShallowWrapper {
           "color": "white-madison-blue-border",
           "disabled": false,
           "fullWidth": false,
+          "hover": "shadow",
           "label": "–",
           "onClick": [Function],
           "shadow": false,
@@ -378,6 +389,7 @@ ShallowWrapper {
           "color": "white-madison-blue-border",
           "disabled": false,
           "fullWidth": false,
+          "hover": "shadow",
           "label": "+",
           "onClick": [Function],
           "shadow": false,
@@ -404,6 +416,7 @@ ShallowWrapper {
             color="white-madison-blue-border"
             disabled={false}
             fullWidth={false}
+            hover="shadow"
             label="–"
             onClick={[Function]}
             shadow={false}
@@ -429,6 +442,7 @@ ShallowWrapper {
             color="white-madison-blue-border"
             disabled={false}
             fullWidth={false}
+            hover="shadow"
             label="+"
             onClick={[Function]}
             shadow={false}
@@ -451,6 +465,7 @@ ShallowWrapper {
             "color": "white-madison-blue-border",
             "disabled": false,
             "fullWidth": false,
+            "hover": "shadow",
             "label": "–",
             "onClick": [Function],
             "shadow": false,
@@ -493,6 +508,7 @@ ShallowWrapper {
             "color": "white-madison-blue-border",
             "disabled": false,
             "fullWidth": false,
+            "hover": "shadow",
             "label": "+",
             "onClick": [Function],
             "shadow": false,

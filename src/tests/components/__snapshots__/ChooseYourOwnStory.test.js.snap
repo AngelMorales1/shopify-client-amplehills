@@ -249,10 +249,14 @@ ShallowWrapper {
                                         className="mb4"
                               >
                                         <p
-                                                  className="copy pr2"
-                                        >
-                                                  foo
-                                        </p>
+                                                  className="block-subheadline"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "<p>foo</p>
+                                                            ",
+                                                                    }
+                                                  }
+                                        />
                               </div>
                               <OurPledge
                                         actions={
@@ -297,7 +301,7 @@ ShallowWrapper {
                                         className="small bold"
                               >
                                         Choose 
-                                        4
+                                        Four
                                          Flavors
                               </label>
                               <div
@@ -366,7 +370,7 @@ ShallowWrapper {
                                                             className="small bold"
                                                   >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                                   </span>
                                         </div>
@@ -391,6 +395,7 @@ ShallowWrapper {
                                                   color="white-madison-blue"
                                                   disabled={true}
                                                   fullWidth={false}
+                                                  hover="shadow"
                                                   label=""
                                                   onClick={[Function]}
                                                   shadow={false}
@@ -474,10 +479,14 @@ ShallowWrapper {
                                           className="mb4"
                             >
                                           <p
-                                                        className="copy pr2"
-                                          >
-                                                        foo
-                                          </p>
+                                                        className="block-subheadline"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                      ",
+                                                                                  }
+                                                        }
+                                          />
                             </div>
                             <OurPledge
                                           actions={
@@ -564,10 +573,14 @@ ShallowWrapper {
                                 className="mb4"
                 >
                                 <p
-                                                className="copy pr2"
-                                >
-                                                foo
-                                </p>
+                                                className="block-subheadline"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "<p>foo</p>
+                                                                ",
+                                                                              }
+                                                }
+                                />
                 </div>
                 <OurPledge
                                 actions={
@@ -615,10 +628,14 @@ ShallowWrapper {
                     className="mb4"
 >
                     <p
-                                        className="copy pr2"
-                    >
-                                        foo
-                    </p>
+                                        className="block-subheadline"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "<p>foo</p>
+                                                            ",
+                                                                              }
+                                        }
+                    />
 </div>,
                   <OurPledge
                     actions={
@@ -677,10 +694,14 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <p
-                      className="copy pr2"
->
-                      foo
-</p>,
+                      className="block-subheadline"
+                      dangerouslySetInnerHTML={
+                                            Object {
+                                                                  "__html": "<p>foo</p>
+                                            ",
+                                                                }
+                      }
+/>,
                     "className": "mb4",
                   },
                   "ref": null,
@@ -689,11 +710,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "foo",
-                      "className": "copy pr2",
+                      "className": "block-subheadline",
+                      "dangerouslySetInnerHTML": Object {
+                        "__html": "<p>foo</p>
+",
+                      },
                     },
                     "ref": null,
-                    "rendered": "foo",
+                    "rendered": null,
                     "type": "p",
                   },
                   "type": "div",
@@ -750,7 +774,7 @@ ShallowWrapper {
                                     className="small bold"
                         >
                                     Choose 
-                                    4
+                                    Four
                                      Flavors
                         </label>
                         <div
@@ -819,7 +843,7 @@ ShallowWrapper {
                                                             className="small bold"
                                                 >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                                 </span>
                                     </div>
@@ -844,6 +868,7 @@ ShallowWrapper {
                                                 color="white-madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label=""
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -885,7 +910,7 @@ ShallowWrapper {
                                 className="small bold"
                 >
                                 Choose 
-                                4
+                                Four
                                  Flavors
                 </label>
                 <div
@@ -954,7 +979,7 @@ ShallowWrapper {
                                                                 className="small bold"
                                                 >
                                                                 Choose 
-                                                                4
+                                                                Four
                                                                  Flavors
                                                 </span>
                                 </div>
@@ -979,6 +1004,7 @@ ShallowWrapper {
                                                 color="white-madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label=""
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -1025,7 +1051,7 @@ ShallowWrapper {
                     className="small bold"
 >
                     Choose 
-                    4
+                    Four
                      Flavors
 </label>,
                   <div
@@ -1092,7 +1118,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "Choose ",
-                      4,
+                      "Four",
                       " Flavors",
                     ],
                     "className": "small bold",
@@ -1100,7 +1126,7 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": Array [
                     "Choose ",
-                    4,
+                    "Four",
                     " Flavors",
                   ],
                   "type": "label",
@@ -1329,7 +1355,7 @@ ShallowWrapper {
                                                             className="small bold"
                                         >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                         </span>
                     </div>
@@ -1354,6 +1380,7 @@ ShallowWrapper {
                                         color="white-madison-blue"
                                         disabled={true}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label=""
                                         onClick={[Function]}
                                         shadow={false}
@@ -1389,7 +1416,7 @@ ShallowWrapper {
                                             className="small bold"
                       >
                                             Choose 
-                                            4
+                                            Four
                                              Flavors
                       </span>
 </div>,
@@ -1405,7 +1432,7 @@ ShallowWrapper {
                         className="small bold"
 >
                         Choose 
-                        4
+                        Four
                          Flavors
 </span>,
                       "className": "col col-12",
@@ -1418,7 +1445,7 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           "Choose ",
-                          4,
+                          "Four",
                           " Flavors",
                         ],
                         "className": "small bold",
@@ -1426,7 +1453,7 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": Array [
                         "Choose ",
-                        4,
+                        "Four",
                         " Flavors",
                       ],
                       "type": "span",
@@ -1479,6 +1506,7 @@ ShallowWrapper {
                       color="white-madison-blue"
                       disabled={true}
                       fullWidth={false}
+                      hover="shadow"
                       label=""
                       onClick={[Function]}
                       shadow={false}
@@ -1519,6 +1547,7 @@ ShallowWrapper {
                       "color": "white-madison-blue",
                       "disabled": true,
                       "fullWidth": false,
+                      "hover": "shadow",
                       "label": "",
                       "onClick": [Function],
                       "shadow": false,
@@ -1628,10 +1657,14 @@ ShallowWrapper {
                                                 className="mb4"
                                     >
                                                 <p
-                                                            className="copy pr2"
-                                                >
-                                                            foo
-                                                </p>
+                                                            className="block-subheadline"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "<p>foo</p>
+                                                                        ",
+                                                                                  }
+                                                            }
+                                                />
                                     </div>
                                     <OurPledge
                                                 actions={
@@ -1676,7 +1709,7 @@ ShallowWrapper {
                                                 className="small bold"
                                     >
                                                 Choose 
-                                                4
+                                                Four
                                                  Flavors
                                     </label>
                                     <div
@@ -1745,7 +1778,7 @@ ShallowWrapper {
                                                                         className="small bold"
                                                             >
                                                                         Choose 
-                                                                        4
+                                                                        Four
                                                                          Flavors
                                                             </span>
                                                 </div>
@@ -1770,6 +1803,7 @@ ShallowWrapper {
                                                             color="white-madison-blue"
                                                             disabled={true}
                                                             fullWidth={false}
+                                                            hover="shadow"
                                                             label=""
                                                             onClick={[Function]}
                                                             shadow={false}
@@ -1853,10 +1887,14 @@ ShallowWrapper {
                                                 className="mb4"
                                 >
                                                 <p
-                                                                className="copy pr2"
-                                                >
-                                                                foo
-                                                </p>
+                                                                className="block-subheadline"
+                                                                dangerouslySetInnerHTML={
+                                                                                Object {
+                                                                                                "__html": "<p>foo</p>
+                                                                                ",
+                                                                                              }
+                                                                }
+                                                />
                                 </div>
                                 <OurPledge
                                                 actions={
@@ -1943,10 +1981,14 @@ ShallowWrapper {
                                     className="mb4"
                   >
                                     <p
-                                                      className="copy pr2"
-                                    >
-                                                      foo
-                                    </p>
+                                                      className="block-subheadline"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "<p>foo</p>
+                                                                        ",
+                                                                                        }
+                                                      }
+                                    />
                   </div>
                   <OurPledge
                                     actions={
@@ -1994,10 +2036,14 @@ ShallowWrapper {
                       className="mb4"
 >
                       <p
-                                            className="copy pr2"
-                      >
-                                            foo
-                      </p>
+                                            className="block-subheadline"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "<p>foo</p>
+                                                                  ",
+                                                                                      }
+                                            }
+                      />
 </div>,
                     <OurPledge
                       actions={
@@ -2056,10 +2102,14 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <p
-                        className="copy pr2"
->
-                        foo
-</p>,
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "<p>foo</p>
+                                                ",
+                                                                      }
+                        }
+/>,
                       "className": "mb4",
                     },
                     "ref": null,
@@ -2068,11 +2118,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "foo",
-                        "className": "copy pr2",
+                        "className": "block-subheadline",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "<p>foo</p>
+",
+                        },
                       },
                       "ref": null,
-                      "rendered": "foo",
+                      "rendered": null,
                       "type": "p",
                     },
                     "type": "div",
@@ -2129,7 +2182,7 @@ ShallowWrapper {
                                           className="small bold"
                             >
                                           Choose 
-                                          4
+                                          Four
                                            Flavors
                             </label>
                             <div
@@ -2198,7 +2251,7 @@ ShallowWrapper {
                                                                       className="small bold"
                                                         >
                                                                       Choose 
-                                                                      4
+                                                                      Four
                                                                        Flavors
                                                         </span>
                                           </div>
@@ -2223,6 +2276,7 @@ ShallowWrapper {
                                                         color="white-madison-blue"
                                                         disabled={true}
                                                         fullWidth={false}
+                                                        hover="shadow"
                                                         label=""
                                                         onClick={[Function]}
                                                         shadow={false}
@@ -2264,7 +2318,7 @@ ShallowWrapper {
                                     className="small bold"
                   >
                                     Choose 
-                                    4
+                                    Four
                                      Flavors
                   </label>
                   <div
@@ -2333,7 +2387,7 @@ ShallowWrapper {
                                                                         className="small bold"
                                                       >
                                                                         Choose 
-                                                                        4
+                                                                        Four
                                                                          Flavors
                                                       </span>
                                     </div>
@@ -2358,6 +2412,7 @@ ShallowWrapper {
                                                       color="white-madison-blue"
                                                       disabled={true}
                                                       fullWidth={false}
+                                                      hover="shadow"
                                                       label=""
                                                       onClick={[Function]}
                                                       shadow={false}
@@ -2404,7 +2459,7 @@ ShallowWrapper {
                       className="small bold"
 >
                       Choose 
-                      4
+                      Four
                        Flavors
 </label>,
                     <div
@@ -2471,7 +2526,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "Choose ",
-                        4,
+                        "Four",
                         " Flavors",
                       ],
                       "className": "small bold",
@@ -2479,7 +2534,7 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": Array [
                       "Choose ",
-                      4,
+                      "Four",
                       " Flavors",
                     ],
                     "type": "label",
@@ -2708,7 +2763,7 @@ ShallowWrapper {
                                                                   className="small bold"
                                             >
                                                                   Choose 
-                                                                  4
+                                                                  Four
                                                                    Flavors
                                             </span>
                       </div>
@@ -2733,6 +2788,7 @@ ShallowWrapper {
                                             color="white-madison-blue"
                                             disabled={true}
                                             fullWidth={false}
+                                            hover="shadow"
                                             label=""
                                             onClick={[Function]}
                                             shadow={false}
@@ -2768,7 +2824,7 @@ ShallowWrapper {
                                                 className="small bold"
                         >
                                                 Choose 
-                                                4
+                                                Four
                                                  Flavors
                         </span>
 </div>,
@@ -2784,7 +2840,7 @@ ShallowWrapper {
                           className="small bold"
 >
                           Choose 
-                          4
+                          Four
                            Flavors
 </span>,
                         "className": "col col-12",
@@ -2797,7 +2853,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             "Choose ",
-                            4,
+                            "Four",
                             " Flavors",
                           ],
                           "className": "small bold",
@@ -2805,7 +2861,7 @@ ShallowWrapper {
                         "ref": null,
                         "rendered": Array [
                           "Choose ",
-                          4,
+                          "Four",
                           " Flavors",
                         ],
                         "type": "span",
@@ -2858,6 +2914,7 @@ ShallowWrapper {
                         color="white-madison-blue"
                         disabled={true}
                         fullWidth={false}
+                        hover="shadow"
                         label=""
                         onClick={[Function]}
                         shadow={false}
@@ -2898,6 +2955,7 @@ ShallowWrapper {
                         "color": "white-madison-blue",
                         "disabled": true,
                         "fullWidth": false,
+                        "hover": "shadow",
                         "label": "",
                         "onClick": [Function],
                         "shadow": false,
@@ -3076,7 +3134,12 @@ ShallowWrapper {
                                         className="mb4"
                               >
                                         <p
-                                                  className="copy pr2"
+                                                  className="block-subheadline"
+                                                  dangerouslySetInnerHTML={
+                                                            Object {
+                                                                      "__html": "",
+                                                                    }
+                                                  }
                                         />
                               </div>
                               <OurPledge
@@ -3138,7 +3201,7 @@ ShallowWrapper {
                                         className="small bold"
                               >
                                         Choose 
-                                        4
+                                        Four
                                          Flavors
                               </label>
                               <div
@@ -3207,7 +3270,7 @@ ShallowWrapper {
                                                             className="small bold"
                                                   >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                                   </span>
                                         </div>
@@ -3232,6 +3295,7 @@ ShallowWrapper {
                                                   color="white-madison-blue"
                                                   disabled={true}
                                                   fullWidth={false}
+                                                  hover="shadow"
                                                   label=""
                                                   onClick={[Function]}
                                                   shadow={false}
@@ -3308,7 +3372,12 @@ ShallowWrapper {
                                           className="mb4"
                             >
                                           <p
-                                                        className="copy pr2"
+                                                        className="block-subheadline"
+                                                        dangerouslySetInnerHTML={
+                                                                      Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                        }
                                           />
                             </div>
                             <OurPledge
@@ -3388,7 +3457,12 @@ ShallowWrapper {
                                 className="mb4"
                 >
                                 <p
-                                                className="copy pr2"
+                                                className="block-subheadline"
+                                                dangerouslySetInnerHTML={
+                                                                Object {
+                                                                                "__html": "",
+                                                                              }
+                                                }
                                 />
                 </div>
                 <OurPledge
@@ -3451,7 +3525,12 @@ ShallowWrapper {
                     className="mb4"
 >
                     <p
-                                        className="copy pr2"
+                                        className="block-subheadline"
+                                        dangerouslySetInnerHTML={
+                                                            Object {
+                                                                                "__html": "",
+                                                                              }
+                                        }
                     />
 </div>,
                   <OurPledge
@@ -3527,7 +3606,12 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <p
-                      className="copy pr2"
+                      className="block-subheadline"
+                      dangerouslySetInnerHTML={
+                                            Object {
+                                                                  "__html": "",
+                                                                }
+                      }
 />,
                     "className": "mb4",
                   },
@@ -3537,11 +3621,13 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "",
-                      "className": "copy pr2",
+                      "className": "block-subheadline",
+                      "dangerouslySetInnerHTML": Object {
+                        "__html": "",
+                      },
                     },
                     "ref": null,
-                    "rendered": "",
+                    "rendered": null,
                     "type": "p",
                   },
                   "type": "div",
@@ -3614,7 +3700,7 @@ ShallowWrapper {
                                     className="small bold"
                         >
                                     Choose 
-                                    4
+                                    Four
                                      Flavors
                         </label>
                         <div
@@ -3683,7 +3769,7 @@ ShallowWrapper {
                                                             className="small bold"
                                                 >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                                 </span>
                                     </div>
@@ -3708,6 +3794,7 @@ ShallowWrapper {
                                                 color="white-madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label=""
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -3749,7 +3836,7 @@ ShallowWrapper {
                                 className="small bold"
                 >
                                 Choose 
-                                4
+                                Four
                                  Flavors
                 </label>
                 <div
@@ -3818,7 +3905,7 @@ ShallowWrapper {
                                                                 className="small bold"
                                                 >
                                                                 Choose 
-                                                                4
+                                                                Four
                                                                  Flavors
                                                 </span>
                                 </div>
@@ -3843,6 +3930,7 @@ ShallowWrapper {
                                                 color="white-madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label=""
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -3889,7 +3977,7 @@ ShallowWrapper {
                     className="small bold"
 >
                     Choose 
-                    4
+                    Four
                      Flavors
 </label>,
                   <div
@@ -3956,7 +4044,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       "Choose ",
-                      4,
+                      "Four",
                       " Flavors",
                     ],
                     "className": "small bold",
@@ -3964,7 +4052,7 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": Array [
                     "Choose ",
-                    4,
+                    "Four",
                     " Flavors",
                   ],
                   "type": "label",
@@ -4193,7 +4281,7 @@ ShallowWrapper {
                                                             className="small bold"
                                         >
                                                             Choose 
-                                                            4
+                                                            Four
                                                              Flavors
                                         </span>
                     </div>
@@ -4218,6 +4306,7 @@ ShallowWrapper {
                                         color="white-madison-blue"
                                         disabled={true}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label=""
                                         onClick={[Function]}
                                         shadow={false}
@@ -4253,7 +4342,7 @@ ShallowWrapper {
                                             className="small bold"
                       >
                                             Choose 
-                                            4
+                                            Four
                                              Flavors
                       </span>
 </div>,
@@ -4269,7 +4358,7 @@ ShallowWrapper {
                         className="small bold"
 >
                         Choose 
-                        4
+                        Four
                          Flavors
 </span>,
                       "className": "col col-12",
@@ -4282,7 +4371,7 @@ ShallowWrapper {
                       "props": Object {
                         "children": Array [
                           "Choose ",
-                          4,
+                          "Four",
                           " Flavors",
                         ],
                         "className": "small bold",
@@ -4290,7 +4379,7 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": Array [
                         "Choose ",
-                        4,
+                        "Four",
                         " Flavors",
                       ],
                       "type": "span",
@@ -4343,6 +4432,7 @@ ShallowWrapper {
                       color="white-madison-blue"
                       disabled={true}
                       fullWidth={false}
+                      hover="shadow"
                       label=""
                       onClick={[Function]}
                       shadow={false}
@@ -4383,6 +4473,7 @@ ShallowWrapper {
                       "color": "white-madison-blue",
                       "disabled": true,
                       "fullWidth": false,
+                      "hover": "shadow",
                       "label": "",
                       "onClick": [Function],
                       "shadow": false,
@@ -4485,7 +4576,12 @@ ShallowWrapper {
                                                 className="mb4"
                                     >
                                                 <p
-                                                            className="copy pr2"
+                                                            className="block-subheadline"
+                                                            dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                    "__html": "",
+                                                                                  }
+                                                            }
                                                 />
                                     </div>
                                     <OurPledge
@@ -4547,7 +4643,7 @@ ShallowWrapper {
                                                 className="small bold"
                                     >
                                                 Choose 
-                                                4
+                                                Four
                                                  Flavors
                                     </label>
                                     <div
@@ -4616,7 +4712,7 @@ ShallowWrapper {
                                                                         className="small bold"
                                                             >
                                                                         Choose 
-                                                                        4
+                                                                        Four
                                                                          Flavors
                                                             </span>
                                                 </div>
@@ -4641,6 +4737,7 @@ ShallowWrapper {
                                                             color="white-madison-blue"
                                                             disabled={true}
                                                             fullWidth={false}
+                                                            hover="shadow"
                                                             label=""
                                                             onClick={[Function]}
                                                             shadow={false}
@@ -4717,7 +4814,12 @@ ShallowWrapper {
                                                 className="mb4"
                                 >
                                                 <p
-                                                                className="copy pr2"
+                                                                className="block-subheadline"
+                                                                dangerouslySetInnerHTML={
+                                                                                Object {
+                                                                                                "__html": "",
+                                                                                              }
+                                                                }
                                                 />
                                 </div>
                                 <OurPledge
@@ -4797,7 +4899,12 @@ ShallowWrapper {
                                     className="mb4"
                   >
                                     <p
-                                                      className="copy pr2"
+                                                      className="block-subheadline"
+                                                      dangerouslySetInnerHTML={
+                                                                        Object {
+                                                                                          "__html": "",
+                                                                                        }
+                                                      }
                                     />
                   </div>
                   <OurPledge
@@ -4860,7 +4967,12 @@ ShallowWrapper {
                       className="mb4"
 >
                       <p
-                                            className="copy pr2"
+                                            className="block-subheadline"
+                                            dangerouslySetInnerHTML={
+                                                                  Object {
+                                                                                        "__html": "",
+                                                                                      }
+                                            }
                       />
 </div>,
                     <OurPledge
@@ -4936,7 +5048,12 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <p
-                        className="copy pr2"
+                        className="block-subheadline"
+                        dangerouslySetInnerHTML={
+                                                Object {
+                                                                        "__html": "",
+                                                                      }
+                        }
 />,
                       "className": "mb4",
                     },
@@ -4946,11 +5063,13 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "",
-                        "className": "copy pr2",
+                        "className": "block-subheadline",
+                        "dangerouslySetInnerHTML": Object {
+                          "__html": "",
+                        },
                       },
                       "ref": null,
-                      "rendered": "",
+                      "rendered": null,
                       "type": "p",
                     },
                     "type": "div",
@@ -5023,7 +5142,7 @@ ShallowWrapper {
                                           className="small bold"
                             >
                                           Choose 
-                                          4
+                                          Four
                                            Flavors
                             </label>
                             <div
@@ -5092,7 +5211,7 @@ ShallowWrapper {
                                                                       className="small bold"
                                                         >
                                                                       Choose 
-                                                                      4
+                                                                      Four
                                                                        Flavors
                                                         </span>
                                           </div>
@@ -5117,6 +5236,7 @@ ShallowWrapper {
                                                         color="white-madison-blue"
                                                         disabled={true}
                                                         fullWidth={false}
+                                                        hover="shadow"
                                                         label=""
                                                         onClick={[Function]}
                                                         shadow={false}
@@ -5158,7 +5278,7 @@ ShallowWrapper {
                                     className="small bold"
                   >
                                     Choose 
-                                    4
+                                    Four
                                      Flavors
                   </label>
                   <div
@@ -5227,7 +5347,7 @@ ShallowWrapper {
                                                                         className="small bold"
                                                       >
                                                                         Choose 
-                                                                        4
+                                                                        Four
                                                                          Flavors
                                                       </span>
                                     </div>
@@ -5252,6 +5372,7 @@ ShallowWrapper {
                                                       color="white-madison-blue"
                                                       disabled={true}
                                                       fullWidth={false}
+                                                      hover="shadow"
                                                       label=""
                                                       onClick={[Function]}
                                                       shadow={false}
@@ -5298,7 +5419,7 @@ ShallowWrapper {
                       className="small bold"
 >
                       Choose 
-                      4
+                      Four
                        Flavors
 </label>,
                     <div
@@ -5365,7 +5486,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         "Choose ",
-                        4,
+                        "Four",
                         " Flavors",
                       ],
                       "className": "small bold",
@@ -5373,7 +5494,7 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": Array [
                       "Choose ",
-                      4,
+                      "Four",
                       " Flavors",
                     ],
                     "type": "label",
@@ -5602,7 +5723,7 @@ ShallowWrapper {
                                                                   className="small bold"
                                             >
                                                                   Choose 
-                                                                  4
+                                                                  Four
                                                                    Flavors
                                             </span>
                       </div>
@@ -5627,6 +5748,7 @@ ShallowWrapper {
                                             color="white-madison-blue"
                                             disabled={true}
                                             fullWidth={false}
+                                            hover="shadow"
                                             label=""
                                             onClick={[Function]}
                                             shadow={false}
@@ -5662,7 +5784,7 @@ ShallowWrapper {
                                                 className="small bold"
                         >
                                                 Choose 
-                                                4
+                                                Four
                                                  Flavors
                         </span>
 </div>,
@@ -5678,7 +5800,7 @@ ShallowWrapper {
                           className="small bold"
 >
                           Choose 
-                          4
+                          Four
                            Flavors
 </span>,
                         "className": "col col-12",
@@ -5691,7 +5813,7 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             "Choose ",
-                            4,
+                            "Four",
                             " Flavors",
                           ],
                           "className": "small bold",
@@ -5699,7 +5821,7 @@ ShallowWrapper {
                         "ref": null,
                         "rendered": Array [
                           "Choose ",
-                          4,
+                          "Four",
                           " Flavors",
                         ],
                         "type": "span",
@@ -5752,6 +5874,7 @@ ShallowWrapper {
                         color="white-madison-blue"
                         disabled={true}
                         fullWidth={false}
+                        hover="shadow"
                         label=""
                         onClick={[Function]}
                         shadow={false}
@@ -5792,6 +5915,7 @@ ShallowWrapper {
                         "color": "white-madison-blue",
                         "disabled": true,
                         "fullWidth": false,
+                        "hover": "shadow",
                         "label": "",
                         "onClick": [Function],
                         "shadow": false,

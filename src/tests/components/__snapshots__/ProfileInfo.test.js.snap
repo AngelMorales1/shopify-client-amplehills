@@ -62,84 +62,101 @@ ShallowWrapper {
           className="card card--light-gray-border p3 my2"
 >
           <div
-                    className="relative"
+                    className="flex flex-column"
           >
-                    <strong
-                              className="bold block mb2"
+                    <div
+                              className="w100 flex flex-row justify-between"
                     >
-                              Email Address
-                    </strong>
-                    <p>
+                              <strong
+                                        className="bold block mb2"
+                              >
+                                        Email Address
+                              </strong>
+                              <Button
+                                        className="text-peach"
+                                        color="white-denim"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="underline-peach"
+                                        label="Edit"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="style-none"
+                              />
+                    </div>
+                    <p
+                              className="wrap"
+                    >
                               foo
                     </p>
-                    <Button
-                              className="text-peach absolute t0 r0"
-                              color="white-denim"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Edit"
-                              onClick={[Function]}
-                              shadow={false}
-                              to=""
-                              type="button"
-                              variant="no-style"
-                    />
           </div>
 </div>,
         <div
           className="card card--light-gray-border p3 my2"
 >
           <div
-                    className="relative"
+                    className="flex flex-column"
           >
-                    <strong
-                              className="bold block mb2"
+                    <div
+                              className="w100 flex flex-row justify-between"
                     >
-                              Phone Number
-                    </strong>
+                              <strong
+                                        className="bold block mb2"
+                              >
+                                        Phone Number
+                              </strong>
+                              <Button
+                                        className="text-peach"
+                                        color="white-denim"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="underline-peach"
+                                        label="Edit"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="style-none"
+                              />
+                    </div>
                     <p>
                               foo
                     </p>
-                    <Button
-                              className="text-peach absolute t0 r0"
-                              color="white-denim"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Edit"
-                              onClick={[Function]}
-                              shadow={false}
-                              to=""
-                              type="button"
-                              variant="no-style"
-                    />
           </div>
 </div>,
         <div
           className="card card--light-gray-border p3 my2"
 >
           <div
-                    className="relative"
+                    className="flex flex-column"
           >
-                    <strong
-                              className="bold block mb2"
+                    <div
+                              className="w100 flex flex-row justify-between"
                     >
-                              Password
-                    </strong>
+                              <strong
+                                        className="bold block mb2"
+                              >
+                                        Password
+                              </strong>
+                              <Button
+                                        className="text-peach"
+                                        color="white-denim"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="underline-peach"
+                                        label="Edit"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="style-none"
+                              />
+                    </div>
                     <p>
                               • • • • • • • • • •
                     </p>
-                    <Button
-                              className="text-peach absolute t0 r0"
-                              color="white-denim"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Edit"
-                              onClick={[Function]}
-                              shadow={false}
-                              to=""
-                              type="button"
-                              variant="no-style"
-                    />
           </div>
 </div>,
         null,
@@ -194,28 +211,35 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="relative"
+            className="flex flex-column"
 >
-            <strong
-                        className="bold block mb2"
+            <div
+                        className="w100 flex flex-row justify-between"
             >
-                        Email Address
-            </strong>
-            <p>
+                        <strong
+                                    className="bold block mb2"
+                        >
+                                    Email Address
+                        </strong>
+                        <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                        />
+            </div>
+            <p
+                        className="wrap"
+            >
                         foo
             </p>
-            <Button
-                        className="text-peach absolute t0 r0"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Edit"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="no-style"
-            />
 </div>,
           "className": "card card--light-gray-border p3 my2",
         },
@@ -226,28 +250,35 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <strong
-                className="bold block mb2"
+              <div
+                className="w100 flex flex-row justify-between"
 >
-                Email Address
-</strong>,
-              <p>
+                <strong
+                                className="bold block mb2"
+                >
+                                Email Address
+                </strong>
+                <Button
+                                className="text-peach"
+                                color="white-denim"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="underline-peach"
+                                label="Edit"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="style-none"
+                />
+</div>,
+              <p
+                className="wrap"
+>
                 foo
 </p>,
-              <Button
-                className="text-peach absolute t0 r0"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Edit"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="no-style"
-/>,
             ],
-            "className": "relative",
+            "className": "flex flex-column",
           },
           "ref": null,
           "rendered": Array [
@@ -256,12 +287,66 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Email Address",
-                "className": "bold block mb2",
+                "children": Array [
+                  <strong
+                    className="bold block mb2"
+>
+                    Email Address
+</strong>,
+                  <Button
+                    className="text-peach"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="underline-peach"
+                    label="Edit"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="style-none"
+/>,
+                ],
+                "className": "w100 flex flex-row justify-between",
               },
               "ref": null,
-              "rendered": "Email Address",
-              "type": "strong",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Email Address",
+                    "className": "bold block mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Email Address",
+                  "type": "strong",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "text-peach",
+                    "color": "white-denim",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "underline-peach",
+                    "label": "Edit",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "style-none",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -269,31 +354,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "foo",
+                "className": "wrap",
               },
               "ref": null,
               "rendered": "foo",
               "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "text-peach absolute t0 r0",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Edit",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "no-style",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
             },
           ],
           "type": "div",
@@ -306,28 +371,33 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="relative"
+            className="flex flex-column"
 >
-            <strong
-                        className="bold block mb2"
+            <div
+                        className="w100 flex flex-row justify-between"
             >
-                        Phone Number
-            </strong>
+                        <strong
+                                    className="bold block mb2"
+                        >
+                                    Phone Number
+                        </strong>
+                        <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                        />
+            </div>
             <p>
                         foo
             </p>
-            <Button
-                        className="text-peach absolute t0 r0"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Edit"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="no-style"
-            />
 </div>,
           "className": "card card--light-gray-border p3 my2",
         },
@@ -338,28 +408,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <strong
-                className="bold block mb2"
+              <div
+                className="w100 flex flex-row justify-between"
 >
-                Phone Number
-</strong>,
+                <strong
+                                className="bold block mb2"
+                >
+                                Phone Number
+                </strong>
+                <Button
+                                className="text-peach"
+                                color="white-denim"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="underline-peach"
+                                label="Edit"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="style-none"
+                />
+</div>,
               <p>
                 foo
 </p>,
-              <Button
-                className="text-peach absolute t0 r0"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Edit"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="no-style"
-/>,
             ],
-            "className": "relative",
+            "className": "flex flex-column",
           },
           "ref": null,
           "rendered": Array [
@@ -368,12 +443,66 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Phone Number",
-                "className": "bold block mb2",
+                "children": Array [
+                  <strong
+                    className="bold block mb2"
+>
+                    Phone Number
+</strong>,
+                  <Button
+                    className="text-peach"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="underline-peach"
+                    label="Edit"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="style-none"
+/>,
+                ],
+                "className": "w100 flex flex-row justify-between",
               },
               "ref": null,
-              "rendered": "Phone Number",
-              "type": "strong",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Phone Number",
+                    "className": "bold block mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Phone Number",
+                  "type": "strong",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "text-peach",
+                    "color": "white-denim",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "underline-peach",
+                    "label": "Edit",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "style-none",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -386,27 +515,6 @@ ShallowWrapper {
               "rendered": "foo",
               "type": "p",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "text-peach absolute t0 r0",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Edit",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "no-style",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
           ],
           "type": "div",
         },
@@ -418,28 +526,33 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="relative"
+            className="flex flex-column"
 >
-            <strong
-                        className="bold block mb2"
+            <div
+                        className="w100 flex flex-row justify-between"
             >
-                        Password
-            </strong>
+                        <strong
+                                    className="bold block mb2"
+                        >
+                                    Password
+                        </strong>
+                        <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                        />
+            </div>
             <p>
                         • • • • • • • • • •
             </p>
-            <Button
-                        className="text-peach absolute t0 r0"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Edit"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="no-style"
-            />
 </div>,
           "className": "card card--light-gray-border p3 my2",
         },
@@ -450,28 +563,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <strong
-                className="bold block mb2"
+              <div
+                className="w100 flex flex-row justify-between"
 >
-                Password
-</strong>,
+                <strong
+                                className="bold block mb2"
+                >
+                                Password
+                </strong>
+                <Button
+                                className="text-peach"
+                                color="white-denim"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="underline-peach"
+                                label="Edit"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="style-none"
+                />
+</div>,
               <p>
                 • • • • • • • • • •
 </p>,
-              <Button
-                className="text-peach absolute t0 r0"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Edit"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="no-style"
-/>,
             ],
-            "className": "relative",
+            "className": "flex flex-column",
           },
           "ref": null,
           "rendered": Array [
@@ -480,12 +598,66 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Password",
-                "className": "bold block mb2",
+                "children": Array [
+                  <strong
+                    className="bold block mb2"
+>
+                    Password
+</strong>,
+                  <Button
+                    className="text-peach"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="underline-peach"
+                    label="Edit"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="style-none"
+/>,
+                ],
+                "className": "w100 flex flex-row justify-between",
               },
               "ref": null,
-              "rendered": "Password",
-              "type": "strong",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Password",
+                    "className": "bold block mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Password",
+                  "type": "strong",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "text-peach",
+                    "color": "white-denim",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "underline-peach",
+                    "label": "Edit",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "style-none",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -497,27 +669,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": "• • • • • • • • • •",
               "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "text-peach absolute t0 r0",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Edit",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "no-style",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
             },
           ],
           "type": "div",
@@ -556,84 +707,101 @@ ShallowWrapper {
             className="card card--light-gray-border p3 my2"
 >
             <div
-                        className="relative"
+                        className="flex flex-column"
             >
-                        <strong
-                                    className="bold block mb2"
+                        <div
+                                    className="w100 flex flex-row justify-between"
                         >
-                                    Email Address
-                        </strong>
-                        <p>
+                                    <strong
+                                                className="bold block mb2"
+                                    >
+                                                Email Address
+                                    </strong>
+                                    <Button
+                                                className="text-peach"
+                                                color="white-denim"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="underline-peach"
+                                                label="Edit"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="style-none"
+                                    />
+                        </div>
+                        <p
+                                    className="wrap"
+                        >
                                     foo
                         </p>
-                        <Button
-                                    className="text-peach absolute t0 r0"
-                                    color="white-denim"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Edit"
-                                    onClick={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="no-style"
-                        />
             </div>
 </div>,
           <div
             className="card card--light-gray-border p3 my2"
 >
             <div
-                        className="relative"
+                        className="flex flex-column"
             >
-                        <strong
-                                    className="bold block mb2"
+                        <div
+                                    className="w100 flex flex-row justify-between"
                         >
-                                    Phone Number
-                        </strong>
+                                    <strong
+                                                className="bold block mb2"
+                                    >
+                                                Phone Number
+                                    </strong>
+                                    <Button
+                                                className="text-peach"
+                                                color="white-denim"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="underline-peach"
+                                                label="Edit"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="style-none"
+                                    />
+                        </div>
                         <p>
                                     foo
                         </p>
-                        <Button
-                                    className="text-peach absolute t0 r0"
-                                    color="white-denim"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Edit"
-                                    onClick={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="no-style"
-                        />
             </div>
 </div>,
           <div
             className="card card--light-gray-border p3 my2"
 >
             <div
-                        className="relative"
+                        className="flex flex-column"
             >
-                        <strong
-                                    className="bold block mb2"
+                        <div
+                                    className="w100 flex flex-row justify-between"
                         >
-                                    Password
-                        </strong>
+                                    <strong
+                                                className="bold block mb2"
+                                    >
+                                                Password
+                                    </strong>
+                                    <Button
+                                                className="text-peach"
+                                                color="white-denim"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="underline-peach"
+                                                label="Edit"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="style-none"
+                                    />
+                        </div>
                         <p>
                                     • • • • • • • • • •
                         </p>
-                        <Button
-                                    className="text-peach absolute t0 r0"
-                                    color="white-denim"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Edit"
-                                    onClick={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="no-style"
-                        />
             </div>
 </div>,
           null,
@@ -688,28 +856,35 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="relative"
+              className="flex flex-column"
 >
-              <strong
-                            className="bold block mb2"
+              <div
+                            className="w100 flex flex-row justify-between"
               >
-                            Email Address
-              </strong>
-              <p>
+                            <strong
+                                          className="bold block mb2"
+                            >
+                                          Email Address
+                            </strong>
+                            <Button
+                                          className="text-peach"
+                                          color="white-denim"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="underline-peach"
+                                          label="Edit"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="style-none"
+                            />
+              </div>
+              <p
+                            className="wrap"
+              >
                             foo
               </p>
-              <Button
-                            className="text-peach absolute t0 r0"
-                            color="white-denim"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Edit"
-                            onClick={[Function]}
-                            shadow={false}
-                            to=""
-                            type="button"
-                            variant="no-style"
-              />
 </div>,
             "className": "card card--light-gray-border p3 my2",
           },
@@ -720,28 +895,35 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <strong
-                  className="bold block mb2"
+                <div
+                  className="w100 flex flex-row justify-between"
 >
-                  Email Address
-</strong>,
-                <p>
+                  <strong
+                                    className="bold block mb2"
+                  >
+                                    Email Address
+                  </strong>
+                  <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                  />
+</div>,
+                <p
+                  className="wrap"
+>
                   foo
 </p>,
-                <Button
-                  className="text-peach absolute t0 r0"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Edit"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="no-style"
-/>,
               ],
-              "className": "relative",
+              "className": "flex flex-column",
             },
             "ref": null,
             "rendered": Array [
@@ -750,12 +932,66 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Email Address",
-                  "className": "bold block mb2",
+                  "children": Array [
+                    <strong
+                      className="bold block mb2"
+>
+                      Email Address
+</strong>,
+                    <Button
+                      className="text-peach"
+                      color="white-denim"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="underline-peach"
+                      label="Edit"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="style-none"
+/>,
+                  ],
+                  "className": "w100 flex flex-row justify-between",
                 },
                 "ref": null,
-                "rendered": "Email Address",
-                "type": "strong",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Email Address",
+                      "className": "bold block mb2",
+                    },
+                    "ref": null,
+                    "rendered": "Email Address",
+                    "type": "strong",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "text-peach",
+                      "color": "white-denim",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "underline-peach",
+                      "label": "Edit",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "style-none",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -763,31 +999,11 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "foo",
+                  "className": "wrap",
                 },
                 "ref": null,
                 "rendered": "foo",
                 "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "className": "text-peach absolute t0 r0",
-                  "color": "white-denim",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Edit",
-                  "onClick": [Function],
-                  "shadow": false,
-                  "to": "",
-                  "type": "button",
-                  "variant": "no-style",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
               },
             ],
             "type": "div",
@@ -800,28 +1016,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="relative"
+              className="flex flex-column"
 >
-              <strong
-                            className="bold block mb2"
+              <div
+                            className="w100 flex flex-row justify-between"
               >
-                            Phone Number
-              </strong>
+                            <strong
+                                          className="bold block mb2"
+                            >
+                                          Phone Number
+                            </strong>
+                            <Button
+                                          className="text-peach"
+                                          color="white-denim"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="underline-peach"
+                                          label="Edit"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="style-none"
+                            />
+              </div>
               <p>
                             foo
               </p>
-              <Button
-                            className="text-peach absolute t0 r0"
-                            color="white-denim"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Edit"
-                            onClick={[Function]}
-                            shadow={false}
-                            to=""
-                            type="button"
-                            variant="no-style"
-              />
 </div>,
             "className": "card card--light-gray-border p3 my2",
           },
@@ -832,28 +1053,33 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <strong
-                  className="bold block mb2"
+                <div
+                  className="w100 flex flex-row justify-between"
 >
-                  Phone Number
-</strong>,
+                  <strong
+                                    className="bold block mb2"
+                  >
+                                    Phone Number
+                  </strong>
+                  <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                  />
+</div>,
                 <p>
                   foo
 </p>,
-                <Button
-                  className="text-peach absolute t0 r0"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Edit"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="no-style"
-/>,
               ],
-              "className": "relative",
+              "className": "flex flex-column",
             },
             "ref": null,
             "rendered": Array [
@@ -862,12 +1088,66 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Phone Number",
-                  "className": "bold block mb2",
+                  "children": Array [
+                    <strong
+                      className="bold block mb2"
+>
+                      Phone Number
+</strong>,
+                    <Button
+                      className="text-peach"
+                      color="white-denim"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="underline-peach"
+                      label="Edit"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="style-none"
+/>,
+                  ],
+                  "className": "w100 flex flex-row justify-between",
                 },
                 "ref": null,
-                "rendered": "Phone Number",
-                "type": "strong",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Phone Number",
+                      "className": "bold block mb2",
+                    },
+                    "ref": null,
+                    "rendered": "Phone Number",
+                    "type": "strong",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "text-peach",
+                      "color": "white-denim",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "underline-peach",
+                      "label": "Edit",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "style-none",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -880,27 +1160,6 @@ ShallowWrapper {
                 "rendered": "foo",
                 "type": "p",
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "className": "text-peach absolute t0 r0",
-                  "color": "white-denim",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Edit",
-                  "onClick": [Function],
-                  "shadow": false,
-                  "to": "",
-                  "type": "button",
-                  "variant": "no-style",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
             ],
             "type": "div",
           },
@@ -912,28 +1171,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="relative"
+              className="flex flex-column"
 >
-              <strong
-                            className="bold block mb2"
+              <div
+                            className="w100 flex flex-row justify-between"
               >
-                            Password
-              </strong>
+                            <strong
+                                          className="bold block mb2"
+                            >
+                                          Password
+                            </strong>
+                            <Button
+                                          className="text-peach"
+                                          color="white-denim"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="underline-peach"
+                                          label="Edit"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="style-none"
+                            />
+              </div>
               <p>
                             • • • • • • • • • •
               </p>
-              <Button
-                            className="text-peach absolute t0 r0"
-                            color="white-denim"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Edit"
-                            onClick={[Function]}
-                            shadow={false}
-                            to=""
-                            type="button"
-                            variant="no-style"
-              />
 </div>,
             "className": "card card--light-gray-border p3 my2",
           },
@@ -944,28 +1208,33 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <strong
-                  className="bold block mb2"
+                <div
+                  className="w100 flex flex-row justify-between"
 >
-                  Password
-</strong>,
+                  <strong
+                                    className="bold block mb2"
+                  >
+                                    Password
+                  </strong>
+                  <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                  />
+</div>,
                 <p>
                   • • • • • • • • • •
 </p>,
-                <Button
-                  className="text-peach absolute t0 r0"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Edit"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="no-style"
-/>,
               ],
-              "className": "relative",
+              "className": "flex flex-column",
             },
             "ref": null,
             "rendered": Array [
@@ -974,12 +1243,66 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Password",
-                  "className": "bold block mb2",
+                  "children": Array [
+                    <strong
+                      className="bold block mb2"
+>
+                      Password
+</strong>,
+                    <Button
+                      className="text-peach"
+                      color="white-denim"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="underline-peach"
+                      label="Edit"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="style-none"
+/>,
+                  ],
+                  "className": "w100 flex flex-row justify-between",
                 },
                 "ref": null,
-                "rendered": "Password",
-                "type": "strong",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Password",
+                      "className": "bold block mb2",
+                    },
+                    "ref": null,
+                    "rendered": "Password",
+                    "type": "strong",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "text-peach",
+                      "color": "white-denim",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "underline-peach",
+                      "label": "Edit",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "style-none",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -991,27 +1314,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "• • • • • • • • • •",
                 "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "className": "text-peach absolute t0 r0",
-                  "color": "white-denim",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Edit",
-                  "onClick": [Function],
-                  "shadow": false,
-                  "to": "",
-                  "type": "button",
-                  "variant": "no-style",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
               },
             ],
             "type": "div",
@@ -1077,25 +1379,32 @@ ShallowWrapper {
           className="card card--light-gray-border p3 my2"
 >
           <div
-                    className="relative"
+                    className="flex flex-column"
           >
-                    <strong
-                              className="bold block mb2"
+                    <div
+                              className="w100 flex flex-row justify-between"
                     >
-                              Email Address
-                    </strong>
-                    <p />
-                    <Button
-                              className="text-peach absolute t0 r0"
-                              color="white-denim"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Edit"
-                              onClick={[Function]}
-                              shadow={false}
-                              to=""
-                              type="button"
-                              variant="no-style"
+                              <strong
+                                        className="bold block mb2"
+                              >
+                                        Email Address
+                              </strong>
+                              <Button
+                                        className="text-peach"
+                                        color="white-denim"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="underline-peach"
+                                        label="Edit"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="style-none"
+                              />
+                    </div>
+                    <p
+                              className="wrap"
                     />
           </div>
 </div>,
@@ -1104,28 +1413,33 @@ ShallowWrapper {
           className="card card--light-gray-border p3 my2"
 >
           <div
-                    className="relative"
+                    className="flex flex-column"
           >
-                    <strong
-                              className="bold block mb2"
+                    <div
+                              className="w100 flex flex-row justify-between"
                     >
-                              Password
-                    </strong>
+                              <strong
+                                        className="bold block mb2"
+                              >
+                                        Password
+                              </strong>
+                              <Button
+                                        className="text-peach"
+                                        color="white-denim"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="underline-peach"
+                                        label="Edit"
+                                        onClick={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="style-none"
+                              />
+                    </div>
                     <p>
                               • • • • • • • • • •
                     </p>
-                    <Button
-                              className="text-peach absolute t0 r0"
-                              color="white-denim"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Edit"
-                              onClick={[Function]}
-                              shadow={false}
-                              to=""
-                              type="button"
-                              variant="no-style"
-                    />
           </div>
 </div>,
         null,
@@ -1154,25 +1468,32 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="relative"
+            className="flex flex-column"
 >
-            <strong
-                        className="bold block mb2"
+            <div
+                        className="w100 flex flex-row justify-between"
             >
-                        Email Address
-            </strong>
-            <p />
-            <Button
-                        className="text-peach absolute t0 r0"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Edit"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="no-style"
+                        <strong
+                                    className="bold block mb2"
+                        >
+                                    Email Address
+                        </strong>
+                        <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                        />
+            </div>
+            <p
+                        className="wrap"
             />
 </div>,
           "className": "card card--light-gray-border p3 my2",
@@ -1184,26 +1505,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <strong
-                className="bold block mb2"
+              <div
+                className="w100 flex flex-row justify-between"
 >
-                Email Address
-</strong>,
-              <p />,
-              <Button
-                className="text-peach absolute t0 r0"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Edit"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="no-style"
+                <strong
+                                className="bold block mb2"
+                >
+                                Email Address
+                </strong>
+                <Button
+                                className="text-peach"
+                                color="white-denim"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="underline-peach"
+                                label="Edit"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="style-none"
+                />
+</div>,
+              <p
+                className="wrap"
 />,
             ],
-            "className": "relative",
+            "className": "flex flex-column",
           },
           "ref": null,
           "rendered": Array [
@@ -1212,12 +1540,66 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Email Address",
-                "className": "bold block mb2",
+                "children": Array [
+                  <strong
+                    className="bold block mb2"
+>
+                    Email Address
+</strong>,
+                  <Button
+                    className="text-peach"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="underline-peach"
+                    label="Edit"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="style-none"
+/>,
+                ],
+                "className": "w100 flex flex-row justify-between",
               },
               "ref": null,
-              "rendered": "Email Address",
-              "type": "strong",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Email Address",
+                    "className": "bold block mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Email Address",
+                  "type": "strong",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "text-peach",
+                    "color": "white-denim",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "underline-peach",
+                    "label": "Edit",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "style-none",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -1225,31 +1607,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "",
+                "className": "wrap",
               },
               "ref": null,
               "rendered": "",
               "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "text-peach absolute t0 r0",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Edit",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "no-style",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
             },
           ],
           "type": "div",
@@ -1263,28 +1625,33 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="relative"
+            className="flex flex-column"
 >
-            <strong
-                        className="bold block mb2"
+            <div
+                        className="w100 flex flex-row justify-between"
             >
-                        Password
-            </strong>
+                        <strong
+                                    className="bold block mb2"
+                        >
+                                    Password
+                        </strong>
+                        <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                        />
+            </div>
             <p>
                         • • • • • • • • • •
             </p>
-            <Button
-                        className="text-peach absolute t0 r0"
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        label="Edit"
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="no-style"
-            />
 </div>,
           "className": "card card--light-gray-border p3 my2",
         },
@@ -1295,28 +1662,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <strong
-                className="bold block mb2"
+              <div
+                className="w100 flex flex-row justify-between"
 >
-                Password
-</strong>,
+                <strong
+                                className="bold block mb2"
+                >
+                                Password
+                </strong>
+                <Button
+                                className="text-peach"
+                                color="white-denim"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="underline-peach"
+                                label="Edit"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="style-none"
+                />
+</div>,
               <p>
                 • • • • • • • • • •
 </p>,
-              <Button
-                className="text-peach absolute t0 r0"
-                color="white-denim"
-                disabled={false}
-                fullWidth={false}
-                label="Edit"
-                onClick={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="no-style"
-/>,
             ],
-            "className": "relative",
+            "className": "flex flex-column",
           },
           "ref": null,
           "rendered": Array [
@@ -1325,12 +1697,66 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Password",
-                "className": "bold block mb2",
+                "children": Array [
+                  <strong
+                    className="bold block mb2"
+>
+                    Password
+</strong>,
+                  <Button
+                    className="text-peach"
+                    color="white-denim"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="underline-peach"
+                    label="Edit"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="style-none"
+/>,
+                ],
+                "className": "w100 flex flex-row justify-between",
               },
               "ref": null,
-              "rendered": "Password",
-              "type": "strong",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Password",
+                    "className": "bold block mb2",
+                  },
+                  "ref": null,
+                  "rendered": "Password",
+                  "type": "strong",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "text-peach",
+                    "color": "white-denim",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "underline-peach",
+                    "label": "Edit",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "style-none",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -1342,27 +1768,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": "• • • • • • • • • •",
               "type": "p",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "text-peach absolute t0 r0",
-                "color": "white-denim",
-                "disabled": false,
-                "fullWidth": false,
-                "label": "Edit",
-                "onClick": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "no-style",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
             },
           ],
           "type": "div",
@@ -1391,25 +1796,32 @@ ShallowWrapper {
             className="card card--light-gray-border p3 my2"
 >
             <div
-                        className="relative"
+                        className="flex flex-column"
             >
-                        <strong
-                                    className="bold block mb2"
+                        <div
+                                    className="w100 flex flex-row justify-between"
                         >
-                                    Email Address
-                        </strong>
-                        <p />
-                        <Button
-                                    className="text-peach absolute t0 r0"
-                                    color="white-denim"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Edit"
-                                    onClick={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="no-style"
+                                    <strong
+                                                className="bold block mb2"
+                                    >
+                                                Email Address
+                                    </strong>
+                                    <Button
+                                                className="text-peach"
+                                                color="white-denim"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="underline-peach"
+                                                label="Edit"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="style-none"
+                                    />
+                        </div>
+                        <p
+                                    className="wrap"
                         />
             </div>
 </div>,
@@ -1418,28 +1830,33 @@ ShallowWrapper {
             className="card card--light-gray-border p3 my2"
 >
             <div
-                        className="relative"
+                        className="flex flex-column"
             >
-                        <strong
-                                    className="bold block mb2"
+                        <div
+                                    className="w100 flex flex-row justify-between"
                         >
-                                    Password
-                        </strong>
+                                    <strong
+                                                className="bold block mb2"
+                                    >
+                                                Password
+                                    </strong>
+                                    <Button
+                                                className="text-peach"
+                                                color="white-denim"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="underline-peach"
+                                                label="Edit"
+                                                onClick={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="style-none"
+                                    />
+                        </div>
                         <p>
                                     • • • • • • • • • •
                         </p>
-                        <Button
-                                    className="text-peach absolute t0 r0"
-                                    color="white-denim"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Edit"
-                                    onClick={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="no-style"
-                        />
             </div>
 </div>,
           null,
@@ -1468,25 +1885,32 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="relative"
+              className="flex flex-column"
 >
-              <strong
-                            className="bold block mb2"
+              <div
+                            className="w100 flex flex-row justify-between"
               >
-                            Email Address
-              </strong>
-              <p />
-              <Button
-                            className="text-peach absolute t0 r0"
-                            color="white-denim"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Edit"
-                            onClick={[Function]}
-                            shadow={false}
-                            to=""
-                            type="button"
-                            variant="no-style"
+                            <strong
+                                          className="bold block mb2"
+                            >
+                                          Email Address
+                            </strong>
+                            <Button
+                                          className="text-peach"
+                                          color="white-denim"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="underline-peach"
+                                          label="Edit"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="style-none"
+                            />
+              </div>
+              <p
+                            className="wrap"
               />
 </div>,
             "className": "card card--light-gray-border p3 my2",
@@ -1498,26 +1922,33 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <strong
-                  className="bold block mb2"
+                <div
+                  className="w100 flex flex-row justify-between"
 >
-                  Email Address
-</strong>,
-                <p />,
-                <Button
-                  className="text-peach absolute t0 r0"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Edit"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="no-style"
+                  <strong
+                                    className="bold block mb2"
+                  >
+                                    Email Address
+                  </strong>
+                  <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                  />
+</div>,
+                <p
+                  className="wrap"
 />,
               ],
-              "className": "relative",
+              "className": "flex flex-column",
             },
             "ref": null,
             "rendered": Array [
@@ -1526,12 +1957,66 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Email Address",
-                  "className": "bold block mb2",
+                  "children": Array [
+                    <strong
+                      className="bold block mb2"
+>
+                      Email Address
+</strong>,
+                    <Button
+                      className="text-peach"
+                      color="white-denim"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="underline-peach"
+                      label="Edit"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="style-none"
+/>,
+                  ],
+                  "className": "w100 flex flex-row justify-between",
                 },
                 "ref": null,
-                "rendered": "Email Address",
-                "type": "strong",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Email Address",
+                      "className": "bold block mb2",
+                    },
+                    "ref": null,
+                    "rendered": "Email Address",
+                    "type": "strong",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "text-peach",
+                      "color": "white-denim",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "underline-peach",
+                      "label": "Edit",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "style-none",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -1539,31 +2024,11 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
+                  "className": "wrap",
                 },
                 "ref": null,
                 "rendered": "",
                 "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "className": "text-peach absolute t0 r0",
-                  "color": "white-denim",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Edit",
-                  "onClick": [Function],
-                  "shadow": false,
-                  "to": "",
-                  "type": "button",
-                  "variant": "no-style",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
               },
             ],
             "type": "div",
@@ -1577,28 +2042,33 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="relative"
+              className="flex flex-column"
 >
-              <strong
-                            className="bold block mb2"
+              <div
+                            className="w100 flex flex-row justify-between"
               >
-                            Password
-              </strong>
+                            <strong
+                                          className="bold block mb2"
+                            >
+                                          Password
+                            </strong>
+                            <Button
+                                          className="text-peach"
+                                          color="white-denim"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="underline-peach"
+                                          label="Edit"
+                                          onClick={[Function]}
+                                          shadow={false}
+                                          to=""
+                                          type="button"
+                                          variant="style-none"
+                            />
+              </div>
               <p>
                             • • • • • • • • • •
               </p>
-              <Button
-                            className="text-peach absolute t0 r0"
-                            color="white-denim"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Edit"
-                            onClick={[Function]}
-                            shadow={false}
-                            to=""
-                            type="button"
-                            variant="no-style"
-              />
 </div>,
             "className": "card card--light-gray-border p3 my2",
           },
@@ -1609,28 +2079,33 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <strong
-                  className="bold block mb2"
+                <div
+                  className="w100 flex flex-row justify-between"
 >
-                  Password
-</strong>,
+                  <strong
+                                    className="bold block mb2"
+                  >
+                                    Password
+                  </strong>
+                  <Button
+                                    className="text-peach"
+                                    color="white-denim"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="underline-peach"
+                                    label="Edit"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="style-none"
+                  />
+</div>,
                 <p>
                   • • • • • • • • • •
 </p>,
-                <Button
-                  className="text-peach absolute t0 r0"
-                  color="white-denim"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Edit"
-                  onClick={[Function]}
-                  shadow={false}
-                  to=""
-                  type="button"
-                  variant="no-style"
-/>,
               ],
-              "className": "relative",
+              "className": "flex flex-column",
             },
             "ref": null,
             "rendered": Array [
@@ -1639,12 +2114,66 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Password",
-                  "className": "bold block mb2",
+                  "children": Array [
+                    <strong
+                      className="bold block mb2"
+>
+                      Password
+</strong>,
+                    <Button
+                      className="text-peach"
+                      color="white-denim"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="underline-peach"
+                      label="Edit"
+                      onClick={[Function]}
+                      shadow={false}
+                      to=""
+                      type="button"
+                      variant="style-none"
+/>,
+                  ],
+                  "className": "w100 flex flex-row justify-between",
                 },
                 "ref": null,
-                "rendered": "Password",
-                "type": "strong",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Password",
+                      "className": "bold block mb2",
+                    },
+                    "ref": null,
+                    "rendered": "Password",
+                    "type": "strong",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "className": "text-peach",
+                      "color": "white-denim",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "underline-peach",
+                      "label": "Edit",
+                      "onClick": [Function],
+                      "shadow": false,
+                      "to": "",
+                      "type": "button",
+                      "variant": "style-none",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
@@ -1656,27 +2185,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "• • • • • • • • • •",
                 "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "className": "text-peach absolute t0 r0",
-                  "color": "white-denim",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Edit",
-                  "onClick": [Function],
-                  "shadow": false,
-                  "to": "",
-                  "type": "button",
-                  "variant": "no-style",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
               },
             ],
             "type": "div",

@@ -140,6 +140,19 @@ ShallowWrapper {
                                 .
                         </p>
                 </div>
+                <Button
+                        className="mx-auto"
+                        color="white-peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label="Refresh Page"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary"
+                />
         </div>
         <div
                 className="absolute b0 l0 w100"
@@ -207,6 +220,19 @@ ShallowWrapper {
                                     .
                         </p>
             </div>
+            <Button
+                        className="mx-auto"
+                        color="white-peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label="Refresh Page"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary"
+            />
 </div>,
           <div
             className="absolute b0 l0 w100"
@@ -272,6 +298,19 @@ ShallowWrapper {
                                 .
                 </p>
 </div>,
+              <Button
+                className="mx-auto"
+                color="white-peach"
+                disabled={false}
+                fullWidth={false}
+                hover="shadow"
+                label="Refresh Page"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary"
+/>,
             ],
             "className": "center text-white transition-slide-up-large",
           },
@@ -417,6 +456,28 @@ ShallowWrapper {
               ],
               "type": "div",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "mx-auto",
+                "color": "white-peach",
+                "disabled": false,
+                "fullWidth": false,
+                "hover": "shadow",
+                "label": "Refresh Page",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": "div",
         },
@@ -513,6 +574,19 @@ ShallowWrapper {
                                         .
                               </p>
                     </div>
+                    <Button
+                              className="mx-auto"
+                              color="white-peach"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="Refresh Page"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary"
+                    />
           </div>
           <div
                     className="absolute b0 l0 w100"
@@ -580,6 +654,19 @@ ShallowWrapper {
                                           .
                             </p>
               </div>
+              <Button
+                            className="mx-auto"
+                            color="white-peach"
+                            disabled={false}
+                            fullWidth={false}
+                            hover="shadow"
+                            label="Refresh Page"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary"
+              />
 </div>,
             <div
               className="absolute b0 l0 w100"
@@ -645,6 +732,19 @@ ShallowWrapper {
                                     .
                   </p>
 </div>,
+                <Button
+                  className="mx-auto"
+                  color="white-peach"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="Refresh Page"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary"
+/>,
               ],
               "className": "center text-white transition-slide-up-large",
             },
@@ -789,6 +889,28 @@ ShallowWrapper {
                   },
                 ],
                 "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "mx-auto",
+                  "color": "white-peach",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "Refresh Page",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
             ],
             "type": "div",

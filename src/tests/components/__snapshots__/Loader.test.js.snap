@@ -17,43 +17,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Image
-        alt=""
-        bg={false}
-        className="w100"
-        onImgLoad={[Function]}
-        src="/assets/images/ample-hills-logo.svg"
-        style={Object {}}
+      "children": Array [
+        <div
+          className="absolute t0 l0"
 />,
-      "className": "w100 flex bg-white p2",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "alt": "",
-        "bg": false,
-        "children": null,
-        "className": "w100",
-        "onImgLoad": [Function],
-        "src": "/assets/images/ample-hills-logo.svg",
-        "style": Object {},
-      },
-      "ref": null,
-      "rendered": null,
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Image
+        <Image
           alt=""
           bg={false}
           className="w100"
@@ -61,10 +29,23 @@ ShallowWrapper {
           src="/assets/images/ample-hills-logo.svg"
           style={Object {}}
 />,
-        "className": "w100 flex bg-white p2",
+      ],
+      "className": "w100 flex bg-white p2 pt3 relative",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "absolute t0 l0",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -81,6 +62,61 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="absolute t0 l0"
+/>,
+          <Image
+            alt=""
+            bg={false}
+            className="w100"
+            onImgLoad={[Function]}
+            src="/assets/images/ample-hills-logo.svg"
+            style={Object {}}
+/>,
+        ],
+        "className": "w100 flex bg-white p2 pt3 relative",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "absolute t0 l0",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "",
+            "bg": false,
+            "children": null,
+            "className": "w100",
+            "onImgLoad": [Function],
+            "src": "/assets/images/ample-hills-logo.svg",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

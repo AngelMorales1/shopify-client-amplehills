@@ -110,7 +110,7 @@ ShallowWrapper {
           bg={false}
           className="icon z-1"
           onImgLoad={[Function]}
-          src="foo"
+          src="foo?w=200&fm=png&q=90"
           style={Object {}}
 />,
         <div
@@ -141,6 +141,7 @@ ShallowWrapper {
                                         color="white-denim"
                                         disabled={false}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="More Info"
                                         onClick={[Function]}
                                         shadow={false}
@@ -213,7 +214,7 @@ ShallowWrapper {
           "children": null,
           "className": "icon z-1",
           "onImgLoad": [Function],
-          "src": "foo",
+          "src": "foo?w=200&fm=png&q=90",
           "style": Object {},
         },
         "ref": null,
@@ -251,6 +252,7 @@ ShallowWrapper {
                                           color="white-denim"
                                           disabled={false}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="More Info"
                                           onClick={[Function]}
                                           shadow={false}
@@ -326,6 +328,7 @@ ShallowWrapper {
                                 color="white-denim"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
@@ -347,6 +350,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label="More Info"
                   onClick={[Function]}
                   shadow={false}
@@ -367,6 +371,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
@@ -453,7 +458,7 @@ ShallowWrapper {
             bg={false}
             className="icon z-1"
             onImgLoad={[Function]}
-            src="foo"
+            src="foo?w=200&fm=png&q=90"
             style={Object {}}
 />,
           <div
@@ -484,6 +489,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -556,7 +562,7 @@ ShallowWrapper {
             "children": null,
             "className": "icon z-1",
             "onImgLoad": [Function],
-            "src": "foo",
+            "src": "foo?w=200&fm=png&q=90",
             "style": Object {},
           },
           "ref": null,
@@ -594,6 +600,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -669,6 +676,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
@@ -690,6 +698,7 @@ ShallowWrapper {
                     color="white-denim"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="More Info"
                     onClick={[Function]}
                     shadow={false}
@@ -710,6 +719,7 @@ ShallowWrapper {
                     "color": "white-denim",
                     "disabled": false,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "More Info",
                     "onClick": [Function],
                     "shadow": false,
@@ -842,7 +852,7 @@ ShallowWrapper {
           bg={false}
           className="icon z-1"
           onImgLoad={[Function]}
-          src=""
+          src="?w=200&fm=png&q=90"
           style={Object {}}
 />,
         <div
@@ -873,6 +883,7 @@ ShallowWrapper {
                                         color="white-denim"
                                         disabled={false}
                                         fullWidth={false}
+                                        hover="shadow"
                                         label="More Info"
                                         onClick={[Function]}
                                         shadow={false}
@@ -905,7 +916,7 @@ ShallowWrapper {
           "children": null,
           "className": "icon z-1",
           "onImgLoad": [Function],
-          "src": "",
+          "src": "?w=200&fm=png&q=90",
           "style": Object {},
         },
         "ref": null,
@@ -943,6 +954,7 @@ ShallowWrapper {
                                           color="white-denim"
                                           disabled={false}
                                           fullWidth={false}
+                                          hover="shadow"
                                           label="More Info"
                                           onClick={[Function]}
                                           shadow={false}
@@ -1018,6 +1030,7 @@ ShallowWrapper {
                                 color="white-denim"
                                 disabled={false}
                                 fullWidth={false}
+                                hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
@@ -1039,6 +1052,7 @@ ShallowWrapper {
                   color="white-denim"
                   disabled={false}
                   fullWidth={false}
+                  hover="shadow"
                   label="More Info"
                   onClick={[Function]}
                   shadow={false}
@@ -1059,6 +1073,7 @@ ShallowWrapper {
                   "color": "white-denim",
                   "disabled": false,
                   "fullWidth": false,
+                  "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
@@ -1107,7 +1122,7 @@ ShallowWrapper {
             bg={false}
             className="icon z-1"
             onImgLoad={[Function]}
-            src=""
+            src="?w=200&fm=png&q=90"
             style={Object {}}
 />,
           <div
@@ -1138,6 +1153,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -1170,7 +1186,7 @@ ShallowWrapper {
             "children": null,
             "className": "icon z-1",
             "onImgLoad": [Function],
-            "src": "",
+            "src": "?w=200&fm=png&q=90",
             "style": Object {},
           },
           "ref": null,
@@ -1208,6 +1224,7 @@ ShallowWrapper {
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
+                                                hover="shadow"
                                                 label="More Info"
                                                 onClick={[Function]}
                                                 shadow={false}
@@ -1283,6 +1300,7 @@ ShallowWrapper {
                                     color="white-denim"
                                     disabled={false}
                                     fullWidth={false}
+                                    hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
@@ -1304,6 +1322,7 @@ ShallowWrapper {
                     color="white-denim"
                     disabled={false}
                     fullWidth={false}
+                    hover="shadow"
                     label="More Info"
                     onClick={[Function]}
                     shadow={false}
@@ -1324,6 +1343,7 @@ ShallowWrapper {
                     "color": "white-denim",
                     "disabled": false,
                     "fullWidth": false,
+                    "hover": "shadow",
                     "label": "More Info",
                     "onClick": [Function],
                     "shadow": false,

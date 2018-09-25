@@ -9,6 +9,7 @@ ShallowWrapper {
     color="denim"
     disabled={false}
     fullWidth={true}
+    hover="shadow"
     label="Click Me"
     onClick={[Function]}
     shadow={false}
@@ -102,6 +103,7 @@ ShallowWrapper {
     color="denim"
     disabled={false}
     fullWidth={true}
+    hover="shadow"
     label="Click Me"
     onClick={[Function]}
     shadow={false}
@@ -237,6 +239,7 @@ ShallowWrapper {
     color="denim"
     disabled={false}
     fullWidth={true}
+    hover="shadow"
     label="Click Me"
     onClick={[Function]}
     shadow={false}
@@ -370,6 +373,7 @@ ShallowWrapper {
     color="white-denim"
     disabled={false}
     fullWidth={false}
+    hover="shadow"
     label=""
     onClick={[Function]}
     shadow={false}
