@@ -17,7 +17,8 @@ const ProductWhatsIncluded = ({
     whatsIncludedDrip,
     whatsIncludedIllustration,
     whatsIncludedProducts
-  }, setRef 
+  },
+  setRef
 }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(

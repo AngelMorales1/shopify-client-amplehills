@@ -31,18 +31,61 @@ const GenericHero = ({ block, z }) => {
 
   return (
     <div style={{ zIndex: z }} className={classes}>
-      <div className="transition-slide-up container-width mx-auto pt4 px2 center">
-        <p className="block-headline pt3 pb4">{title}</p>
-        {image1 ? (
-          <Image
-            className="col-8 md-col-6 mt4"
-            alt={`${title} image`}
-            src={contentfulImgUtil(
-              get(image1, 'fields.file.url', ''),
-              '1400',
-              'png'
+      <div
+        className={cx(
+          styles['GenericHero__content-container'],
+          'flex justify-center',
+          {
+            'justify-between': imageRight,
+            [styles['GenericHero__content-container--reverse']]:
+              imageRight && isReverseArrangement
+          }
+        )}
+      >
+        <div className="col-12 md-col-6 flex justify-center">
+          <div
+            className={cx(
+              {
+                [styles['GenericHero__text-container--image-right']]: imageRight
+              },
+              'transition-slide-up py4 px2 col-10 md-col-8 center'
             )}
-          />
+          >
+            <p className="block-headline pb3">{title}</p>
+            {text ? <div className="block-subheadline">{text}</div> : null}
+            {image1 && !imageRight ? (
+              <Image
+                className={cx(styles['GenericHero__image'], 'w100')}
+                alt={`${title} image`}
+                src={contentfulImgUtil(
+                  get(image1, 'fields.file.url', ''),
+                  '1400',
+                  'png'
+                )}
+              />
+            ) : null}
+            {blockHasButton ? (
+              <Button
+                className="inline-block mt3"
+                color="madison-blue"
+                label={buttonLabel}
+                to={buttonLink}
+              />
+            ) : null}
+          </div>
+        </div>
+        {imageRight ? (
+          <div className="col-12 md-col-6 flex flex-row items-center justify-center ">
+            <Image
+              className={cx(styles['GenericHero__image'], 'col-10 my4')}
+              alt={`${title} image`}
+              src={contentfulImgUtil(
+                get(image1, 'fields.file.url', ''),
+                '1400',
+                'png'
+              )}
+            />
+          </div>
         ) : null}
       </div>
     </div>

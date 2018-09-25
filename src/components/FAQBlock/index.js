@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 
@@ -65,7 +64,7 @@ class FAQBlock extends Component {
           <div className="col-12 md-col-8 form-container-width">
             {fragments.map(fragment => {
               const uuid = get(fragment, 'uuid', '');
-              const dropdownIsOpen = this.state.selectedItem === uuid;
+              const dropdownIsOpen = selectedItem === uuid;
 
               return get(fragment, 'type', '') === 'Heading' ? (
                 <p
@@ -87,9 +86,9 @@ class FAQBlock extends Component {
                       )}
                       variant="style-none"
                       onClick={() =>
-                        this.state.selectedItem === uuid
-                          ? this.setState({ selectedItem: '' })
-                          : this.setState({ selectedItem: uuid })
+                        this.setState({
+                          selectedItem: dropdownIsOpen ? '' : uuid
+                        })
                       }
                     >
                       <p className="text-madison-blue semi-bold">

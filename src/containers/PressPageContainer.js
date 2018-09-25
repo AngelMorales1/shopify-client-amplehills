@@ -1,7 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import get from 'utils/get'
+import get from 'utils/get';
 
 class PressPageContainer extends ContainerBase {
   view = import('views/PressPageView');
@@ -10,7 +10,6 @@ class PressPageContainer extends ContainerBase {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     pressItems: get(
       state,

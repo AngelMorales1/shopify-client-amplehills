@@ -43,7 +43,7 @@ class PressPageView extends Component {
               key={pressItemId}
               pressCard={get(pressItems, `simpleFragments.${pressItemId}`, {})}
             />
-          ))} */}
+          ))}
         </div>
       </div>
     );
