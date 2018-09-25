@@ -29,7 +29,7 @@ const GenericHero = ({ block, z }) => {
         <p className="block-headline pt3">{title}</p>
         {image1 ? (
           <Image
-            className="col-8 md-col-6 mt4"
+            className={cx(styles['GenericHero__image'], 'col-8 md-col-6 mt4')}
             alt={`${title} image`}
             src={contentfulImgUtil(
               get(image1, 'fields.file.url', ''),
