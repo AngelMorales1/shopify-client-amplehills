@@ -7,47 +7,6 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <OurPledgeOverlay
     closeOurPledgeOverlay={[Function]}
     ourPledgeOverlayIsOpen={false}
-    overlayContentImage={
-        Object {
-            "fields": Object {
-              "file": Object {
-                "contentType": "foo",
-                "details": Object {
-                  "image": Object {
-                    "height": 0,
-                    "width": 0,
-                  },
-                  "size": 0,
-                },
-                "fileName": "foo",
-                "url": "foo",
-              },
-              "title": "foo",
-            },
-            "sys": Object {
-              "createdAt": "foo",
-              "environment": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "id": "foo",
-              "locale": "foo",
-              "revision": 0,
-              "space": Object {
-                "sys": Object {
-                  "id": "foo",
-                  "linkType": "foo",
-                  "type": "foo",
-                },
-              },
-              "type": "foo",
-              "updatedAt": "foo",
-            },
-          }
-    }
     shippingInformation="foo"
     shippingPledge="foo"
 />,

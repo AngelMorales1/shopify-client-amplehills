@@ -3150,19 +3150,7 @@ ShallowWrapper {
                                                             "openOurPledge": [Function],
                                                           }
                                         }
-                                        calloutImage={
-                                                  Object {
-                                                            "fields": Object {
-                                                              "file": Object {
-                                                                "url": "",
-                                                              },
-                                                              "title": "",
-                                                            },
-                                                            "sys": Object {
-                                                              "id": "",
-                                                            },
-                                                          }
-                                        }
+                                        calloutImage=""
                                         ourPledgeOverlayIsOpen={false}
                                         overlayContentImage={
                                                   Object {
@@ -3388,19 +3376,7 @@ ShallowWrapper {
                                                                       "openOurPledge": [Function],
                                                                     }
                                           }
-                                          calloutImage={
-                                                        Object {
-                                                                      "fields": Object {
-                                                                        "file": Object {
-                                                                          "url": "",
-                                                                        },
-                                                                        "title": "",
-                                                                      },
-                                                                      "sys": Object {
-                                                                        "id": "",
-                                                                      },
-                                                                    }
-                                          }
+                                          calloutImage=""
                                           ourPledgeOverlayIsOpen={false}
                                           overlayContentImage={
                                                         Object {
@@ -3473,19 +3449,7 @@ ShallowWrapper {
                                                                 "openOurPledge": [Function],
                                                               }
                                 }
-                                calloutImage={
-                                                Object {
-                                                                "fields": Object {
-                                                                  "file": Object {
-                                                                    "url": "",
-                                                                  },
-                                                                  "title": "",
-                                                                },
-                                                                "sys": Object {
-                                                                  "id": "",
-                                                                },
-                                                              }
-                                }
+                                calloutImage=""
                                 ourPledgeOverlayIsOpen={false}
                                 overlayContentImage={
                                                 Object {
@@ -3541,19 +3505,7 @@ ShallowWrapper {
                                                             "openOurPledge": [Function],
                                                           }
                     }
-                    calloutImage={
-                                        Object {
-                                                            "fields": Object {
-                                                              "file": Object {
-                                                                "url": "",
-                                                              },
-                                                              "title": "",
-                                                            },
-                                                            "sys": Object {
-                                                              "id": "",
-                                                            },
-                                                          }
-                    }
+                    calloutImage=""
                     ourPledgeOverlayIsOpen={false}
                     overlayContentImage={
                                         Object {
@@ -3642,17 +3594,7 @@ ShallowWrapper {
                       "closeOurPledge": [Function],
                       "openOurPledge": [Function],
                     },
-                    "calloutImage": Object {
-                      "fields": Object {
-                        "file": Object {
-                          "url": "",
-                        },
-                        "title": "",
-                      },
-                      "sys": Object {
-                        "id": "",
-                      },
-                    },
+                    "calloutImage": "",
                     "ourPledgeOverlayIsOpen": false,
                     "overlayContentImage": Object {
                       "fields": Object {
@@ -4592,19 +4534,7 @@ ShallowWrapper {
                                                                         "openOurPledge": [Function],
                                                                       }
                                                 }
-                                                calloutImage={
-                                                            Object {
-                                                                        "fields": Object {
-                                                                          "file": Object {
-                                                                            "url": "",
-                                                                          },
-                                                                          "title": "",
-                                                                        },
-                                                                        "sys": Object {
-                                                                          "id": "",
-                                                                        },
-                                                                      }
-                                                }
+                                                calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
                                                 overlayContentImage={
                                                             Object {
@@ -4830,19 +4760,7 @@ ShallowWrapper {
                                                                                 "openOurPledge": [Function],
                                                                               }
                                                 }
-                                                calloutImage={
-                                                                Object {
-                                                                                "fields": Object {
-                                                                                  "file": Object {
-                                                                                    "url": "",
-                                                                                  },
-                                                                                  "title": "",
-                                                                                },
-                                                                                "sys": Object {
-                                                                                  "id": "",
-                                                                                },
-                                                                              }
-                                                }
+                                                calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
                                                 overlayContentImage={
                                                                 Object {
@@ -4915,19 +4833,7 @@ ShallowWrapper {
                                                                         "openOurPledge": [Function],
                                                                       }
                                     }
-                                    calloutImage={
-                                                      Object {
-                                                                        "fields": Object {
-                                                                          "file": Object {
-                                                                            "url": "",
-                                                                          },
-                                                                          "title": "",
-                                                                        },
-                                                                        "sys": Object {
-                                                                          "id": "",
-                                                                        },
-                                                                      }
-                                    }
+                                    calloutImage=""
                                     ourPledgeOverlayIsOpen={false}
                                     overlayContentImage={
                                                       Object {
@@ -4983,19 +4889,7 @@ ShallowWrapper {
                                                                   "openOurPledge": [Function],
                                                                 }
                       }
-                      calloutImage={
-                                            Object {
-                                                                  "fields": Object {
-                                                                    "file": Object {
-                                                                      "url": "",
-                                                                    },
-                                                                    "title": "",
-                                                                  },
-                                                                  "sys": Object {
-                                                                    "id": "",
-                                                                  },
-                                                                }
-                      }
+                      calloutImage=""
                       ourPledgeOverlayIsOpen={false}
                       overlayContentImage={
                                             Object {
@@ -5084,17 +4978,7 @@ ShallowWrapper {
                         "closeOurPledge": [Function],
                         "openOurPledge": [Function],
                       },
-                      "calloutImage": Object {
-                        "fields": Object {
-                          "file": Object {
-                            "url": "",
-                          },
-                          "title": "",
-                        },
-                        "sys": Object {
-                          "id": "",
-                        },
-                      },
+                      "calloutImage": "",
                       "ourPledgeOverlayIsOpen": false,
                       "overlayContentImage": Object {
                         "fields": Object {

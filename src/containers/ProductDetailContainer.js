@@ -7,7 +7,6 @@ import {
   openOurPledge,
   closeOurPledge
 } from 'state/actions/ui/productUIActions';
-import { fetchOurPledge } from 'state/actions/productActions';
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
@@ -17,13 +16,7 @@ import get from 'utils/get';
 class ProductDetailContainer extends ContainerBase {
   view = import('views/ProductDetailView');
 
-  model = () => {
-    const {
-      actions: { fetchOurPledge }
-    } = this.props;
-
-    return fetchOurPledge();
-  };
+  model = () => {};
 }
 
 const mapStateToProps = (state, props) => {
@@ -37,7 +30,11 @@ const mapStateToProps = (state, props) => {
     ),
     product: product(state, props),
     products: products(state),
-    ourPledge: get(state, 'product.ourPledge.items[0].fields', {}),
+    ourPledge: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.ourPledge.simpleFragments',
+      {}
+    ),
     ourPledgeOverlayIsOpen: get(
       state,
       'productUI.ourPledgeOverlayIsOpen',
@@ -51,7 +48,6 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         addLineItems,
-        fetchOurPledge,
         openOurPledge,
         closeOurPledge
       },

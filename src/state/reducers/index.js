@@ -5,7 +5,6 @@ import customerUI from './ui/customerUI';
 import productUI from './ui/productUI';
 import locationsUI from './ui/locationsUI';
 import locations from './locations';
-import product from './product';
 import products from './products';
 import customer from './customer';
 import genericPage from './genericPage';
@@ -18,7 +17,6 @@ export default {
   locationsUI,
   productUI,
   locations,
-  product,
   products,
   customer,
   genericPage

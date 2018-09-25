@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import get from 'utils/get';
-import imageModel from 'models/imageModel';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './OurPledge.scss';
 import { Image, Button } from 'components/base';
@@ -12,13 +9,10 @@ import OurPledgeOverlay from 'components/OurPledgeOverlay';
 const OurPledge = ({
   actions,
   ourPledgeOverlayIsOpen,
-  overlayContentImage,
   shippingInformation,
   shippingPledge,
   calloutImage
 }) => {
-  const calloutImageUrl = get(calloutImage, 'fields.file.url', '');
-
   return (
     <div
       className={cx(
@@ -28,7 +22,7 @@ const OurPledge = ({
     >
       <Image
         alt="Our pledge icon"
-        src={contentfulImgUtil(calloutImageUrl, '200', 'png')}
+        src={calloutImage}
         className={cx('icon z-1', styles['OurPledge__icon'])}
       />
       <div
@@ -69,7 +63,6 @@ const OurPledge = ({
         </div>
       </div>
       <OurPledgeOverlay
-        overlayContentImage={overlayContentImage}
         shippingInformation={shippingInformation}
         shippingPledge={shippingPledge}
         closeOurPledgeOverlay={actions.closeOurPledge}
@@ -82,8 +75,7 @@ const OurPledge = ({
 export default OurPledge;
 
 OurPledge.propTypes = {
-  calloutImage: imageModel.propTypes,
-  overlayContentImage: PropTypes.object,
+  calloutImage: PropTypes.string,
   shippingInformation: PropTypes.string,
   shippingPledge: PropTypes.string,
   ourPledgeOverlayIsOpen: PropTypes.bool,
@@ -95,8 +87,7 @@ OurPledge.propTypes = {
 
 OurPledge.defaultProps = {
   ourPledgeOverlayIsOpen: false,
-  calloutImage: imageModel.default,
-  overlayContentImage: {},
+  calloutImage: '',
   shippingInformation: '',
   shippingPledge: '',
   actions: {
