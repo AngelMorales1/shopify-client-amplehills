@@ -49,6 +49,28 @@ export default createSelector(
       const blocks = get(product, 'fields.contentBlocks', []);
       const preOrderDate = get(product, 'fields.preOrderDate', false);
       const cartDetails = get(product, 'fields.cartDetails', '');
+      const productHeroCarouselImages = get(
+        product,
+        'fields.productHeroCarouselImages',
+        []
+      );
+      const productHeroImage = get(
+        product,
+        'fields.productHeroImage.fields.file.url',
+        ''
+      );
+      const productHeroTitle = get(product, 'fields.productHeroTitle', '');
+      const productHeroAlert = get(product, 'fields.productHeroAlert', '');
+      const productHeroTitleBackgroundImage = get(
+        product,
+        'fields.productHeroTitleBackgroundImage.fields.file.url',
+        ''
+      );
+      const productHeroTitleBackgroundImagePosition = get(
+        product,
+        'fields.productHeroTitleBackgroundImagePosition',
+        0
+      );
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -79,6 +101,12 @@ export default createSelector(
         subItemsAvailable,
         preOrderDate,
         cartDetails,
+        productHeroCarouselImages,
+        productHeroImage,
+        productHeroTitle,
+        productHeroTitleBackgroundImage,
+        productHeroTitleBackgroundImagePosition,
+        productHeroAlert,
         ...shopifyProduct
       };
 
