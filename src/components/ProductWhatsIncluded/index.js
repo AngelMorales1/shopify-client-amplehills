@@ -40,16 +40,12 @@ const ProductWhatsIncluded = ({
         <h2 className="block-headline my3 nowrap center flex flex-column items-center justify-center">
           What&rsquo;s included
         </h2>
-        {fields.illustration ? (
+        {whatsIncludedIllustration ? (
           <div className="center xs-hide sm-hide mx-auto">
             <Image
               className="col-4 mt3"
               alt="what&rsquo;s included image"
-              src={contentfulImgUtil(
-                get(fields, 'illustration.fields.file.url', ''),
-                '600',
-                'png'
-              )}
+              src={contentfulImgUtil(whatsIncludedIllustration, '600', 'png')}
             />
           </div>
         ) : null}
@@ -87,7 +83,7 @@ const ProductWhatsIncluded = ({
         <div
           className={cx(
             styles['ProductWhatsIncluded__illustration'],
-            'col-12 md-col-6 center'
+            'col-12 md-col-6 center lg-hide md-hide'
           )}
         >
           <Image
