@@ -68,7 +68,14 @@ class ProductHero extends Component {
 
   render() {
     const {
-      block,
+      productHero: {
+        productHeroAlert,
+        productHeroCarouselImages,
+        productHeroImage,
+        productHeroTitle,
+        productHeroTitleBackgroundImage,
+        productHeroTitleBackgroundImagePosition
+      },
       product,
       ourPledge,
       ourPledgeOverlayIsOpen,
@@ -89,13 +96,13 @@ class ProductHero extends Component {
         )}
         style={{ zIndex: z }}
       >
-        {get(fields, 'alert', '') ? (
+        {productHeroAlert ? (
           <div className="absolute center mt3 uppercase tout z-1 w100">
-            {get(fields, 'alert', '')}
+            {productHeroAlert}
           </div>
         ) : null}
 
-        {carouselImages.length > 1 ? (
+        {productHeroCarouselImages.length > 1 ? (
           <div className="col col-12 md-col-6 flex square">
             <Carousel
               className={cx(styles['ProductHero__carousel'], 'wh100')}
@@ -103,8 +110,9 @@ class ProductHero extends Component {
               showDotsOnImage={true}
               sliderClasses="h100"
             >
-              {carouselImages.map(image => (
+              {productHeroCarouselImages.map((image, i) => (
                 <div
+                  key={get(image, 'sys.id', i)}
                   className="wh100 square"
                   style={{
                     background: `url(${contentfulImgUtil(
@@ -122,7 +130,7 @@ class ProductHero extends Component {
             className="col col-12 md-col-6 square"
             style={{
               background: `url(${contentfulImgUtil(
-                get(carouselImages, '[0]fields.file.url', ''),
+                productHeroImage,
                 '1600'
               )}) no-repeat center`,
               backgroundSize: 'cover'
@@ -132,21 +140,17 @@ class ProductHero extends Component {
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px3 mx-auto">
             <div className="mb4 relative inline-block">
-              <h1 className="block-headline">{get(fields, 'title', '')}</h1>
+              <h1 className="block-headline">{productHeroTitle}</h1>
               <Image
                 style={{
-                  transform: `translateX(${get(
-                    block,
-                    'fields.titleImagePosition',
-                    0
-                  )}%)`
+                  transform: `translateX(${productHeroTitleBackgroundImagePosition}%)`
                 }}
                 className={cx(
                   'absolute z-below t0 b0 my-auto',
                   styles['ProductHero__title-illustration']
                 )}
                 src={contentfulImgUtil(
-                  get(fields, 'titleIllustration.fields.file.url', ''),
+                  productHeroTitleBackgroundImage,
                   '1000',
                   'png'
                 )}
