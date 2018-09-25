@@ -83,9 +83,6 @@ class ProductHero extends Component {
       z
     } = this.props;
     const { available, subItemsAvailable, price } = product;
-    const fields = get(block, 'fields', {});
-
-    const carouselImages = get(fields, 'carouselImages', []);
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
     return (
