@@ -2,7 +2,6 @@ import React from 'react';
 
 import get from 'utils/get';
 
-import ProductHero from 'components/ProductHero';
 import ProductDetails from 'components/ProductDetails';
 import ImageText from 'components/ImageText';
 import ImageDoubleText from 'components/ImageDoubleText';
@@ -17,8 +16,6 @@ const BlockSwitch = props => {
   const type = get(block, 'sys.contentType.sys.id');
 
   switch (type) {
-    case 'blockProductHero':
-      return <ProductHero {...props} />;
     case 'blockWhatsIncluded':
       return <ProductWhatsIncluded {...props} />;
     case 'blockProductDetails':

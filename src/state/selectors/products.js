@@ -71,6 +71,14 @@ export default createSelector(
         'fields.productHeroTitleBackgroundImagePosition',
         0
       );
+      const productHero = {
+        productHeroCarouselImages,
+        productHeroImage,
+        productHeroTitle,
+        productHeroTitleBackgroundImage,
+        productHeroTitleBackgroundImagePosition,
+        productHeroAlert
+      };
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -101,12 +109,7 @@ export default createSelector(
         subItemsAvailable,
         preOrderDate,
         cartDetails,
-        productHeroCarouselImages,
-        productHeroImage,
-        productHeroTitle,
-        productHeroTitleBackgroundImage,
-        productHeroTitleBackgroundImagePosition,
-        productHeroAlert,
+        productHero,
         ...shopifyProduct
       };
 
