@@ -35,5 +35,10 @@
       width: 60%;
       margin-right: spacing(6);
     }
+
+    input {
+      padding-top: calc(#{spacing(4)} + 0.1875rem);
+      padding-bottom: calc(#{spacing(4)} - 0.1875rem);
+    }
   }
 }
