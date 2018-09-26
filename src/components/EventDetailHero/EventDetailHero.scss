@@ -60,6 +60,8 @@
   }
 
   &__action-button {
+    padding-top: calc(#{spacing(4)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(4)} - 0.0625rem);
     letter-spacing: spacing(0.2);
     margin-left: auto;
     @media ($medium-up) {
