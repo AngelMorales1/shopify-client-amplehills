@@ -59,6 +59,7 @@ const Routes = ({ location }) => (
     <Route path="/scoop-tab-party" component={GenericPageContainer} />
     <Route path="/ice-cream-cakes" component={GenericPageContainer} />
     <Route path="/party-request-form" component={PartyRequestFormContainer} />
+    <Route path="/faq" component={GenericPageContainer} />
   </Switch>
 );
 
