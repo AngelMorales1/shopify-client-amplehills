@@ -1,0 +1,65 @@
+@import 'settings', 'src/styles/utils';
+
+$transition-duration: 0.2;
+
+.LocationCard {
+  &__card-container {
+    border-radius: radius('s');
+    max-width: spacing(100);
+
+    &--selected {
+      box-shadow: $drop-shadow-large;
+      transform: scale(1.05);
+    }
+  }
+
+  &__card-seasonal-image {
+    width: spacing(16);
+    height: spacing(16);
+    top: spacing(37);
+    right: spacing(12);
+
+    @media ($medium-up) {
+      top: spacing(48);
+    }
+  }
+
+  &__card-image {
+    border-top-right-radius: radius('s');
+    border-top-left-radius: radius('s');
+    height: spacing(50);
+
+    @media ($medium-up) {
+      height: spacing(60);
+    }
+  }
+
+  &__card-text {
+    margin-top: spacing(1.5);
+  }
+
+  &__card-tag {
+    padding: spacing(3) spacing(5) spacing(2);
+    border-radius: radius('l');
+    letter-spacing: spacing(0.2);
+    font-size: $font-2;
+  }
+
+  &__card-drip {
+    position: relative;
+
+    &::before {
+      background-color: color('white');
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: spacing(-8);
+      width: 100%;
+      height: spacing(10);
+      mask: url('/assets/images/card-polygon.svg') no-repeat;
+      mask-position: center;
+      mask-size: cover;
+    }
+  }
+}
