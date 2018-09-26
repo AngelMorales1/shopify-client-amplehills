@@ -88,4 +88,11 @@
       margin: spacing(8);
     }
   }
+
+  &__text-field {
+    input {
+      padding-top: calc(#{spacing(4)} + 0.125rem);
+      padding-bottom: calc(#{spacing(4)} - 0.125rem);
+    }
+  }
 }

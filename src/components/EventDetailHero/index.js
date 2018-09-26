@@ -337,18 +337,16 @@ class EventDetailHero extends Component {
                   <Image src="/assets/images/icon-close.svg" />
                 </Button>
                 <h2 className="block-headline m3 pt3 mx-auto center">RSVP</h2>
-                <div
-                  className={cx(
-                    styles['ContactUs'],
-                    'transition-slide-up flex flex-column justify-center items-center'
-                  )}
-                >
+                <div className="transition-slide-up flex flex-column justify-center items-center">
                   <form className="flex flex-wrap justify-center text-container-width">
                     <div className="w100 flex flex-column">
                       {Object.values(ContactUsForm.FIELDS).map(field => (
                         <TextField
                           key={field.label}
-                          className="m1"
+                          className={cx(
+                            styles['EventDetailHero__text-field'],
+                            'm1'
+                          )}
                           variant={
                             field.type === 'textarea'
                               ? 'light-gray-tall'
@@ -363,12 +361,7 @@ class EventDetailHero extends Component {
                         />
                       ))}
                     </div>
-                    <div
-                      className={cx(
-                        styles['ContactUs__button-container'],
-                        'w100 flex flex-wrap text-container-width my2 px1'
-                      )}
-                    >
+                    <div className="w100 flex flex-wrap text-container-width my2 px1">
                       {error || formStatus === REJECTED ? (
                         <FormFlash
                           className="w100 mb2"
