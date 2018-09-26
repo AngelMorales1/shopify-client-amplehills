@@ -50,6 +50,8 @@
   }
 
   &__map-button {
+    padding-top: calc(#{spacing(2)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
     margin-top: spacing(4);
 
     @media ($medium-up) {
