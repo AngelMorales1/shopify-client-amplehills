@@ -16,6 +16,7 @@ import PressPageContainer from 'containers/PressPageContainer';
 import EventDetailContainer from 'containers/EventDetailContainer';
 import LocationDetailContainer from 'containers/LocationDetailContainer';
 import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
+import NewsLandingContainer from 'containers/NewsLandingContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -60,6 +61,7 @@ const Routes = ({ location }) => (
     <Route path="/ice-cream-cakes" component={GenericPageContainer} />
     <Route path="/party-request-form" component={PartyRequestFormContainer} />
     <Route path="/faq" component={GenericPageContainer} />
+    <Route path="/news" component={NewsLandingContainer} />
   </Switch>
 );
 
