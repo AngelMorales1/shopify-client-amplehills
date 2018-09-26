@@ -139,7 +139,10 @@ class EventDetailHero extends Component {
           <div className="mt3">
             <FacebookShareButton url={get(window, 'location.href', '')}>
               <Button
-                className="inline-flex uppercase"
+                className={cx(
+                  styles['EventDetailHero__share-button'],
+                  'inline-flex uppercase'
+                )}
                 variant="primary-small"
                 color="clear-madison-blue-border"
                 label="Share"
