@@ -10,7 +10,7 @@ import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import styles from './LocationDetailHero.scss';
-import { Button } from 'components/base';
+import { Button, FormFlash } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 
 class LocationDetailHero extends PureComponent {
@@ -27,6 +27,11 @@ class LocationDetailHero extends PureComponent {
       events.find(event => event.locationId === location.id),
       'contentfulId',
       ''
+    );
+    const closeLocationForTheSeason = get(
+      location,
+      'closeLocationForTheSeason',
+      false
     );
 
     return (
@@ -61,7 +66,7 @@ class LocationDetailHero extends PureComponent {
             <div
               className={cx(
                 styles['LocationDetailHero__content-detail-container'],
-                'flex'
+                'flex items-start'
               )}
             >
               <div className="col-12 md-col-6 mb4 flex flex-row justify-between items-center">
@@ -103,15 +108,23 @@ class LocationDetailHero extends PureComponent {
               </div>
               <div className="col-12 md-col-6 mb4">
                 <p className="uppercase text-peach bold copy mb1">hours</p>
+                {closeLocationForTheSeason ? (
+                  <FormFlash
+                    className="mb1 center"
+                    error={true}
+                    message="Closed for the Season"
+                  />
+                ) : null}
                 {get(location, 'sortedHours', []).map((hour, i) => {
                   const key = Object.keys(hour);
-                  console.log(location);
-                  return (
+                  const dateIsClosed = hour[key] === 'close';
+
+                  return !dateIsClosed ? (
                     <div key={key} className="flex flex-row justify-between">
                       <p className="bold block-subheadline mr1">{key}</p>
                       <p className="block-subheadline">{hour[key]}</p>
                     </div>
-                  );
+                  ) : null;
                 })}
               </div>
             </div>
