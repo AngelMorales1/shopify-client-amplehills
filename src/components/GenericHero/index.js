@@ -65,12 +65,14 @@ const GenericHero = ({ block, z }) => {
               />
             ) : null}
             {blockHasButton ? (
-              <Button
-                className="inline-block mt3"
-                color="madison-blue"
-                label={buttonLabel}
-                to={buttonLink}
-              />
+              <div>
+                <Button
+                  className="inline-flex mt3"
+                  color="madison-blue"
+                  label={buttonLabel}
+                  to={buttonLink}
+                />
+              </div>
             ) : null}
           </div>
         </div>
