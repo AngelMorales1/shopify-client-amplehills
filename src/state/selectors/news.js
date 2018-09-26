@@ -15,7 +15,8 @@ export default createSelector(
         const author = get(node, 'author', {});
         const authorName = get(author, 'name', '');
         const authorEmail = get(author, 'email', '');
-        const content = get(node, 'contentHtml', '');
+        const contentHtml = get(node, 'contentHtml', '');
+        const content = get(node, 'content', '');
         const image = get(node, 'image.originalSrc', '');
         const publishedAt = moment(get(node, 'publishedAt', '')).format(
           'MMMM D YYYY'
@@ -30,6 +31,7 @@ export default createSelector(
           cursor,
           authorName,
           authorEmail,
+          contentHtml,
           content,
           image,
           publishedAt,
