@@ -16,7 +16,9 @@ class GenericPageView extends Component {
 
     const menuList = get(this, 'props.blocks', []).reduce((menu, block) => {
       const blockType = get(block, 'sys.contentType.sys.id', '');
-      if (blockType === 'blockGenericHero') {
+      const fields = get(block, 'fields', false);
+
+      if (blockType === 'blockGenericHero' || fields === false) {
         return menu;
       }
 
