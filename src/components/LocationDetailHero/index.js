@@ -80,7 +80,7 @@ class LocationDetailHero extends PureComponent {
                   )}
                 >
                   <MapboxMap
-                    className="z-0 wh100"
+                    className="z-0 wh100 circle"
                     featureCollection={locationGeoJSON}
                     defaultIcon="year-round-icon"
                     styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
