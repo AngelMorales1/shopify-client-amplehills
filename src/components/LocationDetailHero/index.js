@@ -105,6 +105,7 @@ class LocationDetailHero extends PureComponent {
                 <p className="uppercase text-peach bold copy mb1">hours</p>
                 {get(location, 'sortedHours', []).map((hour, i) => {
                   const key = Object.keys(hour);
+                  console.log(location);
                   return (
                     <div key={key} className="flex flex-row justify-between">
                       <p className="bold block-subheadline mr1">{key}</p>
