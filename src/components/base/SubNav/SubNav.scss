@@ -19,4 +19,12 @@
     height: $button-primary-height;
     box-shadow: $drop-shadow;
   }
+
+  &__menu {
+    margin-bottom: 2px;
+  }
+
+  &__dropdown {
+    margin-bottom: 2px;
+  }
 }

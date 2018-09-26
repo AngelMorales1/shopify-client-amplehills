@@ -46,7 +46,9 @@ const Button = ({
       onClick={onClick}
     >
       <div className={classes}>
-        <span className="h100 flex justify-center items-center">{label}</span>
+        <span className="avenir h100 flex justify-center items-center">
+          {label}
+        </span>
       </div>
     </a>
   ) : (
@@ -58,7 +60,9 @@ const Button = ({
       onClick={onClick}
     >
       <div className={classes}>
-        <span className="h100 flex justify-center items-center">{label}</span>
+        <span className="avenir h100 flex justify-center items-center">
+          {label}
+        </span>
       </div>
     </Link>
   );
