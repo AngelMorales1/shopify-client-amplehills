@@ -105,7 +105,7 @@ class ContactUs extends Component {
             {Object.values(ContactUsForm.FIELDS).map(field => (
               <TextField
                 key={field.label}
-                className="m1"
+                className={cx(styles['ContactUs__text-field'], 'm1')}
                 variant={
                   field.type === 'textarea' ? 'light-gray-tall' : 'light-gray'
                 }

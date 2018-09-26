@@ -68,6 +68,7 @@
   &--primary-small {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: radius('l');
     height: $button-primary-height;
     padding: spacing(4) spacing(6);

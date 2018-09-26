@@ -14,4 +14,11 @@
       justify-content: center;
     }
   }
+
+  &__text-field {
+    input {
+      padding-top: calc(#{spacing(4)} + 0.0625rem);
+      padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+    }
+  }
 }
