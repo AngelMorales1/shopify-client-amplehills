@@ -7,7 +7,7 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 
-import { Image, Dropdown, TextField, Button } from 'components/base';
+import { Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
 
 class LocationsCards extends Component {
@@ -199,132 +199,151 @@ class LocationsCards extends Component {
                 <span className="bold">{locationResultsLabel}</span>
               </div>
               <div className="flex flex-column items-center">
-                {sortedLocations.map(location => (
-                  <div
-                    key={location.id}
-                    ref={$card => (this.$cards[location.id] = $card)}
-                    className={cx(
-                      styles['LocationsCards__card-container'],
-                      'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100',
-                      {
-                        [styles['LocationsCards__card-container--selected']]:
-                          location.id === selectedLocation
-                      }
-                    )}
-                  >
-                    {location.distance ? (
-                      <div
-                        className={cx(
-                          styles['LocationsCards__card-tag'],
-                          'bg-peach bold text-white absolute m3'
-                        )}
-                      >
-                        <span
+                {sortedLocations.map(location => {
+                  const closeLocationForTheSeason = get(
+                    location,
+                    'closeLocationForTheSeason',
+                    false
+                  );
+                  const currentOpenHours =
+                    location.hours[location.currentOpenHours];
+                  let openStatus = 'Closed today';
+
+                  if (closeLocationForTheSeason) {
+                    openStatus = 'Closed for the season';
+                  } else {
+                    if (currentOpenHours) {
+                      openStatus = 'Open today';
+                    }
+                  }
+
+                  return (
+                    <div
+                      key={location.id}
+                      ref={$card => (this.$cards[location.id] = $card)}
+                      className={cx(
+                        styles['LocationsCards__card-container'],
+                        'transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100',
+                        {
+                          [styles['LocationsCards__card-container--selected']]:
+                            location.id === selectedLocation
+                        }
+                      )}
+                    >
+                      {location.distance ? (
+                        <div
                           className={cx(
-                            styles['LocationsCards__card-text'],
-                            'uppercase'
+                            styles['LocationsCards__card-tag'],
+                            'bg-peach bold text-white absolute m3'
                           )}
                         >
-                          {location.distance} miles away
-                        </span>
-                      </div>
-                    ) : null}
-                    {location.seasonal ? (
-                      <div
-                        className={cx(
-                          styles['LocationsCards__card-seasonal-image'],
-                          'z-1 absolute'
-                        )}
-                        style={{
-                          background:
-                            'url(assets/images/seasonal-icon.png) no-repeat center',
-                          backgroundSize: 'cover'
-                        }}
-                      />
-                    ) : (
-                      <div
-                        className={cx(
-                          styles['LocationsCards__card-seasonal-image'],
-                          'z-1 absolute'
-                        )}
-                        style={{
-                          background:
-                            'url(assets/images/year-round-icon.png) no-repeat center',
-                          backgroundSize: 'cover'
-                        }}
-                      />
-                    )}
-                    <div
-                      style={
-                        location.image
-                          ? {
-                              background: `url(${
-                                location.image
-                              }) no-repeat center`,
-                              backgroundSize: 'cover'
-                            }
-                          : null
-                      }
-                      className={cx(styles['LocationsCards__card-image'], {
-                        'bg-denim': !location.image
-                      })}
-                    />
-                    <div
-                      className={cx(styles['LocationsCards__card-drip'], 'p3')}
-                    >
-                      <h2 className="big carter mb2">{location.title}</h2>
-                      <div>
-                        <div className="flex flex-column justify-between">
-                          <span className="small">{location.address1}</span>
                           <span
                             className={cx(
                               styles['LocationsCards__card-text'],
-                              'small'
-                            )}
-                          >{`${location.city}, ${location.state} ${
-                            location.zip
-                          }`}</span>
-                          <span
-                            className={cx(
-                              styles['LocationsCards__card-text'],
-                              'small'
+                              'uppercase'
                             )}
                           >
-                            {location.phone}
+                            {location.distance} miles away
                           </span>
                         </div>
-                      </div>
-                      <div>
-                        <div className="flex flex-row flex-wrap justify-between items-center mt2">
-                          {location.currentOpenHours ? (
-                            <div className="flex flex-column">
-                              <span className="block-subheadline bold">
-                                Open today
-                              </span>
-                              <span className={cx('small')}>
-                                {location.hours[location.currentOpenHours]}
-                              </span>
-                            </div>
-                          ) : (
-                            <span className="block-subheadline bold">
-                              Closed today
-                            </span>
+                      ) : null}
+                      {location.seasonal ? (
+                        <div
+                          className={cx(
+                            styles['LocationsCards__card-seasonal-image'],
+                            'z-1 absolute'
                           )}
-                          {location.delivery ? (
-                            <div
+                          style={{
+                            background:
+                              'url(assets/images/seasonal-icon.png) no-repeat center',
+                            backgroundSize: 'cover'
+                          }}
+                        />
+                      ) : (
+                        <div
+                          className={cx(
+                            styles['LocationsCards__card-seasonal-image'],
+                            'z-1 absolute'
+                          )}
+                          style={{
+                            background:
+                              'url(assets/images/year-round-icon.png) no-repeat center',
+                            backgroundSize: 'cover'
+                          }}
+                        />
+                      )}
+                      <div
+                        style={
+                          location.image
+                            ? {
+                                background: `url(${
+                                  location.image
+                                }) no-repeat center`,
+                                backgroundSize: 'cover'
+                              }
+                            : null
+                        }
+                        className={cx(styles['LocationsCards__card-image'], {
+                          'bg-denim': !location.image
+                        })}
+                      />
+                      <div
+                        className={cx(
+                          styles['LocationsCards__card-drip'],
+                          'p3'
+                        )}
+                      >
+                        <h2 className="big carter mb2">{location.title}</h2>
+                        <div>
+                          <div className="flex flex-column justify-between">
+                            <span className="small">{location.address1}</span>
+                            <span
                               className={cx(
-                                styles['LocationsCards__card-tag'],
-                                'uppercase bold bg-madison-blue inline-block text-white mt2'
+                                styles['LocationsCards__card-text'],
+                                'small'
+                              )}
+                            >{`${location.city}, ${location.state} ${
+                              location.zip
+                            }`}</span>
+                            <span
+                              className={cx(
+                                styles['LocationsCards__card-text'],
+                                'small'
                               )}
                             >
-                              <span className="text-white">Delivery</span>
+                              {location.phone}
+                            </span>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex flex-row flex-wrap justify-between items-center mt2">
+                            <div className="flex flex-column">
+                              <span className="block-subheadline bold">
+                                {openStatus}
+                              </span>
+                              {!closeLocationForTheSeason &&
+                              currentOpenHours ? (
+                                <span className={cx('small')}>
+                                  {currentOpenHours}
+                                </span>
+                              ) : null}
                             </div>
-                          ) : null}
+                            {location.delivery ? (
+                              <div
+                                className={cx(
+                                  styles['LocationsCards__card-tag'],
+                                  'uppercase bold bg-madison-blue inline-block text-white mt2'
+                                )}
+                              >
+                                <span className="text-white">Delivery</span>
+                              </div>
+                            ) : null}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ) : (
