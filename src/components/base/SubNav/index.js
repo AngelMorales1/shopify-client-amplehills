@@ -74,7 +74,7 @@ class SubNav extends Component {
                 variant="no-style"
                 className={cx(
                   styles['SubNav__menu'],
-                  'copy text-peach bold px2'
+                  'copy text-peach bold mx2'
                 )}
                 onClick={() => {
                   onClick(menu);
