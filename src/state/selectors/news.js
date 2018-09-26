@@ -22,6 +22,7 @@ export default createSelector(
           'MMMM D YYYY'
         );
         const title = get(node, 'title', '');
+        const id = get(node, 'id', '');
         const tags = get(node, 'tags', []).reduce((sortedTags, tag) => {
           sortedTags[tag] = tag;
           return sortedTags;
@@ -36,6 +37,7 @@ export default createSelector(
           image,
           publishedAt,
           title,
+          id,
           tags
         };
         return sortedArticles.concat([sortedArticle]);
