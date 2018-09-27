@@ -202,7 +202,7 @@ class LocationsCards extends Component {
               <div className="flex flex-column items-center">
                 {sortedLocations.map(location => (
                   <LocationCard
-                    ref={$card => (this.$cards[location.id] = $card)}
+                    getRef={$card => (this.$cards[location.id] = $card)}
                     key={location.id}
                     selectedLocation={selectedLocation}
                     location={location}
