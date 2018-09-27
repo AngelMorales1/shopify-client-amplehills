@@ -24,6 +24,7 @@ const ArticlePreview = ({ article, index }) => {
         <div
           className={cx(
             styles['ArticlePreview__image'],
+            styles['ArticlePreview__linked-button'],
             'col-12 aspect-4-3 absolute'
           )}
           style={{
@@ -45,6 +46,7 @@ const ArticlePreview = ({ article, index }) => {
           <h2
             className={cx(
               styles['ArticlePreview__title'],
+              styles['ArticlePreview__linked-button'],
               'bold my2 text-madison-blue avenir'
             )}
           >

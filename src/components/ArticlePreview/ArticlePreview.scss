@@ -3,18 +3,9 @@
 .ArticlePreview {
   &__image {
     border-radius: radius('m');
-    @extend .pointer;
-    text-decoration: none;
-    transform: translate3d(0, spacing(-0.5), 0);
-    transition: $transition;
 
     &:hover {
       box-shadow: $drop-shadow;
-      transform: translate3d(0, spacing(-0.25), 0);
-    }
-
-    &:active {
-      transform: translate3d(0, spacing(0.25), 0);
     }
   }
 
@@ -28,9 +19,21 @@
   }
 
   &__title {
-    @extend .pointer;
     text-align: left;
     font-size: spacing(4.5);
+
+    @media ($medium-up) {
+      font-size: $font-6;
+    }
+  }
+
+  &__date {
+    letter-spacing: spacing(0.1);
+  }
+
+  &__linked-button {
+    @extend .pointer;
+    text-decoration: none;
     transform: translate3d(0, spacing(-0.5), 0);
     transition: $transition;
 
@@ -41,13 +44,5 @@
     &:active {
       transform: translate3d(0, spacing(0.25), 0);
     }
-
-    @media ($medium-up) {
-      font-size: $font-6;
-    }
-  }
-
-  &__date {
-    letter-spacing: spacing(0.1);
   }
 }
