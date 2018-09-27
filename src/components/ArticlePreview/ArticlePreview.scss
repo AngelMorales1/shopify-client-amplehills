@@ -3,10 +3,10 @@
 .ArticlePreview {
   &__image {
     border-radius: radius('m');
+  }
 
-    &:hover {
-      box-shadow: $drop-shadow;
-    }
+  &__button {
+    white-space: normal;
   }
 
   &__text-container {
@@ -21,28 +21,15 @@
   &__title {
     text-align: left;
     font-size: spacing(4.5);
+    line-height: $font-6;
 
     @media ($medium-up) {
       font-size: $font-6;
+      line-height: $font-7;
     }
   }
 
   &__date {
     letter-spacing: spacing(0.1);
-  }
-
-  &__linked-button {
-    @extend .pointer;
-    text-decoration: none;
-    transform: translate3d(0, spacing(-0.5), 0);
-    transition: $transition;
-
-    &:hover {
-      transform: translate3d(0, spacing(-0.25), 0);
-    }
-
-    &:active {
-      transform: translate3d(0, spacing(0.25), 0);
-    }
   }
 }

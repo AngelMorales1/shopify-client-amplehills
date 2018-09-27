@@ -23,17 +23,18 @@ const Button = ({
   newTab
 }) => {
   const classes = cx(
-    className,
-    styles.Button,
     styles[`Button--${color}`],
     {
       w100: fullWidth,
       [styles['Button--disabled']]: disabled,
-      [styles['Button--div']]: to
+      [styles['Button--div']]: to,
+      [styles['Button--shadow']]: shadow,
+      [styles['Button--border-none']]: children && !label
     },
     styles[`Button--${variant}`],
-    { [styles['Button--shadow']]: shadow },
-    styles[`Button--hover-${hover}`]
+    styles[`Button--hover-${hover}`],
+    className,
+    styles.Button
   );
 
   const linkedComponent =

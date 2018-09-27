@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
-import { Link } from 'react-router-dom';
 import { FacebookShareButton } from 'react-share';
 import articleModel from 'models/articleModel';
 
@@ -20,11 +19,10 @@ const ArticlePreview = ({ article, index }) => {
 
   return (
     <div className="px2">
-      <Link to={`/news/${article.handle}`}>
+      <Button variant="style-none" to={`/news/${article.handle}`}>
         <div
           className={cx(
             styles['ArticlePreview__image'],
-            styles['ArticlePreview__linked-button'],
             'col-12 aspect-4-3 absolute'
           )}
           style={{
@@ -35,24 +33,27 @@ const ArticlePreview = ({ article, index }) => {
             backgroundSize: 'cover'
           }}
         />
-      </Link>
+      </Button>
       <div
         className={cx(
           styles['ArticlePreview__text-container'],
           'text-container-width'
         )}
       >
-        <Link to={`/news/${article.handle}`} className="text-decoration-none">
+        <Button
+          className={cx(styles['ArticlePreview__button'])}
+          variant="style-none"
+          to={`/news/${article.handle}`}
+        >
           <h2
             className={cx(
               styles['ArticlePreview__title'],
-              styles['ArticlePreview__linked-button'],
               'bold my2 text-madison-blue avenir'
             )}
           >
             {article.title}
           </h2>
-        </Link>
+        </Button>
         <p
           className={cx(
             styles['ArticlePreview__date'],

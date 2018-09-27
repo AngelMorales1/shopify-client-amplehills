@@ -15,6 +15,10 @@
     transform: translate3d(0, spacing(0.25), 0);
   }
 
+  &--border-none {
+    border: 0;
+  }
+
   &--hover-shadow {
     &:hover {
       box-shadow: $drop-shadow;
