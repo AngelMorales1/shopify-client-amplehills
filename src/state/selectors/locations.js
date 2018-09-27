@@ -25,6 +25,11 @@ export default createSelector(
       const seasonal = get(fields, 'seasonal', true);
       const delivery = get(fields, 'delivery', false);
       const orderDeliveryLink = get(fields, 'orderDeliveryLink', '');
+      const closeLocationForTheSeason = get(
+        fields,
+        'closeLocationForTheSeason',
+        false
+      );
 
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
@@ -61,6 +66,7 @@ export default createSelector(
         sortedHours,
         delivery,
         orderDeliveryLink,
+        closeLocationForTheSeason,
         currentOpenHours,
         stringifiedSearchableFields
       };

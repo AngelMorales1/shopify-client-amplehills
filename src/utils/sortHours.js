@@ -1,5 +1,6 @@
 import { Days } from 'constants/Days.js';
 import { abbreviateDay } from './abbreviateDay.js';
+import get from 'utils/get';
 
 const getDayRange = daysWithSameHours => {
   return daysWithSameHours.length > 1
@@ -13,8 +14,8 @@ export default openHours => {
   let allSortedDays = [];
 
   Days.reduce((accumulated, day) => {
-    let time = openHours[day];
-    let timeRange = Object.keys(accumulated)[0];
+    const time = get(openHours, day, 'close');
+    const timeRange = Object.keys(accumulated)[0];
 
     if (timeRange) {
       if (accumulated[time]) {
