@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import contentfulImgUtil from 'utils/contentfulImgUtil';
 import { Link } from 'react-router-dom';
 import { FacebookShareButton } from 'react-share';
+import articleModel from 'models/articleModel';
 
 import styles from './ArticlePreview.scss';
-import { Button, Image } from 'components/base';
+import { Button } from 'components/base';
 
 const ArticlePreview = ({ article, index }) => {
   const thisIsfirstArticle = index === 0;
@@ -86,8 +87,14 @@ const ArticlePreview = ({ article, index }) => {
   );
 };
 
-ArticlePreview.propTypes = {};
+ArticlePreview.propTypes = {
+  article: articleModel.propTypes,
+  index: PropTypes.number
+};
 
-ArticlePreview.defaultProps = {};
+ArticlePreview.defaultProps = {
+  article: {},
+  index: 0
+};
 
 export default ArticlePreview;
