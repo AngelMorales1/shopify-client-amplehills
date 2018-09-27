@@ -3,6 +3,19 @@
 .ArticlePreview {
   &__image {
     border-radius: radius('m');
+    @extend .pointer;
+    text-decoration: none;
+    transform: translate3d(0, spacing(-0.5), 0);
+    transition: $transition;
+
+    &:hover {
+      box-shadow: $drop-shadow;
+      transform: translate3d(0, spacing(-0.25), 0);
+    }
+
+    &:active {
+      transform: translate3d(0, spacing(0.25), 0);
+    }
   }
 
   &__text-container {
@@ -15,7 +28,19 @@
   }
 
   &__title {
+    @extend .pointer;
+    text-align: left;
     font-size: spacing(4.5);
+    transform: translate3d(0, spacing(-0.5), 0);
+    transition: $transition;
+
+    &:hover {
+      transform: translate3d(0, spacing(-0.25), 0);
+    }
+
+    &:active {
+      transform: translate3d(0, spacing(0.25), 0);
+    }
 
     @media ($medium-up) {
       font-size: $font-6;

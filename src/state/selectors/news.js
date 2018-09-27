@@ -18,6 +18,7 @@ export default createSelector(
         const contentHtml = get(node, 'contentHtml', '');
         const content = get(node, 'content', '');
         const image = get(node, 'image.originalSrc', '');
+        const handle = get(node, 'handle', '');
         const publishedAt = moment(get(node, 'publishedAt', '')).format(
           'MMMM D YYYY'
         );
@@ -35,6 +36,7 @@ export default createSelector(
           contentHtml,
           content,
           image,
+          handle,
           publishedAt,
           title,
           id,
