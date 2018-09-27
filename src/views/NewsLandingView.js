@@ -3,6 +3,7 @@ import Global from 'constants/Global';
 import get from 'utils/get';
 
 import ArticlePreview from 'components/ArticlePreview';
+import RecentArticle from 'components/RecentArticle';
 
 class NewsLandingView extends Component {
   render() {
@@ -10,14 +11,24 @@ class NewsLandingView extends Component {
 
     return (
       <div className="flex flex-row justify-between py4 px2">
+        <div className="col-12 md-col-3">
+          <h2 className="callout">Recent Articles</h2>
+          <div className="flex flex-column">
+            {articles.slice(0, 4).map((article, i) => {
+              console.log(article.handle);
+              return <RecentArticle article={article} />;
+            })}
+          </div>
+        </div>
         <div className="col-12 md-col-6">
-          {articles.map((article, i) => (
-            <ArticlePreview
-              key={get(article, 'id', i)}
-              index={i}
-              article={article}
-            />
-          ))}
+          {articles
+            .map((article, i) => (
+              <ArticlePreview
+                key={get(article, 'id', i)}
+                index={i}
+                article={article}
+              />
+            ))}
         </div>
       </div>
     );
