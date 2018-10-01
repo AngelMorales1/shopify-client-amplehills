@@ -1,8 +1,9 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchNews } from 'state/actions/newsActions';
+import { fetchNews, fetchNewsTags } from 'state/actions/newsActions';
 import news from 'state/selectors/news';
+import newsTags from 'state/selectors/newsTags';
 import get from 'utils/get';
 
 class NewsLandingContainer extends ContainerBase {
@@ -10,22 +11,36 @@ class NewsLandingContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchNews }
+      actions: { fetchNews, fetchNewsTags }
     } = this.props;
 
-    return fetchNews();
+    return Promise.all([fetchNews(), fetchNewsTags()]).then(
+      ([news, newsTags]) => {
+        return {
+          news: get(news, 'value'),
+          newsTags: get(newsTags, 'value')
+        };
+      }
+    );
   };
 }
 
 const mapStateToProps = state => {
   return {
-    news: news(state)
+    news: news(state),
+    newsTags: newsTags(state)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({ fetchNews }, dispatch)
+    actions: bindActionCreators(
+      {
+        fetchNews,
+        fetchNewsTags
+      },
+      dispatch
+    )
   };
 };
 

@@ -40,3 +40,21 @@ export const newsFetch = gql`
     }
   }
 `;
+
+export const newsTagFetch = gql`
+  query newsTags {
+    blogs(first: 100) {
+      edges {
+        node {
+          articles(first: 100, reverse: true) {
+            edges {
+              node {
+                tags
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
