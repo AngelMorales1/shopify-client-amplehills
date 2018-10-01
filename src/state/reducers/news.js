@@ -1,4 +1,8 @@
-import { FETCH_NEWS, FETCH_NEWS_TAGS } from 'state/actions/newsActions';
+import {
+  FETCH_NEWS,
+  FETCH_NEWS_TAGS,
+  FETCH_NEWS_BY_TAG
+} from 'state/actions/newsActions';
 
 const initialState = {
   news: {},
@@ -17,6 +21,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         newsTags: action.payload
+      };
+    case `${FETCH_NEWS_BY_TAG}_FULFILLED`:
+      return {
+        ...state,
+        news: action.payload
       };
     default:
       return state;

@@ -25,6 +25,7 @@ query newsArticles {
           name
           email
         }
+        cursor
       }
       cursor
     }
@@ -69,6 +70,7 @@ query newsArticles($tag: String!) {
           name
           email
         }
+        cursor
       }
       cursor
     }

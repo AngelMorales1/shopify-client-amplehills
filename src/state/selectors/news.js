@@ -3,7 +3,7 @@ import get from 'utils/get';
 import moment from 'moment';
 
 export default createSelector(
-  state => get(state, 'news.news.data.blogs.edges[0].node.articles'),
+  state => get(state, 'news.news.data.articles'),
   news => {
     const pageInfo = get(news, 'pageInfo', {});
     const hasNextPage = get(pageInfo, 'hasNextPage', false);
@@ -24,10 +24,7 @@ export default createSelector(
         );
         const title = get(node, 'title', '');
         const id = get(node, 'id', '');
-        const tags = get(node, 'tags', []).reduce((sortedTags, tag) => {
-          sortedTags[tag] = tag;
-          return sortedTags;
-        }, {});
+        const tags = get(node, 'tags', []);
 
         const sortedArticle = {
           cursor,
