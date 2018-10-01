@@ -11,11 +11,7 @@ import { Button } from 'components/base';
 
 const ArticlePreview = ({ article, index }) => {
   const thisIsfirstArticle = index === 0;
-  const firstTwoSentencesFromContent =
-    article.content
-      .split('. ')
-      .slice(0, 2)
-      .join('. ') + '.';
+  const excerpt = article.content.slice(0, 200) + '...';
 
   return (
     <div className="px2">
@@ -64,7 +60,7 @@ const ArticlePreview = ({ article, index }) => {
         </p>
         {thisIsfirstArticle ? (
           <Fragment>
-            <p className="block-subheadline">{firstTwoSentencesFromContent}</p>
+            <p className="block-subheadline">{excerpt}</p>
             <div className="flex flex-row my3">
               <Button
                 to={`/news/${article.handle}`}

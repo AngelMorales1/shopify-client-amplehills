@@ -2,13 +2,13 @@ import gql from 'graphql-tag';
 
 export const newsFetch = gql`
   query newsArticles {
-    blogs(first: 100) {
+    blogs(first: 5) {
       edges {
         node {
           handle
           title
           id
-          articles(first: 10, reverse: true) {
+          articles(first: 5, reverse: true) {
             pageInfo {
               hasNextPage
               hasPreviousPage

@@ -5,35 +5,8 @@ import get from 'utils/get';
 import ArticlePreview from 'components/ArticlePreview';
 
 class NewsLandingView extends Component {
-  state = {
-    currentBreakpoint: Global.breakpoints.medium.label
-  };
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateWindow);
-    this.updateWindow();
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindow);
-  }
-
-  updateWindow = () => {
-    const { small, medium } = Global.breakpoints;
-    const currentBreakpoint =
-      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
-
-    if (this.state.currentBreakpoint !== currentBreakpoint)
-      this.setState({ currentBreakpoint });
-  };
-
   render() {
-    const renderArticleCount =
-      this.state.currentBreakpoint === Global.breakpoints.medium.label ? 3 : 5;
-    const articles = get(this, 'props.news.articles', []).slice(
-      0,
-      renderArticleCount
-    );
+    const articles = get(this, 'props.news.articles', []);
 
     return (
       <div className="flex flex-row justify-between py4 px2">
