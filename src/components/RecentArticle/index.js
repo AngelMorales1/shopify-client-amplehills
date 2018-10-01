@@ -9,7 +9,7 @@ import styles from './RecentArticle.scss';
 
 const RecentArticle = ({ article }) => {
   return (
-    <div className="my2">
+    <div className="my1">
       <Link to={`/news/${article.handle}`} className="text-decoration-none">
         <p className={cx(styles['RecentArticle__title'], 'avenir bold')}>
           {article.title}
