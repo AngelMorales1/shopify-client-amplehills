@@ -1,60 +1,77 @@
 import gql from 'graphql-tag';
 
 export const newsFetch = gql`
-  query newsArticles {
-    blogs(first: 5) {
-      edges {
-        node {
-          handle
-          title
+query newsArticles {
+  articles(first: 5, reverse: true) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      node {
+        content
+        contentHtml
+        handle
+        id
+        publishedAt
+        tags
+        title
+        image {
+          altText
           id
-          articles(first: 5, reverse: true) {
-            pageInfo {
-              hasNextPage
-              hasPreviousPage
-            }
-            edges {
-              node {
-                content
-                contentHtml
-                handle
-                id
-                publishedAt
-                tags
-                title
-                image {
-                  altText
-                  id
-                  originalSrc
-                }
-                author {
-                  name
-                  email
-                }
-              }
-              cursor
-            }
-          }
+          originalSrc
+        }
+        author {
+          name
+          email
         }
       }
+      cursor
     }
   }
+}
 `;
 
 export const newsTagFetch = gql`
-  query newsTags {
-    blogs(first: 100) {
-      edges {
-        node {
-          articles(first: 100, reverse: true) {
-            edges {
-              node {
-                tags
-              }
-            }
-          }
-        }
+query newsTags {
+  articles(first: 100, reverse: true) {
+    edges {
+      node {
+        tags
       }
     }
   }
+}
+`;
+
+export const newsByTagFetch = gql`
+query newsArticles($tag: String!) {
+  articles(first: 5, reverse: true, query: $tag) {
+    pageInfo {
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      node {
+        content
+        contentHtml
+        handle
+        id
+        publishedAt
+        tags
+        title
+        image {
+          altText
+          id
+          originalSrc
+        }
+        author {
+          name
+          email
+        }
+      }
+      cursor
+    }
+  }
+}
 `;

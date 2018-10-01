@@ -83,6 +83,14 @@
     padding: spacing(2) spacing(6);
   }
 
+  &--tag {
+    border-radius: radius('m');
+    height: spacing(7);
+    font-size: spacing(2.25);
+    letter-spacing: spacing(0.25);
+    padding: spacing(1) spacing(3);
+  }
+
   &--secondary {
     display: flex;
     align-items: center;
@@ -198,6 +206,11 @@
 
   &--madison-blue {
     @extend .bg-madison-blue;
+    @extend .text-white;
+  }
+
+  &--green {
+    @extend .bg-green;
     @extend .text-white;
   }
 
