@@ -3,7 +3,7 @@ import get from 'utils/get';
 import moment from 'moment';
 
 export default createSelector(
-  state => get(state, 'news.news.data.shop.blogs.edges[0].node.articles'),
+  state => get(state, 'news.news.data.blogs.edges[0].node.articles'),
   news => {
     const pageInfo = get(news, 'pageInfo', {});
     const hasNextPage = get(pageInfo, 'hasNextPage', false);
