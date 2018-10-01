@@ -20,8 +20,36 @@ const RecentArticle = ({ article }) => {
   );
 };
 
-RecentArticle.propTypes = {};
+RecentArticle.propTypes = {
+  article: PropTypes.shape({
+    authorEmail: PropTypes.string,
+    authorName: PropTypes.string,
+    content: PropTypes.string,
+    contentHtml: PropTypes.string,
+    cursor: PropTypes.string,
+    handle: PropTypes.string,
+    id: PropTypes.string,
+    image: PropTypes.string,
+    publishedAt: PropTypes.string,
+    tags: PropTypes.object,
+    title: PropTypes.string
+  })
+};
 
-RecentArticle.defaultProps = {};
+RecentArticle.defaultProps = {
+  article: {
+    authorEmail: '',
+    authorName: '',
+    content: '',
+    contentHtml: '',
+    cursor: '',
+    handle: '',
+    id: '',
+    image: '',
+    publishedAt: '',
+    tags: {},
+    title: ''
+  }
+};
 
 export default RecentArticle;
