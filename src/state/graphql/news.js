@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const newsFetch = gql`
-  query shop {
+  query newsArticles {
     shop {
       blogs(first: 100) {
         edges {
