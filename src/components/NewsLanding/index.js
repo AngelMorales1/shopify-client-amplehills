@@ -10,7 +10,7 @@ import styles from './NewsLanding.scss';
 import ArticlePreview from 'components/ArticlePreview';
 import RecentArticle from 'components/RecentArticle';
 
-const NewsLAnding = ({ news }) => {
+const NewsLanding = ({ news }) => {
   const articles = get(news, 'articles', []);
 
   return (
@@ -20,7 +20,7 @@ const NewsLAnding = ({ news }) => {
         <div className="flex flex-column mb3">
           {articles
             .slice(0, 4)
-            .map((article, i) => (
+            .map(article => (
               <RecentArticle key={article.id} article={article} />
             ))}
         </div>
@@ -31,7 +31,7 @@ const NewsLAnding = ({ news }) => {
           'col-12 md-col-6'
         )}
       >
-        {articles.map((article, i) => (
+        {articles.map(article => (
           <ArticlePreview key={article.id} article={article} />
         ))}
       </div>
@@ -39,16 +39,16 @@ const NewsLAnding = ({ news }) => {
   );
 };
 
-NewsLAnding.propTypes = {
+NewsLanding.propTypes = {
   hasNextPage: PropTypes.bool,
   hasPreviousPage: PropTypes.bool,
   articles: PropTypes.arrayOf(articleModel.propTypes)
 };
 
-NewsLAnding.defaultProps = {
+NewsLanding.defaultProps = {
   hasNextPage: false,
   hasPreviousPage: false,
   articles: []
 };
 
-export default NewsLAnding;
+export default NewsLanding;
