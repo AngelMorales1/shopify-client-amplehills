@@ -1,0 +1,16 @@
+@import 'settings', 'typography', 'src/styles/utils';
+
+.NewsLandingView {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+
+  &__recent-articles-content-container {
+    margin-bottom: spacing(12);
+    @media ($medium-up) {
+      margin-bottom: 0;
+    }
+  }
+}

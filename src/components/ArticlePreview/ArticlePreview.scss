@@ -32,4 +32,14 @@
   &__date {
     letter-spacing: spacing(0.1);
   }
+
+  &__detail-container {
+    display: none;
+  }
+
+  &:first-of-type {
+    .ArticlePreview__detail-container {
+      display: block;
+    }
+  }
 }

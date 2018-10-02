@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
+import articleModel from 'models/articleModel';
 
 import { Image, Button } from 'components/base';
 import styles from './RecentArticle.scss';
@@ -21,35 +22,11 @@ const RecentArticle = ({ article }) => {
 };
 
 RecentArticle.propTypes = {
-  article: PropTypes.shape({
-    authorEmail: PropTypes.string,
-    authorName: PropTypes.string,
-    content: PropTypes.string,
-    contentHtml: PropTypes.string,
-    cursor: PropTypes.string,
-    handle: PropTypes.string,
-    id: PropTypes.string,
-    image: PropTypes.string,
-    publishedAt: PropTypes.string,
-    tags: PropTypes.object,
-    title: PropTypes.string
-  })
+  article: articleModel.propTypes
 };
 
 RecentArticle.defaultProps = {
-  article: {
-    authorEmail: '',
-    authorName: '',
-    content: '',
-    contentHtml: '',
-    cursor: '',
-    handle: '',
-    id: '',
-    image: '',
-    publishedAt: '',
-    tags: {},
-    title: ''
-  }
+  article: articleModel.default
 };
 
 export default RecentArticle;
