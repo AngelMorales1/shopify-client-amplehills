@@ -29,7 +29,7 @@ ShallowWrapper {
           bg={false}
           className="icon z-1"
           onImgLoad={[Function]}
-          src="foo?w=200&fm=png&q=90"
+          src="foo"
           style={Object {}}
 />,
         <div
@@ -92,7 +92,7 @@ ShallowWrapper {
           "children": null,
           "className": "icon z-1",
           "onImgLoad": [Function],
-          "src": "foo?w=200&fm=png&q=90",
+          "src": "foo",
           "style": Object {},
         },
         "ref": null,
@@ -297,7 +297,7 @@ ShallowWrapper {
             bg={false}
             className="icon z-1"
             onImgLoad={[Function]}
-            src="foo?w=200&fm=png&q=90"
+            src="foo"
             style={Object {}}
 />,
           <div
@@ -360,7 +360,7 @@ ShallowWrapper {
             "children": null,
             "className": "icon z-1",
             "onImgLoad": [Function],
-            "src": "foo?w=200&fm=png&q=90",
+            "src": "foo",
             "style": Object {},
           },
           "ref": null,
@@ -598,7 +598,7 @@ ShallowWrapper {
           bg={false}
           className="icon z-1"
           onImgLoad={[Function]}
-          src="?w=200&fm=png&q=90"
+          src=""
           style={Object {}}
 />,
         <div
@@ -661,7 +661,7 @@ ShallowWrapper {
           "children": null,
           "className": "icon z-1",
           "onImgLoad": [Function],
-          "src": "?w=200&fm=png&q=90",
+          "src": "",
           "style": Object {},
         },
         "ref": null,
@@ -866,7 +866,7 @@ ShallowWrapper {
             bg={false}
             className="icon z-1"
             onImgLoad={[Function]}
-            src="?w=200&fm=png&q=90"
+            src=""
             style={Object {}}
 />,
           <div
@@ -929,7 +929,7 @@ ShallowWrapper {
             "children": null,
             "className": "icon z-1",
             "onImgLoad": [Function],
-            "src": "?w=200&fm=png&q=90",
+            "src": "",
             "style": Object {},
           },
           "ref": null,

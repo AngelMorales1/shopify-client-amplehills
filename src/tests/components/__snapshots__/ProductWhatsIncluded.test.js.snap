@@ -40,6 +40,13 @@ ShallowWrapper {
     }
     products={Object {}}
     setRef={[Function]}
+    whatsIncluded={
+        Object {
+            "whatsIncludedDrip": false,
+            "whatsIncludedIllustration": "",
+            "whatsIncludedProducts": Array [],
+          }
+    }
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -55,8 +62,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="block-headline my3 nowrap col-12 md-col-6 center"
+        <div
+          className="col-12 md-col-6"
 >
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -71,7 +78,7 @@ ShallowWrapper {
 </div>,
         null,
       ],
-      "className": "flex justify-between drip relative",
+      "className": "flex justify-between relative",
       "style": Object {
         "zIndex": 0,
       },
@@ -83,8 +90,15 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What’s included",
-          "className": "block-headline my3 nowrap col-12 md-col-6 center",
+          "children": Array [
+            <h2
+              className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+              What’s included
+</h2>,
+            null,
+          ],
+          "className": "col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [
@@ -127,8 +141,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="block-headline my3 nowrap col-12 md-col-6 center"
+          <div
+            className="col-12 md-col-6"
 >
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -143,7 +157,7 @@ ShallowWrapper {
 </div>,
           null,
         ],
-        "className": "flex justify-between drip relative",
+        "className": "flex justify-between relative",
         "style": Object {
           "zIndex": 0,
         },
@@ -155,8 +169,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What’s included",
-            "className": "block-headline my3 nowrap col-12 md-col-6 center",
+            "children": Array [
+              <h2
+                className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+                What’s included
+</h2>,
+              null,
+            ],
+            "className": "col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [
@@ -225,6 +246,13 @@ ShallowWrapper {
     }
     products={Object {}}
     setRef={[Function]}
+    whatsIncluded={
+        Object {
+            "whatsIncludedDrip": false,
+            "whatsIncludedIllustration": "",
+            "whatsIncludedProducts": Array [],
+          }
+    }
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -240,8 +268,8 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2
-          className="block-headline my3 nowrap col-12 md-col-6 center"
+        <div
+          className="col-12 md-col-6"
 >
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -252,38 +280,11 @@ ShallowWrapper {
         <div
           className="flex flex-column col-12 md-col-6"
 >
-          <div
-                    className="flex items-start my2 col-12"
-          >
-                    <div
-                              className="mr3 col-2"
-                    >
-                              <Image
-                                        alt="undefined image"
-                                        bg={false}
-                                        className="w100"
-                                        onImgLoad={[Function]}
-                                        src="undefined?w=500&fm=png&q=90"
-                                        style={Object {}}
-                              />
-                    </div>
-                    <div
-                              className="col-10"
-                    >
-                              <h3
-                                        className="description-title bold mb2"
-                              >
-                                        1x undefined
-                              </h3>
-                              <p
-                                        className="block-subheadline"
-                              />
-                    </div>
-          </div>
+          
 </div>,
         null,
       ],
-      "className": "flex justify-between drip relative",
+      "className": "flex justify-between relative",
       "style": Object {
         "zIndex": 1,
       },
@@ -295,11 +296,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "What’s included",
-          "className": "block-headline my3 nowrap col-12 md-col-6 center",
+          "children": Array [
+            <h2
+              className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+              What’s included
+</h2>,
+            null,
+          ],
+          "className": "col-12 md-col-6",
         },
         "ref": null,
         "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
@@ -320,160 +329,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="flex items-start my2 col-12"
->
-              <div
-                            className="mr3 col-2"
-              >
-                            <Image
-                                          alt="undefined image"
-                                          bg={false}
-                                          className="w100"
-                                          onImgLoad={[Function]}
-                                          src="undefined?w=500&fm=png&q=90"
-                                          style={Object {}}
-                            />
-              </div>
-              <div
-                            className="col-10"
-              >
-                            <h3
-                                          className="description-title bold mb2"
-                            >
-                                          1x undefined
-                            </h3>
-                            <p
-                                          className="block-subheadline"
-                            />
-              </div>
-</div>,
-          ],
+          "children": Array [],
           "className": "flex flex-column col-12 md-col-6",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <div
-                  className="mr3 col-2"
->
-                  <Image
-                                    alt="undefined image"
-                                    bg={false}
-                                    className="w100"
-                                    onImgLoad={[Function]}
-                                    src="undefined?w=500&fm=png&q=90"
-                                    style={Object {}}
-                  />
-</div>,
-                <div
-                  className="col-10"
->
-                  <h3
-                                    className="description-title bold mb2"
-                  >
-                                    1x undefined
-                  </h3>
-                  <p
-                                    className="block-subheadline"
-                  />
-</div>,
-              ],
-              "className": "flex items-start my2 col-12",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": <Image
-                    alt="undefined image"
-                    bg={false}
-                    className="w100"
-                    onImgLoad={[Function]}
-                    src="undefined?w=500&fm=png&q=90"
-                    style={Object {}}
-/>,
-                  "className": "mr3 col-2",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "alt": "undefined image",
-                    "bg": false,
-                    "children": null,
-                    "className": "w100",
-                    "onImgLoad": [Function],
-                    "src": "undefined?w=500&fm=png&q=90",
-                    "style": Object {},
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <h3
-                      className="description-title bold mb2"
->
-                      1x undefined
-</h3>,
-                    <p
-                      className="block-subheadline"
-/>,
-                  ],
-                  "className": "col-10",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "1x undefined",
-                      "className": "description-title bold mb2",
-                    },
-                    "ref": null,
-                    "rendered": "1x undefined",
-                    "type": "h3",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": undefined,
-                      "className": "block-subheadline",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "p",
-                  },
-                ],
-                "type": "div",
-              },
-            ],
-            "type": "div",
-          },
-        ],
+        "rendered": Array [],
         "type": "div",
       },
       null,
@@ -487,8 +347,8 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2
-            className="block-headline my3 nowrap col-12 md-col-6 center"
+          <div
+            className="col-12 md-col-6"
 >
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
@@ -499,38 +359,11 @@ ShallowWrapper {
           <div
             className="flex flex-column col-12 md-col-6"
 >
-            <div
-                        className="flex items-start my2 col-12"
-            >
-                        <div
-                                    className="mr3 col-2"
-                        >
-                                    <Image
-                                                alt="undefined image"
-                                                bg={false}
-                                                className="w100"
-                                                onImgLoad={[Function]}
-                                                src="undefined?w=500&fm=png&q=90"
-                                                style={Object {}}
-                                    />
-                        </div>
-                        <div
-                                    className="col-10"
-                        >
-                                    <h3
-                                                className="description-title bold mb2"
-                                    >
-                                                1x undefined
-                                    </h3>
-                                    <p
-                                                className="block-subheadline"
-                                    />
-                        </div>
-            </div>
+            
 </div>,
           null,
         ],
-        "className": "flex justify-between drip relative",
+        "className": "flex justify-between relative",
         "style": Object {
           "zIndex": 1,
         },
@@ -542,8 +375,15 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "What’s included",
-            "className": "block-headline my3 nowrap col-12 md-col-6 center",
+            "children": Array [
+              <h2
+                className="block-headline my3 nowrap center flex flex-column items-center justify-center"
+>
+                What’s included
+</h2>,
+              null,
+            ],
+            "className": "col-12 md-col-6",
           },
           "ref": null,
           "rendered": Array [
@@ -568,160 +408,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <div
-                className="flex items-start my2 col-12"
->
-                <div
-                                className="mr3 col-2"
-                >
-                                <Image
-                                                alt="undefined image"
-                                                bg={false}
-                                                className="w100"
-                                                onImgLoad={[Function]}
-                                                src="undefined?w=500&fm=png&q=90"
-                                                style={Object {}}
-                                />
-                </div>
-                <div
-                                className="col-10"
-                >
-                                <h3
-                                                className="description-title bold mb2"
-                                >
-                                                1x undefined
-                                </h3>
-                                <p
-                                                className="block-subheadline"
-                                />
-                </div>
-</div>,
-            ],
+            "children": Array [],
             "className": "flex flex-column col-12 md-col-6",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <div
-                    className="mr3 col-2"
->
-                    <Image
-                                        alt="undefined image"
-                                        bg={false}
-                                        className="w100"
-                                        onImgLoad={[Function]}
-                                        src="undefined?w=500&fm=png&q=90"
-                                        style={Object {}}
-                    />
-</div>,
-                  <div
-                    className="col-10"
->
-                    <h3
-                                        className="description-title bold mb2"
-                    >
-                                        1x undefined
-                    </h3>
-                    <p
-                                        className="block-subheadline"
-                    />
-</div>,
-                ],
-                "className": "flex items-start my2 col-12",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": <Image
-                      alt="undefined image"
-                      bg={false}
-                      className="w100"
-                      onImgLoad={[Function]}
-                      src="undefined?w=500&fm=png&q=90"
-                      style={Object {}}
-/>,
-                    "className": "mr3 col-2",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "alt": "undefined image",
-                      "bg": false,
-                      "children": null,
-                      "className": "w100",
-                      "onImgLoad": [Function],
-                      "src": "undefined?w=500&fm=png&q=90",
-                      "style": Object {},
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h3
-                        className="description-title bold mb2"
->
-                        1x undefined
-</h3>,
-                      <p
-                        className="block-subheadline"
-/>,
-                    ],
-                    "className": "col-10",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "1x undefined",
-                        "className": "description-title bold mb2",
-                      },
-                      "ref": null,
-                      "rendered": "1x undefined",
-                      "type": "h3",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": undefined,
-                        "className": "block-subheadline",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "p",
-                    },
-                  ],
-                  "type": "div",
-                },
-              ],
-              "type": "div",
-            },
-          ],
+          "rendered": Array [],
           "type": "div",
         },
         null,

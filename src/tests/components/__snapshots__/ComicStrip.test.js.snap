@@ -1044,10 +1044,6 @@ ShallowWrapper {
               "backgroundColor": "",
               "products": Array [
                 Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                   "fields": Object {
                     "comics": Array [
                       Object {
@@ -1055,31 +1051,11 @@ ShallowWrapper {
                           "file": Object {
                             "url": "",
                           },
-<<<<<<< HEAD
                         },
                       },
                     ],
                     "title": "",
                   },
-=======
-                  "comics": Array [
-                    Object {
-                      "fields": Object {
-                        "file": Object {
-                          "url": "",
-                        },
-                      },
-                    },
-                  ],
-                  "title": "",
->>>>>>> Add test
-=======
-                        },
-                      },
-                    ],
-                    "title": "",
-                  },
->>>>>>> Add subNav test and fix location related selectors
                 },
               ],
               "title": "",
@@ -1166,10 +1142,6 @@ ShallowWrapper {
                     <div
                               className="flex flex-row"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                               <div
                                         className="transition-slide-up-large m2 xs-hide sm-hide"
                               >
@@ -1182,23 +1154,11 @@ ShallowWrapper {
                                                   style={Object {}}
                                         />
                               </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                               <Carousel
                                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         dotColor=""
-=======
->>>>>>> Add test
-=======
-                                        dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -1206,10 +1166,6 @@ ShallowWrapper {
                                         showOnImage={false}
                                         sliderClasses=""
                               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                         <div
                                                   className="w-auto mx-auto"
                                         >
@@ -1222,12 +1178,6 @@ ShallowWrapper {
                                                             style={Object {}}
                                                   />
                                         </div>
-<<<<<<< HEAD
-=======
-                                        
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                               </Carousel>
                     </div>
           </div>
@@ -1390,15 +1340,7 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": Object {
                   "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
                   "key": undefined,
-=======
-                  "key": "0",
->>>>>>> Add test
-=======
-                  "key": undefined,
->>>>>>> Add subNav test and fix location related selectors
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
@@ -1441,10 +1383,6 @@ ShallowWrapper {
               <div
                             className="flex flex-row"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                             <div
                                           className="transition-slide-up-large m2 xs-hide sm-hide"
                             >
@@ -1457,23 +1395,11 @@ ShallowWrapper {
                                                         style={Object {}}
                                           />
                             </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                             <Carousel
                                           arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                           arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                           className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                           dotColor=""
-=======
->>>>>>> Add test
-=======
-                                          dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                           index={0}
                                           onChange={[Function]}
                                           showArrows={false}
@@ -1481,10 +1407,6 @@ ShallowWrapper {
                                           showOnImage={false}
                                           sliderClasses=""
                             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                           <div
                                                         className="w-auto mx-auto"
                                           >
@@ -1497,12 +1419,6 @@ ShallowWrapper {
                                                                       style={Object {}}
                                                         />
                                           </div>
-<<<<<<< HEAD
-=======
-                                          
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                             </Carousel>
               </div>
 </div>,
@@ -1523,10 +1439,6 @@ ShallowWrapper {
                 <div
                   className="flex flex-row"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                   <div
                                     className="transition-slide-up-large m2 xs-hide sm-hide"
                   >
@@ -1539,23 +1451,11 @@ ShallowWrapper {
                                                       style={Object {}}
                                     />
                   </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                   <Carousel
                                     arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                     arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                     className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     dotColor=""
-=======
->>>>>>> Add test
-=======
-                                    dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                     index={0}
                                     onChange={[Function]}
                                     showArrows={false}
@@ -1563,10 +1463,6 @@ ShallowWrapper {
                                     showOnImage={false}
                                     sliderClasses=""
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                     <div
                                                       className="w-auto mx-auto"
                                     >
@@ -1579,12 +1475,6 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                       />
                                     </div>
-<<<<<<< HEAD
-=======
-                                    
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                   </Carousel>
 </div>,
               ],
@@ -1610,10 +1500,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                     Array [
                       <div
                         className="transition-slide-up-large m2 xs-hide sm-hide"
@@ -1628,24 +1514,11 @@ ShallowWrapper {
                         />
 </div>,
                     ],
-<<<<<<< HEAD
-=======
-                    Array [],
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                     <Carousel
                       arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                       arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                       className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                       dotColor=""
-=======
->>>>>>> Add test
-=======
-                      dotColor=""
->>>>>>> Add ImageVideoCarousel test
                       index={0}
                       onChange={[Function]}
                       showArrows={false}
@@ -1653,10 +1526,6 @@ ShallowWrapper {
                       showOnImage={false}
                       sliderClasses=""
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                       <div
                                             className="w-auto mx-auto"
                       >
@@ -1669,12 +1538,6 @@ ShallowWrapper {
                                                                   style={Object {}}
                                             />
                       </div>
-<<<<<<< HEAD
-=======
-                      
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
 </Carousel>,
                   ],
                   "className": "flex flex-row",
@@ -1683,10 +1546,6 @@ ShallowWrapper {
                 "rendered": Array [
                   Object {
                     "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                     "key": "0",
                     "nodeType": "host",
                     "props": Object {
@@ -1722,20 +1581,11 @@ ShallowWrapper {
                   },
                   Object {
                     "instance": null,
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
                       "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
                       "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                       "children": Array [
                         <div
                           className="w-auto mx-auto"
@@ -1750,19 +1600,8 @@ ShallowWrapper {
                           />
 </div>,
                       ],
-<<<<<<< HEAD
                       "className": "w100 mx-auto md-hide lg-hide",
                       "dotColor": "",
-=======
-                      "children": Array [],
-=======
->>>>>>> Add subNav test and fix location related selectors
-                      "className": "w100 mx-auto md-hide lg-hide",
-<<<<<<< HEAD
->>>>>>> Add test
-=======
-                      "dotColor": "",
->>>>>>> Add ImageVideoCarousel test
                       "index": 0,
                       "onChange": [Function],
                       "showArrows": false,
@@ -1771,10 +1610,6 @@ ShallowWrapper {
                       "sliderClasses": "",
                     },
                     "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                     "rendered": Array [
                       Object {
                         "instance": null,
@@ -1812,12 +1647,6 @@ ShallowWrapper {
                         "type": "div",
                       },
                     ],
-<<<<<<< HEAD
-=======
-                    "rendered": Array [],
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                     "type": [Function],
                   },
                 ],
@@ -1864,14 +1693,7 @@ ShallowWrapper {
                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         dotColor=""
-=======
->>>>>>> Add test
-=======
-                        dotColor=""
->>>>>>> Add ImageVideoCarousel test
                         index={0}
                         onChange={[Function]}
                         showArrows={true}
@@ -1910,10 +1732,6 @@ ShallowWrapper {
                         <div
                                     className="flex flex-row"
                         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                     <div
                                                 className="transition-slide-up-large m2 xs-hide sm-hide"
                                     >
@@ -1926,23 +1744,11 @@ ShallowWrapper {
                                                             style={Object {}}
                                                 />
                                     </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                                     <Carousel
                                                 arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 dotColor=""
-=======
->>>>>>> Add test
-=======
-                                                dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -1950,10 +1756,6 @@ ShallowWrapper {
                                                 showOnImage={false}
                                                 sliderClasses=""
                                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                                 <div
                                                             className="w-auto mx-auto"
                                                 >
@@ -1966,12 +1768,6 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                             />
                                                 </div>
-<<<<<<< HEAD
-=======
-                                                
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                                     </Carousel>
                         </div>
             </div>
@@ -2134,15 +1930,7 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": Object {
                     "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
                     "key": undefined,
-=======
-                    "key": "0",
->>>>>>> Add test
-=======
-                    "key": undefined,
->>>>>>> Add subNav test and fix location related selectors
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
@@ -2185,10 +1973,6 @@ ShallowWrapper {
                 <div
                                 className="flex flex-row"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                 <div
                                                 className="transition-slide-up-large m2 xs-hide sm-hide"
                                 >
@@ -2201,23 +1985,11 @@ ShallowWrapper {
                                                                 style={Object {}}
                                                 />
                                 </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                                 <Carousel
                                                 arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                                 arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                                 className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 dotColor=""
-=======
->>>>>>> Add test
-=======
-                                                dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                                 index={0}
                                                 onChange={[Function]}
                                                 showArrows={false}
@@ -2225,10 +1997,6 @@ ShallowWrapper {
                                                 showOnImage={false}
                                                 sliderClasses=""
                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                                 <div
                                                                 className="w-auto mx-auto"
                                                 >
@@ -2241,12 +2009,6 @@ ShallowWrapper {
                                                                                 style={Object {}}
                                                                 />
                                                 </div>
-<<<<<<< HEAD
-=======
-                                                
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                                 </Carousel>
                 </div>
 </div>,
@@ -2267,10 +2029,6 @@ ShallowWrapper {
                   <div
                     className="flex flex-row"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                     <div
                                         className="transition-slide-up-large m2 xs-hide sm-hide"
                     >
@@ -2283,23 +2041,11 @@ ShallowWrapper {
                                                             style={Object {}}
                                         />
                     </div>
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                     <Carousel
                                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                                         className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         dotColor=""
-=======
->>>>>>> Add test
-=======
-                                        dotColor=""
->>>>>>> Add ImageVideoCarousel test
                                         index={0}
                                         onChange={[Function]}
                                         showArrows={false}
@@ -2307,10 +2053,6 @@ ShallowWrapper {
                                         showOnImage={false}
                                         sliderClasses=""
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                                         <div
                                                             className="w-auto mx-auto"
                                         >
@@ -2323,12 +2065,6 @@ ShallowWrapper {
                                                                                 style={Object {}}
                                                             />
                                         </div>
-<<<<<<< HEAD
-=======
-                                        
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                     </Carousel>
 </div>,
                 ],
@@ -2354,10 +2090,6 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                       Array [
                         <div
                           className="transition-slide-up-large m2 xs-hide sm-hide"
@@ -2372,24 +2104,11 @@ ShallowWrapper {
                           />
 </div>,
                       ],
-<<<<<<< HEAD
-=======
-                      Array [],
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                       <Carousel
                         arrowNextImage="/assets/images/icon-circle-right-arrow.svg"
                         arrowPreviousImage="/assets/images/icon-circle-left-arrow.svg"
                         className="w100 mx-auto md-hide lg-hide"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         dotColor=""
-=======
->>>>>>> Add test
-=======
-                        dotColor=""
->>>>>>> Add ImageVideoCarousel test
                         index={0}
                         onChange={[Function]}
                         showArrows={false}
@@ -2397,10 +2116,6 @@ ShallowWrapper {
                         showOnImage={false}
                         sliderClasses=""
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                         <div
                                                 className="w-auto mx-auto"
                         >
@@ -2413,12 +2128,6 @@ ShallowWrapper {
                                                                         style={Object {}}
                                                 />
                         </div>
-<<<<<<< HEAD
-=======
-                        
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
 </Carousel>,
                     ],
                     "className": "flex flex-row",
@@ -2427,10 +2136,6 @@ ShallowWrapper {
                   "rendered": Array [
                     Object {
                       "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                       "key": "0",
                       "nodeType": "host",
                       "props": Object {
@@ -2466,20 +2171,11 @@ ShallowWrapper {
                     },
                     Object {
                       "instance": null,
-<<<<<<< HEAD
-=======
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
                         "arrowNextImage": "/assets/images/icon-circle-right-arrow.svg",
                         "arrowPreviousImage": "/assets/images/icon-circle-left-arrow.svg",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                         "children": Array [
                           <div
                             className="w-auto mx-auto"
@@ -2494,18 +2190,8 @@ ShallowWrapper {
                             />
 </div>,
                         ],
-<<<<<<< HEAD
                         "className": "w100 mx-auto md-hide lg-hide",
                         "dotColor": "",
-<<<<<<< HEAD
-=======
-                        "children": Array [],
-=======
->>>>>>> Add subNav test and fix location related selectors
-                        "className": "w100 mx-auto md-hide lg-hide",
->>>>>>> Add test
-=======
->>>>>>> Add ImageVideoCarousel test
                         "index": 0,
                         "onChange": [Function],
                         "showArrows": false,
@@ -2514,10 +2200,6 @@ ShallowWrapper {
                         "sliderClasses": "",
                       },
                       "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add subNav test and fix location related selectors
                       "rendered": Array [
                         Object {
                           "instance": null,
@@ -2555,12 +2237,6 @@ ShallowWrapper {
                           "type": "div",
                         },
                       ],
-<<<<<<< HEAD
-=======
-                      "rendered": Array [],
->>>>>>> Add test
-=======
->>>>>>> Add subNav test and fix location related selectors
                       "type": [Function],
                     },
                   ],

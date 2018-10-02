@@ -264,21 +264,10 @@ ShallowWrapper {
                                                             "foo": [Function],
                                                           }
                                         }
-                                        calloutImage={
-                                                  Object {
-                                                            "fields": Object {},
-                                                            "sys": Object {},
-                                                          }
-                                        }
+                                        calloutImage=""
                                         ourPledgeOverlayIsOpen={false}
-                                        overlayContentImage={
-                                                  Object {
-                                                            "fields": Object {},
-                                                            "sys": Object {},
-                                                          }
-                                        }
-                                        shippingInformation="foo"
-                                        shippingPledge="foo"
+                                        shippingInformation=""
+                                        shippingPledge=""
                               />
                     </div>
           </div>
@@ -494,21 +483,10 @@ ShallowWrapper {
                                                                       "foo": [Function],
                                                                     }
                                           }
-                                          calloutImage={
-                                                        Object {
-                                                                      "fields": Object {},
-                                                                      "sys": Object {},
-                                                                    }
-                                          }
+                                          calloutImage=""
                                           ourPledgeOverlayIsOpen={false}
-                                          overlayContentImage={
-                                                        Object {
-                                                                      "fields": Object {},
-                                                                      "sys": Object {},
-                                                                    }
-                                          }
-                                          shippingInformation="foo"
-                                          shippingPledge="foo"
+                                          shippingInformation=""
+                                          shippingPledge=""
                             />
               </div>
 </div>,
@@ -588,21 +566,10 @@ ShallowWrapper {
                                                                 "foo": [Function],
                                                               }
                                 }
-                                calloutImage={
-                                                Object {
-                                                                "fields": Object {},
-                                                                "sys": Object {},
-                                                              }
-                                }
+                                calloutImage=""
                                 ourPledgeOverlayIsOpen={false}
-                                overlayContentImage={
-                                                Object {
-                                                                "fields": Object {},
-                                                                "sys": Object {},
-                                                              }
-                                }
-                                shippingInformation="foo"
-                                shippingPledge="foo"
+                                shippingInformation=""
+                                shippingPledge=""
                 />
 </div>,
               "className": "col-12 lg-col-6",
@@ -643,21 +610,10 @@ ShallowWrapper {
                                                             "foo": [Function],
                                                           }
                     }
-                    calloutImage={
-                                        Object {
-                                                            "fields": Object {},
-                                                            "sys": Object {},
-                                                          }
-                    }
+                    calloutImage=""
                     ourPledgeOverlayIsOpen={false}
-                    overlayContentImage={
-                                        Object {
-                                                            "fields": Object {},
-                                                            "sys": Object {},
-                                                          }
-                    }
-                    shippingInformation="foo"
-                    shippingPledge="foo"
+                    shippingInformation=""
+                    shippingPledge=""
 />,
                 ],
                 "className": "text-container-width mx-auto",
@@ -730,17 +686,10 @@ ShallowWrapper {
                     "actions": Object {
                       "foo": [Function],
                     },
-                    "calloutImage": Object {
-                      "fields": Object {},
-                      "sys": Object {},
-                    },
+                    "calloutImage": "",
                     "ourPledgeOverlayIsOpen": false,
-                    "overlayContentImage": Object {
-                      "fields": Object {},
-                      "sys": Object {},
-                    },
-                    "shippingInformation": "foo",
-                    "shippingPledge": "foo",
+                    "shippingInformation": "",
+                    "shippingPledge": "",
                   },
                   "ref": null,
                   "rendered": null,
@@ -1672,21 +1621,10 @@ ShallowWrapper {
                                                                         "foo": [Function],
                                                                       }
                                                 }
-                                                calloutImage={
-                                                            Object {
-                                                                        "fields": Object {},
-                                                                        "sys": Object {},
-                                                                      }
-                                                }
+                                                calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
-                                                overlayContentImage={
-                                                            Object {
-                                                                        "fields": Object {},
-                                                                        "sys": Object {},
-                                                                      }
-                                                }
-                                                shippingInformation="foo"
-                                                shippingPledge="foo"
+                                                shippingInformation=""
+                                                shippingPledge=""
                                     />
                         </div>
             </div>
@@ -1902,21 +1840,10 @@ ShallowWrapper {
                                                                                 "foo": [Function],
                                                                               }
                                                 }
-                                                calloutImage={
-                                                                Object {
-                                                                                "fields": Object {},
-                                                                                "sys": Object {},
-                                                                              }
-                                                }
+                                                calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
-                                                overlayContentImage={
-                                                                Object {
-                                                                                "fields": Object {},
-                                                                                "sys": Object {},
-                                                                              }
-                                                }
-                                                shippingInformation="foo"
-                                                shippingPledge="foo"
+                                                shippingInformation=""
+                                                shippingPledge=""
                                 />
                 </div>
 </div>,
@@ -1996,21 +1923,10 @@ ShallowWrapper {
                                                                         "foo": [Function],
                                                                       }
                                     }
-                                    calloutImage={
-                                                      Object {
-                                                                        "fields": Object {},
-                                                                        "sys": Object {},
-                                                                      }
-                                    }
+                                    calloutImage=""
                                     ourPledgeOverlayIsOpen={false}
-                                    overlayContentImage={
-                                                      Object {
-                                                                        "fields": Object {},
-                                                                        "sys": Object {},
-                                                                      }
-                                    }
-                                    shippingInformation="foo"
-                                    shippingPledge="foo"
+                                    shippingInformation=""
+                                    shippingPledge=""
                   />
 </div>,
                 "className": "col-12 lg-col-6",
@@ -2051,21 +1967,10 @@ ShallowWrapper {
                                                                   "foo": [Function],
                                                                 }
                       }
-                      calloutImage={
-                                            Object {
-                                                                  "fields": Object {},
-                                                                  "sys": Object {},
-                                                                }
-                      }
+                      calloutImage=""
                       ourPledgeOverlayIsOpen={false}
-                      overlayContentImage={
-                                            Object {
-                                                                  "fields": Object {},
-                                                                  "sys": Object {},
-                                                                }
-                      }
-                      shippingInformation="foo"
-                      shippingPledge="foo"
+                      shippingInformation=""
+                      shippingPledge=""
 />,
                   ],
                   "className": "text-container-width mx-auto",
@@ -2138,17 +2043,10 @@ ShallowWrapper {
                       "actions": Object {
                         "foo": [Function],
                       },
-                      "calloutImage": Object {
-                        "fields": Object {},
-                        "sys": Object {},
-                      },
+                      "calloutImage": "",
                       "ourPledgeOverlayIsOpen": false,
-                      "overlayContentImage": Object {
-                        "fields": Object {},
-                        "sys": Object {},
-                      },
-                      "shippingInformation": "foo",
-                      "shippingPledge": "foo",
+                      "shippingInformation": "",
+                      "shippingPledge": "",
                     },
                     "ref": null,
                     "rendered": null,
@@ -3042,17 +2940,10 @@ ShallowWrapper {
     }
     ourPledge={
         Object {
-            "overlayContentImage": Object {
-              "fields": Object {
-                "file": Object {
-                  "url": "",
-                },
-                "title": "",
-              },
-              "sys": Object {
-                "id": "",
-              },
+            "calloutImage": Object {
+              "data": "",
             },
+            "closeOurPledgeOverlay": [Function],
             "shippingInformation": "",
             "shippingPledge": "",
           }
@@ -3152,19 +3043,6 @@ ShallowWrapper {
                                         }
                                         calloutImage=""
                                         ourPledgeOverlayIsOpen={false}
-                                        overlayContentImage={
-                                                  Object {
-                                                            "fields": Object {
-                                                              "file": Object {
-                                                                "url": "",
-                                                              },
-                                                              "title": "",
-                                                            },
-                                                            "sys": Object {
-                                                              "id": "",
-                                                            },
-                                                          }
-                                        }
                                         shippingInformation=""
                                         shippingPledge=""
                               />
@@ -3378,19 +3256,6 @@ ShallowWrapper {
                                           }
                                           calloutImage=""
                                           ourPledgeOverlayIsOpen={false}
-                                          overlayContentImage={
-                                                        Object {
-                                                                      "fields": Object {
-                                                                        "file": Object {
-                                                                          "url": "",
-                                                                        },
-                                                                        "title": "",
-                                                                      },
-                                                                      "sys": Object {
-                                                                        "id": "",
-                                                                      },
-                                                                    }
-                                          }
                                           shippingInformation=""
                                           shippingPledge=""
                             />
@@ -3451,19 +3316,6 @@ ShallowWrapper {
                                 }
                                 calloutImage=""
                                 ourPledgeOverlayIsOpen={false}
-                                overlayContentImage={
-                                                Object {
-                                                                "fields": Object {
-                                                                  "file": Object {
-                                                                    "url": "",
-                                                                  },
-                                                                  "title": "",
-                                                                },
-                                                                "sys": Object {
-                                                                  "id": "",
-                                                                },
-                                                              }
-                                }
                                 shippingInformation=""
                                 shippingPledge=""
                 />
@@ -3507,19 +3359,6 @@ ShallowWrapper {
                     }
                     calloutImage=""
                     ourPledgeOverlayIsOpen={false}
-                    overlayContentImage={
-                                        Object {
-                                                            "fields": Object {
-                                                              "file": Object {
-                                                                "url": "",
-                                                              },
-                                                              "title": "",
-                                                            },
-                                                            "sys": Object {
-                                                              "id": "",
-                                                            },
-                                                          }
-                    }
                     shippingInformation=""
                     shippingPledge=""
 />,
@@ -3596,17 +3435,6 @@ ShallowWrapper {
                     },
                     "calloutImage": "",
                     "ourPledgeOverlayIsOpen": false,
-                    "overlayContentImage": Object {
-                      "fields": Object {
-                        "file": Object {
-                          "url": "",
-                        },
-                        "title": "",
-                      },
-                      "sys": Object {
-                        "id": "",
-                      },
-                    },
                     "shippingInformation": "",
                     "shippingPledge": "",
                   },
@@ -4536,19 +4364,6 @@ ShallowWrapper {
                                                 }
                                                 calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
-                                                overlayContentImage={
-                                                            Object {
-                                                                        "fields": Object {
-                                                                          "file": Object {
-                                                                            "url": "",
-                                                                          },
-                                                                          "title": "",
-                                                                        },
-                                                                        "sys": Object {
-                                                                          "id": "",
-                                                                        },
-                                                                      }
-                                                }
                                                 shippingInformation=""
                                                 shippingPledge=""
                                     />
@@ -4762,19 +4577,6 @@ ShallowWrapper {
                                                 }
                                                 calloutImage=""
                                                 ourPledgeOverlayIsOpen={false}
-                                                overlayContentImage={
-                                                                Object {
-                                                                                "fields": Object {
-                                                                                  "file": Object {
-                                                                                    "url": "",
-                                                                                  },
-                                                                                  "title": "",
-                                                                                },
-                                                                                "sys": Object {
-                                                                                  "id": "",
-                                                                                },
-                                                                              }
-                                                }
                                                 shippingInformation=""
                                                 shippingPledge=""
                                 />
@@ -4835,19 +4637,6 @@ ShallowWrapper {
                                     }
                                     calloutImage=""
                                     ourPledgeOverlayIsOpen={false}
-                                    overlayContentImage={
-                                                      Object {
-                                                                        "fields": Object {
-                                                                          "file": Object {
-                                                                            "url": "",
-                                                                          },
-                                                                          "title": "",
-                                                                        },
-                                                                        "sys": Object {
-                                                                          "id": "",
-                                                                        },
-                                                                      }
-                                    }
                                     shippingInformation=""
                                     shippingPledge=""
                   />
@@ -4891,19 +4680,6 @@ ShallowWrapper {
                       }
                       calloutImage=""
                       ourPledgeOverlayIsOpen={false}
-                      overlayContentImage={
-                                            Object {
-                                                                  "fields": Object {
-                                                                    "file": Object {
-                                                                      "url": "",
-                                                                    },
-                                                                    "title": "",
-                                                                  },
-                                                                  "sys": Object {
-                                                                    "id": "",
-                                                                  },
-                                                                }
-                      }
                       shippingInformation=""
                       shippingPledge=""
 />,
@@ -4980,17 +4756,6 @@ ShallowWrapper {
                       },
                       "calloutImage": "",
                       "ourPledgeOverlayIsOpen": false,
-                      "overlayContentImage": Object {
-                        "fields": Object {
-                          "file": Object {
-                            "url": "",
-                          },
-                          "title": "",
-                        },
-                        "sys": Object {
-                          "id": "",
-                        },
-                      },
                       "shippingInformation": "",
                       "shippingPledge": "",
                     },

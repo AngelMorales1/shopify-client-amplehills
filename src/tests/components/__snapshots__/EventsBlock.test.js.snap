@@ -193,15 +193,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
             "key": "0",
-=======
-            "key": "foo",
->>>>>>> Add EventBlock test
-=======
-            "key": "0",
->>>>>>> Fix event selector corresponding to change
             "nodeType": "function",
             "props": Object {
               "active": true,
@@ -378,15 +370,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
               "key": "0",
-=======
-              "key": "foo",
->>>>>>> Add EventBlock test
-=======
-              "key": "0",
->>>>>>> Fix event selector corresponding to change
               "nodeType": "function",
               "props": Object {
                 "active": true,
@@ -613,15 +597,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
             "key": "0",
-=======
-            "key": undefined,
->>>>>>> Add EventBlock test
-=======
-            "key": "0",
->>>>>>> Fix event selector corresponding to change
             "nodeType": "function",
             "props": Object {
               "active": true,
@@ -791,15 +767,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
               "key": "0",
-=======
-              "key": undefined,
->>>>>>> Add EventBlock test
-=======
-              "key": "0",
->>>>>>> Fix event selector corresponding to change
               "nodeType": "function",
               "props": Object {
                 "active": true,

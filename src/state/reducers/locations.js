@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/state/reducers/locations.js
 import { GET_LOCATION_DATA } from 'state/actions/locationsActions';
-=======
-import { GET_OUR_STORY_PAGE } from 'state/actions/ourStoryPageActions';
->>>>>>> clean up:src/state/reducers/ourStory.js
 
 const initialState = {
   locations: []

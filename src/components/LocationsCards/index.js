@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import scrollTo from 'react-scroll-to-component';
 import get from 'utils/get';
-import getLocationCity from 'utils/getLocationCity';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationCard from 'components/LocationCard';
-import getUrlParam from 'utils/getUrlParam';
 
 import { Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';

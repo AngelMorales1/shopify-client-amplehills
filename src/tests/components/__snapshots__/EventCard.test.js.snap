@@ -53,15 +53,7 @@ ShallowWrapper {
                     <p
                               className="mb2"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
                               Invalid date, undefined at foo
-=======
-                              Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                              Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
                     </p>
                     <h2
                               className=""
@@ -69,7 +61,7 @@ ShallowWrapper {
                               foo
                     </h2>
                     <p
-                              className="mt1 mb3"
+                              className="mt1"
                               dangerouslySetInnerHTML={
                                         Object {
                                                   "__html": "<p>foo</p>
@@ -80,7 +72,7 @@ ShallowWrapper {
           </div>
           <div>
                     <Button
-                              className="inline-flex"
+                              className="inline-flex mt3"
                               color="peach"
                               disabled={false}
                               fullWidth={false}
@@ -88,15 +80,7 @@ ShallowWrapper {
                               label="RSVP"
                               onClick={[Function]}
                               shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                               to="/events/undefined"
-=======
-                              to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                              to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                               type="button"
                               variant="primary"
                     />
@@ -132,15 +116,7 @@ ShallowWrapper {
               <p
                             className="mb2"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
                             Invalid date, undefined at foo
-=======
-                            Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                            Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
               </p>
               <h2
                             className=""
@@ -148,7 +124,7 @@ ShallowWrapper {
                             foo
               </h2>
               <p
-                            className="mt1 mb3"
+                            className="mt1"
                             dangerouslySetInnerHTML={
                                           Object {
                                                         "__html": "<p>foo</p>
@@ -159,7 +135,7 @@ ShallowWrapper {
 </div>,
             <div>
               <Button
-                            className="inline-flex"
+                            className="inline-flex mt3"
                             color="peach"
                             disabled={false}
                             fullWidth={false}
@@ -167,15 +143,7 @@ ShallowWrapper {
                             label="RSVP"
                             onClick={[Function]}
                             shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                             to="/events/undefined"
-=======
-                            to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                            to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                             type="button"
                             variant="primary"
               />
@@ -194,15 +162,7 @@ ShallowWrapper {
                 <p
                   className="mb2"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                   Invalid date, undefined at foo
-=======
-                  Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                  Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
 </p>,
                 <h2
                   className=""
@@ -211,7 +171,7 @@ ShallowWrapper {
 </h2>,
                 null,
                 <p
-                  className="mt1 mb3"
+                  className="mt1"
                   dangerouslySetInnerHTML={
                                     Object {
                                                       "__html": "<p>foo</p>
@@ -228,27 +188,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                   "children": "Invalid date, undefined at foo",
                   "className": "mb2",
                 },
                 "ref": null,
                 "rendered": "Invalid date, undefined at foo",
-=======
-                  "children": "Invalid date, foo: at foo",
-                  "className": "mb2",
-                },
-                "ref": null,
-                "rendered": "Invalid date, foo: at foo",
->>>>>>> Add EventDetailHero text
-=======
-                  "children": "Invalid date, undefined at foo",
-                  "className": "mb2",
-                },
-                "ref": null,
-                "rendered": "Invalid date, undefined at foo",
->>>>>>> Fix event detail hero test
                 "type": "p",
               },
               Object {
@@ -269,7 +213,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "mt1 mb3",
+                  "className": "mt1",
                   "dangerouslySetInnerHTML": Object {
                     "__html": "<p>foo</p>
 ",
@@ -288,7 +232,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <Button
-                className="inline-flex"
+                className="inline-flex mt3"
                 color="peach"
                 disabled={false}
                 fullWidth={false}
@@ -296,15 +240,7 @@ ShallowWrapper {
                 label="RSVP"
                 onClick={[Function]}
                 shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 to="/events/undefined"
-=======
-                to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                 type="button"
                 variant="primary"
 />,
@@ -316,7 +252,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "inline-flex",
+                "className": "inline-flex mt3",
                 "color": "peach",
                 "disabled": false,
                 "fullWidth": false,
@@ -324,15 +260,7 @@ ShallowWrapper {
                 "label": "RSVP",
                 "onClick": [Function],
                 "shadow": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 "to": "/events/undefined",
-=======
-                "to": "/events/foo",
->>>>>>> Add EventDetailHero text
-=======
-                "to": "/events/undefined",
->>>>>>> Fix event selector corresponding to change
                 "type": "button",
                 "variant": "primary",
               },
@@ -371,15 +299,7 @@ ShallowWrapper {
                         <p
                                     className="mb2"
                         >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     Invalid date, undefined at foo
-=======
-                                    Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                                    Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
                         </p>
                         <h2
                                     className=""
@@ -387,7 +307,7 @@ ShallowWrapper {
                                     foo
                         </h2>
                         <p
-                                    className="mt1 mb3"
+                                    className="mt1"
                                     dangerouslySetInnerHTML={
                                                 Object {
                                                             "__html": "<p>foo</p>
@@ -398,7 +318,7 @@ ShallowWrapper {
             </div>
             <div>
                         <Button
-                                    className="inline-flex"
+                                    className="inline-flex mt3"
                                     color="peach"
                                     disabled={false}
                                     fullWidth={false}
@@ -406,15 +326,7 @@ ShallowWrapper {
                                     label="RSVP"
                                     onClick={[Function]}
                                     shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     to="/events/undefined"
-=======
-                                    to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                                    to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                                     type="button"
                                     variant="primary"
                         />
@@ -450,15 +362,7 @@ ShallowWrapper {
                 <p
                                 className="mb2"
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 Invalid date, undefined at foo
-=======
-                                Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                                Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
                 </p>
                 <h2
                                 className=""
@@ -466,7 +370,7 @@ ShallowWrapper {
                                 foo
                 </h2>
                 <p
-                                className="mt1 mb3"
+                                className="mt1"
                                 dangerouslySetInnerHTML={
                                                 Object {
                                                                 "__html": "<p>foo</p>
@@ -477,7 +381,7 @@ ShallowWrapper {
 </div>,
               <div>
                 <Button
-                                className="inline-flex"
+                                className="inline-flex mt3"
                                 color="peach"
                                 disabled={false}
                                 fullWidth={false}
@@ -485,15 +389,7 @@ ShallowWrapper {
                                 label="RSVP"
                                 onClick={[Function]}
                                 shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 to="/events/undefined"
-=======
-                                to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                                to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                                 type="button"
                                 variant="primary"
                 />
@@ -512,15 +408,7 @@ ShallowWrapper {
                   <p
                     className="mb2"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Invalid date, undefined at foo
-=======
-                    Invalid date, foo: at foo
->>>>>>> Add EventDetailHero text
-=======
-                    Invalid date, undefined at foo
->>>>>>> Fix event detail hero test
 </p>,
                   <h2
                     className=""
@@ -529,7 +417,7 @@ ShallowWrapper {
 </h2>,
                   null,
                   <p
-                    className="mt1 mb3"
+                    className="mt1"
                     dangerouslySetInnerHTML={
                                         Object {
                                                             "__html": "<p>foo</p>
@@ -546,27 +434,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                     "children": "Invalid date, undefined at foo",
                     "className": "mb2",
                   },
                   "ref": null,
                   "rendered": "Invalid date, undefined at foo",
-=======
-                    "children": "Invalid date, foo: at foo",
-                    "className": "mb2",
-                  },
-                  "ref": null,
-                  "rendered": "Invalid date, foo: at foo",
->>>>>>> Add EventDetailHero text
-=======
-                    "children": "Invalid date, undefined at foo",
-                    "className": "mb2",
-                  },
-                  "ref": null,
-                  "rendered": "Invalid date, undefined at foo",
->>>>>>> Fix event detail hero test
                   "type": "p",
                 },
                 Object {
@@ -587,7 +459,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "mt1 mb3",
+                    "className": "mt1",
                     "dangerouslySetInnerHTML": Object {
                       "__html": "<p>foo</p>
 ",
@@ -606,7 +478,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
-                  className="inline-flex"
+                  className="inline-flex mt3"
                   color="peach"
                   disabled={false}
                   fullWidth={false}
@@ -614,15 +486,7 @@ ShallowWrapper {
                   label="RSVP"
                   onClick={[Function]}
                   shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   to="/events/undefined"
-=======
-                  to="/events/foo"
->>>>>>> Add EventDetailHero text
-=======
-                  to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                   type="button"
                   variant="primary"
 />,
@@ -634,7 +498,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
-                  "className": "inline-flex",
+                  "className": "inline-flex mt3",
                   "color": "peach",
                   "disabled": false,
                   "fullWidth": false,
@@ -642,15 +506,7 @@ ShallowWrapper {
                   "label": "RSVP",
                   "onClick": [Function],
                   "shadow": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                   "to": "/events/undefined",
-=======
-                  "to": "/events/foo",
->>>>>>> Add EventDetailHero text
-=======
-                  "to": "/events/undefined",
->>>>>>> Fix event selector corresponding to change
                   "type": "button",
                   "variant": "primary",
                 },
@@ -738,7 +594,7 @@ ShallowWrapper {
           </div>
           <div>
                     <Button
-                              className="inline-flex"
+                              className="inline-flex mt3"
                               color="peach"
                               disabled={false}
                               fullWidth={false}
@@ -746,15 +602,7 @@ ShallowWrapper {
                               label="RSVP"
                               onClick={[Function]}
                               shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                               to="/events/undefined"
-=======
-                              to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                              to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                               type="button"
                               variant="primary"
                     />
@@ -798,7 +646,7 @@ ShallowWrapper {
 </div>,
             <div>
               <Button
-                            className="inline-flex"
+                            className="inline-flex mt3"
                             color="peach"
                             disabled={false}
                             fullWidth={false}
@@ -806,15 +654,7 @@ ShallowWrapper {
                             label="RSVP"
                             onClick={[Function]}
                             shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                             to="/events/undefined"
-=======
-                            to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                            to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                             type="button"
                             variant="primary"
               />
@@ -879,7 +719,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": <Button
-                className="inline-flex"
+                className="inline-flex mt3"
                 color="peach"
                 disabled={false}
                 fullWidth={false}
@@ -887,15 +727,7 @@ ShallowWrapper {
                 label="RSVP"
                 onClick={[Function]}
                 shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 to="/events/undefined"
-=======
-                to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                 type="button"
                 variant="primary"
 />,
@@ -907,7 +739,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "inline-flex",
+                "className": "inline-flex mt3",
                 "color": "peach",
                 "disabled": false,
                 "fullWidth": false,
@@ -915,15 +747,7 @@ ShallowWrapper {
                 "label": "RSVP",
                 "onClick": [Function],
                 "shadow": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                 "to": "/events/undefined",
-=======
-                "to": "/events/",
->>>>>>> Add EventDetailHero text
-=======
-                "to": "/events/undefined",
->>>>>>> Fix event selector corresponding to change
                 "type": "button",
                 "variant": "primary",
               },
@@ -970,7 +794,7 @@ ShallowWrapper {
             </div>
             <div>
                         <Button
-                                    className="inline-flex"
+                                    className="inline-flex mt3"
                                     color="peach"
                                     disabled={false}
                                     fullWidth={false}
@@ -978,15 +802,7 @@ ShallowWrapper {
                                     label="RSVP"
                                     onClick={[Function]}
                                     shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     to="/events/undefined"
-=======
-                                    to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                                    to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                                     type="button"
                                     variant="primary"
                         />
@@ -1030,7 +846,7 @@ ShallowWrapper {
 </div>,
               <div>
                 <Button
-                                className="inline-flex"
+                                className="inline-flex mt3"
                                 color="peach"
                                 disabled={false}
                                 fullWidth={false}
@@ -1038,15 +854,7 @@ ShallowWrapper {
                                 label="RSVP"
                                 onClick={[Function]}
                                 shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 to="/events/undefined"
-=======
-                                to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                                to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                                 type="button"
                                 variant="primary"
                 />
@@ -1111,7 +919,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
-                  className="inline-flex"
+                  className="inline-flex mt3"
                   color="peach"
                   disabled={false}
                   fullWidth={false}
@@ -1119,15 +927,7 @@ ShallowWrapper {
                   label="RSVP"
                   onClick={[Function]}
                   shadow={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   to="/events/undefined"
-=======
-                  to="/events/"
->>>>>>> Add EventDetailHero text
-=======
-                  to="/events/undefined"
->>>>>>> Fix event selector corresponding to change
                   type="button"
                   variant="primary"
 />,
@@ -1139,7 +939,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
-                  "className": "inline-flex",
+                  "className": "inline-flex mt3",
                   "color": "peach",
                   "disabled": false,
                   "fullWidth": false,
@@ -1147,15 +947,7 @@ ShallowWrapper {
                   "label": "RSVP",
                   "onClick": [Function],
                   "shadow": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
                   "to": "/events/undefined",
-=======
-                  "to": "/events/",
->>>>>>> Add EventDetailHero text
-=======
-                  "to": "/events/undefined",
->>>>>>> Fix event selector corresponding to change
                   "type": "button",
                   "variant": "primary",
                 },

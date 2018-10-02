@@ -39,9 +39,7 @@ ShallowWrapper {
 />,
         <span
           className="carter text-peach center py3 mb4"
->
-          ""
-</span>,
+/>,
         <Button
           className="uppercase"
           color="peach"
@@ -82,11 +80,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "\\"\\"",
+          "children": "",
           "className": "carter text-peach center py3 mb4",
         },
         "ref": null,
-        "rendered": "\\"\\"",
+        "rendered": "",
         "type": "span",
       },
       Object {
@@ -131,9 +129,7 @@ ShallowWrapper {
 />,
           <span
             className="carter text-peach center py3 mb4"
->
-            ""
-</span>,
+/>,
           <Button
             className="uppercase"
             color="peach"
@@ -174,11 +170,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "\\"\\"",
+            "children": "",
             "className": "carter text-peach center py3 mb4",
           },
           "ref": null,
-          "rendered": "\\"\\"",
+          "rendered": "",
           "type": "span",
         },
         Object {
@@ -256,9 +252,7 @@ ShallowWrapper {
 />,
         <span
           className="carter text-peach center py3 mb4"
->
-          ""
-</span>,
+/>,
         <Button
           className="uppercase"
           color="peach"
@@ -299,11 +293,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "\\"\\"",
+          "children": "",
           "className": "carter text-peach center py3 mb4",
         },
         "ref": null,
-        "rendered": "\\"\\"",
+        "rendered": "",
         "type": "span",
       },
       Object {
@@ -348,9 +342,7 @@ ShallowWrapper {
 />,
           <span
             className="carter text-peach center py3 mb4"
->
-            ""
-</span>,
+/>,
           <Button
             className="uppercase"
             color="peach"
@@ -391,11 +383,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "\\"\\"",
+            "children": "",
             "className": "carter text-peach center py3 mb4",
           },
           "ref": null,
-          "rendered": "\\"\\"",
+          "rendered": "",
           "type": "span",
         },
         Object {

@@ -127,7 +127,7 @@ ShallowWrapper {
         className="foo w100 undefined"
 >
         <span
-                className="h100 flex justify-center items-center"
+                className="avenir h100 flex justify-center items-center"
         >
                 Click Me
         </span>
@@ -145,7 +145,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <span
-          className="h100 flex justify-center items-center"
+          className="avenir h100 flex justify-center items-center"
 >
           Click Me
 </span>,
@@ -158,7 +158,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Click Me",
-          "className": "h100 flex justify-center items-center",
+          "className": "avenir h100 flex justify-center items-center",
         },
         "ref": null,
         "rendered": "Click Me",
@@ -178,7 +178,7 @@ ShallowWrapper {
           className="foo w100 undefined"
 >
           <span
-                    className="h100 flex justify-center items-center"
+                    className="avenir h100 flex justify-center items-center"
           >
                     Click Me
           </span>
@@ -196,7 +196,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <span
-            className="h100 flex justify-center items-center"
+            className="avenir h100 flex justify-center items-center"
 >
             Click Me
 </span>,
@@ -209,7 +209,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Click Me",
-            "className": "h100 flex justify-center items-center",
+            "className": "avenir h100 flex justify-center items-center",
           },
           "ref": null,
           "rendered": "Click Me",
@@ -263,7 +263,7 @@ ShallowWrapper {
         className="foo w100 undefined"
 >
         <span
-                className="h100 flex justify-center items-center"
+                className="avenir h100 flex justify-center items-center"
         >
                 Click Me
         </span>
@@ -280,7 +280,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <span
-          className="h100 flex justify-center items-center"
+          className="avenir h100 flex justify-center items-center"
 >
           Click Me
 </span>,
@@ -293,7 +293,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Click Me",
-          "className": "h100 flex justify-center items-center",
+          "className": "avenir h100 flex justify-center items-center",
         },
         "ref": null,
         "rendered": "Click Me",
@@ -313,7 +313,7 @@ ShallowWrapper {
           className="foo w100 undefined"
 >
           <span
-                    className="h100 flex justify-center items-center"
+                    className="avenir h100 flex justify-center items-center"
           >
                     Click Me
           </span>
@@ -330,7 +330,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <span
-            className="h100 flex justify-center items-center"
+            className="avenir h100 flex justify-center items-center"
 >
             Click Me
 </span>,
@@ -343,7 +343,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Click Me",
-            "className": "h100 flex justify-center items-center",
+            "className": "avenir h100 flex justify-center items-center",
           },
           "ref": null,
           "rendered": "Click Me",

@@ -25,10 +25,6 @@ ShallowWrapper {
             "image": "foo",
             "locationTitle": "foo",
             "title": "foo",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
             "variants": Array [
               Object {
                 "available": true,
@@ -36,11 +32,6 @@ ShallowWrapper {
                 "price": "0.00",
               },
             ],
-<<<<<<< HEAD
-=======
->>>>>>> Add EventDetailHero text
-=======
->>>>>>> Fix event detail hero test
           }
     }
 />,
@@ -120,17 +111,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                   />
-=======
-                                                  >
-                                                            Invalid date
-                                                  </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                  />
->>>>>>> Fix event detail hero test
                                         </div>
                                         <div>
                                                   <p
@@ -140,17 +121,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                   />
-=======
-                                                  >
-                                                            foo
-                                                  </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                  />
->>>>>>> Fix event detail hero test
                                         </div>
                                         <div
                                                   className="flex mt3 w100"
@@ -186,45 +157,20 @@ ShallowWrapper {
                               </div>
                               <Button
                                         className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         color="madison-blue"
                                         disabled={true}
                                         fullWidth={false}
                                         hover="shadow"
                                         label=""
-=======
-                                        color="peach"
-                                        disabled={false}
-=======
-                                        color="madison-blue"
-                                        disabled={true}
->>>>>>> Fix event detail hero test
-                                        fullWidth={false}
-                                        hover="shadow"
-<<<<<<< HEAD
-                                        label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                        label=""
->>>>>>> Fix event selector corresponding to change
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                               >
                                         <span
                                                   className="mr-auto"
                                         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                   Add to Cart
                                         </span>
                                         <span
@@ -232,19 +178,8 @@ ShallowWrapper {
                                         >
                                                   $
                                                   0.00
-<<<<<<< HEAD
                                         </span>
                               </Button>
-=======
-                              />
->>>>>>> Add EventDetailHero text
-=======
-                                                  Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                        </span>
-                              </Button>
->>>>>>> Fix event selector corresponding to change
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -256,14 +191,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
         null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-        null,
->>>>>>> Fix event selector corresponding to change
       ],
       "className": "flex flex-column mb4",
     },
@@ -433,17 +361,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                         />
-=======
-                                                        >
-                                                                      Invalid date
-                                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                        />
->>>>>>> Fix event detail hero test
                                           </div>
                                           <div>
                                                         <p
@@ -453,17 +371,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                         />
-=======
-                                                        >
-                                                                      foo
-                                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                        />
->>>>>>> Fix event detail hero test
                                           </div>
                                           <div
                                                         className="flex mt3 w100"
@@ -499,45 +407,20 @@ ShallowWrapper {
                             </div>
                             <Button
                                           className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                           color="madison-blue"
                                           disabled={true}
                                           fullWidth={false}
                                           hover="shadow"
                                           label=""
-=======
-                                          color="peach"
-                                          disabled={false}
-=======
-                                          color="madison-blue"
-                                          disabled={true}
->>>>>>> Fix event detail hero test
-                                          fullWidth={false}
-                                          hover="shadow"
-<<<<<<< HEAD
-                                          label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                          label=""
->>>>>>> Fix event selector corresponding to change
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                             >
                                           <span
                                                         className="mr-auto"
                                           >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                         Add to Cart
                                           </span>
                                           <span
@@ -545,19 +428,8 @@ ShallowWrapper {
                                           >
                                                         $
                                                         0.00
-<<<<<<< HEAD
                                           </span>
                             </Button>
-=======
-                            />
->>>>>>> Add EventDetailHero text
-=======
-                                                        Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                          </span>
-                            </Button>
->>>>>>> Fix event selector corresponding to change
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -624,17 +496,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 />
-=======
-                                                >
-                                                                Invalid date
-                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                />
->>>>>>> Fix event detail hero test
                                 </div>
                                 <div>
                                                 <p
@@ -644,17 +506,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 />
-=======
-                                                >
-                                                                foo
-                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                />
->>>>>>> Fix event detail hero test
                                 </div>
                                 <div
                                                 className="flex mt3 w100"
@@ -690,45 +542,20 @@ ShallowWrapper {
                 </div>
                 <Button
                                 className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 color="madison-blue"
                                 disabled={true}
                                 fullWidth={false}
                                 hover="shadow"
                                 label=""
-=======
-                                color="peach"
-                                disabled={false}
-=======
-                                color="madison-blue"
-                                disabled={true}
->>>>>>> Fix event detail hero test
-                                fullWidth={false}
-                                hover="shadow"
-<<<<<<< HEAD
-                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                label=""
->>>>>>> Fix event selector corresponding to change
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                 >
                                 <span
                                                 className="mr-auto"
                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                 Add to Cart
                                 </span>
                                 <span
@@ -736,19 +563,8 @@ ShallowWrapper {
                                 >
                                                 $
                                                 0.00
-<<<<<<< HEAD
                                 </span>
                 </Button>
-=======
-                />
->>>>>>> Add EventDetailHero text
-=======
-                                                Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                </span>
-                </Button>
->>>>>>> Fix event selector corresponding to change
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -776,17 +592,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         />
-=======
-                                        >
-                                                            Invalid date
-                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                        />
->>>>>>> Fix event detail hero test
                     </div>
                     <div>
                                         <p
@@ -796,17 +602,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         />
-=======
-                                        >
-                                                            foo
-                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                        />
->>>>>>> Fix event detail hero test
                     </div>
                     <div
                                         className="flex mt3 w100"
@@ -842,45 +638,20 @@ ShallowWrapper {
 </div>,
                   <Button
                     className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                     color="madison-blue"
                     disabled={true}
                     fullWidth={false}
                     hover="shadow"
                     label=""
-=======
-                    color="peach"
-                    disabled={false}
-=======
-                    color="madison-blue"
-                    disabled={true}
->>>>>>> Fix event detail hero test
-                    fullWidth={false}
-                    hover="shadow"
-<<<<<<< HEAD
-                    label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                    label=""
->>>>>>> Fix event selector corresponding to change
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
 >
                     <span
                                         className="mr-auto"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                         Add to Cart
                     </span>
                     <span
@@ -888,19 +659,8 @@ ShallowWrapper {
                     >
                                         $
                                         0.00
-<<<<<<< HEAD
                     </span>
 </Button>,
-=======
-/>,
->>>>>>> Add EventDetailHero text
-=======
-                                        Call to Action
-=======
->>>>>>> Fix event detail hero test
-                    </span>
-</Button>,
->>>>>>> Fix event selector corresponding to change
                   null,
                   <div
                     className="markdown-block"
@@ -929,17 +689,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         />
-=======
-                        >
-                                                Invalid date
-                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                        />
->>>>>>> Fix event detail hero test
 </div>,
                       <div>
                         <p
@@ -949,17 +699,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         />
-=======
-                        >
-                                                foo
-                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                        />
->>>>>>> Fix event detail hero test
 </div>,
                       <div
                         className="flex mt3 w100"
@@ -1009,17 +749,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                            Invalid date
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> Fix event detail hero test
                         ],
                       },
                       "ref": null,
@@ -1041,27 +771,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
-=======
-                            "children": "Invalid date",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "Invalid date",
->>>>>>> Add EventDetailHero text
-=======
-                            "children": "",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "",
->>>>>>> Fix event detail hero test
                           "type": "p",
                         },
                       ],
@@ -1080,17 +794,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                            foo
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> Fix event detail hero test
                         ],
                       },
                       "ref": null,
@@ -1112,27 +816,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
-=======
-                            "children": "foo",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "foo",
->>>>>>> Add EventDetailHero text
-=======
-                            "children": "",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "",
->>>>>>> Fix event detail hero test
                           "type": "p",
                         },
                       ],
@@ -1278,18 +966,10 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                     "children": Array [
                       <span
                         className="mr-auto"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                         Add to Cart
 </span>,
                       <span
@@ -1297,7 +977,6 @@ ShallowWrapper {
 >
                         $
                         0.00
-<<<<<<< HEAD
 </span>,
                     ],
                     "className": "my4",
@@ -1306,26 +985,6 @@ ShallowWrapper {
                     "fullWidth": false,
                     "hover": "shadow",
                     "label": "",
-=======
-                    "children": null,
-=======
-                        Call to Action
-=======
->>>>>>> Fix event detail hero test
-</span>,
-                    ],
->>>>>>> Fix event selector corresponding to change
-                    "className": "my4",
-                    "color": "madison-blue",
-                    "disabled": true,
-                    "fullWidth": false,
-                    "hover": "shadow",
-<<<<<<< HEAD
-                    "label": "Call to Action",
->>>>>>> Add EventDetailHero text
-=======
-                    "label": "",
->>>>>>> Fix event selector corresponding to change
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -1333,18 +992,12 @@ ShallowWrapper {
                     "variant": "primary",
                   },
                   "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                   "rendered": Array [
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         "children": "Add to Cart",
                         "className": "mr-auto",
                       },
@@ -1371,40 +1024,6 @@ ShallowWrapper {
                       "type": "span",
                     },
                   ],
-=======
-                  "rendered": null,
->>>>>>> Add EventDetailHero text
-=======
-                        "children": "Call to Action",
-=======
-                        "children": "Add to Cart",
->>>>>>> Fix event detail hero test
-                        "className": "mr-auto",
-                      },
-                      "ref": null,
-                      "rendered": "Add to Cart",
-                      "type": "span",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": Array [
-                          "$",
-                          "0.00",
-                        ],
-                        "className": "ml2",
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        "$",
-                        "0.00",
-                      ],
-                      "type": "span",
-                    },
-                  ],
->>>>>>> Fix event selector corresponding to change
                   "type": [Function],
                 },
                 null,
@@ -1430,14 +1049,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
       null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-      null,
->>>>>>> Fix event selector corresponding to change
     ],
     "type": "div",
   },
@@ -1511,17 +1123,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                             />
-=======
-                                                            >
-                                                                        Invalid date
-                                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                            />
->>>>>>> Fix event detail hero test
                                                 </div>
                                                 <div>
                                                             <p
@@ -1531,17 +1133,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                             />
-=======
-                                                            >
-                                                                        foo
-                                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                            />
->>>>>>> Fix event detail hero test
                                                 </div>
                                                 <div
                                                             className="flex mt3 w100"
@@ -1577,45 +1169,20 @@ ShallowWrapper {
                                     </div>
                                     <Button
                                                 className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 color="madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
-=======
-                                                color="peach"
-                                                disabled={false}
-=======
-                                                color="madison-blue"
-                                                disabled={true}
->>>>>>> Fix event detail hero test
-                                                fullWidth={false}
-                                                hover="shadow"
-<<<<<<< HEAD
-                                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                                label=""
->>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                                     >
                                                 <span
                                                             className="mr-auto"
                                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                             Add to Cart
                                                 </span>
                                                 <span
@@ -1623,19 +1190,8 @@ ShallowWrapper {
                                                 >
                                                             $
                                                             0.00
-<<<<<<< HEAD
                                                 </span>
                                     </Button>
-=======
-                                    />
->>>>>>> Add EventDetailHero text
-=======
-                                                            Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                                </span>
-                                    </Button>
->>>>>>> Fix event selector corresponding to change
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1647,14 +1203,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
           null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-          null,
->>>>>>> Fix event selector corresponding to change
         ],
         "className": "flex flex-column mb4",
       },
@@ -1824,17 +1373,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                                 />
-=======
-                                                                >
-                                                                                Invalid date
-                                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                                />
->>>>>>> Fix event detail hero test
                                                 </div>
                                                 <div>
                                                                 <p
@@ -1844,17 +1383,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                                 />
-=======
-                                                                >
-                                                                                foo
-                                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                                />
->>>>>>> Fix event detail hero test
                                                 </div>
                                                 <div
                                                                 className="flex mt3 w100"
@@ -1890,45 +1419,20 @@ ShallowWrapper {
                                 </div>
                                 <Button
                                                 className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 color="madison-blue"
                                                 disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label=""
-=======
-                                                color="peach"
-                                                disabled={false}
-=======
-                                                color="madison-blue"
-                                                disabled={true}
->>>>>>> Fix event detail hero test
-                                                fullWidth={false}
-                                                hover="shadow"
-<<<<<<< HEAD
-                                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                                label=""
->>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                                 >
                                                 <span
                                                                 className="mr-auto"
                                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                                 Add to Cart
                                                 </span>
                                                 <span
@@ -1936,19 +1440,8 @@ ShallowWrapper {
                                                 >
                                                                 $
                                                                 0.00
-<<<<<<< HEAD
                                                 </span>
                                 </Button>
-=======
-                                />
->>>>>>> Add EventDetailHero text
-=======
-                                                                Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                                </span>
-                                </Button>
->>>>>>> Fix event selector corresponding to change
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -2015,17 +1508,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                       />
-=======
-                                                      >
-                                                                        Invalid date
-                                                      </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                      />
->>>>>>> Fix event detail hero test
                                     </div>
                                     <div>
                                                       <p
@@ -2035,17 +1518,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                       />
-=======
-                                                      >
-                                                                        foo
-                                                      </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                      />
->>>>>>> Fix event detail hero test
                                     </div>
                                     <div
                                                       className="flex mt3 w100"
@@ -2081,45 +1554,20 @@ ShallowWrapper {
                   </div>
                   <Button
                                     className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     color="madison-blue"
                                     disabled={true}
                                     fullWidth={false}
                                     hover="shadow"
                                     label=""
-=======
-                                    color="peach"
-                                    disabled={false}
-=======
-                                    color="madison-blue"
-                                    disabled={true}
->>>>>>> Fix event detail hero test
-                                    fullWidth={false}
-                                    hover="shadow"
-<<<<<<< HEAD
-                                    label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                    label=""
->>>>>>> Fix event selector corresponding to change
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                   >
                                     <span
                                                       className="mr-auto"
                                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                                       Add to Cart
                                     </span>
                                     <span
@@ -2127,19 +1575,8 @@ ShallowWrapper {
                                     >
                                                       $
                                                       0.00
-<<<<<<< HEAD
                                     </span>
                   </Button>
-=======
-                  />
->>>>>>> Add EventDetailHero text
-=======
-                                                      Call to Action
-=======
->>>>>>> Fix event detail hero test
-                                    </span>
-                  </Button>
->>>>>>> Fix event selector corresponding to change
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -2167,17 +1604,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             />
-=======
-                                            >
-                                                                  Invalid date
-                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                            />
->>>>>>> Fix event detail hero test
                       </div>
                       <div>
                                             <p
@@ -2187,17 +1614,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             />
-=======
-                                            >
-                                                                  foo
-                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                            />
->>>>>>> Fix event detail hero test
                       </div>
                       <div
                                             className="flex mt3 w100"
@@ -2233,45 +1650,20 @@ ShallowWrapper {
 </div>,
                     <Button
                       className="my4"
-<<<<<<< HEAD
-<<<<<<< HEAD
                       color="madison-blue"
                       disabled={true}
                       fullWidth={false}
                       hover="shadow"
                       label=""
-=======
-                      color="peach"
-                      disabled={false}
-=======
-                      color="madison-blue"
-                      disabled={true}
->>>>>>> Fix event detail hero test
-                      fullWidth={false}
-                      hover="shadow"
-<<<<<<< HEAD
-                      label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                      label=""
->>>>>>> Fix event selector corresponding to change
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
 >
                       <span
                                             className="mr-auto"
                       >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                                             Add to Cart
                       </span>
                       <span
@@ -2279,19 +1671,8 @@ ShallowWrapper {
                       >
                                             $
                                             0.00
-<<<<<<< HEAD
                       </span>
 </Button>,
-=======
-/>,
->>>>>>> Add EventDetailHero text
-=======
-                                            Call to Action
-=======
->>>>>>> Fix event detail hero test
-                      </span>
-</Button>,
->>>>>>> Fix event selector corresponding to change
                     null,
                     <div
                       className="markdown-block"
@@ -2320,17 +1701,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                           />
-=======
-                          >
-                                                    Invalid date
-                          </p>
->>>>>>> Add EventDetailHero text
-=======
-                          />
->>>>>>> Fix event detail hero test
 </div>,
                         <div>
                           <p
@@ -2340,17 +1711,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                           />
-=======
-                          >
-                                                    foo
-                          </p>
->>>>>>> Add EventDetailHero text
-=======
-                          />
->>>>>>> Fix event detail hero test
 </div>,
                         <div
                           className="flex mt3 w100"
@@ -2400,17 +1761,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                              Invalid date
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> Fix event detail hero test
                           ],
                         },
                         "ref": null,
@@ -2432,27 +1783,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
-=======
-                              "children": "Invalid date",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "Invalid date",
->>>>>>> Add EventDetailHero text
-=======
-                              "children": "",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "",
->>>>>>> Fix event detail hero test
                             "type": "p",
                           },
                         ],
@@ -2471,17 +1806,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                              foo
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> Fix event detail hero test
                           ],
                         },
                         "ref": null,
@@ -2503,27 +1828,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
-=======
-                              "children": "foo",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "foo",
->>>>>>> Add EventDetailHero text
-=======
-                              "children": "",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "",
->>>>>>> Fix event detail hero test
                             "type": "p",
                           },
                         ],
@@ -2669,18 +1978,10 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                       "children": Array [
                         <span
                           className="mr-auto"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event detail hero test
                           Add to Cart
 </span>,
                         <span
@@ -2688,7 +1989,6 @@ ShallowWrapper {
 >
                           $
                           0.00
-<<<<<<< HEAD
 </span>,
                       ],
                       "className": "my4",
@@ -2697,26 +1997,6 @@ ShallowWrapper {
                       "fullWidth": false,
                       "hover": "shadow",
                       "label": "",
-=======
-                      "children": null,
-=======
-                          Call to Action
-=======
->>>>>>> Fix event detail hero test
-</span>,
-                      ],
->>>>>>> Fix event selector corresponding to change
-                      "className": "my4",
-                      "color": "madison-blue",
-                      "disabled": true,
-                      "fullWidth": false,
-                      "hover": "shadow",
-<<<<<<< HEAD
-                      "label": "Call to Action",
->>>>>>> Add EventDetailHero text
-=======
-                      "label": "",
->>>>>>> Fix event selector corresponding to change
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -2724,18 +2004,12 @@ ShallowWrapper {
                       "variant": "primary",
                     },
                     "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                     "rendered": Array [
                       Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                           "children": "Add to Cart",
                           "className": "mr-auto",
                         },
@@ -2762,40 +2036,6 @@ ShallowWrapper {
                         "type": "span",
                       },
                     ],
-=======
-                    "rendered": null,
->>>>>>> Add EventDetailHero text
-=======
-                          "children": "Call to Action",
-=======
-                          "children": "Add to Cart",
->>>>>>> Fix event detail hero test
-                          "className": "mr-auto",
-                        },
-                        "ref": null,
-                        "rendered": "Add to Cart",
-                        "type": "span",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            "$",
-                            "0.00",
-                          ],
-                          "className": "ml2",
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          "$",
-                          "0.00",
-                        ],
-                        "type": "span",
-                      },
-                    ],
->>>>>>> Fix event selector corresponding to change
                     "type": [Function],
                   },
                   null,
@@ -2821,14 +2061,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
-<<<<<<< HEAD
-<<<<<<< HEAD
         null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-        null,
->>>>>>> Fix event selector corresponding to change
       ],
       "type": "div",
     },
@@ -2945,17 +2178,7 @@ ShallowWrapper {
                                                   </p>
                                                   <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                   />
-=======
-                                                  >
-                                                            Invalid date
-                                                  </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                  />
->>>>>>> fix DatesAndTimes key to be lower case
                                         </div>
                                         <div>
                                                   <p
@@ -3003,44 +2226,19 @@ ShallowWrapper {
                                         disabled={false}
                                         fullWidth={false}
                                         hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         label=""
-=======
-                                        label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                        label=""
->>>>>>> Fix event selector corresponding to change
                                         onClick={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
                                         variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                               >
                                         <span
                                                   className="mr-auto"
                                         >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                   RSVP
                                         </span>
                               </Button>
-=======
-                              />
->>>>>>> Add EventDetailHero text
-=======
-                                                  Call to Action
-=======
-                                                  RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                        </span>
-                              </Button>
->>>>>>> Fix event selector corresponding to change
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -3052,14 +2250,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
         null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-        null,
->>>>>>> Fix event selector corresponding to change
       ],
       "className": "flex flex-column mb4",
     },
@@ -3227,17 +2418,7 @@ ShallowWrapper {
                                                         </p>
                                                         <p
                                                                       className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                         />
-=======
-                                                        >
-                                                                      Invalid date
-                                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                        />
->>>>>>> fix DatesAndTimes key to be lower case
                                           </div>
                                           <div>
                                                         <p
@@ -3285,44 +2466,19 @@ ShallowWrapper {
                                           disabled={false}
                                           fullWidth={false}
                                           hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                           label=""
-=======
-                                          label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                          label=""
->>>>>>> Fix event selector corresponding to change
                                           onClick={[Function]}
                                           shadow={false}
                                           to=""
                                           type="button"
                                           variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                             >
                                           <span
                                                         className="mr-auto"
                                           >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                         RSVP
                                           </span>
                             </Button>
-=======
-                            />
->>>>>>> Add EventDetailHero text
-=======
-                                                        Call to Action
-=======
-                                                        RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                          </span>
-                            </Button>
->>>>>>> Fix event selector corresponding to change
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -3389,17 +2545,7 @@ ShallowWrapper {
                                                 </p>
                                                 <p
                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 />
-=======
-                                                >
-                                                                Invalid date
-                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                />
->>>>>>> fix DatesAndTimes key to be lower case
                                 </div>
                                 <div>
                                                 <p
@@ -3447,44 +2593,19 @@ ShallowWrapper {
                                 disabled={false}
                                 fullWidth={false}
                                 hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 label=""
-=======
-                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                label=""
->>>>>>> Fix event selector corresponding to change
                                 onClick={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                 >
                                 <span
                                                 className="mr-auto"
                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 RSVP
                                 </span>
                 </Button>
-=======
-                />
->>>>>>> Add EventDetailHero text
-=======
-                                                Call to Action
-=======
-                                                RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                </span>
-                </Button>
->>>>>>> Fix event selector corresponding to change
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -3512,17 +2633,7 @@ ShallowWrapper {
                                         </p>
                                         <p
                                                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         />
-=======
-                                        >
-                                                            Invalid date
-                                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                                        />
->>>>>>> fix DatesAndTimes key to be lower case
                     </div>
                     <div>
                                         <p
@@ -3570,44 +2681,19 @@ ShallowWrapper {
                     disabled={false}
                     fullWidth={false}
                     hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                     label=""
-=======
-                    label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                    label=""
->>>>>>> Fix event selector corresponding to change
                     onClick={[Function]}
                     shadow={false}
                     to=""
                     type="button"
                     variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
 >
                     <span
                                         className="mr-auto"
                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                         RSVP
                     </span>
 </Button>,
-=======
-/>,
->>>>>>> Add EventDetailHero text
-=======
-                                        Call to Action
-=======
-                                        RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                    </span>
-</Button>,
->>>>>>> Fix event selector corresponding to change
                   null,
                   <div
                     className="markdown-block"
@@ -3636,17 +2722,7 @@ ShallowWrapper {
                         </p>
                         <p
                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                         />
-=======
-                        >
-                                                Invalid date
-                        </p>
->>>>>>> Add EventDetailHero text
-=======
-                        />
->>>>>>> fix DatesAndTimes key to be lower case
 </div>,
                       <div>
                         <p
@@ -3704,17 +2780,7 @@ ShallowWrapper {
 </p>,
                           <p
                             className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                            Invalid date
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> fix DatesAndTimes key to be lower case
                         ],
                       },
                       "ref": null,
@@ -3736,27 +2802,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                             "children": "",
                             "className": "mt1",
                           },
                           "ref": null,
                           "rendered": "",
-=======
-                            "children": "Invalid date",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "Invalid date",
->>>>>>> Add EventDetailHero text
-=======
-                            "children": "",
-                            "className": "mt1",
-                          },
-                          "ref": null,
-                          "rendered": "",
->>>>>>> fix DatesAndTimes key to be lower case
                           "type": "p",
                         },
                       ],
@@ -3943,46 +2993,20 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                     "children": Array [
                       <span
                         className="mr-auto"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                         RSVP
 </span>,
                       null,
                     ],
-=======
-                    "children": null,
->>>>>>> Add EventDetailHero text
-=======
-                        Call to Action
-=======
-                        RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-</span>,
-                      null,
-                    ],
->>>>>>> Fix event selector corresponding to change
                     "className": "my4",
                     "color": "peach",
                     "disabled": false,
                     "fullWidth": false,
                     "hover": "shadow",
-<<<<<<< HEAD
-<<<<<<< HEAD
                     "label": "",
-=======
-                    "label": "Call to Action",
->>>>>>> Add EventDetailHero text
-=======
-                    "label": "",
->>>>>>> Fix event selector corresponding to change
                     "onClick": [Function],
                     "shadow": false,
                     "to": "",
@@ -3990,47 +3014,21 @@ ShallowWrapper {
                     "variant": "primary",
                   },
                   "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                   "rendered": Array [
                     Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                         "children": "RSVP",
                         "className": "mr-auto",
                       },
                       "ref": null,
                       "rendered": "RSVP",
-=======
-                        "children": "Call to Action",
-                        "className": "mr-auto",
-                      },
-                      "ref": null,
-                      "rendered": "Call to Action",
->>>>>>> Fix event selector corresponding to change
-=======
-                        "children": "RSVP",
-                        "className": "mr-auto",
-                      },
-                      "ref": null,
-                      "rendered": "RSVP",
->>>>>>> fix DatesAndTimes key to be lower case
                       "type": "span",
                     },
                     null,
                   ],
-<<<<<<< HEAD
-=======
-                  "rendered": null,
->>>>>>> Add EventDetailHero text
-=======
->>>>>>> Fix event selector corresponding to change
                   "type": [Function],
                 },
                 null,
@@ -4056,14 +3054,7 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
       null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-      null,
->>>>>>> Fix event selector corresponding to change
     ],
     "type": "div",
   },
@@ -4135,17 +3126,7 @@ ShallowWrapper {
                                                             </p>
                                                             <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                             />
-=======
-                                                            >
-                                                                        Invalid date
-                                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                            />
->>>>>>> fix DatesAndTimes key to be lower case
                                                 </div>
                                                 <div>
                                                             <p
@@ -4193,44 +3174,19 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 label=""
-=======
-                                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                                label=""
->>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                                     >
                                                 <span
                                                             className="mr-auto"
                                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                             RSVP
                                                 </span>
                                     </Button>
-=======
-                                    />
->>>>>>> Add EventDetailHero text
-=======
-                                                            Call to Action
-=======
-                                                            RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                                </span>
-                                    </Button>
->>>>>>> Fix event selector corresponding to change
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -4242,14 +3198,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
           null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-          null,
->>>>>>> Fix event selector corresponding to change
         ],
         "className": "flex flex-column mb4",
       },
@@ -4417,17 +3366,7 @@ ShallowWrapper {
                                                                 </p>
                                                                 <p
                                                                                 className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                                 />
-=======
-                                                                >
-                                                                                Invalid date
-                                                                </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                                />
->>>>>>> fix DatesAndTimes key to be lower case
                                                 </div>
                                                 <div>
                                                                 <p
@@ -4475,44 +3414,19 @@ ShallowWrapper {
                                                 disabled={false}
                                                 fullWidth={false}
                                                 hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                 label=""
-=======
-                                                label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                                label=""
->>>>>>> Fix event selector corresponding to change
                                                 onClick={[Function]}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
                                                 variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                                 >
                                                 <span
                                                                 className="mr-auto"
                                                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                                 RSVP
                                                 </span>
                                 </Button>
-=======
-                                />
->>>>>>> Add EventDetailHero text
-=======
-                                                                Call to Action
-=======
-                                                                RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                                </span>
-                                </Button>
->>>>>>> Fix event selector corresponding to change
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -4579,17 +3493,7 @@ ShallowWrapper {
                                                       </p>
                                                       <p
                                                                         className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                       />
-=======
-                                                      >
-                                                                        Invalid date
-                                                      </p>
->>>>>>> Add EventDetailHero text
-=======
-                                                      />
->>>>>>> fix DatesAndTimes key to be lower case
                                     </div>
                                     <div>
                                                       <p
@@ -4637,44 +3541,19 @@ ShallowWrapper {
                                     disabled={false}
                                     fullWidth={false}
                                     hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                     label=""
-=======
-                                    label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                                    label=""
->>>>>>> Fix event selector corresponding to change
                                     onClick={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
                                     variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                   >
                                     <span
                                                       className="mr-auto"
                                     >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                       RSVP
                                     </span>
                   </Button>
-=======
-                  />
->>>>>>> Add EventDetailHero text
-=======
-                                                      Call to Action
-=======
-                                                      RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                                    </span>
-                  </Button>
->>>>>>> Fix event selector corresponding to change
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -4702,17 +3581,7 @@ ShallowWrapper {
                                             </p>
                                             <p
                                                                   className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             />
-=======
-                                            >
-                                                                  Invalid date
-                                            </p>
->>>>>>> Add EventDetailHero text
-=======
-                                            />
->>>>>>> fix DatesAndTimes key to be lower case
                       </div>
                       <div>
                                             <p
@@ -4760,44 +3629,19 @@ ShallowWrapper {
                       disabled={false}
                       fullWidth={false}
                       hover="shadow"
-<<<<<<< HEAD
-<<<<<<< HEAD
                       label=""
-=======
-                      label="Call to Action"
->>>>>>> Add EventDetailHero text
-=======
-                      label=""
->>>>>>> Fix event selector corresponding to change
                       onClick={[Function]}
                       shadow={false}
                       to=""
                       type="button"
                       variant="primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
 >
                       <span
                                             className="mr-auto"
                       >
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             RSVP
                       </span>
 </Button>,
-=======
-/>,
->>>>>>> Add EventDetailHero text
-=======
-                                            Call to Action
-=======
-                                            RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-                      </span>
-</Button>,
->>>>>>> Fix event selector corresponding to change
                     null,
                     <div
                       className="markdown-block"
@@ -4826,17 +3670,7 @@ ShallowWrapper {
                           </p>
                           <p
                                                     className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
                           />
-=======
-                          >
-                                                    Invalid date
-                          </p>
->>>>>>> Add EventDetailHero text
-=======
-                          />
->>>>>>> fix DatesAndTimes key to be lower case
 </div>,
                         <div>
                           <p
@@ -4894,17 +3728,7 @@ ShallowWrapper {
 </p>,
                             <p
                               className="mt1"
-<<<<<<< HEAD
-<<<<<<< HEAD
 />,
-=======
->
-                              Invalid date
-</p>,
->>>>>>> Add EventDetailHero text
-=======
-/>,
->>>>>>> fix DatesAndTimes key to be lower case
                           ],
                         },
                         "ref": null,
@@ -4926,27 +3750,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                               "children": "",
                               "className": "mt1",
                             },
                             "ref": null,
                             "rendered": "",
-=======
-                              "children": "Invalid date",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "Invalid date",
->>>>>>> Add EventDetailHero text
-=======
-                              "children": "",
-                              "className": "mt1",
-                            },
-                            "ref": null,
-                            "rendered": "",
->>>>>>> fix DatesAndTimes key to be lower case
                             "type": "p",
                           },
                         ],
@@ -5133,46 +3941,20 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                       "children": Array [
                         <span
                           className="mr-auto"
 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                           RSVP
 </span>,
                         null,
                       ],
-=======
-                      "children": null,
->>>>>>> Add EventDetailHero text
-=======
-                          Call to Action
-=======
-                          RSVP
->>>>>>> fix DatesAndTimes key to be lower case
-</span>,
-                        null,
-                      ],
->>>>>>> Fix event selector corresponding to change
                       "className": "my4",
                       "color": "peach",
                       "disabled": false,
                       "fullWidth": false,
                       "hover": "shadow",
-<<<<<<< HEAD
-<<<<<<< HEAD
                       "label": "",
-=======
-                      "label": "Call to Action",
->>>>>>> Add EventDetailHero text
-=======
-                      "label": "",
->>>>>>> Fix event selector corresponding to change
                       "onClick": [Function],
                       "shadow": false,
                       "to": "",
@@ -5180,47 +3962,21 @@ ShallowWrapper {
                       "variant": "primary",
                     },
                     "ref": null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Fix event selector corresponding to change
                     "rendered": Array [
                       Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-<<<<<<< HEAD
-<<<<<<< HEAD
                           "children": "RSVP",
                           "className": "mr-auto",
                         },
                         "ref": null,
                         "rendered": "RSVP",
-=======
-                          "children": "Call to Action",
-                          "className": "mr-auto",
-                        },
-                        "ref": null,
-                        "rendered": "Call to Action",
->>>>>>> Fix event selector corresponding to change
-=======
-                          "children": "RSVP",
-                          "className": "mr-auto",
-                        },
-                        "ref": null,
-                        "rendered": "RSVP",
->>>>>>> fix DatesAndTimes key to be lower case
                         "type": "span",
                       },
                       null,
                     ],
-<<<<<<< HEAD
-=======
-                    "rendered": null,
->>>>>>> Add EventDetailHero text
-=======
->>>>>>> Fix event selector corresponding to change
                     "type": [Function],
                   },
                   null,
@@ -5246,14 +4002,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
-<<<<<<< HEAD
-<<<<<<< HEAD
         null,
-=======
->>>>>>> Add EventDetailHero text
-=======
-        null,
->>>>>>> Fix event selector corresponding to change
       ],
       "type": "div",
     },
