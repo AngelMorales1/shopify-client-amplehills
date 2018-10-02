@@ -9,7 +9,7 @@ import styles from './ArticlePreview.scss';
 import { Button } from 'components/base';
 
 const ArticlePreview = ({ article }) => {
-  const excerpt = article.content.slice(0, 200) + '...';
+  const excerpt = get(article, 'content', '').slice(0, 200) + '...';
 
   return (
     <div className={cx(styles['ArticlePreview'], 'px2')}>

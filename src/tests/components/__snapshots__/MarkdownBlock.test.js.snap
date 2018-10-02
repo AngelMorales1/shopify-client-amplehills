@@ -351,6 +351,7 @@ ShallowWrapper {
               "content": "",
               "drip": false,
               "title": "",
+              "titleCenterAlign": false,
               "titleLeft": false,
             },
           }

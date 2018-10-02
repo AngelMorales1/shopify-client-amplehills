@@ -66,13 +66,14 @@ ShallowWrapper {
                 <div
                         className="col-12 md-col-11 mx-auto py-auto"
                 >
-                        <Image
-                                alt="foo image 1"
-                                bg={false}
-                                className="w100"
-                                onImgLoad={[Function]}
-                                src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                style={Object {}}
+                        <div
+                                className="aspect-ratio-16-9"
+                                style={
+                                        Object {
+                                                "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "contain",
+                                              }
+                                }
                         />
                 </div>
         </Carousel>
@@ -110,13 +111,14 @@ ShallowWrapper {
             <div
                         className="col-12 md-col-11 mx-auto py-auto"
             >
-                        <Image
-                                    alt="foo image 1"
-                                    bg={false}
-                                    className="w100"
-                                    onImgLoad={[Function]}
-                                    src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                    style={Object {}}
+                        <div
+                                    className="aspect-ratio-16-9"
+                                    style={
+                                                Object {
+                                                            "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "contain",
+                                                          }
+                                    }
                         />
             </div>
 </Carousel>,
@@ -148,13 +150,14 @@ ShallowWrapper {
               <div
                 className="col-12 md-col-11 mx-auto py-auto"
 >
-                <Image
-                                alt="foo image 1"
-                                bg={false}
-                                className="w100"
-                                onImgLoad={[Function]}
-                                src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                style={Object {}}
+                <div
+                                className="aspect-ratio-16-9"
+                                style={
+                                                Object {
+                                                                "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                "backgroundSize": "contain",
+                                                              }
+                                }
                 />
 </div>,
             ],
@@ -175,13 +178,14 @@ ShallowWrapper {
               "key": "foo",
               "nodeType": "host",
               "props": Object {
-                "children": <Image
-                  alt="foo image 1"
-                  bg={false}
-                  className="w100"
-                  onImgLoad={[Function]}
-                  src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                  style={Object {}}
+                "children": <div
+                  className="aspect-ratio-16-9"
+                  style={
+                                    Object {
+                                                      "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "contain",
+                                                    }
+                  }
 />,
                 "className": "col-12 md-col-11 mx-auto py-auto",
               },
@@ -189,19 +193,17 @@ ShallowWrapper {
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
+                "nodeType": "host",
                 "props": Object {
-                  "alt": "foo image 1",
-                  "bg": false,
-                  "children": null,
-                  "className": "w100",
-                  "onImgLoad": [Function],
-                  "src": "foo?w=1200&fm=jpg&fl=progressive&q=90",
-                  "style": Object {},
+                  "className": "aspect-ratio-16-9",
+                  "style": Object {
+                    "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "contain",
+                  },
                 },
                 "ref": null,
                 "rendered": null,
-                "type": [Function],
+                "type": "div",
               },
               "type": "div",
             },
@@ -243,13 +245,14 @@ ShallowWrapper {
                     <div
                               className="col-12 md-col-11 mx-auto py-auto"
                     >
-                              <Image
-                                        alt="foo image 1"
-                                        bg={false}
-                                        className="w100"
-                                        onImgLoad={[Function]}
-                                        src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                        style={Object {}}
+                              <div
+                                        className="aspect-ratio-16-9"
+                                        style={
+                                                  Object {
+                                                            "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "contain",
+                                                          }
+                                        }
                               />
                     </div>
           </Carousel>
@@ -287,13 +290,14 @@ ShallowWrapper {
               <div
                             className="col-12 md-col-11 mx-auto py-auto"
               >
-                            <Image
-                                          alt="foo image 1"
-                                          bg={false}
-                                          className="w100"
-                                          onImgLoad={[Function]}
-                                          src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                          style={Object {}}
+                            <div
+                                          className="aspect-ratio-16-9"
+                                          style={
+                                                        Object {
+                                                                      "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                      "backgroundSize": "contain",
+                                                                    }
+                                          }
                             />
               </div>
 </Carousel>,
@@ -325,13 +329,14 @@ ShallowWrapper {
                 <div
                   className="col-12 md-col-11 mx-auto py-auto"
 >
-                  <Image
-                                    alt="foo image 1"
-                                    bg={false}
-                                    className="w100"
-                                    onImgLoad={[Function]}
-                                    src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                                    style={Object {}}
+                  <div
+                                    className="aspect-ratio-16-9"
+                                    style={
+                                                      Object {
+                                                                        "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                        "backgroundSize": "contain",
+                                                                      }
+                                    }
                   />
 </div>,
               ],
@@ -352,13 +357,14 @@ ShallowWrapper {
                 "key": "foo",
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Image
-                    alt="foo image 1"
-                    bg={false}
-                    className="w100"
-                    onImgLoad={[Function]}
-                    src="foo?w=1200&fm=jpg&fl=progressive&q=90"
-                    style={Object {}}
+                  "children": <div
+                    className="aspect-ratio-16-9"
+                    style={
+                                        Object {
+                                                            "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "contain",
+                                                          }
+                    }
 />,
                   "className": "col-12 md-col-11 mx-auto py-auto",
                 },
@@ -366,19 +372,17 @@ ShallowWrapper {
                 "rendered": Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
+                  "nodeType": "host",
                   "props": Object {
-                    "alt": "foo image 1",
-                    "bg": false,
-                    "children": null,
-                    "className": "w100",
-                    "onImgLoad": [Function],
-                    "src": "foo?w=1200&fm=jpg&fl=progressive&q=90",
-                    "style": Object {},
+                    "className": "aspect-ratio-16-9",
+                    "style": Object {
+                      "background": "url(foo?w=1200&fm=jpg&fl=progressive&q=90) no-repeat center",
+                      "backgroundSize": "contain",
+                    },
                   },
                   "ref": null,
                   "rendered": null,
-                  "type": [Function],
+                  "type": "div",
                 },
                 "type": "div",
               },

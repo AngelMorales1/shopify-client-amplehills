@@ -265,7 +265,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-11-02T22:54:40.303Z}
+                                        initialMonth={2018-11-06T15:57:17.650Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -915,7 +915,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-11-02T22:54:40.303Z}
+                                          initialMonth={2018-11-06T15:57:17.650Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1579,7 +1579,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-11-02T22:54:40.303Z}
+                                    initialMonth={2018-11-06T15:57:17.650Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1768,7 +1768,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-11-02T22:54:40.303Z}
+                      initialMonth={2018-11-06T15:57:17.650Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -1964,7 +1964,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-11-02T22:54:40.303Z,
+                      "initialMonth": 2018-11-06T15:57:17.650Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -4078,7 +4078,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-11-02T22:54:40.303Z}
+                                                initialMonth={2018-11-06T15:57:17.650Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -4728,7 +4728,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-11-02T22:54:40.303Z}
+                                                initialMonth={2018-11-06T15:57:17.650Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -5392,7 +5392,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-11-02T22:54:40.303Z}
+                                        initialMonth={2018-11-06T15:57:17.650Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5581,7 +5581,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-11-02T22:54:40.303Z}
+                        initialMonth={2018-11-06T15:57:17.650Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -5777,7 +5777,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-11-02T22:54:40.303Z,
+                        "initialMonth": 2018-11-06T15:57:17.650Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -7945,7 +7945,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-11-02T22:54:40.303Z}
+                                        initialMonth={2018-11-06T15:57:17.650Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -8588,7 +8588,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-11-02T22:54:40.303Z}
+                                          initialMonth={2018-11-06T15:57:17.650Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -9240,7 +9240,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-11-02T22:54:40.303Z}
+                                    initialMonth={2018-11-06T15:57:17.650Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -9429,7 +9429,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-11-02T22:54:40.303Z}
+                      initialMonth={2018-11-06T15:57:17.650Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -9625,7 +9625,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-11-02T22:54:40.303Z,
+                      "initialMonth": 2018-11-06T15:57:17.650Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -11732,7 +11732,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-11-02T22:54:40.303Z}
+                                                initialMonth={2018-11-06T15:57:17.650Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -12375,7 +12375,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-11-02T22:54:40.303Z}
+                                                initialMonth={2018-11-06T15:57:17.650Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -13027,7 +13027,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-11-02T22:54:40.303Z}
+                                        initialMonth={2018-11-06T15:57:17.650Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -13216,7 +13216,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-11-02T22:54:40.303Z}
+                        initialMonth={2018-11-06T15:57:17.650Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -13412,7 +13412,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-11-02T22:54:40.303Z,
+                        "initialMonth": 2018-11-06T15:57:17.650Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",

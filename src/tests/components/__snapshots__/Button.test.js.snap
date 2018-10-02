@@ -34,7 +34,7 @@ ShallowWrapper {
 >
         Click Me
 </div>,
-      "className": "foo w100",
+      "className": "w100 foo",
       "onClick": [Function],
       "type": "button",
     },
@@ -64,7 +64,7 @@ ShallowWrapper {
 >
           Click Me
 </div>,
-        "className": "foo w100",
+        "className": "w100 foo",
         "onClick": [Function],
         "type": "button",
       },
@@ -124,7 +124,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="foo w100 undefined"
+        className="w100 foo"
 >
         <span
                 className="avenir h100 flex justify-center items-center"
@@ -149,7 +149,7 @@ ShallowWrapper {
 >
           Click Me
 </span>,
-        "className": "foo w100 undefined",
+        "className": "w100 foo",
       },
       "ref": null,
       "rendered": Object {
@@ -175,7 +175,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="foo w100 undefined"
+          className="w100 foo"
 >
           <span
                     className="avenir h100 flex justify-center items-center"
@@ -200,7 +200,7 @@ ShallowWrapper {
 >
             Click Me
 </span>,
-          "className": "foo w100 undefined",
+          "className": "w100 foo",
         },
         "ref": null,
         "rendered": Object {
@@ -260,7 +260,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "children": <div
-        className="foo w100 undefined"
+        className="w100 foo"
 >
         <span
                 className="avenir h100 flex justify-center items-center"
@@ -284,7 +284,7 @@ ShallowWrapper {
 >
           Click Me
 </span>,
-        "className": "foo w100 undefined",
+        "className": "w100 foo",
       },
       "ref": null,
       "rendered": Object {
@@ -310,7 +310,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "children": <div
-          className="foo w100 undefined"
+          className="w100 foo"
 >
           <span
                     className="avenir h100 flex justify-center items-center"
@@ -334,7 +334,7 @@ ShallowWrapper {
 >
             Click Me
 </span>,
-          "className": "foo w100 undefined",
+          "className": "w100 foo",
         },
         "ref": null,
         "rendered": Object {
