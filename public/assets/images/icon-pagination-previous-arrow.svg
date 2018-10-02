@@ -1,0 +1,10 @@
+<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="News" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family=".SFNSDisplay, .SF NS Display" font-size="20" font-weight="normal" letter-spacing="0.675" line-spacing="24">
+        <g id="News-Detail" transform="translate(-223.000000, -2111.000000)" fill="#13436D">
+            <text id="←">
+                <tspan x="222" y="2123">←</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

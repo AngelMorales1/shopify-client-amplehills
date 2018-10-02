@@ -3,7 +3,8 @@ import { client as Apollo } from 'lib/Apollo';
 import {
   fetchArticlesQuery,
   fetchArticlesTagsQuery,
-  fetchArticlesByTagQuery
+  fetchArticlesByTagQuery,
+  cursorFetch
 } from 'state/graphql/articles';
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
@@ -33,6 +34,17 @@ export const fetchArticlesByTag = tag => dispatch => {
     payload: Apollo.query({
       query: fetchArticlesByTagQuery,
       variables: { tag }
+    })
+  });
+};
+
+export const FETCH_CURSOR = 'FETCH_CURSOR';
+export const fetchCursor = cursor => dispatch => {
+  return dispatch({
+    type: FETCH_CURSOR,
+    payload: Apollo.query({
+      query: cursorFetch,
+      variables: { cursor }
     })
   });
 };

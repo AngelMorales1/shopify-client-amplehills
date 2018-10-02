@@ -75,3 +75,16 @@ export const fetchArticlesByTagQuery = gql`
     }
   }
 `;
+
+export const cursorFetch = gql`
+query newsArticles($cursor: String) {
+  articles(after: $cursor, first: 5, sortKey: PUBLISHED_AT, reverse: true) {
+    pageInfo {
+      hasNextPage
+    }
+    edges {
+      cursor
+    }
+  }
+}
+`;
