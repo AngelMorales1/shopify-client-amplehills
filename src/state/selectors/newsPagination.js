@@ -1,11 +1,9 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import moment from 'moment';
 
 export default createSelector(
   state => get(state, 'news.pagination.data.articles.edges', []),
   paginations => {
-    console.log(paginations);
     const pageCount = paginations.length;
 
     let pageLastItemCursors = [];

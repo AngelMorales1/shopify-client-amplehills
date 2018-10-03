@@ -159,15 +159,23 @@ class NewsLanding extends Component {
 }
 
 NewsLanding.propTypes = {
-  hasNextPage: PropTypes.bool,
-  hasPreviousPage: PropTypes.bool,
-  articles: PropTypes.arrayOf(articleModel.propTypes)
+  news: PropTypes.shape({
+    hasNextPage: PropTypes.bool,
+    hasPreviousPage: PropTypes.bool,
+    articles: PropTypes.arrayOf(articleModel.propTypes)
+  }),
+  actions: PropTypes.object,
+  cursors: PropTypes.arrayOf(PropTypes.string)
 };
 
 NewsLanding.defaultProps = {
-  hasNextPage: false,
-  hasPreviousPage: false,
-  articles: []
+  news: PropTypes.shape({
+    hasNextPage: false,
+    hasPreviousPage: false,
+    articles: PropTypes.arrayOf(articleModel.default)
+  }),
+  actions: {},
+  cursors: ['']
 };
 
 export default NewsLanding;
