@@ -2,9 +2,9 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
-  fetchNews,
-  fetchNewsTags,
-  newsFetchByTag
+  fetchArticles,
+  fetchArticlesTags,
+  fetchArticlesByTag
 } from 'state/actions/newsActions';
 import news from 'state/selectors/news';
 import newsTags from 'state/selectors/newsTags';
@@ -15,10 +15,10 @@ class NewsLandingContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchNews, fetchNewsTags, newsFetchByTag }
+      actions: { fetchArticles, fetchArticlesTags }
     } = this.props;
 
-    return Promise.all([fetchNews(), fetchNewsTags()]).then(
+    return Promise.all([fetchArticles(), fetchArticlesTags()]).then(
       ([news, newsTags]) => {
         return {
           news: get(news, 'value'),
@@ -40,9 +40,9 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        fetchNews,
-        fetchNewsTags,
-        newsFetchByTag
+        fetchArticles,
+        fetchArticlesTags,
+        fetchArticlesByTag
       },
       dispatch
     )

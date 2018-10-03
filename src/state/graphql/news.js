@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const newsFetch = gql`
+export const fetchNews = gql`
   query newsArticles {
     articles(first: 5, reverse: true) {
       pageInfo {
@@ -32,7 +32,7 @@ export const newsFetch = gql`
   }
 `;
 
-export const newsTagFetch = gql`
+export const fetchNewsTag = gql`
   query newsTags {
     articles(first: 100, reverse: true) {
       edges {
@@ -44,7 +44,7 @@ export const newsTagFetch = gql`
   }
 `;
 
-export const newsByTagFetch = gql`
+export const fetchNewsByTag = gql`
   query newsArticles($tag: String!) {
     articles(first: 5, reverse: true, query: $tag) {
       pageInfo {

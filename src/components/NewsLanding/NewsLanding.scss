@@ -7,10 +7,26 @@
     flex-direction: row;
   }
 
+  &__article-preview-container {
+    margin: 0;
+
+    @media ($medium-up) {
+      margin: 0 spacing(16);
+    }
+  }
+
   &__recent-articles-content-container {
     margin-bottom: spacing(12);
     @media ($medium-up) {
       margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    border-top: spacing(0.5) solid color('gray');
+
+    @media ($medium-up) {
+      border-top: unset;
     }
   }
 }
