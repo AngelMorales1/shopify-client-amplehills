@@ -10,7 +10,7 @@ import products from './products';
 import customer from './customer';
 import genericPage from './genericPage';
 import events from './events';
-import news from './news';
+import articles from './articles';
 
 export default {
   status,
@@ -25,5 +25,5 @@ export default {
   genericPage,
   events,
   mobileNavUI,
-  news
+  articles
 };

@@ -3,13 +3,13 @@ import get from 'utils/get';
 import moment from 'moment';
 
 export default createSelector(
-  state => get(state, 'news.news.data.articles'),
-  news => {
-    const pageInfo = get(news, 'pageInfo', {});
+  state => get(state, 'articles.articles.data.articles'),
+  articlesData => {
+    const pageInfo = get(articlesData, 'pageInfo', {});
     const hasNextPage = get(pageInfo, 'hasNextPage', false);
     const hasPreviousPage = get(pageInfo, 'hasPreviousPage', false);
-    const articles = get(news, 'edges', []).reduce(
-      (sortedArticles, article) => {
+    const articles = get(articlesData, 'edges', []).reduce(
+      (handlizedArticles, article) => {
         const cursor = get(article, 'cursor', '');
         const node = get(article, 'node', {});
         const author = get(node, 'author', {});
@@ -26,7 +26,7 @@ export default createSelector(
         const id = get(node, 'id', '');
         const tags = get(node, 'tags', []);
 
-        const sortedArticle = {
+        const articleObject = {
           cursor,
           authorName,
           authorEmail,
@@ -39,7 +39,7 @@ export default createSelector(
           id,
           tags
         };
-        return sortedArticles.concat([sortedArticle]);
+        return handlizedArticles.concat([articleObject]);
       },
       []
     );

@@ -5,11 +5,11 @@ import cx from 'classnames';
 import articleModel from 'models/articleModel';
 import { Button } from 'components/base';
 
-import styles from './NewsLanding.scss';
+import styles from './ArticlesLanding.scss';
 import ArticlePreview from 'components/ArticlePreview';
 import RecentArticle from 'components/RecentArticle';
 
-class NewsLanding extends Component {
+class ArticlesLanding extends Component {
   state = {
     selectedTagButton: ''
   };
@@ -30,17 +30,20 @@ class NewsLanding extends Component {
   };
 
   render() {
-    const { news, tags } = this.props;
-    const articles = get(news, 'articles', []);
+    const { articles, tags } = this.props;
+    const getArticles = get(articles, 'articles', []);
 
     return (
       <div
-        className={cx(styles['NewsLanding'], 'flex justify-between py4 px2')}
+        className={cx(
+          styles['ArticlesLanding'],
+          'flex justify-between py4 px2'
+        )}
       >
         <div className="col-12 md-col-3 px2">
           <h2 className="callout mb2">Recent Articles</h2>
           <div className="flex flex-column mb3">
-            {articles
+            {getArticles
               .slice(0, 4)
               .map(article => (
                 <RecentArticle key={article.id} article={article} />
@@ -49,17 +52,17 @@ class NewsLanding extends Component {
         </div>
         <div
           className={cx(
-            styles['NewsLanding__article-preview-container'],
+            styles['ArticlesLanding__article-preview-container'],
             'col-12 md-col-6'
           )}
         >
-          {articles.map(article => (
+          {getArticles.map(article => (
             <ArticlePreview key={article.id} article={article} />
           ))}
         </div>
         <div
           className={cx(
-            styles['NewsLanding__line'],
+            styles['ArticlesLanding__line'],
             'mb3 px2 mx2 md-hide lg-hide'
           )}
         />
@@ -88,16 +91,20 @@ class NewsLanding extends Component {
   }
 }
 
-NewsLanding.propTypes = {
-  hasNextPage: PropTypes.bool,
-  hasPreviousPage: PropTypes.bool,
-  articles: PropTypes.arrayOf(articleModel.propTypes)
+ArticlesLanding.propTypes = {
+  articles: PropTypes.shape({
+    hasNextPage: PropTypes.bool,
+    hasPreviousPage: PropTypes.bool,
+    articles: PropTypes.arrayOf(articleModel.propTypes)
+  })
 };
 
-NewsLanding.defaultProps = {
-  hasNextPage: false,
-  hasPreviousPage: false,
-  articles: []
+ArticlesLanding.defaultProps = {
+  articles: {
+    hasNextPage: false,
+    hasPreviousPage: false,
+    articles: []
+  }
 };
 
-export default NewsLanding;
+export default ArticlesLanding;

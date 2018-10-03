@@ -5,13 +5,13 @@ import {
   fetchArticles,
   fetchArticlesTags,
   fetchArticlesByTag
-} from 'state/actions/newsActions';
-import news from 'state/selectors/news';
-import newsTags from 'state/selectors/newsTags';
+} from 'state/actions/articlesActions';
+import articles from 'state/selectors/articles';
+import articlesTags from 'state/selectors/articlesTags';
 import get from 'utils/get';
 
-class NewsLandingContainer extends ContainerBase {
-  view = import('views/NewsLandingView');
+class ArticlesLandingContainer extends ContainerBase {
+  view = import('views/ArticlesLandingView');
 
   model = () => {
     const {
@@ -19,10 +19,10 @@ class NewsLandingContainer extends ContainerBase {
     } = this.props;
 
     return Promise.all([fetchArticles(), fetchArticlesTags()]).then(
-      ([news, newsTags]) => {
+      ([articles, articlesTags]) => {
         return {
-          news: get(news, 'value'),
-          newsTags: get(newsTags, 'value')
+          articles: get(articles, 'value'),
+          articlesTags: get(articlesTags, 'value')
         };
       }
     );
@@ -31,8 +31,8 @@ class NewsLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    news: news(state),
-    newsTags: newsTags(state)
+    articles: articles(state),
+    articlesTags: articlesTags(state)
   };
 };
 
@@ -52,4 +52,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NewsLandingContainer);
+)(ArticlesLandingContainer);

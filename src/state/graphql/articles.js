@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
-export const fetchNews = gql`
-  query newsArticles {
+export const fetchArticlesQuery = gql`
+  query articles {
     articles(first: 5, reverse: true) {
       pageInfo {
         hasNextPage
@@ -32,8 +32,8 @@ export const fetchNews = gql`
   }
 `;
 
-export const fetchNewsTag = gql`
-  query newsTags {
+export const fetchArticlesTagsQuery = gql`
+  query articlesTags {
     articles(first: 100, reverse: true) {
       edges {
         node {
@@ -44,8 +44,8 @@ export const fetchNewsTag = gql`
   }
 `;
 
-export const fetchNewsByTag = gql`
-  query newsArticles($tag: String!) {
+export const fetchArticlesByTagQuery = gql`
+  query articlesByTag($tag: String!) {
     articles(first: 5, reverse: true, query: $tag) {
       pageInfo {
         hasNextPage
