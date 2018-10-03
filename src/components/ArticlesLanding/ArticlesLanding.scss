@@ -29,4 +29,12 @@
       border-top: unset;
     }
   }
+  
+  &__pagination-number {
+    margin: 0 spacing(1);
+  }
+
+  &__pagination-image {
+    width: spacing(3);
+  }
 }

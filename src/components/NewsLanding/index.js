@@ -11,7 +11,7 @@ import ArticlePreview from 'components/ArticlePreview';
 import RecentArticle from 'components/RecentArticle';
 import { Image, Button } from 'components/base';
 
-class NewsLAnding extends Component {
+class NewsLanding extends Component {
   state = {
     selectedPage: 1
   };
@@ -73,6 +73,7 @@ class NewsLAnding extends Component {
           <div className="flex flex-row">
             {currentPage !== 1 ? (
               <Button
+                className="mr1"
                 onClick={() =>
                   this.handlePaginationClick(
                     cursors[currentPage - 3],
@@ -82,24 +83,30 @@ class NewsLAnding extends Component {
                 variant="style-none"
               >
                 <Image
-                  className="icon"
+                  className={cx(styles['NewsLanding__pagination-image'], 'mr1')}
                   src="/assets/images/icon-pagination-previous-arrow.svg"
                 />
-                <p>Previous</p>
+                <p className="copy text-peach bold">Previous</p>
               </Button>
             ) : null}
             {paginations[0] !== 1 ? (
               <Fragment>
                 <Button
+                  className="copy text-peach bold"
                   onClick={() => this.handlePaginationClick('', 1)}
                   variant="style-none"
                   label="1"
                 />
-                <p>...</p>
+                <p className="copy text-peach bold mx1">...</p>
               </Fragment>
             ) : null}
             {paginations.map(pagination => (
               <Button
+                className={cx(
+                  styles['NewsLanding__pagination-number'],
+                  'copy text-peach bold'
+                )}
+                key={pagination}
                 onClick={() =>
                   this.handlePaginationClick(
                     cursors[pagination - 2],
@@ -112,8 +119,9 @@ class NewsLAnding extends Component {
             ))}
             {paginations[paginations.length - 1] !== cursorsLength ? (
               <Fragment>
-                <p>...</p>
+                <p className="copy text-peach bold mx1">...</p>
                 <Button
+                  className="copy text-peach bold"
                   onClick={() =>
                     this.handlePaginationClick(
                       cursors[cursorsLength - 2],
@@ -127,6 +135,7 @@ class NewsLAnding extends Component {
             ) : null}
             {currentPage !== cursorsLength ? (
               <Button
+                className="ml1"
                 onClick={() =>
                   this.handlePaginationClick(
                     cursors[currentPage - 1],
@@ -135,9 +144,9 @@ class NewsLAnding extends Component {
                 }
                 variant="style-none"
               >
-                <p>Next</p>
+                <p className="copy text-peach bold">Next</p>
                 <Image
-                  className="icon"
+                  className={cx(styles['NewsLanding__pagination-image'], 'ml1')}
                   src="/assets/images/icon-pagination-next-arrow.svg"
                 />
               </Button>
@@ -149,16 +158,16 @@ class NewsLAnding extends Component {
   }
 }
 
-NewsLAnding.propTypes = {
+NewsLanding.propTypes = {
   hasNextPage: PropTypes.bool,
   hasPreviousPage: PropTypes.bool,
   articles: PropTypes.arrayOf(articleModel.propTypes)
 };
 
-NewsLAnding.defaultProps = {
+NewsLanding.defaultProps = {
   hasNextPage: false,
   hasPreviousPage: false,
   articles: []
 };
 
-export default NewsLAnding;
+export default NewsLanding;
