@@ -1,7 +1,6 @@
 import {
   FETCH_ARTICLES,
   FETCH_ARTICLES_TAGS,
-  FETCH_ARTICLES_BY_TAG,
   FETCH_ALL_PAGE_CURSORS
 } from 'state/actions/articlesActions';
 

@@ -51,11 +51,10 @@ class ArticlesLanding extends Component {
   };
 
   render() {
-    const { articles, tags, actions, cursors } = this.props;
+    const { articles, tags, cursors } = this.props;
     const getArticles = get(articles, 'articles', []);
     const cursorsLength = cursors.length;
     const currentPage = this.state.selectedPage;
-    const test = get(articles[4], 'cursor', '');
     const paginations = this.sortPagination(cursors);
 
     return (
@@ -84,8 +83,13 @@ class ArticlesLanding extends Component {
           {getArticles.map(article => (
             <ArticlePreview key={article.id} article={article} />
           ))}
-          {cursorsLength > 0 ? (
-            <div className="flex flex-row w100 justify-end px2">
+          <div className={cx(styles['ArticlesLanding__pagination-container'])}>
+            <div
+              className={cx(
+                { 'display-none': cursorsLength < 1 },
+                'flex flex-row w100 justify-end px2 transition'
+              )}
+            >
               {currentPage !== 1 ? (
                 <Button
                   className="mr1"
@@ -132,7 +136,7 @@ class ArticlesLanding extends Component {
                     )
                   }
                   variant="style-none"
-                  label={pagination}
+                  label={`${pagination}`}
                 />
               ))}
               {paginations[paginations.length - 1] !== cursorsLength ? (
@@ -147,7 +151,7 @@ class ArticlesLanding extends Component {
                       )
                     }
                     variant="style-none"
-                    label={cursorsLength}
+                    label={`${cursorsLength}`}
                   />
                 </Fragment>
               ) : null}
@@ -173,7 +177,7 @@ class ArticlesLanding extends Component {
                 </Button>
               ) : null}
             </div>
-          ) : null}
+          </div>
         </div>
         <div
           className={cx(
