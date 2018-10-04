@@ -2,6 +2,7 @@ import { client as Apollo } from 'lib/Apollo';
 import get from 'utils/get';
 
 import {
+  fetchAllNewsArticlesQuery,
   fetchArticlesQuery,
   fetchArticlesTagsQuery,
   fetchCursorQuery
@@ -9,6 +10,16 @@ import {
 
 let allArticleFetched = false;
 let fetchedTag = '';
+
+export const FETCH_ALL_NEWS_ARTICLES = 'FETCH_ALL_NEWS_ARTICLES';
+export const fetchAllNewsArticles = payload => dispatch => {
+  return dispatch({
+    type: FETCH_ALL_NEWS_ARTICLES,
+    payload: Apollo.query({
+      query: fetchAllNewsArticlesQuery
+    })
+  });
+};
 
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
 export const fetchArticles = (cursor, tag) => dispatch => {

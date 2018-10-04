@@ -8,7 +8,7 @@ import {
   fetchContentfulProducts
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
-
+import { fetchAllNewsArticles } from 'state/actions/articlesActions';
 import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
@@ -24,7 +24,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         getGlobalSettings()(dispatch),
         fetchShopifyProducts()(dispatch),
         fetchContentfulProducts()(dispatch),
-        getEvents()(dispatch)
+        getEvents()(dispatch),
+        fetchAllNewsArticles()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -39,7 +40,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             settings,
             products,
             contentfulProducts,
-            getEvents
+            getEvents,
+            fetchAllNewsArticles
           ]) => resolve()
         )
         .catch(err => reject(err));
