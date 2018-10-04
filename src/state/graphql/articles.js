@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const fetchArticlesQuery = gql`
-  query articles {
-    articles(first: 5, reverse: true) {
+  query articles($cursor: String, $tag: String) {
+    articles(after: $cursor, first: 5, reverse: true, query: $tag) {
       pageInfo {
         hasNextPage
         hasPreviousPage
@@ -44,47 +44,15 @@ export const fetchArticlesTagsQuery = gql`
   }
 `;
 
-export const fetchArticlesByTagQuery = gql`
-  query articlesByTag($tag: String!) {
-    articles(first: 5, reverse: true, query: $tag) {
+export const fetchCursorQuery = gql`
+  query articlesCursor($cursor: String) {
+    articles(after: $cursor, first: 5, reverse: true) {
       pageInfo {
         hasNextPage
-        hasPreviousPage
       }
       edges {
-        node {
-          content
-          contentHtml
-          handle
-          id
-          publishedAt
-          tags
-          title
-          image {
-            altText
-            id
-            originalSrc
-          }
-          author {
-            name
-            email
-          }
-        }
         cursor
       }
     }
   }
-`;
-
-export const cursorFetch = gql`
-query newsArticles($cursor: String) {
-  articles(after: $cursor, first: 5, sortKey: PUBLISHED_AT, reverse: true) {
-    pageInfo {
-      hasNextPage
-    }
-    edges {
-      cursor
-    }
-  }
-}
 `;

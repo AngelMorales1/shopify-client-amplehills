@@ -9,9 +9,15 @@ class ArticlesLandingView extends Component {
 
     const tags = Object.keys(get(this, 'props.articlesTags', {}));
     const articles = get(this, 'props.articles', {});
+    const cursors = get(this, 'props.cursors', []);
 
     return (
-      <ArticlesLanding articles={articles} tags={tags} actions={actions} />
+      <ArticlesLanding
+        articles={articles}
+        tags={tags}
+        actions={actions}
+        cursors={cursors}
+      />
     );
   }
 }

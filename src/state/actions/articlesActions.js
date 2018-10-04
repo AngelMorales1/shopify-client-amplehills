@@ -1,18 +1,40 @@
 import { client as Apollo } from 'lib/Apollo';
+import get from 'utils/get';
 
 import {
   fetchArticlesQuery,
   fetchArticlesTagsQuery,
-  fetchArticlesByTagQuery,
-  cursorFetch
+  fetchCursorQuery
 } from 'state/graphql/articles';
 
+let allArticleFetched = false;
+let fetchedTag = '';
+
 export const FETCH_ARTICLES = 'FETCH_ARTICLES';
-export const fetchArticles = payload => dispatch => {
+export const fetchArticles = (cursor, tag) => dispatch => {
   return dispatch({
     type: FETCH_ARTICLES,
     payload: Apollo.query({
-      query: fetchArticlesQuery
+      query: fetchArticlesQuery,
+      variables: { cursor, tag }
+    }).then(res => {
+      if ((!allArticleFetched && !tag) || (tag && tag !== fetchedTag)) {
+        const articlesData = get(res, 'data.articles', {});
+
+        dispatch(
+          fetchAllPageCursors(get(articlesData, 'edges[4].cursor', ''), true)
+        );
+      }
+
+      if (tag) {
+        fetchedTag = tag;
+        allArticleFetched = false;
+      } else {
+        fetchedTag = '';
+        allArticleFetched = true;
+      }
+
+      return res;
     })
   });
 };
@@ -27,24 +49,36 @@ export const fetchArticlesTags = payload => dispatch => {
   });
 };
 
-export const FETCH_ARTICLES_BY_TAG = 'FETCH_ARTICLES_BY_TAG';
-export const fetchArticlesByTag = tag => dispatch => {
+export const FETCH_ALL_PAGE_CURSORS = 'FETCH_ALL_PAGE_CURSORS';
+export const fetchAllPageCursors = (
+  lastItemCursor,
+  hasNextPage
+) => dispatch => {
   return dispatch({
-    type: FETCH_ARTICLES_BY_TAG,
-    payload: Apollo.query({
-      query: fetchArticlesByTagQuery,
-      variables: { tag }
-    })
+    type: FETCH_ALL_PAGE_CURSORS,
+    payload: getAllCursors(lastItemCursor, hasNextPage)
   });
 };
 
-export const FETCH_CURSOR = 'FETCH_CURSOR';
-export const fetchCursor = cursor => dispatch => {
-  return dispatch({
-    type: FETCH_CURSOR,
-    payload: Apollo.query({
-      query: cursorFetch,
-      variables: { cursor }
-    })
-  });
+const getAllCursors = async (
+  lastItemCursor,
+  hasNextPage,
+  collectedCursors = []
+) => {
+  if (hasNextPage && lastItemCursor) {
+    const res = await Apollo.query({
+      query: fetchCursorQuery,
+      variables: { cursor: lastItemCursor }
+    });
+
+    const articles = get(res, 'data.articles', {});
+    const lastCursor = get(articles, 'edges[4].cursor', '');
+    const nextPage = get(articles, 'pageInfo.hasNextPage', false);
+
+    const addedCursorCollected = collectedCursors.concat([lastCursor]);
+
+    return getAllCursors(lastCursor, nextPage, addedCursorCollected);
+  } else {
+    return collectedCursors;
+  }
 };
