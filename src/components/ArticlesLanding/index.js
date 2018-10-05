@@ -99,7 +99,7 @@ class ArticlesLanding extends Component {
           <div
             className={cx(
               styles['ArticlesLanding__pagination-container'],
-              'w100 flex flex-row justify-end items-center'
+              'w100 flex flex-row justify-end items-center px2'
             )}
           >
             <Button
@@ -231,19 +231,13 @@ class ArticlesLanding extends Component {
 }
 
 ArticlesLanding.propTypes = {
-  articles: PropTypes.shape({
-    hasNextPage: PropTypes.bool,
-    hasPreviousPage: PropTypes.bool,
-    articles: PropTypes.arrayOf(articleModel.propTypes)
-  })
+  articles: PropTypes.arrayOf(articleModel.propTypes),
+  tags: PropTypes.array
 };
 
 ArticlesLanding.defaultProps = {
-  articles: {
-    hasNextPage: false,
-    hasPreviousPage: false,
-    articles: []
-  }
+  articles: [],
+  tags: []
 };
 
 export default ArticlesLanding;

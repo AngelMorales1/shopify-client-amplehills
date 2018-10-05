@@ -4,15 +4,13 @@ import get from 'utils/get';
 
 class ArticlesLandingView extends Component {
   render() {
-    const { model, actions } = this.props;
+    const { model } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     const tags = get(this, 'props.newsArticlesTags', {});
     const articles = get(this, 'props.newsArticles', []);
 
-    return (
-      <ArticlesLanding articles={articles} tags={tags} actions={actions} />
-    );
+    return <ArticlesLanding articles={articles} tags={tags} />;
   }
 }
 
