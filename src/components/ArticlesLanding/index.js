@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import getPagination from 'utils/getPagination';
 import cx from 'classnames';
 import articleModel from 'models/articleModel';
 import { Image, Button } from 'components/base';
+import Global from 'constants/Global';
 
 import styles from './ArticlesLanding.scss';
 import ArticlePreview from 'components/ArticlePreview';
@@ -11,61 +13,60 @@ import RecentArticle from 'components/RecentArticle';
 
 class ArticlesLanding extends Component {
   state = {
-    selectedTagButton: {},
-    selectedPage: 1
+    selectedPage: 1,
+    currentBreakpoint: Global.breakpoints.small.label
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+
+    this.updateWindow();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+  }
+
+  updateWindow = () => {
+    const { small, large } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= large.lowerbound ? small.label : large.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint) {
+      this.setState({ currentBreakpoint });
+    }
   };
 
   handleTagButtonClick = tag => {
+    const { removeSelectedTag, addSelectedTag } = get(
+      this,
+      'props.actions',
+      {}
+    );
     this.setState({ selectedPage: 1 });
-    const tagButtons = this.state.selectedTagButton;
 
-    if (this.state.selectedTagButton[tag]) {
-      delete tagButtons[tag];
-
-      return this.setState({ selectedTagButton: tagButtons });
+    if (this.props.selectedTags.indexOf(tag) > -1) {
+      return removeSelectedTag(tag);
     }
 
-    tagButtons[tag] = true;
-    this.setState({ selectedTagButton: tagButtons });
-  };
-
-  getPagination = (articlesAmount, articlesPerPage) => {
-    const pageLeftover = articlesAmount % articlesPerPage > 0 ? 1 : 0;
-    const totalPages =
-      Math.floor(articlesAmount / articlesPerPage) + pageLeftover;
-    let pages = [];
-
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push(i);
-    }
-
-    const currentPage = this.state.selectedPage;
-    const pageBefore = currentPage - 3 >= 0 ? currentPage - 3 : 0;
-    const pageAfter =
-      currentPage + 2 <= totalPages ? currentPage + 2 : totalPages;
-
-    return { paginations: pages.slice(pageBefore, pageAfter), totalPages };
+    return addSelectedTag(tag);
   };
 
   render() {
-    const articles = get(this, 'props.articles', []).filter(article => {
-      const selectedTags = Object.keys(this.state.selectedTagButton);
-      if (!selectedTags.length) {
-        return true;
-      } else {
-        const articlesTags = Object.keys(article.tags);
-        for (let i = 0; i < articlesTags.length; i++) {
-          if (this.state.selectedTagButton[articlesTags[i]]) {
-            return true;
-          }
-        }
-
-        return false;
-      }
-    });
+    const articlesByTags = get(this, 'props.articlesByTags', []);
+    const articles = articlesByTags.length
+      ? articlesByTags
+      : get(this, 'props.articles', []);
     const tags = get(this, 'props.tags', []);
     const articleLength = articles.length;
-    const { paginations, totalPages } = this.getPagination(articleLength, 5);
+    const { large } = Global.breakpoints;
+    const pageOffset = this.state.currentBreakpoint === large.label ? 2 : 1;
+    const { pagination, totalPages } = getPagination(
+      articleLength,
+      5,
+      pageOffset,
+      this.state.selectedPage
+    );
     const currentPage = this.state.selectedPage;
 
     return (
@@ -96,12 +97,7 @@ class ArticlesLanding extends Component {
             .map(article => (
               <ArticlePreview key={article.id} article={article} />
             ))}
-          <div
-            className={cx(
-              styles['ArticlesLanding__pagination-container'],
-              'w100 flex flex-row justify-end items-center px2'
-            )}
-          >
+          <div className="w100 flex flex-row justify-end flex-wrap items-center px2">
             <Button
               className={cx(
                 { 'display-none': currentPage === 1 || totalPages <= 1 },
@@ -117,11 +113,11 @@ class ArticlesLanding extends Component {
                 )}
                 src="/assets/images/icon-pagination-previous-arrow.svg"
               />
-              <p className="copy text-peach bold">Previous</p>
+              <p className="copy text-peach bold xs-hide sm-hide">Previous</p>
             </Button>
             <Button
               className={cx(
-                { 'display-none': paginations.includes(1) || totalPages <= 1 },
+                { 'display-none': pagination.includes(1) || totalPages <= 1 },
                 'copy text-peach bold'
               )}
               onClick={() => this.setState({ selectedPage: 1 })}
@@ -132,8 +128,8 @@ class ArticlesLanding extends Component {
               className={cx(
                 {
                   'display-none':
-                    paginations.includes(1) ||
-                    paginations.includes(2) ||
+                    pagination.includes(1) ||
+                    pagination.includes(2) ||
                     totalPages <= 1
                 },
                 'copy text-peach bold mx1'
@@ -141,24 +137,24 @@ class ArticlesLanding extends Component {
             >
               ...
             </p>
-            {paginations.map(pagination => (
+            {pagination.map(page => (
               <Button
                 className={cx(
                   styles['ArticlesLanding__pagination-number'],
                   'copy text-peach bold'
                 )}
-                key={pagination}
-                onClick={() => this.setState({ selectedPage: pagination })}
+                key={page}
+                onClick={() => this.setState({ selectedPage: page })}
                 variant="style-none"
-                label={`${pagination}`}
+                label={`${page}`}
               />
             ))}
             <p
               className={cx(
                 {
                   'display-none':
-                    paginations.includes(totalPages) ||
-                    paginations.includes(totalPages - 1) ||
+                    pagination.includes(totalPages) ||
+                    pagination.includes(totalPages - 1) ||
                     totalPages <= 1
                 },
                 'copy text-peach bold mx1'
@@ -170,7 +166,7 @@ class ArticlesLanding extends Component {
               className={cx(
                 {
                   'display-none':
-                    paginations.includes(totalPages) || totalPages <= 1
+                    pagination.includes(totalPages) || totalPages <= 1
                 },
                 'copy text-peach bold'
               )}
@@ -188,7 +184,7 @@ class ArticlesLanding extends Component {
               onClick={() => this.setState({ selectedPage: currentPage + 1 })}
               variant="style-none"
             >
-              <p className="copy text-peach bold">Next</p>
+              <p className="copy text-peach bold xs-hide sm-hide">Next</p>
               <Image
                 className={cx(
                   styles['ArticlesLanding__pagination-image'],
@@ -208,7 +204,8 @@ class ArticlesLanding extends Component {
         <div className="col-12 md-col-3 px2">
           <h2 className="callout mb2">Tags</h2>
           {tags.map(tag => {
-            const buttonIsSelected = this.state.selectedTagButton[tag];
+            const buttonIsSelected =
+              get(this, 'props.selectedTags', []).indexOf(tag) > -1;
 
             return (
               <Button

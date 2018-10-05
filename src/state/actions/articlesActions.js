@@ -11,6 +11,56 @@ export const fetchAllNewsArticles = payload => dispatch => {
   });
 };
 
+export const ADD_SELECTED_TAG = 'ADD_SELECTED_TAG';
+export const addSelectedTag = tag => (dispatch, getState) => {
+  const selectedTags = getState().articles.selectedTags;
+  selectedTags.push(tag);
+
+  dispatch(getArticlesByTags(selectedTags));
+
+  return dispatch({
+    type: ADD_SELECTED_TAG,
+    payload: selectedTags
+  });
+};
+
+export const REMOVE_SELECTED_TAG = 'REMOVE_SELECTED_TAG';
+export const removeSelectedTag = tag => (dispatch, getState) => {
+  const selectedTags = getState().articles.selectedTags;
+  const index = selectedTags.indexOf(tag);
+  if (index !== -1) selectedTags.splice(index, 1);
+
+  dispatch(getArticlesByTags(selectedTags));
+
+  return dispatch({
+    type: REMOVE_SELECTED_TAG,
+    payload: selectedTags
+  });
+};
+
+export const GET_ARTICLES_BY_TAGS = 'GET_ARTICLES_BY_TAGS';
+export const getArticlesByTags = tags => (dispatch, getState) => {
+  const filteredArticles = tags.length
+    ? getState().articles.newsArticles.filter(article => {
+        const articlesTags = article.node.tags;
+        if (articlesTags.length) {
+          for (let i = 0; i < articlesTags.length; i++) {
+            if (tags.indexOf(articlesTags[i]) > -1) {
+              return true;
+            }
+          }
+        }
+
+        return false;
+      })
+    : [];
+
+  return dispatch({
+    type: GET_ARTICLES_BY_TAGS,
+    payload: new Promise((resolve, reject) => resolve(filteredArticles))
+  });
+};
+
 const getAllArticles = async (
   lastItemCursor,
   hasNextPage,
