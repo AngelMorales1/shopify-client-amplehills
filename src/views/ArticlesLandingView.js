@@ -7,17 +7,11 @@ class ArticlesLandingView extends Component {
     const { model, actions } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    const tags = Object.keys(get(this, 'props.articlesTags', {}));
-    const articles = get(this, 'props.articles', {});
-    const cursors = get(this, 'props.cursors', []);
+    const tags = get(this, 'props.newsArticlesTags', {});
+    const articles = get(this, 'props.newsArticles', []);
 
     return (
-      <ArticlesLanding
-        articles={articles}
-        tags={tags}
-        actions={actions}
-        cursors={cursors}
-      />
+      <ArticlesLanding articles={articles} tags={tags} actions={actions} />
     );
   }
 }
