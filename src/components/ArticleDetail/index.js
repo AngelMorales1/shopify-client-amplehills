@@ -7,22 +7,36 @@ import articleModel from 'models/articleModel';
 
 import styles from './ArticleDetail.scss';
 import { Button } from 'components/base';
+import Breadcrumbs from 'components/Breadcrumbs';
 
 const ArticleDetail = ({ article }) => {
+  const breadcrumbs = [
+    {
+      to: '/news',
+      label: 'Back to news'
+    }
+  ];
   return (
-    <div>
-      <div className="flex flex-column items-center form-container-width mx-auto">
+    <div className={cx(styles['ArticleDetail'])}>
+      <Breadcrumbs
+        breadcrumbs={breadcrumbs}
+        className={cx(
+          styles['ArticleDetail__breadcrumbs'],
+          'transition-slide-up mx-auto container-width'
+        )}
+      />
+      <div className="flex flex-column items-center form-container-width mx-auto px2">
         <h2
           className={cx(
             styles['ArticleDetail__title'],
-            'bold center text-container-width'
+            'bold center text-container-width mt3'
           )}
         >
           {article.title}
         </h2>
         <p className="line-item-title text-peach my2">{article.publishedAt}</p>
         <div
-          className={cx(styles['ArticleDetail__content'], 'my3')}
+          className={cx(styles['ArticleDetail__content'], 'mb3')}
           dangerouslySetInnerHTML={{ __html: article.contentHtml }}
         />
         <div className="self-start block-subheadline my3">

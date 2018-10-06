@@ -1,8 +1,16 @@
 @import 'settings', 'typography', 'src/styles/utils';
 
 .ArticleDetail {
+  &__breadcrumbs {
+    @media ($medium-up) {
+      padding-top: spacing(8);
+    }
+  }
+
   &__title {
     font-size: spacing(4.5);
+    line-height: $font-6;
+    letter-spacing: spacing(0.1);
 
     @media ($medium-up) {
       font-size: $font-6;
@@ -12,12 +20,16 @@
   }
 
   &__content {
+    @media ($medium-up) {
+      margin-top: spacing(12);
+    }
     p,
     span {
       @extend .block-subheadline;
     }
 
-    img {
+    img,
+    iframe {
       width: 100%;
       margin: spacing(12) 0;
       border-radius: radius('m');
