@@ -1,0 +1,26 @@
+@import 'settings', 'typography', 'src/styles/utils';
+
+.ArticleDetail {
+  &__title {
+    font-size: spacing(4.5);
+
+    @media ($medium-up) {
+      font-size: $font-6;
+      line-height: $font-8;
+      letter-spacing: spacing(0.1);
+    }
+  }
+
+  &__content {
+    p,
+    span {
+      @extend .block-subheadline;
+    }
+
+    img {
+      width: 100%;
+      margin: spacing(12) 0;
+      border-radius: radius('m');
+    }
+  }
+}
