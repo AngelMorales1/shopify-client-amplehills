@@ -2,12 +2,17 @@ import React from 'react';
 import get from 'utils/get';
 import cx from 'classnames';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
-import { FacebookShareButton } from 'react-share';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  PinterestShareButton,
+  GooglePlusShareButton
+} from 'react-share';
 import { Link } from 'react-router-dom';
 import articleModel from 'models/articleModel';
 
 import styles from './ArticleDetail.scss';
-import { Image } from 'components/base';
+import { Image, Button } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 
 const ArticleDetail = ({ article, newsArticles }) => {
@@ -26,13 +31,26 @@ const ArticleDetail = ({ article, newsArticles }) => {
 
   return (
     <div className={cx(styles['ArticleDetail'])}>
-      <Breadcrumbs
-        breadcrumbs={breadcrumbs}
-        className={cx(
-          styles['ArticleDetail__breadcrumbs'],
-          'transition-slide-up mx-auto container-width'
-        )}
-      />
+      <div className="flex flex-row justify-between items-center mx-auto container-width">
+        <Breadcrumbs
+          breadcrumbs={breadcrumbs}
+          className={cx(
+            styles['ArticleDetail__breadcrumbs'],
+            'transition-slide-up'
+          )}
+        />
+        <FacebookShareButton
+          className="md-hide lg-hide mr2"
+          url={get(window, 'location.href', '')}
+        >
+          <Button
+            className={cx(styles['ArticleDetail__share-button'])}
+            variant="primary-small"
+            color="white-madison-blue-border"
+            label="Share"
+          />
+        </FacebookShareButton>
+      </div>
       <div className="flex flex-column items-center form-container-width mx-auto px2">
         <h2
           className={cx(
@@ -54,6 +72,55 @@ const ArticleDetail = ({ article, newsArticles }) => {
         <div className="self-start block-subheadline">
           <p className="uppercase">Written By</p>
           <p>{article.authorName}</p>
+        </div>
+      </div>
+      <div className="form-container-width mx-auto px2 my4 pt3 pb4 xs-hide sm-hide">
+        <p className="uppercase text-peach bold my3">share</p>
+        <div className="flex flex-row">
+          <FacebookShareButton url={get(window, 'location.href', '')}>
+            <Button
+              className={cx(
+                styles['ArticleDetail__share-button'],
+                'uppercase mr2'
+              )}
+              variant="primary-small"
+              color="madison-blue"
+              label="Facebook"
+            />
+          </FacebookShareButton>
+          <TwitterShareButton url={get(window, 'location.href', '')}>
+            <Button
+              className={cx(
+                styles['ArticleDetail__share-button'],
+                'uppercase mr2'
+              )}
+              variant="primary-small"
+              color="madison-blue"
+              label="Twitter"
+            />
+          </TwitterShareButton>
+          <PinterestShareButton
+            url={get(window, 'location.href', '')}
+            media={get(article, 'image', '')}
+          >
+            <Button
+              className={cx(
+                styles['ArticleDetail__share-button'],
+                'uppercase mr2'
+              )}
+              variant="primary-small"
+              color="madison-blue"
+              label="Pinterest"
+            />
+          </PinterestShareButton>
+          <GooglePlusShareButton url={get(window, 'location.href', '')}>
+            <Button
+              className={cx(styles['ArticleDetail__share-button'], 'uppercase')}
+              variant="primary-small"
+              color="madison-blue"
+              label="Google"
+            />
+          </GooglePlusShareButton>
         </div>
       </div>
       <div

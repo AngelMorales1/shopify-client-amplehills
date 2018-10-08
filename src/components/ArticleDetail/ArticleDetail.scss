@@ -41,6 +41,13 @@
     }
   }
 
+  &__share-button {
+    font-size: $font-2;
+    letter-spacing: spacing(0.1);
+    padding-top: calc(#{spacing(2)} + 0.125rem);
+    padding-bottom: calc(#{spacing(2)} - 0.125rem);
+  }
+
   &__nav-button-container {
     @extend .pointer;
     border: spacing(0.7) solid color('cloud-gray');
