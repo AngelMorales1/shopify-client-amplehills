@@ -4,10 +4,10 @@ import get from 'utils/get';
 
 class ArticleDetailView extends Component {
   render() {
-    const { model, article } = this.props;
+    const { model, article, newsArticles } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    return <ArticleDetail article={article} />;
+    return <ArticleDetail article={article} newsArticles={newsArticles} />;
   }
 }
 
