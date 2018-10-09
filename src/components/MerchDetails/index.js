@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import merchModel from 'models/merchModel';
+import checkoutModel from 'models/checkoutModel';
 import Global from 'constants/Global';
 
 import { Button, QuantitySelector, Radio } from 'components/base';
@@ -251,11 +253,19 @@ class MerchDetails extends Component {
 }
 
 MerchDetails.propTypes = {
-  merch: merchModel.propTypes
+  merch: merchModel.propTypes,
+  actions: PropTypes.shape({
+    addLineItems: PropTypes.func
+  }),
+  checkout: checkoutModel.propTypes
 };
 
 MerchDetails.defaultProps = {
-  merch: merchModel.default
+  merch: merchModel.default,
+  actions: {
+    addLineItems: () => {}
+  },
+  checkout: checkoutModel.default
 };
 
 export default MerchDetails;
