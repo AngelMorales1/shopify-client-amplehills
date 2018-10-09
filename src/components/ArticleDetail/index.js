@@ -51,7 +51,7 @@ const ArticleDetail = ({ article, newsArticles }) => {
           />
         </FacebookShareButton>
       </div>
-      <div className="flex flex-column items-center form-container-width mx-auto px2">
+      <div className="flex flex-column items-center form-container-width mx-auto px3">
         <h2
           className={cx(
             styles['ArticleDetail__title'],
@@ -125,7 +125,7 @@ const ArticleDetail = ({ article, newsArticles }) => {
       </div>
       <div
         className={cx(
-          'flex flex-row items-center justify-center mx-auto mt4 px1',
+          'flex flex-row items-center justify-center mx-auto mt4 px3',
           {
             'container-width': !articleIsFirstOne || !articleIsLastOne,
             'form-container-width': articleIsFirstOne || articleIsLastOne
@@ -137,7 +137,7 @@ const ArticleDetail = ({ article, newsArticles }) => {
           className={cx(
             { 'display-none': articleIsFirstOne },
             styles['ArticleDetail__nav-button-container'],
-            'relative mx1 flex flex-column xs-hide sm-hide self-stretch'
+            'relative flex flex-column xs-hide sm-hide self-stretch'
           )}
         >
           <Image
@@ -162,7 +162,7 @@ const ArticleDetail = ({ article, newsArticles }) => {
           className={cx(
             { 'display-none': articleIsLastOne },
             styles['ArticleDetail__nav-button-container'],
-            'relative mx1 flex flex-column self-stretch'
+            'relative flex flex-column self-stretch'
           )}
         >
           <p className="uppercase text-peach bold">Next</p>
