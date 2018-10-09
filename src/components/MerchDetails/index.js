@@ -98,14 +98,14 @@ class MerchDetails extends Component {
             )}
           >
             <div className="mx-auto text-container-width">
-              <h2 className="block-headline ">{merch.title}</h2>
+              <h2 className="block-headline mb3">{merch.title}</h2>
               <div
                 dangerouslySetInnerHTML={{
                   __html: marked(get(merch, 'description', ''))
                 }}
                 className="markdown-block"
               />
-              <div>
+              <div className="flex flex-row flex-wrap">
                 {get(merch, 'variants', []).map(variant => (
                   <Radio
                     disabled={!variant.available}
@@ -113,22 +113,22 @@ class MerchDetails extends Component {
                     key={variant.id}
                     checked={this.state.selectedItem === variant.id}
                     onClick={() => this.setState({ selectedItem: variant.id })}
-                    className="mx2 my1 small"
+                    className="mr3 my2 small"
                     label={variant.title}
                   />
                 ))}
               </div>
-              <div>
+              <div className="flex flex-row flex-wrap justify-between items-center mt3 mb4">
                 <QuantitySelector
                   variant={
                     this.state.currentBreakpoint === 'small' ? 'small' : null
                   }
-                  className="my3 mr1"
+                  className="my3 mr2"
                   quantity={this.state.quantity}
                   onChange={value => this.setState({ quantity: value })}
                 />
                 <Button
-                  className={cx(styles['ProductHero__button'])}
+                  className={cx(styles['MerchDetails__button'])}
                   color="madison-blue"
                   variant={
                     this.state.currentBreakpoint === 'small'
@@ -146,7 +146,9 @@ class MerchDetails extends Component {
                   </span>
                 </Button>
               </div>
-              <p className="bold uppercase text-peach">{merch.detailsTitle}</p>
+              <p className="bold uppercase text-peach mb2">
+                {merch.detailsTitle}
+              </p>
               <div
                 dangerouslySetInnerHTML={{
                   __html: marked(get(merch, 'detailsContent', ''))
