@@ -1,0 +1,60 @@
+@import 'settings';
+
+.MerchDetails {
+  padding: spacing(4) spacing(6);
+
+  @media ($medium-up) {
+    padding: spacing(4) spacing(16);
+  }
+
+  &__breadcrumbs {
+    margin-left: spacing(-4);
+  }
+
+  &__container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  &__image,
+  &__image--divide {
+    border-radius: radius('s');
+  }
+
+  &__image-container--divide {
+    flex-direction: column;
+    margin-bottom: spacing(2);
+
+    @media ($medium-up) {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .MerchDetails__image--divide:first-child {
+      margin-bottom: spacing(4);
+
+      @media ($medium-up) {
+        margin: 0;
+        margin-right: spacing(2);
+      }
+    }
+
+    .MerchDetails__image--divide:last-child {
+      @media ($medium-up) {
+        margin-left: spacing(2);
+      }
+    }
+  }
+
+  &__image--divide {
+    width: 100%;
+
+    @media ($medium-up) {
+      width: 50%;
+    }
+  }
+}

@@ -19,11 +19,6 @@ const mapStateToProps = (state, props) => {
   return {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
-    globalSettings: get(
-      state,
-      'applicationUI.globalSettings.items[0].fields',
-      {}
-    ),
     merchandises: merchandises(state),
     merch: merch(state, props)
   };
