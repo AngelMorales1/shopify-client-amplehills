@@ -20,6 +20,12 @@
     }
   }
 
+  &__order-container {
+    @media ($medium-up) {
+      padding: 0 spacing(20);
+    }
+  }
+
   &__image,
   &__image--divide {
     border-radius: radius('s');

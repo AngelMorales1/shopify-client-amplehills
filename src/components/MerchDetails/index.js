@@ -4,16 +4,72 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import merchModel from 'models/merchModel';
+import Global from 'constants/Global';
 
-import { Button } from 'components/base';
+import { Button, QuantitySelector, Radio } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './MerchDetails.scss';
 
 class MerchDetails extends Component {
+  state = {
+    currentBreakpoint: Global.breakpoints.small.label,
+    selectedItem: '',
+    quantity: 1
+  };
+
+  componentDidMount() {console.log(get(this, 'props', ''))
+    const firstAvailableItem = get(this, 'props.merch.variants', '').find(
+      variant => variant.available === true
+    );
+    this.setState({ selectedItem: firstAvailableItem.id });
+    window.addEventListener('resize', this.updateWindow);
+
+    this.updateWindow();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+    window.removeEventListener('scroll', this.updateMenu);
+  }
+
+  updateWindow = () => {
+    const { small, large } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= large.lowerbound ? small.label : large.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint) {
+      this.setState({ currentBreakpoint });
+    }
+  };
+
+  addToCart = () => {
+    const selectedItem = get(this, 'props.merch.variants', []).find(
+      variant => variant.id === this.state.selectedItem
+    );
+
+    const item = [
+      {
+        variantId: get(selectedItem, 'id', ''),
+        quantity: this.state.quantity,
+        customAttributes: [
+          {
+            key: 'Item',
+            value: get(selectedItem, 'title', '')
+          }
+        ]
+      }
+    ];
+
+    this.props.actions.addLineItems(this.props.checkout.id, item);
+  };
+
   render() {
     const merch = get(this, 'props.merch', {});
     const breadcrumbs = [{ to: '/order-online', label: 'Order Online' }];
     const images = get(merch, 'images', []);
+    const selectedItem = get(merch, 'variants', []).find(
+      variant => variant.id === this.state.selectedItem
+    );
 
     return (
       <div className={cx(styles['MerchDetails'])}>
@@ -35,7 +91,70 @@ class MerchDetails extends Component {
               backgroundSize: 'cover'
             }}
           />
-          <div>details</div>
+          <div
+            className={cx(
+              styles['MerchDetails__order-container'],
+              'col-12 md-col-6 my2 flex flex-column items-center'
+            )}
+          >
+            <div className="mx-auto text-container-width">
+              <h2 className="block-headline ">{merch.title}</h2>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(get(merch, 'description', ''))
+                }}
+                className="markdown-block"
+              />
+              <div>
+                {get(merch, 'variants', []).map(variant => (
+                  <Radio
+                    disabled={!variant.available}
+                    color={variant.available ? 'peach' : 'ghost-gray'}
+                    key={variant.id}
+                    checked={this.state.selectedItem === variant.id}
+                    onClick={() => this.setState({ selectedItem: variant.id })}
+                    className="mx2 my1 small"
+                    label={variant.title}
+                  />
+                ))}
+              </div>
+              <div>
+                <QuantitySelector
+                  variant={
+                    this.state.currentBreakpoint === 'small' ? 'small' : null
+                  }
+                  className="my3 mr1"
+                  quantity={this.state.quantity}
+                  onChange={value => this.setState({ quantity: value })}
+                />
+                <Button
+                  className={cx(styles['ProductHero__button'])}
+                  color="madison-blue"
+                  variant={
+                    this.state.currentBreakpoint === 'small'
+                      ? 'primary-small'
+                      : 'primary'
+                  }
+                  shadow={true}
+                  onClick={this.addToCart}
+                >
+                  <span>Add to Cart</span>
+                  <span className="ml2">
+                    ${(
+                      get(selectedItem, 'price', 0.0) * this.state.quantity
+                    ).toFixed(2)}
+                  </span>
+                </Button>
+              </div>
+              <p className="bold uppercase text-peach">{merch.detailsTitle}</p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(get(merch, 'detailsContent', ''))
+                }}
+                className="markdown-block"
+              />
+            </div>
+          </div>
           <div className="col-12 md-col-6">
             <div
               className={cx(

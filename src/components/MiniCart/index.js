@@ -8,6 +8,7 @@ import {
 } from 'state/actions/checkoutActions';
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
+import merchandises from 'state/selectors/merchandises';
 import lineItems from 'state/selectors/lineItems';
 import events from 'state/selectors/events';
 import partyDeposit from 'state/selectors/partyDeposit';
@@ -172,6 +173,7 @@ const mapStateToProps = state => {
     checkout: checkout(state),
     products: products(state),
     events: events(state),
+    merchandises: merchandises(state),
     items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', []),

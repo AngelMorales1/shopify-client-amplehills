@@ -15,6 +15,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
+import merchandises from 'state/selectors/merchandises';
 import lineItems from 'state/selectors/lineItems';
 import partyDeposit from 'state/selectors/partyDeposit';
 import checkoutModel from 'models/checkoutModel';
@@ -387,7 +388,8 @@ const mapStateToProps = state => {
     items: lineItems(state),
     products: products(state),
     events: events(state),
-    partyDeposit: partyDeposit(state)
+    partyDeposit: partyDeposit(state),
+    merchandises: merchandises(state)
   };
 };
 

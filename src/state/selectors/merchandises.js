@@ -47,7 +47,7 @@ export default createSelector(
       const detailsContent = get(product, 'fields.detailsContent', []);
       const images = get(product, 'fields.images', []);
       const variants = get(product, 'variant.simpleFragments', []);
-
+      
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
         price: null,

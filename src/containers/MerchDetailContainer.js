@@ -22,7 +22,7 @@ const mapStateToProps = (state, props) => {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     allMerchandise: allMerchandise(state),
-    merchByHandle: merchByHandle(state, props)
+    merch: merchByHandle(state, props)
   };
 };
 
