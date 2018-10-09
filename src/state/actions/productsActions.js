@@ -24,6 +24,17 @@ export const fetchContentfulProducts = payload => dispatch => {
   });
 };
 
+export const FETCH_CONTENTFUL_MERCH = 'FETCH_CONTENTFUL_MERCH';
+export const fetchContentfulMerch = payload => dispatch => {
+  return dispatch({
+    type: FETCH_CONTENTFUL_MERCH,
+    payload: Data.getEntries({
+      content_type: 'merch',
+      include: 4
+    })
+  });
+};
+
 export const FETCH_PRODUCT_LANDING = 'FETCH_PRODUCT_LANDING';
 export const fetchProductLanding = payload => dispatch => {
   return dispatch({

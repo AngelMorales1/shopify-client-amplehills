@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
+import merchandises from 'state/selectors/merchandises';
+import merch from 'state/selectors/merch';
 
 import get from 'utils/get';
 
@@ -21,7 +23,9 @@ const mapStateToProps = (state, props) => {
       state,
       'applicationUI.globalSettings.items[0].fields',
       {}
-    )
+    ),
+    merchandises: merchandises(state),
+    merch: merch(state, props)
   };
 };
 

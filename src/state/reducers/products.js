@@ -1,12 +1,14 @@
 import {
   FETCH_SHOPIFY_PRODUCTS,
   FETCH_CONTENTFUL_PRODUCTS,
+  FETCH_CONTENTFUL_MERCH,
   FETCH_PRODUCT_LANDING
 } from 'state/actions/productsActions';
 
 const initialState = {
   products: [],
   contentfulProducts: {},
+  contentfulMerch: {},
   productLanding: {}
 };
 
@@ -22,6 +24,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         contentfulProducts: action.payload
+      };
+    case `${FETCH_CONTENTFUL_MERCH}_FULFILLED`:
+      return {
+        ...state,
+        contentfulMerch: action.payload
       };
     case `${FETCH_PRODUCT_LANDING}_FULFILLED`:
       return {

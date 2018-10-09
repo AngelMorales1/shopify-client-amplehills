@@ -5,7 +5,8 @@ import { getLocationData } from 'state/actions/locationsActions';
 
 import {
   fetchShopifyProducts,
-  fetchContentfulProducts
+  fetchContentfulProducts,
+  fetchContentfulMerch
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
 import { fetchAllNewsArticles } from 'state/actions/articlesActions';
@@ -25,7 +26,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         fetchShopifyProducts()(dispatch),
         fetchContentfulProducts()(dispatch),
         getEvents()(dispatch),
-        fetchAllNewsArticles()(dispatch)
+        fetchAllNewsArticles()(dispatch),
+        fetchContentfulMerch()(dispatch)
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -41,7 +43,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             products,
             contentfulProducts,
             getEvents,
-            fetchAllNewsArticles
+            fetchAllNewsArticles,
+            fetchContentfulMerch
           ]) => resolve()
         )
         .catch(err => reject(err));
