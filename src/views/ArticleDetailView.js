@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ArticleDetail from 'components/ArticleDetail';
-import get from 'utils/get';
 
 class ArticleDetailView extends Component {
   render() {

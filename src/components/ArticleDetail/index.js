@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -188,11 +188,13 @@ const ArticleDetail = ({ article, newsArticles }) => {
 };
 
 ArticleDetail.propTypes = {
-  article: articleModel.propTypes
+  article: articleModel.propTypes,
+  newsArticles: PropTypes.arrayOf(articleModel.propTypes)
 };
 
 ArticleDetail.defaultProps = {
-  article: {}
+  article: {},
+  newsArticles: []
 };
 
 export default ArticleDetail;
