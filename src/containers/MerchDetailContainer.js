@@ -6,6 +6,8 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
 import allMerchandise from 'state/selectors/allMerchandise';
 import merchByHandle from 'state/selectors/merchByHandle';
+import merchandises from 'state/selectors/merchandises';
+import merch from 'state/selectors/merch';
 
 import get from 'utils/get';
 
