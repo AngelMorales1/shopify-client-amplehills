@@ -1,13 +1,12 @@
-import React, { Component, Fragment } from 'react';
-import get from 'utils/get';
+import React, { Component } from 'react';
 import MerchDetails from 'components/MerchDetails';
 
 class MerchDetailView extends Component {
   render() {
-    const { model, merch } = this.props;
+    const { model, merchByHandle } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
-    return <MerchDetails merch={merch} />;
+    return <MerchDetails merch={merchByHandle} />;
   }
 }
 

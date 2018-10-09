@@ -16,7 +16,8 @@ export default createSelector(
       const variants = get(node, 'variants.edges', []).map(variant => {
         const variantNode = get(variant, 'node', {});
         const { id, price, title, availableForSale } = variantNode;
-        return { id, price, title, available: availableForSale };
+        const numberPrice = parseFloat(get(variantNode, 'price', 0.0));
+        return { id, price: numberPrice, title, available: availableForSale };
       });
 
       const available = variants.some(variant => variant.available);
@@ -35,11 +36,9 @@ export default createSelector(
 
     return products;
   },
-  state => get(state, 'products.contentfulMerch', []),
-  (shopifyProducts, contentful) => {
-    const products = get(contentful, 'items', []);
-
-    return products.reduce((mergedProducts, product) => {
+  state => get(state, 'products.contentfulMerch.items', []),
+  (shopifyProducts, contentfulProducts) => {
+    return contentfulProducts.reduce((mergedProducts, product) => {
       const title = get(product, 'fields.title', '');
       const handle = get(product, 'fields.handle', '');
       const description = get(product, 'fields.description', '');

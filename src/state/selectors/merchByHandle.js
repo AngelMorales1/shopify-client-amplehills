@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import merchandises from 'state/selectors/merchandises';
+import allMerchandise from 'state/selectors/allMerchandise';
 
 export default createSelector(
-  state => merchandises(state),
+  state => allMerchandise(state),
   (state, props) => get(props, 'match.params.merchHandle', ''),
   (products, handle) => products[handle]
 );

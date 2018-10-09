@@ -1,24 +1,19 @@
 import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import merchModel from 'models/merchModel';
 
-import { Image, Button } from 'components/base';
+import { Button } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './MerchDetails.scss';
 
 class MerchDetails extends Component {
-  constructor() {
-    super(...arguments);
-
-    this.state = {};
-  }
-
   render() {
     const merch = get(this, 'props.merch', {});
     const breadcrumbs = [{ to: '/order-online', label: 'Order Online' }];
+    const images = get(merch, 'images', []);
 
     return (
       <div className={cx(styles['MerchDetails'])}>
@@ -49,13 +44,13 @@ class MerchDetails extends Component {
               )}
               style={{
                 background: `url(${contentfulImgUtil(
-                  get(merch, 'images[0].fields.file.url', ''),
+                  get(images[0], 'fields.file.url', ''),
                   '900'
                 )}) no-repeat center`,
                 backgroundSize: 'cover'
               }}
             />
-            {merch.images.length > 4 ? (
+            {images.length > 4 ? (
               <Fragment>
                 <div
                   className={cx(
@@ -70,7 +65,7 @@ class MerchDetails extends Component {
                     )}
                     style={{
                       background: `url(${contentfulImgUtil(
-                        get(merch, 'images[1].fields.file.url', ''),
+                        get(images[1], 'fields.file.url', ''),
                         '900'
                       )}) no-repeat center`,
                       backgroundSize: 'cover'
@@ -83,50 +78,48 @@ class MerchDetails extends Component {
                     )}
                     style={{
                       background: `url(${contentfulImgUtil(
-                        get(merch, 'images[2].fields.file.url', ''),
+                        get(images[2], 'fields.file.url', ''),
                         '900'
                       )}) no-repeat center`,
                       backgroundSize: 'cover'
                     }}
                   />
                 </div>
-                {get(merch, 'images', [])
-                  .slice(3)
-                  .map(image => (
-                    <div
-                      className={cx(
-                        styles['MerchDetails__image'],
-                        'aspect-4-3 my2'
-                      )}
-                      style={{
-                        background: `url(${contentfulImgUtil(
-                          get(image, 'fields.file.url', ''),
-                          '900'
-                        )}) no-repeat center`,
-                        backgroundSize: 'cover'
-                      }}
-                    />
-                  ))}
+                {images.slice(3).map((image, i) => (
+                  <div
+                    key={get(image, 'sys.id', i)}
+                    className={cx(
+                      styles['MerchDetails__image'],
+                      'aspect-4-3 my2'
+                    )}
+                    style={{
+                      background: `url(${contentfulImgUtil(
+                        get(image, 'fields.file.url', ''),
+                        '900'
+                      )}) no-repeat center`,
+                      backgroundSize: 'cover'
+                    }}
+                  />
+                ))}
               </Fragment>
             ) : (
               <Fragment>
-                {get(merch, 'images', [])
-                  .slice(1)
-                  .map(image => (
-                    <div
-                      className={cx(
-                        styles['MerchDetails__image'],
-                        'aspect-4-3 my2'
-                      )}
-                      style={{
-                        background: `url(${contentfulImgUtil(
-                          get(image, 'fields.file.url', ''),
-                          '900'
-                        )}) no-repeat center`,
-                        backgroundSize: 'cover'
-                      }}
-                    />
-                  ))}
+                {images.slice(1).map((image, i) => (
+                  <div
+                    key={get(image, 'sys.id', i)}
+                    className={cx(
+                      styles['MerchDetails__image'],
+                      'aspect-4-3 my2'
+                    )}
+                    style={{
+                      background: `url(${contentfulImgUtil(
+                        get(image, 'fields.file.url', ''),
+                        '900'
+                      )}) no-repeat center`,
+                      backgroundSize: 'cover'
+                    }}
+                  />
+                ))}
               </Fragment>
             )}
           </div>
@@ -136,8 +129,12 @@ class MerchDetails extends Component {
   }
 }
 
-MerchDetails.propTypes = {};
+MerchDetails.propTypes = {
+  merch: merchModel.propTypes
+};
 
-MerchDetails.defaultProps = {};
+MerchDetails.defaultProps = {
+  merch: merchModel.default
+};
 
 export default MerchDetails;

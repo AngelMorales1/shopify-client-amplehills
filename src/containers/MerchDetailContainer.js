@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
-import merchandises from 'state/selectors/merchandises';
-import merch from 'state/selectors/merch';
+import allMerchandise from 'state/selectors/allMerchandise';
+import merchByHandle from 'state/selectors/merchByHandle';
 
 import get from 'utils/get';
 
@@ -19,8 +19,8 @@ const mapStateToProps = (state, props) => {
   return {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
-    merchandises: merchandises(state),
-    merch: merch(state, props)
+    allMerchandise: allMerchandise(state),
+    merchByHandle: merchByHandle(state, props)
   };
 };
 

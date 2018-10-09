@@ -20,14 +20,13 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const Contentful = isPreview ? PreviewClient() : ContentfulClient();
       Data.setRef('contentful', Contentful);
       const fetchData = Promise.all([
-        fetchOrCreateCheckout(checkoutID)(dispatch),
-        getLocationData()(dispatch),
-        getGlobalSettings()(dispatch),
-        fetchShopifyProducts()(dispatch),
-        fetchContentfulProducts()(dispatch),
-        getEvents()(dispatch),
-        fetchAllNewsArticles()(dispatch),
-        fetchContentfulMerch()(dispatch)
+        dispatch(getLocationData()),
+        dispatch(getGlobalSettings()),
+        dispatch(fetchShopifyProducts()),
+        dispatch(fetchContentfulProducts()),
+        dispatch(getEvents()),
+        dispatch(fetchAllNewsArticles()),
+        dispatch(fetchContentfulMerch())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
