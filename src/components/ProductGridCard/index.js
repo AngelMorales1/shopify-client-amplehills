@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import productModel from 'models/productModel';
@@ -6,18 +7,21 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ProductGridCard.scss';
 
-const ProductGridCard = ({ product }) => {
+const ProductGridCard = ({ product, merchandise }) => {
   return (
     <div
-      className={cx(
-        styles['ProductGridCard'],
-        'col col-12 md-col-4 p1 relative'
-      )}
+      className={cx(styles['ProductGridCard'], 'col col-12 p1 relative', {
+        'md-col-3': merchandise,
+        'md-col-4': !merchandise
+      })}
     >
       {product.limitedEdition ? (
         <div
           className={cx(
-            styles['ProductGridCard__mark'],
+            {
+              [styles['ProductGridCard__mark']]: !merchandise,
+              [styles['ProductGridCard__mark--small']]: merchandise
+            },
             'circle bg-peach absolute z-1 flex items-center justify-center m3 r0 t0'
           )}
         >
@@ -40,7 +44,10 @@ const ProductGridCard = ({ product }) => {
           <div
             className={cx(
               styles['ProductGridCard__image'],
-              'aspect-4-5 transition card w100'
+              'aspect-4-5 transition card w100',
+              {
+                'aspect-3-4': merchandise
+              }
             )}
             style={{
               background: `url(${contentfulImgUtil(
@@ -61,9 +68,11 @@ const ProductGridCard = ({ product }) => {
 export default ProductGridCard;
 
 ProductGridCard.propTypes = {
-  product: productModel.propTypes
+  product: productModel.propTypes,
+  merchandise: PropTypes.bool
 };
 
 ProductGridCard.defaultProps = {
-  product: productModel.default
+  product: productModel.default,
+  merchandise: false
 };
