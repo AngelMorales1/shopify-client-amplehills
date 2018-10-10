@@ -27,7 +27,7 @@ class GenericPageView extends Component {
 
       return menu;
     }, []);
-    console.log(this.props);
+
     return (
       <Fragment>
         {subNavIsOn ? (

@@ -40,6 +40,12 @@
     align-items: center;
     padding-bottom: spacing(8);
   }
+  
+  &__content-container {
+    @media ($medium-up) {
+      margin-left: spacing(4);
+    }
+  }
 
   &__content-container--two-column {
     display: flex;
@@ -52,6 +58,23 @@
       > .MarkdownBlock__content {
         margin-right: spacing(8);
       }
+    }
+  }
+
+  &__button-container {
+    align-items: center;
+
+    @media ($medium-up) {
+      align-items: start;
+    }
+  }
+
+  &__button-text {
+    max-width: spacing(80);
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: start;
     }
   }
 }

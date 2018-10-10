@@ -4,6 +4,7 @@ import marked from 'marked';
 
 import cx from 'classnames';
 import get from 'utils/get';
+import { Button } from 'components/base';
 
 import styles from './MarkdownBlock.scss';
 
@@ -11,6 +12,12 @@ const MarkdownBlock = props => {
   const { z, block, setRef } = props;
   const fields = get(block, 'fields', {});
   const markdown = get(fields, 'content', '');
+  const button1Label = get(fields, 'button1Label', '');
+  const button1Link = get(fields, 'button1Link', '');
+  const button1Text = get(fields, 'button1Text', '');
+  const button2Label = get(fields, 'button2Label', '');
+  const button2Link = get(fields, 'button2Link', '');
+  const button2Text = get(fields, 'button2Text', '');
   const markdown2 = get(fields, 'content2', '');
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `MarkdownBlock--${get(
@@ -59,27 +66,80 @@ const MarkdownBlock = props => {
             ]]: twoColumnContentIsTrue
           })}
         >
+        {button1Label || button1Link || button1Text ? (
           <div
-            dangerouslySetInnerHTML={{ __html: marked(markdown) }}
             className={cx(
-              styles['MarkdownBlock__content'],
-              'col-12 markdown-block form-container-width',
-              {
-                'md-col-6': twoColumnContentIsTrue
-              }
+              styles['MarkdownBlock__button-container'],
+              'flex flex-column mb3'
             )}
-          />
-          {twoColumnContentIsTrue ? (
+          >
             <div
-              dangerouslySetInnerHTML={{ __html: marked(markdown2) }}
+              dangerouslySetInnerHTML={{ __html: marked(button1Text) }}
+              className={cx(
+                styles['MarkdownBlock__button-text'],
+                'markdown-block'
+              )}
+            />
+            <Button
+              className="inline-flex"
+              color="peach"
+              label={button1Label}
+              to={button1Link}
+            />
+          </div>
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{ __html: marked(markdown) }}
               className={cx(
                 styles['MarkdownBlock__content'],
-                'col-12 markdown-block form-container-width ',
+                'col-12 markdown-block form-container-width',
                 {
                   'md-col-6': twoColumnContentIsTrue
                 }
               )}
             />
+          )}
+          {twoColumnContentIsTrue ? (
+            <div
+              className={cx(
+                styles['MarkdownBlock__content-container'],
+                'col-12',
+                {
+                  'md-col-6': twoColumnContentIsTrue
+                }
+              )}
+            >
+              {button2Label || button2Link || button2Text ? (
+                <div
+                  className={cx(
+                    styles['MarkdownBlock__button-container'],
+                    'flex flex-column mb3'
+                  )}
+                >
+                  <div
+                    dangerouslySetInnerHTML={{ __html: marked(button2Text) }}
+                    className={cx(
+                      styles['MarkdownBlock__button-text'],
+                      'markdown-block'
+                    )}
+                  />
+                  <Button
+                    className="inline-flex"
+                    color="peach"
+                    label={button2Label}
+                    to={button1Link}
+                  />
+                </div>
+              ) : (
+                <div
+                  dangerouslySetInnerHTML={{ __html: marked(markdown2) }}
+                  className={cx(
+                    styles['MarkdownBlock__content'],
+                    'w100 markdown-block form-container-width'
+                  )}
+                />
+              )}
+            </div>
           ) : null}
         </div>
       </div>
@@ -96,7 +156,13 @@ MarkdownBlock.propTypes = {
       title: PropTypes.string,
       titleLeft: PropTypes.bool,
       drip: PropTypes.bool,
-      titleCenterAlign: PropTypes.bool
+      titleCenterAlign: PropTypes.bool,
+      button1Label: PropTypes.string,
+      button1Link: PropTypes.string,
+      button1Text: PropTypes.string,
+      button2Label: PropTypes.string,
+      button2Link: PropTypes.string,
+      button2Text: PropTypes.string
     })
   }),
   setRef: PropTypes.func
@@ -111,7 +177,13 @@ MarkdownBlock.defaultProps = {
       title: '',
       titleLeft: false,
       drip: false,
-      titleCenterAlign: false
+      titleCenterAlign: false,
+      button1Label: '',
+      button1Link: '',
+      button1Text: '',
+      button2Label: '',
+      button2Link: '',
+      button2Text: ''
     }
   },
   setRef: () => {}
