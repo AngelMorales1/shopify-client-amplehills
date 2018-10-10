@@ -1,8 +1,25 @@
 @import 'settings';
 
 .ProductGridCard {
+  &__mark {
+    width: spacing(20);
+    height: spacing(20);
+
+    @media ($medium-up) {
+      width: spacing(24);
+      height: spacing(24);
+    }
+  }
+
+  &__mark-text {
+    width: spacing(20);
+    font-size: $font-2;
+    letter-spacing: spacing(0.1);
+  }
+
   &__image {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    border-radius: radius('xs');
   }
 
   &:hover {

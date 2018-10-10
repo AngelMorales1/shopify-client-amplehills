@@ -8,7 +8,29 @@ import styles from './ProductGridCard.scss';
 
 const ProductGridCard = ({ product }) => {
   return (
-    <div className={cx(styles['ProductGridCard'], 'col col-12 md-col-4 p1')}>
+    <div
+      className={cx(
+        styles['ProductGridCard'],
+        'col col-12 md-col-4 p1 relative'
+      )}
+    >
+      {product.limitedEdition ? (
+        <div
+          className={cx(
+            styles['ProductGridCard__mark'],
+            'circle bg-peach absolute z-1 flex items-center justify-center m3 r0 t0'
+          )}
+        >
+          <p
+            className={cx(
+              styles['ProductGridCard__mark-text'],
+              'center carter text-white'
+            )}
+          >
+            Limited Edition
+          </p>
+        </div>
+      ) : null}
       <Link
         className="text-decoration-none"
         exact
@@ -18,7 +40,7 @@ const ProductGridCard = ({ product }) => {
           <div
             className={cx(
               styles['ProductGridCard__image'],
-              'square transition card w100'
+              'aspect-4-5 transition card w100'
             )}
             style={{
               background: `url(${contentfulImgUtil(

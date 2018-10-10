@@ -10,7 +10,7 @@ class ProductLandingView extends Component {
     if (model.isError) return <h1>Error</h1>;
 
     const content = get(model, 'landing.items[0].fields', {});
-    const gridProducts = get(content, 'products', []).map(product => {
+    const gridProducts = get(content, 'iceCreamProducts', []).map(product => {
       const handle = get(product, 'fields.productHandle', '');
       return products[handle];
     });
@@ -19,11 +19,11 @@ class ProductLandingView extends Component {
       <div className="ProductLanding mb3 transition-slide-up">
         <div className="my4 px3 text-container-width mx-auto center">
           <h2 className="block-headline text-peach mb2">
-            {get(content, 'title', '')}
+            {get(content, 'iceCreamTitle', '')}
           </h2>
           <p
             dangerouslySetInnerHTML={{
-              __html: marked(get(content, 'description', ''))
+              __html: marked(get(content, 'iceCreamDescription', ''))
             }}
             className="markdown-block"
           />

@@ -107,6 +107,8 @@ export default createSelector(
           whatsIncludedProducts
         };
 
+        const limitedEdition = get(product, 'fields.limitedEdition', false);
+
         const shopifyProduct = get(shopifyProducts, handle, {
           id: null,
           price: null,
@@ -127,24 +129,24 @@ export default createSelector(
       const forceAvailable = get(product, 'fields.forceAvailable', false);
       const link = `/products/${handle}`;
 
-      mergedProducts[handle] = {
-        title,
-        handle,
-        flavorDescription,
-        description,
-        gridImage,
-        pintImage,
-        blocks,
-        subItems,
-        subItemsAvailable,
-        preOrderDate,
-        cartDetails,
-        productHero,
-        whatsIncluded,
-        forceAvailable,
-        link,
-        ...shopifyProduct
-      };
+        mergedProducts[handle] = {
+          title,
+          handle,
+          flavorDescription,
+          description,
+          gridImage,
+          pintImage,
+          blocks,
+          subItems,
+          subItemsAvailable,
+          preOrderDate,
+          cartDetails,
+          productHero,
+          whatsIncluded,
+          limitedEdition,
+          link,
+          ...shopifyProduct
+        };
 
         return mergedProducts;
       },
