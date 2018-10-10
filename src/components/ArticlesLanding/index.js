@@ -229,12 +229,24 @@ class ArticlesLanding extends Component {
 
 ArticlesLanding.propTypes = {
   articles: PropTypes.arrayOf(articleModel.propTypes),
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  articlesByTags: PropTypes.arrayOf(articleModel.propTypes),
+  actions: PropTypes.shape({
+    addSelectedTag: PropTypes.func,
+    removeSelectedTag: PropTypes.func
+  }),
+  selectedTags: PropTypes.arrayOf(PropTypes.string)
 };
 
 ArticlesLanding.defaultProps = {
   articles: [],
-  tags: []
+  tags: [],
+  articlesByTags: [],
+  actions: {
+    addSelectedTag: () => {},
+    removeSelectedTag: () => {}
+  },
+  selectedTags: []
 };
 
 export default ArticlesLanding;
