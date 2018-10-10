@@ -3,6 +3,7 @@ import marked from 'marked';
 
 import get from 'utils/get';
 import ProductGrid from 'components/ProductGrid';
+import WholesaleInfoBlock from 'components/WholesaleInfoBlock';
 
 class ProductLandingView extends Component {
   render() {
@@ -29,6 +30,11 @@ class ProductLandingView extends Component {
           />
         </div>
         <ProductGrid products={gridProducts} />
+        <WholesaleInfoBlock
+          image={get(content, 'wholesaleImage.fields.file.url', '')}
+          title={get(content, 'wholesaleTitle', '')}
+          description={get(content, 'wholesaleDescription', '')}
+        />
       </div>
     );
   }

@@ -1,0 +1,12 @@
+@import 'settings', 'typography', 'src/styles/utils';
+
+.WholesaleInfoBlock {
+  flex-direction: column;
+  padding: spacing(4) spacing(8);
+  margin-top: spacing(40);
+
+  @media ($medium-up) {
+    flex-direction: row;
+    padding: spacing(16);
+  }
+}
