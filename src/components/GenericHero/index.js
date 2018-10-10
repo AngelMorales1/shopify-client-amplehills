@@ -51,11 +51,11 @@ const GenericHero = ({ block, z }) => {
               'transition-slide-up py4 px2 col-10 md-col-8 center'
             )}
           >
-            <p className="block-headline pb3">{title}</p>
-            {text ? <div className="block-subheadline">{text}</div> : null}
+            <p className="block-headline pt3">{title}</p>
+            {text ? <div className="block-subheadline pt3">{text}</div> : null}
             {image1 && !imageRight ? (
               <Image
-                className={cx(styles['GenericHero__image'], 'w100')}
+                className={cx(styles['GenericHero__image'], 'w100 pt3')}
                 alt={`${title} image`}
                 src={contentfulImgUtil(
                   get(image1, 'fields.file.url', ''),
