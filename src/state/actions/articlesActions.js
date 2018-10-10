@@ -45,7 +45,7 @@ export const getArticlesByTags = tags => (dispatch, getState) => {
         const articlesTags = article.node.tags;
         if (articlesTags.length) {
           for (let i = 0; i < articlesTags.length; i++) {
-            if (tags.indexOf(articlesTags[i]) > -1) {
+            if (tags.includes(articlesTags[i])) {
               return true;
             }
           }

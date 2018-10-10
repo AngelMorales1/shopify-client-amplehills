@@ -45,7 +45,7 @@ class ArticlesLanding extends Component {
     );
     this.setState({ selectedPage: 1 });
 
-    if (this.props.selectedTags.indexOf(tag) > -1) {
+    if (this.props.selectedTags.includes(tag)) {
       return removeSelectedTag(tag);
     }
 
@@ -204,8 +204,11 @@ class ArticlesLanding extends Component {
         <div className="col-12 md-col-3 px2">
           <h2 className="callout mb2">Tags</h2>
           {tags.map(tag => {
-            const buttonIsSelected =
-              get(this, 'props.selectedTags', []).indexOf(tag) > -1;
+            const buttonIsSelected = get(
+              this,
+              'props.selectedTags',
+              []
+            ).includes(tag);
 
             return (
               <Button
