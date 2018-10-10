@@ -38,7 +38,11 @@ const ProductGridCard = ({ product, merchandise }) => {
       <Link
         className="text-decoration-none"
         exact
-        to={`/products/${product.handle}`}
+        to={
+          merchandise
+            ? `/merchandise/${product.handle}`
+            : `/products/${product.handle}`
+        }
       >
         <div className="flex flex-column items-center">
           <div
@@ -57,7 +61,7 @@ const ProductGridCard = ({ product, merchandise }) => {
               backgroundSize: 'cover'
             }}
           />
-          <span className="bold mt2 mb1">{product.title}</span>
+          <span className="bold mt2 mb1 center">{product.title}</span>
           <span>{`$${product.price.toFixed(2)}`}</span>
         </div>
       </Link>
