@@ -6,6 +6,7 @@ import productModel from 'models/productModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import imageModel from 'models/imageModel';
 
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Carousel } from 'components/base';
@@ -254,6 +255,15 @@ ProductHero.propTypes = {
     }),
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
+  }),
+  ourPledgeOverlayIsOpen: PropTypes.bool,
+  productHero: PropTypes.shape({
+    productHeroAlert: PropTypes.string,
+    productHeroCarouselImages: PropTypes.arrayOf(imageModel.propTypes),
+    productHeroImage: PropTypes.string,
+    productHeroTitle: PropTypes.string,
+    productHeroTitleBackgroundImage: PropTypes.string,
+    productHeroTitleBackgroundImagePosition: PropTypes.number
   })
 };
 
@@ -268,6 +278,15 @@ ProductHero.defaultProps = {
     },
     shippingInformation: '',
     shippingPledge: ''
+  },
+  ourPledgeOverlayIsOpen: false,
+  productHero: {
+    productHeroAlert: '',
+    productHeroCarouselImages: [],
+    productHeroImage: '',
+    productHeroTitle: '',
+    productHeroTitleBackgroundImage: '',
+    productHeroTitleBackgroundImagePosition: 0
   }
 };
 

@@ -119,6 +119,16 @@ ShallowWrapper {
             "subItemsAvailable": true,
           }
     }
+    productHero={
+        Object {
+            "productHeroAlert": "",
+            "productHeroCarouselImages": Array [],
+            "productHeroImage": "",
+            "productHeroTitle": "",
+            "productHeroTitleBackgroundImage": "",
+            "productHeroTitleBackgroundImagePosition": 0,
+          }
+    }
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1504,6 +1514,7 @@ ShallowWrapper {
             "shippingPledge": "",
           }
     }
+    ourPledgeOverlayIsOpen={false}
     product={
         Object {
             "available": false,
@@ -1523,6 +1534,16 @@ ShallowWrapper {
                 "title": "",
               },
             ],
+          }
+    }
+    productHero={
+        Object {
+            "productHeroAlert": "",
+            "productHeroCarouselImages": Array [],
+            "productHeroImage": "",
+            "productHeroTitle": "",
+            "productHeroTitleBackgroundImage": "",
+            "productHeroTitleBackgroundImagePosition": 0,
           }
     }
     z={1}
