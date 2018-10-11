@@ -17,7 +17,6 @@ export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
     case ADD_LOCATION_FILTER:
-      const { selectedLocation } = initialState;
       return {
         ...state,
         selectedLocation: initialState.selectedLocation,
