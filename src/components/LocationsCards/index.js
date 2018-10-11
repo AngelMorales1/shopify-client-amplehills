@@ -220,7 +220,7 @@ class LocationsCards extends Component {
                       selectedLocation={selectedLocation}
                       location={location}
                     />
-                  )
+                  );
                 })}
               </div>
             </div>
@@ -243,13 +243,13 @@ LocationsCards.propTypes = {
       address1: PropTypes.string,
       address2: PropTypes.string,
       city: PropTypes.string,
-      coordinates: {
+      coordinates: PropTypes.shape({
         lon: PropTypes.number,
         lat: PropTypes.number
-      },
+      }),
       currentOpenHours: PropTypes.string,
       delivery: PropTypes.bool,
-      hours: {
+      hours: PropTypes.shape({
         monday: PropTypes.string,
         tuesday: PropTypes.string,
         wednesday: PropTypes.string,
@@ -257,7 +257,7 @@ LocationsCards.propTypes = {
         friday: PropTypes.string,
         saturday: PropTypes.string,
         sunday: PropTypes.string
-      },
+      }),
       id: PropTypes.string,
       image: PropTypes.string,
       orderDeliveryLink: PropTypes.string,
@@ -265,7 +265,7 @@ LocationsCards.propTypes = {
       region: PropTypes.string,
       seasonal: PropTypes.bool,
       seasonalImage: PropTypes.string,
-      sortedHours: PropTypes.arrayOf(PropTypes.Object),
+      sortedHours: PropTypes.arrayOf(PropTypes.object),
       state: PropTypes.string,
       stringifiedSearchableFields: PropTypes.arrayOf(PropTypes.string),
       title: PropTypes.string,

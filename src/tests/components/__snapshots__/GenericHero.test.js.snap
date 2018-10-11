@@ -675,7 +675,15 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <GenericHero
     block={
         Object {
-            "fields": [Function],
+            "fields": Object {
+              "buttonLabel": "",
+              "buttonLink": "",
+              "color": "blue",
+              "drip": false,
+              "image1": null,
+              "text": "",
+              "title": "",
+            },
           }
     }
     z={1}

@@ -31,26 +31,26 @@ const GenericHero = ({ block, z }) => {
 
   return (
     <div style={{ zIndex: z }} className={classes}>
-    <div
-      className={cx(
-        styles['GenericHero__content-container'],
-        'flex justify-center',
-        {
-          'justify-between': imageRight,
-          [styles['GenericHero__content-container--reverse']]:
-            imageRight && isReverseArrangement
-        }
-      )}
-    >
-      <div className="col-12 md-col-6 flex justify-center">
-        <div
-          className={cx(
-            {
-              [styles['GenericHero__text-container--image-right']]: imageRight
-            },
-            'transition-slide-up py4 px2 col-10 md-col-8 center'
-          )}
-        >
+      <div
+        className={cx(
+          styles['GenericHero__content-container'],
+          'flex justify-center',
+          {
+            'justify-between': imageRight,
+            [styles['GenericHero__content-container--reverse']]:
+              imageRight && isReverseArrangement
+          }
+        )}
+      >
+        <div className="col-12 md-col-6 flex justify-center">
+          <div
+            className={cx(
+              {
+                [styles['GenericHero__text-container--image-right']]: imageRight
+              },
+              'transition-slide-up py4 px2 col-10 md-col-8 center'
+            )}
+          >
             <p className="block-headline pb3">{title}</p>
             {text ? <div className="block-subheadline">{text}</div> : null}
             {image1 && !imageRight ? (
@@ -112,7 +112,7 @@ GenericHero.propTypes = {
 GenericHero.defaultProps = {
   z: 1,
   block: {
-    fields: PropTypes.shape({
+    fields: {
       color: 'blue',
       drip: false,
       image1: null,
@@ -120,7 +120,7 @@ GenericHero.defaultProps = {
       text: '',
       buttonLink: '',
       buttonLabel: ''
-    })
+    }
   }
 };
 
