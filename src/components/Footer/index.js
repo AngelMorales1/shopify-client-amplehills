@@ -7,7 +7,6 @@ import Global from 'constants/Global';
 
 import { Image, Button } from 'components/base';
 import { NavLink } from 'react-router-dom';
-import locationModel from 'models/locationModel';
 
 import styles from './Footer.scss';
 
@@ -35,7 +34,7 @@ class Footer extends Component {
   };
 
   render() {
-    const { footerLinks, locations, footerIcons } = this.props;
+    const { footerLinks, footerIcons } = this.props;
     const { currentBreakpoint } = this.state;
 
     return (
@@ -165,12 +164,10 @@ export default Footer;
 
 Footer.propTypes = {
   footerLinks: PropTypes.object,
-  footerIcons: PropTypes.object,
-  locations: PropTypes.arrayOf(locationModel.propTypes)
+  footerIcons: PropTypes.object
 };
 
 Footer.defaultProps = {
   footerLinks: {},
-  footerIcons: {},
-  locations: []
+  footerIcons: {}
 };
