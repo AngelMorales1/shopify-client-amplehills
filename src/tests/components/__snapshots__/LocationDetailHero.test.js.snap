@@ -155,7 +155,7 @@ ShallowWrapper {
                               foo
                     </h2>
                     <div
-                              className="flex"
+                              className="flex items-start"
                     >
                               <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -188,7 +188,7 @@ ShallowWrapper {
                                                   className="circle z-1 bg-white"
                                         >
                                                   <MapboxMap
-                                                            className="z-0 wh100"
+                                                            className="z-0 wh100 circle"
                                                             cluster={false}
                                                             clusterMaxZoom={null}
                                                             clusterRadius={null}
@@ -375,7 +375,7 @@ ShallowWrapper {
                             foo
               </h2>
               <div
-                            className="flex"
+                            className="flex items-start"
               >
                             <div
                                           className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -408,7 +408,7 @@ ShallowWrapper {
                                                         className="circle z-1 bg-white"
                                           >
                                                         <MapboxMap
-                                                                      className="z-0 wh100"
+                                                                      className="z-0 wh100 circle"
                                                                       cluster={false}
                                                                       clusterMaxZoom={null}
                                                                       clusterRadius={null}
@@ -576,7 +576,7 @@ ShallowWrapper {
                   foo
 </h2>,
                 <div
-                  className="flex"
+                  className="flex items-start"
 >
                   <div
                                     className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -609,7 +609,7 @@ ShallowWrapper {
                                                       className="circle z-1 bg-white"
                                     >
                                                       <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -775,7 +775,7 @@ ShallowWrapper {
                                             className="circle z-1 bg-white"
                       >
                                             <MapboxMap
-                                                                  className="z-0 wh100"
+                                                                  className="z-0 wh100 circle"
                                                                   cluster={false}
                                                                   clusterMaxZoom={null}
                                                                   clusterRadius={null}
@@ -887,7 +887,7 @@ ShallowWrapper {
                       </div>
 </div>,
                   ],
-                  "className": "flex",
+                  "className": "flex items-start",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -925,7 +925,7 @@ ShallowWrapper {
                           className="circle z-1 bg-white"
 >
                           <MapboxMap
-                                                    className="z-0 wh100"
+                                                    className="z-0 wh100 circle"
                                                     cluster={false}
                                                     clusterMaxZoom={null}
                                                     clusterRadius={null}
@@ -1105,7 +1105,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": <MapboxMap
-                            className="z-0 wh100"
+                            className="z-0 wh100 circle"
                             cluster={false}
                             clusterMaxZoom={null}
                             clusterRadius={null}
@@ -1199,7 +1199,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "className": "z-0 wh100",
+                            "className": "z-0 wh100 circle",
                             "cluster": false,
                             "clusterMaxZoom": null,
                             "clusterRadius": null,
@@ -1301,6 +1301,7 @@ ShallowWrapper {
 >
                           hours
 </p>,
+                        null,
                         Array [
                           <div
                             className="flex flex-row justify-between"
@@ -1334,6 +1335,7 @@ ShallowWrapper {
                         "rendered": "hours",
                         "type": "p",
                       },
+                      null,
                       Object {
                         "instance": null,
                         "key": "foo",
@@ -1569,7 +1571,7 @@ ShallowWrapper {
                                     foo
                         </h2>
                         <div
-                                    className="flex"
+                                    className="flex items-start"
                         >
                                     <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -1602,7 +1604,7 @@ ShallowWrapper {
                                                             className="circle z-1 bg-white"
                                                 >
                                                             <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -1789,7 +1791,7 @@ ShallowWrapper {
                                 foo
                 </h2>
                 <div
-                                className="flex"
+                                className="flex items-start"
                 >
                                 <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -1822,7 +1824,7 @@ ShallowWrapper {
                                                                 className="circle z-1 bg-white"
                                                 >
                                                                 <MapboxMap
-                                                                                className="z-0 wh100"
+                                                                                className="z-0 wh100 circle"
                                                                                 cluster={false}
                                                                                 clusterMaxZoom={null}
                                                                                 clusterRadius={null}
@@ -1990,7 +1992,7 @@ ShallowWrapper {
                     foo
 </h2>,
                   <div
-                    className="flex"
+                    className="flex items-start"
 >
                     <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -2023,7 +2025,7 @@ ShallowWrapper {
                                                             className="circle z-1 bg-white"
                                         >
                                                             <MapboxMap
-                                                                                className="z-0 wh100"
+                                                                                className="z-0 wh100 circle"
                                                                                 cluster={false}
                                                                                 clusterMaxZoom={null}
                                                                                 clusterRadius={null}
@@ -2189,7 +2191,7 @@ ShallowWrapper {
                                                 className="circle z-1 bg-white"
                         >
                                                 <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -2301,7 +2303,7 @@ ShallowWrapper {
                         </div>
 </div>,
                     ],
-                    "className": "flex",
+                    "className": "flex items-start",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -2339,7 +2341,7 @@ ShallowWrapper {
                             className="circle z-1 bg-white"
 >
                             <MapboxMap
-                                                        className="z-0 wh100"
+                                                        className="z-0 wh100 circle"
                                                         cluster={false}
                                                         clusterMaxZoom={null}
                                                         clusterRadius={null}
@@ -2519,7 +2521,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": <MapboxMap
-                              className="z-0 wh100"
+                              className="z-0 wh100 circle"
                               cluster={false}
                               clusterMaxZoom={null}
                               clusterRadius={null}
@@ -2613,7 +2615,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "className": "z-0 wh100",
+                              "className": "z-0 wh100 circle",
                               "cluster": false,
                               "clusterMaxZoom": null,
                               "clusterRadius": null,
@@ -2715,6 +2717,7 @@ ShallowWrapper {
 >
                             hours
 </p>,
+                          null,
                           Array [
                             <div
                               className="flex flex-row justify-between"
@@ -2748,6 +2751,7 @@ ShallowWrapper {
                           "rendered": "hours",
                           "type": "p",
                         },
+                        null,
                         Object {
                           "instance": null,
                           "key": "foo",
@@ -3060,7 +3064,7 @@ ShallowWrapper {
                               className="block-headline my4"
                     />
                     <div
-                              className="flex"
+                              className="flex items-start"
                     >
                               <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -3086,7 +3090,7 @@ ShallowWrapper {
                                                   className="circle z-1 bg-white"
                                         >
                                                   <MapboxMap
-                                                            className="z-0 wh100"
+                                                            className="z-0 wh100 circle"
                                                             cluster={false}
                                                             clusterMaxZoom={null}
                                                             clusterRadius={null}
@@ -3206,7 +3210,7 @@ ShallowWrapper {
                             className="block-headline my4"
               />
               <div
-                            className="flex"
+                            className="flex items-start"
               >
                             <div
                                           className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -3232,7 +3236,7 @@ ShallowWrapper {
                                                         className="circle z-1 bg-white"
                                           >
                                                         <MapboxMap
-                                                                      className="z-0 wh100"
+                                                                      className="z-0 wh100 circle"
                                                                       cluster={false}
                                                                       clusterMaxZoom={null}
                                                                       clusterRadius={null}
@@ -3333,7 +3337,7 @@ ShallowWrapper {
                   className="block-headline my4"
 />,
                 <div
-                  className="flex"
+                  className="flex items-start"
 >
                   <div
                                     className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -3359,7 +3363,7 @@ ShallowWrapper {
                                                       className="circle z-1 bg-white"
                                     >
                                                       <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -3453,7 +3457,7 @@ ShallowWrapper {
                                             className="circle z-1 bg-white"
                       >
                                             <MapboxMap
-                                                                  className="z-0 wh100"
+                                                                  className="z-0 wh100 circle"
                                                                   cluster={false}
                                                                   clusterMaxZoom={null}
                                                                   clusterRadius={null}
@@ -3500,7 +3504,7 @@ ShallowWrapper {
                       </p>
 </div>,
                   ],
-                  "className": "flex",
+                  "className": "flex items-start",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -3531,7 +3535,7 @@ ShallowWrapper {
                           className="circle z-1 bg-white"
 >
                           <MapboxMap
-                                                    className="z-0 wh100"
+                                                    className="z-0 wh100 circle"
                                                     cluster={false}
                                                     clusterMaxZoom={null}
                                                     clusterRadius={null}
@@ -3643,7 +3647,7 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "children": <MapboxMap
-                            className="z-0 wh100"
+                            className="z-0 wh100 circle"
                             cluster={false}
                             clusterMaxZoom={null}
                             clusterRadius={null}
@@ -3686,7 +3690,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "className": "z-0 wh100",
+                            "className": "z-0 wh100 circle",
                             "cluster": false,
                             "clusterMaxZoom": null,
                             "clusterRadius": null,
@@ -3737,6 +3741,7 @@ ShallowWrapper {
 >
                           hours
 </p>,
+                        null,
                         Array [],
                       ],
                       "className": "col-12 md-col-6 mb4",
@@ -3755,6 +3760,7 @@ ShallowWrapper {
                         "rendered": "hours",
                         "type": "p",
                       },
+                      null,
                     ],
                     "type": "div",
                   },
@@ -3936,7 +3942,7 @@ ShallowWrapper {
                                     className="block-headline my4"
                         />
                         <div
-                                    className="flex"
+                                    className="flex items-start"
                         >
                                     <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -3962,7 +3968,7 @@ ShallowWrapper {
                                                             className="circle z-1 bg-white"
                                                 >
                                                             <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -4082,7 +4088,7 @@ ShallowWrapper {
                                 className="block-headline my4"
                 />
                 <div
-                                className="flex"
+                                className="flex items-start"
                 >
                                 <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4108,7 +4114,7 @@ ShallowWrapper {
                                                                 className="circle z-1 bg-white"
                                                 >
                                                                 <MapboxMap
-                                                                                className="z-0 wh100"
+                                                                                className="z-0 wh100 circle"
                                                                                 cluster={false}
                                                                                 clusterMaxZoom={null}
                                                                                 clusterRadius={null}
@@ -4209,7 +4215,7 @@ ShallowWrapper {
                     className="block-headline my4"
 />,
                   <div
-                    className="flex"
+                    className="flex items-start"
 >
                     <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4235,7 +4241,7 @@ ShallowWrapper {
                                                             className="circle z-1 bg-white"
                                         >
                                                             <MapboxMap
-                                                                                className="z-0 wh100"
+                                                                                className="z-0 wh100 circle"
                                                                                 cluster={false}
                                                                                 clusterMaxZoom={null}
                                                                                 clusterRadius={null}
@@ -4329,7 +4335,7 @@ ShallowWrapper {
                                                 className="circle z-1 bg-white"
                         >
                                                 <MapboxMap
-                                                                        className="z-0 wh100"
+                                                                        className="z-0 wh100 circle"
                                                                         cluster={false}
                                                                         clusterMaxZoom={null}
                                                                         clusterRadius={null}
@@ -4376,7 +4382,7 @@ ShallowWrapper {
                         </p>
 </div>,
                     ],
-                    "className": "flex",
+                    "className": "flex items-start",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -4407,7 +4413,7 @@ ShallowWrapper {
                             className="circle z-1 bg-white"
 >
                             <MapboxMap
-                                                        className="z-0 wh100"
+                                                        className="z-0 wh100 circle"
                                                         cluster={false}
                                                         clusterMaxZoom={null}
                                                         clusterRadius={null}
@@ -4519,7 +4525,7 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "children": <MapboxMap
-                              className="z-0 wh100"
+                              className="z-0 wh100 circle"
                               cluster={false}
                               clusterMaxZoom={null}
                               clusterRadius={null}
@@ -4562,7 +4568,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "className": "z-0 wh100",
+                              "className": "z-0 wh100 circle",
                               "cluster": false,
                               "clusterMaxZoom": null,
                               "clusterRadius": null,
@@ -4613,6 +4619,7 @@ ShallowWrapper {
 >
                             hours
 </p>,
+                          null,
                           Array [],
                         ],
                         "className": "col-12 md-col-6 mb4",
@@ -4631,6 +4638,7 @@ ShallowWrapper {
                           "rendered": "hours",
                           "type": "p",
                         },
+                        null,
                       ],
                       "type": "div",
                     },
