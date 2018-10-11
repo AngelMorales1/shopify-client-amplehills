@@ -4,6 +4,8 @@ import allMerchandise from 'state/selectors/allMerchandise';
 
 export default createSelector(
   state => allMerchandise(state),
-  (state, props) => get(props, 'match.params.merchHandle', ''),
+  (state, props) => {
+    return get(props, 'match.params.merchHandle', '');
+  },
   (products, handle) => products[handle]
 );
