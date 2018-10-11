@@ -11,6 +11,7 @@ export default [
     address1: '110 Bowery',
     address2: 'Fl. 4',
     city: 'New York',
+    closeLocationForTheSeason: false,
     region: 'Manhattan',
     state: 'NY',
     zip: '10013',
