@@ -1,6 +1,7 @@
 export default {
   title: 'Test Product',
   id: '9999',
+  limitedEdition: false,
   handle: 'test-product',
   available: true,
   flavorDescription: 'Very testy',

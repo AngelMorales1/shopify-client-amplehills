@@ -2,6 +2,7 @@ export default {
   'test-product': {
     title: 'Test Product',
     id: '9999',
+    limitedEdition: false,
     handle: 'test-product',
     link: '/products/test-product',
     available: true,
@@ -42,6 +43,7 @@ export default {
     handle: 'test-product-2',
     link: '/products/test-product-2',
     available: false,
+    limitedEdition: false,
     preOrderDate: false,
     flavorDescription: 'Very testy',
     cartDetails: '1x Test Flavor',
@@ -78,6 +80,7 @@ export default {
     id: '9999',
     handle: 'test-product-3',
     link: '/products/test-product-3',
+    limitedEdition: false,
     available: true,
     preOrderDate: false,
     flavorDescription: 'Very testy',
