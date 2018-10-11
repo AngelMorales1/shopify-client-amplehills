@@ -9,6 +9,19 @@ export default {
     cartDetails: '1x Test Flavor',
     description: 'This is a test description',
     price: 19.99,
+    productHero: {
+      productHeroAlert: '',
+      productHeroCarouselImages: [],
+      productHeroImage: '',
+      productHeroTitle: '',
+      productHeroTitleBackgroundImage: '',
+      productHeroTitleBackgroundImagePosition: 0
+    },
+    whatsIncluded: {
+      whatsIncludedDrip: false,
+      whatsIncludedIllustration: '',
+      whatsIncludedProducts: []
+    },
     variants: [
       {
         available: true,
@@ -32,6 +45,19 @@ export default {
     cartDetails: '1x Test Flavor',
     description: 'This is a test description',
     price: 19.99,
+    productHero: {
+      productHeroAlert: '',
+      productHeroCarouselImages: [],
+      productHeroImage: '',
+      productHeroTitle: '',
+      productHeroTitleBackgroundImage: '',
+      productHeroTitleBackgroundImagePosition: 0
+    },
+    whatsIncluded: {
+      whatsIncludedDrip: false,
+      whatsIncludedIllustration: '',
+      whatsIncludedProducts: []
+    },
     variants: [
       {
         available: false,
@@ -55,6 +81,19 @@ export default {
     cartDetails: '1x Test Flavor',
     description: 'This is a test description',
     price: 19.99,
+    productHero: {
+      productHeroAlert: '',
+      productHeroCarouselImages: [],
+      productHeroImage: '',
+      productHeroTitle: '',
+      productHeroTitleBackgroundImage: '',
+      productHeroTitleBackgroundImagePosition: 0
+    },
+    whatsIncluded: {
+      whatsIncludedDrip: false,
+      whatsIncludedIllustration: '',
+      whatsIncludedProducts: []
+    },
     variants: [
       {
         available: true,

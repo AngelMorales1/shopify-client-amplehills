@@ -7,6 +7,14 @@ export default {
   cartDetails: '1x Test Flavor',
   description: 'This is a test description',
   price: 19.99,
+  productHero: {
+    productHeroAlert: '',
+    productHeroCarouselImages: [],
+    productHeroImage: '',
+    productHeroTitle: '',
+    productHeroTitleBackgroundImage: '',
+    productHeroTitleBackgroundImagePosition: 0
+  },
   variants: [
     {
       available: true,
@@ -14,6 +22,11 @@ export default {
       id: '9999'
     }
   ],
+  whatsIncluded: {
+    whatsIncludedDrip: false,
+    whatsIncludedIllustration: '',
+    whatsIncludedProducts: []
+  },
   preOrderDate: false,
   gridImage: 'test.jpg',
   pintImage: 'pint.jpg',
