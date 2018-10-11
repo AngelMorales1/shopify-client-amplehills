@@ -348,6 +348,12 @@ ShallowWrapper {
         Object {
             "fields": Object {
               "backgroudColor": "white",
+              "button1Label": "",
+              "button1Link": "",
+              "button1Text": "",
+              "button2Label": "",
+              "button2Link": "",
+              "button2Text": "",
               "content": "",
               "drip": false,
               "title": "",
