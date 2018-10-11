@@ -83,19 +83,19 @@ ShallowWrapper {
                         className="transition-slide-up py4 px2 col-10 md-col-8 center"
                 >
                         <p
-                                className="block-headline pb3"
+                                className="block-headline pt3"
                         >
                                 foo
                         </p>
                         <div
-                                className="block-subheadline"
+                                className="block-subheadline pt3"
                         >
                                 foo
                         </div>
                         <Image
                                 alt="foo image"
                                 bg={false}
-                                className="w100"
+                                className="w100 pt3"
                                 onImgLoad={[Function]}
                                 src="?w=1400&fm=png&q=90"
                                 style={Object {}}
@@ -137,19 +137,19 @@ ShallowWrapper {
                         className="transition-slide-up py4 px2 col-10 md-col-8 center"
             >
                         <p
-                                    className="block-headline pb3"
+                                    className="block-headline pt3"
                         >
                                     foo
                         </p>
                         <div
-                                    className="block-subheadline"
+                                    className="block-subheadline pt3"
                         >
                                     foo
                         </div>
                         <Image
                                     alt="foo image"
                                     bg={false}
-                                    className="w100"
+                                    className="w100 pt3"
                                     onImgLoad={[Function]}
                                     src="?w=1400&fm=png&q=90"
                                     style={Object {}}
@@ -186,19 +186,19 @@ ShallowWrapper {
               className="transition-slide-up py4 px2 col-10 md-col-8 center"
 >
               <p
-                            className="block-headline pb3"
+                            className="block-headline pt3"
               >
                             foo
               </p>
               <div
-                            className="block-subheadline"
+                            className="block-subheadline pt3"
               >
                             foo
               </div>
               <Image
                             alt="foo image"
                             bg={false}
-                            className="w100"
+                            className="w100 pt3"
                             onImgLoad={[Function]}
                             src="?w=1400&fm=png&q=90"
                             style={Object {}}
@@ -229,19 +229,19 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="block-headline pb3"
+                  className="block-headline pt3"
 >
                   foo
 </p>,
                 <div
-                  className="block-subheadline"
+                  className="block-subheadline pt3"
 >
                   foo
 </div>,
                 <Image
                   alt="foo image"
                   bg={false}
-                  className="w100"
+                  className="w100 pt3"
                   onImgLoad={[Function]}
                   src="?w=1400&fm=png&q=90"
                   style={Object {}}
@@ -272,7 +272,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "foo",
-                  "className": "block-headline pb3",
+                  "className": "block-headline pt3",
                 },
                 "ref": null,
                 "rendered": "foo",
@@ -284,7 +284,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "foo",
-                  "className": "block-subheadline",
+                  "className": "block-subheadline pt3",
                 },
                 "ref": null,
                 "rendered": "foo",
@@ -298,7 +298,7 @@ ShallowWrapper {
                   "alt": "foo image",
                   "bg": false,
                   "children": null,
-                  "className": "w100",
+                  "className": "w100 pt3",
                   "onImgLoad": [Function],
                   "src": "?w=1400&fm=png&q=90",
                   "style": Object {},
@@ -378,19 +378,19 @@ ShallowWrapper {
                               className="transition-slide-up py4 px2 col-10 md-col-8 center"
                     >
                               <p
-                                        className="block-headline pb3"
+                                        className="block-headline pt3"
                               >
                                         foo
                               </p>
                               <div
-                                        className="block-subheadline"
+                                        className="block-subheadline pt3"
                               >
                                         foo
                               </div>
                               <Image
                                         alt="foo image"
                                         bg={false}
-                                        className="w100"
+                                        className="w100 pt3"
                                         onImgLoad={[Function]}
                                         src="?w=1400&fm=png&q=90"
                                         style={Object {}}
@@ -432,19 +432,19 @@ ShallowWrapper {
                             className="transition-slide-up py4 px2 col-10 md-col-8 center"
               >
                             <p
-                                          className="block-headline pb3"
+                                          className="block-headline pt3"
                             >
                                           foo
                             </p>
                             <div
-                                          className="block-subheadline"
+                                          className="block-subheadline pt3"
                             >
                                           foo
                             </div>
                             <Image
                                           alt="foo image"
                                           bg={false}
-                                          className="w100"
+                                          className="w100 pt3"
                                           onImgLoad={[Function]}
                                           src="?w=1400&fm=png&q=90"
                                           style={Object {}}
@@ -481,19 +481,19 @@ ShallowWrapper {
                 className="transition-slide-up py4 px2 col-10 md-col-8 center"
 >
                 <p
-                                className="block-headline pb3"
+                                className="block-headline pt3"
                 >
                                 foo
                 </p>
                 <div
-                                className="block-subheadline"
+                                className="block-subheadline pt3"
                 >
                                 foo
                 </div>
                 <Image
                                 alt="foo image"
                                 bg={false}
-                                className="w100"
+                                className="w100 pt3"
                                 onImgLoad={[Function]}
                                 src="?w=1400&fm=png&q=90"
                                 style={Object {}}
@@ -524,19 +524,19 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="block-headline pb3"
+                    className="block-headline pt3"
 >
                     foo
 </p>,
                   <div
-                    className="block-subheadline"
+                    className="block-subheadline pt3"
 >
                     foo
 </div>,
                   <Image
                     alt="foo image"
                     bg={false}
-                    className="w100"
+                    className="w100 pt3"
                     onImgLoad={[Function]}
                     src="?w=1400&fm=png&q=90"
                     style={Object {}}
@@ -567,7 +567,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "foo",
-                    "className": "block-headline pb3",
+                    "className": "block-headline pt3",
                   },
                   "ref": null,
                   "rendered": "foo",
@@ -579,7 +579,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "foo",
-                    "className": "block-subheadline",
+                    "className": "block-subheadline pt3",
                   },
                   "ref": null,
                   "rendered": "foo",
@@ -593,7 +593,7 @@ ShallowWrapper {
                     "alt": "foo image",
                     "bg": false,
                     "children": null,
-                    "className": "w100",
+                    "className": "w100 pt3",
                     "onImgLoad": [Function],
                     "src": "?w=1400&fm=png&q=90",
                     "style": Object {},
@@ -710,7 +710,7 @@ ShallowWrapper {
                         className="transition-slide-up py4 px2 col-10 md-col-8 center"
                 >
                         <p
-                                className="block-headline pb3"
+                                className="block-headline pt3"
                         />
                 </div>
         </div>
@@ -734,7 +734,7 @@ ShallowWrapper {
                         className="transition-slide-up py4 px2 col-10 md-col-8 center"
             >
                         <p
-                                    className="block-headline pb3"
+                                    className="block-headline pt3"
                         />
             </div>
 </div>,
@@ -753,7 +753,7 @@ ShallowWrapper {
               className="transition-slide-up py4 px2 col-10 md-col-8 center"
 >
               <p
-                            className="block-headline pb3"
+                            className="block-headline pt3"
               />
 </div>,
             "className": "col-12 md-col-6 flex justify-center",
@@ -766,7 +766,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="block-headline pb3"
+                  className="block-headline pt3"
 />,
                 null,
                 null,
@@ -782,7 +782,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
-                  "className": "block-headline pb3",
+                  "className": "block-headline pt3",
                 },
                 "ref": null,
                 "rendered": "",
@@ -818,7 +818,7 @@ ShallowWrapper {
                               className="transition-slide-up py4 px2 col-10 md-col-8 center"
                     >
                               <p
-                                        className="block-headline pb3"
+                                        className="block-headline pt3"
                               />
                     </div>
           </div>
@@ -842,7 +842,7 @@ ShallowWrapper {
                             className="transition-slide-up py4 px2 col-10 md-col-8 center"
               >
                             <p
-                                          className="block-headline pb3"
+                                          className="block-headline pt3"
                             />
               </div>
 </div>,
@@ -861,7 +861,7 @@ ShallowWrapper {
                 className="transition-slide-up py4 px2 col-10 md-col-8 center"
 >
                 <p
-                                className="block-headline pb3"
+                                className="block-headline pt3"
                 />
 </div>,
               "className": "col-12 md-col-6 flex justify-center",
@@ -874,7 +874,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="block-headline pb3"
+                    className="block-headline pt3"
 />,
                   null,
                   null,
@@ -890,7 +890,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
-                    "className": "block-headline pb3",
+                    "className": "block-headline pt3",
                   },
                   "ref": null,
                   "rendered": "",

@@ -1,0 +1,874 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MerchDetails
+    merch={
+        Object {
+            "available": true,
+            "description": "foo",
+            "detailsContent": "foo",
+            "detailsTitle": "foo",
+            "handle": "foo",
+            "id": "foo",
+            "images": Array [],
+            "price": 0,
+            "title": "",
+            "variants": Array [],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Breadcrumbs
+          breadcrumbs={
+                    Array [
+                              Object {
+                                "label": "Order Online",
+                                "to": "/order-online",
+                              },
+                            ]
+          }
+          className=""
+/>,
+        <div
+          className="flex"
+>
+          <div
+                    className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                    style={
+                              Object {
+                                        "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
+          />
+          <div>
+                    details
+          </div>
+          <div
+                    className="col-12 md-col-6"
+          >
+                    <div
+                              className="aspect-4-3 my2 xs-hide sm-hide"
+                              style={
+                                        Object {
+                                                  "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
+                    />
+                    <Unknown>
+                              
+                    </Unknown>
+          </div>
+</div>,
+      ],
+      "className": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Order Online",
+              "to": "/order-online",
+            },
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="aspect-4-3 my2 col-12 md-hide lg-hide"
+              style={
+                            Object {
+                                          "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
+/>,
+            <div>
+              details
+</div>,
+            <div
+              className="col-12 md-col-6"
+>
+              <div
+                            className="aspect-4-3 my2 xs-hide sm-hide"
+                            style={
+                                          Object {
+                                                        "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+              <Unknown>
+                            
+              </Unknown>
+</div>,
+          ],
+          "className": "flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "aspect-4-3 my2 col-12 md-hide lg-hide",
+              "style": Object {
+                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                "backgroundSize": "cover",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "details",
+            },
+            "ref": null,
+            "rendered": "details",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="aspect-4-3 my2 xs-hide sm-hide"
+                  style={
+                                    Object {
+                                                      "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                <Unknown>
+                  
+</Unknown>,
+              ],
+              "className": "col-12 md-col-6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-3 my2 xs-hide sm-hide",
+                  "style": Object {
+                    "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [],
+                },
+                "ref": null,
+                "rendered": Array [],
+                "type": Symbol(react.fragment),
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Breadcrumbs
+            breadcrumbs={
+                        Array [
+                                    Object {
+                                      "label": "Order Online",
+                                      "to": "/order-online",
+                                    },
+                                  ]
+            }
+            className=""
+/>,
+          <div
+            className="flex"
+>
+            <div
+                        className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                        style={
+                                    Object {
+                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                        }
+            />
+            <div>
+                        details
+            </div>
+            <div
+                        className="col-12 md-col-6"
+            >
+                        <div
+                                    className="aspect-4-3 my2 xs-hide sm-hide"
+                                    style={
+                                                Object {
+                                                            "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+                        <Unknown>
+                                    
+                        </Unknown>
+            </div>
+</div>,
+        ],
+        "className": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "breadcrumbs": Array [
+              Object {
+                "label": "Order Online",
+                "to": "/order-online",
+              },
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                style={
+                                Object {
+                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
+/>,
+              <div>
+                details
+</div>,
+              <div
+                className="col-12 md-col-6"
+>
+                <div
+                                className="aspect-4-3 my2 xs-hide sm-hide"
+                                style={
+                                                Object {
+                                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                "backgroundSize": "cover",
+                                                              }
+                                }
+                />
+                <Unknown>
+                                
+                </Unknown>
+</div>,
+            ],
+            "className": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "aspect-4-3 my2 col-12 md-hide lg-hide",
+                "style": Object {
+                  "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                  "backgroundSize": "cover",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "details",
+              },
+              "ref": null,
+              "rendered": "details",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="aspect-4-3 my2 xs-hide sm-hide"
+                    style={
+                                        Object {
+                                                            "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                    }
+/>,
+                  <Unknown>
+                    
+</Unknown>,
+                ],
+                "className": "col-12 md-col-6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "aspect-4-3 my2 xs-hide sm-hide",
+                    "style": Object {
+                      "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                      "backgroundSize": "cover",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [],
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": Symbol(react.fragment),
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MerchDetails
+    merch={
+        Object {
+            "available": false,
+            "description": "",
+            "detailsContent": "",
+            "detailsTitle": "",
+            "handle": "",
+            "id": "",
+            "images": Array [
+              Object {
+                "fields": Object {
+                  "file": Object {
+                    "url": "",
+                  },
+                  "title": "",
+                },
+                "sys": Object {
+                  "id": "",
+                },
+              },
+            ],
+            "price": 0,
+            "title": "",
+            "variants": Array [
+              Object {
+                "available": false,
+                "id": "",
+                "price": 0,
+                "title": "",
+              },
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Breadcrumbs
+          breadcrumbs={
+                    Array [
+                              Object {
+                                "label": "Order Online",
+                                "to": "/order-online",
+                              },
+                            ]
+          }
+          className=""
+/>,
+        <div
+          className="flex"
+>
+          <div
+                    className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                    style={
+                              Object {
+                                        "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                        "backgroundSize": "cover",
+                                      }
+                    }
+          />
+          <div>
+                    details
+          </div>
+          <div
+                    className="col-12 md-col-6"
+          >
+                    <div
+                              className="aspect-4-3 my2 xs-hide sm-hide"
+                              style={
+                                        Object {
+                                                  "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                  "backgroundSize": "cover",
+                                                }
+                              }
+                    />
+                    <Unknown>
+                              
+                    </Unknown>
+          </div>
+</div>,
+      ],
+      "className": "",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "breadcrumbs": Array [
+            Object {
+              "label": "Order Online",
+              "to": "/order-online",
+            },
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="aspect-4-3 my2 col-12 md-hide lg-hide"
+              style={
+                            Object {
+                                          "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                          "backgroundSize": "cover",
+                                        }
+              }
+/>,
+            <div>
+              details
+</div>,
+            <div
+              className="col-12 md-col-6"
+>
+              <div
+                            className="aspect-4-3 my2 xs-hide sm-hide"
+                            style={
+                                          Object {
+                                                        "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+              <Unknown>
+                            
+              </Unknown>
+</div>,
+          ],
+          "className": "flex",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "aspect-4-3 my2 col-12 md-hide lg-hide",
+              "style": Object {
+                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                "backgroundSize": "cover",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "details",
+            },
+            "ref": null,
+            "rendered": "details",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="aspect-4-3 my2 xs-hide sm-hide"
+                  style={
+                                    Object {
+                                                      "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                <Unknown>
+                  
+</Unknown>,
+              ],
+              "className": "col-12 md-col-6",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-3 my2 xs-hide sm-hide",
+                  "style": Object {
+                    "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [],
+                },
+                "ref": null,
+                "rendered": Array [],
+                "type": Symbol(react.fragment),
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Breadcrumbs
+            breadcrumbs={
+                        Array [
+                                    Object {
+                                      "label": "Order Online",
+                                      "to": "/order-online",
+                                    },
+                                  ]
+            }
+            className=""
+/>,
+          <div
+            className="flex"
+>
+            <div
+                        className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                        style={
+                                    Object {
+                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                        }
+            />
+            <div>
+                        details
+            </div>
+            <div
+                        className="col-12 md-col-6"
+            >
+                        <div
+                                    className="aspect-4-3 my2 xs-hide sm-hide"
+                                    style={
+                                                Object {
+                                                            "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+                        <Unknown>
+                                    
+                        </Unknown>
+            </div>
+</div>,
+        ],
+        "className": "",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "breadcrumbs": Array [
+              Object {
+                "label": "Order Online",
+                "to": "/order-online",
+              },
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="aspect-4-3 my2 col-12 md-hide lg-hide"
+                style={
+                                Object {
+                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                "backgroundSize": "cover",
+                                              }
+                }
+/>,
+              <div>
+                details
+</div>,
+              <div
+                className="col-12 md-col-6"
+>
+                <div
+                                className="aspect-4-3 my2 xs-hide sm-hide"
+                                style={
+                                                Object {
+                                                                "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                                "backgroundSize": "cover",
+                                                              }
+                                }
+                />
+                <Unknown>
+                                
+                </Unknown>
+</div>,
+            ],
+            "className": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "aspect-4-3 my2 col-12 md-hide lg-hide",
+                "style": Object {
+                  "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                  "backgroundSize": "cover",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "details",
+              },
+              "ref": null,
+              "rendered": "details",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="aspect-4-3 my2 xs-hide sm-hide"
+                    style={
+                                        Object {
+                                                            "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                    }
+/>,
+                  <Unknown>
+                    
+</Unknown>,
+                ],
+                "className": "col-12 md-col-6",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "aspect-4-3 my2 xs-hide sm-hide",
+                    "style": Object {
+                      "background": "url(?w=900&fm=jpg&fl=progressive&q=90) no-repeat center",
+                      "backgroundSize": "cover",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [],
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": Symbol(react.fragment),
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

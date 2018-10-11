@@ -31,7 +31,7 @@ export default {
     description: '',
     detailsContent: '',
     detailsTitle: '',
-    images: PropTypes.arrayOf(imageModel.default),
+    images: [imageModel.default],
     variants: [
       {
         id: '',

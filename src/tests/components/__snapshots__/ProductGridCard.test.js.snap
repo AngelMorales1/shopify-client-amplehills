@@ -61,143 +61,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Link
-        className="text-decoration-none"
-        exact={true}
-        replace={false}
-        to="/products/"
->
-        <div
-                className="flex flex-column items-center"
-        >
-                <div
-                        className="square transition card w100"
-                        style={
-                                Object {
-                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                        "backgroundSize": "cover",
-                                      }
-                        }
-                />
-                <span
-                        className="bold mt2 mb1"
-                />
-                <span>
-                        $0.00
-                </span>
-        </div>
-</Link>,
-      "className": "col col-12 md-col-4 p1",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div
-          className="flex flex-column items-center"
->
-          <div
-                    className="square transition card w100"
-                    style={
-                              Object {
-                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                        "backgroundSize": "cover",
-                                      }
-                    }
-          />
-          <span
-                    className="bold mt2 mb1"
-          />
-          <span>
-                    $0.00
-          </span>
-</div>,
-        "className": "text-decoration-none",
-        "exact": true,
-        "replace": false,
-        "to": "/products/",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="square transition card w100"
-              style={
-                            Object {
-                                          "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                          "backgroundSize": "cover",
-                                        }
-              }
-/>,
-            <span
-              className="bold mt2 mb1"
-/>,
-            <span>
-              $0.00
-</span>,
-          ],
-          "className": "flex flex-column items-center",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "square transition card w100",
-              "style": Object {
-                "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                "backgroundSize": "cover",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "",
-              "className": "bold mt2 mb1",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": "span",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "$0.00",
-            },
-            "ref": null,
-            "rendered": "$0.00",
-            "type": "span",
-          },
-        ],
-        "type": "div",
-      },
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Link
+      "children": Array [
+        null,
+        <Link
           className="text-decoration-none"
           exact={true}
           replace={false}
@@ -207,7 +73,7 @@ ShallowWrapper {
                     className="flex flex-column items-center"
           >
                     <div
-                              className="square transition card w100"
+                              className="aspect-4-5 transition card w100"
                               style={
                                         Object {
                                                   "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -223,10 +89,13 @@ ShallowWrapper {
                     </span>
           </div>
 </Link>,
-        "className": "col col-12 md-col-4 p1",
-      },
-      "ref": null,
-      "rendered": Object {
+      ],
+      "className": "col col-12 md-col-4 p1 relative",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -235,7 +104,7 @@ ShallowWrapper {
             className="flex flex-column items-center"
 >
             <div
-                        className="square transition card w100"
+                        className="aspect-4-5 transition card w100"
                         style={
                                     Object {
                                                 "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -263,7 +132,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="square transition card w100"
+                className="aspect-4-5 transition card w100"
                 style={
                                 Object {
                                                 "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -287,7 +156,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "square transition card w100",
+                "className": "aspect-4-5 transition card w100",
                 "style": Object {
                   "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                   "backgroundSize": "cover",
@@ -325,6 +194,149 @@ ShallowWrapper {
         },
         "type": [Function],
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <Link
+            className="text-decoration-none"
+            exact={true}
+            replace={false}
+            to="/products/"
+>
+            <div
+                        className="flex flex-column items-center"
+            >
+                        <div
+                                    className="aspect-4-5 transition card w100"
+                                    style={
+                                                Object {
+                                                            "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+                        <span
+                                    className="bold mt2 mb1"
+                        />
+                        <span>
+                                    $0.00
+                        </span>
+            </div>
+</Link>,
+        ],
+        "className": "col col-12 md-col-4 p1 relative",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div
+              className="flex flex-column items-center"
+>
+              <div
+                            className="aspect-4-5 transition card w100"
+                            style={
+                                          Object {
+                                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+              <span
+                            className="bold mt2 mb1"
+              />
+              <span>
+                            $0.00
+              </span>
+</div>,
+            "className": "text-decoration-none",
+            "exact": true,
+            "replace": false,
+            "to": "/products/",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="aspect-4-5 transition card w100"
+                  style={
+                                    Object {
+                                                      "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                <span
+                  className="bold mt2 mb1"
+/>,
+                <span>
+                  $0.00
+</span>,
+              ],
+              "className": "flex flex-column items-center",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-5 transition card w100",
+                  "style": Object {
+                    "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                  "className": "bold mt2 mb1",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$0.00",
+                },
+                "ref": null,
+                "rendered": "$0.00",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
@@ -377,143 +389,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Link
-        className="text-decoration-none"
-        exact={true}
-        replace={false}
-        to="/products/"
->
-        <div
-                className="flex flex-column items-center"
-        >
-                <div
-                        className="square transition card w100"
-                        style={
-                                Object {
-                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                        "backgroundSize": "cover",
-                                      }
-                        }
-                />
-                <span
-                        className="bold mt2 mb1"
-                />
-                <span>
-                        $0.00
-                </span>
-        </div>
-</Link>,
-      "className": "col col-12 md-col-4 p1",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "class",
-      "props": Object {
-        "children": <div
-          className="flex flex-column items-center"
->
-          <div
-                    className="square transition card w100"
-                    style={
-                              Object {
-                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                        "backgroundSize": "cover",
-                                      }
-                    }
-          />
-          <span
-                    className="bold mt2 mb1"
-          />
-          <span>
-                    $0.00
-          </span>
-</div>,
-        "className": "text-decoration-none",
-        "exact": true,
-        "replace": false,
-        "to": "/products/",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="square transition card w100"
-              style={
-                            Object {
-                                          "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                                          "backgroundSize": "cover",
-                                        }
-              }
-/>,
-            <span
-              className="bold mt2 mb1"
-/>,
-            <span>
-              $0.00
-</span>,
-          ],
-          "className": "flex flex-column items-center",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "square transition card w100",
-              "style": Object {
-                "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
-                "backgroundSize": "cover",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "",
-              "className": "bold mt2 mb1",
-            },
-            "ref": null,
-            "rendered": "",
-            "type": "span",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "$0.00",
-            },
-            "ref": null,
-            "rendered": "$0.00",
-            "type": "span",
-          },
-        ],
-        "type": "div",
-      },
-      "type": [Function],
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <Link
+      "children": Array [
+        null,
+        <Link
           className="text-decoration-none"
           exact={true}
           replace={false}
@@ -523,7 +401,7 @@ ShallowWrapper {
                     className="flex flex-column items-center"
           >
                     <div
-                              className="square transition card w100"
+                              className="aspect-4-5 transition card w100"
                               style={
                                         Object {
                                                   "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -539,10 +417,13 @@ ShallowWrapper {
                     </span>
           </div>
 </Link>,
-        "className": "col col-12 md-col-4 p1",
-      },
-      "ref": null,
-      "rendered": Object {
+      ],
+      "className": "col col-12 md-col-4 p1 relative",
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
@@ -551,7 +432,7 @@ ShallowWrapper {
             className="flex flex-column items-center"
 >
             <div
-                        className="square transition card w100"
+                        className="aspect-4-5 transition card w100"
                         style={
                                     Object {
                                                 "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -579,7 +460,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="square transition card w100"
+                className="aspect-4-5 transition card w100"
                 style={
                                 Object {
                                                 "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
@@ -603,7 +484,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "square transition card w100",
+                "className": "aspect-4-5 transition card w100",
                 "style": Object {
                   "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
                   "backgroundSize": "cover",
@@ -641,6 +522,149 @@ ShallowWrapper {
         },
         "type": [Function],
       },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <Link
+            className="text-decoration-none"
+            exact={true}
+            replace={false}
+            to="/products/"
+>
+            <div
+                        className="flex flex-column items-center"
+            >
+                        <div
+                                    className="aspect-4-5 transition card w100"
+                                    style={
+                                                Object {
+                                                            "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                            "backgroundSize": "cover",
+                                                          }
+                                    }
+                        />
+                        <span
+                                    className="bold mt2 mb1"
+                        />
+                        <span>
+                                    $0.00
+                        </span>
+            </div>
+</Link>,
+        ],
+        "className": "col col-12 md-col-4 p1 relative",
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div
+              className="flex flex-column items-center"
+>
+              <div
+                            className="aspect-4-5 transition card w100"
+                            style={
+                                          Object {
+                                                        "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                        "backgroundSize": "cover",
+                                                      }
+                            }
+              />
+              <span
+                            className="bold mt2 mb1"
+              />
+              <span>
+                            $0.00
+              </span>
+</div>,
+            "className": "text-decoration-none",
+            "exact": true,
+            "replace": false,
+            "to": "/products/",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="aspect-4-5 transition card w100"
+                  style={
+                                    Object {
+                                                      "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                                                      "backgroundSize": "cover",
+                                                    }
+                  }
+/>,
+                <span
+                  className="bold mt2 mb1"
+/>,
+                <span>
+                  $0.00
+</span>,
+              ],
+              "className": "flex flex-column items-center",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "aspect-4-5 transition card w100",
+                  "style": Object {
+                    "background": "url(?w=500&fm=jpg&fl=progressive&q=90) no-repeat center",
+                    "backgroundSize": "cover",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                  "className": "bold mt2 mb1",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "span",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "$0.00",
+                },
+                "ref": null,
+                "rendered": "$0.00",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],
