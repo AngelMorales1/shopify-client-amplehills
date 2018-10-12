@@ -6,12 +6,12 @@ import cx from 'classnames';
 import { Image, Button } from 'components/base';
 import styles from './PressCard.scss';
 
-const PressCard = ({ pressCard }) => {console.log(pressCard)
+const PressCard = ({ pressCard }) => {
   return (
     <div
       className={cx(
         styles['PressCard'],
-        'm2 pt4 pb3 px3 flex flex-column justify-center items-center'
+        'm2 pt4 pb3 px3 flex flex-column justify-between items-center'
       )}
     >
       <Image
@@ -22,7 +22,7 @@ const PressCard = ({ pressCard }) => {console.log(pressCard)
       <span
         className={cx(
           styles['PressCard__quote'],
-          'carter text-peach center py3 mb4'
+          'carter text-peach center py3 mb2'
         )}
       >
         {pressCard.quote}
