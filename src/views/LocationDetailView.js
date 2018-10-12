@@ -37,6 +37,7 @@ class LocationDetailView extends Component {
             location={location}
             locationGeoJSON={locationGeoJSON}
             events={events}
+            z={blocks.length + 1}
           />
           {blocks &&
             blocks.map((block, i) => {
