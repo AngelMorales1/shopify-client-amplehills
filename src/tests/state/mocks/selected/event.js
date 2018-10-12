@@ -9,6 +9,7 @@ export default {
   ],
   blockCardButtonLabel: '',
   available: true,
+  blockCardButtonLabel: '',
   price: 19.99,
   contentfulId: 'test-event-1',
   handle: 'test-event-1',
