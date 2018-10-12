@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
+import { Link } from 'react-router-dom';
 
 import { Image, Button } from 'components/base';
 import { NavLink } from 'react-router-dom';
@@ -74,13 +75,53 @@ class Footer extends Component {
               'flex flex-column justify-start col-12 md-col-5'
             )}
           >
-            <div className="col-3 flex flex-column mb4">
-              <div>
+            <div className="col-3 flex flex-row mb4">
+              <div className="flex flex-column justify-around mr4 pr2 xs-hide sm-hide">
+                <Link
+                  to="/news"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>News</span>
+                </Link>
+                <Link
+                  to="/press"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>Press</span>
+                </Link>
+                <Link
+                  to="/faq"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>FAQ</span>
+                </Link>
+              </div>
+              <div className="flex flex-column justify-around mr4 pr4 xs-hide sm-hide">
+                <Link
+                  to="/jobs"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>Jobs</span>
+                </Link>
+                <Link
+                  to="/wholesale"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>Wholesale</span>
+                </Link>
+                <Link
+                  to="/in-stores"
+                  className="my2 flex items-center bold text-white text-decoration-none"
+                >
+                  <span>In Stores</span>
+                </Link>
+              </div>
+              <div className="flex flex-column">
                 <a
                   href={get(footerLinks, 'instagramLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my3 flex items-center bold text-white text-decoration-none"
+                  className="my2 flex items-center bold text-white text-decoration-none"
                 >
                   <Image
                     alt="Instagram icon"
@@ -97,7 +138,7 @@ class Footer extends Component {
                   href={get(footerLinks, 'twitterLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my3 flex items-center bold text-white text-decoration-none"
+                  className="my2 flex items-center bold text-white text-decoration-none"
                 >
                   <Image
                     alt="Twitter icon"
@@ -114,7 +155,7 @@ class Footer extends Component {
                   href={get(footerLinks, 'facebookLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my3 flex items-center bold text-white text-decoration-none"
+                  className="my2 flex items-center bold text-white text-decoration-none"
                 >
                   <Image
                     alt="Facebook icon"
