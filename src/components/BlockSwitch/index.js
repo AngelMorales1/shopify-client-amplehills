@@ -13,6 +13,7 @@ import PressCarousel from 'components/PressCarousel';
 import EventsBlock from 'components/EventsBlock';
 import ImageVideoCarousel from 'components/ImageVideoCarousel';
 import FAQBlock from 'components/FAQBlock';
+import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -41,6 +42,17 @@ const BlockSwitch = props => {
       return <ImageVideoCarousel {...props} />;
     case 'blockFaq':
       return <FAQBlock {...props} />;
+    case 'blockFixedContent':
+      const fields = get(block, 'fields', {});
+      const contentType = get(fields, 'contentType', '');
+      const drip = get(fields, 'drip', false);
+
+      switch (contentType) {
+        case "What's Included Block":
+          return <ProductWhatsIncluded {...props} drip={drip} />;
+        default:
+          return null;
+      }
     default:
       return null;
   }

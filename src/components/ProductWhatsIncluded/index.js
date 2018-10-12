@@ -17,7 +17,9 @@ const ProductWhatsIncluded = ({
     whatsIncludedIllustration,
     whatsIncludedProducts
   },
-  setRef
+  drip,
+  setRef,
+  wholesaleProducts
 }) => {
   const fields = get(block, 'fields', {});
   const colorClass = `ProductWhatsIncluded--${get(
@@ -25,6 +27,10 @@ const ProductWhatsIncluded = ({
     'backgroundColor',
     'light-pink'
   )}`;
+  const renderWholesaleFlavors = !whatsIncludedProducts.length;
+  const flavors = renderWholesaleFlavors
+    ? Object.keys(wholesaleProducts)
+    : whatsIncludedProducts;
 
   return (
     <div
@@ -33,13 +39,13 @@ const ProductWhatsIncluded = ({
         styles['ProductWhatsIncluded'],
         styles[colorClass],
         'flex justify-between relative',
-        { drip: whatsIncludedDrip }
+        { drip: whatsIncludedDrip || drip }
       )}
       style={{ zIndex: z }}
     >
       <div className="col-12 md-col-6">
         <h2 className="block-headline my3 nowrap center flex flex-column items-center justify-center">
-          What&rsquo;s included
+          {renderWholesaleFlavors ? 'Available Flavors' : "What's included"}
         </h2>
         {whatsIncludedIllustration ? (
           <div className="center xs-hide sm-hide mx-auto">
@@ -52,9 +58,13 @@ const ProductWhatsIncluded = ({
         ) : null}
       </div>
       <div className="flex flex-column col-12 md-col-6">
-        {whatsIncludedProducts.map(includedItem => {
-          const handle = get(includedItem, 'fields.productHandle', '');
-          const product = get(products, handle, {});
+        {flavors.map(includedItem => {
+          const handle = renderWholesaleFlavors
+            ? includedItem
+            : get(includedItem, 'fields.productHandle', '');
+          const product = renderWholesaleFlavors
+            ? get(wholesaleProducts, handle, {})
+            : get(products, handle, {});
 
           return (
             <div

@@ -11,6 +11,7 @@ import customer from './customer';
 import genericPage from './genericPage';
 import events from './events';
 import articles from './articles';
+import wholesale from './wholesale';
 
 export default {
   status,
@@ -25,5 +26,6 @@ export default {
   genericPage,
   events,
   mobileNavUI,
-  articles
+  articles,
+  wholesale
 };
