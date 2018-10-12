@@ -19,6 +19,8 @@ const EventCard = ({ event, active }) => {
   const times = datesAndTimes.map(dateAndTime => {
     return getShortTimeFormat(get(dateAndTime, 'time', ''));
   });
+  const blockCardButtonLabel = event.blockCardButtonLabel;
+  const label = blockCardButtonLabel ? blockCardButtonLabel : 'More Info';
 
   return (
     <div
@@ -74,7 +76,7 @@ const EventCard = ({ event, active }) => {
           <Button
             className="inline-flex mt3"
             color="peach"
-            label={event.blockCardButtonLabel || 'More Info'}
+            label={label}
             to={`/events/${event.handle}`}
           />
         </div>
