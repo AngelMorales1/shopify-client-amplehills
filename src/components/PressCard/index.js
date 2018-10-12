@@ -25,7 +25,7 @@ const PressCard = ({ pressCard }) => {
           'carter text-peach center py3 mb2'
         )}
       >
-        {pressCard.quote}
+        {`“${pressCard.quote}”`}
       </span>
       <Button
         className={cx(styles['PressCard__button'], 'uppercase')}
