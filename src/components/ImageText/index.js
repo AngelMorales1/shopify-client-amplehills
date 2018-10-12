@@ -23,6 +23,7 @@ const ImageText = ({ block, z, setRef }) => {
   const buttonLink = get(fields, 'buttonLink', '');
   const blockHasButton = buttonLabel && buttonLink;
   const buttonColor = get(fields, 'buttonColor', 'peach');
+  const linkedTextDescription = get(fields, 'linkedTextDescription', '');
   const linkedTextLabel = get(fields, 'linkedTextLabel', '');
   const linkedTextLink = get(fields, 'linkedTextLink', '');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
@@ -94,21 +95,46 @@ const ImageText = ({ block, z, setRef }) => {
           >
             {blockHasButton ? (
               <Button
-                className={cx(styles['ImageText__button'], 'mt3 mr2')}
+                className={cx(styles['ImageText__button'], 'my1 mr2')}
                 label={buttonLabel}
                 to={buttonLink}
                 color={getButtonColor(buttonColor)}
               />
             ) : null}
-            {blockHasLinkedText ? (
+            {blockHasLinkedText && !linkedTextDescription ? (
               <Button
-                className="mt3 mr1 text-madison-blue"
+                className="my1 mr1 text-madison-blue"
                 label={linkedTextLabel}
                 to={linkedTextLink}
                 variant="underline-peach"
               />
             ) : null}
           </div>
+          {blockHasLinkedText && linkedTextDescription ? (
+            <div
+              className={cx(
+                styles['ImageText__linked-text-description-container'],
+                'w100 flex mt4'
+              )}
+            >
+              <p
+                className={cx(
+                  styles['ImageText__linked-text-description'],
+                  'carter mr1'
+                )}
+              >
+                {linkedTextDescription}
+              </p>
+              <div className="inline-flex">
+                <Button
+                  className="text-madison-blue"
+                  label={linkedTextLabel}
+                  to={linkedTextLink}
+                  variant="underline-peach"
+                />
+              </div>
+            </div>
+          ) : null}
         </div>
         {!isFullImage ? (
           <Image
