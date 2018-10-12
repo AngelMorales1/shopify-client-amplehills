@@ -133,7 +133,8 @@ ProductWhatsIncluded.propTypes = {
   products: PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.object, PropTypes.array])
   ),
-  setRef: PropTypes.func
+  setRef: PropTypes.func,
+  wholesaleProducts: PropTypes.object
 };
 
 ProductWhatsIncluded.defaultProps = {
@@ -157,5 +158,6 @@ ProductWhatsIncluded.defaultProps = {
   },
   z: 1,
   products: {},
-  setRef: () => {}
+  setRef: () => {},
+  wholesaleProducts: {}
 };

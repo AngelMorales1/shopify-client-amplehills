@@ -47,6 +47,7 @@ ShallowWrapper {
             "whatsIncludedProducts": Array [],
           }
     }
+    wholesaleProducts={Object {}}
     z={0}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -68,7 +69,7 @@ ShallowWrapper {
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
           >
-                    What’s included
+                    Available Flavors
           </h2>
 </div>,
         <div
@@ -94,7 +95,7 @@ ShallowWrapper {
             <h2
               className="block-headline my3 nowrap center flex flex-column items-center justify-center"
 >
-              What’s included
+              Available Flavors
 </h2>,
             null,
           ],
@@ -107,11 +108,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "What’s included",
+              "children": "Available Flavors",
               "className": "block-headline my3 nowrap center flex flex-column items-center justify-center",
             },
             "ref": null,
-            "rendered": "What’s included",
+            "rendered": "Available Flavors",
             "type": "h2",
           },
           null,
@@ -147,7 +148,7 @@ ShallowWrapper {
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
             >
-                        What’s included
+                        Available Flavors
             </h2>
 </div>,
           <div
@@ -173,7 +174,7 @@ ShallowWrapper {
               <h2
                 className="block-headline my3 nowrap center flex flex-column items-center justify-center"
 >
-                What’s included
+                Available Flavors
 </h2>,
               null,
             ],
@@ -186,11 +187,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "What’s included",
+                "children": "Available Flavors",
                 "className": "block-headline my3 nowrap center flex flex-column items-center justify-center",
               },
               "ref": null,
-              "rendered": "What’s included",
+              "rendered": "Available Flavors",
               "type": "h2",
             },
             null,
@@ -253,6 +254,7 @@ ShallowWrapper {
             "whatsIncludedProducts": Array [],
           }
     }
+    wholesaleProducts={Object {}}
     z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -274,7 +276,7 @@ ShallowWrapper {
           <h2
                     className="block-headline my3 nowrap center flex flex-column items-center justify-center"
           >
-                    What’s included
+                    Available Flavors
           </h2>
 </div>,
         <div
@@ -300,7 +302,7 @@ ShallowWrapper {
             <h2
               className="block-headline my3 nowrap center flex flex-column items-center justify-center"
 >
-              What’s included
+              Available Flavors
 </h2>,
             null,
           ],
@@ -313,11 +315,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "What’s included",
+              "children": "Available Flavors",
               "className": "block-headline my3 nowrap center flex flex-column items-center justify-center",
             },
             "ref": null,
-            "rendered": "What’s included",
+            "rendered": "Available Flavors",
             "type": "h2",
           },
           null,
@@ -353,7 +355,7 @@ ShallowWrapper {
             <h2
                         className="block-headline my3 nowrap center flex flex-column items-center justify-center"
             >
-                        What’s included
+                        Available Flavors
             </h2>
 </div>,
           <div
@@ -379,7 +381,7 @@ ShallowWrapper {
               <h2
                 className="block-headline my3 nowrap center flex flex-column items-center justify-center"
 >
-                What’s included
+                Available Flavors
 </h2>,
               null,
             ],
@@ -392,11 +394,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "What’s included",
+                "children": "Available Flavors",
                 "className": "block-headline my3 nowrap center flex flex-column items-center justify-center",
               },
               "ref": null,
-              "rendered": "What’s included",
+              "rendered": "Available Flavors",
               "type": "h2",
             },
             null,
