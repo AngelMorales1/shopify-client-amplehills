@@ -189,6 +189,7 @@ ShallowWrapper {
 >
                   
 </div>,
+                null,
               ],
               "className": "flex flex-column justify-center col-12 md-col-6",
             },
@@ -239,6 +240,7 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
+              null,
             ],
             "type": "div",
           },
@@ -394,6 +396,7 @@ ShallowWrapper {
 >
                     
 </div>,
+                  null,
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-6",
               },
@@ -444,6 +447,7 @@ ShallowWrapper {
                   ],
                   "type": "div",
                 },
+                null,
               ],
               "type": "div",
             },
@@ -645,6 +649,7 @@ ShallowWrapper {
 >
                   
 </div>,
+                null,
               ],
               "className": "flex flex-column justify-center col-12 md-col-5",
             },
@@ -694,6 +699,7 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
+              null,
             ],
             "type": "div",
           },
@@ -840,6 +846,7 @@ ShallowWrapper {
 >
                     
 </div>,
+                  null,
                 ],
                 "className": "flex flex-column justify-center col-12 md-col-5",
               },
@@ -889,6 +896,7 @@ ShallowWrapper {
                   ],
                   "type": "div",
                 },
+                null,
               ],
               "type": "div",
             },
