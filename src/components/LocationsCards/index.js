@@ -98,7 +98,8 @@ class LocationsCards extends Component {
       locationFilters,
       searchFilter,
       locationResultsLabel,
-      selectedLocation
+      selectedLocation,
+      states
     } = this.props;
     const { sortedLocations } = this.state;
     const STATE_KEY = get(
@@ -142,7 +143,7 @@ class LocationsCards extends Component {
                       : null
                   }
                   options={[{ label: 'All states', value: 'All' }]
-                    .concat(Object.values(LocationsMapFilters.STATE_FILTERS))
+                    .concat(states)
                     .map(filter => ({
                       label: filter.label,
                       value: filter.value
