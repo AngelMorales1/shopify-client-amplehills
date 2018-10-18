@@ -13,7 +13,7 @@ import MapboxMap from 'components/MapboxMap';
 
 class LocationDetailHero extends PureComponent {
   render() {
-    const { location, locationGeoJSON, events } = this.props;
+    const { location, locationGeoJSON, events, z } = this.props;
 
     locationGeoJSON.features = [
       get(locationGeoJSON, 'features', []).find(
@@ -34,6 +34,7 @@ class LocationDetailHero extends PureComponent {
 
     return (
       <div
+        style={{ zIndex: z }}
         className={cx(
           styles['LocationDetailHero'],
           'flex bg-bees-wax relative'

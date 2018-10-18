@@ -19,9 +19,11 @@ class LocationDetailView extends Component {
       get(block, 'fields.title', '')
     );
 
+    const blocksLength = get(location, 'contentBlocks', []).length;
+
     return (
       <Fragment>
-        {location.contentBlocks.length ? (
+        {blocksLength ? (
           <SubNav
             onClick={menuTitle =>
               scrollTo(this.refBlocks[menuTitle], SubNavScrollOption)
@@ -31,6 +33,7 @@ class LocationDetailView extends Component {
         ) : null}
         <div className="subnav-padding-on-last-child">
           <LocationDetailHero
+            z={blocksLength + 1}
             location={location}
             locationGeoJSON={locationGeoJSON}
             events={events}
@@ -38,7 +41,7 @@ class LocationDetailView extends Component {
           {blocks &&
             blocks.map((block, i) => {
               const title = get(block, 'fields.title', '');
-              const blockZIndex = blocks.length - i;
+              const blockZIndex = blocksLength - i;
 
               return (
                 <BlockSwitch
