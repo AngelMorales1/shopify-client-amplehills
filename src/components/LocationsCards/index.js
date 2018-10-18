@@ -287,7 +287,8 @@ LocationsCards.propTypes = {
     })
   ),
   searchFilter: PropTypes.string,
-  locationResultsLabel: PropTypes.string
+  locationResultsLabel: PropTypes.string,
+  states: PropTypes.array
 };
 
 LocationsCards.defaultProps = {
@@ -342,7 +343,8 @@ LocationsCards.defaultProps = {
     }
   ],
   searchFilter: '',
-  locationResultsLabel: ''
+  locationResultsLabel: '',
+  states: []
 };
 
 export default LocationsCards;

@@ -17,6 +17,7 @@ ShallowWrapper {
     locationFilters={Array []}
     locationGeoJSON={Object {}}
     locations={Array []}
+    states={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

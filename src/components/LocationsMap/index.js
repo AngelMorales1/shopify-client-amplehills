@@ -159,7 +159,8 @@ LocationsMap.propTypes = {
       value: PropTypes.string
     })
   ),
-  selectedLocation: PropTypes.string
+  selectedLocation: PropTypes.string,
+  states: PropTypes.array
 };
 
 LocationsMap.defaultProps = {
@@ -172,7 +173,8 @@ LocationsMap.defaultProps = {
   },
   locationGeoJSON: {},
   locations: [],
-  locationFilters: []
+  locationFilters: [],
+  states: []
 };
 
 export default LocationsMap;
