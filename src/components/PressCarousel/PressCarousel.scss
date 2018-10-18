@@ -5,6 +5,7 @@
     border-radius: radius('s');
     margin: spacing(4);
     width: spacing(65);
+    min-height: spacing(96);
 
     @media ($medium-up) {
       width: spacing(75);
@@ -19,11 +20,9 @@
 
   &__quote {
     font-size: $font-5;
-    margin-bottom: spacing(6);
 
     @media ($medium-up) {
-      font-size: $font-6;
-      margin-bottom: spacing(16);
+      font-size: spacing(5.2);
     }
   }
 

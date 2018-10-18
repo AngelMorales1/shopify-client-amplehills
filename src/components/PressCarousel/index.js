@@ -51,7 +51,7 @@ const PressCarousel = ({ block, z, pressItems, setRef }) => {
               key={pressItemId}
               className={cx(
                 styles['PressCarousel__card'],
-                'bg-white p3 flex flex-column justify-center items-center'
+                'bg-white p3 flex flex-column justify-between items-center'
               )}
             >
               <Image
