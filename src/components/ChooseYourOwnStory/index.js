@@ -6,7 +6,6 @@ import marked from 'marked';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import productModel from 'models/productModel';
-import imageModel from 'models/imageModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
@@ -135,12 +134,7 @@ class ChooseYourOwnStory extends Component {
 
     const handle = get(this.props.product, 'handle', 'choose-your-own-story');
     const product = get(products, handle, {});
-    const {
-      overlayContentImage,
-      shippingInformation,
-      shippingPledge,
-      calloutImage
-    } = ourPledge;
+    const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
     const productVariant = get(product, 'variants', []);
     const activeVariant = productVariant.find(
@@ -228,11 +222,14 @@ class ChooseYourOwnStory extends Component {
               </div>
               <OurPledge
                 actions={actions}
-                overlayContentImage={overlayContentImage}
-                shippingInformation={shippingInformation}
-                shippingPledge={shippingPledge}
-                calloutImage={calloutImage}
                 ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
+                shippingInformation={get(
+                  ourPledgeData,
+                  'shippingInformation',
+                  ''
+                )}
+                shippingPledge={get(ourPledgeData, 'shippingPledge', '')}
+                calloutImage={get(ourPledgeData, 'calloutImage.data', '')}
               />
             </div>
           </div>
@@ -388,7 +385,10 @@ ChooseYourOwnStory.propTypes = {
     )
   }),
   ourPledge: PropTypes.shape({
-    overlayContentImage: imageModel.propTypes,
+    closeOurPledgeOverlay: PropTypes.func,
+    calloutImage: PropTypes.shape({
+      data: PropTypes.string
+    }),
     shippingInformation: PropTypes.string,
     shippingPledge: PropTypes.string
   })
@@ -408,7 +408,10 @@ ChooseYourOwnStory.defaultProps = {
     products: []
   },
   ourPledge: {
-    overlayContentImage: imageModel.default,
+    closeOurPledgeOverlay: () => {},
+    calloutImage: {
+      data: ''
+    },
     shippingInformation: '',
     shippingPledge: ''
   }

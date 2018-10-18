@@ -7,5 +7,8 @@ export default {
   },
   PRODUCTION: {
     subdomain: 'www'
+  },
+  LOCAL: {
+    subdomain: 'localhost:3000'
   }
 };

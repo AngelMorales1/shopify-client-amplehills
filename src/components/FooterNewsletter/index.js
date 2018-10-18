@@ -25,7 +25,7 @@ class FooterNewsletter extends Component {
       <div
         className={cx(
           styles['FooterNewsletter'],
-          'mt4 py4 px3 flex items-center drip bg-white z-1'
+          'py4 px3 flex items-center drip bg-white z-1'
         )}
       >
         <div

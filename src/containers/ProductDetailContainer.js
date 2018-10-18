@@ -39,6 +39,10 @@ const mapStateToProps = (state, props) => {
       state,
       'productUI.ourPledgeOverlayIsOpen',
       false
+    ),
+    pressItems: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.pressItems'
     )
   };
 };

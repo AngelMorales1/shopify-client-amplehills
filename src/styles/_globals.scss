@@ -59,6 +59,7 @@ Dimension classes
     display: block;
     position: absolute;
     left: 0;
+    top: calc(100% - 1px);
     width: 100%;
   }
 

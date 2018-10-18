@@ -10,4 +10,9 @@
     @extend .bg-bees-wax;
     @extend .text-madison-blue;
   }
+
+  &__image {
+    max-height: spacing(100);
+    object-fit: contain;
+  }
 }

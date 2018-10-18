@@ -1,0 +1,50 @@
+@import 'settings';
+
+.HorizontalCarousel {
+  &__wrapper {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      overflow: scroll;
+    }
+  }
+
+  &__text-container {
+    align-items: center;
+
+    @media ($medium-up) {
+      align-items: flex-start;
+      margin-left: spacing(40);
+    }
+  }
+
+  &__title {
+    width: spacing(90);
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: left;
+    }
+  }
+
+  &__carousel-cards-container {
+    overflow: scroll;
+
+    @media ($medium-up) {
+      overflow: visible;
+    }
+  }
+
+  &__carousel-container {
+    flex-direction: row;
+
+    @media ($medium-up) {
+      margin-left: spacing(32);
+    }
+  }
+
+  &__carousel-container--reverse {
+    flex-direction: row-reverse;
+  }
+}

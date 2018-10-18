@@ -17,17 +17,19 @@ const GenericHero = ({ block, z }) => {
   const classes = cx(
     styles[colorClass],
     {
+      pb4: !isDripOn,
       drip: isDripOn
     },
     'pb2 z-sub-nav'
   );
+
   return (
     <div style={{ zIndex: z }} className={classes}>
-      <div className="transition-slide-up container-width mx-auto pt4 px2 center">
+      <div className="transition-slide-up container-width mx-auto pt4 pb2 px2 center">
         <p className="block-headline pt3">{title}</p>
         {image1 ? (
           <Image
-            className="col-8 md-col-6 mt4"
+            className={cx(styles['GenericHero__image'], 'col-8 md-col-6 mt4')}
             alt={`${title} image`}
             src={contentfulImgUtil(
               get(image1, 'fields.file.url', ''),

@@ -6,7 +6,8 @@ export const getGenericPage = path => dispatch => {
     type: GET_GENERIC_PAGE,
     payload: Data.getEntries({
       content_type: 'genericPage',
-      'fields.slug': path
+      'fields.slug': path,
+      include: 4
     })
   });
 };

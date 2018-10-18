@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressCard
+    pressCard={
+        Object {
+            "linkUrl": "",
+            "logoImage": Object {
+              "data": "",
+            },
+            "quote": "",
+            "title": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Image
+          alt=" logo"
+          bg={false}
+          className=""
+          onImgLoad={[Function]}
+          src=""
+          style={Object {}}
+/>,
+        <span
+          className="carter text-peach center py3 mb4"
+>
+          ""
+</span>,
+        <Button
+          className="uppercase"
+          color="peach"
+          disabled={false}
+          fullWidth={false}
+          hover="shadow"
+          label="Read about it"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="primary-small"
+/>,
+      ],
+      "className": "m2 pt4 pb3 px3 flex flex-column justify-center items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "alt": " logo",
+          "bg": false,
+          "children": null,
+          "className": "",
+          "onImgLoad": [Function],
+          "src": "",
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "\\"\\"",
+          "className": "carter text-peach center py3 mb4",
+        },
+        "ref": null,
+        "rendered": "\\"\\"",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "uppercase",
+          "color": "peach",
+          "disabled": false,
+          "fullWidth": false,
+          "hover": "shadow",
+          "label": "Read about it",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "primary-small",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Image
+            alt=" logo"
+            bg={false}
+            className=""
+            onImgLoad={[Function]}
+            src=""
+            style={Object {}}
+/>,
+          <span
+            className="carter text-peach center py3 mb4"
+>
+            ""
+</span>,
+          <Button
+            className="uppercase"
+            color="peach"
+            disabled={false}
+            fullWidth={false}
+            hover="shadow"
+            label="Read about it"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="primary-small"
+/>,
+        ],
+        "className": "m2 pt4 pb3 px3 flex flex-column justify-center items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": " logo",
+            "bg": false,
+            "children": null,
+            "className": "",
+            "onImgLoad": [Function],
+            "src": "",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "\\"\\"",
+            "className": "carter text-peach center py3 mb4",
+          },
+          "ref": null,
+          "rendered": "\\"\\"",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "uppercase",
+            "color": "peach",
+            "disabled": false,
+            "fullWidth": false,
+            "hover": "shadow",
+            "label": "Read about it",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "primary-small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressCard
+    pressCard={
+        Object {
+            "linkUrl": "",
+            "logoImage": Object {
+              "data": "",
+            },
+            "quote": "",
+            "title": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Image
+          alt=" logo"
+          bg={false}
+          className=""
+          onImgLoad={[Function]}
+          src=""
+          style={Object {}}
+/>,
+        <span
+          className="carter text-peach center py3 mb4"
+>
+          ""
+</span>,
+        <Button
+          className="uppercase"
+          color="peach"
+          disabled={false}
+          fullWidth={false}
+          hover="shadow"
+          label="Read about it"
+          onClick={[Function]}
+          shadow={false}
+          to=""
+          type="button"
+          variant="primary-small"
+/>,
+      ],
+      "className": "m2 pt4 pb3 px3 flex flex-column justify-center items-center",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "alt": " logo",
+          "bg": false,
+          "children": null,
+          "className": "",
+          "onImgLoad": [Function],
+          "src": "",
+          "style": Object {},
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "\\"\\"",
+          "className": "carter text-peach center py3 mb4",
+        },
+        "ref": null,
+        "rendered": "\\"\\"",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": null,
+          "className": "uppercase",
+          "color": "peach",
+          "disabled": false,
+          "fullWidth": false,
+          "hover": "shadow",
+          "label": "Read about it",
+          "onClick": [Function],
+          "shadow": false,
+          "to": "",
+          "type": "button",
+          "variant": "primary-small",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Image
+            alt=" logo"
+            bg={false}
+            className=""
+            onImgLoad={[Function]}
+            src=""
+            style={Object {}}
+/>,
+          <span
+            className="carter text-peach center py3 mb4"
+>
+            ""
+</span>,
+          <Button
+            className="uppercase"
+            color="peach"
+            disabled={false}
+            fullWidth={false}
+            hover="shadow"
+            label="Read about it"
+            onClick={[Function]}
+            shadow={false}
+            to=""
+            type="button"
+            variant="primary-small"
+/>,
+        ],
+        "className": "m2 pt4 pb3 px3 flex flex-column justify-center items-center",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": " logo",
+            "bg": false,
+            "children": null,
+            "className": "",
+            "onImgLoad": [Function],
+            "src": "",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "\\"\\"",
+            "className": "carter text-peach center py3 mb4",
+          },
+          "ref": null,
+          "rendered": "\\"\\"",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": null,
+            "className": "uppercase",
+            "color": "peach",
+            "disabled": false,
+            "fullWidth": false,
+            "hover": "shadow",
+            "label": "Read about it",
+            "onClick": [Function],
+            "shadow": false,
+            "to": "",
+            "type": "button",
+            "variant": "primary-small",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -12,7 +12,11 @@ class GenericPageContainer extends ContainerBase {
     const { getGenericPage } = this.props.actions;
     const { path } = this.props.match;
 
-    return getGenericPage(path);
+    return getGenericPage(path).then(genericPage => {
+      return {
+        genericPage: get(genericPage, 'value')
+      };
+    });
   };
 }
 
@@ -22,6 +26,10 @@ const mapStateToProps = state => {
       state,
       'genericPage.genericPage.items[0].fields.contentBlocks',
       []
+    ),
+    pressItems: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.pressItems'
     )
   };
 };

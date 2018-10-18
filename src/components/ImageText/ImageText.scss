@@ -1,9 +1,34 @@
-@import 'settings';
+@import 'settings', 'typography';
 
 .ImageText {
+  @extend .text-madison-blue;
+
+  &--white {
+    @extend .bg-white;
+  }
+
   &--pink {
     @extend .bg-light-pink;
-    @extend .text-madison-blue;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--peach {
+    @extend .bg-light-peach;
+  }
+
+  &--yellow {
+    @extend .bg-marigold-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-bees-wax;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
   }
 
   &__container {
@@ -18,11 +43,17 @@
 
     .ImageText__image {
       min-width: spacing(65);
+      margin-top: spacing(12);
+
+      @media ($small-down) {
+        transform: translate(0, 0) !important;
+      }
 
       @media ($medium-up) {
         order: 1;
-        margin-left: spacing(20);
         align-self: flex-end;
+        margin-right: spacing(18);
+        margin-top: auto;
       }
     }
 
@@ -37,12 +68,13 @@
   &__container--reverse {
     .ImageText__image {
       min-width: spacing(65);
-      margin-left: auto;
+      margin-right: auto;
 
       @media ($medium-up) {
         order: 2;
-        margin-right: spacing(20);
         align-self: flex-end;
+        margin-right: 0;
+        margin-left: spacing(18);
       }
     }
 
@@ -53,5 +85,68 @@
         margin-right: spacing(18);
       }
     }
+  }
+
+  &__container--full-image {
+    margin: 0;
+
+    @media ($medium-up) {
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ImageText__text-content {
+      padding: 0 spacing(8);
+
+      @media ($medium-up) {
+        order: 1;
+        margin: 0;
+        padding: 0 spacing(16) 0 0;
+      }
+    }
+
+    .ImageText__text-content--reverse {
+      @media ($medium-up) {
+        padding: 0 0 0 spacing(16);
+      }
+    }
+  }
+
+  &__text {
+    h2 {
+      @extend .carter;
+      font-size: $font-6;
+      margin-bottom: spacing(10);
+    }
+
+    > h3 {
+      @extend .block-subheadline;
+      @extend .bold;
+      margin-bottom: spacing(2);
+    }
+
+    ul > li::before {
+      content: '- ';
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+  }
+}
+
+.ImageText__full-image {
+  flex-direction: column-reverse;
+
+  @media ($medium-up) {
+    flex-direction: row;
+  }
+}
+
+.ImageText__full-image--reverse {
+  @media ($medium-up) {
+    flex-direction: row-reverse;
   }
 }
