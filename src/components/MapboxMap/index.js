@@ -39,7 +39,10 @@ class MapboxMap extends Component {
       if (prevProps.featureIdZoomTo === this.props.featureIdZoomTo) {
         await this.setBounds();
 
-        if (this.props.featureIdZoomTo === null) {
+        if (
+          this.props.featureIdZoomTo === undefined ||
+          this.props.featureIdZoomTo === null
+        ) {
           this.zoomToBounds();
         } else {
           const feature = this.featureFromId(this.props.featureIdZoomTo);

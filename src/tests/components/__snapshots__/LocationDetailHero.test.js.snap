@@ -115,6 +115,62 @@ ShallowWrapper {
                 },
                 "type": "foo",
               },
+              Object {
+                "geometry": Object {
+                  "coordinates": Array [
+                    0,
+                    0,
+                  ],
+                  "type": "foo",
+                },
+                "properties": Object {
+                  "address1": "foo",
+                  "address2": "",
+                  "city": "foo",
+                  "contentBlocks": Array [],
+                  "coordinates": Object {
+                    "lat": 0,
+                    "lon": 0,
+                  },
+                  "currentOpenHours": "foo",
+                  "delivery": false,
+                  "hours": Object {
+                    "friday": "foo",
+                    "monday": "foo",
+                    "saturday": "foo",
+                    "sunday": "foo",
+                    "thursday": "foo",
+                    "tuesday": "foo",
+                    "wednesday": "foo",
+                  },
+                  "id": "foo",
+                  "image": "foo",
+                  "orderDeliveryLink": "foo",
+                  "phone": "foo",
+                  "region": "foo",
+                  "seasonal": true,
+                  "seasonalImage": "foo",
+                  "slug": "foo",
+                  "sortedHours": Array [
+                    Object {
+                      "foo": "foo",
+                    },
+                    Object {
+                      "foo": "foo",
+                    },
+                    Object {
+                      "foo": "foo",
+                    },
+                  ],
+                  "state": "foo",
+                  "stringifiedSearchableFields": Array [
+                    "foo",
+                  ],
+                  "title": "foo",
+                  "zip": "foo",
+                },
+                "type": "foo",
+              },
             ],
             "type": "foo",
           }
@@ -201,6 +257,13 @@ ShallowWrapper {
                                                                                   "icon": "seasonal-icon",
                                                                                   "name": "SeasonalLocations",
                                                                                 },
+                                                                                Object {
+                                                                                  "filter": Object {
+                                                                                    "ids": Array [],
+                                                                                  },
+                                                                                  "name": "unselectedLocation",
+                                                                                  "visible": false,
+                                                                                },
                                                                               ]
                                                             }
                                                             defaultIcon="year-round-icon"
@@ -244,6 +307,62 @@ ShallowWrapper {
                                                                                       "seasonalImage": "foo",
                                                                                       "slug": "foo",
                                                                                       "sortedHours": Array [
+                                                                                        Object {
+                                                                                          "foo": "foo",
+                                                                                        },
+                                                                                        Object {
+                                                                                          "foo": "foo",
+                                                                                        },
+                                                                                      ],
+                                                                                      "state": "foo",
+                                                                                      "stringifiedSearchableFields": Array [
+                                                                                        "foo",
+                                                                                      ],
+                                                                                      "title": "foo",
+                                                                                      "zip": "foo",
+                                                                                    },
+                                                                                    "type": "foo",
+                                                                                  },
+                                                                                  Object {
+                                                                                    "geometry": Object {
+                                                                                      "coordinates": Array [
+                                                                                        0,
+                                                                                        0,
+                                                                                      ],
+                                                                                      "type": "foo",
+                                                                                    },
+                                                                                    "properties": Object {
+                                                                                      "address1": "foo",
+                                                                                      "address2": "",
+                                                                                      "city": "foo",
+                                                                                      "contentBlocks": Array [],
+                                                                                      "coordinates": Object {
+                                                                                        "lat": 0,
+                                                                                        "lon": 0,
+                                                                                      },
+                                                                                      "currentOpenHours": "foo",
+                                                                                      "delivery": false,
+                                                                                      "hours": Object {
+                                                                                        "friday": "foo",
+                                                                                        "monday": "foo",
+                                                                                        "saturday": "foo",
+                                                                                        "sunday": "foo",
+                                                                                        "thursday": "foo",
+                                                                                        "tuesday": "foo",
+                                                                                        "wednesday": "foo",
+                                                                                      },
+                                                                                      "id": "foo",
+                                                                                      "image": "foo",
+                                                                                      "orderDeliveryLink": "foo",
+                                                                                      "phone": "foo",
+                                                                                      "region": "foo",
+                                                                                      "seasonal": true,
+                                                                                      "seasonalImage": "foo",
+                                                                                      "slug": "foo",
+                                                                                      "sortedHours": Array [
+                                                                                        Object {
+                                                                                          "foo": "foo",
+                                                                                        },
                                                                                         Object {
                                                                                           "foo": "foo",
                                                                                         },
@@ -342,6 +461,9 @@ ShallowWrapper {
 </div>,
       ],
       "className": "flex bg-bees-wax relative",
+      "style": Object {
+        "zIndex": undefined,
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -421,6 +543,13 @@ ShallowWrapper {
                                                                                                     "icon": "seasonal-icon",
                                                                                                     "name": "SeasonalLocations",
                                                                                                   },
+                                                                                                  Object {
+                                                                                                    "filter": Object {
+                                                                                                      "ids": Array [],
+                                                                                                    },
+                                                                                                    "name": "unselectedLocation",
+                                                                                                    "visible": false,
+                                                                                                  },
                                                                                                 ]
                                                                       }
                                                                       defaultIcon="year-round-icon"
@@ -464,6 +593,62 @@ ShallowWrapper {
                                                                                                         "seasonalImage": "foo",
                                                                                                         "slug": "foo",
                                                                                                         "sortedHours": Array [
+                                                                                                          Object {
+                                                                                                            "foo": "foo",
+                                                                                                          },
+                                                                                                          Object {
+                                                                                                            "foo": "foo",
+                                                                                                          },
+                                                                                                        ],
+                                                                                                        "state": "foo",
+                                                                                                        "stringifiedSearchableFields": Array [
+                                                                                                          "foo",
+                                                                                                        ],
+                                                                                                        "title": "foo",
+                                                                                                        "zip": "foo",
+                                                                                                      },
+                                                                                                      "type": "foo",
+                                                                                                    },
+                                                                                                    Object {
+                                                                                                      "geometry": Object {
+                                                                                                        "coordinates": Array [
+                                                                                                          0,
+                                                                                                          0,
+                                                                                                        ],
+                                                                                                        "type": "foo",
+                                                                                                      },
+                                                                                                      "properties": Object {
+                                                                                                        "address1": "foo",
+                                                                                                        "address2": "",
+                                                                                                        "city": "foo",
+                                                                                                        "contentBlocks": Array [],
+                                                                                                        "coordinates": Object {
+                                                                                                          "lat": 0,
+                                                                                                          "lon": 0,
+                                                                                                        },
+                                                                                                        "currentOpenHours": "foo",
+                                                                                                        "delivery": false,
+                                                                                                        "hours": Object {
+                                                                                                          "friday": "foo",
+                                                                                                          "monday": "foo",
+                                                                                                          "saturday": "foo",
+                                                                                                          "sunday": "foo",
+                                                                                                          "thursday": "foo",
+                                                                                                          "tuesday": "foo",
+                                                                                                          "wednesday": "foo",
+                                                                                                        },
+                                                                                                        "id": "foo",
+                                                                                                        "image": "foo",
+                                                                                                        "orderDeliveryLink": "foo",
+                                                                                                        "phone": "foo",
+                                                                                                        "region": "foo",
+                                                                                                        "seasonal": true,
+                                                                                                        "seasonalImage": "foo",
+                                                                                                        "slug": "foo",
+                                                                                                        "sortedHours": Array [
+                                                                                                          Object {
+                                                                                                            "foo": "foo",
+                                                                                                          },
                                                                                                           Object {
                                                                                                             "foo": "foo",
                                                                                                           },
@@ -622,6 +807,13 @@ ShallowWrapper {
                                                                                                               "icon": "seasonal-icon",
                                                                                                               "name": "SeasonalLocations",
                                                                                                             },
+                                                                                                            Object {
+                                                                                                              "filter": Object {
+                                                                                                                "ids": Array [],
+                                                                                                              },
+                                                                                                              "name": "unselectedLocation",
+                                                                                                              "visible": false,
+                                                                                                            },
                                                                                                           ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
@@ -665,6 +857,62 @@ ShallowWrapper {
                                                                                                                   "seasonalImage": "foo",
                                                                                                                   "slug": "foo",
                                                                                                                   "sortedHours": Array [
+                                                                                                                    Object {
+                                                                                                                      "foo": "foo",
+                                                                                                                    },
+                                                                                                                    Object {
+                                                                                                                      "foo": "foo",
+                                                                                                                    },
+                                                                                                                  ],
+                                                                                                                  "state": "foo",
+                                                                                                                  "stringifiedSearchableFields": Array [
+                                                                                                                    "foo",
+                                                                                                                  ],
+                                                                                                                  "title": "foo",
+                                                                                                                  "zip": "foo",
+                                                                                                                },
+                                                                                                                "type": "foo",
+                                                                                                              },
+                                                                                                              Object {
+                                                                                                                "geometry": Object {
+                                                                                                                  "coordinates": Array [
+                                                                                                                    0,
+                                                                                                                    0,
+                                                                                                                  ],
+                                                                                                                  "type": "foo",
+                                                                                                                },
+                                                                                                                "properties": Object {
+                                                                                                                  "address1": "foo",
+                                                                                                                  "address2": "",
+                                                                                                                  "city": "foo",
+                                                                                                                  "contentBlocks": Array [],
+                                                                                                                  "coordinates": Object {
+                                                                                                                    "lat": 0,
+                                                                                                                    "lon": 0,
+                                                                                                                  },
+                                                                                                                  "currentOpenHours": "foo",
+                                                                                                                  "delivery": false,
+                                                                                                                  "hours": Object {
+                                                                                                                    "friday": "foo",
+                                                                                                                    "monday": "foo",
+                                                                                                                    "saturday": "foo",
+                                                                                                                    "sunday": "foo",
+                                                                                                                    "thursday": "foo",
+                                                                                                                    "tuesday": "foo",
+                                                                                                                    "wednesday": "foo",
+                                                                                                                  },
+                                                                                                                  "id": "foo",
+                                                                                                                  "image": "foo",
+                                                                                                                  "orderDeliveryLink": "foo",
+                                                                                                                  "phone": "foo",
+                                                                                                                  "region": "foo",
+                                                                                                                  "seasonal": true,
+                                                                                                                  "seasonalImage": "foo",
+                                                                                                                  "slug": "foo",
+                                                                                                                  "sortedHours": Array [
+                                                                                                                    Object {
+                                                                                                                      "foo": "foo",
+                                                                                                                    },
                                                                                                                     Object {
                                                                                                                       "foo": "foo",
                                                                                                                     },
@@ -788,6 +1036,13 @@ ShallowWrapper {
                                                                                                                 "icon": "seasonal-icon",
                                                                                                                 "name": "SeasonalLocations",
                                                                                                               },
+                                                                                                              Object {
+                                                                                                                "filter": Object {
+                                                                                                                  "ids": Array [],
+                                                                                                                },
+                                                                                                                "name": "unselectedLocation",
+                                                                                                                "visible": false,
+                                                                                                              },
                                                                                                             ]
                                                                   }
                                                                   defaultIcon="year-round-icon"
@@ -831,6 +1086,62 @@ ShallowWrapper {
                                                                                                                     "seasonalImage": "foo",
                                                                                                                     "slug": "foo",
                                                                                                                     "sortedHours": Array [
+                                                                                                                      Object {
+                                                                                                                        "foo": "foo",
+                                                                                                                      },
+                                                                                                                      Object {
+                                                                                                                        "foo": "foo",
+                                                                                                                      },
+                                                                                                                    ],
+                                                                                                                    "state": "foo",
+                                                                                                                    "stringifiedSearchableFields": Array [
+                                                                                                                      "foo",
+                                                                                                                    ],
+                                                                                                                    "title": "foo",
+                                                                                                                    "zip": "foo",
+                                                                                                                  },
+                                                                                                                  "type": "foo",
+                                                                                                                },
+                                                                                                                Object {
+                                                                                                                  "geometry": Object {
+                                                                                                                    "coordinates": Array [
+                                                                                                                      0,
+                                                                                                                      0,
+                                                                                                                    ],
+                                                                                                                    "type": "foo",
+                                                                                                                  },
+                                                                                                                  "properties": Object {
+                                                                                                                    "address1": "foo",
+                                                                                                                    "address2": "",
+                                                                                                                    "city": "foo",
+                                                                                                                    "contentBlocks": Array [],
+                                                                                                                    "coordinates": Object {
+                                                                                                                      "lat": 0,
+                                                                                                                      "lon": 0,
+                                                                                                                    },
+                                                                                                                    "currentOpenHours": "foo",
+                                                                                                                    "delivery": false,
+                                                                                                                    "hours": Object {
+                                                                                                                      "friday": "foo",
+                                                                                                                      "monday": "foo",
+                                                                                                                      "saturday": "foo",
+                                                                                                                      "sunday": "foo",
+                                                                                                                      "thursday": "foo",
+                                                                                                                      "tuesday": "foo",
+                                                                                                                      "wednesday": "foo",
+                                                                                                                    },
+                                                                                                                    "id": "foo",
+                                                                                                                    "image": "foo",
+                                                                                                                    "orderDeliveryLink": "foo",
+                                                                                                                    "phone": "foo",
+                                                                                                                    "region": "foo",
+                                                                                                                    "seasonal": true,
+                                                                                                                    "seasonalImage": "foo",
+                                                                                                                    "slug": "foo",
+                                                                                                                    "sortedHours": Array [
+                                                                                                                      Object {
+                                                                                                                        "foo": "foo",
+                                                                                                                      },
                                                                                                                       Object {
                                                                                                                         "foo": "foo",
                                                                                                                       },
@@ -938,6 +1249,13 @@ ShallowWrapper {
                                                                                                           "icon": "seasonal-icon",
                                                                                                           "name": "SeasonalLocations",
                                                                                                         },
+                                                                                                        Object {
+                                                                                                          "filter": Object {
+                                                                                                            "ids": Array [],
+                                                                                                          },
+                                                                                                          "name": "unselectedLocation",
+                                                                                                          "visible": false,
+                                                                                                        },
                                                                                                       ]
                                                     }
                                                     defaultIcon="year-round-icon"
@@ -981,6 +1299,62 @@ ShallowWrapper {
                                                                                                               "seasonalImage": "foo",
                                                                                                               "slug": "foo",
                                                                                                               "sortedHours": Array [
+                                                                                                                Object {
+                                                                                                                  "foo": "foo",
+                                                                                                                },
+                                                                                                                Object {
+                                                                                                                  "foo": "foo",
+                                                                                                                },
+                                                                                                              ],
+                                                                                                              "state": "foo",
+                                                                                                              "stringifiedSearchableFields": Array [
+                                                                                                                "foo",
+                                                                                                              ],
+                                                                                                              "title": "foo",
+                                                                                                              "zip": "foo",
+                                                                                                            },
+                                                                                                            "type": "foo",
+                                                                                                          },
+                                                                                                          Object {
+                                                                                                            "geometry": Object {
+                                                                                                              "coordinates": Array [
+                                                                                                                0,
+                                                                                                                0,
+                                                                                                              ],
+                                                                                                              "type": "foo",
+                                                                                                            },
+                                                                                                            "properties": Object {
+                                                                                                              "address1": "foo",
+                                                                                                              "address2": "",
+                                                                                                              "city": "foo",
+                                                                                                              "contentBlocks": Array [],
+                                                                                                              "coordinates": Object {
+                                                                                                                "lat": 0,
+                                                                                                                "lon": 0,
+                                                                                                              },
+                                                                                                              "currentOpenHours": "foo",
+                                                                                                              "delivery": false,
+                                                                                                              "hours": Object {
+                                                                                                                "friday": "foo",
+                                                                                                                "monday": "foo",
+                                                                                                                "saturday": "foo",
+                                                                                                                "sunday": "foo",
+                                                                                                                "thursday": "foo",
+                                                                                                                "tuesday": "foo",
+                                                                                                                "wednesday": "foo",
+                                                                                                              },
+                                                                                                              "id": "foo",
+                                                                                                              "image": "foo",
+                                                                                                              "orderDeliveryLink": "foo",
+                                                                                                              "phone": "foo",
+                                                                                                              "region": "foo",
+                                                                                                              "seasonal": true,
+                                                                                                              "seasonalImage": "foo",
+                                                                                                              "slug": "foo",
+                                                                                                              "sortedHours": Array [
+                                                                                                                Object {
+                                                                                                                  "foo": "foo",
+                                                                                                                },
                                                                                                                 Object {
                                                                                                                   "foo": "foo",
                                                                                                                 },
@@ -1118,6 +1492,13 @@ ShallowWrapper {
                                                                                       "icon": "seasonal-icon",
                                                                                       "name": "SeasonalLocations",
                                                                                     },
+                                                                                    Object {
+                                                                                      "filter": Object {
+                                                                                        "ids": Array [],
+                                                                                      },
+                                                                                      "name": "unselectedLocation",
+                                                                                      "visible": false,
+                                                                                    },
                                                                                   ]
                             }
                             defaultIcon="year-round-icon"
@@ -1177,6 +1558,62 @@ ShallowWrapper {
                                                                                         },
                                                                                         "type": "foo",
                                                                                       },
+                                                                                      Object {
+                                                                                        "geometry": Object {
+                                                                                          "coordinates": Array [
+                                                                                            0,
+                                                                                            0,
+                                                                                          ],
+                                                                                          "type": "foo",
+                                                                                        },
+                                                                                        "properties": Object {
+                                                                                          "address1": "foo",
+                                                                                          "address2": "",
+                                                                                          "city": "foo",
+                                                                                          "contentBlocks": Array [],
+                                                                                          "coordinates": Object {
+                                                                                            "lat": 0,
+                                                                                            "lon": 0,
+                                                                                          },
+                                                                                          "currentOpenHours": "foo",
+                                                                                          "delivery": false,
+                                                                                          "hours": Object {
+                                                                                            "friday": "foo",
+                                                                                            "monday": "foo",
+                                                                                            "saturday": "foo",
+                                                                                            "sunday": "foo",
+                                                                                            "thursday": "foo",
+                                                                                            "tuesday": "foo",
+                                                                                            "wednesday": "foo",
+                                                                                          },
+                                                                                          "id": "foo",
+                                                                                          "image": "foo",
+                                                                                          "orderDeliveryLink": "foo",
+                                                                                          "phone": "foo",
+                                                                                          "region": "foo",
+                                                                                          "seasonal": true,
+                                                                                          "seasonalImage": "foo",
+                                                                                          "slug": "foo",
+                                                                                          "sortedHours": Array [
+                                                                                            Object {
+                                                                                              "foo": "foo",
+                                                                                            },
+                                                                                            Object {
+                                                                                              "foo": "foo",
+                                                                                            },
+                                                                                            Object {
+                                                                                              "foo": "foo",
+                                                                                            },
+                                                                                          ],
+                                                                                          "state": "foo",
+                                                                                          "stringifiedSearchableFields": Array [
+                                                                                            "foo",
+                                                                                          ],
+                                                                                          "title": "foo",
+                                                                                          "zip": "foo",
+                                                                                        },
+                                                                                        "type": "foo",
+                                                                                      },
                                                                                     ],
                                                                                     "type": "foo",
                                                                                   }
@@ -1210,6 +1647,13 @@ ShallowWrapper {
                                 },
                                 "icon": "seasonal-icon",
                                 "name": "SeasonalLocations",
+                              },
+                              Object {
+                                "filter": Object {
+                                  "ids": Array [],
+                                },
+                                "name": "unselectedLocation",
+                                "visible": false,
                               },
                             ],
                             "defaultIcon": "year-round-icon",
@@ -1252,6 +1696,62 @@ ShallowWrapper {
                                     "seasonalImage": "foo",
                                     "slug": "foo",
                                     "sortedHours": Array [
+                                      Object {
+                                        "foo": "foo",
+                                      },
+                                      Object {
+                                        "foo": "foo",
+                                      },
+                                    ],
+                                    "state": "foo",
+                                    "stringifiedSearchableFields": Array [
+                                      "foo",
+                                    ],
+                                    "title": "foo",
+                                    "zip": "foo",
+                                  },
+                                  "type": "foo",
+                                },
+                                Object {
+                                  "geometry": Object {
+                                    "coordinates": Array [
+                                      0,
+                                      0,
+                                    ],
+                                    "type": "foo",
+                                  },
+                                  "properties": Object {
+                                    "address1": "foo",
+                                    "address2": "",
+                                    "city": "foo",
+                                    "contentBlocks": Array [],
+                                    "coordinates": Object {
+                                      "lat": 0,
+                                      "lon": 0,
+                                    },
+                                    "currentOpenHours": "foo",
+                                    "delivery": false,
+                                    "hours": Object {
+                                      "friday": "foo",
+                                      "monday": "foo",
+                                      "saturday": "foo",
+                                      "sunday": "foo",
+                                      "thursday": "foo",
+                                      "tuesday": "foo",
+                                      "wednesday": "foo",
+                                    },
+                                    "id": "foo",
+                                    "image": "foo",
+                                    "orderDeliveryLink": "foo",
+                                    "phone": "foo",
+                                    "region": "foo",
+                                    "seasonal": true,
+                                    "seasonalImage": "foo",
+                                    "slug": "foo",
+                                    "sortedHours": Array [
+                                      Object {
+                                        "foo": "foo",
+                                      },
                                       Object {
                                         "foo": "foo",
                                       },
@@ -1617,6 +2117,13 @@ ShallowWrapper {
                                                                                                   "icon": "seasonal-icon",
                                                                                                   "name": "SeasonalLocations",
                                                                                                 },
+                                                                                                Object {
+                                                                                                  "filter": Object {
+                                                                                                    "ids": Array [],
+                                                                                                  },
+                                                                                                  "name": "unselectedLocation",
+                                                                                                  "visible": false,
+                                                                                                },
                                                                                               ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
@@ -1660,6 +2167,62 @@ ShallowWrapper {
                                                                                                       "seasonalImage": "foo",
                                                                                                       "slug": "foo",
                                                                                                       "sortedHours": Array [
+                                                                                                        Object {
+                                                                                                          "foo": "foo",
+                                                                                                        },
+                                                                                                        Object {
+                                                                                                          "foo": "foo",
+                                                                                                        },
+                                                                                                      ],
+                                                                                                      "state": "foo",
+                                                                                                      "stringifiedSearchableFields": Array [
+                                                                                                        "foo",
+                                                                                                      ],
+                                                                                                      "title": "foo",
+                                                                                                      "zip": "foo",
+                                                                                                    },
+                                                                                                    "type": "foo",
+                                                                                                  },
+                                                                                                  Object {
+                                                                                                    "geometry": Object {
+                                                                                                      "coordinates": Array [
+                                                                                                        0,
+                                                                                                        0,
+                                                                                                      ],
+                                                                                                      "type": "foo",
+                                                                                                    },
+                                                                                                    "properties": Object {
+                                                                                                      "address1": "foo",
+                                                                                                      "address2": "",
+                                                                                                      "city": "foo",
+                                                                                                      "contentBlocks": Array [],
+                                                                                                      "coordinates": Object {
+                                                                                                        "lat": 0,
+                                                                                                        "lon": 0,
+                                                                                                      },
+                                                                                                      "currentOpenHours": "foo",
+                                                                                                      "delivery": false,
+                                                                                                      "hours": Object {
+                                                                                                        "friday": "foo",
+                                                                                                        "monday": "foo",
+                                                                                                        "saturday": "foo",
+                                                                                                        "sunday": "foo",
+                                                                                                        "thursday": "foo",
+                                                                                                        "tuesday": "foo",
+                                                                                                        "wednesday": "foo",
+                                                                                                      },
+                                                                                                      "id": "foo",
+                                                                                                      "image": "foo",
+                                                                                                      "orderDeliveryLink": "foo",
+                                                                                                      "phone": "foo",
+                                                                                                      "region": "foo",
+                                                                                                      "seasonal": true,
+                                                                                                      "seasonalImage": "foo",
+                                                                                                      "slug": "foo",
+                                                                                                      "sortedHours": Array [
+                                                                                                        Object {
+                                                                                                          "foo": "foo",
+                                                                                                        },
                                                                                                         Object {
                                                                                                           "foo": "foo",
                                                                                                         },
@@ -1758,6 +2321,9 @@ ShallowWrapper {
 </div>,
         ],
         "className": "flex bg-bees-wax relative",
+        "style": Object {
+          "zIndex": undefined,
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -1837,6 +2403,13 @@ ShallowWrapper {
                                                                                                                   "icon": "seasonal-icon",
                                                                                                                   "name": "SeasonalLocations",
                                                                                                                 },
+                                                                                                                Object {
+                                                                                                                  "filter": Object {
+                                                                                                                    "ids": Array [],
+                                                                                                                  },
+                                                                                                                  "name": "unselectedLocation",
+                                                                                                                  "visible": false,
+                                                                                                                },
                                                                                                               ]
                                                                                 }
                                                                                 defaultIcon="year-round-icon"
@@ -1880,6 +2453,62 @@ ShallowWrapper {
                                                                                                                       "seasonalImage": "foo",
                                                                                                                       "slug": "foo",
                                                                                                                       "sortedHours": Array [
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
+                                                                                                                      ],
+                                                                                                                      "state": "foo",
+                                                                                                                      "stringifiedSearchableFields": Array [
+                                                                                                                        "foo",
+                                                                                                                      ],
+                                                                                                                      "title": "foo",
+                                                                                                                      "zip": "foo",
+                                                                                                                    },
+                                                                                                                    "type": "foo",
+                                                                                                                  },
+                                                                                                                  Object {
+                                                                                                                    "geometry": Object {
+                                                                                                                      "coordinates": Array [
+                                                                                                                        0,
+                                                                                                                        0,
+                                                                                                                      ],
+                                                                                                                      "type": "foo",
+                                                                                                                    },
+                                                                                                                    "properties": Object {
+                                                                                                                      "address1": "foo",
+                                                                                                                      "address2": "",
+                                                                                                                      "city": "foo",
+                                                                                                                      "contentBlocks": Array [],
+                                                                                                                      "coordinates": Object {
+                                                                                                                        "lat": 0,
+                                                                                                                        "lon": 0,
+                                                                                                                      },
+                                                                                                                      "currentOpenHours": "foo",
+                                                                                                                      "delivery": false,
+                                                                                                                      "hours": Object {
+                                                                                                                        "friday": "foo",
+                                                                                                                        "monday": "foo",
+                                                                                                                        "saturday": "foo",
+                                                                                                                        "sunday": "foo",
+                                                                                                                        "thursday": "foo",
+                                                                                                                        "tuesday": "foo",
+                                                                                                                        "wednesday": "foo",
+                                                                                                                      },
+                                                                                                                      "id": "foo",
+                                                                                                                      "image": "foo",
+                                                                                                                      "orderDeliveryLink": "foo",
+                                                                                                                      "phone": "foo",
+                                                                                                                      "region": "foo",
+                                                                                                                      "seasonal": true,
+                                                                                                                      "seasonalImage": "foo",
+                                                                                                                      "slug": "foo",
+                                                                                                                      "sortedHours": Array [
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
                                                                                                                         Object {
                                                                                                                           "foo": "foo",
                                                                                                                         },
@@ -2038,6 +2667,13 @@ ShallowWrapper {
                                                                                                                           "icon": "seasonal-icon",
                                                                                                                           "name": "SeasonalLocations",
                                                                                                                         },
+                                                                                                                        Object {
+                                                                                                                          "filter": Object {
+                                                                                                                            "ids": Array [],
+                                                                                                                          },
+                                                                                                                          "name": "unselectedLocation",
+                                                                                                                          "visible": false,
+                                                                                                                        },
                                                                                                                       ]
                                                                                 }
                                                                                 defaultIcon="year-round-icon"
@@ -2081,6 +2717,62 @@ ShallowWrapper {
                                                                                                                               "seasonalImage": "foo",
                                                                                                                               "slug": "foo",
                                                                                                                               "sortedHours": Array [
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
+                                                                                                                              ],
+                                                                                                                              "state": "foo",
+                                                                                                                              "stringifiedSearchableFields": Array [
+                                                                                                                                "foo",
+                                                                                                                              ],
+                                                                                                                              "title": "foo",
+                                                                                                                              "zip": "foo",
+                                                                                                                            },
+                                                                                                                            "type": "foo",
+                                                                                                                          },
+                                                                                                                          Object {
+                                                                                                                            "geometry": Object {
+                                                                                                                              "coordinates": Array [
+                                                                                                                                0,
+                                                                                                                                0,
+                                                                                                                              ],
+                                                                                                                              "type": "foo",
+                                                                                                                            },
+                                                                                                                            "properties": Object {
+                                                                                                                              "address1": "foo",
+                                                                                                                              "address2": "",
+                                                                                                                              "city": "foo",
+                                                                                                                              "contentBlocks": Array [],
+                                                                                                                              "coordinates": Object {
+                                                                                                                                "lat": 0,
+                                                                                                                                "lon": 0,
+                                                                                                                              },
+                                                                                                                              "currentOpenHours": "foo",
+                                                                                                                              "delivery": false,
+                                                                                                                              "hours": Object {
+                                                                                                                                "friday": "foo",
+                                                                                                                                "monday": "foo",
+                                                                                                                                "saturday": "foo",
+                                                                                                                                "sunday": "foo",
+                                                                                                                                "thursday": "foo",
+                                                                                                                                "tuesday": "foo",
+                                                                                                                                "wednesday": "foo",
+                                                                                                                              },
+                                                                                                                              "id": "foo",
+                                                                                                                              "image": "foo",
+                                                                                                                              "orderDeliveryLink": "foo",
+                                                                                                                              "phone": "foo",
+                                                                                                                              "region": "foo",
+                                                                                                                              "seasonal": true,
+                                                                                                                              "seasonalImage": "foo",
+                                                                                                                              "slug": "foo",
+                                                                                                                              "sortedHours": Array [
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
                                                                                                                                 Object {
                                                                                                                                   "foo": "foo",
                                                                                                                                 },
@@ -2204,6 +2896,13 @@ ShallowWrapper {
                                                                                                                           "icon": "seasonal-icon",
                                                                                                                           "name": "SeasonalLocations",
                                                                                                                         },
+                                                                                                                        Object {
+                                                                                                                          "filter": Object {
+                                                                                                                            "ids": Array [],
+                                                                                                                          },
+                                                                                                                          "name": "unselectedLocation",
+                                                                                                                          "visible": false,
+                                                                                                                        },
                                                                                                                       ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
@@ -2247,6 +2946,62 @@ ShallowWrapper {
                                                                                                                               "seasonalImage": "foo",
                                                                                                                               "slug": "foo",
                                                                                                                               "sortedHours": Array [
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
+                                                                                                                              ],
+                                                                                                                              "state": "foo",
+                                                                                                                              "stringifiedSearchableFields": Array [
+                                                                                                                                "foo",
+                                                                                                                              ],
+                                                                                                                              "title": "foo",
+                                                                                                                              "zip": "foo",
+                                                                                                                            },
+                                                                                                                            "type": "foo",
+                                                                                                                          },
+                                                                                                                          Object {
+                                                                                                                            "geometry": Object {
+                                                                                                                              "coordinates": Array [
+                                                                                                                                0,
+                                                                                                                                0,
+                                                                                                                              ],
+                                                                                                                              "type": "foo",
+                                                                                                                            },
+                                                                                                                            "properties": Object {
+                                                                                                                              "address1": "foo",
+                                                                                                                              "address2": "",
+                                                                                                                              "city": "foo",
+                                                                                                                              "contentBlocks": Array [],
+                                                                                                                              "coordinates": Object {
+                                                                                                                                "lat": 0,
+                                                                                                                                "lon": 0,
+                                                                                                                              },
+                                                                                                                              "currentOpenHours": "foo",
+                                                                                                                              "delivery": false,
+                                                                                                                              "hours": Object {
+                                                                                                                                "friday": "foo",
+                                                                                                                                "monday": "foo",
+                                                                                                                                "saturday": "foo",
+                                                                                                                                "sunday": "foo",
+                                                                                                                                "thursday": "foo",
+                                                                                                                                "tuesday": "foo",
+                                                                                                                                "wednesday": "foo",
+                                                                                                                              },
+                                                                                                                              "id": "foo",
+                                                                                                                              "image": "foo",
+                                                                                                                              "orderDeliveryLink": "foo",
+                                                                                                                              "phone": "foo",
+                                                                                                                              "region": "foo",
+                                                                                                                              "seasonal": true,
+                                                                                                                              "seasonalImage": "foo",
+                                                                                                                              "slug": "foo",
+                                                                                                                              "sortedHours": Array [
+                                                                                                                                Object {
+                                                                                                                                  "foo": "foo",
+                                                                                                                                },
                                                                                                                                 Object {
                                                                                                                                   "foo": "foo",
                                                                                                                                 },
@@ -2354,6 +3109,13 @@ ShallowWrapper {
                                                                                                                   "icon": "seasonal-icon",
                                                                                                                   "name": "SeasonalLocations",
                                                                                                                 },
+                                                                                                                Object {
+                                                                                                                  "filter": Object {
+                                                                                                                    "ids": Array [],
+                                                                                                                  },
+                                                                                                                  "name": "unselectedLocation",
+                                                                                                                  "visible": false,
+                                                                                                                },
                                                                                                               ]
                                                         }
                                                         defaultIcon="year-round-icon"
@@ -2397,6 +3159,62 @@ ShallowWrapper {
                                                                                                                       "seasonalImage": "foo",
                                                                                                                       "slug": "foo",
                                                                                                                       "sortedHours": Array [
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
+                                                                                                                      ],
+                                                                                                                      "state": "foo",
+                                                                                                                      "stringifiedSearchableFields": Array [
+                                                                                                                        "foo",
+                                                                                                                      ],
+                                                                                                                      "title": "foo",
+                                                                                                                      "zip": "foo",
+                                                                                                                    },
+                                                                                                                    "type": "foo",
+                                                                                                                  },
+                                                                                                                  Object {
+                                                                                                                    "geometry": Object {
+                                                                                                                      "coordinates": Array [
+                                                                                                                        0,
+                                                                                                                        0,
+                                                                                                                      ],
+                                                                                                                      "type": "foo",
+                                                                                                                    },
+                                                                                                                    "properties": Object {
+                                                                                                                      "address1": "foo",
+                                                                                                                      "address2": "",
+                                                                                                                      "city": "foo",
+                                                                                                                      "contentBlocks": Array [],
+                                                                                                                      "coordinates": Object {
+                                                                                                                        "lat": 0,
+                                                                                                                        "lon": 0,
+                                                                                                                      },
+                                                                                                                      "currentOpenHours": "foo",
+                                                                                                                      "delivery": false,
+                                                                                                                      "hours": Object {
+                                                                                                                        "friday": "foo",
+                                                                                                                        "monday": "foo",
+                                                                                                                        "saturday": "foo",
+                                                                                                                        "sunday": "foo",
+                                                                                                                        "thursday": "foo",
+                                                                                                                        "tuesday": "foo",
+                                                                                                                        "wednesday": "foo",
+                                                                                                                      },
+                                                                                                                      "id": "foo",
+                                                                                                                      "image": "foo",
+                                                                                                                      "orderDeliveryLink": "foo",
+                                                                                                                      "phone": "foo",
+                                                                                                                      "region": "foo",
+                                                                                                                      "seasonal": true,
+                                                                                                                      "seasonalImage": "foo",
+                                                                                                                      "slug": "foo",
+                                                                                                                      "sortedHours": Array [
+                                                                                                                        Object {
+                                                                                                                          "foo": "foo",
+                                                                                                                        },
                                                                                                                         Object {
                                                                                                                           "foo": "foo",
                                                                                                                         },
@@ -2534,6 +3352,13 @@ ShallowWrapper {
                                                                                             "icon": "seasonal-icon",
                                                                                             "name": "SeasonalLocations",
                                                                                           },
+                                                                                          Object {
+                                                                                            "filter": Object {
+                                                                                              "ids": Array [],
+                                                                                            },
+                                                                                            "name": "unselectedLocation",
+                                                                                            "visible": false,
+                                                                                          },
                                                                                         ]
                               }
                               defaultIcon="year-round-icon"
@@ -2593,6 +3418,62 @@ ShallowWrapper {
                                                                                               },
                                                                                               "type": "foo",
                                                                                             },
+                                                                                            Object {
+                                                                                              "geometry": Object {
+                                                                                                "coordinates": Array [
+                                                                                                  0,
+                                                                                                  0,
+                                                                                                ],
+                                                                                                "type": "foo",
+                                                                                              },
+                                                                                              "properties": Object {
+                                                                                                "address1": "foo",
+                                                                                                "address2": "",
+                                                                                                "city": "foo",
+                                                                                                "contentBlocks": Array [],
+                                                                                                "coordinates": Object {
+                                                                                                  "lat": 0,
+                                                                                                  "lon": 0,
+                                                                                                },
+                                                                                                "currentOpenHours": "foo",
+                                                                                                "delivery": false,
+                                                                                                "hours": Object {
+                                                                                                  "friday": "foo",
+                                                                                                  "monday": "foo",
+                                                                                                  "saturday": "foo",
+                                                                                                  "sunday": "foo",
+                                                                                                  "thursday": "foo",
+                                                                                                  "tuesday": "foo",
+                                                                                                  "wednesday": "foo",
+                                                                                                },
+                                                                                                "id": "foo",
+                                                                                                "image": "foo",
+                                                                                                "orderDeliveryLink": "foo",
+                                                                                                "phone": "foo",
+                                                                                                "region": "foo",
+                                                                                                "seasonal": true,
+                                                                                                "seasonalImage": "foo",
+                                                                                                "slug": "foo",
+                                                                                                "sortedHours": Array [
+                                                                                                  Object {
+                                                                                                    "foo": "foo",
+                                                                                                  },
+                                                                                                  Object {
+                                                                                                    "foo": "foo",
+                                                                                                  },
+                                                                                                  Object {
+                                                                                                    "foo": "foo",
+                                                                                                  },
+                                                                                                ],
+                                                                                                "state": "foo",
+                                                                                                "stringifiedSearchableFields": Array [
+                                                                                                  "foo",
+                                                                                                ],
+                                                                                                "title": "foo",
+                                                                                                "zip": "foo",
+                                                                                              },
+                                                                                              "type": "foo",
+                                                                                            },
                                                                                           ],
                                                                                           "type": "foo",
                                                                                         }
@@ -2626,6 +3507,13 @@ ShallowWrapper {
                                   },
                                   "icon": "seasonal-icon",
                                   "name": "SeasonalLocations",
+                                },
+                                Object {
+                                  "filter": Object {
+                                    "ids": Array [],
+                                  },
+                                  "name": "unselectedLocation",
+                                  "visible": false,
                                 },
                               ],
                               "defaultIcon": "year-round-icon",
@@ -2668,6 +3556,62 @@ ShallowWrapper {
                                       "seasonalImage": "foo",
                                       "slug": "foo",
                                       "sortedHours": Array [
+                                        Object {
+                                          "foo": "foo",
+                                        },
+                                        Object {
+                                          "foo": "foo",
+                                        },
+                                      ],
+                                      "state": "foo",
+                                      "stringifiedSearchableFields": Array [
+                                        "foo",
+                                      ],
+                                      "title": "foo",
+                                      "zip": "foo",
+                                    },
+                                    "type": "foo",
+                                  },
+                                  Object {
+                                    "geometry": Object {
+                                      "coordinates": Array [
+                                        0,
+                                        0,
+                                      ],
+                                      "type": "foo",
+                                    },
+                                    "properties": Object {
+                                      "address1": "foo",
+                                      "address2": "",
+                                      "city": "foo",
+                                      "contentBlocks": Array [],
+                                      "coordinates": Object {
+                                        "lat": 0,
+                                        "lon": 0,
+                                      },
+                                      "currentOpenHours": "foo",
+                                      "delivery": false,
+                                      "hours": Object {
+                                        "friday": "foo",
+                                        "monday": "foo",
+                                        "saturday": "foo",
+                                        "sunday": "foo",
+                                        "thursday": "foo",
+                                        "tuesday": "foo",
+                                        "wednesday": "foo",
+                                      },
+                                      "id": "foo",
+                                      "image": "foo",
+                                      "orderDeliveryLink": "foo",
+                                      "phone": "foo",
+                                      "region": "foo",
+                                      "seasonal": true,
+                                      "seasonalImage": "foo",
+                                      "slug": "foo",
+                                      "sortedHours": Array [
+                                        Object {
+                                          "foo": "foo",
+                                        },
                                         Object {
                                           "foo": "foo",
                                         },
@@ -3024,13 +3968,7 @@ ShallowWrapper {
             "zip": "",
           }
     }
-    locationGeoJSON={
-        Object {
-            "features": Array [
-              undefined,
-            ],
-          }
-    }
+    locationGeoJSON={Object {}}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -3105,16 +4043,17 @@ ShallowWrapper {
                                                                                   "icon": "seasonal-icon",
                                                                                   "name": "SeasonalLocations",
                                                                                 },
+                                                                                Object {
+                                                                                  "filter": Object {
+                                                                                    "ids": Array [],
+                                                                                  },
+                                                                                  "name": "unselectedLocation",
+                                                                                  "visible": false,
+                                                                                },
                                                                               ]
                                                             }
                                                             defaultIcon="year-round-icon"
-                                                            featureCollection={
-                                                                      Object {
-                                                                                "features": Array [
-                                                                                  undefined,
-                                                                                ],
-                                                                              }
-                                                            }
+                                                            featureCollection={Object {}}
                                                             hoverFade={false}
                                                             iconSize={0.8}
                                                             mapPadding={10}
@@ -3179,6 +4118,9 @@ ShallowWrapper {
 </div>,
       ],
       "className": "flex bg-bees-wax relative",
+      "style": Object {
+        "zIndex": undefined,
+      },
     },
     "ref": null,
     "rendered": Array [
@@ -3251,16 +4193,17 @@ ShallowWrapper {
                                                                                                     "icon": "seasonal-icon",
                                                                                                     "name": "SeasonalLocations",
                                                                                                   },
+                                                                                                  Object {
+                                                                                                    "filter": Object {
+                                                                                                      "ids": Array [],
+                                                                                                    },
+                                                                                                    "name": "unselectedLocation",
+                                                                                                    "visible": false,
+                                                                                                  },
                                                                                                 ]
                                                                       }
                                                                       defaultIcon="year-round-icon"
-                                                                      featureCollection={
-                                                                                    Object {
-                                                                                                  "features": Array [
-                                                                                                    undefined,
-                                                                                                  ],
-                                                                                                }
-                                                                      }
+                                                                      featureCollection={Object {}}
                                                                       hoverFade={false}
                                                                       iconSize={0.8}
                                                                       mapPadding={10}
@@ -3378,16 +4321,17 @@ ShallowWrapper {
                                                                                                               "icon": "seasonal-icon",
                                                                                                               "name": "SeasonalLocations",
                                                                                                             },
+                                                                                                            Object {
+                                                                                                              "filter": Object {
+                                                                                                                "ids": Array [],
+                                                                                                              },
+                                                                                                              "name": "unselectedLocation",
+                                                                                                              "visible": false,
+                                                                                                            },
                                                                                                           ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
-                                                                        featureCollection={
-                                                                                          Object {
-                                                                                                            "features": Array [
-                                                                                                              undefined,
-                                                                                                            ],
-                                                                                                          }
-                                                                        }
+                                                                        featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
                                                                         mapPadding={10}
@@ -3472,16 +4416,17 @@ ShallowWrapper {
                                                                                                                 "icon": "seasonal-icon",
                                                                                                                 "name": "SeasonalLocations",
                                                                                                               },
+                                                                                                              Object {
+                                                                                                                "filter": Object {
+                                                                                                                  "ids": Array [],
+                                                                                                                },
+                                                                                                                "name": "unselectedLocation",
+                                                                                                                "visible": false,
+                                                                                                              },
                                                                                                             ]
                                                                   }
                                                                   defaultIcon="year-round-icon"
-                                                                  featureCollection={
-                                                                                        Object {
-                                                                                                              "features": Array [
-                                                                                                                undefined,
-                                                                                                              ],
-                                                                                                            }
-                                                                  }
+                                                                  featureCollection={Object {}}
                                                                   hoverFade={false}
                                                                   iconSize={0.8}
                                                                   mapPadding={10}
@@ -3550,16 +4495,17 @@ ShallowWrapper {
                                                                                                           "icon": "seasonal-icon",
                                                                                                           "name": "SeasonalLocations",
                                                                                                         },
+                                                                                                        Object {
+                                                                                                          "filter": Object {
+                                                                                                            "ids": Array [],
+                                                                                                          },
+                                                                                                          "name": "unselectedLocation",
+                                                                                                          "visible": false,
+                                                                                                        },
                                                                                                       ]
                                                     }
                                                     defaultIcon="year-round-icon"
-                                                    featureCollection={
-                                                                              Object {
-                                                                                                        "features": Array [
-                                                                                                          undefined,
-                                                                                                        ],
-                                                                                                      }
-                                                    }
+                                                    featureCollection={Object {}}
                                                     hoverFade={false}
                                                     iconSize={0.8}
                                                     mapPadding={10}
@@ -3662,16 +4608,17 @@ ShallowWrapper {
                                                                                       "icon": "seasonal-icon",
                                                                                       "name": "SeasonalLocations",
                                                                                     },
+                                                                                    Object {
+                                                                                      "filter": Object {
+                                                                                        "ids": Array [],
+                                                                                      },
+                                                                                      "name": "unselectedLocation",
+                                                                                      "visible": false,
+                                                                                    },
                                                                                   ]
                             }
                             defaultIcon="year-round-icon"
-                            featureCollection={
-                                                        Object {
-                                                                                    "features": Array [
-                                                                                      undefined,
-                                                                                    ],
-                                                                                  }
-                            }
+                            featureCollection={Object {}}
                             hoverFade={false}
                             iconSize={0.8}
                             mapPadding={10}
@@ -3704,13 +4651,16 @@ ShallowWrapper {
                                 "icon": "seasonal-icon",
                                 "name": "SeasonalLocations",
                               },
+                              Object {
+                                "filter": Object {
+                                  "ids": Array [],
+                                },
+                                "name": "unselectedLocation",
+                                "visible": false,
+                              },
                             ],
                             "defaultIcon": "year-round-icon",
-                            "featureCollection": Object {
-                              "features": Array [
-                                undefined,
-                              ],
-                            },
+                            "featureCollection": Object {},
                             "hoverFade": false,
                             "iconSize": 0.8,
                             "mapPadding": 10,
@@ -3983,16 +4933,17 @@ ShallowWrapper {
                                                                                                   "icon": "seasonal-icon",
                                                                                                   "name": "SeasonalLocations",
                                                                                                 },
+                                                                                                Object {
+                                                                                                  "filter": Object {
+                                                                                                    "ids": Array [],
+                                                                                                  },
+                                                                                                  "name": "unselectedLocation",
+                                                                                                  "visible": false,
+                                                                                                },
                                                                                               ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
-                                                                        featureCollection={
-                                                                                    Object {
-                                                                                                "features": Array [
-                                                                                                  undefined,
-                                                                                                ],
-                                                                                              }
-                                                                        }
+                                                                        featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
                                                                         mapPadding={10}
@@ -4057,6 +5008,9 @@ ShallowWrapper {
 </div>,
         ],
         "className": "flex bg-bees-wax relative",
+        "style": Object {
+          "zIndex": undefined,
+        },
       },
       "ref": null,
       "rendered": Array [
@@ -4129,16 +5083,17 @@ ShallowWrapper {
                                                                                                                   "icon": "seasonal-icon",
                                                                                                                   "name": "SeasonalLocations",
                                                                                                                 },
+                                                                                                                Object {
+                                                                                                                  "filter": Object {
+                                                                                                                    "ids": Array [],
+                                                                                                                  },
+                                                                                                                  "name": "unselectedLocation",
+                                                                                                                  "visible": false,
+                                                                                                                },
                                                                                                               ]
                                                                                 }
                                                                                 defaultIcon="year-round-icon"
-                                                                                featureCollection={
-                                                                                                Object {
-                                                                                                                "features": Array [
-                                                                                                                  undefined,
-                                                                                                                ],
-                                                                                                              }
-                                                                                }
+                                                                                featureCollection={Object {}}
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
                                                                                 mapPadding={10}
@@ -4256,16 +5211,17 @@ ShallowWrapper {
                                                                                                                           "icon": "seasonal-icon",
                                                                                                                           "name": "SeasonalLocations",
                                                                                                                         },
+                                                                                                                        Object {
+                                                                                                                          "filter": Object {
+                                                                                                                            "ids": Array [],
+                                                                                                                          },
+                                                                                                                          "name": "unselectedLocation",
+                                                                                                                          "visible": false,
+                                                                                                                        },
                                                                                                                       ]
                                                                                 }
                                                                                 defaultIcon="year-round-icon"
-                                                                                featureCollection={
-                                                                                                    Object {
-                                                                                                                        "features": Array [
-                                                                                                                          undefined,
-                                                                                                                        ],
-                                                                                                                      }
-                                                                                }
+                                                                                featureCollection={Object {}}
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
                                                                                 mapPadding={10}
@@ -4350,16 +5306,17 @@ ShallowWrapper {
                                                                                                                           "icon": "seasonal-icon",
                                                                                                                           "name": "SeasonalLocations",
                                                                                                                         },
+                                                                                                                        Object {
+                                                                                                                          "filter": Object {
+                                                                                                                            "ids": Array [],
+                                                                                                                          },
+                                                                                                                          "name": "unselectedLocation",
+                                                                                                                          "visible": false,
+                                                                                                                        },
                                                                                                                       ]
                                                                         }
                                                                         defaultIcon="year-round-icon"
-                                                                        featureCollection={
-                                                                                                Object {
-                                                                                                                        "features": Array [
-                                                                                                                          undefined,
-                                                                                                                        ],
-                                                                                                                      }
-                                                                        }
+                                                                        featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
                                                                         mapPadding={10}
@@ -4428,16 +5385,17 @@ ShallowWrapper {
                                                                                                                   "icon": "seasonal-icon",
                                                                                                                   "name": "SeasonalLocations",
                                                                                                                 },
+                                                                                                                Object {
+                                                                                                                  "filter": Object {
+                                                                                                                    "ids": Array [],
+                                                                                                                  },
+                                                                                                                  "name": "unselectedLocation",
+                                                                                                                  "visible": false,
+                                                                                                                },
                                                                                                               ]
                                                         }
                                                         defaultIcon="year-round-icon"
-                                                        featureCollection={
-                                                                                    Object {
-                                                                                                                "features": Array [
-                                                                                                                  undefined,
-                                                                                                                ],
-                                                                                                              }
-                                                        }
+                                                        featureCollection={Object {}}
                                                         hoverFade={false}
                                                         iconSize={0.8}
                                                         mapPadding={10}
@@ -4540,16 +5498,17 @@ ShallowWrapper {
                                                                                             "icon": "seasonal-icon",
                                                                                             "name": "SeasonalLocations",
                                                                                           },
+                                                                                          Object {
+                                                                                            "filter": Object {
+                                                                                              "ids": Array [],
+                                                                                            },
+                                                                                            "name": "unselectedLocation",
+                                                                                            "visible": false,
+                                                                                          },
                                                                                         ]
                               }
                               defaultIcon="year-round-icon"
-                              featureCollection={
-                                                            Object {
-                                                                                          "features": Array [
-                                                                                            undefined,
-                                                                                          ],
-                                                                                        }
-                              }
+                              featureCollection={Object {}}
                               hoverFade={false}
                               iconSize={0.8}
                               mapPadding={10}
@@ -4582,13 +5541,16 @@ ShallowWrapper {
                                   "icon": "seasonal-icon",
                                   "name": "SeasonalLocations",
                                 },
+                                Object {
+                                  "filter": Object {
+                                    "ids": Array [],
+                                  },
+                                  "name": "unselectedLocation",
+                                  "visible": false,
+                                },
                               ],
                               "defaultIcon": "year-round-icon",
-                              "featureCollection": Object {
-                                "features": Array [
-                                  undefined,
-                                ],
-                              },
+                              "featureCollection": Object {},
                               "hoverFade": false,
                               "iconSize": 0.8,
                               "mapPadding": 10,

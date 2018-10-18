@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
 import getLocationCity from 'utils/getLocationCity';
@@ -11,15 +11,9 @@ import styles from './LocationDetailHero.scss';
 import { Button, FormFlash } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 
-class LocationDetailHero extends PureComponent {
+class LocationDetailHero extends Component {
   render() {
     const { location, locationGeoJSON, events, z } = this.props;
-
-    locationGeoJSON.features = [
-      get(locationGeoJSON, 'features', []).find(
-        feature => get(feature, 'properties.id', '') === location.id
-      )
-    ];
 
     const eventId = get(
       events.find(event => event.locationId === location.id),
@@ -100,6 +94,26 @@ class LocationDetailHero extends PureComponent {
                           ids: location.seasonal ? [location.id] : []
                         },
                         icon: 'seasonal-icon'
+                      },
+                      {
+                        name: 'unselectedLocation',
+                        filter: {
+                          ids: get(locationGeoJSON, 'features', []).reduce(
+                            (filteredIds, feature) => {
+                              if (
+                                get(feature, 'properties.id', '') !==
+                                location.id
+                              ) {
+                                filteredIds.push(
+                                  get(feature, 'properties.id', '')
+                                );
+                              }
+                              return filteredIds;
+                            },
+                            []
+                          )
+                        },
+                        visible: false
                       }
                     ]}
                   />

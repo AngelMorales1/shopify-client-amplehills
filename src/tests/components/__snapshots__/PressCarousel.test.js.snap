@@ -128,7 +128,7 @@ ShallowWrapper {
         z={0}
 >
         <div
-                className="bg-white p3 flex flex-column justify-center items-center"
+                className="bg-white p3 flex flex-column justify-between items-center"
         >
                 <Image
                         alt=" logo"
@@ -188,7 +188,7 @@ ShallowWrapper {
         "buttonLink": "foo",
         "children": Array [
           <div
-            className="bg-white p3 flex flex-column justify-center items-center"
+            className="bg-white p3 flex flex-column justify-between items-center"
 >
             <Image
                         alt=" logo"
@@ -258,7 +258,7 @@ ShallowWrapper {
                 variant="primary-small"
 />,
             ],
-            "className": "bg-white p3 flex flex-column justify-center items-center",
+            "className": "bg-white p3 flex flex-column justify-between items-center",
           },
           "ref": null,
           "rendered": Array [
@@ -361,7 +361,7 @@ ShallowWrapper {
           z={0}
 >
           <div
-                    className="bg-white p3 flex flex-column justify-center items-center"
+                    className="bg-white p3 flex flex-column justify-between items-center"
           >
                     <Image
                               alt=" logo"
@@ -421,7 +421,7 @@ ShallowWrapper {
           "buttonLink": "foo",
           "children": Array [
             <div
-              className="bg-white p3 flex flex-column justify-center items-center"
+              className="bg-white p3 flex flex-column justify-between items-center"
 >
               <Image
                             alt=" logo"
@@ -491,7 +491,7 @@ ShallowWrapper {
                   variant="primary-small"
 />,
               ],
-              "className": "bg-white p3 flex flex-column justify-center items-center",
+              "className": "bg-white p3 flex flex-column justify-between items-center",
             },
             "ref": null,
             "rendered": Array [
