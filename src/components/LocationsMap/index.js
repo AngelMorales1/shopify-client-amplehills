@@ -5,7 +5,6 @@ import cx from 'classnames';
 import get from 'utils/get';
 import locationModel from 'models/locationModel';
 
-import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationsMapKey from 'constants/LocationsMapKey';
 
 import { Image, Button } from 'components/base';
@@ -20,7 +19,8 @@ const LocationsMap = props => {
     locations,
     locationGeoJSON,
     actions,
-    alertIsActive
+    alertIsActive,
+    states
   } = props;
 
   const onClickFeature = feature => {
@@ -49,15 +49,6 @@ const LocationsMap = props => {
 
     window.scrollTo(0, 0);
   };
-
-  const locationsState = locations.reduce((states, location) => {
-    const state = get(location, 'state', '');
-    states[state] = true;
-    return states;
-  }, {});
-  const states = Object.keys(locationsState).map(
-    state => LocationsMapFilters.STATE_FILTERS[state]
-  );
 
   return (
     <div className={LocationsMapClasses}>

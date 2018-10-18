@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Global from 'constants/Global';
+import LocationsMapFilters from 'constants/LocationsMapFilters';
+import get from 'utils/get';
 
 import LocationsMap from 'components/LocationsMap';
 import LocationsCards from 'components/LocationsCards';
@@ -28,13 +30,22 @@ class LocationsLandingView extends Component {
   };
 
   render() {
-    const { model, alertIsActive } = this.props;
+    const { model, alertIsActive, locations } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 
     const mapPosition = alertIsActive
       ? Global.headerHeight.desktop + Global.alertHeight.desktop
       : Global.headerHeight.desktop;
+
+    const locationsState = locations.reduce((states, location) => {
+      const state = get(location, 'state', '');
+      states[state] = true;
+      return states;
+    }, {});
+    const states = Object.keys(locationsState).map(
+      state => LocationsMapFilters.STATE_FILTERS[state]
+    );
 
     return (
       <div className="Locations w100 flex flex-row">
@@ -46,7 +57,7 @@ class LocationsLandingView extends Component {
               top: `${mapPosition}px`
             }}
           >
-            <LocationsMap {...this.props} />
+            <LocationsMap {...this.props} states={states} />
           </div>
         ) : null}
         <div
@@ -56,7 +67,7 @@ class LocationsLandingView extends Component {
               : { width: `${Global.locationsCardsWidth}px` }
           }
         >
-          <LocationsCards {...this.props} />
+          <LocationsCards {...this.props} states={states} />
         </div>
       </div>
     );
