@@ -20,10 +20,10 @@ class MerchDetails extends Component {
   };
 
   componentDidMount() {
-    const firstAvailableItem = get(this, 'props.merch.variants', '').find(
+    const firstAvailableItem = get(this, 'props.merch.variants', []).find(
       variant => variant.available === true
     );
-    this.setState({ selectedItem: firstAvailableItem.id });
+    this.setState({ selectedItem: get(firstAvailableItem, 'id', '') });
     window.addEventListener('resize', this.updateWindow);
 
     this.updateWindow();

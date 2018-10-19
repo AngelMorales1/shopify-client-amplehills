@@ -6,7 +6,7 @@ export default {
     webUrl: PropTypes.string,
     subtotalPrice: PropTypes.string,
     id: PropTypes.string,
-    items: PropTypes.arrayOf(itemModel.propTypes)
+    items: itemModel.propTypes
   }),
 
   default: {

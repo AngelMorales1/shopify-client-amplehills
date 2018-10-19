@@ -15,7 +15,7 @@ export default createSelector(
       const handle = get(node, 'handle', '');
       const variants = get(node, 'variants.edges', []).map(variant => {
         const variantNode = get(variant, 'node', {});
-        const { id, price, title, availableForSale } = variantNode;
+        const { id, title, availableForSale } = variantNode;
         const numberPrice = parseFloat(get(variantNode, 'price', 0.0));
         return { id, price: numberPrice, title, available: availableForSale };
       });

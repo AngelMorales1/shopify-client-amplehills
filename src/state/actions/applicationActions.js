@@ -10,7 +10,6 @@ import {
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
 import { fetchAllNewsArticles } from 'state/actions/articlesActions';
-import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
