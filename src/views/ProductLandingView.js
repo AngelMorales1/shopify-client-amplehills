@@ -30,11 +30,13 @@ class ProductLandingView extends Component {
           />
         </div>
         <ProductGrid products={gridProducts} />
-        <WholesaleInfoBlock
-          image={get(content, 'wholesaleImage.fields.file.url', '')}
-          title={get(content, 'wholesaleTitle', '')}
-          description={get(content, 'wholesaleDescription', '')}
-        />
+        {!get(content, 'hideWholesaleBlock', false) ? (
+          <WholesaleInfoBlock
+            image={get(content, 'wholesaleImage.fields.file.url', '')}
+            title={get(content, 'wholesaleTitle', '')}
+            description={get(content, 'wholesaleDescription', '')}
+          />
+        ) : null}
       </div>
     );
   }
