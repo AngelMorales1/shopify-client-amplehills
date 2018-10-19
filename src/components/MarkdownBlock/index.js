@@ -38,7 +38,7 @@ const MarkdownBlock = props => {
             'col-12 md-col-4 flex flex-row justify-center'
           )}
         >
-          <span className="block-headline">{title}</span>
+          <span className="block-headline mx3">{title}</span>
         </div>
       ) : null}
       <div
