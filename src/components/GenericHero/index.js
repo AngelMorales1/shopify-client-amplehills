@@ -12,6 +12,7 @@ const GenericHero = ({ block, z }) => {
   const fields = get(block, 'fields', {});
   const title = get(fields, 'title', '');
   const image1 = get(fields, 'image1', null);
+  const image2 = get(fields, 'image2', null);
   const isDripOn = get(fields, 'drip', false);
   const colorClass = `GenericHero--${get(fields, 'color', 'blue')}`;
   const text = get(fields, 'text', '');
@@ -34,14 +35,26 @@ const GenericHero = ({ block, z }) => {
       <div
         className={cx(
           styles['GenericHero__content-container'],
-          'flex justify-center',
+          'flex justify-center content-width mx-auto',
           {
             'justify-between': imageRight,
             [styles['GenericHero__content-container--reverse']]:
-              imageRight && isReverseArrangement
+              imageRight && isReverseArrangement,
+            [styles['GenericHero__two-images']]: image1 && image2
           }
         )}
       >
+        {image1 && image2 ? (
+          <Image
+            className={cx(styles['GenericHero__image'], 'col-7 md-col-2 m2')}
+            alt={`${title} image`}
+            src={contentfulImgUtil(
+              get(image1, 'fields.file.url', ''),
+              '1400',
+              'png'
+            )}
+          />
+        ) : null}
         <div className="col-12 md-col-6 flex justify-center">
           <div
             className={cx(
@@ -53,7 +66,7 @@ const GenericHero = ({ block, z }) => {
           >
             <p className="block-headline pt3">{title}</p>
             {text ? <div className="block-subheadline pt3">{text}</div> : null}
-            {image1 && !imageRight ? (
+            {image1 && !imageRight && !image2 ? (
               <Image
                 className={cx(styles['GenericHero__image'], 'w100 pt3')}
                 alt={`${title} image`}
@@ -88,6 +101,17 @@ const GenericHero = ({ block, z }) => {
               )}
             />
           </div>
+        ) : null}
+        {image2 ? (
+          <Image
+            className={cx(styles['GenericHero__image'], 'col-7 md-col-2 m2')}
+            alt={`${title} image`}
+            src={contentfulImgUtil(
+              get(image2, 'fields.file.url', ''),
+              '1400',
+              'png'
+            )}
+          />
         ) : null}
       </div>
     </div>

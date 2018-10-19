@@ -2,7 +2,7 @@
 
 .GenericHero {
   @extend .text-madison-blue;
-  
+
   &--blue {
     @extend .bg-sky-blue;
   }
@@ -45,5 +45,15 @@
   &__image {
     max-height: spacing(100);
     object-fit: contain;
+  }
+
+  &__two-images {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
