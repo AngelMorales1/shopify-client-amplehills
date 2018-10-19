@@ -26,7 +26,7 @@ const HorizontalCarousel = ({
         <span
           className={cx(
             styles['HorizontalCarousel__title'],
-            'block-headline my3'
+            'block-headline my3 px3'
           )}
         >
           {title}
