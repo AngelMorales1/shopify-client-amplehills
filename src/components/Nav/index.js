@@ -62,6 +62,7 @@ class Nav extends Component {
 
   render() {
     const { logo, profileIcon } = this.props;
+    const cartIsEmpty = this.props.totalItems === 0;
 
     return (
       <div
@@ -183,7 +184,7 @@ class Nav extends Component {
               'small flex items-center justify-center'
             )}
             variant="circle"
-            color="madison-blue"
+            color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
             to="/cart"
             label={this.props.totalItems.toString()}
             hover="clear-white-border"

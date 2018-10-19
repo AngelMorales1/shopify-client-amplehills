@@ -215,6 +215,11 @@
     @extend .text-white;
   }
 
+  &--burgundy {
+    @extend .bg-burgundy;
+    @extend .text-white;
+  }
+
   &--green {
     @extend .bg-green;
     @extend .text-white;
