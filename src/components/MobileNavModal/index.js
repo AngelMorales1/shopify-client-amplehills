@@ -31,7 +31,7 @@ class MobileNavModal extends Component {
 
   closeMobileNavOnDesktopView = () => {
     const { medium } = Global.breakpoints;
-    if (window.innerWidth >= medium.lowerbound && this.props.mobileNavIsOpen) {
+    if (window.innerWidth >= medium.upperbound && this.props.mobileNavIsOpen) {
       this.props.actions.closeMobileNav();
     }
   };

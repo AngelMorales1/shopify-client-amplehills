@@ -36,7 +36,7 @@ class Nav extends Component {
   updateWindow = () => {
     const { small, medium } = Global.breakpoints;
     const currentBreakpoint =
-      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+      window.innerWidth <= medium.upperbound ? small.label : medium.label;
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
