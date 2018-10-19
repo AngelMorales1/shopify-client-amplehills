@@ -42,10 +42,13 @@ export default createSelector(
       const title = get(product, 'fields.title', '');
       const handle = get(product, 'fields.handle', '');
       const description = get(product, 'fields.description', '');
+      const gridImage = get(product, 'fields.gridImage.fields.file.url', '');
       const detailsTitle = get(product, 'fields.detailsTitle', '');
       const detailsContent = get(product, 'fields.detailsContent', []);
       const images = get(product, 'fields.images', []);
       const variants = get(product, 'variant.simpleFragments', []);
+      const cartDetails = get(product, 'fields.cartDetails', '');
+      const limitedEdition = get(product, 'fields.limitedEdition', false);
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -61,7 +64,10 @@ export default createSelector(
         detailsTitle,
         detailsContent,
         images,
+        gridImage,
         variants,
+        cartDetails,
+        limitedEdition,
         ...shopifyProduct
       };
 

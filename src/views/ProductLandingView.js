@@ -12,7 +12,7 @@ class ProductLandingView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, products } = this.props;
+    const { model, products, allMerchandise } = this.props;
     if (model.isError) return <h1>Error</h1>;
 
     const content = get(model, 'landing.items[0].fields', {});
@@ -25,12 +25,14 @@ class ProductLandingView extends Component {
         return products[handle];
       }
     );
-    const merchandiseGridProducts = get(content, 'iceCreamProducts', []).map(
+
+    const merchandiseGridProducts = get(content, 'merchandiseProducts', []).map(
       product => {
-        const handle = get(product, 'fields.productHandle', '');
-        return products[handle];
+        const handle = get(product, 'fields.handle', '');
+        return allMerchandise[handle];
       }
     );
+
     const subNavIsOn = get(content, 'subNavigation', false);
     const menuList = () => {
       const menu = [];

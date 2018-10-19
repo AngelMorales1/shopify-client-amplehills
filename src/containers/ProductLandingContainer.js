@@ -6,6 +6,7 @@ import {
   fetchProductLanding
 } from 'state/actions/productsActions';
 import products from 'state/selectors/products';
+import allMerchandise from 'state/selectors/allMerchandise';
 import get from 'utils/get';
 
 class ProductLandingContainer extends ContainerBase {
@@ -29,7 +30,8 @@ class ProductLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
-    products: products(state)
+    products: products(state),
+    allMerchandise: allMerchandise(state)
   };
 };
 
