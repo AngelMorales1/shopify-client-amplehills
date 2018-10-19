@@ -387,78 +387,81 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div
-                className="my2 w100"
->
+              Array [
                 <div
-                                className="flex flex-row justify-between items-start"
-                >
-                                <Button
-                                                className="col-10 flex flex-start"
-                                                color="white-denim"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="style-none"
-                                >
-                                                <p
-                                                                className="text-madison-blue semi-bold"
-                                                />
-                                </Button>
-                                <Button
-                                                className="display-none transition-slide-up col-2"
-                                                color="white-denim"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="style-none"
-                                >
-                                                <Image
-                                                                alt=""
-                                                                bg={false}
-                                                                className="ml-auto"
-                                                                onImgLoad={[Function]}
-                                                                src="/assets/images/arrow-dropdown-active-peach.svg"
-                                                                style={Object {}}
-                                                />
-                                </Button>
-                                <Button
-                                                className="transition-slide-up col-2"
-                                                color="white-denim"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="style-none"
-                                >
-                                                <Image
-                                                                alt=""
-                                                                bg={false}
-                                                                className="ml-auto"
-                                                                onImgLoad={[Function]}
-                                                                src="/assets/images/arrow-dropdown-inactive-peach.svg"
-                                                                style={Object {}}
-                                                />
-                                </Button>
-                </div>
-                <p
-                                className="block-subheadline pt4 pb4 mb3 transition-slide-up"
-                />
+                  className="my2 w100"
+>
+                  <div
+                                    className="flex flex-row justify-between items-start"
+                  >
+                                    <Button
+                                                      className="col-10 flex flex-start"
+                                                      color="white-denim"
+                                                      disabled={false}
+                                                      fullWidth={false}
+                                                      hover="shadow"
+                                                      label=""
+                                                      onClick={[Function]}
+                                                      shadow={false}
+                                                      to=""
+                                                      type="button"
+                                                      variant="style-none"
+                                    >
+                                                      <p
+                                                                        className="text-madison-blue semi-bold"
+                                                      />
+                                    </Button>
+                                    <Button
+                                                      className="display-none transition-slide-up col-2"
+                                                      color="white-denim"
+                                                      disabled={false}
+                                                      fullWidth={false}
+                                                      hover="shadow"
+                                                      label=""
+                                                      onClick={[Function]}
+                                                      shadow={false}
+                                                      to=""
+                                                      type="button"
+                                                      variant="style-none"
+                                    >
+                                                      <Image
+                                                                        alt=""
+                                                                        bg={false}
+                                                                        className="ml-auto"
+                                                                        onImgLoad={[Function]}
+                                                                        src="/assets/images/arrow-dropdown-active-peach.svg"
+                                                                        style={Object {}}
+                                                      />
+                                    </Button>
+                                    <Button
+                                                      className="transition-slide-up col-2"
+                                                      color="white-denim"
+                                                      disabled={false}
+                                                      fullWidth={false}
+                                                      hover="shadow"
+                                                      label=""
+                                                      onClick={[Function]}
+                                                      shadow={false}
+                                                      to=""
+                                                      type="button"
+                                                      variant="style-none"
+                                    >
+                                                      <Image
+                                                                        alt=""
+                                                                        bg={false}
+                                                                        className="ml-auto"
+                                                                        onImgLoad={[Function]}
+                                                                        src="/assets/images/arrow-dropdown-inactive-peach.svg"
+                                                                        style={Object {}}
+                                                      />
+                                    </Button>
+                  </div>
+                  <p
+                                    className="block-subheadline pt4 pb4 mb3 transition-slide-up"
+                  />
 </div>,
+              ],
+              null,
             ],
             "className": "col-12 md-col-8 form-container-width",
           },
@@ -758,6 +761,7 @@ ShallowWrapper {
               ],
               "type": "div",
             },
+            null,
           ],
           "type": "div",
         },
@@ -1096,78 +1100,81 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div
-                  className="my2 w100"
->
+                Array [
                   <div
-                                    className="flex flex-row justify-between items-start"
-                  >
-                                    <Button
-                                                      className="col-10 flex flex-start"
-                                                      color="white-denim"
-                                                      disabled={false}
-                                                      fullWidth={false}
-                                                      hover="shadow"
-                                                      label=""
-                                                      onClick={[Function]}
-                                                      shadow={false}
-                                                      to=""
-                                                      type="button"
-                                                      variant="style-none"
-                                    >
-                                                      <p
-                                                                        className="text-madison-blue semi-bold"
-                                                      />
-                                    </Button>
-                                    <Button
-                                                      className="display-none transition-slide-up col-2"
-                                                      color="white-denim"
-                                                      disabled={false}
-                                                      fullWidth={false}
-                                                      hover="shadow"
-                                                      label=""
-                                                      onClick={[Function]}
-                                                      shadow={false}
-                                                      to=""
-                                                      type="button"
-                                                      variant="style-none"
-                                    >
-                                                      <Image
-                                                                        alt=""
-                                                                        bg={false}
-                                                                        className="ml-auto"
-                                                                        onImgLoad={[Function]}
-                                                                        src="/assets/images/arrow-dropdown-active-peach.svg"
-                                                                        style={Object {}}
-                                                      />
-                                    </Button>
-                                    <Button
-                                                      className="transition-slide-up col-2"
-                                                      color="white-denim"
-                                                      disabled={false}
-                                                      fullWidth={false}
-                                                      hover="shadow"
-                                                      label=""
-                                                      onClick={[Function]}
-                                                      shadow={false}
-                                                      to=""
-                                                      type="button"
-                                                      variant="style-none"
-                                    >
-                                                      <Image
-                                                                        alt=""
-                                                                        bg={false}
-                                                                        className="ml-auto"
-                                                                        onImgLoad={[Function]}
-                                                                        src="/assets/images/arrow-dropdown-inactive-peach.svg"
-                                                                        style={Object {}}
-                                                      />
-                                    </Button>
-                  </div>
-                  <p
-                                    className="block-subheadline pt4 pb4 mb3 transition-slide-up"
-                  />
+                    className="my2 w100"
+>
+                    <div
+                                        className="flex flex-row justify-between items-start"
+                    >
+                                        <Button
+                                                            className="col-10 flex flex-start"
+                                                            color="white-denim"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label=""
+                                                            onClick={[Function]}
+                                                            shadow={false}
+                                                            to=""
+                                                            type="button"
+                                                            variant="style-none"
+                                        >
+                                                            <p
+                                                                                className="text-madison-blue semi-bold"
+                                                            />
+                                        </Button>
+                                        <Button
+                                                            className="display-none transition-slide-up col-2"
+                                                            color="white-denim"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label=""
+                                                            onClick={[Function]}
+                                                            shadow={false}
+                                                            to=""
+                                                            type="button"
+                                                            variant="style-none"
+                                        >
+                                                            <Image
+                                                                                alt=""
+                                                                                bg={false}
+                                                                                className="ml-auto"
+                                                                                onImgLoad={[Function]}
+                                                                                src="/assets/images/arrow-dropdown-active-peach.svg"
+                                                                                style={Object {}}
+                                                            />
+                                        </Button>
+                                        <Button
+                                                            className="transition-slide-up col-2"
+                                                            color="white-denim"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label=""
+                                                            onClick={[Function]}
+                                                            shadow={false}
+                                                            to=""
+                                                            type="button"
+                                                            variant="style-none"
+                                        >
+                                                            <Image
+                                                                                alt=""
+                                                                                bg={false}
+                                                                                className="ml-auto"
+                                                                                onImgLoad={[Function]}
+                                                                                src="/assets/images/arrow-dropdown-inactive-peach.svg"
+                                                                                style={Object {}}
+                                                            />
+                                        </Button>
+                    </div>
+                    <p
+                                        className="block-subheadline pt4 pb4 mb3 transition-slide-up"
+                    />
 </div>,
+                ],
+                null,
               ],
               "className": "col-12 md-col-8 form-container-width",
             },
@@ -1467,6 +1474,7 @@ ShallowWrapper {
                 ],
                 "type": "div",
               },
+              null,
             ],
             "type": "div",
           },
@@ -1598,11 +1606,16 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [],
+            "children": Array [
+              Array [],
+              null,
+            ],
             "className": "col-12 md-col-8 form-container-width",
           },
           "ref": null,
-          "rendered": Array [],
+          "rendered": Array [
+            null,
+          ],
           "type": "div",
         },
       ],
@@ -1697,11 +1710,16 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [],
+              "children": Array [
+                Array [],
+                null,
+              ],
               "className": "col-12 md-col-8 form-container-width",
             },
             "ref": null,
-            "rendered": Array [],
+            "rendered": Array [
+              null,
+            ],
             "type": "div",
           },
         ],
