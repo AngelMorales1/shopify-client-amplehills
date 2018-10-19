@@ -19,7 +19,7 @@ class MerchDetails extends Component {
     quantity: 1
   };
 
-  componentDidMount() {console.log(get(this, 'props', ''))
+  componentDidMount() {
     const firstAvailableItem = get(this, 'props.merch.variants', '').find(
       variant => variant.available === true
     );
@@ -67,7 +67,7 @@ class MerchDetails extends Component {
 
   render() {
     const merch = get(this, 'props.merch', {});
-    const breadcrumbs = [{ to: '/order-online', label: 'Order Online' }];
+    const breadcrumbs = [{ to: '/products', label: 'Order Online' }];
     const images = get(merch, 'images', []);
     const selectedItem = get(merch, 'variants', []).find(
       variant => variant.id === this.state.selectedItem
@@ -148,14 +148,14 @@ class MerchDetails extends Component {
                   </span>
                 </Button>
               </div>
-              <p className="bold uppercase text-peach mb2">
+              <p className="bold uppercase text-peach mb2 xs-hide sm-hide">
                 {merch.detailsTitle}
               </p>
               <div
                 dangerouslySetInnerHTML={{
                   __html: marked(get(merch, 'detailsContent', ''))
                 }}
-                className="markdown-block"
+                className="markdown-block xs-hide sm-hide"
               />
             </div>
           </div>
