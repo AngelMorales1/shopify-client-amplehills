@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import marked from 'marked';
 
 import { Button, Image } from 'components/base';
 import styles from './FAQBlock.scss';
@@ -18,6 +19,7 @@ class FAQBlock extends Component {
     const title = get(fields, 'title', '');
     const buttonLabel = get(fields, 'buttonLabel', '');
     const buttonLink = get(fields, 'buttonLink', '');
+    const text = get(fields, 'text', '');
     const fragments = get(fields, 'headingAndQa.fragments', []).map(
       fragment => {
         return fragment.reduce((sortedFragment, fragmentItem) => {
@@ -135,6 +137,14 @@ class FAQBlock extends Component {
                 </div>
               );
             })}
+            {text ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(text)
+                }}
+                className="markdown-block semi-bold mt3"
+              />
+            ) : null}
           </div>
         </div>
       </div>
