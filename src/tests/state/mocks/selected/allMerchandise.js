@@ -1,6 +1,9 @@
 export default {
   'test-product': {
     available: true,
+    cartDetails: '',
+    gridImage: '',
+    limitedEdition: false,
     description:
       'Now you can wear your Ample Hills pride on your sleeve! Featuring our full color two-scoop spiral cone designed by Ample Hills art director Lauren Kaelin.',
     detailsContent:

@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGrid
+    merchandise={false}
     products={
         Array [
             Object {
@@ -41,9 +42,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex flex-wrap container-width mx-auto px2"
+        className="flex flex-wrap container-width mx-auto px2 justify-center"
 >
         <ProductGridCard
+                merchandise={false}
                 product={
                         Object {
                                 "available": true,
@@ -76,6 +78,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <ProductGridCard
+            merchandise={false}
             product={
                         Object {
                                     "available": true,
@@ -98,7 +101,7 @@ ShallowWrapper {
             }
 />,
         ],
-        "className": "flex flex-wrap container-width mx-auto px2",
+        "className": "flex flex-wrap container-width mx-auto px2 justify-center",
       },
       "ref": null,
       "rendered": Array [
@@ -107,6 +110,7 @@ ShallowWrapper {
           "key": "foo",
           "nodeType": "function",
           "props": Object {
+            "merchandise": false,
             "product": Object {
               "available": true,
               "blocks": Array [
@@ -142,9 +146,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex flex-wrap container-width mx-auto px2"
+          className="flex flex-wrap container-width mx-auto px2 justify-center"
 >
           <ProductGridCard
+                    merchandise={false}
                     product={
                               Object {
                                         "available": true,
@@ -177,6 +182,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ProductGridCard
+              merchandise={false}
               product={
                             Object {
                                           "available": true,
@@ -199,7 +205,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": "flex flex-wrap container-width mx-auto px2",
+          "className": "flex flex-wrap container-width mx-auto px2 justify-center",
         },
         "ref": null,
         "rendered": Array [
@@ -208,6 +214,7 @@ ShallowWrapper {
             "key": "foo",
             "nodeType": "function",
             "props": Object {
+              "merchandise": false,
               "product": Object {
                 "available": true,
                 "blocks": Array [
@@ -252,6 +259,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGrid
+    merchandise={false}
     products={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -267,7 +275,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex flex-wrap container-width mx-auto px2"
+        className="flex flex-wrap container-width mx-auto px2 justify-center"
 >
         
 </div>,
@@ -280,7 +288,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [],
-        "className": "flex flex-wrap container-width mx-auto px2",
+        "className": "flex flex-wrap container-width mx-auto px2 justify-center",
       },
       "ref": null,
       "rendered": Array [],
@@ -295,7 +303,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex flex-wrap container-width mx-auto px2"
+          className="flex flex-wrap container-width mx-auto px2 justify-center"
 >
           
 </div>,
@@ -308,7 +316,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [],
-          "className": "flex flex-wrap container-width mx-auto px2",
+          "className": "flex flex-wrap container-width mx-auto px2 justify-center",
         },
         "ref": null,
         "rendered": Array [],

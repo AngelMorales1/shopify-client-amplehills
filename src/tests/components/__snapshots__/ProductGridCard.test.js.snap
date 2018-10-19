@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGridCard
+    merchandise={false}
     product={
         Object {
             "available": false,
@@ -82,7 +83,7 @@ ShallowWrapper {
                               }
                     />
                     <span
-                              className="bold mt2 mb1"
+                              className="bold mt2 mb1 center"
                     />
                     <span>
                               $0.00
@@ -90,7 +91,7 @@ ShallowWrapper {
           </div>
 </Link>,
       ],
-      "className": "col col-12 md-col-4 p1 relative",
+      "className": "col col-12 p1 relative md-col-4",
     },
     "ref": null,
     "rendered": Array [
@@ -113,7 +114,7 @@ ShallowWrapper {
                         }
             />
             <span
-                        className="bold mt2 mb1"
+                        className="bold mt2 mb1 center"
             />
             <span>
                         $0.00
@@ -141,7 +142,7 @@ ShallowWrapper {
                 }
 />,
               <span
-                className="bold mt2 mb1"
+                className="bold mt2 mb1 center"
 />,
               <span>
                 $0.00
@@ -172,7 +173,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "",
-                "className": "bold mt2 mb1",
+                "className": "bold mt2 mb1 center",
               },
               "ref": null,
               "rendered": "",
@@ -224,7 +225,7 @@ ShallowWrapper {
                                     }
                         />
                         <span
-                                    className="bold mt2 mb1"
+                                    className="bold mt2 mb1 center"
                         />
                         <span>
                                     $0.00
@@ -232,7 +233,7 @@ ShallowWrapper {
             </div>
 </Link>,
         ],
-        "className": "col col-12 md-col-4 p1 relative",
+        "className": "col col-12 p1 relative md-col-4",
       },
       "ref": null,
       "rendered": Array [
@@ -255,7 +256,7 @@ ShallowWrapper {
                             }
               />
               <span
-                            className="bold mt2 mb1"
+                            className="bold mt2 mb1 center"
               />
               <span>
                             $0.00
@@ -283,7 +284,7 @@ ShallowWrapper {
                   }
 />,
                 <span
-                  className="bold mt2 mb1"
+                  className="bold mt2 mb1 center"
 />,
                 <span>
                   $0.00
@@ -314,7 +315,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
-                  "className": "bold mt2 mb1",
+                  "className": "bold mt2 mb1 center",
                 },
                 "ref": null,
                 "rendered": "",
@@ -355,6 +356,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGridCard
+    merchandise={false}
     product={
         Object {
             "available": false,
@@ -410,7 +412,7 @@ ShallowWrapper {
                               }
                     />
                     <span
-                              className="bold mt2 mb1"
+                              className="bold mt2 mb1 center"
                     />
                     <span>
                               $0.00
@@ -418,7 +420,7 @@ ShallowWrapper {
           </div>
 </Link>,
       ],
-      "className": "col col-12 md-col-4 p1 relative",
+      "className": "col col-12 p1 relative md-col-4",
     },
     "ref": null,
     "rendered": Array [
@@ -441,7 +443,7 @@ ShallowWrapper {
                         }
             />
             <span
-                        className="bold mt2 mb1"
+                        className="bold mt2 mb1 center"
             />
             <span>
                         $0.00
@@ -469,7 +471,7 @@ ShallowWrapper {
                 }
 />,
               <span
-                className="bold mt2 mb1"
+                className="bold mt2 mb1 center"
 />,
               <span>
                 $0.00
@@ -500,7 +502,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "",
-                "className": "bold mt2 mb1",
+                "className": "bold mt2 mb1 center",
               },
               "ref": null,
               "rendered": "",
@@ -552,7 +554,7 @@ ShallowWrapper {
                                     }
                         />
                         <span
-                                    className="bold mt2 mb1"
+                                    className="bold mt2 mb1 center"
                         />
                         <span>
                                     $0.00
@@ -560,7 +562,7 @@ ShallowWrapper {
             </div>
 </Link>,
         ],
-        "className": "col col-12 md-col-4 p1 relative",
+        "className": "col col-12 p1 relative md-col-4",
       },
       "ref": null,
       "rendered": Array [
@@ -583,7 +585,7 @@ ShallowWrapper {
                             }
               />
               <span
-                            className="bold mt2 mb1"
+                            className="bold mt2 mb1 center"
               />
               <span>
                             $0.00
@@ -611,7 +613,7 @@ ShallowWrapper {
                   }
 />,
                 <span
-                  className="bold mt2 mb1"
+                  className="bold mt2 mb1 center"
 />,
                 <span>
                   $0.00
@@ -642,7 +644,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
-                  "className": "bold mt2 mb1",
+                  "className": "bold mt2 mb1 center",
                 },
                 "ref": null,
                 "rendered": "",
