@@ -74,7 +74,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex justify-center"
+        className="flex justify-center content-width mx-auto"
 >
         <div
                 className="col-12 md-col-6 flex justify-center"
@@ -130,6 +130,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          null,
           <div
             className="col-12 md-col-6 flex justify-center"
 >
@@ -172,11 +173,13 @@ ShallowWrapper {
             </div>
 </div>,
           null,
+          null,
         ],
-        "className": "flex justify-center",
+        "className": "flex justify-center content-width mx-auto",
       },
       "ref": null,
       "rendered": Array [
+        null,
         Object {
           "instance": null,
           "key": undefined,
@@ -357,6 +360,7 @@ ShallowWrapper {
           "type": "div",
         },
         null,
+        null,
       ],
       "type": "div",
     },
@@ -369,7 +373,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex justify-center"
+          className="flex justify-center content-width mx-auto"
 >
           <div
                     className="col-12 md-col-6 flex justify-center"
@@ -425,6 +429,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            null,
             <div
               className="col-12 md-col-6 flex justify-center"
 >
@@ -467,11 +472,13 @@ ShallowWrapper {
               </div>
 </div>,
             null,
+            null,
           ],
-          "className": "flex justify-center",
+          "className": "flex justify-center content-width mx-auto",
         },
         "ref": null,
         "rendered": Array [
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -652,6 +659,7 @@ ShallowWrapper {
             "type": "div",
           },
           null,
+          null,
         ],
         "type": "div",
       },
@@ -701,7 +709,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex justify-center"
+        className="flex justify-center content-width mx-auto"
 >
         <div
                 className="col-12 md-col-6 flex justify-center"
@@ -727,6 +735,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          null,
           <div
             className="col-12 md-col-6 flex justify-center"
 >
@@ -739,11 +748,13 @@ ShallowWrapper {
             </div>
 </div>,
           null,
+          null,
         ],
-        "className": "flex justify-center",
+        "className": "flex justify-center content-width mx-auto",
       },
       "ref": null,
       "rendered": Array [
+        null,
         Object {
           "instance": null,
           "key": undefined,
@@ -797,6 +808,7 @@ ShallowWrapper {
           "type": "div",
         },
         null,
+        null,
       ],
       "type": "div",
     },
@@ -809,7 +821,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex justify-center"
+          className="flex justify-center content-width mx-auto"
 >
           <div
                     className="col-12 md-col-6 flex justify-center"
@@ -835,6 +847,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            null,
             <div
               className="col-12 md-col-6 flex justify-center"
 >
@@ -847,11 +860,13 @@ ShallowWrapper {
               </div>
 </div>,
             null,
+            null,
           ],
-          "className": "flex justify-center",
+          "className": "flex justify-center content-width mx-auto",
         },
         "ref": null,
         "rendered": Array [
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -904,6 +919,7 @@ ShallowWrapper {
             },
             "type": "div",
           },
+          null,
           null,
         ],
         "type": "div",
