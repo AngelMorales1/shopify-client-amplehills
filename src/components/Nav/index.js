@@ -83,6 +83,13 @@ class Nav extends Component {
               </NavLink>
               <NavLink
                 exact
+                to="/flavors"
+                className="text-hover ml3 link-text center xs-hide sm-hide"
+              >
+                Flavors
+              </NavLink>
+              <NavLink
+                exact
                 to="/events"
                 className="text-hover ml3 link-text center xs-hide sm-hide"
               >

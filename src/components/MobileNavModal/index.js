@@ -130,6 +130,14 @@ class MobileNavModal extends Component {
             </div>
             <NavLink
               exact
+              to="/flavors"
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
+              onClick={this.handleMenuClick}
+            >
+              Flavors
+            </NavLink>
+            <NavLink
+              exact
               to="/classes-and-socials"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={this.handleMenuClick}
