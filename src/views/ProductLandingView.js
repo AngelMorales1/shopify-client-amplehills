@@ -82,7 +82,10 @@ class ProductLandingView extends Component {
             className="markdown-block"
           />
         </div>
-        <ProductGrid products={merchandiseGridProducts} merchandise={true} />
+        <ProductGrid
+          products={merchandiseGridProducts}
+          productIsMerchandise={true}
+        />
         {!get(content, 'hideWholesaleBlock', false) ? (
           <WholesaleInfoBlock
             image={get(content, 'wholesaleImage.fields.file.url', '')}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import productModel from 'models/productModel';
 import ProductGridCard from 'components/ProductGridCard';
 
-const ProductGrid = ({ products, merchandise }) => {
+const ProductGrid = ({ products, productIsMerchandise }) => {
   return (
     <div className="ProductGrid">
       <div className="flex flex-wrap container-width mx-auto px2 justify-center">
@@ -11,7 +11,7 @@ const ProductGrid = ({ products, merchandise }) => {
           <ProductGridCard
             key={product.id}
             product={product}
-            merchandise={merchandise}
+            productIsMerchandise={productIsMerchandise}
           />
         ))}
       </div>

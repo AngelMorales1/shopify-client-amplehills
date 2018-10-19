@@ -7,20 +7,20 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 
 import styles from './ProductGridCard.scss';
 
-const ProductGridCard = ({ product, merchandise }) => {
+const ProductGridCard = ({ product, productIsMerchandise }) => {
   return (
     <div
       className={cx(styles['ProductGridCard'], 'col col-12 p1 relative', {
-        'md-col-3': merchandise,
-        'md-col-4': !merchandise
+        'md-col-3': productIsMerchandise,
+        'md-col-4': !productIsMerchandise
       })}
     >
       {product.limitedEdition ? (
         <div
           className={cx(
             {
-              [styles['ProductGridCard__mark']]: !merchandise,
-              [styles['ProductGridCard__mark--small']]: merchandise
+              [styles['ProductGridCard__mark']]: !productIsMerchandise,
+              [styles['ProductGridCard__mark--small']]: productIsMerchandise
             },
             'circle bg-peach absolute z-1 flex items-center justify-center m3 r0 t0'
           )}
@@ -39,7 +39,7 @@ const ProductGridCard = ({ product, merchandise }) => {
         className="text-decoration-none"
         exact
         to={
-          merchandise
+          productIsMerchandise
             ? `/merchandise/${product.handle}`
             : `/products/${product.handle}`
         }
@@ -50,7 +50,7 @@ const ProductGridCard = ({ product, merchandise }) => {
               styles['ProductGridCard__image'],
               'aspect-4-5 transition card w100',
               {
-                'aspect-3-4': merchandise
+                'aspect-3-4': productIsMerchandise
               }
             )}
             style={{
@@ -73,10 +73,10 @@ export default ProductGridCard;
 
 ProductGridCard.propTypes = {
   product: productModel.propTypes,
-  merchandise: PropTypes.bool
+  productIsMerchandise: PropTypes.bool
 };
 
 ProductGridCard.defaultProps = {
   product: productModel.default,
-  merchandise: false
+  productIsMerchandise: false
 };
