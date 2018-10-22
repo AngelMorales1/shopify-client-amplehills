@@ -42,6 +42,25 @@
     }
   }
 
+  &--square {
+    input {
+      @extend .text-madison-blue;
+      width: 100%;
+      border-radius: radius('xs');
+      border: spacing(0.6) solid color('gray');
+      font-size: $font-4;
+      padding: spacing(5) spacing(6);
+      text-align: center;
+
+      &::placeholder {
+        @extend .bold;
+        @extend .text-dusty-gray;
+        font-size: $font-4;
+        text-align: center;
+      }
+    }
+  }
+
   &--madison-blue {
     input {
       @extend .bg-madison-blue;

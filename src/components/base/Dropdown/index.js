@@ -5,6 +5,7 @@ import cx from 'classnames';
 
 import { Image } from 'components/base';
 import styles from './Dropdown.scss';
+// import default from '../../../constants/forms/ContactUs';
 
 const Arrow = ({ onMouseDown, isOpen }) => {
   const src = isOpen
@@ -17,6 +18,13 @@ const ArrowWhite = ({ onMouseDown, isOpen }) => {
   const src = isOpen
     ? '/assets/images/arrow-dropdown-active.svg'
     : '/assets/images/arrow-dropdown-white.svg';
+  return <Image src={src} />;
+};
+
+const ArrowPeach = ({ onMouseDown, isOpen }) => {
+  const src = isOpen
+    ? '/assets/images/arrow-dropdown.svg'
+    : '/assets/images/arrow-dropdown-active.svg';
   return <Image src={src} />;
 };
 
@@ -47,6 +55,17 @@ class Dropdown extends Component {
 
   onClose = () => {
     this.setState({ menuIsOpen: false });
+  };
+
+  getArrowRenderer = color => {
+    switch (color) {
+      case 'white':
+        return ArrowWhite;
+      case 'peach':
+        return ArrowPeach;
+      default:
+        return Arrow;
+    }
   };
 
   render() {
@@ -104,7 +123,7 @@ class Dropdown extends Component {
           onClose={this.onClose}
           placeholder={placeholder}
           onChange={this.onChange}
-          arrowRenderer={color === 'white' ? ArrowWhite : Arrow}
+          arrowRenderer={this.getArrowRenderer(color)} //{color === 'white' ? ArrowWhite : Arrow}
         />
       </div>
     );

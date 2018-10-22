@@ -1,0 +1,15 @@
+@import 'settings', 'typography';
+
+.PartyRequestForm {
+  &__help-text {
+    font-size: 0.875rem;
+  }
+
+  &__footer-text-container {
+    max-width: spacing(65);
+  }
+
+  &__footer-text {
+    font-size: 1.125rem;
+  }
+}

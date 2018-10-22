@@ -24,6 +24,7 @@ export default createSelector(
       const phone = get(fields, 'phone', '');
       const seasonal = get(fields, 'seasonal', true);
       const delivery = get(fields, 'delivery', false);
+      const partyAvailable = get(fields, 'partyAvailable', false);
       const orderDeliveryLink = get(fields, 'orderDeliveryLink', '');
       const closeLocationForTheSeason = get(
         fields,
@@ -67,6 +68,7 @@ export default createSelector(
         hours,
         sortedHours,
         delivery,
+        partyAvailable,
         orderDeliveryLink,
         closeLocationForTheSeason,
         currentOpenHours,

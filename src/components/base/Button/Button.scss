@@ -86,6 +86,19 @@
     padding: spacing(3) spacing(6);
   }
 
+  &--square,
+  &--square--selected {
+    border-radius: radius('xs');
+    border: spacing(0.6) solid color('gray');
+    padding: spacing(5) spacing(4);
+    color: color('dusty-gray');
+  }
+
+  &--square--selected {
+    border: spacing(0.6) solid color('madison-blue');
+    color: color('madison-blue');
+  }
+
   &--carousel-arrow {
     border: 0;
     border-radius: radius('circle');

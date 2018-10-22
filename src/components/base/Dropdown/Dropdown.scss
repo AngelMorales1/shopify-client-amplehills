@@ -82,6 +82,42 @@
     }
   }
 
+  &--square {
+    display: flex;
+    align-items: center;
+    border-radius: radius('xs');
+    border: spacing(0.6) solid color('gray');
+    padding: spacing(5) spacing(6);
+    width: 100%;
+
+    :global {
+      .Select-placeholder {
+        color: color('dusty-gray');
+      }
+
+      .Select-value {
+        color: color('madison-blue');
+      }
+
+      .Select {
+        width: 100%;
+      }
+
+      .Select-control {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .Select-menu-outer .Select-menu {
+        opacity: 1;
+        width: 100%;
+        transform: translate3d(0, spacing(6), 0);
+      }
+    }
+  }
+
   &--secondary {
     :global {
       .Select {

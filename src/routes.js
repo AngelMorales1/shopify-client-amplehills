@@ -15,6 +15,7 @@ import GenericPageContainer from 'containers/GenericPageContainer';
 import PressPageContainer from 'containers/PressPageContainer';
 import EventDetailContainer from 'containers/EventDetailContainer';
 import LocationDetailContainer from 'containers/LocationDetailContainer';
+import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -55,6 +56,7 @@ const Routes = ({ location }) => (
     <Route path="/pints-and-postcards" component={GenericPageContainer} />
     <Route path="/catering" component={GenericPageContainer} />
     <Route path="/ice-cream-cakes" component={GenericPageContainer} />
+    <Route path="/party-request-form" component={PartyRequestFormContainer} />
   </Switch>
 );
 
