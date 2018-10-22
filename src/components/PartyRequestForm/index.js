@@ -16,7 +16,32 @@ import styles from './PartyRequestForm.scss';
 
 class PartyRequestForm extends Component {
   state = {
-    ccurrentBreakpoint: Global.breakpoints.medium.label
+    currentBreakpoint: Global.breakpoints.medium.label,
+    selectedLocation: '',
+    selecteddate: '',
+    timeSlots: [
+      { uuid: '1', index: 0, endTime: '11am', startTime: '1pm' },
+      { uuid: '2', index: 1, endTime: '4pm', startTime: '2pm' },
+      { uuid: '3', index: 2, endTime: '7pm', startTime: '5pm' },
+      { uuid: '4', index: 3, endTime: '10pm', startTime: '8pm' }
+    ],
+    partyTypes: [
+      { uuid: '1', index: 0, partyType: 'Bike Party', link: '/bike-party' },
+      {
+        uuid: '2',
+        index: 1,
+        partyType: 'Scoop Tab Party',
+        link: 'scoop-tab-party'
+      }
+    ],
+    partyTypeIsSelected: false,
+    selectedTimeSlot: '',
+    selectedPartyType: '',
+    selectedAge: '',
+    selectedNumberOfGuests: 0,
+    selectedCelebrating: '',
+    selectedAddOns: [],
+    selectedAllergies: ''
   };
 
   componentDidMount() {
@@ -51,20 +76,95 @@ class PartyRequestForm extends Component {
     return `${100 / buttonCount}%`;
   };
 
+  getSelectedButton = (selectedValue, buttonValue) => {
+    if (selectedValue === buttonValue) {
+      return 'square--selected';
+    }
+
+    return 'square';
+  };
+
+  hasSelectedAllergies = () => {
+    const { selectedAllergies } = this.state;
+
+    return selectedAllergies
+      ? `Allergies: ${selectedAllergies}`
+      : 'No Alergies';
+  };
+
+  addOnClick = value => {
+    let addOns = this.state.selectedAddOns;
+    const valueIndexInAddOns = addOns.indexOf(value);
+
+    if (valueIndexInAddOns !== -1) {
+      addOns.splice(valueIndexInAddOns, 1);
+      this.setState({ selectedAddOns: addOns });
+    } else {
+      addOns = addOns.concat([value]);
+      this.setState({ selectedAddOns: addOns });
+    }
+  };
+
   render() {
-    const locations = get(this, 'props.partyAvailableLocations', []);
-    const timeSlots = [
-      '11am to 1pm',
-      '2pm to 4pm',
-      '5pm to 7pm',
-      '8pm to 10pm'
-    ];
-    const partyTypes = ['Bike Party', 'Scoop Tab Party'];
+    const locations = get(this, 'props.partyAvailableLocations', {});
+    const locationIds = Object.keys(locations);
     const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
     const partyAddOns = [
       { value: 'Our Food & Drink Package1', price: 60.0 },
       { value: 'Our Food & Drink Package2', price: 60.0 },
       { value: 'Our Food & Drink Package3', price: 60.0 }
+    ];
+    const {
+      selectedLocation,
+      selectedAddOns,
+      selectedAllergies,
+      selectedDate,
+      selectedTimeSlot,
+      selectedPartyType,
+      selectedAge,
+      selectedNumberOfGuests,
+      selectedCelebrating
+    } = this.state;
+    const fieldIsEmpty =
+      !selectedLocation &&
+      !selectedAddOns.length &&
+      !selectedAllergies &&
+      !selectedDate &&
+      !selectedTimeSlot &&
+      !selectedPartyType &&
+      !selectedAge &&
+      !selectedNumberOfGuests &&
+      !selectedCelebrating;
+
+    const summeryOrder = [
+      {
+        name: 'Location',
+        value: get(locations[selectedLocation], 'title', '')
+      },
+      {
+        name: 'Date',
+        value: selectedDate
+      },
+      {
+        name: 'Time Slot',
+        value: selectedTimeSlot
+      },
+      {
+        name: 'Party Type',
+        value: selectedPartyType
+      },
+      {
+        name: '# of Guests',
+        value: selectedNumberOfGuests
+      },
+      {
+        name: 'Age',
+        value: selectedAge
+      },
+      {
+        name: 'Celebrating',
+        value: selectedCelebrating
+      }
     ];
 
     return (
@@ -72,7 +172,7 @@ class PartyRequestForm extends Component {
         <h2 className="block-headline center my4">Party Request Form</h2>
         <div className="w100 mt4 flex flex-column items-center">
           <p className="bold big center mb3">
-            At which location would you like to host your party?{' '}
+            At which location would you like to host your party?
           </p>
           <Button
             variant="primary-small"
@@ -81,31 +181,40 @@ class PartyRequestForm extends Component {
             className="uppercase mb3 tout"
           />
           <Dropdown
-            className="w100 z-1 text-container-width"
+            className="w100 text-container-width z-sub-nav"
             color="peach"
-            variant="square"
+            variant={selectedLocation ? 'square--selected' : 'square'}
             placeholder="Choose a Location"
-            options={locations.map(location => {
-              const title = location.title;
+            value={selectedLocation}
+            onChange={filter => {
+              this.setState({
+                selectedLocation: filter.value,
+                timeSlots: locations[filter.value].timeSlots,
+                partyTypes: locations[filter.value].partyTypes
+              }),
+                filter.value !== selectedLocation
+                  ? this.setState({
+                      selectedTimeSlot: '',
+                      selectedPartyType: ''
+                    })
+                  : null;
+            }}
+            options={locationIds.map(locationId => {
+              const title = locations[locationId].title;
 
-              return { label: title, value: title };
+              return { label: title, value: locationId };
             })}
           />
         </div>
         <div className="w100 mt4 flex flex-column items-center">
           <p className="bold big center mb3">
-            Did you have a weekend in mind for your event?
+            Did you have a date in mind for your event?
           </p>
-          <Dropdown
-            className="text-container-width w100 z-1"
-            color="peach"
+          <TextField
+            className="w100 text-container-width"
             variant="square"
             placeholder="Choose a Weekend"
-            options={locations.map(location => {
-              const title = location.title;
-
-              return { label: title, value: title };
-            })}
+            type="date"
           />
         </div>
         <div className="w100 mt4 flex flex-column items-center">
@@ -113,12 +222,13 @@ class PartyRequestForm extends Component {
             Of these time slots, which is your first choice?
           </p>
           <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {timeSlots.map(timeSlot => {
-              const timeSlotsLength = timeSlots.length;
+            {this.state.timeSlots.map(timeSlot => {
+              const timeSlotsLength = this.state.timeSlots.length;
+              const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
 
               return (
                 <div
-                  key={timeSlot}
+                  key={timeSlot.uuid}
                   style={{ width: this.getButtonWidth(timeSlotsLength) }}
                   className={cx(
                     styles['PartyRequestForm__button-container'],
@@ -127,8 +237,13 @@ class PartyRequestForm extends Component {
                 >
                   <Button
                     className="center wh100 white-space-normal"
-                    variant="square"
-                    label={timeSlot}
+                    variant={
+                      selectedTimeSlot
+                        ? this.getSelectedButton(selectedTimeSlot, label)
+                        : 'square'
+                    }
+                    label={label}
+                    onClick={() => this.setState({ selectedTimeSlot: label })}
                   />
                 </div>
               );
@@ -140,20 +255,40 @@ class PartyRequestForm extends Component {
             Which kind of party is best for you?
           </p>
           <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {partyTypes.map(partyType => {
-              const partyLength = partyTypes.length;
+            {this.state.partyTypes.map(partyType => {
+              const partyLength = this.state.partyTypes.length;
+              const label = partyType.partyType;
 
               return (
-                <div
-                  key={partyType}
-                  style={{ width: this.getButtonWidth(partyLength) }}
-                  className="p1"
-                >
+                <div key={partyType.uuid} className="p1 col-6">
                   <Button
                     className="center wh100 white-space-normal"
-                    variant="square"
-                    label={partyType}
-                  />
+                    variant={
+                      selectedPartyType
+                        ? this.getSelectedButton(selectedPartyType, label)
+                        : 'square'
+                    }
+                    onClick={() => this.setState({ selectedPartyType: label })}
+                  >
+                    <div
+                      className={cx(
+                        'w100 flex items-center mx2',
+                        styles['PartyRequestForm__party-type-button']
+                      )}
+                    >
+                      <p>{label}</p>
+                      <Button
+                        variant="primary-small"
+                        color="peach"
+                        label="More Info"
+                        className={cx(
+                          styles['PartyRequestForm__party-type-inner-button'],
+                          'uppercase tout'
+                        )}
+                        to={partyType.link}
+                      />
+                    </div>
+                  </Button>
                 </div>
               );
             })}
@@ -170,8 +305,10 @@ class PartyRequestForm extends Component {
           </p>
           <TextField
             className="w100 text-container-width"
-            variant="square"
+            variant={selectedNumberOfGuests ? 'square--selected' : 'square'}
             placeholder="Enter number of guests"
+            onChange={value => this.setState({ selectedNumberOfGuests: value })}
+            type="number"
           />
         </div>
         <div className="w100 mt4 flex flex-column items-center">
@@ -183,8 +320,13 @@ class PartyRequestForm extends Component {
               return (
                 <div key={ageGroup} className="col-6 md-col-3 p1">
                   <Button
+                    onClick={() => this.setState({ selectedAge: ageGroup })}
+                    variant={
+                      selectedAge
+                        ? this.getSelectedButton(selectedAge, ageGroup)
+                        : 'square'
+                    }
                     className="center wh100 white-space-normal"
-                    variant="square"
                     label={`${ageGroup} Years old`}
                   />
                 </div>
@@ -198,7 +340,8 @@ class PartyRequestForm extends Component {
           </p>
           <TextField
             className="w100 text-container-width"
-            variant="square"
+            variant={selectedCelebrating ? 'square--selected' : 'square'}
+            onChange={value => this.setState({ selectedCelebrating: value })}
             placeholder="Enter a name of something"
           />
         </div>
@@ -210,7 +353,15 @@ class PartyRequestForm extends Component {
 
               return (
                 <div key={partyAddOn.value} className="col-6 p1">
-                  <Button className="center wh100 " variant="square">
+                  <Button
+                    onClick={() => this.addOnClick(partyAddOn.value)}
+                    className="center wh100 "
+                    variant={
+                      selectedAddOns.includes(partyAddOn.value)
+                        ? 'square--selected'
+                        : 'square'
+                    }
+                  >
                     <div className="flex flex-column wh100">
                       <p className="mb1 white-space-normal center">
                         {partyAddOn.value}
@@ -232,41 +383,96 @@ class PartyRequestForm extends Component {
           </p>
           <TextField
             className="w100 text-container-width"
-            variant="square"
+            variant={selectedAllergies ? 'square--selected' : 'square'}
+            onChange={value => this.setState({ selectedAllergies: value })}
             placeholder="Add a note"
           />
         </div>
-        <div className="bg-tuft-bush w100 flex flex-row space-between p4 mt4">
-          <div className="col-12 md-col-6 flex justify-center">
+        <div className="bg-tuft-bush w100 p4 mt4">
+          <div
+            className={cx(
+              styles['PartyRequestForm__footer-container'],
+              'flex container-width mx-auto'
+            )}
+          >
             <div
-              className={cx(styles['PartyRequestForm__footer-text-container'])}
+              className={cx(
+                styles['PartyRequestForm__footer-summery'],
+                'col-12 md-col-6 flex flex-column h100'
+              )}
             >
-              <p
+              <div
                 className={cx(
-                  styles[('PartyRequestForm__footer-text', 'bold')]
+                  styles['PartyRequestForm__footer-text-container']
                 )}
               >
-                Summary
-              </p>
-              <p className={cx(styles['PartyRequestForm__help-text'])}>
-                Please make required selections
-              </p>
+                <p
+                  className={cx(
+                    styles[('PartyRequestForm__footer-text', 'bold')],
+                    'mb3'
+                  )}
+                >
+                  Summary
+                </p>
+                {fieldIsEmpty ? (
+                  <p className={cx(styles['PartyRequestForm__help-text'])}>
+                    Please make required selections
+                  </p>
+                ) : (
+                  <div>
+                    {summeryOrder.map(summeryField => {
+                      const value = get(summeryField, 'value', '');
+                      if (value.length) {
+                        return (
+                          <p
+                            className={cx(
+                              styles['PartyRequestForm__help-text']
+                            )}
+                          >{`${summeryField.name}: ${summeryField.value}`}</p>
+                        );
+                      }
+                    })}
+                  </div>
+                )}
+                {selectedAddOns.length
+                  ? selectedAddOns.map(addOn => {
+                      return (
+                        <p
+                          className={cx(styles['PartyRequestForm__help-text'])}
+                        >{`Addon: ${addOn}`}</p>
+                      );
+                    })
+                  : null}
+                {!fieldIsEmpty ? (
+                  <p className={cx(styles['PartyRequestForm__help-text'])}>
+                    {this.hasSelectedAllergies()}
+                  </p>
+                ) : null}
+              </div>
             </div>
-          </div>
-          <div className="col-12 md-col-6 flex justify-center">
-            <div
-              className={cx(styles['PartyRequestForm__footer-text-container'])}
-            >
-              <p
-                className={cx(styles['PartyRequestForm__footer-text'], 'bold')}
+            <div className="col-12 md-col-4 flex h100">
+              <div
+                className={cx(
+                  styles['PartyRequestForm__footer-text-container'],
+                  'flex flex-column justify-between h100'
+                )}
               >
-                Deposit total $100.00
-              </p>
-              <p className={cx(styles['PartyRequestForm__help-text'])}>
-                Statement that mentions what the customer can expect after
-                making this deposit
-              </p>
-              <Button label="Make Deposit" />
+                <p
+                  className={cx(
+                    styles['PartyRequestForm__footer-text'],
+                    'bold mb3'
+                  )}
+                >
+                  Deposit total $100.00
+                </p>
+                <p className={cx(styles['PartyRequestForm__help-text'], 'mb3')}>
+                  Statement that mentions what the customer can expect after
+                  making this deposit
+                </p>
+                <div>
+                  <Button className="inline-flex" label="Make Deposit" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,27 @@
 @import 'settings', 'typography';
 
 .PartyRequestForm {
+  &__footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__footer-summery {
+    align-items: flex-start;
+
+    @media ($medium-up) {
+      align-items: center;
+    }
+  }
+
   &__help-text {
+    line-height: $font-6;
     font-size: 0.875rem;
   }
 
@@ -11,5 +31,24 @@
 
   &__footer-text {
     font-size: 1.125rem;
+  }
+
+  &__party-type-button {
+    flex-direction: column;
+    justify-content: center;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__party-type-inner-button {
+    margin-top: spacing(8);
+
+    @media ($medium-up) {
+      margin: 0;
+      margin: spacing(8) 0;
+    }
   }
 }

@@ -5,6 +5,11 @@ import locations from 'state/selectors/locations';
 export default createSelector(
   state => locations(state),
   locations => {
-    return locations.filter(location => location.partyAvailable === true);
+    return locations.reduce((locationById, location) => {
+      if (location.partyAvailable === true) {
+        locationById[location.id] = location;
+      }
+      return locationById;
+    }, {});
   }
 );

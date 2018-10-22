@@ -42,7 +42,8 @@
     }
   }
 
-  &--square {
+  &--square,
+  &--square--selected {
     input {
       @extend .text-madison-blue;
       width: 100%;
@@ -58,6 +59,12 @@
         font-size: $font-4;
         text-align: center;
       }
+    }
+  }
+
+  &--square--selected {
+    input {
+      border: spacing(0.6) solid color('madison-blue');
     }
   }
 
