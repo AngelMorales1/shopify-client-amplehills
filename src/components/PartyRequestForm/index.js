@@ -723,14 +723,14 @@ PartyRequestForm.defaultProps = {
   checkout: checkoutModel.default,
   partyAddons: {},
   partyAvailableLocations: {},
-  partyDeposit: PropTypes.shape({
+  partyDeposit: {
     available: false,
     description: '',
     handle: '',
     id: '',
     price: '0.00',
     title: ''
-  })
+  }
 };
 
 export default PartyRequestForm;

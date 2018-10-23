@@ -15,6 +15,32 @@ export default {
         image: 'path-to-image.jpg',
         seasonalImage: 'path-to-image.jpg',
         slug: 'test-location',
+        timeSlots: [
+          {
+            endTime: '11am',
+            index: 0,
+            startTime: '1pm',
+            uuid: '1'
+          },
+          {
+            endTime: '4pm',
+            index: 1,
+            startTime: '2pm',
+            uuid: '2'
+          },
+          {
+            endTime: '7pm',
+            index: 2,
+            startTime: '5pm',
+            uuid: '3'
+          },
+          {
+            endTime: '10pm',
+            index: 3,
+            startTime: '8pm',
+            uuid: '4'
+          }
+        ],
         address1: '110 Bowery',
         address2: 'Fl. 4',
         city: 'New York',
@@ -28,6 +54,21 @@ export default {
           lat: 40.789
         },
         orderDeliveryLink: '',
+        partyAvailable: false,
+        partyTypes: [
+          {
+            index: 0,
+            link: '/bike-party',
+            partyType: 'Bike Party',
+            uuid: '1'
+          },
+          {
+            index: 1,
+            link: 'scoop-tab-party',
+            partyType: 'Scoop Tab Party',
+            uuid: '2'
+          }
+        ],
         phone: '8881234567',
         seasonal: false,
         delivery: false,
@@ -68,6 +109,32 @@ export default {
         image: 'path-to-image.jpg',
         seasonalImage: 'path-to-image.jpg',
         slug: '',
+        timeSlots: [
+          {
+            endTime: '11am',
+            index: 0,
+            startTime: '1pm',
+            uuid: '1'
+          },
+          {
+            endTime: '4pm',
+            index: 1,
+            startTime: '2pm',
+            uuid: '2'
+          },
+          {
+            endTime: '7pm',
+            index: 2,
+            startTime: '5pm',
+            uuid: '3'
+          },
+          {
+            endTime: '10pm',
+            index: 3,
+            startTime: '8pm',
+            uuid: '4'
+          }
+        ],
         address1: '36 Westwood BLVD',
         address2: '',
         city: 'New Jersey',
@@ -81,6 +148,21 @@ export default {
           lat: 40.789
         },
         orderDeliveryLink: '',
+        partyAvailable: false,
+        partyTypes: [
+          {
+            index: 0,
+            link: '/bike-party',
+            partyType: 'Bike Party',
+            uuid: '1'
+          },
+          {
+            index: 1,
+            link: 'scoop-tab-party',
+            partyType: 'Scoop Tab Party',
+            uuid: '2'
+          }
+        ],
         phone: '8881234567',
         seasonal: false,
         delivery: false,

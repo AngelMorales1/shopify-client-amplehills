@@ -13,6 +13,6 @@ export default {
     webUrl: '',
     subtotalPrice: '',
     id: '',
-    items: itemModel.default
+    items: [itemModel.default]
   }
 };
