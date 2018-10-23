@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import Global from 'constants/Global';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import moment from 'moment';
+import 'react-day-picker/lib/style.css';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
@@ -19,7 +22,7 @@ class PartyRequestForm extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.medium.label,
     selectedLocation: '',
-    selecteddate: '',
+    selectedDate: '',
     timeSlots: [
       { uuid: '1', index: 0, endTime: '11am', startTime: '1pm' },
       { uuid: '2', index: 1, endTime: '4pm', startTime: '2pm' },
@@ -101,13 +104,13 @@ class PartyRequestForm extends Component {
     }
 
     if (!selectedNumberOfGuests || selectedNumberOfGuests > 55) {
-      const error = 'Please enter expectiong total guests number under 55.';
+      const error = 'Please enter total number of expected guests under 55.';
       this.setState({ error });
       return true;
     }
 
     if (!selectedCelebrating) {
-      const error = 'Please enter Who (or what) will we be celebrating.';
+      const error = 'Please enter who or what we will be celebrating.';
       this.setState({ error });
       return true;
     }
@@ -229,244 +232,256 @@ class PartyRequestForm extends Component {
 
     return (
       <div className="w100 flex flex-column items-center">
-        <h2 className="block-headline center my4">Party Request Form</h2>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            At which location would you like to host your party?
-          </p>
-          <Button
-            variant="primary-small"
-            color="peach"
-            label="More Info"
-            className="uppercase mb3 tout"
-          />
-          <Dropdown
-            className="w100 text-container-width z-sub-nav"
-            color="peach"
-            variant={selectedLocation ? 'square--selected' : 'square'}
-            placeholder="Choose a Location"
-            value={selectedLocation}
-            onChange={filter => {
-              this.setState({
-                selectedLocation: filter.value,
-                timeSlots: locations[filter.value].timeSlots,
-                partyTypes: locations[filter.value].partyTypes
-              }),
-                filter.value !== selectedLocation
-                  ? this.setState({
-                      selectedTimeSlot: '',
-                      selectedPartyType: ''
-                    })
-                  : null;
-            }}
-            options={locationIds.map(locationId => {
-              const title = locations[locationId].title;
+        <div className="w100 flex flex-column items-center px2">
+          <h2 className="block-headline center my4">Party Request Form</h2>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              At which location would you like to host your party?
+            </p>
+            <Button
+              variant="primary-small"
+              color="peach"
+              label="More Info"
+              className="uppercase mb3 tout"
+            />
+            <Dropdown
+              className="w100 text-container-width z-sub-nav"
+              color="peach"
+              variant={selectedLocation ? 'square--selected' : 'square'}
+              placeholder="Choose a Location"
+              value={selectedLocation}
+              onChange={filter => {
+                this.setState({
+                  selectedLocation: filter.value,
+                  timeSlots: locations[filter.value].timeSlots,
+                  partyTypes: locations[filter.value].partyTypes
+                }),
+                  filter.value !== selectedLocation
+                    ? this.setState({
+                        selectedTimeSlot: '',
+                        selectedPartyType: ''
+                      })
+                    : null;
+              }}
+              options={locationIds.map(locationId => {
+                const title = locations[locationId].title;
 
-              return { label: title, value: locationId };
-            })}
-          />
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            Did you have a date in mind for your event?
-          </p>
-          <TextField
-            className="w100 text-container-width"
-            variant="square"
-            placeholder="Choose a Weekend"
-            type="date"
-          />
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            Of these time slots, which is your first choice?
-          </p>
-          <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {this.state.timeSlots.map(timeSlot => {
-              const timeSlotsLength = this.state.timeSlots.length;
-              const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
-
-              return (
-                <div
-                  key={timeSlot.uuid}
-                  style={{ width: this.getButtonWidth(timeSlotsLength) }}
-                  className={cx(
-                    styles['PartyRequestForm__button-container'],
-                    'p1'
-                  )}
-                >
-                  <Button
-                    className="center wh100 white-space-normal"
-                    variant={
-                      selectedTimeSlot
-                        ? this.getSelectedButton(selectedTimeSlot, label)
-                        : 'square'
-                    }
-                    label={label}
-                    onClick={() => this.setState({ selectedTimeSlot: label })}
-                  />
-                </div>
-              );
-            })}
+                return { label: title, value: locationId };
+              })}
+            />
           </div>
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            Which kind of party is best for you?
-          </p>
-          <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {this.state.partyTypes.map(partyType => {
-              const partyLength = this.state.partyTypes.length;
-              const label = partyType.partyType;
-
-              return (
-                <div key={partyType.uuid} className="p1 col-6">
-                  <Button
-                    className="center wh100 white-space-normal"
-                    variant={
-                      selectedPartyType
-                        ? this.getSelectedButton(selectedPartyType, label)
-                        : 'square'
-                    }
-                    onClick={() => this.setState({ selectedPartyType: label })}
-                  >
-                    <div
-                      className={cx(
-                        'w100 flex items-center mx2',
-                        styles['PartyRequestForm__party-type-button']
-                      )}
-                    >
-                      <p>{label}</p>
-                      <Button
-                        variant="primary-small"
-                        color="peach"
-                        label="More Info"
-                        className={cx(
-                          styles['PartyRequestForm__party-type-inner-button'],
-                          'uppercase tout'
-                        )}
-                        to={partyType.link}
-                      />
-                    </div>
-                  </Button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb2">
-            How many total guests are you expecting?
-          </p>
-          <p
-            className={cx(styles['PartyRequestForm__help-text'], 'center mb3')}
-          >
-            Maximum number of 55
-          </p>
-          <TextField
-            className="w100 text-container-width"
-            variant={selectedNumberOfGuests ? 'square--selected' : 'square'}
-            placeholder="Enter number of guests"
-            onChange={value => this.setState({ selectedNumberOfGuests: value })}
-            type="number"
-          />
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            If relevant, what’s the age group of the children?
-          </p>
-          <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {ageGroups.map(ageGroup => {
-              return (
-                <div key={ageGroup} className="col-6 md-col-3 p1">
-                  <Button
-                    onClick={() => this.setState({ selectedAge: ageGroup })}
-                    variant={
-                      selectedAge
-                        ? this.getSelectedButton(selectedAge, ageGroup)
-                        : 'square'
-                    }
-                    className="center wh100 white-space-normal"
-                    label={`${ageGroup} Years old`}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            Who (or what) will we be celebrating?
-          </p>
-          <TextField
-            className="w100 text-container-width"
-            variant={selectedCelebrating ? 'square--selected' : 'square'}
-            onChange={value => this.setState({ selectedCelebrating: value })}
-            placeholder="Enter a name of something"
-          />
-        </div>
-        <div className="w100 mt4 flex flex-column items-center">
-          <p className="bold big center mb3">Would you like any add-ons?</p>
-          <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-            {partyAddOns.map(partyAddOn => {
-              const partyAddOnsLength = partyAddOns.length;
-
-              return (
-                <div key={partyAddOn.value} className="col-6 p1">
-                  <Button
-                    onClick={() => this.addOnClick(partyAddOn.value)}
-                    className="center wh100 "
-                    variant={
-                      selectedAddOns.includes(partyAddOn.value)
-                        ? 'square--selected'
-                        : 'square'
-                    }
-                  >
-                    <div className="flex flex-column wh100">
-                      <p className="mb1 white-space-normal center">
-                        {partyAddOn.value}
-                      </p>
-                      <p className="white-space-normal">{`$${
-                        partyAddOn.price
-                      }`}</p>
-                    </div>
-                  </Button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="w100 my4 flex flex-column items-center">
-          <p className="bold big center mb3">
-            Are there any dietary restrictions or allergies that we should be
-            aware of?
-          </p>
-          <TextField
-            className="w100 text-container-width"
-            variant={selectedAllergies ? 'square--selected' : 'square'}
-            onChange={value => this.setState({ selectedAllergies: value })}
-            placeholder="Add a note"
-          />
-        </div>
-        <div className="w100 text-container-width">
-          {error || formStatus === REJECTED ? (
-            <FormFlash
-              className="w100 mb2"
-              error={true}
-              message={
-                error
-                  ? error
-                  : 'There was an unexpected problem while submitting your message. Please reach out directly to info@amplehills.com'
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              Did you have a day in mind for your event?
+            </p>
+            <DayPickerInput
+              formatDate={() => moment().format('MMMM DD')}
+              placeholder="Choose a day"
+              value={this.state.selectedDate}
+              onDayChange={day =>
+                this.setState({
+                  selectedDate: moment(day).format('MMMM DD')
+                })
               }
             />
-          ) : null}
-          {formStatus === FULFILLED ? (
-            <FormFlash
-              className="w100 mb2"
-              success={true}
-              message="Your message has been sent!"
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              Of these time slots, which is your first choice?
+            </p>
+            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+              {this.state.timeSlots.map(timeSlot => {
+                const timeSlotsLength = this.state.timeSlots.length;
+                const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
+
+                return (
+                  <div
+                    key={timeSlot.uuid}
+                    style={{ width: this.getButtonWidth(timeSlotsLength) }}
+                    className={cx(
+                      styles['PartyRequestForm__button-container'],
+                      'p1'
+                    )}
+                  >
+                    <Button
+                      className="center wh100 white-space-normal"
+                      variant={
+                        selectedTimeSlot
+                          ? this.getSelectedButton(selectedTimeSlot, label)
+                          : 'square'
+                      }
+                      label={label}
+                      onClick={() => this.setState({ selectedTimeSlot: label })}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              Which kind of party is best for you?
+            </p>
+            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+              {this.state.partyTypes.map(partyType => {
+                const label = partyType.partyType;
+
+                return (
+                  <div key={partyType.uuid} className="p1 col-6">
+                    <Button
+                      className="center wh100 white-space-normal"
+                      variant={
+                        selectedPartyType
+                          ? this.getSelectedButton(selectedPartyType, label)
+                          : 'square'
+                      }
+                      onClick={() =>
+                        this.setState({ selectedPartyType: label })
+                      }
+                    >
+                      <div
+                        className={cx(
+                          'w100 flex items-center mx2',
+                          styles['PartyRequestForm__party-type-button']
+                        )}
+                      >
+                        <p>{label}</p>
+                        <Button
+                          variant="primary-small"
+                          color="peach"
+                          label="More Info"
+                          className={cx(
+                            styles['PartyRequestForm__party-type-inner-button'],
+                            'uppercase tout white-space-normal'
+                          )}
+                          to={partyType.link}
+                        />
+                      </div>
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb2">
+              How many total guests are you expecting?
+            </p>
+            <p
+              className={cx(
+                styles['PartyRequestForm__help-text'],
+                'center mb3'
+              )}
+            >
+              Maximum number of 55
+            </p>
+            <TextField
+              className="w100 text-container-width"
+              variant={selectedNumberOfGuests ? 'square--selected' : 'square'}
+              placeholder="Enter number of guests"
+              onChange={value =>
+                this.setState({ selectedNumberOfGuests: value })
+              }
+              type="number"
             />
-          ) : null}
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              If relevant, what’s the age group of the children?
+            </p>
+            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+              {ageGroups.map(ageGroup => {
+                return (
+                  <div key={ageGroup} className="col-6 md-col-3 p1">
+                    <Button
+                      onClick={() => this.setState({ selectedAge: ageGroup })}
+                      variant={
+                        selectedAge
+                          ? this.getSelectedButton(selectedAge, ageGroup)
+                          : 'square'
+                      }
+                      className="center wh100 white-space-normal"
+                      label={`${ageGroup} Years old`}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              Who (or what) will we be celebrating?
+            </p>
+            <TextField
+              className="w100 text-container-width"
+              variant={selectedCelebrating ? 'square--selected' : 'square'}
+              onChange={value => this.setState({ selectedCelebrating: value })}
+              placeholder="Enter a name of something"
+            />
+          </div>
+          <div className="w100 mt4 flex flex-column items-center">
+            <p className="bold big center mb3">Would you like any add-ons?</p>
+            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+              {partyAddOns.map(partyAddOn => {
+                const partyAddOnsLength = partyAddOns.length;
+
+                return (
+                  <div key={partyAddOn.value} className="col-6 p1">
+                    <Button
+                      onClick={() => this.addOnClick(partyAddOn.value)}
+                      className="center wh100 "
+                      variant={
+                        selectedAddOns.includes(partyAddOn.value)
+                          ? 'square--selected'
+                          : 'square'
+                      }
+                    >
+                      <div className="flex flex-column wh100">
+                        <p className="mb1 white-space-normal center">
+                          {partyAddOn.value}
+                        </p>
+                        <p className="white-space-normal">{`$${
+                          partyAddOn.price
+                        }`}</p>
+                      </div>
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 my4 flex flex-column items-center">
+            <p className="bold big center mb3">
+              Are there any dietary restrictions or allergies that we should be
+              aware of?
+            </p>
+            <TextField
+              className="w100 text-container-width"
+              variant={selectedAllergies ? 'square--selected' : 'square'}
+              onChange={value => this.setState({ selectedAllergies: value })}
+              placeholder="Add a note"
+            />
+          </div>
+          <div className="w100 text-container-width">
+            {error || formStatus === REJECTED ? (
+              <FormFlash
+                className="w100 mb2"
+                error={true}
+                message={
+                  error
+                    ? error
+                    : 'There was an unexpected problem while submitting your request. Please reach out directly to info@amplehills.com'
+                }
+              />
+            ) : null}
+            {formStatus === FULFILLED ? (
+              <FormFlash
+                className="w100 mb2"
+                success={true}
+                message="Your message has been sent!"
+              />
+            ) : null}
+          </div>
         </div>
         <div className="bg-tuft-bush w100 p4 mt4">
           <div
@@ -505,6 +520,7 @@ class PartyRequestForm extends Component {
                       if (value.length) {
                         return (
                           <p
+                            key={summeryField.value}
                             className={cx(
                               styles['PartyRequestForm__help-text']
                             )}
@@ -518,6 +534,7 @@ class PartyRequestForm extends Component {
                   ? selectedAddOns.map(addOn => {
                       return (
                         <p
+                          key={addOn}
                           className={cx(styles['PartyRequestForm__help-text'])}
                         >{`Addon: ${addOn}`}</p>
                       );

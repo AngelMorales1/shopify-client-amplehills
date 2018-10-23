@@ -14,9 +14,11 @@
 
   &__footer-summery {
     align-items: flex-start;
+    margin-bottom: spacing(16);
 
     @media ($medium-up) {
       align-items: center;
+      margin-bottom: 0;
     }
   }
 
@@ -49,6 +51,56 @@
     @media ($medium-up) {
       margin: 0;
       margin: spacing(8) 0;
+    }
+  }
+}
+
+:global {
+  .DayPickerInput {
+    max-width: 36rem;
+    width: 100%;
+    position: relative;
+
+    // &::after {
+    //   content: ' ';
+    //   display: block;
+    //   position: absolute;
+    //   width: 16px;
+    //   height: 10px;
+    //   margin-top: spacing(-10);
+    //   right: spacing(6);
+    //   background: url('/assets/images/arrow-dropdown-active.svg') no-repeat;
+    // }
+
+    input {
+      text-align: left;
+      font-family: $font-avenir;
+      font-weight: 800;
+      color: color('madison-blue');
+      width: 100%;
+      border-radius: radius('xs');
+      border: spacing(0.6) solid color('gray');
+      font-size: $font-4;
+      padding: spacing(5) spacing(6);
+
+      &::placeholder {
+        color: color('dusty-gray');
+        font-size: $font-4;
+      }
+    }
+
+    // &-OverlayWrapper {
+    //   > div {
+    //     left: 50%;
+    //     width: auto;
+    //     transform: translateX(-50%);
+    //   }
+    // }
+
+    .selected {
+      input {
+        border: spacing(0.6) solid color('madison-blue');
+      }
     }
   }
 }
