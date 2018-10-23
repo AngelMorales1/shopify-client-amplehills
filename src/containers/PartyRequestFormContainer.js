@@ -4,9 +4,9 @@ import { bindActionCreators } from 'redux';
 import { IDLE } from 'constants/Status';
 
 import { addLineItems } from 'state/actions/checkoutActions';
+import { fetchPartyAddons } from 'state/actions/partyRequestFormActions';
 import checkout from 'state/selectors/checkout';
-import products from 'state/selectors/products';
-import product from 'state/selectors/product';
+import partyAddons from 'state/selectors/partyAddons';
 import partyAvailableLocations from 'state/selectors/partyAvailableLocations';
 
 import get from 'utils/get';
@@ -14,7 +14,11 @@ import get from 'utils/get';
 class PartyRequestFormContainer extends ContainerBase {
   view = import('views/PartyRequestFormView');
 
-  model = () => {};
+  model = () => {
+    const { fetchPartyAddons } = this.props.actions;
+
+    return fetchPartyAddons();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -22,7 +26,8 @@ const mapStateToProps = (state, props) => {
     formStatus: get(state, 'status.contactUsFormStatus', IDLE),
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
-    partyAvailableLocations: partyAvailableLocations(state)
+    partyAvailableLocations: partyAvailableLocations(state),
+    partyAddons: partyAddons(state)
   };
 };
 
@@ -30,7 +35,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        addLineItems
+        addLineItems,
+        fetchPartyAddons
       },
       dispatch
     )

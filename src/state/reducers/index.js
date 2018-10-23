@@ -10,6 +10,7 @@ import products from './products';
 import customer from './customer';
 import genericPage from './genericPage';
 import events from './events';
+import partyRequestForm from './partyRequestForm';
 
 export default {
   status,
@@ -23,5 +24,6 @@ export default {
   customer,
   genericPage,
   events,
-  mobileNavUI
+  mobileNavUI,
+  partyRequestForm
 };

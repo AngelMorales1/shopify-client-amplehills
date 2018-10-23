@@ -3,20 +3,13 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import Global from 'constants/Global';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
 import moment from 'moment';
+import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
-import {
-  Image,
-  Button,
-  TextField,
-  FormFlash,
-  Dropdown,
-  Radio
-} from 'components/base';
+import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
 
 class PartyRequestForm extends Component {
   state = {
@@ -45,7 +38,8 @@ class PartyRequestForm extends Component {
     selectedNumberOfGuests: 0,
     selectedCelebrating: '',
     selectedAddOns: [],
-    selectedAllergies: ''
+    selectedAllergies: '',
+    dayPickerIsSelected: false
   };
 
   componentDidMount() {
@@ -69,12 +63,9 @@ class PartyRequestForm extends Component {
   formHasErrors = () => {
     const {
       selectedLocation,
-      selectedAddOns,
-      selectedAllergies,
       selectedDate,
       selectedTimeSlot,
       selectedPartyType,
-      selectedAge,
       selectedNumberOfGuests,
       selectedCelebrating
     } = this.state;
@@ -165,8 +156,29 @@ class PartyRequestForm extends Component {
     return this.formHasErrors();
   };
 
+  handleLocationChange = filter => {
+    const locations = get(this, 'props.partyAvailableLocations', {});
+    const { selectedLocation } = this.state;
+
+    const timeSlots = locations[filter.value].timeSlots;
+    const partyTypes = locations[filter.value].partyTypes;
+
+    this.setState({
+      selectedLocation: filter.value,
+      timeSlots: timeSlots,
+      partyTypes: partyTypes
+    });
+
+    filter.value !== selectedLocation
+      ? this.setState({
+          selectedTimeSlot: '',
+          selectedPartyType: ''
+        })
+      : null;
+  };
+
   render() {
-    const { formStatus } = this.props;
+    const { formStatus, partyAddons } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -177,17 +189,13 @@ class PartyRequestForm extends Component {
       selectedAge,
       selectedNumberOfGuests,
       selectedCelebrating,
-      error
+      error,
+      dayPickerIsSelected
     } = this.state;
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
     const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
-    const partyAddOns = [
-      { value: 'Our Food & Drink Package1', price: 60.0 },
-      { value: 'Our Food & Drink Package2', price: 60.0 },
-      { value: 'Our Food & Drink Package3', price: 60.0 }
-    ];
-
+    const partyAddonsValue = Object.values(partyAddons);
     const fieldIsEmpty =
       !selectedLocation &&
       !selectedAddOns.length &&
@@ -250,19 +258,7 @@ class PartyRequestForm extends Component {
               variant={selectedLocation ? 'square--selected' : 'square'}
               placeholder="Choose a Location"
               value={selectedLocation}
-              onChange={filter => {
-                this.setState({
-                  selectedLocation: filter.value,
-                  timeSlots: locations[filter.value].timeSlots,
-                  partyTypes: locations[filter.value].partyTypes
-                }),
-                  filter.value !== selectedLocation
-                    ? this.setState({
-                        selectedTimeSlot: '',
-                        selectedPartyType: ''
-                      })
-                    : null;
-              }}
+              onChange={filter => this.handleLocationChange(filter)}
               options={locationIds.map(locationId => {
                 const title = locations[locationId].title;
 
@@ -274,16 +270,57 @@ class PartyRequestForm extends Component {
             <p className="bold big center mb3">
               Did you have a day in mind for your event?
             </p>
-            <DayPickerInput
-              formatDate={() => moment().format('MMMM DD')}
-              placeholder="Choose a day"
-              value={this.state.selectedDate}
-              onDayChange={day =>
+            <Button
+              variant="style-none"
+              onClick={() =>
                 this.setState({
-                  selectedDate: moment(day).format('MMMM DD')
+                  dayPickerIsSelected: !this.state.dayPickerIsSelected
                 })
               }
-            />
+              className={cx(
+                styles['PartyRequestForm__day-picker-container'],
+                'w100 text-container-width relative z-1',
+                {
+                  [styles[
+                    'PartyRequestForm__day-picker-container--selected'
+                  ]]: selectedDate
+                }
+              )}
+            >
+              {selectedDate ? (
+                <p className="bold text-madison-blue">{selectedDate}</p>
+              ) : (
+                <p className="bold text-dusty-gray">Choose a day</p>
+              )}
+              <Image
+                className={cx(
+                  styles['PartyRequestForm__day-picker-button'],
+                  'right'
+                )}
+                src={
+                  dayPickerIsSelected
+                    ? '/assets/images/arrow-dropdown.svg'
+                    : '/assets/images/arrow-dropdown-active.svg'
+                }
+              />
+              <DayPicker
+                className={cx(
+                  styles['PartyRequestForm__day-picker'],
+                  'absolute t0 l0 mt4 bg-white',
+                  {
+                    hide: !dayPickerIsSelected
+                  }
+                )}
+                onMonthChange={() => {
+                  this.setState({ dayPickerIsSelected: true });
+                }}
+                onDayClick={day =>
+                  this.setState({
+                    selectedDate: moment(day).format('MMMM DD')
+                  })
+                }
+              />
+            </Button>
           </div>
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
@@ -422,27 +459,25 @@ class PartyRequestForm extends Component {
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">Would you like any add-ons?</p>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-              {partyAddOns.map(partyAddOn => {
-                const partyAddOnsLength = partyAddOns.length;
-
+              {partyAddonsValue.map(partyAddOn => {
                 return (
-                  <div key={partyAddOn.value} className="col-6 p1">
+                  <div key={partyAddOn.id} className="col-6 p1">
                     <Button
-                      onClick={() => this.addOnClick(partyAddOn.value)}
+                      onClick={() => this.addOnClick(partyAddOn.handle)}
                       className="center wh100 "
                       variant={
-                        selectedAddOns.includes(partyAddOn.value)
+                        selectedAddOns.includes(partyAddOn.handle)
                           ? 'square--selected'
                           : 'square'
                       }
                     >
-                      <div className="flex flex-column wh100">
+                      <div className="inline-flex flex-column w100 my2">
                         <p className="mb1 white-space-normal center">
-                          {partyAddOn.value}
+                          {partyAddOn.title}
                         </p>
-                        <p className="white-space-normal">{`$${
+                        <p className="white-space-normal light">{`$${
                           partyAddOn.price
-                        }`}</p>
+                        } ${partyAddOn.description}`}</p>
                       </div>
                     </Button>
                   </div>
@@ -536,7 +571,7 @@ class PartyRequestForm extends Component {
                         <p
                           key={addOn}
                           className={cx(styles['PartyRequestForm__help-text'])}
-                        >{`Addon: ${addOn}`}</p>
+                        >{`Addon: ${partyAddons[addOn].title}`}</p>
                       );
                     })
                   : null}
