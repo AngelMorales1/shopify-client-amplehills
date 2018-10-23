@@ -9,7 +9,14 @@ import 'react-day-picker/lib/style.css';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
-import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
+import {
+  Image,
+  Button,
+  TextField,
+  FormFlash,
+  Dropdown,
+  Modal
+} from 'components/base';
 
 class PartyRequestForm extends Component {
   state = {
@@ -39,7 +46,8 @@ class PartyRequestForm extends Component {
     selectedCelebrating: '',
     selectedAddOns: [],
     selectedAllergies: '',
-    dayPickerIsSelected: false
+    dayPickerIsSelected: false,
+    modalIsOpen: false
   };
 
   componentDidMount() {
@@ -106,6 +114,7 @@ class PartyRequestForm extends Component {
       return true;
     }
 
+    this.setState({ error: false });
     return false;
   };
 
@@ -152,8 +161,29 @@ class PartyRequestForm extends Component {
     }
   };
 
-  handleMakeDeposit = () => {
-    return this.formHasErrors();
+  handleMakeDeposit = summeryOrder => {
+    const errorCheck = this.formHasErrors();
+    const attributes = summeryOrder.map(
+      field => `${field.name}: ${field.value}`
+    );
+
+    const item = [
+      {
+        variantId: get(this, 'props.partyDeposit.id', ''),
+        quantity: 1,
+        customAttributes: [
+          {
+            key: 'Order Summery',
+            value: attributes.join(', ')
+          }
+        ]
+      }
+    ];
+    if (!errorCheck) {
+      this.props.actions.addLineItems(this.props.checkout.id, item);
+    }
+
+    return errorCheck;
   };
 
   handleLocationChange = filter => {
@@ -178,7 +208,7 @@ class PartyRequestForm extends Component {
   };
 
   render() {
-    const { formStatus, partyAddons } = this.props;
+    const { formStatus, partyAddons, partyDeposit } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -251,6 +281,7 @@ class PartyRequestForm extends Component {
               color="peach"
               label="More Info"
               className="uppercase mb3 tout"
+              onClick={() => this.setState({ modalIsOpen: true })}
             />
             <Dropdown
               className="w100 text-container-width z-sub-nav"
@@ -306,7 +337,7 @@ class PartyRequestForm extends Component {
               <DayPicker
                 className={cx(
                   styles['PartyRequestForm__day-picker'],
-                  'absolute t0 l0 mt4 bg-white',
+                  'absolute t0 l0 mt4 bg-white text-madison-blue',
                   {
                     hide: !dayPickerIsSelected
                   }
@@ -498,7 +529,7 @@ class PartyRequestForm extends Component {
             />
           </div>
           <div className="w100 text-container-width">
-            {error || formStatus === REJECTED ? (
+            {error ? (
               <FormFlash
                 className="w100 mb2"
                 error={true}
@@ -509,11 +540,11 @@ class PartyRequestForm extends Component {
                 }
               />
             ) : null}
-            {formStatus === FULFILLED ? (
+            {error === false ? (
               <FormFlash
                 className="w100 mb2"
                 success={true}
-                message="Your message has been sent!"
+                message="Your request is added to cart!"
               />
             ) : null}
           </div>
@@ -595,7 +626,7 @@ class PartyRequestForm extends Component {
                     'bold mb3'
                   )}
                 >
-                  Deposit total $100.00
+                  {`Deposit total $${partyDeposit.price}`}
                 </p>
                 <p className={cx(styles['PartyRequestForm__help-text'], 'mb3')}>
                   Statement that mentions what the customer can expect after
@@ -603,7 +634,7 @@ class PartyRequestForm extends Component {
                 </p>
                 <div>
                   <Button
-                    onClick={this.handleMakeDeposit}
+                    onClick={() => this.handleMakeDeposit(summeryOrder)}
                     color="madison-blue"
                     className="inline-flex"
                     label="Make Deposit"
@@ -613,6 +644,51 @@ class PartyRequestForm extends Component {
             </div>
           </div>
         </div>
+        {this.state.modalIsOpen ? (
+          <div
+            className={cx(
+              styles['PartyRequestForm__modal'],
+              'overflow-scroll fixed-cover bg-white-wash flex justify-center items-center transition-fade-in'
+            )}
+          >
+            <div
+              className={cx(
+                styles['PartyRequestForm__modal-content-container'],
+                'relative flex items-center justify-center bg-white drop-shadow transition-slide-up-large-long'
+              )}
+            >
+              <div className="wh100 m-auto flex flex-column mb3 justify-center">
+                <div>
+                  <h2 className="block-headline m3 pt3 mb3">More Info</h2>
+                  {Object.values(locations).map(location => {
+                    return (
+                      <div key={location.id} className="m3">
+                        <p className="bold big mb2">{location.title}</p>
+                        <p>{location.address1}</p>
+                        {location.address2 ? <p>{location.address2}</p> : null}
+                        <p>{`${location.city}, ${location.state} ${
+                          location.zip
+                        }`}</p>
+                        <p>capacity</p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <div>
+                  <Button
+                    className={cx(
+                      styles['PartyRequestForm__modal-close-button'],
+                      'right'
+                    )}
+                    color="madison-blue"
+                    label="Close"
+                    onClick={() => this.setState({ modalIsOpen: false })}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   }

@@ -77,4 +77,32 @@
       margin: spacing(8) 0;
     }
   }
+
+  &__modal {
+    align-items: flex-start;
+
+    @media ($medium-up) {
+      align-items: center;
+    }
+  }
+
+  &__modal-content-container {
+    min-height: 100%;
+    width: 100%;
+    padding: 0 spacing(4);
+
+    @media ($medium-up) {
+      min-height: inherit;
+      max-width: 36rem;
+      border-radius: radius('m');
+    }
+  }
+
+  &__modal-close-button {
+    margin: spacing(4);
+
+    @media ($medium-up) {
+      margin: spacing(8);
+    }
+  }
 }

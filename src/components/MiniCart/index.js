@@ -10,6 +10,7 @@ import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
 import events from 'state/selectors/events';
+import partyDeposit from 'state/selectors/partyDeposit';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -40,6 +41,7 @@ class MiniCart extends Component {
       items,
       products,
       events,
+      partyDeposit,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -70,7 +72,8 @@ class MiniCart extends Component {
               const handle = getProductHandleFromVariantId(
                 products,
                 events,
-                item
+                item,
+                partyDeposit
               );
               const productIsEvent = !products[handle];
 
@@ -91,18 +94,40 @@ class MiniCart extends Component {
                     {subItems.length ? (
                       <div className="w100">
                         <ul className="my1">
-                          {subItems.map(subItem => (
-                            <li
-                              className="sub-line-item small"
-                              key={subItem.handle}
-                            >
-                              {productIsEvent
-                                ? subItem.handle
-                                : `${subItem.quantity}x ${
-                                    products[subItem.handle].title
-                                  }`}
-                            </li>
-                          ))}
+                          {subItems.map(subItem => {
+                            return (
+                              <li
+                                className="sub-line-item small"
+                                key={subItem.handle}
+                              >
+                                {productIsEvent
+                                  ? subItem.handle
+                                  : `${subItem.quantity}x ${
+                                      products[subItem.handle].title
+                                    }`}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ) : null}
+                    {item.title === 'Party Deposit' ||
+                    item.productId ===
+                      'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ==' ? (
+                      <div className="w100">
+                        <ul className="my1">
+                          {get(item, 'attributes[0].value', '')
+                            .split(', ')
+                            .map(attribute => {
+                              return (
+                                <li
+                                  className="sub-line-item small"
+                                  key={attribute}
+                                >
+                                  {attribute}
+                                </li>
+                              );
+                            })}
                         </ul>
                       </div>
                     ) : null}
@@ -190,7 +215,8 @@ const mapStateToProps = state => {
     events: events(state),
     items: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
-    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
+    lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', []),
+    partyDeposit: partyDeposit(state)
   };
 };
 

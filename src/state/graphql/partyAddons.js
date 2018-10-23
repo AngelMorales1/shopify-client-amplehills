@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export const fetchPartyAddonsQuery = gql`
   query shop {
     shop {
-      products(first: 250, query: "Party-Add-on") {
+      products(first: 250, query: "party-add-on") {
         edges {
           node {
             availableForSale

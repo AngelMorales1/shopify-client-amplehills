@@ -17,6 +17,7 @@ import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
 import lineItems from 'state/selectors/lineItems';
+import partyDeposit from 'state/selectors/partyDeposit';
 import checkoutModel from 'models/checkoutModel';
 import itemModel from 'models/itemModel';
 import productModel from 'models/productModel';
@@ -70,7 +71,8 @@ class Cart extends Component {
       items,
       products,
       updatingNote,
-      events
+      events,
+      partyDeposit
     } = this.props;
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
@@ -117,7 +119,8 @@ class Cart extends Component {
                 const handle = getProductHandleFromVariantId(
                   products,
                   events,
-                  item
+                  item,
+                  partyDeposit
                 );
                 const productIsEvent = !products[handle];
                 const event = events.find(event => {
@@ -159,6 +162,19 @@ class Cart extends Component {
                               </span>
                             );
                           })}
+                          {item.title === 'Party Deposit' ||
+                          item.productId ===
+                            'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
+                            ? get(item, 'attributes[0].value', '')
+                                .split(', ')
+                                .map(attribute => {
+                                  return (
+                                    <span className="small mb1" key={attribute}>
+                                      {attribute}
+                                    </span>
+                                  );
+                                })
+                            : null}
                           {productIsEvent && cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
@@ -180,7 +196,12 @@ class Cart extends Component {
                     >
                       <Link
                         className={`text-decoration-none ${
-                          item.subitems ? 'mb2' : 'my-auto'
+                          item.subitems ||
+                          item.title === 'Party Deposit' ||
+                          item.productId ===
+                            'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
+                            ? 'mb2'
+                            : 'my-auto'
                         }`}
                         to={
                           productIsEvent
@@ -201,6 +222,19 @@ class Cart extends Component {
                           </span>
                         );
                       })}
+                      {item.title === 'Party Deposit' ||
+                      item.productId ===
+                        'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
+                        ? get(item, 'attributes[0].value', '')
+                            .split(', ')
+                            .map(attribute => {
+                              return (
+                                <span className="small mb1" key={attribute}>
+                                  {attribute}
+                                </span>
+                              );
+                            })
+                        : null}
                       {productIsEvent && cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
@@ -428,7 +462,8 @@ const mapStateToProps = state => {
     updatingNote: get(state, 'status.updatingNote', IDLE),
     items: lineItems(state),
     products: products(state),
-    events: events(state)
+    events: events(state),
+    partyDeposit: partyDeposit(state)
   };
 };
 
