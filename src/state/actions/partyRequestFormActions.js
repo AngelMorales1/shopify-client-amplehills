@@ -1,4 +1,3 @@
-import Data from 'lib/Data';
 import { client as Apollo } from 'lib/Apollo';
 
 import { fetchPartyAddonsQuery } from 'state/graphql/partyAddons';

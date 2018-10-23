@@ -9,22 +9,22 @@ class PartyRequestFormView extends Component {
 
     const {
       partyAvailableLocations,
-      formStateus,
       partyAddons,
       partyDeposit,
       actions,
-      checkout
+      checkout,
+      addLineItemsStatus
     } = this.props;
 
     return (
       <div className="PartyRequestFormView">
         <PartyRequestForm
-          formStateus={formStateus}
           partyAvailableLocations={partyAvailableLocations}
           partyAddons={partyAddons}
           partyDeposit={partyDeposit}
           actions={actions}
           checkout={checkout}
+          addLineItemsStatus={addLineItemsStatus}
         />
       </div>
     );

@@ -9,6 +9,7 @@ import {
 } from 'state/actions/checkoutActions';
 
 import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
+import { GENERAL_PRODUCT, EVENT, PARTY_DEPOSIT } from 'constants/ProductTypes';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -62,6 +63,33 @@ class Cart extends Component {
       get(this.props.checkout, 'id', ''),
       items
     );
+  };
+
+  getProductType = handle => {
+    const { products, partyDeposit, events } = this.props;
+
+    if (products[handle]) {
+      return GENERAL_PRODUCT;
+    }
+
+    if (partyDeposit.handle === handle) {
+      return PARTY_DEPOSIT;
+    }
+
+    return EVENT;
+  };
+
+  getProductLink = (productType, event, handle) => {
+    switch (productType) {
+      case GENERAL_PRODUCT:
+        return `/products/${handle}`;
+      case PARTY_DEPOSIT:
+        return '/party-request-form';
+      case EVENT:
+        return `/events/${get(event, 'handle', '')}`;
+      default:
+        return '/';
+    }
   };
 
   render() {
@@ -122,6 +150,8 @@ class Cart extends Component {
                   item,
                   partyDeposit
                 );
+
+                const productType = this.getProductType(handle);
                 const productIsEvent = !products[handle];
                 const event = events.find(event => {
                   return get(event, 'variants', []).find(
@@ -142,11 +172,7 @@ class Cart extends Component {
                       <div className="my2">
                         <Link
                           className="text-decoration-none"
-                          to={
-                            productIsEvent
-                              ? `/events/${get(event, 'handle', '')}`
-                              : `/products/${handle}`
-                          }
+                          to={this.getProductLink(productType, event, handle)}
                         >
                           <span className="small bold">{item.title}</span>
                         </Link>
@@ -162,18 +188,17 @@ class Cart extends Component {
                               </span>
                             );
                           })}
-                          {item.title === 'Party Deposit' ||
-                          item.productId ===
-                            'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
-                            ? get(item, 'attributes[0].value', '')
-                                .split(', ')
-                                .map(attribute => {
-                                  return (
-                                    <span className="small mb1" key={attribute}>
-                                      {attribute}
-                                    </span>
-                                  );
-                                })
+                          {item.attributes.length
+                            ? get(item, 'attributes', []).map(attribute => {
+                                return (
+                                  <span
+                                    className="small mb1"
+                                    key={attribute.value}
+                                  >
+                                    {`${attribute.key}: ${attribute.value}`}
+                                  </span>
+                                );
+                              })
                             : null}
                           {productIsEvent && cartDetails ? (
                             <div className="flex flex-column">
@@ -196,18 +221,11 @@ class Cart extends Component {
                     >
                       <Link
                         className={`text-decoration-none ${
-                          item.subitems ||
-                          item.title === 'Party Deposit' ||
-                          item.productId ===
-                            'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
+                          item.subitems || item.title === 'Party Deposit'
                             ? 'mb2'
                             : 'my-auto'
                         }`}
-                        to={
-                          productIsEvent
-                            ? `/events/${get(event, 'handle', '')}`
-                            : `/products/${handle}`
-                        }
+                        to={this.getProductLink(productType, event, handle)}
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
@@ -222,18 +240,14 @@ class Cart extends Component {
                           </span>
                         );
                       })}
-                      {item.title === 'Party Deposit' ||
-                      item.productId ===
-                        'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ=='
-                        ? get(item, 'attributes[0].value', '')
-                            .split(', ')
-                            .map(attribute => {
-                              return (
-                                <span className="small mb1" key={attribute}>
-                                  {attribute}
-                                </span>
-                              );
-                            })
+                      {item.attributes.length
+                        ? get(item, 'attributes', []).map(attribute => {
+                            return (
+                              <span className="small mb1" key={attribute.value}>
+                                {`${attribute.key}: ${attribute.value}`}
+                              </span>
+                            );
+                          })
                         : null}
                       {productIsEvent && cartDetails ? (
                         <div className="flex flex-column">

@@ -5,7 +5,6 @@ import cx from 'classnames';
 
 import { Image } from 'components/base';
 import styles from './Dropdown.scss';
-// import default from '../../../constants/forms/ContactUs';
 
 const Arrow = ({ onMouseDown, isOpen }) => {
   const src = isOpen
@@ -123,7 +122,7 @@ class Dropdown extends Component {
           onClose={this.onClose}
           placeholder={placeholder}
           onChange={this.onChange}
-          arrowRenderer={this.getArrowRenderer(color)} //{color === 'white' ? ArrowWhite : Arrow}
+          arrowRenderer={this.getArrowRenderer(color)}
         />
       </div>
     );

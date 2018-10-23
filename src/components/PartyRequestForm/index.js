@@ -2,22 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
 import Global from 'constants/Global';
-import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
+import checkoutModel from 'models/checkoutModel';
+import { PENDING, FULFILLED } from 'constants/Status';
+import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
 import moment from 'moment';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
-import checkoutModel from 'models/checkoutModel';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
-import {
-  Image,
-  Button,
-  TextField,
-  FormFlash,
-  Dropdown,
-  Modal
-} from 'components/base';
 
 class PartyRequestForm extends Component {
   state = {
@@ -58,6 +51,15 @@ class PartyRequestForm extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindow);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.addLineItemsStatus === PENDING &&
+      this.props.addLineItemsStatus === FULFILLED
+    ) {
+      this.setState({ error: false });
+    }
   }
 
   updateWindow = () => {
@@ -141,7 +143,7 @@ class PartyRequestForm extends Component {
     return 'square';
   };
 
-  hasSelectedAllergies = () => {
+  hasAllergies = () => {
     const { selectedAllergies } = this.state;
 
     return selectedAllergies
@@ -162,26 +164,71 @@ class PartyRequestForm extends Component {
     }
   };
 
-  handleMakeDeposit = summeryOrder => {
-    const errorCheck = this.formHasErrors();
-    const attributes = summeryOrder.map(
-      field => `${field.name}: ${field.value}`
-    );
+  getPartySummary = () => {
+    const {
+      selectedLocation,
+      selectedDate,
+      selectedTimeSlot,
+      selectedPartyType,
+      selectedAge,
+      selectedNumberOfGuests,
+      selectedCelebrating
+    } = this.state;
+    const locations = get(this, 'props.partyAvailableLocations', {});
 
-    const item = [
+    return [
       {
-        variantId: get(this, 'props.partyDeposit.id', ''),
-        quantity: 1,
-        customAttributes: [
-          {
-            key: 'Order Summery',
-            value: attributes.join(', ')
-          }
-        ]
+        key: 'Location',
+        value: get(locations[selectedLocation], 'title', '')
+      },
+      {
+        key: 'Date',
+        value: selectedDate
+      },
+      {
+        key: 'Time Slot',
+        value: selectedTimeSlot
+      },
+      {
+        key: 'Party Type',
+        value: selectedPartyType
+      },
+      {
+        key: '# of Guests',
+        value: selectedNumberOfGuests
+      },
+      {
+        key: 'Age',
+        value: selectedAge
+      },
+      {
+        key: 'Celebrating',
+        value: selectedCelebrating
       }
     ];
+  };
+
+  handleMakeDeposit = () => {
+    const errorCheck = this.formHasErrors();
+    const { selectedAddOns, selectedAllergies } = this.state;
+    const { partyAddons } = this.props;
+
     if (!errorCheck) {
-      this.props.actions.addLineItems(this.props.checkout.id, item);
+      const partyAddonsTitles = selectedAddOns
+        .map(addonHandle => partyAddons[addonHandle].title)
+        .join(', ');
+      const items = [
+        {
+          variantId: get(this, 'props.partyDeposit.id', ''),
+          quantity: 1,
+          customAttributes: this.getPartySummary().concat([
+            { key: 'Allergies', value: selectedAllergies },
+            { key: 'Party Addons', value: partyAddonsTitles }
+          ])
+        }
+      ];
+
+      this.props.actions.addLineItems(this.props.checkout.id, items);
     }
 
     return errorCheck;
@@ -200,16 +247,16 @@ class PartyRequestForm extends Component {
       partyTypes: partyTypes
     });
 
-    filter.value !== selectedLocation
-      ? this.setState({
-          selectedTimeSlot: '',
-          selectedPartyType: ''
-        })
-      : null;
+    if (filter.value !== selectedLocation) {
+      this.setState({
+        selectedTimeSlot: '',
+        selectedPartyType: ''
+      });
+    }
   };
 
   render() {
-    const { formStatus, partyAddons, partyDeposit } = this.props;
+    const { partyAddons, partyDeposit, addLineItemsStatus } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -238,37 +285,6 @@ class PartyRequestForm extends Component {
       !selectedNumberOfGuests &&
       !selectedCelebrating;
 
-    const summeryOrder = [
-      {
-        name: 'Location',
-        value: get(locations[selectedLocation], 'title', '')
-      },
-      {
-        name: 'Date',
-        value: selectedDate
-      },
-      {
-        name: 'Time Slot',
-        value: selectedTimeSlot
-      },
-      {
-        name: 'Party Type',
-        value: selectedPartyType
-      },
-      {
-        name: '# of Guests',
-        value: selectedNumberOfGuests
-      },
-      {
-        name: 'Age',
-        value: selectedAge
-      },
-      {
-        name: 'Celebrating',
-        value: selectedCelebrating
-      }
-    ];
-    console.log(this.props);
     return (
       <div className="w100 flex flex-column items-center">
         <div className="w100 flex flex-column items-center px2">
@@ -539,11 +555,11 @@ class PartyRequestForm extends Component {
                 message={
                   error
                     ? error
-                    : 'There was an unexpected problem while submitting your request. Please reach out directly to info@amplehills.com'
+                    : 'There was an unexpected problem while submitting your request. Please reach out directly to parties@amplehills.com'
                 }
               />
             ) : null}
-            {error === false ? (
+            {error === false && addLineItemsStatus === FULFILLED ? (
               <FormFlash
                 className="w100 mb2"
                 success={true}
@@ -567,7 +583,8 @@ class PartyRequestForm extends Component {
             >
               <div
                 className={cx(
-                  styles['PartyRequestForm__footer-text-container']
+                  styles['PartyRequestForm__footer-text-container'],
+                  'col12 md-col-10'
                 )}
               >
                 <p
@@ -584,7 +601,7 @@ class PartyRequestForm extends Component {
                   </p>
                 ) : (
                   <div>
-                    {summeryOrder.map(summeryField => {
+                    {this.getPartySummary().map(summeryField => {
                       const value = get(summeryField, 'value', '');
                       if (value.length) {
                         return (
@@ -593,7 +610,7 @@ class PartyRequestForm extends Component {
                             className={cx(
                               styles['PartyRequestForm__help-text']
                             )}
-                          >{`${summeryField.name}: ${summeryField.value}`}</p>
+                          >{`${summeryField.key}: ${summeryField.value}`}</p>
                         );
                       }
                     })}
@@ -611,7 +628,7 @@ class PartyRequestForm extends Component {
                   : null}
                 {!fieldIsEmpty ? (
                   <p className={cx(styles['PartyRequestForm__help-text'])}>
-                    {this.hasSelectedAllergies()}
+                    {this.hasAllergies()}
                   </p>
                 ) : null}
               </div>
@@ -637,7 +654,7 @@ class PartyRequestForm extends Component {
                 </p>
                 <div>
                   <Button
-                    onClick={() => this.handleMakeDeposit(summeryOrder)}
+                    onClick={() => this.handleMakeDeposit()}
                     color="madison-blue"
                     className="inline-flex"
                     label="Make Deposit"

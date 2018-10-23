@@ -1,6 +1,5 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import products from 'state/selectors/products';
 
 export default createSelector(
   state => get(state, 'products.products.data.shop.products.edges', []),

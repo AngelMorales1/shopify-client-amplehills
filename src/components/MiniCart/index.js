@@ -111,23 +111,19 @@ class MiniCart extends Component {
                         </ul>
                       </div>
                     ) : null}
-                    {item.title === 'Party Deposit' ||
-                    item.productId ===
-                      'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUzNzU0NDg2MzgxOQ==' ? (
+                    {item.attributes.length ? (
                       <div className="w100">
                         <ul className="my1">
-                          {get(item, 'attributes[0].value', '')
-                            .split(', ')
-                            .map(attribute => {
-                              return (
-                                <li
-                                  className="sub-line-item small"
-                                  key={attribute}
-                                >
-                                  {attribute}
-                                </li>
-                              );
-                            })}
+                          {get(item, 'attributes', []).map(attribute => {
+                            return (
+                              <li
+                                className="sub-line-item small"
+                                key={attribute.value}
+                              >
+                                {`${attribute.key}: ${attribute.value}`}
+                              </li>
+                            );
+                          })}
                         </ul>
                       </div>
                     ) : null}
