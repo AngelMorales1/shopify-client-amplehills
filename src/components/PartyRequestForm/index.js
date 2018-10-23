@@ -6,6 +6,7 @@ import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 import moment from 'moment';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
+import checkoutModel from 'models/checkoutModel';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
@@ -148,7 +149,7 @@ class PartyRequestForm extends Component {
       : 'No Alergies';
   };
 
-  addOnClick = value => {
+  handleAddOnClick = value => {
     let addOns = this.state.selectedAddOns;
     const valueIndexInAddOns = addOns.indexOf(value);
 
@@ -267,7 +268,7 @@ class PartyRequestForm extends Component {
         value: selectedCelebrating
       }
     ];
-
+    console.log(this.props);
     return (
       <div className="w100 flex flex-column items-center">
         <div className="w100 flex flex-column items-center px2">
@@ -487,35 +488,37 @@ class PartyRequestForm extends Component {
               placeholder="Enter a name of something"
             />
           </div>
-          <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">Would you like any add-ons?</p>
-            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-              {partyAddonsValue.map(partyAddOn => {
-                return (
-                  <div key={partyAddOn.id} className="col-6 p1">
-                    <Button
-                      onClick={() => this.addOnClick(partyAddOn.handle)}
-                      className="center wh100 "
-                      variant={
-                        selectedAddOns.includes(partyAddOn.handle)
-                          ? 'square--selected'
-                          : 'square'
-                      }
-                    >
-                      <div className="inline-flex flex-column w100 my2">
-                        <p className="mb1 white-space-normal center">
-                          {partyAddOn.title}
-                        </p>
-                        <p className="white-space-normal light">{`$${
-                          partyAddOn.price
-                        } ${partyAddOn.description}`}</p>
-                      </div>
-                    </Button>
-                  </div>
-                );
-              })}
+          {partyAddonsValue.length ? (
+            <div className="w100 mt4 flex flex-column items-center">
+              <p className="bold big center mb3">Would you like any add-ons?</p>
+              <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+                {partyAddonsValue.map(partyAddOn => {
+                  return (
+                    <div key={partyAddOn.id} className="col-6 p1">
+                      <Button
+                        onClick={() => this.handleAddOnClick(partyAddOn.handle)}
+                        className="center wh100 "
+                        variant={
+                          selectedAddOns.includes(partyAddOn.handle)
+                            ? 'square--selected'
+                            : 'square'
+                        }
+                      >
+                        <div className="inline-flex flex-column w100 my2">
+                          <p className="mb1 white-space-normal center">
+                            {partyAddOn.title}
+                          </p>
+                          <p className="white-space-normal light">{`$${
+                            partyAddOn.price
+                          } ${partyAddOn.description}`}</p>
+                        </div>
+                      </Button>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          ) : null}
           <div className="w100 my4 flex flex-column items-center">
             <p className="bold big center mb3">
               Are there any dietary restrictions or allergies that we should be
@@ -694,8 +697,40 @@ class PartyRequestForm extends Component {
   }
 }
 
-PartyRequestForm.propTypes = {};
+PartyRequestForm.propTypes = {
+  actions: PropTypes.shape({
+    addLineItems: PropTypes.func,
+    fetchPartyAddons: PropTypes.func
+  }),
+  checkout: checkoutModel.propTypes,
+  partyAddons: PropTypes.object,
+  partyAvailableLocations: PropTypes.object,
+  partyDeposit: PropTypes.shape({
+    available: PropTypes.bool,
+    description: PropTypes.string,
+    handle: PropTypes.string,
+    id: PropTypes.string,
+    price: PropTypes.string,
+    title: PropTypes.string
+  })
+};
 
-PartyRequestForm.defaultProps = {};
+PartyRequestForm.defaultProps = {
+  actions: {
+    addLineItems: () => {},
+    fetchPartyAddons: () => {}
+  },
+  checkout: checkoutModel.default,
+  partyAddons: {},
+  partyAvailableLocations: {},
+  partyDeposit: PropTypes.shape({
+    available: false,
+    description: '',
+    handle: '',
+    id: '',
+    price: '0.00',
+    title: ''
+  })
+};
 
 export default PartyRequestForm;

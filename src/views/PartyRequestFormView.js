@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import get from 'utils/get';
+import React, { Component } from 'react';
 import PartyRequestForm from 'components/PartyRequestForm';
 
 class PartyRequestFormView extends Component {
