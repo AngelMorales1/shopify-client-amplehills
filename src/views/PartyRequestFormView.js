@@ -8,11 +8,14 @@ class PartyRequestFormView extends Component {
 
     if (model.isError) return <h1>Error</h1>;
 
-    const { partyAvailableLocations } = this.props;
+    const { partyAvailableLocations, formStateus } = this.props;
 
     return (
       <div className="PartyRequestFormView">
-        <PartyRequestForm partyAvailableLocations={partyAvailableLocations} />
+        <PartyRequestForm
+          formStateus={formStateus}
+          partyAvailableLocations={partyAvailableLocations}
+        />
       </div>
     );
   }

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import get from 'utils/get';
-import cx from 'classnames';
 import Global from 'constants/Global';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 
+import cx from 'classnames';
+import styles from './PartyRequestForm.scss';
 import {
   Image,
   Button,
@@ -12,7 +14,6 @@ import {
   Dropdown,
   Radio
 } from 'components/base';
-import styles from './PartyRequestForm.scss';
 
 class PartyRequestForm extends Component {
   state = {
@@ -62,6 +63,58 @@ class PartyRequestForm extends Component {
       this.setState({ currentBreakpoint });
   };
 
+  formHasErrors = () => {
+    const {
+      selectedLocation,
+      selectedAddOns,
+      selectedAllergies,
+      selectedDate,
+      selectedTimeSlot,
+      selectedPartyType,
+      selectedAge,
+      selectedNumberOfGuests,
+      selectedCelebrating
+    } = this.state;
+
+    if (!selectedLocation) {
+      const error = 'Please select the location.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!selectedDate) {
+      const error = 'Please select the date.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!selectedTimeSlot) {
+      const error = 'Please select the time slot.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!selectedPartyType) {
+      const error = 'Please select the party type.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!selectedNumberOfGuests || selectedNumberOfGuests > 55) {
+      const error = 'Please enter expectiong total guests number under 55.';
+      this.setState({ error });
+      return true;
+    }
+
+    if (!selectedCelebrating) {
+      const error = 'Please enter Who (or what) will we be celebrating.';
+      this.setState({ error });
+      return true;
+    }
+
+    return false;
+  };
+
   getButtonWidth = buttonCount => {
     const { small } = Global.breakpoints;
 
@@ -105,15 +158,12 @@ class PartyRequestForm extends Component {
     }
   };
 
+  handleMakeDeposit = () => {
+    return this.formHasErrors();
+  };
+
   render() {
-    const locations = get(this, 'props.partyAvailableLocations', {});
-    const locationIds = Object.keys(locations);
-    const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
-    const partyAddOns = [
-      { value: 'Our Food & Drink Package1', price: 60.0 },
-      { value: 'Our Food & Drink Package2', price: 60.0 },
-      { value: 'Our Food & Drink Package3', price: 60.0 }
-    ];
+    const { formStatus } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -123,8 +173,18 @@ class PartyRequestForm extends Component {
       selectedPartyType,
       selectedAge,
       selectedNumberOfGuests,
-      selectedCelebrating
+      selectedCelebrating,
+      error
     } = this.state;
+    const locations = get(this, 'props.partyAvailableLocations', {});
+    const locationIds = Object.keys(locations);
+    const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
+    const partyAddOns = [
+      { value: 'Our Food & Drink Package1', price: 60.0 },
+      { value: 'Our Food & Drink Package2', price: 60.0 },
+      { value: 'Our Food & Drink Package3', price: 60.0 }
+    ];
+
     const fieldIsEmpty =
       !selectedLocation &&
       !selectedAddOns.length &&
@@ -388,6 +448,26 @@ class PartyRequestForm extends Component {
             placeholder="Add a note"
           />
         </div>
+        <div className="w100 text-container-width">
+          {error || formStatus === REJECTED ? (
+            <FormFlash
+              className="w100 mb2"
+              error={true}
+              message={
+                error
+                  ? error
+                  : 'There was an unexpected problem while submitting your message. Please reach out directly to info@amplehills.com'
+              }
+            />
+          ) : null}
+          {formStatus === FULFILLED ? (
+            <FormFlash
+              className="w100 mb2"
+              success={true}
+              message="Your message has been sent!"
+            />
+          ) : null}
+        </div>
         <div className="bg-tuft-bush w100 p4 mt4">
           <div
             className={cx(
@@ -470,7 +550,12 @@ class PartyRequestForm extends Component {
                   making this deposit
                 </p>
                 <div>
-                  <Button className="inline-flex" label="Make Deposit" />
+                  <Button
+                    onClick={this.handleMakeDeposit}
+                    color="madison-blue"
+                    className="inline-flex"
+                    label="Make Deposit"
+                  />
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { IDLE } from 'constants/Status';
 
 import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
@@ -18,6 +19,7 @@ class PartyRequestFormContainer extends ContainerBase {
 
 const mapStateToProps = (state, props) => {
   return {
+    formStatus: get(state, 'status.contactUsFormStatus', IDLE),
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     partyAvailableLocations: partyAvailableLocations(state)
