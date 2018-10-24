@@ -6,6 +6,7 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
+import { GENERAL_PRODUCT, EVENT, PARTY_DEPOSIT } from 'constants/ProductTypes';
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import allMerchandise from 'state/selectors/allMerchandise';
