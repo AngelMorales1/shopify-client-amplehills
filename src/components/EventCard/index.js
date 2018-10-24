@@ -77,6 +77,7 @@ const EventCard = ({ event, active }) => {
             className="inline-flex mt3"
             color="peach"
             label={label}
+            label={event.blockCardButtonLabel || 'More Info'}
             to={`/events/${event.handle}`}
           />
         </div>

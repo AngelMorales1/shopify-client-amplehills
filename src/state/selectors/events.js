@@ -55,6 +55,7 @@ export default createSelector(
       const contentBlocks = get(fields, 'contentBlocks', []);
       const text = get(fields, 'text', '');
       const link = `/events/${handle}`;
+      const blockCardButtonLabel = get(fields, 'blockCardButtonLabel', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -109,6 +110,7 @@ export default createSelector(
         link,
         datesAndTimes,
         locationPhone,
+        blockCardButtonLabel,
         ...shopifyProduct
       };
 
