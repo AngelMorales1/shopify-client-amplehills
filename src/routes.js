@@ -55,6 +55,8 @@ const Routes = ({ location }) => (
     <Route path="/field-trips" component={GenericPageContainer} />
     <Route path="/pints-and-postcards" component={GenericPageContainer} />
     <Route path="/catering" component={GenericPageContainer} />
+    <Route path="/bike-party" component={GenericPageContainer} />
+    <Route path="/scoop-tab-party" component={GenericPageContainer} />
     <Route path="/ice-cream-cakes" component={GenericPageContainer} />
     <Route path="/party-request-form" component={PartyRequestFormContainer} />
   </Switch>
