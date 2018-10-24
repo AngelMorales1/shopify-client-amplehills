@@ -41,7 +41,7 @@ export default createSelector(
   (shopifyProducts, contentfulProduct) => {
     const events = get(contentfulProduct, 'items', []);
 
-    return events.map(event => {
+    return events.reduce((mergedProducts, event) => {
       const fields = get(event, 'fields', {});
       const title = get(fields, 'title', '');
       const handle = get(fields, 'eventHandle', '');
@@ -54,6 +54,7 @@ export default createSelector(
       const locationPhone = get(fields, 'location.fields.phone', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
       const text = get(fields, 'text', '');
+      const link = `/events/${handle}`;
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -94,7 +95,7 @@ export default createSelector(
             return { ...sortedFragment, sortedDate, sortedTime };
           });
 
-      return {
+      mergedProducts[handle] = {
         title,
         handle,
         contentfulId,
@@ -105,10 +106,13 @@ export default createSelector(
         locationId,
         contentBlocks,
         text,
+        link,
         datesAndTimes,
         locationPhone,
         ...shopifyProduct
       };
-    });
+
+      return mergedProducts;
+    }, {});
   }
 );

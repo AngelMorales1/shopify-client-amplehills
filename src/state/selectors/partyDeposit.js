@@ -21,6 +21,7 @@ export default createSelector(
       const { id, price, title, availableForSale } = variantNode;
       return { id, price, title, available: availableForSale };
     });
+    const link = '/party-request-form';
 
     const available = variants.some(variant => variant.available);
 
@@ -31,7 +32,8 @@ export default createSelector(
       handle,
       available,
       description,
-      title
+      title,
+      link
     };
 
     return handlizedProduct;

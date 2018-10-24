@@ -674,12 +674,13 @@ class PartyRequestForm extends Component {
                     return (
                       <div key={location.id} className="m3">
                         <p className="bold big mb2">{location.title}</p>
-                        <p>{location.address1}</p>
-                        {location.address2 ? <p>{location.address2}</p> : null}
+                        <p className="mb1">{location.address1}</p>
+                        {location.address2 ? (
+                          <p className="mb1">{location.address2}</p>
+                        ) : null}
                         <p>{`${location.city}, ${location.state} ${
                           location.zip
                         }`}</p>
-                        <p>capacity</p>
                       </div>
                     );
                   })}

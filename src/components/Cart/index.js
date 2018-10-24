@@ -9,11 +9,13 @@ import {
 } from 'state/actions/checkoutActions';
 
 import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { GENERAL_PRODUCT, EVENT, PARTY_DEPOSIT } from 'constants/ProductTypes';
+import { GENERAL_PRODUCT, EVENT } from 'constants/ProductTypes';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import getProductType from 'utils/getProductType';
+import getProduct from 'utils/getProduct';
 import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
@@ -63,33 +65,6 @@ class Cart extends Component {
       get(this.props.checkout, 'id', ''),
       items
     );
-  };
-
-  getProductType = handle => {
-    const { products, partyDeposit, events } = this.props;
-
-    if (products[handle]) {
-      return GENERAL_PRODUCT;
-    }
-
-    if (partyDeposit.handle === handle) {
-      return PARTY_DEPOSIT;
-    }
-
-    return EVENT;
-  };
-
-  getProductLink = (productType, event, handle) => {
-    switch (productType) {
-      case GENERAL_PRODUCT:
-        return `/products/${handle}`;
-      case PARTY_DEPOSIT:
-        return '/party-request-form';
-      case EVENT:
-        return `/events/${get(event, 'handle', '')}`;
-      default:
-        return '/';
-    }
   };
 
   render() {
@@ -151,13 +126,19 @@ class Cart extends Component {
                   partyDeposit
                 );
 
-                const productType = this.getProductType(handle);
-                const productIsEvent = !products[handle];
-                const event = events.find(event => {
-                  return get(event, 'variants', []).find(
-                    variant => variant.id === item.productId
-                  );
-                });
+                const productType = getProductType(
+                  handle,
+                  products,
+                  partyDeposit,
+                  events
+                );
+                const product = getProduct(
+                  productType,
+                  handle,
+                  products,
+                  partyDeposit,
+                  events
+                );
                 const cartDetails = get(products, handle, {}).cartDetails;
 
                 return (
@@ -172,7 +153,7 @@ class Cart extends Component {
                       <div className="my2">
                         <Link
                           className="text-decoration-none"
-                          to={this.getProductLink(productType, event, handle)}
+                          to={get(product, 'link', '/')}
                         >
                           <span className="small bold">{item.title}</span>
                         </Link>
@@ -180,15 +161,16 @@ class Cart extends Component {
                           {item.subItems.map(subItem => {
                             return (
                               <span key={subItem.handle} className="small mb1">
-                                {productIsEvent
-                                  ? subItem.handle
-                                  : `${subItem.quantity}x ${
+                                {productType === GENERAL_PRODUCT
+                                  ? `${subItem.quantity}x ${
                                       products[subItem.handle].title
-                                    }`}
+                                    }`
+                                  : null}
                               </span>
                             );
                           })}
-                          {item.attributes.length
+                          {item.attributes.length &&
+                          productType !== GENERAL_PRODUCT
                             ? get(item, 'attributes', []).map(attribute => {
                                 return (
                                   <span
@@ -200,7 +182,7 @@ class Cart extends Component {
                                 );
                               })
                             : null}
-                          {productIsEvent && cartDetails ? (
+                          {productType === EVENT && cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
                                 {cartDetails}
@@ -221,26 +203,27 @@ class Cart extends Component {
                     >
                       <Link
                         className={`text-decoration-none ${
-                          item.subitems || item.title === 'Party Deposit'
+                          get(item, 'subItems', []).length ||
+                          get(item, 'attributes', []).length
                             ? 'mb2'
                             : 'my-auto'
                         }`}
-                        to={this.getProductLink(productType, event, handle)}
+                        to={get(product, 'link', '/')}
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
                       {item.subItems.map(subItem => {
                         return (
                           <span key={subItem.handle} className="small mb1">
-                            {productIsEvent
-                              ? subItem.handle
-                              : `${subItem.quantity}x ${
+                            {productType === GENERAL_PRODUCT
+                              ? `${subItem.quantity}x ${
                                   products[subItem.handle].title
-                                }`}
+                                }`
+                              : null}
                           </span>
                         );
                       })}
-                      {item.attributes.length
+                      {item.attributes.length && productType !== GENERAL_PRODUCT
                         ? get(item, 'attributes', []).map(attribute => {
                             return (
                               <span className="small mb1" key={attribute.value}>
@@ -249,7 +232,7 @@ class Cart extends Component {
                             );
                           })
                         : null}
-                      {productIsEvent && cartDetails ? (
+                      {productType === EVENT && cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
                             {cartDetails}

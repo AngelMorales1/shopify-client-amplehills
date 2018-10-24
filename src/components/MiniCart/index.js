@@ -6,6 +6,7 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
+import { GENERAL_PRODUCT, EVENT, PARTY_DEPOSIT } from 'constants/ProductTypes';
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
@@ -15,6 +16,7 @@ import partyDeposit from 'state/selectors/partyDeposit';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import getProductType from 'utils/getProductType';
 import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import checkoutModel from 'models/checkoutModel';
 import productModel from 'models/productModel';
@@ -76,6 +78,12 @@ class MiniCart extends Component {
                 partyDeposit
               );
               const productIsEvent = !products[handle];
+              const productType = getProductType(
+                handle,
+                products,
+                partyDeposit,
+                events
+              );
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
@@ -95,7 +103,7 @@ class MiniCart extends Component {
                       <div className="w100">
                         <ul className="my1">
                           {subItems.map(subItem => {
-                            return (
+                            return productType === GENERAL_PRODUCT ? (
                               <li
                                 className="sub-line-item small"
                                 key={subItem.handle}
@@ -106,12 +114,13 @@ class MiniCart extends Component {
                                       products[subItem.handle].title
                                     }`}
                               </li>
-                            );
+                            ) : null;
                           })}
                         </ul>
                       </div>
                     ) : null}
-                    {item.attributes.length ? (
+                    {item.attributes.length &&
+                    productType !== GENERAL_PRODUCT ? (
                       <div className="w100">
                         <ul className="my1">
                           {get(item, 'attributes', []).map(attribute => {

@@ -5,10 +5,6 @@ import fragmentsToArray from 'utils/fragmentsToArray';
 import recursivelyStringify from 'utils/recursivelyStringify';
 import sortHours from 'utils/sortHours';
 import moment from 'moment';
-import {
-  defaultPartyTypes,
-  defaultTimeSlots
-} from 'constants/defaultPartyRequestForm';
 
 export default createSelector(
   state => get(state, 'locations.locations'),

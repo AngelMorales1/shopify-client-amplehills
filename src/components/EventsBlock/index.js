@@ -18,7 +18,8 @@ class EventsBlock extends Component {
   };
 
   componentDidMount() {
-    const selectedEvents = get(this, 'props.block.fields.events', []).length
+    const events = get(this, 'props.block.fields.events', {});
+    const selectedEvents = Object.values(events).length
       ? this.getCustomEvents()
       : this.getAllEvents();
 
@@ -70,7 +71,8 @@ class EventsBlock extends Component {
   };
 
   getAllEvents = () => {
-    const allEvents = get(this, 'props.events', []);
+    const events = get(this, 'props.events', {});
+    const allEvents = Object.values(events);
     const blockEventType = get(this, 'props.block.fields.eventType', '');
 
     return allEvents.filter(event => {
@@ -85,8 +87,9 @@ class EventsBlock extends Component {
   };
 
   getCustomEvents = () => {
+    const events = get(this, 'props.events', {});
     const customEvents = get(this, 'props.block.fields.events', []);
-    const allEvents = get(this, 'props.events', []);
+    const allEvents = Object.values(events);
 
     return customEvents.map(customEvent => {
       const id = get(customEvent, 'sys.id', '');
