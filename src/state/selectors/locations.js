@@ -1,9 +1,14 @@
 import { createSelector } from 'reselect';
 import { Days } from 'constants/Days.js';
 import get from 'utils/get';
+import fragmentsToArray from 'utils/fragmentsToArray';
 import recursivelyStringify from 'utils/recursivelyStringify';
 import sortHours from 'utils/sortHours';
 import moment from 'moment';
+import {
+  defaultPartyTypes,
+  defaultTimeSlots
+} from 'constants/defaultPartyRequestForm';
 
 export default createSelector(
   state => get(state, 'locations.locations'),
@@ -33,20 +38,10 @@ export default createSelector(
       const contentBlocks = get(fields, 'contentBlocks', []);
       const slug = get(fields, 'slug', '');
       const partyAvailable = get(fields, 'partyAvailable', false);
-      let partyTypes = Object.values(
-        get(fields, 'partyTypes.simpleFragments', {})
-      ).reduce((fragmentsArray, fragment) => {
-        fragmentsArray.push(fragment);
-
-        return fragmentsArray;
-      }, []);
-      let timeSlots = Object.values(
-        get(fields, 'timeSlots.simpleFragments', {})
-      ).reduce((fragmentsArray, fragment) => {
-        fragmentsArray.push(fragment);
-
-        return fragmentsArray;
-      }, []);
+      const partyTypesFragments = get(fields, 'partyTypes.simpleFragments', {});
+      const partyTypes = fragmentsToArray(partyTypesFragments);
+      const timeSlotsFragments = get(fields, 'timeSlots.simpleFragments', {});
+      const timeSlots = fragmentsToArray(timeSlotsFragments);
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
