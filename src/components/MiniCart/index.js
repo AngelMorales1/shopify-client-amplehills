@@ -97,7 +97,7 @@ class MiniCart extends Component {
                               >
                                 {cartItemDetail}
                               </li>
-                            );
+                            ) : null;
                           })}
                         </ul>
                       </div>
