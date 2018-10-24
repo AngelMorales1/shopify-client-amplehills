@@ -196,8 +196,6 @@ UI elements
 
   ol,
   ul {
-    margin: spacing(10) 0;
-
     > li {
       @extend .block-subheadline;
       margin: spacing(2) 0;

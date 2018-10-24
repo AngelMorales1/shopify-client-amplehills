@@ -35,10 +35,10 @@ const MarkdownBlock = props => {
         <div
           className={cx(
             styles['MarkdownBlock__title-container'],
-            'col-12 md-col-4 flex flex-row justify-center'
+            'col-12 md-col-4 flex flex-row justify-start'
           )}
         >
-          <span className="block-headline mx3">{title}</span>
+          <span className="block-headline mx3 pl3">{title}</span>
         </div>
       ) : null}
       <div
