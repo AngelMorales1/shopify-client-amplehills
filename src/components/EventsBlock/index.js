@@ -163,13 +163,13 @@ class EventsBlock extends Component {
         ) : null}
         <div className="w100 flex flex-column items-center my3 px2">
           {selectedEvents.map((event, i) => {
-            return (
+            return event ? (
               <EventCard
                 active={this.cardIsActive(event)}
                 key={get(event, 'contentfulId', i)}
                 event={event}
               />
-            );
+            ) : null;
           })}
         </div>
       </div>
