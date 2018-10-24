@@ -203,19 +203,18 @@ class PartyRequestForm extends Component {
   handleMakeDeposit = () => {
     const errorCheck = this.formHasErrors();
     const { selectedAddOns, selectedAllergies } = this.state;
-    const { partyAddons } = this.props;
 
     if (!errorCheck) {
-      const partyAddonsTitles = selectedAddOns
-        .map(addonHandle => partyAddons[addonHandle].title)
-        .join(', ');
       const items = [
         {
           variantId: get(this, 'props.partyDeposit.id', ''),
           quantity: 1,
           customAttributes: this.getPartySummary().concat([
             { key: 'Allergies', value: selectedAllergies },
-            { key: 'Party Addons', value: partyAddonsTitles }
+            {
+              key: 'Party Addons',
+              value: selectedAddOns.join(', ')
+            }
           ])
         }
       ];
@@ -265,7 +264,6 @@ class PartyRequestForm extends Component {
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
     const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
-    const partyAddonsValue = Object.values(partyAddons);
     const fieldIsEmpty =
       !selectedLocation &&
       !selectedAddOns.length &&
@@ -496,18 +494,18 @@ class PartyRequestForm extends Component {
               placeholder="Enter a name of something"
             />
           </div>
-          {partyAddonsValue.length ? (
+          {partyAddons.length ? (
             <div className="w100 mt4 flex flex-column items-center">
               <p className="bold big center mb3">Would you like any add-ons?</p>
               <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-                {partyAddonsValue.map(partyAddOn => {
+                {partyAddons.map((partyAddOn, i) => {
                   return (
-                    <div key={partyAddOn.id} className="col-6 p1">
+                    <div key={get(partyAddOn, 'id', i)} className="col-6 p1">
                       <Button
-                        onClick={() => this.handleAddOnClick(partyAddOn.handle)}
+                        onClick={() => this.handleAddOnClick(partyAddOn.title)}
                         className="center wh100 "
                         variant={
-                          selectedAddOns.includes(partyAddOn.handle)
+                          selectedAddOns.includes(partyAddOn.title)
                             ? 'square--selected'
                             : 'square'
                         }
@@ -518,7 +516,7 @@ class PartyRequestForm extends Component {
                           </p>
                           <p className="white-space-normal light">{`$${
                             partyAddOn.price
-                          } ${partyAddOn.description}`}</p>
+                          } ${partyAddOn.unit}`}</p>
                         </div>
                       </Button>
                     </div>
@@ -614,7 +612,7 @@ class PartyRequestForm extends Component {
                         <p
                           key={addOn}
                           className={cx(styles['PartyRequestForm__help-text'])}
-                        >{`Addon: ${partyAddons[addOn].title}`}</p>
+                        >{`Addon: ${addOn}`}</p>
                       );
                     })
                   : null}
@@ -708,11 +706,10 @@ class PartyRequestForm extends Component {
 
 PartyRequestForm.propTypes = {
   actions: PropTypes.shape({
-    addLineItems: PropTypes.func,
-    fetchPartyAddons: PropTypes.func
+    addLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  partyAddons: PropTypes.object,
+  partyAddons: PropTypes.array,
   partyAvailableLocations: PropTypes.object,
   partyDeposit: PropTypes.shape({
     available: PropTypes.bool,
@@ -726,11 +723,10 @@ PartyRequestForm.propTypes = {
 
 PartyRequestForm.defaultProps = {
   actions: {
-    addLineItems: () => {},
-    fetchPartyAddons: () => {}
+    addLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  partyAddons: {},
+  partyAddons: [],
   partyAvailableLocations: {},
   partyDeposit: {
     available: false,
