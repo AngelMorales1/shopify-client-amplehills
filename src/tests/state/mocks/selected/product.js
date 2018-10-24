@@ -7,6 +7,7 @@ export default {
   cartDetails: '1x Test Flavor',
   description: 'This is a test description',
   price: 19.99,
+  link: '/products/test-product',
   productHero: {
     productHeroAlert: '',
     productHeroCarouselImages: [],

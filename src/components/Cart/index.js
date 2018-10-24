@@ -9,14 +9,11 @@ import {
 } from 'state/actions/checkoutActions';
 
 import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { GENERAL_PRODUCT, EVENT } from 'constants/ProductTypes';
+import { CHOOSE_YOUR_OWN_STORY } from 'constants/ProductTypes';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getProductType from 'utils/getProductType';
-import getProduct from 'utils/getProduct';
-import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
 import lineItems from 'state/selectors/lineItems';
@@ -68,15 +65,7 @@ class Cart extends Component {
   };
 
   render() {
-    const {
-      actions,
-      checkout,
-      items,
-      products,
-      updatingNote,
-      events,
-      partyDeposit
-    } = this.props;
+    const { actions, checkout, items, products, updatingNote } = this.props;
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const isUpdateButtonActive =
@@ -119,26 +108,9 @@ class Cart extends Component {
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {get(this, 'props.items', []).map(item => {
-                const handle = getProductHandleFromVariantId(
-                  products,
-                  events,
-                  item,
-                  partyDeposit
-                );
-
-                const productType = getProductType(
-                  handle,
-                  products,
-                  partyDeposit,
-                  events
-                );
-                const product = getProduct(
-                  productType,
-                  handle,
-                  products,
-                  partyDeposit,
-                  events
-                );
+                const handle = item.handle;
+                const productType = item.productType;
+                const product = item.product;
                 const cartDetails = get(products, handle, {}).cartDetails;
 
                 return (
@@ -161,7 +133,7 @@ class Cart extends Component {
                           {item.subItems.map(subItem => {
                             return (
                               <span key={subItem.handle} className="small mb1">
-                                {productType === GENERAL_PRODUCT
+                                {productType === CHOOSE_YOUR_OWN_STORY
                                   ? `${subItem.quantity}x ${
                                       products[subItem.handle].title
                                     }`
@@ -170,7 +142,8 @@ class Cart extends Component {
                             );
                           })}
                           {item.attributes.length &&
-                          productType !== GENERAL_PRODUCT
+                          productType !== CHOOSE_YOUR_OWN_STORY &&
+                          !cartDetails
                             ? get(item, 'attributes', []).map(attribute => {
                                 return (
                                   <span
@@ -182,7 +155,7 @@ class Cart extends Component {
                                 );
                               })
                             : null}
-                          {productType === EVENT && cartDetails ? (
+                          {cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
                                 {cartDetails}
@@ -215,7 +188,7 @@ class Cart extends Component {
                       {item.subItems.map(subItem => {
                         return (
                           <span key={subItem.handle} className="small mb1">
-                            {productType === GENERAL_PRODUCT
+                            {productType === CHOOSE_YOUR_OWN_STORY
                               ? `${subItem.quantity}x ${
                                   products[subItem.handle].title
                                 }`
@@ -223,7 +196,9 @@ class Cart extends Component {
                           </span>
                         );
                       })}
-                      {item.attributes.length && productType !== GENERAL_PRODUCT
+                      {item.attributes.length &&
+                      productType !== CHOOSE_YOUR_OWN_STORY &&
+                      !cartDetails
                         ? get(item, 'attributes', []).map(attribute => {
                             return (
                               <span className="small mb1" key={attribute.value}>
@@ -232,7 +207,7 @@ class Cart extends Component {
                             );
                           })
                         : null}
-                      {productType === EVENT && cartDetails ? (
+                      {cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>
                             {cartDetails}

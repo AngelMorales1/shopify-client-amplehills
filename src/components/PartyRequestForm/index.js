@@ -593,16 +593,12 @@ class PartyRequestForm extends Component {
                   <div>
                     {this.getPartySummary().map(summeryField => {
                       const value = get(summeryField, 'value', '');
-                      if (value.length) {
-                        return (
-                          <p
-                            key={summeryField.value}
-                            className={cx(
-                              styles['PartyRequestForm__help-text']
-                            )}
-                          >{`${summeryField.key}: ${summeryField.value}`}</p>
-                        );
-                      }
+                      return value.length ? (
+                        <p
+                          key={summeryField.value}
+                          className={cx(styles['PartyRequestForm__help-text'])}
+                        >{`${summeryField.key}: ${summeryField.value}`}</p>
+                      ) : null;
                     })}
                   </div>
                 )}

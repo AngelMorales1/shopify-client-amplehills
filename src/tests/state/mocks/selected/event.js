@@ -11,6 +11,7 @@ export default {
   price: 19.99,
   contentfulId: 'test-event-1',
   handle: 'test-event-1',
+  link: '/events/test-event-1',
   id: '9999',
   locationPhone: '000-000-0000',
   blockCardText: '',

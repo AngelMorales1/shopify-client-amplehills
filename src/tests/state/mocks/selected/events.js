@@ -1,5 +1,5 @@
-export default [
-  {
+export default {
+  'test-event-1': {
     variants: [
       {
         available: true,
@@ -12,6 +12,7 @@ export default [
     price: 19.99,
     contentfulId: 'test-event-1',
     handle: 'test-event-1',
+    link: '/events/test-event-1',
     id: '9999',
     locationPhone: '000-000-0000',
     blockCardText: '',
@@ -33,7 +34,7 @@ export default [
       }
     ]
   },
-  {
+  'test-event-2': {
     variants: [
       {
         available: false,
@@ -46,6 +47,7 @@ export default [
     price: 19.99,
     contentfulId: 'test-event-2',
     handle: 'test-event-2',
+    link: '/events/test-event-2',
     id: '9999',
     locationPhone: '000-000-0000',
     blockCardText:
@@ -227,4 +229,4 @@ export default [
       }
     ]
   }
-];
+};

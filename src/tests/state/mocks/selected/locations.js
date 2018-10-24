@@ -3,6 +3,8 @@ import moment from 'moment';
 export default [
   {
     id: '0001',
+    partyTypes: [],
+    timeSlots: [],
     title: 'Location 1',
     image: 'path-to-image.jpg',
     seasonalImage: 'path-to-image.jpg',
@@ -50,7 +52,8 @@ export default [
   },
   {
     id: '0002',
-
+    partyTypes: [],
+    timeSlots: [],
     title: 'Location 2',
     image: 'path-to-image.jpg',
     seasonalImage: 'path-to-image.jpg',

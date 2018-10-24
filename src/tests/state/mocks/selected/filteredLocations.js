@@ -21,6 +21,8 @@ export default [
     },
     orderDeliveryLink: '',
     partyAvailable: false,
+    partyTypes: [],
+    timeSlots: [],
     phone: '8881234567',
     seasonal: false,
     delivery: false,

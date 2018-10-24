@@ -264,7 +264,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-23T21:13:26.878Z}
+                                        initialMonth={2018-10-24T20:01:09.984Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -662,51 +662,6 @@ ShallowWrapper {
                     />
           </div>
           <div
-                    className="w100 mt4 flex flex-column items-center"
-          >
-                    <p
-                              className="bold big center mb3"
-                    >
-                              Would you like any add-ons?
-                    </p>
-                    <div
-                              className="form-container-width w100 flex flex-row flex-wrap justify-center"
-                    >
-                              <div
-                                        className="col-6 p1"
-                              >
-                                        <Button
-                                                  className="center wh100 "
-                                                  color="white-denim"
-                                                  disabled={false}
-                                                  fullWidth={false}
-                                                  hover="shadow"
-                                                  label=""
-                                                  onClick={[Function]}
-                                                  shadow={false}
-                                                  to=""
-                                                  type="button"
-                                                  variant="square"
-                                        >
-                                                  <div
-                                                            className="inline-flex flex-column w100 my2"
-                                                  >
-                                                            <p
-                                                                      className="mb1 white-space-normal center"
-                                                            >
-                                                                      foo
-                                                            </p>
-                                                            <p
-                                                                      className="white-space-normal light"
-                                                            >
-                                                                      $0.00 foo
-                                                            </p>
-                                                  </div>
-                                        </Button>
-                              </div>
-                    </div>
-          </div>
-          <div
                     className="w100 my4 flex flex-column items-center"
           >
                     <p
@@ -742,7 +697,7 @@ ShallowWrapper {
                               className="col-12 md-col-6 flex flex-column h100"
                     >
                               <div
-                                        className=""
+                                        className="col12 md-col-10"
                               >
                                         <p
                                                   className="mb3"
@@ -957,7 +912,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-23T21:13:26.878Z}
+                                          initialMonth={2018-10-24T20:01:09.984Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1354,51 +1309,7 @@ ShallowWrapper {
                             variant="square"
               />
 </div>,
-            <div
-              className="w100 mt4 flex flex-column items-center"
->
-              <p
-                            className="bold big center mb3"
-              >
-                            Would you like any add-ons?
-              </p>
-              <div
-                            className="form-container-width w100 flex flex-row flex-wrap justify-center"
-              >
-                            <div
-                                          className="col-6 p1"
-                            >
-                                          <Button
-                                                        className="center wh100 "
-                                                        color="white-denim"
-                                                        disabled={false}
-                                                        fullWidth={false}
-                                                        hover="shadow"
-                                                        label=""
-                                                        onClick={[Function]}
-                                                        shadow={false}
-                                                        to=""
-                                                        type="button"
-                                                        variant="square"
-                                          >
-                                                        <div
-                                                                      className="inline-flex flex-column w100 my2"
-                                                        >
-                                                                      <p
-                                                                                    className="mb1 white-space-normal center"
-                                                                      >
-                                                                                    foo
-                                                                      </p>
-                                                                      <p
-                                                                                    className="white-space-normal light"
-                                                                      >
-                                                                                    $0.00 foo
-                                                                      </p>
-                                                        </div>
-                                          </Button>
-                            </div>
-              </div>
-</div>,
+            null,
             <div
               className="w100 my4 flex flex-column items-center"
 >
@@ -1663,7 +1574,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-23T21:13:26.878Z}
+                                    initialMonth={2018-10-24T20:01:09.984Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1852,7 +1763,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-23T21:13:26.878Z}
+                      initialMonth={2018-10-24T20:01:09.984Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -2048,7 +1959,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-23T21:13:26.878Z,
+                      "initialMonth": 2018-10-24T20:01:09.984Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -3547,239 +3458,7 @@ ShallowWrapper {
             ],
             "type": "div",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <p
-                  className="bold big center mb3"
->
-                  Would you like any add-ons?
-</p>,
-                <div
-                  className="form-container-width w100 flex flex-row flex-wrap justify-center"
->
-                  <div
-                                    className="col-6 p1"
-                  >
-                                    <Button
-                                                      className="center wh100 "
-                                                      color="white-denim"
-                                                      disabled={false}
-                                                      fullWidth={false}
-                                                      hover="shadow"
-                                                      label=""
-                                                      onClick={[Function]}
-                                                      shadow={false}
-                                                      to=""
-                                                      type="button"
-                                                      variant="square"
-                                    >
-                                                      <div
-                                                                        className="inline-flex flex-column w100 my2"
-                                                      >
-                                                                        <p
-                                                                                          className="mb1 white-space-normal center"
-                                                                        >
-                                                                                          foo
-                                                                        </p>
-                                                                        <p
-                                                                                          className="white-space-normal light"
-                                                                        >
-                                                                                          $0.00 foo
-                                                                        </p>
-                                                      </div>
-                                    </Button>
-                  </div>
-</div>,
-              ],
-              "className": "w100 mt4 flex flex-column items-center",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Would you like any add-ons?",
-                  "className": "bold big center mb3",
-                },
-                "ref": null,
-                "rendered": "Would you like any add-ons?",
-                "type": "p",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <div
-                      className="col-6 p1"
->
-                      <Button
-                                            className="center wh100 "
-                                            color="white-denim"
-                                            disabled={false}
-                                            fullWidth={false}
-                                            hover="shadow"
-                                            label=""
-                                            onClick={[Function]}
-                                            shadow={false}
-                                            to=""
-                                            type="button"
-                                            variant="square"
-                      >
-                                            <div
-                                                                  className="inline-flex flex-column w100 my2"
-                                            >
-                                                                  <p
-                                                                                        className="mb1 white-space-normal center"
-                                                                  >
-                                                                                        foo
-                                                                  </p>
-                                                                  <p
-                                                                                        className="white-space-normal light"
-                                                                  >
-                                                                                        $0.00 foo
-                                                                  </p>
-                                            </div>
-                      </Button>
-</div>,
-                  ],
-                  "className": "form-container-width w100 flex flex-row flex-wrap justify-center",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": "foo",
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": <Button
-                        className="center wh100 "
-                        color="white-denim"
-                        disabled={false}
-                        fullWidth={false}
-                        hover="shadow"
-                        label=""
-                        onClick={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="square"
->
-                        <div
-                                                className="inline-flex flex-column w100 my2"
-                        >
-                                                <p
-                                                                        className="mb1 white-space-normal center"
-                                                >
-                                                                        foo
-                                                </p>
-                                                <p
-                                                                        className="white-space-normal light"
-                                                >
-                                                                        $0.00 foo
-                                                </p>
-                        </div>
-</Button>,
-                      "className": "col-6 p1",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": <div
-                          className="inline-flex flex-column w100 my2"
->
-                          <p
-                                                    className="mb1 white-space-normal center"
-                          >
-                                                    foo
-                          </p>
-                          <p
-                                                    className="white-space-normal light"
-                          >
-                                                    $0.00 foo
-                          </p>
-</div>,
-                        "className": "center wh100 ",
-                        "color": "white-denim",
-                        "disabled": false,
-                        "fullWidth": false,
-                        "hover": "shadow",
-                        "label": "",
-                        "onClick": [Function],
-                        "shadow": false,
-                        "to": "",
-                        "type": "button",
-                        "variant": "square",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": Array [
-                            <p
-                              className="mb1 white-space-normal center"
->
-                              foo
-</p>,
-                            <p
-                              className="white-space-normal light"
->
-                              $0.00 foo
-</p>,
-                          ],
-                          "className": "inline-flex flex-column w100 my2",
-                        },
-                        "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": "foo",
-                              "className": "mb1 white-space-normal center",
-                            },
-                            "ref": null,
-                            "rendered": "foo",
-                            "type": "p",
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": "$0.00 foo",
-                              "className": "white-space-normal light",
-                            },
-                            "ref": null,
-                            "rendered": "$0.00 foo",
-                            "type": "p",
-                          },
-                        ],
-                        "type": "div",
-                      },
-                      "type": [Function],
-                    },
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-            ],
-            "type": "div",
-          },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -3874,7 +3553,7 @@ ShallowWrapper {
                         className="col-12 md-col-6 flex flex-column h100"
             >
                         <div
-                                    className=""
+                                    className="col12 md-col-10"
                         >
                                     <p
                                                 className="mb3"
@@ -3935,7 +3614,7 @@ ShallowWrapper {
                 className="col-12 md-col-6 flex flex-column h100"
 >
                 <div
-                                className=""
+                                className="col12 md-col-10"
                 >
                                 <p
                                                 className="mb3"
@@ -3993,7 +3672,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className=""
+                  className="col12 md-col-10"
 >
                   <p
                                     className="mb3"
@@ -4028,7 +3707,7 @@ ShallowWrapper {
                     null,
                     null,
                   ],
-                  "className": "",
+                  "className": "col12 md-col-10",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -4382,7 +4061,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-23T21:13:26.878Z}
+                                                initialMonth={2018-10-24T20:01:09.984Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -4780,51 +4459,6 @@ ShallowWrapper {
                         />
             </div>
             <div
-                        className="w100 mt4 flex flex-column items-center"
-            >
-                        <p
-                                    className="bold big center mb3"
-                        >
-                                    Would you like any add-ons?
-                        </p>
-                        <div
-                                    className="form-container-width w100 flex flex-row flex-wrap justify-center"
-                        >
-                                    <div
-                                                className="col-6 p1"
-                                    >
-                                                <Button
-                                                            className="center wh100 "
-                                                            color="white-denim"
-                                                            disabled={false}
-                                                            fullWidth={false}
-                                                            hover="shadow"
-                                                            label=""
-                                                            onClick={[Function]}
-                                                            shadow={false}
-                                                            to=""
-                                                            type="button"
-                                                            variant="square"
-                                                >
-                                                            <div
-                                                                        className="inline-flex flex-column w100 my2"
-                                                            >
-                                                                        <p
-                                                                                    className="mb1 white-space-normal center"
-                                                                        >
-                                                                                    foo
-                                                                        </p>
-                                                                        <p
-                                                                                    className="white-space-normal light"
-                                                                        >
-                                                                                    $0.00 foo
-                                                                        </p>
-                                                            </div>
-                                                </Button>
-                                    </div>
-                        </div>
-            </div>
-            <div
                         className="w100 my4 flex flex-column items-center"
             >
                         <p
@@ -4860,7 +4494,7 @@ ShallowWrapper {
                                     className="col-12 md-col-6 flex flex-column h100"
                         >
                                     <div
-                                                className=""
+                                                className="col12 md-col-10"
                                     >
                                                 <p
                                                             className="mb3"
@@ -5075,7 +4709,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-23T21:13:26.878Z}
+                                                initialMonth={2018-10-24T20:01:09.984Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -5472,51 +5106,7 @@ ShallowWrapper {
                                 variant="square"
                 />
 </div>,
-              <div
-                className="w100 mt4 flex flex-column items-center"
->
-                <p
-                                className="bold big center mb3"
-                >
-                                Would you like any add-ons?
-                </p>
-                <div
-                                className="form-container-width w100 flex flex-row flex-wrap justify-center"
-                >
-                                <div
-                                                className="col-6 p1"
-                                >
-                                                <Button
-                                                                className="center wh100 "
-                                                                color="white-denim"
-                                                                disabled={false}
-                                                                fullWidth={false}
-                                                                hover="shadow"
-                                                                label=""
-                                                                onClick={[Function]}
-                                                                shadow={false}
-                                                                to=""
-                                                                type="button"
-                                                                variant="square"
-                                                >
-                                                                <div
-                                                                                className="inline-flex flex-column w100 my2"
-                                                                >
-                                                                                <p
-                                                                                                className="mb1 white-space-normal center"
-                                                                                >
-                                                                                                foo
-                                                                                </p>
-                                                                                <p
-                                                                                                className="white-space-normal light"
-                                                                                >
-                                                                                                $0.00 foo
-                                                                                </p>
-                                                                </div>
-                                                </Button>
-                                </div>
-                </div>
-</div>,
+              null,
               <div
                 className="w100 my4 flex flex-column items-center"
 >
@@ -5781,7 +5371,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-23T21:13:26.878Z}
+                                        initialMonth={2018-10-24T20:01:09.984Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5970,7 +5560,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-23T21:13:26.878Z}
+                        initialMonth={2018-10-24T20:01:09.984Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -6166,7 +5756,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-23T21:13:26.878Z,
+                        "initialMonth": 2018-10-24T20:01:09.984Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -7665,239 +7255,7 @@ ShallowWrapper {
               ],
               "type": "div",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p
-                    className="bold big center mb3"
->
-                    Would you like any add-ons?
-</p>,
-                  <div
-                    className="form-container-width w100 flex flex-row flex-wrap justify-center"
->
-                    <div
-                                        className="col-6 p1"
-                    >
-                                        <Button
-                                                            className="center wh100 "
-                                                            color="white-denim"
-                                                            disabled={false}
-                                                            fullWidth={false}
-                                                            hover="shadow"
-                                                            label=""
-                                                            onClick={[Function]}
-                                                            shadow={false}
-                                                            to=""
-                                                            type="button"
-                                                            variant="square"
-                                        >
-                                                            <div
-                                                                                className="inline-flex flex-column w100 my2"
-                                                            >
-                                                                                <p
-                                                                                                    className="mb1 white-space-normal center"
-                                                                                >
-                                                                                                    foo
-                                                                                </p>
-                                                                                <p
-                                                                                                    className="white-space-normal light"
-                                                                                >
-                                                                                                    $0.00 foo
-                                                                                </p>
-                                                            </div>
-                                        </Button>
-                    </div>
-</div>,
-                ],
-                "className": "w100 mt4 flex flex-column items-center",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Would you like any add-ons?",
-                    "className": "bold big center mb3",
-                  },
-                  "ref": null,
-                  "rendered": "Would you like any add-ons?",
-                  "type": "p",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <div
-                        className="col-6 p1"
->
-                        <Button
-                                                className="center wh100 "
-                                                color="white-denim"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="square"
-                        >
-                                                <div
-                                                                        className="inline-flex flex-column w100 my2"
-                                                >
-                                                                        <p
-                                                                                                className="mb1 white-space-normal center"
-                                                                        >
-                                                                                                foo
-                                                                        </p>
-                                                                        <p
-                                                                                                className="white-space-normal light"
-                                                                        >
-                                                                                                $0.00 foo
-                                                                        </p>
-                                                </div>
-                        </Button>
-</div>,
-                    ],
-                    "className": "form-container-width w100 flex flex-row flex-wrap justify-center",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": "foo",
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": <Button
-                          className="center wh100 "
-                          color="white-denim"
-                          disabled={false}
-                          fullWidth={false}
-                          hover="shadow"
-                          label=""
-                          onClick={[Function]}
-                          shadow={false}
-                          to=""
-                          type="button"
-                          variant="square"
->
-                          <div
-                                                    className="inline-flex flex-column w100 my2"
-                          >
-                                                    <p
-                                                                              className="mb1 white-space-normal center"
-                                                    >
-                                                                              foo
-                                                    </p>
-                                                    <p
-                                                                              className="white-space-normal light"
-                                                    >
-                                                                              $0.00 foo
-                                                    </p>
-                          </div>
-</Button>,
-                        "className": "col-6 p1",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": <div
-                            className="inline-flex flex-column w100 my2"
->
-                            <p
-                                                        className="mb1 white-space-normal center"
-                            >
-                                                        foo
-                            </p>
-                            <p
-                                                        className="white-space-normal light"
-                            >
-                                                        $0.00 foo
-                            </p>
-</div>,
-                          "className": "center wh100 ",
-                          "color": "white-denim",
-                          "disabled": false,
-                          "fullWidth": false,
-                          "hover": "shadow",
-                          "label": "",
-                          "onClick": [Function],
-                          "shadow": false,
-                          "to": "",
-                          "type": "button",
-                          "variant": "square",
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": Array [
-                              <p
-                                className="mb1 white-space-normal center"
->
-                                foo
-</p>,
-                              <p
-                                className="white-space-normal light"
->
-                                $0.00 foo
-</p>,
-                            ],
-                            "className": "inline-flex flex-column w100 my2",
-                          },
-                          "ref": null,
-                          "rendered": Array [
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "children": "foo",
-                                "className": "mb1 white-space-normal center",
-                              },
-                              "ref": null,
-                              "rendered": "foo",
-                              "type": "p",
-                            },
-                            Object {
-                              "instance": null,
-                              "key": undefined,
-                              "nodeType": "host",
-                              "props": Object {
-                                "children": "$0.00 foo",
-                                "className": "white-space-normal light",
-                              },
-                              "ref": null,
-                              "rendered": "$0.00 foo",
-                              "type": "p",
-                            },
-                          ],
-                          "type": "div",
-                        },
-                        "type": [Function],
-                      },
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
-              ],
-              "type": "div",
-            },
+            null,
             Object {
               "instance": null,
               "key": undefined,
@@ -7992,7 +7350,7 @@ ShallowWrapper {
                             className="col-12 md-col-6 flex flex-column h100"
               >
                             <div
-                                          className=""
+                                          className="col12 md-col-10"
                             >
                                           <p
                                                         className="mb3"
@@ -8053,7 +7411,7 @@ ShallowWrapper {
                   className="col-12 md-col-6 flex flex-column h100"
 >
                   <div
-                                    className=""
+                                    className="col12 md-col-10"
                   >
                                     <p
                                                       className="mb3"
@@ -8111,7 +7469,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <div
-                    className=""
+                    className="col12 md-col-10"
 >
                     <p
                                         className="mb3"
@@ -8146,7 +7504,7 @@ ShallowWrapper {
                       null,
                       null,
                     ],
-                    "className": "",
+                    "className": "col12 md-col-10",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -8355,7 +7713,6 @@ ShallowWrapper {
     actions={
         Object {
             "addLineItems": [Function],
-            "fetchPartyAddons": [Function],
           }
     }
     checkout={
@@ -8379,7 +7736,7 @@ ShallowWrapper {
             "webUrl": "",
           }
     }
-    partyAddons={Object {}}
+    partyAddons={Array []}
     partyAvailableLocations={Object {}}
     partyDeposit={
         Object {
@@ -8555,7 +7912,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-23T21:13:26.878Z}
+                                        initialMonth={2018-10-24T20:01:09.984Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -8988,7 +8345,7 @@ ShallowWrapper {
                               className="col-12 md-col-6 flex flex-column h100"
                     >
                               <div
-                                        className=""
+                                        className="col12 md-col-10"
                               >
                                         <p
                                                   className="mb3"
@@ -9196,7 +8553,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-23T21:13:26.878Z}
+                                          initialMonth={2018-10-24T20:01:09.984Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -9846,7 +9203,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-23T21:13:26.878Z}
+                                    initialMonth={2018-10-24T20:01:09.984Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -10035,7 +9392,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-23T21:13:26.878Z}
+                      initialMonth={2018-10-24T20:01:09.984Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -10231,7 +9588,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-23T21:13:26.878Z,
+                      "initialMonth": 2018-10-24T20:01:09.984Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -11825,7 +11182,7 @@ ShallowWrapper {
                         className="col-12 md-col-6 flex flex-column h100"
             >
                         <div
-                                    className=""
+                                    className="col12 md-col-10"
                         >
                                     <p
                                                 className="mb3"
@@ -11886,7 +11243,7 @@ ShallowWrapper {
                 className="col-12 md-col-6 flex flex-column h100"
 >
                 <div
-                                className=""
+                                className="col12 md-col-10"
                 >
                                 <p
                                                 className="mb3"
@@ -11944,7 +11301,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <div
-                  className=""
+                  className="col12 md-col-10"
 >
                   <p
                                     className="mb3"
@@ -11979,7 +11336,7 @@ ShallowWrapper {
                     null,
                     null,
                   ],
-                  "className": "",
+                  "className": "col12 md-col-10",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -12326,7 +11683,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-23T21:13:26.878Z}
+                                                initialMonth={2018-10-24T20:01:09.984Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -12759,7 +12116,7 @@ ShallowWrapper {
                                     className="col-12 md-col-6 flex flex-column h100"
                         >
                                     <div
-                                                className=""
+                                                className="col12 md-col-10"
                                     >
                                                 <p
                                                             className="mb3"
@@ -12967,7 +12324,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-23T21:13:26.878Z}
+                                                initialMonth={2018-10-24T20:01:09.984Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -13617,7 +12974,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-23T21:13:26.878Z}
+                                        initialMonth={2018-10-24T20:01:09.984Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -13806,7 +13163,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-23T21:13:26.878Z}
+                        initialMonth={2018-10-24T20:01:09.984Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -14002,7 +13359,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-23T21:13:26.878Z,
+                        "initialMonth": 2018-10-24T20:01:09.984Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -15596,7 +14953,7 @@ ShallowWrapper {
                             className="col-12 md-col-6 flex flex-column h100"
               >
                             <div
-                                          className=""
+                                          className="col12 md-col-10"
                             >
                                           <p
                                                         className="mb3"
@@ -15657,7 +15014,7 @@ ShallowWrapper {
                   className="col-12 md-col-6 flex flex-column h100"
 >
                   <div
-                                    className=""
+                                    className="col12 md-col-10"
                   >
                                     <p
                                                       className="mb3"
@@ -15715,7 +15072,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <div
-                    className=""
+                    className="col12 md-col-10"
 >
                     <p
                                         className="mb3"
@@ -15750,7 +15107,7 @@ ShallowWrapper {
                       null,
                       null,
                     ],
-                    "className": "",
+                    "className": "col12 md-col-10",
                   },
                   "ref": null,
                   "rendered": Array [

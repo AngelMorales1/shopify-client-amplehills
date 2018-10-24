@@ -6,7 +6,7 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
-import { GENERAL_PRODUCT, EVENT, PARTY_DEPOSIT } from 'constants/ProductTypes';
+import { CHOOSE_YOUR_OWN_STORY } from 'constants/ProductTypes';
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
@@ -16,8 +16,6 @@ import partyDeposit from 'state/selectors/partyDeposit';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import getProductType from 'utils/getProductType';
-import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import checkoutModel from 'models/checkoutModel';
 import productModel from 'models/productModel';
 
@@ -42,8 +40,6 @@ class MiniCart extends Component {
       checkout,
       items,
       products,
-      events,
-      partyDeposit,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -71,19 +67,9 @@ class MiniCart extends Component {
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
-              const handle = getProductHandleFromVariantId(
-                products,
-                events,
-                item,
-                partyDeposit
-              );
+              const handle = item.handle;
               const productIsEvent = !products[handle];
-              const productType = getProductType(
-                handle,
-                products,
-                partyDeposit,
-                events
-              );
+              const productType = item.productType;
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
@@ -93,6 +79,7 @@ class MiniCart extends Component {
               });
 
               const { subItems } = item;
+              const cartDetails = get(products, handle, {}).cartDetails;
 
               return (
                 <div className={classes} key={item.id}>
@@ -103,7 +90,7 @@ class MiniCart extends Component {
                       <div className="w100">
                         <ul className="my1">
                           {subItems.map(subItem => {
-                            return productType === GENERAL_PRODUCT ? (
+                            return productType === CHOOSE_YOUR_OWN_STORY ? (
                               <li
                                 className="sub-line-item small"
                                 key={subItem.handle}
@@ -119,8 +106,9 @@ class MiniCart extends Component {
                         </ul>
                       </div>
                     ) : null}
-                    {item.attributes.length &&
-                    productType !== GENERAL_PRODUCT ? (
+                    {(item.attributes.length &&
+                      productType !== CHOOSE_YOUR_OWN_STORY) ||
+                    cartDetails ? (
                       <div className="w100">
                         <ul className="my1">
                           {get(item, 'attributes', []).map(attribute => {
@@ -136,7 +124,7 @@ class MiniCart extends Component {
                         </ul>
                       </div>
                     ) : null}
-                    {get(products, handle, {}).cartDetails ? (
+                    {!cartDetails ? (
                       <div className="flex flex-column my1">
                         <pre
                           className={cx(
@@ -144,7 +132,7 @@ class MiniCart extends Component {
                             'col-9'
                           )}
                         >
-                          {products[handle].cartDetails}
+                          {cartDetails}
                         </pre>
                       </div>
                     ) : null}

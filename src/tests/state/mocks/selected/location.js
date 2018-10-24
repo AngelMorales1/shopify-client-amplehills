@@ -18,21 +18,9 @@ export default {
     lon: 80.123,
     lat: 40.789
   },
+  partyTypes: [],
+  timeSlots: [],
   partyAvailable: false,
-  partyTypes: [
-    {
-      index: 0,
-      link: '/bike-party',
-      partyType: 'Bike Party',
-      uuid: '1'
-    },
-    {
-      index: 1,
-      link: 'scoop-tab-party',
-      partyType: 'Scoop Tab Party',
-      uuid: '2'
-    }
-  ],
   orderDeliveryLink: '',
   phone: '8881234567',
   seasonal: false,
