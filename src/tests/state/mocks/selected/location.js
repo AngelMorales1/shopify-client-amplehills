@@ -2,32 +2,6 @@ import moment from 'moment';
 
 export default {
   id: '0001',
-  timeSlots: [
-    {
-      endTime: '11am',
-      index: 0,
-      startTime: '1pm',
-      uuid: '1'
-    },
-    {
-      endTime: '4pm',
-      index: 1,
-      startTime: '2pm',
-      uuid: '2'
-    },
-    {
-      endTime: '7pm',
-      index: 2,
-      startTime: '5pm',
-      uuid: '3'
-    },
-    {
-      endTime: '10pm',
-      index: 3,
-      startTime: '8pm',
-      uuid: '4'
-    }
-  ],
   title: 'Location 1',
   image: 'path-to-image.jpg',
   seasonalImage: 'path-to-image.jpg',
@@ -44,21 +18,6 @@ export default {
     lon: 80.123,
     lat: 40.789
   },
-  partyAvailable: false,
-  partyTypes: [
-    {
-      index: 0,
-      link: '/bike-party',
-      partyType: 'Bike Party',
-      uuid: '1'
-    },
-    {
-      index: 1,
-      link: 'scoop-tab-party',
-      partyType: 'Scoop Tab Party',
-      uuid: '2'
-    }
-  ],
   partyAvailable: false,
   partyTypes: [
     {

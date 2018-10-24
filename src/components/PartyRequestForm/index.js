@@ -9,6 +9,11 @@ import moment from 'moment';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
+import {
+  defaultPartyTypes,
+  defaultTimeSlots
+} from 'constants/defaultPartyRequestForm';
+
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
 
@@ -17,21 +22,8 @@ class PartyRequestForm extends Component {
     currentBreakpoint: Global.breakpoints.medium.label,
     selectedLocation: '',
     selectedDate: '',
-    timeSlots: [
-      { uuid: '1', index: 0, endTime: '11am', startTime: '1pm' },
-      { uuid: '2', index: 1, endTime: '4pm', startTime: '2pm' },
-      { uuid: '3', index: 2, endTime: '7pm', startTime: '5pm' },
-      { uuid: '4', index: 3, endTime: '10pm', startTime: '8pm' }
-    ],
-    partyTypes: [
-      { uuid: '1', index: 0, partyType: 'Bike Party', link: '/bike-party' },
-      {
-        uuid: '2',
-        index: 1,
-        partyType: 'Scoop Tab Party',
-        link: 'scoop-tab-party'
-      }
-    ],
+    timeSlots: defaultTimeSlots,
+    partyTypes: defaultPartyTypes,
     partyTypeIsSelected: false,
     selectedTimeSlot: '',
     selectedPartyType: '',
@@ -243,8 +235,8 @@ class PartyRequestForm extends Component {
 
     this.setState({
       selectedLocation: filter.value,
-      timeSlots: timeSlots,
-      partyTypes: partyTypes
+      timeSlots: timeSlots.length ? timeSlots : defaultTimeSlots,
+      partyTypes: partyTypes.length ? partyTypes : defaultPartyTypes
     });
 
     if (filter.value !== selectedLocation) {

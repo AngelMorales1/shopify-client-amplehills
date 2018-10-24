@@ -33,15 +33,6 @@ export default createSelector(
       const contentBlocks = get(fields, 'contentBlocks', []);
       const slug = get(fields, 'slug', '');
       const partyAvailable = get(fields, 'partyAvailable', false);
-      const defaultPartyTypes = [
-        { uuid: '1', index: 0, partyType: 'Bike Party', link: '/bike-party' },
-        {
-          uuid: '2',
-          index: 1,
-          partyType: 'Scoop Tab Party',
-          link: 'scoop-tab-party'
-        }
-      ];
       let partyTypes = Object.values(
         get(fields, 'partyTypes.simpleFragments', {})
       ).reduce((fragmentsArray, fragment) => {
@@ -49,16 +40,6 @@ export default createSelector(
 
         return fragmentsArray;
       }, []);
-      if (!partyTypes.length) {
-        partyTypes = defaultPartyTypes;
-      }
-
-      const defaultTimeSlots = [
-        { uuid: '1', index: 0, endTime: '11am', startTime: '1pm' },
-        { uuid: '2', index: 1, endTime: '4pm', startTime: '2pm' },
-        { uuid: '3', index: 2, endTime: '7pm', startTime: '5pm' },
-        { uuid: '4', index: 3, endTime: '10pm', startTime: '8pm' }
-      ];
       let timeSlots = Object.values(
         get(fields, 'timeSlots.simpleFragments', {})
       ).reduce((fragmentsArray, fragment) => {
@@ -66,9 +47,6 @@ export default createSelector(
 
         return fragmentsArray;
       }, []);
-      if (!timeSlots.length) {
-        timeSlots = defaultTimeSlots;
-      }
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
