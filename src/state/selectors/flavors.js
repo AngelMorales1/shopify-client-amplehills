@@ -4,8 +4,8 @@ import get from 'utils/get';
 export default createSelector(
   state => get(state, 'flavors.flavors'),
   flavors => {
-    const collectedFilters = {};
-    const collectedDietaryRestrictions = {};
+    const collectedFilters = [];
+    const collectedDietaryRestrictions = [];
     const sanitisedFlavors = get(flavors, 'items', []).map(flavor => {
       const id = get(flavor, 'sys.id', '');
       const fields = get(flavor, 'fields', {});
@@ -15,9 +15,10 @@ export default createSelector(
       const filters = get(fields, 'filters.fragments', []).reduce(
         (sanitisedFilters, fragment) => {
           const filterName = get(fragment[1], 'value', '');
+
           if (filterName) {
-            collectedFilters[filterName] = true;
-            sanitisedFilters[filterName] = true;
+            collectedFilters.push(filterName);
+            sanitisedFilters[filterName] = filterName;
           }
 
           return sanitisedFilters;
@@ -30,8 +31,9 @@ export default createSelector(
         []
       ).reduce((sanitisedDietaryRestrictions, fragment) => {
         const restrictionName = get(fragment[1], 'value', '');
+
         if (restrictionName) {
-          collectedDietaryRestrictions[restrictionName] = true;
+          collectedDietaryRestrictions.push(restrictionName);
           sanitisedDietaryRestrictions[restrictionName] = true;
         }
 
