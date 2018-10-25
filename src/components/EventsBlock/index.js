@@ -4,7 +4,7 @@ import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import EventCard from 'components/EventCard';
-import eventModel from 'models/eventModel';
+// import eventModel from 'models/eventModel';
 import EventTypes from 'constants/EventTypes';
 
 import { Button } from 'components/base';
@@ -56,10 +56,8 @@ class EventsBlock extends Component {
     const locationButtonLabel = selectedEvents.reduce((acc, cur) => {
       const location = get(cur, 'locationTitle', '');
 
-      if (acc[location]) {
-        acc[location]++;
-      } else {
-        acc[location] = 1;
+      if (location) {
+        acc[location] ? acc[location]++ : (acc[location] = 1);
       }
 
       return acc;
@@ -190,7 +188,7 @@ EventsBlock.propTypes = {
       locationFilterButton: PropTypes.bool
     })
   }),
-  events: PropTypes.arrayOf(eventModel.propTypes),
+  events: PropTypes.object,
   setRef: PropTypes.func
 };
 
@@ -207,7 +205,7 @@ EventsBlock.defaultProps = {
       locationFilterButton: false
     }
   },
-  events: [eventModel.default],
+  events: {},
   setRef: () => {}
 };
 

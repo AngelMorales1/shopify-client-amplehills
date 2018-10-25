@@ -47,7 +47,10 @@ class FAQBlock extends Component {
             )}
           >
             <div
-              className={cx(styles['FAQBlock__block-title-wrapper'], 'w100')}
+              className={cx(
+                styles['FAQBlock__block-title-wrapper'],
+                'flex flex-column w100'
+              )}
             >
               <h2
                 className={cx(
@@ -58,8 +61,9 @@ class FAQBlock extends Component {
                 {title}
               </h2>
               {buttonLabel && buttonLink ? (
-                <div className="inline-flex mb3">
+                <div className={cx(styles['FAQBlock__block-button'], 'flex')}>
                   <Button
+                    className="inline-flex"
                     label={buttonLabel}
                     to={buttonLink}
                     color="madison-blue"

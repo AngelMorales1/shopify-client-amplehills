@@ -32,6 +32,14 @@
     }
   }
 
+  &__block-button {
+    justify-content: center;
+
+    @media ($medium-up) {
+      justify-content: flex-start;
+    }
+  }
+
   &__title {
     margin-top: spacing(16);
 
