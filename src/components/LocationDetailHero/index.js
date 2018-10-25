@@ -4,7 +4,6 @@ import get from 'utils/get';
 import getLocationCity from 'utils/getLocationCity';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
-import eventModel from 'models/eventModel';
 import locationModel from 'models/locationModel';
 
 import styles from './LocationDetailHero.scss';
@@ -15,9 +14,11 @@ class LocationDetailHero extends Component {
   render() {
     const { location, locationGeoJSON, events, z } = this.props;
 
-    const eventId = get(
-      events.find(event => event.locationId === location.id),
-      'contentfulId',
+    const event = get(
+      Object.values(events).find(
+        event => event.locationId === location.id && event.id
+      ),
+      'handle',
       ''
     );
     const closeLocationForTheSeason = get(
@@ -148,14 +149,14 @@ class LocationDetailHero extends Component {
               'flex flex-wrap justify-center col-12 md-col-11 mx-auto'
             )}
           >
-            {eventId ? (
+            {event ? (
               <div className={cx(styles['LocationDetailHero__button'], 'm1')}>
                 <Button
                   className="uppercase justify-center"
                   color="madison-blue"
                   variant="primary-small"
                   label="book a class"
-                  to={`/events/${eventId}`}
+                  to={`/events/${event}`}
                 />
               </div>
             ) : null}
@@ -190,13 +191,13 @@ LocationDetailHero.propTypes = {
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   }),
-  events: PropTypes.arrayOf(eventModel.propTypes)
+  events: PropTypes.object
 };
 
 LocationDetailHero.defaultProps = {
   location: locationModel.default,
   locationGeoJSON: {},
-  events: [eventModel.default]
+  events: {}
 };
 
 export default LocationDetailHero;
