@@ -56,7 +56,7 @@ const FlavorCard = ({ flavor }) => {
 };
 
 FlavorCard.propTypes = {
-  flavors: PropTypes.shape({
+  flavor: PropTypes.shape({
     dietaryRestrictions: PropTypes.object,
     filters: PropTypes.object,
     id: PropTypes.string,
@@ -67,7 +67,7 @@ FlavorCard.propTypes = {
 };
 
 FlavorCard.defaultProps = {
-  flavors: {
+  flavor: {
     dietaryRestrictions: {},
     filters: {},
     id: '',
