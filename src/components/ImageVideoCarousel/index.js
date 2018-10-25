@@ -93,9 +93,15 @@ class ImageVideoCarousel extends Component {
                       />
                     </div>
                   ) : (
-                    <Image
-                      alt={`${title} image ${i + 1}`}
-                      src={contentfulImgUtil(url, '1200')}
+                    <div
+                      className="aspect-ratio-16-9"
+                      style={{
+                        background: `url(${contentfulImgUtil(
+                          url,
+                          '1200'
+                        )}) no-repeat center`,
+                        backgroundSize: 'contain'
+                      }}
                     />
                   )}
                 </div>
