@@ -140,7 +140,7 @@ class PartyRequestForm extends Component {
 
     return selectedAllergies
       ? `Allergies: ${selectedAllergies}`
-      : 'No Alergies';
+      : 'No Allergies';
   };
 
   handleAddOnClick = value => {
@@ -281,7 +281,7 @@ class PartyRequestForm extends Component {
           <h2 className="block-headline center my4">Party Request Form</h2>
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
-              At which location would you like to host your party?
+              Where would you like to host your party?
             </p>
             <Button
               variant="primary-small"
@@ -306,7 +306,7 @@ class PartyRequestForm extends Component {
           </div>
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
-              Did you have a day in mind for your event?
+              Do you have a weekend in mind?
             </p>
             <Button
               variant="style-none"
@@ -440,7 +440,7 @@ class PartyRequestForm extends Component {
           </div>
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb2">
-              How many total guests are you expecting?
+              How many participants are you expecting?
             </p>
             <p
               className={cx(
@@ -496,7 +496,9 @@ class PartyRequestForm extends Component {
           </div>
           {partyAddons.length ? (
             <div className="w100 mt4 flex flex-column items-center">
-              <p className="bold big center mb3">Would you like any add-ons?</p>
+              <p className="bold big center mb3">
+                Would you like any Bells & Whistles?
+              </p>
               <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
                 {partyAddons.map((partyAddOn, i) => {
                   return (
