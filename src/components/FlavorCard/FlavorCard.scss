@@ -1,0 +1,27 @@
+@import 'settings', 'typography';
+
+.FlavorCard {
+  border-radius: radius('xs');
+  width: spacing(65);
+  height: spacing(90);
+
+  @media ($medium-up) {
+    width: spacing(75);
+    height: spacing(100);
+  }
+
+  &__mark {
+    width: spacing(20);
+    height: spacing(20);
+  }
+
+  &__mark-text {
+    width: spacing(20);
+    font-size: $font-2;
+    letter-spacing: spacing(0.1);
+  }
+
+  &__image {
+    height: 80%;
+  }
+}
