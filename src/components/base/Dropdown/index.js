@@ -78,7 +78,8 @@ class Dropdown extends Component {
       color,
       className,
       selectClassName,
-      shadow
+      shadow,
+      textColor
     } = this.props;
     return (
       <div
@@ -87,6 +88,7 @@ class Dropdown extends Component {
           'w-auto relative z-1 pointer',
           className,
           styles[`Dropdown--${variant}`],
+          styles[`Dropdown--text-${textColor}`],
           {
             [styles['Dropdown--small']]: variant === 'small'
           }
@@ -150,7 +152,8 @@ Dropdown.propTypes = {
   label: PropTypes.string,
   variant: PropTypes.string,
   onChange: PropTypes.func,
-  shadow: PropTypes.bool
+  shadow: PropTypes.bool,
+  textColor: PropTypes.string
 };
 
 Dropdown.defaultProps = {
@@ -163,7 +166,8 @@ Dropdown.defaultProps = {
   value: '',
   variant: 'primary',
   onChange: () => {},
-  shadow: false
+  shadow: false,
+  textColor: ''
 };
 
 export default Dropdown;

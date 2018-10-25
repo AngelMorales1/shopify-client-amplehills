@@ -1,0 +1,32 @@
+@import 'settings', 'typography';
+
+.FlavorsLanding {
+  &__filter-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__filter-button-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      padding: 0 spacing(48) spacing(8);
+    }
+  }
+
+  &__dietary-restrictions {
+    margin: spacing(4) 0;
+    justify-content: center;
+
+    @media ($medium-up) {
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: spacing(5);
+    }
+  }
+}

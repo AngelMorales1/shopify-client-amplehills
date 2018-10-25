@@ -160,4 +160,12 @@
       }
     }
   }
+
+  &--text-madison-blue {
+    :global {
+      .Select-value {
+        color: color('madison-blue');
+      }
+    }
+  }
 }
