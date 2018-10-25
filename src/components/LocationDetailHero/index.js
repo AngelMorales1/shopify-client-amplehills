@@ -166,7 +166,7 @@ class LocationDetailHero extends Component {
                 color="madison-blue"
                 variant="primary-small"
                 label="book a party"
-                to="/contact"
+                to="/party-request-form"
               />
             </div>
             <div className={cx(styles['LocationDetailHero__button'], 'm1')}>
