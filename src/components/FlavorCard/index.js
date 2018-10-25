@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import get from 'utils/get';
 import cx from 'classnames';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
