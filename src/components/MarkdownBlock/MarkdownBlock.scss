@@ -24,14 +24,21 @@
 
     @media ($medium-up) {
       flex-direction: row;
-      padding: 0 spacing(20) 0 0;
     }
 
     .MarkdownBlock__title-container {
       padding: spacing(16) 0 0;
 
+      > span {
+        margin: 0 auto;
+      }
+
       @media ($medium-up) {
         padding: spacing(16) 0;
+
+        > span {
+          margin: 0 spacing(8);
+        }
       }
     }
   }
@@ -45,7 +52,7 @@
       justify-content: space-between;
 
       > .MarkdownBlock__content {
-        margin: 0 spacing(12);
+        margin-right: spacing(8);
       }
     }
   }

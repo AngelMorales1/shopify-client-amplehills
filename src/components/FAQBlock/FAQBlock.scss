@@ -1,11 +1,9 @@
 @import 'settings', 'typography', 'utils';
 
 .FAQBlock {
-  padding: spacing(16) spacing(8);
   flex-direction: column;
 
   @media ($medium-up) {
-    padding: spacing(16) spacing(16);
     flex-direction: row;
   }
 
@@ -17,8 +15,21 @@
     }
   }
 
+  &__block-title-wrapper {
+    justify-content: center;
+
+    @media ($medium-up) {
+      justify-content: flex-start;
+      margin: 0 spacing(8);
+    }
+  }
+
   &__block-title {
-    max-width: spacing(80);
+    justify-content: center;
+
+    @media ($medium-up) {
+      justify-content: flex-start;
+    }
   }
 
   &__title {

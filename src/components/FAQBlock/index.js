@@ -34,18 +34,25 @@ class FAQBlock extends Component {
 
     return (
       <div ref={refBlock => setRef(refBlock)} style={{ zIndex: z }}>
-        <div className={cx(styles['FAQBlock'], 'flex')}>
+        <div
+          className={cx(
+            styles['FAQBlock'],
+            'flex content-width my4 mx-auto px3'
+          )}
+        >
           <div
             className={cx(
               styles['FAQBlock__block-title-container'],
-              'flex col-12 md-col-4 pr3 mb4'
+              'flex col-12 md-col-4 mb4'
             )}
           >
-            <div>
+            <div
+              className={cx(styles['FAQBlock__block-title-wrapper'], 'w100')}
+            >
               <h2
                 className={cx(
                   styles['FAQBlock__block-title'],
-                  'block-headline mb3'
+                  'flex block-headline mb3'
                 )}
               >
                 {title}

@@ -26,52 +26,56 @@ const MarkdownBlock = props => {
     <div
       ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
-      className={cx(styles[colorClass], 'flex justify-center', {
-        [styles['MarkdownBlock--title-left']]: titleOnLeft,
-        drip: isDripOn
-      })}
+      className={cx(styles[colorClass], 'flex justify-center px3')}
     >
-      {titleOnLeft ? (
-        <div
-          className={cx(
-            styles['MarkdownBlock__title-container'],
-            'col-12 md-col-4 flex flex-row justify-start'
-          )}
-        >
-          <span className="block-headline mx3 pl3">{title}</span>
-        </div>
-      ) : null}
       <div
-        className={cx('transition-slide-up mx-auto px3 py4', {
-          'col-12 md-col-8': titleOnLeft,
-          'content-width': twoColumnContentIsTrue,
-          [styles[
-            'MarkdownBlock__content-container--two-column'
-          ]]: twoColumnContentIsTrue
+        className={cx('flex content-width', {
+          [styles['MarkdownBlock--title-left']]: titleOnLeft,
+          drip: isDripOn
         })}
       >
-        <div
-          dangerouslySetInnerHTML={{ __html: marked(markdown) }}
-          className={cx(
-            styles['MarkdownBlock__content'],
-            'col-12 markdown-block form-container-width ',
-            {
-              'md-col-6': twoColumnContentIsTrue
-            }
-          )}
-        />
-        {twoColumnContentIsTrue ? (
+        {titleOnLeft ? (
           <div
-            dangerouslySetInnerHTML={{ __html: marked(markdown2) }}
+            className={cx(
+              styles['MarkdownBlock__title-container'],
+              'col-12 md-col-4 flex flex-row justify-start'
+            )}
+          >
+            <span className="block-headline">{title}</span>
+          </div>
+        ) : null}
+        <div
+          className={cx('transition-slide-up mx-auto py4', {
+            'col-12 md-col-8': titleOnLeft,
+            'content-width': twoColumnContentIsTrue,
+            [styles[
+              'MarkdownBlock__content-container--two-column'
+            ]]: twoColumnContentIsTrue
+          })}
+        >
+          <div
+            dangerouslySetInnerHTML={{ __html: marked(markdown) }}
             className={cx(
               styles['MarkdownBlock__content'],
-              'col-12 markdown-block form-container-width ',
+              'col-12 markdown-block form-container-width',
               {
                 'md-col-6': twoColumnContentIsTrue
               }
             )}
           />
-        ) : null}
+          {twoColumnContentIsTrue ? (
+            <div
+              dangerouslySetInnerHTML={{ __html: marked(markdown2) }}
+              className={cx(
+                styles['MarkdownBlock__content'],
+                'col-12 markdown-block form-container-width ',
+                {
+                  'md-col-6': twoColumnContentIsTrue
+                }
+              )}
+            />
+          ) : null}
+        </div>
       </div>
     </div>
   );
