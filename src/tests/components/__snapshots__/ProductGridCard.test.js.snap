@@ -5,7 +5,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGridCard
-    merchandise={false}
     product={
         Object {
             "available": false,
@@ -27,6 +26,7 @@ ShallowWrapper {
             ],
           }
     }
+    productIsMerchandise={false}
     products={
         Object {
             "foo": Object {
@@ -356,7 +356,6 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductGridCard
-    merchandise={false}
     product={
         Object {
             "available": false,
@@ -378,6 +377,7 @@ ShallowWrapper {
             ],
           }
     }
+    productIsMerchandise={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
