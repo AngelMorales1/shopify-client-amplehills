@@ -9,6 +9,7 @@ import {
   fetchContentfulMerch
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
+import { getFlavors } from 'state/actions/flavorsActions';
 import { fetchAllNewsArticles } from 'state/actions/articlesActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
@@ -25,7 +26,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(fetchContentfulProducts()),
         dispatch(getEvents()),
         dispatch(fetchAllNewsArticles()),
-        dispatch(fetchContentfulMerch())
+        dispatch(fetchContentfulMerch()),
+        dispatch(getFlavors())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -42,7 +44,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             contentfulProducts,
             getEvents,
             fetchAllNewsArticles,
-            fetchContentfulMerch
+            fetchContentfulMerch,
+            getFlavors
           ]) => resolve()
         )
         .catch(err => reject(err));

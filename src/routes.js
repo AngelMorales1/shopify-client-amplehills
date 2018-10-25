@@ -19,6 +19,7 @@ import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
 import ArticlesLandingContainer from 'containers/ArticlesLandingContainer';
 import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
+import FlavorsLandingContainer from 'containers/FlavorsLandingContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -75,6 +76,7 @@ const Routes = ({ location }) => (
     <Route path="/faq" component={GenericPageContainer} />
     <Route path="/news" component={ArticlesLandingContainer} />
     <Route path="/wholesale" component={GenericPageContainer} />
+    <Route path="/flavors" component={FlavorsLandingContainer} />
   </Switch>
 );
 

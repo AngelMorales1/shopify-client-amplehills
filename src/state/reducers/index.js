@@ -12,6 +12,7 @@ import genericPage from './genericPage';
 import events from './events';
 import articles from './articles';
 import wholesale from './wholesale';
+import flavors from './flavors';
 
 export default {
   status,
@@ -27,5 +28,6 @@ export default {
   events,
   mobileNavUI,
   articles,
-  wholesale
+  wholesale,
+  flavors
 };
