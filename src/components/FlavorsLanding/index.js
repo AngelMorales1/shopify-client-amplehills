@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import get from 'utils/get';
 import cx from 'classnames';
 import Global from 'constants/Global';
@@ -167,5 +168,39 @@ class FlavorLanding extends Component {
     );
   }
 }
+
+FlavorLanding.propTypes = {
+  flavors: PropTypes.shape({
+    collectedDietaryRestrictions: PropTypes.array,
+    collectedFilters: PropTypes.array,
+    flavors: PropTypes.arrayOf(
+      PropTypes.shape({
+        dietaryRestrictions: PropTypes.object,
+        filters: PropTypes.object,
+        id: PropTypes.string,
+        image: PropTypes.string,
+        label: PropTypes.string,
+        title: PropTypes.string
+      })
+    )
+  })
+};
+
+FlavorLanding.defaultProps = {
+  flavors: {
+    collectedDietaryRestrictions: [],
+    collectedFilters: [],
+    flavors: [
+      {
+        dietaryRestrictions: {},
+        filters: {},
+        id: '',
+        image: '',
+        label: '',
+        title: ''
+      }
+    ]
+  }
+};
 
 export default FlavorLanding;
