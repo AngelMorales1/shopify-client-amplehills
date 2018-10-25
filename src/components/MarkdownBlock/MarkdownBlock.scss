@@ -27,18 +27,10 @@
     }
 
     .MarkdownBlock__title-container {
-      padding: spacing(16) 0 0;
-
-      > span {
-        margin: 0 auto;
-      }
+      margin: spacing(16) 0 0;
 
       @media ($medium-up) {
-        padding: spacing(16) 0;
-
-        > span {
-          margin: 0 spacing(8);
-        }
+        margin: spacing(16) spacing(8);
       }
     }
   }

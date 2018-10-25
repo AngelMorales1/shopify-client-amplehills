@@ -33,46 +33,36 @@ class FAQBlock extends Component {
     );
 
     return (
-      <div ref={refBlock => setRef(refBlock)} style={{ zIndex: z }}>
-        <div
-          className={cx(
-            styles['FAQBlock'],
-            'flex content-width my4 mx-auto px3'
-          )}
-        >
+      <div
+        ref={refBlock => setRef(refBlock)}
+        style={{ zIndex: z }}
+        className="flex justify-center px3 py4"
+      >
+        <div className={cx(styles['FAQBlock'], 'w100 flex content-width')}>
           <div
             className={cx(
               styles['FAQBlock__block-title-container'],
-              'flex col-12 md-col-4 mb4'
+              'flex flex-column col-12 md-col-4 mb4'
             )}
           >
-            <div
-              className={cx(
-                styles['FAQBlock__block-title-wrapper'],
-                'flex flex-column w100'
-              )}
-            >
-              <h2
-                className={cx(
-                  styles['FAQBlock__block-title'],
-                  'flex block-headline mb3'
-                )}
-              >
-                {title}
-              </h2>
-              {buttonLabel && buttonLink ? (
-                <div className={cx(styles['FAQBlock__block-button'], 'flex')}>
-                  <Button
-                    className="inline-flex"
-                    label={buttonLabel}
-                    to={buttonLink}
-                    color="madison-blue"
-                  />
-                </div>
-              ) : null}
-            </div>
+            <h2 className="block-headline mb3">{title}</h2>
+            {buttonLabel && buttonLink ? (
+              <div className={cx(styles['FAQBlock__block-button'])}>
+                <Button
+                  className="inline-flex"
+                  label={buttonLabel}
+                  to={buttonLink}
+                  color="madison-blue"
+                />
+              </div>
+            ) : null}
           </div>
-          <div className="col-12 md-col-8 form-container-width">
+          <div
+            className={cx(
+              styles['FAQBlock__FAQ-container'],
+              'col-12 md-col-8 form-container-width'
+            )}
+          >
             {fragments.map(fragment => {
               const uuid = get(fragment, 'uuid', '');
               const dropdownIsOpen = selectedItem === uuid;

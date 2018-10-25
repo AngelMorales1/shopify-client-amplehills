@@ -4,7 +4,6 @@ import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
 import EventCard from 'components/EventCard';
-// import eventModel from 'models/eventModel';
 import EventTypes from 'constants/EventTypes';
 
 import { Button } from 'components/base';

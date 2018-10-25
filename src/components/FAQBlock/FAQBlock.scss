@@ -8,35 +8,15 @@
   }
 
   &__block-title-container {
-    justify-content: flex-start;
-
     @media ($medium-up) {
-      justify-content: center;
+      margin: 0 0 spacing(12) spacing(8);
+      padding-right: spacing(8);
     }
   }
 
-  &__block-title-wrapper {
-    justify-content: center;
-
+  &__FAQ-container {
     @media ($medium-up) {
-      justify-content: flex-start;
-      margin: 0 spacing(8);
-    }
-  }
-
-  &__block-title {
-    justify-content: center;
-
-    @media ($medium-up) {
-      justify-content: flex-start;
-    }
-  }
-
-  &__block-button {
-    justify-content: center;
-
-    @media ($medium-up) {
-      justify-content: flex-start;
+      margin-left: spacing(4);
     }
   }
 

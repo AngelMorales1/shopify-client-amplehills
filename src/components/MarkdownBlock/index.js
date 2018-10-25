@@ -29,7 +29,7 @@ const MarkdownBlock = props => {
       className={cx(styles[colorClass], 'flex justify-center px3')}
     >
       <div
-        className={cx('flex content-width', {
+        className={cx('w100 flex content-width', {
           [styles['MarkdownBlock--title-left']]: titleOnLeft,
           drip: isDripOn
         })}
@@ -38,10 +38,10 @@ const MarkdownBlock = props => {
           <div
             className={cx(
               styles['MarkdownBlock__title-container'],
-              'col-12 md-col-4 flex flex-row justify-start'
+              'col-12 md-col-4'
             )}
           >
-            <span className="block-headline">{title}</span>
+            <h2 className="block-headline">{title}</h2>
           </div>
         ) : null}
         <div
