@@ -55,8 +55,26 @@ const FlavorCard = ({ flavor }) => {
   );
 };
 
-FlavorCard.propTypes = {};
+FlavorCard.propTypes = {
+  flavors: PropTypes.shape({
+    dietaryRestrictions: PropTypes.object,
+    filters: PropTypes.object,
+    id: PropTypes.string,
+    image: PropTypes.string,
+    label: PropTypes.string,
+    title: PropTypes.string
+  })
+};
 
-FlavorCard.defaultProps = {};
+FlavorCard.defaultProps = {
+  flavors: {
+    dietaryRestrictions: {},
+    filters: {},
+    id: '',
+    image: '',
+    label: '',
+    title: ''
+  }
+};
 
 export default FlavorCard;
