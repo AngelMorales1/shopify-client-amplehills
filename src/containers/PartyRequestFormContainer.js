@@ -6,7 +6,7 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
 import partyDeposit from 'state/selectors/partyDeposit';
 import partyAvailableLocations from 'state/selectors/partyAvailableLocations';
-import partyAddons from 'state/selectors/partyAddons';
+import partyAddOns from 'state/selectors/partyAddOns';
 
 import get from 'utils/get';
 
@@ -22,7 +22,7 @@ const mapStateToProps = (state, props) => {
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     partyAvailableLocations: partyAvailableLocations(state),
     partyDeposit: partyDeposit(state),
-    partyAddons: partyAddons(state)
+    partyAddOns: partyAddOns(state)
   };
 };
 

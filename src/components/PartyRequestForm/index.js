@@ -247,7 +247,7 @@ class PartyRequestForm extends Component {
   };
 
   render() {
-    const { partyAddons, partyDeposit, addLineItemsStatus } = this.props;
+    const { partyAddOns, partyDeposit, addLineItemsStatus } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -494,13 +494,13 @@ class PartyRequestForm extends Component {
               placeholder="Enter a name of something"
             />
           </div>
-          {partyAddons.length ? (
+          {partyAddOns.length ? (
             <div className="w100 mt4 flex flex-column items-center">
               <p className="bold big center mb3">
                 Would you like any Bells & Whistles?
               </p>
               <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-                {partyAddons.map((partyAddOn, i) => {
+                {partyAddOns.map((partyAddOn, i) => {
                   return (
                     <div key={get(partyAddOn, 'id', i)} className="col-6 p1">
                       <Button
@@ -708,7 +708,7 @@ PartyRequestForm.propTypes = {
     addLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  partyAddons: PropTypes.array,
+  partyAddOns: PropTypes.array,
   partyAvailableLocations: PropTypes.object,
   partyDeposit: PropTypes.shape({
     available: PropTypes.bool,
@@ -725,7 +725,7 @@ PartyRequestForm.defaultProps = {
     addLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  partyAddons: [],
+  partyAddOns: [],
   partyAvailableLocations: {},
   partyDeposit: {
     available: false,

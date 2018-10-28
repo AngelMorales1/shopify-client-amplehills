@@ -9,7 +9,7 @@ class PartyRequestFormView extends Component {
 
     const {
       partyAvailableLocations,
-      partyAddons,
+      partyAddOns,
       partyDeposit,
       actions,
       checkout,
@@ -20,7 +20,7 @@ class PartyRequestFormView extends Component {
       <div className="PartyRequestFormView">
         <PartyRequestForm
           partyAvailableLocations={partyAvailableLocations}
-          partyAddons={partyAddons}
+          partyAddOns={partyAddOns}
           partyDeposit={partyDeposit}
           actions={actions}
           checkout={checkout}

@@ -15,9 +15,6 @@ import getEvents from 'state/selectors/events';
 import getPartyDeposit from 'state/selectors/partyDeposit';
 
 const getProductTypeAndProduct = (allProducts, productId, item) => {
-  // const getProducts = products(state);
-  // const getEvents = events(state);
-  // const getPartyDeposit = partyDeposit(state);
   const handle = getProductHandleFromVariantId(
     allProducts.products,
     allProducts.events,
@@ -106,6 +103,12 @@ export const deriveLineItems = (checkout, allProducts) =>
         ? `${subItem.quantity}x ${allProducts.products[subItem.handle].title}`
         : subItem.handle;
     });
+
+    if (productTypeAndProduct.productType === PARTY_DEPOSIT) {
+      sanitisedItem.cartItemDetails = attributes.map(
+        attribute => `${attribute.key}: ${attribute.value}`
+      );
+    }
 
     lineItems.push({
       ...sanitisedItem,
