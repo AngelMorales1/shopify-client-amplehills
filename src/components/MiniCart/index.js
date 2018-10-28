@@ -6,7 +6,6 @@ import {
   updateLineItems,
   removeLineItems
 } from 'state/actions/checkoutActions';
-import { CHOOSE_YOUR_OWN_STORY } from 'constants/ProductTypes';
 import products from 'state/selectors/products';
 import checkout from 'state/selectors/checkout';
 import lineItems from 'state/selectors/lineItems';
@@ -68,8 +67,6 @@ class MiniCart extends Component {
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
               const handle = item.handle;
-              const productIsEvent = !products[handle];
-              const productType = item.productType;
 
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.subItems.length,
@@ -78,53 +75,37 @@ class MiniCart extends Component {
                   this.props.lineItemsBeingRemoved.includes(item.id)
               });
 
-              const { subItems } = item;
+              const { cartItemDetails } = item;
               const cartDetails = get(products, handle, {}).cartDetails;
 
               return (
                 <div className={classes} key={item.id}>
                   <div className="mb2 flex flex-wrap justify-between">
-                    <span className="line-item-title mr2">{item.title}</span>
-                    <span className="line-item-title">${item.price}</span>
-                    {subItems.length ? (
+                    <div className="flex flex-row justify-between w100">
+                      <span className="line-item-title mr2 col-10">
+                        {item.title}
+                      </span>
+                      <span className="line-item-title col-2">
+                        ${item.price}
+                      </span>
+                    </div>
+                    {cartItemDetails.length ? (
                       <div className="w100">
                         <ul className="my1">
-                          {subItems.map(subItem => {
-                            return productType === CHOOSE_YOUR_OWN_STORY ? (
-                              <li
-                                className="sub-line-item small"
-                                key={subItem.handle}
-                              >
-                                {productIsEvent
-                                  ? subItem.handle
-                                  : `${subItem.quantity}x ${
-                                      products[subItem.handle].title
-                                    }`}
-                              </li>
-                            ) : null;
-                          })}
-                        </ul>
-                      </div>
-                    ) : null}
-                    {(item.attributes.length &&
-                      productType !== CHOOSE_YOUR_OWN_STORY) ||
-                    cartDetails ? (
-                      <div className="w100">
-                        <ul className="my1">
-                          {get(item, 'attributes', []).map(attribute => {
+                          {cartItemDetails.map(cartItemDetail => {
                             return (
                               <li
                                 className="sub-line-item small"
-                                key={attribute.value}
+                                key={cartItemDetail}
                               >
-                                {`${attribute.key}: ${attribute.value}`}
+                                {cartItemDetail}
                               </li>
                             );
                           })}
                         </ul>
                       </div>
                     ) : null}
-                    {!cartDetails ? (
+                    {cartDetails ? (
                       <div className="flex flex-column my1">
                         <pre
                           className={cx(

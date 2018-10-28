@@ -10,44 +10,48 @@ import {
 } from 'constants/ProductTypes';
 
 import checkout from 'state/selectors/checkout';
-import products from 'state/selectors/products';
-import events from 'state/selectors/events';
-import partyDeposit from 'state/selectors/partyDeposit';
+import getProducts from 'state/selectors/products';
+import getEvents from 'state/selectors/events';
+import getPartyDeposit from 'state/selectors/partyDeposit';
 
-const getProductTypeAndProduct = (state, productId, item) => {
-  const getProducts = products(state);
-  const getEvents = events(state);
-  const getPartyDeposit = partyDeposit(state);
+const getProductTypeAndProduct = (allProducts, productId, item) => {
+  // const getProducts = products(state);
+  // const getEvents = events(state);
+  // const getPartyDeposit = partyDeposit(state);
   const handle = getProductHandleFromVariantId(
-    getProducts,
-    getEvents,
+    allProducts.products,
+    allProducts.events,
     item,
-    getPartyDeposit
+    allProducts.partyDeposit
   );
 
   if (handle === 'choose-your-own-story') {
     return {
       handle,
       productType: CHOOSE_YOUR_OWN_STORY,
-      product: getProducts[handle]
+      product: allProducts.products[handle]
     };
   }
-  if (getProducts[handle]) {
+  if (allProducts.products[handle]) {
     return {
       handle,
       productType: GENERAL_PRODUCT,
-      product: getProducts[handle]
+      product: allProducts.products[handle]
     };
   }
-  if (getPartyDeposit.handle === handle) {
-    return { handle, productType: PARTY_DEPOSIT, product: getPartyDeposit };
+  if (allProducts.partyDeposit.handle === handle) {
+    return {
+      handle,
+      productType: PARTY_DEPOSIT,
+      product: allProducts.partyDeposit
+    };
   }
-  if (getEvents[handle]) {
-    return { handle, productType: EVENT, product: getEvents[handle] };
+  if (allProducts.events[handle]) {
+    return { handle, productType: EVENT, product: allProducts.events[handle] };
   }
 };
 
-export const deriveLineItems = (checkout, state) =>
+export const deriveLineItems = (checkout, allProducts) =>
   checkout.lineItems.reduce((lineItems, node) => {
     const item = get(node, 'node', {});
     const id = get(item, 'id', '');
@@ -57,7 +61,6 @@ export const deriveLineItems = (checkout, state) =>
 
     const attributes = get(item, 'customAttributes', []);
     const itemIsEvent = get(attributes[0], 'key', '').includes('Event Time');
-
     const allSubItems = attributes.filter(attribute => {
       return itemIsEvent
         ? get(attribute, 'key', '').includes('Event Time')
@@ -91,11 +94,18 @@ export const deriveLineItems = (checkout, state) =>
       productId,
       variant
     };
+
     const productTypeAndProduct = getProductTypeAndProduct(
-      state,
+      allProducts,
       productId,
       sanitisedItem
     );
+
+    sanitisedItem.cartItemDetails = subItems.map(subItem => {
+      return productTypeAndProduct.productType === CHOOSE_YOUR_OWN_STORY
+        ? `${subItem.quantity}x ${allProducts.products[subItem.handle].title}`
+        : subItem.handle;
+    });
 
     lineItems.push({
       ...sanitisedItem,
@@ -107,6 +117,12 @@ export const deriveLineItems = (checkout, state) =>
 
 export default createSelector(
   state => checkout(state),
-  state => state,
+  state => {
+    const products = getProducts(state);
+    const events = getEvents(state);
+    const partyDeposit = getPartyDeposit(state);
+
+    return { products, events, partyDeposit };
+  },
   deriveLineItems
 );

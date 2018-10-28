@@ -9,7 +9,6 @@ import {
 } from 'state/actions/checkoutActions';
 
 import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { CHOOSE_YOUR_OWN_STORY } from 'constants/ProductTypes';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -109,7 +108,6 @@ class Cart extends Component {
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {get(this, 'props.items', []).map(item => {
                 const handle = item.handle;
-                const productType = item.productType;
                 const product = item.product;
                 const cartDetails = get(products, handle, {}).cartDetails;
 
@@ -130,31 +128,13 @@ class Cart extends Component {
                           <span className="small bold">{item.title}</span>
                         </Link>
                         <div className="flex flex-column mt2">
-                          {item.subItems.map(subItem => {
+                          {item.cartItemDetails.map(cartItemDetail => {
                             return (
-                              <span key={subItem.handle} className="small mb1">
-                                {productType === CHOOSE_YOUR_OWN_STORY
-                                  ? `${subItem.quantity}x ${
-                                      products[subItem.handle].title
-                                    }`
-                                  : null}
+                              <span key={cartItemDetail} className="small mb1">
+                                {cartItemDetail}
                               </span>
                             );
                           })}
-                          {item.attributes.length &&
-                          productType !== CHOOSE_YOUR_OWN_STORY &&
-                          !cartDetails
-                            ? get(item, 'attributes', []).map(attribute => {
-                                return (
-                                  <span
-                                    className="small mb1"
-                                    key={attribute.value}
-                                  >
-                                    {`${attribute.key}: ${attribute.value}`}
-                                  </span>
-                                );
-                              })
-                            : null}
                           {cartDetails ? (
                             <div className="flex flex-column">
                               <pre className={styles['Cart__product-details']}>
@@ -185,28 +165,13 @@ class Cart extends Component {
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
-                      {item.subItems.map(subItem => {
+                      {item.cartItemDetails.map(cartItemDetail => {
                         return (
-                          <span key={subItem.handle} className="small mb1">
-                            {productType === CHOOSE_YOUR_OWN_STORY
-                              ? `${subItem.quantity}x ${
-                                  products[subItem.handle].title
-                                }`
-                              : null}
+                          <span key={cartItemDetail} className="small mb1">
+                            {cartItemDetail}
                           </span>
                         );
                       })}
-                      {item.attributes.length &&
-                      productType !== CHOOSE_YOUR_OWN_STORY &&
-                      !cartDetails
-                        ? get(item, 'attributes', []).map(attribute => {
-                            return (
-                              <span className="small mb1" key={attribute.value}>
-                                {`${attribute.key}: ${attribute.value}`}
-                              </span>
-                            );
-                          })
-                        : null}
                       {cartDetails ? (
                         <div className="flex flex-column">
                           <pre className={cx(styles['Cart__product-details'])}>

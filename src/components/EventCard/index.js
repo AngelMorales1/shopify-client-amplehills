@@ -19,8 +19,6 @@ const EventCard = ({ event, active }) => {
   const times = datesAndTimes.map(dateAndTime => {
     return getShortTimeFormat(get(dateAndTime, 'time', ''));
   });
-  const eventTypeIsClass = event.eventType === 'Ice Cream Classes';
-  const label = eventTypeIsClass ? 'More Info' : 'RSVP';
 
   return (
     <div
@@ -76,7 +74,6 @@ const EventCard = ({ event, active }) => {
           <Button
             className="inline-flex mt3"
             color="peach"
-            label={label}
             label={event.blockCardButtonLabel || 'More Info'}
             to={`/events/${event.handle}`}
           />
