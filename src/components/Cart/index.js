@@ -110,6 +110,8 @@ class Cart extends Component {
                 const handle = item.handle;
                 const product = item.product;
                 const cartDetails = get(products, handle, {}).cartDetails;
+                const hasCartDetail =
+                  cartDetails || get(item, 'cartItemDetails', []).length;
 
                 return (
                   <div
@@ -155,12 +157,14 @@ class Cart extends Component {
                       )}
                     >
                       <Link
-                        className={`text-decoration-none ${
-                          get(item, 'subItems', []).length ||
-                          get(item, 'attributes', []).length
-                            ? 'mb2'
-                            : 'my-auto'
-                        }`}
+                        className={cx('text-decoration-none', {
+                          [styles[
+                            'Cart__title--with-cart-detail'
+                          ]]: hasCartDetail,
+                          [styles[
+                            'Cart__title--without-cart-detail'
+                          ]]: !hasCartDetail
+                        })}
                         to={get(product, 'link', '/')}
                       >
                         <span className="small bold">{item.title}</span>

@@ -19,6 +19,14 @@
     margin-right: auto;
   }
 
+  &__title--with-cart-detail {
+    margin-bottom: spacing(4);
+  }
+
+  &__title--without-cart-detail {
+    margin: auto 0;
+  }
+
   &__product-details {
     font-size: $font-3;
     line-height: $font-6;
