@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import slugify from 'utils/slugify';
 
 import { Button } from 'components/base';
 import styles from './FlavorCard.scss';
 
 const FlavorCard = ({ flavor }) => {
-  const generateSlugFromTitle = '/flavors/' + flavor.title.split(' ').join('-');
+  const generateSlugFromTitle = '/flavors/' + slugify(flavor.title);
 
   return (
     <Button variant="style-none" to={generateSlugFromTitle}>
