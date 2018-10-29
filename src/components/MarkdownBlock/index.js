@@ -19,6 +19,7 @@ const MarkdownBlock = props => {
     'white'
   )}`;
   const titleOnLeft = get(fields, 'titleLeft', false);
+  const titleOnCenter = get(fields, 'titleCenterAlign', false);
   const title = get(fields, 'title', '');
   const twoColumnContentIsTrue = get(fields, 'twoColumnContent', false);
 
@@ -38,7 +39,12 @@ const MarkdownBlock = props => {
           <div
             className={cx(
               styles['MarkdownBlock__title-container'],
-              'col-12 md-col-4'
+              'col-12 md-col-4',
+              {
+                [styles[
+                  'MarkdownBlock__title-container--center'
+                ]]: titleOnCenter
+              }
             )}
           >
             <h2 className="block-headline">{title}</h2>
@@ -89,7 +95,8 @@ MarkdownBlock.propTypes = {
       content: PropTypes.string,
       title: PropTypes.string,
       titleLeft: PropTypes.bool,
-      drip: PropTypes.bool
+      drip: PropTypes.bool,
+      titleCenterAlign: PropTypes.bool
     })
   }),
   setRef: PropTypes.func
@@ -103,7 +110,8 @@ MarkdownBlock.defaultProps = {
       content: '',
       title: '',
       titleLeft: false,
-      drip: false
+      drip: false,
+      titleCenterAlign: false
     }
   },
   setRef: () => {}

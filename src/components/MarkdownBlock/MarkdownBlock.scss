@@ -35,6 +35,12 @@
     }
   }
 
+  &__title-container--center {
+    display: flex;
+    align-items: center;
+    padding-bottom: spacing(8);
+  }
+
   &__content-container--two-column {
     display: flex;
     flex-direction: column;
