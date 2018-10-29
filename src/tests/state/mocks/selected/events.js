@@ -9,6 +9,7 @@ export default {
       }
     ],
     available: true,
+    blockCardButtonLabel: '',
     price: 19.99,
     contentfulId: 'test-event-1',
     handle: 'test-event-1',
@@ -44,6 +45,7 @@ export default {
       }
     ],
     available: false,
+    blockCardButtonLabel: '',
     price: 19.99,
     contentfulId: 'test-event-2',
     handle: 'test-event-2',

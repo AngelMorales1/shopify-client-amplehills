@@ -4,6 +4,7 @@ export default [
     title: 'Test Product',
     quantity: 2,
     price: '39.98',
+    cartItemDetails: [],
     attributes: [
       {
         key: 'Item 1',
@@ -18,16 +19,7 @@ export default [
         value: 'test-product-3'
       }
     ],
-    subItems: [
-      {
-        handle: 'test-product-2',
-        quantity: 2
-      },
-      {
-        handle: 'test-product-3',
-        quantity: 1
-      }
-    ],
+    product: {},
     variant: {
       id: '9999',
       price: 19.99

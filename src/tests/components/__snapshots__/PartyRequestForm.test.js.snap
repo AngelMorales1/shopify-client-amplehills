@@ -23,6 +23,7 @@ ShallowWrapper {
             "webUrl": "/foo",
           }
     }
+    partyAddOns={Array []}
     partyAddons={
         Object {
             "foo": Object {
@@ -121,7 +122,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb3"
                     >
-                              At which location would you like to host your party?
+                              Where would you like to host your party?
                     </p>
                     <Button
                               className="uppercase mb3 tout"
@@ -163,7 +164,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb3"
                     >
-                              Did you have a day in mind for your event?
+                              Do you have a weekend in mind?
                     </p>
                     <Button
                               className="w100 text-container-width relative z-1"
@@ -264,7 +265,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-24T20:01:09.984Z}
+                                        initialMonth={2018-10-29T17:14:28.121Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -541,7 +542,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb2"
                     >
-                              How many total guests are you expecting?
+                              How many participants are you expecting?
                     </p>
                     <p
                               className="center mb3"
@@ -769,7 +770,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb3"
               >
-                            At which location would you like to host your party?
+                            Where would you like to host your party?
               </p>
               <Button
                             className="uppercase mb3 tout"
@@ -811,7 +812,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb3"
               >
-                            Did you have a day in mind for your event?
+                            Do you have a weekend in mind?
               </p>
               <Button
                             className="w100 text-container-width relative z-1"
@@ -912,7 +913,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-24T20:01:09.984Z}
+                                          initialMonth={2018-10-29T17:14:28.121Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1189,7 +1190,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb2"
               >
-                            How many total guests are you expecting?
+                            How many participants are you expecting?
               </p>
               <p
                             className="center mb3"
@@ -1361,7 +1362,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb3"
 >
-                  At which location would you like to host your party?
+                  Where would you like to host your party?
 </p>,
                 <Button
                   className="uppercase mb3 tout"
@@ -1406,11 +1407,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "At which location would you like to host your party?",
+                  "children": "Where would you like to host your party?",
                   "className": "bold big center mb3",
                 },
                 "ref": null,
-                "rendered": "At which location would you like to host your party?",
+                "rendered": "Where would you like to host your party?",
                 "type": "p",
               },
               Object {
@@ -1473,7 +1474,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb3"
 >
-                  Did you have a day in mind for your event?
+                  Do you have a weekend in mind?
 </p>,
                 <Button
                   className="w100 text-container-width relative z-1"
@@ -1574,7 +1575,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-24T20:01:09.984Z}
+                                    initialMonth={2018-10-29T17:14:28.121Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1664,11 +1665,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Did you have a day in mind for your event?",
+                  "children": "Do you have a weekend in mind?",
                   "className": "bold big center mb3",
                 },
                 "ref": null,
-                "rendered": "Did you have a day in mind for your event?",
+                "rendered": "Do you have a weekend in mind?",
                 "type": "p",
               },
               Object {
@@ -1763,7 +1764,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-24T20:01:09.984Z}
+                      initialMonth={2018-10-29T17:14:28.121Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -1959,7 +1960,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-24T20:01:09.984Z,
+                      "initialMonth": 2018-10-29T17:14:28.121Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -2963,7 +2964,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb2"
 >
-                  How many total guests are you expecting?
+                  How many participants are you expecting?
 </p>,
                 <p
                   className="center mb3"
@@ -2991,11 +2992,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "How many total guests are you expecting?",
+                  "children": "How many participants are you expecting?",
                   "className": "bold big center mb2",
                 },
                 "ref": null,
-                "rendered": "How many total guests are you expecting?",
+                "rendered": "How many participants are you expecting?",
                 "type": "p",
               },
               Object {
@@ -3918,7 +3919,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb3"
                         >
-                                    At which location would you like to host your party?
+                                    Where would you like to host your party?
                         </p>
                         <Button
                                     className="uppercase mb3 tout"
@@ -3960,7 +3961,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb3"
                         >
-                                    Did you have a day in mind for your event?
+                                    Do you have a weekend in mind?
                         </p>
                         <Button
                                     className="w100 text-container-width relative z-1"
@@ -4061,7 +4062,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-24T20:01:09.984Z}
+                                                initialMonth={2018-10-29T17:14:28.121Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -4338,7 +4339,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb2"
                         >
-                                    How many total guests are you expecting?
+                                    How many participants are you expecting?
                         </p>
                         <p
                                     className="center mb3"
@@ -4566,7 +4567,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb3"
                 >
-                                At which location would you like to host your party?
+                                Where would you like to host your party?
                 </p>
                 <Button
                                 className="uppercase mb3 tout"
@@ -4608,7 +4609,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb3"
                 >
-                                Did you have a day in mind for your event?
+                                Do you have a weekend in mind?
                 </p>
                 <Button
                                 className="w100 text-container-width relative z-1"
@@ -4709,7 +4710,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-24T20:01:09.984Z}
+                                                initialMonth={2018-10-29T17:14:28.121Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -4986,7 +4987,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb2"
                 >
-                                How many total guests are you expecting?
+                                How many participants are you expecting?
                 </p>
                 <p
                                 className="center mb3"
@@ -5158,7 +5159,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb3"
 >
-                    At which location would you like to host your party?
+                    Where would you like to host your party?
 </p>,
                   <Button
                     className="uppercase mb3 tout"
@@ -5203,11 +5204,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "At which location would you like to host your party?",
+                    "children": "Where would you like to host your party?",
                     "className": "bold big center mb3",
                   },
                   "ref": null,
-                  "rendered": "At which location would you like to host your party?",
+                  "rendered": "Where would you like to host your party?",
                   "type": "p",
                 },
                 Object {
@@ -5270,7 +5271,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb3"
 >
-                    Did you have a day in mind for your event?
+                    Do you have a weekend in mind?
 </p>,
                   <Button
                     className="w100 text-container-width relative z-1"
@@ -5371,7 +5372,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-24T20:01:09.984Z}
+                                        initialMonth={2018-10-29T17:14:28.121Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5461,11 +5462,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Did you have a day in mind for your event?",
+                    "children": "Do you have a weekend in mind?",
                     "className": "bold big center mb3",
                   },
                   "ref": null,
-                  "rendered": "Did you have a day in mind for your event?",
+                  "rendered": "Do you have a weekend in mind?",
                   "type": "p",
                 },
                 Object {
@@ -5560,7 +5561,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-24T20:01:09.984Z}
+                        initialMonth={2018-10-29T17:14:28.121Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -5756,7 +5757,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-24T20:01:09.984Z,
+                        "initialMonth": 2018-10-29T17:14:28.121Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -6760,7 +6761,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb2"
 >
-                    How many total guests are you expecting?
+                    How many participants are you expecting?
 </p>,
                   <p
                     className="center mb3"
@@ -6788,11 +6789,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "How many total guests are you expecting?",
+                    "children": "How many participants are you expecting?",
                     "className": "bold big center mb2",
                   },
                   "ref": null,
-                  "rendered": "How many total guests are you expecting?",
+                  "rendered": "How many participants are you expecting?",
                   "type": "p",
                 },
                 Object {
@@ -7736,7 +7737,7 @@ ShallowWrapper {
             "webUrl": "",
           }
     }
-    partyAddons={Array []}
+    partyAddOns={Array []}
     partyAvailableLocations={Object {}}
     partyDeposit={
         Object {
@@ -7776,7 +7777,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb3"
                     >
-                              At which location would you like to host your party?
+                              Where would you like to host your party?
                     </p>
                     <Button
                               className="uppercase mb3 tout"
@@ -7811,7 +7812,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb3"
                     >
-                              Did you have a day in mind for your event?
+                              Do you have a weekend in mind?
                     </p>
                     <Button
                               className="w100 text-container-width relative z-1"
@@ -7912,7 +7913,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-24T20:01:09.984Z}
+                                        initialMonth={2018-10-29T17:14:28.121Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -8189,7 +8190,7 @@ ShallowWrapper {
                     <p
                               className="bold big center mb2"
                     >
-                              How many total guests are you expecting?
+                              How many participants are you expecting?
                     </p>
                     <p
                               className="center mb3"
@@ -8417,7 +8418,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb3"
               >
-                            At which location would you like to host your party?
+                            Where would you like to host your party?
               </p>
               <Button
                             className="uppercase mb3 tout"
@@ -8452,7 +8453,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb3"
               >
-                            Did you have a day in mind for your event?
+                            Do you have a weekend in mind?
               </p>
               <Button
                             className="w100 text-container-width relative z-1"
@@ -8553,7 +8554,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-24T20:01:09.984Z}
+                                          initialMonth={2018-10-29T17:14:28.121Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -8830,7 +8831,7 @@ ShallowWrapper {
               <p
                             className="bold big center mb2"
               >
-                            How many total guests are you expecting?
+                            How many participants are you expecting?
               </p>
               <p
                             className="center mb3"
@@ -9002,7 +9003,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb3"
 >
-                  At which location would you like to host your party?
+                  Where would you like to host your party?
 </p>,
                 <Button
                   className="uppercase mb3 tout"
@@ -9040,11 +9041,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "At which location would you like to host your party?",
+                  "children": "Where would you like to host your party?",
                   "className": "bold big center mb3",
                 },
                 "ref": null,
-                "rendered": "At which location would you like to host your party?",
+                "rendered": "Where would you like to host your party?",
                 "type": "p",
               },
               Object {
@@ -9102,7 +9103,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb3"
 >
-                  Did you have a day in mind for your event?
+                  Do you have a weekend in mind?
 </p>,
                 <Button
                   className="w100 text-container-width relative z-1"
@@ -9203,7 +9204,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-24T20:01:09.984Z}
+                                    initialMonth={2018-10-29T17:14:28.121Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -9293,11 +9294,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Did you have a day in mind for your event?",
+                  "children": "Do you have a weekend in mind?",
                   "className": "bold big center mb3",
                 },
                 "ref": null,
-                "rendered": "Did you have a day in mind for your event?",
+                "rendered": "Do you have a weekend in mind?",
                 "type": "p",
               },
               Object {
@@ -9392,7 +9393,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-24T20:01:09.984Z}
+                      initialMonth={2018-10-29T17:14:28.121Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -9588,7 +9589,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-24T20:01:09.984Z,
+                      "initialMonth": 2018-10-29T17:14:28.121Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -10592,7 +10593,7 @@ ShallowWrapper {
                 <p
                   className="bold big center mb2"
 >
-                  How many total guests are you expecting?
+                  How many participants are you expecting?
 </p>,
                 <p
                   className="center mb3"
@@ -10620,11 +10621,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "How many total guests are you expecting?",
+                  "children": "How many participants are you expecting?",
                   "className": "bold big center mb2",
                 },
                 "ref": null,
-                "rendered": "How many total guests are you expecting?",
+                "rendered": "How many participants are you expecting?",
                 "type": "p",
               },
               Object {
@@ -11547,7 +11548,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb3"
                         >
-                                    At which location would you like to host your party?
+                                    Where would you like to host your party?
                         </p>
                         <Button
                                     className="uppercase mb3 tout"
@@ -11582,7 +11583,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb3"
                         >
-                                    Did you have a day in mind for your event?
+                                    Do you have a weekend in mind?
                         </p>
                         <Button
                                     className="w100 text-container-width relative z-1"
@@ -11683,7 +11684,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-24T20:01:09.984Z}
+                                                initialMonth={2018-10-29T17:14:28.121Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -11960,7 +11961,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center mb2"
                         >
-                                    How many total guests are you expecting?
+                                    How many participants are you expecting?
                         </p>
                         <p
                                     className="center mb3"
@@ -12188,7 +12189,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb3"
                 >
-                                At which location would you like to host your party?
+                                Where would you like to host your party?
                 </p>
                 <Button
                                 className="uppercase mb3 tout"
@@ -12223,7 +12224,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb3"
                 >
-                                Did you have a day in mind for your event?
+                                Do you have a weekend in mind?
                 </p>
                 <Button
                                 className="w100 text-container-width relative z-1"
@@ -12324,7 +12325,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-24T20:01:09.984Z}
+                                                initialMonth={2018-10-29T17:14:28.121Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -12601,7 +12602,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center mb2"
                 >
-                                How many total guests are you expecting?
+                                How many participants are you expecting?
                 </p>
                 <p
                                 className="center mb3"
@@ -12773,7 +12774,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb3"
 >
-                    At which location would you like to host your party?
+                    Where would you like to host your party?
 </p>,
                   <Button
                     className="uppercase mb3 tout"
@@ -12811,11 +12812,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "At which location would you like to host your party?",
+                    "children": "Where would you like to host your party?",
                     "className": "bold big center mb3",
                   },
                   "ref": null,
-                  "rendered": "At which location would you like to host your party?",
+                  "rendered": "Where would you like to host your party?",
                   "type": "p",
                 },
                 Object {
@@ -12873,7 +12874,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb3"
 >
-                    Did you have a day in mind for your event?
+                    Do you have a weekend in mind?
 </p>,
                   <Button
                     className="w100 text-container-width relative z-1"
@@ -12974,7 +12975,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-24T20:01:09.984Z}
+                                        initialMonth={2018-10-29T17:14:28.121Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -13064,11 +13065,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Did you have a day in mind for your event?",
+                    "children": "Do you have a weekend in mind?",
                     "className": "bold big center mb3",
                   },
                   "ref": null,
-                  "rendered": "Did you have a day in mind for your event?",
+                  "rendered": "Do you have a weekend in mind?",
                   "type": "p",
                 },
                 Object {
@@ -13163,7 +13164,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-24T20:01:09.984Z}
+                        initialMonth={2018-10-29T17:14:28.121Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -13359,7 +13360,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-24T20:01:09.984Z,
+                        "initialMonth": 2018-10-29T17:14:28.121Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -14363,7 +14364,7 @@ ShallowWrapper {
                   <p
                     className="bold big center mb2"
 >
-                    How many total guests are you expecting?
+                    How many participants are you expecting?
 </p>,
                   <p
                     className="center mb3"
@@ -14391,11 +14392,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "How many total guests are you expecting?",
+                    "children": "How many participants are you expecting?",
                     "className": "bold big center mb2",
                   },
                   "ref": null,
-                  "rendered": "How many total guests are you expecting?",
+                  "rendered": "How many participants are you expecting?",
                   "type": "p",
                 },
                 Object {

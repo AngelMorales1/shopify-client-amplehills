@@ -1,3 +1,4 @@
+import get from 'utils/get';
 import {
   GENERAL_PRODUCT,
   EVENT,
@@ -6,7 +7,7 @@ import {
 } from 'constants/ProductTypes';
 
 export default (product, products, partyDeposit, events) => {
-  const handle = product.handle;
+  const handle = get(product, 'handle', '');
 
   if (handle === 'choose-your-own-story') {
     return CHOOSE_YOUR_OWN_STORY;

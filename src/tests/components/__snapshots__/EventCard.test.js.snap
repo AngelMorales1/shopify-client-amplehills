@@ -77,7 +77,7 @@ ShallowWrapper {
                               disabled={false}
                               fullWidth={false}
                               hover="shadow"
-                              label="RSVP"
+                              label="More Info"
                               onClick={[Function]}
                               shadow={false}
                               to="/events/undefined"
@@ -140,7 +140,7 @@ ShallowWrapper {
                             disabled={false}
                             fullWidth={false}
                             hover="shadow"
-                            label="RSVP"
+                            label="More Info"
                             onClick={[Function]}
                             shadow={false}
                             to="/events/undefined"
@@ -237,7 +237,7 @@ ShallowWrapper {
                 disabled={false}
                 fullWidth={false}
                 hover="shadow"
-                label="RSVP"
+                label="More Info"
                 onClick={[Function]}
                 shadow={false}
                 to="/events/undefined"
@@ -257,7 +257,7 @@ ShallowWrapper {
                 "disabled": false,
                 "fullWidth": false,
                 "hover": "shadow",
-                "label": "RSVP",
+                "label": "More Info",
                 "onClick": [Function],
                 "shadow": false,
                 "to": "/events/undefined",
@@ -323,7 +323,7 @@ ShallowWrapper {
                                     disabled={false}
                                     fullWidth={false}
                                     hover="shadow"
-                                    label="RSVP"
+                                    label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
                                     to="/events/undefined"
@@ -386,7 +386,7 @@ ShallowWrapper {
                                 disabled={false}
                                 fullWidth={false}
                                 hover="shadow"
-                                label="RSVP"
+                                label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
                                 to="/events/undefined"
@@ -483,7 +483,7 @@ ShallowWrapper {
                   disabled={false}
                   fullWidth={false}
                   hover="shadow"
-                  label="RSVP"
+                  label="More Info"
                   onClick={[Function]}
                   shadow={false}
                   to="/events/undefined"
@@ -503,7 +503,7 @@ ShallowWrapper {
                   "disabled": false,
                   "fullWidth": false,
                   "hover": "shadow",
-                  "label": "RSVP",
+                  "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
                   "to": "/events/undefined",
@@ -599,7 +599,7 @@ ShallowWrapper {
                               disabled={false}
                               fullWidth={false}
                               hover="shadow"
-                              label="RSVP"
+                              label="More Info"
                               onClick={[Function]}
                               shadow={false}
                               to="/events/undefined"
@@ -651,7 +651,7 @@ ShallowWrapper {
                             disabled={false}
                             fullWidth={false}
                             hover="shadow"
-                            label="RSVP"
+                            label="More Info"
                             onClick={[Function]}
                             shadow={false}
                             to="/events/undefined"
@@ -724,7 +724,7 @@ ShallowWrapper {
                 disabled={false}
                 fullWidth={false}
                 hover="shadow"
-                label="RSVP"
+                label="More Info"
                 onClick={[Function]}
                 shadow={false}
                 to="/events/undefined"
@@ -744,7 +744,7 @@ ShallowWrapper {
                 "disabled": false,
                 "fullWidth": false,
                 "hover": "shadow",
-                "label": "RSVP",
+                "label": "More Info",
                 "onClick": [Function],
                 "shadow": false,
                 "to": "/events/undefined",
@@ -799,7 +799,7 @@ ShallowWrapper {
                                     disabled={false}
                                     fullWidth={false}
                                     hover="shadow"
-                                    label="RSVP"
+                                    label="More Info"
                                     onClick={[Function]}
                                     shadow={false}
                                     to="/events/undefined"
@@ -851,7 +851,7 @@ ShallowWrapper {
                                 disabled={false}
                                 fullWidth={false}
                                 hover="shadow"
-                                label="RSVP"
+                                label="More Info"
                                 onClick={[Function]}
                                 shadow={false}
                                 to="/events/undefined"
@@ -924,7 +924,7 @@ ShallowWrapper {
                   disabled={false}
                   fullWidth={false}
                   hover="shadow"
-                  label="RSVP"
+                  label="More Info"
                   onClick={[Function]}
                   shadow={false}
                   to="/events/undefined"
@@ -944,7 +944,7 @@ ShallowWrapper {
                   "disabled": false,
                   "fullWidth": false,
                   "hover": "shadow",
-                  "label": "RSVP",
+                  "label": "More Info",
                   "onClick": [Function],
                   "shadow": false,
                   "to": "/events/undefined",

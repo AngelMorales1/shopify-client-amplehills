@@ -435,7 +435,7 @@ ShallowWrapper {
                                         label="book a party"
                                         onClick={[Function]}
                                         shadow={false}
-                                        to="/contact"
+                                        to="/party-request-form"
                                         type="button"
                                         variant="primary-small"
                               />
@@ -721,7 +721,7 @@ ShallowWrapper {
                                           label="book a party"
                                           onClick={[Function]}
                                           shadow={false}
-                                          to="/contact"
+                                          to="/party-request-form"
                                           type="button"
                                           variant="primary-small"
                             />
@@ -1916,7 +1916,7 @@ ShallowWrapper {
                                     label="book a party"
                                     onClick={[Function]}
                                     shadow={false}
-                                    to="/contact"
+                                    to="/party-request-form"
                                     type="button"
                                     variant="primary-small"
                   />
@@ -1958,7 +1958,7 @@ ShallowWrapper {
                     label="book a party"
                     onClick={[Function]}
                     shadow={false}
-                    to="/contact"
+                    to="/party-request-form"
                     type="button"
                     variant="primary-small"
 />,
@@ -1979,7 +1979,7 @@ ShallowWrapper {
                     "label": "book a party",
                     "onClick": [Function],
                     "shadow": false,
-                    "to": "/contact",
+                    "to": "/party-request-form",
                     "type": "button",
                     "variant": "primary-small",
                   },
@@ -2295,7 +2295,7 @@ ShallowWrapper {
                                                 label="book a party"
                                                 onClick={[Function]}
                                                 shadow={false}
-                                                to="/contact"
+                                                to="/party-request-form"
                                                 type="button"
                                                 variant="primary-small"
                                     />
@@ -2581,7 +2581,7 @@ ShallowWrapper {
                                                 label="book a party"
                                                 onClick={[Function]}
                                                 shadow={false}
-                                                to="/contact"
+                                                to="/party-request-form"
                                                 type="button"
                                                 variant="primary-small"
                                 />
@@ -3776,7 +3776,7 @@ ShallowWrapper {
                                         label="book a party"
                                         onClick={[Function]}
                                         shadow={false}
-                                        to="/contact"
+                                        to="/party-request-form"
                                         type="button"
                                         variant="primary-small"
                     />
@@ -3818,7 +3818,7 @@ ShallowWrapper {
                       label="book a party"
                       onClick={[Function]}
                       shadow={false}
-                      to="/contact"
+                      to="/party-request-form"
                       type="button"
                       variant="primary-small"
 />,
@@ -3839,7 +3839,7 @@ ShallowWrapper {
                       "label": "book a party",
                       "onClick": [Function],
                       "shadow": false,
-                      "to": "/contact",
+                      "to": "/party-request-form",
                       "type": "button",
                       "variant": "primary-small",
                     },
@@ -3919,25 +3919,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LocationDetailHero
-    events={
-        Array [
-            Object {
-              "blockCardText": "",
-              "datesAndTimes": Array [
-                Object {
-                  "Date": "",
-                  "Time": "",
-                  "uuid": "",
-                },
-              ],
-              "eventType": "",
-              "id": "",
-              "image": "",
-              "locationTitle": "",
-              "title": "",
-            },
-          ]
-    }
+    events={Array []}
     location={
         Object {
             "address1": "",
@@ -4092,7 +4074,7 @@ ShallowWrapper {
                                         label="book a party"
                                         onClick={[Function]}
                                         shadow={false}
-                                        to="/contact"
+                                        to="/party-request-form"
                                         type="button"
                                         variant="primary-small"
                               />
@@ -4242,7 +4224,7 @@ ShallowWrapper {
                                           label="book a party"
                                           onClick={[Function]}
                                           shadow={false}
-                                          to="/contact"
+                                          to="/party-request-form"
                                           type="button"
                                           variant="primary-small"
                             />
@@ -4739,7 +4721,7 @@ ShallowWrapper {
                                     label="book a party"
                                     onClick={[Function]}
                                     shadow={false}
-                                    to="/contact"
+                                    to="/party-request-form"
                                     type="button"
                                     variant="primary-small"
                   />
@@ -4781,7 +4763,7 @@ ShallowWrapper {
                     label="book a party"
                     onClick={[Function]}
                     shadow={false}
-                    to="/contact"
+                    to="/party-request-form"
                     type="button"
                     variant="primary-small"
 />,
@@ -4802,7 +4784,7 @@ ShallowWrapper {
                     "label": "book a party",
                     "onClick": [Function],
                     "shadow": false,
-                    "to": "/contact",
+                    "to": "/party-request-form",
                     "type": "button",
                     "variant": "primary-small",
                   },
@@ -4982,7 +4964,7 @@ ShallowWrapper {
                                                 label="book a party"
                                                 onClick={[Function]}
                                                 shadow={false}
-                                                to="/contact"
+                                                to="/party-request-form"
                                                 type="button"
                                                 variant="primary-small"
                                     />
@@ -5132,7 +5114,7 @@ ShallowWrapper {
                                                 label="book a party"
                                                 onClick={[Function]}
                                                 shadow={false}
-                                                to="/contact"
+                                                to="/party-request-form"
                                                 type="button"
                                                 variant="primary-small"
                                 />
@@ -5629,7 +5611,7 @@ ShallowWrapper {
                                         label="book a party"
                                         onClick={[Function]}
                                         shadow={false}
-                                        to="/contact"
+                                        to="/party-request-form"
                                         type="button"
                                         variant="primary-small"
                     />
@@ -5671,7 +5653,7 @@ ShallowWrapper {
                       label="book a party"
                       onClick={[Function]}
                       shadow={false}
-                      to="/contact"
+                      to="/party-request-form"
                       type="button"
                       variant="primary-small"
 />,
@@ -5692,7 +5674,7 @@ ShallowWrapper {
                       "label": "book a party",
                       "onClick": [Function],
                       "shadow": false,
-                      "to": "/contact",
+                      "to": "/party-request-form",
                       "type": "button",
                       "variant": "primary-small",
                     },

@@ -429,25 +429,7 @@ ShallowWrapper {
             },
           }
     }
-    events={
-        Array [
-            Object {
-              "blockCardText": "",
-              "datesAndTimes": Array [
-                Object {
-                  "Date": "",
-                  "Time": "",
-                  "uuid": "",
-                },
-              ],
-              "eventType": "",
-              "id": "",
-              "image": "",
-              "locationTitle": "",
-              "title": "",
-            },
-          ]
-    }
+    events={Array []}
     setRef={[Function]}
     z={0}
 />,
@@ -483,26 +465,7 @@ ShallowWrapper {
         <div
           className="w100 flex flex-column items-center my3 px2"
 >
-          <EventCard
-                    active={true}
-                    event={
-                              Object {
-                                        "blockCardText": "",
-                                        "datesAndTimes": Array [
-                                          Object {
-                                            "Date": "",
-                                            "Time": "",
-                                            "uuid": "",
-                                          },
-                                        ],
-                                        "eventType": "",
-                                        "id": "",
-                                        "image": "",
-                                        "locationTitle": "",
-                                        "title": "",
-                                      }
-                    }
-          />
+          
 </div>,
       ],
       "className": "flex flex-column items-center justify-center",
@@ -569,59 +532,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <EventCard
-              active={true}
-              event={
-                            Object {
-                                          "blockCardText": "",
-                                          "datesAndTimes": Array [
-                                            Object {
-                                              "Date": "",
-                                              "Time": "",
-                                              "uuid": "",
-                                            },
-                                          ],
-                                          "eventType": "",
-                                          "id": "",
-                                          "image": "",
-                                          "locationTitle": "",
-                                          "title": "",
-                                        }
-              }
-/>,
-          ],
+          "children": Array [],
           "className": "w100 flex flex-column items-center my3 px2",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": "0",
-            "nodeType": "function",
-            "props": Object {
-              "active": true,
-              "event": Object {
-                "blockCardText": "",
-                "datesAndTimes": Array [
-                  Object {
-                    "Date": "",
-                    "Time": "",
-                    "uuid": "",
-                  },
-                ],
-                "eventType": "",
-                "id": "",
-                "image": "",
-                "locationTitle": "",
-                "title": "",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
+        "rendered": Array [],
         "type": "div",
       },
     ],
@@ -653,26 +568,7 @@ ShallowWrapper {
           <div
             className="w100 flex flex-column items-center my3 px2"
 >
-            <EventCard
-                        active={true}
-                        event={
-                                    Object {
-                                                "blockCardText": "",
-                                                "datesAndTimes": Array [
-                                                  Object {
-                                                    "Date": "",
-                                                    "Time": "",
-                                                    "uuid": "",
-                                                  },
-                                                ],
-                                                "eventType": "",
-                                                "id": "",
-                                                "image": "",
-                                                "locationTitle": "",
-                                                "title": "",
-                                              }
-                        }
-            />
+            
 </div>,
         ],
         "className": "flex flex-column items-center justify-center",
@@ -739,59 +635,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <EventCard
-                active={true}
-                event={
-                                Object {
-                                                "blockCardText": "",
-                                                "datesAndTimes": Array [
-                                                  Object {
-                                                    "Date": "",
-                                                    "Time": "",
-                                                    "uuid": "",
-                                                  },
-                                                ],
-                                                "eventType": "",
-                                                "id": "",
-                                                "image": "",
-                                                "locationTitle": "",
-                                                "title": "",
-                                              }
-                }
-/>,
-            ],
+            "children": Array [],
             "className": "w100 flex flex-column items-center my3 px2",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "0",
-              "nodeType": "function",
-              "props": Object {
-                "active": true,
-                "event": Object {
-                  "blockCardText": "",
-                  "datesAndTimes": Array [
-                    Object {
-                      "Date": "",
-                      "Time": "",
-                      "uuid": "",
-                    },
-                  ],
-                  "eventType": "",
-                  "id": "",
-                  "image": "",
-                  "locationTitle": "",
-                  "title": "",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
+          "rendered": Array [],
           "type": "div",
         },
       ],

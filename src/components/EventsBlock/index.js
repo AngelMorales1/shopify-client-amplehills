@@ -187,7 +187,7 @@ EventsBlock.propTypes = {
       locationFilterButton: PropTypes.bool
     })
   }),
-  events: PropTypes.object,
+  events: PropTypes.array,
   setRef: PropTypes.func
 };
 
@@ -204,7 +204,7 @@ EventsBlock.defaultProps = {
       locationFilterButton: false
     }
   },
-  events: {},
+  events: [],
   setRef: () => {}
 };
 

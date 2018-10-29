@@ -14,11 +14,11 @@ import getEvents from 'state/selectors/events';
 import getPartyDeposit from 'state/selectors/partyDeposit';
 
 const getProduct = (allProducts, productId) => {
-  if (productId === allProducts.partyDeposit.id) {
+  if (productId === get(allProducts, 'partyDeposit.id', '')) {
     return allProducts.partyDeposit;
   }
 
-  const findFromProducts = Object.values(allProducts.products).find(
+  const findFromProducts = Object.values(get(allProducts, 'products', {})).find(
     product => product.id === productId
   );
 
@@ -26,13 +26,15 @@ const getProduct = (allProducts, productId) => {
     return findFromProducts;
   }
 
-  const findFromEvent = Object.values(allProducts.events).find(event =>
-    event.variants.find(variant => variant.id === productId)
+  const findFromEvent = Object.values(get(allProducts, 'events', {})).find(
+    event => event.variants.find(variant => variant.id === productId)
   );
 
   if (findFromEvent) {
     return findFromEvent;
   }
+
+  return {};
 };
 
 export const deriveLineItems = (checkout, allProducts) =>
@@ -48,9 +50,9 @@ export const deriveLineItems = (checkout, allProducts) =>
     const product = getProduct(allProducts, productId);
     const productType = getProductTypeFromProduct(
       product,
-      allProducts.products,
-      allProducts.partyDeposit,
-      allProducts.events
+      get(allProducts, 'products', {}),
+      get(allProducts, 'partyDeposit', {}),
+      get(allProducts, 'events', {})
     );
 
     let cartItemDetails = [];

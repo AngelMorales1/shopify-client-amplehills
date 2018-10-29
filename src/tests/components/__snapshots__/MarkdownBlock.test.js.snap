@@ -48,128 +48,58 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <div
-          className="col-12 md-col-4 flex flex-row justify-center"
+      "children": <div
+        className="w100 flex content-width undefined"
 >
-          <span
-                    className="block-headline mx3"
-          >
-                    foo
-          </span>
-</div>,
         <div
-          className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
->
-          <div
-                    className="col-12 markdown-block form-container-width "
-                    dangerouslySetInnerHTML={
-                              Object {
+                className="col-12 md-col-4"
+        >
+                <h2
+                        className="block-headline"
+                >
+                        foo
+                </h2>
+        </div>
+        <div
+                className="transition-slide-up mx-auto py4 col-12 md-col-8"
+        >
+                <div
+                        className="col-12 markdown-block form-container-width"
+                        dangerouslySetInnerHTML={
+                                Object {
                                         "__html": "<p>foo</p>
-                              ",
+                                ",
                                       }
-                    }
-          />
+                        }
+                />
+        </div>
 </div>,
-      ],
-      "className": "flex justify-center undefined",
+      "className": "flex justify-center px3",
       "style": Object {
         "zIndex": 0,
       },
     },
     "ref": [Function],
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <span
-            className="block-headline mx3"
->
-            foo
-</span>,
-          "className": "col-12 md-col-4 flex flex-row justify-center",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "foo",
-            "className": "block-headline mx3",
-          },
-          "ref": null,
-          "rendered": "foo",
-          "type": "span",
-        },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="col-12 markdown-block form-container-width "
-              dangerouslySetInnerHTML={
-                            Object {
-                                          "__html": "<p>foo</p>
-                            ",
-                                        }
-              }
-/>,
-            null,
-          ],
-          "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "col-12 markdown-block form-container-width ",
-              "dangerouslySetInnerHTML": Object {
-                "__html": "<p>foo</p>
-",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          null,
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
           <div
-            className="col-12 md-col-4 flex flex-row justify-center"
+            className="col-12 md-col-4"
 >
-            <span
-                        className="block-headline mx3"
+            <h2
+                        className="block-headline"
             >
                         foo
-            </span>
+            </h2>
 </div>,
           <div
-            className="transition-slide-up mx-auto px3 py4 col-12 md-col-8"
+            className="transition-slide-up mx-auto py4 col-12 md-col-8"
 >
             <div
-                        className="col-12 markdown-block form-container-width "
+                        className="col-12 markdown-block form-container-width"
                         dangerouslySetInnerHTML={
                                     Object {
                                                 "__html": "<p>foo</p>
@@ -179,24 +109,21 @@ ShallowWrapper {
             />
 </div>,
         ],
-        "className": "flex justify-center undefined",
-        "style": Object {
-          "zIndex": 0,
-        },
+        "className": "w100 flex content-width undefined",
       },
-      "ref": [Function],
+      "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <span
-              className="block-headline mx3"
+            "children": <h2
+              className="block-headline"
 >
               foo
-</span>,
-            "className": "col-12 md-col-4 flex flex-row justify-center",
+</h2>,
+            "className": "col-12 md-col-4",
           },
           "ref": null,
           "rendered": Object {
@@ -205,11 +132,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "foo",
-              "className": "block-headline mx3",
+              "className": "block-headline",
             },
             "ref": null,
             "rendered": "foo",
-            "type": "span",
+            "type": "h2",
           },
           "type": "div",
         },
@@ -220,7 +147,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="col-12 markdown-block form-container-width "
+                className="col-12 markdown-block form-container-width"
                 dangerouslySetInnerHTML={
                                 Object {
                                                 "__html": "<p>foo</p>
@@ -230,7 +157,7 @@ ShallowWrapper {
 />,
               null,
             ],
-            "className": "transition-slide-up mx-auto px3 py4 col-12 md-col-8",
+            "className": "transition-slide-up mx-auto py4 col-12 md-col-8",
           },
           "ref": null,
           "rendered": Array [
@@ -239,7 +166,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "col-12 markdown-block form-container-width ",
+                "className": "col-12 markdown-block form-container-width",
                 "dangerouslySetInnerHTML": Object {
                   "__html": "<p>foo</p>
 ",
@@ -254,6 +181,151 @@ ShallowWrapper {
           "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="w100 flex content-width undefined"
+>
+          <div
+                    className="col-12 md-col-4"
+          >
+                    <h2
+                              className="block-headline"
+                    >
+                              foo
+                    </h2>
+          </div>
+          <div
+                    className="transition-slide-up mx-auto py4 col-12 md-col-8"
+          >
+                    <div
+                              className="col-12 markdown-block form-container-width"
+                              dangerouslySetInnerHTML={
+                                        Object {
+                                                  "__html": "<p>foo</p>
+                                        ",
+                                                }
+                              }
+                    />
+          </div>
+</div>,
+        "className": "flex justify-center px3",
+        "style": Object {
+          "zIndex": 0,
+        },
+      },
+      "ref": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-12 md-col-4"
+>
+              <h2
+                            className="block-headline"
+              >
+                            foo
+              </h2>
+</div>,
+            <div
+              className="transition-slide-up mx-auto py4 col-12 md-col-8"
+>
+              <div
+                            className="col-12 markdown-block form-container-width"
+                            dangerouslySetInnerHTML={
+                                          Object {
+                                                        "__html": "<p>foo</p>
+                                          ",
+                                                      }
+                            }
+              />
+</div>,
+          ],
+          "className": "w100 flex content-width undefined",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <h2
+                className="block-headline"
+>
+                foo
+</h2>,
+              "className": "col-12 md-col-4",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "foo",
+                "className": "block-headline",
+              },
+              "ref": null,
+              "rendered": "foo",
+              "type": "h2",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-12 markdown-block form-container-width"
+                  dangerouslySetInnerHTML={
+                                    Object {
+                                                      "__html": "<p>foo</p>
+                                    ",
+                                                    }
+                  }
+/>,
+                null,
+              ],
+              "className": "transition-slide-up mx-auto py4 col-12 md-col-8",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "col-12 markdown-block form-container-width",
+                  "dangerouslySetInnerHTML": Object {
+                    "__html": "<p>foo</p>
+",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              null,
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],
@@ -298,72 +370,29 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        null,
-        <div
-          className="transition-slide-up mx-auto px3 py4"
+      "children": <div
+        className="w100 flex content-width"
 >
-          <div
-                    className="col-12 markdown-block form-container-width "
-                    dangerouslySetInnerHTML={
-                              Object {
+        <div
+                className="transition-slide-up mx-auto py4"
+        >
+                <div
+                        className="col-12 markdown-block form-container-width"
+                        dangerouslySetInnerHTML={
+                                Object {
                                         "__html": "",
                                       }
-                    }
-          />
+                        }
+                />
+        </div>
 </div>,
-      ],
-      "className": "flex justify-center",
+      "className": "flex justify-center px3",
       "style": Object {
         "zIndex": 0,
       },
     },
     "ref": [Function],
-    "rendered": Array [
-      null,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              className="col-12 markdown-block form-container-width "
-              dangerouslySetInnerHTML={
-                            Object {
-                                          "__html": "",
-                                        }
-              }
-/>,
-            null,
-          ],
-          "className": "transition-slide-up mx-auto px3 py4",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "col-12 markdown-block form-container-width ",
-              "dangerouslySetInnerHTML": Object {
-                "__html": "",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          null,
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -371,10 +400,10 @@ ShallowWrapper {
         "children": Array [
           null,
           <div
-            className="transition-slide-up mx-auto px3 py4"
+            className="transition-slide-up mx-auto py4"
 >
             <div
-                        className="col-12 markdown-block form-container-width "
+                        className="col-12 markdown-block form-container-width"
                         dangerouslySetInnerHTML={
                                     Object {
                                                 "__html": "",
@@ -383,12 +412,9 @@ ShallowWrapper {
             />
 </div>,
         ],
-        "className": "flex justify-center",
-        "style": Object {
-          "zIndex": 0,
-        },
+        "className": "w100 flex content-width",
       },
-      "ref": [Function],
+      "ref": null,
       "rendered": Array [
         null,
         Object {
@@ -398,7 +424,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="col-12 markdown-block form-container-width "
+                className="col-12 markdown-block form-container-width"
                 dangerouslySetInnerHTML={
                                 Object {
                                                 "__html": "",
@@ -407,7 +433,7 @@ ShallowWrapper {
 />,
               null,
             ],
-            "className": "transition-slide-up mx-auto px3 py4",
+            "className": "transition-slide-up mx-auto py4",
           },
           "ref": null,
           "rendered": Array [
@@ -416,7 +442,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "col-12 markdown-block form-container-width ",
+                "className": "col-12 markdown-block form-container-width",
                 "dangerouslySetInnerHTML": Object {
                   "__html": "",
                 },
@@ -430,6 +456,104 @@ ShallowWrapper {
           "type": "div",
         },
       ],
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="w100 flex content-width"
+>
+          <div
+                    className="transition-slide-up mx-auto py4"
+          >
+                    <div
+                              className="col-12 markdown-block form-container-width"
+                              dangerouslySetInnerHTML={
+                                        Object {
+                                                  "__html": "",
+                                                }
+                              }
+                    />
+          </div>
+</div>,
+        "className": "flex justify-center px3",
+        "style": Object {
+          "zIndex": 0,
+        },
+      },
+      "ref": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            null,
+            <div
+              className="transition-slide-up mx-auto py4"
+>
+              <div
+                            className="col-12 markdown-block form-container-width"
+                            dangerouslySetInnerHTML={
+                                          Object {
+                                                        "__html": "",
+                                                      }
+                            }
+              />
+</div>,
+          ],
+          "className": "w100 flex content-width",
+        },
+        "ref": null,
+        "rendered": Array [
+          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="col-12 markdown-block form-container-width"
+                  dangerouslySetInnerHTML={
+                                    Object {
+                                                      "__html": "",
+                                                    }
+                  }
+/>,
+                null,
+              ],
+              "className": "transition-slide-up mx-auto py4",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "col-12 markdown-block form-container-width",
+                  "dangerouslySetInnerHTML": Object {
+                    "__html": "",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              null,
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
       "type": "div",
     },
   ],

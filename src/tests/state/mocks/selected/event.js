@@ -7,6 +7,7 @@ export default {
       price: 19.99
     }
   ],
+  blockCardButtonLabel: '',
   available: true,
   price: 19.99,
   contentfulId: 'test-event-1',
