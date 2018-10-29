@@ -16,6 +16,7 @@ export default createSelector(
       const label = get(fields, 'label', '');
       const image = get(fields, 'image.fields.file.url', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
+      const availableLocations = get(fields, 'availableLocations', []);
       const filters = get(fields, 'filters.fragments', []).reduce(
         (sanitisedFilters, fragment) => {
           const filterName = get(fragment[1], 'value', '');
@@ -52,7 +53,8 @@ export default createSelector(
         filters,
         dietaryRestrictions,
         slug,
-        contentBlocks
+        contentBlocks,
+        availableLocations
       };
     });
 

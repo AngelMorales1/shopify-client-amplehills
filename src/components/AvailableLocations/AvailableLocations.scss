@@ -1,0 +1,17 @@
+@import 'settings', 'src/styles/utils';
+
+.AvailableLocations {
+  padding: spacing(16) spacing(12);
+
+  @media ($medium-up) {
+    padding: spacing(16) spacing(16);
+  }
+
+  &__button-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+}
