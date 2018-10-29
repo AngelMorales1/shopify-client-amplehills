@@ -181,6 +181,7 @@
 
   &--text-madison-blue {
     :global {
+      .Select-placeholder,
       .Select-value {
         color: color('madison-blue');
       }

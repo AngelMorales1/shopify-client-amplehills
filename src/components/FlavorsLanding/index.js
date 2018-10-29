@@ -11,7 +11,7 @@ import FlavorCard from 'components/FlavorCard';
 class FlavorLanding extends Component {
   state = {
     activeFilter: 'All',
-    activeDietaryRestrictions: 'Dietary Restrictions',
+    activeDietaryRestrictions: '',
     currentBreakpoint: Global.breakpoints.medium.label
   };
 
@@ -33,12 +33,20 @@ class FlavorLanding extends Component {
       this.setState({ currentBreakpoint });
   };
 
+  handleDietaryRestrictionsClick = value => {
+    if (value === 'None') {
+      return this.setState({ activeDietaryRestrictions: '' });
+    }
+
+    return this.setState({ activeDietaryRestrictions: value });
+  };
+
   render() {
     const flavors = get(this, 'props.flavors', {});
     const filteredFlavor = get(flavors, 'flavors', []).filter(flavor => {
       if (
         this.state.activeFilter !== 'All' &&
-        this.state.activeDietaryRestrictions !== 'Dietary Restrictions'
+        this.state.activeDietaryRestrictions
       ) {
         return (
           get(flavor, `filters.${this.state.activeFilter}`, false) &&
@@ -54,7 +62,7 @@ class FlavorLanding extends Component {
         return get(flavor, `filters.${this.state.activeFilter}`, false);
       }
 
-      if (this.state.activeDietaryRestrictions !== 'Dietary Restrictions') {
+      if (this.state.activeDietaryRestrictions !== '') {
         return get(
           flavor,
           `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
@@ -146,15 +154,16 @@ class FlavorLanding extends Component {
                 selectClassName="w100"
                 variant="small"
                 color="peach"
+                placeholder="Dietary Restrictions"
                 textColor="madison-blue"
                 value={this.state.activeDietaryRestrictions}
-                options={['Dietary Restrictions']
+                options={['None']
                   .concat(flavors.collectedDietaryRestrictions)
                   .map(filter => {
                     return { label: filter, value: filter };
                   })}
                 onChange={filter =>
-                  this.setState({ activeDietaryRestrictions: filter.value })
+                  this.handleDietaryRestrictionsClick(filter.value)
                 }
               />
             </div>
