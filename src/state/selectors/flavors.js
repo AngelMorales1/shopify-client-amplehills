@@ -1,6 +1,8 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
 
+import slugify from 'utils/slugify';
+
 export default createSelector(
   state => get(state, 'flavors.flavors'),
   flavors => {
@@ -10,8 +12,10 @@ export default createSelector(
       const id = get(flavor, 'sys.id', '');
       const fields = get(flavor, 'fields', {});
       const title = get(fields, 'title', '');
+      const slug = slugify(title);
       const label = get(fields, 'label', '');
       const image = get(fields, 'image.fields.file.url', '');
+      const contentBlocks = get(fields, 'contentBlocks', []);
       const filters = get(fields, 'filters.fragments', []).reduce(
         (sanitisedFilters, fragment) => {
           const filterName = get(fragment[1], 'value', '');
@@ -46,7 +50,9 @@ export default createSelector(
         label,
         image,
         filters,
-        dietaryRestrictions
+        dietaryRestrictions,
+        slug,
+        contentBlocks
       };
     });
 

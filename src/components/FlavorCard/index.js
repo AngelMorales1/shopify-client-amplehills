@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
-import slugify from 'utils/slugify';
 
 import { Button } from 'components/base';
 import styles from './FlavorCard.scss';
