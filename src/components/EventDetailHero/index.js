@@ -66,12 +66,7 @@ class EventDetailHero extends Component {
       {
         variantId: get(this, 'state.selectedItem', ''),
         quantity: 1,
-        customAttributes: [
-          {
-            key: 'Event Time',
-            value: get(this, 'state.selectedItemDateAndTime', '')
-          }
-        ]
+        customAttributes: []
       }
     ];
 

@@ -1,9 +1,8 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
-import getProductHandleFromVariantId from 'utils/getProductHandleFromVariantId';
 import getLineItemPrice from 'utils/getLineItemPrice';
+import getProductTypeFromProduct from 'utils/getProductTypeFromProduct';
 import {
-  GENERAL_PRODUCT,
   EVENT,
   PARTY_DEPOSIT,
   CHOOSE_YOUR_OWN_STORY
@@ -14,37 +13,25 @@ import getProducts from 'state/selectors/products';
 import getEvents from 'state/selectors/events';
 import getPartyDeposit from 'state/selectors/partyDeposit';
 
-const getProductTypeAndProduct = (allProducts, productId, item) => {
-  const handle = getProductHandleFromVariantId(
-    allProducts.products,
-    allProducts.events,
-    item,
-    allProducts.partyDeposit
+const getProduct = (allProducts, productId) => {
+  if (productId === allProducts.partyDeposit.id) {
+    return allProducts.partyDeposit;
+  }
+
+  const findFromProducts = Object.values(allProducts.products).find(
+    product => product.id === productId
   );
 
-  if (handle === 'choose-your-own-story') {
-    return {
-      handle,
-      productType: CHOOSE_YOUR_OWN_STORY,
-      product: allProducts.products[handle]
-    };
+  if (findFromProducts) {
+    return findFromProducts;
   }
-  if (allProducts.products[handle]) {
-    return {
-      handle,
-      productType: GENERAL_PRODUCT,
-      product: allProducts.products[handle]
-    };
-  }
-  if (allProducts.partyDeposit.handle === handle) {
-    return {
-      handle,
-      productType: PARTY_DEPOSIT,
-      product: allProducts.partyDeposit
-    };
-  }
-  if (allProducts.events[handle]) {
-    return { handle, productType: EVENT, product: allProducts.events[handle] };
+
+  const findFromEvent = Object.values(allProducts.events).find(event =>
+    event.variants.find(variant => variant.id === productId)
+  );
+
+  if (findFromEvent) {
+    return findFromEvent;
   }
 };
 
@@ -55,31 +42,60 @@ export const deriveLineItems = (checkout, allProducts) =>
     const title = get(item, 'title', '');
     const quantity = get(item, 'quantity', 0);
     const price = getLineItemPrice(get(item, 'variant.price', 0.0), quantity);
-
-    const attributes = get(item, 'customAttributes', []);
-    const itemIsEvent = get(attributes[0], 'key', '').includes('Event Time');
-    const allSubItems = attributes.filter(attribute => {
-      return itemIsEvent
-        ? get(attribute, 'key', '').includes('Event Time')
-        : get(attribute, 'key', '').includes('Item');
-    });
-
-    const subItemsObject = allSubItems.reduce((uniqueSubItems, subItem) => {
-      uniqueSubItems[subItem.value]
-        ? uniqueSubItems[subItem.value].quantity++
-        : (uniqueSubItems[subItem.value] = {
-            handle: subItem.value,
-            quantity: 1
-          });
-      return uniqueSubItems;
-    }, {});
-
-    const subItems = Object.values(subItemsObject).sort(
-      (a, b) => b.quantity - a.quantity
-    );
-
     const variant = get(item, 'variant', {});
     const productId = get(variant, 'id', '');
+    const attributes = get(item, 'customAttributes', []);
+    const product = getProduct(allProducts, productId);
+    const productType = getProductTypeFromProduct(
+      product,
+      allProducts.products,
+      allProducts.partyDeposit,
+      allProducts.events
+    );
+
+    let cartItemDetails = [];
+
+    if (productType === CHOOSE_YOUR_OWN_STORY) {
+      const getUniqueAttribute = attributes
+        .filter(attribute => get(attribute, 'key', '').includes('Item'))
+        .reduce((uniqueAttribute, attribute) => {
+          uniqueAttribute[attribute.value]
+            ? uniqueAttribute[attribute.value].quantity++
+            : (uniqueAttribute[attribute.value] = {
+                handle: attribute.value,
+                quantity: 1
+              });
+          return uniqueAttribute;
+        }, {});
+
+      cartItemDetails = Object.values(getUniqueAttribute)
+        .sort((a, b) => b.quantity - a.quantity)
+        .map(
+          attribute =>
+            `${attribute.quantity}x ${
+              allProducts.products[attribute.handle].title
+            }`
+        );
+    }
+
+    if (productType === PARTY_DEPOSIT) {
+      cartItemDetails = attributes.map(
+        attribute => `${attribute.key}: ${attribute.value}`
+      );
+    }
+
+    if (productType === EVENT) {
+      const eventDate = product.variants.find(
+        variant => variant.id === productId
+      ).date;
+      cartItemDetails.push(eventDate);
+    }
+
+    const cartDetails = get(product, 'cartDetails', '');
+
+    if (cartDetails) {
+      cartItemDetails.unshift(cartDetails);
+    }
 
     const sanitisedItem = {
       id,
@@ -87,32 +103,14 @@ export const deriveLineItems = (checkout, allProducts) =>
       price,
       quantity,
       attributes,
-      subItems,
       productId,
-      variant
+      variant,
+      cartItemDetails,
+      product
     };
 
-    const productTypeAndProduct = getProductTypeAndProduct(
-      allProducts,
-      productId,
-      sanitisedItem
-    );
-
-    sanitisedItem.cartItemDetails = subItems.map(subItem => {
-      return productTypeAndProduct.productType === CHOOSE_YOUR_OWN_STORY
-        ? `${subItem.quantity}x ${allProducts.products[subItem.handle].title}`
-        : subItem.handle;
-    });
-
-    if (productTypeAndProduct.productType === PARTY_DEPOSIT) {
-      sanitisedItem.cartItemDetails = attributes.map(
-        attribute => `${attribute.key}: ${attribute.value}`
-      );
-    }
-
     lineItems.push({
-      ...sanitisedItem,
-      ...productTypeAndProduct
+      ...sanitisedItem
     });
 
     return lineItems;

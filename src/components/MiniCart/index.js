@@ -38,7 +38,6 @@ class MiniCart extends Component {
     const {
       checkout,
       items,
-      products,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -66,17 +65,14 @@ class MiniCart extends Component {
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
-              const handle = item.handle;
-
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
-                mb4: item.subItems.length,
+                mb4: item.cartItemDetails.length,
                 [styles['MiniCart__line-item--updating']]:
                   this.props.lineItemsBeingUpdated.includes(item.id) ||
                   this.props.lineItemsBeingRemoved.includes(item.id)
               });
 
               const { cartItemDetails } = item;
-              const cartDetails = get(products, handle, {}).cartDetails;
 
               return (
                 <div className={classes} key={item.id}>
@@ -103,18 +99,6 @@ class MiniCart extends Component {
                             );
                           })}
                         </ul>
-                      </div>
-                    ) : null}
-                    {cartDetails ? (
-                      <div className="flex flex-column my1">
-                        <pre
-                          className={cx(
-                            styles['MiniCart__product-details'],
-                            'col-9'
-                          )}
-                        >
-                          {cartDetails}
-                        </pre>
                       </div>
                     ) : null}
                   </div>

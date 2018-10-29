@@ -64,7 +64,7 @@ class Cart extends Component {
   };
 
   render() {
-    const { actions, checkout, items, products, updatingNote } = this.props;
+    const { actions, checkout, items, updatingNote } = this.props;
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const isUpdateButtonActive =
@@ -107,11 +107,8 @@ class Cart extends Component {
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {get(this, 'props.items', []).map(item => {
-                const handle = item.handle;
                 const product = item.product;
-                const cartDetails = get(products, handle, {}).cartDetails;
-                const hasCartDetail =
-                  cartDetails || get(item, 'cartItemDetails', []).length;
+                const hasCartDetail = get(item, 'cartItemDetails', []).length;
 
                 return (
                   <div
@@ -137,13 +134,6 @@ class Cart extends Component {
                               </span>
                             );
                           })}
-                          {cartDetails ? (
-                            <div className="flex flex-column">
-                              <pre className={styles['Cart__product-details']}>
-                                {cartDetails}
-                              </pre>
-                            </div>
-                          ) : null}
                         </div>
                       </div>
                       <span className="line-item-title my2 md-hide lg-hide">
@@ -176,13 +166,6 @@ class Cart extends Component {
                           </span>
                         );
                       })}
-                      {cartDetails ? (
-                        <div className="flex flex-column">
-                          <pre className={cx(styles['Cart__product-details'])}>
-                            {cartDetails}
-                          </pre>
-                        </div>
-                      ) : null}
                     </div>
                     <div
                       className={cx(
