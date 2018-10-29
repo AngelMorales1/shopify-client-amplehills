@@ -18,20 +18,20 @@ const getProduct = (allProducts, productId) => {
     return allProducts.partyDeposit;
   }
 
-  const findFromProducts = Object.values(get(allProducts, 'products', {})).find(
-    product => product.id === productId
-  );
+  const matchedProductFromProducts = Object.values(
+    get(allProducts, 'products', {})
+  ).find(product => product.id === productId);
 
-  if (findFromProducts) {
-    return findFromProducts;
+  if (matchedProductFromProducts) {
+    return matchedProductFromProducts;
   }
 
-  const findFromEvent = Object.values(get(allProducts, 'events', {})).find(
-    event => event.variants.find(variant => variant.id === productId)
-  );
+  const matchedProductFromEvents = Object.values(
+    get(allProducts, 'events', {})
+  ).find(event => event.variants.find(variant => variant.id === productId));
 
-  if (findFromEvent) {
-    return findFromEvent;
+  if (matchedProductFromEvents) {
+    return matchedProductFromEvents;
   }
 
   return {};
