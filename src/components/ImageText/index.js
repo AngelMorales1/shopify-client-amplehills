@@ -26,6 +26,7 @@ const ImageText = ({ block, z, setRef }) => {
   const linkedTextDescription = get(fields, 'linkedTextDescription', '');
   const linkedTextLabel = get(fields, 'linkedTextLabel', '');
   const linkedTextLink = get(fields, 'linkedTextLink', '');
+  const textContentCenterAlign = get(fields, 'textContentCenterAlign', '');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
 
   const getButtonColor = colorName => {
@@ -74,6 +75,9 @@ const ImageText = ({ block, z, setRef }) => {
               [styles[
                 'ImageText__text-content--reverse'
               ]]: isReverseArrangement,
+              [styles[
+                'ImageText__text-content--center'
+              ]]: textContentCenterAlign,
               'md-col-5': imageTextRatioIs5050 && !isFullImage,
               'md-col-6': !imageTextRatioIs5050 && !isFullImage,
               'md-col-9': isFullImage
