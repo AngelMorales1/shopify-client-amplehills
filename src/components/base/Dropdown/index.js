@@ -79,17 +79,19 @@ class Dropdown extends Component {
       className,
       selectClassName,
       shadow,
-      textColor
+      textColor,
+      fixedWidth
     } = this.props;
     return (
       <div
         className={cx(
           styles['Dropdown'],
-          'w-auto relative z-1 pointer',
+          'relative z-1 pointer',
           className,
           styles[`Dropdown--${variant}`],
           styles[`Dropdown--text-${textColor}`],
           {
+            [styles[`Dropdown--fixedWidth`]]: fixedWidth,
             [styles['Dropdown--small']]: variant === 'small'
           }
         )}
@@ -153,7 +155,8 @@ Dropdown.propTypes = {
   variant: PropTypes.string,
   onChange: PropTypes.func,
   shadow: PropTypes.bool,
-  textColor: PropTypes.string
+  textColor: PropTypes.string,
+  fixedWidth: PropTypes.bool
 };
 
 Dropdown.defaultProps = {
@@ -167,7 +170,8 @@ Dropdown.defaultProps = {
   variant: 'primary',
   onChange: () => {},
   shadow: false,
-  textColor: ''
+  textColor: '',
+  fixedWidth: false
 };
 
 export default Dropdown;

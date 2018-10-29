@@ -3,9 +3,27 @@
 .Dropdown {
   animation-name: bg;
   animation-duration: 1s;
+  width: auto;
 
   * {
     width: auto;
+  }
+
+  &--fixedWidth {
+    width: 100%;
+
+    :global {
+      .Select-control {
+        width: 100%;
+      }
+
+      .Select-multi-value-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
   }
 
   :global {

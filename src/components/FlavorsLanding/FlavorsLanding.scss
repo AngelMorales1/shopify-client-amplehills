@@ -14,27 +14,14 @@
 
     @media ($medium-up) {
       flex-direction: row;
-      padding: 0 spacing(48) spacing(8);
+      padding: 0 spacing(54) spacing(8);
     }
   }
 
   &__dietary-restrictions {
-    min-width: spacing(40);
+    min-width: spacing(50);
     margin: spacing(4) 0;
     justify-content: center;
-
-    > div {
-      width: 100%;
-      > div {
-        width: 100%;
-        > div {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-      }
-    }
 
     @media ($medium-up) {
       margin: 0;
