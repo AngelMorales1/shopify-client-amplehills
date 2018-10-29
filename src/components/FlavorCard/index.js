@@ -8,10 +8,8 @@ import { Button } from 'components/base';
 import styles from './FlavorCard.scss';
 
 const FlavorCard = ({ flavor }) => {
-  const generateSlugFromTitle = '/flavors/' + slugify(flavor.title);
-
   return (
-    <Button variant="style-none" to={generateSlugFromTitle}>
+    <Button variant="style-none" to={`/flavors/${slugify(flavor.title)}`}>
       <div
         className={cx(
           styles['FlavorCard'],
