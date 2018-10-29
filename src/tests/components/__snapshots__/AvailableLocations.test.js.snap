@@ -1,0 +1,285 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AvailableLocations
+    block={
+        Object {
+            "fields": Object {
+              "contentType": "foo",
+              "drip": false,
+              "title": "foo",
+            },
+            "sys": Object {
+              "id": "foo",
+            },
+          }
+    }
+    flavor={
+        Object {
+            "availableLocations": Array [],
+            "contentBlocks": Array [],
+            "id": "foo",
+            "image": "foo",
+            "label": "foo",
+            "slug": "foo",
+            "title": "foo",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="block-headline center mb3"
+>
+          foo
+</h2>,
+        <div
+          className="flex w100 items-center justify-center"
+>
+          
+</div>,
+      ],
+      "className": "bg-light-yellow",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "foo",
+          "className": "block-headline center mb3",
+        },
+        "ref": null,
+        "rendered": "foo",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "flex w100 items-center justify-center",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="block-headline center mb3"
+>
+            foo
+</h2>,
+          <div
+            className="flex w100 items-center justify-center"
+>
+            
+</div>,
+        ],
+        "className": "bg-light-yellow",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "foo",
+            "className": "block-headline center mb3",
+          },
+          "ref": null,
+          "rendered": "foo",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "flex w100 items-center justify-center",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AvailableLocations
+    block={
+        Object {
+            "fields": Object {
+              "contentType": "",
+              "drip": false,
+              "title": "",
+            },
+            "sys": Object {
+              "id": "",
+            },
+          }
+    }
+    flavor={
+        Object {
+            "availableLocations": Array [],
+            "contentBlocks": Array [],
+            "id": "",
+            "image": "",
+            "label": "",
+            "slug": "",
+            "title": "",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="block-headline center mb3"
+/>,
+        <div
+          className="flex w100 items-center justify-center"
+>
+          
+</div>,
+      ],
+      "className": "bg-light-yellow",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+          "className": "block-headline center mb3",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "flex w100 items-center justify-center",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="block-headline center mb3"
+/>,
+          <div
+            className="flex w100 items-center justify-center"
+>
+            
+</div>,
+        ],
+        "className": "bg-light-yellow",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+            "className": "block-headline center mb3",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "flex w100 items-center justify-center",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

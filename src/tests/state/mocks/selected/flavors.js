@@ -4,6 +4,7 @@ export default {
   flavors: [
     {
       dietaryRestrictions: {},
+      availableLocations: [],
       contentBlocks: [],
       slug: 'flavor-1',
       filters: {
@@ -19,6 +20,7 @@ export default {
       filters: {
         Vanilla: 'Vanilla'
       },
+      availableLocations: [],
       contentBlocks: [],
       slug: 'flavor-2',
       id: '30e8A5crO0KwMwWcOmAAmG',
