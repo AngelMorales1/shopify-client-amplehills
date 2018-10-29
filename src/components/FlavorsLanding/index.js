@@ -121,7 +121,7 @@ class FlavorLanding extends Component {
               </div>
             ) : (
               <Dropdown
-                className="mb2"
+                className="mb2 z-2"
                 selectClassName="w100"
                 variant="secondary"
                 value={this.state.activeFilter}
@@ -138,7 +138,7 @@ class FlavorLanding extends Component {
             <div
               className={cx(
                 styles['FlavorsLanding__dietary-restrictions'],
-                'flex mb2'
+                'flex mb2 z-1'
               )}
             >
               <Dropdown
