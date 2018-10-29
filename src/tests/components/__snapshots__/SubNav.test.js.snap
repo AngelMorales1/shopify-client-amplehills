@@ -23,6 +23,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Dropdown
         className="w100 mx2"
+        fixedWidth={false}
         label=""
         name=""
         onChange={[Function]}
@@ -43,6 +44,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "className": "w100 mx2",
+        "fixedWidth": false,
         "label": "",
         "name": "",
         "onChange": [Function],
@@ -68,6 +70,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Dropdown
           className="w100 mx2"
+          fixedWidth={false}
           label=""
           name=""
           onChange={[Function]}
@@ -88,6 +91,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "w100 mx2",
+          "fixedWidth": false,
           "label": "",
           "name": "",
           "onChange": [Function],
@@ -143,6 +147,7 @@ ShallowWrapper {
     "props": Object {
       "children": <Dropdown
         className="w100 mx2"
+        fixedWidth={false}
         label=""
         name=""
         onChange={[Function]}
@@ -170,6 +175,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "className": "w100 mx2",
+        "fixedWidth": false,
         "label": "",
         "name": "",
         "onChange": [Function],
@@ -200,6 +206,7 @@ ShallowWrapper {
       "props": Object {
         "children": <Dropdown
           className="w100 mx2"
+          fixedWidth={false}
           label=""
           name=""
           onChange={[Function]}
@@ -227,6 +234,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "className": "w100 mx2",
+          "fixedWidth": false,
           "label": "",
           "name": "",
           "onChange": [Function],

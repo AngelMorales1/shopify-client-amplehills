@@ -6,6 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dropdown
     className="foo"
+    fixedWidth={false}
     label="foo"
     name="foo"
     onChange={[Function]}
@@ -103,7 +104,7 @@ ShallowWrapper {
           valueKey="value"
 />,
       ],
-      "className": "w-auto relative z-1 pointer foo undefined",
+      "className": "relative z-1 pointer foo undefined",
     },
     "ref": null,
     "rendered": Array [
@@ -261,7 +262,7 @@ ShallowWrapper {
             valueKey="value"
 />,
         ],
-        "className": "w-auto relative z-1 pointer foo undefined",
+        "className": "relative z-1 pointer foo undefined",
       },
       "ref": null,
       "rendered": Array [
@@ -363,6 +364,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dropdown
     className=""
+    fixedWidth={false}
     label=""
     name=""
     onChange={[Function]}
@@ -449,7 +451,7 @@ ShallowWrapper {
           valueKey="value"
 />,
       ],
-      "className": "w-auto relative z-1 pointer",
+      "className": "relative z-1 pointer",
     },
     "ref": null,
     "rendered": Array [
@@ -584,7 +586,7 @@ ShallowWrapper {
             valueKey="value"
 />,
         ],
-        "className": "w-auto relative z-1 pointer",
+        "className": "relative z-1 pointer",
       },
       "ref": null,
       "rendered": Array [

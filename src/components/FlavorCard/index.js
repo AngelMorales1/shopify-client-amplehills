@@ -8,7 +8,7 @@ import styles from './FlavorCard.scss';
 
 const FlavorCard = ({ flavor }) => {
   return (
-    <Button variant="style-none" to={`/flavors/${slugify(flavor.title)}`}>
+    <Button variant="style-none" to={`/flavors/${flavor.slug}`}>
       <div
         className={cx(
           styles['FlavorCard'],

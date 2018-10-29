@@ -68,6 +68,7 @@ ShallowWrapper {
                         <Dropdown
                                 className=""
                                 color="peach"
+                                fixedWidth={true}
                                 label=""
                                 name=""
                                 onChange={[Function]}
@@ -145,6 +146,7 @@ ShallowWrapper {
                         <Dropdown
                                     className=""
                                     color="peach"
+                                    fixedWidth={true}
                                     label=""
                                     name=""
                                     onChange={[Function]}
@@ -227,6 +229,7 @@ ShallowWrapper {
                 <Dropdown
                                 className=""
                                 color="peach"
+                                fixedWidth={true}
                                 label=""
                                 name=""
                                 onChange={[Function]}
@@ -309,6 +312,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   className=""
                   color="peach"
+                  fixedWidth={true}
                   label=""
                   name=""
                   onChange={[Function]}
@@ -337,6 +341,7 @@ ShallowWrapper {
                 "props": Object {
                   "className": "",
                   "color": "peach",
+                  "fixedWidth": true,
                   "label": "",
                   "name": "",
                   "onChange": [Function],
@@ -451,6 +456,7 @@ ShallowWrapper {
                               <Dropdown
                                         className=""
                                         color="peach"
+                                        fixedWidth={true}
                                         label=""
                                         name=""
                                         onChange={[Function]}
@@ -528,6 +534,7 @@ ShallowWrapper {
                             <Dropdown
                                           className=""
                                           color="peach"
+                                          fixedWidth={true}
                                           label=""
                                           name=""
                                           onChange={[Function]}
@@ -610,6 +617,7 @@ ShallowWrapper {
                   <Dropdown
                                     className=""
                                     color="peach"
+                                    fixedWidth={true}
                                     label=""
                                     name=""
                                     onChange={[Function]}
@@ -692,6 +700,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     className=""
                     color="peach"
+                    fixedWidth={true}
                     label=""
                     name=""
                     onChange={[Function]}
@@ -720,6 +729,7 @@ ShallowWrapper {
                   "props": Object {
                     "className": "",
                     "color": "peach",
+                    "fixedWidth": true,
                     "label": "",
                     "name": "",
                     "onChange": [Function],
@@ -873,6 +883,7 @@ ShallowWrapper {
                         <Dropdown
                                 className=""
                                 color="peach"
+                                fixedWidth={true}
                                 label=""
                                 name=""
                                 onChange={[Function]}
@@ -950,6 +961,7 @@ ShallowWrapper {
                         <Dropdown
                                     className=""
                                     color="peach"
+                                    fixedWidth={true}
                                     label=""
                                     name=""
                                     onChange={[Function]}
@@ -1032,6 +1044,7 @@ ShallowWrapper {
                 <Dropdown
                                 className=""
                                 color="peach"
+                                fixedWidth={true}
                                 label=""
                                 name=""
                                 onChange={[Function]}
@@ -1114,6 +1127,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   className=""
                   color="peach"
+                  fixedWidth={true}
                   label=""
                   name=""
                   onChange={[Function]}
@@ -1142,6 +1156,7 @@ ShallowWrapper {
                 "props": Object {
                   "className": "",
                   "color": "peach",
+                  "fixedWidth": true,
                   "label": "",
                   "name": "",
                   "onChange": [Function],
@@ -1256,6 +1271,7 @@ ShallowWrapper {
                               <Dropdown
                                         className=""
                                         color="peach"
+                                        fixedWidth={true}
                                         label=""
                                         name=""
                                         onChange={[Function]}
@@ -1333,6 +1349,7 @@ ShallowWrapper {
                             <Dropdown
                                           className=""
                                           color="peach"
+                                          fixedWidth={true}
                                           label=""
                                           name=""
                                           onChange={[Function]}
@@ -1415,6 +1432,7 @@ ShallowWrapper {
                   <Dropdown
                                     className=""
                                     color="peach"
+                                    fixedWidth={true}
                                     label=""
                                     name=""
                                     onChange={[Function]}
@@ -1497,6 +1515,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     className=""
                     color="peach"
+                    fixedWidth={true}
                     label=""
                     name=""
                     onChange={[Function]}
@@ -1525,6 +1544,7 @@ ShallowWrapper {
                   "props": Object {
                     "className": "",
                     "color": "peach",
+                    "fixedWidth": true,
                     "label": "",
                     "name": "",
                     "onChange": [Function],
