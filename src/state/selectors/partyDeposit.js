@@ -2,12 +2,13 @@ import { createSelector } from 'reselect';
 import get from 'utils/get';
 
 export default createSelector(
-  state => get(state, 'products.products.data.shop.products.edges', []),
-  shopifyProducts => {
-    const partyDeposit = shopifyProducts.find(product => {
-      return get(product, 'node.handle', '') === 'party-deposit';
-    });
-
+  state =>
+    get(state, 'products.products.data.shop.products.edges', []).find(
+      product => {
+        return get(product, 'node.handle', '') === 'party-deposit';
+      }
+    ),
+  partyDeposit => {
     const node = get(partyDeposit, 'node', {});
     const price = parseFloat(
       get(node, 'variants.edges[0].node.price', 0.0)
