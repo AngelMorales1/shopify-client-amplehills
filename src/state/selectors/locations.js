@@ -38,6 +38,8 @@ export default createSelector(
       const partyTypes = fragmentsToArray(partyTypesFragments);
       const timeSlotsFragments = get(fields, 'timeSlots.simpleFragments', {});
       const timeSlots = fragmentsToArray(timeSlotsFragments);
+      const availableFlavors = get(fields, 'availableFlavors', []);
+
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
@@ -80,7 +82,8 @@ export default createSelector(
         currentOpenHours,
         stringifiedSearchableFields,
         contentBlocks,
-        slug
+        slug,
+        availableFlavors
       };
     });
 

@@ -1,0 +1,26 @@
+@import 'settings';
+
+.AvailableFlavors {
+  &__card-container {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    border-radius: radius('xs');
+    width: 100%;
+    height: spacing(25);
+
+    @media ($medium-up) {
+      width: spacing(70);
+    }
+  }
+
+  &__card-image {
+    height: spacing(17);
+    object-fit: contain;
+  }
+}
