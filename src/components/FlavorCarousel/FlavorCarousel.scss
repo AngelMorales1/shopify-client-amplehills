@@ -1,0 +1,45 @@
+@import 'settings';
+
+.FlavorCarousel {
+  &--yellow {
+    @extend .bg-bees-wax;
+  }
+
+  &--green {
+    @extend .bg-pastel-green;
+  }
+
+  &__card {
+    border-radius: radius('s');
+    margin: spacing(4);
+    width: spacing(65);
+
+    @media ($medium-up) {
+      width: spacing(75);
+    }
+  }
+
+  &__mark {
+    width: spacing(20);
+    height: spacing(20);
+  }
+
+  &__mark-text {
+    width: spacing(20);
+    font-size: $font-2;
+    letter-spacing: spacing(0.1);
+  }
+
+  &__image {
+    width: spacing(50);
+    height: spacing(50);
+    object-fit: contain;
+    margin-bottom: spacing(8);
+
+    @media ($medium-up) {
+      width: spacing(60);
+      height: spacing(60);
+      margin-bottom: spacing(12);
+    }
+  }
+}

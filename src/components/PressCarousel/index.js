@@ -13,6 +13,7 @@ const PressCarousel = ({ block, z, pressItems, ...props }) => {
   const showCardNumber = get(fields, 'showCardNumber', null);
   const sortByLatest = get(fields, 'sortByLatest', true);
   const pressItemsInBlock = get(fields, 'pressItems.fragments', []);
+  const backdroundColor = get(fields, 'color', 'yellow');
   const isCustomOrder = !!pressItemsInBlock.length;
   const selectedPressItems = isCustomOrder
     ? pressItemsInBlock
@@ -29,7 +30,11 @@ const PressCarousel = ({ block, z, pressItems, ...props }) => {
     <div
       ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
-      className={cx(styles['PressCarousel'], { drip: isDripOn }, 'bg-bees-wax')}
+      className={cx(
+        styles['PressCarousel'],
+        styles[`PressCarousel--${backdroundColor}`],
+        { drip: isDripOn }
+      )}
     >
       <HorizontalCarousel
         title={get(fields, 'title', '')}
