@@ -8,6 +8,19 @@ import { Button } from 'components/base';
 import styles from './InStores.scss';
 
 const InStores = ({ localRetailers, text }) => {
+  const localRetailersValues = Object.values(localRetailers);
+  const uniqueFilter = localRetailersValues.reduce(
+    (uniqueFilters, localRetailer) => {
+      const filter = localRetailer.filter.toUpperCase();
+      if (!uniqueFilters[filter]) {
+        uniqueFilters[filter] = true;
+      }
+
+      return uniqueFilters;
+    },
+    {}
+  );
+
   return (
     <div>
       <div className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip">
@@ -18,9 +31,19 @@ const InStores = ({ localRetailers, text }) => {
           }}
           className="markdown-block center text-container-width"
         />
+        <div className="flex flex-row">
+          {Object.keys(uniqueFilter).map(filter => (
+            <Button
+              className="m1"
+              color="madison-blue"
+              variant="primary-small"
+              label={filter}
+            />
+          ))}
+        </div>
       </div>
       <div className="mt3 py4 px3 flex flex-column items-center">
-        {Object.values(localRetailers).map((localRetailer, i) => {
+        {localRetailersValues.map((localRetailer, i) => {
           return (
             <div
               key={get(localRetailer, 'uuid', i)}
