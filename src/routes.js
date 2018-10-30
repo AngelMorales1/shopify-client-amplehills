@@ -43,12 +43,12 @@ const Routes = ({ location }) => (
     />
     <Route
       exact
-      path="/Merchandise/:merchHandle"
+      path="/merchandise/:merchHandle"
       component={MerchDetailContainer}
     />
     <Route
       exact
-      path="/flavors/:flavorSlug"
+      path="/flavors/:flavorHandle"
       component={FlavorDetailContainer}
     />
     <Route path="/products" component={ProductLandingContainer} />

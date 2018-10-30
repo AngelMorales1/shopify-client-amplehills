@@ -6,7 +6,8 @@ import cx from 'classnames';
 import styles from './PressCarousel.scss';
 import { Image, Button, HorizontalCarousel } from 'components/base';
 
-const PressCarousel = ({ block, z, pressItems, setRef }) => {
+const PressCarousel = ({ block, z, pressItems, ...props }) => {
+  const setRef = get(props, 'setRef', () => {});
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
   const showCardNumber = get(fields, 'showCardNumber', null);

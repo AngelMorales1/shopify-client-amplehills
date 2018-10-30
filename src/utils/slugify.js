@@ -1,1 +1,5 @@
-export default string => string.split(' ').join('-');
+export default string =>
+  string
+    .split(' ')
+    .join('-')
+    .toLowerCase();
