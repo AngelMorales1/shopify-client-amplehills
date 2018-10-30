@@ -26,6 +26,7 @@ export default [
     phone: '8881234567',
     seasonal: false,
     delivery: false,
+    availableFlavors: [],
     hours: {
       sunday: 'Noon–12am',
       monday: 'Noon–11pm',

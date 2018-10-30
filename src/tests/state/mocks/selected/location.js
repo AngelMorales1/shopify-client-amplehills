@@ -8,6 +8,7 @@ export default {
   slug: 'test-location',
   address1: '110 Bowery',
   address2: 'Fl. 4',
+  availableFlavors: [],
   city: 'New York',
   closeLocationForTheSeason: false,
   contentBlocks: [],

@@ -19,6 +19,7 @@ export default {
         slug: 'test-location',
         address1: '110 Bowery',
         address2: 'Fl. 4',
+        availableFlavors: [],
         city: 'New York',
         closeLocationForTheSeason: false,
         region: 'Manhattan',
@@ -76,6 +77,7 @@ export default {
 
         address1: '36 Westwood BLVD',
         address2: '',
+        availableFlavors: [],
         city: 'New Jersey',
         closeLocationForTheSeason: false,
         region: 'New Jersey',
