@@ -6,7 +6,7 @@ import { Button } from 'components/base';
 
 import styles from './AvailableLocations.scss';
 
-const AvailableLocations = ({ flavor, block }) => {
+const AvailableLocations = ({ flavor, block, z, setRef }) => {
   const availableLocations = get(flavor, 'availableLocations', []);
   const field = get(block, 'fields', {});
   const blockTitle = get(field, 'title', '');
@@ -14,6 +14,8 @@ const AvailableLocations = ({ flavor, block }) => {
 
   return (
     <div
+      ref={refBlock => setRef(refBlock)}
+      style={{ zIndex: z }}
       className={cx(styles['AvailableLocations'], 'bg-light-yellow', {
         drip: drip
       })}
@@ -57,6 +59,8 @@ AvailableLocations.propTypes = {
     slug: PropTypes.string,
     title: PropTypes.string
   }),
+  z: PropTypes.number,
+  setRef: PropTypes.func,
   block: PropTypes.shape({
     fields: PropTypes.shape({
       contentType: PropTypes.string,
@@ -79,6 +83,8 @@ AvailableLocations.defaultProps = {
     slug: '',
     title: ''
   },
+  z: 1,
+  setRef: () => {},
   block: {
     fields: {
       contentType: '',
