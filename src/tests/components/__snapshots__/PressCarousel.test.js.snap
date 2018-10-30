@@ -156,7 +156,7 @@ ShallowWrapper {
                 />
         </div>
 </HorizontalCarousel>,
-      "className": "bg-bees-wax",
+      "className": "",
       "style": Object {
         "zIndex": 0,
       },
@@ -389,7 +389,7 @@ ShallowWrapper {
                     />
           </div>
 </HorizontalCarousel>,
-        "className": "bg-bees-wax",
+        "className": "",
         "style": Object {
           "zIndex": 0,
         },
@@ -617,7 +617,7 @@ ShallowWrapper {
 >
         
 </HorizontalCarousel>,
-      "className": "bg-bees-wax",
+      "className": "",
       "style": Object {
         "zIndex": undefined,
       },
@@ -704,7 +704,7 @@ ShallowWrapper {
 >
           
 </HorizontalCarousel>,
-        "className": "bg-bees-wax",
+        "className": "",
         "style": Object {
           "zIndex": undefined,
         },
