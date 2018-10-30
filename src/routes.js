@@ -21,6 +21,7 @@ import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
 import FlavorsLandingContainer from 'containers/FlavorsLandingContainer';
 import FlavorDetailContainer from 'containers/FlavorDetailContainer';
+import InStoresContainer from 'containers/InStoresContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -83,6 +84,7 @@ const Routes = ({ location }) => (
     <Route path="/news" component={ArticlesLandingContainer} />
     <Route path="/wholesale" component={GenericPageContainer} />
     <Route path="/flavors" component={FlavorsLandingContainer} />
+    <Route path="/in-stores" component={InStoresContainer} />
   </Switch>
 );
 
