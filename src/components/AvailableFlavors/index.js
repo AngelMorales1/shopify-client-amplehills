@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
+import locationModel from 'models/locationModel';
 
 import { Button, Image } from 'components/base';
 import styles from './AvailableFlavors.scss';
@@ -33,7 +34,7 @@ class AvailableFlavors extends Component {
   };
 
   render() {
-    const { drip, setRef, location, block, z, ...props } = this.props;
+    const { drip, setRef, location, block, z } = this.props;
     const { small } = Global.breakpoints;
     const title = get(block, 'fields.title', '');
     const locationId = get(location, 'id', '');
@@ -59,7 +60,7 @@ class AvailableFlavors extends Component {
               'flex flex-wrap items-center justify-center'
             )}
           >
-            {selectedAvailableFlavors.map(flavor => {
+            {selectedAvailableFlavors.map((flavor, i) => {
               const fields = get(flavor, 'fields', {});
               const title = get(fields, 'title', '');
               const label = get(fields, 'label', '');
@@ -72,6 +73,7 @@ class AvailableFlavors extends Component {
 
               return (
                 <div
+                  key={get(flavor, 'sys.id', i)}
                   className={cx(
                     styles['AvailableFlavors__card'],
                     'flex flex-row justify-between items-center bg-white m1 p1'
@@ -124,8 +126,24 @@ class AvailableFlavors extends Component {
   }
 }
 
-AvailableFlavors.propTypes = {};
+AvailableFlavors.propTypes = {
+  drip: PropTypes.bool,
+  setRef: PropTypes.func,
+  location: locationModel.propTypes,
+  block: PropTypes.shape({
+    title: PropTypes.string
+  }),
+  z: PropTypes.number
+};
 
-AvailableFlavors.defaultProps = {};
+AvailableFlavors.defaultProps = {
+  drip: false,
+  setRef: () => {},
+  location: locationModel.default,
+  block: {
+    title: ''
+  },
+  z: 1
+};
 
 export default AvailableFlavors;
