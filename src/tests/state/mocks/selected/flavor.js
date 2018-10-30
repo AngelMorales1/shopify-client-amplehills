@@ -1,7 +1,7 @@
 export default {
   dietaryRestrictions: {},
   contentBlocks: [],
-  slug: 'Flavor-1',
+  slug: 'flavor-1',
   filters: {
     chocolate: 'chocolate'
   },

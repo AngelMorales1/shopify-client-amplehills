@@ -63,7 +63,7 @@ ShallowWrapper {
                         />
                 </div>
                 <div
-                        className="flex mb2"
+                        className="flex mb2 z-1"
                 >
                         <Dropdown
                                 className=""
@@ -75,16 +75,16 @@ ShallowWrapper {
                                 options={
                                         Array [
                                                 Object {
-                                                  "label": "Dietary Restrictions",
-                                                  "value": "Dietary Restrictions",
+                                                  "label": "None",
+                                                  "value": "None",
                                                 },
                                               ]
                                 }
-                                placeholder="Select"
+                                placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
                                 textColor="madison-blue"
-                                value="Dietary Restrictions"
+                                value=""
                                 variant="small"
                         />
                 </div>
@@ -141,7 +141,7 @@ ShallowWrapper {
                         />
             </div>
             <div
-                        className="flex mb2"
+                        className="flex mb2 z-1"
             >
                         <Dropdown
                                     className=""
@@ -153,16 +153,16 @@ ShallowWrapper {
                                     options={
                                                 Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                                     }
-                                    placeholder="Select"
+                                    placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
                                     textColor="madison-blue"
-                                    value="Dietary Restrictions"
+                                    value=""
                                     variant="small"
                         />
             </div>
@@ -224,7 +224,7 @@ ShallowWrapper {
                 />
 </div>,
               <div
-                className="flex mb2"
+                className="flex mb2 z-1"
 >
                 <Dropdown
                                 className=""
@@ -236,16 +236,16 @@ ShallowWrapper {
                                 options={
                                                 Array [
                                                                 Object {
-                                                                  "label": "Dietary Restrictions",
-                                                                  "value": "Dietary Restrictions",
+                                                                  "label": "None",
+                                                                  "value": "None",
                                                                 },
                                                               ]
                                 }
-                                placeholder="Select"
+                                placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
                                 textColor="madison-blue"
-                                value="Dietary Restrictions"
+                                value=""
                                 variant="small"
                 />
 </div>,
@@ -319,19 +319,19 @@ ShallowWrapper {
                   options={
                                     Array [
                                                       Object {
-                                                        "label": "Dietary Restrictions",
-                                                        "value": "Dietary Restrictions",
+                                                        "label": "None",
+                                                        "value": "None",
                                                       },
                                                     ]
                   }
-                  placeholder="Select"
+                  placeholder="Dietary Restrictions"
                   selectClassName="w100"
                   shadow={false}
                   textColor="madison-blue"
-                  value="Dietary Restrictions"
+                  value=""
                   variant="small"
 />,
-                "className": "flex mb2",
+                "className": "flex mb2 z-1",
               },
               "ref": null,
               "rendered": Object {
@@ -347,15 +347,15 @@ ShallowWrapper {
                   "onChange": [Function],
                   "options": Array [
                     Object {
-                      "label": "Dietary Restrictions",
-                      "value": "Dietary Restrictions",
+                      "label": "None",
+                      "value": "None",
                     },
                   ],
-                  "placeholder": "Select",
+                  "placeholder": "Dietary Restrictions",
                   "selectClassName": "w100",
                   "shadow": false,
                   "textColor": "madison-blue",
-                  "value": "Dietary Restrictions",
+                  "value": "",
                   "variant": "small",
                 },
                 "ref": null,
@@ -451,7 +451,7 @@ ShallowWrapper {
                               />
                     </div>
                     <div
-                              className="flex mb2"
+                              className="flex mb2 z-1"
                     >
                               <Dropdown
                                         className=""
@@ -463,16 +463,16 @@ ShallowWrapper {
                                         options={
                                                   Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                                         }
-                                        placeholder="Select"
+                                        placeholder="Dietary Restrictions"
                                         selectClassName="w100"
                                         shadow={false}
                                         textColor="madison-blue"
-                                        value="Dietary Restrictions"
+                                        value=""
                                         variant="small"
                               />
                     </div>
@@ -529,7 +529,7 @@ ShallowWrapper {
                             />
               </div>
               <div
-                            className="flex mb2"
+                            className="flex mb2 z-1"
               >
                             <Dropdown
                                           className=""
@@ -541,16 +541,16 @@ ShallowWrapper {
                                           options={
                                                         Array [
                                                                       Object {
-                                                                        "label": "Dietary Restrictions",
-                                                                        "value": "Dietary Restrictions",
+                                                                        "label": "None",
+                                                                        "value": "None",
                                                                       },
                                                                     ]
                                           }
-                                          placeholder="Select"
+                                          placeholder="Dietary Restrictions"
                                           selectClassName="w100"
                                           shadow={false}
                                           textColor="madison-blue"
-                                          value="Dietary Restrictions"
+                                          value=""
                                           variant="small"
                             />
               </div>
@@ -612,7 +612,7 @@ ShallowWrapper {
                   />
 </div>,
                 <div
-                  className="flex mb2"
+                  className="flex mb2 z-1"
 >
                   <Dropdown
                                     className=""
@@ -624,16 +624,16 @@ ShallowWrapper {
                                     options={
                                                       Array [
                                                                         Object {
-                                                                          "label": "Dietary Restrictions",
-                                                                          "value": "Dietary Restrictions",
+                                                                          "label": "None",
+                                                                          "value": "None",
                                                                         },
                                                                       ]
                                     }
-                                    placeholder="Select"
+                                    placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
                                     textColor="madison-blue"
-                                    value="Dietary Restrictions"
+                                    value=""
                                     variant="small"
                   />
 </div>,
@@ -707,19 +707,19 @@ ShallowWrapper {
                     options={
                                         Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                     }
-                    placeholder="Select"
+                    placeholder="Dietary Restrictions"
                     selectClassName="w100"
                     shadow={false}
                     textColor="madison-blue"
-                    value="Dietary Restrictions"
+                    value=""
                     variant="small"
 />,
-                  "className": "flex mb2",
+                  "className": "flex mb2 z-1",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -735,15 +735,15 @@ ShallowWrapper {
                     "onChange": [Function],
                     "options": Array [
                       Object {
-                        "label": "Dietary Restrictions",
-                        "value": "Dietary Restrictions",
+                        "label": "None",
+                        "value": "None",
                       },
                     ],
-                    "placeholder": "Select",
+                    "placeholder": "Dietary Restrictions",
                     "selectClassName": "w100",
                     "shadow": false,
                     "textColor": "madison-blue",
-                    "value": "Dietary Restrictions",
+                    "value": "",
                     "variant": "small",
                   },
                   "ref": null,
@@ -878,7 +878,7 @@ ShallowWrapper {
                         />
                 </div>
                 <div
-                        className="flex mb2"
+                        className="flex mb2 z-1"
                 >
                         <Dropdown
                                 className=""
@@ -890,16 +890,16 @@ ShallowWrapper {
                                 options={
                                         Array [
                                                 Object {
-                                                  "label": "Dietary Restrictions",
-                                                  "value": "Dietary Restrictions",
+                                                  "label": "None",
+                                                  "value": "None",
                                                 },
                                               ]
                                 }
-                                placeholder="Select"
+                                placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
                                 textColor="madison-blue"
-                                value="Dietary Restrictions"
+                                value=""
                                 variant="small"
                         />
                 </div>
@@ -956,7 +956,7 @@ ShallowWrapper {
                         />
             </div>
             <div
-                        className="flex mb2"
+                        className="flex mb2 z-1"
             >
                         <Dropdown
                                     className=""
@@ -968,16 +968,16 @@ ShallowWrapper {
                                     options={
                                                 Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                                     }
-                                    placeholder="Select"
+                                    placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
                                     textColor="madison-blue"
-                                    value="Dietary Restrictions"
+                                    value=""
                                     variant="small"
                         />
             </div>
@@ -1039,7 +1039,7 @@ ShallowWrapper {
                 />
 </div>,
               <div
-                className="flex mb2"
+                className="flex mb2 z-1"
 >
                 <Dropdown
                                 className=""
@@ -1051,16 +1051,16 @@ ShallowWrapper {
                                 options={
                                                 Array [
                                                                 Object {
-                                                                  "label": "Dietary Restrictions",
-                                                                  "value": "Dietary Restrictions",
+                                                                  "label": "None",
+                                                                  "value": "None",
                                                                 },
                                                               ]
                                 }
-                                placeholder="Select"
+                                placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
                                 textColor="madison-blue"
-                                value="Dietary Restrictions"
+                                value=""
                                 variant="small"
                 />
 </div>,
@@ -1134,19 +1134,19 @@ ShallowWrapper {
                   options={
                                     Array [
                                                       Object {
-                                                        "label": "Dietary Restrictions",
-                                                        "value": "Dietary Restrictions",
+                                                        "label": "None",
+                                                        "value": "None",
                                                       },
                                                     ]
                   }
-                  placeholder="Select"
+                  placeholder="Dietary Restrictions"
                   selectClassName="w100"
                   shadow={false}
                   textColor="madison-blue"
-                  value="Dietary Restrictions"
+                  value=""
                   variant="small"
 />,
-                "className": "flex mb2",
+                "className": "flex mb2 z-1",
               },
               "ref": null,
               "rendered": Object {
@@ -1162,15 +1162,15 @@ ShallowWrapper {
                   "onChange": [Function],
                   "options": Array [
                     Object {
-                      "label": "Dietary Restrictions",
-                      "value": "Dietary Restrictions",
+                      "label": "None",
+                      "value": "None",
                     },
                   ],
-                  "placeholder": "Select",
+                  "placeholder": "Dietary Restrictions",
                   "selectClassName": "w100",
                   "shadow": false,
                   "textColor": "madison-blue",
-                  "value": "Dietary Restrictions",
+                  "value": "",
                   "variant": "small",
                 },
                 "ref": null,
@@ -1266,7 +1266,7 @@ ShallowWrapper {
                               />
                     </div>
                     <div
-                              className="flex mb2"
+                              className="flex mb2 z-1"
                     >
                               <Dropdown
                                         className=""
@@ -1278,16 +1278,16 @@ ShallowWrapper {
                                         options={
                                                   Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                                         }
-                                        placeholder="Select"
+                                        placeholder="Dietary Restrictions"
                                         selectClassName="w100"
                                         shadow={false}
                                         textColor="madison-blue"
-                                        value="Dietary Restrictions"
+                                        value=""
                                         variant="small"
                               />
                     </div>
@@ -1344,7 +1344,7 @@ ShallowWrapper {
                             />
               </div>
               <div
-                            className="flex mb2"
+                            className="flex mb2 z-1"
               >
                             <Dropdown
                                           className=""
@@ -1356,16 +1356,16 @@ ShallowWrapper {
                                           options={
                                                         Array [
                                                                       Object {
-                                                                        "label": "Dietary Restrictions",
-                                                                        "value": "Dietary Restrictions",
+                                                                        "label": "None",
+                                                                        "value": "None",
                                                                       },
                                                                     ]
                                           }
-                                          placeholder="Select"
+                                          placeholder="Dietary Restrictions"
                                           selectClassName="w100"
                                           shadow={false}
                                           textColor="madison-blue"
-                                          value="Dietary Restrictions"
+                                          value=""
                                           variant="small"
                             />
               </div>
@@ -1427,7 +1427,7 @@ ShallowWrapper {
                   />
 </div>,
                 <div
-                  className="flex mb2"
+                  className="flex mb2 z-1"
 >
                   <Dropdown
                                     className=""
@@ -1439,16 +1439,16 @@ ShallowWrapper {
                                     options={
                                                       Array [
                                                                         Object {
-                                                                          "label": "Dietary Restrictions",
-                                                                          "value": "Dietary Restrictions",
+                                                                          "label": "None",
+                                                                          "value": "None",
                                                                         },
                                                                       ]
                                     }
-                                    placeholder="Select"
+                                    placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
                                     textColor="madison-blue"
-                                    value="Dietary Restrictions"
+                                    value=""
                                     variant="small"
                   />
 </div>,
@@ -1522,19 +1522,19 @@ ShallowWrapper {
                     options={
                                         Array [
                                                             Object {
-                                                              "label": "Dietary Restrictions",
-                                                              "value": "Dietary Restrictions",
+                                                              "label": "None",
+                                                              "value": "None",
                                                             },
                                                           ]
                     }
-                    placeholder="Select"
+                    placeholder="Dietary Restrictions"
                     selectClassName="w100"
                     shadow={false}
                     textColor="madison-blue"
-                    value="Dietary Restrictions"
+                    value=""
                     variant="small"
 />,
-                  "className": "flex mb2",
+                  "className": "flex mb2 z-1",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -1550,15 +1550,15 @@ ShallowWrapper {
                     "onChange": [Function],
                     "options": Array [
                       Object {
-                        "label": "Dietary Restrictions",
-                        "value": "Dietary Restrictions",
+                        "label": "None",
+                        "value": "None",
                       },
                     ],
-                    "placeholder": "Select",
+                    "placeholder": "Dietary Restrictions",
                     "selectClassName": "w100",
                     "shadow": false,
                     "textColor": "madison-blue",
-                    "value": "Dietary Restrictions",
+                    "value": "",
                     "variant": "small",
                   },
                   "ref": null,

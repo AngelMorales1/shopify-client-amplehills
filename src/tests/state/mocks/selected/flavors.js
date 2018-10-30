@@ -5,7 +5,7 @@ export default {
     {
       dietaryRestrictions: {},
       contentBlocks: [],
-      slug: 'Flavor-1',
+      slug: 'flavor-1',
       filters: {
         chocolate: 'chocolate'
       },
@@ -20,7 +20,7 @@ export default {
         Vanilla: 'Vanilla'
       },
       contentBlocks: [],
-      slug: 'Flavor-2',
+      slug: 'flavor-2',
       id: '30e8A5crO0KwMwWcOmAAmG',
       image: '/image-url',
       label: 'In Store Only',

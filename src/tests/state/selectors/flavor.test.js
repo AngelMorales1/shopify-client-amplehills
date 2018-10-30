@@ -5,7 +5,7 @@ import flavors from 'state/selectors/flavors';
 
 it('flavor selector works as intended', () => {
   const selectedflavors = flavors.resultFunc(unselectedflavors);
-  const slug = 'Flavor-1';
+  const slug = 'flavor-1';
 
   expect(flavor.resultFunc(selectedflavors, slug)).toEqual(selectedflavor);
 });
