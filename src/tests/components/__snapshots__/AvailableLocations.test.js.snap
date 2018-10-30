@@ -28,6 +28,8 @@ ShallowWrapper {
             "title": "foo",
           }
     }
+    setRef={[Function]}
+    z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -54,8 +56,11 @@ ShallowWrapper {
 </div>,
       ],
       "className": "bg-light-yellow",
+      "style": Object {
+        "zIndex": 1,
+      },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -103,8 +108,11 @@ ShallowWrapper {
 </div>,
         ],
         "className": "bg-light-yellow",
+        "style": Object {
+          "zIndex": 1,
+        },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,
@@ -172,6 +180,8 @@ ShallowWrapper {
             "title": "",
           }
     }
+    setRef={[Function]}
+    z={1}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -196,8 +206,11 @@ ShallowWrapper {
 </div>,
       ],
       "className": "bg-light-yellow",
+      "style": Object {
+        "zIndex": 1,
+      },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Array [
       Object {
         "instance": null,
@@ -243,8 +256,11 @@ ShallowWrapper {
 </div>,
         ],
         "className": "bg-light-yellow",
+        "style": Object {
+          "zIndex": 1,
+        },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Array [
         Object {
           "instance": null,
