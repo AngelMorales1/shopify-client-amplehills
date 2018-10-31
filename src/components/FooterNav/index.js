@@ -15,8 +15,8 @@ class FooterNav extends PureComponent {
     if (!items.length) return null;
 
     return (
-      <div className="xs-hide sm-hide col-12 mb4">
-        <div className="container-width mx-auto flex">
+      <div className="xs-hide sm-hide col-12 drip bg-white z-1 relative">
+        <div className="container-width mx-auto flex py3">
           {items.map(item => (
             <div className="w100 flex flex-column center">
               <a
