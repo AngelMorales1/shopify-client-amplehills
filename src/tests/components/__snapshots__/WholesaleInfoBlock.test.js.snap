@@ -59,6 +59,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Wholesale Info"
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to="/wholesale"
                     type="button"
@@ -133,6 +135,8 @@ ShallowWrapper {
               hover="shadow"
               label="Wholesale Info"
               onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               shadow={false}
               to="/wholesale"
               type="button"
@@ -183,6 +187,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "Wholesale Info",
               "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
               "shadow": false,
               "to": "/wholesale",
               "type": "button",
@@ -242,6 +248,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Wholesale Info"
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to="/wholesale"
                         type="button"
@@ -316,6 +324,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="Wholesale Info"
                 onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
                 shadow={false}
                 to="/wholesale"
                 type="button"
@@ -366,6 +376,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Wholesale Info",
                 "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
                 "shadow": false,
                 "to": "/wholesale",
                 "type": "button",
@@ -448,6 +460,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Wholesale Info"
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to="/wholesale"
                     type="button"
@@ -519,6 +533,8 @@ ShallowWrapper {
               hover="shadow"
               label="Wholesale Info"
               onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               shadow={false}
               to="/wholesale"
               type="button"
@@ -568,6 +584,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "Wholesale Info",
               "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
               "shadow": false,
               "to": "/wholesale",
               "type": "button",
@@ -624,6 +642,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Wholesale Info"
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to="/wholesale"
                         type="button"
@@ -695,6 +715,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="Wholesale Info"
                 onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
                 shadow={false}
                 to="/wholesale"
                 type="button"
@@ -744,6 +766,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Wholesale Info",
                 "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
                 "shadow": false,
                 "to": "/wholesale",
                 "type": "button",

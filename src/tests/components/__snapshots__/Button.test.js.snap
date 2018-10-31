@@ -12,6 +12,8 @@ ShallowWrapper {
     hover="shadow"
     label="Click Me"
     onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     shadow={false}
     to=""
     type="button"
@@ -36,6 +38,8 @@ ShallowWrapper {
 </div>,
       "className": "w100 foo",
       "onClick": [Function],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
       "type": "button",
     },
     "ref": null,
@@ -66,6 +70,8 @@ ShallowWrapper {
 </div>,
         "className": "w100 foo",
         "onClick": [Function],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
         "type": "button",
       },
       "ref": null,
@@ -106,6 +112,8 @@ ShallowWrapper {
     hover="shadow"
     label="Click Me"
     onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     shadow={false}
     to="https://google.com"
     type="button"
@@ -135,6 +143,8 @@ ShallowWrapper {
       "className": "text-decoration-none",
       "href": "https://google.com",
       "onClick": [Function],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
       "rel": "noopener",
       "target": "_blank",
     },
@@ -186,6 +196,8 @@ ShallowWrapper {
         "className": "text-decoration-none",
         "href": "https://google.com",
         "onClick": [Function],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
         "rel": "noopener",
         "target": "_blank",
       },
@@ -242,6 +254,8 @@ ShallowWrapper {
     hover="shadow"
     label="Click Me"
     onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     shadow={false}
     to="/products"
     type="button"
@@ -270,6 +284,8 @@ ShallowWrapper {
 </div>,
       "className": "text-decoration-none",
       "onClick": [Function],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
       "replace": false,
       "to": "/products",
     },
@@ -320,6 +336,8 @@ ShallowWrapper {
 </div>,
         "className": "text-decoration-none",
         "onClick": [Function],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
         "replace": false,
         "to": "/products",
       },
@@ -376,6 +394,8 @@ ShallowWrapper {
     hover="shadow"
     label=""
     onClick={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     shadow={false}
     to=""
     type="button"
@@ -398,6 +418,8 @@ ShallowWrapper {
 />,
       "className": "",
       "onClick": [Function],
+      "onMouseEnter": [Function],
+      "onMouseLeave": [Function],
       "type": "button",
     },
     "ref": null,
@@ -426,6 +448,8 @@ ShallowWrapper {
 />,
         "className": "",
         "onClick": [Function],
+        "onMouseEnter": [Function],
+        "onMouseLeave": [Function],
         "type": "button",
       },
       "ref": null,

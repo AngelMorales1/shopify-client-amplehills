@@ -50,6 +50,8 @@ ShallowWrapper {
           hover="shadow"
           label="Read about it"
           onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
           shadow={false}
           to=""
           type="button"
@@ -102,6 +104,8 @@ ShallowWrapper {
           "hover": "shadow",
           "label": "Read about it",
           "onClick": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
           "shadow": false,
           "to": "",
           "type": "button",
@@ -142,6 +146,8 @@ ShallowWrapper {
             hover="shadow"
             label="Read about it"
             onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             shadow={false}
             to=""
             type="button"
@@ -194,6 +200,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "Read about it",
             "onClick": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
             "shadow": false,
             "to": "",
             "type": "button",
@@ -267,6 +275,8 @@ ShallowWrapper {
           hover="shadow"
           label="Read about it"
           onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
           shadow={false}
           to=""
           type="button"
@@ -319,6 +329,8 @@ ShallowWrapper {
           "hover": "shadow",
           "label": "Read about it",
           "onClick": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
           "shadow": false,
           "to": "",
           "type": "button",
@@ -359,6 +371,8 @@ ShallowWrapper {
             hover="shadow"
             label="Read about it"
             onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             shadow={false}
             to=""
             type="button"
@@ -411,6 +425,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "Read about it",
             "onClick": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
             "shadow": false,
             "to": "",
             "type": "button",

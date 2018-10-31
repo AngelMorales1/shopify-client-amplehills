@@ -148,6 +148,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Refresh Page"
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to=""
                         type="button"
@@ -228,6 +230,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Refresh Page"
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to=""
                         type="button"
@@ -306,6 +310,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="Refresh Page"
                 onClick={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
                 shadow={false}
                 to=""
                 type="button"
@@ -469,6 +475,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Refresh Page",
                 "onClick": [Function],
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
                 "shadow": false,
                 "to": "",
                 "type": "button",
@@ -582,6 +590,8 @@ ShallowWrapper {
                               hover="shadow"
                               label="Refresh Page"
                               onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
                               shadow={false}
                               to=""
                               type="button"
@@ -662,6 +672,8 @@ ShallowWrapper {
                             hover="shadow"
                             label="Refresh Page"
                             onClick={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
                             shadow={false}
                             to=""
                             type="button"
@@ -740,6 +752,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="Refresh Page"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   shadow={false}
                   to=""
                   type="button"
@@ -903,6 +917,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "Refresh Page",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
                   "shadow": false,
                   "to": "",
                   "type": "button",

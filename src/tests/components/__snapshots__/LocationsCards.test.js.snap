@@ -145,6 +145,8 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Clear"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -278,6 +280,8 @@ ShallowWrapper {
                               hover="shadow"
                               label="Clear"
                               onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
                               shadow={false}
                               to=""
                               type="button"
@@ -408,6 +412,8 @@ ShallowWrapper {
                             hover="shadow"
                             label="Clear"
                             onClick={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
                             shadow={false}
                             to=""
                             type="button"
@@ -571,6 +577,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="Clear"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   shadow={false}
                   to=""
                   type="button"
@@ -614,6 +622,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "Clear",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -844,6 +854,8 @@ ShallowWrapper {
                                         hover="shadow"
                                         label="Clear"
                                         onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -977,6 +989,8 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Clear"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -1107,6 +1121,8 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Clear"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -1270,6 +1286,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Clear"
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to=""
                     type="button"
@@ -1313,6 +1331,8 @@ ShallowWrapper {
                     "hover": "shadow",
                     "label": "Clear",
                     "onClick": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -1629,6 +1649,8 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Clear"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -1752,6 +1774,8 @@ ShallowWrapper {
                               hover="shadow"
                               label="Clear"
                               onClick={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
                               shadow={false}
                               to=""
                               type="button"
@@ -1872,6 +1896,8 @@ ShallowWrapper {
                             hover="shadow"
                             label="Clear"
                             onClick={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
                             shadow={false}
                             to=""
                             type="button"
@@ -2025,6 +2051,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="Clear"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   shadow={false}
                   to=""
                   type="button"
@@ -2068,6 +2096,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "Clear",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -2280,6 +2310,8 @@ ShallowWrapper {
                                         hover="shadow"
                                         label="Clear"
                                         onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -2403,6 +2435,8 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Clear"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -2489,6 +2523,205 @@ ShallowWrapper {
                                                                   "label": "All states",
                                                                   "value": "All",
                                                                 },
+<<<<<<< HEAD
+=======
+                                                                Object {
+                                                                  "label": "New York",
+                                                                  "value": "NY",
+                                                                },
+                                                                Object {
+                                                                  "label": "New Jersey",
+                                                                  "value": "NJ",
+                                                                },
+                                                                Object {
+                                                                  "label": "Florida",
+                                                                  "value": "FL",
+                                                                },
+                                                                Object {
+                                                                  "label": "Alabama",
+                                                                  "value": "AL",
+                                                                },
+                                                                Object {
+                                                                  "label": "Alaska",
+                                                                  "value": "AK",
+                                                                },
+                                                                Object {
+                                                                  "label": "California",
+                                                                  "value": "CA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Colorado",
+                                                                  "value": "CO",
+                                                                },
+                                                                Object {
+                                                                  "label": "Connecticut",
+                                                                  "value": "CT",
+                                                                },
+                                                                Object {
+                                                                  "label": "Delaware",
+                                                                  "value": "DE",
+                                                                },
+                                                                Object {
+                                                                  "label": "Georgia",
+                                                                  "value": "GA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Hawaii",
+                                                                  "value": "HI",
+                                                                },
+                                                                Object {
+                                                                  "label": "Idaho",
+                                                                  "value": "ID",
+                                                                },
+                                                                Object {
+                                                                  "label": "Illinois",
+                                                                  "value": "IL",
+                                                                },
+                                                                Object {
+                                                                  "label": "Indiana",
+                                                                  "value": "IN",
+                                                                },
+                                                                Object {
+                                                                  "label": "Iowa",
+                                                                  "value": "IA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Kansas",
+                                                                  "value": "KS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Kentucky",
+                                                                  "value": "KY",
+                                                                },
+                                                                Object {
+                                                                  "label": "Arizona",
+                                                                  "value": "AZ",
+                                                                },
+                                                                Object {
+                                                                  "label": "Louisiana",
+                                                                  "value": "LA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Maine",
+                                                                  "value": "ME",
+                                                                },
+                                                                Object {
+                                                                  "label": "Maryland",
+                                                                  "value": "MD",
+                                                                },
+                                                                Object {
+                                                                  "label": "Massachusetts",
+                                                                  "value": "MA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Michigan",
+                                                                  "value": "MI",
+                                                                },
+                                                                Object {
+                                                                  "label": "Minnesota",
+                                                                  "value": "MN",
+                                                                },
+                                                                Object {
+                                                                  "label": "Mississippi",
+                                                                  "value": "MS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Missouri",
+                                                                  "value": "MO",
+                                                                },
+                                                                Object {
+                                                                  "label": "Montana",
+                                                                  "value": "MT",
+                                                                },
+                                                                Object {
+                                                                  "label": "Nebraska",
+                                                                  "value": "NE",
+                                                                },
+                                                                Object {
+                                                                  "label": "Nevada",
+                                                                  "value": "NV",
+                                                                },
+                                                                Object {
+                                                                  "label": "New Hampshire",
+                                                                  "value": "NH",
+                                                                },
+                                                                Object {
+                                                                  "label": "New Mexico",
+                                                                  "value": "NM",
+                                                                },
+                                                                Object {
+                                                                  "label": "North Carolina",
+                                                                  "value": "NC",
+                                                                },
+                                                                Object {
+                                                                  "label": "North Dakota",
+                                                                  "value": "ND",
+                                                                },
+                                                                Object {
+                                                                  "label": "Ohio",
+                                                                  "value": "OH",
+                                                                },
+                                                                Object {
+                                                                  "label": "Oklahoma",
+                                                                  "value": "OK",
+                                                                },
+                                                                Object {
+                                                                  "label": "Oregon",
+                                                                  "value": "OR",
+                                                                },
+                                                                Object {
+                                                                  "label": "Pennsylvania",
+                                                                  "value": "PA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Rhode Island",
+                                                                  "value": "RI",
+                                                                },
+                                                                Object {
+                                                                  "label": "South Carolina",
+                                                                  "value": "SC",
+                                                                },
+                                                                Object {
+                                                                  "label": "South Dakota",
+                                                                  "value": "SD",
+                                                                },
+                                                                Object {
+                                                                  "label": "Tennessee",
+                                                                  "value": "TN",
+                                                                },
+                                                                Object {
+                                                                  "label": "Texas",
+                                                                  "value": "TX",
+                                                                },
+                                                                Object {
+                                                                  "label": "Utah",
+                                                                  "value": "UT",
+                                                                },
+                                                                Object {
+                                                                  "label": "Vermont",
+                                                                  "value": "VT",
+                                                                },
+                                                                Object {
+                                                                  "label": "Virginia",
+                                                                  "value": "VA",
+                                                                },
+                                                                Object {
+                                                                  "label": "Washington",
+                                                                  "value": "WA",
+                                                                },
+                                                                Object {
+                                                                  "label": "West Virginia",
+                                                                  "value": "WV",
+                                                                },
+                                                                Object {
+                                                                  "label": "Wisconsin",
+                                                                  "value": "WI",
+                                                                },
+                                                                Object {
+                                                                  "label": "Wyoming",
+                                                                  "value": "WY",
+                                                                },
+>>>>>>> Add ShopOnlineNavDropdown test
                                                               ]
                                 }
                                 placeholder="All states"
@@ -2523,6 +2756,11 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Clear"
                                 onClick={[Function]}
+<<<<<<< HEAD
+=======
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -2539,6 +2777,7 @@ ShallowWrapper {
               <div
                 className="flex flex-column items-center"
 >
+<<<<<<< HEAD
                 <LocationCard
                                 getRef={[Function]}
                                 location={
@@ -2582,6 +2821,61 @@ ShallowWrapper {
                                 locationUrl="/location/undefined"
                                 selectedLocation={null}
                 />
+=======
+                <a
+                                className="transition-slide-up-large transition bg-white my2 flex flex-column justify-between relative w100"
+                                href="/location/undefined"
+                >
+                                <div
+                                                className="z-1 absolute"
+                                                style={
+                                                                Object {
+                                                                                "background": "url(assets/images/seasonal-icon.png) no-repeat center",
+                                                                                "backgroundSize": "cover",
+                                                                              }
+                                                }
+                                />
+                                <div
+                                                className="bg-denim"
+                                                style={null}
+                                />
+                                <div
+                                                className="p3"
+                                >
+                                                <h2
+                                                                className="big carter mb2"
+                                                />
+                                                <div>
+                                                                <div
+                                                                                className="flex flex-column justify-between"
+                                                                >
+                                                                                <span
+                                                                                                className="small"
+                                                                                />
+                                                                                <span
+                                                                                                className="small"
+                                                                                >
+                                                                                                ,  
+                                                                                </span>
+                                                                                <span
+                                                                                                className="small"
+                                                                                />
+                                                                </div>
+                                                </div>
+                                                <div>
+                                                                <div
+                                                                                className="flex flex-row flex-wrap justify-between items-center mt2"
+                                                                >
+                                                                                <span
+                                                                                                className="block-subheadline bold"
+                                                                                >
+                                                                                                Closed today
+                                                                                </span>
+                                                                </div>
+                                                </div>
+                                </div>
+                </a>
+>>>>>>> Add ShopOnlineNavDropdown test
 </div>,
             ],
             "className": "transition-slide-up w100",
@@ -2602,6 +2896,205 @@ ShallowWrapper {
                   onChange={[Function]}
                   options={
                                     Array [
+<<<<<<< HEAD
+=======
+                                                      Object {
+                                                        "label": "All states",
+                                                        "value": "All",
+                                                      },
+                                                      Object {
+                                                        "label": "New York",
+                                                        "value": "NY",
+                                                      },
+                                                      Object {
+                                                        "label": "New Jersey",
+                                                        "value": "NJ",
+                                                      },
+                                                      Object {
+                                                        "label": "Florida",
+                                                        "value": "FL",
+                                                      },
+                                                      Object {
+                                                        "label": "Alabama",
+                                                        "value": "AL",
+                                                      },
+                                                      Object {
+                                                        "label": "Alaska",
+                                                        "value": "AK",
+                                                      },
+                                                      Object {
+                                                        "label": "California",
+                                                        "value": "CA",
+                                                      },
+                                                      Object {
+                                                        "label": "Colorado",
+                                                        "value": "CO",
+                                                      },
+                                                      Object {
+                                                        "label": "Connecticut",
+                                                        "value": "CT",
+                                                      },
+                                                      Object {
+                                                        "label": "Delaware",
+                                                        "value": "DE",
+                                                      },
+                                                      Object {
+                                                        "label": "Georgia",
+                                                        "value": "GA",
+                                                      },
+                                                      Object {
+                                                        "label": "Hawaii",
+                                                        "value": "HI",
+                                                      },
+                                                      Object {
+                                                        "label": "Idaho",
+                                                        "value": "ID",
+                                                      },
+                                                      Object {
+                                                        "label": "Illinois",
+                                                        "value": "IL",
+                                                      },
+                                                      Object {
+                                                        "label": "Indiana",
+                                                        "value": "IN",
+                                                      },
+                                                      Object {
+                                                        "label": "Iowa",
+                                                        "value": "IA",
+                                                      },
+                                                      Object {
+                                                        "label": "Kansas",
+                                                        "value": "KS",
+                                                      },
+                                                      Object {
+                                                        "label": "Kentucky",
+                                                        "value": "KY",
+                                                      },
+                                                      Object {
+                                                        "label": "Arizona",
+                                                        "value": "AZ",
+                                                      },
+                                                      Object {
+                                                        "label": "Louisiana",
+                                                        "value": "LA",
+                                                      },
+                                                      Object {
+                                                        "label": "Maine",
+                                                        "value": "ME",
+                                                      },
+                                                      Object {
+                                                        "label": "Maryland",
+                                                        "value": "MD",
+                                                      },
+                                                      Object {
+                                                        "label": "Massachusetts",
+                                                        "value": "MA",
+                                                      },
+                                                      Object {
+                                                        "label": "Michigan",
+                                                        "value": "MI",
+                                                      },
+                                                      Object {
+                                                        "label": "Minnesota",
+                                                        "value": "MN",
+                                                      },
+                                                      Object {
+                                                        "label": "Mississippi",
+                                                        "value": "MS",
+                                                      },
+                                                      Object {
+                                                        "label": "Missouri",
+                                                        "value": "MO",
+                                                      },
+                                                      Object {
+                                                        "label": "Montana",
+                                                        "value": "MT",
+                                                      },
+                                                      Object {
+                                                        "label": "Nebraska",
+                                                        "value": "NE",
+                                                      },
+                                                      Object {
+                                                        "label": "Nevada",
+                                                        "value": "NV",
+                                                      },
+                                                      Object {
+                                                        "label": "New Hampshire",
+                                                        "value": "NH",
+                                                      },
+                                                      Object {
+                                                        "label": "New Mexico",
+                                                        "value": "NM",
+                                                      },
+                                                      Object {
+                                                        "label": "North Carolina",
+                                                        "value": "NC",
+                                                      },
+                                                      Object {
+                                                        "label": "North Dakota",
+                                                        "value": "ND",
+                                                      },
+                                                      Object {
+                                                        "label": "Ohio",
+                                                        "value": "OH",
+                                                      },
+                                                      Object {
+                                                        "label": "Oklahoma",
+                                                        "value": "OK",
+                                                      },
+                                                      Object {
+                                                        "label": "Oregon",
+                                                        "value": "OR",
+                                                      },
+                                                      Object {
+                                                        "label": "Pennsylvania",
+                                                        "value": "PA",
+                                                      },
+                                                      Object {
+                                                        "label": "Rhode Island",
+                                                        "value": "RI",
+                                                      },
+                                                      Object {
+                                                        "label": "South Carolina",
+                                                        "value": "SC",
+                                                      },
+                                                      Object {
+                                                        "label": "South Dakota",
+                                                        "value": "SD",
+                                                      },
+                                                      Object {
+                                                        "label": "Tennessee",
+                                                        "value": "TN",
+                                                      },
+                                                      Object {
+                                                        "label": "Texas",
+                                                        "value": "TX",
+                                                      },
+                                                      Object {
+                                                        "label": "Utah",
+                                                        "value": "UT",
+                                                      },
+                                                      Object {
+                                                        "label": "Vermont",
+                                                        "value": "VT",
+                                                      },
+                                                      Object {
+                                                        "label": "Virginia",
+                                                        "value": "VA",
+                                                      },
+                                                      Object {
+                                                        "label": "Washington",
+                                                        "value": "WA",
+                                                      },
+                                                      Object {
+                                                        "label": "West Virginia",
+                                                        "value": "WV",
+                                                      },
+                                                      Object {
+                                                        "label": "Wisconsin",
+                                                        "value": "WI",
+                                                      },
+>>>>>>> Add ShopOnlineNavDropdown test
                                                       Object {
                                                         "label": "All states",
                                                         "value": "All",
@@ -2676,6 +3169,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Clear"
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to=""
                     type="button"
@@ -2719,6 +3214,8 @@ ShallowWrapper {
                     "hover": "shadow",
                     "label": "Clear",
                     "onClick": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
                     "shadow": false,
                     "to": "",
                     "type": "button",

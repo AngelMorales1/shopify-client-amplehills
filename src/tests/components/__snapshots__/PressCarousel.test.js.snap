@@ -128,7 +128,11 @@ ShallowWrapper {
         z={0}
 >
         <div
+<<<<<<< HEAD
                 className="bg-white p3 flex flex-column justify-between items-center"
+=======
+                className="bg-white p3 flex flex-column justify-center items-center"
+>>>>>>> Add ShopOnlineNavDropdown test
         >
                 <Image
                         alt=" logo"
@@ -149,6 +153,11 @@ ShallowWrapper {
                         hover="shadow"
                         label="Read about it"
                         onClick={[Function]}
+<<<<<<< HEAD
+=======
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                         shadow={false}
                         to=""
                         type="button"
@@ -156,7 +165,11 @@ ShallowWrapper {
                 />
         </div>
 </HorizontalCarousel>,
+<<<<<<< HEAD
       "className": "",
+=======
+      "className": "bg-bees-wax",
+>>>>>>> Add ShopOnlineNavDropdown test
       "style": Object {
         "zIndex": 0,
       },
@@ -188,7 +201,11 @@ ShallowWrapper {
         "buttonLink": "foo",
         "children": Array [
           <div
+<<<<<<< HEAD
             className="bg-white p3 flex flex-column justify-between items-center"
+=======
+            className="bg-white p3 flex flex-column justify-center items-center"
+>>>>>>> Add ShopOnlineNavDropdown test
 >
             <Image
                         alt=" logo"
@@ -209,6 +226,11 @@ ShallowWrapper {
                         hover="shadow"
                         label="Read about it"
                         onClick={[Function]}
+<<<<<<< HEAD
+=======
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                         shadow={false}
                         to=""
                         type="button"
@@ -252,13 +274,22 @@ ShallowWrapper {
                 hover="shadow"
                 label="Read about it"
                 onClick={[Function]}
+<<<<<<< HEAD
+=======
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                 shadow={false}
                 to=""
                 type="button"
                 variant="primary-small"
 />,
             ],
+<<<<<<< HEAD
             "className": "bg-white p3 flex flex-column justify-between items-center",
+=======
+            "className": "bg-white p3 flex flex-column justify-center items-center",
+>>>>>>> Add ShopOnlineNavDropdown test
           },
           "ref": null,
           "rendered": Array [
@@ -304,6 +335,11 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Read about it",
                 "onClick": [Function],
+<<<<<<< HEAD
+=======
+                "onMouseEnter": [Function],
+                "onMouseLeave": [Function],
+>>>>>>> Add ShopOnlineNavDropdown test
                 "shadow": false,
                 "to": "",
                 "type": "button",
@@ -361,7 +397,11 @@ ShallowWrapper {
           z={0}
 >
           <div
+<<<<<<< HEAD
                     className="bg-white p3 flex flex-column justify-between items-center"
+=======
+                    className="bg-white p3 flex flex-column justify-center items-center"
+>>>>>>> Add ShopOnlineNavDropdown test
           >
                     <Image
                               alt=" logo"
@@ -382,6 +422,11 @@ ShallowWrapper {
                               hover="shadow"
                               label="Read about it"
                               onClick={[Function]}
+<<<<<<< HEAD
+=======
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                               shadow={false}
                               to=""
                               type="button"
@@ -389,7 +434,11 @@ ShallowWrapper {
                     />
           </div>
 </HorizontalCarousel>,
+<<<<<<< HEAD
         "className": "",
+=======
+        "className": "bg-bees-wax",
+>>>>>>> Add ShopOnlineNavDropdown test
         "style": Object {
           "zIndex": 0,
         },
@@ -421,7 +470,11 @@ ShallowWrapper {
           "buttonLink": "foo",
           "children": Array [
             <div
+<<<<<<< HEAD
               className="bg-white p3 flex flex-column justify-between items-center"
+=======
+              className="bg-white p3 flex flex-column justify-center items-center"
+>>>>>>> Add ShopOnlineNavDropdown test
 >
               <Image
                             alt=" logo"
@@ -442,6 +495,11 @@ ShallowWrapper {
                             hover="shadow"
                             label="Read about it"
                             onClick={[Function]}
+<<<<<<< HEAD
+=======
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                             shadow={false}
                             to=""
                             type="button"
@@ -485,13 +543,22 @@ ShallowWrapper {
                   hover="shadow"
                   label="Read about it"
                   onClick={[Function]}
+<<<<<<< HEAD
+=======
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+>>>>>>> Add ShopOnlineNavDropdown test
                   shadow={false}
                   to=""
                   type="button"
                   variant="primary-small"
 />,
               ],
+<<<<<<< HEAD
               "className": "bg-white p3 flex flex-column justify-between items-center",
+=======
+              "className": "bg-white p3 flex flex-column justify-center items-center",
+>>>>>>> Add ShopOnlineNavDropdown test
             },
             "ref": null,
             "rendered": Array [
@@ -537,6 +604,11 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "Read about it",
                   "onClick": [Function],
+<<<<<<< HEAD
+=======
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
+>>>>>>> Add ShopOnlineNavDropdown test
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -617,7 +689,11 @@ ShallowWrapper {
 >
         
 </HorizontalCarousel>,
+<<<<<<< HEAD
       "className": "",
+=======
+      "className": "bg-bees-wax",
+>>>>>>> Add ShopOnlineNavDropdown test
       "style": Object {
         "zIndex": undefined,
       },
@@ -704,7 +780,11 @@ ShallowWrapper {
 >
           
 </HorizontalCarousel>,
+<<<<<<< HEAD
         "className": "",
+=======
+        "className": "bg-bees-wax",
+>>>>>>> Add ShopOnlineNavDropdown test
         "style": Object {
           "zIndex": undefined,
         },
