@@ -62,7 +62,7 @@ const Routes = ({ location }) => (
     <Route path="/web-accessibility" component={GenericPageContainer} />
     <Route path="/press" component={GenericPageContainer} />
     {isStaging() ? (
-      <Route path="/style-guide" component={GenericPageContainer} />
+      <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/classes-and-socials" component={GenericPageContainer} />
