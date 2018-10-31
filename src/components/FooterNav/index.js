@@ -13,7 +13,6 @@ class FooterNav extends PureComponent {
     if (this.routeOmitsFooterNav()) return null;
 
     const items = Object.values(get(this.props, 'items.simpleFragments', {}));
-    console.log(items);
     const defaultIcon = '/assets/images/bubble-icon.svg';
     if (!items.length) return null;
 
@@ -62,7 +61,10 @@ FooterNav.propTypes = {
 };
 
 FooterNav.defaultProps = {
-  pathname: ''
+  pathname: '',
+  items: {
+    simpleFragments: {}
+  }
 };
 
 export default FooterNav;
