@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+
 import RoutesWithoutFooterExtras from 'constants/RoutesWithoutFooterExtras';
 import get from 'utils/get';
 
@@ -11,6 +13,7 @@ class FooterNav extends PureComponent {
     if (this.routeOmitsFooterNav()) return null;
 
     const items = Object.values(get(this.props, 'items.simpleFragments', {}));
+    console.log(items);
     const defaultIcon = '/assets/images/bubble-icon.svg';
     if (!items.length) return null;
 
@@ -18,7 +21,10 @@ class FooterNav extends PureComponent {
       <div className="xs-hide sm-hide col-12 drip bg-white z-1 relative">
         <div className="container-width mx-auto flex py3">
           {items.map(item => (
-            <div className="w100 flex flex-column center">
+            <div
+              key={get(item, 'uuid')}
+              className="w100 flex flex-column center"
+            >
               <a
                 className="text-decoration-none hover-slide-up"
                 href={get(item, 'link')}
@@ -37,5 +43,26 @@ class FooterNav extends PureComponent {
     );
   }
 }
+
+FooterNav.propTypes = {
+  pathname: PropTypes.string,
+  items: PropTypes.shape({
+    simpleFragments: PropTypes.objectOf(
+      PropTypes.shape({
+        icon: PropTypes.shape({
+          data: PropTypes.string,
+          name: PropTypes.name
+        }),
+        uuid: PropTypes.string,
+        link: PropTypes.string,
+        text: PropTypes.string
+      })
+    )
+  })
+};
+
+FooterNav.defaultProps = {
+  pathname: ''
+};
 
 export default FooterNav;

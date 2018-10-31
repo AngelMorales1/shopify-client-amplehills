@@ -101,8 +101,6 @@ class FooterNewsletter extends Component {
   }
 }
 
-export default FooterNewsletter;
-
 FooterNewsletter.propTypes = {
   pathname: PropTypes.string
 };
@@ -110,3 +108,5 @@ FooterNewsletter.propTypes = {
 FooterNewsletter.defaultProps = {
   pathname: ''
 };
+
+export default FooterNewsletter;
