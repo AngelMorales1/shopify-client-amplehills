@@ -124,6 +124,18 @@ const ShopOnlineNavDropdown = ({
 
 export default ShopOnlineNavDropdown;
 
-ShopOnlineNavDropdown.propTypes = {};
+ShopOnlineNavDropdown.propTypes = {
+  productLanding: PropTypes.object,
+  alertIsActive: PropTypes.bool,
+  shopOnlineDropdownIsOpen: PropTypes.bool,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
+};
 
-ShopOnlineNavDropdown.defaultProps = {};
+ShopOnlineNavDropdown.defaultProps = {
+  productLanding: {},
+  alertIsActive: false,
+  shopOnlineDropdownIsOpen: false,
+  onMouseEnter: () => {},
+  onMouseLeave: () => {}
+};
