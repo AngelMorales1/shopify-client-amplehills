@@ -75,12 +75,14 @@ class Dropdown extends Component {
       label,
       placeholder,
       variant,
+      bgColor,
       color,
       className,
       selectClassName,
       shadow,
       textColor,
-      fixedWidth
+      fixedWidth,
+      textAlignCenter
     } = this.props;
     return (
       <div
@@ -90,9 +92,11 @@ class Dropdown extends Component {
           className,
           styles[`Dropdown--${variant}`],
           styles[`Dropdown--text-${textColor}`],
+          styles[`Dropdown--background-${bgColor}`],
           {
             [styles[`Dropdown--fixedWidth`]]: fixedWidth,
-            [styles['Dropdown--small']]: variant === 'small'
+            [styles['Dropdown--small']]: variant === 'small',
+            [styles['Dropdown--center']]: textAlignCenter
           }
         )}
       >
@@ -156,7 +160,9 @@ Dropdown.propTypes = {
   onChange: PropTypes.func,
   shadow: PropTypes.bool,
   textColor: PropTypes.string,
-  fixedWidth: PropTypes.bool
+  fixedWidth: PropTypes.bool,
+  bgColor: PropTypes.string,
+  textAlignCenter: PropTypes.bool
 };
 
 Dropdown.defaultProps = {
@@ -171,7 +177,9 @@ Dropdown.defaultProps = {
   onChange: () => {},
   shadow: false,
   textColor: '',
-  fixedWidth: false
+  fixedWidth: false,
+  bgColor: '',
+  textAlignCenter: false
 };
 
 export default Dropdown;

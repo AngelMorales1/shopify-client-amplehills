@@ -179,6 +179,31 @@
     }
   }
 
+  &--center {
+    :global {
+      .Select-control {
+        width: 100%;
+      }
+
+      .Select-multi-value-wrapper {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &--background-clear-madison-blue-border {
+    :global {
+      .Select {
+        background: transparent;
+      }
+      .Select-control {
+        border-radius: radius('l');
+        border: spacing(1) solid color('madison-blue');
+      }
+    }
+  }
+
   &--text-madison-blue {
     :global {
       .Select-placeholder,

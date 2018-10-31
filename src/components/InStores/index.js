@@ -3,17 +3,37 @@ import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
+import Global from 'constants/Global';
 
-import { Button } from 'components/base';
+import { Button, Dropdown } from 'components/base';
 import styles from './InStores.scss';
 
 class InStores extends Component {
   state = {
-    activeFilter: ''
+    activeFilter: '',
+    currentBreakpoint: Global.breakpoints.medium.label
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+  }
+
+  updateWindow = () => {
+    const { small, medium } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
   };
 
   handleFilterButtonClick = filter => {
-    if (filter === this.state.activeFilter) {
+    if (filter === this.state.activeFilter || filter === 'All') {
       return this.setState({ activeFilter: '' });
     }
 
@@ -22,7 +42,8 @@ class InStores extends Component {
 
   render() {
     const { localRetailers, text } = this.props;
-    const { activeFilter } = this.state;
+    const { activeFilter, currentBreakpoint } = this.state;
+    const { medium } = Global.breakpoints;
     const localRetailersValues = Object.values(localRetailers);
     const uniqueFilter = localRetailersValues.reduce(
       (uniqueFilters, localRetailer) => {
@@ -52,21 +73,40 @@ class InStores extends Component {
             }}
             className="markdown-block center text-container-width"
           />
-          <div className="flex flex-row">
-            {Object.keys(uniqueFilter).map(filter => (
-              <Button
-                key={filter}
-                onClick={() => this.handleFilterButtonClick(filter)}
-                className="m1"
-                color={
-                  activeFilter === filter
-                    ? 'clear-madison-blue-border'
-                    : 'madison-blue'
-                }
-                variant="primary-small"
-                label={filter}
+          <div className="flex flex-row justify-center flex-wrap w100">
+            {currentBreakpoint === medium.label ? (
+              Object.keys(uniqueFilter).map(filter => (
+                <Button
+                  key={filter}
+                  onClick={() => this.handleFilterButtonClick(filter)}
+                  className="m1"
+                  color={
+                    activeFilter === filter
+                      ? 'clear-madison-blue-border'
+                      : 'madison-blue'
+                  }
+                  variant="primary-small"
+                  label={filter}
+                />
+              ))
+            ) : (
+              <Dropdown
+                textAlignCenter={true}
+                color="peach"
+                textColor="madison-blue"
+                bgColor="clear-madison-blue-border"
+                className="w100"
+                selectClassName="w100"
+                variant="secondary"
+                value={this.state.activeFilter}
+                options={['All']
+                  .concat(Object.keys(uniqueFilter))
+                  .map(filter => {
+                    return { label: filter, value: filter };
+                  })}
+                onChange={filter => this.handleFilterButtonClick(filter.value)}
               />
-            ))}
+            )}
           </div>
         </div>
         <div className="mt3 py4 px3 flex flex-column items-center">
