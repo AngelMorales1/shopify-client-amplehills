@@ -55,6 +55,7 @@ class InStores extends Component {
           <div className="flex flex-row">
             {Object.keys(uniqueFilter).map(filter => (
               <Button
+                key={filter}
                 onClick={() => this.handleFilterButtonClick(filter)}
                 className="m1"
                 color={
@@ -108,5 +109,15 @@ class InStores extends Component {
     );
   }
 }
+
+InStores.propTypes = {
+  localRetailers: PropTypes.object,
+  text: PropTypes.string
+};
+
+InStores.defaultProps = {
+  localRetailers: {},
+  text: ''
+};
 
 export default InStores;
