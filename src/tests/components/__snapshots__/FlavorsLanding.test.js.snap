@@ -66,6 +66,7 @@ ShallowWrapper {
                         className="flex mb2 z-1"
                 >
                         <Dropdown
+                                bgColor=""
                                 className=""
                                 color="peach"
                                 fixedWidth={true}
@@ -83,6 +84,7 @@ ShallowWrapper {
                                 placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
+                                textAlignCenter={false}
                                 textColor="madison-blue"
                                 value=""
                                 variant="small"
@@ -144,6 +146,7 @@ ShallowWrapper {
                         className="flex mb2 z-1"
             >
                         <Dropdown
+                                    bgColor=""
                                     className=""
                                     color="peach"
                                     fixedWidth={true}
@@ -161,6 +164,7 @@ ShallowWrapper {
                                     placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
+                                    textAlignCenter={false}
                                     textColor="madison-blue"
                                     value=""
                                     variant="small"
@@ -227,6 +231,7 @@ ShallowWrapper {
                 className="flex mb2 z-1"
 >
                 <Dropdown
+                                bgColor=""
                                 className=""
                                 color="peach"
                                 fixedWidth={true}
@@ -244,6 +249,7 @@ ShallowWrapper {
                                 placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
+                                textAlignCenter={false}
                                 textColor="madison-blue"
                                 value=""
                                 variant="small"
@@ -310,6 +316,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Dropdown
+                  bgColor=""
                   className=""
                   color="peach"
                   fixedWidth={true}
@@ -327,6 +334,7 @@ ShallowWrapper {
                   placeholder="Dietary Restrictions"
                   selectClassName="w100"
                   shadow={false}
+                  textAlignCenter={false}
                   textColor="madison-blue"
                   value=""
                   variant="small"
@@ -339,6 +347,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "bgColor": "",
                   "className": "",
                   "color": "peach",
                   "fixedWidth": true,
@@ -354,6 +363,7 @@ ShallowWrapper {
                   "placeholder": "Dietary Restrictions",
                   "selectClassName": "w100",
                   "shadow": false,
+                  "textAlignCenter": false,
                   "textColor": "madison-blue",
                   "value": "",
                   "variant": "small",
@@ -454,6 +464,7 @@ ShallowWrapper {
                               className="flex mb2 z-1"
                     >
                               <Dropdown
+                                        bgColor=""
                                         className=""
                                         color="peach"
                                         fixedWidth={true}
@@ -471,6 +482,7 @@ ShallowWrapper {
                                         placeholder="Dietary Restrictions"
                                         selectClassName="w100"
                                         shadow={false}
+                                        textAlignCenter={false}
                                         textColor="madison-blue"
                                         value=""
                                         variant="small"
@@ -532,6 +544,7 @@ ShallowWrapper {
                             className="flex mb2 z-1"
               >
                             <Dropdown
+                                          bgColor=""
                                           className=""
                                           color="peach"
                                           fixedWidth={true}
@@ -549,6 +562,7 @@ ShallowWrapper {
                                           placeholder="Dietary Restrictions"
                                           selectClassName="w100"
                                           shadow={false}
+                                          textAlignCenter={false}
                                           textColor="madison-blue"
                                           value=""
                                           variant="small"
@@ -615,6 +629,7 @@ ShallowWrapper {
                   className="flex mb2 z-1"
 >
                   <Dropdown
+                                    bgColor=""
                                     className=""
                                     color="peach"
                                     fixedWidth={true}
@@ -632,6 +647,7 @@ ShallowWrapper {
                                     placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
+                                    textAlignCenter={false}
                                     textColor="madison-blue"
                                     value=""
                                     variant="small"
@@ -698,6 +714,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Dropdown
+                    bgColor=""
                     className=""
                     color="peach"
                     fixedWidth={true}
@@ -715,6 +732,7 @@ ShallowWrapper {
                     placeholder="Dietary Restrictions"
                     selectClassName="w100"
                     shadow={false}
+                    textAlignCenter={false}
                     textColor="madison-blue"
                     value=""
                     variant="small"
@@ -727,6 +745,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "bgColor": "",
                     "className": "",
                     "color": "peach",
                     "fixedWidth": true,
@@ -742,6 +761,7 @@ ShallowWrapper {
                     "placeholder": "Dietary Restrictions",
                     "selectClassName": "w100",
                     "shadow": false,
+                    "textAlignCenter": false,
                     "textColor": "madison-blue",
                     "value": "",
                     "variant": "small",
@@ -881,6 +901,7 @@ ShallowWrapper {
                         className="flex mb2 z-1"
                 >
                         <Dropdown
+                                bgColor=""
                                 className=""
                                 color="peach"
                                 fixedWidth={true}
@@ -898,6 +919,7 @@ ShallowWrapper {
                                 placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
+                                textAlignCenter={false}
                                 textColor="madison-blue"
                                 value=""
                                 variant="small"
@@ -959,6 +981,7 @@ ShallowWrapper {
                         className="flex mb2 z-1"
             >
                         <Dropdown
+                                    bgColor=""
                                     className=""
                                     color="peach"
                                     fixedWidth={true}
@@ -976,6 +999,7 @@ ShallowWrapper {
                                     placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
+                                    textAlignCenter={false}
                                     textColor="madison-blue"
                                     value=""
                                     variant="small"
@@ -1042,6 +1066,7 @@ ShallowWrapper {
                 className="flex mb2 z-1"
 >
                 <Dropdown
+                                bgColor=""
                                 className=""
                                 color="peach"
                                 fixedWidth={true}
@@ -1059,6 +1084,7 @@ ShallowWrapper {
                                 placeholder="Dietary Restrictions"
                                 selectClassName="w100"
                                 shadow={false}
+                                textAlignCenter={false}
                                 textColor="madison-blue"
                                 value=""
                                 variant="small"
@@ -1125,6 +1151,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Dropdown
+                  bgColor=""
                   className=""
                   color="peach"
                   fixedWidth={true}
@@ -1142,6 +1169,7 @@ ShallowWrapper {
                   placeholder="Dietary Restrictions"
                   selectClassName="w100"
                   shadow={false}
+                  textAlignCenter={false}
                   textColor="madison-blue"
                   value=""
                   variant="small"
@@ -1154,6 +1182,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "bgColor": "",
                   "className": "",
                   "color": "peach",
                   "fixedWidth": true,
@@ -1169,6 +1198,7 @@ ShallowWrapper {
                   "placeholder": "Dietary Restrictions",
                   "selectClassName": "w100",
                   "shadow": false,
+                  "textAlignCenter": false,
                   "textColor": "madison-blue",
                   "value": "",
                   "variant": "small",
@@ -1269,6 +1299,7 @@ ShallowWrapper {
                               className="flex mb2 z-1"
                     >
                               <Dropdown
+                                        bgColor=""
                                         className=""
                                         color="peach"
                                         fixedWidth={true}
@@ -1286,6 +1317,7 @@ ShallowWrapper {
                                         placeholder="Dietary Restrictions"
                                         selectClassName="w100"
                                         shadow={false}
+                                        textAlignCenter={false}
                                         textColor="madison-blue"
                                         value=""
                                         variant="small"
@@ -1347,6 +1379,7 @@ ShallowWrapper {
                             className="flex mb2 z-1"
               >
                             <Dropdown
+                                          bgColor=""
                                           className=""
                                           color="peach"
                                           fixedWidth={true}
@@ -1364,6 +1397,7 @@ ShallowWrapper {
                                           placeholder="Dietary Restrictions"
                                           selectClassName="w100"
                                           shadow={false}
+                                          textAlignCenter={false}
                                           textColor="madison-blue"
                                           value=""
                                           variant="small"
@@ -1430,6 +1464,7 @@ ShallowWrapper {
                   className="flex mb2 z-1"
 >
                   <Dropdown
+                                    bgColor=""
                                     className=""
                                     color="peach"
                                     fixedWidth={true}
@@ -1447,6 +1482,7 @@ ShallowWrapper {
                                     placeholder="Dietary Restrictions"
                                     selectClassName="w100"
                                     shadow={false}
+                                    textAlignCenter={false}
                                     textColor="madison-blue"
                                     value=""
                                     variant="small"
@@ -1513,6 +1549,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Dropdown
+                    bgColor=""
                     className=""
                     color="peach"
                     fixedWidth={true}
@@ -1530,6 +1567,7 @@ ShallowWrapper {
                     placeholder="Dietary Restrictions"
                     selectClassName="w100"
                     shadow={false}
+                    textAlignCenter={false}
                     textColor="madison-blue"
                     value=""
                     variant="small"
@@ -1542,6 +1580,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
+                    "bgColor": "",
                     "className": "",
                     "color": "peach",
                     "fixedWidth": true,
@@ -1557,6 +1596,7 @@ ShallowWrapper {
                     "placeholder": "Dietary Restrictions",
                     "selectClassName": "w100",
                     "shadow": false,
+                    "textAlignCenter": false,
                     "textColor": "madison-blue",
                     "value": "",
                     "variant": "small",

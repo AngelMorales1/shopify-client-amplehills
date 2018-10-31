@@ -64,7 +64,7 @@ ShallowWrapper {
                     }
           />
           <div
-                    className="flex flex-row"
+                    className="flex flex-row justify-center flex-wrap w100"
           >
                     <Button
                               className="m1"
@@ -181,7 +181,7 @@ ShallowWrapper {
               }
 />,
             <div
-              className="flex flex-row"
+              className="flex flex-row justify-center flex-wrap w100"
 >
               <Button
                             className="m1"
@@ -275,7 +275,7 @@ ShallowWrapper {
                   variant="primary-small"
 />,
               ],
-              "className": "flex flex-row",
+              "className": "flex flex-row justify-center flex-wrap w100",
             },
             "ref": null,
             "rendered": Array [
@@ -641,7 +641,7 @@ ShallowWrapper {
                         }
             />
             <div
-                        className="flex flex-row"
+                        className="flex flex-row justify-center flex-wrap w100"
             >
                         <Button
                                     className="m1"
@@ -758,7 +758,7 @@ ShallowWrapper {
                 }
 />,
               <div
-                className="flex flex-row"
+                className="flex flex-row justify-center flex-wrap w100"
 >
                 <Button
                                 className="m1"
@@ -852,7 +852,7 @@ ShallowWrapper {
                     variant="primary-small"
 />,
                 ],
-                "className": "flex flex-row",
+                "className": "flex flex-row justify-center flex-wrap w100",
               },
               "ref": null,
               "rendered": Array [
@@ -1242,7 +1242,7 @@ ShallowWrapper {
                     }
           />
           <div
-                    className="flex flex-row"
+                    className="flex flex-row justify-center flex-wrap w100"
           >
                     
           </div>
@@ -1276,7 +1276,7 @@ ShallowWrapper {
               }
 />,
             <div
-              className="flex flex-row"
+              className="flex flex-row justify-center flex-wrap w100"
 >
               
 </div>,
@@ -1317,7 +1317,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [],
-              "className": "flex flex-row",
+              "className": "flex flex-row justify-center flex-wrap w100",
             },
             "ref": null,
             "rendered": Array [],
@@ -1365,7 +1365,7 @@ ShallowWrapper {
                         }
             />
             <div
-                        className="flex flex-row"
+                        className="flex flex-row justify-center flex-wrap w100"
             >
                         
             </div>
@@ -1399,7 +1399,7 @@ ShallowWrapper {
                 }
 />,
               <div
-                className="flex flex-row"
+                className="flex flex-row justify-center flex-wrap w100"
 >
                 
 </div>,
@@ -1440,7 +1440,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [],
-                "className": "flex flex-row",
+                "className": "flex flex-row justify-center flex-wrap w100",
               },
               "ref": null,
               "rendered": Array [],

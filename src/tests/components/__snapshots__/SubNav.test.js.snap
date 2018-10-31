@@ -22,6 +22,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <Dropdown
+        bgColor=""
         className="w100 mx2"
         fixedWidth={false}
         label=""
@@ -31,6 +32,7 @@ ShallowWrapper {
         placeholder="Select menu"
         selectClassName="w100"
         shadow={true}
+        textAlignCenter={false}
         textColor=""
         value={null}
         variant="secondary"
@@ -43,6 +45,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "bgColor": "",
         "className": "w100 mx2",
         "fixedWidth": false,
         "label": "",
@@ -52,6 +55,7 @@ ShallowWrapper {
         "placeholder": "Select menu",
         "selectClassName": "w100",
         "shadow": true,
+        "textAlignCenter": false,
         "textColor": "",
         "value": null,
         "variant": "secondary",
@@ -69,6 +73,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <Dropdown
+          bgColor=""
           className="w100 mx2"
           fixedWidth={false}
           label=""
@@ -78,6 +83,7 @@ ShallowWrapper {
           placeholder="Select menu"
           selectClassName="w100"
           shadow={true}
+          textAlignCenter={false}
           textColor=""
           value={null}
           variant="secondary"
@@ -90,6 +96,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "bgColor": "",
           "className": "w100 mx2",
           "fixedWidth": false,
           "label": "",
@@ -99,6 +106,7 @@ ShallowWrapper {
           "placeholder": "Select menu",
           "selectClassName": "w100",
           "shadow": true,
+          "textAlignCenter": false,
           "textColor": "",
           "value": null,
           "variant": "secondary",
@@ -146,6 +154,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <Dropdown
+        bgColor=""
         className="w100 mx2"
         fixedWidth={false}
         label=""
@@ -162,6 +171,7 @@ ShallowWrapper {
         placeholder="Select menu"
         selectClassName="w100"
         shadow={true}
+        textAlignCenter={false}
         textColor=""
         value={null}
         variant="secondary"
@@ -174,6 +184,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "bgColor": "",
         "className": "w100 mx2",
         "fixedWidth": false,
         "label": "",
@@ -188,6 +199,7 @@ ShallowWrapper {
         "placeholder": "Select menu",
         "selectClassName": "w100",
         "shadow": true,
+        "textAlignCenter": false,
         "textColor": "",
         "value": null,
         "variant": "secondary",
@@ -205,6 +217,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <Dropdown
+          bgColor=""
           className="w100 mx2"
           fixedWidth={false}
           label=""
@@ -221,6 +234,7 @@ ShallowWrapper {
           placeholder="Select menu"
           selectClassName="w100"
           shadow={true}
+          textAlignCenter={false}
           textColor=""
           value={null}
           variant="secondary"
@@ -233,6 +247,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "bgColor": "",
           "className": "w100 mx2",
           "fixedWidth": false,
           "label": "",
@@ -247,6 +262,7 @@ ShallowWrapper {
           "placeholder": "Select menu",
           "selectClassName": "w100",
           "shadow": true,
+          "textAlignCenter": false,
           "textColor": "",
           "value": null,
           "variant": "secondary",

@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dropdown
+    bgColor=""
     className="foo"
     fixedWidth={false}
     label="foo"
@@ -21,6 +22,7 @@ ShallowWrapper {
     placeholder="foo"
     selectClassName=""
     shadow={false}
+    textAlignCenter={false}
     textColor=""
     value="foo"
     variant="small"
@@ -104,7 +106,7 @@ ShallowWrapper {
           valueKey="value"
 />,
       ],
-      "className": "relative z-1 pointer foo undefined",
+      "className": "relative z-1 pointer foo",
     },
     "ref": null,
     "rendered": Array [
@@ -262,7 +264,7 @@ ShallowWrapper {
             valueKey="value"
 />,
         ],
-        "className": "relative z-1 pointer foo undefined",
+        "className": "relative z-1 pointer foo",
       },
       "ref": null,
       "rendered": Array [
@@ -363,6 +365,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Dropdown
+    bgColor=""
     className=""
     fixedWidth={false}
     label=""
@@ -376,6 +379,7 @@ ShallowWrapper {
     placeholder="Select"
     selectClassName=""
     shadow={false}
+    textAlignCenter={false}
     textColor=""
     value=""
     variant="primary"
