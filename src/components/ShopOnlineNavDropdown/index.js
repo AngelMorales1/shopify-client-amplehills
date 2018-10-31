@@ -6,84 +6,116 @@ import get from 'utils/get';
 import styles from './ShopOnlineNavDropdown.scss';
 import { Image, Button } from 'components/base';
 
-const ShopOnlineNavDropdown = ({ productLanding, alertIsActive }) => {
+const ShopOnlineNavDropdown = ({
+  productLanding,
+  alertIsActive,
+  shopOnlineDropdownIsOpen,
+  onMouseEnter,
+  onMouseLeave
+}) => {
   const iceCreamProducts = get(productLanding, 'iceCreamProducts', []);
   const merchProducts = get(productLanding, 'merchandiseProducts', []);
 
   return (
-    <div className="absolute">
+    <div
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className={cx(
+        styles['ShopOnlineNavDropdown'],
+        {
+          [styles['ShopOnlineNavDropdown--active']]: shopOnlineDropdownIsOpen
+        },
+        'relative z-nav'
+      )}
+    >
       <div
         className={cx(
-          styles['ShopOnlineNavDropdown'],
-          { [styles['ShopOnlineNavDropdown--with-alert']]: alertIsActive },
-          'w100 pt3 px4 bg-peach z-nav fixed drip flex flex-row items-center'
+          styles['ShopOnlineNavDropdown__nav-container'],
+          {
+            [styles[
+              'ShopOnlineNavDropdown__nav-container--with-alert'
+            ]]: alertIsActive
+          },
+          'absolute z-nav'
         )}
       >
-        <div className="col-6 flex flex-row justify-center mx-auto">
-          {iceCreamProducts.map(product => {
-            const fields = get(product, 'fields', {});
-            const image = get(fields, 'dropdownNavImage.fields.file.url', '');
-            const title = get(fields, 'productTitle', '');
-            const handle = get(fields, 'productHandle', '');
+        <div
+          className={cx(
+            'w100 pt3 px4 bg-peach fixed drip flex flex-row items-center'
+          )}
+        >
+          <div className="col-6 flex flex-row justify-center mx-auto">
+            {iceCreamProducts.map(product => {
+              const fields = get(product, 'fields', {});
+              const image = get(fields, 'dropdownNavImage.fields.file.url', '');
+              const title = get(fields, 'productTitle', '');
+              const handle = get(fields, 'productHandle', '');
 
-            return (
-              <Button
-                key={handle}
-                variant="style-none"
-                to={`/products/${handle}`}
-              >
-                <div
-                  className={cx(
-                    styles['ShopOnlineNavDropdown__card'],
-                    'bg-white mx2 p3 flex flex-column items-center justify-between'
-                  )}
+              return (
+                <Button
+                  onClick={onMouseLeave}
+                  key={handle}
+                  variant="style-none"
+                  to={`/products/${handle}`}
                 >
                   <div
                     className={cx(
-                      styles['ShopOnlineNavDropdown__image--container'],
-                      'w100'
+                      styles['ShopOnlineNavDropdown__card'],
+                      'bg-white mx2 p3 flex flex-column items-center justify-between'
                     )}
                   >
-                    <Image
+                    <div
                       className={cx(
-                        styles['ShopOnlineNavDropdown__image'],
-                        'wh100'
+                        styles['ShopOnlineNavDropdown__image--container'],
+                        'w100'
                       )}
-                      src={image}
-                    />
+                    >
+                      <Image
+                        className={cx(
+                          styles['ShopOnlineNavDropdown__image'],
+                          'wh100'
+                        )}
+                        src={image}
+                      />
+                    </div>
+                    <div
+                      className={cx(
+                        styles['ShopOnlineNavDropdown__card-text-container'],
+                        'flex flex-row items-center'
+                      )}
+                    >
+                      <p className="white-space-normal center text-heavy-gray">
+                        {title}
+                      </p>
+                    </div>
                   </div>
-                  <div
-                    className={cx(
-                      styles['ShopOnlineNavDropdown__card-text-container'],
-                      'flex flex-row items-center'
-                    )}
-                  >
-                    <p className="white-space-normal center text-heavy-gray">
-                      {title}
-                    </p>
-                  </div>
-                </div>
-              </Button>
-            );
-          })}
-        </div>
-        <div
-          className={cx(
-            styles['ShopOnlineNavDropdown__merch-container'],
-            'col-2 absolute r0'
-          )}
-        >
-          <p className="text-white bold">Merch</p>
-          {merchProducts.map(merch => {
-            const fields = get(merch, 'fields', {});
-            const title = get(fields, 'title', '');
-            const handle = get(fields, 'handle', '');
-            return (
-              <Button variant="style-none" to={`/merchandise/${handle}`}>
-                <p className="text-white light mt1">{title}</p>
-              </Button>
-            );
-          })}
+                </Button>
+              );
+            })}
+          </div>
+          <div
+            className={cx(
+              styles['ShopOnlineNavDropdown__merch-container'],
+              'col-2 absolute r0'
+            )}
+          >
+            <p className="text-white bold">Merch</p>
+            {merchProducts.map(merch => {
+              const fields = get(merch, 'fields', {});
+              const title = get(fields, 'title', '');
+              const handle = get(fields, 'handle', '');
+              return (
+                <Button
+                  onClick={onMouseLeave}
+                  key={handle}
+                  variant="style-none"
+                  to={`/merchandise/${handle}`}
+                >
+                  <p className="text-white light mt1">{title}</p>
+                </Button>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

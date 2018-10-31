@@ -1,10 +1,19 @@
 @import 'settings', 'typography', 'src/styles/utils';
 
 .ShopOnlineNavDropdown {
-  top: $header-height-desktop;
-  height: spacing(70);
+  @extend .transition-dropdown-slide-down;
+  display: none;
 
-  &--with-alert {
+  &--active {
+    display: inherit;
+  }
+
+  &__nav-container {
+    top: $header-height-desktop;
+    height: spacing(70);
+  }
+
+  &__nav-container--with-alert {
     top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
   }
 

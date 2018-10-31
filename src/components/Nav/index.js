@@ -27,7 +27,8 @@ import styles from './Nav.scss';
 class Nav extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.medium.label,
-    mobileNavIsOpen: false
+    mobileNavIsOpen: false,
+    shopOnlineDropdownIsOpen: false
   };
 
   componentDidMount() {
@@ -62,8 +63,17 @@ class Nav extends Component {
     return mobileNavIsOpen ? closeMobileNav() : openMobileNav();
   };
 
+  closeShopOnline = () => {
+    this.setState({ shopOnlineDropdownIsOpen: false });
+  };
+
+  openShopOnline = () => {
+    this.setState({ shopOnlineDropdownIsOpen: true });
+  };
+
   render() {
     const { logo, profileIcon, productLanding, alertIsActive } = this.props;
+    const { medium } = Global.breakpoints;
     const cartIsEmpty = this.props.totalItems === 0;
 
     return (
@@ -76,7 +86,7 @@ class Nav extends Component {
           )}
         >
           <div className="col col-4 md-col-5 flex items-center justify-start">
-            {this.state.currentBreakpoint === 'medium' ? (
+            {this.state.currentBreakpoint === medium.label ? (
               <Fragment>
                 <NavLink
                   exact
@@ -177,6 +187,8 @@ class Nav extends Component {
                   variant="primary-small"
                   color="white-peach"
                   label="Shop Online"
+                  onClick={this.closeShopOnline}
+                  onMouseEnter={this.openShopOnline}
                   hover="clear-white-border"
                 />
               </Fragment>
@@ -200,10 +212,15 @@ class Nav extends Component {
             />
           </div>
         </div>
-        <ShopOnlineNavDropdown
-          productLanding={productLanding}
-          alertIsActive={alertIsActive}
-        />
+        {this.state.currentBreakpoint === medium.label ? (
+          <ShopOnlineNavDropdown
+            shopOnlineDropdownIsOpen={this.state.shopOnlineDropdownIsOpen}
+            productLanding={productLanding}
+            alertIsActive={alertIsActive}
+            onMouseEnter={this.openShopOnline}
+            onMouseLeave={this.closeShopOnline}
+          />
+        ) : null}
       </div>
     );
   }

@@ -20,7 +20,9 @@ const Button = ({
   to,
   shadow,
   hover,
-  newTab
+  newTab,
+  onMouseEnter,
+  onMouseLeave
 }) => {
   const classes = cx(
     styles[`Button--${color}`],
@@ -47,6 +49,8 @@ const Button = ({
         target="_blank"
         rel="noopener"
         onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         <div className={classes}>
           <span className="avenir h100 flex justify-center items-center">
@@ -61,19 +65,29 @@ const Button = ({
         })}
         to={to}
         onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         <div className={classes}>
-          <span className="avenir h100 flex justify-center items-center">
-            {label}
-          </span>
-        </div>
+        {children && !label ? (
+          children
+        ) : (
+          <span className="h100 flex justify-center items-center">{label}</span>
+        )}
+      </div>
       </Link>
     );
 
   const button = to ? (
     linkedComponent
   ) : (
-    <button type={type} onClick={onClick} className={classes}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={classes}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       <div className="h100 flex justify-center items-center">
         {children && !label ? children : label}
       </div>
@@ -95,7 +109,9 @@ Button.propTypes = {
   type: PropTypes.string,
   to: PropTypes.string,
   shadow: PropTypes.bool,
-  hover: PropTypes.string
+  hover: PropTypes.string,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
 };
 
 Button.defaultProps = {
@@ -110,7 +126,9 @@ Button.defaultProps = {
   type: 'button',
   to: '',
   shadow: false,
-  hover: 'shadow'
+  hover: 'shadow',
+  onMouseEnter: () => {},
+  onMouseLeave: () => {}
 };
 
 export default Button;
