@@ -117,3 +117,11 @@ $transition: $transition-duration $transition-easing;
 .transition-show-hide-dots {
   animation: show-hide-dots 1.8s infinite ease-in-out;
 }
+
+.hover-slide-up {
+  transition: transform $transition;
+
+  &:hover {
+    transform: translate3d(0, -0.5rem, 0);
+  }
+}

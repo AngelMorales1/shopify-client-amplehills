@@ -63,6 +63,7 @@ class App extends Component {
       instagramLink,
       twitterLink,
       footerIllustration,
+      footerNav,
       forceErrorPage,
       forceErrorPageOnProduction,
       facebookIcon,
@@ -94,7 +95,10 @@ class App extends Component {
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
-            <FooterNav pathname={get(this, 'props.location.pathname')} />
+            <FooterNav
+              pathname={get(this, 'props.location.pathname')}
+              items={footerNav}
+            />
             <Footer
               locations={locations}
               footerIllustration={footerIllustration}
@@ -147,7 +151,8 @@ App.propTypes = {
   globalSettings: PropTypes.shape({
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
-    twitterLink: PropTypes.string
+    twitterLink: PropTypes.string,
+    footerNav: PropTypes.object
   }),
   locations: PropTypes.arrayOf(locationModel.propTypes),
   forceErrorPage: PropTypes.bool
