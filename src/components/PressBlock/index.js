@@ -8,9 +8,7 @@ import PressCard from 'components/PressCard';
 
 class PressBlock extends Component {
   render() {
-    const { model, pressItems, z, setRef, drip } = this.props;
-
-    if (model.isError) return <h1>Error</h1>;
+    const { pressItems, z, setRef, drip } = this.props;
 
     const pressItemsId = get(pressItems, 'fragments', []).map(fragment =>
       get(fragment[0], 'value', '')
@@ -51,8 +49,8 @@ class PressBlock extends Component {
   }
 }
 
-PressBlock.PropTypes = {
-  pressItems: PropTypes.objet,
+PressBlock.propTypes = {
+  pressItems: PropTypes.object,
   z: PropTypes.number,
   setRef: PropTypes.func,
   drip: PropTypes.bool

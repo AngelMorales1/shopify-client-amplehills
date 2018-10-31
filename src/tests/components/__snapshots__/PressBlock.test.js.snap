@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressBlock
+    drip={false}
+    pressItems={
+        Object {
+            "simpleFragments": Object {
+              "foo": Object {
+                "index": 1,
+                "linkUrl": "/foo",
+                "logoImage": Object {
+                  "data": "foo",
+                  "name": "foo",
+                  "size": 100,
+                  "type": "foo",
+                },
+                "quote": "foo",
+                "title": "foo",
+                "uuid": "foo",
+              },
+            },
+          }
+    }
+    setRef={[Function]}
+    z={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center"
+>
+          <span
+                    className="block-headline text-peach center"
+          >
+                    ""
+          </span>
+          <Image
+                    alt=""
+                    bg={false}
+                    className="col-3 mt4 mb2"
+                    onImgLoad={[Function]}
+                    src=""
+                    style={Object {}}
+          />
+</div>,
+        <div
+          className="p3 flex flex-row justify-center flex-wrap"
+>
+          
+</div>,
+      ],
+      "className": "",
+      "style": Object {
+        "zIndex": 1,
+      },
+    },
+    "ref": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="block-headline text-peach center"
+>
+              ""
+</span>,
+            <Image
+              alt=""
+              bg={false}
+              className="col-3 mt4 mb2"
+              onImgLoad={[Function]}
+              src=""
+              style={Object {}}
+/>,
+          ],
+          "className": "mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "\\"\\"",
+              "className": "block-headline text-peach center",
+            },
+            "ref": null,
+            "rendered": "\\"\\"",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "",
+              "bg": false,
+              "children": null,
+              "className": "col-3 mt4 mb2",
+              "onImgLoad": [Function],
+              "src": "",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "p3 flex flex-row justify-center flex-wrap",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center"
+>
+            <span
+                        className="block-headline text-peach center"
+            >
+                        ""
+            </span>
+            <Image
+                        alt=""
+                        bg={false}
+                        className="col-3 mt4 mb2"
+                        onImgLoad={[Function]}
+                        src=""
+                        style={Object {}}
+            />
+</div>,
+          <div
+            className="p3 flex flex-row justify-center flex-wrap"
+>
+            
+</div>,
+        ],
+        "className": "",
+        "style": Object {
+          "zIndex": 1,
+        },
+      },
+      "ref": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="block-headline text-peach center"
+>
+                ""
+</span>,
+              <Image
+                alt=""
+                bg={false}
+                className="col-3 mt4 mb2"
+                onImgLoad={[Function]}
+                src=""
+                style={Object {}}
+/>,
+            ],
+            "className": "mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "\\"\\"",
+                "className": "block-headline text-peach center",
+              },
+              "ref": null,
+              "rendered": "\\"\\"",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": "",
+                "bg": false,
+                "children": null,
+                "className": "col-3 mt4 mb2",
+                "onImgLoad": [Function],
+                "src": "",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "p3 flex flex-row justify-center flex-wrap",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressBlock
+    drip={false}
+    pressItems={Object {}}
+    setRef={[Function]}
+    z={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center"
+>
+          <span
+                    className="block-headline text-peach center"
+          >
+                    ""
+          </span>
+          <Image
+                    alt=""
+                    bg={false}
+                    className="col-3 mt4 mb2"
+                    onImgLoad={[Function]}
+                    src=""
+                    style={Object {}}
+          />
+</div>,
+        <div
+          className="p3 flex flex-row justify-center flex-wrap"
+>
+          
+</div>,
+      ],
+      "className": "",
+      "style": Object {
+        "zIndex": 1,
+      },
+    },
+    "ref": [Function],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span
+              className="block-headline text-peach center"
+>
+              ""
+</span>,
+            <Image
+              alt=""
+              bg={false}
+              className="col-3 mt4 mb2"
+              onImgLoad={[Function]}
+              src=""
+              style={Object {}}
+/>,
+          ],
+          "className": "mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "\\"\\"",
+              "className": "block-headline text-peach center",
+            },
+            "ref": null,
+            "rendered": "\\"\\"",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "",
+              "bg": false,
+              "children": null,
+              "className": "col-3 mt4 mb2",
+              "onImgLoad": [Function],
+              "src": "",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "p3 flex flex-row justify-center flex-wrap",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center"
+>
+            <span
+                        className="block-headline text-peach center"
+            >
+                        ""
+            </span>
+            <Image
+                        alt=""
+                        bg={false}
+                        className="col-3 mt4 mb2"
+                        onImgLoad={[Function]}
+                        src=""
+                        style={Object {}}
+            />
+</div>,
+          <div
+            className="p3 flex flex-row justify-center flex-wrap"
+>
+            
+</div>,
+        ],
+        "className": "",
+        "style": Object {
+          "zIndex": 1,
+        },
+      },
+      "ref": [Function],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span
+                className="block-headline text-peach center"
+>
+                ""
+</span>,
+              <Image
+                alt=""
+                bg={false}
+                className="col-3 mt4 mb2"
+                onImgLoad={[Function]}
+                src=""
+                style={Object {}}
+/>,
+            ],
+            "className": "mx-auto my4 px2 col-12 md-col-6 flex flex-column items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "\\"\\"",
+                "className": "block-headline text-peach center",
+              },
+              "ref": null,
+              "rendered": "\\"\\"",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": "",
+                "bg": false,
+                "children": null,
+                "className": "col-3 mt4 mb2",
+                "onImgLoad": [Function],
+                "src": "",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "p3 flex flex-row justify-center flex-wrap",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
