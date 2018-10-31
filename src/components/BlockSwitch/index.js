@@ -16,6 +16,7 @@ import ImageVideoCarousel from 'components/ImageVideoCarousel';
 import FAQBlock from 'components/FAQBlock';
 import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import AvailableLocations from 'components/AvailableLocations';
+import PressBlock from 'components/PressBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -58,6 +59,8 @@ const BlockSwitch = props => {
           return <ProductWhatsIncluded {...props} drip={drip} />;
         case 'Available Locations Block':
           return <AvailableLocations {...props} drip={drip} />;
+        case 'Press Block':
+          return <PressBlock {...props} drip={drip} />;
         default:
           return null;
       }

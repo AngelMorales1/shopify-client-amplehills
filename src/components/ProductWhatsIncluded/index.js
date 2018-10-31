@@ -108,8 +108,6 @@ const ProductWhatsIncluded = ({
   );
 };
 
-export default ProductWhatsIncluded;
-
 ProductWhatsIncluded.propTypes = {
   block: PropTypes.shape({
     fields: PropTypes.shape({
@@ -161,3 +159,5 @@ ProductWhatsIncluded.defaultProps = {
   setRef: () => {},
   wholesaleProducts: {}
 };
+
+export default ProductWhatsIncluded;

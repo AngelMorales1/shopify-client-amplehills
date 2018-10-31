@@ -12,7 +12,6 @@ import LocationsLandingContainer from 'containers/LocationsLandingContainer';
 import ContactUsContainer from 'containers/ContactUsContainer';
 import Cart from 'components/Cart';
 import GenericPageContainer from 'containers/GenericPageContainer';
-import PressPageContainer from 'containers/PressPageContainer';
 import EventDetailContainer from 'containers/EventDetailContainer';
 import LocationDetailContainer from 'containers/LocationDetailContainer';
 import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
@@ -61,12 +60,11 @@ const Routes = ({ location }) => (
     <Route path="/cart" component={Cart} />
     <Route path="/privacy-policy" component={GenericPageContainer} />
     <Route path="/web-accessibility" component={GenericPageContainer} />
-    <Route path="/press" component={PressPageContainer} />
+    <Route path="/press" component={GenericPageContainer} />
     {isStaging() ? (
       <Route path="/style-guide" component={GenericPageContainer} />
     ) : null}
     <Route path="/our-story" component={GenericPageContainer} />
-    <Route path="/press" component={PressPageContainer} />
     <Route path="/classes-and-socials" component={GenericPageContainer} />
     <Route path="/ice-cream-classes" component={GenericPageContainer} />
     <Route path="/ice-cream-socials" component={GenericPageContainer} />
