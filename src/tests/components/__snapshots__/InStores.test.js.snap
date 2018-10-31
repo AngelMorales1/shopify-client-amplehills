@@ -1,0 +1,1476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <InStores
+    localRetailers={
+        Object {
+            "bar": Object {
+              "address": "bar",
+              "city": "bar",
+              "filter": "bar",
+              "index": 1,
+              "number": "bar",
+              "state": "bar",
+              "title": "bar",
+              "uuid": "bar",
+              "zip": "bar",
+            },
+            "foo": Object {
+              "address": "foo",
+              "city": "foo",
+              "filter": "foo",
+              "index": 0,
+              "number": "foo",
+              "state": "foo",
+              "title": "foo",
+              "uuid": "foo",
+              "zip": "foo",
+            },
+          }
+    }
+    text="foo"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip"
+>
+          <h2
+                    className="block-headline center mb3"
+          >
+                    Local Retailers
+          </h2>
+          <div
+                    className="markdown-block center text-container-width"
+                    dangerouslySetInnerHTML={
+                              Object {
+                                        "__html": "<p>foo</p>
+                              ",
+                                      }
+                    }
+          />
+          <div
+                    className="flex flex-row"
+          >
+                    <Button
+                              className="m1"
+                              color="madison-blue"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="FOO"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary-small"
+                    />
+                    <Button
+                              className="m1"
+                              color="madison-blue"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="BAR"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary-small"
+                    />
+          </div>
+</div>,
+        <div
+          className="mt3 py4 px3 flex flex-column items-center"
+>
+          <div
+                    className="flex form-container-width justify-between w100 my2 p3"
+          >
+                    <div
+                              className=""
+                    >
+                              <p
+                                        className="bold mb1"
+                              >
+                                        foo
+                              </p>
+                              <p>
+                                        foo, foo, foo foo
+                              </p>
+                    </div>
+                    <Button
+                              className=""
+                              color="peach"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="foo"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary-small"
+                    />
+          </div>
+          <div
+                    className="flex form-container-width justify-between w100 my2 p3"
+          >
+                    <div
+                              className=""
+                    >
+                              <p
+                                        className="bold mb1"
+                              >
+                                        bar
+                              </p>
+                              <p>
+                                        bar, bar, bar bar
+                              </p>
+                    </div>
+                    <Button
+                              className=""
+                              color="peach"
+                              disabled={false}
+                              fullWidth={false}
+                              hover="shadow"
+                              label="bar"
+                              onClick={[Function]}
+                              shadow={false}
+                              to=""
+                              type="button"
+                              variant="primary-small"
+                    />
+          </div>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="block-headline center mb3"
+>
+              Local Retailers
+</h2>,
+            <div
+              className="markdown-block center text-container-width"
+              dangerouslySetInnerHTML={
+                            Object {
+                                          "__html": "<p>foo</p>
+                            ",
+                                        }
+              }
+/>,
+            <div
+              className="flex flex-row"
+>
+              <Button
+                            className="m1"
+                            color="madison-blue"
+                            disabled={false}
+                            fullWidth={false}
+                            hover="shadow"
+                            label="FOO"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary-small"
+              />
+              <Button
+                            className="m1"
+                            color="madison-blue"
+                            disabled={false}
+                            fullWidth={false}
+                            hover="shadow"
+                            label="BAR"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary-small"
+              />
+</div>,
+          ],
+          "className": "bg-iceberg py4 px3 flex flex-column justify-center items-center drip",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Local Retailers",
+              "className": "block-headline center mb3",
+            },
+            "ref": null,
+            "rendered": "Local Retailers",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "markdown-block center text-container-width",
+              "dangerouslySetInnerHTML": Object {
+                "__html": "<p>foo</p>
+",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Button
+                  className="m1"
+                  color="madison-blue"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="FOO"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+                <Button
+                  className="m1"
+                  color="madison-blue"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="BAR"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+              ],
+              "className": "flex flex-row",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "FOO",
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "m1",
+                  "color": "madison-blue",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "FOO",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "BAR",
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "m1",
+                  "color": "madison-blue",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "BAR",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="flex form-container-width justify-between w100 my2 p3"
+>
+              <div
+                            className=""
+              >
+                            <p
+                                          className="bold mb1"
+                            >
+                                          foo
+                            </p>
+                            <p>
+                                          foo, foo, foo foo
+                            </p>
+              </div>
+              <Button
+                            className=""
+                            color="peach"
+                            disabled={false}
+                            fullWidth={false}
+                            hover="shadow"
+                            label="foo"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary-small"
+              />
+</div>,
+            <div
+              className="flex form-container-width justify-between w100 my2 p3"
+>
+              <div
+                            className=""
+              >
+                            <p
+                                          className="bold mb1"
+                            >
+                                          bar
+                            </p>
+                            <p>
+                                          bar, bar, bar bar
+                            </p>
+              </div>
+              <Button
+                            className=""
+                            color="peach"
+                            disabled={false}
+                            fullWidth={false}
+                            hover="shadow"
+                            label="bar"
+                            onClick={[Function]}
+                            shadow={false}
+                            to=""
+                            type="button"
+                            variant="primary-small"
+              />
+</div>,
+          ],
+          "className": "mt3 py4 px3 flex flex-column items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "foo",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className=""
+>
+                  <p
+                                    className="bold mb1"
+                  >
+                                    foo
+                  </p>
+                  <p>
+                                    foo, foo, foo foo
+                  </p>
+</div>,
+                <Button
+                  className=""
+                  color="peach"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="foo"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+              ],
+              "className": "flex form-container-width justify-between w100 my2 p3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="bold mb1"
+>
+                      foo
+</p>,
+                    <p>
+                      foo, foo, foo foo
+</p>,
+                  ],
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "foo",
+                      "className": "bold mb1",
+                    },
+                    "ref": null,
+                    "rendered": "foo",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "foo, foo, foo foo",
+                    },
+                    "ref": null,
+                    "rendered": "foo, foo, foo foo",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "",
+                  "color": "peach",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "foo",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": "bar",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className=""
+>
+                  <p
+                                    className="bold mb1"
+                  >
+                                    bar
+                  </p>
+                  <p>
+                                    bar, bar, bar bar
+                  </p>
+</div>,
+                <Button
+                  className=""
+                  color="peach"
+                  disabled={false}
+                  fullWidth={false}
+                  hover="shadow"
+                  label="bar"
+                  onClick={[Function]}
+                  shadow={false}
+                  to=""
+                  type="button"
+                  variant="primary-small"
+/>,
+              ],
+              "className": "flex form-container-width justify-between w100 my2 p3",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="bold mb1"
+>
+                      bar
+</p>,
+                    <p>
+                      bar, bar, bar bar
+</p>,
+                  ],
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "bar",
+                      "className": "bold mb1",
+                    },
+                    "ref": null,
+                    "rendered": "bar",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "bar, bar, bar bar",
+                    },
+                    "ref": null,
+                    "rendered": "bar, bar, bar bar",
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": null,
+                  "className": "",
+                  "color": "peach",
+                  "disabled": false,
+                  "fullWidth": false,
+                  "hover": "shadow",
+                  "label": "bar",
+                  "onClick": [Function],
+                  "shadow": false,
+                  "to": "",
+                  "type": "button",
+                  "variant": "primary-small",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip"
+>
+            <h2
+                        className="block-headline center mb3"
+            >
+                        Local Retailers
+            </h2>
+            <div
+                        className="markdown-block center text-container-width"
+                        dangerouslySetInnerHTML={
+                                    Object {
+                                                "__html": "<p>foo</p>
+                                    ",
+                                              }
+                        }
+            />
+            <div
+                        className="flex flex-row"
+            >
+                        <Button
+                                    className="m1"
+                                    color="madison-blue"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="FOO"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+                        <Button
+                                    className="m1"
+                                    color="madison-blue"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="BAR"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
+</div>,
+          <div
+            className="mt3 py4 px3 flex flex-column items-center"
+>
+            <div
+                        className="flex form-container-width justify-between w100 my2 p3"
+            >
+                        <div
+                                    className=""
+                        >
+                                    <p
+                                                className="bold mb1"
+                                    >
+                                                foo
+                                    </p>
+                                    <p>
+                                                foo, foo, foo foo
+                                    </p>
+                        </div>
+                        <Button
+                                    className=""
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="foo"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
+            <div
+                        className="flex form-container-width justify-between w100 my2 p3"
+            >
+                        <div
+                                    className=""
+                        >
+                                    <p
+                                                className="bold mb1"
+                                    >
+                                                bar
+                                    </p>
+                                    <p>
+                                                bar, bar, bar bar
+                                    </p>
+                        </div>
+                        <Button
+                                    className=""
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="bar"
+                                    onClick={[Function]}
+                                    shadow={false}
+                                    to=""
+                                    type="button"
+                                    variant="primary-small"
+                        />
+            </div>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline center mb3"
+>
+                Local Retailers
+</h2>,
+              <div
+                className="markdown-block center text-container-width"
+                dangerouslySetInnerHTML={
+                                Object {
+                                                "__html": "<p>foo</p>
+                                ",
+                                              }
+                }
+/>,
+              <div
+                className="flex flex-row"
+>
+                <Button
+                                className="m1"
+                                color="madison-blue"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="FOO"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+                <Button
+                                className="m1"
+                                color="madison-blue"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="BAR"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
+            ],
+            "className": "bg-iceberg py4 px3 flex flex-column justify-center items-center drip",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Local Retailers",
+                "className": "block-headline center mb3",
+              },
+              "ref": null,
+              "rendered": "Local Retailers",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "markdown-block center text-container-width",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "<p>foo</p>
+",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Button
+                    className="m1"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="FOO"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                  <Button
+                    className="m1"
+                    color="madison-blue"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="BAR"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                ],
+                "className": "flex flex-row",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "FOO",
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "m1",
+                    "color": "madison-blue",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "FOO",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "BAR",
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "m1",
+                    "color": "madison-blue",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "BAR",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="flex form-container-width justify-between w100 my2 p3"
+>
+                <div
+                                className=""
+                >
+                                <p
+                                                className="bold mb1"
+                                >
+                                                foo
+                                </p>
+                                <p>
+                                                foo, foo, foo foo
+                                </p>
+                </div>
+                <Button
+                                className=""
+                                color="peach"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="foo"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
+              <div
+                className="flex form-container-width justify-between w100 my2 p3"
+>
+                <div
+                                className=""
+                >
+                                <p
+                                                className="bold mb1"
+                                >
+                                                bar
+                                </p>
+                                <p>
+                                                bar, bar, bar bar
+                                </p>
+                </div>
+                <Button
+                                className=""
+                                color="peach"
+                                disabled={false}
+                                fullWidth={false}
+                                hover="shadow"
+                                label="bar"
+                                onClick={[Function]}
+                                shadow={false}
+                                to=""
+                                type="button"
+                                variant="primary-small"
+                />
+</div>,
+            ],
+            "className": "mt3 py4 px3 flex flex-column items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "foo",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className=""
+>
+                    <p
+                                        className="bold mb1"
+                    >
+                                        foo
+                    </p>
+                    <p>
+                                        foo, foo, foo foo
+                    </p>
+</div>,
+                  <Button
+                    className=""
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="foo"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                ],
+                "className": "flex form-container-width justify-between w100 my2 p3",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="bold mb1"
+>
+                        foo
+</p>,
+                      <p>
+                        foo, foo, foo foo
+</p>,
+                    ],
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "foo",
+                        "className": "bold mb1",
+                      },
+                      "ref": null,
+                      "rendered": "foo",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "foo, foo, foo foo",
+                      },
+                      "ref": null,
+                      "rendered": "foo, foo, foo foo",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "",
+                    "color": "peach",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "foo",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": "bar",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className=""
+>
+                    <p
+                                        className="bold mb1"
+                    >
+                                        bar
+                    </p>
+                    <p>
+                                        bar, bar, bar bar
+                    </p>
+</div>,
+                  <Button
+                    className=""
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="bar"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+/>,
+                ],
+                "className": "flex form-container-width justify-between w100 my2 p3",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="bold mb1"
+>
+                        bar
+</p>,
+                      <p>
+                        bar, bar, bar bar
+</p>,
+                    ],
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "bar",
+                        "className": "bold mb1",
+                      },
+                      "ref": null,
+                      "rendered": "bar",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "bar, bar, bar bar",
+                      },
+                      "ref": null,
+                      "rendered": "bar, bar, bar bar",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "className": "",
+                    "color": "peach",
+                    "disabled": false,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "bar",
+                    "onClick": [Function],
+                    "shadow": false,
+                    "to": "",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <InStores
+    localRetailers={Object {}}
+    text=""
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip"
+>
+          <h2
+                    className="block-headline center mb3"
+          >
+                    Local Retailers
+          </h2>
+          <div
+                    className="markdown-block center text-container-width"
+                    dangerouslySetInnerHTML={
+                              Object {
+                                        "__html": "",
+                                      }
+                    }
+          />
+          <div
+                    className="flex flex-row"
+          >
+                    
+          </div>
+</div>,
+        <div
+          className="mt3 py4 px3 flex flex-column items-center"
+>
+          
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2
+              className="block-headline center mb3"
+>
+              Local Retailers
+</h2>,
+            <div
+              className="markdown-block center text-container-width"
+              dangerouslySetInnerHTML={
+                            Object {
+                                          "__html": "",
+                                        }
+              }
+/>,
+            <div
+              className="flex flex-row"
+>
+              
+</div>,
+          ],
+          "className": "bg-iceberg py4 px3 flex flex-column justify-center items-center drip",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Local Retailers",
+              "className": "block-headline center mb3",
+            },
+            "ref": null,
+            "rendered": "Local Retailers",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "markdown-block center text-container-width",
+              "dangerouslySetInnerHTML": Object {
+                "__html": "",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [],
+              "className": "flex flex-row",
+            },
+            "ref": null,
+            "rendered": Array [],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "mt3 py4 px3 flex flex-column items-center",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip"
+>
+            <h2
+                        className="block-headline center mb3"
+            >
+                        Local Retailers
+            </h2>
+            <div
+                        className="markdown-block center text-container-width"
+                        dangerouslySetInnerHTML={
+                                    Object {
+                                                "__html": "",
+                                              }
+                        }
+            />
+            <div
+                        className="flex flex-row"
+            >
+                        
+            </div>
+</div>,
+          <div
+            className="mt3 py4 px3 flex flex-column items-center"
+>
+            
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2
+                className="block-headline center mb3"
+>
+                Local Retailers
+</h2>,
+              <div
+                className="markdown-block center text-container-width"
+                dangerouslySetInnerHTML={
+                                Object {
+                                                "__html": "",
+                                              }
+                }
+/>,
+              <div
+                className="flex flex-row"
+>
+                
+</div>,
+            ],
+            "className": "bg-iceberg py4 px3 flex flex-column justify-center items-center drip",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Local Retailers",
+                "className": "block-headline center mb3",
+              },
+              "ref": null,
+              "rendered": "Local Retailers",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "markdown-block center text-container-width",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [],
+                "className": "flex flex-row",
+              },
+              "ref": null,
+              "rendered": Array [],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "mt3 py4 px3 flex flex-column items-center",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
