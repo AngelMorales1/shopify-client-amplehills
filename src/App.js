@@ -23,6 +23,7 @@ import MiniCart from 'components/MiniCart';
 import MobileNavModal from 'components/MobileNavModal';
 import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
+import FooterNav from 'components/FooterNav';
 import Alert from 'components/Alert';
 
 import 'basscss/css/basscss.min.css';
@@ -93,6 +94,7 @@ class App extends Component {
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
+            <FooterNav pathname={get(this, 'props.location.pathname')} />
             <Footer
               locations={locations}
               footerIllustration={footerIllustration}

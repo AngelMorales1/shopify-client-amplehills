@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import RoutesWithoutNewsletter from 'constants/RoutesWithoutNewsletter';
+import RoutesWithoutFooterExtras from 'constants/RoutesWithoutFooterExtras';
 
 import styles from './FooterNewsletter.scss';
 import { Image, Button, TextField, FormFlash } from 'components/base';
@@ -13,7 +13,7 @@ class FooterNewsletter extends Component {
   };
 
   routeOmitsNewsletter = () => {
-    return RoutesWithoutNewsletter.includes(this.props.pathname);
+    return RoutesWithoutFooterExtras.includes(this.props.pathname);
   };
 
   render() {
