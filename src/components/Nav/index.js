@@ -10,6 +10,7 @@ import {
   openMobileNav,
   closeMobileNav
 } from 'state/actions/ui/mobileNavUIActions';
+import alertIsActive from 'state/selectors/alertIsActive';
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
@@ -17,6 +18,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
+import ShopOnlineNavDropdown from 'components/ShopOnlineNavDropdown';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -61,135 +63,147 @@ class Nav extends Component {
   };
 
   render() {
-    const { logo, profileIcon } = this.props;
+    const { logo, profileIcon, productLanding, alertIsActive } = this.props;
     const cartIsEmpty = this.props.totalItems === 0;
 
     return (
-      <div
-        className={cx(
-          styles['Nav'],
-          this.props.alertIsActive ? null : 't0',
-          'z-nav w100 fixed l0 flex bg-peach text-white items-center transition-fade-in'
-        )}
-      >
-        <div className="col col-4 md-col-5 flex items-center justify-start">
-          {this.state.currentBreakpoint === 'medium' ? (
-            <Fragment>
-              <NavLink
-                exact
-                to="/locations"
-                className="link-text center text-hover"
-              >
-                Locations
-              </NavLink>
-              <NavLink
-                exact
-                to="/flavors"
-                className="text-hover ml3 link-text center xs-hide sm-hide"
-              >
-                Flavors
-              </NavLink>
-              <NavLink
-                exact
-                to="/events"
-                className="text-hover ml3 link-text center xs-hide sm-hide"
-              >
-                Events
-              </NavLink>
-              <NavLink
-                exact
-                to="/classes-and-socials"
-                className="text-hover ml3 link-text center xs-hide sm-hide"
-              >
-                Classes & Socials
-              </NavLink>
-              <NavLink
-                exact
-                to="/parties"
-                className="text-hover ml3 link-text center xs-hide sm-hide"
-              >
-                Parties
-              </NavLink>
-            </Fragment>
-          ) : (
-            <Button variant="style-none" onClick={() => this.toggleMobileNav()}>
-              <Image
-                alt="menu icon"
-                src="/assets/images/icon-mobile-menu.svg"
-              />
-            </Button>
-          )}
-        </div>
+      <div className="w100 relative">
         <div
           className={cx(
-            styles['logo-container'],
-            'col col-4 md-col-4 h100 flex items-center'
+            styles['Nav'],
+            this.props.alertIsActive ? null : 't0',
+            'z-nav w100 fixed l0 flex bg-peach text-white items-center transition-fade-in'
           )}
         >
-          <NavLink exact to="/" className="flex justify-center">
-            <Image
-              className={cx(styles['logo-container__logo'], 'col-12 md-col-10')}
-              alt="Click the Ample Hills Logo to return to the homepage"
-              src={contentfulImgUtil(
-                get(logo, 'fields.file.url', ''),
-                '500',
-                'png'
-              )}
-            />
-          </NavLink>
-        </div>
-        <div className="col col-4 md-col-5 flex items-center justify-end">
-          {this.state.currentBreakpoint === 'medium' ? (
-            <Fragment>
-              <NavLink
-                exact
-                to="/our-story"
-                className="text-hover link-text center mr2"
-              >
-                Our Story
-              </NavLink>
-              <NavLink exact to="/profile" className="mr2 link-text center">
-                <Image
-                  className="icon"
-                  src={contentfulImgUtil(
-                    get(
-                      profileIcon,
-                      'fields.file.url',
-                      '/assets/images/bubble-icon.svg'
-                    ),
-                    '200',
-                    'png'
-                  )}
-                />
-              </NavLink>
+          <div className="col col-4 md-col-5 flex items-center justify-start">
+            {this.state.currentBreakpoint === 'medium' ? (
+              <Fragment>
+                <NavLink
+                  exact
+                  to="/locations"
+                  className="link-text center text-hover"
+                >
+                  Locations
+                </NavLink>
+                <NavLink
+                  exact
+                  to="/flavors"
+                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                >
+                  Flavors
+                </NavLink>
+                <NavLink
+                  exact
+                  to="/events"
+                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                >
+                  Events
+                </NavLink>
+                <NavLink
+                  exact
+                  to="/classes-and-socials"
+                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                >
+                  Classes & Socials
+                </NavLink>
+                <NavLink
+                  exact
+                  to="/parties"
+                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                >
+                  Parties
+                </NavLink>
+              </Fragment>
+            ) : (
               <Button
-                className="mr2"
-                to="/products"
-                variant="primary-small"
-                color="white-peach"
-                label="Shop Online"
-                hover="clear-white-border"
-              />
-            </Fragment>
-          ) : (
-            <Fragment>
-              <NavLink exact to="/profile" className="link-text center mx2">
-                <Image src="/assets/images/icon-profile.svg" />
-              </NavLink>
-            </Fragment>
-          )}
-          <Button
-            className={cx(
-              styles['Nav__cart-button'],
-              'small flex items-center justify-center'
+                variant="style-none"
+                onClick={() => this.toggleMobileNav()}
+              >
+                <Image
+                  alt="menu icon"
+                  src="/assets/images/icon-mobile-menu.svg"
+                />
+              </Button>
             )}
-            variant="circle"
-            color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
-            to="/cart"
-            label={this.props.totalItems.toString()}
-            hover="clear-white-border"
-          />
+          </div>
+          <div
+            className={cx(
+              styles['logo-container'],
+              'col col-4 md-col-4 h100 flex items-center'
+            )}
+          >
+            <NavLink exact to="/" className="flex justify-center">
+              <Image
+                className={cx(
+                  styles['logo-container__logo'],
+                  'col-12 md-col-10'
+                )}
+                alt="Click the Ample Hills Logo to return to the homepage"
+                src={contentfulImgUtil(
+                  get(logo, 'fields.file.url', ''),
+                  '500',
+                  'png'
+                )}
+              />
+            </NavLink>
+          </div>
+          <div className="col col-4 md-col-5 flex items-center justify-end">
+            {this.state.currentBreakpoint === 'medium' ? (
+              <Fragment>
+                <NavLink
+                  exact
+                  to="/our-story"
+                  className="text-hover link-text center mr2"
+                >
+                  Our Story
+                </NavLink>
+                <NavLink exact to="/profile" className="mr2 link-text center">
+                  <Image
+                    className="icon"
+                    src={contentfulImgUtil(
+                      get(
+                        profileIcon,
+                        'fields.file.url',
+                        '/assets/images/bubble-icon.svg'
+                      ),
+                      '200',
+                      'png'
+                    )}
+                  />
+                </NavLink>
+                <Button
+                  className="mr2"
+                  to="/products"
+                  variant="primary-small"
+                  color="white-peach"
+                  label="Shop Online"
+                  hover="clear-white-border"
+                />
+              </Fragment>
+            ) : (
+              <Fragment>
+                <NavLink exact to="/profile" className="link-text center mx2">
+                  <Image src="/assets/images/icon-profile.svg" />
+                </NavLink>
+              </Fragment>
+            )}
+            <Button
+              className={cx(
+                styles['Nav__cart-button'],
+                'small flex items-center justify-center'
+              )}
+              variant="circle"
+              color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
+              to="/cart"
+              label={this.props.totalItems.toString()}
+              hover="clear-white-border"
+            />
+          </div>
         </div>
+        <ShopOnlineNavDropdown
+          productLanding={productLanding}
+          alertIsActive={alertIsActive}
+        />
       </div>
     );
   }
@@ -226,7 +240,9 @@ const mapStateToProps = state => {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
-    totalItems: totalItems(state)
+    totalItems: totalItems(state),
+    productLanding: get(state, 'products.productLanding.items[0].fields', {}),
+    alertIsActive: alertIsActive(state)
   };
 };
 

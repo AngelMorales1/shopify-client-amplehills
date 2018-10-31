@@ -1,0 +1,35 @@
+@import 'settings', 'typography', 'src/styles/utils';
+
+.ShopOnlineNavDropdown {
+  top: $header-height-desktop;
+  height: spacing(70);
+
+  &--with-alert {
+    top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
+  }
+
+  &__card {
+    width: spacing(42);
+    height: spacing(55);
+    border-radius: radius('xs');
+    overflow: hidden;
+  }
+
+  &__image--container {
+    height: 70%;
+  }
+
+  &__image {
+    object-fit: contain;
+  }
+
+  &__card-text-container {
+    font-size: $font-2;
+    line-height: $font-4;
+    height: 20%;
+  }
+
+  &__merch-container {
+    height: spacing(55);
+  }
+}

@@ -6,7 +6,8 @@ import { getLocationData } from 'state/actions/locationsActions';
 import {
   fetchShopifyProducts,
   fetchContentfulProducts,
-  fetchContentfulMerch
+  fetchContentfulMerch,
+  fetchProductLanding
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
 import { getFlavors } from 'state/actions/flavorsActions';
@@ -24,6 +25,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
         dispatch(fetchContentfulProducts()),
+        dispatch(fetchProductLanding()),
         dispatch(getEvents()),
         dispatch(fetchAllNewsArticles()),
         dispatch(fetchContentfulMerch()),
