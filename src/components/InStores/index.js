@@ -45,7 +45,7 @@ class InStores extends Component {
     const { activeFilter, currentBreakpoint } = this.state;
     const { medium } = Global.breakpoints;
     const localRetailersValues = Object.values(localRetailers);
-    const uniqueFilter = localRetailersValues.reduce(
+    const uniqueFilters = localRetailersValues.reduce(
       (uniqueFilters, localRetailer) => {
         const filter = localRetailer.filter.toUpperCase();
         if (!uniqueFilters[filter]) {
@@ -75,7 +75,7 @@ class InStores extends Component {
           />
           <div className="flex flex-row justify-center flex-wrap w100">
             {currentBreakpoint === medium.label ? (
-              Object.keys(uniqueFilter).map(filter => (
+              Object.keys(uniqueFilters).map(filter => (
                 <Button
                   key={filter}
                   onClick={() => this.handleFilterButtonClick(filter)}
@@ -100,7 +100,7 @@ class InStores extends Component {
                 variant="secondary"
                 value={this.state.activeFilter}
                 options={['All']
-                  .concat(Object.keys(uniqueFilter))
+                  .concat(Object.keys(uniqueFilters))
                   .map(filter => {
                     return { label: filter, value: filter };
                   })}
