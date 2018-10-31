@@ -143,12 +143,6 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export { App };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
-
 App.propTypes = {
   globalSettings: PropTypes.shape({
     facebookLink: PropTypes.string,
@@ -164,3 +158,9 @@ App.defaultProps = {
   locations: [],
   forceErrorPage: false
 };
+
+export { App };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
