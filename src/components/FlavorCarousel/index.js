@@ -10,13 +10,13 @@ const FlavorCarousel = ({ block, z, ...props }) => {
   const setRef = get(props, 'setRef', () => {});
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
-  const showCardNumber = get(fields, 'showCardNumber', null);
+  const numberOfCardToRender = get(fields, 'showCardNumber', null);
   const flavorItems = get(block, 'fields.flavorItems', []);
   const selectedFlavorItems =
-    typeof showCardNumber === 'number'
-      ? flavorItems.slice(0, showCardNumber)
+    typeof numberOfCardToRender === 'number'
+      ? flavorItems.slice(0, numberOfCardToRender)
       : flavorItems;
-  const backdroundColor = get(fields, 'color', 'yellow');
+  const backgroundColor = get(fields, 'color', 'yellow');
 
   return (
     <div
@@ -24,7 +24,7 @@ const FlavorCarousel = ({ block, z, ...props }) => {
       style={{ zIndex: z }}
       className={cx(
         styles['FlavorCarousel'],
-        styles[`FlavorCarousel--${backdroundColor}`],
+        styles[`FlavorCarousel--${backgroundColor}`],
         { drip: isDripOn }
       )}
     >
