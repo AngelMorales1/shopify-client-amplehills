@@ -7,6 +7,7 @@ import { fetchShopifyWholesaleProducts } from 'state/actions/wholesaleActions';
 import events from 'state/selectors/events';
 import wholesaleProducts from 'state/selectors/wholesaleProducts';
 import flavors from 'state/selectors/flavors';
+import cardsBlock from 'state/selectors/cardsBlock';
 
 import get from 'utils/get';
 
@@ -53,7 +54,8 @@ const mapStateToProps = state => {
     ),
     events: events(state),
     wholesaleProducts: wholesaleProducts(state),
-    flavors: flavors(state)
+    flavors: flavors(state),
+    cardsBlock: cardsBlock(get(state, 'genericPage.genericPage.items[0]', {}))
   };
 };
 

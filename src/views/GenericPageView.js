@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
+import CardsBlock from 'components/CardsBlock';
 
 import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
@@ -10,7 +11,7 @@ class GenericPageView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, blocks, subNavIsOn } = this.props;
+    const { model, blocks, subNavIsOn, cardsBlock } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 
@@ -27,6 +28,7 @@ class GenericPageView extends Component {
 
       return menu;
     }, []);
+    const cardsBlockHasData = Object.values(cardsBlock).length;
 
     return (
       <Fragment>
@@ -54,6 +56,7 @@ class GenericPageView extends Component {
                 />
               );
             })}
+          {cardsBlockHasData ? <CardsBlock cardsBlock={cardsBlock} /> : null}
         </div>
       </Fragment>
     );
