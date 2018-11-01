@@ -8,8 +8,8 @@ import styles from './CardsBlock.scss';
 import { Button, Image } from 'components/base';
 
 const CardsBlock = ({ cardsBlock }) => {
-  const cardBlock1 = get(cardsBlock, 'cardBlock1', null);
-  const cardBlock2 = get(cardsBlock, 'cardBlock2', null);
+  const cardBlock1 = get(cardsBlock, 'cardBlock1', {});
+  const cardBlock2 = get(cardsBlock, 'cardBlock2', {});
 
   return (
     <div
@@ -18,7 +18,7 @@ const CardsBlock = ({ cardsBlock }) => {
         'w100 p3 mt4 flex content-width mx-auto'
       )}
     >
-      {cardBlock1 ? (
+      {Object.values(cardBlock1).length ? (
         <div className="col-12 md-col-6">
           <Button
             to={cardBlock1.link}
@@ -41,7 +41,7 @@ const CardsBlock = ({ cardsBlock }) => {
           </Button>
         </div>
       ) : null}
-      {cardBlock2 ? (
+      {Object.values(cardBlock2).length ? (
         <div className="col-12 md-col-6">
           <Button
             to={cardBlock2.link}
@@ -68,8 +68,24 @@ const CardsBlock = ({ cardsBlock }) => {
   );
 };
 
-CardsBlock.propTypes = {};
+CardsBlock.propTypes = {
+  cardBlock1: PropTypes.shape({
+    color: PropTypes.string,
+    image: PropTypes.string,
+    link: PropTypes.string,
+    text: PropTypes.string
+  }),
+  cardBlock2: PropTypes.shape({
+    color: PropTypes.string,
+    image: PropTypes.string,
+    link: PropTypes.string,
+    text: PropTypes.string
+  })
+};
 
-CardsBlock.defaultProps = {};
+CardsBlock.defaultProps = {
+  cardBlock1: {},
+  cardBlock2: {}
+};
 
 export default CardsBlock;
