@@ -110,9 +110,12 @@ ShallowWrapper {
                 />
         </div>
 </div>,
-      "className": "bg-pastel-green py4 px3 drip",
+      "className": "bg-pastel-green py4 px3",
+      "style": Object {
+        "zIndex": undefined,
+      },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Object {
       "instance": null,
       "key": undefined,
@@ -518,9 +521,12 @@ ShallowWrapper {
                     />
           </div>
 </div>,
-        "className": "bg-pastel-green py4 px3 drip",
+        "className": "bg-pastel-green py4 px3",
+        "style": Object {
+          "zIndex": undefined,
+        },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Object {
         "instance": null,
         "key": undefined,
@@ -965,9 +971,12 @@ ShallowWrapper {
                 />
         </div>
 </div>,
-      "className": "bg-pastel-green py4 px3 drip",
+      "className": "bg-pastel-green py4 px3",
+      "style": Object {
+        "zIndex": undefined,
+      },
     },
-    "ref": null,
+    "ref": [Function],
     "rendered": Object {
       "instance": null,
       "key": undefined,
@@ -1373,9 +1382,12 @@ ShallowWrapper {
                     />
           </div>
 </div>,
-        "className": "bg-pastel-green py4 px3 drip",
+        "className": "bg-pastel-green py4 px3",
+        "style": Object {
+          "zIndex": undefined,
+        },
       },
-      "ref": null,
+      "ref": [Function],
       "rendered": Object {
         "instance": null,
         "key": undefined,
