@@ -77,7 +77,7 @@ class Nav extends Component {
     const cartIsEmpty = this.props.totalItems === 0;
 
     return (
-      <div className="w100 relative">
+      <div className="w100">
         <div
           className={cx(
             styles['Nav'],

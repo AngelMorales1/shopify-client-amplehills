@@ -3,6 +3,7 @@
 .ShopOnlineNavDropdown {
   @extend .transition-dropdown-slide-down;
   display: none;
+  z-index: 750;
 
   &--active {
     display: inherit;

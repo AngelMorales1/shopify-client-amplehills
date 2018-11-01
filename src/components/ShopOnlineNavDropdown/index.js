@@ -25,7 +25,7 @@ const ShopOnlineNavDropdown = ({
         {
           [styles['ShopOnlineNavDropdown--active']]: shopOnlineDropdownIsOpen
         },
-        'relative z-nav'
+        'relative transition-dropdown-slide-down'
       )}
     >
       <div
