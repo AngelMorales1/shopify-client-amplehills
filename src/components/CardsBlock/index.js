@@ -33,8 +33,8 @@ const CardsBlock = ({ cardsBlock }) => {
               )}
             >
               <Image
-                className={cx(styles['CardsBlock__card-image'], 'col-4 mt2')}
-                src={cardBlock1.image}
+                className={cx(styles['CardsBlock__card-image'], 'mt2')}
+                src={contentfulImgUtil(cardBlock1.image, '300', 'png')}
               />
               <p className="py2">{cardBlock1.text}</p>
             </div>
@@ -56,8 +56,8 @@ const CardsBlock = ({ cardsBlock }) => {
               )}
             >
               <Image
-                className={cx(styles['CardsBlock__card-image'], 'col-4 mt2')}
-                src={cardBlock2.image}
+                className={cx(styles['CardsBlock__card-image'], 'mt2')}
+                src={contentfulImgUtil(cardBlock2.image, '300', 'png')}
               />
               <p className="py2">{cardBlock2.text}</p>
             </div>

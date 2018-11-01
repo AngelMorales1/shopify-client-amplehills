@@ -35,6 +35,11 @@
 
   &__card-image {
     height: 60%;
+    width: 60%;
     object-fit: contain;
+
+    @media ($medium-up) {
+      width: 40%;
+    }
   }
 }
