@@ -10,6 +10,7 @@ import events from 'state/selectors/events';
 import event from 'state/selectors/event';
 import checkout from 'state/selectors/checkout';
 import { IDLE } from 'constants/Status';
+import cardsBlock from 'state/selectors/cardsBlock';
 
 class EventDetailContainer extends ContainerBase {
   view = import('views/EventDetailView');

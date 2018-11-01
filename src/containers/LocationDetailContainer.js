@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getEvents } from 'state/actions/eventsActions';
 import events from 'state/selectors/events';
+import cardsBlock from 'state/selectors/cardsBlock';
 
 import get from 'utils/get';
 
@@ -21,12 +22,15 @@ class LocationDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
+  const selectedLocation = location(state, props);
+
   return {
-    location: location(state, props),
+    location: selectedLocation,
     locations: locations(state),
     locationGeoJSON: locationGeoJSON(state),
     blocks: get(location(state, props), 'contentBlocks', []),
-    events: events(state)
+    events: events(state),
+    cardsBlock: cardsBlock(selectedLocation)
   };
 };
 

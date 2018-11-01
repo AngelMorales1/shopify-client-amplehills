@@ -55,7 +55,9 @@ const mapStateToProps = state => {
     events: events(state),
     wholesaleProducts: wholesaleProducts(state),
     flavors: flavors(state),
-    cardsBlock: cardsBlock(get(state, 'genericPage.genericPage.items[0]', {}))
+    cardsBlock: cardsBlock(
+      get(state, 'genericPage.genericPage.items[0].fields', {})
+    )
   };
 };
 

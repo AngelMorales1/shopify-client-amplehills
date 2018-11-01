@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import MerchDetails from 'components/MerchDetails';
+import CardsBlock from 'components/CardsBlock';
 
 class MerchDetailView extends Component {
   render() {
-    const { model, merch, actions, checkout } = this.props;
+    const { model, merch, actions, checkout, cardsBlock } = this.props;
+
     if (model.isError) return <h1>Error</h1>;
 
-    return <MerchDetails merch={merch} actions={actions} checkout={checkout} />;
+    const cardsBlockHasData = Object.values(cardsBlock).length;
+
+    return (
+      <Fragment>
+        <MerchDetails merch={merch} actions={actions} checkout={checkout} />
+        {cardsBlockHasData ? <CardsBlock cardsBlock={cardsBlock} /> : null}
+      </Fragment>
+    );
   }
 }
 

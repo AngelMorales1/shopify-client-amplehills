@@ -8,19 +8,19 @@ const cardBlockHasDate = cardBlock => {
 };
 
 export default createSelector(
-  items => get(items, 'fields', {}),
-  fields => {
+  items => items,
+  items => {
     const cardBlock1 = {};
-    cardBlock1.text = get(fields, 'cardBlock1Text', '');
-    cardBlock1.link = get(fields, 'cardBlock1Link', '');
-    cardBlock1.color = get(fields, 'cardBlock1Color', '');
-    cardBlock1.image = get(fields, 'cardBlock1Image.fields.file.url', '');
+    cardBlock1.text = get(items, 'cardBlock1Text', '');
+    cardBlock1.link = get(items, 'cardBlock1Link', '');
+    cardBlock1.color = get(items, 'cardBlock1Color', '');
+    cardBlock1.image = get(items, 'cardBlock1Image.fields.file.url', '');
 
     const cardBlock2 = {};
-    cardBlock2.text = get(fields, 'cardBlock2Text', '');
-    cardBlock2.link = get(fields, 'cardBlock2Link', '');
-    cardBlock2.color = get(fields, 'cardBlock2Color', '');
-    cardBlock2.image = get(fields, 'cardBlock2Image.fields.file.url', '');
+    cardBlock2.text = get(items, 'cardBlock2Text', '');
+    cardBlock2.link = get(items, 'cardBlock2Link', '');
+    cardBlock2.color = get(items, 'cardBlock2Color', '');
+    cardBlock2.image = get(items, 'cardBlock2Image.fields.file.url', '');
 
     const cardBlock = {};
 

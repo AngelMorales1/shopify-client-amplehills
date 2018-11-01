@@ -6,6 +6,7 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
 import allMerchandise from 'state/selectors/allMerchandise';
 import merchByHandle from 'state/selectors/merchByHandle';
+import cardsBlock from 'state/selectors/cardsBlock';
 
 import get from 'utils/get';
 
@@ -16,11 +17,13 @@ class MerchDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
+  const selectedMerch = merchByHandle(state, props);
   return {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     allMerchandise: allMerchandise(state),
-    merch: merchByHandle(state, props)
+    merch: selectedMerch,
+    cardsBlock: cardsBlock(selectedMerch)
   };
 };
 
