@@ -1,0 +1,40 @@
+@import 'settings', 'src/styles/utils';
+
+.CardsBlock {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__card {
+    @extend .bg-dark-bay-blue;
+    height: spacing(85);
+  }
+
+  &__card--yellow {
+    @extend .bg-butter-yellow;
+  }
+
+  &__card--peach {
+    @extend .bg-sea-peach;
+  }
+
+  &__card--navy {
+    @extend .bg-navy;
+  }
+
+  &__card--blue {
+    @extend .bg-bay-blue;
+  }
+
+  &__card--purple {
+    @extend .bg-purple;
+  }
+
+  &__card-image {
+    height: 60%;
+    object-fit: contain;
+  }
+}
