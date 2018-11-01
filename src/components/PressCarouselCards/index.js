@@ -4,17 +4,25 @@ import get from 'utils/get';
 import cx from 'classnames';
 
 import styles from './PressCarouselCards.scss';
-import { Image, Button, HorizontalCarousel } from 'components/base';
+import { Image, Button } from 'components/base';
 
-const PressCarouselCards = ({ pressItemsInBlock, pressItems }) => {
-  const fields = get(pressItems, '');
+const PressCarouselCards = ({
+  pressItemsInBlock,
+  pressItems,
+  numberOfCardToRender
+}) => {
   const isCustomOrder = pressItemsInBlock.length;
+
   const selectedPressItems = isCustomOrder
     ? pressItemsInBlock
     : get(pressItems, 'fragments', []);
   let selectedPressItemsIds = selectedPressItems.map(fragment =>
     get(fragment[0], 'value', '')
   );
+  selectedPressItemsIds =
+    typeof numberOfCardToRender === 'number'
+      ? selectedPressItemsIds.slice(0, numberOfCardToRender)
+      : selectedPressItemsIds;
 
   return (
     <Fragment>
@@ -67,55 +75,19 @@ const PressCarouselCards = ({ pressItemsInBlock, pressItems }) => {
 };
 
 PressCarouselCards.propTypes = {
-  block: PropTypes.shape({
-    fields: PropTypes.shape({
-      buttonLabel: PropTypes.string,
-      buttonLink: PropTypes.string,
-      pressItems: PropTypes.shape({
-        fragments: PropTypes.arrayOf(PropTypes.array),
-        simpleFragments: PropTypes.object
-      }),
-      customOrder: PropTypes.bool,
-      drip: PropTypes.bool,
-      sortByLatest: PropTypes.bool,
-      title: PropTypes.string
-    }),
-    sys: PropTypes.shape({
-      id: PropTypes.string
-    })
-  }),
-  z: PropTypes.number,
+  pressItemsInBlock: PropTypes.object,
   pressItems: PropTypes.shape({
-    fragments: PropTypes.arrayOf(PropTypes.array),
+    fragments: PropTypes.array,
     simpleFragments: PropTypes.object
-  }),
-  setRef: PropTypes.func
+  })
 };
 
 PressCarouselCards.defaultProps = {
-  block: {
-    fields: {
-      buttonLabel: '',
-      buttonLink: '',
-      pressItems: {
-        fragments: [],
-        simpleFragments: {}
-      },
-      customOrder: false,
-      drip: false,
-      sortByLatest: true,
-      title: ''
-    },
-    sys: {
-      id: ''
-    }
-  },
-  z: 0,
+  pressItemsInBlock: {},
   pressItems: {
     fragments: [],
     simpleFragments: {}
-  },
-  setRef: () => {}
+  }
 };
 
 export default PressCarouselCards;

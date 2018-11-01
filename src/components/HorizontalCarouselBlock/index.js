@@ -10,8 +10,8 @@ import { HorizontalCarousel } from 'components/base';
 
 const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
   const setRef = get(props, 'setRef', () => {});
-  const isDripOn = get(fields, 'drip', false);
   const fields = get(block, 'fields', {});
+  const isDripOn = get(fields, 'drip', false);
   const backgroundColor = get(fields, 'color', 'yellow');
   const flavorItems = get(block, 'fields.flavorItems', []);
   const pressItemsInBlock = get(fields, 'pressItems.simpleFragments', {});
@@ -44,6 +44,7 @@ const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
         ) : (
           <PressCarouselCards
             pressItemsInBlock={pressItemsInBlock}
+            numberOfCardToRender={numberOfCardToRender}
             pressItems={pressItems}
           />
         )}

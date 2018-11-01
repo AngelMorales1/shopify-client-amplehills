@@ -4,7 +4,7 @@ import get from 'utils/get';
 import cx from 'classnames';
 
 import styles from './FlavorCarouselCards.scss';
-import { Image, HorizontalCarousel } from 'components/base';
+import { Image } from 'components/base';
 
 const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
   const selectedFlavorItems =
@@ -59,38 +59,12 @@ const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
   );
 };
 
-HorizontalCarousel.propTypes = {
-  block: PropTypes.shape({
-    fields: PropTypes.shape({
-      buttonLabel: PropTypes.string,
-      buttonLink: PropTypes.string,
-      drip: PropTypes.bool,
-      title: PropTypes.string,
-      flavorItems: PropTypes.array
-    }),
-    sys: PropTypes.shape({
-      id: PropTypes.string
-    })
-  }),
-  z: PropTypes.number,
-  setRef: PropTypes.func
+FlavorCarouselCards.propTypes = {
+  flavorItems: PropTypes.array
 };
 
-HorizontalCarousel.defaultProps = {
-  block: {
-    fields: {
-      buttonLabel: '',
-      buttonLink: '',
-      drip: false,
-      title: '',
-      flavorItems: []
-    },
-    sys: {
-      id: ''
-    }
-  },
-  z: 0,
-  setRef: () => {}
+FlavorCarouselCards.defaultProps = {
+  flavorItems: []
 };
 
 export default FlavorCarouselCards;
