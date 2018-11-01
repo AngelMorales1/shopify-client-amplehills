@@ -10,16 +10,16 @@ const ShopOnlineNavDropdown = ({
   productLanding,
   alertIsActive,
   shopOnlineDropdownIsOpen,
-  onMouseEnter,
-  onMouseLeave
+  openShopOnline,
+  closeShopOnline
 }) => {
   const iceCreamProducts = get(productLanding, 'iceCreamProducts', []);
   const merchProducts = get(productLanding, 'merchandiseProducts', []);
 
   return (
     <div
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseEnter={openShopOnline}
+      onMouseLeave={closeShopOnline}
       className={cx(
         styles['ShopOnlineNavDropdown'],
         {
@@ -53,7 +53,7 @@ const ShopOnlineNavDropdown = ({
 
               return (
                 <Button
-                  onClick={onMouseLeave}
+                  onClick={closeShopOnline}
                   key={handle}
                   variant="style-none"
                   to={`/products/${handle}`}
@@ -106,7 +106,7 @@ const ShopOnlineNavDropdown = ({
               const handle = get(fields, 'handle', '');
               return (
                 <Button
-                  onClick={onMouseLeave}
+                  onClick={closeShopOnline}
                   key={handle}
                   variant="style-none"
                   to={`/merchandise/${handle}`}

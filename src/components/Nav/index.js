@@ -217,8 +217,8 @@ class Nav extends Component {
             shopOnlineDropdownIsOpen={this.state.shopOnlineDropdownIsOpen}
             productLanding={productLanding}
             alertIsActive={alertIsActive}
-            onMouseEnter={this.openShopOnline}
-            onMouseLeave={this.closeShopOnline}
+            openShopOnline={this.openShopOnline}
+            closeShopOnline={this.closeShopOnline}
           />
         ) : null}
       </div>
