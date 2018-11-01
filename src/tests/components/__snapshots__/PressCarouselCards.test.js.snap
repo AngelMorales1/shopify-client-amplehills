@@ -1,0 +1,402 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressCarouselCards
+    pressItems={
+        Object {
+            "fragments": Array [
+              Array [
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+              ],
+            ],
+            "simpleFragments": Object {
+              "foo": Object {},
+            },
+          }
+    }
+    pressItemsInBlock={
+        Object {
+            "fragments": Array [
+              Array [
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+                Object {
+                  "key": "foo",
+                  "value": "foo",
+                },
+              ],
+            ],
+            "simpleFragments": Object {
+              "foo": Object {},
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <div
+          className="bg-white p3 flex flex-column justify-center items-center"
+>
+          <Image
+                    alt=" logo"
+                    bg={false}
+                    className=""
+                    onImgLoad={[Function]}
+                    src=""
+                    style={Object {}}
+          />
+          <span
+                    className="carter text-peach center py3"
+          />
+          <Button
+                    className="uppercase detail"
+                    color="peach"
+                    disabled={false}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Read about it"
+                    onClick={[Function]}
+                    shadow={false}
+                    to=""
+                    type="button"
+                    variant="primary-small"
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "foo",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Image
+              alt=" logo"
+              bg={false}
+              className=""
+              onImgLoad={[Function]}
+              src=""
+              style={Object {}}
+/>,
+            <span
+              className="carter text-peach center py3"
+/>,
+            <Button
+              className="uppercase detail"
+              color="peach"
+              disabled={false}
+              fullWidth={false}
+              hover="shadow"
+              label="Read about it"
+              onClick={[Function]}
+              shadow={false}
+              to=""
+              type="button"
+              variant="primary-small"
+/>,
+          ],
+          "className": "bg-white p3 flex flex-column justify-center items-center",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": " logo",
+              "bg": false,
+              "children": null,
+              "className": "",
+              "onImgLoad": [Function],
+              "src": "",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+              "className": "carter text-peach center py3",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": null,
+              "className": "uppercase detail",
+              "color": "peach",
+              "disabled": false,
+              "fullWidth": false,
+              "hover": "shadow",
+              "label": "Read about it",
+              "onClick": [Function],
+              "shadow": false,
+              "to": "",
+              "type": "button",
+              "variant": "primary-small",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <div
+            className="bg-white p3 flex flex-column justify-center items-center"
+>
+            <Image
+                        alt=" logo"
+                        bg={false}
+                        className=""
+                        onImgLoad={[Function]}
+                        src=""
+                        style={Object {}}
+            />
+            <span
+                        className="carter text-peach center py3"
+            />
+            <Button
+                        className="uppercase detail"
+                        color="peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label="Read about it"
+                        onClick={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary-small"
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "foo",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Image
+                alt=" logo"
+                bg={false}
+                className=""
+                onImgLoad={[Function]}
+                src=""
+                style={Object {}}
+/>,
+              <span
+                className="carter text-peach center py3"
+/>,
+              <Button
+                className="uppercase detail"
+                color="peach"
+                disabled={false}
+                fullWidth={false}
+                hover="shadow"
+                label="Read about it"
+                onClick={[Function]}
+                shadow={false}
+                to=""
+                type="button"
+                variant="primary-small"
+/>,
+            ],
+            "className": "bg-white p3 flex flex-column justify-center items-center",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": " logo",
+                "bg": false,
+                "children": null,
+                "className": "",
+                "onImgLoad": [Function],
+                "src": "",
+                "style": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "carter text-peach center py3",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": null,
+                "className": "uppercase detail",
+                "color": "peach",
+                "disabled": false,
+                "fullWidth": false,
+                "hover": "shadow",
+                "label": "Read about it",
+                "onClick": [Function],
+                "shadow": false,
+                "to": "",
+                "type": "button",
+                "variant": "primary-small",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`renders without data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PressCarouselCards
+    pressItems={
+        Object {
+            "fragments": Array [],
+            "simpleFragments": Object {},
+          }
+    }
+    pressItemsInBlock={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [],
+    },
+    "ref": null,
+    "rendered": Array [],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [],
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

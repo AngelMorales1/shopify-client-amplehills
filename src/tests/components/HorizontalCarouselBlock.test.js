@@ -1,17 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import FlavorCarousel from 'components/FlavorCarousel';
+import HorizontalCarouselBlock from 'components/HorizontalCarouselBlock';
 
 it('renders without data', () => {
-  const component = shallow(<FlavorCarousel />);
+  const component = shallow(<HorizontalCarouselBlock />);
 
   expect(component).toMatchSnapshot();
 });
 
 it('renders with data', () => {
   const component = shallow(
-    <FlavorCarousel
+    <HorizontalCarouselBlock
       block={{
         fields: {
           buttonLabel: 'foo',
