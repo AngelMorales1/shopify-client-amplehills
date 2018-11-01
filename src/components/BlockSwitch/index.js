@@ -17,6 +17,7 @@ import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import AvailableLocations from 'components/AvailableLocations';
 import PressBlock from 'components/PressBlock';
 import AvailableFlavors from 'components/AvailableFlavors';
+import FlavorsLanding from 'components/FlavorsLanding';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -59,6 +60,8 @@ const BlockSwitch = props => {
           return <PressBlock {...props} drip={drip} />;
         case 'Available Flavors Block':
           return <AvailableFlavors {...props} drip={drip} />;
+        case 'Flavors Block':
+          return <FlavorsLanding {...props} drip={drip} />;
         default:
           return null;
       }

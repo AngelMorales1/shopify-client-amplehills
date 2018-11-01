@@ -6,6 +6,7 @@ import { getEvents } from 'state/actions/eventsActions';
 import { fetchShopifyWholesaleProducts } from 'state/actions/wholesaleActions';
 import events from 'state/selectors/events';
 import wholesaleProducts from 'state/selectors/wholesaleProducts';
+import flavors from 'state/selectors/flavors';
 
 import get from 'utils/get';
 
@@ -51,7 +52,8 @@ const mapStateToProps = state => {
       false
     ),
     events: events(state),
-    wholesaleProducts: wholesaleProducts(state)
+    wholesaleProducts: wholesaleProducts(state),
+    flavors: flavors(state)
   };
 };
 

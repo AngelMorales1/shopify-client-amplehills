@@ -42,6 +42,7 @@ class FlavorLanding extends Component {
   };
 
   render() {
+    const { setRef, drip, z } = this.props;
     const flavors = get(this, 'props.flavors', {});
     const filteredFlavor = get(flavors, 'flavors', []).filter(flavor => {
       if (
@@ -74,7 +75,11 @@ class FlavorLanding extends Component {
     });
 
     return (
-      <div className="bg-pastel-green py4 px3 drip">
+      <div
+        className={cx('bg-pastel-green py4 px3', { drip: drip })}
+        ref={refBlock => setRef(refBlock)}
+        style={{ zIndex: z }}
+      >
         <div className="mx-auto flex flex-column justify-center">
           <h2 className="block-headline center mb4">Our Flavors</h2>
           <div

@@ -18,7 +18,6 @@ import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
 import ArticlesLandingContainer from 'containers/ArticlesLandingContainer';
 import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
-import FlavorsLandingContainer from 'containers/FlavorsLandingContainer';
 import FlavorDetailContainer from 'containers/FlavorDetailContainer';
 import InStoresContainer from 'containers/InStoresContainer';
 
@@ -61,9 +60,6 @@ const Routes = ({ location }) => (
     <Route path="/privacy-policy" component={GenericPageContainer} />
     <Route path="/web-accessibility" component={GenericPageContainer} />
     <Route path="/press" component={GenericPageContainer} />
-    {isStaging() ? (
-      <Route exact path="/style-guide" component={GenericPageContainer} />
-    ) : null}
     <Route path="/our-story" component={GenericPageContainer} />
     <Route path="/classes-and-socials" component={GenericPageContainer} />
     <Route path="/ice-cream-classes" component={GenericPageContainer} />
@@ -74,15 +70,15 @@ const Routes = ({ location }) => (
     <Route path="/field-trips" component={GenericPageContainer} />
     <Route path="/pints-and-postcards" component={GenericPageContainer} />
     <Route path="/catering" component={GenericPageContainer} />
-    <Route path="/bike-party" component={GenericPageContainer} />
-    <Route path="/scoop-tab-party" component={GenericPageContainer} />
     <Route path="/ice-cream-cakes" component={GenericPageContainer} />
-    <Route path="/party-request-form" component={PartyRequestFormContainer} />
     <Route path="/faq" component={GenericPageContainer} />
     <Route path="/news" component={ArticlesLandingContainer} />
     <Route path="/wholesale" component={GenericPageContainer} />
-    <Route path="/flavors" component={FlavorsLandingContainer} />
+    <Route path="/flavors" component={GenericPageContainer} />      
     <Route path="/in-stores" component={InStoresContainer} />
+    {isStaging() ? (
+      <Route exact path="/style-guide" component={GenericPageContainer} />
+    ) : null}
   </Switch>
 );
 
