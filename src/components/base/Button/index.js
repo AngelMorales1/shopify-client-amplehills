@@ -19,7 +19,8 @@ const Button = ({
   type,
   to,
   shadow,
-  hover
+  hover,
+  newTab
 }) => {
   const classes = cx(
     className,
@@ -35,37 +36,38 @@ const Button = ({
     styles[`Button--hover-${hover}`]
   );
 
-  const linkedComponent = isExternalLink(to) ? (
-    <a
-      className={cx('text-decoration-none', {
-        'events-none': disabled
-      })}
-      href={to}
-      target="_blank"
-      rel="noopener"
-      onClick={onClick}
-    >
-      <div className={classes}>
-        <span className="avenir h100 flex justify-center items-center">
-          {label}
-        </span>
-      </div>
-    </a>
-  ) : (
-    <Link
-      className={cx('text-decoration-none', {
-        'events-none': disabled
-      })}
-      to={to}
-      onClick={onClick}
-    >
-      <div className={classes}>
-        <span className="avenir h100 flex justify-center items-center">
-          {label}
-        </span>
-      </div>
-    </Link>
-  );
+  const linkedComponent =
+    isExternalLink(to) || newTab ? (
+      <a
+        className={cx('text-decoration-none', {
+          'events-none': disabled
+        })}
+        href={to}
+        target="_blank"
+        rel="noopener"
+        onClick={onClick}
+      >
+        <div className={classes}>
+          <span className="avenir h100 flex justify-center items-center">
+            {label}
+          </span>
+        </div>
+      </a>
+    ) : (
+      <Link
+        className={cx('text-decoration-none', {
+          'events-none': disabled
+        })}
+        to={to}
+        onClick={onClick}
+      >
+        <div className={classes}>
+          <span className="avenir h100 flex justify-center items-center">
+            {label}
+          </span>
+        </div>
+      </Link>
+    );
 
   const button = to ? (
     linkedComponent

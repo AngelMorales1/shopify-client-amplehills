@@ -430,6 +430,7 @@ class PartyRequestForm extends Component {
                             'uppercase tout white-space-normal'
                           )}
                           to={partyType.link}
+                          newTab={true}
                         />
                       </div>
                     </Button>
