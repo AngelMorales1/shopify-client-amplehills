@@ -66,6 +66,7 @@ export default createSelector(
   },
   state => get(state, 'products.contentfulProducts', []),
   (shopifyProducts, contentful) => {
+    console.log('SHOP', shopifyProducts);
     const products = get(contentful, 'items', []);
     const mergedContentfulProducts = products.reduce(
       (mergedProducts, product) => {
