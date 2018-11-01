@@ -492,7 +492,7 @@ class PartyRequestForm extends Component {
               className="w100 text-container-width"
               variant={selectedCelebrating ? 'square--selected' : 'square'}
               onChange={value => this.setState({ selectedCelebrating: value })}
-              placeholder="Enter a name of something"
+              placeholder="Enter someone's name or a cause"
             />
           </div>
           {partyAddOns.length ? (
