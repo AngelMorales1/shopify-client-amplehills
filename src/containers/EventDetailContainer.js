@@ -29,6 +29,10 @@ const mapStateToProps = (state, props) => {
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     event: event(state, props),
     events: events(state),
+    pressItems: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.pressItems'
+    ),
     formStatus: get(state, 'status.contactUsFormStatus', IDLE)
   };
 };

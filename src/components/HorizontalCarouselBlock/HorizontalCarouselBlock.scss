@@ -1,0 +1,11 @@
+@import 'settings';
+
+.HorizontalCarouselBlock {
+  &--yellow {
+    @extend .bg-bees-wax;
+  }
+
+  &--green {
+    @extend .bg-pastel-green;
+  }
+}

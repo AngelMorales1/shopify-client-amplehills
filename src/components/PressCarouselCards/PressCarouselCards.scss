@@ -1,14 +1,6 @@
 @import 'settings';
 
-.PressCarousel {
-  &--yellow {
-    @extend .bg-bees-wax;
-  }
-
-  &--green {
-    @extend .bg-pastel-green;
-  }
-
+.PressCarouselCards {
   &__card {
     border-radius: radius('s');
     margin: spacing(4);

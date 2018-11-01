@@ -1,6 +1,7 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import get from 'utils/get';
 import flavor from 'state/selectors/flavor';
 
 class FlavorLandingContainer extends ContainerBase {
@@ -11,7 +12,11 @@ class FlavorLandingContainer extends ContainerBase {
 
 const mapStateToProps = (state, props) => {
   return {
-    flavor: flavor(state, props)
+    flavor: flavor(state, props),
+    pressItems: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.pressItems'
+    )
   };
 };
 
