@@ -23,6 +23,14 @@ export default {
     locationTitle: "At Bubby's High Line",
     locationId: '5mLbZOuNJCaaYEq0ks6ewe',
     title: 'Ice Cream Social3',
+    cardBlock1Color: '',
+    cardBlock1Image: {},
+    cardBlock1Link: '',
+    cardBlock1Text: '',
+    cardBlock2Color: '',
+    cardBlock2Image: {},
+    cardBlock2Link: '',
+    cardBlock2Text: '',
     contentBlocks: [],
     text:
       "Join us for a postcard writing and crafting ice cream gathering benefiting Brooklyn Pride. We'll craft postcards, hear from our friends at Brooklyn Pride and indulge on ice cream with a pay-as-you-wish sundae bar.\n\nAll are always welcome!\n\nFor every pre-packed pint (at all our NY/NJ scoop shops) purchased on June 6th, we’ll donate $1 to Brooklyn Pride. #icecreamforgood",
@@ -60,6 +68,14 @@ export default {
     locationTitle: 'Gowanus scoop shop',
     locationId: '1VTQWA1tK0wASgi8UkWuWC',
     title: 'Ice Cream Social',
+    cardBlock1Color: '',
+    cardBlock1Image: {},
+    cardBlock1Link: '',
+    cardBlock1Text: '',
+    cardBlock2Color: '',
+    cardBlock2Image: {},
+    cardBlock2Link: '',
+    cardBlock2Text: '',
     contentBlocks: [
       {
         sys: {

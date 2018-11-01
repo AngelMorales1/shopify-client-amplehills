@@ -1,5 +1,13 @@
 export default {
   available: true,
+  cardBlock1Color: '',
+  cardBlock1Image: {},
+  cardBlock1Link: '',
+  cardBlock1Text: '',
+  cardBlock2Color: '',
+  cardBlock2Image: {},
+  cardBlock2Link: '',
+  cardBlock2Text: '',
   cartDetails: '',
   gridImage: '',
   limitedEdition: false,
