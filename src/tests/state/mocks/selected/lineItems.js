@@ -4,7 +4,7 @@ export default [
     title: 'Test Product',
     quantity: 2,
     price: '39.98',
-    cartItemDetails: [],
+    cartAttributes: ['2x Test Product 2', '1x Test Product 3'],
     attributes: [
       {
         key: 'Item 1',

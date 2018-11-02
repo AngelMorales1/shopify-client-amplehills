@@ -265,7 +265,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-29T17:14:28.121Z}
+                                        initialMonth={2018-11-02T22:54:40.303Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -487,6 +487,7 @@ ShallowWrapper {
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="More Info"
+                                                                      newTab={true}
                                                                       onClick={[Function]}
                                                                       shadow={false}
                                                                       to="/bike-party"
@@ -525,6 +526,7 @@ ShallowWrapper {
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="More Info"
+                                                                      newTab={true}
                                                                       onClick={[Function]}
                                                                       shadow={false}
                                                                       to="scoop-tab-party"
@@ -656,7 +658,7 @@ ShallowWrapper {
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
-                              placeholder="Enter a name of something"
+                              placeholder="Enter someone's name or a cause"
                               required={false}
                               type="text"
                               variant="square"
@@ -913,7 +915,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-29T17:14:28.121Z}
+                                          initialMonth={2018-11-02T22:54:40.303Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1135,6 +1137,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="/bike-party"
@@ -1173,6 +1176,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="scoop-tab-party"
@@ -1304,7 +1308,7 @@ ShallowWrapper {
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
-                            placeholder="Enter a name of something"
+                            placeholder="Enter someone's name or a cause"
                             required={false}
                             type="text"
                             variant="square"
@@ -1575,7 +1579,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-29T17:14:28.121Z}
+                                    initialMonth={2018-11-02T22:54:40.303Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1764,7 +1768,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-29T17:14:28.121Z}
+                      initialMonth={2018-11-02T22:54:40.303Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -1960,7 +1964,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-29T17:14:28.121Z,
+                      "initialMonth": 2018-11-02T22:54:40.303Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -2503,6 +2507,7 @@ ShallowWrapper {
                                                                                           fullWidth={false}
                                                                                           hover="shadow"
                                                                                           label="More Info"
+                                                                                          newTab={true}
                                                                                           onClick={[Function]}
                                                                                           shadow={false}
                                                                                           to="/bike-party"
@@ -2541,6 +2546,7 @@ ShallowWrapper {
                                                                                           fullWidth={false}
                                                                                           hover="shadow"
                                                                                           label="More Info"
+                                                                                          newTab={true}
                                                                                           onClick={[Function]}
                                                                                           shadow={false}
                                                                                           to="scoop-tab-party"
@@ -2603,6 +2609,7 @@ ShallowWrapper {
                                                                                         fullWidth={false}
                                                                                         hover="shadow"
                                                                                         label="More Info"
+                                                                                        newTab={true}
                                                                                         onClick={[Function]}
                                                                                         shadow={false}
                                                                                         to="/bike-party"
@@ -2641,6 +2648,7 @@ ShallowWrapper {
                                                                                         fullWidth={false}
                                                                                         hover="shadow"
                                                                                         label="More Info"
+                                                                                        newTab={true}
                                                                                         onClick={[Function]}
                                                                                         shadow={false}
                                                                                         to="scoop-tab-party"
@@ -2686,6 +2694,7 @@ ShallowWrapper {
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="More Info"
+                                                                        newTab={true}
                                                                         onClick={[Function]}
                                                                         shadow={false}
                                                                         to="/bike-party"
@@ -2715,6 +2724,7 @@ ShallowWrapper {
                                                     fullWidth={false}
                                                     hover="shadow"
                                                     label="More Info"
+                                                    newTab={true}
                                                     onClick={[Function]}
                                                     shadow={false}
                                                     to="/bike-party"
@@ -2751,6 +2761,7 @@ ShallowWrapper {
                               fullWidth={false}
                               hover="shadow"
                               label="More Info"
+                              newTab={true}
                               onClick={[Function]}
                               shadow={false}
                               to="/bike-party"
@@ -2785,6 +2796,7 @@ ShallowWrapper {
                               "fullWidth": false,
                               "hover": "shadow",
                               "label": "More Info",
+                              "newTab": true,
                               "onClick": [Function],
                               "shadow": false,
                               "to": "/bike-party",
@@ -2833,6 +2845,7 @@ ShallowWrapper {
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="More Info"
+                                                                        newTab={true}
                                                                         onClick={[Function]}
                                                                         shadow={false}
                                                                         to="scoop-tab-party"
@@ -2862,6 +2875,7 @@ ShallowWrapper {
                                                     fullWidth={false}
                                                     hover="shadow"
                                                     label="More Info"
+                                                    newTab={true}
                                                     onClick={[Function]}
                                                     shadow={false}
                                                     to="scoop-tab-party"
@@ -2898,6 +2912,7 @@ ShallowWrapper {
                               fullWidth={false}
                               hover="shadow"
                               label="More Info"
+                              newTab={true}
                               onClick={[Function]}
                               shadow={false}
                               to="scoop-tab-party"
@@ -2932,6 +2947,7 @@ ShallowWrapper {
                               "fullWidth": false,
                               "hover": "shadow",
                               "label": "More Info",
+                              "newTab": true,
                               "onClick": [Function],
                               "shadow": false,
                               "to": "scoop-tab-party",
@@ -3415,7 +3431,7 @@ ShallowWrapper {
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
-                  placeholder="Enter a name of something"
+                  placeholder="Enter someone's name or a cause"
                   required={false}
                   type="text"
                   variant="square"
@@ -3447,7 +3463,7 @@ ShallowWrapper {
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
-                  "placeholder": "Enter a name of something",
+                  "placeholder": "Enter someone's name or a cause",
                   "required": false,
                   "type": "text",
                   "variant": "square",
@@ -4062,7 +4078,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-29T17:14:28.121Z}
+                                                initialMonth={2018-11-02T22:54:40.303Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -4284,6 +4300,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="/bike-party"
@@ -4322,6 +4339,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="scoop-tab-party"
@@ -4453,7 +4471,7 @@ ShallowWrapper {
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    placeholder="Enter a name of something"
+                                    placeholder="Enter someone's name or a cause"
                                     required={false}
                                     type="text"
                                     variant="square"
@@ -4710,7 +4728,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-29T17:14:28.121Z}
+                                                initialMonth={2018-11-02T22:54:40.303Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -4932,6 +4950,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="/bike-party"
@@ -4970,6 +4989,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="scoop-tab-party"
@@ -5101,7 +5121,7 @@ ShallowWrapper {
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder="Enter a name of something"
+                                placeholder="Enter someone's name or a cause"
                                 required={false}
                                 type="text"
                                 variant="square"
@@ -5372,7 +5392,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-29T17:14:28.121Z}
+                                        initialMonth={2018-11-02T22:54:40.303Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5561,7 +5581,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-29T17:14:28.121Z}
+                        initialMonth={2018-11-02T22:54:40.303Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -5757,7 +5777,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-29T17:14:28.121Z,
+                        "initialMonth": 2018-11-02T22:54:40.303Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -6300,6 +6320,7 @@ ShallowWrapper {
                                                                                                     fullWidth={false}
                                                                                                     hover="shadow"
                                                                                                     label="More Info"
+                                                                                                    newTab={true}
                                                                                                     onClick={[Function]}
                                                                                                     shadow={false}
                                                                                                     to="/bike-party"
@@ -6338,6 +6359,7 @@ ShallowWrapper {
                                                                                                     fullWidth={false}
                                                                                                     hover="shadow"
                                                                                                     label="More Info"
+                                                                                                    newTab={true}
                                                                                                     onClick={[Function]}
                                                                                                     shadow={false}
                                                                                                     to="scoop-tab-party"
@@ -6400,6 +6422,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="/bike-party"
@@ -6438,6 +6461,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="scoop-tab-party"
@@ -6483,6 +6507,7 @@ ShallowWrapper {
                                                                               fullWidth={false}
                                                                               hover="shadow"
                                                                               label="More Info"
+                                                                              newTab={true}
                                                                               onClick={[Function]}
                                                                               shadow={false}
                                                                               to="/bike-party"
@@ -6512,6 +6537,7 @@ ShallowWrapper {
                                                         fullWidth={false}
                                                         hover="shadow"
                                                         label="More Info"
+                                                        newTab={true}
                                                         onClick={[Function]}
                                                         shadow={false}
                                                         to="/bike-party"
@@ -6548,6 +6574,7 @@ ShallowWrapper {
                                 fullWidth={false}
                                 hover="shadow"
                                 label="More Info"
+                                newTab={true}
                                 onClick={[Function]}
                                 shadow={false}
                                 to="/bike-party"
@@ -6582,6 +6609,7 @@ ShallowWrapper {
                                 "fullWidth": false,
                                 "hover": "shadow",
                                 "label": "More Info",
+                                "newTab": true,
                                 "onClick": [Function],
                                 "shadow": false,
                                 "to": "/bike-party",
@@ -6630,6 +6658,7 @@ ShallowWrapper {
                                                                               fullWidth={false}
                                                                               hover="shadow"
                                                                               label="More Info"
+                                                                              newTab={true}
                                                                               onClick={[Function]}
                                                                               shadow={false}
                                                                               to="scoop-tab-party"
@@ -6659,6 +6688,7 @@ ShallowWrapper {
                                                         fullWidth={false}
                                                         hover="shadow"
                                                         label="More Info"
+                                                        newTab={true}
                                                         onClick={[Function]}
                                                         shadow={false}
                                                         to="scoop-tab-party"
@@ -6695,6 +6725,7 @@ ShallowWrapper {
                                 fullWidth={false}
                                 hover="shadow"
                                 label="More Info"
+                                newTab={true}
                                 onClick={[Function]}
                                 shadow={false}
                                 to="scoop-tab-party"
@@ -6729,6 +6760,7 @@ ShallowWrapper {
                                 "fullWidth": false,
                                 "hover": "shadow",
                                 "label": "More Info",
+                                "newTab": true,
                                 "onClick": [Function],
                                 "shadow": false,
                                 "to": "scoop-tab-party",
@@ -7212,7 +7244,7 @@ ShallowWrapper {
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
-                    placeholder="Enter a name of something"
+                    placeholder="Enter someone's name or a cause"
                     required={false}
                     type="text"
                     variant="square"
@@ -7244,7 +7276,7 @@ ShallowWrapper {
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
-                    "placeholder": "Enter a name of something",
+                    "placeholder": "Enter someone's name or a cause",
                     "required": false,
                     "type": "text",
                     "variant": "square",
@@ -7913,7 +7945,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-29T17:14:28.121Z}
+                                        initialMonth={2018-11-02T22:54:40.303Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -8135,6 +8167,7 @@ ShallowWrapper {
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="More Info"
+                                                                      newTab={true}
                                                                       onClick={[Function]}
                                                                       shadow={false}
                                                                       to="/bike-party"
@@ -8173,6 +8206,7 @@ ShallowWrapper {
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="More Info"
+                                                                      newTab={true}
                                                                       onClick={[Function]}
                                                                       shadow={false}
                                                                       to="scoop-tab-party"
@@ -8304,7 +8338,7 @@ ShallowWrapper {
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
-                              placeholder="Enter a name of something"
+                              placeholder="Enter someone's name or a cause"
                               required={false}
                               type="text"
                               variant="square"
@@ -8554,7 +8588,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-10-29T17:14:28.121Z}
+                                          initialMonth={2018-11-02T22:54:40.303Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -8776,6 +8810,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="/bike-party"
@@ -8814,6 +8849,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="scoop-tab-party"
@@ -8945,7 +8981,7 @@ ShallowWrapper {
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
-                            placeholder="Enter a name of something"
+                            placeholder="Enter someone's name or a cause"
                             required={false}
                             type="text"
                             variant="square"
@@ -9204,7 +9240,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-10-29T17:14:28.121Z}
+                                    initialMonth={2018-11-02T22:54:40.303Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -9393,7 +9429,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-10-29T17:14:28.121Z}
+                      initialMonth={2018-11-02T22:54:40.303Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -9589,7 +9625,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-10-29T17:14:28.121Z,
+                      "initialMonth": 2018-11-02T22:54:40.303Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -10132,6 +10168,7 @@ ShallowWrapper {
                                                                                           fullWidth={false}
                                                                                           hover="shadow"
                                                                                           label="More Info"
+                                                                                          newTab={true}
                                                                                           onClick={[Function]}
                                                                                           shadow={false}
                                                                                           to="/bike-party"
@@ -10170,6 +10207,7 @@ ShallowWrapper {
                                                                                           fullWidth={false}
                                                                                           hover="shadow"
                                                                                           label="More Info"
+                                                                                          newTab={true}
                                                                                           onClick={[Function]}
                                                                                           shadow={false}
                                                                                           to="scoop-tab-party"
@@ -10232,6 +10270,7 @@ ShallowWrapper {
                                                                                         fullWidth={false}
                                                                                         hover="shadow"
                                                                                         label="More Info"
+                                                                                        newTab={true}
                                                                                         onClick={[Function]}
                                                                                         shadow={false}
                                                                                         to="/bike-party"
@@ -10270,6 +10309,7 @@ ShallowWrapper {
                                                                                         fullWidth={false}
                                                                                         hover="shadow"
                                                                                         label="More Info"
+                                                                                        newTab={true}
                                                                                         onClick={[Function]}
                                                                                         shadow={false}
                                                                                         to="scoop-tab-party"
@@ -10315,6 +10355,7 @@ ShallowWrapper {
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="More Info"
+                                                                        newTab={true}
                                                                         onClick={[Function]}
                                                                         shadow={false}
                                                                         to="/bike-party"
@@ -10344,6 +10385,7 @@ ShallowWrapper {
                                                     fullWidth={false}
                                                     hover="shadow"
                                                     label="More Info"
+                                                    newTab={true}
                                                     onClick={[Function]}
                                                     shadow={false}
                                                     to="/bike-party"
@@ -10380,6 +10422,7 @@ ShallowWrapper {
                               fullWidth={false}
                               hover="shadow"
                               label="More Info"
+                              newTab={true}
                               onClick={[Function]}
                               shadow={false}
                               to="/bike-party"
@@ -10414,6 +10457,7 @@ ShallowWrapper {
                               "fullWidth": false,
                               "hover": "shadow",
                               "label": "More Info",
+                              "newTab": true,
                               "onClick": [Function],
                               "shadow": false,
                               "to": "/bike-party",
@@ -10462,6 +10506,7 @@ ShallowWrapper {
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="More Info"
+                                                                        newTab={true}
                                                                         onClick={[Function]}
                                                                         shadow={false}
                                                                         to="scoop-tab-party"
@@ -10491,6 +10536,7 @@ ShallowWrapper {
                                                     fullWidth={false}
                                                     hover="shadow"
                                                     label="More Info"
+                                                    newTab={true}
                                                     onClick={[Function]}
                                                     shadow={false}
                                                     to="scoop-tab-party"
@@ -10527,6 +10573,7 @@ ShallowWrapper {
                               fullWidth={false}
                               hover="shadow"
                               label="More Info"
+                              newTab={true}
                               onClick={[Function]}
                               shadow={false}
                               to="scoop-tab-party"
@@ -10561,6 +10608,7 @@ ShallowWrapper {
                               "fullWidth": false,
                               "hover": "shadow",
                               "label": "More Info",
+                              "newTab": true,
                               "onClick": [Function],
                               "shadow": false,
                               "to": "scoop-tab-party",
@@ -11044,7 +11092,7 @@ ShallowWrapper {
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
-                  placeholder="Enter a name of something"
+                  placeholder="Enter someone's name or a cause"
                   required={false}
                   type="text"
                   variant="square"
@@ -11076,7 +11124,7 @@ ShallowWrapper {
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
-                  "placeholder": "Enter a name of something",
+                  "placeholder": "Enter someone's name or a cause",
                   "required": false,
                   "type": "text",
                   "variant": "square",
@@ -11684,7 +11732,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-29T17:14:28.121Z}
+                                                initialMonth={2018-11-02T22:54:40.303Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -11906,6 +11954,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="/bike-party"
@@ -11944,6 +11993,7 @@ ShallowWrapper {
                                                                                     fullWidth={false}
                                                                                     hover="shadow"
                                                                                     label="More Info"
+                                                                                    newTab={true}
                                                                                     onClick={[Function]}
                                                                                     shadow={false}
                                                                                     to="scoop-tab-party"
@@ -12075,7 +12125,7 @@ ShallowWrapper {
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
-                                    placeholder="Enter a name of something"
+                                    placeholder="Enter someone's name or a cause"
                                     required={false}
                                     type="text"
                                     variant="square"
@@ -12325,7 +12375,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-10-29T17:14:28.121Z}
+                                                initialMonth={2018-11-02T22:54:40.303Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -12547,6 +12597,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="/bike-party"
@@ -12585,6 +12636,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="scoop-tab-party"
@@ -12716,7 +12768,7 @@ ShallowWrapper {
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder="Enter a name of something"
+                                placeholder="Enter someone's name or a cause"
                                 required={false}
                                 type="text"
                                 variant="square"
@@ -12975,7 +13027,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-10-29T17:14:28.121Z}
+                                        initialMonth={2018-11-02T22:54:40.303Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -13164,7 +13216,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-10-29T17:14:28.121Z}
+                        initialMonth={2018-11-02T22:54:40.303Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -13360,7 +13412,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-10-29T17:14:28.121Z,
+                        "initialMonth": 2018-11-02T22:54:40.303Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -13903,6 +13955,7 @@ ShallowWrapper {
                                                                                                     fullWidth={false}
                                                                                                     hover="shadow"
                                                                                                     label="More Info"
+                                                                                                    newTab={true}
                                                                                                     onClick={[Function]}
                                                                                                     shadow={false}
                                                                                                     to="/bike-party"
@@ -13941,6 +13994,7 @@ ShallowWrapper {
                                                                                                     fullWidth={false}
                                                                                                     hover="shadow"
                                                                                                     label="More Info"
+                                                                                                    newTab={true}
                                                                                                     onClick={[Function]}
                                                                                                     shadow={false}
                                                                                                     to="scoop-tab-party"
@@ -14003,6 +14057,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="/bike-party"
@@ -14041,6 +14096,7 @@ ShallowWrapper {
                                                                                                 fullWidth={false}
                                                                                                 hover="shadow"
                                                                                                 label="More Info"
+                                                                                                newTab={true}
                                                                                                 onClick={[Function]}
                                                                                                 shadow={false}
                                                                                                 to="scoop-tab-party"
@@ -14086,6 +14142,7 @@ ShallowWrapper {
                                                                               fullWidth={false}
                                                                               hover="shadow"
                                                                               label="More Info"
+                                                                              newTab={true}
                                                                               onClick={[Function]}
                                                                               shadow={false}
                                                                               to="/bike-party"
@@ -14115,6 +14172,7 @@ ShallowWrapper {
                                                         fullWidth={false}
                                                         hover="shadow"
                                                         label="More Info"
+                                                        newTab={true}
                                                         onClick={[Function]}
                                                         shadow={false}
                                                         to="/bike-party"
@@ -14151,6 +14209,7 @@ ShallowWrapper {
                                 fullWidth={false}
                                 hover="shadow"
                                 label="More Info"
+                                newTab={true}
                                 onClick={[Function]}
                                 shadow={false}
                                 to="/bike-party"
@@ -14185,6 +14244,7 @@ ShallowWrapper {
                                 "fullWidth": false,
                                 "hover": "shadow",
                                 "label": "More Info",
+                                "newTab": true,
                                 "onClick": [Function],
                                 "shadow": false,
                                 "to": "/bike-party",
@@ -14233,6 +14293,7 @@ ShallowWrapper {
                                                                               fullWidth={false}
                                                                               hover="shadow"
                                                                               label="More Info"
+                                                                              newTab={true}
                                                                               onClick={[Function]}
                                                                               shadow={false}
                                                                               to="scoop-tab-party"
@@ -14262,6 +14323,7 @@ ShallowWrapper {
                                                         fullWidth={false}
                                                         hover="shadow"
                                                         label="More Info"
+                                                        newTab={true}
                                                         onClick={[Function]}
                                                         shadow={false}
                                                         to="scoop-tab-party"
@@ -14298,6 +14360,7 @@ ShallowWrapper {
                                 fullWidth={false}
                                 hover="shadow"
                                 label="More Info"
+                                newTab={true}
                                 onClick={[Function]}
                                 shadow={false}
                                 to="scoop-tab-party"
@@ -14332,6 +14395,7 @@ ShallowWrapper {
                                 "fullWidth": false,
                                 "hover": "shadow",
                                 "label": "More Info",
+                                "newTab": true,
                                 "onClick": [Function],
                                 "shadow": false,
                                 "to": "scoop-tab-party",
@@ -14815,7 +14879,7 @@ ShallowWrapper {
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
-                    placeholder="Enter a name of something"
+                    placeholder="Enter someone's name or a cause"
                     required={false}
                     type="text"
                     variant="square"
@@ -14847,7 +14911,7 @@ ShallowWrapper {
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
-                    "placeholder": "Enter a name of something",
+                    "placeholder": "Enter someone's name or a cause",
                     "required": false,
                     "type": "text",
                     "variant": "square",

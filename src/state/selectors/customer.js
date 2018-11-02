@@ -1,12 +1,14 @@
 import { createSelector } from 'reselect';
 
 import { deriveLineItems } from 'state/selectors/lineItems.js';
+import products from 'state/selectors/product.js';
 
 import get from 'utils/get';
 
 export default createSelector(
   state => get(state, 'customer'),
-  customer => {
+  state => products(state),
+  (customer, products) => {
     if (!get(customer, 'id', '')) return { id: '' };
     const id = get(customer, 'id', '');
     const email = get(customer, 'email', '');
@@ -25,7 +27,7 @@ export default createSelector(
       const totalPrice = get(orderNode, 'totalPrice', '0.00');
 
       const lineItems = get(orderNode, 'lineItems.edges', []);
-      const items = deriveLineItems({ lineItems });
+      const items = deriveLineItems({ lineItems }, products);
 
       return {
         id,
