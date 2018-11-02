@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import productModel from 'models/productModel';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
@@ -121,7 +120,9 @@ ProductWhatsIncluded.propTypes = {
     whatsIncludedProducts: PropTypes.array
   }),
   z: PropTypes.number,
-  products: PropTypes.objectOf(productModel.propTypes),
+  products: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+  ),
   setRef: PropTypes.func
 };
 

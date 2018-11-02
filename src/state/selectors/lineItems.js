@@ -47,15 +47,9 @@ export const deriveLineItems = (checkout, products) =>
       }, {});
 
     let cartAttributes = cartDetails ? [cartDetails] : [];
-
-    console.log(subItems);
     cartAttributes = Object.values(subItems)
       .sort((a, b) => b.quantity - a.quantity)
       .reduce((itemAttributes, subItem) => {
-        console.log(
-          subItem.handle,
-          get(products, subItem.handle, subItem.handle)
-        );
         itemAttributes.push(
           `${subItem.quantity}x ${
             get(products, subItem.handle, subItem.handle).title
@@ -89,41 +83,6 @@ export const deriveLineItems = (checkout, products) =>
       const date = get(variant, 'title', '');
       if (date) cartAttributes.push(date);
     }
-
-    // if (productType === CHOOSE_YOUR_OWN_STORY) {
-    //   const getUniqueAttribute = attributes
-    //     .filter(attribute => get(attribute, 'key', '').includes('Item'))
-    //     .reduce((uniqueAttribute, attribute) => {
-    //       uniqueAttribute[attribute.value]
-    //         ? uniqueAttribute[attribute.value].quantity++
-    //         : (uniqueAttribute[attribute.value] = {
-    //             handle: attribute.value,
-    //             quantity: 1
-    //           });
-    //       return uniqueAttribute;
-    //     }, {});
-
-    // cartAttributes = Object.values(getUniqueAttribute)
-    //     .map(
-    //       attribute =>
-    //         `${attribute.quantity}x ${
-    //           products[attribute.handle].title
-    //         }`
-    //     );
-    // }
-
-    // if (productType === PARTY_DEPOSIT) {
-    // cartAttributes = attributes.map(
-    //   attribute =>
-    // );
-    // }
-
-    // if (productType === EVENT) {
-    //   const eventDate = product.variants.find(
-    //     variant => variant.id === productId
-    //   ).date;
-    //   cartAttributes.push(eventDate);
-    // }
 
     const sanitisedItem = {
       id,

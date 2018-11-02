@@ -45,7 +45,6 @@ export default createSelector(
   state => get(state, 'products.contentfulProducts', []),
   (shopifyProducts, contentful) => {
     const products = get(contentful, 'items', []);
-    console.log(products);
     const mergedContentfulProducts = products.reduce(
       (mergedProducts, product) => {
         const title = get(product, 'fields.productTitle', '');
@@ -179,7 +178,6 @@ export default createSelector(
       mergedContentfulProducts
     );
 
-    console.log(allProducts);
     return allProducts;
   }
 );
