@@ -1,43 +1,12 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
-import getProductTypeFromProduct from 'utils/getProductTypeFromProduct';
-import {
-  EVENT,
-  PARTY_DEPOSIT,
-  CHOOSE_YOUR_OWN_STORY
-} from 'constants/ProductTypes';
+import ShopifyProductTypes from 'constants/ShopifyProductTypes';
 
 import checkout from 'state/selectors/checkout';
-import getProducts from 'state/selectors/products';
-import getEvents from 'state/selectors/events';
-import getPartyDeposit from 'state/selectors/partyDeposit';
+import products from 'state/selectors/products';
 
-const getProduct = (allProducts, productId) => {
-  if (productId === get(allProducts, 'partyDeposit.id', '')) {
-    return allProducts.partyDeposit;
-  }
-
-  const matchedProductFromProducts = Object.values(
-    get(allProducts, 'products', {})
-  ).find(product => product.id === productId);
-
-  if (matchedProductFromProducts) {
-    return matchedProductFromProducts;
-  }
-
-  const matchedProductFromEvents = Object.values(
-    get(allProducts, 'events', {})
-  ).find(event => event.variants.find(variant => variant.id === productId));
-
-  if (matchedProductFromEvents) {
-    return matchedProductFromEvents;
-  }
-
-  return {};
-};
-
-export const deriveLineItems = (checkout, allProducts) =>
+export const deriveLineItems = (checkout, products) =>
   checkout.lineItems.reduce((lineItems, node) => {
     const item = get(node, 'node', {});
     const id = get(item, 'id', '');
@@ -47,57 +16,114 @@ export const deriveLineItems = (checkout, allProducts) =>
     const variant = get(item, 'variant', {});
     const productId = get(variant, 'id', '');
     const attributes = get(item, 'customAttributes', []);
-    const product = getProduct(allProducts, productId);
-    const productType = getProductTypeFromProduct(
-      product,
-      get(allProducts, 'products', {}),
-      get(allProducts, 'partyDeposit', {}),
-      get(allProducts, 'events', {})
+    const handle = get(item, 'variant.product.handle', '');
+    const product = get(products, handle, {});
+    const cartDetails = get(product, 'cartDetails', '');
+    const productType = get(product, 'type', '');
+
+    const subItems = get(product, 'subItems', []).reduce(
+      (uniqueSubItems, subItem) => {
+        uniqueSubItems[subItem]
+          ? uniqueSubItems[subItem].quantity++
+          : (uniqueSubItems[subItem] = {
+              handle: subItem,
+              quantity: 1
+            });
+        return uniqueSubItems;
+      },
+      {}
     );
 
-    let cartItemDetails = [];
+    const customSubItems = attributes
+      .filter(attribute => attribute.key.includes('Item'))
+      .reduce((uniqueCustomSubItems, attribute) => {
+        uniqueCustomSubItems[attribute.value]
+          ? uniqueCustomSubItems[attribute.value].quantity++
+          : (uniqueCustomSubItems[attribute.value] = {
+              handle: attribute.value,
+              quantity: 1
+            });
+        return uniqueCustomSubItems;
+      }, {});
 
-    if (productType === CHOOSE_YOUR_OWN_STORY) {
-      const getUniqueAttribute = attributes
-        .filter(attribute => get(attribute, 'key', '').includes('Item'))
-        .reduce((uniqueAttribute, attribute) => {
-          uniqueAttribute[attribute.value]
-            ? uniqueAttribute[attribute.value].quantity++
-            : (uniqueAttribute[attribute.value] = {
-                handle: attribute.value,
-                quantity: 1
-              });
-          return uniqueAttribute;
-        }, {});
+    let cartAttributes = cartDetails ? [cartDetails] : [];
 
-      cartItemDetails = Object.values(getUniqueAttribute)
-        .sort((a, b) => b.quantity - a.quantity)
-        .map(
-          attribute =>
-            `${attribute.quantity}x ${
-              allProducts.products[attribute.handle].title
-            }`
+    console.log(subItems);
+    cartAttributes = Object.values(subItems)
+      .sort((a, b) => b.quantity - a.quantity)
+      .reduce((itemAttributes, subItem) => {
+        console.log(
+          subItem.handle,
+          get(products, subItem.handle, subItem.handle)
         );
+        itemAttributes.push(
+          `${subItem.quantity}x ${
+            get(products, subItem.handle, subItem.handle).title
+          }`
+        );
+        return itemAttributes;
+      }, cartAttributes);
+
+    cartAttributes = Object.values(customSubItems)
+      .sort((a, b) => b.quantity - a.quantity)
+      .reduce((itemAttributes, attribute) => {
+        itemAttributes.push(
+          `${attribute.quantity}x ${
+            get(products, attribute.handle, attribute.handle).title
+          }`
+        );
+        return itemAttributes;
+      }, cartAttributes);
+
+    cartAttributes = attributes
+      .filter(attribute => !attribute.key.includes('Item'))
+      .reduce((stringifiedAttributes, attribute) => {
+        stringifiedAttributes.push(`${attribute.key}: ${attribute.value}`);
+        return stringifiedAttributes;
+      }, cartAttributes);
+
+    if (
+      productType === ShopifyProductTypes.CLASSES ||
+      productType === ShopifyProductTypes.EVENTS
+    ) {
+      const date = get(variant, 'title', '');
+      if (date) cartAttributes.push(date);
     }
 
-    if (productType === PARTY_DEPOSIT) {
-      cartItemDetails = attributes.map(
-        attribute => `${attribute.key}: ${attribute.value}`
-      );
-    }
+    // if (productType === CHOOSE_YOUR_OWN_STORY) {
+    //   const getUniqueAttribute = attributes
+    //     .filter(attribute => get(attribute, 'key', '').includes('Item'))
+    //     .reduce((uniqueAttribute, attribute) => {
+    //       uniqueAttribute[attribute.value]
+    //         ? uniqueAttribute[attribute.value].quantity++
+    //         : (uniqueAttribute[attribute.value] = {
+    //             handle: attribute.value,
+    //             quantity: 1
+    //           });
+    //       return uniqueAttribute;
+    //     }, {});
 
-    if (productType === EVENT) {
-      const eventDate = product.variants.find(
-        variant => variant.id === productId
-      ).date;
-      cartItemDetails.push(eventDate);
-    }
+    // cartAttributes = Object.values(getUniqueAttribute)
+    //     .map(
+    //       attribute =>
+    //         `${attribute.quantity}x ${
+    //           products[attribute.handle].title
+    //         }`
+    //     );
+    // }
 
-    const cartDetails = get(product, 'cartDetails', '');
+    // if (productType === PARTY_DEPOSIT) {
+    // cartAttributes = attributes.map(
+    //   attribute =>
+    // );
+    // }
 
-    if (cartDetails) {
-      cartItemDetails.unshift(cartDetails);
-    }
+    // if (productType === EVENT) {
+    //   const eventDate = product.variants.find(
+    //     variant => variant.id === productId
+    //   ).date;
+    //   cartAttributes.push(eventDate);
+    // }
 
     const sanitisedItem = {
       id,
@@ -107,7 +133,7 @@ export const deriveLineItems = (checkout, allProducts) =>
       attributes,
       productId,
       variant,
-      cartItemDetails,
+      cartAttributes,
       product
     };
 
@@ -120,12 +146,6 @@ export const deriveLineItems = (checkout, allProducts) =>
 
 export default createSelector(
   state => checkout(state),
-  state => {
-    const products = getProducts(state);
-    const events = getEvents(state);
-    const partyDeposit = getPartyDeposit(state);
-
-    return { products, events, partyDeposit };
-  },
+  state => products(state),
   deriveLineItems
 );

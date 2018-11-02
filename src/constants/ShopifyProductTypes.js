@@ -6,7 +6,11 @@
 
 export default {
   'Ice Cream': 'Ice Cream',
+  ICE_CREAM: 'Ice Cream',
   Events: 'Events',
+  EVENTS: 'Events',
   Classes: 'Classes',
-  'Party Deposit': 'Party Deposit'
+  CLASSES: 'Classes',
+  'Party Deposit': 'Party Deposit',
+  PARTY_DEPOSIT: 'Party Deposit'
 };

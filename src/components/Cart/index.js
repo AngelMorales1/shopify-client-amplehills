@@ -108,7 +108,7 @@ class Cart extends Component {
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
               {get(this, 'props.items', []).map(item => {
                 const product = item.product;
-                const hasCartDetail = get(item, 'cartItemDetails', []).length;
+                const hasCartDetail = get(item, 'cartAttributes', []).length;
 
                 return (
                   <div
@@ -127,7 +127,7 @@ class Cart extends Component {
                           <span className="small bold">{item.title}</span>
                         </Link>
                         <div className="flex flex-column mt2">
-                          {item.cartItemDetails.map(cartItemDetail => {
+                          {item.cartAttributes.map(cartItemDetail => {
                             return (
                               <span key={cartItemDetail} className="small mb1">
                                 {cartItemDetail}
@@ -159,7 +159,7 @@ class Cart extends Component {
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
-                      {item.cartItemDetails.map(cartItemDetail => {
+                      {item.cartAttributes.map(cartItemDetail => {
                         return (
                           <span key={cartItemDetail} className="small mb1">
                             {cartItemDetail}

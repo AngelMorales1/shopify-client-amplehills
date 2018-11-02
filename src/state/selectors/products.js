@@ -44,9 +44,8 @@ export default createSelector(
   },
   state => get(state, 'products.contentfulProducts', []),
   (shopifyProducts, contentful) => {
-    console.log('SHOP', shopifyProducts);
     const products = get(contentful, 'items', []);
-
+    console.log(products);
     const mergedContentfulProducts = products.reduce(
       (mergedProducts, product) => {
         const title = get(product, 'fields.productTitle', '');
@@ -160,23 +159,27 @@ export default createSelector(
           product.handle,
           null
         );
-        const mergedProduct = contentfulProduct ? contentfulProduct : product;
 
-        if (mergedProduct.type) {
-          if (allMergedProducts[mergedProduct.type]) {
-            allMergedProducts[mergedProduct.type].push(mergedProduct);
-          } else {
-            allMergedProducts[mergedProduct.type] = [mergedProduct];
+        if (!contentfulProduct) {
+          const mergedProduct = contentfulProduct ? contentfulProduct : product;
+
+          if (mergedProduct.type) {
+            if (allMergedProducts[mergedProduct.type]) {
+              allMergedProducts[mergedProduct.type].push(mergedProduct);
+            } else {
+              allMergedProducts[mergedProduct.type] = [mergedProduct];
+            }
           }
-        }
 
-        allMergedProducts[product.handle] = mergedProduct;
+          allMergedProducts[product.handle] = mergedProduct;
+        }
 
         return allMergedProducts;
       },
-      {}
+      mergedContentfulProducts
     );
 
+    console.log(allProducts);
     return allProducts;
   }
 );

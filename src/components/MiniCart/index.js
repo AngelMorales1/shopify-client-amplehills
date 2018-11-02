@@ -16,7 +16,6 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 import checkoutModel from 'models/checkoutModel';
-import productModel from 'models/productModel';
 
 import { Button, Image, QuantitySelector } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
@@ -66,13 +65,13 @@ class MiniCart extends Component {
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
             {items.map(item => {
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
-                mb4: item.cartItemDetails.length,
+                mb4: item.cartAttributes.length,
                 [styles['MiniCart__line-item--updating']]:
                   this.props.lineItemsBeingUpdated.includes(item.id) ||
                   this.props.lineItemsBeingRemoved.includes(item.id)
               });
 
-              const { cartItemDetails } = item;
+              const { cartAttributes } = item;
 
               return (
                 <div className={classes} key={item.id}>
@@ -85,10 +84,10 @@ class MiniCart extends Component {
                         ${item.price}
                       </span>
                     </div>
-                    {cartItemDetails.length ? (
+                    {cartAttributes.length ? (
                       <div className="w100">
                         <ul className="my1">
-                          {cartItemDetails.map(cartItemDetail => {
+                          {cartAttributes.map(cartItemDetail => {
                             return (
                               <li
                                 className="sub-line-item small"
@@ -149,7 +148,9 @@ MiniCart.propTypes = {
     updateLineItems: PropTypes.func
   }),
   checkout: checkoutModel.propTypes,
-  products: PropTypes.objectOf(productModel.propTypes)
+  products: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.object, PropTypes.array])
+  )
 };
 
 MiniCart.defaultProps = {
@@ -161,7 +162,7 @@ MiniCart.defaultProps = {
     updateLineItems: () => {}
   },
   checkout: checkoutModel.default,
-  products: {}
+  products: []
 };
 
 const mapStateToProps = state => {
