@@ -10,6 +10,10 @@ import {
   openMobileNav,
   closeMobileNav
 } from 'state/actions/ui/mobileNavUIActions';
+import {
+  openShopOnline,
+  closeShopOnline
+} from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
 
 import PropTypes from 'prop-types';
@@ -27,8 +31,7 @@ import styles from './Nav.scss';
 class Nav extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.medium.label,
-    mobileNavIsOpen: false,
-    shopOnlineDropdownIsOpen: false
+    mobileNavIsOpen: false
   };
 
   componentDidMount() {
@@ -63,16 +66,15 @@ class Nav extends Component {
     return mobileNavIsOpen ? closeMobileNav() : openMobileNav();
   };
 
-  closeShopOnline = () => {
-    this.setState({ shopOnlineDropdownIsOpen: false });
-  };
-
-  openShopOnline = () => {
-    this.setState({ shopOnlineDropdownIsOpen: true });
-  };
-
   render() {
-    const { logo, profileIcon, productLanding, alertIsActive } = this.props;
+    const {
+      logo,
+      profileIcon,
+      productLanding,
+      alertIsActive,
+      shopOnlineDropdownIsOpen
+    } = this.props;
+    const { openShopOnline, closeShopOnline } = this.props.actions;
     const { medium } = Global.breakpoints;
     const cartIsEmpty = this.props.totalItems === 0;
 
@@ -187,8 +189,8 @@ class Nav extends Component {
                   variant="primary-small"
                   color="white-peach"
                   label="Shop Online"
-                  onClick={this.closeShopOnline}
-                  onMouseEnter={this.openShopOnline}
+                  onClick={closeShopOnline}
+                  onMouseEnter={openShopOnline}
                   hover="clear-white-border"
                 />
               </Fragment>
@@ -214,11 +216,11 @@ class Nav extends Component {
         </div>
         {this.state.currentBreakpoint === medium.label ? (
           <ShopOnlineNavDropdown
-            shopOnlineDropdownIsOpen={this.state.shopOnlineDropdownIsOpen}
+            shopOnlineDropdownIsOpen={shopOnlineDropdownIsOpen}
             productLanding={productLanding}
             alertIsActive={alertIsActive}
-            openShopOnline={this.openShopOnline}
-            closeShopOnline={this.closeShopOnline}
+            openShopOnline={openShopOnline}
+            closeShopOnline={closeShopOnline}
           />
         ) : null}
       </div>
@@ -231,7 +233,9 @@ Nav.propTypes = {
     openMiniCart: PropTypes.func,
     closeMiniCart: PropTypes.func,
     openMobileNav: PropTypes.func,
-    closeMobileNav: PropTypes.func
+    closeMobileNav: PropTypes.func,
+    openShopOnline: PropTypes.func,
+    closeShopOnline: PropTypes.func
   }),
   miniCartIsOpen: PropTypes.bool,
   mobileNavIsOpen: PropTypes.bool,
@@ -244,7 +248,9 @@ Nav.defaultProps = {
     openMiniCart: () => {},
     closeMiniCart: () => {},
     openMobileNav: () => {},
-    closeMobileNav: () => {}
+    closeMobileNav: () => {},
+    openShopOnline: () => {},
+    closeShopOnline: () => {}
   },
   miniCartIsOpen: false,
   mobileNavIsOpen: false,
@@ -257,6 +263,7 @@ const mapStateToProps = state => {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
+    shopOnlineDropdownIsOpen: get(state, 'dropdownNavUI.shopOnlineIsOpen'),
     totalItems: totalItems(state),
     productLanding: get(
       state,
@@ -274,7 +281,9 @@ const mapDispatchToProps = dispatch => {
         openMiniCart,
         closeMiniCart,
         openMobileNav,
-        closeMobileNav
+        closeMobileNav,
+        openShopOnline,
+        closeShopOnline
       },
       dispatch
     )
