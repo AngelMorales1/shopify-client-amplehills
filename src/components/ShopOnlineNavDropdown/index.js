@@ -39,82 +39,96 @@ const ShopOnlineNavDropdown = ({
           'absolute z-nav'
         )}
       >
-        <div
-          className={cx(
-            'w100 pt3 px4 bg-peach fixed drip flex flex-row items-center'
-          )}
-        >
-          <div className="col-6 flex flex-row justify-center mx-auto">
-            {iceCreamProducts.map(product => {
-              const fields = get(product, 'fields', {});
-              const image = get(fields, 'dropdownNavImage.fields.file.url', '');
-              const title = get(fields, 'productTitle', '');
-              const handle = get(fields, 'productHandle', '');
+        <div className={cx('w100 pt3 px4 bg-peach fixed drip')}>
+          <div className="content-width mx-auto flex flex-row items-center justify-end">
+            <div
+              className={cx(styles['ShopOnlineNavDropdown__product-wrapper'])}
+            >
+              <div
+                className={cx(
+                  styles['ShopOnlineNavDropdown__product-container'],
+                  'flex flex-row justify-between mx-auto'
+                )}
+              >
+                {iceCreamProducts.map(product => {
+                  const fields = get(product, 'fields', {});
+                  const image = get(
+                    fields,
+                    'dropdownNavImage.fields.file.url',
+                    ''
+                  );
+                  const title = get(fields, 'productTitle', '');
+                  const handle = get(fields, 'productHandle', '');
 
-              return (
-                <Button
-                  onClick={closeShopOnline}
-                  key={handle}
-                  variant="style-none"
-                  to={`/products/${handle}`}
-                >
-                  <div
-                    className={cx(
-                      styles['ShopOnlineNavDropdown__card'],
-                      'bg-white mx2 p3 flex flex-column items-center justify-between'
-                    )}
-                  >
-                    <div
-                      className={cx(
-                        styles['ShopOnlineNavDropdown__image--container'],
-                        'w100'
-                      )}
-                    >
-                      <Image
-                        className={cx(
-                          styles['ShopOnlineNavDropdown__image'],
-                          'wh100'
-                        )}
-                        src={image}
-                      />
+                  return (
+                    <div className="mx1">
+                      <Button
+                        onClick={closeShopOnline}
+                        key={handle}
+                        variant="style-none"
+                        to={`/products/${handle}`}
+                      >
+                        <div
+                          className={cx(
+                            styles['ShopOnlineNavDropdown__card'],
+                            'bg-white p3 flex flex-column items-center justify-between'
+                          )}
+                        >
+                          <div
+                            className={cx(
+                              styles['ShopOnlineNavDropdown__image--container'],
+                              'w100'
+                            )}
+                          >
+                            <Image
+                              className={cx(
+                                styles['ShopOnlineNavDropdown__image'],
+                                'wh100'
+                              )}
+                              src={image}
+                            />
+                          </div>
+                          <div
+                            className={cx(
+                              styles[
+                                'ShopOnlineNavDropdown__card-text-container'
+                              ],
+                              'flex flex-row items-center'
+                            )}
+                          >
+                            <p className="white-space-normal center text-heavy-gray">
+                              {title}
+                            </p>
+                          </div>
+                        </div>
+                      </Button>
                     </div>
-                    <div
-                      className={cx(
-                        styles['ShopOnlineNavDropdown__card-text-container'],
-                        'flex flex-row items-center'
-                      )}
+                  );
+                })}
+              </div>
+            </div>
+            <div
+              className={cx(styles['ShopOnlineNavDropdown__merch-container'])}
+            >
+              <div className="ml2">
+                <p className="text-white bold">Merch</p>
+                {merchProducts.map(merch => {
+                  const fields = get(merch, 'fields', {});
+                  const title = get(fields, 'title', '');
+                  const handle = get(fields, 'handle', '');
+                  return (
+                    <Button
+                      onClick={closeShopOnline}
+                      key={handle}
+                      variant="style-none"
+                      to={`/merchandise/${handle}`}
                     >
-                      <p className="white-space-normal center text-heavy-gray">
-                        {title}
-                      </p>
-                    </div>
-                  </div>
-                </Button>
-              );
-            })}
-          </div>
-          <div
-            className={cx(
-              styles['ShopOnlineNavDropdown__merch-container'],
-              'col-2 absolute r0'
-            )}
-          >
-            <p className="text-white bold">Merch</p>
-            {merchProducts.map(merch => {
-              const fields = get(merch, 'fields', {});
-              const title = get(fields, 'title', '');
-              const handle = get(fields, 'handle', '');
-              return (
-                <Button
-                  onClick={closeShopOnline}
-                  key={handle}
-                  variant="style-none"
-                  to={`/merchandise/${handle}`}
-                >
-                  <p className="text-white light mt1">{title}</p>
-                </Button>
-              );
-            })}
+                      <p className="text-white light mt1">{title}</p>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -18,6 +18,14 @@
     top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
   }
 
+  &__product-wrapper {
+    width: 60%;
+  }
+
+  &__product-container {
+    max-width: 40rem;
+  }
+
   &__card {
     width: spacing(42);
     height: spacing(55);
@@ -41,5 +49,6 @@
 
   &__merch-container {
     height: spacing(55);
+    width: 20%;
   }
 }
