@@ -61,7 +61,7 @@ const ShopOnlineNavDropdown = ({
                   const handle = get(fields, 'productHandle', '');
 
                   return (
-                    <div className="mx1">
+                    <div key={get(product, 'sys.id', '')} className="mx1">
                       <Button
                         onClick={closeShopOnline}
                         key={handle}
@@ -107,28 +107,30 @@ const ShopOnlineNavDropdown = ({
                 })}
               </div>
             </div>
-            <div
-              className={cx(styles['ShopOnlineNavDropdown__merch-container'])}
-            >
-              <div className="ml2">
-                <p className="text-white bold">Merch</p>
-                {merchProducts.map(merch => {
-                  const fields = get(merch, 'fields', {});
-                  const title = get(fields, 'title', '');
-                  const handle = get(fields, 'handle', '');
-                  return (
-                    <Button
-                      onClick={closeShopOnline}
-                      key={handle}
-                      variant="style-none"
-                      to={`/merchandise/${handle}`}
-                    >
-                      <p className="text-white light mt1">{title}</p>
-                    </Button>
-                  );
-                })}
+            {merchProducts.length ? (
+              <div
+                className={cx(styles['ShopOnlineNavDropdown__merch-container'])}
+              >
+                <div className="ml2">
+                  <p className="text-white bold">Merch</p>
+                  {merchProducts.map(merch => {
+                    const fields = get(merch, 'fields', {});
+                    const title = get(fields, 'title', '');
+                    const handle = get(fields, 'handle', '');
+                    return (
+                      <Button
+                        onClick={closeShopOnline}
+                        key={handle}
+                        variant="style-none"
+                        to={`/merchandise/${handle}`}
+                      >
+                        <p className="text-white light mt1">{title}</p>
+                      </Button>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
       </div>

@@ -5,7 +5,8 @@ export const getGlobalSettings = payload => dispatch => {
   return dispatch({
     type: GET_GLOBAL_SETTINGS,
     payload: Data.getEntries({
-      content_type: 'globalSettings'
+      content_type: 'globalSettings',
+      include: 4
     })
   });
 };

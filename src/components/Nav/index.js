@@ -258,7 +258,11 @@ const mapStateToProps = state => {
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
     totalItems: totalItems(state),
-    productLanding: get(state, 'products.productLanding.items[0].fields', {}),
+    productLanding: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.productLanding.fields',
+      {}
+    ),
     alertIsActive: alertIsActive(state)
   };
 };
