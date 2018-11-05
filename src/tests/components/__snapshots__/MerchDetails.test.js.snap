@@ -13,18 +13,20 @@ ShallowWrapper {
     checkout={
         Object {
             "id": "",
-            "items": Object {
-              "id": "",
-              "price": "0.0",
-              "productId": "",
-              "subItems": Array [
-                Object {
-                  "handle": "",
-                  "quantity": 1,
-                },
-              ],
-              "title": "",
-            },
+            "items": Array [
+              Object {
+                "id": "",
+                "price": "0.0",
+                "productId": "",
+                "subItems": Array [
+                  Object {
+                    "handle": "",
+                    "quantity": 1,
+                  },
+                ],
+                "title": "",
+              },
+            ],
             "subtotalPrice": "",
             "webUrl": "",
           }
@@ -1448,18 +1450,20 @@ ShallowWrapper {
     checkout={
         Object {
             "id": "",
-            "items": Object {
-              "id": "",
-              "price": "0.0",
-              "productId": "",
-              "subItems": Array [
-                Object {
-                  "handle": "",
-                  "quantity": 1,
-                },
-              ],
-              "title": "",
-            },
+            "items": Array [
+              Object {
+                "id": "",
+                "price": "0.0",
+                "productId": "",
+                "subItems": Array [
+                  Object {
+                    "handle": "",
+                    "quantity": 1,
+                  },
+                ],
+                "title": "",
+              },
+            ],
             "subtotalPrice": "",
             "webUrl": "",
           }

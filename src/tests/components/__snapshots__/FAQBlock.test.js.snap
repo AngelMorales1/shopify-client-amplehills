@@ -69,7 +69,6 @@ ShallowWrapper {
         <div
                 className="flex flex-column col-12 md-col-4 mb4"
         >
-<<<<<<< HEAD
                 <h2
                         className="block-headline mb3"
                 >
@@ -86,38 +85,13 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="foo"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
                                 shadow={false}
                                 to="foo"
                                 type="button"
                                 variant="primary"
                         />
-=======
-                <div>
-                        <h2
-                                className="block-headline mb3"
-                        >
-                                foo
-                        </h2>
-                        <div
-                                className="inline-flex mb3"
-                        >
-                                <Button
-                                        className=""
-                                        color="madison-blue"
-                                        disabled={false}
-                                        fullWidth={false}
-                                        hover="shadow"
-                                        label="foo"
-                                        onClick={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        shadow={false}
-                                        to="foo"
-                                        type="button"
-                                        variant="primary"
-                                />
-                        </div>
->>>>>>> Add ShopOnlineNavDropdown test
                 </div>
         </div>
         <div
@@ -218,7 +192,6 @@ ShallowWrapper {
           <div
             className="flex flex-column col-12 md-col-4 mb4"
 >
-<<<<<<< HEAD
             <h2
                         className="block-headline mb3"
             >
@@ -235,38 +208,13 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="foo"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     shadow={false}
                                     to="foo"
                                     type="button"
                                     variant="primary"
                         />
-=======
-            <div>
-                        <h2
-                                    className="block-headline mb3"
-                        >
-                                    foo
-                        </h2>
-                        <div
-                                    className="inline-flex mb3"
-                        >
-                                    <Button
-                                                className=""
-                                                color="madison-blue"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label="foo"
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to="foo"
-                                                type="button"
-                                                variant="primary"
-                                    />
-                        </div>
->>>>>>> Add ShopOnlineNavDropdown test
             </div>
 </div>,
           <div
@@ -363,52 +311,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h2
-<<<<<<< HEAD
                 className="block-headline mb3"
-=======
-                            className="block-headline mb3"
-              >
-                            foo
-              </h2>
-              <div
-                            className="inline-flex mb3"
-              >
-                            <Button
-                                          className=""
-                                          color="madison-blue"
-                                          disabled={false}
-                                          fullWidth={false}
-                                          hover="shadow"
-                                          label="foo"
-                                          onClick={[Function]}
-                                          onMouseEnter={[Function]}
-                                          onMouseLeave={[Function]}
-                                          shadow={false}
-                                          to="foo"
-                                          type="button"
-                                          variant="primary"
-                            />
-              </div>
-</div>,
-            "className": "flex col-12 md-col-4 pr3 mb4",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h2
-                  className="block-headline mb3"
->>>>>>> Add ShopOnlineNavDropdown test
 >
                 foo
 </h2>,
               <div
                 className=""
 >
-<<<<<<< HEAD
                 <Button
                                 className="inline-flex"
                                 color="madison-blue"
@@ -417,28 +326,13 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="foo"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
                                 shadow={false}
                                 to="foo"
                                 type="button"
                                 variant="primary"
                 />
-=======
-                  <Button
-                                    className=""
-                                    color="madison-blue"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    hover="shadow"
-                                    label="foo"
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                    shadow={false}
-                                    to="foo"
-                                    type="button"
-                                    variant="primary"
-                  />
->>>>>>> Add ShopOnlineNavDropdown test
 </div>,
             ],
             "className": "flex flex-column col-12 md-col-4 mb4",
@@ -470,6 +364,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="foo"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
                   shadow={false}
                   to="foo"
                   type="button"
@@ -483,7 +379,6 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-<<<<<<< HEAD
                   "children": null,
                   "className": "inline-flex",
                   "color": "madison-blue",
@@ -492,6 +387,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "foo",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
                   "shadow": false,
                   "to": "foo",
                   "type": "button",
@@ -500,51 +397,6 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
-=======
-                  "children": <Button
-                    className=""
-                    color="madison-blue"
-                    disabled={false}
-                    fullWidth={false}
-                    hover="shadow"
-                    label="foo"
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    shadow={false}
-                    to="foo"
-                    type="button"
-                    variant="primary"
-/>,
-                  "className": "inline-flex mb3",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": null,
-                    "className": "",
-                    "color": "madison-blue",
-                    "disabled": false,
-                    "fullWidth": false,
-                    "hover": "shadow",
-                    "label": "foo",
-                    "onClick": [Function],
-                    "onMouseEnter": [Function],
-                    "onMouseLeave": [Function],
-                    "shadow": false,
-                    "to": "foo",
-                    "type": "button",
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": "div",
->>>>>>> Add ShopOnlineNavDropdown test
               },
               "type": "div",
             },
@@ -976,7 +828,6 @@ ShallowWrapper {
           <div
                     className="flex flex-column col-12 md-col-4 mb4"
           >
-<<<<<<< HEAD
                     <h2
                               className="block-headline mb3"
                     >
@@ -993,38 +844,13 @@ ShallowWrapper {
                                         hover="shadow"
                                         label="foo"
                                         onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
                                         shadow={false}
                                         to="foo"
                                         type="button"
                                         variant="primary"
                               />
-=======
-                    <div>
-                              <h2
-                                        className="block-headline mb3"
-                              >
-                                        foo
-                              </h2>
-                              <div
-                                        className="inline-flex mb3"
-                              >
-                                        <Button
-                                                  className=""
-                                                  color="madison-blue"
-                                                  disabled={false}
-                                                  fullWidth={false}
-                                                  hover="shadow"
-                                                  label="foo"
-                                                  onClick={[Function]}
-                                                  onMouseEnter={[Function]}
-                                                  onMouseLeave={[Function]}
-                                                  shadow={false}
-                                                  to="foo"
-                                                  type="button"
-                                                  variant="primary"
-                                        />
-                              </div>
->>>>>>> Add ShopOnlineNavDropdown test
                     </div>
           </div>
           <div
@@ -1125,7 +951,6 @@ ShallowWrapper {
             <div
               className="flex flex-column col-12 md-col-4 mb4"
 >
-<<<<<<< HEAD
               <h2
                             className="block-headline mb3"
               >
@@ -1142,38 +967,13 @@ ShallowWrapper {
                                           hover="shadow"
                                           label="foo"
                                           onClick={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
                                           shadow={false}
                                           to="foo"
                                           type="button"
                                           variant="primary"
                             />
-=======
-              <div>
-                            <h2
-                                          className="block-headline mb3"
-                            >
-                                          foo
-                            </h2>
-                            <div
-                                          className="inline-flex mb3"
-                            >
-                                          <Button
-                                                        className=""
-                                                        color="madison-blue"
-                                                        disabled={false}
-                                                        fullWidth={false}
-                                                        hover="shadow"
-                                                        label="foo"
-                                                        onClick={[Function]}
-                                                        onMouseEnter={[Function]}
-                                                        onMouseLeave={[Function]}
-                                                        shadow={false}
-                                                        to="foo"
-                                                        type="button"
-                                                        variant="primary"
-                                          />
-                            </div>
->>>>>>> Add ShopOnlineNavDropdown test
               </div>
 </div>,
             <div
@@ -1270,52 +1070,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h2
-<<<<<<< HEAD
                   className="block-headline mb3"
-=======
-                                className="block-headline mb3"
-                >
-                                foo
-                </h2>
-                <div
-                                className="inline-flex mb3"
-                >
-                                <Button
-                                                className=""
-                                                color="madison-blue"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label="foo"
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to="foo"
-                                                type="button"
-                                                variant="primary"
-                                />
-                </div>
-</div>,
-              "className": "flex col-12 md-col-4 pr3 mb4",
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h2
-                    className="block-headline mb3"
->>>>>>> Add ShopOnlineNavDropdown test
 >
                   foo
 </h2>,
                 <div
                   className=""
 >
-<<<<<<< HEAD
                   <Button
                                     className="inline-flex"
                                     color="madison-blue"
@@ -1324,28 +1085,13 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="foo"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
                                     shadow={false}
                                     to="foo"
                                     type="button"
                                     variant="primary"
                   />
-=======
-                    <Button
-                                        className=""
-                                        color="madison-blue"
-                                        disabled={false}
-                                        fullWidth={false}
-                                        hover="shadow"
-                                        label="foo"
-                                        onClick={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        shadow={false}
-                                        to="foo"
-                                        type="button"
-                                        variant="primary"
-                    />
->>>>>>> Add ShopOnlineNavDropdown test
 </div>,
               ],
               "className": "flex flex-column col-12 md-col-4 mb4",
@@ -1377,6 +1123,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="foo"
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to="foo"
                     type="button"
@@ -1390,7 +1138,6 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-<<<<<<< HEAD
                     "children": null,
                     "className": "inline-flex",
                     "color": "madison-blue",
@@ -1399,6 +1146,8 @@ ShallowWrapper {
                     "hover": "shadow",
                     "label": "foo",
                     "onClick": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
                     "shadow": false,
                     "to": "foo",
                     "type": "button",
@@ -1407,51 +1156,6 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
-=======
-                    "children": <Button
-                      className=""
-                      color="madison-blue"
-                      disabled={false}
-                      fullWidth={false}
-                      hover="shadow"
-                      label="foo"
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      shadow={false}
-                      to="foo"
-                      type="button"
-                      variant="primary"
-/>,
-                    "className": "inline-flex mb3",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": null,
-                      "className": "",
-                      "color": "madison-blue",
-                      "disabled": false,
-                      "fullWidth": false,
-                      "hover": "shadow",
-                      "label": "foo",
-                      "onClick": [Function],
-                      "onMouseEnter": [Function],
-                      "onMouseLeave": [Function],
-                      "shadow": false,
-                      "to": "foo",
-                      "type": "button",
-                      "variant": "primary",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": "div",
->>>>>>> Add ShopOnlineNavDropdown test
                 },
                 "type": "div",
               },

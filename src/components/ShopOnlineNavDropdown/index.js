@@ -144,14 +144,14 @@ ShopOnlineNavDropdown.propTypes = {
   productLanding: PropTypes.object,
   alertIsActive: PropTypes.bool,
   shopOnlineDropdownIsOpen: PropTypes.bool,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  openShopOnline: PropTypes.func,
+  closeShopOnline: PropTypes.func
 };
 
 ShopOnlineNavDropdown.defaultProps = {
   productLanding: {},
   alertIsActive: false,
   shopOnlineDropdownIsOpen: false,
-  onMouseEnter: () => {},
-  onMouseLeave: () => {}
+  openShopOnline: () => {},
+  closeShopOnline: () => {}
 };

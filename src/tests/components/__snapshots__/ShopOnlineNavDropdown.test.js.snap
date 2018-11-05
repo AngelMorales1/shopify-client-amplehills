@@ -6,8 +6,10 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ShopOnlineNavDropdown
     alertIsActive={false}
+    closeShopOnline={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    openShopOnline={[Function]}
     productLanding={
         Object {
             "description": "foo",
@@ -53,25 +55,24 @@ ShallowWrapper {
         className="absolute z-nav"
 >
         <div
-                className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+                className="w100 pt3 px4 bg-peach fixed drip"
         >
                 <div
-                        className="col-6 flex flex-row justify-center mx-auto"
+                        className="content-width mx-auto flex flex-row items-center justify-end"
                 >
-                        
-                </div>
-                <div
-                        className="col-2 absolute r0"
-                >
-                        <p
-                                className="text-white bold"
+                        <div
+                                className=""
                         >
-                                Merch
-                        </p>
+                                <div
+                                        className="flex flex-row justify-between mx-auto"
+                                >
+                                        
+                                </div>
+                        </div>
                 </div>
         </div>
 </div>,
-      "className": "relative z-nav",
+      "className": "undefined relative",
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
     },
@@ -82,21 +83,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+          className="w100 pt3 px4 bg-peach fixed drip"
 >
           <div
-                    className="col-6 flex flex-row justify-center mx-auto"
+                    className="content-width mx-auto flex flex-row items-center justify-end"
           >
-                    
-          </div>
-          <div
-                    className="col-2 absolute r0"
-          >
-                    <p
-                              className="text-white bold"
+                    <div
+                              className=""
                     >
-                              Merch
-                    </p>
+                              <div
+                                        className="flex flex-row justify-between mx-auto"
+                              >
+                                        
+                              </div>
+                    </div>
           </div>
 </div>,
         "className": "absolute z-nav",
@@ -107,71 +107,74 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="col-6 flex flex-row justify-center mx-auto"
+          "children": <div
+            className="content-width mx-auto flex flex-row items-center justify-end"
 >
-              
-</div>,
             <div
-              className="col-2 absolute r0"
->
-              <p
-                            className="text-white bold"
-              >
-                            Merch
-              </p>
+                        className=""
+            >
+                        <div
+                                    className="flex flex-row justify-between mx-auto"
+                        >
+                                    
+                        </div>
+            </div>
 </div>,
-          ],
-          "className": "w100 pt3 px4 bg-peach fixed drip flex flex-row items-center",
+          "className": "w100 pt3 px4 bg-peach fixed drip",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [],
-              "className": "col-6 flex flex-row justify-center mx-auto",
-            },
-            "ref": null,
-            "rendered": Array [],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <p
-                  className="text-white bold"
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className=""
 >
-                  Merch
-</p>,
-                Array [],
-              ],
-              "className": "col-2 absolute r0",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
+                <div
+                                className="flex flex-row justify-between mx-auto"
+                >
+                                
+                </div>
+</div>,
+              null,
+            ],
+            "className": "content-width mx-auto flex flex-row items-center justify-end",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="flex flex-row justify-between mx-auto"
+>
+                  
+</div>,
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Merch",
-                  "className": "text-white bold",
+                  "children": Array [],
+                  "className": "flex flex-row justify-between mx-auto",
                 },
                 "ref": null,
-                "rendered": "Merch",
-                "type": "p",
+                "rendered": Array [],
+                "type": "div",
               },
-            ],
-            "type": "div",
-          },
-        ],
+              "type": "div",
+            },
+            null,
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       "type": "div",
@@ -188,25 +191,24 @@ ShallowWrapper {
           className="absolute z-nav"
 >
           <div
-                    className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+                    className="w100 pt3 px4 bg-peach fixed drip"
           >
                     <div
-                              className="col-6 flex flex-row justify-center mx-auto"
+                              className="content-width mx-auto flex flex-row items-center justify-end"
                     >
-                              
-                    </div>
-                    <div
-                              className="col-2 absolute r0"
-                    >
-                              <p
-                                        className="text-white bold"
+                              <div
+                                        className=""
                               >
-                                        Merch
-                              </p>
+                                        <div
+                                                  className="flex flex-row justify-between mx-auto"
+                                        >
+                                                  
+                                        </div>
+                              </div>
                     </div>
           </div>
 </div>,
-        "className": "relative z-nav",
+        "className": "undefined relative",
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
       },
@@ -217,21 +219,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+            className="w100 pt3 px4 bg-peach fixed drip"
 >
             <div
-                        className="col-6 flex flex-row justify-center mx-auto"
+                        className="content-width mx-auto flex flex-row items-center justify-end"
             >
-                        
-            </div>
-            <div
-                        className="col-2 absolute r0"
-            >
-                        <p
-                                    className="text-white bold"
+                        <div
+                                    className=""
                         >
-                                    Merch
-                        </p>
+                                    <div
+                                                className="flex flex-row justify-between mx-auto"
+                                    >
+                                                
+                                    </div>
+                        </div>
             </div>
 </div>,
           "className": "absolute z-nav",
@@ -242,71 +243,74 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <div
-                className="col-6 flex flex-row justify-center mx-auto"
+            "children": <div
+              className="content-width mx-auto flex flex-row items-center justify-end"
 >
-                
-</div>,
               <div
-                className="col-2 absolute r0"
->
-                <p
-                                className="text-white bold"
-                >
-                                Merch
-                </p>
+                            className=""
+              >
+                            <div
+                                          className="flex flex-row justify-between mx-auto"
+                            >
+                                          
+                            </div>
+              </div>
 </div>,
-            ],
-            "className": "w100 pt3 px4 bg-peach fixed drip flex flex-row items-center",
+            "className": "w100 pt3 px4 bg-peach fixed drip",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [],
-                "className": "col-6 flex flex-row justify-center mx-auto",
-              },
-              "ref": null,
-              "rendered": Array [],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p
-                    className="text-white bold"
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className=""
 >
-                    Merch
-</p>,
-                  Array [],
-                ],
-                "className": "col-2 absolute r0",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
+                  <div
+                                    className="flex flex-row justify-between mx-auto"
+                  >
+                                    
+                  </div>
+</div>,
+                null,
+              ],
+              "className": "content-width mx-auto flex flex-row items-center justify-end",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="flex flex-row justify-between mx-auto"
+>
+                    
+</div>,
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Merch",
-                    "className": "text-white bold",
+                    "children": Array [],
+                    "className": "flex flex-row justify-between mx-auto",
                   },
                   "ref": null,
-                  "rendered": "Merch",
-                  "type": "p",
+                  "rendered": Array [],
+                  "type": "div",
                 },
-              ],
-              "type": "div",
-            },
-          ],
+                "type": "div",
+              },
+              null,
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
         "type": "div",
@@ -330,8 +334,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ShopOnlineNavDropdown
     alertIsActive={false}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
+    closeShopOnline={[Function]}
+    openShopOnline={[Function]}
     productLanding={Object {}}
     shopOnlineDropdownIsOpen={false}
 />,
@@ -351,25 +355,24 @@ ShallowWrapper {
         className="absolute z-nav"
 >
         <div
-                className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+                className="w100 pt3 px4 bg-peach fixed drip"
         >
                 <div
-                        className="col-6 flex flex-row justify-center mx-auto"
+                        className="content-width mx-auto flex flex-row items-center justify-end"
                 >
-                        
-                </div>
-                <div
-                        className="col-2 absolute r0"
-                >
-                        <p
-                                className="text-white bold"
+                        <div
+                                className=""
                         >
-                                Merch
-                        </p>
+                                <div
+                                        className="flex flex-row justify-between mx-auto"
+                                >
+                                        
+                                </div>
+                        </div>
                 </div>
         </div>
 </div>,
-      "className": "relative z-nav",
+      "className": "undefined relative",
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
     },
@@ -380,21 +383,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+          className="w100 pt3 px4 bg-peach fixed drip"
 >
           <div
-                    className="col-6 flex flex-row justify-center mx-auto"
+                    className="content-width mx-auto flex flex-row items-center justify-end"
           >
-                    
-          </div>
-          <div
-                    className="col-2 absolute r0"
-          >
-                    <p
-                              className="text-white bold"
+                    <div
+                              className=""
                     >
-                              Merch
-                    </p>
+                              <div
+                                        className="flex flex-row justify-between mx-auto"
+                              >
+                                        
+                              </div>
+                    </div>
           </div>
 </div>,
         "className": "absolute z-nav",
@@ -405,71 +407,74 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="col-6 flex flex-row justify-center mx-auto"
+          "children": <div
+            className="content-width mx-auto flex flex-row items-center justify-end"
 >
-              
-</div>,
             <div
-              className="col-2 absolute r0"
->
-              <p
-                            className="text-white bold"
-              >
-                            Merch
-              </p>
+                        className=""
+            >
+                        <div
+                                    className="flex flex-row justify-between mx-auto"
+                        >
+                                    
+                        </div>
+            </div>
 </div>,
-          ],
-          "className": "w100 pt3 px4 bg-peach fixed drip flex flex-row items-center",
+          "className": "w100 pt3 px4 bg-peach fixed drip",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [],
-              "className": "col-6 flex flex-row justify-center mx-auto",
-            },
-            "ref": null,
-            "rendered": Array [],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <p
-                  className="text-white bold"
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className=""
 >
-                  Merch
-</p>,
-                Array [],
-              ],
-              "className": "col-2 absolute r0",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
+                <div
+                                className="flex flex-row justify-between mx-auto"
+                >
+                                
+                </div>
+</div>,
+              null,
+            ],
+            "className": "content-width mx-auto flex flex-row items-center justify-end",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="flex flex-row justify-between mx-auto"
+>
+                  
+</div>,
+                "className": "",
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Merch",
-                  "className": "text-white bold",
+                  "children": Array [],
+                  "className": "flex flex-row justify-between mx-auto",
                 },
                 "ref": null,
-                "rendered": "Merch",
-                "type": "p",
+                "rendered": Array [],
+                "type": "div",
               },
-            ],
-            "type": "div",
-          },
-        ],
+              "type": "div",
+            },
+            null,
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       "type": "div",
@@ -486,25 +491,24 @@ ShallowWrapper {
           className="absolute z-nav"
 >
           <div
-                    className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+                    className="w100 pt3 px4 bg-peach fixed drip"
           >
                     <div
-                              className="col-6 flex flex-row justify-center mx-auto"
+                              className="content-width mx-auto flex flex-row items-center justify-end"
                     >
-                              
-                    </div>
-                    <div
-                              className="col-2 absolute r0"
-                    >
-                              <p
-                                        className="text-white bold"
+                              <div
+                                        className=""
                               >
-                                        Merch
-                              </p>
+                                        <div
+                                                  className="flex flex-row justify-between mx-auto"
+                                        >
+                                                  
+                                        </div>
+                              </div>
                     </div>
           </div>
 </div>,
-        "className": "relative z-nav",
+        "className": "undefined relative",
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
       },
@@ -515,21 +519,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="w100 pt3 px4 bg-peach fixed drip flex flex-row items-center"
+            className="w100 pt3 px4 bg-peach fixed drip"
 >
             <div
-                        className="col-6 flex flex-row justify-center mx-auto"
+                        className="content-width mx-auto flex flex-row items-center justify-end"
             >
-                        
-            </div>
-            <div
-                        className="col-2 absolute r0"
-            >
-                        <p
-                                    className="text-white bold"
+                        <div
+                                    className=""
                         >
-                                    Merch
-                        </p>
+                                    <div
+                                                className="flex flex-row justify-between mx-auto"
+                                    >
+                                                
+                                    </div>
+                        </div>
             </div>
 </div>,
           "className": "absolute z-nav",
@@ -540,71 +543,74 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <div
-                className="col-6 flex flex-row justify-center mx-auto"
+            "children": <div
+              className="content-width mx-auto flex flex-row items-center justify-end"
 >
-                
-</div>,
               <div
-                className="col-2 absolute r0"
->
-                <p
-                                className="text-white bold"
-                >
-                                Merch
-                </p>
+                            className=""
+              >
+                            <div
+                                          className="flex flex-row justify-between mx-auto"
+                            >
+                                          
+                            </div>
+              </div>
 </div>,
-            ],
-            "className": "w100 pt3 px4 bg-peach fixed drip flex flex-row items-center",
+            "className": "w100 pt3 px4 bg-peach fixed drip",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [],
-                "className": "col-6 flex flex-row justify-center mx-auto",
-              },
-              "ref": null,
-              "rendered": Array [],
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <p
-                    className="text-white bold"
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className=""
 >
-                    Merch
-</p>,
-                  Array [],
-                ],
-                "className": "col-2 absolute r0",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
+                  <div
+                                    className="flex flex-row justify-between mx-auto"
+                  >
+                                    
+                  </div>
+</div>,
+                null,
+              ],
+              "className": "content-width mx-auto flex flex-row items-center justify-end",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="flex flex-row justify-between mx-auto"
+>
+                    
+</div>,
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Merch",
-                    "className": "text-white bold",
+                    "children": Array [],
+                    "className": "flex flex-row justify-between mx-auto",
                   },
                   "ref": null,
-                  "rendered": "Merch",
-                  "type": "p",
+                  "rendered": Array [],
+                  "type": "div",
                 },
-              ],
-              "type": "div",
-            },
-          ],
+                "type": "div",
+              },
+              null,
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
         "type": "div",
