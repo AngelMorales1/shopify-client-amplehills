@@ -5,7 +5,7 @@ import BlockSwitch from 'components/BlockSwitch';
 
 class FlavorDetailView extends Component {
   render() {
-    const { model, flavor, cardsBlock } = this.props;
+    const { model, flavor } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 

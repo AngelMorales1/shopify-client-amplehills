@@ -11,14 +11,7 @@ class LocationDetailView extends Component {
   refBlocks = {};
 
   render() {
-    const {
-      model,
-      blocks,
-      location,
-      locationGeoJSON,
-      events,
-      cardsBlock
-    } = this.props;
+    const { model, blocks, location, locationGeoJSON, events } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 

@@ -1,13 +1,5 @@
 export default {
   available: true,
-  cardBlock1Color: '',
-  cardBlock1Image: {},
-  cardBlock1Link: '',
-  cardBlock1Text: '',
-  cardBlock2Color: '',
-  cardBlock2Image: {},
-  cardBlock2Link: '',
-  cardBlock2Text: '',
   cartDetails: '',
   gridImage: '',
   limitedEdition: false,
@@ -20,6 +12,7 @@ export default {
   id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8xMzUyMDIwNzcwODIzNQ==',
   price: 10,
   title: 'Ample Hills T-Shirt',
+  contentBlocks: [],
   images: [
     {
       fields: {

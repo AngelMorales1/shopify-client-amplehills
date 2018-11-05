@@ -10,7 +10,7 @@ class GenericPageView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, blocks, subNavIsOn, cardsBlock } = this.props;
+    const { model, blocks, subNavIsOn } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
 

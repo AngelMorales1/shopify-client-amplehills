@@ -21,6 +21,39 @@ ShallowWrapper {
             "text": "foo",
           }
     }
+    fields={
+        Object {
+            "card1Color": "",
+            "card1Image": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "card1Link": "",
+            "card1Text": "",
+            "card2Color": "",
+            "card2Image": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "card2Link": "",
+            "card2Text": "",
+            "title": "",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -82,8 +115,39 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <CardsBlock
-    cardBlock1={Object {}}
-    cardBlock2={Object {}}
+    fields={
+        Object {
+            "card1Color": "",
+            "card1Image": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "card1Link": "",
+            "card1Text": "",
+            "card2Color": "",
+            "card2Image": Object {
+              "fields": Object {
+                "file": Object {
+                  "url": "",
+                },
+                "title": "",
+              },
+              "sys": Object {
+                "id": "",
+              },
+            },
+            "card2Link": "",
+            "card2Text": "",
+            "title": "",
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

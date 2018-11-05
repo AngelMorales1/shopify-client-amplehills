@@ -6,7 +6,7 @@ import EventDetailHero from 'components/EventDetailHero';
 
 class EventDetailView extends Component {
   render() {
-    const { model, event, cardsBlock } = this.props;
+    const { model, event } = this.props;
     const blocks = get(event, 'contentBlocks', []);
 
     if (model.isError) return <h1>Error</h1>;

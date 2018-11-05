@@ -56,14 +56,6 @@ export default createSelector(
       const text = get(fields, 'text', '');
       const link = `/events/${handle}`;
       const blockCardButtonLabel = get(fields, 'blockCardButtonLabel', '');
-      const cardBlock1Text = get(fields, 'cardBlock1Text', '');
-      const cardBlock1Link = get(fields, 'cardBlock1Link', '');
-      const cardBlock1Color = get(fields, 'cardBlock1Color', '');
-      const cardBlock1Image = get(fields, 'cardBlock1Image', {});
-      const cardBlock2Text = get(fields, 'cardBlock2Text', '');
-      const cardBlock2Link = get(fields, 'cardBlock2Link', '');
-      const cardBlock2Color = get(fields, 'cardBlock2Color', '');
-      const cardBlock2Image = get(fields, 'cardBlock2Image', {});
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -119,14 +111,6 @@ export default createSelector(
         datesAndTimes,
         locationPhone,
         blockCardButtonLabel,
-        cardBlock1Text,
-        cardBlock1Link,
-        cardBlock1Color,
-        cardBlock1Image,
-        cardBlock2Text,
-        cardBlock2Link,
-        cardBlock2Color,
-        cardBlock2Image,
         ...shopifyProduct
       };
 
