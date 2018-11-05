@@ -11,8 +11,8 @@ import {
   closeMobileNav
 } from 'state/actions/ui/mobileNavUIActions';
 import {
-  openShopOnline,
-  closeShopOnline
+  openShopDropdown,
+  closeShopDropdown
 } from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
 
@@ -22,7 +22,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
-import ShopOnlineNavDropdown from 'components/ShopOnlineNavDropdown';
+import ShopDropdown from 'components/ShopDropdown';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -72,9 +72,9 @@ class Nav extends Component {
       profileIcon,
       productLanding,
       alertIsActive,
-      shopOnlineDropdownIsOpen
+      shopDropdownIsOpen
     } = this.props;
-    const { openShopOnline, closeShopOnline } = this.props.actions;
+    const { openShopDropdown, closeShopDropdown } = this.props.actions;
     const { medium } = Global.breakpoints;
     const cartIsEmpty = this.props.totalItems === 0;
 
@@ -189,8 +189,8 @@ class Nav extends Component {
                   variant="primary-small"
                   color="white-peach"
                   label="Shop Online"
-                  onClick={closeShopOnline}
-                  onMouseEnter={openShopOnline}
+                  onClick={closeShopDropdown}
+                  onMouseEnter={openShopDropdown}
                   hover="clear-white-border"
                 />
               </Fragment>
@@ -215,12 +215,12 @@ class Nav extends Component {
           </div>
         </div>
         {this.state.currentBreakpoint === medium.label ? (
-          <ShopOnlineNavDropdown
-            shopOnlineDropdownIsOpen={shopOnlineDropdownIsOpen}
+          <ShopDropdown
+            shopDropdownIsOpen={shopDropdownIsOpen}
             productLanding={productLanding}
             alertIsActive={alertIsActive}
-            openShopOnline={openShopOnline}
-            closeShopOnline={closeShopOnline}
+            openShopDropdown={openShopDropdown}
+            closeShopDropdown={closeShopDropdown}
           />
         ) : null}
       </div>
@@ -234,8 +234,8 @@ Nav.propTypes = {
     closeMiniCart: PropTypes.func,
     openMobileNav: PropTypes.func,
     closeMobileNav: PropTypes.func,
-    openShopOnline: PropTypes.func,
-    closeShopOnline: PropTypes.func
+    openShopDropdown: PropTypes.func,
+    closeShopDropdown: PropTypes.func
   }),
   miniCartIsOpen: PropTypes.bool,
   mobileNavIsOpen: PropTypes.bool,
@@ -249,8 +249,8 @@ Nav.defaultProps = {
     closeMiniCart: () => {},
     openMobileNav: () => {},
     closeMobileNav: () => {},
-    openShopOnline: () => {},
-    closeShopOnline: () => {}
+    openShopDropdown: () => {},
+    closeShopDropdown: () => {}
   },
   miniCartIsOpen: false,
   mobileNavIsOpen: false,
@@ -263,7 +263,7 @@ const mapStateToProps = state => {
     ...state,
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
-    shopOnlineDropdownIsOpen: get(state, 'dropdownNavUI.shopOnlineIsOpen'),
+    shopDropdownIsOpen: get(state, 'dropdownNavUI.shopDropdownIsOpen'),
     totalItems: totalItems(state),
     productLanding: get(
       state,
@@ -282,8 +282,8 @@ const mapDispatchToProps = dispatch => {
         closeMiniCart,
         openMobileNav,
         closeMobileNav,
-        openShopOnline,
-        closeShopOnline
+        openShopDropdown,
+        closeShopDropdown
       },
       dispatch
     )

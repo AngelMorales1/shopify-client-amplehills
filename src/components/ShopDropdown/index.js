@@ -3,50 +3,46 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
 
-import styles from './ShopOnlineNavDropdown.scss';
+import styles from './ShopDropdown.scss';
 import { Image, Button } from 'components/base';
 
-const ShopOnlineNavDropdown = ({
+const ShopDropdown = ({
   productLanding,
   alertIsActive,
-  shopOnlineDropdownIsOpen,
-  openShopOnline,
-  closeShopOnline
+  shopDropdownIsOpen,
+  openShopDropdown,
+  closeShopDropdown
 }) => {
   const iceCreamProducts = get(productLanding, 'iceCreamProducts', []);
   const merchProducts = get(productLanding, 'merchandiseProducts', []);
 
   return (
     <div
-      onMouseEnter={openShopOnline}
-      onMouseLeave={closeShopOnline}
+      onMouseEnter={openShopDropdown}
+      onMouseLeave={closeShopDropdown}
       className={cx(
-        styles['ShopOnlineNavDropdown'],
+        styles['ShopDropdown'],
         {
-          [styles['ShopOnlineNavDropdown--inactive']]: !shopOnlineDropdownIsOpen
+          [styles['ShopDropdown--inactive']]: !shopDropdownIsOpen
         },
         'relative'
       )}
     >
       <div
         className={cx(
-          styles['ShopOnlineNavDropdown__nav-container'],
+          styles['ShopDropdown__nav-container'],
           {
-            [styles[
-              'ShopOnlineNavDropdown__nav-container--with-alert'
-            ]]: alertIsActive
+            [styles['ShopDropdown__nav-container--with-alert']]: alertIsActive
           },
           'absolute z-nav'
         )}
       >
         <div className={cx('w100 pt3 px4 bg-peach fixed drip')}>
           <div className="content-width mx-auto flex flex-row items-center justify-end">
-            <div
-              className={cx(styles['ShopOnlineNavDropdown__product-wrapper'])}
-            >
+            <div className={cx(styles['ShopDropdown__product-wrapper'])}>
               <div
                 className={cx(
-                  styles['ShopOnlineNavDropdown__product-container'],
+                  styles['ShopDropdown__product-container'],
                   'flex flex-row justify-between mx-auto'
                 )}
               >
@@ -63,26 +59,26 @@ const ShopOnlineNavDropdown = ({
                   return (
                     <div key={get(product, 'sys.id', '')} className="mx1">
                       <Button
-                        onClick={closeShopOnline}
+                        onClick={closeShopDropdown}
                         key={handle}
                         variant="style-none"
                         to={`/products/${handle}`}
                       >
                         <div
                           className={cx(
-                            styles['ShopOnlineNavDropdown__card'],
+                            styles['ShopDropdown__card'],
                             'bg-white p3 flex flex-column items-center justify-between'
                           )}
                         >
                           <div
                             className={cx(
-                              styles['ShopOnlineNavDropdown__image--container'],
+                              styles['ShopDropdown__image--container'],
                               'w100'
                             )}
                           >
                             <Image
                               className={cx(
-                                styles['ShopOnlineNavDropdown__image'],
+                                styles['ShopDropdown__image'],
                                 'wh100'
                               )}
                               src={image}
@@ -90,9 +86,7 @@ const ShopOnlineNavDropdown = ({
                           </div>
                           <div
                             className={cx(
-                              styles[
-                                'ShopOnlineNavDropdown__card-text-container'
-                              ],
+                              styles['ShopDropdown__card-text-container'],
                               'flex flex-row items-center'
                             )}
                           >
@@ -108,9 +102,7 @@ const ShopOnlineNavDropdown = ({
               </div>
             </div>
             {merchProducts.length ? (
-              <div
-                className={cx(styles['ShopOnlineNavDropdown__merch-container'])}
-              >
+              <div className={cx(styles['ShopDropdown__merch-container'])}>
                 <div className="ml2">
                   <p className="text-white bold">Merch</p>
                   {merchProducts.map(merch => {
@@ -119,7 +111,7 @@ const ShopOnlineNavDropdown = ({
                     const handle = get(fields, 'handle', '');
                     return (
                       <Button
-                        onClick={closeShopOnline}
+                        onClick={closeShopDropdown}
                         key={handle}
                         variant="style-none"
                         to={`/merchandise/${handle}`}
@@ -138,20 +130,20 @@ const ShopOnlineNavDropdown = ({
   );
 };
 
-export default ShopOnlineNavDropdown;
+export default ShopDropdown;
 
-ShopOnlineNavDropdown.propTypes = {
+ShopDropdown.propTypes = {
   productLanding: PropTypes.object,
   alertIsActive: PropTypes.bool,
-  shopOnlineDropdownIsOpen: PropTypes.bool,
-  openShopOnline: PropTypes.func,
-  closeShopOnline: PropTypes.func
+  shopDropdownIsOpen: PropTypes.bool,
+  openShopDropdown: PropTypes.func,
+  closeShopDropdown: PropTypes.func
 };
 
-ShopOnlineNavDropdown.defaultProps = {
+ShopDropdown.defaultProps = {
   productLanding: {},
   alertIsActive: false,
-  shopOnlineDropdownIsOpen: false,
-  openShopOnline: () => {},
-  closeShopOnline: () => {}
+  shopDropdownIsOpen: false,
+  openShopDropdown: () => {},
+  closeShopDropdown: () => {}
 };

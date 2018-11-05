@@ -1,20 +1,20 @@
 import {
-  OPEN_SHOP_ONLINE,
-  CLOSE_SHOP_ONLINE
+  OPEN_SHOP_DROPDOWN,
+  CLOSE_SHOP_DROPDOWN
 } from 'state/actions/ui/dropdownNavUIActions';
 
 const initialState = {
-  shopOnlineIsOpen: false
+  shopDropdownIsOpen: false
 };
 
 export default (state = initialState, action) => {
   const { type } = action;
   switch (type) {
-    case OPEN_SHOP_ONLINE:
-    case CLOSE_SHOP_ONLINE:
+    case OPEN_SHOP_DROPDOWN:
+    case CLOSE_SHOP_DROPDOWN:
       return {
         ...state,
-        shopOnlineIsOpen: action.payload
+        shopDropdownIsOpen: action.payload
       };
     default:
       return state;

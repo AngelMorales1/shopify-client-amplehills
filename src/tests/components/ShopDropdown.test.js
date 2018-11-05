@@ -1,17 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ShopOnlineNavDropdown from 'components/ShopOnlineNavDropdown';
+import ShopDropdown from 'components/ShopDropdown';
 
 it('renders without data', () => {
-  const component = shallow(<ShopOnlineNavDropdown />);
+  const component = shallow(<ShopDropdown />);
 
   expect(component).toMatchSnapshot();
 });
 
 it('renders with data', () => {
   const component = shallow(
-    <ShopOnlineNavDropdown
+    <ShopDropdown
       productLanding={{
         description: 'foo',
         hideWholesaleBlock: false,
