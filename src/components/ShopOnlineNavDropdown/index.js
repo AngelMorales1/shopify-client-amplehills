@@ -23,9 +23,9 @@ const ShopOnlineNavDropdown = ({
       className={cx(
         styles['ShopOnlineNavDropdown'],
         {
-          [styles['ShopOnlineNavDropdown--active']]: shopOnlineDropdownIsOpen
+          [styles['ShopOnlineNavDropdown--inactive']]: !shopOnlineDropdownIsOpen
         },
-        'relative transition-dropdown-slide-down'
+        'relative'
       )}
     >
       <div

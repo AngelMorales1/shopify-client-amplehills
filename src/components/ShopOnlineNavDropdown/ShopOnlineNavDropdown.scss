@@ -1,11 +1,11 @@
-@import 'settings', 'typography', 'src/styles/utils';
+@import 'settings', 'typography';
 
 .ShopOnlineNavDropdown {
-  display: none;
   z-index: 750;
+  transition: transform 0.5s ease-out;
 
-  &--active {
-    display: inherit;
+  &--inactive {
+    transform: translate3d(0, spacing(-100), 0);
   }
 
   &__nav-container {
