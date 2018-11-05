@@ -18,7 +18,7 @@ import AvailableLocations from 'components/AvailableLocations';
 import PressBlock from 'components/PressBlock';
 import AvailableFlavors from 'components/AvailableFlavors';
 import FlavorsLanding from 'components/FlavorsLanding';
-import CardsBlock from 'components/CardsBlock';
+import CardRecirculation from 'components/CardRecirculation';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -47,8 +47,8 @@ const BlockSwitch = props => {
       return <ImageVideoCarousel {...props} />;
     case 'blockFaq':
       return <FAQBlock {...props} />;
-    case 'blockCardsModule':
-      return <CardsBlock {...props} />;
+    case 'blockCardRecirculation':
+      return <CardRecirculation {...props} />;
     case 'blockFixedContent':
       const fields = get(block, 'fields', {});
       const contentType = get(fields, 'contentType', '');

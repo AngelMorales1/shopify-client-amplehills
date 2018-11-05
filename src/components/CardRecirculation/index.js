@@ -5,10 +5,10 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import imageModel from 'models/imageModel';
 
-import styles from './CardsBlock.scss';
+import styles from './CardRecirculation.scss';
 import { Button, Image } from 'components/base';
 
-const CardsBlock = ({ block }) => {
+const CardRecirculation = ({ block }) => {
   const fields = get(block, 'fields', {});
   const card1HasData = Object.keys(fields).find(field =>
     field.includes('card1')
@@ -22,7 +22,7 @@ const CardsBlock = ({ block }) => {
   return (
     <div
       className={cx(
-        styles['CardsBlock'],
+        styles['CardRecirculation'],
         'w100 p3 mt4 flex content-width mx-auto'
       )}
     >
@@ -35,13 +35,13 @@ const CardsBlock = ({ block }) => {
           >
             <div
               className={cx(
-                styles['CardsBlock__card'],
-                styles[`CardsBlock__card--${card1Color}`],
+                styles['CardRecirculation__card'],
+                styles[`CardRecirculation__card--${card1Color}`],
                 'flex flex-column items-center justify-between p3 w100'
               )}
             >
               <Image
-                className={cx(styles['CardsBlock__card-image'], 'mt2')}
+                className={cx(styles['CardRecirculation__card-image'], 'mt2')}
                 src={contentfulImgUtil(
                   get(fields, 'card1Image.fields.file.url', ''),
                   '300',
@@ -62,13 +62,13 @@ const CardsBlock = ({ block }) => {
           >
             <div
               className={cx(
-                styles['CardsBlock__card'],
-                styles[`CardsBlock__card--${card2Color}`],
+                styles['CardRecirculation__card'],
+                styles[`CardRecirculation__card--${card2Color}`],
                 'flex flex-column items-center justify-between p3 w100'
               )}
             >
               <Image
-                className={cx(styles['CardsBlock__card-image'], 'mt2')}
+                className={cx(styles['CardRecirculation__card-image'], 'mt2')}
                 src={contentfulImgUtil(
                   get(fields, 'card2Image.fields.file.url', ''),
                   '300',
@@ -84,7 +84,7 @@ const CardsBlock = ({ block }) => {
   );
 };
 
-CardsBlock.propTypes = {
+CardRecirculation.propTypes = {
   fields: PropTypes.shape({
     card1Color: PropTypes.string,
     card1Image: imageModel.propTypes,
@@ -98,7 +98,7 @@ CardsBlock.propTypes = {
   })
 };
 
-CardsBlock.defaultProps = {
+CardRecirculation.defaultProps = {
   fields: {
     card1Color: '',
     card1Image: imageModel.default,
@@ -112,4 +112,4 @@ CardsBlock.defaultProps = {
   }
 };
 
-export default CardsBlock;
+export default CardRecirculation;
