@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import productHasHero from 'utils/productHasHero';
-import CardsBlock from 'components/CardsBlock';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
@@ -17,7 +16,6 @@ class ProductDetailView extends Component {
       product,
       product: { blocks, productHero, whatsIncluded }
     } = this.props;
-    const cardsBlockHasData = Object.values(cardsBlock).length;
 
     return (
       <div className="ProductDetailView">
@@ -51,7 +49,6 @@ class ProductDetailView extends Component {
                 {...this.props}
               />
             ))}
-          {cardsBlockHasData ? <CardsBlock cardsBlock={cardsBlock} /> : null}
         </div>
       </div>
     );

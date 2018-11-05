@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import get from 'utils/get';
 import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
-import CardsBlock from 'components/CardsBlock';
 
 import LocationDetailHero from 'components/LocationDetailHero';
 import BlockSwitch from 'components/BlockSwitch';
@@ -26,7 +25,6 @@ class LocationDetailView extends Component {
     const menuList = location.contentBlocks.map(block =>
       get(block, 'fields.title', '')
     );
-    const cardsBlockHasData = Object.values(cardsBlock).length;
 
     const blocksLength = get(location, 'contentBlocks', []).length;
 
@@ -63,7 +61,6 @@ class LocationDetailView extends Component {
                 />
               );
             })}
-          {cardsBlockHasData ? <CardsBlock cardsBlock={cardsBlock} /> : null}
         </div>
       </Fragment>
     );

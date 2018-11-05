@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import get from 'utils/get';
-import CardsBlock from 'components/CardsBlock';
 
 import BlockSwitch from 'components/BlockSwitch';
 import EventDetailHero from 'components/EventDetailHero';
@@ -11,7 +10,6 @@ class EventDetailView extends Component {
     const blocks = get(event, 'contentBlocks', []);
 
     if (model.isError) return <h1>Error</h1>;
-    const cardsBlockHasData = Object.values(cardsBlock).length;
 
     return (
       <div className="EventDetailView">
@@ -25,7 +23,6 @@ class EventDetailView extends Component {
               {...this.props}
             />
           ))}
-        {cardsBlockHasData ? <CardsBlock cardsBlock={cardsBlock} /> : null}
       </div>
     );
   }

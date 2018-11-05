@@ -9,8 +9,11 @@
   }
 
   &__card {
-    @extend .bg-dark-bay-blue;
     height: spacing(85);
+  }
+
+  &__card--dark-blue {
+    @extend .bg-dark-bay-blue;
   }
 
   &__card--yellow {

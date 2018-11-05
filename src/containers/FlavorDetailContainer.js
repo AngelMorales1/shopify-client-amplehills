@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import get from 'utils/get';
 import flavor from 'state/selectors/flavor';
-import cardsBlock from 'state/selectors/cardsBlock';
 
 class FlavorLandingContainer extends ContainerBase {
   view = import('views/FlavorDetailView');

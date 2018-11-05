@@ -10,7 +10,6 @@ import {
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
-import cardsBlock from 'state/selectors/cardsBlock';
 
 import get from 'utils/get';
 
@@ -21,8 +20,6 @@ class ProductDetailContainer extends ContainerBase {
 }
 
 const mapStateToProps = (state, props) => {
-  const selectedProduct = product(state, props);
-
   return {
     checkout: checkout(state),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
@@ -31,7 +28,7 @@ const mapStateToProps = (state, props) => {
       'applicationUI.globalSettings.items[0].fields',
       {}
     ),
-    product: selectedProduct,
+    product: product(state, props),
     products: products(state),
     ourPledge: get(
       state,
@@ -46,8 +43,7 @@ const mapStateToProps = (state, props) => {
     pressItems: get(
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
-    ),
-    cardsBlock: cardsBlock(selectedProduct)
+    )
   };
 };
 
