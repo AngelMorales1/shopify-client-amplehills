@@ -150,9 +150,17 @@ class LocationDetailHero extends Component {
             )}
           >
             {event ? (
-              <div className={cx(styles['LocationDetailHero__button'], 'm1')}>
+              <div
+                className={cx(
+                  styles['LocationDetailHero__button-container'],
+                  'm1'
+                )}
+              >
                 <Button
-                  className="uppercase justify-center"
+                  className={cx(
+                    styles['LocationDetailHero__button'],
+                    'uppercase justify-center'
+                  )}
                   color="madison-blue"
                   variant="primary-small"
                   label="book a class"
@@ -160,18 +168,34 @@ class LocationDetailHero extends Component {
                 />
               </div>
             ) : null}
-            <div className={cx(styles['LocationDetailHero__button'], 'm1')}>
+            <div
+              className={cx(
+                styles['LocationDetailHero__button-container'],
+                'm1'
+              )}
+            >
               <Button
-                className="uppercase justify-center"
+                className={cx(
+                  styles['LocationDetailHero__button'],
+                  'uppercase justify-center'
+                )}
                 color="madison-blue"
                 variant="primary-small"
                 label="book a party"
                 to="/party-request-form"
               />
             </div>
-            <div className={cx(styles['LocationDetailHero__button'], 'm1')}>
+            <div
+              className={cx(
+                styles['LocationDetailHero__button-container'],
+                'm1'
+              )}
+            >
               <Button
-                className="uppercase justify-center"
+                className={cx(
+                  styles['LocationDetailHero__button'],
+                  'uppercase justify-center'
+                )}
                 color="madison-blue"
                 variant="primary-small"
                 label="order a cake"
