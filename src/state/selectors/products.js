@@ -27,13 +27,28 @@ export default createSelector(
 
       const available = variants.some(variant => variant.available);
 
+      let link = `/products/${handle}`;
+
+      if (type === ShopifyProductTypes.EVENTS) {
+        link = `/events/${handle}`;
+      }
+
+      if (type === ShopifyProductTypes.MERCH) {
+        link = `/merchandise/${handle}`;
+      }
+
+      if (type === ShopifyProductTypes.PARTY_DEPOSIT) {
+        link = 'party-request-form';
+      }
+
       const handlizedProduct = {
         id,
         price,
         variants,
         handle,
         available,
-        type
+        type,
+        link
       };
 
       handlizedProducts[handle] = handlizedProduct;
@@ -114,7 +129,8 @@ export default createSelector(
           price: null,
           variants: [],
           type: null,
-          available: false
+          available: false,
+          link: ''
         });
         const subItems = get(product, 'fields.subItems', []).map(subItem => {
           return get(subItem, 'fields.productHandle', '');
@@ -126,8 +142,8 @@ export default createSelector(
           const variants = get(shopifySubItem, 'variants', []);
           return variants.some(variant => variant.available);
         });
-      const forceAvailable = get(product, 'fields.forceAvailable', false);
-      const link = `/products/${handle}`;
+        const forceAvailable = get(product, 'fields.forceAvailable', false);
+        const link = `/products/${handle}`;
 
         mergedProducts[handle] = {
           title,
@@ -144,7 +160,6 @@ export default createSelector(
           productHero,
           whatsIncluded,
           limitedEdition,
-          link,
           ...shopifyProduct
         };
 
