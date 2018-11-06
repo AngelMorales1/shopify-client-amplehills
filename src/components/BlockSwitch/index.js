@@ -19,6 +19,7 @@ import PressBlock from 'components/PressBlock';
 import AvailableFlavors from 'components/AvailableFlavors';
 import FlavorsLanding from 'components/FlavorsLanding';
 import CardRecirculation from 'components/CardRecirculation';
+import MultipleImageText from 'components/MultipleImageText';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -65,6 +66,8 @@ const BlockSwitch = props => {
           return <AvailableFlavors {...props} drip={drip} />;
         case 'Flavors Block':
           return <FlavorsLanding {...props} drip={drip} />;
+        case 'Multiple Image Text Block':
+          return <MultipleImageText {...props} drip={drip} />;
         default:
           return null;
       }

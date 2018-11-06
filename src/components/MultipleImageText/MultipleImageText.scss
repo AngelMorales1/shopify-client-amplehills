@@ -1,0 +1,19 @@
+@import 'settings';
+.MultipleImageText {
+  &__image-text-container {
+    flex-direction: column;
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+  }
+  &__image {
+    max-width: spacing(30);
+    max-height: spacing(30);
+  }
+  &__text {
+    text-align: center;
+    @media ($medium-up) {
+      text-align: start;
+    }
+  }
+}
