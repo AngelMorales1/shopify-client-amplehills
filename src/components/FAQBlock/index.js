@@ -38,7 +38,7 @@ class FAQBlock extends Component {
       <div
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
-        className="flex justify-center px3 py4"
+        className="flex justify-center px3 py4 mt4"
       >
         <div className={cx(styles['FAQBlock'], 'w100 flex content-width')}>
           <div
