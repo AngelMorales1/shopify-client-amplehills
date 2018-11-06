@@ -70,7 +70,11 @@ export const deriveLineItems = (checkout, products) =>
       }, cartAttributes);
 
     cartAttributes = attributes
-      .filter(attribute => !attribute.key.includes('Item'))
+      .filter(
+        attribute =>
+          !attribute.key.includes('Item') &&
+          !attribute.key.includes('Shipping Estimate')
+      )
       .reduce((stringifiedAttributes, attribute) => {
         stringifiedAttributes.push(`${attribute.key}: ${attribute.value}`);
         return stringifiedAttributes;

@@ -54,10 +54,10 @@ class MerchDetails extends Component {
         variantId: get(selectedItem, 'id', ''),
         quantity: this.state.quantity,
         customAttributes: [
-          {
-            key: 'Item',
-            value: get(selectedItem, 'title', '')
-          }
+          // {
+          //   key: 'Item',
+          //   value: get(selectedItem, 'title', '')
+          // }
         ]
       }
     ];
