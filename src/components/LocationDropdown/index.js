@@ -47,14 +47,14 @@ const LocationDropdown = ({
             </div>
             <div className="col-8 flex flex-row items-start justify-between">
               {Object.keys(locationSortedByGroup).map(locationGroup => {
-                let locationGroupTitle = 'Brooklyn';
+                let locationGroupTitle = BROOKLYN;
 
                 if (locationGroup === FARTHER_FROM_BROOKLYN) {
-                  locationGroupTitle = 'Farther From Brooklyn';
+                  locationGroupTitle = FARTHER_FROM_BROOKLYN;
                 }
 
                 if (locationGroup === FARTHEST_FROM_BROOKLYN) {
-                  locationGroupTitle = 'Farthest from Brooklyn';
+                  locationGroupTitle = FARTHEST_FROM_BROOKLYN;
                 }
 
                 return (
