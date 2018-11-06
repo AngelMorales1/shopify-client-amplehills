@@ -374,7 +374,6 @@ ChooseYourOwnStory.propTypes = {
     closeOurPledge: PropTypes.func
   }),
   product: productModel.propTypes,
-  products: PropTypes.objectOf(productModel.propTypes),
   block: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,

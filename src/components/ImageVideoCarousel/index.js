@@ -6,7 +6,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
 
 import styles from './ImageVideoCarousel.scss';
-import { Image, Carousel } from 'components/base';
+import { Carousel } from 'components/base';
 
 class ImageVideoCarousel extends Component {
   state = {

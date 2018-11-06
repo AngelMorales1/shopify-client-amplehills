@@ -413,7 +413,7 @@ Cart.propTypes = {
   }),
   checkout: checkoutModel.propTypes,
   items: PropTypes.arrayOf(itemModel.propTypes),
-  products: PropTypes.objectOf(productModel.propTypes)
+  products: productModel.propTypes
 };
 
 Cart.defaultProps = {
