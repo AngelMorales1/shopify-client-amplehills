@@ -2,6 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import {
+  FARTHER_FROM_BROOKLYN,
+  FARTHEST_FROM_BROOKLYN,
+  BROOKLYN
+} from 'constants/LocationGroups';
 import styles from './LocationDropdown.scss';
 import { Image, Button } from 'components/base';
 const LocationDropdown = ({
@@ -41,20 +46,23 @@ const LocationDropdown = ({
               <Image src={locationDropdownImage} />
             </div>
             <div className="col-8 flex flex-row items-start justify-between">
-              {Object.keys(locationSortedByGroup).map(locationGrop => {
+              {Object.keys(locationSortedByGroup).map(locationGroup => {
                 let locationGroupTitle = 'Brooklyn';
-                if (locationGrop === 'fartherFromBrooklyn') {
+
+                if (locationGroup === FARTHER_FROM_BROOKLYN) {
                   locationGroupTitle = 'Farther From Brooklyn';
                 }
-                if (locationGrop === 'farthestFromBrooklyn') {
+
+                if (locationGroup === FARTHEST_FROM_BROOKLYN) {
                   locationGroupTitle = 'Farthest from Brooklyn';
                 }
+
                 return (
-                  <div key={locationGrop} className="col-4 mr2">
+                  <div key={locationGroup} className="col-4 mr2">
                     <p className="carter text-white mb3 white-space-normal">
                       {locationGroupTitle}
                     </p>
-                    {Object.keys(locationSortedByGroup[locationGrop]).map(
+                    {Object.keys(locationSortedByGroup[locationGroup]).map(
                       region => {
                         return (
                           <div
@@ -66,7 +74,7 @@ const LocationDropdown = ({
                             </p>
                             {get(
                               locationSortedByGroup,
-                              `${locationGrop}.${region}`,
+                              `${locationGroup}.${region}`,
                               []
                             ).map(location => {
                               const fields = get(location, 'fields', {});

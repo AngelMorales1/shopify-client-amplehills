@@ -17,6 +17,11 @@ import {
   closeLocationDropdown
 } from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
+import {
+  FARTHER_FROM_BROOKLYN,
+  FARTHEST_FROM_BROOKLYN,
+  BROOKLYN
+} from 'constants/LocationGroups';
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
@@ -36,9 +41,9 @@ class Nav extends Component {
     currentBreakpoint: Global.breakpoints.medium.label,
     mobileNavIsOpen: false,
     locationSortedByGroup: {
-      brooklyn: {},
-      fartherFromBrooklyn: {},
-      farthestFromBrooklyn: {}
+      [BROOKLYN]: {},
+      [FARTHER_FROM_BROOKLYN]: {},
+      [FARTHEST_FROM_BROOKLYN]: {}
     }
   };
 
@@ -52,18 +57,26 @@ class Nav extends Component {
       const fields = get(location, 'fields', {});
       const region = get(fields, 'region', '');
       if (region === 'Brooklyn') {
-        return getlocationSortedByGroup.brooklyn[region]
-          ? getlocationSortedByGroup.brooklyn[region].push(location)
-          : (getlocationSortedByGroup.brooklyn[region] = [location]);
+        return getlocationSortedByGroup[BROOKLYN][region]
+          ? getlocationSortedByGroup[BROOKLYN][region].push(location)
+          : (getlocationSortedByGroup[BROOKLYN][region] = [location]);
       }
       if (get(fields, 'state', '') === 'NY') {
-        return getlocationSortedByGroup.fartherFromBrooklyn[region]
-          ? getlocationSortedByGroup.fartherFromBrooklyn[region].push(location)
-          : (getlocationSortedByGroup.fartherFromBrooklyn[region] = [location]);
+        return getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region]
+          ? getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region].push(
+              location
+            )
+          : (getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region] = [
+              location
+            ]);
       }
-      return getlocationSortedByGroup.farthestFromBrooklyn[region]
-        ? getlocationSortedByGroup.farthestFromBrooklyn[region].push(location)
-        : (getlocationSortedByGroup.farthestFromBrooklyn[region] = [location]);
+      return getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region]
+        ? getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region].push(
+            location
+          )
+        : (getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region] = [
+            location
+          ]);
     });
     this.setState({ locationSortedByGroup: getlocationSortedByGroup });
   }
