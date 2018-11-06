@@ -4,12 +4,12 @@ exports[`renders with data 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ShopOnlineNavDropdown
+  Symbol(enzyme.__unrendered__): <ShopDropdown
     alertIsActive={false}
-    closeShopOnline={[Function]}
+    closeShopDropdown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    openShopOnline={[Function]}
+    openShopDropdown={[Function]}
     productLanding={
         Object {
             "description": "foo",
@@ -37,6 +37,7 @@ ShallowWrapper {
             "wholesaleTitle": "foo",
           }
     }
+    shopDropdownIsOpen={false}
     shopOnlineDropdownIsOpen={false}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -332,12 +333,12 @@ exports[`renders without data 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ShopOnlineNavDropdown
+  Symbol(enzyme.__unrendered__): <ShopDropdown
     alertIsActive={false}
-    closeShopOnline={[Function]}
-    openShopOnline={[Function]}
+    closeShopDropdown={[Function]}
+    openShopDropdown={[Function]}
     productLanding={Object {}}
-    shopOnlineDropdownIsOpen={false}
+    shopDropdownIsOpen={false}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],

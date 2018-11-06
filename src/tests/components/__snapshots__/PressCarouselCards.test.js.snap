@@ -82,7 +82,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="bg-white p3 flex flex-column justify-center items-center"
+          className="bg-white p3 flex flex-column justify-between items-center"
 >
           <Image
                     alt=" logo"
@@ -93,7 +93,7 @@ ShallowWrapper {
                     style={Object {}}
           />
           <span
-                    className="carter text-peach center py3"
+                    className="carter text-peach center"
           />
           <Button
                     className="uppercase detail"
@@ -130,7 +130,7 @@ ShallowWrapper {
               style={Object {}}
 />,
             <span
-              className="carter text-peach center py3"
+              className="carter text-peach center"
 />,
             <Button
               className="uppercase detail"
@@ -148,7 +148,7 @@ ShallowWrapper {
               variant="primary-small"
 />,
           ],
-          "className": "bg-white p3 flex flex-column justify-center items-center",
+          "className": "bg-white p3 flex flex-column justify-between items-center",
         },
         "ref": null,
         "rendered": Array [
@@ -175,7 +175,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "",
-              "className": "carter text-peach center py3",
+              "className": "carter text-peach center",
             },
             "ref": null,
             "rendered": "",
@@ -219,7 +219,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="bg-white p3 flex flex-column justify-center items-center"
+            className="bg-white p3 flex flex-column justify-between items-center"
 >
             <Image
                         alt=" logo"
@@ -230,7 +230,7 @@ ShallowWrapper {
                         style={Object {}}
             />
             <span
-                        className="carter text-peach center py3"
+                        className="carter text-peach center"
             />
             <Button
                         className="uppercase detail"
@@ -267,7 +267,7 @@ ShallowWrapper {
                 style={Object {}}
 />,
               <span
-                className="carter text-peach center py3"
+                className="carter text-peach center"
 />,
               <Button
                 className="uppercase detail"
@@ -285,7 +285,7 @@ ShallowWrapper {
                 variant="primary-small"
 />,
             ],
-            "className": "bg-white p3 flex flex-column justify-center items-center",
+            "className": "bg-white p3 flex flex-column justify-between items-center",
           },
           "ref": null,
           "rendered": Array [
@@ -312,7 +312,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "",
-                "className": "carter text-peach center py3",
+                "className": "carter text-peach center",
               },
               "ref": null,
               "rendered": "",

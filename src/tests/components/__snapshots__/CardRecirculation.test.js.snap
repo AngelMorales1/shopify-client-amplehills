@@ -89,6 +89,8 @@ ShallowWrapper {
                     hover="shadow"
                     label=""
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to="foo"
                     type="button"
@@ -124,6 +126,8 @@ ShallowWrapper {
                     hover="shadow"
                     label=""
                     onClick={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
                     shadow={false}
                     to="foo"
                     type="button"
@@ -166,6 +170,8 @@ ShallowWrapper {
             hover="shadow"
             label=""
             onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             shadow={false}
             to="foo"
             type="button"
@@ -221,6 +227,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "",
             "onClick": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
             "shadow": false,
             "to": "foo",
             "type": "button",
@@ -300,6 +308,8 @@ ShallowWrapper {
             hover="shadow"
             label=""
             onClick={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
             shadow={false}
             to="foo"
             type="button"
@@ -355,6 +365,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "",
             "onClick": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
             "shadow": false,
             "to": "foo",
             "type": "button",
@@ -442,6 +454,8 @@ ShallowWrapper {
                         hover="shadow"
                         label=""
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to="foo"
                         type="button"
@@ -477,6 +491,8 @@ ShallowWrapper {
                         hover="shadow"
                         label=""
                         onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
                         shadow={false}
                         to="foo"
                         type="button"
@@ -519,6 +535,8 @@ ShallowWrapper {
               hover="shadow"
               label=""
               onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               shadow={false}
               to="foo"
               type="button"
@@ -574,6 +592,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "",
               "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
               "shadow": false,
               "to": "foo",
               "type": "button",
@@ -653,6 +673,8 @@ ShallowWrapper {
               hover="shadow"
               label=""
               onClick={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               shadow={false}
               to="foo"
               type="button"
@@ -708,6 +730,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "",
               "onClick": [Function],
+              "onMouseEnter": [Function],
+              "onMouseLeave": [Function],
               "shadow": false,
               "to": "foo",
               "type": "button",
