@@ -14,7 +14,7 @@ export default createSelector(
           coordinates: [location.coordinates.lon, location.coordinates.lat]
         },
         properties: {
-          ...location
+          id: location.id
         }
       }))
     };
