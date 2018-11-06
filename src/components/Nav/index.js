@@ -50,7 +50,6 @@ class Nav extends Component {
     const getlocationSortedByGroup = this.state.locationSortedByGroup;
     locations.forEach(location => {
       const fields = get(location, 'fields', {});
-      const title = get(fields, 'title', '');
       const region = get(fields, 'region', '');
       if (region === 'Brooklyn') {
         return getlocationSortedByGroup.brooklyn[region]
@@ -104,7 +103,6 @@ class Nav extends Component {
       alertIsActive,
       shopDropdownIsOpen,
       locationDropdownIsOpen,
-      locations,
       locationDropdownImage
     } = this.props;
     const {

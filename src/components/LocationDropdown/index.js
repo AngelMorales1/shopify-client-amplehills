@@ -5,7 +5,6 @@ import get from 'utils/get';
 import styles from './LocationDropdown.scss';
 import { Image, Button } from 'components/base';
 const LocationDropdown = ({
-  productLanding,
   alertIsActive,
   locationDropdownIsOpen,
   openLocationDropdown,
@@ -51,14 +50,17 @@ const LocationDropdown = ({
                   locationGroupTitle = 'Farthest from Brooklyn';
                 }
                 return (
-                  <div className="col-4 mr2">
+                  <div key={locationGrop} className="col-4 mr2">
                     <p className="carter text-white mb3 white-space-normal">
                       {locationGroupTitle}
                     </p>
                     {Object.keys(locationSortedByGroup[locationGrop]).map(
                       region => {
                         return (
-                          <div className="flex flex-column items-start mb2">
+                          <div
+                            key={region}
+                            className="flex flex-column items-start mb2"
+                          >
                             <p className="bold text-white mb1 white-space-normal">
                               {region}
                             </p>
@@ -72,6 +74,7 @@ const LocationDropdown = ({
                               const slug = get(fields, 'slug', '');
                               return (
                                 <Button
+                                  key={title}
                                   className={cx(
                                     styles['LocationDropdown__location-link'],
                                     'text-white light mb1 white-space-normal avenir'
@@ -100,16 +103,18 @@ const LocationDropdown = ({
 };
 export default LocationDropdown;
 LocationDropdown.propTypes = {
-  productLanding: PropTypes.object,
   alertIsActive: PropTypes.bool,
   LocationDropdownIsOpen: PropTypes.bool,
   openLocationDropdown: PropTypes.func,
-  closeLocationDropdown: PropTypes.func
+  closeLocationDropdown: PropTypes.func,
+  locationSortedByGroup: PropTypes.object,
+  locationDropdownImage: PropTypes.string
 };
 LocationDropdown.defaultProps = {
-  productLanding: {},
   alertIsActive: false,
   LocationDropdownIsOpen: false,
   openLocationDropdown: () => {},
-  closeLocationDropdown: () => {}
+  closeLocationDropdown: () => {},
+  locationSortedByGroup: {},
+  locationDropdownImage: ''
 };
