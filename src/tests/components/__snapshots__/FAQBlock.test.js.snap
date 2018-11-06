@@ -177,7 +177,7 @@ ShallowWrapper {
                 </div>
         </div>
 </div>,
-      "className": "flex justify-center px3 py4",
+      "className": "flex justify-center px3 py4 mt4",
       "style": Object {
         "zIndex": 0,
       },
@@ -936,7 +936,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        "className": "flex justify-center px3 py4",
+        "className": "flex justify-center px3 py4 mt4",
         "style": Object {
           "zIndex": 0,
         },
@@ -1633,7 +1633,7 @@ ShallowWrapper {
                 
         </div>
 </div>,
-      "className": "flex justify-center px3 py4",
+      "className": "flex justify-center px3 py4 mt4",
       "style": Object {
         "zIndex": 0,
       },
@@ -1737,7 +1737,7 @@ ShallowWrapper {
                     
           </div>
 </div>,
-        "className": "flex justify-center px3 py4",
+        "className": "flex justify-center px3 py4 mt4",
         "style": Object {
           "zIndex": 0,
         },

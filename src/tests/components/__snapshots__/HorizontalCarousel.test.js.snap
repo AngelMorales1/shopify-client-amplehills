@@ -28,11 +28,11 @@ ShallowWrapper {
         <div
           className="flex flex-column justify-center"
 >
-          <span
-                    className="block-headline my3 px3"
+          <p
+                    className="block-headline my3"
           >
                     foo
-          </span>
+          </p>
           <Button
                     className="ml1"
                     color="peach"
@@ -67,11 +67,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <span
-              className="block-headline my3 px3"
+            <p
+              className="block-headline my3"
 >
               foo
-</span>,
+</p>,
             <Button
               className="ml1"
               color="peach"
@@ -98,11 +98,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "foo",
-              "className": "block-headline my3 px3",
+              "className": "block-headline my3",
             },
             "ref": null,
             "rendered": "foo",
-            "type": "span",
+            "type": "p",
           },
           Object {
             "instance": null,
@@ -169,11 +169,11 @@ ShallowWrapper {
           <div
             className="flex flex-column justify-center"
 >
-            <span
-                        className="block-headline my3 px3"
+            <p
+                        className="block-headline my3"
             >
                         foo
-            </span>
+            </p>
             <Button
                         className="ml1"
                         color="peach"
@@ -208,11 +208,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <span
-                className="block-headline my3 px3"
+              <p
+                className="block-headline my3"
 >
                 foo
-</span>,
+</p>,
               <Button
                 className="ml1"
                 color="peach"
@@ -239,11 +239,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "foo",
-                "className": "block-headline my3 px3",
+                "className": "block-headline my3",
               },
               "ref": null,
               "rendered": "foo",
-              "type": "span",
+              "type": "p",
             },
             Object {
               "instance": null,
@@ -339,8 +339,8 @@ ShallowWrapper {
         <div
           className="flex flex-column justify-center"
 >
-          <span
-                    className="block-headline my3 px3"
+          <p
+                    className="block-headline my3"
           />
           <Button
                     className="ml1"
@@ -376,8 +376,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <span
-              className="block-headline my3 px3"
+            <p
+              className="block-headline my3"
 />,
             <Button
               className="ml1"
@@ -405,11 +405,11 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "",
-              "className": "block-headline my3 px3",
+              "className": "block-headline my3",
             },
             "ref": null,
             "rendered": "",
-            "type": "span",
+            "type": "p",
           },
           Object {
             "instance": null,
@@ -476,8 +476,8 @@ ShallowWrapper {
           <div
             className="flex flex-column justify-center"
 >
-            <span
-                        className="block-headline my3 px3"
+            <p
+                        className="block-headline my3"
             />
             <Button
                         className="ml1"
@@ -513,8 +513,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <span
-                className="block-headline my3 px3"
+              <p
+                className="block-headline my3"
 />,
               <Button
                 className="ml1"
@@ -542,11 +542,11 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "",
-                "className": "block-headline my3 px3",
+                "className": "block-headline my3",
               },
               "ref": null,
               "rendered": "",
-              "type": "span",
+              "type": "p",
             },
             Object {
               "instance": null,
