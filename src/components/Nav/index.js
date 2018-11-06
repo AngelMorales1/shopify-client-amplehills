@@ -12,7 +12,9 @@ import {
 } from 'state/actions/ui/mobileNavUIActions';
 import {
   openShopDropdown,
-  closeShopDropdown
+  closeShopDropdown,
+  openLocationDropdown,
+  closeLocationDropdown
 } from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
 
@@ -23,6 +25,7 @@ import cx from 'classnames';
 import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
 import ShopDropdown from 'components/ShopDropdown';
+import LocationDropdown from 'components/LocationDropdown';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -31,12 +34,39 @@ import styles from './Nav.scss';
 class Nav extends Component {
   state = {
     currentBreakpoint: Global.breakpoints.medium.label,
-    mobileNavIsOpen: false
+    mobileNavIsOpen: false,
+    locationSortedByGroup: {
+      brooklyn: {},
+      fartherFromBrooklyn: {},
+      farthestFromBrooklyn: {}
+    }
   };
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
     this.updateWindow();
+
+    const locations = get(this, 'props.locations', []);
+    const getlocationSortedByGroup = this.state.locationSortedByGroup;
+    locations.forEach(location => {
+      const fields = get(location, 'fields', {});
+      const title = get(fields, 'title', '');
+      const region = get(fields, 'region', '');
+      if (region === 'Brooklyn') {
+        return getlocationSortedByGroup.brooklyn[region]
+          ? getlocationSortedByGroup.brooklyn[region].push(location)
+          : (getlocationSortedByGroup.brooklyn[region] = [location]);
+      }
+      if (get(fields, 'state', '') === 'NY') {
+        return getlocationSortedByGroup.fartherFromBrooklyn[region]
+          ? getlocationSortedByGroup.fartherFromBrooklyn[region].push(location)
+          : (getlocationSortedByGroup.fartherFromBrooklyn[region] = [location]);
+      }
+      return getlocationSortedByGroup.farthestFromBrooklyn[region]
+        ? getlocationSortedByGroup.farthestFromBrooklyn[region].push(location)
+        : (getlocationSortedByGroup.farthestFromBrooklyn[region] = [location]);
+    });
+    this.setState({ locationSortedByGroup: getlocationSortedByGroup });
   }
 
   updateWindow = () => {
@@ -72,9 +102,17 @@ class Nav extends Component {
       profileIcon,
       productLanding,
       alertIsActive,
-      shopDropdownIsOpen
+      shopDropdownIsOpen,
+      locationDropdownIsOpen,
+      locations,
+      locationDropdownImage
     } = this.props;
-    const { openShopDropdown, closeShopDropdown } = this.props.actions;
+    const {
+      openShopDropdown,
+      closeShopDropdown,
+      openLocationDropdown,
+      closeLocationDropdown
+    } = this.props.actions;
     const { medium } = Global.breakpoints;
     const cartIsEmpty = this.props.totalItems === 0;
 
@@ -90,13 +128,17 @@ class Nav extends Component {
           <div className="col col-4 md-col-5 flex items-center justify-start">
             {this.state.currentBreakpoint === medium.label ? (
               <Fragment>
-                <NavLink
-                  exact
+                <Button
+                  className="link-text center text-hover text-white"
+                  variant="style-none"
+                  onClick={closeLocationDropdown}
+                  onMouseEnter={() => {
+                    openLocationDropdown();
+                    closeShopDropdown();
+                  }}
                   to="/locations"
-                  className="link-text center text-hover"
-                >
-                  Locations
-                </NavLink>
+                  label="Locations"
+                />
                 <NavLink
                   exact
                   to="/flavors"
@@ -190,7 +232,10 @@ class Nav extends Component {
                   color="white-peach"
                   label="Shop Online"
                   onClick={closeShopDropdown}
-                  onMouseEnter={openShopDropdown}
+                  onMouseEnter={() => {
+                    openShopDropdown();
+                    closeLocationDropdown();
+                  }}
                   hover="clear-white-border"
                 />
               </Fragment>
@@ -223,6 +268,16 @@ class Nav extends Component {
             closeShopDropdown={closeShopDropdown}
           />
         ) : null}
+        {this.state.currentBreakpoint === medium.label ? (
+          <LocationDropdown
+            locationDropdownIsOpen={locationDropdownIsOpen}
+            alertIsActive={alertIsActive}
+            openLocationDropdown={openLocationDropdown}
+            closeLocationDropdown={closeLocationDropdown}
+            locationSortedByGroup={this.state.locationSortedByGroup}
+            locationDropdownImage={locationDropdownImage}
+          />
+        ) : null}
       </div>
     );
   }
@@ -235,7 +290,9 @@ Nav.propTypes = {
     openMobileNav: PropTypes.func,
     closeMobileNav: PropTypes.func,
     openShopDropdown: PropTypes.func,
-    closeShopDropdown: PropTypes.func
+    closeShopDropdown: PropTypes.func,
+    openLocationDropdown: PropTypes.func,
+    closeLocationDropdown: PropTypes.func
   }),
   miniCartIsOpen: PropTypes.bool,
   mobileNavIsOpen: PropTypes.bool,
@@ -250,7 +307,9 @@ Nav.defaultProps = {
     openMobileNav: () => {},
     closeMobileNav: () => {},
     openShopDropdown: () => {},
-    closeShopDropdown: () => {}
+    closeShopDropdown: () => {},
+    openLocationDropdown: () => {},
+    closeLocationDropdown: () => {}
   },
   miniCartIsOpen: false,
   mobileNavIsOpen: false,
@@ -264,13 +323,20 @@ const mapStateToProps = state => {
     miniCartIsOpen: get(state, 'miniCartUI.miniCartIsOpen'),
     mobileNavIsOpen: get(state, 'mobileNavUI.mobileNavIsOpen'),
     shopDropdownIsOpen: get(state, 'dropdownNavUI.shopDropdownIsOpen'),
+    locationDropdownIsOpen: get(state, 'dropdownNavUI.locationDropdownIsOpen'),
     totalItems: totalItems(state),
     productLanding: get(
       state,
       'applicationUI.globalSettings.items[0].fields.productLanding.fields',
       {}
     ),
-    alertIsActive: alertIsActive(state)
+    alertIsActive: alertIsActive(state),
+    locations: get(state, 'locations.locations.items', []),
+    locationDropdownImage: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields.locationDropdownNavImage.fields.file.url',
+      {}
+    )
   };
 };
 
@@ -283,7 +349,9 @@ const mapDispatchToProps = dispatch => {
         openMobileNav,
         closeMobileNav,
         openShopDropdown,
-        closeShopDropdown
+        closeShopDropdown,
+        openLocationDropdown,
+        closeLocationDropdown
       },
       dispatch
     )
