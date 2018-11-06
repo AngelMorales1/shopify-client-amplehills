@@ -82,7 +82,8 @@ export const deriveLineItems = (checkout, products) =>
 
     if (
       productType === ShopifyProductTypes.CLASSES ||
-      productType === ShopifyProductTypes.EVENTS
+      productType === ShopifyProductTypes.EVENTS ||
+      productType === ShopifyProductTypes.MERCH
     ) {
       const date = get(variant, 'title', '');
       if (date) cartAttributes.push(date);

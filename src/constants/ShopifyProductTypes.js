@@ -12,5 +12,7 @@ export default {
   Classes: 'Classes',
   CLASSES: 'Classes',
   'Party Deposit': 'Party Deposit',
-  PARTY_DEPOSIT: 'Party Deposit'
+  PARTY_DEPOSIT: 'Party Deposit',
+  Merch: 'Merch',
+  MERCH: 'Merch'
 };
