@@ -74,8 +74,9 @@ const Routes = ({ location }) => (
     <Route path="/faq" component={GenericPageContainer} />
     <Route path="/news" component={ArticlesLandingContainer} />
     <Route path="/wholesale" component={GenericPageContainer} />
-    <Route path="/flavors" component={GenericPageContainer} />      
+    <Route path="/flavors" component={GenericPageContainer} />
     <Route path="/in-stores" component={InStoresContainer} />
+    <Route path="/party-request-form" component={PartyRequestFormContainer} />
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
