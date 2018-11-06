@@ -15,6 +15,7 @@ import GenericPageContainer from 'containers/GenericPageContainer';
 import EventDetailContainer from 'containers/EventDetailContainer';
 import LocationDetailContainer from 'containers/LocationDetailContainer';
 import PartyRequestFormContainer from 'containers/PartyRequestFormContainer';
+import CakeRequestFormContainer from 'containers/CakeRequestFormContainer';
 import ArticlesLandingContainer from 'containers/ArticlesLandingContainer';
 import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
@@ -79,6 +80,7 @@ const Routes = ({ location }) => (
     <Route path="/bike-party" component={GenericPageContainer} />
     <Route path="/scoop-tab-party" component={GenericPageContainer} />
     <Route path="/party-request-form" component={PartyRequestFormContainer} />
+    <Route path="/cake-request-form" component={CakeRequestFormContainer} />
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
