@@ -96,7 +96,7 @@ class FlavorLanding extends Component {
                 )}
               >
                 <Button
-                  className="m1"
+                  className={cx(styles['FlavorsLanding__filter-button'], 'm1')}
                   color={
                     this.state.activeFilter === 'All'
                       ? 'clear-madison-blue-border'
@@ -118,7 +118,10 @@ class FlavorLanding extends Component {
 
                   return (
                     <Button
-                      className="m1"
+                      className={cx(
+                        styles['FlavorsLanding__filter-button'],
+                        'm1'
+                      )}
                       color={color}
                       key={filter}
                       label={filter}
