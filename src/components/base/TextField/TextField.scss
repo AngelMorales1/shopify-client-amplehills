@@ -39,6 +39,8 @@
   &--primary-search {
     input {
       padding: spacing(4) spacing(7);
+      padding-top: calc(#{spacing(4)} + 0.125rem);
+      padding-bottom: calc(#{spacing(4)} - 0.125rem);
     }
   }
 
