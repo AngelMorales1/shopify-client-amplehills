@@ -156,6 +156,8 @@
             width: 100%;
             height: auto;
             padding: spacing(5) spacing(8) spacing(4);
+            padding-top: calc(#{spacing(5)} + 0.0625rem);
+            padding-bottom: calc(#{spacing(4)} - 0.0625rem);
           }
 
           .Select-menu {
