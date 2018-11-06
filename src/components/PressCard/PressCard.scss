@@ -2,12 +2,9 @@
 
 .PressCard {
   border: spacing(0.7) solid color('light-gray');
-  margin: spacing(4);
-  min-width: spacing(65);
-
-  @media ($medium-up) {
-    min-width: spacing(75);
-  }
+  width: spacing(76);
+  min-height: spacing(96);
+  border-radius: radius('s');
 
   &__logo {
     width: spacing(25);

@@ -76,6 +76,8 @@ const Routes = ({ location }) => (
     <Route path="/wholesale" component={GenericPageContainer} />
     <Route path="/flavors" component={GenericPageContainer} />
     <Route path="/in-stores" component={InStoresContainer} />
+    <Route path="/bike-party" component={GenericPageContainer} />
+    <Route path="/scoop-tab-party" component={GenericPageContainer} />
     <Route path="/party-request-form" component={PartyRequestFormContainer} />
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
