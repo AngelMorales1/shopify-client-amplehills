@@ -12,18 +12,21 @@
 
   &__text-container {
     align-items: center;
+    margin: spacing(12);
 
     @media ($medium-up) {
       align-items: flex-start;
+      margin: spacing(12) 0;
       margin-left: spacing(40);
     }
   }
 
   &__title {
-    width: spacing(90);
+    max-width: spacing(90);
     text-align: center;
 
     @media ($medium-up) {
+      width: spacing(90);
       text-align: left;
     }
   }

@@ -23,14 +23,14 @@ const HorizontalCarousel = ({
           'flex flex-column justify-center'
         )}
       >
-        <span
+        <p
           className={cx(
             styles['HorizontalCarousel__title'],
-            'block-headline my3 px3'
+            'block-headline my3'
           )}
         >
           {title}
-        </span>
+        </p>
         <Button
           className="ml1"
           to={buttonLink}
