@@ -80,7 +80,10 @@ const GenericHero = ({ block, z }) => {
             {blockHasButton ? (
               <div>
                 <Button
-                  className="inline-flex mt3"
+                  className={cx(
+                    styles['GenericHero__button'],
+                    'inline-flex mt3'
+                  )}
                   color="madison-blue"
                   label={buttonLabel}
                   to={buttonLink}

@@ -47,6 +47,11 @@
     object-fit: contain;
   }
 
+  &__button {
+    padding-top: calc(#{spacing(4)} + 0.125rem);
+    padding-bottom: calc(#{spacing(4)} - 0.125rem);
+  }
+
   &__two-images {
     flex-direction: column;
     justify-content: center;
