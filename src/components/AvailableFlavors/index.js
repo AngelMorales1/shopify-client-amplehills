@@ -5,6 +5,7 @@ import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
 import locationModel from 'models/locationModel';
+import slugify from 'utils/slugify';
 
 import { Button, Image } from 'components/base';
 import styles from './AvailableFlavors.scss';
@@ -65,6 +66,7 @@ class AvailableFlavors extends Component {
               const title = get(fields, 'title', '');
               const label = get(fields, 'label', '');
               const image = get(fields, 'image.fields.file.url', '');
+              const slug = slugify(title);
               const isLocationSpecial = get(fields, 'locationSpecial', []).find(
                 location => {
                   return get(location, 'sys.id', '') === locationId;
@@ -72,7 +74,8 @@ class AvailableFlavors extends Component {
               );
 
               return (
-                <div
+                <Button
+                  to={`/flavors/${slug}`}
                   key={get(flavor, 'sys.id', i)}
                   className={cx(
                     styles['AvailableFlavors__card'],
@@ -89,16 +92,18 @@ class AvailableFlavors extends Component {
                   <div className="col-6">
                     {label &&
                       !isLocationSpecial && (
-                        <p className="small mb1 carter text-peach">{label}</p>
+                        <p className="mb1 carter light detail text-peach">
+                          {label}
+                        </p>
                       )}
                     {isLocationSpecial && (
-                      <p className="small mb1 carter text-peach">
+                      <p className="mb1 carter light detail text-peach">
                         Location Special
                       </p>
                     )}
-                    <p className="small bold">{title}</p>
+                    <p className="small bold text-madison-blue">{title}</p>
                   </div>
-                </div>
+                </Button>
               );
             })}
             {isMobileView && FlavorsLength > 4 ? (
