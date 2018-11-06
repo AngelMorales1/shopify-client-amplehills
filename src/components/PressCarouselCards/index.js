@@ -41,7 +41,7 @@ const PressCarouselCards = ({
             key={pressItemId}
             className={cx(
               styles['PressCarouselCards__card'],
-              'bg-white p3 flex flex-column justify-center items-center'
+              'bg-white p3 flex flex-column justify-between items-center'
             )}
           >
             <Image
@@ -52,7 +52,7 @@ const PressCarouselCards = ({
             <span
               className={cx(
                 styles['PressCarouselCards__quote'],
-                'carter text-peach center py3'
+                'carter text-peach center'
               )}
             >
               {get(selectedPressItem, 'quote', '')}
