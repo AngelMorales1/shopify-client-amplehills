@@ -127,7 +127,7 @@ class Nav extends Component {
             {this.state.currentBreakpoint === medium.label ? (
               <Fragment>
                 <Button
-                  className="link-text center text-hover text-white"
+                  className="link-text center text-white"
                   variant="style-none"
                   onClick={closeLocationDropdown}
                   onMouseEnter={() => {
@@ -136,6 +136,7 @@ class Nav extends Component {
                   }}
                   to="/locations"
                   label="Locations"
+                  hover="underline-white"
                 />
                 <NavLink
                   exact
