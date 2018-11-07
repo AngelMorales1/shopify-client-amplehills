@@ -37,7 +37,9 @@ class AvailableFlavors extends Component {
   render() {
     const { drip, setRef, location, block, z } = this.props;
     const { small } = Global.breakpoints;
-    const title = get(block, 'fields.title', '');
+    const fields = get(block, 'fields', {});
+    const title = get(fields, 'title', '');
+    const backgroundColor = get(fields, 'backgroundColor', '');
     const locationId = get(location, 'id', '');
     const isMobileView = this.state.currentBreakpoint === small.label;
     const availableFlavors = get(location, 'availableFlavors', []);
@@ -51,7 +53,11 @@ class AvailableFlavors extends Component {
       <div
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
-        className={cx({ drip: drip }, 'bg-sky-blue py4 px3')}
+        className={cx(
+          { drip: drip },
+          styles[`AvailableFlavors--${backgroundColor}`],
+          'py4 px3'
+        )}
       >
         <div className="mx-auto flex flex-column items-center container-width">
           <h2 className="block-headline center mb3">{title}</h2>
