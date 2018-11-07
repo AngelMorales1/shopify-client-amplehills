@@ -5,15 +5,22 @@ import get from 'utils/get';
 import styles from './MultipleImageText.scss';
 import { Image } from 'components/base';
 const MultipleImageText = ({ block, setRef, z }) => {
-  const imagesAndTexts = get(block, 'fields.fragmentType.simpleFragments', {});
-  const drip = get(block, 'fields.drip', false);
+  const fields = get(block, 'fields', {});
+  const imagesAndTexts = get(fields, 'fragmentType.simpleFragments', {});
+  const drip = get(fields, 'drip', false);
+  const backgroundColor = get(fields, 'backgroundColor', '');
+
   return (
     <div
       style={{ zIndex: z }}
       ref={refBlock => setRef(refBlock)}
-      className={cx('py4 px3', {
-        drip: drip
-      })}
+      className={cx(
+        styles[`MultipleImageText--${backgroundColor}`],
+        'py4 px3',
+        {
+          drip: drip
+        }
+      )}
     >
       <div className="form-container-width flex flex-column mx-auto">
         {Object.values(imagesAndTexts).map(imageAndText => (

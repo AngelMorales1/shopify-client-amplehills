@@ -27,7 +27,7 @@ class ProductDetails extends Component {
     const { block, z, setRef } = this.props;
     const fields = get(block, 'fields', {});
     const details = get(fields, 'productDetails', []);
-    const colorClass = `ProductDetails--${get(fields, 'color', 'Blue')}`;
+    const colorClass = `ProductDetails--${get(fields, 'color', '')}`;
 
     return (
       <div
