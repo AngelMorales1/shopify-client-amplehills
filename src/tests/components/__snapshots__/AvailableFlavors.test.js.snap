@@ -45,7 +45,7 @@ ShallowWrapper {
                 
         </div>
 </div>,
-      "className": "bg-iceberg py4 px3",
+      "className": "py4 px3",
       "style": Object {
         "zIndex": 1,
       },
@@ -122,7 +122,7 @@ ShallowWrapper {
                     
           </div>
 </div>,
-        "className": "bg-iceberg py4 px3",
+        "className": "py4 px3",
         "style": Object {
           "zIndex": 1,
         },
@@ -260,7 +260,7 @@ ShallowWrapper {
                 
         </div>
 </div>,
-      "className": "bg-iceberg py4 px3",
+      "className": "py4 px3",
       "style": Object {
         "zIndex": 1,
       },
@@ -337,7 +337,7 @@ ShallowWrapper {
                     
           </div>
 </div>,
-        "className": "bg-iceberg py4 px3",
+        "className": "py4 px3",
         "style": Object {
           "zIndex": 1,
         },

@@ -110,7 +110,7 @@ ShallowWrapper {
                 />
         </div>
 </div>,
-      "className": "bg-pastel-green py4 px3",
+      "className": "bg-light-turquoise py4 px3",
       "style": Object {
         "zIndex": undefined,
       },
@@ -521,7 +521,7 @@ ShallowWrapper {
                     />
           </div>
 </div>,
-        "className": "bg-pastel-green py4 px3",
+        "className": "bg-light-turquoise py4 px3",
         "style": Object {
           "zIndex": undefined,
         },
@@ -971,7 +971,7 @@ ShallowWrapper {
                 />
         </div>
 </div>,
-      "className": "bg-pastel-green py4 px3",
+      "className": "bg-light-turquoise py4 px3",
       "style": Object {
         "zIndex": undefined,
       },
@@ -1382,7 +1382,7 @@ ShallowWrapper {
                     />
           </div>
 </div>,
-        "className": "bg-pastel-green py4 px3",
+        "className": "bg-light-turquoise py4 px3",
         "style": Object {
           "zIndex": undefined,
         },

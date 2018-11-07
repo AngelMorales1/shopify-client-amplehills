@@ -396,7 +396,7 @@ ShallowWrapper {
                                                   foo
                                         </p>
                                         <div
-                                                  className="undefined p3 circle square bg-goldenrod"
+                                                  className="undefined p3 circle square bg-yellow"
                                         />
                               </div>
                               <div>
@@ -576,7 +576,7 @@ ShallowWrapper {
                                                         foo
                                           </p>
                                           <div
-                                                        className="undefined p3 circle square bg-goldenrod"
+                                                        className="undefined p3 circle square bg-yellow"
                                           />
                             </div>
                             <div>
@@ -677,7 +677,7 @@ ShallowWrapper {
                                                       foo
                                     </p>
                                     <div
-                                                      className="undefined p3 circle square bg-goldenrod"
+                                                      className="undefined p3 circle square bg-yellow"
                                     />
                   </div>
                   <div>
@@ -1000,7 +1000,7 @@ ShallowWrapper {
                                             foo
                       </p>
                       <div
-                                            className="undefined p3 circle square bg-goldenrod"
+                                            className="undefined p3 circle square bg-yellow"
                       />
 </div>,
                     <div>
@@ -1031,7 +1031,7 @@ ShallowWrapper {
                           foo
 </p>,
                         <div
-                          className="undefined p3 circle square bg-goldenrod"
+                          className="undefined p3 circle square bg-yellow"
 />,
                       ],
                       "className": "undefined z-1 absolute flex justify-center items-center",
@@ -1055,7 +1055,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "undefined p3 circle square bg-goldenrod",
+                          "className": "undefined p3 circle square bg-yellow",
                         },
                         "ref": null,
                         "rendered": null,
@@ -1220,7 +1220,7 @@ ShallowWrapper {
                                                             foo
                                                 </p>
                                                 <div
-                                                            className="undefined p3 circle square bg-goldenrod"
+                                                            className="undefined p3 circle square bg-yellow"
                                                 />
                                     </div>
                                     <div>
@@ -1400,7 +1400,7 @@ ShallowWrapper {
                                                                 foo
                                                 </p>
                                                 <div
-                                                                className="undefined p3 circle square bg-goldenrod"
+                                                                className="undefined p3 circle square bg-yellow"
                                                 />
                                 </div>
                                 <div>
@@ -1501,7 +1501,7 @@ ShallowWrapper {
                                                             foo
                                         </p>
                                         <div
-                                                            className="undefined p3 circle square bg-goldenrod"
+                                                            className="undefined p3 circle square bg-yellow"
                                         />
                     </div>
                     <div>
@@ -1824,7 +1824,7 @@ ShallowWrapper {
                                                 foo
                         </p>
                         <div
-                                                className="undefined p3 circle square bg-goldenrod"
+                                                className="undefined p3 circle square bg-yellow"
                         />
 </div>,
                       <div>
@@ -1855,7 +1855,7 @@ ShallowWrapper {
                             foo
 </p>,
                           <div
-                            className="undefined p3 circle square bg-goldenrod"
+                            className="undefined p3 circle square bg-yellow"
 />,
                         ],
                         "className": "undefined z-1 absolute flex justify-center items-center",
@@ -1879,7 +1879,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "className": "undefined p3 circle square bg-goldenrod",
+                            "className": "undefined p3 circle square bg-yellow",
                           },
                           "ref": null,
                           "rendered": null,
@@ -2091,7 +2091,7 @@ ShallowWrapper {
                                                   className="absolute center callout-small z-1"
                                         />
                                         <div
-                                                  className="undefined p3 circle square bg-goldenrod"
+                                                  className="undefined p3 circle square bg-yellow"
                                         />
                               </div>
                               <div>
@@ -2267,7 +2267,7 @@ ShallowWrapper {
                                                         className="absolute center callout-small z-1"
                                           />
                                           <div
-                                                        className="undefined p3 circle square bg-goldenrod"
+                                                        className="undefined p3 circle square bg-yellow"
                                           />
                             </div>
                             <div>
@@ -2364,7 +2364,7 @@ ShallowWrapper {
                                                       className="absolute center callout-small z-1"
                                     />
                                     <div
-                                                      className="undefined p3 circle square bg-goldenrod"
+                                                      className="undefined p3 circle square bg-yellow"
                                     />
                   </div>
                   <div>
@@ -2677,7 +2677,7 @@ ShallowWrapper {
                                             className="absolute center callout-small z-1"
                       />
                       <div
-                                            className="undefined p3 circle square bg-goldenrod"
+                                            className="undefined p3 circle square bg-yellow"
                       />
 </div>,
                     <div>
@@ -2706,7 +2706,7 @@ ShallowWrapper {
                           className="absolute center callout-small z-1"
 />,
                         <div
-                          className="undefined p3 circle square bg-goldenrod"
+                          className="undefined p3 circle square bg-yellow"
 />,
                       ],
                       "className": "undefined z-1 absolute flex justify-center items-center",
@@ -2730,7 +2730,7 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "undefined p3 circle square bg-goldenrod",
+                          "className": "undefined p3 circle square bg-yellow",
                         },
                         "ref": null,
                         "rendered": null,
@@ -2891,7 +2891,7 @@ ShallowWrapper {
                                                             className="absolute center callout-small z-1"
                                                 />
                                                 <div
-                                                            className="undefined p3 circle square bg-goldenrod"
+                                                            className="undefined p3 circle square bg-yellow"
                                                 />
                                     </div>
                                     <div>
@@ -3067,7 +3067,7 @@ ShallowWrapper {
                                                                 className="absolute center callout-small z-1"
                                                 />
                                                 <div
-                                                                className="undefined p3 circle square bg-goldenrod"
+                                                                className="undefined p3 circle square bg-yellow"
                                                 />
                                 </div>
                                 <div>
@@ -3164,7 +3164,7 @@ ShallowWrapper {
                                                             className="absolute center callout-small z-1"
                                         />
                                         <div
-                                                            className="undefined p3 circle square bg-goldenrod"
+                                                            className="undefined p3 circle square bg-yellow"
                                         />
                     </div>
                     <div>
@@ -3477,7 +3477,7 @@ ShallowWrapper {
                                                 className="absolute center callout-small z-1"
                         />
                         <div
-                                                className="undefined p3 circle square bg-goldenrod"
+                                                className="undefined p3 circle square bg-yellow"
                         />
 </div>,
                       <div>
@@ -3506,7 +3506,7 @@ ShallowWrapper {
                             className="absolute center callout-small z-1"
 />,
                           <div
-                            className="undefined p3 circle square bg-goldenrod"
+                            className="undefined p3 circle square bg-yellow"
 />,
                         ],
                         "className": "undefined z-1 absolute flex justify-center items-center",
@@ -3530,7 +3530,7 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "className": "undefined p3 circle square bg-goldenrod",
+                            "className": "undefined p3 circle square bg-yellow",
                           },
                           "ref": null,
                           "rendered": null,

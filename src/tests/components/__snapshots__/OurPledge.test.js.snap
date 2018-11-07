@@ -33,7 +33,7 @@ ShallowWrapper {
           style={Object {}}
 />,
         <div
-          className="bg-varden flex items-center w100"
+          className="bg-light-yellow flex items-center w100"
 >
           <div
                     className="flex col col-8 md-col-9"
@@ -145,7 +145,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "bg-varden flex items-center w100",
+          "className": "bg-light-yellow flex items-center w100",
         },
         "ref": null,
         "rendered": Array [
@@ -311,7 +311,7 @@ ShallowWrapper {
             style={Object {}}
 />,
           <div
-            className="bg-varden flex items-center w100"
+            className="bg-light-yellow flex items-center w100"
 >
             <div
                         className="flex col col-8 md-col-9"
@@ -423,7 +423,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "bg-varden flex items-center w100",
+            "className": "bg-light-yellow flex items-center w100",
           },
           "ref": null,
           "rendered": Array [
@@ -622,7 +622,7 @@ ShallowWrapper {
           style={Object {}}
 />,
         <div
-          className="bg-varden flex items-center w100"
+          className="bg-light-yellow flex items-center w100"
 >
           <div
                     className="flex col col-8 md-col-9"
@@ -734,7 +734,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "bg-varden flex items-center w100",
+          "className": "bg-light-yellow flex items-center w100",
         },
         "ref": null,
         "rendered": Array [
@@ -900,7 +900,7 @@ ShallowWrapper {
             style={Object {}}
 />,
           <div
-            className="bg-varden flex items-center w100"
+            className="bg-light-yellow flex items-center w100"
 >
             <div
                         className="flex col col-8 md-col-9"
@@ -1012,7 +1012,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "bg-varden flex items-center w100",
+            "className": "bg-light-yellow flex items-center w100",
           },
           "ref": null,
           "rendered": Array [

@@ -219,7 +219,7 @@ ShallowWrapper {
                 </div>
         </div>
 </div>,
-      "className": "flex justify-center bg-goldenrod py3",
+      "className": "flex justify-center bg-yellow py3",
     },
     "ref": null,
     "rendered": Object {
@@ -928,7 +928,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        "className": "flex justify-center bg-goldenrod py3",
+        "className": "flex justify-center bg-yellow py3",
       },
       "ref": null,
       "rendered": Object {
@@ -1713,7 +1713,7 @@ ShallowWrapper {
                 </div>
         </div>
 </div>,
-      "className": "flex justify-center bg-goldenrod py3",
+      "className": "flex justify-center bg-yellow py3",
     },
     "ref": null,
     "rendered": Object {
@@ -2374,7 +2374,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        "className": "flex justify-center bg-goldenrod py3",
+        "className": "flex justify-center bg-yellow py3",
       },
       "ref": null,
       "rendered": Object {

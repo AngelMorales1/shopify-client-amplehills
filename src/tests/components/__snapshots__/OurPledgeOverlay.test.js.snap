@@ -28,7 +28,7 @@ ShallowWrapper {
           onClick={[Function]}
 />,
         <div
-          className="fixed bg-island-spice"
+          className="fixed bg-off-white-yellow"
 >
           <div
                     className="flex flex-column items-center p3 fixed"
@@ -191,7 +191,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "fixed bg-island-spice",
+          "className": "fixed bg-off-white-yellow",
         },
         "ref": null,
         "rendered": Object {
@@ -508,7 +508,7 @@ ShallowWrapper {
             onClick={[Function]}
 />,
           <div
-            className="fixed bg-island-spice"
+            className="fixed bg-off-white-yellow"
 >
             <div
                         className="flex flex-column items-center p3 fixed"
@@ -671,7 +671,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "fixed bg-island-spice",
+            "className": "fixed bg-off-white-yellow",
           },
           "ref": null,
           "rendered": Object {
@@ -1015,7 +1015,7 @@ ShallowWrapper {
           onClick={[Function]}
 />,
         <div
-          className="fixed bg-island-spice"
+          className="fixed bg-off-white-yellow"
 >
           <div
                     className="flex flex-column items-center p3 fixed"
@@ -1174,7 +1174,7 @@ ShallowWrapper {
                         </div>
             </div>
 </div>,
-          "className": "fixed bg-island-spice",
+          "className": "fixed bg-off-white-yellow",
         },
         "ref": null,
         "rendered": Object {
@@ -1483,7 +1483,7 @@ ShallowWrapper {
             onClick={[Function]}
 />,
           <div
-            className="fixed bg-island-spice"
+            className="fixed bg-off-white-yellow"
 >
             <div
                         className="flex flex-column items-center p3 fixed"
@@ -1642,7 +1642,7 @@ ShallowWrapper {
                             </div>
               </div>
 </div>,
-            "className": "fixed bg-island-spice",
+            "className": "fixed bg-off-white-yellow",
           },
           "ref": null,
           "rendered": Object {
