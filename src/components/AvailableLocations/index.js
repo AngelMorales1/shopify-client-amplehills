@@ -8,17 +8,22 @@ import styles from './AvailableLocations.scss';
 
 const AvailableLocations = ({ flavor, block, z, setRef }) => {
   const availableLocations = get(flavor, 'availableLocations', []);
-  const field = get(block, 'fields', {});
-  const blockTitle = get(field, 'title', '');
-  const drip = get(field, 'drip', false);
+  const fields = get(block, 'fields', {});
+  const blockTitle = get(fields, 'title', '');
+  const backgroundColor = get(fields, 'backgroundColor', '');
+  const drip = get(fields, 'drip', false);
 
   return (
     <div
       ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
-      className={cx(styles['AvailableLocations'], 'bg-light-yellow', {
-        drip: drip
-      })}
+      className={cx(
+        styles['AvailableLocations'],
+        styles[`AvailableLocations--${backgroundColor}`],
+        {
+          drip: drip
+        }
+      )}
     >
       <h2 className="block-headline center mb3">{blockTitle}</h2>
       <div

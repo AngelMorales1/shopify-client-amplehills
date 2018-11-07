@@ -1,9 +1,38 @@
 @import 'settings';
 
 .ComicStrip {
+  @extend .text-madison-blue;
+
   &--yellow {
     @extend .bg-yellow;
-    @extend .text-madison-blue;
+  }
+
+  &--light-yellow {
+    @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
+    @extend .bg-light-peach;
   }
 
   &__headline {

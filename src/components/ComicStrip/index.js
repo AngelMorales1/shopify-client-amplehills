@@ -19,11 +19,7 @@ class ComicStrip extends Component {
     const { block, z, setRef } = this.props;
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
-    const colorClass = `ComicStrip--${get(
-      fields,
-      'backgroundColor',
-      'yellow'
-    )}`;
+    const colorClass = `ComicStrip--${get(fields, 'backgroundColor', '')}`;
 
     return (
       <div
