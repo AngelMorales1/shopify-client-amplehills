@@ -26,7 +26,8 @@ const MarkdownBlock = props => {
     'white'
   )}`;
   const titleOnLeft = get(fields, 'titleLeft', false);
-  const titleOnCenter = get(fields, 'titleCenterAlign', false);
+  const titleOnTop = get(fields, 'titleTop', false);
+  const titleOnLeftCenter = get(fields, 'titleCenterAlign', false);
   const title = get(fields, 'title', '');
   const twoColumnContentIsTrue = get(fields, 'twoColumnContent', false);
 
@@ -39,10 +40,11 @@ const MarkdownBlock = props => {
       <div
         className={cx('w100 flex content-width', {
           [styles['MarkdownBlock--title-left']]: titleOnLeft,
+          [styles['MarkdownBlock--title-top']]: titleOnTop,
           drip: isDripOn
         })}
       >
-        {titleOnLeft ? (
+        {titleOnLeft || titleOnTop ? (
           <div
             className={cx(
               styles['MarkdownBlock__title-container'],
@@ -50,7 +52,7 @@ const MarkdownBlock = props => {
               {
                 [styles[
                   'MarkdownBlock__title-container--center'
-                ]]: titleOnCenter
+                ]]: titleOnLeftCenter
               }
             )}
           >
@@ -66,27 +68,27 @@ const MarkdownBlock = props => {
             ]]: twoColumnContentIsTrue
           })}
         >
-        {button1Label || button1Link || button1Text ? (
-          <div
-            className={cx(
-              styles['MarkdownBlock__button-container'],
-              'flex flex-column mb3'
-            )}
-          >
+          {button1Label || button1Link || button1Text ? (
             <div
-              dangerouslySetInnerHTML={{ __html: marked(button1Text) }}
               className={cx(
-                styles['MarkdownBlock__button-text'],
-                'markdown-block'
+                styles['MarkdownBlock__button-container'],
+                'flex flex-column mb3'
               )}
-            />
-            <Button
-              className="inline-flex"
-              color="peach"
-              label={button1Label}
-              to={button1Link}
-            />
-          </div>
+            >
+              <div
+                dangerouslySetInnerHTML={{ __html: marked(button1Text) }}
+                className={cx(
+                  styles['MarkdownBlock__button-text'],
+                  'markdown-block'
+                )}
+              />
+              <Button
+                className="inline-flex"
+                color="peach"
+                label={button1Label}
+                to={button1Link}
+              />
+            </div>
           ) : (
             <div
               dangerouslySetInnerHTML={{ __html: marked(markdown) }}
