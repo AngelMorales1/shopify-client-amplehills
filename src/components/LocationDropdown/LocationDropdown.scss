@@ -2,10 +2,10 @@
 
 .LocationDropdown {
   z-index: 750;
-  transition: transform 0.5s ease-out;
+  transition: transform 0.7s ease-out;
 
   &--inactive {
-    transform: translate3d(0, spacing(-200), 0);
+    transform: translate3d(0, spacing(-180), 0);
   }
 
   &__nav-container {
