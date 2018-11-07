@@ -33,6 +33,11 @@ ShallowWrapper {
           >
                     foo
           </p>
+          <p
+                    className="block-subheadline mb2"
+          >
+                    foo
+          </p>
           <Button
                     className="ml1"
                     color="peach"
@@ -72,6 +77,11 @@ ShallowWrapper {
 >
               foo
 </p>,
+            <p
+              className="block-subheadline mb2"
+>
+              foo
+</p>,
             <Button
               className="ml1"
               color="peach"
@@ -99,6 +109,18 @@ ShallowWrapper {
             "props": Object {
               "children": "foo",
               "className": "block-headline my3",
+            },
+            "ref": null,
+            "rendered": "foo",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "foo",
+              "className": "block-subheadline mb2",
             },
             "ref": null,
             "rendered": "foo",
@@ -174,6 +196,11 @@ ShallowWrapper {
             >
                         foo
             </p>
+            <p
+                        className="block-subheadline mb2"
+            >
+                        foo
+            </p>
             <Button
                         className="ml1"
                         color="peach"
@@ -213,6 +240,11 @@ ShallowWrapper {
 >
                 foo
 </p>,
+              <p
+                className="block-subheadline mb2"
+>
+                foo
+</p>,
               <Button
                 className="ml1"
                 color="peach"
@@ -240,6 +272,18 @@ ShallowWrapper {
               "props": Object {
                 "children": "foo",
                 "className": "block-headline my3",
+              },
+              "ref": null,
+              "rendered": "foo",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "foo",
+                "className": "block-subheadline mb2",
               },
               "ref": null,
               "rendered": "foo",
@@ -379,6 +423,7 @@ ShallowWrapper {
             <p
               className="block-headline my3"
 />,
+            null,
             <Button
               className="ml1"
               color="peach"
@@ -411,6 +456,7 @@ ShallowWrapper {
             "rendered": "",
             "type": "p",
           },
+          null,
           Object {
             "instance": null,
             "key": undefined,
@@ -516,6 +562,7 @@ ShallowWrapper {
               <p
                 className="block-headline my3"
 />,
+              null,
               <Button
                 className="ml1"
                 color="peach"
@@ -548,6 +595,7 @@ ShallowWrapper {
               "rendered": "",
               "type": "p",
             },
+            null,
             Object {
               "instance": null,
               "key": undefined,

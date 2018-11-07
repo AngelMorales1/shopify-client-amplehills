@@ -49,7 +49,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="w100 flex content-width undefined"
+        className="w100 flex content-width"
 >
         <div
                 className="col-12 md-col-4"
@@ -109,7 +109,7 @@ ShallowWrapper {
             />
 </div>,
         ],
-        "className": "w100 flex content-width undefined",
+        "className": "w100 flex content-width",
       },
       "ref": null,
       "rendered": Array [
@@ -192,7 +192,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w100 flex content-width undefined"
+          className="w100 flex content-width"
 >
           <div
                     className="col-12 md-col-4"
@@ -252,7 +252,7 @@ ShallowWrapper {
               />
 </div>,
           ],
-          "className": "w100 flex content-width undefined",
+          "className": "w100 flex content-width",
         },
         "ref": null,
         "rendered": Array [
