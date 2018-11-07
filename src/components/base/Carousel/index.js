@@ -78,7 +78,13 @@ class Carousel extends Component {
             showDots ? (
               <ul>
                 {[...Array(props.slideCount)].map((dot, i) => (
-                  <li key={i} className="inline-block p1">
+                  <li
+                    key={i}
+                    className={cx(
+                      styles['Carousel__indicator'],
+                      'inline-block'
+                    )}
+                  >
                     <Button
                       className={cx('big', {
                         'text-peach': !dotColor,

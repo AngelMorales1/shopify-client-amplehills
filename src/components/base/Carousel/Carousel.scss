@@ -28,19 +28,20 @@
   }
 
   &__indicator {
-    background-color: color('peach');
-    width: spacing(2);
-    margin: spacing(1);
-
-    &--active {
-      background-color: transparent;
-      width: spacing(3);
-      border: spacing(0.5) solid color('peach');
+    @media ($medium-up) {
+      padding: spacing(2);
     }
   }
 }
 
 :global {
+  .slider-control-bottomcenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
   .slider-slide {
     display: inline-flex !important;
     flex-direction: row;
