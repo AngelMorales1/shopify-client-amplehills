@@ -99,11 +99,7 @@ class EventsBlock extends Component {
     const { buttonLabels, selectedEvents } = this.state;
     const fields = get(block, 'fields', {});
     const isDripOn = get(fields, 'drip', false);
-    const colorClass = `EventsBlock--${get(
-      fields,
-      'backgroundColor',
-      'white'
-    )}`;
+    const colorClass = `EventsBlock--${get(fields, 'backgroundColor', '')}`;
     const title = get(fields, 'title', '');
     const text = get(fields, 'text', '');
     const locationFilterButtonIsOn = get(fields, 'locationFilterButton', false);
