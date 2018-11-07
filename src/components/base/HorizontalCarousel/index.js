@@ -11,7 +11,8 @@ const HorizontalCarousel = ({
   title,
   buttonLabel,
   buttonLink,
-  isReverseOrder
+  isReverseOrder,
+  text
 }) => {
   return (
     <div
@@ -25,12 +26,22 @@ const HorizontalCarousel = ({
       >
         <p
           className={cx(
-            styles['HorizontalCarousel__title'],
+            styles['HorizontalCarousel__text'],
             'block-headline my3'
           )}
         >
           {title}
         </p>
+        {text ? (
+          <p
+            className={cx(
+              styles['HorizontalCarousel__text'],
+              'block-subheadline mb2'
+            )}
+          >
+            {text}
+          </p>
+        ) : null}
         <Button
           className="ml1"
           to={buttonLink}
@@ -69,7 +80,8 @@ HorizontalCarousel.propTypes = {
   text: PropTypes.string,
   buttonLabel: PropTypes.string,
   buttonLink: PropTypes.string,
-  isReverseOrder: PropTypes.bool
+  isReverseOrder: PropTypes.bool,
+  text: PropTypes.string
 };
 
 HorizontalCarousel.defaultProps = {
@@ -79,7 +91,8 @@ HorizontalCarousel.defaultProps = {
   text: '',
   buttonLabel: '',
   buttonLink: '',
-  isReverseOrder: false
+  isReverseOrder: false,
+  text: ''
 };
 
 export default HorizontalCarousel;

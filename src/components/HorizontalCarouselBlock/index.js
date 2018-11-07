@@ -32,6 +32,7 @@ const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
     >
       <HorizontalCarousel
         title={get(fields, 'title', '')}
+        text={get(fields, 'text', '')}
         buttonLink={get(fields, 'buttonLink', '')}
         buttonLabel={get(fields, 'buttonLabel', '')}
         isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
