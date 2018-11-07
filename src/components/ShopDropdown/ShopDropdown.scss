@@ -2,7 +2,7 @@
 
 .ShopDropdown {
   z-index: 750;
-  transition: transform 0.7s ease-out;
+  transition: transform 0.7s ease;
 
   &--inactive {
     transform: translate3d(0, spacing(-180), 0);
