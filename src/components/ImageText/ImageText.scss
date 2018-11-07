@@ -2,34 +2,7 @@
 
 .ImageText {
   @extend .text-madison-blue;
-
-  &--white {
-    @extend .bg-white;
-  }
-
-  &--pink {
-    @extend .bg-light-pink;
-  }
-
-  &--blue {
-    @extend .bg-sky-blue;
-  }
-
-  &--light-peach {
-    @extend .bg-light-peach;
-  }
-
-  &--peach {
-    @extend .bg-peach-pink;
-  }
-
-  &--light-pink {
-    @extend .bg-baby-pink;
-  }
-
-  &--mustard {
-    @extend .bg-deep-yellow;
-  }
+  @extend .bg-white;
 
   &--yellow {
     @extend .bg-yellow;
@@ -37,6 +10,30 @@
 
   &--light-yellow {
     @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
+    @extend .bg-light-peach;
   }
 
   &__container {

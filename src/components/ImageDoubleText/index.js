@@ -10,11 +10,7 @@ import styles from './ImageDoubleText.scss';
 
 const ImageDoubleText = ({ block, z, setRef }) => {
   const fields = get(block, 'fields', {});
-  const colorClass = `ImageDoubleText--${get(
-    fields,
-    'backgroundColor',
-    'light-yellow'
-  )}`;
+  const colorClass = `ImageDoubleText--${get(fields, 'backgroundColor', '')}`;
   const isReverseArrangement = get(fields, 'isReverseArrangement', false);
 
   return (

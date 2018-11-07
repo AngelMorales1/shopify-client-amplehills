@@ -11,7 +11,7 @@ import { Image, Button } from 'components/base';
 
 const ImageText = ({ block, z, setRef }) => {
   const fields = get(block, 'fields', {});
-  const colorClass = `ImageText--${get(fields, 'backgroundColor', 'white')}`;
+  const colorClass = `ImageText--${get(fields, 'backgroundColor', '')}`;
   const positionY = get(fields, 'imagePositionY', 0);
   const positionX = get(fields, 'imagePositionX', 0);
   const isReverseArrangement = get(fields, 'isReverseArrangement', false);
@@ -223,6 +223,6 @@ ImageText.defaultProps = {
     }
   },
   setRef: () => {}
-}
+};
 
 export default ImageText;
