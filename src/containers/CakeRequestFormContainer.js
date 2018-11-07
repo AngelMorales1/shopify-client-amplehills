@@ -6,7 +6,9 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
 import cakeDeposit from 'state/selectors/cakeDeposit';
 import cakeLocations from 'state/selectors/cakeLocations';
-import cakeAddOns from 'state/selectors/cakeAddOns';
+import cakeFlavors from 'state/selectors/cakeFlavors';
+import cakeToppings from 'state/selectors/cakeToppings';
+import cakeFillings from 'state/selectors/cakeFillings';
 
 import get from 'utils/get';
 
@@ -22,7 +24,9 @@ const mapStateToProps = (state, props) => {
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     cakeLocations: cakeLocations(state),
     cakeDeposit: cakeDeposit(state),
-    cakeAddOns: cakeAddOns(state)
+    cakeFlavors: cakeFlavors(state),
+    cakeToppings: cakeToppings(state),
+    cakeFillings: cakeFillings(state)
   };
 };
 

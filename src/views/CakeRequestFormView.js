@@ -9,7 +9,9 @@ class CakeRequestFormView extends Component {
 
     const {
       cakeLocations,
-      cakeAddOns,
+      cakeFlavors,
+      cakeToppings,
+      cakeFillings,
       cakeDeposit,
       actions,
       checkout,
@@ -20,7 +22,9 @@ class CakeRequestFormView extends Component {
       <div className="CakeRequestFormView">
         <CakeRequestForm
           cakeLocations={cakeLocations}
-          cakeAddOns={cakeAddOns}
+          cakeFlavors={cakeFlavors}
+          cakeToppings={cakeToppings}
+          cakeFillings={cakeFillings}
           cakeDeposit={cakeDeposit}
           actions={actions}
           checkout={checkout}

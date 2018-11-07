@@ -5,7 +5,7 @@ export default createSelector(
   state => locations(state),
   locations =>
     locations.reduce((locationsById, location) => {
-      if (!!location.cakeAvailable) locationsById[location.id] = location;
+      if (location.cakes) locationsById[location.id] = location;
       return locationsById;
     }, {})
 );
