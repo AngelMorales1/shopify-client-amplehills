@@ -2,20 +2,37 @@
 
 .GenericHero {
   @extend .text-madison-blue;
+  @extend .bg-white;
+
+  &--yellow {
+    @extend .bg-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
 
   &--blue {
     @extend .bg-sky-blue;
   }
 
-  &--yellow {
-    @extend .bg-light-yellow;
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
   }
 
-  &--mustard {
-    @extend .bg-yellow;
+  &--pink {
+    @extend .bg-light-pink;
   }
 
-  &--peach {
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
     @extend .bg-light-peach;
   }
 
