@@ -5,7 +5,7 @@
   transition: transform 0.5s ease-out;
 
   &--inactive {
-    transform: translate3d(0, spacing(-100), 0);
+    transform: translate3d(0, spacing(-200), 0);
   }
 
   &__nav-container {
