@@ -2,10 +2,10 @@
 
 .HorizontalCarouselBlock {
   &--yellow {
-    @extend .bg-bees-wax;
+    @extend .bg-light-yellow;
   }
 
   &--green {
-    @extend .bg-pastel-green;
+    @extend .bg-light-turquoise;
   }
 }

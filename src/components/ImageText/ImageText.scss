@@ -28,15 +28,15 @@
   }
 
   &--mustard {
-    @extend .bg-goldenrod;
+    @extend .bg-deep-yellow;
   }
 
   &--yellow {
-    @extend .bg-marigold-yellow;
+    @extend .bg-yellow;
   }
 
   &--light-yellow {
-    @extend .bg-bees-wax;
+    @extend .bg-light-yellow;
   }
 
   &__container {

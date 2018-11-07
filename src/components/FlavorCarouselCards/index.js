@@ -33,7 +33,7 @@ const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
               <div
                 className={cx(
                   styles['FlavorCarouselCards__mark'],
-                  'z-subnav circle bg-pastel-pink absolute z-1 flex items-center justify-center mr2 mt3 r0 t0 p1'
+                  'z-subnav circle bg-pink absolute z-1 flex items-center justify-center mr2 mt3 r0 t0 p1'
                 )}
               >
                 <p

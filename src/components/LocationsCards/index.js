@@ -123,7 +123,7 @@ class LocationsCards extends Component {
       <div
         className={cx(
           styles['LocationsCards'],
-          'flex justify-center bg-goldenrod py3'
+          'flex justify-center bg-yellow py3'
         )}
       >
         <div

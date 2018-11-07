@@ -51,7 +51,7 @@ class AvailableFlavors extends Component {
       <div
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
-        className={cx({ drip: drip }, 'bg-iceberg py4 px3')}
+        className={cx({ drip: drip }, 'bg-sky-blue py4 px3')}
       >
         <div className="mx-auto flex flex-column items-center container-width">
           <h2 className="block-headline center mb3">{title}</h2>

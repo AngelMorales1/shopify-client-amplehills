@@ -164,7 +164,7 @@ class ProductDetails extends Component {
                     <div
                       className={`${
                         styles['FlavorHighlight--label']
-                      } p3 circle square bg-goldenrod`}
+                      } p3 circle square bg-yellow`}
                     />
                   </div>
                   <div>

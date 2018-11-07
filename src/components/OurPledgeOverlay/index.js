@@ -28,7 +28,7 @@ const OurPledgeOverlay = ({
       />
       <div
         className={cx(
-          'fixed bg-island-spice',
+          'fixed bg-off-white-yellow',
           styles['OurPledgeOverlay__circle-background']
         )}
       >

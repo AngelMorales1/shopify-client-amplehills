@@ -32,7 +32,7 @@ class LocationDetailHero extends Component {
         style={{ zIndex: z }}
         className={cx(
           styles['LocationDetailHero'],
-          'flex bg-bees-wax relative'
+          'flex bg-light-yellow relative'
         )}
       >
         <div

@@ -65,7 +65,7 @@ class InStores extends Component {
 
     return (
       <div>
-        <div className="bg-iceberg py4 px3 flex flex-column justify-center items-center drip">
+        <div className="bg-sky-blue py4 px3 flex flex-column justify-center items-center drip">
           <h2 className="block-headline center mb3">Local Retailers</h2>
           <div
             dangerouslySetInnerHTML={{

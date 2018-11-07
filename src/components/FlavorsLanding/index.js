@@ -76,7 +76,7 @@ class FlavorLanding extends Component {
 
     return (
       <div
-        className={cx('bg-pastel-green py4 px3', { drip: drip })}
+        className={cx('bg-light-turquoise py4 px3', { drip: drip })}
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
       >

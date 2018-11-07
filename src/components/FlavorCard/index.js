@@ -22,7 +22,7 @@ const FlavorCard = ({ flavor }) => {
               'z-subnav circle bg-peach absolute z-1 flex items-center justify-center m2 r0 t0 p1',
               {
                 'bg-pastel-blue': flavor.label === 'In Store Only',
-                'bg-aqua-forest': flavor.label === 'Online Only'
+                'bg-turquoise': flavor.label === 'Online Only'
               }
             )}
           >

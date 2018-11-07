@@ -561,7 +561,7 @@ class PartyRequestForm extends Component {
             ) : null}
           </div>
         </div>
-        <div className="bg-tuft-bush w100 p4 mt4">
+        <div className="bg-pastel-peach w100 p4 mt4">
           <div
             className={cx(
               styles['PartyRequestForm__footer-container'],

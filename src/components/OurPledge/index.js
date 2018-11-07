@@ -27,7 +27,7 @@ const OurPledge = ({
       />
       <div
         className={cx(
-          'bg-varden flex items-center w100',
+          'bg-light-yellow flex items-center w100',
           styles['OurPledge__content-container']
         )}
       >
