@@ -33,11 +33,15 @@ ShallowWrapper {
           >
                     foo
           </p>
-          <p
-                    className="block-subheadline mb2"
-          >
-                    foo
-          </p>
+          <div
+                    className="markdown-block mb2"
+                    dangerouslySetInnerHTML={
+                              Object {
+                                        "__html": "<p>foo</p>
+                              ",
+                                      }
+                    }
+          />
           <Button
                     className="ml1"
                     color="peach"
@@ -77,11 +81,15 @@ ShallowWrapper {
 >
               foo
 </p>,
-            <p
-              className="block-subheadline mb2"
->
-              foo
-</p>,
+            <div
+              className="markdown-block mb2"
+              dangerouslySetInnerHTML={
+                            Object {
+                                          "__html": "<p>foo</p>
+                            ",
+                                        }
+              }
+/>,
             <Button
               className="ml1"
               color="peach"
@@ -119,12 +127,15 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "foo",
-              "className": "block-subheadline mb2",
+              "className": "markdown-block mb2",
+              "dangerouslySetInnerHTML": Object {
+                "__html": "<p>foo</p>
+",
+              },
             },
             "ref": null,
-            "rendered": "foo",
-            "type": "p",
+            "rendered": null,
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -196,11 +207,15 @@ ShallowWrapper {
             >
                         foo
             </p>
-            <p
-                        className="block-subheadline mb2"
-            >
-                        foo
-            </p>
+            <div
+                        className="markdown-block mb2"
+                        dangerouslySetInnerHTML={
+                                    Object {
+                                                "__html": "<p>foo</p>
+                                    ",
+                                              }
+                        }
+            />
             <Button
                         className="ml1"
                         color="peach"
@@ -240,11 +255,15 @@ ShallowWrapper {
 >
                 foo
 </p>,
-              <p
-                className="block-subheadline mb2"
->
-                foo
-</p>,
+              <div
+                className="markdown-block mb2"
+                dangerouslySetInnerHTML={
+                                Object {
+                                                "__html": "<p>foo</p>
+                                ",
+                                              }
+                }
+/>,
               <Button
                 className="ml1"
                 color="peach"
@@ -282,12 +301,15 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "foo",
-                "className": "block-subheadline mb2",
+                "className": "markdown-block mb2",
+                "dangerouslySetInnerHTML": Object {
+                  "__html": "<p>foo</p>
+",
+                },
               },
               "ref": null,
-              "rendered": "foo",
-              "type": "p",
+              "rendered": null,
+              "type": "div",
             },
             Object {
               "instance": null,

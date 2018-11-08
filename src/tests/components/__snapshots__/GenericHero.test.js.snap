@@ -88,10 +88,14 @@ ShallowWrapper {
                                 foo
                         </p>
                         <div
-                                className="block-subheadline pt3"
-                        >
-                                foo
-                        </div>
+                                className="markdown-block pt3"
+                                dangerouslySetInnerHTML={
+                                        Object {
+                                                "__html": "<p>foo</p>
+                                        ",
+                                              }
+                                }
+                        />
                         <Image
                                 alt="foo image"
                                 bg={false}
@@ -145,10 +149,14 @@ ShallowWrapper {
                                     foo
                         </p>
                         <div
-                                    className="block-subheadline pt3"
-                        >
-                                    foo
-                        </div>
+                                    className="markdown-block pt3"
+                                    dangerouslySetInnerHTML={
+                                                Object {
+                                                            "__html": "<p>foo</p>
+                                                ",
+                                                          }
+                                    }
+                        />
                         <Image
                                     alt="foo image"
                                     bg={false}
@@ -198,10 +206,14 @@ ShallowWrapper {
                             foo
               </p>
               <div
-                            className="block-subheadline pt3"
-              >
-                            foo
-              </div>
+                            className="markdown-block pt3"
+                            dangerouslySetInnerHTML={
+                                          Object {
+                                                        "__html": "<p>foo</p>
+                                          ",
+                                                      }
+                            }
+              />
               <Image
                             alt="foo image"
                             bg={false}
@@ -243,10 +255,14 @@ ShallowWrapper {
                   foo
 </p>,
                 <div
-                  className="block-subheadline pt3"
->
-                  foo
-</div>,
+                  className="markdown-block pt3"
+                  dangerouslySetInnerHTML={
+                                    Object {
+                                                      "__html": "<p>foo</p>
+                                    ",
+                                                    }
+                  }
+/>,
                 <Image
                   alt="foo image"
                   bg={false}
@@ -294,11 +310,14 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "foo",
-                  "className": "block-subheadline pt3",
+                  "className": "markdown-block pt3",
+                  "dangerouslySetInnerHTML": Object {
+                    "__html": "<p>foo</p>
+",
+                  },
                 },
                 "ref": null,
-                "rendered": "foo",
+                "rendered": null,
                 "type": "div",
               },
               Object {
@@ -399,10 +418,14 @@ ShallowWrapper {
                                         foo
                               </p>
                               <div
-                                        className="block-subheadline pt3"
-                              >
-                                        foo
-                              </div>
+                                        className="markdown-block pt3"
+                                        dangerouslySetInnerHTML={
+                                                  Object {
+                                                            "__html": "<p>foo</p>
+                                                  ",
+                                                          }
+                                        }
+                              />
                               <Image
                                         alt="foo image"
                                         bg={false}
@@ -456,10 +479,14 @@ ShallowWrapper {
                                           foo
                             </p>
                             <div
-                                          className="block-subheadline pt3"
-                            >
-                                          foo
-                            </div>
+                                          className="markdown-block pt3"
+                                          dangerouslySetInnerHTML={
+                                                        Object {
+                                                                      "__html": "<p>foo</p>
+                                                        ",
+                                                                    }
+                                          }
+                            />
                             <Image
                                           alt="foo image"
                                           bg={false}
@@ -509,10 +536,14 @@ ShallowWrapper {
                                 foo
                 </p>
                 <div
-                                className="block-subheadline pt3"
-                >
-                                foo
-                </div>
+                                className="markdown-block pt3"
+                                dangerouslySetInnerHTML={
+                                                Object {
+                                                                "__html": "<p>foo</p>
+                                                ",
+                                                              }
+                                }
+                />
                 <Image
                                 alt="foo image"
                                 bg={false}
@@ -554,10 +585,14 @@ ShallowWrapper {
                     foo
 </p>,
                   <div
-                    className="block-subheadline pt3"
->
-                    foo
-</div>,
+                    className="markdown-block pt3"
+                    dangerouslySetInnerHTML={
+                                        Object {
+                                                            "__html": "<p>foo</p>
+                                        ",
+                                                          }
+                    }
+/>,
                   <Image
                     alt="foo image"
                     bg={false}
@@ -605,11 +640,14 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "foo",
-                    "className": "block-subheadline pt3",
+                    "className": "markdown-block pt3",
+                    "dangerouslySetInnerHTML": Object {
+                      "__html": "<p>foo</p>
+",
+                    },
                   },
                   "ref": null,
-                  "rendered": "foo",
+                  "rendered": null,
                   "type": "div",
                 },
                 Object {
