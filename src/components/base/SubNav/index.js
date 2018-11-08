@@ -72,10 +72,7 @@ class SubNav extends Component {
               <Button
                 key={menu}
                 variant="no-style"
-                className={cx(
-                  styles['SubNav__menu'],
-                  'copy text-peach bold mx2'
-                )}
+                className={cx(styles['SubNav__menu'], 'text-peach bold mx2')}
                 onClick={() => {
                   onClick(menu);
                   this.onMenuClick(menu);

@@ -4,13 +4,11 @@
   display: flex;
   position: sticky;
   height: 0;
-  top: calc(
-    #{spacing(8)} + #{$header-height-desktop} + #{$alert-height-desktop}
-  );
+  top: calc(#{spacing(2)} + #{$header-height-mobile} + #{$alert-height-mobile});
 
   @media ($medium-up) {
     top: calc(
-      #{spacing(16)} + #{$header-height-desktop} + #{$alert-height-desktop}
+      #{spacing(3)} + #{$header-height-desktop} + #{$alert-height-desktop}
     );
   }
 
@@ -22,6 +20,7 @@
 
   &__menu {
     margin-bottom: 2px;
+    font-size: $font-2;
   }
 
   &__dropdown {
