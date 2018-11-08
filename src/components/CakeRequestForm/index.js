@@ -12,15 +12,21 @@ class CakeRequestForm extends Component {
     phone: null,
     size: null,
     flavor: null,
+    secondFlavor: null,
     filling: null,
     toppings: []
   };
+
+  openFlavorModal = () => this.setState({ flavorModalIsOpen: true });
+  closeFlavorModal = () => this.setState({ flavorModalIsOpen: false });
+  validateForm = () => Object.values(this.state).every(value => value !== null);
 
   handleLocationChange = location => this.setState({ location });
   handleNameChange = name => this.setState({ name });
   handlePhoneChange = phone => this.setState({ phone });
   handleSizeChange = size => this.setState({ size });
   handleFlavorChange = flavor => this.setState({ flavor });
+  handleSecondFlavorChange = secondFlavor => this.setState({ secondFlavor });
   handleFillingChange = filling => this.setState({ filling });
 
   handleAddTopping = topping => {
@@ -41,21 +47,33 @@ class CakeRequestForm extends Component {
     return this.setState({ toppings: newToppings });
   };
 
-  openFlavorModal = () => this.setState({ flavorModalIsOpen: true });
-  closeFlavorModal = () => this.setState({ flavorModalIsOpen: false });
-  validateForm = () => Object.values(this.state).every(value => value !== null);
+  submitDeposit = () => {
+    const formIsValid = this.validateForm();
+    if (!formIsValid) return null;
+
+    this.actions.addLineItems();
+  };
 
   render() {
     const formIsValid = this.validateForm();
 
     const product = get(this, 'props.cakeDeposit', {});
     const variants = get(product, 'variants', []);
-    const flavors = get(this, 'props.cakeFlavors', []);
+    const suggestedFlavors = get(this, 'props.cakeFlavors', []);
     const fillings = get(this, 'props.cakeFillings', []);
     const toppings = get(this, 'props.cakeToppings', []);
     const locations = get(this, 'props.cakeLocations', {});
 
-    console.log(formIsValid, this.state);
+    const selectedLocation = this.state.location
+      ? locations[this.state.location.value]
+      : null;
+
+    const availableFlavors = selectedLocation
+      ? selectedLocation.availableFlavors.map(flavor => {
+          console.log(flavor, get(flavor, 'fields.title'));
+          return get(flavor, 'fields.title', '');
+        })
+      : [];
 
     return (
       <div className="flex flex-wrap my4">
@@ -160,11 +178,43 @@ class CakeRequestForm extends Component {
               placeholder="Choose a Flavor"
               value={get(this, 'state.flavor.value', null)}
               onChange={this.handleFlavorChange}
-              options={flavors.map(flavor => ({
-                label: flavor.title,
-                value: flavor.title
+              options={availableFlavors.map(flavor => ({
+                label: flavor,
+                value: flavor
               }))}
             />
+            <span
+              className={cx('mt2', {
+                'text-white': !!selectedLocation,
+                'text-peach': !selectedLocation
+              })}
+            >
+              You must first select a location
+            </span>
+          </div>
+          <div className="w100 mb4 flex flex-column items-center">
+            <p className="bold big center mb2">Choose a second flavor!</p>
+            <Dropdown
+              className="w100 text-container-width"
+              color="peach"
+              variant="square"
+              disabled={!selectedLocation}
+              placeholder="Choose a Flavor"
+              value={get(this, 'state.secondFlavor.value', null)}
+              onChange={this.handleSecondFlavorChange}
+              options={availableFlavors.map(flavor => ({
+                label: flavor,
+                value: flavor
+              }))}
+            />
+            <span
+              className={cx('mt2', {
+                'text-white': !!selectedLocation,
+                'text-peach': !selectedLocation
+              })}
+            >
+              You must first select a location
+            </span>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">Choose a filling!</p>
@@ -247,8 +297,12 @@ class CakeRequestForm extends Component {
                     {this.state.size.title}
                   </span>
                   <span className="line-height">
-                    <span className="bold">Flavor: </span>
+                    <span className="bold">Flavor 1: </span>
                     {this.state.flavor.label}
+                  </span>
+                  <span className="line-height">
+                    <span className="bold">Flavor 2: </span>
+                    {this.state.secondFlavor.label}
                   </span>
                   <span className="line-height">
                     <span className="bold">Filling: </span>
@@ -315,7 +369,7 @@ class CakeRequestForm extends Component {
                       three most popular ice cream cake flavor pairings.
                     </p>
                   </div>
-                  {Object.values(flavors).map(flavor => {
+                  {Object.values(suggestedFlavors).map(flavor => {
                     return (
                       <div key={flavor.title} className="my3 pr3">
                         <p className="bold mb1">{flavor.title}</p>
