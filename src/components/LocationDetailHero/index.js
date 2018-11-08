@@ -26,7 +26,7 @@ class LocationDetailHero extends Component {
       'closeLocationForTheSeason',
       false
     );
-    const patryIsAvailable = get(location, 'partyAvailable', false);
+    const partyIsAvailable = get(location, 'partyAvailable', false);
 
     return (
       <div
@@ -152,7 +152,7 @@ class LocationDetailHero extends Component {
                 [styles[
                   'LocationDetailHero__button-container--with-one-button'
                 ]]:
-                  !event || !patryIsAvailable
+                  !event || !partyIsAvailable
               }
             )}
           >
@@ -175,7 +175,7 @@ class LocationDetailHero extends Component {
                 />
               </div>
             ) : null}
-            {patryIsAvailable ? (
+            {partyIsAvailable ? (
               <div
                 className={cx(
                   styles['LocationDetailHero__button-container'],
