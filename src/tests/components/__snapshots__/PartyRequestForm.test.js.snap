@@ -274,7 +274,11 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
+<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -958,7 +962,11 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
+<<<<<<< HEAD
                                           initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                          initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1660,7 +1668,11 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
+<<<<<<< HEAD
                                     initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                    initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1849,7 +1861,11 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
+<<<<<<< HEAD
                       initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                      initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -2047,7 +2063,11 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
+<<<<<<< HEAD
                       "initialMonth": 2019-02-01T05:00:00.000Z,
+=======
+                      "initialMonth": 2018-11-08T19:56:33.009Z,
+>>>>>>> update snapshot
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -4285,7 +4305,11 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
+<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                                initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -4969,7 +4993,11 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
+<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                                initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -5671,7 +5699,11 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
+<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5860,7 +5892,11 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
+<<<<<<< HEAD
                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -6058,7 +6094,11 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
+<<<<<<< HEAD
                         "initialMonth": 2019-02-01T05:00:00.000Z,
+=======
+                        "initialMonth": 2018-11-08T19:56:33.009Z,
+>>>>>>> update snapshot
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -8351,7 +8391,11 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
+<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -9028,7 +9072,11 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
+<<<<<<< HEAD
                                           initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                          initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -9718,7 +9766,11 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
+<<<<<<< HEAD
                                     initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                    initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -9907,7 +9959,11 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
+<<<<<<< HEAD
                       initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                      initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -10105,7 +10161,11 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
+<<<<<<< HEAD
                       "initialMonth": 2019-02-01T05:00:00.000Z,
+=======
+                      "initialMonth": 2018-11-08T19:56:33.009Z,
+>>>>>>> update snapshot
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -12336,7 +12396,11 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
+<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                                initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -13013,7 +13077,11 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
+<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                                initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -13703,7 +13771,11 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
+<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -13892,7 +13964,11 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
+<<<<<<< HEAD
                         initialMonth={2019-02-01T05:00:00.000Z}
+=======
+                        initialMonth={2018-11-08T19:56:33.009Z}
+>>>>>>> update snapshot
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -14090,7 +14166,11 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
+<<<<<<< HEAD
                         "initialMonth": 2019-02-01T05:00:00.000Z,
+=======
+                        "initialMonth": 2018-11-08T19:56:33.009Z,
+>>>>>>> update snapshot
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
