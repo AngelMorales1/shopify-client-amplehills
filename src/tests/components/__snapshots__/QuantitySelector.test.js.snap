@@ -44,6 +44,8 @@ ShallowWrapper {
           address=""
           className="copy mx2"
           color="seafoam-madison-blue-border"
+          max={null}
+          min={null}
           name=""
           onBlur={[Function]}
           onChange={[Function]}
@@ -105,6 +107,8 @@ ShallowWrapper {
           "address": "",
           "className": "copy mx2",
           "color": "seafoam-madison-blue-border",
+          "max": null,
+          "min": null,
           "name": "",
           "onBlur": [Function],
           "onChange": [Function],
@@ -171,6 +175,8 @@ ShallowWrapper {
             address=""
             className="copy mx2"
             color="seafoam-madison-blue-border"
+            max={null}
+            min={null}
             name=""
             onBlur={[Function]}
             onChange={[Function]}
@@ -232,6 +238,8 @@ ShallowWrapper {
             "address": "",
             "className": "copy mx2",
             "color": "seafoam-madison-blue-border",
+            "max": null,
+            "min": null,
             "name": "",
             "onBlur": [Function],
             "onChange": [Function],
@@ -327,6 +335,8 @@ ShallowWrapper {
           address=""
           className="copy mx2"
           color="madison-blue"
+          max={null}
+          min={null}
           name=""
           onBlur={[Function]}
           onChange={[Function]}
@@ -388,6 +398,8 @@ ShallowWrapper {
           "address": "",
           "className": "copy mx2",
           "color": "madison-blue",
+          "max": null,
+          "min": null,
           "name": "",
           "onBlur": [Function],
           "onChange": [Function],
@@ -454,6 +466,8 @@ ShallowWrapper {
             address=""
             className="copy mx2"
             color="madison-blue"
+            max={null}
+            min={null}
             name=""
             onBlur={[Function]}
             onChange={[Function]}
@@ -515,6 +529,8 @@ ShallowWrapper {
             "address": "",
             "className": "copy mx2",
             "color": "madison-blue",
+            "max": null,
+            "min": null,
             "name": "",
             "onBlur": [Function],
             "onChange": [Function],

@@ -20,6 +20,8 @@ export default [
       lat: 40.789
     },
     orderDeliveryLink: '',
+    participantsLimit: 55,
+    participantsLimitText: '',
     partyAvailable: false,
     partyTypes: [],
     timeSlots: [],

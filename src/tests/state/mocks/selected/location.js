@@ -23,6 +23,8 @@ export default {
   timeSlots: [],
   partyAvailable: false,
   orderDeliveryLink: '',
+  participantsLimit: 55,
+  participantsLimitText: '',
   phone: '8881234567',
   seasonal: false,
   delivery: false,

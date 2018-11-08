@@ -23,6 +23,8 @@ export default [
       lat: 40.789
     },
     orderDeliveryLink: '',
+    participantsLimit: 55,
+    participantsLimitText: '',
     partyAvailable: false,
     phone: '8881234567',
     seasonal: false,
@@ -74,6 +76,8 @@ export default [
     },
     partyAvailable: false,
     orderDeliveryLink: '',
+    participantsLimit: 55,
+    participantsLimitText: '',
     phone: '8881234567',
     seasonal: false,
     delivery: false,
