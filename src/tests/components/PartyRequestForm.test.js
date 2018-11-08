@@ -87,6 +87,7 @@ it('renders with data', () => {
         price: '0.00',
         title: 'foo'
       }}
+      today={new Date(2019, 1, 1)}
     />
   );
 

@@ -25,6 +25,7 @@ class PartyRequestFormView extends Component {
           actions={actions}
           checkout={checkout}
           addLineItemsStatus={addLineItemsStatus}
+          today={new Date()}
         />
       </div>
     );

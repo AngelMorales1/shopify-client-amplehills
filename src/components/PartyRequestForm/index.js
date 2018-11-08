@@ -357,6 +357,7 @@ class PartyRequestForm extends Component {
                     selectedDate: moment(day).format('MMMM DD')
                   })
                 }
+                initialMonth={this.props.today}
               />
             </Button>
           </div>
@@ -718,7 +719,8 @@ PartyRequestForm.propTypes = {
     id: PropTypes.string,
     price: PropTypes.string,
     title: PropTypes.string
-  })
+  }),
+  today: PropTypes.instanceOf(Date)
 };
 
 PartyRequestForm.defaultProps = {
@@ -735,7 +737,8 @@ PartyRequestForm.defaultProps = {
     id: '',
     price: '0.00',
     title: ''
-  }
+  },
+  today: new Date(2019, 1, 1)
 };
 
 export default PartyRequestForm;
