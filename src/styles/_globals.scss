@@ -139,6 +139,20 @@ UI elements
   }
 }
 
+.modal {
+  max-height: 100vh;
+  overflow: scroll;
+  border-radius: radius('s');
+
+  &--light-gray-border {
+    border: spacing(0.8) solid color('light-gray');
+  }
+
+  @media ($medium-up) {
+    max-height: 70vh;
+  }
+}
+
 .tag {
   @extend .tag-text;
   padding: calc(#{spacing(3)} + 3px) spacing(6) spacing(3);

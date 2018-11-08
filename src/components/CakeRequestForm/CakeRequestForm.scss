@@ -1,0 +1,20 @@
+@import 'settings';
+$CRF-close-bar-height: spacing(18);
+
+.CakeRequestForm {
+  &__modal {
+    &__info {
+      height: calc(100% - #{$CRF-close-bar-height});
+    }
+
+    &__close-bar {
+      border-top: color('light-gray') 1px solid;
+      height: $CRF-close-bar-height;
+    }
+
+    &__text {
+      font-size: $font-3;
+      line-height: $font-5;
+    }
+  }
+}
