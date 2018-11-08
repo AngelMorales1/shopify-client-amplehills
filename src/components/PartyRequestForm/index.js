@@ -497,7 +497,9 @@ class PartyRequestForm extends Component {
             />
           </div>
           <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">what's the age range?</p>
+            <p className="bold big center mb3">
+              If relevant, what’s the age group of the children?
+            </p>
             <div className="container-width w100 flex flex-row flex-wrap justify-center">
               {ageGroups.map(ageGroup => {
                 return (
