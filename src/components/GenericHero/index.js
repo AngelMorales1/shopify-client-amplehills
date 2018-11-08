@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import marked from 'marked';
 
 import imageModel from 'models/imageModel';
 import styles from './GenericHero.scss';
@@ -65,7 +66,14 @@ const GenericHero = ({ block, z }) => {
             )}
           >
             <p className="block-headline pt3">{title}</p>
-            {text ? <div className="block-subheadline pt3">{text}</div> : null}
+            {text ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(text)
+                }}
+                className="markdown-block pt3"
+              />
+            ) : null}
             {image1 && !imageRight && !image2 ? (
               <Image
                 className={cx(styles['GenericHero__image'], 'w100 pt3')}
