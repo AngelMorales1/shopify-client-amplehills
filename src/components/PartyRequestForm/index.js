@@ -6,6 +6,7 @@ import checkoutModel from 'models/checkoutModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
 import moment from 'moment';
+import marked from 'marked';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
@@ -33,7 +34,9 @@ class PartyRequestForm extends Component {
     selectedAddOns: [],
     selectedAllergies: '',
     dayPickerIsSelected: false,
-    modalIsOpen: false
+    modalIsOpen: false,
+    participantsLimit: 55,
+    participantsLimitText: ''
   };
 
   componentDidMount() {
@@ -70,7 +73,8 @@ class PartyRequestForm extends Component {
       selectedTimeSlot,
       selectedPartyType,
       selectedNumberOfGuests,
-      selectedCelebrating
+      selectedCelebrating,
+      participantsLimit
     } = this.state;
 
     if (!selectedLocation) {
@@ -97,8 +101,8 @@ class PartyRequestForm extends Component {
       return true;
     }
 
-    if (!selectedNumberOfGuests || selectedNumberOfGuests > 55) {
-      const error = 'Please enter total number of expected guests under 55.';
+    if (!selectedNumberOfGuests || selectedNumberOfGuests > participantsLimit) {
+      const error = `Please enter total number of expected guests under ${participantsLimit}.`;
       this.setState({ error });
       return true;
     }
@@ -231,17 +235,22 @@ class PartyRequestForm extends Component {
 
     const timeSlots = locations[filter.value].timeSlots;
     const partyTypes = locations[filter.value].partyTypes;
+    const participantsLimit = locations[filter.value].participantsLimit;
+    const participantsLimitText = locations[filter.value].participantsLimitText;
 
     this.setState({
       selectedLocation: filter.value,
       timeSlots: timeSlots.length ? timeSlots : defaultTimeSlots,
-      partyTypes: partyTypes.length ? partyTypes : defaultPartyTypes
+      partyTypes: partyTypes.length ? partyTypes : defaultPartyTypes,
+      participantsLimit,
+      participantsLimitText
     });
 
     if (filter.value !== selectedLocation) {
       this.setState({
         selectedTimeSlot: '',
-        selectedPartyType: ''
+        selectedPartyType: '',
+        selectedNumberOfGuests: ''
       });
     }
   };
@@ -259,7 +268,9 @@ class PartyRequestForm extends Component {
       selectedNumberOfGuests,
       selectedCelebrating,
       error,
-      dayPickerIsSelected
+      dayPickerIsSelected,
+      participantsLimit,
+      participantsLimitText
     } = this.state;
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
@@ -444,14 +455,26 @@ class PartyRequestForm extends Component {
             <p className="bold big center mb2">
               How many participants are you expecting?
             </p>
-            <p
-              className={cx(
-                styles['PartyRequestForm__help-text'],
-                'center mb3'
-              )}
-            >
-              Maximum number of 55
-            </p>
+            {participantsLimitText ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(participantsLimitText)
+                }}
+                className={cx(
+                  'center mb3 text-container-width',
+                  styles['PartyRequestForm__help-text']
+                )}
+              />
+            ) : (
+              <p
+                className={cx(
+                  styles['PartyRequestForm__help-text'],
+                  'center mb3'
+                )}
+              >
+                Maximum number of 55
+              </p>
+            )}
             <TextField
               className="w100 text-container-width"
               variant={selectedNumberOfGuests ? 'square--selected' : 'square'}
@@ -459,7 +482,10 @@ class PartyRequestForm extends Component {
               onChange={value =>
                 this.setState({ selectedNumberOfGuests: value })
               }
+              value={selectedNumberOfGuests}
               type="number"
+              min={0}
+              max={participantsLimit}
             />
           </div>
           <div className="w100 mt4 flex flex-column items-center">

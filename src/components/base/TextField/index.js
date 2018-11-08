@@ -18,7 +18,9 @@ const TextField = ({
   value,
   variant,
   color,
-  fullWidth
+  fullWidth,
+  min,
+  max
 }) => {
   const classes = cx(styles['TextField'], 'field-group', className, {
     [styles['TextField--error']]: error,
@@ -63,6 +65,8 @@ const TextField = ({
           pattern={pattern}
           placeholder={placeholder}
           type={type}
+          min={min}
+          max={max}
           required={required ? 'required' : false}
           value={value}
         />
@@ -86,7 +90,9 @@ TextField.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.bool,
   type: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  min: PropTypes.number,
+  max: PropTypes.number
 };
 
 TextField.defaultProps = {
@@ -97,7 +103,9 @@ TextField.defaultProps = {
   placeholder: '',
   required: false,
   type: 'text',
-  name: ''
+  name: '',
+  min: null,
+  max: null
 };
 
 export default TextField;
