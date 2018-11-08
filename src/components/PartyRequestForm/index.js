@@ -257,6 +257,11 @@ class PartyRequestForm extends Component {
     }
   };
 
+  handleInnerButtonClick = (e, onClickFunction) => {
+    e.stopPropagation();
+    return onClickFunction;
+  };
+
   render() {
     const { partyAddOns, partyDeposit, addLineItemsStatus } = this.props;
     const {
@@ -449,6 +454,7 @@ class PartyRequestForm extends Component {
                             styles['PartyRequestForm__party-type-inner-button'],
                             'uppercase tout white-space-normal'
                           )}
+                          onClick={e => this.handleInnerButtonClick(e)}
                           to={partyType.link}
                           newTab={true}
                         />
@@ -562,10 +568,13 @@ class PartyRequestForm extends Component {
                               variant="primary-small"
                               color="peach"
                               label="More Info"
-                              onClick={() =>
-                                this.setState({
-                                  moreInfoOpenedPartyAddons: partyAddOnId
-                                })
+                              onClick={e =>
+                                this.handleInnerButtonClick(
+                                  e,
+                                  this.setState({
+                                    moreInfoOpenedPartyAddons: partyAddOnId
+                                  })
+                                )
                               }
                               className={cx(
                                 styles[
