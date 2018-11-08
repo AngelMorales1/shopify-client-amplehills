@@ -140,7 +140,10 @@ class Nav extends Component {
             {this.state.currentBreakpoint === medium.label ? (
               <Fragment>
                 <Button
-                  className="copy bold text-decoration-none center text-white"
+                  className={cx(
+                    styles['Nav__location-button'],
+                    'copy bold text-decoration-none center text-white'
+                  )}
                   variant="style-none"
                   onClick={closeLocationDropdown}
                   onMouseEnter={() => {
