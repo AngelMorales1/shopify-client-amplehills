@@ -274,15 +274,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -966,15 +958,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                          initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                          initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                           initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1676,15 +1660,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                    initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                     initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1873,15 +1849,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                      initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                       initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -2079,15 +2047,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      "initialMonth": 2018-11-08T22:52:14.949Z,
-=======
-                      "initialMonth": 2018-11-08T19:59:15.785Z,
->>>>>>> snapshot update
-=======
                       "initialMonth": 2019-02-01T05:00:00.000Z,
->>>>>>> Add today props to initialMonth in Daypicker
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -4325,15 +4285,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                                initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                                initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                                 initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -5017,15 +4969,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                                initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                                initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                                 initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -5727,15 +5671,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -5924,15 +5860,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -6130,15 +6058,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        "initialMonth": 2018-11-08T22:52:14.949Z,
-=======
-                        "initialMonth": 2018-11-08T19:59:15.785Z,
->>>>>>> snapshot update
-=======
                         "initialMonth": 2019-02-01T05:00:00.000Z,
->>>>>>> Add today props to initialMonth in Daypicker
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -8431,15 +8351,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -9116,15 +9028,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                          initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                          initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                           initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -9814,15 +9718,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                    initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                    initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                     initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -10011,15 +9907,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                      initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                       initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -10217,15 +10105,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      "initialMonth": 2018-11-08T22:52:14.949Z,
-=======
-                      "initialMonth": 2018-11-08T19:59:15.785Z,
->>>>>>> snapshot update
-=======
                       "initialMonth": 2019-02-01T05:00:00.000Z,
->>>>>>> Add today props to initialMonth in Daypicker
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -12456,15 +12336,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                                initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                                initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                                 initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -13141,15 +13013,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                                initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                                initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                                 initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -13839,15 +13703,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -14036,15 +13892,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        initialMonth={2018-11-08T22:52:14.949Z}
-=======
-                        initialMonth={2018-11-08T19:59:15.785Z}
->>>>>>> snapshot update
-=======
                         initialMonth={2019-02-01T05:00:00.000Z}
->>>>>>> Add today props to initialMonth in Daypicker
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -14242,15 +14090,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        "initialMonth": 2018-11-08T22:52:14.949Z,
-=======
-                        "initialMonth": 2018-11-08T19:59:15.785Z,
->>>>>>> snapshot update
-=======
                         "initialMonth": 2019-02-01T05:00:00.000Z,
->>>>>>> Add today props to initialMonth in Daypicker
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
