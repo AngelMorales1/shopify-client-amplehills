@@ -140,7 +140,7 @@ class Nav extends Component {
             {this.state.currentBreakpoint === medium.label ? (
               <Fragment>
                 <Button
-                  className="link-text center text-white"
+                  className="copy bold text-decoration-none center text-white"
                   variant="style-none"
                   onClick={closeLocationDropdown}
                   onMouseEnter={() => {
@@ -154,28 +154,28 @@ class Nav extends Component {
                 <NavLink
                   exact
                   to="/flavors"
-                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
                 >
                   Flavors
                 </NavLink>
                 <NavLink
                   exact
                   to="/events"
-                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
                 >
                   Events
                 </NavLink>
                 <NavLink
                   exact
                   to="/classes-and-socials"
-                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
                 >
                   Classes & Socials
                 </NavLink>
                 <NavLink
                   exact
                   to="/parties"
-                  className="text-hover ml3 link-text center xs-hide sm-hide"
+                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
                 >
                   Parties
                 </NavLink>
@@ -195,14 +195,14 @@ class Nav extends Component {
           <div
             className={cx(
               styles['logo-container'],
-              'col col-4 md-col-4 h100 flex items-center'
+              'col col-4 md-col-2 h100 flex items-center'
             )}
           >
             <NavLink exact to="/" className="flex justify-center">
               <Image
                 className={cx(
                   styles['logo-container__logo'],
-                  'col-12 md-col-10'
+                  'col-12 md-col-10 px1'
                 )}
                 alt="Click the Ample Hills Logo to return to the homepage"
                 src={contentfulImgUtil(
@@ -219,11 +219,15 @@ class Nav extends Component {
                 <NavLink
                   exact
                   to="/our-story"
-                  className="text-hover link-text center mr2"
+                  className="text-hover copy bold text-decoration-none center mr2"
                 >
                   Our Story
                 </NavLink>
-                <NavLink exact to="/profile" className="mr2 link-text center">
+                <NavLink
+                  exact
+                  to="/profile"
+                  className="mr2 copy bold text-decoration-none center"
+                >
                   <Image
                     className="icon"
                     src={contentfulImgUtil(
