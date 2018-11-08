@@ -138,7 +138,12 @@ class Nav extends Component {
         >
           <div className="col col-4 md-col-5 flex items-center justify-start">
             {this.state.currentBreakpoint === medium.label ? (
-              <Fragment>
+              <div
+                className={cx(
+                  styles['Nav__left-menu'],
+                  'w100 flex items-center'
+                )}
+              >
                 <Button
                   className={cx(
                     styles['Nav__location-button'],
@@ -182,7 +187,7 @@ class Nav extends Component {
                 >
                   Parties
                 </NavLink>
-              </Fragment>
+              </div>
             ) : (
               <Button
                 variant="style-none"

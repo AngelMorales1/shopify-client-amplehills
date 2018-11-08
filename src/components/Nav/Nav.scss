@@ -11,6 +11,11 @@
     top: $alert-height-desktop;
   }
 
+  &__left-menu {
+    justify-content: space-between;
+    max-width: 30rem;
+  }
+
   &__location-button {
     padding-top: calc(#{spacing(4)} + 0.125rem);
     padding-bottom: calc(#{spacing(4)} - 0.125rem);
