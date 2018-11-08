@@ -142,7 +142,7 @@ class Nav extends Component {
                 <Button
                   className={cx(
                     styles['Nav__location-button'],
-                    'copy bold text-decoration-none center text-white'
+                    'line-item-title text-decoration-none center text-white'
                   )}
                   variant="style-none"
                   onClick={closeLocationDropdown}
@@ -157,28 +157,28 @@ class Nav extends Component {
                 <NavLink
                   exact
                   to="/flavors"
-                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
+                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                 >
                   Flavors
                 </NavLink>
                 <NavLink
                   exact
                   to="/events"
-                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
+                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                 >
                   Events
                 </NavLink>
                 <NavLink
                   exact
                   to="/classes-and-socials"
-                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
+                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                 >
                   Classes & Socials
                 </NavLink>
                 <NavLink
                   exact
                   to="/parties"
-                  className="text-hover ml2 copy bold text-decoration-none center xs-hide sm-hide"
+                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                 >
                   Parties
                 </NavLink>
@@ -222,14 +222,14 @@ class Nav extends Component {
                 <NavLink
                   exact
                   to="/our-story"
-                  className="text-hover copy bold text-decoration-none center mr2"
+                  className="text-hover line-item-title text-decoration-none center mr2"
                 >
                   Our Story
                 </NavLink>
                 <NavLink
                   exact
                   to="/profile"
-                  className="mr2 copy bold text-decoration-none center"
+                  className="mr2 line-item-title text-decoration-none center"
                 >
                   <Image
                     className="icon"
