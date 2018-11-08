@@ -29,7 +29,7 @@ class PartyRequestForm extends Component {
     selectedTimeSlot: '',
     selectedPartyType: '',
     selectedAge: '',
-    selectedNumberOfGuests: 0,
+    selectedNumberOfGuests: '',
     selectedCelebrating: '',
     selectedAddOns: [],
     selectedAllergies: '',
@@ -274,7 +274,13 @@ class PartyRequestForm extends Component {
     } = this.state;
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
-    const ageGroups = ['2 - 5', '4 - 6', '7 -10', '11 - 13'];
+    const ageGroups = [
+      '2 - 5 Years old',
+      '4 - 6 Years old',
+      '7 - 10 Years old',
+      '11 - 13 Years old',
+      '14 + Years old'
+    ];
     const fieldIsEmpty =
       !selectedLocation &&
       !selectedAddOns.length &&
@@ -489,13 +495,11 @@ class PartyRequestForm extends Component {
             />
           </div>
           <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">
-              If relevant, what’s the age group of the children?
-            </p>
-            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+            <p className="bold big center mb3">what's the age range?</p>
+            <div className="container-width w100 flex flex-row flex-wrap justify-center">
               {ageGroups.map(ageGroup => {
                 return (
-                  <div key={ageGroup} className="col-6 md-col-3 p1">
+                  <div key={ageGroup} className="col-6 md-col-2 p1">
                     <Button
                       onClick={() => this.setState({ selectedAge: ageGroup })}
                       variant={
@@ -504,7 +508,7 @@ class PartyRequestForm extends Component {
                           : 'square'
                       }
                       className="center wh100 white-space-normal"
-                      label={`${ageGroup} Years old`}
+                      label={ageGroup}
                     />
                   </div>
                 );

@@ -80,8 +80,7 @@ HorizontalCarousel.propTypes = {
   text: PropTypes.string,
   buttonLabel: PropTypes.string,
   buttonLink: PropTypes.string,
-  isReverseOrder: PropTypes.bool,
-  text: PropTypes.string
+  isReverseOrder: PropTypes.bool
 };
 
 HorizontalCarousel.defaultProps = {
@@ -91,8 +90,7 @@ HorizontalCarousel.defaultProps = {
   text: '',
   buttonLabel: '',
   buttonLink: '',
-  isReverseOrder: false,
-  text: ''
+  isReverseOrder: false
 };
 
 export default HorizontalCarousel;
