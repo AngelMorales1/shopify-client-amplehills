@@ -38,16 +38,21 @@
   }
 
   &__button-container {
+    font-size: $font-2;
+    letter-spacing: spacing(0.2);
     flex-direction: column;
+    justify-content: center;
 
     @media ($medium-up) {
       flex-direction: row;
     }
   }
 
-  &__button-container {
-    font-size: $font-2;
-    letter-spacing: spacing(0.2);
+  &__button-container--with-one-button {
+    @media ($medium-up) {
+      justify-content: start;
+      padding: 0 spacing(12);
+    }
   }
 
   &__button {

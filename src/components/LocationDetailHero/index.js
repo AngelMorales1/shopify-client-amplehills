@@ -26,6 +26,7 @@ class LocationDetailHero extends Component {
       'closeLocationForTheSeason',
       false
     );
+    const patryIsAvailable = get(location, 'partyAvailable', false);
 
     return (
       <div
@@ -146,7 +147,13 @@ class LocationDetailHero extends Component {
           <div
             className={cx(
               styles['LocationDetailHero__button-container'],
-              'flex flex-wrap justify-center col-12 md-col-11 mx-auto'
+              'flex flex-wrap col-12 md-col-11 mx-auto',
+              {
+                [styles[
+                  'LocationDetailHero__button-container--with-one-button'
+                ]]:
+                  !event || !patryIsAvailable
+              }
             )}
           >
             {event ? (
@@ -168,23 +175,25 @@ class LocationDetailHero extends Component {
                 />
               </div>
             ) : null}
-            <div
-              className={cx(
-                styles['LocationDetailHero__button-container'],
-                'm1'
-              )}
-            >
-              <Button
+            {patryIsAvailable ? (
+              <div
                 className={cx(
-                  styles['LocationDetailHero__button'],
-                  'uppercase justify-center'
+                  styles['LocationDetailHero__button-container'],
+                  'm1'
                 )}
-                color="madison-blue"
-                variant="primary-small"
-                label="book a party"
-                to="/party-request-form"
-              />
-            </div>
+              >
+                <Button
+                  className={cx(
+                    styles['LocationDetailHero__button'],
+                    'uppercase justify-center'
+                  )}
+                  color="madison-blue"
+                  variant="primary-small"
+                  label="book a party"
+                  to="/party-request-form"
+                />
+              </div>
+            ) : null}
             <div
               className={cx(
                 styles['LocationDetailHero__button-container'],
