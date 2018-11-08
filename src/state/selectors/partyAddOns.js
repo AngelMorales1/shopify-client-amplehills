@@ -16,12 +16,14 @@ export default createSelector(
       const price = parseFloat(product.price || '0.0').toFixed(2);
       const title = product.title || '';
       const unit = product.unit || '';
+      const moreInfoText = product.moreInfoText || '';
 
       const handlizedProduct = {
         id,
         price,
         unit,
-        title
+        title,
+        moreInfoText
       };
 
       handlizedProducts.push(handlizedProduct);

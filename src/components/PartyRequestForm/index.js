@@ -14,6 +14,7 @@ import {
   defaultPartyTypes,
   defaultTimeSlots
 } from 'constants/defaultPartyRequestForm';
+import PartyRequestFormModal from './PartyRequestFormModal';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
@@ -34,9 +35,10 @@ class PartyRequestForm extends Component {
     selectedAddOns: [],
     selectedAllergies: '',
     dayPickerIsSelected: false,
-    modalIsOpen: false,
+    moreInfoModalIsOpen: false,
     participantsLimit: 55,
-    participantsLimitText: ''
+    participantsLimitText: '',
+    moreInfoOpenedPartyAddons: ''
   };
 
   componentDidMount() {
@@ -305,7 +307,7 @@ class PartyRequestForm extends Component {
               color="peach"
               label="More Info"
               className="uppercase mb3 tout"
-              onClick={() => this.setState({ modalIsOpen: true })}
+              onClick={() => this.setState({ moreInfoModalIsOpen: true })}
             />
             <Dropdown
               className="w100 text-container-width z-sub-nav"
@@ -533,8 +535,10 @@ class PartyRequestForm extends Component {
               </p>
               <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
                 {partyAddOns.map((partyAddOn, i) => {
+                  const partyAddOnId = get(partyAddOn, 'id', '');
+
                   return (
-                    <div key={get(partyAddOn, 'id', i)} className="col-6 p1">
+                    <div key={partyAddOnId} className="col-6 p1">
                       <Button
                         onClick={() => this.handleAddOnClick(partyAddOn.title)}
                         className="center wh100 "
@@ -551,8 +555,37 @@ class PartyRequestForm extends Component {
                           <p className="white-space-normal light">{`$${
                             partyAddOn.price
                           } ${partyAddOn.unit}`}</p>
+                          <div className="mx-auto mt2">
+                            <Button
+                              variant="primary-small"
+                              color="peach"
+                              label="More Info"
+                              onClick={() =>
+                                this.setState({
+                                  moreInfoOpenedPartyAddons: partyAddOnId
+                                })
+                              }
+                              className={cx(
+                                styles[
+                                  'PartyRequestForm__party-type-inner-button'
+                                ],
+                                'uppercase tout white-space-normal'
+                              )}
+                            />
+                          </div>
                         </div>
                       </Button>
+                      {this.state.moreInfoOpenedPartyAddons === partyAddOnId ? (
+                        <PartyRequestFormModal
+                          onCloseClick={() =>
+                            this.setState({ moreInfoOpenedPartyAddons: '' })
+                          }
+                        >
+                          <p className="m3 block-subheadline">
+                            {partyAddOn.moreInfoText}
+                          </p>
+                        </PartyRequestFormModal>
+                      ) : null}
                     </div>
                   );
                 })}
@@ -684,51 +717,23 @@ class PartyRequestForm extends Component {
             </div>
           </div>
         </div>
-        {this.state.modalIsOpen ? (
-          <div
-            className={cx(
-              styles['PartyRequestForm__modal'],
-              'overflow-scroll fixed-cover bg-white-wash flex justify-center items-center transition-fade-in'
-            )}
+        {this.state.moreInfoModalIsOpen ? (
+          <PartyRequestFormModal
+            onCloseClick={() => this.setState({ moreInfoModalIsOpen: false })}
           >
-            <div
-              className={cx(
-                styles['PartyRequestForm__modal-content-container'],
-                'relative flex items-center justify-center bg-white drop-shadow transition-slide-up-large-long'
-              )}
-            >
-              <div className="wh100 m-auto flex flex-column mb3 justify-center">
-                <div>
-                  <h2 className="block-headline m3 pt3 mb3">More Info</h2>
-                  {Object.values(locations).map(location => {
-                    return (
-                      <div key={location.id} className="m3">
-                        <p className="bold big mb2">{location.title}</p>
-                        <p className="mb1">{location.address1}</p>
-                        {location.address2 ? (
-                          <p className="mb1">{location.address2}</p>
-                        ) : null}
-                        <p>{`${location.city}, ${location.state} ${
-                          location.zip
-                        }`}</p>
-                      </div>
-                    );
-                  })}
+            {Object.values(locations).map(location => {
+              return (
+                <div key={location.id} className="m3">
+                  <p className="bold big mb2">{location.title}</p>
+                  <p className="mb1">{location.address1}</p>
+                  {location.address2 ? (
+                    <p className="mb1">{location.address2}</p>
+                  ) : null}
+                  <p>{`${location.city}, ${location.state} ${location.zip}`}</p>
                 </div>
-                <div>
-                  <Button
-                    className={cx(
-                      styles['PartyRequestForm__modal-close-button'],
-                      'right'
-                    )}
-                    color="madison-blue"
-                    label="Close"
-                    onClick={() => this.setState({ modalIsOpen: false })}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+              );
+            })}
+          </PartyRequestFormModal>
         ) : null}
       </div>
     );
