@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import ShopifyProductTypes from 'constants/ShopifyProductTypes';
+import HiddenCartAttributes from 'constants/HiddenCartAttributes';
 
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
@@ -76,7 +77,9 @@ export const deriveLineItems = (checkout, products) =>
           !attribute.key.includes('Shipping Estimate')
       )
       .reduce((stringifiedAttributes, attribute) => {
-        stringifiedAttributes.push(`${attribute.key}: ${attribute.value}`);
+        if (!HiddenCartAttributes.includes(attribute.key)) {
+          stringifiedAttributes.push(`${attribute.key}: ${attribute.value}`);
+        }
         return stringifiedAttributes;
       }, cartAttributes);
 
