@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import marked from 'marked';
 
 import styles from './HorizontalCarousel.scss';
 import { Button } from 'components/base';
@@ -33,14 +34,15 @@ const HorizontalCarousel = ({
           {title}
         </p>
         {text ? (
-          <p
+          <div
+            dangerouslySetInnerHTML={{
+              __html: marked(text)
+            }}
             className={cx(
               styles['HorizontalCarousel__text'],
-              'block-subheadline mb2'
+              'markdown-block mb2'
             )}
-          >
-            {text}
-          </p>
+          />
         ) : null}
         <Button
           className="ml1"
