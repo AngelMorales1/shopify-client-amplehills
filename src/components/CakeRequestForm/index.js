@@ -47,11 +47,56 @@ class CakeRequestForm extends Component {
     return this.setState({ toppings: newToppings });
   };
 
+  getCakeAttributes = () => [
+    {
+      key: 'Pickup Location',
+      value: this.state.location.label
+    },
+    {
+      key: 'Name',
+      value: this.state.name
+    },
+    {
+      key: 'Phone',
+      value: this.state.phone
+    },
+    {
+      key: 'Size',
+      value: this.state.size.title
+    },
+    {
+      key: 'Flavor 1',
+      value: this.state.flavor.label
+    },
+    {
+      key: 'Flavor 2',
+      value: this.state.secondFlavor.label
+    },
+    {
+      key: 'Filling',
+      value: this.state.filling
+    },
+    {
+      key: 'Toppings',
+      value: this.state.toppings.join(', ')
+    }
+  ];
+
   submitDeposit = () => {
     const formIsValid = this.validateForm();
     if (!formIsValid) return null;
 
-    this.actions.addLineItems();
+    const items = [
+      {
+        variantId: get(this, 'state.size.id', ''),
+        quantity: 1,
+        customAttributes: this.getCakeAttributes()
+      }
+    ];
+
+    console.log(items);
+
+    this.props.actions.addLineItems(get(this, 'props.checkout.id'), items);
   };
 
   render() {
@@ -69,10 +114,9 @@ class CakeRequestForm extends Component {
       : null;
 
     const availableFlavors = selectedLocation
-      ? selectedLocation.availableFlavors.map(flavor => {
-          console.log(flavor, get(flavor, 'fields.title'));
-          return get(flavor, 'fields.title', '');
-        })
+      ? selectedLocation.availableFlavors.map(flavor =>
+          get(flavor, 'fields.title', '')
+        )
       : [];
 
     return (
