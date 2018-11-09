@@ -20,7 +20,11 @@ const MarkdownBlock = props => {
   const button2Text = get(fields, 'button2Text', '');
   const markdown2 = get(fields, 'content2', '');
   const isDripOn = get(fields, 'drip', false);
-  const colorClass = `MarkdownBlock--${get(fields, 'backgroundColor', '')}`;
+  const colorClass = `MarkdownBlock--${get(
+    fields,
+    'backgroundColor',
+    'white'
+  )}`;
   const titleOnLeft = get(fields, 'titleLeft', false);
   const titleOnTop = get(fields, 'titleTop', false);
   const titleOnLeftCenter = get(fields, 'titleCenterAlign', false);

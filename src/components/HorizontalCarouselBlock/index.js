@@ -12,7 +12,7 @@ const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
   const setRef = get(props, 'setRef', () => {});
   const fields = get(block, 'fields', {});
   const isDripOn = get(fields, 'drip', false);
-  const backgroundColor = get(fields, 'color', '');
+  const backgroundColor = get(fields, 'color', 'white');
   const flavorItems = get(block, 'fields.flavorItems', []);
   const pressItemsInBlock = get(fields, 'pressItems.simpleFragments', {});
   const sortByLatest = get(fields, 'sortByLatest', true);

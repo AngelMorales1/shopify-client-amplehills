@@ -10,7 +10,7 @@ const AvailableLocations = ({ flavor, block, z, setRef }) => {
   const availableLocations = get(flavor, 'availableLocations', []);
   const fields = get(block, 'fields', {});
   const blockTitle = get(fields, 'title', '');
-  const backgroundColor = get(fields, 'backgroundColor', '');
+  const backgroundColor = get(fields, 'backgroundColor', 'white');
   const drip = get(fields, 'drip', false);
 
   return (

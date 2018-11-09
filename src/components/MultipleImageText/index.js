@@ -8,7 +8,7 @@ const MultipleImageText = ({ block, setRef, z }) => {
   const fields = get(block, 'fields', {});
   const imagesAndTexts = get(fields, 'fragmentType.simpleFragments', {});
   const drip = get(fields, 'drip', false);
-  const backgroundColor = get(fields, 'backgroundColor', '');
+  const backgroundColor = get(fields, 'backgroundColor', 'white');
 
   return (
     <div

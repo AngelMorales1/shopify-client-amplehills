@@ -15,7 +15,7 @@ const GenericHero = ({ block, z }) => {
   const image1 = get(fields, 'image1', null);
   const image2 = get(fields, 'image2', null);
   const isDripOn = get(fields, 'drip', false);
-  const colorClass = `GenericHero--${get(fields, 'color', '')}`;
+  const colorClass = `GenericHero--${get(fields, 'color', 'white')}`;
   const text = get(fields, 'text', '');
   const imageRight = get(fields, 'imageRight', false);
   const isReverseArrangement = get(fields, 'isReverseArrangement', false);

@@ -1,7 +1,9 @@
 @import 'settings';
 
 .AvailableFlavors {
-  @extend .bg-white;
+  &--white {
+    @extend .bg-white;
+  }
 
   &--yellow {
     @extend .bg-yellow;

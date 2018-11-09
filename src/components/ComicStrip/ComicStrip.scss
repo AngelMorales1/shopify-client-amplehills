@@ -2,7 +2,10 @@
 
 .ComicStrip {
   @extend .text-madison-blue;
-  @extend .bg-white;
+
+  &--white {
+    @extend .bg-white;
+  }
 
   &--yellow {
     @extend .bg-yellow;

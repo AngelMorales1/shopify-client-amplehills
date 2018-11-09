@@ -1,6 +1,10 @@
 @import 'settings', 'src/styles/utils';
 
 .AvailableLocations {
+  &--white {
+    @extend .bg-white;
+  }
+
   &--yellow {
     @extend .bg-yellow;
   }

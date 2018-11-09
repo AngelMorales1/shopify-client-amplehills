@@ -39,7 +39,7 @@ class AvailableFlavors extends Component {
     const { small } = Global.breakpoints;
     const fields = get(block, 'fields', {});
     const title = get(fields, 'title', '');
-    const backgroundColor = get(fields, 'backgroundColor', '');
+    const backgroundColor = get(fields, 'backgroundColor', 'white');
     const locationId = get(location, 'id', '');
     const isMobileView = this.state.currentBreakpoint === small.label;
     const availableFlavors = get(location, 'availableFlavors', []);

@@ -1,7 +1,9 @@
 @import 'settings';
 
 .ProductDetails {
-  @extend .bg-white;
+  &--white {
+    @extend .bg-white;
+  }
 
   &--yellow {
     @extend .bg-yellow;
