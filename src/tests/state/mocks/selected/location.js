@@ -3,6 +3,7 @@ import moment from 'moment';
 export default {
   id: '0001',
   title: 'Location 1',
+  text: '',
   image: 'path-to-image.jpg',
   seasonalImage: 'path-to-image.jpg',
   slug: 'test-location',

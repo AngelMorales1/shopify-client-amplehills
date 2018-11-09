@@ -4,6 +4,7 @@ export default [
   {
     id: '0001',
     title: 'Location 1',
+    text: '',
     image: 'path-to-image.jpg',
     contentBlocks: [],
     slug: 'test-location',

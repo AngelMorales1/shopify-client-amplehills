@@ -206,12 +206,12 @@ ShallowWrapper {
                     className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
           >
                     <h2
-                              className="block-headline my4"
+                              className="block-headline mt4"
                     >
                               foo
                     </h2>
                     <div
-                              className="flex items-start"
+                              className="flex items-start mt4"
                     >
                               <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -477,12 +477,12 @@ ShallowWrapper {
               className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
 >
               <h2
-                            className="block-headline my4"
+                            className="block-headline mt4"
               >
                             foo
               </h2>
               <div
-                            className="flex items-start"
+                            className="flex items-start mt4"
               >
                             <div
                                           className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -726,12 +726,13 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h2
-                  className="block-headline my4"
+                  className="block-headline mt4"
 >
                   foo
 </h2>,
+                null,
                 <div
-                  className="flex items-start"
+                  className="flex items-start mt4"
 >
                   <div
                                     className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -950,12 +951,13 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "foo",
-                  "className": "block-headline my4",
+                  "className": "block-headline mt4",
                 },
                 "ref": null,
                 "rendered": "foo",
                 "type": "h2",
               },
+              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -1168,7 +1170,7 @@ ShallowWrapper {
                       </div>
 </div>,
                   ],
-                  "className": "flex items-start",
+                  "className": "flex items-start mt4",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -1982,12 +1984,12 @@ ShallowWrapper {
                         className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
             >
                         <h2
-                                    className="block-headline my4"
+                                    className="block-headline mt4"
                         >
                                     foo
                         </h2>
                         <div
-                                    className="flex items-start"
+                                    className="flex items-start mt4"
                         >
                                     <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -2253,12 +2255,12 @@ ShallowWrapper {
                 className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
 >
                 <h2
-                                className="block-headline my4"
+                                className="block-headline mt4"
                 >
                                 foo
                 </h2>
                 <div
-                                className="flex items-start"
+                                className="flex items-start mt4"
                 >
                                 <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -2502,12 +2504,13 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h2
-                    className="block-headline my4"
+                    className="block-headline mt4"
 >
                     foo
 </h2>,
+                  null,
                   <div
-                    className="flex items-start"
+                    className="flex items-start mt4"
 >
                     <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -2726,12 +2729,13 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "foo",
-                    "className": "block-headline my4",
+                    "className": "block-headline mt4",
                   },
                   "ref": null,
                   "rendered": "foo",
                   "type": "h2",
                 },
+                null,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -2944,7 +2948,7 @@ ShallowWrapper {
                         </div>
 </div>,
                     ],
-                    "className": "flex items-start",
+                    "className": "flex items-start mt4",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -3751,7 +3755,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LocationDetailHero
-    events={Array []}
+    events={Object {}}
     location={
         Object {
             "address1": "",
@@ -3778,6 +3782,7 @@ ShallowWrapper {
             "seasonal": true,
             "seasonalImage": "",
             "state": "",
+            "text": "",
             "title": "",
             "zip": "",
           }
@@ -3813,10 +3818,10 @@ ShallowWrapper {
                     className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
           >
                     <h2
-                              className="block-headline my4"
+                              className="block-headline mt4"
                     />
                     <div
-                              className="flex items-start"
+                              className="flex items-start mt4"
                     >
                               <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -3948,10 +3953,10 @@ ShallowWrapper {
               className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
 >
               <h2
-                            className="block-headline my4"
+                            className="block-headline mt4"
               />
               <div
-                            className="flex items-start"
+                            className="flex items-start mt4"
               >
                             <div
                                           className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4061,10 +4066,11 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h2
-                  className="block-headline my4"
+                  className="block-headline mt4"
 />,
+                null,
                 <div
-                  className="flex items-start"
+                  className="flex items-start mt4"
 >
                   <div
                                     className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4149,12 +4155,13 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
-                  "className": "block-headline my4",
+                  "className": "block-headline mt4",
                 },
                 "ref": null,
                 "rendered": "",
                 "type": "h2",
               },
+              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -4233,7 +4240,7 @@ ShallowWrapper {
                       </p>
 </div>,
                   ],
-                  "className": "flex items-start",
+                  "className": "flex items-start mt4",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -4619,10 +4626,10 @@ ShallowWrapper {
                         className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
             >
                         <h2
-                                    className="block-headline my4"
+                                    className="block-headline mt4"
                         />
                         <div
-                                    className="flex items-start"
+                                    className="flex items-start mt4"
                         >
                                     <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4754,10 +4761,10 @@ ShallowWrapper {
                 className="col-12 md-col-9 mx-auto flex-column justify-around items-center"
 >
                 <h2
-                                className="block-headline my4"
+                                className="block-headline mt4"
                 />
                 <div
-                                className="flex items-start"
+                                className="flex items-start mt4"
                 >
                                 <div
                                                 className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4867,10 +4874,11 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <h2
-                    className="block-headline my4"
+                    className="block-headline mt4"
 />,
+                  null,
                   <div
-                    className="flex items-start"
+                    className="flex items-start mt4"
 >
                     <div
                                         className="col-12 md-col-6 mb4 flex flex-row justify-between items-center"
@@ -4955,12 +4963,13 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
-                    "className": "block-headline my4",
+                    "className": "block-headline mt4",
                   },
                   "ref": null,
                   "rendered": "",
                   "type": "h2",
                 },
+                null,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -5039,7 +5048,7 @@ ShallowWrapper {
                         </p>
 </div>,
                     ],
-                    "className": "flex items-start",
+                    "className": "flex items-start mt4",
                   },
                   "ref": null,
                   "rendered": Array [

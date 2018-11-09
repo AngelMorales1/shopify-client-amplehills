@@ -229,6 +229,7 @@ ShallowWrapper {
             "seasonal": true,
             "seasonalImage": "",
             "state": "",
+            "text": "",
             "title": "",
             "zip": "",
           }
