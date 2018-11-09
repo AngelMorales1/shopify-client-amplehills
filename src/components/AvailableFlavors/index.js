@@ -83,19 +83,20 @@ class AvailableFlavors extends Component {
                 <Button
                   to={`/flavors/${slug}`}
                   key={get(flavor, 'sys.id', i)}
+                  variant="style-none"
                   className={cx(
                     styles['AvailableFlavors__card'],
-                    'flex flex-row justify-between items-center bg-white m1 p1'
+                    'flex flex-row justify-between items-center bg-white m1'
                   )}
                 >
                   <Image
                     className={cx(
                       styles['AvailableFlavors__card-image'],
-                      'col-5'
+                      'col-5 mr1'
                     )}
                     src={contentfulImgUtil(image, '200')}
                   />
-                  <div className="col-6">
+                  <div className="col-6 ml1">
                     {label &&
                       !isLocationSpecial && (
                         <p className="mb1 carter light detail text-peach">

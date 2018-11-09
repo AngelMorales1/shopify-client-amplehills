@@ -47,6 +47,7 @@
     border-radius: radius('xs');
     width: 100%;
     height: spacing(25);
+    padding: spacing(2);
 
     @media ($medium-up) {
       width: spacing(70);
