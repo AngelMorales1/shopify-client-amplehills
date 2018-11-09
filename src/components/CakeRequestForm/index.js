@@ -205,7 +205,7 @@ class CakeRequestForm extends Component {
                     >
                       <div className="inline-flex flex-column w100 my2">
                         <p className="mb1 white-space-normal center">{title}</p>
-                        <p className="white-space-normal light">{price}</p>
+                        <p className="white-space-normal light">${price}</p>
                       </div>
                     </Button>
                   </div>
