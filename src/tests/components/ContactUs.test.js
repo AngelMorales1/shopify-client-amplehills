@@ -12,6 +12,7 @@ it('renders without data', () => {
 it('renders with data', () => {
   const component = shallow(
     <ContactUs
+      param={''}
       actions={{ sendContactForm: () => console.log('foo') }}
       addLineItemsStatus={'foo'}
       formStatus={'foo'}

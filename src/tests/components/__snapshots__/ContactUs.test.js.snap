@@ -69,6 +69,7 @@ ShallowWrapper {
             },
           }
     }
+    param=""
     staticContext={undefined}
     view={[Function]}
     z={0}
