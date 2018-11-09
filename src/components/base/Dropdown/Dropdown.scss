@@ -107,9 +107,18 @@
     border-radius: radius('xs');
     border: spacing(0.6) solid color('gray');
     padding: spacing(5) spacing(6);
-    width: 100%;
 
     :global {
+      .Select-menu-outer {
+        width: calc(100% + #{spacing(12)});
+        left: spacing(-6);
+
+        .Select-menu {
+          width: 120%;
+          left: 0;
+        }
+      }
+
       .Select-placeholder {
         color: color('dusty-gray');
       }
