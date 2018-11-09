@@ -41,6 +41,8 @@ export default createSelector(
       const availableFlavors = get(fields, 'availableFlavors', []);
       const participantsLimit = get(fields, 'participantsLimit', 55);
       const participantsLimitText = get(fields, 'participantsLimitText', '');
+      const text = get(fields, 'text', '');
+
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
@@ -87,6 +89,7 @@ export default createSelector(
         availableFlavors,
         participantsLimit,
         participantsLimitText
+        text
       };
     });
 

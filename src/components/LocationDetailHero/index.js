@@ -4,6 +4,7 @@ import get from 'utils/get';
 import getLocationCity from 'utils/getLocationCity';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
+import marked from 'marked';
 import locationModel from 'models/locationModel';
 
 import styles from './LocationDetailHero.scss';
@@ -13,7 +14,6 @@ import MapboxMap from 'components/MapboxMap';
 class LocationDetailHero extends Component {
   render() {
     const { location, locationGeoJSON, events, z } = this.props;
-
     const event = get(
       Object.values(events).find(
         event => event.locationId === location.id && event.id
@@ -57,11 +57,19 @@ class LocationDetailHero extends Component {
               }
             )}
           >
-            <h2 className="block-headline my4">{location.title}</h2>
+            <h2 className="block-headline mt4">{location.title}</h2>
+            {location.text ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: marked(location.text)
+                }}
+                className="markdown-block mt3"
+              />
+            ) : null}
             <div
               className={cx(
                 styles['LocationDetailHero__content-detail-container'],
-                'flex items-start'
+                'flex items-start mt4'
               )}
             >
               <div className="col-12 md-col-6 mb4 flex flex-row justify-between items-center">
