@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FacebookShareButton } from 'react-share';
 import get from 'utils/get';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import cx from 'classnames';
@@ -129,26 +128,13 @@ class EventDetailHero extends Component {
 
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
-        <div className="flex flex-column justify-center items-center w100 mt4">
+        <div className="flex flex-column justify-center items-center w100 my4">
           <h2 className="block-headline">{event.title}</h2>
-          <div className="mt3">
-            <FacebookShareButton url={get(window, 'location.href', '')}>
-              <Button
-                className={cx(
-                  styles['EventDetailHero__share-button'],
-                  'inline-flex uppercase'
-                )}
-                variant="primary-small"
-                color="clear-madison-blue-border"
-                label="Share"
-              />
-            </FacebookShareButton>
-          </div>
         </div>
         <div
           className={cx(
             styles['EventDetailHero__content-container'],
-            'flex mt4'
+            'flex mt3'
           )}
         >
           <div
