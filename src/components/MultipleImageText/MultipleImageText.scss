@@ -32,6 +32,22 @@
     @extend .bg-light-peach;
   }
 
+  &--light-orange {
+    @extend .bg-light-orange;
+  }
+
+  &--peach-pink {
+    @extend .bg-peach-pink;
+  }
+
+  &--yellow-green {
+    @extend .bg-yellow-green;
+  }
+
+  &--light-yellow-green {
+    @extend .bg-light-yellow-green;
+  }
+
   &__image-text-container {
     flex-direction: column;
     @media ($medium-up) {
