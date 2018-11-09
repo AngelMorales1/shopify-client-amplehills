@@ -134,33 +134,45 @@ ShallowWrapper {
                                                   </div>
                                         </div>
                               </div>
-                              <Button
-                                        className="my4"
-                                        color="madison-blue"
-                                        disabled={true}
-                                        fullWidth={false}
-                                        hover="shadow"
-                                        label=""
-                                        onClick={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        shadow={false}
-                                        to=""
-                                        type="button"
-                                        variant="primary"
+                              <div
+                                        className="w100 flex flex-row justify-between items-center flex-wrap my4"
                               >
-                                        <span
-                                                  className="mr-auto"
+                                        <QuantitySelector
+                                                  allowZero={false}
+                                                  className="mr1 my2"
+                                                  color=""
+                                                  onChange={[Function]}
+                                                  quantity={1}
+                                                  variant=""
+                                        />
+                                        <Button
+                                                  className=""
+                                                  color="madison-blue"
+                                                  disabled={true}
+                                                  fullWidth={false}
+                                                  hover="shadow"
+                                                  label=""
+                                                  onClick={[Function]}
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                                  shadow={false}
+                                                  to=""
+                                                  type="button"
+                                                  variant="primary"
                                         >
-                                                  Add to Cart
-                                        </span>
-                                        <span
-                                                  className="ml2"
-                                        >
-                                                  $
-                                                  0.00
-                                        </span>
-                              </Button>
+                                                  <span
+                                                            className="mr-auto"
+                                                  >
+                                                            Add to Cart
+                                                  </span>
+                                                  <span
+                                                            className="ml2"
+                                                  >
+                                                            $
+                                                            0.00
+                                                  </span>
+                                        </Button>
+                              </div>
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -285,33 +297,45 @@ ShallowWrapper {
                                                         </div>
                                           </div>
                             </div>
-                            <Button
-                                          className="my4"
-                                          color="madison-blue"
-                                          disabled={true}
-                                          fullWidth={false}
-                                          hover="shadow"
-                                          label=""
-                                          onClick={[Function]}
-                                          onMouseEnter={[Function]}
-                                          onMouseLeave={[Function]}
-                                          shadow={false}
-                                          to=""
-                                          type="button"
-                                          variant="primary"
+                            <div
+                                          className="w100 flex flex-row justify-between items-center flex-wrap my4"
                             >
-                                          <span
-                                                        className="mr-auto"
+                                          <QuantitySelector
+                                                        allowZero={false}
+                                                        className="mr1 my2"
+                                                        color=""
+                                                        onChange={[Function]}
+                                                        quantity={1}
+                                                        variant=""
+                                          />
+                                          <Button
+                                                        className=""
+                                                        color="madison-blue"
+                                                        disabled={true}
+                                                        fullWidth={false}
+                                                        hover="shadow"
+                                                        label=""
+                                                        onClick={[Function]}
+                                                        onMouseEnter={[Function]}
+                                                        onMouseLeave={[Function]}
+                                                        shadow={false}
+                                                        to=""
+                                                        type="button"
+                                                        variant="primary"
                                           >
-                                                        Add to Cart
-                                          </span>
-                                          <span
-                                                        className="ml2"
-                                          >
-                                                        $
-                                                        0.00
-                                          </span>
-                            </Button>
+                                                        <span
+                                                                      className="mr-auto"
+                                                        >
+                                                                      Add to Cart
+                                                        </span>
+                                                        <span
+                                                                      className="ml2"
+                                                        >
+                                                                      $
+                                                                      0.00
+                                                        </span>
+                                          </Button>
+                            </div>
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -424,33 +448,45 @@ ShallowWrapper {
                                                 </div>
                                 </div>
                 </div>
-                <Button
-                                className="my4"
-                                color="madison-blue"
-                                disabled={true}
-                                fullWidth={false}
-                                hover="shadow"
-                                label=""
-                                onClick={[Function]}
-                                onMouseEnter={[Function]}
-                                onMouseLeave={[Function]}
-                                shadow={false}
-                                to=""
-                                type="button"
-                                variant="primary"
+                <div
+                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                 >
-                                <span
-                                                className="mr-auto"
+                                <QuantitySelector
+                                                allowZero={false}
+                                                className="mr1 my2"
+                                                color=""
+                                                onChange={[Function]}
+                                                quantity={1}
+                                                variant=""
+                                />
+                                <Button
+                                                className=""
+                                                color="madison-blue"
+                                                disabled={true}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label=""
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
                                 >
-                                                Add to Cart
-                                </span>
-                                <span
-                                                className="ml2"
-                                >
-                                                $
-                                                0.00
-                                </span>
-                </Button>
+                                                <span
+                                                                className="mr-auto"
+                                                >
+                                                                Add to Cart
+                                                </span>
+                                                <span
+                                                                className="ml2"
+                                                >
+                                                                $
+                                                                0.00
+                                                </span>
+                                </Button>
+                </div>
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -524,33 +560,45 @@ ShallowWrapper {
                                         </div>
                     </div>
 </div>,
-                  <Button
-                    className="my4"
-                    color="madison-blue"
-                    disabled={true}
-                    fullWidth={false}
-                    hover="shadow"
-                    label=""
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary"
+                  <div
+                    className="w100 flex flex-row justify-between items-center flex-wrap my4"
 >
-                    <span
-                                        className="mr-auto"
+                    <QuantitySelector
+                                        allowZero={false}
+                                        className="mr1 my2"
+                                        color=""
+                                        onChange={[Function]}
+                                        quantity={1}
+                                        variant=""
+                    />
+                    <Button
+                                        className=""
+                                        color="madison-blue"
+                                        disabled={true}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label=""
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary"
                     >
-                                        Add to Cart
-                    </span>
-                    <span
-                                        className="ml2"
-                    >
-                                        $
-                                        0.00
-                    </span>
-</Button>,
+                                        <span
+                                                            className="mr-auto"
+                                        >
+                                                            Add to Cart
+                                        </span>
+                                        <span
+                                                            className="ml2"
+                                        >
+                                                            $
+                                                            0.00
+                                        </span>
+                    </Button>
+</div>,
                   null,
                   <div
                     className="markdown-block"
@@ -862,69 +910,134 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <span
-                        className="mr-auto"
+                      <QuantitySelector
+                        allowZero={false}
+                        className="mr1 my2"
+                        color=""
+                        onChange={[Function]}
+                        quantity={1}
+                        variant=""
+/>,
+                      <Button
+                        className=""
+                        color="madison-blue"
+                        disabled={true}
+                        fullWidth={false}
+                        hover="shadow"
+                        label=""
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary"
 >
-                        Add to Cart
-</span>,
-                      <span
-                        className="ml2"
->
-                        $
-                        0.00
-</span>,
+                        <span
+                                                className="mr-auto"
+                        >
+                                                Add to Cart
+                        </span>
+                        <span
+                                                className="ml2"
+                        >
+                                                $
+                                                0.00
+                        </span>
+</Button>,
                     ],
-                    "className": "my4",
-                    "color": "madison-blue",
-                    "disabled": true,
-                    "fullWidth": false,
-                    "hover": "shadow",
-                    "label": "",
-                    "onClick": [Function],
-                    "onMouseEnter": [Function],
-                    "onMouseLeave": [Function],
-                    "shadow": false,
-                    "to": "",
-                    "type": "button",
-                    "variant": "primary",
+                    "className": "w100 flex flex-row justify-between items-center flex-wrap my4",
                   },
                   "ref": null,
                   "rendered": Array [
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "host",
+                      "nodeType": "function",
                       "props": Object {
-                        "children": "Add to Cart",
-                        "className": "mr-auto",
+                        "allowZero": false,
+                        "className": "mr1 my2",
+                        "color": "",
+                        "onChange": [Function],
+                        "quantity": 1,
+                        "variant": "",
                       },
                       "ref": null,
-                      "rendered": "Add to Cart",
-                      "type": "span",
+                      "rendered": null,
+                      "type": [Function],
                     },
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "host",
+                      "nodeType": "function",
                       "props": Object {
                         "children": Array [
-                          "$",
-                          "0.00",
+                          <span
+                            className="mr-auto"
+>
+                            Add to Cart
+</span>,
+                          <span
+                            className="ml2"
+>
+                            $
+                            0.00
+</span>,
                         ],
-                        "className": "ml2",
+                        "className": "",
+                        "color": "madison-blue",
+                        "disabled": true,
+                        "fullWidth": false,
+                        "hover": "shadow",
+                        "label": "",
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "shadow": false,
+                        "to": "",
+                        "type": "button",
+                        "variant": "primary",
                       },
                       "ref": null,
                       "rendered": Array [
-                        "$",
-                        "0.00",
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Add to Cart",
+                            "className": "mr-auto",
+                          },
+                          "ref": null,
+                          "rendered": "Add to Cart",
+                          "type": "span",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "$",
+                              "0.00",
+                            ],
+                            "className": "ml2",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "$",
+                            "0.00",
+                          ],
+                          "type": "span",
+                        },
                       ],
-                      "type": "span",
+                      "type": [Function],
                     },
                   ],
-                  "type": [Function],
+                  "type": "div",
                 },
                 null,
                 Object {
@@ -1046,33 +1159,45 @@ ShallowWrapper {
                                                             </div>
                                                 </div>
                                     </div>
-                                    <Button
-                                                className="my4"
-                                                color="madison-blue"
-                                                disabled={true}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="primary"
+                                    <div
+                                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                                     >
-                                                <span
-                                                            className="mr-auto"
+                                                <QuantitySelector
+                                                            allowZero={false}
+                                                            className="mr1 my2"
+                                                            color=""
+                                                            onChange={[Function]}
+                                                            quantity={1}
+                                                            variant=""
+                                                />
+                                                <Button
+                                                            className=""
+                                                            color="madison-blue"
+                                                            disabled={true}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label=""
+                                                            onClick={[Function]}
+                                                            onMouseEnter={[Function]}
+                                                            onMouseLeave={[Function]}
+                                                            shadow={false}
+                                                            to=""
+                                                            type="button"
+                                                            variant="primary"
                                                 >
-                                                            Add to Cart
-                                                </span>
-                                                <span
-                                                            className="ml2"
-                                                >
-                                                            $
-                                                            0.00
-                                                </span>
-                                    </Button>
+                                                            <span
+                                                                        className="mr-auto"
+                                                            >
+                                                                        Add to Cart
+                                                            </span>
+                                                            <span
+                                                                        className="ml2"
+                                                            >
+                                                                        $
+                                                                        0.00
+                                                            </span>
+                                                </Button>
+                                    </div>
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1197,33 +1322,45 @@ ShallowWrapper {
                                                                 </div>
                                                 </div>
                                 </div>
-                                <Button
-                                                className="my4"
-                                                color="madison-blue"
-                                                disabled={true}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="primary"
+                                <div
+                                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                                 >
-                                                <span
-                                                                className="mr-auto"
+                                                <QuantitySelector
+                                                                allowZero={false}
+                                                                className="mr1 my2"
+                                                                color=""
+                                                                onChange={[Function]}
+                                                                quantity={1}
+                                                                variant=""
+                                                />
+                                                <Button
+                                                                className=""
+                                                                color="madison-blue"
+                                                                disabled={true}
+                                                                fullWidth={false}
+                                                                hover="shadow"
+                                                                label=""
+                                                                onClick={[Function]}
+                                                                onMouseEnter={[Function]}
+                                                                onMouseLeave={[Function]}
+                                                                shadow={false}
+                                                                to=""
+                                                                type="button"
+                                                                variant="primary"
                                                 >
-                                                                Add to Cart
-                                                </span>
-                                                <span
-                                                                className="ml2"
-                                                >
-                                                                $
-                                                                0.00
-                                                </span>
-                                </Button>
+                                                                <span
+                                                                                className="mr-auto"
+                                                                >
+                                                                                Add to Cart
+                                                                </span>
+                                                                <span
+                                                                                className="ml2"
+                                                                >
+                                                                                $
+                                                                                0.00
+                                                                </span>
+                                                </Button>
+                                </div>
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -1336,33 +1473,45 @@ ShallowWrapper {
                                                       </div>
                                     </div>
                   </div>
-                  <Button
-                                    className="my4"
-                                    color="madison-blue"
-                                    disabled={true}
-                                    fullWidth={false}
-                                    hover="shadow"
-                                    label=""
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="primary"
+                  <div
+                                    className="w100 flex flex-row justify-between items-center flex-wrap my4"
                   >
-                                    <span
-                                                      className="mr-auto"
+                                    <QuantitySelector
+                                                      allowZero={false}
+                                                      className="mr1 my2"
+                                                      color=""
+                                                      onChange={[Function]}
+                                                      quantity={1}
+                                                      variant=""
+                                    />
+                                    <Button
+                                                      className=""
+                                                      color="madison-blue"
+                                                      disabled={true}
+                                                      fullWidth={false}
+                                                      hover="shadow"
+                                                      label=""
+                                                      onClick={[Function]}
+                                                      onMouseEnter={[Function]}
+                                                      onMouseLeave={[Function]}
+                                                      shadow={false}
+                                                      to=""
+                                                      type="button"
+                                                      variant="primary"
                                     >
-                                                      Add to Cart
-                                    </span>
-                                    <span
-                                                      className="ml2"
-                                    >
-                                                      $
-                                                      0.00
-                                    </span>
-                  </Button>
+                                                      <span
+                                                                        className="mr-auto"
+                                                      >
+                                                                        Add to Cart
+                                                      </span>
+                                                      <span
+                                                                        className="ml2"
+                                                      >
+                                                                        $
+                                                                        0.00
+                                                      </span>
+                                    </Button>
+                  </div>
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -1436,33 +1585,45 @@ ShallowWrapper {
                                             </div>
                       </div>
 </div>,
-                    <Button
-                      className="my4"
-                      color="madison-blue"
-                      disabled={true}
-                      fullWidth={false}
-                      hover="shadow"
-                      label=""
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      shadow={false}
-                      to=""
-                      type="button"
-                      variant="primary"
+                    <div
+                      className="w100 flex flex-row justify-between items-center flex-wrap my4"
 >
-                      <span
-                                            className="mr-auto"
+                      <QuantitySelector
+                                            allowZero={false}
+                                            className="mr1 my2"
+                                            color=""
+                                            onChange={[Function]}
+                                            quantity={1}
+                                            variant=""
+                      />
+                      <Button
+                                            className=""
+                                            color="madison-blue"
+                                            disabled={true}
+                                            fullWidth={false}
+                                            hover="shadow"
+                                            label=""
+                                            onClick={[Function]}
+                                            onMouseEnter={[Function]}
+                                            onMouseLeave={[Function]}
+                                            shadow={false}
+                                            to=""
+                                            type="button"
+                                            variant="primary"
                       >
-                                            Add to Cart
-                      </span>
-                      <span
-                                            className="ml2"
-                      >
-                                            $
-                                            0.00
-                      </span>
-</Button>,
+                                            <span
+                                                                  className="mr-auto"
+                                            >
+                                                                  Add to Cart
+                                            </span>
+                                            <span
+                                                                  className="ml2"
+                                            >
+                                                                  $
+                                                                  0.00
+                                            </span>
+                      </Button>
+</div>,
                     null,
                     <div
                       className="markdown-block"
@@ -1774,69 +1935,134 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <span
-                          className="mr-auto"
+                        <QuantitySelector
+                          allowZero={false}
+                          className="mr1 my2"
+                          color=""
+                          onChange={[Function]}
+                          quantity={1}
+                          variant=""
+/>,
+                        <Button
+                          className=""
+                          color="madison-blue"
+                          disabled={true}
+                          fullWidth={false}
+                          hover="shadow"
+                          label=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          shadow={false}
+                          to=""
+                          type="button"
+                          variant="primary"
 >
-                          Add to Cart
-</span>,
-                        <span
-                          className="ml2"
->
-                          $
-                          0.00
-</span>,
+                          <span
+                                                    className="mr-auto"
+                          >
+                                                    Add to Cart
+                          </span>
+                          <span
+                                                    className="ml2"
+                          >
+                                                    $
+                                                    0.00
+                          </span>
+</Button>,
                       ],
-                      "className": "my4",
-                      "color": "madison-blue",
-                      "disabled": true,
-                      "fullWidth": false,
-                      "hover": "shadow",
-                      "label": "",
-                      "onClick": [Function],
-                      "onMouseEnter": [Function],
-                      "onMouseLeave": [Function],
-                      "shadow": false,
-                      "to": "",
-                      "type": "button",
-                      "variant": "primary",
+                      "className": "w100 flex flex-row justify-between items-center flex-wrap my4",
                     },
                     "ref": null,
                     "rendered": Array [
                       Object {
                         "instance": null,
                         "key": undefined,
-                        "nodeType": "host",
+                        "nodeType": "function",
                         "props": Object {
-                          "children": "Add to Cart",
-                          "className": "mr-auto",
+                          "allowZero": false,
+                          "className": "mr1 my2",
+                          "color": "",
+                          "onChange": [Function],
+                          "quantity": 1,
+                          "variant": "",
                         },
                         "ref": null,
-                        "rendered": "Add to Cart",
-                        "type": "span",
+                        "rendered": null,
+                        "type": [Function],
                       },
                       Object {
                         "instance": null,
                         "key": undefined,
-                        "nodeType": "host",
+                        "nodeType": "function",
                         "props": Object {
                           "children": Array [
-                            "$",
-                            "0.00",
+                            <span
+                              className="mr-auto"
+>
+                              Add to Cart
+</span>,
+                            <span
+                              className="ml2"
+>
+                              $
+                              0.00
+</span>,
                           ],
-                          "className": "ml2",
+                          "className": "",
+                          "color": "madison-blue",
+                          "disabled": true,
+                          "fullWidth": false,
+                          "hover": "shadow",
+                          "label": "",
+                          "onClick": [Function],
+                          "onMouseEnter": [Function],
+                          "onMouseLeave": [Function],
+                          "shadow": false,
+                          "to": "",
+                          "type": "button",
+                          "variant": "primary",
                         },
                         "ref": null,
                         "rendered": Array [
-                          "$",
-                          "0.00",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Add to Cart",
+                              "className": "mr-auto",
+                            },
+                            "ref": null,
+                            "rendered": "Add to Cart",
+                            "type": "span",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": Array [
+                                "$",
+                                "0.00",
+                              ],
+                              "className": "ml2",
+                            },
+                            "ref": null,
+                            "rendered": Array [
+                              "$",
+                              "0.00",
+                            ],
+                            "type": "span",
+                          },
                         ],
-                        "type": "span",
+                        "type": [Function],
                       },
                     ],
-                    "type": [Function],
+                    "type": "div",
                   },
                   null,
                   Object {
@@ -1999,27 +2225,31 @@ ShallowWrapper {
                                                   </div>
                                         </div>
                               </div>
-                              <Button
-                                        className="my4"
-                                        color="peach"
-                                        disabled={false}
-                                        fullWidth={false}
-                                        hover="shadow"
-                                        label=""
-                                        onClick={[Function]}
-                                        onMouseEnter={[Function]}
-                                        onMouseLeave={[Function]}
-                                        shadow={false}
-                                        to=""
-                                        type="button"
-                                        variant="primary"
+                              <div
+                                        className="w100 flex flex-row justify-between items-center flex-wrap my4"
                               >
-                                        <span
-                                                  className="mr-auto"
+                                        <Button
+                                                  className=""
+                                                  color="peach"
+                                                  disabled={false}
+                                                  fullWidth={false}
+                                                  hover="shadow"
+                                                  label=""
+                                                  onClick={[Function]}
+                                                  onMouseEnter={[Function]}
+                                                  onMouseLeave={[Function]}
+                                                  shadow={false}
+                                                  to=""
+                                                  type="button"
+                                                  variant="primary"
                                         >
-                                                  RSVP
-                                        </span>
-                              </Button>
+                                                  <span
+                                                            className="mr-auto"
+                                                  >
+                                                            RSVP
+                                                  </span>
+                                        </Button>
+                              </div>
                               <div
                                         className="markdown-block"
                                         dangerouslySetInnerHTML={
@@ -2140,27 +2370,31 @@ ShallowWrapper {
                                                         </div>
                                           </div>
                             </div>
-                            <Button
-                                          className="my4"
-                                          color="peach"
-                                          disabled={false}
-                                          fullWidth={false}
-                                          hover="shadow"
-                                          label=""
-                                          onClick={[Function]}
-                                          onMouseEnter={[Function]}
-                                          onMouseLeave={[Function]}
-                                          shadow={false}
-                                          to=""
-                                          type="button"
-                                          variant="primary"
+                            <div
+                                          className="w100 flex flex-row justify-between items-center flex-wrap my4"
                             >
-                                          <span
-                                                        className="mr-auto"
+                                          <Button
+                                                        className=""
+                                                        color="peach"
+                                                        disabled={false}
+                                                        fullWidth={false}
+                                                        hover="shadow"
+                                                        label=""
+                                                        onClick={[Function]}
+                                                        onMouseEnter={[Function]}
+                                                        onMouseLeave={[Function]}
+                                                        shadow={false}
+                                                        to=""
+                                                        type="button"
+                                                        variant="primary"
                                           >
-                                                        RSVP
-                                          </span>
-                            </Button>
+                                                        <span
+                                                                      className="mr-auto"
+                                                        >
+                                                                      RSVP
+                                                        </span>
+                                          </Button>
+                            </div>
                             <div
                                           className="markdown-block"
                                           dangerouslySetInnerHTML={
@@ -2271,27 +2505,31 @@ ShallowWrapper {
                                                 </div>
                                 </div>
                 </div>
-                <Button
-                                className="my4"
-                                color="peach"
-                                disabled={false}
-                                fullWidth={false}
-                                hover="shadow"
-                                label=""
-                                onClick={[Function]}
-                                onMouseEnter={[Function]}
-                                onMouseLeave={[Function]}
-                                shadow={false}
-                                to=""
-                                type="button"
-                                variant="primary"
+                <div
+                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                 >
-                                <span
-                                                className="mr-auto"
+                                <Button
+                                                className=""
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label=""
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                shadow={false}
+                                                to=""
+                                                type="button"
+                                                variant="primary"
                                 >
-                                                RSVP
-                                </span>
-                </Button>
+                                                <span
+                                                                className="mr-auto"
+                                                >
+                                                                RSVP
+                                                </span>
+                                </Button>
+                </div>
                 <div
                                 className="markdown-block"
                                 dangerouslySetInnerHTML={
@@ -2363,27 +2601,31 @@ ShallowWrapper {
                                         </div>
                     </div>
 </div>,
-                  <Button
-                    className="my4"
-                    color="peach"
-                    disabled={false}
-                    fullWidth={false}
-                    hover="shadow"
-                    label=""
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary"
+                  <div
+                    className="w100 flex flex-row justify-between items-center flex-wrap my4"
 >
-                    <span
-                                        className="mr-auto"
+                    <Button
+                                        className=""
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label=""
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        shadow={false}
+                                        to=""
+                                        type="button"
+                                        variant="primary"
                     >
-                                        RSVP
-                    </span>
-</Button>,
+                                        <span
+                                                            className="mr-auto"
+                                        >
+                                                            RSVP
+                                        </span>
+                    </Button>
+</div>,
                   null,
                   <div
                     className="markdown-block"
@@ -2689,47 +2931,84 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "function",
+                  "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <span
-                        className="mr-auto"
->
-                        RSVP
-</span>,
                       null,
+                      <Button
+                        className=""
+                        color="peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label=""
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        shadow={false}
+                        to=""
+                        type="button"
+                        variant="primary"
+>
+                        <span
+                                                className="mr-auto"
+                        >
+                                                RSVP
+                        </span>
+</Button>,
                     ],
-                    "className": "my4",
-                    "color": "peach",
-                    "disabled": false,
-                    "fullWidth": false,
-                    "hover": "shadow",
-                    "label": "",
-                    "onClick": [Function],
-                    "onMouseEnter": [Function],
-                    "onMouseLeave": [Function],
-                    "shadow": false,
-                    "to": "",
-                    "type": "button",
-                    "variant": "primary",
+                    "className": "w100 flex flex-row justify-between items-center flex-wrap my4",
                   },
                   "ref": null,
                   "rendered": Array [
+                    null,
                     Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "host",
+                      "nodeType": "function",
                       "props": Object {
-                        "children": "RSVP",
-                        "className": "mr-auto",
+                        "children": Array [
+                          <span
+                            className="mr-auto"
+>
+                            RSVP
+</span>,
+                          null,
+                        ],
+                        "className": "",
+                        "color": "peach",
+                        "disabled": false,
+                        "fullWidth": false,
+                        "hover": "shadow",
+                        "label": "",
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "shadow": false,
+                        "to": "",
+                        "type": "button",
+                        "variant": "primary",
                       },
                       "ref": null,
-                      "rendered": "RSVP",
-                      "type": "span",
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "RSVP",
+                            "className": "mr-auto",
+                          },
+                          "ref": null,
+                          "rendered": "RSVP",
+                          "type": "span",
+                        },
+                        null,
+                      ],
+                      "type": [Function],
                     },
-                    null,
                   ],
-                  "type": [Function],
+                  "type": "div",
                 },
                 null,
                 Object {
@@ -2847,27 +3126,31 @@ ShallowWrapper {
                                                             </div>
                                                 </div>
                                     </div>
-                                    <Button
-                                                className="my4"
-                                                color="peach"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="primary"
+                                    <div
+                                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                                     >
-                                                <span
-                                                            className="mr-auto"
+                                                <Button
+                                                            className=""
+                                                            color="peach"
+                                                            disabled={false}
+                                                            fullWidth={false}
+                                                            hover="shadow"
+                                                            label=""
+                                                            onClick={[Function]}
+                                                            onMouseEnter={[Function]}
+                                                            onMouseLeave={[Function]}
+                                                            shadow={false}
+                                                            to=""
+                                                            type="button"
+                                                            variant="primary"
                                                 >
-                                                            RSVP
-                                                </span>
-                                    </Button>
+                                                            <span
+                                                                        className="mr-auto"
+                                                            >
+                                                                        RSVP
+                                                            </span>
+                                                </Button>
+                                    </div>
                                     <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -2988,27 +3271,31 @@ ShallowWrapper {
                                                                 </div>
                                                 </div>
                                 </div>
-                                <Button
-                                                className="my4"
-                                                color="peach"
-                                                disabled={false}
-                                                fullWidth={false}
-                                                hover="shadow"
-                                                label=""
-                                                onClick={[Function]}
-                                                onMouseEnter={[Function]}
-                                                onMouseLeave={[Function]}
-                                                shadow={false}
-                                                to=""
-                                                type="button"
-                                                variant="primary"
+                                <div
+                                                className="w100 flex flex-row justify-between items-center flex-wrap my4"
                                 >
-                                                <span
-                                                                className="mr-auto"
+                                                <Button
+                                                                className=""
+                                                                color="peach"
+                                                                disabled={false}
+                                                                fullWidth={false}
+                                                                hover="shadow"
+                                                                label=""
+                                                                onClick={[Function]}
+                                                                onMouseEnter={[Function]}
+                                                                onMouseLeave={[Function]}
+                                                                shadow={false}
+                                                                to=""
+                                                                type="button"
+                                                                variant="primary"
                                                 >
-                                                                RSVP
-                                                </span>
-                                </Button>
+                                                                <span
+                                                                                className="mr-auto"
+                                                                >
+                                                                                RSVP
+                                                                </span>
+                                                </Button>
+                                </div>
                                 <div
                                                 className="markdown-block"
                                                 dangerouslySetInnerHTML={
@@ -3119,27 +3406,31 @@ ShallowWrapper {
                                                       </div>
                                     </div>
                   </div>
-                  <Button
-                                    className="my4"
-                                    color="peach"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    hover="shadow"
-                                    label=""
-                                    onClick={[Function]}
-                                    onMouseEnter={[Function]}
-                                    onMouseLeave={[Function]}
-                                    shadow={false}
-                                    to=""
-                                    type="button"
-                                    variant="primary"
+                  <div
+                                    className="w100 flex flex-row justify-between items-center flex-wrap my4"
                   >
-                                    <span
-                                                      className="mr-auto"
+                                    <Button
+                                                      className=""
+                                                      color="peach"
+                                                      disabled={false}
+                                                      fullWidth={false}
+                                                      hover="shadow"
+                                                      label=""
+                                                      onClick={[Function]}
+                                                      onMouseEnter={[Function]}
+                                                      onMouseLeave={[Function]}
+                                                      shadow={false}
+                                                      to=""
+                                                      type="button"
+                                                      variant="primary"
                                     >
-                                                      RSVP
-                                    </span>
-                  </Button>
+                                                      <span
+                                                                        className="mr-auto"
+                                                      >
+                                                                        RSVP
+                                                      </span>
+                                    </Button>
+                  </div>
                   <div
                                     className="markdown-block"
                                     dangerouslySetInnerHTML={
@@ -3211,27 +3502,31 @@ ShallowWrapper {
                                             </div>
                       </div>
 </div>,
-                    <Button
-                      className="my4"
-                      color="peach"
-                      disabled={false}
-                      fullWidth={false}
-                      hover="shadow"
-                      label=""
-                      onClick={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      shadow={false}
-                      to=""
-                      type="button"
-                      variant="primary"
+                    <div
+                      className="w100 flex flex-row justify-between items-center flex-wrap my4"
 >
-                      <span
-                                            className="mr-auto"
+                      <Button
+                                            className=""
+                                            color="peach"
+                                            disabled={false}
+                                            fullWidth={false}
+                                            hover="shadow"
+                                            label=""
+                                            onClick={[Function]}
+                                            onMouseEnter={[Function]}
+                                            onMouseLeave={[Function]}
+                                            shadow={false}
+                                            to=""
+                                            type="button"
+                                            variant="primary"
                       >
-                                            RSVP
-                      </span>
-</Button>,
+                                            <span
+                                                                  className="mr-auto"
+                                            >
+                                                                  RSVP
+                                            </span>
+                      </Button>
+</div>,
                     null,
                     <div
                       className="markdown-block"
@@ -3537,47 +3832,84 @@ ShallowWrapper {
                   Object {
                     "instance": null,
                     "key": undefined,
-                    "nodeType": "function",
+                    "nodeType": "host",
                     "props": Object {
                       "children": Array [
-                        <span
-                          className="mr-auto"
->
-                          RSVP
-</span>,
                         null,
+                        <Button
+                          className=""
+                          color="peach"
+                          disabled={false}
+                          fullWidth={false}
+                          hover="shadow"
+                          label=""
+                          onClick={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          shadow={false}
+                          to=""
+                          type="button"
+                          variant="primary"
+>
+                          <span
+                                                    className="mr-auto"
+                          >
+                                                    RSVP
+                          </span>
+</Button>,
                       ],
-                      "className": "my4",
-                      "color": "peach",
-                      "disabled": false,
-                      "fullWidth": false,
-                      "hover": "shadow",
-                      "label": "",
-                      "onClick": [Function],
-                      "onMouseEnter": [Function],
-                      "onMouseLeave": [Function],
-                      "shadow": false,
-                      "to": "",
-                      "type": "button",
-                      "variant": "primary",
+                      "className": "w100 flex flex-row justify-between items-center flex-wrap my4",
                     },
                     "ref": null,
                     "rendered": Array [
+                      null,
                       Object {
                         "instance": null,
                         "key": undefined,
-                        "nodeType": "host",
+                        "nodeType": "function",
                         "props": Object {
-                          "children": "RSVP",
-                          "className": "mr-auto",
+                          "children": Array [
+                            <span
+                              className="mr-auto"
+>
+                              RSVP
+</span>,
+                            null,
+                          ],
+                          "className": "",
+                          "color": "peach",
+                          "disabled": false,
+                          "fullWidth": false,
+                          "hover": "shadow",
+                          "label": "",
+                          "onClick": [Function],
+                          "onMouseEnter": [Function],
+                          "onMouseLeave": [Function],
+                          "shadow": false,
+                          "to": "",
+                          "type": "button",
+                          "variant": "primary",
                         },
                         "ref": null,
-                        "rendered": "RSVP",
-                        "type": "span",
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "RSVP",
+                              "className": "mr-auto",
+                            },
+                            "ref": null,
+                            "rendered": "RSVP",
+                            "type": "span",
+                          },
+                          null,
+                        ],
+                        "type": [Function],
                       },
-                      null,
                     ],
-                    "type": [Function],
+                    "type": "div",
                   },
                   null,
                   Object {
