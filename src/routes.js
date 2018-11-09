@@ -51,36 +51,40 @@ const Routes = ({ location }) => (
       path="/flavors/:flavorHandle"
       component={FlavorDetailContainer}
     />
-    <Route path="/products" component={ProductLandingContainer} />
-    <Route path="/profile" component={ProfileContainer} />
-    <Route path="/sign-in" component={SignInContainer} />
-    <Route path="/sign-up" component={SignUpContainer} />
-    <Route path="/locations" component={LocationsLandingContainer} />
-    <Route path="/contact" component={ContactUsContainer} />
-    <Route path="/cart" component={Cart} />
-    <Route path="/privacy-policy" component={GenericPageContainer} />
-    <Route path="/web-accessibility" component={GenericPageContainer} />
-    <Route path="/press" component={GenericPageContainer} />
-    <Route path="/our-story" component={GenericPageContainer} />
-    <Route path="/classes-and-socials" component={GenericPageContainer} />
-    <Route path="/ice-cream-classes" component={GenericPageContainer} />
-    <Route path="/ice-cream-socials" component={GenericPageContainer} />
-    <Route path="/events" component={GenericPageContainer} />
-    <Route path="/weddings" component={GenericPageContainer} />
-    <Route path="/parties" component={GenericPageContainer} />
-    <Route path="/field-trips" component={GenericPageContainer} />
-    <Route path="/pints-and-postcards" component={GenericPageContainer} />
-    <Route path="/catering" component={GenericPageContainer} />
-    <Route path="/ice-cream-cakes" component={GenericPageContainer} />
-    <Route path="/faq" component={GenericPageContainer} />
-    <Route path="/news" component={ArticlesLandingContainer} />
-    <Route path="/wholesale" component={GenericPageContainer} />
-    <Route path="/flavors" component={GenericPageContainer} />
-    <Route path="/in-stores" component={InStoresContainer} />
-    <Route path="/bike-party" component={GenericPageContainer} />
-    <Route path="/scoop-tab-party" component={GenericPageContainer} />
-    <Route path="/party-request-form" component={PartyRequestFormContainer} />
-    <Route path="/cake-request-form" component={CakeRequestFormContainer} />
+    <Route exact path="/products" component={ProductLandingContainer} />
+    <Route exact path="/profile" component={ProfileContainer} />
+    <Route exact path="/sign-in" component={SignInContainer} />
+    <Route exact path="/sign-up" component={SignUpContainer} />
+    <Route exact path="/locations" component={LocationsLandingContainer} />
+    <Route exact path="/contact" component={ContactUsContainer} />
+    <Route exact path="/cart" component={Cart} />
+    <Route exact path="/privacy-policy" component={GenericPageContainer} />
+    <Route exact path="/web-accessibility" component={GenericPageContainer} />
+    <Route exact path="/press" component={GenericPageContainer} />
+    <Route exact path="/our-story" component={GenericPageContainer} />
+    <Route exact path="/classes-and-socials" component={GenericPageContainer} />
+    <Route exact path="/ice-cream-classes" component={GenericPageContainer} />
+    <Route exact path="/ice-cream-socials" component={GenericPageContainer} />
+    <Route exact path="/events" component={GenericPageContainer} />
+    <Route exact path="/weddings" component={GenericPageContainer} />
+    <Route exact path="/parties" component={GenericPageContainer} />
+    <Route exact path="/field-trips" component={GenericPageContainer} />
+    <Route exact path="/pints-and-postcards" component={GenericPageContainer} />
+    <Route exact path="/catering" component={GenericPageContainer} />
+    <Route exact path="/ice-cream-cakes" component={GenericPageContainer} />
+    <Route exact path="/faq" component={GenericPageContainer} />
+    <Route exact path="/news" component={ArticlesLandingContainer} />
+    <Route exact path="/wholesale" component={GenericPageContainer} />
+    <Route exact path="/flavors" component={GenericPageContainer} />
+    <Route exact path="/in-stores" component={InStoresContainer} />
+    <Route exact path="/bike-party" component={GenericPageContainer} />
+    <Route exact path="/scoop-tab-party" component={GenericPageContainer} />
+    <Route
+      exact
+      path="/party-request-form"
+      component={PartyRequestFormContainer}
+    />
+    <Route exact path="/cake-request-form" component={CakeRequestFormContainer} />
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
