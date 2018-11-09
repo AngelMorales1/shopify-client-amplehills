@@ -11,11 +11,6 @@
     }
   }
 
-  &__share-button {
-    padding-top: calc(#{spacing(2)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
-  }
-
   &__image {
     margin: 0 0 spacing(12);
 
