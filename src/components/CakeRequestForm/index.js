@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+
+import checkoutModel from 'models/checkoutModel';
+import locationModel from 'models/locationModel';
+import productModel from 'models/locationModel';
 
 import { Button, TextField, Dropdown } from 'components/base';
 import styles from './CakeRequestForm.scss';
@@ -114,8 +119,6 @@ class CakeRequestForm extends Component {
     const selectedLocation = this.state.location
       ? locations[this.state.location.value]
       : null;
-
-    console.log(selectedLocation);
 
     const availableFlavors = selectedLocation
       ? selectedLocation.availableFlavors.map(flavor =>
@@ -454,5 +457,46 @@ class CakeRequestForm extends Component {
     );
   }
 }
+
+CakeRequestForm.propTypes = {
+  cakeLocations: PropTypes.objectOf(locationModel.propTypes),
+  cakeFlavors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string
+    })
+  ),
+  cakeToppings: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+      price: PropTypes.string
+    })
+  ),
+  cakeFillings: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string
+    })
+  ),
+  cakeDeposit: productModel.propTypes,
+  actions: PropTypes.shape({
+    addLineItems: PropTypes.func
+  }),
+  checkout: checkoutModel.propTypes
+};
+
+CakeRequestForm.defaultProps = {
+  cakeLocations: {},
+  cakeFlavors: [],
+  cakeToppings: [],
+  cakeFillings: [],
+  cakeDeposit: {},
+  actions: {
+    addLineItems: f => f
+  },
+  checkout: checkoutModel.defaultProps
+};
 
 export default CakeRequestForm;
