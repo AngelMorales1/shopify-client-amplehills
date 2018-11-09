@@ -63,6 +63,7 @@
       }
 
       .Select-option {
+        background: color('white');
         border-bottom: spacing(0.25) solid color('yellow');
         padding: spacing(3) spacing(6);
         transition: $transition;
