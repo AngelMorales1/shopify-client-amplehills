@@ -8,6 +8,38 @@ import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
+  componentDidMount() {
+    const { param } = this.props;
+
+    switch (param) {
+      case 'general-info':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.GENERAL.bucket
+        });
+      case 'orders':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.ORDERS.bucket
+        });
+      case 'off-site-events':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.EVENTS.bucket
+        });
+      case 'press':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.PRESS.bucket
+        });
+      case 'parties':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket
+        });
+      case 'comments-concerns':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.CONCERNS.bucket
+        });
+      default:
+        return null;
+    }
+  }
   componentDidUpdate(prevProps) {
     if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
       this.setState({
