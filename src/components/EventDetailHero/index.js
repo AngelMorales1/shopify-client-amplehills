@@ -10,7 +10,14 @@ import eventModel from 'models/eventModel';
 import ContactUsForm from 'constants/forms/ContactUs';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 
-import { Button, Radio, Image, FormFlash, TextField } from 'components/base';
+import {
+  Button,
+  Radio,
+  Image,
+  FormFlash,
+  TextField,
+  QuantitySelector
+} from 'components/base';
 import styles from './EventDetailHero.scss';
 
 class EventDetailHero extends Component {
@@ -22,7 +29,8 @@ class EventDetailHero extends Component {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    quantity: 1
   };
 
   componentDidMount() {
@@ -64,7 +72,7 @@ class EventDetailHero extends Component {
     const item = [
       {
         variantId: get(this, 'state.selectedItem', ''),
-        quantity: 1,
+        quantity: this.state.quantity,
         customAttributes: []
       }
     ];
@@ -118,7 +126,7 @@ class EventDetailHero extends Component {
 
   render() {
     const { event, formStatus } = this.props;
-    const { selectedItem, error } = this.state;
+    const { selectedItem, error, quantity } = this.state;
     const eventVariants = get(event, 'variants', []);
     const selectedEvent = eventVariants.find(
       variant => variant.id === this.state.selectedItem
@@ -265,25 +273,36 @@ class EventDetailHero extends Component {
                   </div>
                 </div>
               )}
-              <Button
-                className={cx(styles['EventDetailHero__action-button'], 'my4')}
-                color={shoppableItem ? 'madison-blue' : 'peach'}
-                disabled={shoppableItem ? !selectedEventIsAvailable : false}
-                onClick={
-                  shoppableItem
-                    ? this.handleAddToCart
-                    : () => this.setState({ modalIsOpen: true })
-                }
-              >
-                <span className="mr-auto">
-                  {shoppableItem ? 'Add to Cart' : 'RSVP'}
-                </span>
+              <div className="w100 flex flex-row justify-between items-center flex-wrap my4">
                 {shoppableItem ? (
-                  <span className="ml2">
-                    ${this.getItemPrice(this.state.selectedItem)}
-                  </span>
+                  <QuantitySelector
+                    className="mr1 my2"
+                    quantity={quantity}
+                    onChange={value => this.setState({ quantity: value })}
+                  />
                 ) : null}
-              </Button>
+                <Button
+                  className={cx(styles['EventDetailHero__action-button'])}
+                  color={shoppableItem ? 'madison-blue' : 'peach'}
+                  disabled={shoppableItem ? !selectedEventIsAvailable : false}
+                  onClick={
+                    shoppableItem
+                      ? this.handleAddToCart
+                      : () => this.setState({ modalIsOpen: true })
+                  }
+                >
+                  <span className="mr-auto">
+                    {shoppableItem ? 'Add to Cart' : 'RSVP'}
+                  </span>
+                  {shoppableItem ? (
+                    <span className="ml2">
+                      ${(
+                        this.getItemPrice(this.state.selectedItem) * quantity
+                      ).toFixed(2)}
+                    </span>
+                  ) : null}
+                </Button>
+              </div>
               {event.datesAndTimes.length > 1 && event.text ? (
                 <p className="copy text-peach bold mb1">Details</p>
               ) : null}
