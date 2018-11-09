@@ -88,7 +88,7 @@ export default createSelector(
         slug,
         availableFlavors,
         participantsLimit,
-        participantsLimitText
+        participantsLimitText,
         text
       };
     });

@@ -274,11 +274,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -988,11 +984,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-<<<<<<< HEAD
                                           initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                          initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1720,11 +1712,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-<<<<<<< HEAD
                                     initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                    initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -1913,11 +1901,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-<<<<<<< HEAD
                       initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                      initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -2115,11 +2099,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-<<<<<<< HEAD
                       "initialMonth": 2019-02-01T05:00:00.000Z,
-=======
-                      "initialMonth": 2018-11-08T20:25:27.420Z,
->>>>>>> Add PartyRequestFormModal test and update test
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -4458,11 +4438,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                                initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -5172,11 +5148,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                                initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -5904,11 +5876,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -6097,11 +6065,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-<<<<<<< HEAD
                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -6299,11 +6263,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-<<<<<<< HEAD
                         "initialMonth": 2019-02-01T05:00:00.000Z,
-=======
-                        "initialMonth": 2018-11-08T20:25:27.420Z,
->>>>>>> Add PartyRequestFormModal test and update test
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -8697,11 +8657,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -9404,11 +9360,7 @@ ShallowWrapper {
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-<<<<<<< HEAD
                                           initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                          initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -10124,11 +10076,7 @@ ShallowWrapper {
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-<<<<<<< HEAD
                                     initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                    initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -10317,11 +10265,7 @@ ShallowWrapper {
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-<<<<<<< HEAD
                       initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                      initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -10519,11 +10463,7 @@ ShallowWrapper {
                       },
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-<<<<<<< HEAD
                       "initialMonth": 2019-02-01T05:00:00.000Z,
-=======
-                      "initialMonth": 2018-11-08T20:25:27.420Z,
->>>>>>> Add PartyRequestFormModal test and update test
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -12855,11 +12795,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                                initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -13562,11 +13498,7 @@ ShallowWrapper {
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-<<<<<<< HEAD
                                                 initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                                initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -14282,11 +14214,7 @@ ShallowWrapper {
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-<<<<<<< HEAD
                                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -14475,11 +14403,7 @@ ShallowWrapper {
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-<<<<<<< HEAD
                         initialMonth={2019-02-01T05:00:00.000Z}
-=======
-                        initialMonth={2018-11-08T20:25:27.420Z}
->>>>>>> Add PartyRequestFormModal test and update test
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -14677,11 +14601,7 @@ ShallowWrapper {
                         },
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-<<<<<<< HEAD
                         "initialMonth": 2019-02-01T05:00:00.000Z,
-=======
-                        "initialMonth": 2018-11-08T20:25:27.420Z,
->>>>>>> Add PartyRequestFormModal test and update test
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
