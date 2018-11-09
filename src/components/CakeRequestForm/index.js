@@ -142,7 +142,7 @@ class CakeRequestForm extends Component {
               Where would you like to pick up your cake?
             </p>
             <Dropdown
-              className="w100 text-container-width"
+              className="w100 text-container-width z-sub-nav"
               color="peach"
               variant="square"
               placeholder="Choose a Location"
@@ -223,7 +223,7 @@ class CakeRequestForm extends Component {
               onClick={this.openFlavorModal}
             />
             <Dropdown
-              className="w100 text-container-width"
+              className="w100 text-container-width z-sub-nav"
               color="peach"
               variant="square"
               placeholder="Choose a Flavor"
