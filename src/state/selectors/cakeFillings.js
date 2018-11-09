@@ -11,7 +11,7 @@ export default createSelector(
   cakeFillings => {
     return Object.keys(cakeFillings).reduce((fillings, id) => {
       const cakeFilling = cakeFillings[id];
-      const title = cakeFilling.title || '';
+      const title = get(cakeFilling, 'title', '');
 
       const filling = {
         id,
