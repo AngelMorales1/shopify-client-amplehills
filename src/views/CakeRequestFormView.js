@@ -14,8 +14,7 @@ class CakeRequestFormView extends Component {
       cakeFillings,
       cakeDeposit,
       actions,
-      checkout,
-      addLineItemsStatus
+      checkout
     } = this.props;
 
     return (
@@ -28,7 +27,6 @@ class CakeRequestFormView extends Component {
           cakeDeposit={cakeDeposit}
           actions={actions}
           checkout={checkout}
-          addLineItemsStatus={addLineItemsStatus}
         />
       </div>
     );

@@ -134,7 +134,7 @@ class CakeRequestForm extends Component {
               Order Your Custom Ice Cream Cake
             </h1>
             <h2 className="w100 big bold center text-peach mb3">
-              First, let's work out the details
+              {`First, let's work out the details`}
             </h2>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
