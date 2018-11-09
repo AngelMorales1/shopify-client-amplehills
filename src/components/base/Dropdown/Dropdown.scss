@@ -115,6 +115,8 @@
         left: spacing(-6);
 
         .Select-menu {
+          border-top-right-radius: radius('xs');
+          border-top-left-radius: radius('xs');
           width: 120%;
           left: 0;
         }
