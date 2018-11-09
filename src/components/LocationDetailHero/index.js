@@ -232,13 +232,13 @@ LocationDetailHero.propTypes = {
     type: PropTypes.string,
     features: PropTypes.arrayOf(PropTypes.object)
   }),
-  events: PropTypes.array
+  events: PropTypes.object
 };
 
 LocationDetailHero.defaultProps = {
   location: locationModel.default,
   locationGeoJSON: {},
-  events: []
+  events: {}
 };
 
 export default LocationDetailHero;

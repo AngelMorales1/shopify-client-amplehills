@@ -4,6 +4,7 @@ export default {
   propTypes: PropTypes.shape({
     address1: PropTypes.string,
     address2: PropTypes.string,
+    text: PropTypes.string,
     city: PropTypes.string,
     delivery: PropTypes.bool,
     id: PropTypes.string,
@@ -33,6 +34,7 @@ export default {
   default: {
     address1: '',
     address2: '',
+    text: '',
     city: '',
     delivery: false,
     id: '',
