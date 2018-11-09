@@ -128,7 +128,7 @@ class CakeRequestForm extends Component {
 
     return (
       <div className="flex flex-wrap my4">
-        <div className="flex flex-wrap max-width-4 mx-auto my4">
+        <div className="flex flex-wrap max-width-4 mx-auto my4 px2">
           <div className="w100 mb4">
             <h1 className="w100 block-headline center mb3">
               Order Your Custom Ice Cream Cake
@@ -272,9 +272,9 @@ class CakeRequestForm extends Component {
             <div className="form-container-width w100 flex flex-wrap justify-center">
               {fillings.map(filling => {
                 return (
-                  <div key={filling.title} className="col-3 p1">
+                  <div key={filling.title} className="col-6 md-col-3 p1">
                     <Button
-                      className="center wh100 white-space-normal"
+                      className="center wh100 white-space-normal px3"
                       variant={
                         get(this, 'state.filling', null) === filling.title
                           ? 'square--selected'
@@ -325,9 +325,9 @@ class CakeRequestForm extends Component {
             </div>
           </div>
         </div>
-        <div className="w100 bg-tuft-bush py4">
-          <div className="max-width-3 mx-auto flex flex-wrap">
-            <div className="col-12 md-col-7 flex flex-column">
+        <div className="w100 bg-pastel-peach py4">
+          <div className="max-width-3 mx-auto flex flex-wrap px3">
+            <div className="col-12 md-col-7 flex flex-column mb4">
               <span className="bold big mb3">Summary</span>
               {formIsValid ? (
                 <div className="flex flex-column pr3">
