@@ -14,8 +14,6 @@ import get from 'utils/get';
 
 class CakeRequestFormContainer extends ContainerBase {
   view = import('views/CakeRequestFormView');
-
-  model = () => {};
 }
 
 const mapStateToProps = (state, props) => {
