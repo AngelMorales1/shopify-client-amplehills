@@ -8,6 +8,14 @@ import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
+  state = {
+    selectedAddress: '',
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  };
+
   componentDidMount() {
     const { param } = this.props;
 
@@ -40,6 +48,7 @@ class ContactUs extends Component {
         return null;
     }
   }
+
   componentDidUpdate(prevProps) {
     if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
       this.setState({
@@ -50,14 +59,6 @@ class ContactUs extends Component {
         message: ''
       });
   }
-
-  state = {
-    selectedAddress: '',
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  };
 
   handleChangeAddress = selectedAddress => {
     this.setState({ selectedAddress });
