@@ -743,7 +743,10 @@ class PartyRequestForm extends Component {
                     disabled={!formIsValid}
                     onClick={() => this.handleMakeDeposit()}
                     color="madison-blue"
-                    className="inline-flex"
+                    className={cx(
+                      styles['PartyRequestForm__button'],
+                      'inline-flex'
+                    )}
                     label="Make Deposit"
                   />
                 </div>

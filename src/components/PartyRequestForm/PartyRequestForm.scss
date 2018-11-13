@@ -107,4 +107,9 @@
       margin: spacing(8);
     }
   }
+
+  &__button {
+    padding-top: calc(#{spacing(4)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+  }
 }
