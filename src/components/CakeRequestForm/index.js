@@ -382,7 +382,10 @@ class CakeRequestForm extends Component {
                 disabled={!formIsValid}
                 onClick={this.submitDeposit}
                 color="madison-blue"
-                className="mt3 inline-block w-auto"
+                className={cx(
+                  styles['CakeRequestForm__button'],
+                  'mt3 inline-block w-auto'
+                )}
                 label="Make Deposit"
               />
             </div>

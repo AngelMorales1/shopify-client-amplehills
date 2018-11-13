@@ -2,6 +2,11 @@
 $CRF-close-bar-height: spacing(18);
 
 .CakeRequestForm {
+  &__button {
+    padding-top: calc(#{spacing(4)} + 0.125rem);
+    padding-bottom: calc(#{spacing(4)} - 0.125rem);
+  }
+
   &__modal {
     &__info {
       height: calc(100% - #{$CRF-close-bar-height});
