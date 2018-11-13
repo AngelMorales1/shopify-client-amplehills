@@ -27,6 +27,8 @@ const ImageText = ({ block, z, setRef }) => {
   const linkedTextLabel = get(fields, 'linkedTextLabel', '');
   const linkedTextLink = get(fields, 'linkedTextLink', '');
   const textContentCenterAlign = get(fields, 'textContentCenterAlign', '');
+  const smallTitle = get(fields, 'smallTitle', '');
+  const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
 
   const getButtonColor = colorName => {
@@ -84,6 +86,11 @@ const ImageText = ({ block, z, setRef }) => {
             }
           )}
         >
+          {smallTitle ? (
+            <p className={`small-title mb3 text-${smallTitleColor}`}>
+              {smallTitle}
+            </p>
+          ) : null}
           <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
           <div
             dangerouslySetInnerHTML={{
@@ -196,7 +203,9 @@ ImageText.propTypes = {
       buttonLink: PropTypes.string,
       buttonColor: PropTypes.string,
       linkedTextLabel: PropTypes.string,
-      linkedTextLink: PropTypes.string
+      linkedTextLink: PropTypes.string,
+      smallTitle: PropTypes.string,
+      smallTitleColor: PropTypes.string
     })
   }),
   setRef: PropTypes.func
@@ -219,7 +228,9 @@ ImageText.defaultProps = {
       buttonLabel: '',
       buttonLink: '',
       linkedTextLabel: '',
-      linkedTextLink: ''
+      linkedTextLink: '',
+      smallTitle: '',
+      smallTitleColor: 'madison-blue'
     }
   },
   setRef: () => {}
