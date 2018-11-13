@@ -78,6 +78,8 @@ export default {
         },
         phone: '8881234567',
         seasonal: false,
+        cakes: true,
+        cakesBucket: 'foo',
         delivery: false,
         sunday: 'Noon–12am',
         monday: 'Noon–11pm',

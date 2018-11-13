@@ -408,21 +408,6 @@ ShallowWrapper {
           <p
                     className="block-headline my3"
           />
-          <Button
-                    className="ml1"
-                    color="peach"
-                    disabled={false}
-                    fullWidth={false}
-                    hover="shadow"
-                    label=""
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    shadow={false}
-                    to=""
-                    type="button"
-                    variant="primary"
-          />
 </div>,
         <div
           className="px3 flex flex-row"
@@ -446,21 +431,7 @@ ShallowWrapper {
               className="block-headline my3"
 />,
             null,
-            <Button
-              className="ml1"
-              color="peach"
-              disabled={false}
-              fullWidth={false}
-              hover="shadow"
-              label=""
-              onClick={[Function]}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              shadow={false}
-              to=""
-              type="button"
-              variant="primary"
-/>,
+            null,
           ],
           "className": "flex flex-column justify-center",
         },
@@ -479,30 +450,7 @@ ShallowWrapper {
             "type": "p",
           },
           null,
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": null,
-              "className": "ml1",
-              "color": "peach",
-              "disabled": false,
-              "fullWidth": false,
-              "hover": "shadow",
-              "label": "",
-              "onClick": [Function],
-              "onMouseEnter": [Function],
-              "onMouseLeave": [Function],
-              "shadow": false,
-              "to": "",
-              "type": "button",
-              "variant": "primary",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+          null,
         ],
         "type": "div",
       },
@@ -547,21 +495,6 @@ ShallowWrapper {
             <p
                         className="block-headline my3"
             />
-            <Button
-                        className="ml1"
-                        color="peach"
-                        disabled={false}
-                        fullWidth={false}
-                        hover="shadow"
-                        label=""
-                        onClick={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        shadow={false}
-                        to=""
-                        type="button"
-                        variant="primary"
-            />
 </div>,
           <div
             className="px3 flex flex-row"
@@ -585,21 +518,7 @@ ShallowWrapper {
                 className="block-headline my3"
 />,
               null,
-              <Button
-                className="ml1"
-                color="peach"
-                disabled={false}
-                fullWidth={false}
-                hover="shadow"
-                label=""
-                onClick={[Function]}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                shadow={false}
-                to=""
-                type="button"
-                variant="primary"
-/>,
+              null,
             ],
             "className": "flex flex-column justify-center",
           },
@@ -618,30 +537,7 @@ ShallowWrapper {
               "type": "p",
             },
             null,
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": null,
-                "className": "ml1",
-                "color": "peach",
-                "disabled": false,
-                "fullWidth": false,
-                "hover": "shadow",
-                "label": "",
-                "onClick": [Function],
-                "onMouseEnter": [Function],
-                "onMouseLeave": [Function],
-                "shadow": false,
-                "to": "",
-                "type": "button",
-                "variant": "primary",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
+            null,
           ],
           "type": "div",
         },

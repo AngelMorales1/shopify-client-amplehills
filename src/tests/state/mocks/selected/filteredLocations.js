@@ -30,6 +30,8 @@ export default [
     seasonal: false,
     delivery: false,
     availableFlavors: [],
+    cakes: false,
+    cakesBucket: '',
     hours: {
       sunday: 'Noon–12am',
       monday: 'Noon–11pm',

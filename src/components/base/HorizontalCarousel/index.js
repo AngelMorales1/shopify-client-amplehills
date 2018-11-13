@@ -44,12 +44,14 @@ const HorizontalCarousel = ({
             )}
           />
         ) : null}
-        <Button
-          className="ml1"
-          to={buttonLink}
-          label={buttonLabel}
-          color="peach"
-        />
+        {buttonLabel ? (
+          <Button
+            className="ml1"
+            to={buttonLink}
+            label={buttonLabel}
+            color="peach"
+          />
+        ) : null}
       </div>
       <div
         className={cx(

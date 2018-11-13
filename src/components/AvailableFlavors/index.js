@@ -59,7 +59,7 @@ class AvailableFlavors extends Component {
           'py4 px3'
         )}
       >
-        <div className="mx-auto flex flex-column items-center container-width ">
+        <div className="mx-auto flex flex-column items-center container-width">
           <h2 className="block-headline center mb3">{title}</h2>
           <div
             className={cx(

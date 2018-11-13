@@ -89,7 +89,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex flex-wrap max-width-4 mx-auto my4"
+          className="flex flex-wrap max-width-4 mx-auto my4 px2"
 >
           <div
                     className="w100 mb4"
@@ -115,7 +115,7 @@ ShallowWrapper {
                     </p>
                     <Dropdown
                               bgColor=""
-                              className="w100 text-container-width"
+                              className="w100 text-container-width z-sub-nav"
                               color="peach"
                               fixedWidth={false}
                               label=""
@@ -149,6 +149,8 @@ ShallowWrapper {
                     <TextField
                               address=""
                               className="w100 text-container-width"
+                              max={null}
+                              min={null}
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
@@ -169,6 +171,8 @@ ShallowWrapper {
                     <TextField
                               address=""
                               className="w100 text-container-width"
+                              max={null}
+                              min={null}
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
@@ -232,6 +236,7 @@ ShallowWrapper {
                                                             <p
                                                                       className="white-space-normal light"
                                                             >
+                                                                      $
                                                                       49.99
                                                             </p>
                                                   </div>
@@ -266,6 +271,7 @@ ShallowWrapper {
                                                             <p
                                                                       className="white-space-normal light"
                                                             >
+                                                                      $
                                                                       69.99
                                                             </p>
                                                   </div>
@@ -298,7 +304,7 @@ ShallowWrapper {
                     />
                     <Dropdown
                               bgColor=""
-                              className="w100 text-container-width"
+                              className="w100 text-container-width z-sub-nav"
                               color="peach"
                               fixedWidth={false}
                               label=""
@@ -363,10 +369,10 @@ ShallowWrapper {
                               className="form-container-width w100 flex flex-wrap justify-center"
                     >
                               <div
-                                        className="col-3 p1"
+                                        className="col-6 md-col-3 p1"
                               >
                                         <Button
-                                                  className="center wh100 white-space-normal"
+                                                  className="center wh100 white-space-normal px3"
                                                   color="white-denim"
                                                   disabled={false}
                                                   fullWidth={false}
@@ -382,10 +388,10 @@ ShallowWrapper {
                                         />
                               </div>
                               <div
-                                        className="col-3 p1"
+                                        className="col-6 md-col-3 p1"
                               >
                                         <Button
-                                                  className="center wh100 white-space-normal"
+                                                  className="center wh100 white-space-normal px3"
                                                   color="white-denim"
                                                   disabled={false}
                                                   fullWidth={false}
@@ -485,13 +491,13 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="w100 bg-tuft-bush py4"
+          className="w100 bg-pastel-peach py4"
 >
           <div
-                    className="max-width-3 mx-auto flex flex-wrap"
+                    className="max-width-3 mx-auto flex flex-wrap px3"
           >
                     <div
-                              className="col-12 md-col-7 flex flex-column"
+                              className="col-12 md-col-7 flex flex-column mb4"
                     >
                               <span
                                         className="bold big mb3"
@@ -572,7 +578,7 @@ ShallowWrapper {
               </p>
               <Dropdown
                             bgColor=""
-                            className="w100 text-container-width"
+                            className="w100 text-container-width z-sub-nav"
                             color="peach"
                             fixedWidth={false}
                             label=""
@@ -606,6 +612,8 @@ ShallowWrapper {
               <TextField
                             address=""
                             className="w100 text-container-width"
+                            max={null}
+                            min={null}
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -626,6 +634,8 @@ ShallowWrapper {
               <TextField
                             address=""
                             className="w100 text-container-width"
+                            max={null}
+                            min={null}
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -689,6 +699,7 @@ ShallowWrapper {
                                                                       <p
                                                                                     className="white-space-normal light"
                                                                       >
+                                                                                    $
                                                                                     49.99
                                                                       </p>
                                                         </div>
@@ -723,6 +734,7 @@ ShallowWrapper {
                                                                       <p
                                                                                     className="white-space-normal light"
                                                                       >
+                                                                                    $
                                                                                     69.99
                                                                       </p>
                                                         </div>
@@ -755,7 +767,7 @@ ShallowWrapper {
               />
               <Dropdown
                             bgColor=""
-                            className="w100 text-container-width"
+                            className="w100 text-container-width z-sub-nav"
                             color="peach"
                             fixedWidth={false}
                             label=""
@@ -820,10 +832,10 @@ ShallowWrapper {
                             className="form-container-width w100 flex flex-wrap justify-center"
               >
                             <div
-                                          className="col-3 p1"
+                                          className="col-6 md-col-3 p1"
                             >
                                           <Button
-                                                        className="center wh100 white-space-normal"
+                                                        className="center wh100 white-space-normal px3"
                                                         color="white-denim"
                                                         disabled={false}
                                                         fullWidth={false}
@@ -839,10 +851,10 @@ ShallowWrapper {
                                           />
                             </div>
                             <div
-                                          className="col-3 p1"
+                                          className="col-6 md-col-3 p1"
                             >
                                           <Button
-                                                        className="center wh100 white-space-normal"
+                                                        className="center wh100 white-space-normal px3"
                                                         color="white-denim"
                                                         disabled={false}
                                                         fullWidth={false}
@@ -941,7 +953,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "flex flex-wrap max-width-4 mx-auto my4",
+          "className": "flex flex-wrap max-width-4 mx-auto my4 px2",
         },
         "ref": null,
         "rendered": Array [
@@ -1006,7 +1018,7 @@ ShallowWrapper {
 </p>,
                 <Dropdown
                   bgColor=""
-                  className="w100 text-container-width"
+                  className="w100 text-container-width z-sub-nav"
                   color="peach"
                   fixedWidth={false}
                   label=""
@@ -1051,7 +1063,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "bgColor": "",
-                  "className": "w100 text-container-width",
+                  "className": "w100 text-container-width z-sub-nav",
                   "color": "peach",
                   "fixedWidth": false,
                   "label": "",
@@ -1092,6 +1104,8 @@ ShallowWrapper {
                 <TextField
                   address=""
                   className="w100 text-container-width"
+                  max={null}
+                  min={null}
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -1124,6 +1138,8 @@ ShallowWrapper {
                 "props": Object {
                   "address": "",
                   "className": "w100 text-container-width",
+                  "max": null,
+                  "min": null,
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -1153,6 +1169,8 @@ ShallowWrapper {
                 <TextField
                   address=""
                   className="w100 text-container-width"
+                  max={null}
+                  min={null}
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -1185,6 +1203,8 @@ ShallowWrapper {
                 "props": Object {
                   "address": "",
                   "className": "w100 text-container-width",
+                  "max": null,
+                  "min": null,
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -1275,6 +1295,7 @@ ShallowWrapper {
                                                                         <p
                                                                                           className="white-space-normal light"
                                                                         >
+                                                                                          $
                                                                                           49.99
                                                                         </p>
                                                       </div>
@@ -1309,6 +1330,7 @@ ShallowWrapper {
                                                                         <p
                                                                                           className="white-space-normal light"
                                                                         >
+                                                                                          $
                                                                                           69.99
                                                                         </p>
                                                       </div>
@@ -1379,6 +1401,7 @@ ShallowWrapper {
                                                                   <p
                                                                                         className="white-space-normal light"
                                                                   >
+                                                                                        $
                                                                                         49.99
                                                                   </p>
                                             </div>
@@ -1413,6 +1436,7 @@ ShallowWrapper {
                                                                   <p
                                                                                         className="white-space-normal light"
                                                                   >
+                                                                                        $
                                                                                         69.99
                                                                   </p>
                                             </div>
@@ -1454,6 +1478,7 @@ ShallowWrapper {
                                                 <p
                                                                         className="white-space-normal light"
                                                 >
+                                                                        $
                                                                         49.99
                                                 </p>
                         </div>
@@ -1477,6 +1502,7 @@ ShallowWrapper {
                           <p
                                                     className="white-space-normal light"
                           >
+                                                    $
                                                     49.99
                           </p>
 </div>,
@@ -1509,6 +1535,7 @@ ShallowWrapper {
                             <p
                               className="white-space-normal light"
 >
+                              $
                               49.99
 </p>,
                           ],
@@ -1533,11 +1560,17 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "49.99",
+                              "children": Array [
+                                "$",
+                                "49.99",
+                              ],
                               "className": "white-space-normal light",
                             },
                             "ref": null,
-                            "rendered": "49.99",
+                            "rendered": Array [
+                              "$",
+                              "49.99",
+                            ],
                             "type": "p",
                           },
                         ],
@@ -1578,6 +1611,7 @@ ShallowWrapper {
                                                 <p
                                                                         className="white-space-normal light"
                                                 >
+                                                                        $
                                                                         69.99
                                                 </p>
                         </div>
@@ -1601,6 +1635,7 @@ ShallowWrapper {
                           <p
                                                     className="white-space-normal light"
                           >
+                                                    $
                                                     69.99
                           </p>
 </div>,
@@ -1633,6 +1668,7 @@ ShallowWrapper {
                             <p
                               className="white-space-normal light"
 >
+                              $
                               69.99
 </p>,
                           ],
@@ -1657,11 +1693,17 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "69.99",
+                              "children": Array [
+                                "$",
+                                "69.99",
+                              ],
                               "className": "white-space-normal light",
                             },
                             "ref": null,
-                            "rendered": "69.99",
+                            "rendered": Array [
+                              "$",
+                              "69.99",
+                            ],
                             "type": "p",
                           },
                         ],
@@ -1705,7 +1747,7 @@ ShallowWrapper {
 />,
                 <Dropdown
                   bgColor=""
-                  className="w100 text-container-width"
+                  className="w100 text-container-width z-sub-nav"
                   color="peach"
                   fixedWidth={false}
                   label=""
@@ -1772,7 +1814,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "bgColor": "",
-                  "className": "w100 text-container-width",
+                  "className": "w100 text-container-width z-sub-nav",
                   "color": "peach",
                   "fixedWidth": false,
                   "label": "",
@@ -1913,10 +1955,10 @@ ShallowWrapper {
                   className="form-container-width w100 flex flex-wrap justify-center"
 >
                   <div
-                                    className="col-3 p1"
+                                    className="col-6 md-col-3 p1"
                   >
                                     <Button
-                                                      className="center wh100 white-space-normal"
+                                                      className="center wh100 white-space-normal px3"
                                                       color="white-denim"
                                                       disabled={false}
                                                       fullWidth={false}
@@ -1932,10 +1974,10 @@ ShallowWrapper {
                                     />
                   </div>
                   <div
-                                    className="col-3 p1"
+                                    className="col-6 md-col-3 p1"
                   >
                                     <Button
-                                                      className="center wh100 white-space-normal"
+                                                      className="center wh100 white-space-normal px3"
                                                       color="white-denim"
                                                       disabled={false}
                                                       fullWidth={false}
@@ -1975,10 +2017,10 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <div
-                      className="col-3 p1"
+                      className="col-6 md-col-3 p1"
 >
                       <Button
-                                            className="center wh100 white-space-normal"
+                                            className="center wh100 white-space-normal px3"
                                             color="white-denim"
                                             disabled={false}
                                             fullWidth={false}
@@ -1994,10 +2036,10 @@ ShallowWrapper {
                       />
 </div>,
                     <div
-                      className="col-3 p1"
+                      className="col-6 md-col-3 p1"
 >
                       <Button
-                                            className="center wh100 white-space-normal"
+                                            className="center wh100 white-space-normal px3"
                                             color="white-denim"
                                             disabled={false}
                                             fullWidth={false}
@@ -2023,7 +2065,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <Button
-                        className="center wh100 white-space-normal"
+                        className="center wh100 white-space-normal px3"
                         color="white-denim"
                         disabled={false}
                         fullWidth={false}
@@ -2037,7 +2079,7 @@ ShallowWrapper {
                         type="button"
                         variant="square"
 />,
-                      "className": "col-3 p1",
+                      "className": "col-6 md-col-3 p1",
                     },
                     "ref": null,
                     "rendered": Object {
@@ -2046,7 +2088,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
-                        "className": "center wh100 white-space-normal",
+                        "className": "center wh100 white-space-normal px3",
                         "color": "white-denim",
                         "disabled": false,
                         "fullWidth": false,
@@ -2072,7 +2114,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <Button
-                        className="center wh100 white-space-normal"
+                        className="center wh100 white-space-normal px3"
                         color="white-denim"
                         disabled={false}
                         fullWidth={false}
@@ -2086,7 +2128,7 @@ ShallowWrapper {
                         type="button"
                         variant="square"
 />,
-                      "className": "col-3 p1",
+                      "className": "col-6 md-col-3 p1",
                     },
                     "ref": null,
                     "rendered": Object {
@@ -2095,7 +2137,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
-                        "className": "center wh100 white-space-normal",
+                        "className": "center wh100 white-space-normal px3",
                         "color": "white-denim",
                         "disabled": false,
                         "fullWidth": false,
@@ -2563,10 +2605,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="max-width-3 mx-auto flex flex-wrap"
+            className="max-width-3 mx-auto flex flex-wrap px3"
 >
             <div
-                        className="col-12 md-col-7 flex flex-column"
+                        className="col-12 md-col-7 flex flex-column mb4"
             >
                         <span
                                     className="bold big mb3"
@@ -2610,7 +2652,7 @@ ShallowWrapper {
                         />
             </div>
 </div>,
-          "className": "w100 bg-tuft-bush py4",
+          "className": "w100 bg-pastel-peach py4",
         },
         "ref": null,
         "rendered": Object {
@@ -2620,7 +2662,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="col-12 md-col-7 flex flex-column"
+                className="col-12 md-col-7 flex flex-column mb4"
 >
                 <span
                                 className="bold big mb3"
@@ -2664,7 +2706,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "max-width-3 mx-auto flex flex-wrap",
+            "className": "max-width-3 mx-auto flex flex-wrap px3",
           },
           "ref": null,
           "rendered": Array [
@@ -2685,7 +2727,7 @@ ShallowWrapper {
                     Please fill out all fields.
 </span>,
                 ],
-                "className": "col-12 md-col-7 flex flex-column",
+                "className": "col-12 md-col-7 flex flex-column mb4",
               },
               "ref": null,
               "rendered": Array [
@@ -2827,7 +2869,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-wrap max-width-4 mx-auto my4"
+            className="flex flex-wrap max-width-4 mx-auto my4 px2"
 >
             <div
                         className="w100 mb4"
@@ -2853,7 +2895,7 @@ ShallowWrapper {
                         </p>
                         <Dropdown
                                     bgColor=""
-                                    className="w100 text-container-width"
+                                    className="w100 text-container-width z-sub-nav"
                                     color="peach"
                                     fixedWidth={false}
                                     label=""
@@ -2887,6 +2929,8 @@ ShallowWrapper {
                         <TextField
                                     address=""
                                     className="w100 text-container-width"
+                                    max={null}
+                                    min={null}
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
@@ -2907,6 +2951,8 @@ ShallowWrapper {
                         <TextField
                                     address=""
                                     className="w100 text-container-width"
+                                    max={null}
+                                    min={null}
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
@@ -2970,6 +3016,7 @@ ShallowWrapper {
                                                                         <p
                                                                                     className="white-space-normal light"
                                                                         >
+                                                                                    $
                                                                                     49.99
                                                                         </p>
                                                             </div>
@@ -3004,6 +3051,7 @@ ShallowWrapper {
                                                                         <p
                                                                                     className="white-space-normal light"
                                                                         >
+                                                                                    $
                                                                                     69.99
                                                                         </p>
                                                             </div>
@@ -3036,7 +3084,7 @@ ShallowWrapper {
                         />
                         <Dropdown
                                     bgColor=""
-                                    className="w100 text-container-width"
+                                    className="w100 text-container-width z-sub-nav"
                                     color="peach"
                                     fixedWidth={false}
                                     label=""
@@ -3101,10 +3149,10 @@ ShallowWrapper {
                                     className="form-container-width w100 flex flex-wrap justify-center"
                         >
                                     <div
-                                                className="col-3 p1"
+                                                className="col-6 md-col-3 p1"
                                     >
                                                 <Button
-                                                            className="center wh100 white-space-normal"
+                                                            className="center wh100 white-space-normal px3"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
@@ -3120,10 +3168,10 @@ ShallowWrapper {
                                                 />
                                     </div>
                                     <div
-                                                className="col-3 p1"
+                                                className="col-6 md-col-3 p1"
                                     >
                                                 <Button
-                                                            className="center wh100 white-space-normal"
+                                                            className="center wh100 white-space-normal px3"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
@@ -3223,13 +3271,13 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="w100 bg-tuft-bush py4"
+            className="w100 bg-pastel-peach py4"
 >
             <div
-                        className="max-width-3 mx-auto flex flex-wrap"
+                        className="max-width-3 mx-auto flex flex-wrap px3"
             >
                         <div
-                                    className="col-12 md-col-7 flex flex-column"
+                                    className="col-12 md-col-7 flex flex-column mb4"
                         >
                                     <span
                                                 className="bold big mb3"
@@ -3310,7 +3358,7 @@ ShallowWrapper {
                 </p>
                 <Dropdown
                                 bgColor=""
-                                className="w100 text-container-width"
+                                className="w100 text-container-width z-sub-nav"
                                 color="peach"
                                 fixedWidth={false}
                                 label=""
@@ -3344,6 +3392,8 @@ ShallowWrapper {
                 <TextField
                                 address=""
                                 className="w100 text-container-width"
+                                max={null}
+                                min={null}
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
@@ -3364,6 +3414,8 @@ ShallowWrapper {
                 <TextField
                                 address=""
                                 className="w100 text-container-width"
+                                max={null}
+                                min={null}
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
@@ -3427,6 +3479,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                 className="white-space-normal light"
                                                                                 >
+                                                                                                $
                                                                                                 49.99
                                                                                 </p>
                                                                 </div>
@@ -3461,6 +3514,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                 className="white-space-normal light"
                                                                                 >
+                                                                                                $
                                                                                                 69.99
                                                                                 </p>
                                                                 </div>
@@ -3493,7 +3547,7 @@ ShallowWrapper {
                 />
                 <Dropdown
                                 bgColor=""
-                                className="w100 text-container-width"
+                                className="w100 text-container-width z-sub-nav"
                                 color="peach"
                                 fixedWidth={false}
                                 label=""
@@ -3558,10 +3612,10 @@ ShallowWrapper {
                                 className="form-container-width w100 flex flex-wrap justify-center"
                 >
                                 <div
-                                                className="col-3 p1"
+                                                className="col-6 md-col-3 p1"
                                 >
                                                 <Button
-                                                                className="center wh100 white-space-normal"
+                                                                className="center wh100 white-space-normal px3"
                                                                 color="white-denim"
                                                                 disabled={false}
                                                                 fullWidth={false}
@@ -3577,10 +3631,10 @@ ShallowWrapper {
                                                 />
                                 </div>
                                 <div
-                                                className="col-3 p1"
+                                                className="col-6 md-col-3 p1"
                                 >
                                                 <Button
-                                                                className="center wh100 white-space-normal"
+                                                                className="center wh100 white-space-normal px3"
                                                                 color="white-denim"
                                                                 disabled={false}
                                                                 fullWidth={false}
@@ -3679,7 +3733,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "flex flex-wrap max-width-4 mx-auto my4",
+            "className": "flex flex-wrap max-width-4 mx-auto my4 px2",
           },
           "ref": null,
           "rendered": Array [
@@ -3744,7 +3798,7 @@ ShallowWrapper {
 </p>,
                   <Dropdown
                     bgColor=""
-                    className="w100 text-container-width"
+                    className="w100 text-container-width z-sub-nav"
                     color="peach"
                     fixedWidth={false}
                     label=""
@@ -3789,7 +3843,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "bgColor": "",
-                    "className": "w100 text-container-width",
+                    "className": "w100 text-container-width z-sub-nav",
                     "color": "peach",
                     "fixedWidth": false,
                     "label": "",
@@ -3830,6 +3884,8 @@ ShallowWrapper {
                   <TextField
                     address=""
                     className="w100 text-container-width"
+                    max={null}
+                    min={null}
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -3862,6 +3918,8 @@ ShallowWrapper {
                   "props": Object {
                     "address": "",
                     "className": "w100 text-container-width",
+                    "max": null,
+                    "min": null,
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
@@ -3891,6 +3949,8 @@ ShallowWrapper {
                   <TextField
                     address=""
                     className="w100 text-container-width"
+                    max={null}
+                    min={null}
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -3923,6 +3983,8 @@ ShallowWrapper {
                   "props": Object {
                     "address": "",
                     "className": "w100 text-container-width",
+                    "max": null,
+                    "min": null,
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
@@ -4013,6 +4075,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                     className="white-space-normal light"
                                                                                 >
+                                                                                                    $
                                                                                                     49.99
                                                                                 </p>
                                                             </div>
@@ -4047,6 +4110,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                     className="white-space-normal light"
                                                                                 >
+                                                                                                    $
                                                                                                     69.99
                                                                                 </p>
                                                             </div>
@@ -4117,6 +4181,7 @@ ShallowWrapper {
                                                                         <p
                                                                                                 className="white-space-normal light"
                                                                         >
+                                                                                                $
                                                                                                 49.99
                                                                         </p>
                                                 </div>
@@ -4151,6 +4216,7 @@ ShallowWrapper {
                                                                         <p
                                                                                                 className="white-space-normal light"
                                                                         >
+                                                                                                $
                                                                                                 69.99
                                                                         </p>
                                                 </div>
@@ -4192,6 +4258,7 @@ ShallowWrapper {
                                                     <p
                                                                               className="white-space-normal light"
                                                     >
+                                                                              $
                                                                               49.99
                                                     </p>
                           </div>
@@ -4215,6 +4282,7 @@ ShallowWrapper {
                             <p
                                                         className="white-space-normal light"
                             >
+                                                        $
                                                         49.99
                             </p>
 </div>,
@@ -4247,6 +4315,7 @@ ShallowWrapper {
                               <p
                                 className="white-space-normal light"
 >
+                                $
                                 49.99
 </p>,
                             ],
@@ -4271,11 +4340,17 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "49.99",
+                                "children": Array [
+                                  "$",
+                                  "49.99",
+                                ],
                                 "className": "white-space-normal light",
                               },
                               "ref": null,
-                              "rendered": "49.99",
+                              "rendered": Array [
+                                "$",
+                                "49.99",
+                              ],
                               "type": "p",
                             },
                           ],
@@ -4316,6 +4391,7 @@ ShallowWrapper {
                                                     <p
                                                                               className="white-space-normal light"
                                                     >
+                                                                              $
                                                                               69.99
                                                     </p>
                           </div>
@@ -4339,6 +4415,7 @@ ShallowWrapper {
                             <p
                                                         className="white-space-normal light"
                             >
+                                                        $
                                                         69.99
                             </p>
 </div>,
@@ -4371,6 +4448,7 @@ ShallowWrapper {
                               <p
                                 className="white-space-normal light"
 >
+                                $
                                 69.99
 </p>,
                             ],
@@ -4395,11 +4473,17 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "69.99",
+                                "children": Array [
+                                  "$",
+                                  "69.99",
+                                ],
                                 "className": "white-space-normal light",
                               },
                               "ref": null,
-                              "rendered": "69.99",
+                              "rendered": Array [
+                                "$",
+                                "69.99",
+                              ],
                               "type": "p",
                             },
                           ],
@@ -4443,7 +4527,7 @@ ShallowWrapper {
 />,
                   <Dropdown
                     bgColor=""
-                    className="w100 text-container-width"
+                    className="w100 text-container-width z-sub-nav"
                     color="peach"
                     fixedWidth={false}
                     label=""
@@ -4510,7 +4594,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "bgColor": "",
-                    "className": "w100 text-container-width",
+                    "className": "w100 text-container-width z-sub-nav",
                     "color": "peach",
                     "fixedWidth": false,
                     "label": "",
@@ -4651,10 +4735,10 @@ ShallowWrapper {
                     className="form-container-width w100 flex flex-wrap justify-center"
 >
                     <div
-                                        className="col-3 p1"
+                                        className="col-6 md-col-3 p1"
                     >
                                         <Button
-                                                            className="center wh100 white-space-normal"
+                                                            className="center wh100 white-space-normal px3"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
@@ -4670,10 +4754,10 @@ ShallowWrapper {
                                         />
                     </div>
                     <div
-                                        className="col-3 p1"
+                                        className="col-6 md-col-3 p1"
                     >
                                         <Button
-                                                            className="center wh100 white-space-normal"
+                                                            className="center wh100 white-space-normal px3"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
@@ -4713,10 +4797,10 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <div
-                        className="col-3 p1"
+                        className="col-6 md-col-3 p1"
 >
                         <Button
-                                                className="center wh100 white-space-normal"
+                                                className="center wh100 white-space-normal px3"
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
@@ -4732,10 +4816,10 @@ ShallowWrapper {
                         />
 </div>,
                       <div
-                        className="col-3 p1"
+                        className="col-6 md-col-3 p1"
 >
                         <Button
-                                                className="center wh100 white-space-normal"
+                                                className="center wh100 white-space-normal px3"
                                                 color="white-denim"
                                                 disabled={false}
                                                 fullWidth={false}
@@ -4761,7 +4845,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <Button
-                          className="center wh100 white-space-normal"
+                          className="center wh100 white-space-normal px3"
                           color="white-denim"
                           disabled={false}
                           fullWidth={false}
@@ -4775,7 +4859,7 @@ ShallowWrapper {
                           type="button"
                           variant="square"
 />,
-                        "className": "col-3 p1",
+                        "className": "col-6 md-col-3 p1",
                       },
                       "ref": null,
                       "rendered": Object {
@@ -4784,7 +4868,7 @@ ShallowWrapper {
                         "nodeType": "function",
                         "props": Object {
                           "children": null,
-                          "className": "center wh100 white-space-normal",
+                          "className": "center wh100 white-space-normal px3",
                           "color": "white-denim",
                           "disabled": false,
                           "fullWidth": false,
@@ -4810,7 +4894,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": <Button
-                          className="center wh100 white-space-normal"
+                          className="center wh100 white-space-normal px3"
                           color="white-denim"
                           disabled={false}
                           fullWidth={false}
@@ -4824,7 +4908,7 @@ ShallowWrapper {
                           type="button"
                           variant="square"
 />,
-                        "className": "col-3 p1",
+                        "className": "col-6 md-col-3 p1",
                       },
                       "ref": null,
                       "rendered": Object {
@@ -4833,7 +4917,7 @@ ShallowWrapper {
                         "nodeType": "function",
                         "props": Object {
                           "children": null,
-                          "className": "center wh100 white-space-normal",
+                          "className": "center wh100 white-space-normal px3",
                           "color": "white-denim",
                           "disabled": false,
                           "fullWidth": false,
@@ -5301,10 +5385,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="max-width-3 mx-auto flex flex-wrap"
+              className="max-width-3 mx-auto flex flex-wrap px3"
 >
               <div
-                            className="col-12 md-col-7 flex flex-column"
+                            className="col-12 md-col-7 flex flex-column mb4"
               >
                             <span
                                           className="bold big mb3"
@@ -5348,7 +5432,7 @@ ShallowWrapper {
                             />
               </div>
 </div>,
-            "className": "w100 bg-tuft-bush py4",
+            "className": "w100 bg-pastel-peach py4",
           },
           "ref": null,
           "rendered": Object {
@@ -5358,7 +5442,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="col-12 md-col-7 flex flex-column"
+                  className="col-12 md-col-7 flex flex-column mb4"
 >
                   <span
                                     className="bold big mb3"
@@ -5402,7 +5486,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "max-width-3 mx-auto flex flex-wrap",
+              "className": "max-width-3 mx-auto flex flex-wrap px3",
             },
             "ref": null,
             "rendered": Array [
@@ -5423,7 +5507,7 @@ ShallowWrapper {
                       Please fill out all fields.
 </span>,
                   ],
-                  "className": "col-12 md-col-7 flex flex-column",
+                  "className": "col-12 md-col-7 flex flex-column mb4",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -5599,7 +5683,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex flex-wrap max-width-4 mx-auto my4"
+          className="flex flex-wrap max-width-4 mx-auto my4 px2"
 >
           <div
                     className="w100 mb4"
@@ -5625,7 +5709,7 @@ ShallowWrapper {
                     </p>
                     <Dropdown
                               bgColor=""
-                              className="w100 text-container-width"
+                              className="w100 text-container-width z-sub-nav"
                               color="peach"
                               fixedWidth={false}
                               label=""
@@ -5652,6 +5736,8 @@ ShallowWrapper {
                     <TextField
                               address=""
                               className="w100 text-container-width"
+                              max={null}
+                              min={null}
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
@@ -5672,6 +5758,8 @@ ShallowWrapper {
                     <TextField
                               address=""
                               className="w100 text-container-width"
+                              max={null}
+                              min={null}
                               name=""
                               onBlur={[Function]}
                               onChange={[Function]}
@@ -5734,7 +5822,7 @@ ShallowWrapper {
                     />
                     <Dropdown
                               bgColor=""
-                              className="w100 text-container-width"
+                              className="w100 text-container-width z-sub-nav"
                               color="peach"
                               fixedWidth={false}
                               label=""
@@ -5817,13 +5905,13 @@ ShallowWrapper {
           </div>
 </div>,
         <div
-          className="w100 bg-tuft-bush py4"
+          className="w100 bg-pastel-peach py4"
 >
           <div
-                    className="max-width-3 mx-auto flex flex-wrap"
+                    className="max-width-3 mx-auto flex flex-wrap px3"
           >
                     <div
-                              className="col-12 md-col-7 flex flex-column"
+                              className="col-12 md-col-7 flex flex-column mb4"
                     >
                               <span
                                         className="bold big mb3"
@@ -5904,7 +5992,7 @@ ShallowWrapper {
               </p>
               <Dropdown
                             bgColor=""
-                            className="w100 text-container-width"
+                            className="w100 text-container-width z-sub-nav"
                             color="peach"
                             fixedWidth={false}
                             label=""
@@ -5931,6 +6019,8 @@ ShallowWrapper {
               <TextField
                             address=""
                             className="w100 text-container-width"
+                            max={null}
+                            min={null}
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -5951,6 +6041,8 @@ ShallowWrapper {
               <TextField
                             address=""
                             className="w100 text-container-width"
+                            max={null}
+                            min={null}
                             name=""
                             onBlur={[Function]}
                             onChange={[Function]}
@@ -6013,7 +6105,7 @@ ShallowWrapper {
               />
               <Dropdown
                             bgColor=""
-                            className="w100 text-container-width"
+                            className="w100 text-container-width z-sub-nav"
                             color="peach"
                             fixedWidth={false}
                             label=""
@@ -6095,7 +6187,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "flex flex-wrap max-width-4 mx-auto my4",
+          "className": "flex flex-wrap max-width-4 mx-auto my4 px2",
         },
         "ref": null,
         "rendered": Array [
@@ -6160,7 +6252,7 @@ ShallowWrapper {
 </p>,
                 <Dropdown
                   bgColor=""
-                  className="w100 text-container-width"
+                  className="w100 text-container-width z-sub-nav"
                   color="peach"
                   fixedWidth={false}
                   label=""
@@ -6198,7 +6290,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "bgColor": "",
-                  "className": "w100 text-container-width",
+                  "className": "w100 text-container-width z-sub-nav",
                   "color": "peach",
                   "fixedWidth": false,
                   "label": "",
@@ -6234,6 +6326,8 @@ ShallowWrapper {
                 <TextField
                   address=""
                   className="w100 text-container-width"
+                  max={null}
+                  min={null}
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -6266,6 +6360,8 @@ ShallowWrapper {
                 "props": Object {
                   "address": "",
                   "className": "w100 text-container-width",
+                  "max": null,
+                  "min": null,
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -6295,6 +6391,8 @@ ShallowWrapper {
                 <TextField
                   address=""
                   className="w100 text-container-width"
+                  max={null}
+                  min={null}
                   name=""
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -6327,6 +6425,8 @@ ShallowWrapper {
                 "props": Object {
                   "address": "",
                   "className": "w100 text-container-width",
+                  "max": null,
+                  "min": null,
                   "name": "",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -6462,7 +6562,7 @@ ShallowWrapper {
 />,
                 <Dropdown
                   bgColor=""
-                  className="w100 text-container-width"
+                  className="w100 text-container-width z-sub-nav"
                   color="peach"
                   fixedWidth={false}
                   label=""
@@ -6529,7 +6629,7 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "bgColor": "",
-                  "className": "w100 text-container-width",
+                  "className": "w100 text-container-width z-sub-nav",
                   "color": "peach",
                   "fixedWidth": false,
                   "label": "",
@@ -6760,10 +6860,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="max-width-3 mx-auto flex flex-wrap"
+            className="max-width-3 mx-auto flex flex-wrap px3"
 >
             <div
-                        className="col-12 md-col-7 flex flex-column"
+                        className="col-12 md-col-7 flex flex-column mb4"
             >
                         <span
                                     className="bold big mb3"
@@ -6807,7 +6907,7 @@ ShallowWrapper {
                         />
             </div>
 </div>,
-          "className": "w100 bg-tuft-bush py4",
+          "className": "w100 bg-pastel-peach py4",
         },
         "ref": null,
         "rendered": Object {
@@ -6817,7 +6917,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="col-12 md-col-7 flex flex-column"
+                className="col-12 md-col-7 flex flex-column mb4"
 >
                 <span
                                 className="bold big mb3"
@@ -6861,7 +6961,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "max-width-3 mx-auto flex flex-wrap",
+            "className": "max-width-3 mx-auto flex flex-wrap px3",
           },
           "ref": null,
           "rendered": Array [
@@ -6882,7 +6982,7 @@ ShallowWrapper {
                     Please fill out all fields.
 </span>,
                 ],
-                "className": "col-12 md-col-7 flex flex-column",
+                "className": "col-12 md-col-7 flex flex-column mb4",
               },
               "ref": null,
               "rendered": Array [
@@ -7024,7 +7124,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-wrap max-width-4 mx-auto my4"
+            className="flex flex-wrap max-width-4 mx-auto my4 px2"
 >
             <div
                         className="w100 mb4"
@@ -7050,7 +7150,7 @@ ShallowWrapper {
                         </p>
                         <Dropdown
                                     bgColor=""
-                                    className="w100 text-container-width"
+                                    className="w100 text-container-width z-sub-nav"
                                     color="peach"
                                     fixedWidth={false}
                                     label=""
@@ -7077,6 +7177,8 @@ ShallowWrapper {
                         <TextField
                                     address=""
                                     className="w100 text-container-width"
+                                    max={null}
+                                    min={null}
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
@@ -7097,6 +7199,8 @@ ShallowWrapper {
                         <TextField
                                     address=""
                                     className="w100 text-container-width"
+                                    max={null}
+                                    min={null}
                                     name=""
                                     onBlur={[Function]}
                                     onChange={[Function]}
@@ -7159,7 +7263,7 @@ ShallowWrapper {
                         />
                         <Dropdown
                                     bgColor=""
-                                    className="w100 text-container-width"
+                                    className="w100 text-container-width z-sub-nav"
                                     color="peach"
                                     fixedWidth={false}
                                     label=""
@@ -7242,13 +7346,13 @@ ShallowWrapper {
             </div>
 </div>,
           <div
-            className="w100 bg-tuft-bush py4"
+            className="w100 bg-pastel-peach py4"
 >
             <div
-                        className="max-width-3 mx-auto flex flex-wrap"
+                        className="max-width-3 mx-auto flex flex-wrap px3"
             >
                         <div
-                                    className="col-12 md-col-7 flex flex-column"
+                                    className="col-12 md-col-7 flex flex-column mb4"
                         >
                                     <span
                                                 className="bold big mb3"
@@ -7329,7 +7433,7 @@ ShallowWrapper {
                 </p>
                 <Dropdown
                                 bgColor=""
-                                className="w100 text-container-width"
+                                className="w100 text-container-width z-sub-nav"
                                 color="peach"
                                 fixedWidth={false}
                                 label=""
@@ -7356,6 +7460,8 @@ ShallowWrapper {
                 <TextField
                                 address=""
                                 className="w100 text-container-width"
+                                max={null}
+                                min={null}
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
@@ -7376,6 +7482,8 @@ ShallowWrapper {
                 <TextField
                                 address=""
                                 className="w100 text-container-width"
+                                max={null}
+                                min={null}
                                 name=""
                                 onBlur={[Function]}
                                 onChange={[Function]}
@@ -7438,7 +7546,7 @@ ShallowWrapper {
                 />
                 <Dropdown
                                 bgColor=""
-                                className="w100 text-container-width"
+                                className="w100 text-container-width z-sub-nav"
                                 color="peach"
                                 fixedWidth={false}
                                 label=""
@@ -7520,7 +7628,7 @@ ShallowWrapper {
                 </div>
 </div>,
             ],
-            "className": "flex flex-wrap max-width-4 mx-auto my4",
+            "className": "flex flex-wrap max-width-4 mx-auto my4 px2",
           },
           "ref": null,
           "rendered": Array [
@@ -7585,7 +7693,7 @@ ShallowWrapper {
 </p>,
                   <Dropdown
                     bgColor=""
-                    className="w100 text-container-width"
+                    className="w100 text-container-width z-sub-nav"
                     color="peach"
                     fixedWidth={false}
                     label=""
@@ -7623,7 +7731,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "bgColor": "",
-                    "className": "w100 text-container-width",
+                    "className": "w100 text-container-width z-sub-nav",
                     "color": "peach",
                     "fixedWidth": false,
                     "label": "",
@@ -7659,6 +7767,8 @@ ShallowWrapper {
                   <TextField
                     address=""
                     className="w100 text-container-width"
+                    max={null}
+                    min={null}
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -7691,6 +7801,8 @@ ShallowWrapper {
                   "props": Object {
                     "address": "",
                     "className": "w100 text-container-width",
+                    "max": null,
+                    "min": null,
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
@@ -7720,6 +7832,8 @@ ShallowWrapper {
                   <TextField
                     address=""
                     className="w100 text-container-width"
+                    max={null}
+                    min={null}
                     name=""
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -7752,6 +7866,8 @@ ShallowWrapper {
                   "props": Object {
                     "address": "",
                     "className": "w100 text-container-width",
+                    "max": null,
+                    "min": null,
                     "name": "",
                     "onBlur": [Function],
                     "onChange": [Function],
@@ -7887,7 +8003,7 @@ ShallowWrapper {
 />,
                   <Dropdown
                     bgColor=""
-                    className="w100 text-container-width"
+                    className="w100 text-container-width z-sub-nav"
                     color="peach"
                     fixedWidth={false}
                     label=""
@@ -7954,7 +8070,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "bgColor": "",
-                    "className": "w100 text-container-width",
+                    "className": "w100 text-container-width z-sub-nav",
                     "color": "peach",
                     "fixedWidth": false,
                     "label": "",
@@ -8185,10 +8301,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="max-width-3 mx-auto flex flex-wrap"
+              className="max-width-3 mx-auto flex flex-wrap px3"
 >
               <div
-                            className="col-12 md-col-7 flex flex-column"
+                            className="col-12 md-col-7 flex flex-column mb4"
               >
                             <span
                                           className="bold big mb3"
@@ -8232,7 +8348,7 @@ ShallowWrapper {
                             />
               </div>
 </div>,
-            "className": "w100 bg-tuft-bush py4",
+            "className": "w100 bg-pastel-peach py4",
           },
           "ref": null,
           "rendered": Object {
@@ -8242,7 +8358,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="col-12 md-col-7 flex flex-column"
+                  className="col-12 md-col-7 flex flex-column mb4"
 >
                   <span
                                     className="bold big mb3"
@@ -8286,7 +8402,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "max-width-3 mx-auto flex flex-wrap",
+              "className": "max-width-3 mx-auto flex flex-wrap px3",
             },
             "ref": null,
             "rendered": Array [
@@ -8307,7 +8423,7 @@ ShallowWrapper {
                       Please fill out all fields.
 </span>,
                   ],
-                  "className": "col-12 md-col-7 flex flex-column",
+                  "className": "col-12 md-col-7 flex flex-column mb4",
                 },
                 "ref": null,
                 "rendered": Array [
