@@ -44,7 +44,6 @@ export default createSelector(
       const text = get(fields, 'text', '');
       const cakes = get(fields, 'cakes', false);
       const cakesBucket = get(fields, 'cakeOrderingBucket', '');
-
       const hours = Object.keys(fields).reduce((accumulated, current) => {
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;

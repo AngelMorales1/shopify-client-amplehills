@@ -27,6 +27,7 @@ class LocationDetailHero extends Component {
       false
     );
     const partyIsAvailable = get(location, 'partyAvailable', false);
+    const cakeOrderAvailable = get(location, 'cakes', false);
 
     return (
       <div
@@ -160,7 +161,7 @@ class LocationDetailHero extends Component {
                 [styles[
                   'LocationDetailHero__button-container--with-one-button'
                 ]]:
-                  !event || !partyIsAvailable
+                  !event || !partyIsAvailable || !cakeOrderAvailable
               }
             )}
           >
@@ -202,23 +203,25 @@ class LocationDetailHero extends Component {
                 />
               </div>
             ) : null}
-            <div
-              className={cx(
-                styles['LocationDetailHero__button-container'],
-                'm1'
-              )}
-            >
-              <Button
+            {cakeOrderAvailable ? (
+              <div
                 className={cx(
-                  styles['LocationDetailHero__button'],
-                  'uppercase justify-center'
+                  styles['LocationDetailHero__button-container'],
+                  'm1'
                 )}
-                color="madison-blue"
-                variant="primary-small"
-                label="order a cake"
-                to="/contact"
-              />
-            </div>
+              >
+                <Button
+                  className={cx(
+                    styles['LocationDetailHero__button'],
+                    'uppercase justify-center'
+                  )}
+                  color="madison-blue"
+                  variant="primary-small"
+                  label="order a cake"
+                  to="/cake-request-form"
+                />
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
