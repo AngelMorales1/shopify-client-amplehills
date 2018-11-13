@@ -44,7 +44,7 @@ const HorizontalCarousel = ({
             )}
           />
         ) : null}
-        {buttonLabel ? (
+        {buttonLabel && buttonLink ? (
           <Button
             className="ml1"
             to={buttonLink}
