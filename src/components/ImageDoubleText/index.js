@@ -27,6 +27,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
   const text2 = get(fields, 'text2', '');
   const buttonLabel = get(fields, 'buttonLabel', '');
   const buttonLink = get(fields, 'buttonLink', '');
+  const drip = get(fields, 'drip', false);
 
   return (
     <div
@@ -35,7 +36,8 @@ const ImageDoubleText = ({ block, z, setRef }) => {
       className={cx(
         styles['ImageDoubleText'],
         styles[colorClass],
-        'drip drip-padding-on-children'
+        'drip-padding-on-children',
+        { drip: drip }
       )}
     >
       <div className="wh100 flex justify-center items-center overflow-hidden">
@@ -44,8 +46,13 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             styles['ImageDoubleText--container'],
             {
               [styles[
-                'ImageDoubleText--container--reverse'
-              ]]: reverseArrangementX
+                'ImageDoubleText--container--reverse-x'
+              ]]: reverseArrangementX,
+              [styles[
+                'ImageDoubleText--container--reverse-y'
+              ]]: reverseArrangementY,
+              [styles['ImageDoubleText--container--reverse-xy']]:
+                reverseArrangementY && reverseArrangementX
             },
             'w100 container-width flex items-center justify-between'
           )}
@@ -126,13 +133,20 @@ ImageDoubleText.propTypes = {
   z: PropTypes.number,
   block: PropTypes.shape({
     fields: PropTypes.shape({
-      backgroundColor: PropTypes.string,
-      text1: PropTypes.string,
-      text2: PropTypes.string,
-      title1: PropTypes.string,
-      title2: PropTypes.string,
       image: imageModel.propTypes,
-      reverseArrangementX: PropTypes.bool
+      backgroundColor: PropTypes.string,
+      reverseArrangementX: PropTypes.bool,
+      reverseArrangementY: PropTypes.bool,
+      smallTitle: PropTypes.string,
+      smallTitleColor: PropTypes.string,
+      title: PropTypes.string,
+      title1: PropTypes.string,
+      text1: PropTypes.string,
+      title2: PropTypes.string,
+      text2: PropTypes.string,
+      buttonLabel: PropTypes.string,
+      buttonLink: PropTypes.string,
+      drip: PropTypes.bool
     })
   }),
   setRef: PropTypes.func
@@ -142,13 +156,20 @@ ImageDoubleText.defaultProps = {
   z: 1,
   block: {
     fields: {
-      backgroundColor: 'light-yellow',
-      text1: '',
-      text2: '',
-      title1: '',
-      title2: '',
       image: imageModel.default,
-      reverseArrangementX: false
+      backgroundColor: 'white',
+      reverseArrangementX: false,
+      reverseArrangementY: false,
+      smallTitle: '',
+      smallTitleColor: 'madison-blue',
+      title: '',
+      title1: '',
+      text1: '',
+      title2: '',
+      text2: '',
+      buttonLabel: '',
+      buttonLink: '',
+      drip: false
     }
   },
   setRef: () => {}
