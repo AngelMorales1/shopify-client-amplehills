@@ -55,15 +55,16 @@
 
   &__card-container {
     flex-direction: column;
+    align-items: stretch;
 
     @media ($medium-up) {
       flex-direction: row;
+      align-items: center;
     }
   }
 
   &__card {
     border-radius: radius('xs');
-    width: 100%;
     height: spacing(25);
     padding: spacing(2);
 
