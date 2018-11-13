@@ -101,4 +101,9 @@ $CRF-close-bar-height: spacing(18);
     padding-top: calc(#{spacing(4)} + 0.0625rem);
     padding-bottom: calc(#{spacing(4)} - 0.0625rem);
   }
+
+  &__button {
+    padding-top: calc(#{spacing(4)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+  }
 }
