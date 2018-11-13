@@ -38,7 +38,8 @@ class PartyRequestForm extends Component {
     moreInfoModalIsOpen: false,
     participantsLimit: 55,
     participantsLimitText: '',
-    moreInfoOpenedPartyAddons: ''
+    moreInfoOpenedPartyAddons: '',
+    error: ''
   };
 
   componentDidMount() {
@@ -114,7 +115,7 @@ class PartyRequestForm extends Component {
       return true;
     }
 
-    this.setState({ error: false });
+    this.setState({ error: '' });
     return false;
   };
 
@@ -386,9 +387,17 @@ class PartyRequestForm extends Component {
             </Button>
           </div>
           <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">
+            <p className="bold big center">
               Of these time slots, which is your first choice?
             </p>
+            <span
+              className={cx('my2', {
+                'text-white': !!selectedLocation,
+                'text-peach': !selectedLocation
+              })}
+            >
+              You must first select a location
+            </span>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {this.state.timeSlots.map(timeSlot => {
                 const timeSlotsLength = this.state.timeSlots.length;
@@ -419,9 +428,17 @@ class PartyRequestForm extends Component {
             </div>
           </div>
           <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">
+            <p className="bold big center">
               Which kind of party is best for you?
             </p>
+            <span
+              className={cx('my2', {
+                'text-white': !!selectedLocation,
+                'text-peach': !selectedLocation
+              })}
+            >
+              You must first select a location
+            </span>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {this.state.partyTypes.map(partyType => {
                 const label = partyType.partyType;
@@ -469,6 +486,11 @@ class PartyRequestForm extends Component {
             <p className="bold big center mb2">
               How many participants are you expecting?
             </p>
+            {!selectedLocation ? (
+              <span className={cx('mb2 text-peach')}>
+                You must first select a location
+              </span>
+            ) : null}
             {participantsLimitText ? (
               <div
                 dangerouslySetInnerHTML={{
@@ -627,7 +649,7 @@ class PartyRequestForm extends Component {
                 }
               />
             ) : null}
-            {error === false && addLineItemsStatus === FULFILLED ? (
+            {error === '' && addLineItemsStatus === FULFILLED ? (
               <FormFlash
                 className="w100 mb2"
                 success={true}
