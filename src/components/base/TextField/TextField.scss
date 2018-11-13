@@ -53,8 +53,8 @@
       border: spacing(0.6) solid color('gray');
       font-size: $font-4;
       padding: spacing(5) spacing(6);
-      padding-top: calc(#{spacing(5)} + 0.1875rem);
-      padding-bottom: calc(#{spacing(5)} - 0.1875rem);
+      padding-top: calc(#{spacing(5)} + 0.125rem);
+      padding-bottom: calc(#{spacing(5)} - 0.125rem);
       text-align: center;
 
       &::placeholder {
