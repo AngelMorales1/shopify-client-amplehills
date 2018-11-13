@@ -110,6 +110,15 @@ strong {
   font-size: $font-7;
 }
 
+.small-title {
+  @extend .bold;
+  font-size: 0.8125rem;
+
+  @media ($medium-up) {
+    font-size: $font-4;
+  }
+}
+
 .sub-title {
   font-family: $font-carter;
   font-size: $font-6;

@@ -53,6 +53,14 @@
     @extend .bg-light-yellow-green;
   }
 
+  &__title {
+    font-size: $font-6;
+
+    @media ($medium-up) {
+      font-size: 3.5rem;
+    }
+  }
+
   &--container {
     flex-direction: column;
 
@@ -75,10 +83,10 @@
     }
 
     .ImageDoubleText--text-container {
-      margin: spacing(8);
+      padding: spacing(8);
 
       @media ($medium-up) {
-        margin: spacing(12);
+        padding: spacing(12);
       }
     }
   }
@@ -96,11 +104,11 @@
     }
 
     .ImageDoubleText--text-container {
-      margin: spacing(8);
+      padding: spacing(8);
 
       @media ($medium-up) {
         order: 1;
-        margin: spacing(12);
+        padding: spacing(12);
       }
     }
   }
