@@ -68,49 +68,48 @@ class PartyRequestForm extends Component {
       this.setState({ currentBreakpoint });
   };
 
-  formHasErrors = () => {
+  validateForm = () => {
     const {
       selectedLocation,
       selectedDate,
       selectedTimeSlot,
       selectedPartyType,
       selectedNumberOfGuests,
-      selectedCelebrating,
-      participantsLimit
+      selectedCelebrating
     } = this.state;
 
     if (!selectedLocation) {
-      const error = 'Please select the location.';
-      this.setState({ error });
-      return true;
+      return false;
     }
 
     if (!selectedDate) {
-      const error = 'Please select the date.';
-      this.setState({ error });
-      return true;
+      return false;
     }
 
     if (!selectedTimeSlot) {
-      const error = 'Please select the time slot.';
-      this.setState({ error });
-      return true;
+      return false;
     }
 
     if (!selectedPartyType) {
-      const error = 'Please select the party type.';
-      this.setState({ error });
-      return true;
+      return false;
     }
 
-    if (!selectedNumberOfGuests || selectedNumberOfGuests > participantsLimit) {
-      const error = `Please enter total number of expected guests under ${participantsLimit}.`;
-      this.setState({ error });
-      return true;
+    if (!selectedNumberOfGuests) {
+      return false;
     }
 
     if (!selectedCelebrating) {
-      const error = 'Please enter who or what we will be celebrating.';
+      return false;
+    }
+
+    return true;
+  };
+
+  formHasErrors = () => {
+    const { selectedNumberOfGuests, participantsLimit } = this.state;
+
+    if (selectedNumberOfGuests > participantsLimit) {
+      const error = `Please enter total number of expected guests under ${participantsLimit}.`;
       this.setState({ error });
       return true;
     }
@@ -263,6 +262,7 @@ class PartyRequestForm extends Component {
   };
 
   render() {
+    const formIsValid = this.validateForm();
     const { partyAddOns, partyDeposit, addLineItemsStatus } = this.props;
     const {
       selectedLocation,
@@ -718,6 +718,7 @@ class PartyRequestForm extends Component {
                 </p>
                 <div>
                   <Button
+                    disabled={!formIsValid}
                     onClick={() => this.handleMakeDeposit()}
                     color="madison-blue"
                     className="inline-flex"
