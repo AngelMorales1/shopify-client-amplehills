@@ -170,6 +170,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                null,
                 <h2
                   className="block-headline mb3"
 >
@@ -195,6 +196,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
+              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -377,6 +379,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  null,
                   <h2
                     className="block-headline mb3"
 >
@@ -402,6 +405,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                null,
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -518,6 +522,8 @@ ShallowWrapper {
               "isReverseArrangement": false,
               "linkedTextLabel": "",
               "linkedTextLink": "",
+              "smallTitle": "",
+              "smallTitleColor": "madison-blue",
               "text": "",
               "title": "",
             },
@@ -633,6 +639,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
+                null,
                 <h2
                   className="block-headline mb3"
 />,
@@ -655,6 +662,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
+              null,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -830,6 +838,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
+                  null,
                   <h2
                     className="block-headline mb3"
 />,
@@ -852,6 +861,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                null,
                 Object {
                   "instance": null,
                   "key": undefined,

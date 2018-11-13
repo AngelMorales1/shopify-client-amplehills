@@ -69,7 +69,7 @@ ShallowWrapper {
         className="wh100 flex justify-center items-center overflow-hidden"
 >
         <div
-                className="container-width flex items-center justify-between"
+                className="w100 container-width flex items-center justify-between"
         >
                 <div
                         className="circle square"
@@ -81,40 +81,13 @@ ShallowWrapper {
                         }
                 />
                 <div
-                        className="md-col-6"
+                        className="col-12 md-col-7 flex flex-column"
                 >
-                        <div
-                                className="mb3"
-                        >
-                                <h2
-                                        className="block-headline mb2"
-                                />
-                                <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                Object {
-                                                        "__html": "",
-                                                      }
-                                        }
-                                />
-                        </div>
-                        <div>
-                                <h2
-                                        className="block-headline mb2"
-                                />
-                                <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                Object {
-                                                        "__html": "",
-                                                      }
-                                        }
-                                />
-                        </div>
+                        
                 </div>
         </div>
 </div>,
-      "className": "drip drip-padding-on-children",
+      "className": "drip-padding-on-children",
       "style": Object {
         "zIndex": 0,
       },
@@ -126,7 +99,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="container-width flex items-center justify-between"
+          className="w100 container-width flex items-center justify-between"
 >
           <div
                     className="circle square"
@@ -138,36 +111,9 @@ ShallowWrapper {
                     }
           />
           <div
-                    className="md-col-6"
+                    className="col-12 md-col-7 flex flex-column"
           >
-                    <div
-                              className="mb3"
-                    >
-                              <h2
-                                        className="block-headline mb2"
-                              />
-                              <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                  Object {
-                                                            "__html": "",
-                                                          }
-                                        }
-                              />
-                    </div>
-                    <div>
-                              <h2
-                                        className="block-headline mb2"
-                              />
-                              <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                  Object {
-                                                            "__html": "",
-                                                          }
-                                        }
-                              />
-                    </div>
+                    
           </div>
 </div>,
         "className": "wh100 flex justify-center items-center overflow-hidden",
@@ -189,39 +135,12 @@ ShallowWrapper {
               }
 />,
             <div
-              className="md-col-6"
+              className="col-12 md-col-7 flex flex-column"
 >
-              <div
-                            className="mb3"
-              >
-                            <h2
-                                          className="block-headline mb2"
-                            />
-                            <div
-                                          className="markdown-block"
-                                          dangerouslySetInnerHTML={
-                                                        Object {
-                                                                      "__html": "",
-                                                                    }
-                                          }
-                            />
-              </div>
-              <div>
-                            <h2
-                                          className="block-headline mb2"
-                            />
-                            <div
-                                          className="markdown-block"
-                                          dangerouslySetInnerHTML={
-                                                        Object {
-                                                                      "__html": "",
-                                                                    }
-                                          }
-                            />
-              </div>
+              
 </div>,
           ],
-          "className": "container-width flex items-center justify-between",
+          "className": "w100 container-width flex items-center justify-between",
         },
         "ref": null,
         "rendered": Array [
@@ -246,140 +165,21 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div
-                  className="mb3"
->
-                  <h2
-                                    className="block-headline mb2"
-                  />
-                  <div
-                                    className="markdown-block"
-                                    dangerouslySetInnerHTML={
-                                                      Object {
-                                                                        "__html": "",
-                                                                      }
-                                    }
-                  />
-</div>,
-                <div>
-                  <h2
-                                    className="block-headline mb2"
-                  />
-                  <div
-                                    className="markdown-block"
-                                    dangerouslySetInnerHTML={
-                                                      Object {
-                                                                        "__html": "",
-                                                                      }
-                                    }
-                  />
-</div>,
+                null,
+                null,
+                null,
+                null,
+                null,
               ],
-              "className": "md-col-6",
+              "className": "col-12 md-col-7 flex flex-column",
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <h2
-                      className="block-headline mb2"
-/>,
-                    <div
-                      className="markdown-block"
-                      dangerouslySetInnerHTML={
-                                            Object {
-                                                                  "__html": "",
-                                                                }
-                      }
-/>,
-                  ],
-                  "className": "mb3",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "",
-                      "className": "block-headline mb2",
-                    },
-                    "ref": null,
-                    "rendered": "",
-                    "type": "h2",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "markdown-block",
-                      "dangerouslySetInnerHTML": Object {
-                        "__html": "",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <h2
-                      className="block-headline mb2"
-/>,
-                    <div
-                      className="markdown-block"
-                      dangerouslySetInnerHTML={
-                                            Object {
-                                                                  "__html": "",
-                                                                }
-                      }
-/>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "",
-                      "className": "block-headline mb2",
-                    },
-                    "ref": null,
-                    "rendered": "",
-                    "type": "h2",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "markdown-block",
-                      "dangerouslySetInnerHTML": Object {
-                        "__html": "",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
+              null,
+              null,
+              null,
+              null,
+              null,
             ],
             "type": "div",
           },
@@ -400,7 +200,7 @@ ShallowWrapper {
           className="wh100 flex justify-center items-center overflow-hidden"
 >
           <div
-                    className="container-width flex items-center justify-between"
+                    className="w100 container-width flex items-center justify-between"
           >
                     <div
                               className="circle square"
@@ -412,40 +212,13 @@ ShallowWrapper {
                               }
                     />
                     <div
-                              className="md-col-6"
+                              className="col-12 md-col-7 flex flex-column"
                     >
-                              <div
-                                        className="mb3"
-                              >
-                                        <h2
-                                                  className="block-headline mb2"
-                                        />
-                                        <div
-                                                  className="markdown-block"
-                                                  dangerouslySetInnerHTML={
-                                                            Object {
-                                                                      "__html": "",
-                                                                    }
-                                                  }
-                                        />
-                              </div>
-                              <div>
-                                        <h2
-                                                  className="block-headline mb2"
-                                        />
-                                        <div
-                                                  className="markdown-block"
-                                                  dangerouslySetInnerHTML={
-                                                            Object {
-                                                                      "__html": "",
-                                                                    }
-                                                  }
-                                        />
-                              </div>
+                              
                     </div>
           </div>
 </div>,
-        "className": "drip drip-padding-on-children",
+        "className": "drip-padding-on-children",
         "style": Object {
           "zIndex": 0,
         },
@@ -457,7 +230,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="container-width flex items-center justify-between"
+            className="w100 container-width flex items-center justify-between"
 >
             <div
                         className="circle square"
@@ -469,36 +242,9 @@ ShallowWrapper {
                         }
             />
             <div
-                        className="md-col-6"
+                        className="col-12 md-col-7 flex flex-column"
             >
-                        <div
-                                    className="mb3"
-                        >
-                                    <h2
-                                                className="block-headline mb2"
-                                    />
-                                    <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                            Object {
-                                                                        "__html": "",
-                                                                      }
-                                                }
-                                    />
-                        </div>
-                        <div>
-                                    <h2
-                                                className="block-headline mb2"
-                                    />
-                                    <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                            Object {
-                                                                        "__html": "",
-                                                                      }
-                                                }
-                                    />
-                        </div>
+                        
             </div>
 </div>,
           "className": "wh100 flex justify-center items-center overflow-hidden",
@@ -520,39 +266,12 @@ ShallowWrapper {
                 }
 />,
               <div
-                className="md-col-6"
+                className="col-12 md-col-7 flex flex-column"
 >
-                <div
-                                className="mb3"
-                >
-                                <h2
-                                                className="block-headline mb2"
-                                />
-                                <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                                Object {
-                                                                                "__html": "",
-                                                                              }
-                                                }
-                                />
-                </div>
-                <div>
-                                <h2
-                                                className="block-headline mb2"
-                                />
-                                <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                                Object {
-                                                                                "__html": "",
-                                                                              }
-                                                }
-                                />
-                </div>
+                
 </div>,
             ],
-            "className": "container-width flex items-center justify-between",
+            "className": "w100 container-width flex items-center justify-between",
           },
           "ref": null,
           "rendered": Array [
@@ -577,140 +296,21 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div
-                    className="mb3"
->
-                    <h2
-                                        className="block-headline mb2"
-                    />
-                    <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                            Object {
-                                                                                "__html": "",
-                                                                              }
-                                        }
-                    />
-</div>,
-                  <div>
-                    <h2
-                                        className="block-headline mb2"
-                    />
-                    <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                            Object {
-                                                                                "__html": "",
-                                                                              }
-                                        }
-                    />
-</div>,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
                 ],
-                "className": "md-col-6",
+                "className": "col-12 md-col-7 flex flex-column",
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h2
-                        className="block-headline mb2"
-/>,
-                      <div
-                        className="markdown-block"
-                        dangerouslySetInnerHTML={
-                                                Object {
-                                                                        "__html": "",
-                                                                      }
-                        }
-/>,
-                    ],
-                    "className": "mb3",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "",
-                        "className": "block-headline mb2",
-                      },
-                      "ref": null,
-                      "rendered": "",
-                      "type": "h2",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "markdown-block",
-                        "dangerouslySetInnerHTML": Object {
-                          "__html": "",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h2
-                        className="block-headline mb2"
-/>,
-                      <div
-                        className="markdown-block"
-                        dangerouslySetInnerHTML={
-                                                Object {
-                                                                        "__html": "",
-                                                                      }
-                        }
-/>,
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "",
-                        "className": "block-headline mb2",
-                      },
-                      "ref": null,
-                      "rendered": "",
-                      "type": "h2",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "markdown-block",
-                        "dangerouslySetInnerHTML": Object {
-                          "__html": "",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
+                null,
+                null,
+                null,
+                null,
+                null,
               ],
               "type": "div",
             },
@@ -740,7 +340,10 @@ ShallowWrapper {
     block={
         Object {
             "fields": Object {
-              "backgroundColor": "light-yellow",
+              "backgroundColor": "white",
+              "buttonLabel": "",
+              "buttonLink": "",
+              "drip": false,
               "image": Object {
                 "fields": Object {
                   "file": Object {
@@ -752,9 +355,13 @@ ShallowWrapper {
                   "id": "",
                 },
               },
-              "isReverseArrangement": false,
+              "reverseArrangementX": false,
+              "reverseArrangementY": false,
+              "smallTitle": "",
+              "smallTitleColor": "madison-blue",
               "text1": "",
               "text2": "",
+              "title": "",
               "title1": "",
               "title2": "",
             },
@@ -779,7 +386,7 @@ ShallowWrapper {
         className="wh100 flex justify-center items-center overflow-hidden"
 >
         <div
-                className="container-width flex items-center justify-between"
+                className="w100 container-width flex items-center justify-between"
         >
                 <div
                         className="circle square"
@@ -791,40 +398,13 @@ ShallowWrapper {
                         }
                 />
                 <div
-                        className="md-col-6"
+                        className="col-12 md-col-7 flex flex-column"
                 >
-                        <div
-                                className="mb3"
-                        >
-                                <h2
-                                        className="block-headline mb2"
-                                />
-                                <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                Object {
-                                                        "__html": "",
-                                                      }
-                                        }
-                                />
-                        </div>
-                        <div>
-                                <h2
-                                        className="block-headline mb2"
-                                />
-                                <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                Object {
-                                                        "__html": "",
-                                                      }
-                                        }
-                                />
-                        </div>
+                        
                 </div>
         </div>
 </div>,
-      "className": "drip drip-padding-on-children",
+      "className": "drip-padding-on-children",
       "style": Object {
         "zIndex": 1,
       },
@@ -836,7 +416,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="container-width flex items-center justify-between"
+          className="w100 container-width flex items-center justify-between"
 >
           <div
                     className="circle square"
@@ -848,36 +428,9 @@ ShallowWrapper {
                     }
           />
           <div
-                    className="md-col-6"
+                    className="col-12 md-col-7 flex flex-column"
           >
-                    <div
-                              className="mb3"
-                    >
-                              <h2
-                                        className="block-headline mb2"
-                              />
-                              <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                  Object {
-                                                            "__html": "",
-                                                          }
-                                        }
-                              />
-                    </div>
-                    <div>
-                              <h2
-                                        className="block-headline mb2"
-                              />
-                              <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                  Object {
-                                                            "__html": "",
-                                                          }
-                                        }
-                              />
-                    </div>
+                    
           </div>
 </div>,
         "className": "wh100 flex justify-center items-center overflow-hidden",
@@ -899,39 +452,12 @@ ShallowWrapper {
               }
 />,
             <div
-              className="md-col-6"
+              className="col-12 md-col-7 flex flex-column"
 >
-              <div
-                            className="mb3"
-              >
-                            <h2
-                                          className="block-headline mb2"
-                            />
-                            <div
-                                          className="markdown-block"
-                                          dangerouslySetInnerHTML={
-                                                        Object {
-                                                                      "__html": "",
-                                                                    }
-                                          }
-                            />
-              </div>
-              <div>
-                            <h2
-                                          className="block-headline mb2"
-                            />
-                            <div
-                                          className="markdown-block"
-                                          dangerouslySetInnerHTML={
-                                                        Object {
-                                                                      "__html": "",
-                                                                    }
-                                          }
-                            />
-              </div>
+              
 </div>,
           ],
-          "className": "container-width flex items-center justify-between",
+          "className": "w100 container-width flex items-center justify-between",
         },
         "ref": null,
         "rendered": Array [
@@ -956,140 +482,21 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div
-                  className="mb3"
->
-                  <h2
-                                    className="block-headline mb2"
-                  />
-                  <div
-                                    className="markdown-block"
-                                    dangerouslySetInnerHTML={
-                                                      Object {
-                                                                        "__html": "",
-                                                                      }
-                                    }
-                  />
-</div>,
-                <div>
-                  <h2
-                                    className="block-headline mb2"
-                  />
-                  <div
-                                    className="markdown-block"
-                                    dangerouslySetInnerHTML={
-                                                      Object {
-                                                                        "__html": "",
-                                                                      }
-                                    }
-                  />
-</div>,
+                null,
+                null,
+                null,
+                null,
+                null,
               ],
-              "className": "md-col-6",
+              "className": "col-12 md-col-7 flex flex-column",
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <h2
-                      className="block-headline mb2"
-/>,
-                    <div
-                      className="markdown-block"
-                      dangerouslySetInnerHTML={
-                                            Object {
-                                                                  "__html": "",
-                                                                }
-                      }
-/>,
-                  ],
-                  "className": "mb3",
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "",
-                      "className": "block-headline mb2",
-                    },
-                    "ref": null,
-                    "rendered": "",
-                    "type": "h2",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "markdown-block",
-                      "dangerouslySetInnerHTML": Object {
-                        "__html": "",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": Array [
-                    <h2
-                      className="block-headline mb2"
-/>,
-                    <div
-                      className="markdown-block"
-                      dangerouslySetInnerHTML={
-                                            Object {
-                                                                  "__html": "",
-                                                                }
-                      }
-/>,
-                  ],
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "",
-                      "className": "block-headline mb2",
-                    },
-                    "ref": null,
-                    "rendered": "",
-                    "type": "h2",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "markdown-block",
-                      "dangerouslySetInnerHTML": Object {
-                        "__html": "",
-                      },
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                ],
-                "type": "div",
-              },
+              null,
+              null,
+              null,
+              null,
+              null,
             ],
             "type": "div",
           },
@@ -1110,7 +517,7 @@ ShallowWrapper {
           className="wh100 flex justify-center items-center overflow-hidden"
 >
           <div
-                    className="container-width flex items-center justify-between"
+                    className="w100 container-width flex items-center justify-between"
           >
                     <div
                               className="circle square"
@@ -1122,40 +529,13 @@ ShallowWrapper {
                               }
                     />
                     <div
-                              className="md-col-6"
+                              className="col-12 md-col-7 flex flex-column"
                     >
-                              <div
-                                        className="mb3"
-                              >
-                                        <h2
-                                                  className="block-headline mb2"
-                                        />
-                                        <div
-                                                  className="markdown-block"
-                                                  dangerouslySetInnerHTML={
-                                                            Object {
-                                                                      "__html": "",
-                                                                    }
-                                                  }
-                                        />
-                              </div>
-                              <div>
-                                        <h2
-                                                  className="block-headline mb2"
-                                        />
-                                        <div
-                                                  className="markdown-block"
-                                                  dangerouslySetInnerHTML={
-                                                            Object {
-                                                                      "__html": "",
-                                                                    }
-                                                  }
-                                        />
-                              </div>
+                              
                     </div>
           </div>
 </div>,
-        "className": "drip drip-padding-on-children",
+        "className": "drip-padding-on-children",
         "style": Object {
           "zIndex": 1,
         },
@@ -1167,7 +547,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="container-width flex items-center justify-between"
+            className="w100 container-width flex items-center justify-between"
 >
             <div
                         className="circle square"
@@ -1179,36 +559,9 @@ ShallowWrapper {
                         }
             />
             <div
-                        className="md-col-6"
+                        className="col-12 md-col-7 flex flex-column"
             >
-                        <div
-                                    className="mb3"
-                        >
-                                    <h2
-                                                className="block-headline mb2"
-                                    />
-                                    <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                            Object {
-                                                                        "__html": "",
-                                                                      }
-                                                }
-                                    />
-                        </div>
-                        <div>
-                                    <h2
-                                                className="block-headline mb2"
-                                    />
-                                    <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                            Object {
-                                                                        "__html": "",
-                                                                      }
-                                                }
-                                    />
-                        </div>
+                        
             </div>
 </div>,
           "className": "wh100 flex justify-center items-center overflow-hidden",
@@ -1230,39 +583,12 @@ ShallowWrapper {
                 }
 />,
               <div
-                className="md-col-6"
+                className="col-12 md-col-7 flex flex-column"
 >
-                <div
-                                className="mb3"
-                >
-                                <h2
-                                                className="block-headline mb2"
-                                />
-                                <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                                Object {
-                                                                                "__html": "",
-                                                                              }
-                                                }
-                                />
-                </div>
-                <div>
-                                <h2
-                                                className="block-headline mb2"
-                                />
-                                <div
-                                                className="markdown-block"
-                                                dangerouslySetInnerHTML={
-                                                                Object {
-                                                                                "__html": "",
-                                                                              }
-                                                }
-                                />
-                </div>
+                
 </div>,
             ],
-            "className": "container-width flex items-center justify-between",
+            "className": "w100 container-width flex items-center justify-between",
           },
           "ref": null,
           "rendered": Array [
@@ -1287,140 +613,21 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div
-                    className="mb3"
->
-                    <h2
-                                        className="block-headline mb2"
-                    />
-                    <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                            Object {
-                                                                                "__html": "",
-                                                                              }
-                                        }
-                    />
-</div>,
-                  <div>
-                    <h2
-                                        className="block-headline mb2"
-                    />
-                    <div
-                                        className="markdown-block"
-                                        dangerouslySetInnerHTML={
-                                                            Object {
-                                                                                "__html": "",
-                                                                              }
-                                        }
-                    />
-</div>,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
                 ],
-                "className": "md-col-6",
+                "className": "col-12 md-col-7 flex flex-column",
               },
               "ref": null,
               "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h2
-                        className="block-headline mb2"
-/>,
-                      <div
-                        className="markdown-block"
-                        dangerouslySetInnerHTML={
-                                                Object {
-                                                                        "__html": "",
-                                                                      }
-                        }
-/>,
-                    ],
-                    "className": "mb3",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "",
-                        "className": "block-headline mb2",
-                      },
-                      "ref": null,
-                      "rendered": "",
-                      "type": "h2",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "markdown-block",
-                        "dangerouslySetInnerHTML": Object {
-                          "__html": "",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h2
-                        className="block-headline mb2"
-/>,
-                      <div
-                        className="markdown-block"
-                        dangerouslySetInnerHTML={
-                                                Object {
-                                                                        "__html": "",
-                                                                      }
-                        }
-/>,
-                    ],
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "",
-                        "className": "block-headline mb2",
-                      },
-                      "ref": null,
-                      "rendered": "",
-                      "type": "h2",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "className": "markdown-block",
-                        "dangerouslySetInnerHTML": Object {
-                          "__html": "",
-                        },
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "div",
-                    },
-                  ],
-                  "type": "div",
-                },
+                null,
+                null,
+                null,
+                null,
+                null,
               ],
               "type": "div",
             },
