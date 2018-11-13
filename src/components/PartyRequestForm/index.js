@@ -56,7 +56,7 @@ class PartyRequestForm extends Component {
       prevProps.addLineItemsStatus === PENDING &&
       this.props.addLineItemsStatus === FULFILLED
     ) {
-      this.setState({ error: false });
+      this.setState({ error: '' });
     }
   }
 
@@ -280,6 +280,7 @@ class PartyRequestForm extends Component {
       participantsLimit,
       participantsLimitText
     } = this.state;
+
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
     const ageGroups = [
@@ -391,8 +392,7 @@ class PartyRequestForm extends Component {
               Of these time slots, which is your first choice?
             </p>
             <span
-              className={cx('my2', {
-                'text-white': !!selectedLocation,
+              className={cx('my2 text-white', {
                 'text-peach': !selectedLocation
               })}
             >
@@ -432,8 +432,7 @@ class PartyRequestForm extends Component {
               Which kind of party is best for you?
             </p>
             <span
-              className={cx('my2', {
-                'text-white': !!selectedLocation,
+              className={cx('my2 text-white', {
                 'text-peach': !selectedLocation
               })}
             >
@@ -638,7 +637,7 @@ class PartyRequestForm extends Component {
             />
           </div>
           <div className="w100 text-container-width">
-            {error ? (
+            {error.length ? (
               <FormFlash
                 className="w100 mb2"
                 error={true}
@@ -649,7 +648,7 @@ class PartyRequestForm extends Component {
                 }
               />
             ) : null}
-            {error === '' && addLineItemsStatus === FULFILLED ? (
+            {!error.length && addLineItemsStatus === FULFILLED ? (
               <FormFlash
                 className="w100 mb2"
                 success={true}
