@@ -81,7 +81,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
                 {smallTitle}
               </p>
             ) : null}
-            {title ? (
+            {title && !title1 && !text1 && !title2 && !text2 ? (
               <h2
                 className={cx(styles['ImageDoubleText__title'], 'carter my2')}
               >
