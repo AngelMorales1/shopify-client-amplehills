@@ -24,7 +24,7 @@ import InStoresContainer from 'containers/InStoresContainer';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
-    <Route exact path="/" component={HomeContainer} />
+    <Route exact path="/" component={GenericPageContainer} />
     <Route
       exact
       path="/products/:productHandle"
@@ -84,7 +84,11 @@ const Routes = ({ location }) => (
       path="/party-request-form"
       component={PartyRequestFormContainer}
     />
-    <Route exact path="/cake-request-form" component={CakeRequestFormContainer} />
+    <Route
+      exact
+      path="/cake-request-form"
+      component={CakeRequestFormContainer}
+    />
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
