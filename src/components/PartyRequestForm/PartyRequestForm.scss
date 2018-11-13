@@ -8,6 +8,8 @@
     border-radius: radius('xs');
     border: spacing(0.6) solid color('gray');
     padding: spacing(5) spacing(6);
+    padding-top: calc(#{spacing(5)} + 0.25rem);
+    padding-bottom: calc(#{spacing(5)} - 0.25rem);
 
     > div {
       width: 100%;
