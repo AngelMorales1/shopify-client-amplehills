@@ -4,7 +4,7 @@ import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
 import { Button } from 'components/base';
 
-const PartyRequestFormModal = ({ children, onCloseClick }) => {
+const PartyRequestFormModal = ({ children, onCloseClick, title }) => {
   return (
     <div
       className={cx(
@@ -23,7 +23,7 @@ const PartyRequestFormModal = ({ children, onCloseClick }) => {
               'absolute t0 l0 w100 p3 overflow-scroll'
             )}
           >
-            <h3 className="callout mb3">More Info</h3>
+            <h3 className="callout mb3">{title}</h3>
             {children}
           </div>
           <div

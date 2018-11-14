@@ -612,8 +612,14 @@ class PartyRequestForm extends Component {
                           onCloseClick={() =>
                             this.setState({ moreInfoOpenedPartyAddons: '' })
                           }
+                          title={partyAddOn.title}
                         >
-                          <p className="m3 block-subheadline">
+                          <p
+                            className={cx(
+                              styles['PartyRequestForm__modal__text'],
+                              'mb1'
+                            )}
+                          >
                             {partyAddOn.moreInfoText}
                           </p>
                         </PartyRequestFormModal>
@@ -755,6 +761,7 @@ class PartyRequestForm extends Component {
         </div>
         {this.state.moreInfoModalIsOpen ? (
           <PartyRequestFormModal
+            title="More Info"
             onCloseClick={() => this.setState({ moreInfoModalIsOpen: false })}
           >
             {Object.values(locations).map(location => {
