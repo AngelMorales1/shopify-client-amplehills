@@ -54,20 +54,35 @@ const BlockSwitch = props => {
       const fields = get(block, 'fields', {});
       const contentType = get(fields, 'contentType', '');
       const drip = get(fields, 'drip', false);
+      const upperDrip = get(fields, 'upperDrip', false);
 
       switch (contentType) {
         case "What's Included Block":
-          return <ProductWhatsIncluded {...props} drip={drip} />;
+          return (
+            <ProductWhatsIncluded
+              {...props}
+              drip={drip}
+              upperDrip={upperDrip}
+            />
+          );
         case 'Available Locations Block':
-          return <AvailableLocations {...props} drip={drip} />;
+          return (
+            <AvailableLocations {...props} drip={drip} upperDrip={upperDrip} />
+          );
         case 'Press Block':
-          return <PressBlock {...props} drip={drip} />;
+          return <PressBlock {...props} drip={drip} upperDrip={upperDrip} />;
         case 'Available Flavors Block':
-          return <AvailableFlavors {...props} drip={drip} />;
+          return (
+            <AvailableFlavors {...props} drip={drip} upperDrip={upperDrip} />
+          );
         case 'Flavors Block':
-          return <FlavorsLanding {...props} drip={drip} />;
+          return (
+            <FlavorsLanding {...props} drip={drip} upperDrip={upperDrip} />
+          );
         case 'Multiple Image Text Block':
-          return <MultipleImageText {...props} drip={drip} />;
+          return (
+            <MultipleImageText {...props} drip={drip} upperDrip={upperDrip} />
+          );
         default:
           return null;
       }

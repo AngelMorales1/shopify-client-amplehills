@@ -18,6 +18,7 @@ const ProductWhatsIncluded = ({
     whatsIncludedProducts
   },
   drip,
+  upperDrip,
   setRef,
   wholesaleProducts
 }) => {
@@ -39,7 +40,7 @@ const ProductWhatsIncluded = ({
         styles['ProductWhatsIncluded'],
         styles[colorClass],
         'flex justify-between relative',
-        { drip: whatsIncludedDrip || drip }
+        { drip: whatsIncludedDrip || drip, 'upper-drip': upperDrip }
       )}
       style={{ zIndex: z }}
     >
