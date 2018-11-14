@@ -442,12 +442,12 @@ class CakeRequestForm extends Component {
                 <div
                   className={cx(
                     styles['CakeRequestForm__modal__close-bar'],
-                    'absolute b0 l0 w100 p1 bg-white'
+                    'absolute b0 l0 w100 p1 bg-white flex flex-row justify-end items-center'
                   )}
                 >
                   <Button
-                    className={cx('right')}
                     color="madison-blue"
+                    variant="primary-small"
                     label="Close"
                     onClick={this.closeFlavorModal}
                   />
