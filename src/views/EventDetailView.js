@@ -15,14 +15,19 @@ class EventDetailView extends Component {
       <div className="EventDetailView">
         <EventDetailHero event={event} {...this.props} />
         {blocks &&
-          blocks.map((block, i) => (
-            <BlockSwitch
-              key={get(block, 'sys.id', i)}
-              block={block}
-              z={blocks.length - i}
-              {...this.props}
-            />
-          ))}
+          blocks.map((block, i) => {
+            const isUpperDripOn = get(block, 'fields.upperDrip', false);
+            const additionalZIndex = isUpperDripOn ? 1 : 0;
+
+            return (
+              <BlockSwitch
+                key={get(block, 'sys.id', i)}
+                block={block}
+                z={blocks.length - i + additionalZIndex}
+                {...this.props}
+              />
+            );
+          })}
       </div>
     );
   }

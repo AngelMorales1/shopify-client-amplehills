@@ -104,6 +104,46 @@ Dimension classes
   }
 }
 
+.upper-drip {
+  position: relative;
+
+  &::after {
+    background: inherit;
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  &:nth-child(3n + 0) {
+    &::after {
+      mask: url('/assets/images/polygon.svg') repeat-x;
+      transform: scale(-1);
+      top: -61px;
+      height: 62px;
+    }
+  }
+
+  &:nth-child(3n + 1) {
+    &::after {
+      mask: url('/assets/images/polygon-1.svg') repeat-x;
+      transform: scale(-1);
+      top: -104px;
+      height: 105px;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    &::after {
+      mask: url('/assets/images/polygon-2.svg') repeat-x;
+      transform: scale(-1);
+      top: -104px;
+      height: 105px;
+    }
+  }
+}
+
 /*
 Drop shadows
 */

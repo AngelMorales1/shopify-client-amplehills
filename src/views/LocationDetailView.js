@@ -41,7 +41,9 @@ class LocationDetailView extends Component {
           {blocks &&
             blocks.map((block, i) => {
               const title = get(block, 'fields.title', '');
-              const blockZIndex = blocksLength - i;
+              const isUpperDripOn = get(block, 'fields.upperDrip', false);
+              const additionalZIndex = isUpperDripOn ? 1 : 0;
+              const blockZIndex = blocksLength - i + additionalZIndex;
 
               return (
                 <BlockSwitch
