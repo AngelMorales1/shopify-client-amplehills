@@ -28,11 +28,16 @@ class ProductDetails extends Component {
     const fields = get(block, 'fields', {});
     const details = get(fields, 'productDetails', []);
     const colorClass = `ProductDetails--${get(fields, 'color', 'white')}`;
+    const isDripOn = get(fields, 'drip', false);
+    const isUpperDripOn = get(fields, 'upperDrip', false);
 
     return (
       <div
         ref={refBlock => setRef(refBlock)}
-        className={cx(styles['ProductDetails'], styles[colorClass], 'p2 drip')}
+        className={cx(styles['ProductDetails'], styles[colorClass], 'p2', {
+          drip: isDripOn,
+          'upper-drip': isUpperDripOn
+        })}
         style={{ zIndex: z }}
       >
         <div className="flex justify-center flex-wrap center mb3">
