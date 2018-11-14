@@ -107,7 +107,7 @@ Dimension classes
 .upper-drip {
   position: relative;
 
-  &::after {
+  &::before {
     background: inherit;
     content: ' ';
     display: block;
@@ -117,7 +117,7 @@ Dimension classes
   }
 
   &:nth-child(3n + 0) {
-    &::after {
+    &::before {
       mask: url('/assets/images/polygon.svg') repeat-x;
       transform: scale(-1);
       top: -61px;
@@ -126,7 +126,7 @@ Dimension classes
   }
 
   &:nth-child(3n + 1) {
-    &::after {
+    &::before {
       mask: url('/assets/images/polygon-1.svg') repeat-x;
       transform: scale(-1);
       top: -104px;
@@ -135,7 +135,7 @@ Dimension classes
   }
 
   &:nth-child(3n + 2) {
-    &::after {
+    &::before {
       mask: url('/assets/images/polygon-2.svg') repeat-x;
       transform: scale(-1);
       top: -104px;
