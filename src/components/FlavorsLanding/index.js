@@ -42,7 +42,7 @@ class FlavorLanding extends Component {
   };
 
   render() {
-    const { setRef, drip, z } = this.props;
+    const { setRef, drip, upperDrip, z } = this.props;
     const flavors = get(this, 'props.flavors', {});
     const filteredFlavor = get(flavors, 'flavors', []).filter(flavor => {
       if (
@@ -76,7 +76,10 @@ class FlavorLanding extends Component {
 
     return (
       <div
-        className={cx('bg-light-turquoise py4 px3', { drip: drip })}
+        className={cx('bg-light-turquoise py4 px3', {
+          drip: drip,
+          'upper-drip': upperDrip
+        })}
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
       >
