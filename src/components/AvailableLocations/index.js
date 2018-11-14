@@ -6,12 +6,11 @@ import { Button } from 'components/base';
 
 import styles from './AvailableLocations.scss';
 
-const AvailableLocations = ({ flavor, block, z, setRef }) => {
+const AvailableLocations = ({ flavor, block, z, setRef, drip, upperDrip }) => {
   const availableLocations = get(flavor, 'availableLocations', []);
   const fields = get(block, 'fields', {});
   const blockTitle = get(fields, 'title', '');
   const backgroundColor = get(fields, 'backgroundColor', 'white');
-  const drip = get(fields, 'drip', false);
 
   return (
     <div
@@ -21,7 +20,8 @@ const AvailableLocations = ({ flavor, block, z, setRef }) => {
         styles['AvailableLocations'],
         styles[`AvailableLocations--${backgroundColor}`],
         {
-          drip: drip
+          drip: drip,
+          'upper-drip': upperDrip
         }
       )}
     >
