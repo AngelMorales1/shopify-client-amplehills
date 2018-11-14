@@ -442,7 +442,7 @@ class CakeRequestForm extends Component {
                 <div
                   className={cx(
                     styles['CakeRequestForm__modal__close-bar'],
-                    'absolute b0 l0 w100 p1 bg-white flex flex-row justify-end items-center'
+                    'absolute b0 l0 w100 p2 bg-white flex flex-row justify-end items-center'
                   )}
                 >
                   <Button
