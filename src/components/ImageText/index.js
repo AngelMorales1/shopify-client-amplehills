@@ -175,7 +175,8 @@ const ImageText = ({ block, z, setRef }) => {
           style={{
             background: `url(${contentfulImgUtil(
               get(fields, 'image.fields.file.url', ''),
-              '1600'
+              '1600',
+              'png'
             )}) no-repeat center`,
             backgroundSize: 'cover'
           }}
