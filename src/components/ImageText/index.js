@@ -31,6 +31,8 @@ const ImageText = ({ block, z, setRef }) => {
   const smallTitle = get(fields, 'smallTitle', '');
   const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
+  const imageUrl = get(fields, 'image.fields.file.url', '');
+  const imageFileExtension = imageUrl.split('.').pop();
 
   const getButtonColor = colorName => {
     switch (colorName) {
@@ -163,11 +165,7 @@ const ImageText = ({ block, z, setRef }) => {
               transform: `translate(${positionX}%, ${positionY}%)`
             }}
             alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
-              '1400',
-              'png'
-            )}
+            src={contentfulImgUtil(imageUrl, '1400', imageFileExtension)}
           />
         ) : null}
       </div>
@@ -176,9 +174,9 @@ const ImageText = ({ block, z, setRef }) => {
           className="w100 square col-12 md-col-6"
           style={{
             background: `url(${contentfulImgUtil(
-              get(fields, 'image.fields.file.url', ''),
+              imageUrl,
               '1600',
-              'png'
+              imageFileExtension
             )}) no-repeat center`,
             backgroundSize: 'cover'
           }}
