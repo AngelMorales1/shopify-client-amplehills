@@ -20,6 +20,7 @@ const MarkdownBlock = props => {
   const button2Text = get(fields, 'button2Text', '');
   const markdown2 = get(fields, 'content2', '');
   const isDripOn = get(fields, 'drip', false);
+  const isUpperDripOn = get(fields, 'upperDrip', false);
   const colorClass = `MarkdownBlock--${get(
     fields,
     'backgroundColor',
@@ -41,7 +42,8 @@ const MarkdownBlock = props => {
         className={cx('w100 flex content-width', {
           [styles['MarkdownBlock--title-left']]: titleOnLeft,
           [styles['MarkdownBlock--title-top']]: titleOnTop,
-          drip: isDripOn
+          drip: isDripOn,
+          'upper-drip': isUpperDripOn
         })}
       >
         {titleOnLeft || titleOnTop ? (
