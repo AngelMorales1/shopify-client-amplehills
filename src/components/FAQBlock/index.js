@@ -17,8 +17,8 @@ class FAQBlock extends Component {
     const { selectedItem } = this.state;
     const fields = get(block, 'fields', {});
     const title = get(fields, 'title', '');
-    const isDripOn = get(fields, 'drip', false);
-    const isUpperDripOn = get(fields, 'upperDrip', false);
+    const dripIsOn = get(fields, 'drip', false);
+    const upperDripIsOn = get(fields, 'upperDrip', false);
     const buttonLabel = get(fields, 'buttonLabel', '');
     const buttonLink = get(fields, 'buttonLink', '');
     const text = get(fields, 'text', '');
@@ -41,8 +41,8 @@ class FAQBlock extends Component {
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
         className={cx('flex justify-center px3 py4 bg-white', {
-          drip: isDripOn,
-          'upper-drip': isUpperDripOn
+          drip: dripIsOn,
+          'upper-drip': upperDripIsOn
         })}
       >
         <div className={cx(styles['FAQBlock'], 'mt3 w100 flex content-width')}>

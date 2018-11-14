@@ -15,8 +15,8 @@ const ImageText = ({ block, z, setRef }) => {
   const positionY = get(fields, 'imagePositionY', 0);
   const positionX = get(fields, 'imagePositionX', 0);
   const isReverseArrangement = get(fields, 'isReverseArrangement', false);
-  const isDripOn = get(fields, 'drip', false);
-  const isUpperDripOn = get(fields, 'upperDrip', false);
+  const dripIsOn = get(fields, 'drip', false);
+  const upperDripIsOn = get(fields, 'upperDrip', false);
   const isFullImage = get(fields, 'fullImage', false);
   const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
   const imageTextRatioIs5050 = imageTextRatio === '50:50';
@@ -49,8 +49,8 @@ const ImageText = ({ block, z, setRef }) => {
         styles['ImageText'],
         styles[colorClass],
         {
-          drip: isDripOn,
-          'upper-drip': isUpperDripOn,
+          drip: dripIsOn,
+          'upper-drip': upperDripIsOn,
           'drip-padding-on-children': isFullImage,
           [styles['ImageText__full-image']]: isFullImage,
           [styles['ImageText__full-image--reverse']]:

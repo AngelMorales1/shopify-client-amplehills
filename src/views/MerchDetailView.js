@@ -15,8 +15,8 @@ class MerchDetailView extends Component {
         <MerchDetails merch={merch} actions={actions} checkout={checkout} />
         {blocks &&
           blocks.map((block, i) => {
-            const isUpperDripOn = get(block, 'fields.upperDrip', false);
-            const additionalZIndex = isUpperDripOn ? 1 : 0;
+            const upperDripIsOn = get(block, 'fields.upperDrip', false);
+            const additionalZIndex = upperDripIsOn ? 1 : 0;
 
             return (
               <BlockSwitch

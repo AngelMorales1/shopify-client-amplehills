@@ -20,8 +20,8 @@ class ComicStrip extends Component {
     const fields = get(block, 'fields', {});
     const products = get(fields, 'products', []);
     const colorClass = `ComicStrip--${get(fields, 'backgroundColor', 'white')}`;
-    const isDripOn = get(fields, 'drip', false);
-    const isUpperDripOn = get(fields, 'upperDrip', false);
+    const dripIsOn = get(fields, 'drip', false);
+    const upperDripIsOn = get(fields, 'upperDrip', false);
 
     return (
       <div
@@ -32,8 +32,8 @@ class ComicStrip extends Component {
           styles['ComicStrips__container'],
           'flex flex-column justify-center items-center py3',
           {
-            drip: isDripOn,
-            'upper-drip': isUpperDripOn
+            drip: dripIsOn,
+            'upper-drip': upperDripIsOn
           }
         )}
       >

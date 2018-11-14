@@ -14,8 +14,8 @@ const GenericHero = ({ block, z }) => {
   const title = get(fields, 'title', '');
   const image1 = get(fields, 'image1', null);
   const image2 = get(fields, 'image2', null);
-  const isDripOn = get(fields, 'drip', false);
-  const isUpperDripOn = get(fields, 'upperDrip', false);
+  const dripIsOn = get(fields, 'drip', false);
+  const upperDripIsOn = get(fields, 'upperDrip', false);
   const colorClass = `GenericHero--${get(fields, 'color', 'white')}`;
   const text = get(fields, 'text', '');
   const imageRight = get(fields, 'imageRight', false);
@@ -26,9 +26,9 @@ const GenericHero = ({ block, z }) => {
   const classes = cx(
     styles[colorClass],
     {
-      pb4: !isDripOn,
-      drip: isDripOn,
-      'upper-drip': isUpperDripOn
+      pb4: !dripIsOn,
+      drip: dripIsOn,
+      'upper-drip': upperDripIsOn
     },
     'pb2 z-sub-nav'
   );

@@ -98,8 +98,8 @@ class EventsBlock extends Component {
     const { z, block, setRef } = this.props;
     const { buttonLabels, selectedEvents } = this.state;
     const fields = get(block, 'fields', {});
-    const isDripOn = get(fields, 'drip', false);
-    const isUpperDripOn = get(fields, 'upperDrip', false);
+    const dripIsOn = get(fields, 'drip', false);
+    const upperDripIsOn = get(fields, 'upperDrip', false);
     const colorClass = `EventsBlock--${get(
       fields,
       'backgroundColor',
@@ -117,8 +117,8 @@ class EventsBlock extends Component {
           styles[colorClass],
           'flex flex-column items-center justify-center',
           {
-            drip: isDripOn,
-            'upper-drip': isUpperDripOn
+            drip: dripIsOn,
+            'upper-drip': upperDripIsOn
           }
         )}
       >

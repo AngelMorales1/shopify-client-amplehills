@@ -11,8 +11,8 @@ import { HorizontalCarousel } from 'components/base';
 const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
   const setRef = get(props, 'setRef', () => {});
   const fields = get(block, 'fields', {});
-  const isDripOn = get(fields, 'drip', false);
-  const isUpperDripOn = get(fields, 'upperDrip', false);
+  const dripIsOn = get(fields, 'drip', false);
+  const upperDripIsOn = get(fields, 'upperDrip', false);
   const backgroundColor = get(fields, 'color', 'white');
   const flavorItems = get(block, 'fields.flavorItems', []);
   const pressItemsInBlock = get(fields, 'pressItems.simpleFragments', {});
@@ -28,7 +28,7 @@ const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
       className={cx(
         styles['HorizontalCarouselBlock'],
         styles[`HorizontalCarouselBlock--${backgroundColor}`],
-        { drip: isDripOn, 'upper-drip': isUpperDripOn }
+        { drip: dripIsOn, 'upper-drip': upperDripIsOn }
       )}
     >
       <HorizontalCarousel

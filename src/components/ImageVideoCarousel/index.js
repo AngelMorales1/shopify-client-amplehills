@@ -46,8 +46,8 @@ class ImageVideoCarousel extends Component {
     const fields = get(block, 'fields', {});
     const title = get(fields, 'title', '');
     const contents = get(fields, 'contents', []);
-    const isDripOn = get(fields, 'drip', false);
-    const isUpperDripOn = get(fields, 'upperDrip', false);
+    const dripIsOn = get(fields, 'drip', false);
+    const upperDripIsOn = get(fields, 'upperDrip', false);
     const currentBreakpointIsSmall = this.state.currentBreakpoint === 'small';
 
     return (
@@ -55,8 +55,8 @@ class ImageVideoCarousel extends Component {
         ref={refBlock => setRef(refBlock)}
         style={{ zIndex: z }}
         className={cx(styles['ImageVideoCarousel'], 'px3 py4 bg-white', {
-          drip: isDripOn,
-          'upper-drip': isUpperDripOn
+          drip: dripIsOn,
+          'upper-drip': upperDripIsOn
         })}
       >
         <div className="flex flex-column justify-center items-center my4">
