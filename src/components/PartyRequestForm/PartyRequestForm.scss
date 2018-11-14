@@ -1,4 +1,5 @@
 @import 'settings', 'typography';
+$CRF-close-bar-height: spacing(18);
 
 .PartyRequestForm {
   &__day-picker-container,
@@ -81,30 +82,18 @@
   }
 
   &__modal {
-    align-items: flex-start;
-
-    @media ($medium-up) {
-      align-items: center;
+    &__info {
+      height: calc(100% - #{$CRF-close-bar-height});
     }
-  }
 
-  &__modal-content-container {
-    min-height: 100%;
-    width: 100%;
-    padding: 0 spacing(4);
-
-    @media ($medium-up) {
-      min-height: inherit;
-      max-width: 36rem;
-      border-radius: radius('m');
+    &__close-bar {
+      border-top: color('light-gray') 1px solid;
+      height: $CRF-close-bar-height;
     }
-  }
 
-  &__modal-close-button {
-    margin: spacing(4);
-
-    @media ($medium-up) {
-      margin: spacing(8);
+    &__text {
+      font-size: $font-3;
+      line-height: $font-5;
     }
   }
 

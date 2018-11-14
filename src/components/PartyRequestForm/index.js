@@ -759,13 +759,34 @@ class PartyRequestForm extends Component {
           >
             {Object.values(locations).map(location => {
               return (
-                <div key={location.id} className="m3">
-                  <p className="bold big mb2">{location.title}</p>
-                  <p className="mb1">{location.address1}</p>
+                <div key={location.id} className="my3 pr3">
+                  <p className="bold mb1">{location.title}</p>
+                  <p
+                    className={cx(
+                      styles['PartyRequestForm__modal__text'],
+                      'mb1'
+                    )}
+                  >
+                    {location.address1}
+                  </p>
                   {location.address2 ? (
-                    <p className="mb1">{location.address2}</p>
+                    <p
+                      className={cx(
+                        styles['PartyRequestForm__modal__text'],
+                        'mb1'
+                      )}
+                    >
+                      {location.address2}
+                    </p>
                   ) : null}
-                  <p>{`${location.city}, ${location.state} ${location.zip}`}</p>
+                  <p
+                    className={cx(
+                      styles['PartyRequestForm__modal__text'],
+                      'mb1'
+                    )}
+                  >
+                    {`${location.city}, ${location.state} ${location.zip}`}
+                  </p>
                 </div>
               );
             })}
