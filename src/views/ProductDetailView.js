@@ -21,22 +21,13 @@ class ProductDetailView extends Component {
       <div className="ProductDetailView">
         <div>
           {productHasHero(product) ? (
-            <Fragment>
-              <ProductHero
-                product={product}
-                ourPledge={ourPledge}
-                productHero={productHero}
-                z={blocks.length + 2}
-                {...this.props}
-              />
-              <ProductWhatsIncluded
-                product={product}
-                ourPledge={ourPledge}
-                whatsIncluded={whatsIncluded}
-                z={blocks.length + 1}
-                {...this.props}
-              />
-            </Fragment>
+            <ProductHero
+              product={product}
+              ourPledge={ourPledge}
+              productHero={productHero}
+              z={blocks.length + 2}
+              {...this.props}
+            />
           ) : null}
           {blocks &&
             blocks.map((block, i) => (
@@ -45,6 +36,7 @@ class ProductDetailView extends Component {
                 block={block}
                 product={product}
                 ourPledge={ourPledge}
+                whatsIncluded={whatsIncluded}
                 z={blocks.length - i}
                 {...this.props}
               />
