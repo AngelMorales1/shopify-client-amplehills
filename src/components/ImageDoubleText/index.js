@@ -27,7 +27,8 @@ const ImageDoubleText = ({ block, z, setRef }) => {
   const text2 = get(fields, 'text2', '');
   const buttonLabel = get(fields, 'buttonLabel', '');
   const buttonLink = get(fields, 'buttonLink', '');
-  const drip = get(fields, 'drip', false);
+  const isDripOn = get(fields, 'drip', false);
+  const isUpperDripOn = get(fields, 'upperDrip', false);
 
   return (
     <div
@@ -37,7 +38,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
         styles['ImageDoubleText'],
         styles[colorClass],
         'drip-padding-on-children',
-        { drip: drip }
+        { drip: isDripOn, 'upper-drip': isUpperDripOn }
       )}
     >
       <div className="wh100 flex justify-center items-center overflow-hidden">
