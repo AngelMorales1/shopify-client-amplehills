@@ -85,6 +85,12 @@
     }
   }
 
+  &__title-container--left {
+    @media ($medium-up) {
+      padding-right: spacing(30);
+    }
+  }
+
   &__title-container--center {
     display: flex;
     align-items: center;

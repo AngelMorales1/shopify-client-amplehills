@@ -52,7 +52,8 @@ const MarkdownBlock = props => {
               {
                 [styles[
                   'MarkdownBlock__title-container--center'
-                ]]: titleOnLeftCenter
+                ]]: titleOnLeftCenter,
+                [styles['MarkdownBlock__title-container--left']]: titleOnLeft
               }
             )}
           >
