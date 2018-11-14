@@ -4,10 +4,9 @@ import cx from 'classnames';
 import get from 'utils/get';
 import styles from './MultipleImageText.scss';
 import { Image } from 'components/base';
-const MultipleImageText = ({ block, setRef, z }) => {
+const MultipleImageText = ({ block, setRef, z, drip, upperDrip }) => {
   const fields = get(block, 'fields', {});
   const imagesAndTexts = get(fields, 'fragmentType.simpleFragments', {});
-  const drip = get(fields, 'drip', false);
   const backgroundColor = get(fields, 'backgroundColor', 'white');
 
   return (
@@ -18,7 +17,8 @@ const MultipleImageText = ({ block, setRef, z }) => {
         styles[`MultipleImageText--${backgroundColor}`],
         'py4 px3',
         {
-          drip: drip
+          drip: drip,
+          'upper-drip': upperDrip
         }
       )}
     >
