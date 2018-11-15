@@ -32,7 +32,8 @@ const ImageText = ({ block, z, setRef }) => {
   const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
   const imageUrl = get(fields, 'image.fields.file.url', '');
-  const imageFileExtension = imageUrl.split('.').pop();
+  const imageFileExtension =
+    imageUrl.split('.').pop() === 'png' ? 'png' : 'jpg&fl=progressive';
 
   const getButtonColor = colorName => {
     switch (colorName) {
