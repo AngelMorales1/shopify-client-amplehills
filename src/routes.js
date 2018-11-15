@@ -21,6 +21,7 @@ import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
 import FlavorDetailContainer from 'containers/FlavorDetailContainer';
 import InStoresContainer from 'containers/InStoresContainer';
+import ErrorPage from 'components/ErrorPage';
 
 const Routes = ({ location }) => (
   <Switch location={location}>
@@ -93,6 +94,7 @@ const Routes = ({ location }) => (
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
+    <Route path="*" render={() => <ErrorPage errorIs404={true} />} />
   </Switch>
 );
 

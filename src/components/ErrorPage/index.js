@@ -4,7 +4,7 @@ import cx from 'classnames';
 import styles from './ErrorPage.scss';
 import { Image, Button } from 'components/base';
 
-const ErrorPage = ({ children }) => {
+const ErrorPage = ({ children, errorIs404 }) => {
   console.log('Error page rendered');
 
   return (
@@ -18,34 +18,44 @@ const ErrorPage = ({ children }) => {
               className={cx(styles['ErrorPage__logo'], 'w100')}
               src="/assets/images/ample-hills-logo.svg"
             />
-            <div className="my3 text-container-width p2">
-              <h1 className="title carter mb2">{"We'll be right back!"}</h1>
-              <p className="block-subheadline">
-                Our online shop is currently unavailable. In the meantime, feel
-                free to reach out at{' '}
-                <a
-                  href="mailto:info@amplehills.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  info@amplehills.com
-                </a>{' '}
-                or find one of{' '}
-                <a
-                  href="https://www.google.com/search?q=ample+hills+near+me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  our scoop shops
-                </a>.
-              </p>
-            </div>
+            {errorIs404 ? (
+              <div className="my3 text-container-width p2">
+                <h1 className="title carter mb2">Page not found</h1>
+                <p className="block-subheadline">
+                  The page you were looking for could not be found
+                </p>
+              </div>
+            ) : (
+              <div className="my3 text-container-width p2">
+                <h1 className="title carter mb2">{"We'll be right back!"}</h1>
+                <p className="block-subheadline">
+                  Our online shop is currently unavailable. In the meantime,
+                  feel free to reach out at{' '}
+                  <a
+                    href="mailto:info@amplehills.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    info@amplehills.com
+                  </a>{' '}
+                  or find one of{' '}
+                  <a
+                    href="https://www.google.com/search?q=ample+hills+near+me"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    our scoop shops
+                  </a>.
+                </p>
+              </div>
+            )}
             <Button
-              className="mx-auto"
+              className="mx-auto inline-flex"
               color="white-peach"
               variant="primary"
-              label="Refresh Page"
-              onClick={() => window.location.reload()}
+              label={errorIs404 ? 'Go Back Home' : 'Refresh Page'}
+              onClick={!errorIs404 ? () => window.location.reload() : null}
+              to={errorIs404 ? '/' : null}
             />
           </div>
           <div className="absolute b0 l0 w100">
