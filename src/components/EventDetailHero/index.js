@@ -136,8 +136,8 @@ class EventDetailHero extends Component {
 
     return (
       <div className={cx(styles['EventDetailHero'], 'flex flex-column mb4')}>
-        <div className="flex flex-column justify-center items-center w100 my4">
-          <h2 className="block-headline">{event.title}</h2>
+        <div className="flex flex-column justify-center items-center w100 my4 px3">
+          <h2 className="block-headline center">{event.title}</h2>
         </div>
         <div
           className={cx(
