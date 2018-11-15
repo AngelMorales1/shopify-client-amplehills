@@ -8,6 +8,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import eventModel from 'models/eventModel';
 import ContactUsForm from 'constants/forms/ContactUs';
+import Global from 'constants/Global';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 
 import {
@@ -30,10 +31,14 @@ class EventDetailHero extends Component {
     email: '',
     phone: '',
     message: '',
-    quantity: 1
+    quantity: 1,
+    currentBreakpoint: Global.breakpoints.small.label
   };
 
   componentDidMount() {
+    window.addEventListener('resize', this.updateWindow);
+    this.updateWindow();
+
     const event = get(this, 'props.event', {});
     const shoppableItem = !!event.id;
     const eventVariant = get(event, 'variants', []);
@@ -60,6 +65,19 @@ class EventDetailHero extends Component {
       });
     }
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindow);
+  }
+
+  updateWindow = () => {
+    const { small, medium } = Global.breakpoints;
+    const currentBreakpoint =
+      window.innerWidth <= medium.lowerbound ? small.label : medium.label;
+
+    if (this.state.currentBreakpoint !== currentBreakpoint)
+      this.setState({ currentBreakpoint });
+  };
 
   getItemPrice = itemId => {
     const eventVariants = get(this, 'props.event.variants', {});
@@ -276,6 +294,9 @@ class EventDetailHero extends Component {
               <div className="w100 flex flex-row justify-between items-center flex-wrap my4">
                 {shoppableItem ? (
                   <QuantitySelector
+                    variant={
+                      this.state.currentBreakpoint === 'small' ? 'small' : null
+                    }
                     className="mr1 my2"
                     quantity={quantity}
                     onChange={value => this.setState({ quantity: value })}
