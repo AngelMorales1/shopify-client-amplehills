@@ -11,37 +11,39 @@ const getDayRange = daysWithSameHours => {
 };
 
 export default openHours => {
-  let allSortedDays = [];
+  const allSortedDays = [];
 
-  Days.reduce((accumulated, day) => {
+  Days.reduce((openHoursSortedByTime, day) => {
     const time = get(openHours, day, 'close');
-    const timeRange = Object.keys(accumulated)[0];
+    const timeRange = Object.keys(openHoursSortedByTime)[0];
 
     if (timeRange) {
-      if (accumulated[time]) {
-        accumulated[time].push(day);
+      if (openHoursSortedByTime[time]) {
+        openHoursSortedByTime[time].push(day);
       } else {
-        let sortedDays = getDayRange(accumulated[timeRange]);
+        const sortedDays = getDayRange(openHoursSortedByTime[timeRange]);
         allSortedDays.push({ [sortedDays]: timeRange });
-        accumulated = {};
-        accumulated[time] = [day];
+        openHoursSortedByTime = {};
+        openHoursSortedByTime[time] = [day];
       }
     } else {
-      accumulated[time] = [day];
+      openHoursSortedByTime[time] = [day];
     }
 
-    if (accumulated[timeRange] && accumulated[timeRange].length === 7) {
-      allSortedDays.push({ Everyday: timeRange });
-    } else if (day === Days[Days.length - 1]) {
-      if (!accumulated[time]) {
-        accumulated[time] = [day];
+    if (day === Days[Days.length - 1]) {
+      const lastTimeRange = Object.keys(openHoursSortedByTime)[0];
+      if (
+        openHoursSortedByTime[lastTimeRange] &&
+        openHoursSortedByTime[lastTimeRange].length === 7
+      ) {
+        allSortedDays.push({ Everyday: lastTimeRange });
+      } else {
+        const sortedDays = getDayRange(openHoursSortedByTime[lastTimeRange]);
+        allSortedDays.push({ [sortedDays]: lastTimeRange });
       }
-
-      let sortedDays = getDayRange(accumulated[time]);
-      allSortedDays.push({ [sortedDays]: timeRange });
     }
 
-    return accumulated;
+    return openHoursSortedByTime;
   }, {});
 
   return allSortedDays;
