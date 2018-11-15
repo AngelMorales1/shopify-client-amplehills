@@ -48,9 +48,11 @@ class ProductLandingView extends Component {
       return menu;
     };
 
+    const productLandingHasMerchandise = merchandiseGridProducts.length;
+
     return (
       <div className="ProductLanding mb3 transition-slide-up">
-        {subNavIsOn ? (
+        {subNavIsOn && productLandingHasMerchandise ? (
           <div className="drip w100 bg-pastel-peach py4">
             <SubNav
               onClick={menuTitle =>
@@ -72,20 +74,26 @@ class ProductLandingView extends Component {
           />
         </div>
         <ProductGrid products={iceCreamGridProducts} />
-        <div className="my4 pt4 px3 text-container-width mx-auto center">
-          <h2 className="block-headline text-peach mb2">{merchandiseTitle}</h2>
-          <p
-            ref={refBlock => (this.refBlocks[merchandiseTitle] = refBlock)}
-            dangerouslySetInnerHTML={{
-              __html: marked(get(content, 'merchandiseDescription', ''))
-            }}
-            className="markdown-block"
+        {productLandingHasMerchandise ? (
+          <div className="my4 pt4 px3 text-container-width mx-auto center">
+            <h2 className="block-headline text-peach mb2">
+              {merchandiseTitle}
+            </h2>
+            <p
+              ref={refBlock => (this.refBlocks[merchandiseTitle] = refBlock)}
+              dangerouslySetInnerHTML={{
+                __html: marked(get(content, 'merchandiseDescription', ''))
+              }}
+              className="markdown-block"
+            />
+          </div>
+        ) : null}
+        {productLandingHasMerchandise ? (
+          <ProductGrid
+            products={merchandiseGridProducts}
+            productIsMerchandise={true}
           />
-        </div>
-        <ProductGrid
-          products={merchandiseGridProducts}
-          productIsMerchandise={true}
-        />
+        ) : null}
         {!get(content, 'hideWholesaleBlock', false) ? (
           <WholesaleInfoBlock
             image={get(content, 'wholesaleImage.fields.file.url', '')}
