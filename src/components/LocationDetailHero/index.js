@@ -146,7 +146,9 @@ class LocationDetailHero extends Component {
                   return !dateIsClosed ? (
                     <div key={key} className="flex flex-row justify-between">
                       <p className="bold block-subheadline mr1">{key}</p>
-                      <p className="block-subheadline">{hour[key]}</p>
+                      <p className="col-5 md-col-6 block-subheadline">
+                        {hour[key]}
+                      </p>
                     </div>
                   ) : null;
                 })}
