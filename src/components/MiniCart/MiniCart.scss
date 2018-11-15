@@ -24,6 +24,9 @@
   }
 
   &__line-items {
+    max-height: 40vh;
+    overflow: scroll;
+
     @media ($medium-up) {
       min-height: 20vh;
       max-height: 35vh;
