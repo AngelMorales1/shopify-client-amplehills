@@ -79,6 +79,7 @@ const Routes = ({ location }) => (
     <Route exact path="/in-stores" component={InStoresContainer} />
     <Route exact path="/bike-party" component={GenericPageContainer} />
     <Route exact path="/scoop-tab-party" component={GenericPageContainer} />
+    <Route exact path="/jobs" component={GenericPageContainer} />
     <Route
       exact
       path="/party-request-form"
