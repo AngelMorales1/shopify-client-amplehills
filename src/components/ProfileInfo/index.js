@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import { Button, Modal, TextField, FormFlash } from 'components/base';
 import UpdateCustomerForm from 'constants/forms/UpdateCustomer';
 import get from 'utils/get';
+import styles from './ProfileInfo.scss';
 
 class ProfileInfo extends Component {
   constructor(props) {
@@ -71,7 +73,11 @@ class ProfileInfo extends Component {
 
     return (
       <div className="my3">
-        <h2 className="carter sub-title mb3">Personal Info</h2>
+        <h2
+          className={cx(styles['ProfileInfo__title'], 'carter sub-title mb3')}
+        >
+          Personal Info
+        </h2>
 
         {this.renderSuccessMessage(successfullyEditedFields)}
         {errors ? (

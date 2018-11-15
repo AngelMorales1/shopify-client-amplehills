@@ -40,7 +40,11 @@ class ProfileOrders extends Component {
 
     return (
       <div className="my3">
-        <h2 className="carter sub-title mb3">Order History</h2>
+        <h2
+          className={cx(styles['ProfileOrders__title'], 'carter sub-title mb3')}
+        >
+          Order History
+        </h2>
         <div>
           {orders.length ? (
             orders.map(order => (

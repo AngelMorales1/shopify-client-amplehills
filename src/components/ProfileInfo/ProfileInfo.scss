@@ -1,18 +1,11 @@
 @import 'settings', 'src/styles/typography';
 
-.ProfileOrders {
+.ProfileInfo {
   &__title {
     text-align: center;
 
     @media ($medium-up) {
       text-align: left;
-    }
-  }
-
-  &__button-text {
-    > span,
-    div {
-      @extend .bold;
     }
   }
 }
