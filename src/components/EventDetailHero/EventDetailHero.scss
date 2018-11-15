@@ -54,6 +54,16 @@
     }
   }
 
+  &__quantity-selector {
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    @media ($medium-up) {
+      margin-right: spacing(4);
+      justify-content: flex-start;
+    }
+  }
+
   &__action-button {
     padding-top: calc(#{spacing(2)} + 0.0625rem);
     padding-bottom: calc(#{spacing(2)} - 0.0625rem);

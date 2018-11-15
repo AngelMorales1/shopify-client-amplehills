@@ -297,7 +297,10 @@ class EventDetailHero extends Component {
                     variant={
                       this.state.currentBreakpoint === 'small' ? 'small' : null
                     }
-                    className="mr1 my2"
+                    className={cx(
+                      styles['EventDetailHero__quantity-selector'],
+                      'mr1 my2'
+                    )}
                     quantity={quantity}
                     onChange={value => this.setState({ quantity: value })}
                   />
