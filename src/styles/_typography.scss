@@ -191,14 +191,9 @@ strong {
 }
 
 .tag-text {
-  font-size: $font-4;
-  font-weight: 800;
-
-  @media ($medium-up) {
-    text-transform: uppercase;
-    font-size: 0.4rem;
-    font-weight: 400;
-  }
+  text-transform: uppercase;
+  font-size: 0.4rem;
+  font-weight: 400;
 }
 
 .info-text-wide {

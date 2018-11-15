@@ -195,13 +195,8 @@ UI elements
 
 .tag {
   @extend .tag-text;
-  padding: calc(#{spacing(3)} + 3px) spacing(6) spacing(3);
-  border-radius: radius('l');
-
-  @media ($medium-up) {
-    border-radius: radius('m');
-    padding: calc(#{spacing(1)} + 1px) spacing(3) spacing(1);
-  }
+  border-radius: radius('m');
+  padding: calc(#{spacing(1)} + 1px) spacing(3) spacing(1);
 }
 
 .icon {
