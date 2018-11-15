@@ -303,6 +303,11 @@ class EventDetailHero extends Component {
                   />
                 ) : null}
                 <Button
+                  variant={
+                    this.state.currentBreakpoint === 'small'
+                      ? 'primary-small'
+                      : 'primary'
+                  }
                   className={cx(styles['EventDetailHero__action-button'])}
                   color={shoppableItem ? 'madison-blue' : 'peach'}
                   disabled={shoppableItem ? !selectedEventIsAvailable : false}
