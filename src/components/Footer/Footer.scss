@@ -42,12 +42,12 @@
     }
   }
 
-  &__privacy-link {
+  &__link {
     padding-bottom: spacing(1);
     border-bottom: spacing(0.5) solid transparent;
+    color: color('white');
 
     &:hover {
-      color: color('white');
       border-bottom: spacing(0.5) solid color('white');
     }
   }

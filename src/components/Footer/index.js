@@ -81,19 +81,19 @@ class Footer extends Component {
                   to="/news"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>News</span>
+                  <span className={cx(styles['Footer__link'])}>News</span>
                 </Link>
                 <Link
                   to="/press"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>Press</span>
+                  <span className={cx(styles['Footer__link'])}>Press</span>
                 </Link>
                 <Link
                   to="/faq"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>FAQ</span>
+                  <span className={cx(styles['Footer__link'])}>FAQ</span>
                 </Link>
               </div>
               <div className="flex flex-column justify-around mr4 pr4 xs-hide sm-hide">
@@ -101,19 +101,19 @@ class Footer extends Component {
                   to="/jobs"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>Jobs</span>
+                  <span className={cx(styles['Footer__link'])}>Jobs</span>
                 </Link>
                 <Link
                   to="/wholesale"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>Wholesale</span>
+                  <span className={cx(styles['Footer__link'])}>Wholesale</span>
                 </Link>
                 <Link
                   to="/in-stores"
                   className="my2 flex items-center bold text-white text-decoration-none"
                 >
-                  <span>In Stores</span>
+                  <span className={cx(styles['Footer__link'])}>In Stores</span>
                 </Link>
               </div>
               <div className="flex flex-column">
@@ -132,7 +132,7 @@ class Footer extends Component {
                     )}
                     className="icon mr3"
                   />
-                  <span>Instagram</span>
+                  <span className={cx(styles['Footer__link'])}>Instagram</span>
                 </a>
                 <a
                   href={get(footerLinks, 'twitterLink', '')}
@@ -149,7 +149,7 @@ class Footer extends Component {
                     )}
                     className="icon mr3"
                   />
-                  <span>Twitter</span>
+                  <span className={cx(styles['Footer__link'])}>Twitter</span>
                 </a>
                 <a
                   href={get(footerLinks, 'facebookLink', '')}
@@ -166,7 +166,7 @@ class Footer extends Component {
                     )}
                     className="icon mr3"
                   />
-                  <span>Facebook</span>
+                  <span className={cx(styles['Footer__link'])}>Facebook</span>
                 </a>
               </div>
             </div>
@@ -176,7 +176,7 @@ class Footer extends Component {
                 exact
                 to="/privacy-policy"
                 className={cx(
-                  styles['Footer__privacy-link'],
+                  styles['Footer__link'],
                   'text-decoration-none mx1'
                 )}
               >
@@ -187,7 +187,7 @@ class Footer extends Component {
                 exact
                 to="/web-accessibility"
                 className={cx(
-                  styles['Footer__privacy-link'],
+                  styles['Footer__link'],
                   'text-decoration-none mx1'
                 )}
               >
