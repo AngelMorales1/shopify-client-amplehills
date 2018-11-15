@@ -4,7 +4,9 @@ import get from 'utils/get';
 import locations from 'state/selectors/locations';
 
 const locationMatchesSearch = (fields, searchFilter) => {
-  return fields.some(field => field.includes(searchFilter));
+  return fields.some(field =>
+    field.toLowerCase().includes(searchFilter.toLowerCase())
+  );
 };
 
 export default createSelector(
