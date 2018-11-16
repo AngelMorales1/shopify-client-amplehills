@@ -90,10 +90,7 @@ const GenericHero = ({ block, z }) => {
             {blockHasButton ? (
               <div>
                 <Button
-                  className={cx(
-                    styles['GenericHero__button'],
-                    'inline-flex mt3'
-                  )}
+                  className="inline-flex mt3"
                   variant="primary-responsive"
                   color="madison-blue"
                   label={buttonLabel}
