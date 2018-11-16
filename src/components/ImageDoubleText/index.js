@@ -117,6 +117,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             ) : null}
             {buttonLabel ? (
               <Button
+                variant="primary-responsive"
                 className="inline-flex mt2"
                 color="peach"
                 label={buttonLabel}
