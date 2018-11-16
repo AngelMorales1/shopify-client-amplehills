@@ -86,6 +86,7 @@ const MarkdownBlock = props => {
                 )}
               />
               <Button
+                variant="primary-responsive"
                 className="inline-flex"
                 color="peach"
                 label={button1Label}
@@ -129,6 +130,7 @@ const MarkdownBlock = props => {
                     )}
                   />
                   <Button
+                    variant="primary-responsive"
                     className="inline-flex"
                     color="peach"
                     label={button2Label}
