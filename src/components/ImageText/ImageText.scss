@@ -170,7 +170,6 @@
 
     @media ($medium-up) {
       flex-direction: row;
-      justify-content: space-between;
       align-items: center;
       padding-top: spacing(12);
     }
@@ -178,7 +177,7 @@
 
   &__linked-text-description {
     font-size: spacing(4.5);
-    margin-bottom: spacing(8);
+    margin-bottom: spacing(4);
 
     @media ($medium-up) {
       margin-bottom: 0;

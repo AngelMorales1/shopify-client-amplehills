@@ -136,7 +136,7 @@ const ImageText = ({ block, z, setRef }) => {
               <p
                 className={cx(
                   styles['ImageText__linked-text-description'],
-                  'carter mr1'
+                  'carter mr2 pb1'
                 )}
               >
                 {linkedTextDescription}
