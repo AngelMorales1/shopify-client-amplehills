@@ -28,7 +28,8 @@ const WholesaleInfoBlock = ({ image, title, description }) => {
           className="markdown-block text-container-width col-12 md-col-9"
         />
         <Button
-          className="inline-flex mt3"
+          variant="primary-responsive"
+          className={cx(styles['WholesaleInfoBlock__button'], 'inline-flex')}
           to="/wholesale"
           label="Wholesale Info"
           color="peach"

@@ -9,4 +9,10 @@
     flex-direction: row;
     padding: spacing(16);
   }
+
+  &__button {
+    @media ($medium-up) {
+      margin-top: spacing(12);
+    }
+  }
 }
