@@ -205,7 +205,10 @@ ProfileInfo.propTypes = {
     editCustomerPhone: PropTypes.func,
     editCustomerPassword: PropTypes.func
   }),
-  customerFieldBeingEdited: PropTypes.array
+  customerFieldBeingEdited: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ])
 };
 
 ProfileInfo.defaultProps = {

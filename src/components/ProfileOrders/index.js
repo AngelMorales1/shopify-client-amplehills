@@ -57,9 +57,10 @@ class ProfileOrders extends Component {
                 </p>
                 {order.items.map((item, i) => {
                   const subItems = get(item, 'subItems', []);
+
                   return (
                     <div
-                      key={item.title}
+                      key={`${item.productId}-${i}`}
                       className="mb2 flex flex-wrap justify-between"
                     >
                       <span className="line-item-title mr2">{item.title}</span>

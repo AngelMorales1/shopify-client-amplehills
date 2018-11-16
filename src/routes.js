@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import isStaging from 'utils/isStaging';
 
-import HomeContainer from 'containers/HomeContainer';
 import ProductLandingContainer from 'containers/ProductLandingContainer';
 import ProductDetailContainer from 'containers/ProductDetailContainer';
 import ProfileContainer from 'containers/ProfileContainer';
