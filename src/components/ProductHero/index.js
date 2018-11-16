@@ -185,11 +185,7 @@ class ProductHero extends Component {
                   <Button
                     className={cx(styles['ProductHero__button'])}
                     color="madison-blue"
-                    variant={
-                      this.state.currentBreakpoint === 'small'
-                        ? 'primary-small'
-                        : 'primary'
-                    }
+                    variant="primary-responsive"
                     shadow={true}
                     onClick={this.addToCart}
                   >
@@ -210,12 +206,9 @@ class ProductHero extends Component {
                 </div>
               ) : (
                 <Button
+                  className={cx(styles['ProductHero__button'])}
                   color="peach"
-                  variant={
-                    this.state.currentBreakpoint === 'small'
-                      ? 'primary-small'
-                      : 'primary'
-                  }
+                  variant="primary-responsive"
                   onClick={this.addToCart}
                   disabled={true}
                 >
