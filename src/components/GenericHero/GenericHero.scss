@@ -84,8 +84,10 @@
   }
 
   &__button {
-    padding-top: calc(#{spacing(4)} + 0.125rem);
-    padding-bottom: calc(#{spacing(4)} - 0.125rem);
+    @media ($medium-up) {
+      padding-top: calc(#{spacing(4)} + 0.125rem);
+      padding-bottom: calc(#{spacing(4)} - 0.125rem);
+    }
   }
 
   &__two-images {

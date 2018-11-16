@@ -94,6 +94,7 @@ const GenericHero = ({ block, z }) => {
                     styles['GenericHero__button'],
                     'inline-flex mt3'
                   )}
+                  variant="primary-responsive"
                   color="madison-blue"
                   label={buttonLabel}
                   to={buttonLink}
