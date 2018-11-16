@@ -82,7 +82,7 @@ class ProductHero extends Component {
       actions,
       z
     } = this.props;
-    const { available, subItemsAvailable, price } = product;
+    const { available, subItemsAvailable, price, forceAvailable } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
     return (
@@ -177,7 +177,9 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {(available && subItemsAvailable) || product.preOrderDate ? (
+              {(available && subItemsAvailable) ||
+              product.preOrderDate ||
+              (forceAvailable && available) ? (
                 <div className="relative">
                   <Button
                     className={cx(styles['ProductHero__button'])}

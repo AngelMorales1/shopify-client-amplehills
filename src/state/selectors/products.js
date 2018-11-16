@@ -112,6 +112,7 @@ export default createSelector(
           const variants = get(shopifySubItem, 'variants', []);
           return variants.some(variant => variant.available);
         });
+      const forceAvailable = get(product, 'fields.forceAvailable', false);
 
       mergedProducts[handle] = {
         title,
@@ -127,6 +128,7 @@ export default createSelector(
         cartDetails,
         productHero,
         whatsIncluded,
+        forceAvailable,
         ...shopifyProduct
       };
 
