@@ -177,7 +177,10 @@ class MobileNavModal extends Component {
               Contact Us
             </NavLink>
             <Button
-              className="my2 inline-flex"
+              className={cx(
+                styles['MobileNavModal__button'],
+                'my2 inline-flex'
+              )}
               to="/products"
               variant="primary-small"
               color="peach"

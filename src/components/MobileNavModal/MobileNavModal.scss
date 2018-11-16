@@ -34,4 +34,9 @@
   &__location-detail {
     font-size: 1.125rem;
   }
+
+  &__button {
+    padding-top: calc(#{spacing(2)} - 0.125rem);
+    padding-bottom: calc(#{spacing(2)} + 0.125rem);
+  }
 }
