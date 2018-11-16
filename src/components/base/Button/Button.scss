@@ -98,6 +98,20 @@
     padding: spacing(2) spacing(6);
   }
 
+  &--primary-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: radius('l');
+    height: $button-small-height;
+    padding: spacing(2) spacing(6);
+
+    @media ($medium-up) {
+      height: $button-primary-height;
+      padding: spacing(4) spacing(6);
+    }
+  }
+
   &--tag,
   &--selected-tag {
     border-radius: radius('m');
