@@ -46,6 +46,7 @@ const HorizontalCarousel = ({
         ) : null}
         {buttonLabel && buttonLink ? (
           <Button
+            variant="primary-responsive"
             className="ml1"
             to={buttonLink}
             label={buttonLabel}
