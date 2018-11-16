@@ -111,7 +111,10 @@ const ImageText = ({ block, z, setRef }) => {
           >
             {blockHasButton ? (
               <Button
-                className={cx(styles['ImageText__button'], 'my1 mr2')}
+                className={cx(
+                  styles['ImageText__button'],
+                  'my1 mr2 inline-flex'
+                )}
                 variant="primary-responsive"
                 label={buttonLabel}
                 to={buttonLink}

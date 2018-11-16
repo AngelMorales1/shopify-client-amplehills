@@ -189,6 +189,14 @@
     &.Button--primary-small {
       padding-top: 0.8rem;
     }
+
+    &.Button--primary-responsive {
+      padding-top: 0.8rem;
+
+      @media ($medium-up) {
+        padding-top: 1.4rem;
+      }
+    }
   }
 
   &--circle {

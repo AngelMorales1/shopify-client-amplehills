@@ -73,6 +73,7 @@ const EventCard = ({ event, active }) => {
         <div>
           <Button
             className="inline-flex mt3"
+            variant="primary-responsive"
             color="peach"
             label={event.blockCardButtonLabel || 'More Info'}
             to={`/events/${event.handle}`}
