@@ -56,6 +56,7 @@ class FAQBlock extends Component {
             {buttonLabel && buttonLink ? (
               <div className={cx(styles['FAQBlock__block-button'])}>
                 <Button
+                  variant="primary-responsive"
                   className="inline-flex"
                   label={buttonLabel}
                   to={buttonLink}
