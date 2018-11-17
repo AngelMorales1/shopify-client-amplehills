@@ -1,0 +1,12 @@
+{
+  "name": "ample-hills-api",
+  "builds": [
+    { "src": "api/availability.js", "use": "@now/node" },
+    { "src": "api/bookings.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/availability", "dest": "/api/availability" },
+    { "src": "/bookings", "dest": "/api/bookings" }
+  ],
+  "version": 2
+}
