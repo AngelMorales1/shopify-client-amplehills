@@ -1,5 +1,6 @@
 {
   "name": "ample-hills-api",
+  "alias": "ample-hills-api",
   "builds": [
     { "src": "api/availability.js", "use": "@now/node" },
     { "src": "api/bookings.js", "use": "@now/node" }
