@@ -2,9 +2,8 @@ const timekit = require('timekit-sdk');
 
 module.exports = async (req, res) => {
   try {
-    timekit.configure({
-      appKey: process.env.TIMEKIT_API_KEY
-    });
+    timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
+
     const response = await timekit.getApp();
     return res.end(JSON.stringify(response.data));
   } catch (e) {
