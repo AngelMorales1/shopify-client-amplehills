@@ -18,15 +18,14 @@ module.exports = async (req, res) => {
       mode
     });
 
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    });
     return res.end(JSON.stringify(response.data));
   } catch (e) {
-    try {
-      res.writeHead((e && e.status) || 500, {
-        'Content-Type': 'application/json'
-      });
-      return res.end(JSON.stringify(formatError(e)));
-    } catch (e) {
-      return res.end(e.message);
-    }
+    res.writeHead((e && e.status) || 500, {
+      'Content-Type': 'application/json'
+    });
+    return res.end(JSON.stringify(formatError(e)));
   }
 };
