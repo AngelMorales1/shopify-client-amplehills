@@ -3,11 +3,13 @@
   "alias": "ample-hills-api",
   "builds": [
     { "src": "api/availability.js", "use": "@now/node" },
-    { "src": "api/bookings.js", "use": "@now/node" }
+    { "src": "api/bookings.js", "use": "@now/node" },
+    { "src": "api/resource.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/availability", "dest": "/api/availability.js" },
-    { "src": "/bookings", "dest": "/api/bookings.js" }
+    { "src": "/bookings", "dest": "/api/bookings.js" },
+    { "src": "/resource", "dest": "/api/resource.js" }
   ],
   "env": {
     "TIMEKIT_API_KEY": "@ample-hills-api_timekit-api-key"
