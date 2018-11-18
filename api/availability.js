@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
 
     return res.end(JSON.stringify(response.data));
   } catch (e) {
-    return res.end(JSON.stringify(Object.keys(e)));
+    return res.end(JSON.stringify(e.data));
     //return res.end((e && e.message) || 'Unknown Error');
   }
 };
