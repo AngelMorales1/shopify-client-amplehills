@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
     });
     return res.end(JSON.stringify(response.data));
   } catch (e) {
-    return res.end((e && e.message) || 'Unknown Error');
+    return res.end(JSON.parse(Object.keys(e)));
+    //return res.end((e && e.message) || 'Unknown Error');
   }
 };
