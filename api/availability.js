@@ -19,8 +19,12 @@ module.exports = async (req, res) => {
 
     return res.end(JSON.stringify(response.data));
   } catch (e) {
-    return res
-      .status((e && e.status) || 500)
-      .end(JSON.stringify(formatError(e)));
+    try {
+      return res
+        .status((e && e.status) || 500)
+        .end(JSON.stringify(formatError(e)));
+    } catch (e) {
+      return res.end(e.message);
+    }
   }
 };
