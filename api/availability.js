@@ -5,6 +5,6 @@ module.exports = async (req, res) => {
     const app = await timekit.fetchAvailability();
     return res.end(JSON.stringify(app.data));
   } catch (e) {
-    return res.end(e.message || 'Unknown Error');
+    return res.end((e && e.message) || 'Unknown Error');
   }
 };
