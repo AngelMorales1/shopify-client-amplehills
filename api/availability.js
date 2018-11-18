@@ -1,9 +1,12 @@
-import timekit from './utils/timekit';
+const timekit = require('timekit-sdk');
 
 module.exports = async (req, res) => {
   try {
-    const app = await timekit.fetchAvailability();
-    return res.end(JSON.stringify(app.data));
+    timekit.configure({
+      appKey: process.env.TIMEKIT_API_KEY
+    });
+    const response = await timekit.getApp();
+    return res.end(JSON.stringify(response.data));
   } catch (e) {
     return res.end((e && e.message) || 'Unknown Error');
   }
