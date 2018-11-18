@@ -1,5 +1,6 @@
 const { parse } = require('url');
 const timekit = require('timekit-sdk');
+const formatError = require('./utils/formatError');
 
 module.exports = async (req, res) => {
   try {
@@ -18,7 +19,8 @@ module.exports = async (req, res) => {
 
     return res.end(JSON.stringify(response.data));
   } catch (e) {
-    return res.end(JSON.stringify(e.data));
-    //return res.end((e && e.message) || 'Unknown Error');
+    return res
+      .status((e && e.status) || 500)
+      .end(JSON.stringify(formatError(e)));
   }
 };
