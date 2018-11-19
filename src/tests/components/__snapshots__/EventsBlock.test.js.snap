@@ -429,7 +429,7 @@ ShallowWrapper {
             },
           }
     }
-    events={Array []}
+    events={Object {}}
     setRef={[Function]}
     z={0}
 />,

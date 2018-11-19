@@ -21,6 +21,7 @@ class LocationDetailHero extends Component {
       'handle',
       ''
     );
+
     const closeLocationForTheSeason = get(
       location,
       'closeLocationForTheSeason',

@@ -52,7 +52,7 @@ ShallowWrapper {
                     }
           />
           <Button
-                    className="inline-flex mt3"
+                    className="inline-flex"
                     color="peach"
                     disabled={false}
                     fullWidth={false}
@@ -64,7 +64,7 @@ ShallowWrapper {
                     shadow={false}
                     to="/wholesale"
                     type="button"
-                    variant="primary"
+                    variant="primary-responsive"
           />
 </div>,
       ],
@@ -128,7 +128,7 @@ ShallowWrapper {
               }
 />,
             <Button
-              className="inline-flex mt3"
+              className="inline-flex"
               color="peach"
               disabled={false}
               fullWidth={false}
@@ -140,7 +140,7 @@ ShallowWrapper {
               shadow={false}
               to="/wholesale"
               type="button"
-              variant="primary"
+              variant="primary-responsive"
 />,
           ],
           "className": "flex flex-column col-12 md-col-5 my4",
@@ -180,7 +180,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
-              "className": "inline-flex mt3",
+              "className": "inline-flex",
               "color": "peach",
               "disabled": false,
               "fullWidth": false,
@@ -192,7 +192,7 @@ ShallowWrapper {
               "shadow": false,
               "to": "/wholesale",
               "type": "button",
-              "variant": "primary",
+              "variant": "primary-responsive",
             },
             "ref": null,
             "rendered": null,
@@ -241,7 +241,7 @@ ShallowWrapper {
                         }
             />
             <Button
-                        className="inline-flex mt3"
+                        className="inline-flex"
                         color="peach"
                         disabled={false}
                         fullWidth={false}
@@ -253,7 +253,7 @@ ShallowWrapper {
                         shadow={false}
                         to="/wholesale"
                         type="button"
-                        variant="primary"
+                        variant="primary-responsive"
             />
 </div>,
         ],
@@ -317,7 +317,7 @@ ShallowWrapper {
                 }
 />,
               <Button
-                className="inline-flex mt3"
+                className="inline-flex"
                 color="peach"
                 disabled={false}
                 fullWidth={false}
@@ -329,7 +329,7 @@ ShallowWrapper {
                 shadow={false}
                 to="/wholesale"
                 type="button"
-                variant="primary"
+                variant="primary-responsive"
 />,
             ],
             "className": "flex flex-column col-12 md-col-5 my4",
@@ -369,7 +369,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "inline-flex mt3",
+                "className": "inline-flex",
                 "color": "peach",
                 "disabled": false,
                 "fullWidth": false,
@@ -381,7 +381,7 @@ ShallowWrapper {
                 "shadow": false,
                 "to": "/wholesale",
                 "type": "button",
-                "variant": "primary",
+                "variant": "primary-responsive",
               },
               "ref": null,
               "rendered": null,
@@ -453,7 +453,7 @@ ShallowWrapper {
                     }
           />
           <Button
-                    className="inline-flex mt3"
+                    className="inline-flex"
                     color="peach"
                     disabled={false}
                     fullWidth={false}
@@ -465,7 +465,7 @@ ShallowWrapper {
                     shadow={false}
                     to="/wholesale"
                     type="button"
-                    variant="primary"
+                    variant="primary-responsive"
           />
 </div>,
       ],
@@ -526,7 +526,7 @@ ShallowWrapper {
               }
 />,
             <Button
-              className="inline-flex mt3"
+              className="inline-flex"
               color="peach"
               disabled={false}
               fullWidth={false}
@@ -538,7 +538,7 @@ ShallowWrapper {
               shadow={false}
               to="/wholesale"
               type="button"
-              variant="primary"
+              variant="primary-responsive"
 />,
           ],
           "className": "flex flex-column col-12 md-col-5 my4",
@@ -577,7 +577,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
-              "className": "inline-flex mt3",
+              "className": "inline-flex",
               "color": "peach",
               "disabled": false,
               "fullWidth": false,
@@ -589,7 +589,7 @@ ShallowWrapper {
               "shadow": false,
               "to": "/wholesale",
               "type": "button",
-              "variant": "primary",
+              "variant": "primary-responsive",
             },
             "ref": null,
             "rendered": null,
@@ -635,7 +635,7 @@ ShallowWrapper {
                         }
             />
             <Button
-                        className="inline-flex mt3"
+                        className="inline-flex"
                         color="peach"
                         disabled={false}
                         fullWidth={false}
@@ -647,7 +647,7 @@ ShallowWrapper {
                         shadow={false}
                         to="/wholesale"
                         type="button"
-                        variant="primary"
+                        variant="primary-responsive"
             />
 </div>,
         ],
@@ -708,7 +708,7 @@ ShallowWrapper {
                 }
 />,
               <Button
-                className="inline-flex mt3"
+                className="inline-flex"
                 color="peach"
                 disabled={false}
                 fullWidth={false}
@@ -720,7 +720,7 @@ ShallowWrapper {
                 shadow={false}
                 to="/wholesale"
                 type="button"
-                variant="primary"
+                variant="primary-responsive"
 />,
             ],
             "className": "flex flex-column col-12 md-col-5 my4",
@@ -759,7 +759,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "inline-flex mt3",
+                "className": "inline-flex",
                 "color": "peach",
                 "disabled": false,
                 "fullWidth": false,
@@ -771,7 +771,7 @@ ShallowWrapper {
                 "shadow": false,
                 "to": "/wholesale",
                 "type": "button",
-                "variant": "primary",
+                "variant": "primary-responsive",
               },
               "ref": null,
               "rendered": null,

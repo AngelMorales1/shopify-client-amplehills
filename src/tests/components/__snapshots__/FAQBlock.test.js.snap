@@ -64,7 +64,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="w100 flex content-width"
+        className="mt3 w100 flex content-width"
 >
         <div
                 className="flex flex-column col-12 md-col-4 mb4"
@@ -90,7 +90,7 @@ ShallowWrapper {
                                 shadow={false}
                                 to="foo"
                                 type="button"
-                                variant="primary"
+                                variant="primary-responsive"
                         />
                 </div>
         </div>
@@ -177,7 +177,7 @@ ShallowWrapper {
                 </div>
         </div>
 </div>,
-      "className": "flex justify-center px3 py4 mt4",
+      "className": "flex justify-center px3 py4 bg-white",
       "style": Object {
         "zIndex": 0,
       },
@@ -213,7 +213,7 @@ ShallowWrapper {
                                     shadow={false}
                                     to="foo"
                                     type="button"
-                                    variant="primary"
+                                    variant="primary-responsive"
                         />
             </div>
 </div>,
@@ -300,7 +300,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "w100 flex content-width",
+        "className": "mt3 w100 flex content-width",
       },
       "ref": null,
       "rendered": Array [
@@ -331,7 +331,7 @@ ShallowWrapper {
                                 shadow={false}
                                 to="foo"
                                 type="button"
-                                variant="primary"
+                                variant="primary-responsive"
                 />
 </div>,
             ],
@@ -369,7 +369,7 @@ ShallowWrapper {
                   shadow={false}
                   to="foo"
                   type="button"
-                  variant="primary"
+                  variant="primary-responsive"
 />,
                 "className": "",
               },
@@ -392,7 +392,7 @@ ShallowWrapper {
                   "shadow": false,
                   "to": "foo",
                   "type": "button",
-                  "variant": "primary",
+                  "variant": "primary-responsive",
                 },
                 "ref": null,
                 "rendered": null,
@@ -823,7 +823,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w100 flex content-width"
+          className="mt3 w100 flex content-width"
 >
           <div
                     className="flex flex-column col-12 md-col-4 mb4"
@@ -849,7 +849,7 @@ ShallowWrapper {
                                         shadow={false}
                                         to="foo"
                                         type="button"
-                                        variant="primary"
+                                        variant="primary-responsive"
                               />
                     </div>
           </div>
@@ -936,7 +936,7 @@ ShallowWrapper {
                     </div>
           </div>
 </div>,
-        "className": "flex justify-center px3 py4 mt4",
+        "className": "flex justify-center px3 py4 bg-white",
         "style": Object {
           "zIndex": 0,
         },
@@ -972,7 +972,7 @@ ShallowWrapper {
                                           shadow={false}
                                           to="foo"
                                           type="button"
-                                          variant="primary"
+                                          variant="primary-responsive"
                             />
               </div>
 </div>,
@@ -1059,7 +1059,7 @@ ShallowWrapper {
               </div>
 </div>,
           ],
-          "className": "w100 flex content-width",
+          "className": "mt3 w100 flex content-width",
         },
         "ref": null,
         "rendered": Array [
@@ -1090,7 +1090,7 @@ ShallowWrapper {
                                     shadow={false}
                                     to="foo"
                                     type="button"
-                                    variant="primary"
+                                    variant="primary-responsive"
                   />
 </div>,
               ],
@@ -1128,7 +1128,7 @@ ShallowWrapper {
                     shadow={false}
                     to="foo"
                     type="button"
-                    variant="primary"
+                    variant="primary-responsive"
 />,
                   "className": "",
                 },
@@ -1151,7 +1151,7 @@ ShallowWrapper {
                     "shadow": false,
                     "to": "foo",
                     "type": "button",
-                    "variant": "primary",
+                    "variant": "primary-responsive",
                   },
                   "ref": null,
                   "rendered": null,
@@ -1618,7 +1618,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="w100 flex content-width"
+        className="mt3 w100 flex content-width"
 >
         <div
                 className="flex flex-column col-12 md-col-4 mb4"
@@ -1633,7 +1633,7 @@ ShallowWrapper {
                 
         </div>
 </div>,
-      "className": "flex justify-center px3 py4 mt4",
+      "className": "flex justify-center px3 py4 bg-white",
       "style": Object {
         "zIndex": 0,
       },
@@ -1658,7 +1658,7 @@ ShallowWrapper {
             
 </div>,
         ],
-        "className": "w100 flex content-width",
+        "className": "mt3 w100 flex content-width",
       },
       "ref": null,
       "rendered": Array [
@@ -1722,7 +1722,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="w100 flex content-width"
+          className="mt3 w100 flex content-width"
 >
           <div
                     className="flex flex-column col-12 md-col-4 mb4"
@@ -1737,7 +1737,7 @@ ShallowWrapper {
                     
           </div>
 </div>,
-        "className": "flex justify-center px3 py4 mt4",
+        "className": "flex justify-center px3 py4 bg-white",
         "style": Object {
           "zIndex": 0,
         },
@@ -1762,7 +1762,7 @@ ShallowWrapper {
               
 </div>,
           ],
-          "className": "w100 flex content-width",
+          "className": "mt3 w100 flex content-width",
         },
         "ref": null,
         "rendered": Array [

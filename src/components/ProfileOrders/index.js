@@ -53,7 +53,7 @@ class ProfileOrders extends Component {
                 className="card card--light-gray-border px3 pt3 pb2 my2"
               >
                 <p className="bold text-peach mb3">
-                  {moment(order.date).format('MMMM D, YYYY')}
+                  {moment(Date.parse(order.date)).format('MMMM D, YYYY')}
                 </p>
                 {order.items.map((item, i) => {
                   const subItems = get(item, 'subItems', []);
