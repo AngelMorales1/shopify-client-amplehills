@@ -69,7 +69,8 @@ export default createSelector(
             const dateAndTime = variant.date.split(', ');
             const time = dateAndTime[1];
             const date = dateAndTime[0];
-            const sortedDate = moment(date).format('dddd, MMMM Do');
+            const getDateFormat = Date.parse(date);
+            const sortedDate = moment(getDateFormat).format('dddd, MMMM Do');
             const sortedTime = getShortTimeFormat(time);
 
             return { time, date, sortedDate, sortedTime };
@@ -86,7 +87,10 @@ export default createSelector(
               {}
             );
 
-            const sortedDate = moment(get(sortedFragment, 'date', '')).format(
+            const getMultipleDateFormat = Date.parse(
+              get(sortedFragment, 'date', '')
+            );
+            const sortedDate = moment(getMultipleDateFormat).format(
               'dddd, MMMM Do'
             );
             const sortedTime = getShortTimeFormat(
