@@ -70,8 +70,10 @@ export default createSelector(
             const time = dateAndTime[1];
             const date = dateAndTime[0];
             const getDateFormat = Date.parse(date);
-            const sortedDate = moment(getDateFormat).format('dddd, MMMM Do');
-            const sortedTime = getShortTimeFormat(time);
+            const sortedDate = !isNaN(getDateFormat)
+              ? moment(getDateFormat).format('dddd, MMMM Do')
+              : '';
+            const sortedTime = getShortTimeFormat(time) || '';
 
             return { time, date, sortedDate, sortedTime };
           })
@@ -90,12 +92,11 @@ export default createSelector(
             const getMultipleDateFormat = Date.parse(
               get(sortedFragment, 'date', '')
             );
-            const sortedDate = moment(getMultipleDateFormat).format(
-              'dddd, MMMM Do'
-            );
-            const sortedTime = getShortTimeFormat(
-              get(sortedFragment, 'time', '')
-            );
+            const sortedDate = !isNaN(getMultipleDateFormat)
+              ? moment(getMultipleDateFormat).format('dddd, MMMM Do')
+              : '';
+            const sortedTime =
+              getShortTimeFormat(get(sortedFragment, 'time', '')) || '';
 
             return { ...sortedFragment, sortedDate, sortedTime };
           });
