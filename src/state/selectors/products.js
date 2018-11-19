@@ -136,13 +136,14 @@ export default createSelector(
           return get(subItem, 'fields.productHandle', '');
         });
         const subItemsAvailable =
-        !subItems.length ||
-        subItems.every(subItem => {
-          const shopifySubItem = get(shopifyProducts, subItem, {});
-          const variants = get(shopifySubItem, 'variants', []);
-          return variants.some(variant => variant.available);
-        });
+          !subItems.length ||
+          subItems.every(subItem => {
+            const shopifySubItem = get(shopifyProducts, subItem, {});
+            const variants = get(shopifySubItem, 'variants', []);
+            return variants.some(variant => variant.available);
+          });
         const forceAvailable = get(product, 'fields.forceAvailable', false);
+
         const link = `/products/${handle}`;
 
         mergedProducts[handle] = {
@@ -160,6 +161,7 @@ export default createSelector(
           productHero,
           whatsIncluded,
           limitedEdition,
+          forceAvailable,
           ...shopifyProduct
         };
 
