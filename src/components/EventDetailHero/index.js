@@ -150,6 +150,9 @@ class EventDetailHero extends Component {
       variant => variant.id === this.state.selectedItem
     );
     const selectedEventIsAvailable = get(selectedEvent, 'available', false);
+    const shoppableItemLabel = selectedEventIsAvailable
+      ? 'Add to Cart'
+      : 'Sold Out';
     const shoppableItem = !!event.id;
 
     return (
@@ -321,9 +324,9 @@ class EventDetailHero extends Component {
                   }
                 >
                   <span className="mr-auto">
-                    {shoppableItem ? 'Add to Cart' : 'RSVP'}
+                    {shoppableItem ? shoppableItemLabel : 'RSVP'}
                   </span>
-                  {shoppableItem ? (
+                  {shoppableItem && selectedEventIsAvailable ? (
                     <span className="ml2">
                       ${(
                         this.getItemPrice(this.state.selectedItem) * quantity
