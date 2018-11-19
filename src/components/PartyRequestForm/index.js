@@ -460,15 +460,15 @@ class PartyRequestForm extends Component {
                     >
                       <div
                         className={cx(
-                          'w100 flex items-center mx2',
+                          'w100 flex items-center mx2 h100 justify-between',
                           styles['PartyRequestForm__party-type-button']
                         )}
                       >
                         <p>{label}</p>
                         <Button
                           variant="primary-small"
-                          color="peach"
                           label="More Info"
+                          color="peach"
                           className={cx(
                             styles['PartyRequestForm__party-type-inner-button'],
                             'uppercase tout white-space-normal'
@@ -591,7 +591,6 @@ class PartyRequestForm extends Component {
                             <Button
                               variant="primary-small"
                               color="peach"
-                              label="More Info"
                               onClick={e =>
                                 this.handleInnerButtonClick(
                                   e,
@@ -602,11 +601,13 @@ class PartyRequestForm extends Component {
                               }
                               className={cx(
                                 styles[
-                                  'PartyRequestForm__party-type-inner-button'
+                                  'PartyRequestForm__party-add-ons-inner-button'
                                 ],
                                 'uppercase tout white-space-normal'
                               )}
-                            />
+                            >
+                              <p>More Info</p>
+                            </Button>
                           </div>
                         </div>
                       </Button>

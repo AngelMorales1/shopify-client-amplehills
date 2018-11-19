@@ -69,11 +69,9 @@ $CRF-close-bar-height: spacing(18);
 
   &__party-type-button {
     flex-direction: column;
-    justify-content: center;
 
     @media ($medium-up) {
       flex-direction: row;
-      justify-content: space-between;
       padding: spacing(8) 0;
     }
   }
@@ -83,6 +81,13 @@ $CRF-close-bar-height: spacing(18);
 
     @media ($medium-up) {
       margin: 0;
+    }
+  }
+
+  &__party-add-ons-inner-button {
+    @media ($medium-up) {
+      padding-top: calc(#{spacing(2)} + 0.0625rem);
+      padding-bottom: calc(#{spacing(2)} - 0.0625rem);
     }
   }
 
