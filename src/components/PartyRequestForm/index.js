@@ -313,7 +313,10 @@ class PartyRequestForm extends Component {
               variant="primary-small"
               color="peach"
               label="More Info"
-              className="uppercase mb3 tout"
+              className={cx(
+                styles['PartyRequestForm__more-info-button'],
+                'uppercase mb3 tout'
+              )}
               onClick={() => this.setState({ moreInfoModalIsOpen: true })}
             />
             <Dropdown

@@ -2,6 +2,11 @@
 $CRF-close-bar-height: spacing(18);
 
 .PartyRequestForm {
+  &__more-info-button {
+    padding-top: calc(#{spacing(2)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+  }
+
   &__day-picker-container,
   &__day-picker-container--selected {
     cursor: pointer;
