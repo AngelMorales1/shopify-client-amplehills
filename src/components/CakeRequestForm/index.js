@@ -219,7 +219,10 @@ class CakeRequestForm extends Component {
               variant="primary-small"
               color="peach"
               label="Need Help?"
-              className="uppercase mb3 tout"
+              className={cx(
+                styles['CakeRequestForm__help-button'],
+                'uppercase mb3 tout'
+              )}
               onClick={this.openFlavorModal}
             />
             <Dropdown
