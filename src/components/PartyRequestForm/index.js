@@ -446,9 +446,9 @@ class PartyRequestForm extends Component {
                 const label = partyType.partyType;
 
                 return (
-                  <div key={partyType.uuid} className="p1 col-6">
+                  <div key={partyType.uuid} className="p1 col-6 ">
                     <Button
-                      className="center wh100 white-space-normal"
+                      className="wh100"
                       variant={
                         selectedPartyType
                           ? this.getSelectedButton(selectedPartyType, label)
@@ -460,23 +460,33 @@ class PartyRequestForm extends Component {
                     >
                       <div
                         className={cx(
-                          'w100 flex items-center mx2 h100 justify-between',
+                          'wh100 flex items-center mx2',
                           styles['PartyRequestForm__party-type-button']
                         )}
                       >
-                        <p>{label}</p>
-                        <Button
-                          variant="primary-small"
-                          label="More Info"
-                          color="peach"
+                        <p className="white-space-normal">{label}</p>
+                        <div
                           className={cx(
-                            styles['PartyRequestForm__party-type-inner-button'],
-                            'uppercase tout white-space-normal'
+                            styles[
+                              'PartyRequestForm__party-type-inner-button-container'
+                            ]
                           )}
-                          onClick={e => this.handleInnerButtonClick(e)}
-                          to={partyType.link}
-                          newTab={true}
-                        />
+                        >
+                          <Button
+                            variant="primary-small"
+                            label="More Info"
+                            color="peach"
+                            className={cx(
+                              styles[
+                                'PartyRequestForm__party-type-inner-button'
+                              ],
+                              'uppercase tout white-space-normal'
+                            )}
+                            onClick={e => this.handleInnerButtonClick(e)}
+                            to={partyType.link}
+                            newTab={true}
+                          />
+                        </div>
                       </div>
                     </Button>
                   </div>
@@ -580,14 +590,21 @@ class PartyRequestForm extends Component {
                             : 'square'
                         }
                       >
-                        <div className="inline-flex flex-column w100 my2">
+                        <div className="flex flex-column wh100 my1">
                           <p className="mb1 white-space-normal center">
                             {partyAddOn.title}
                           </p>
-                          <p className="white-space-normal light">{`$${
+                          <p className="light white-space-normal center">{`$${
                             partyAddOn.price
                           } ${partyAddOn.unit}`}</p>
-                          <div className="mx-auto mt2">
+                          <div
+                            className={cx(
+                              styles[
+                                'PartyRequestForm__party-add-ons-inner-button--container'
+                              ],
+                              'mx-auto mt-auto mb0 pt2'
+                            )}
+                          >
                             <Button
                               variant="primary-small"
                               color="peach"
@@ -602,11 +619,12 @@ class PartyRequestForm extends Component {
                               className={cx(
                                 styles[
                                   'PartyRequestForm__party-add-ons-inner-button'
-                                ],
-                                'uppercase tout white-space-normal'
+                                ]
                               )}
                             >
-                              <p>More Info</p>
+                              <p className="uppercase tout white-space-normal">
+                                More Info
+                              </p>
                             </Button>
                           </div>
                         </div>
