@@ -204,6 +204,11 @@
       margin-bottom: 0;
     }
   }
+
+  &__full-image-container {
+    align-self: stretch;
+    padding: 0 !important;
+  }
 }
 
 .ImageText__full-image {
