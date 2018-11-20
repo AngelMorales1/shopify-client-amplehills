@@ -52,7 +52,7 @@ ShallowWrapper {
         className="w100 flex content-width"
 >
         <div
-                className="col-12 md-col-4"
+                className="col-12 md-col-4 undefined"
         >
                 <h2
                         className="block-headline"
@@ -87,7 +87,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="col-12 md-col-4"
+            className="col-12 md-col-4 undefined"
 >
             <h2
                         className="block-headline"
@@ -123,7 +123,7 @@ ShallowWrapper {
 >
               foo
 </h2>,
-            "className": "col-12 md-col-4",
+            "className": "col-12 md-col-4 undefined",
           },
           "ref": null,
           "rendered": Object {
@@ -195,7 +195,7 @@ ShallowWrapper {
           className="w100 flex content-width"
 >
           <div
-                    className="col-12 md-col-4"
+                    className="col-12 md-col-4 undefined"
           >
                     <h2
                               className="block-headline"
@@ -230,7 +230,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="col-12 md-col-4"
+              className="col-12 md-col-4 undefined"
 >
               <h2
                             className="block-headline"
@@ -266,7 +266,7 @@ ShallowWrapper {
 >
                 foo
 </h2>,
-              "className": "col-12 md-col-4",
+              "className": "col-12 md-col-4 undefined",
             },
             "ref": null,
             "rendered": Object {

@@ -359,10 +359,15 @@ ShallowWrapper {
                     className="w100 mt4 flex flex-column items-center"
           >
                     <p
-                              className="bold big center mb3"
+                              className="bold big center"
                     >
                               Of these time slots, which is your first choice?
                     </p>
+                    <span
+                              className="my2 text-white text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <div
                               className="form-container-width w100 flex flex-row flex-wrap justify-center"
                     >
@@ -468,10 +473,15 @@ ShallowWrapper {
                     className="w100 mt4 flex flex-column items-center"
           >
                     <p
-                              className="bold big center mb3"
+                              className="bold big center"
                     >
                               Which kind of party is best for you?
                     </p>
+                    <span
+                              className="my2 text-white text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <div
                               className="form-container-width w100 flex flex-row flex-wrap justify-center"
                     >
@@ -571,6 +581,11 @@ ShallowWrapper {
                     >
                               How many participants are you expecting?
                     </p>
+                    <span
+                              className="mb2 text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <p
                               className="center mb3"
                     >
@@ -793,7 +808,7 @@ ShallowWrapper {
                                                   <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -1069,10 +1084,15 @@ ShallowWrapper {
               className="w100 mt4 flex flex-column items-center"
 >
               <p
-                            className="bold big center mb3"
+                            className="bold big center"
               >
                             Of these time slots, which is your first choice?
               </p>
+              <span
+                            className="my2 text-white text-peach"
+              >
+                            You must first select a location
+              </span>
               <div
                             className="form-container-width w100 flex flex-row flex-wrap justify-center"
               >
@@ -1178,10 +1198,15 @@ ShallowWrapper {
               className="w100 mt4 flex flex-column items-center"
 >
               <p
-                            className="bold big center mb3"
+                            className="bold big center"
               >
                             Which kind of party is best for you?
               </p>
+              <span
+                            className="my2 text-white text-peach"
+              >
+                            You must first select a location
+              </span>
               <div
                             className="form-container-width w100 flex flex-row flex-wrap justify-center"
               >
@@ -1281,6 +1306,11 @@ ShallowWrapper {
               >
                             How many participants are you expecting?
               </p>
+              <span
+                            className="mb2 text-peach"
+              >
+                            You must first select a location
+              </span>
               <p
                             className="center mb3"
               >
@@ -2189,10 +2219,15 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="bold big center mb3"
+                  className="bold big center"
 >
                   Of these time slots, which is your first choice?
 </p>,
+                <span
+                  className="my2 text-white text-peach"
+>
+                  You must first select a location
+</span>,
                 <div
                   className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -2304,11 +2339,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Of these time slots, which is your first choice?",
-                  "className": "bold big center mb3",
+                  "className": "bold big center",
                 },
                 "ref": null,
                 "rendered": "Of these time slots, which is your first choice?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "my2 text-white text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -2638,10 +2685,15 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="bold big center mb3"
+                  className="bold big center"
 >
                   Which kind of party is best for you?
 </p>,
+                <span
+                  className="my2 text-white text-peach"
+>
+                  You must first select a location
+</span>,
                 <div
                   className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -2743,11 +2795,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Which kind of party is best for you?",
-                  "className": "bold big center mb3",
+                  "className": "bold big center",
                 },
                 "ref": null,
                 "rendered": "Which kind of party is best for you?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "my2 text-white text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -3189,6 +3253,11 @@ ShallowWrapper {
 >
                   How many participants are you expecting?
 </p>,
+                <span
+                  className="mb2 text-peach"
+>
+                  You must first select a location
+</span>,
                 <p
                   className="center mb3"
 >
@@ -3224,6 +3293,18 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "How many participants are you expecting?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "mb2 text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -3944,7 +4025,7 @@ ShallowWrapper {
                                                 <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -4007,7 +4088,7 @@ ShallowWrapper {
                                                 <Button
                                                                 className="inline-flex"
                                                                 color="madison-blue"
-                                                                disabled={false}
+                                                                disabled={true}
                                                                 fullWidth={false}
                                                                 hover="shadow"
                                                                 label="Make Deposit"
@@ -4125,7 +4206,7 @@ ShallowWrapper {
                                     <Button
                                                       className="inline-flex"
                                                       color="madison-blue"
-                                                      disabled={false}
+                                                      disabled={true}
                                                       fullWidth={false}
                                                       hover="shadow"
                                                       label="Make Deposit"
@@ -4162,7 +4243,7 @@ ShallowWrapper {
                       <Button
                                             className="inline-flex"
                                             color="madison-blue"
-                                            disabled={false}
+                                            disabled={true}
                                             fullWidth={false}
                                             hover="shadow"
                                             label="Make Deposit"
@@ -4212,7 +4293,7 @@ ShallowWrapper {
                       "children": <Button
                         className="inline-flex"
                         color="madison-blue"
-                        disabled={false}
+                        disabled={true}
                         fullWidth={false}
                         hover="shadow"
                         label="Make Deposit"
@@ -4234,7 +4315,7 @@ ShallowWrapper {
                         "children": null,
                         "className": "inline-flex",
                         "color": "madison-blue",
-                        "disabled": false,
+                        "disabled": true,
                         "fullWidth": false,
                         "hover": "shadow",
                         "label": "Make Deposit",
@@ -4523,10 +4604,15 @@ ShallowWrapper {
                         className="w100 mt4 flex flex-column items-center"
             >
                         <p
-                                    className="bold big center mb3"
+                                    className="bold big center"
                         >
                                     Of these time slots, which is your first choice?
                         </p>
+                        <span
+                                    className="my2 text-white text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <div
                                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
                         >
@@ -4632,10 +4718,15 @@ ShallowWrapper {
                         className="w100 mt4 flex flex-column items-center"
             >
                         <p
-                                    className="bold big center mb3"
+                                    className="bold big center"
                         >
                                     Which kind of party is best for you?
                         </p>
+                        <span
+                                    className="my2 text-white text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <div
                                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
                         >
@@ -4735,6 +4826,11 @@ ShallowWrapper {
                         >
                                     How many participants are you expecting?
                         </p>
+                        <span
+                                    className="mb2 text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <p
                                     className="center mb3"
                         >
@@ -4957,7 +5053,7 @@ ShallowWrapper {
                                                             <Button
                                                                         className="inline-flex"
                                                                         color="madison-blue"
-                                                                        disabled={false}
+                                                                        disabled={true}
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="Make Deposit"
@@ -5233,10 +5329,15 @@ ShallowWrapper {
                 className="w100 mt4 flex flex-column items-center"
 >
                 <p
-                                className="bold big center mb3"
+                                className="bold big center"
                 >
                                 Of these time slots, which is your first choice?
                 </p>
+                <span
+                                className="my2 text-white text-peach"
+                >
+                                You must first select a location
+                </span>
                 <div
                                 className="form-container-width w100 flex flex-row flex-wrap justify-center"
                 >
@@ -5342,10 +5443,15 @@ ShallowWrapper {
                 className="w100 mt4 flex flex-column items-center"
 >
                 <p
-                                className="bold big center mb3"
+                                className="bold big center"
                 >
                                 Which kind of party is best for you?
                 </p>
+                <span
+                                className="my2 text-white text-peach"
+                >
+                                You must first select a location
+                </span>
                 <div
                                 className="form-container-width w100 flex flex-row flex-wrap justify-center"
                 >
@@ -5445,6 +5551,11 @@ ShallowWrapper {
                 >
                                 How many participants are you expecting?
                 </p>
+                <span
+                                className="mb2 text-peach"
+                >
+                                You must first select a location
+                </span>
                 <p
                                 className="center mb3"
                 >
@@ -6353,10 +6464,15 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="bold big center mb3"
+                    className="bold big center"
 >
                     Of these time slots, which is your first choice?
 </p>,
+                  <span
+                    className="my2 text-white text-peach"
+>
+                    You must first select a location
+</span>,
                   <div
                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -6468,11 +6584,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Of these time slots, which is your first choice?",
-                    "className": "bold big center mb3",
+                    "className": "bold big center",
                   },
                   "ref": null,
                   "rendered": "Of these time slots, which is your first choice?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "my2 text-white text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -6802,10 +6930,15 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="bold big center mb3"
+                    className="bold big center"
 >
                     Which kind of party is best for you?
 </p>,
+                  <span
+                    className="my2 text-white text-peach"
+>
+                    You must first select a location
+</span>,
                   <div
                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -6907,11 +7040,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Which kind of party is best for you?",
-                    "className": "bold big center mb3",
+                    "className": "bold big center",
                   },
                   "ref": null,
                   "rendered": "Which kind of party is best for you?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "my2 text-white text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -7353,6 +7498,11 @@ ShallowWrapper {
 >
                     How many participants are you expecting?
 </p>,
+                  <span
+                    className="mb2 text-peach"
+>
+                    You must first select a location
+</span>,
                   <p
                     className="center mb3"
 >
@@ -7388,6 +7538,18 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": "How many participants are you expecting?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "mb2 text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -8108,7 +8270,7 @@ ShallowWrapper {
                                                         <Button
                                                                       className="inline-flex"
                                                                       color="madison-blue"
-                                                                      disabled={false}
+                                                                      disabled={true}
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="Make Deposit"
@@ -8171,7 +8333,7 @@ ShallowWrapper {
                                                       <Button
                                                                         className="inline-flex"
                                                                         color="madison-blue"
-                                                                        disabled={false}
+                                                                        disabled={true}
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="Make Deposit"
@@ -8289,7 +8451,7 @@ ShallowWrapper {
                                         <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -8326,7 +8488,7 @@ ShallowWrapper {
                         <Button
                                                 className="inline-flex"
                                                 color="madison-blue"
-                                                disabled={false}
+                                                disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label="Make Deposit"
@@ -8376,7 +8538,7 @@ ShallowWrapper {
                         "children": <Button
                           className="inline-flex"
                           color="madison-blue"
-                          disabled={false}
+                          disabled={true}
                           fullWidth={false}
                           hover="shadow"
                           label="Make Deposit"
@@ -8398,7 +8560,7 @@ ShallowWrapper {
                           "children": null,
                           "className": "inline-flex",
                           "color": "madison-blue",
-                          "disabled": false,
+                          "disabled": true,
                           "fullWidth": false,
                           "hover": "shadow",
                           "label": "Make Deposit",
@@ -8742,10 +8904,15 @@ ShallowWrapper {
                     className="w100 mt4 flex flex-column items-center"
           >
                     <p
-                              className="bold big center mb3"
+                              className="bold big center"
                     >
                               Of these time slots, which is your first choice?
                     </p>
+                    <span
+                              className="my2 text-white text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <div
                               className="form-container-width w100 flex flex-row flex-wrap justify-center"
                     >
@@ -8851,10 +9018,15 @@ ShallowWrapper {
                     className="w100 mt4 flex flex-column items-center"
           >
                     <p
-                              className="bold big center mb3"
+                              className="bold big center"
                     >
                               Which kind of party is best for you?
                     </p>
+                    <span
+                              className="my2 text-white text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <div
                               className="form-container-width w100 flex flex-row flex-wrap justify-center"
                     >
@@ -8954,6 +9126,11 @@ ShallowWrapper {
                     >
                               How many participants are you expecting?
                     </p>
+                    <span
+                              className="mb2 text-peach"
+                    >
+                              You must first select a location
+                    </span>
                     <p
                               className="center mb3"
                     >
@@ -9176,7 +9353,7 @@ ShallowWrapper {
                                                   <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -9445,10 +9622,15 @@ ShallowWrapper {
               className="w100 mt4 flex flex-column items-center"
 >
               <p
-                            className="bold big center mb3"
+                            className="bold big center"
               >
                             Of these time slots, which is your first choice?
               </p>
+              <span
+                            className="my2 text-white text-peach"
+              >
+                            You must first select a location
+              </span>
               <div
                             className="form-container-width w100 flex flex-row flex-wrap justify-center"
               >
@@ -9554,10 +9736,15 @@ ShallowWrapper {
               className="w100 mt4 flex flex-column items-center"
 >
               <p
-                            className="bold big center mb3"
+                            className="bold big center"
               >
                             Which kind of party is best for you?
               </p>
+              <span
+                            className="my2 text-white text-peach"
+              >
+                            You must first select a location
+              </span>
               <div
                             className="form-container-width w100 flex flex-row flex-wrap justify-center"
               >
@@ -9657,6 +9844,11 @@ ShallowWrapper {
               >
                             How many participants are you expecting?
               </p>
+              <span
+                            className="mb2 text-peach"
+              >
+                            You must first select a location
+              </span>
               <p
                             className="center mb3"
               >
@@ -10553,10 +10745,15 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="bold big center mb3"
+                  className="bold big center"
 >
                   Of these time slots, which is your first choice?
 </p>,
+                <span
+                  className="my2 text-white text-peach"
+>
+                  You must first select a location
+</span>,
                 <div
                   className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -10668,11 +10865,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Of these time slots, which is your first choice?",
-                  "className": "bold big center mb3",
+                  "className": "bold big center",
                 },
                 "ref": null,
                 "rendered": "Of these time slots, which is your first choice?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "my2 text-white text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -11002,10 +11211,15 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <p
-                  className="bold big center mb3"
+                  className="bold big center"
 >
                   Which kind of party is best for you?
 </p>,
+                <span
+                  className="my2 text-white text-peach"
+>
+                  You must first select a location
+</span>,
                 <div
                   className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -11107,11 +11321,23 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Which kind of party is best for you?",
-                  "className": "bold big center mb3",
+                  "className": "bold big center",
                 },
                 "ref": null,
                 "rendered": "Which kind of party is best for you?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "my2 text-white text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -11553,6 +11779,11 @@ ShallowWrapper {
 >
                   How many participants are you expecting?
 </p>,
+                <span
+                  className="mb2 text-peach"
+>
+                  You must first select a location
+</span>,
                 <p
                   className="center mb3"
 >
@@ -11588,6 +11819,18 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "How many participants are you expecting?",
                 "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You must first select a location",
+                  "className": "mb2 text-peach",
+                },
+                "ref": null,
+                "rendered": "You must first select a location",
+                "type": "span",
               },
               Object {
                 "instance": null,
@@ -12308,7 +12551,7 @@ ShallowWrapper {
                                                 <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -12371,7 +12614,7 @@ ShallowWrapper {
                                                 <Button
                                                                 className="inline-flex"
                                                                 color="madison-blue"
-                                                                disabled={false}
+                                                                disabled={true}
                                                                 fullWidth={false}
                                                                 hover="shadow"
                                                                 label="Make Deposit"
@@ -12489,7 +12732,7 @@ ShallowWrapper {
                                     <Button
                                                       className="inline-flex"
                                                       color="madison-blue"
-                                                      disabled={false}
+                                                      disabled={true}
                                                       fullWidth={false}
                                                       hover="shadow"
                                                       label="Make Deposit"
@@ -12526,7 +12769,7 @@ ShallowWrapper {
                       <Button
                                             className="inline-flex"
                                             color="madison-blue"
-                                            disabled={false}
+                                            disabled={true}
                                             fullWidth={false}
                                             hover="shadow"
                                             label="Make Deposit"
@@ -12576,7 +12819,7 @@ ShallowWrapper {
                       "children": <Button
                         className="inline-flex"
                         color="madison-blue"
-                        disabled={false}
+                        disabled={true}
                         fullWidth={false}
                         hover="shadow"
                         label="Make Deposit"
@@ -12598,7 +12841,7 @@ ShallowWrapper {
                         "children": null,
                         "className": "inline-flex",
                         "color": "madison-blue",
-                        "disabled": false,
+                        "disabled": true,
                         "fullWidth": false,
                         "hover": "shadow",
                         "label": "Make Deposit",
@@ -12880,10 +13123,15 @@ ShallowWrapper {
                         className="w100 mt4 flex flex-column items-center"
             >
                         <p
-                                    className="bold big center mb3"
+                                    className="bold big center"
                         >
                                     Of these time slots, which is your first choice?
                         </p>
+                        <span
+                                    className="my2 text-white text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <div
                                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
                         >
@@ -12989,10 +13237,15 @@ ShallowWrapper {
                         className="w100 mt4 flex flex-column items-center"
             >
                         <p
-                                    className="bold big center mb3"
+                                    className="bold big center"
                         >
                                     Which kind of party is best for you?
                         </p>
+                        <span
+                                    className="my2 text-white text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <div
                                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
                         >
@@ -13092,6 +13345,11 @@ ShallowWrapper {
                         >
                                     How many participants are you expecting?
                         </p>
+                        <span
+                                    className="mb2 text-peach"
+                        >
+                                    You must first select a location
+                        </span>
                         <p
                                     className="center mb3"
                         >
@@ -13314,7 +13572,7 @@ ShallowWrapper {
                                                             <Button
                                                                         className="inline-flex"
                                                                         color="madison-blue"
-                                                                        disabled={false}
+                                                                        disabled={true}
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="Make Deposit"
@@ -13583,10 +13841,15 @@ ShallowWrapper {
                 className="w100 mt4 flex flex-column items-center"
 >
                 <p
-                                className="bold big center mb3"
+                                className="bold big center"
                 >
                                 Of these time slots, which is your first choice?
                 </p>
+                <span
+                                className="my2 text-white text-peach"
+                >
+                                You must first select a location
+                </span>
                 <div
                                 className="form-container-width w100 flex flex-row flex-wrap justify-center"
                 >
@@ -13692,10 +13955,15 @@ ShallowWrapper {
                 className="w100 mt4 flex flex-column items-center"
 >
                 <p
-                                className="bold big center mb3"
+                                className="bold big center"
                 >
                                 Which kind of party is best for you?
                 </p>
+                <span
+                                className="my2 text-white text-peach"
+                >
+                                You must first select a location
+                </span>
                 <div
                                 className="form-container-width w100 flex flex-row flex-wrap justify-center"
                 >
@@ -13795,6 +14063,11 @@ ShallowWrapper {
                 >
                                 How many participants are you expecting?
                 </p>
+                <span
+                                className="mb2 text-peach"
+                >
+                                You must first select a location
+                </span>
                 <p
                                 className="center mb3"
                 >
@@ -14691,10 +14964,15 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="bold big center mb3"
+                    className="bold big center"
 >
                     Of these time slots, which is your first choice?
 </p>,
+                  <span
+                    className="my2 text-white text-peach"
+>
+                    You must first select a location
+</span>,
                   <div
                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -14806,11 +15084,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Of these time slots, which is your first choice?",
-                    "className": "bold big center mb3",
+                    "className": "bold big center",
                   },
                   "ref": null,
                   "rendered": "Of these time slots, which is your first choice?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "my2 text-white text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -15140,10 +15430,15 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <p
-                    className="bold big center mb3"
+                    className="bold big center"
 >
                     Which kind of party is best for you?
 </p>,
+                  <span
+                    className="my2 text-white text-peach"
+>
+                    You must first select a location
+</span>,
                   <div
                     className="form-container-width w100 flex flex-row flex-wrap justify-center"
 >
@@ -15245,11 +15540,23 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Which kind of party is best for you?",
-                    "className": "bold big center mb3",
+                    "className": "bold big center",
                   },
                   "ref": null,
                   "rendered": "Which kind of party is best for you?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "my2 text-white text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -15691,6 +15998,11 @@ ShallowWrapper {
 >
                     How many participants are you expecting?
 </p>,
+                  <span
+                    className="mb2 text-peach"
+>
+                    You must first select a location
+</span>,
                   <p
                     className="center mb3"
 >
@@ -15726,6 +16038,18 @@ ShallowWrapper {
                   "ref": null,
                   "rendered": "How many participants are you expecting?",
                   "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You must first select a location",
+                    "className": "mb2 text-peach",
+                  },
+                  "ref": null,
+                  "rendered": "You must first select a location",
+                  "type": "span",
                 },
                 Object {
                   "instance": null,
@@ -16446,7 +16770,7 @@ ShallowWrapper {
                                                         <Button
                                                                       className="inline-flex"
                                                                       color="madison-blue"
-                                                                      disabled={false}
+                                                                      disabled={true}
                                                                       fullWidth={false}
                                                                       hover="shadow"
                                                                       label="Make Deposit"
@@ -16509,7 +16833,7 @@ ShallowWrapper {
                                                       <Button
                                                                         className="inline-flex"
                                                                         color="madison-blue"
-                                                                        disabled={false}
+                                                                        disabled={true}
                                                                         fullWidth={false}
                                                                         hover="shadow"
                                                                         label="Make Deposit"
@@ -16627,7 +16951,7 @@ ShallowWrapper {
                                         <Button
                                                             className="inline-flex"
                                                             color="madison-blue"
-                                                            disabled={false}
+                                                            disabled={true}
                                                             fullWidth={false}
                                                             hover="shadow"
                                                             label="Make Deposit"
@@ -16664,7 +16988,7 @@ ShallowWrapper {
                         <Button
                                                 className="inline-flex"
                                                 color="madison-blue"
-                                                disabled={false}
+                                                disabled={true}
                                                 fullWidth={false}
                                                 hover="shadow"
                                                 label="Make Deposit"
@@ -16714,7 +17038,7 @@ ShallowWrapper {
                         "children": <Button
                           className="inline-flex"
                           color="madison-blue"
-                          disabled={false}
+                          disabled={true}
                           fullWidth={false}
                           hover="shadow"
                           label="Make Deposit"
@@ -16736,7 +17060,7 @@ ShallowWrapper {
                           "children": null,
                           "className": "inline-flex",
                           "color": "madison-blue",
-                          "disabled": false,
+                          "disabled": true,
                           "fullWidth": false,
                           "hover": "shadow",
                           "label": "Make Deposit",

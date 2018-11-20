@@ -14,10 +14,14 @@ import { Button } from 'components/base';
 const EventCard = ({ event, active }) => {
   const datesAndTimes = event.datesAndTimes;
   const dates = datesAndTimes.map(dateAndTime => {
-    return moment(get(dateAndTime, 'date', '')).format('MMMM D YYYY');
+    const getDateFormat = Date.parse(get(dateAndTime, 'date', ''));
+
+    return !isNaN(getDateFormat)
+      ? `${moment(getDateFormat).format('MMMM D YYYY')},`
+      : '';
   });
   const times = datesAndTimes.map(dateAndTime => {
-    return getShortTimeFormat(get(dateAndTime, 'time', ''));
+    return getShortTimeFormat(get(dateAndTime, 'time', '')) || '';
   });
 
   return (
@@ -48,17 +52,24 @@ const EventCard = ({ event, active }) => {
           {datesAndTimes.length === 1 ? (
             <p className={cx(styles['EventCard__date-text'], 'mb2')}>{`${
               dates[0]
-            }, ${times[0]} at ${event.locationTitle}`}</p>
+            } ${times[0]} at ${event.locationTitle}`}</p>
           ) : null}
           <h2 className={cx(styles['EventCard__title'])}>{event.title}</h2>
           {datesAndTimes.length > 1 ? (
             <div className="mt2">
-              {dates.map((date, i) => (
-                <p
-                  key={date}
-                  className={cx(styles['EventCard__text'])}
-                >{`${moment(date).format('MM/DD/YY')} - ${times[i]}`}</p>
-              ))}
+              {dates.map((date, i) => {
+                const getMultipleDateFormat = Date.parse(date);
+                const renderDate = !isNaN(getMultipleDateFormat)
+                  ? `${moment(getMultipleDateFormat).format('MM/DD/YY')} -`
+                  : '';
+
+                return (
+                  <p
+                    key={date}
+                    className={cx(styles['EventCard__text'])}
+                  >{`${renderDate} ${times[i]}`}</p>
+                );
+              })}
             </div>
           ) : null}
           {event.blockCardText ? (

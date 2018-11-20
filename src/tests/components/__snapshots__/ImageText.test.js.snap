@@ -101,7 +101,7 @@ ShallowWrapper {
                     bg={false}
                     className="col-4 z-sub-nav mt2 mx-auto my-auto"
                     onImgLoad={[Function]}
-                    src="foo?w=1400&fm=png&q=90"
+                    src="foo?w=1400&fm=jpg&fl=progressive&q=90"
                     style={
                               Object {
                                         "transform": "translate(0%, 0%)",
@@ -152,7 +152,7 @@ ShallowWrapper {
               bg={false}
               className="col-4 z-sub-nav mt2 mx-auto my-auto"
               onImgLoad={[Function]}
-              src="foo?w=1400&fm=png&q=90"
+              src="foo?w=1400&fm=jpg&fl=progressive&q=90"
               style={
                             Object {
                                           "transform": "translate(0%, 0%)",
@@ -256,7 +256,7 @@ ShallowWrapper {
               "children": null,
               "className": "col-4 z-sub-nav mt2 mx-auto my-auto",
               "onImgLoad": [Function],
-              "src": "foo?w=1400&fm=png&q=90",
+              "src": "foo?w=1400&fm=jpg&fl=progressive&q=90",
               "style": Object {
                 "transform": "translate(0%, 0%)",
               },
@@ -310,7 +310,7 @@ ShallowWrapper {
                         bg={false}
                         className="col-4 z-sub-nav mt2 mx-auto my-auto"
                         onImgLoad={[Function]}
-                        src="foo?w=1400&fm=png&q=90"
+                        src="foo?w=1400&fm=jpg&fl=progressive&q=90"
                         style={
                                     Object {
                                                 "transform": "translate(0%, 0%)",
@@ -361,7 +361,7 @@ ShallowWrapper {
                 bg={false}
                 className="col-4 z-sub-nav mt2 mx-auto my-auto"
                 onImgLoad={[Function]}
-                src="foo?w=1400&fm=png&q=90"
+                src="foo?w=1400&fm=jpg&fl=progressive&q=90"
                 style={
                                 Object {
                                                 "transform": "translate(0%, 0%)",
@@ -465,7 +465,7 @@ ShallowWrapper {
                 "children": null,
                 "className": "col-4 z-sub-nav mt2 mx-auto my-auto",
                 "onImgLoad": [Function],
-                "src": "foo?w=1400&fm=png&q=90",
+                "src": "foo?w=1400&fm=jpg&fl=progressive&q=90",
                 "style": Object {
                   "transform": "translate(0%, 0%)",
                 },
@@ -573,7 +573,7 @@ ShallowWrapper {
                     bg={false}
                     className="col-6 z-sub-nav mt2 mx-auto my-auto"
                     onImgLoad={[Function]}
-                    src="?w=1400&fm=png&q=90"
+                    src="?w=1400&fm=jpg&fl=progressive&q=90"
                     style={
                               Object {
                                         "transform": "translate(0%, 0%)",
@@ -621,7 +621,7 @@ ShallowWrapper {
               bg={false}
               className="col-6 z-sub-nav mt2 mx-auto my-auto"
               onImgLoad={[Function]}
-              src="?w=1400&fm=png&q=90"
+              src="?w=1400&fm=jpg&fl=progressive&q=90"
               style={
                             Object {
                                           "transform": "translate(0%, 0%)",
@@ -721,7 +721,7 @@ ShallowWrapper {
               "children": null,
               "className": "col-6 z-sub-nav mt2 mx-auto my-auto",
               "onImgLoad": [Function],
-              "src": "?w=1400&fm=png&q=90",
+              "src": "?w=1400&fm=jpg&fl=progressive&q=90",
               "style": Object {
                 "transform": "translate(0%, 0%)",
               },
@@ -772,7 +772,7 @@ ShallowWrapper {
                         bg={false}
                         className="col-6 z-sub-nav mt2 mx-auto my-auto"
                         onImgLoad={[Function]}
-                        src="?w=1400&fm=png&q=90"
+                        src="?w=1400&fm=jpg&fl=progressive&q=90"
                         style={
                                     Object {
                                                 "transform": "translate(0%, 0%)",
@@ -820,7 +820,7 @@ ShallowWrapper {
                 bg={false}
                 className="col-6 z-sub-nav mt2 mx-auto my-auto"
                 onImgLoad={[Function]}
-                src="?w=1400&fm=png&q=90"
+                src="?w=1400&fm=jpg&fl=progressive&q=90"
                 style={
                                 Object {
                                                 "transform": "translate(0%, 0%)",
@@ -920,7 +920,7 @@ ShallowWrapper {
                 "children": null,
                 "className": "col-6 z-sub-nav mt2 mx-auto my-auto",
                 "onImgLoad": [Function],
-                "src": "?w=1400&fm=png&q=90",
+                "src": "?w=1400&fm=jpg&fl=progressive&q=90",
                 "style": Object {
                   "transform": "translate(0%, 0%)",
                 },

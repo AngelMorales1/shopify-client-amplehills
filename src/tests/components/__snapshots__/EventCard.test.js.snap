@@ -53,7 +53,7 @@ ShallowWrapper {
                     <p
                               className="mb2"
                     >
-                              Invalid date, undefined at foo
+                                at foo
                     </p>
                     <h2
                               className=""
@@ -84,7 +84,7 @@ ShallowWrapper {
                               shadow={false}
                               to="/events/undefined"
                               type="button"
-                              variant="primary"
+                              variant="primary-responsive"
                     />
           </div>
 </div>,
@@ -118,7 +118,7 @@ ShallowWrapper {
               <p
                             className="mb2"
               >
-                            Invalid date, undefined at foo
+                              at foo
               </p>
               <h2
                             className=""
@@ -149,7 +149,7 @@ ShallowWrapper {
                             shadow={false}
                             to="/events/undefined"
                             type="button"
-                            variant="primary"
+                            variant="primary-responsive"
               />
 </div>,
           ],
@@ -166,7 +166,7 @@ ShallowWrapper {
                 <p
                   className="mb2"
 >
-                  Invalid date, undefined at foo
+                    at foo
 </p>,
                 <h2
                   className=""
@@ -192,11 +192,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Invalid date, undefined at foo",
+                  "children": "  at foo",
                   "className": "mb2",
                 },
                 "ref": null,
-                "rendered": "Invalid date, undefined at foo",
+                "rendered": "  at foo",
                 "type": "p",
               },
               Object {
@@ -248,7 +248,7 @@ ShallowWrapper {
                 shadow={false}
                 to="/events/undefined"
                 type="button"
-                variant="primary"
+                variant="primary-responsive"
 />,
             },
             "ref": null,
@@ -270,7 +270,7 @@ ShallowWrapper {
                 "shadow": false,
                 "to": "/events/undefined",
                 "type": "button",
-                "variant": "primary",
+                "variant": "primary-responsive",
               },
               "ref": null,
               "rendered": null,
@@ -307,7 +307,7 @@ ShallowWrapper {
                         <p
                                     className="mb2"
                         >
-                                    Invalid date, undefined at foo
+                                      at foo
                         </p>
                         <h2
                                     className=""
@@ -338,7 +338,7 @@ ShallowWrapper {
                                     shadow={false}
                                     to="/events/undefined"
                                     type="button"
-                                    variant="primary"
+                                    variant="primary-responsive"
                         />
             </div>
 </div>,
@@ -372,7 +372,7 @@ ShallowWrapper {
                 <p
                                 className="mb2"
                 >
-                                Invalid date, undefined at foo
+                                  at foo
                 </p>
                 <h2
                                 className=""
@@ -403,7 +403,7 @@ ShallowWrapper {
                                 shadow={false}
                                 to="/events/undefined"
                                 type="button"
-                                variant="primary"
+                                variant="primary-responsive"
                 />
 </div>,
             ],
@@ -420,7 +420,7 @@ ShallowWrapper {
                   <p
                     className="mb2"
 >
-                    Invalid date, undefined at foo
+                      at foo
 </p>,
                   <h2
                     className=""
@@ -446,11 +446,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Invalid date, undefined at foo",
+                    "children": "  at foo",
                     "className": "mb2",
                   },
                   "ref": null,
-                  "rendered": "Invalid date, undefined at foo",
+                  "rendered": "  at foo",
                   "type": "p",
                 },
                 Object {
@@ -502,7 +502,7 @@ ShallowWrapper {
                   shadow={false}
                   to="/events/undefined"
                   type="button"
-                  variant="primary"
+                  variant="primary-responsive"
 />,
               },
               "ref": null,
@@ -524,7 +524,7 @@ ShallowWrapper {
                   "shadow": false,
                   "to": "/events/undefined",
                   "type": "button",
-                  "variant": "primary",
+                  "variant": "primary-responsive",
                 },
                 "ref": null,
                 "rendered": null,
@@ -602,7 +602,7 @@ ShallowWrapper {
                     <p
                               className="mb2"
                     >
-                              Invalid date, undefined at 
+                                at 
                     </p>
                     <h2
                               className=""
@@ -622,7 +622,7 @@ ShallowWrapper {
                               shadow={false}
                               to="/events/undefined"
                               type="button"
-                              variant="primary"
+                              variant="primary-responsive"
                     />
           </div>
 </div>,
@@ -656,7 +656,7 @@ ShallowWrapper {
               <p
                             className="mb2"
               >
-                            Invalid date, undefined at 
+                              at 
               </p>
               <h2
                             className=""
@@ -676,7 +676,7 @@ ShallowWrapper {
                             shadow={false}
                             to="/events/undefined"
                             type="button"
-                            variant="primary"
+                            variant="primary-responsive"
               />
 </div>,
           ],
@@ -693,7 +693,7 @@ ShallowWrapper {
                 <p
                   className="mb2"
 >
-                  Invalid date, undefined at 
+                    at 
 </p>,
                 <h2
                   className=""
@@ -709,11 +709,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Invalid date, undefined at ",
+                  "children": "  at ",
                   "className": "mb2",
                 },
                 "ref": null,
-                "rendered": "Invalid date, undefined at ",
+                "rendered": "  at ",
                 "type": "p",
               },
               Object {
@@ -751,7 +751,7 @@ ShallowWrapper {
                 shadow={false}
                 to="/events/undefined"
                 type="button"
-                variant="primary"
+                variant="primary-responsive"
 />,
             },
             "ref": null,
@@ -773,7 +773,7 @@ ShallowWrapper {
                 "shadow": false,
                 "to": "/events/undefined",
                 "type": "button",
-                "variant": "primary",
+                "variant": "primary-responsive",
               },
               "ref": null,
               "rendered": null,
@@ -810,7 +810,7 @@ ShallowWrapper {
                         <p
                                     className="mb2"
                         >
-                                    Invalid date, undefined at 
+                                      at 
                         </p>
                         <h2
                                     className=""
@@ -830,7 +830,7 @@ ShallowWrapper {
                                     shadow={false}
                                     to="/events/undefined"
                                     type="button"
-                                    variant="primary"
+                                    variant="primary-responsive"
                         />
             </div>
 </div>,
@@ -864,7 +864,7 @@ ShallowWrapper {
                 <p
                                 className="mb2"
                 >
-                                Invalid date, undefined at 
+                                  at 
                 </p>
                 <h2
                                 className=""
@@ -884,7 +884,7 @@ ShallowWrapper {
                                 shadow={false}
                                 to="/events/undefined"
                                 type="button"
-                                variant="primary"
+                                variant="primary-responsive"
                 />
 </div>,
             ],
@@ -901,7 +901,7 @@ ShallowWrapper {
                   <p
                     className="mb2"
 >
-                    Invalid date, undefined at 
+                      at 
 </p>,
                   <h2
                     className=""
@@ -917,11 +917,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Invalid date, undefined at ",
+                    "children": "  at ",
                     "className": "mb2",
                   },
                   "ref": null,
-                  "rendered": "Invalid date, undefined at ",
+                  "rendered": "  at ",
                   "type": "p",
                 },
                 Object {
@@ -959,7 +959,7 @@ ShallowWrapper {
                   shadow={false}
                   to="/events/undefined"
                   type="button"
-                  variant="primary"
+                  variant="primary-responsive"
 />,
               },
               "ref": null,
@@ -981,7 +981,7 @@ ShallowWrapper {
                   "shadow": false,
                   "to": "/events/undefined",
                   "type": "button",
-                  "variant": "primary",
+                  "variant": "primary-responsive",
                 },
                 "ref": null,
                 "rendered": null,

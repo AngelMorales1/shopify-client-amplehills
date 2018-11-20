@@ -412,7 +412,7 @@ ShallowWrapper {
                                                             foo
                                                   </p>
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="col-5 md-col-6 block-subheadline"
                                                   >
                                                             foo
                                                   </p>
@@ -665,7 +665,7 @@ ShallowWrapper {
                                                                       foo
                                                         </p>
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="col-5 md-col-6 block-subheadline"
                                                         >
                                                                       foo
                                                         </p>
@@ -897,7 +897,7 @@ ShallowWrapper {
                                                                         foo
                                                       </p>
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="col-5 md-col-6 block-subheadline"
                                                       >
                                                                         foo
                                                       </p>
@@ -1127,7 +1127,7 @@ ShallowWrapper {
                                                                   foo
                                             </p>
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="col-5 md-col-6 block-subheadline"
                                             >
                                                                   foo
                                             </p>
@@ -1748,7 +1748,7 @@ ShallowWrapper {
                                                         foo
                             </p>
                             <p
-                                                        className="block-subheadline"
+                                                        className="col-5 md-col-6 block-subheadline"
                             >
                                                         foo
                             </p>
@@ -1784,7 +1784,7 @@ ShallowWrapper {
                               foo
 </p>,
                             <p
-                              className="block-subheadline"
+                              className="col-5 md-col-6 block-subheadline"
 >
                               foo
 </p>,
@@ -1815,7 +1815,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "foo",
-                              "className": "block-subheadline",
+                              "className": "col-5 md-col-6 block-subheadline",
                             },
                             "ref": null,
                             "rendered": "foo",
@@ -2088,7 +2088,7 @@ ShallowWrapper {
                                                                         foo
                                                             </p>
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="col-5 md-col-6 block-subheadline"
                                                             >
                                                                         foo
                                                             </p>
@@ -2341,7 +2341,7 @@ ShallowWrapper {
                                                                                 foo
                                                                 </p>
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="col-5 md-col-6 block-subheadline"
                                                                 >
                                                                                 foo
                                                                 </p>
@@ -2573,7 +2573,7 @@ ShallowWrapper {
                                                                                 foo
                                                             </p>
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="col-5 md-col-6 block-subheadline"
                                                             >
                                                                                 foo
                                                             </p>
@@ -2803,7 +2803,7 @@ ShallowWrapper {
                                                                         foo
                                                 </p>
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="col-5 md-col-6 block-subheadline"
                                                 >
                                                                         foo
                                                 </p>
@@ -3424,7 +3424,7 @@ ShallowWrapper {
                                                             foo
                               </p>
                               <p
-                                                            className="block-subheadline"
+                                                            className="col-5 md-col-6 block-subheadline"
                               >
                                                             foo
                               </p>
@@ -3460,7 +3460,7 @@ ShallowWrapper {
                                 foo
 </p>,
                               <p
-                                className="block-subheadline"
+                                className="col-5 md-col-6 block-subheadline"
 >
                                 foo
 </p>,
@@ -3491,7 +3491,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "foo",
-                                "className": "block-subheadline",
+                                "className": "col-5 md-col-6 block-subheadline",
                               },
                               "ref": null,
                               "rendered": "foo",

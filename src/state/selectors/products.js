@@ -162,6 +162,7 @@ export default createSelector(
           whatsIncluded,
           limitedEdition,
           forceAvailable,
+          link,
           ...shopifyProduct
         };
 

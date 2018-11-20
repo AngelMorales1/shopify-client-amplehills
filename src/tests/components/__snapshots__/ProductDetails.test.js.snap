@@ -414,7 +414,7 @@ ShallowWrapper {
           </div>
 </div>,
       ],
-      "className": "p2 drip",
+      "className": "p2",
       "style": Object {
         "zIndex": 0,
       },
@@ -1238,7 +1238,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "p2 drip",
+        "className": "p2",
         "style": Object {
           "zIndex": 0,
         },
@@ -2109,7 +2109,7 @@ ShallowWrapper {
           </div>
 </div>,
       ],
-      "className": "p2 drip",
+      "className": "p2",
       "style": Object {
         "zIndex": 1,
       },
@@ -2909,7 +2909,7 @@ ShallowWrapper {
             </div>
 </div>,
         ],
-        "className": "p2 drip",
+        "className": "p2",
         "style": Object {
           "zIndex": 1,
         },

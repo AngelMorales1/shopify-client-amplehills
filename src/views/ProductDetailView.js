@@ -1,10 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import get from 'utils/get';
 import productHasHero from 'utils/productHasHero';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
-import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 
 class ProductDetailView extends Component {
   render() {

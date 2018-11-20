@@ -5,6 +5,8 @@ export default {
   handle: 'test-product',
   available: true,
   flavorDescription: 'Very testy',
+  link: '/products/test-product',
+  forceAvailable: false,
   cartDetails: '1x Test Flavor',
   description: 'This is a test description',
   price: 19.99,

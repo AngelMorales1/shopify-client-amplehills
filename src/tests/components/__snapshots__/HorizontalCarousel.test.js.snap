@@ -55,7 +55,7 @@ ShallowWrapper {
                     shadow={false}
                     to="foo"
                     type="button"
-                    variant="primary"
+                    variant="primary-responsive"
           />
 </div>,
         <div
@@ -103,7 +103,7 @@ ShallowWrapper {
               shadow={false}
               to="foo"
               type="button"
-              variant="primary"
+              variant="primary-responsive"
 />,
           ],
           "className": "flex flex-column justify-center",
@@ -155,7 +155,7 @@ ShallowWrapper {
               "shadow": false,
               "to": "foo",
               "type": "button",
-              "variant": "primary",
+              "variant": "primary-responsive",
             },
             "ref": null,
             "rendered": null,
@@ -229,7 +229,7 @@ ShallowWrapper {
                         shadow={false}
                         to="foo"
                         type="button"
-                        variant="primary"
+                        variant="primary-responsive"
             />
 </div>,
           <div
@@ -277,7 +277,7 @@ ShallowWrapper {
                 shadow={false}
                 to="foo"
                 type="button"
-                variant="primary"
+                variant="primary-responsive"
 />,
             ],
             "className": "flex flex-column justify-center",
@@ -329,7 +329,7 @@ ShallowWrapper {
                 "shadow": false,
                 "to": "foo",
                 "type": "button",
-                "variant": "primary",
+                "variant": "primary-responsive",
               },
               "ref": null,
               "rendered": null,

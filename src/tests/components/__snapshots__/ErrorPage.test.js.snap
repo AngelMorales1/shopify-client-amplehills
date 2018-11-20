@@ -141,7 +141,7 @@ ShallowWrapper {
                         </p>
                 </div>
                 <Button
-                        className="mx-auto"
+                        className="mx-auto inline-flex"
                         color="white-peach"
                         disabled={false}
                         fullWidth={false}
@@ -151,7 +151,7 @@ ShallowWrapper {
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         shadow={false}
-                        to=""
+                        to={null}
                         type="button"
                         variant="primary"
                 />
@@ -223,7 +223,7 @@ ShallowWrapper {
                         </p>
             </div>
             <Button
-                        className="mx-auto"
+                        className="mx-auto inline-flex"
                         color="white-peach"
                         disabled={false}
                         fullWidth={false}
@@ -233,7 +233,7 @@ ShallowWrapper {
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
                         shadow={false}
-                        to=""
+                        to={null}
                         type="button"
                         variant="primary"
             />
@@ -303,7 +303,7 @@ ShallowWrapper {
                 </p>
 </div>,
               <Button
-                className="mx-auto"
+                className="mx-auto inline-flex"
                 color="white-peach"
                 disabled={false}
                 fullWidth={false}
@@ -313,7 +313,7 @@ ShallowWrapper {
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
                 shadow={false}
-                to=""
+                to={null}
                 type="button"
                 variant="primary"
 />,
@@ -468,7 +468,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
-                "className": "mx-auto",
+                "className": "mx-auto inline-flex",
                 "color": "white-peach",
                 "disabled": false,
                 "fullWidth": false,
@@ -478,7 +478,7 @@ ShallowWrapper {
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
                 "shadow": false,
-                "to": "",
+                "to": null,
                 "type": "button",
                 "variant": "primary",
               },
@@ -583,7 +583,7 @@ ShallowWrapper {
                               </p>
                     </div>
                     <Button
-                              className="mx-auto"
+                              className="mx-auto inline-flex"
                               color="white-peach"
                               disabled={false}
                               fullWidth={false}
@@ -593,7 +593,7 @@ ShallowWrapper {
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
                               shadow={false}
-                              to=""
+                              to={null}
                               type="button"
                               variant="primary"
                     />
@@ -665,7 +665,7 @@ ShallowWrapper {
                             </p>
               </div>
               <Button
-                            className="mx-auto"
+                            className="mx-auto inline-flex"
                             color="white-peach"
                             disabled={false}
                             fullWidth={false}
@@ -675,7 +675,7 @@ ShallowWrapper {
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
                             shadow={false}
-                            to=""
+                            to={null}
                             type="button"
                             variant="primary"
               />
@@ -745,7 +745,7 @@ ShallowWrapper {
                   </p>
 </div>,
                 <Button
-                  className="mx-auto"
+                  className="mx-auto inline-flex"
                   color="white-peach"
                   disabled={false}
                   fullWidth={false}
@@ -755,7 +755,7 @@ ShallowWrapper {
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
                   shadow={false}
-                  to=""
+                  to={null}
                   type="button"
                   variant="primary"
 />,
@@ -910,7 +910,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
-                  "className": "mx-auto",
+                  "className": "mx-auto inline-flex",
                   "color": "white-peach",
                   "disabled": false,
                   "fullWidth": false,
@@ -920,7 +920,7 @@ ShallowWrapper {
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
                   "shadow": false,
-                  "to": "",
+                  "to": null,
                   "type": "button",
                   "variant": "primary",
                 },
