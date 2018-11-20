@@ -24,7 +24,6 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
         dispatch(fetchContentfulProducts()),
-        dispatch(getEvents()),
         dispatch(fetchAllNewsArticles()),
         dispatch(fetchContentfulMerch()),
         dispatch(getFlavors())
@@ -42,7 +41,6 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             settings,
             products,
             contentfulProducts,
-            getEvents,
             fetchAllNewsArticles,
             fetchContentfulMerch,
             getFlavors
