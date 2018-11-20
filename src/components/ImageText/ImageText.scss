@@ -87,6 +87,15 @@
         margin-left: spacing(18);
       }
     }
+
+    .ImageText__text-content--with-location-search {
+      margin-bottom: spacing(90);
+
+      @media ($medium-up) {
+        margin-bottom: spacing(68);
+        margin-top: spacing(24);
+      }
+    }
   }
 
   &__container--reverse {
@@ -107,6 +116,15 @@
         order: 1;
         margin-left: 0;
         margin-right: spacing(18);
+      }
+    }
+
+    .ImageText__text-content--with-location-search {
+      margin-bottom: spacing(90);
+
+      @media ($medium-up) {
+        margin-bottom: spacing(68);
+        margin-top: spacing(24);
       }
     }
   }
@@ -145,6 +163,15 @@
     .ImageText__text-content--reverse {
       @media ($medium-up) {
         padding: 0 0 0 spacing(16);
+      }
+    }
+
+    .ImageText__text-content--with-location-search {
+      margin-bottom: spacing(90);
+
+      @media ($medium-up) {
+        margin-bottom: spacing(68);
+        margin-top: spacing(24);
       }
     }
   }
