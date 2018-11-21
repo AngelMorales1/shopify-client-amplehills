@@ -5,8 +5,7 @@ import { getLocationData } from 'state/actions/locationsActions';
 
 import {
   fetchShopifyProducts,
-  fetchContentfulProducts,
-  fetchContentfulMerch
+  fetchContentfulProducts
 } from 'state/actions/productsActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
@@ -20,8 +19,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
-        dispatch(fetchContentfulProducts()),
-        dispatch(fetchContentfulMerch())
+        dispatch(fetchContentfulProducts())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -29,15 +27,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const checkTimeout = Promise.race([fetchData, timeout]);
 
       return checkTimeout
-        .then(
-          ([
-            checkout,
-            locations,
-            settings,
-            products,
-            contentfulProducts,
-            fetchContentfulMerch
-          ]) => resolve()
+        .then(([checkout, locations, settings, products, contentfulProducts]) =>
+          resolve()
         )
         .catch(err => reject(err));
     })

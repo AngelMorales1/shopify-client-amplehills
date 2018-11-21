@@ -6,13 +6,20 @@ import { addLineItems } from 'state/actions/checkoutActions';
 import checkout from 'state/selectors/checkout';
 import allMerchandise from 'state/selectors/allMerchandise';
 import merchByHandle from 'state/selectors/merchByHandle';
+import { fetchContentfulMerch } from 'state/actions/productsActions';
 
 import get from 'utils/get';
 
 class MerchDetailContainer extends ContainerBase {
   view = import('views/MerchDetailView');
 
-  model = () => {};
+  model = () => {
+    const {
+      actions: { fetchContentfulMerch }
+    } = this.props;
+
+    return fetchContentfulMerch();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -28,7 +35,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        addLineItems
+        addLineItems,
+        fetchContentfulMerch
       },
       dispatch
     )
