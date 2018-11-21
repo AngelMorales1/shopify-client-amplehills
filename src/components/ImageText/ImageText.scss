@@ -59,6 +59,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0 spacing(8);
+    padding: spacing(16) 0;
 
     @media ($medium-up) {
       flex-direction: row;
@@ -124,12 +125,14 @@
 
   &__container--full-image {
     margin: 0;
+    padding: spacing(20) 0 spacing(30) 0;
 
     @media ($medium-up) {
       margin: 0;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      padding: spacing(30) 0 spacing(30) 0;
     }
 
     .ImageText__text-content {
