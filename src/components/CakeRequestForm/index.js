@@ -27,10 +27,17 @@ class CakeRequestForm extends Component {
     dayPickerIsSelected: false
   };
 
-  getHoursLater = hours => {
+  getDaysLater = days => {
     const currentDate = new Date();
-    return new Date(currentDate.setHours(currentDate.getHours() + hours));
-    // return new Date(currentDate.setTime(currentDate.getTime() + (hours*60*60*1000)));
+
+    const day = 60 * 60 * 24 * 1000;
+    const daysLaterDate = new Date(currentDate.getTime() + day * days);
+
+    return new Date(
+      daysLaterDate.getUTCFullYear(),
+      daysLaterDate.getUTCMonth(),
+      daysLaterDate.getUTCDate()
+    );
   };
 
   openFlavorModal = () => this.setState({ flavorModalIsOpen: true });
@@ -39,7 +46,14 @@ class CakeRequestForm extends Component {
 
   handleLocationChange = location => this.setState({ location });
   handleDayClick = day => {
-    if (new Date(day) >= this.getHoursLater(48)) {
+    const currentDate = new Date(day);
+    if (
+      new Date(
+        currentDate.getUTCFullYear(),
+        currentDate.getUTCMonth(),
+        currentDate.getUTCDate()
+      ) > this.getDaysLater(2)
+    ) {
       this.setState({
         pickupDate: moment(day).format('MMMM DD')
       });
@@ -230,7 +244,7 @@ class CakeRequestForm extends Component {
                 disabledDays={[
                   today,
                   {
-                    before: this.getHoursLater(62)
+                    before: this.getDaysLater(3)
                   }
                 ]}
                 initialMonth={today}
