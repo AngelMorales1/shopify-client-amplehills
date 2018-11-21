@@ -284,11 +284,12 @@ class PartyRequestForm extends Component {
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
     const ageGroups = [
-      '2 - 5 Years old',
-      '4 - 6 Years old',
-      '7 - 10 Years old',
-      '11 - 13 Years old',
-      '14 + Years old'
+      '2 to 5 years old',
+      '4 to 6 years old',
+      '7 to 10 years old',
+      '11 to 13 years old',
+      '14 to 18 years old',
+      'Over 18'
     ];
     const fieldIsEmpty =
       !selectedLocation &&
