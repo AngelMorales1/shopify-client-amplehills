@@ -6,7 +6,7 @@ import {
 } from 'state/actions/articlesActions';
 
 const initialState = {
-  newsArticles: {},
+  newsArticles: [],
   selectedTags: [],
   articlesByTags: []
 };

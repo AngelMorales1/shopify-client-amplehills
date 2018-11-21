@@ -10,7 +10,6 @@ import {
 } from 'state/actions/productsActions';
 import { getEvents } from 'state/actions/eventsActions';
 import { getFlavors } from 'state/actions/flavorsActions';
-import { fetchAllNewsArticles } from 'state/actions/articlesActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
@@ -24,7 +23,6 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
         dispatch(fetchContentfulProducts()),
-        dispatch(fetchAllNewsArticles()),
         dispatch(fetchContentfulMerch()),
         dispatch(getFlavors())
       ]);
@@ -41,7 +39,6 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             settings,
             products,
             contentfulProducts,
-            fetchAllNewsArticles,
             fetchContentfulMerch,
             getFlavors
           ]) => resolve()
