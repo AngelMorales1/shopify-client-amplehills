@@ -8,8 +8,6 @@ import {
   fetchContentfulProducts,
   fetchContentfulMerch
 } from 'state/actions/productsActions';
-import { getEvents } from 'state/actions/eventsActions';
-import { getFlavors } from 'state/actions/flavorsActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
@@ -23,8 +21,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
         dispatch(fetchContentfulProducts()),
-        dispatch(fetchContentfulMerch()),
-        dispatch(getFlavors())
+        dispatch(fetchContentfulMerch())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -39,8 +36,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
             settings,
             products,
             contentfulProducts,
-            fetchContentfulMerch,
-            getFlavors
+            fetchContentfulMerch
           ]) => resolve()
         )
         .catch(err => reject(err));

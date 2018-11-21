@@ -3,11 +3,18 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import get from 'utils/get';
 import flavor from 'state/selectors/flavor';
+import { getFlavors } from 'state/actions/flavorsActions';
 
 class FlavorLandingContainer extends ContainerBase {
   view = import('views/FlavorDetailView');
 
-  model = () => {};
+  model = () => {
+    const {
+      actions: { getFlavors }
+    } = this.props;
+
+    return getFlavors();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -22,7 +29,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators({ getFlavors }, dispatch)
   };
 };
 
