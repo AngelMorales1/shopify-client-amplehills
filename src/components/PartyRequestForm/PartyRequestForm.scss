@@ -55,8 +55,8 @@ $CRF-close-bar-height: spacing(18);
   }
 
   &__help-text {
-    line-height: $font-6;
-    font-size: 0.75rem;
+    @extend .line-height;
+    font-size: 0.875rem;
   }
 
   &__footer-text-container {
