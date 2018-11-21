@@ -78,13 +78,13 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             )}
           >
             {smallTitle ? (
-              <p className={`text-${smallTitleColor} small-title`}>
+              <p className={`text-${smallTitleColor} small-title mb3`}>
                 {smallTitle}
               </p>
             ) : null}
             {title && !title1 && !text1 && !title2 && !text2 ? (
               <h2
-                className={cx(styles['ImageDoubleText__title'], 'carter my2')}
+                className={cx(styles['ImageDoubleText__title'], 'carter mb2')}
               >
                 {title}
               </h2>
