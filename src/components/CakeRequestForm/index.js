@@ -181,9 +181,7 @@ class CakeRequestForm extends Component {
             <p className="bold big center mb2">
               When would you like to pick up your cake?
             </p>
-            <p className={cx('center mb3')}>
-              Please select the day of two days later
-            </p>
+            <p className={cx('center mb3')}>Each cake needs 48 hours notice</p>
             <Button
               variant="style-none"
               onClick={() =>
