@@ -7,6 +7,7 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationCard from 'components/LocationCard';
+import getUrlParam from 'utils/getUrlParam';
 
 import { Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
@@ -21,6 +22,12 @@ class LocationsCards extends Component {
 
   componentDidMount() {
     this.attemptToGetDistanceToStores();
+
+    const param = getUrlParam('search');
+
+    if (param) {
+      this.props.actions.updateSearchFilter(param);
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {

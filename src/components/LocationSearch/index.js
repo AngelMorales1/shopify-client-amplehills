@@ -63,6 +63,7 @@ class LocationSearch extends Component {
               label="Search"
               variant="primary"
               color="madison-blue"
+              to={`/locations?search=${this.state.address}`}
               shadow={true}
             />
           </div>
