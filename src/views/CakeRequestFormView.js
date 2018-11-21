@@ -27,6 +27,7 @@ class CakeRequestFormView extends Component {
           cakeDeposit={cakeDeposit}
           actions={actions}
           checkout={checkout}
+          today={new Date()}
         />
       </div>
     );
