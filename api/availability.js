@@ -7,10 +7,10 @@ module.exports = async (req, res) => {
     timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
 
     const {
-      query: { project_id }
+      query: { project_id, to }
     } = parse(req.url, true);
 
-    const response = await timekit.fetchAvailability({ project_id });
+    const response = await timekit.fetchAvailability({ project_id, to });
     res.writeHead(200, {
       'Content-Type': 'application/json'
     });
