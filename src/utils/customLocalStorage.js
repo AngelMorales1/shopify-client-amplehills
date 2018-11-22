@@ -19,12 +19,12 @@ export default () => {
 
     for (i = 0; i < ca.length; i++) {
       c = ca[i];
-      while (c.charAt(0) == ' ') {
+      while (c.charAt(0) === ' ') {
         c = c.substring(1, c.length);
-        2480;
+        // 2480;
       }
 
-      if (c.indexOf(nameEQ) == 0) {
+      if (c.indexOf(nameEQ) === 0) {
         return c.substring(nameEQ.length, c.length);
       }
     }
@@ -62,7 +62,7 @@ export default () => {
     key: i => {
       var ctr = 0;
       for (var k in data) {
-        if (ctr == i) return k;
+        if (ctr === i) return k;
         else ctr++;
       }
       return null;

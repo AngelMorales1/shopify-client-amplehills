@@ -13,6 +13,7 @@ import {
   SIGN_UP_CUSTOMER
 } from 'state/actions/customerActions';
 import { SEND_CONTACT_FORM } from 'state/actions/ui/contactUIActions';
+import { GET_AVAILABILITY } from 'state/actions/bookingsActions';
 
 const initialState = {
   initializeApplication: IDLE,
@@ -22,7 +23,8 @@ const initialState = {
   customerSigningIn: IDLE,
   customerSigningUp: IDLE,
   updatingNote: IDLE,
-  contactUsFormStatus: IDLE
+  contactUsFormStatus: IDLE,
+  getAvailability: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -34,6 +36,13 @@ export default (state = initialState, action) => {
       return { ...state, initializeApplication: FULFILLED };
     case `${INITIALIZE_APPLICATION}_REJECTED`:
       return { ...state, initializeApplication: REJECTED };
+
+    case `${GET_AVAILABILITY}_PENDING`:
+      return { ...state, getAvailability: PENDING };
+    case `${GET_AVAILABILITY}_FULFILLED`:
+      return { ...state, getAvailability: FULFILLED };
+    case `${GET_AVAILABILITY}_REJECTED`:
+      return { ...state, getAvailability: REJECTED };
 
     case `${ADD_LINE_ITEMS}_PENDING`:
       return { ...state, addLineItemsStatus: PENDING };

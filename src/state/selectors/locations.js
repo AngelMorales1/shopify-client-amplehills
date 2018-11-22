@@ -33,6 +33,7 @@ export default createSelector(
       );
       const contentBlocks = get(fields, 'contentBlocks', []);
       const slug = get(fields, 'slug', '');
+      const timekitProjectId = get(fields, 'timekitProjectId');
       const partyAvailable = get(fields, 'partyAvailable', false);
       const partyTypesFragments = get(fields, 'partyTypes.simpleFragments', {});
       const partyTypes = fragmentsToArray(partyTypesFragments);
@@ -78,6 +79,7 @@ export default createSelector(
         hours,
         sortedHours,
         delivery,
+        timekitProjectId,
         partyAvailable,
         partyTypes,
         timeSlots,

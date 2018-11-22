@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
+import { getAvailability } from 'state/actions/bookingsActions';
 import checkout from 'state/selectors/checkout';
 import partyDeposit from 'state/selectors/partyDeposit';
 import partyAvailableLocations from 'state/selectors/partyAvailableLocations';
@@ -19,6 +20,8 @@ class PartyRequestFormContainer extends ContainerBase {
 const mapStateToProps = (state, props) => {
   return {
     checkout: checkout(state),
+    availabilities: get(state, 'bookings.availabilities', {}),
+    getAvailabilityStatus: get(state, 'status.getAvailability'),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     partyAvailableLocations: partyAvailableLocations(state),
     partyDeposit: partyDeposit(state),
@@ -30,7 +33,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        addLineItems
+        addLineItems,
+        getAvailability
       },
       dispatch
     )

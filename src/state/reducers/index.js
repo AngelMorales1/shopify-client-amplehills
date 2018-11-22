@@ -14,6 +14,7 @@ import events from './events';
 import articles from './articles';
 import wholesale from './wholesale';
 import flavors from './flavors';
+import bookings from './bookings';
 
 export default {
   status,
@@ -31,5 +32,6 @@ export default {
   mobileNavUI,
   articles,
   wholesale,
-  flavors
+  flavors,
+  bookings
 };

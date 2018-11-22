@@ -118,9 +118,11 @@ $CRF-close-bar-height: spacing(18);
       font-size: $font-3;
       line-height: $font-5;
     }
+  }
 
-  &__button {
-    padding-top: calc(#{spacing(4)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+  &__section-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 }
