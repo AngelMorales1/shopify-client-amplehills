@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "access-control": "^1.0.1",
     "timekit-sdk": "^1.17.1"
   }
 }

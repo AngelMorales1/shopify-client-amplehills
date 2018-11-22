@@ -1,8 +1,21 @@
 const { parse } = require('url');
 const timekit = require('timekit-sdk');
+const access = require('access-control');
 const formatError = require('./utils/formatError');
 
+const cors = access({
+  origins: [
+    'https://www.amplehills.com',
+    'https://staging.amplehills.com',
+    'http://localhost:3000'
+  ],
+  methods: ['GET'],
+  credentials: false
+});
+
 module.exports = async (req, res) => {
+  if (cors(req, res)) return;
+
   try {
     timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
 
