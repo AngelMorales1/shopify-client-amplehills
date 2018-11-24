@@ -1,4 +1,4 @@
-import QueryString from 'query-string';
+import QueryString from 'qs';
 
 const Bookings = {
   getAvailability(project_id) {
