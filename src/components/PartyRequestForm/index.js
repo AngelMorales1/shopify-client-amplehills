@@ -384,7 +384,7 @@ class PartyRequestForm extends Component {
           )}
           {availabilityDidError && (
             <span className="my2 text-white text-peach">
-              {`Something went wrong. Please reload try again, or send us an email!`}
+              {`Something's not working. Please reload and try again, or send us an email!`}
             </span>
           )}
 
