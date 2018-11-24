@@ -21,6 +21,7 @@ const mapStateToProps = (state, props) => {
   return {
     checkout: checkout(state),
     availabilities: get(state, 'bookings.availabilities', {}),
+    disabledDays: get(state, 'bookings.disabledDays', {}),
     getAvailabilityStatus: get(state, 'status.getAvailability'),
     addLineItemsStatus: get(state, 'status.addLineItemsStatus'),
     partyAvailableLocations: partyAvailableLocations(state),

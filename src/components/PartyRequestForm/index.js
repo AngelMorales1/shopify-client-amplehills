@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import Global from 'constants/Global';
 import checkoutModel from 'models/checkoutModel';
-import { PENDING, FULFILLED } from 'constants/Status';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import marked from 'marked';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
@@ -14,6 +14,7 @@ import {
   defaultPartyTypes,
   defaultTimeSlots
 } from 'constants/defaultPartyRequestForm';
+
 import PartyRequestFormModal from './PartyRequestFormModal';
 
 import cx from 'classnames';
@@ -24,7 +25,6 @@ class PartyRequestForm extends Component {
     currentBreakpoint: Global.breakpoints.medium.label,
     selectedLocation: '',
     selectedDate: '',
-    timeSlots: defaultTimeSlots,
     partyTypes: defaultPartyTypes,
     partyTypeIsSelected: false,
     selectedTimeSlot: '',
@@ -235,17 +235,15 @@ class PartyRequestForm extends Component {
     const locations = get(this, 'props.partyAvailableLocations', {});
     const { selectedLocation } = this.state;
 
-    // Fire off a request for the availability here!
+    /* Fire off a request for the availability from Timekit here! */
     this.props.getAvailability(locations[filter.value].timekitProjectId);
 
-    const timeSlots = locations[filter.value].timeSlots;
     const partyTypes = locations[filter.value].partyTypes;
     const participantsLimit = locations[filter.value].participantsLimit;
     const participantsLimitText = locations[filter.value].participantsLimitText;
 
     this.setState({
       selectedLocation: filter.value,
-      timeSlots: timeSlots.length ? timeSlots : defaultTimeSlots,
       partyTypes: partyTypes.length ? partyTypes : defaultPartyTypes,
       participantsLimit,
       participantsLimitText
@@ -272,6 +270,7 @@ class PartyRequestForm extends Component {
       partyDeposit,
       addLineItemsStatus,
       availabilities,
+      disabledDays,
       getAvailabilityStatus
     } = this.props;
     const {
@@ -317,12 +316,26 @@ class PartyRequestForm extends Component {
     const availabilityConsideredLoading = availabilityDataForSelectedLocation
       ? false
       : getAvailabilityStatus === PENDING;
+    const availabilityDidError = getAvailabilityStatus === REJECTED;
+    const disabledDaysForSelectedLocation = selectedLocation
+      ? disabledDays[locations[selectedLocation].timekitProjectId] || []
+      : [];
 
-    // TODO: Error State
-    // TODO: Better loading state
-    // TODO: Block of unavailable dates
-    // TODO: Block off unavailable timeslots
-    // TODO: Timezones
+    let availsForSelectedDate = defaultTimeSlots;
+    if (selectedDate) {
+      availsForSelectedDate = availabilityDataForSelectedLocation
+        .filter(avail => {
+          return avail.startMoment.format('MMMM DD, YYYY') === selectedDate;
+        })
+        .map((avail, index) => {
+          return {
+            uuid: index,
+            index,
+            startTime: avail.startMoment.format('ha'),
+            endTime: avail.endMoment.format('ha')
+          };
+        });
+    }
 
     return (
       <div className="w100 flex flex-column items-center">
@@ -364,7 +377,16 @@ class PartyRequestForm extends Component {
             />
           </div>
 
-          {availabilityConsideredLoading && <h1>Loading!</h1>}
+          {availabilityConsideredLoading && (
+            <span className="my2 text-white text-peach">
+              {`We're loading availabilities for this location...`}
+            </span>
+          )}
+          {availabilityDidError && (
+            <span className="my2 text-white text-peach">
+              {`Something went wrong. Please reload try again, or send us an email!`}
+            </span>
+          )}
 
           <div
             className={cx('w100 mt4 flex flex-column items-center', {
@@ -415,6 +437,9 @@ class PartyRequestForm extends Component {
                 }
               />
               <DayPicker
+                disabledDays={disabledDaysForSelectedLocation.map(dt =>
+                  dt.toDate()
+                )}
                 className={cx(
                   styles['PartyRequestForm__day-picker'],
                   'absolute t0 l0 mt4 bg-white text-madison-blue',
@@ -427,22 +452,25 @@ class PartyRequestForm extends Component {
                 }}
                 onDayClick={day => {
                   this.setState({
-                    selectedDate: moment(day).format('MMMM DD, YYY')
+                    selectedDate: moment(day).format('MMMM DD, YYYY')
                   });
                 }}
-                initialMonth={today}
-                disabledDays={disabledDaysForSelectedLocation.map(dt =>
-                  dt.toDate()
-                )}
+                initialMonth={this.props.today}
+                fromMonth={this.props.today}
+                toMonth={
+                  disabledDaysForSelectedLocation.length
+                    ? disabledDaysForSelectedLocation[
+                        disabledDaysForSelectedLocation.length - 1
+                      ].toDate()
+                    : null
+                }
               />
             </Button>
           </div>
 
           <div
             className={cx('w100 mt4 flex flex-column items-center', {
-              [styles[
-                'PartyRequestForm__section-disabled'
-              ]]: !availabilityDataForSelectedLocation
+              [styles['PartyRequestForm__section-disabled']]: !selectedDate
             })}
           >
             <p className="bold big center">
@@ -450,20 +478,19 @@ class PartyRequestForm extends Component {
             </p>
             <span
               className={cx('my2 text-white', {
-                'text-peach': !availabilityDataForSelectedLocation
+                'text-peach': !selectedDate
               })}
             >
-              You must first select a location
+              You must first select a date
             </span>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-              {this.state.timeSlots.map(timeSlot => {
-                const timeSlotsLength = this.state.timeSlots.length;
+              {availsForSelectedDate.map((timeSlot, index, avails) => {
                 const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
 
                 return (
                   <div
                     key={timeSlot.uuid}
-                    style={{ width: this.getButtonWidth(timeSlotsLength) }}
+                    style={{ width: this.getButtonWidth(avails.length) }}
                     className={cx(
                       styles['PartyRequestForm__button-container'],
                       'p1'

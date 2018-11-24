@@ -15,6 +15,7 @@ class PartyRequestFormView extends Component {
       checkout,
       addLineItemsStatus,
       availabilities,
+      disabledDays,
       getAvailabilityStatus,
       actions: { getAvailability }
     } = this.props;
@@ -23,6 +24,7 @@ class PartyRequestFormView extends Component {
       <div className="PartyRequestFormView">
         <PartyRequestForm
           availabilities={availabilities}
+          disabledDays={disabledDays}
           getAvailability={getAvailability}
           getAvailabilityStatus={getAvailabilityStatus}
           partyAvailableLocations={partyAvailableLocations}
