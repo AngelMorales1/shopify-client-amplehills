@@ -72,7 +72,7 @@
     .ImageDoubleText--image-container {
       width: 65%;
       min-width: spacing(100);
-      margin-top: spacing(-24);
+      margin-top: spacing(-16);
       margin-left: spacing(-55);
 
       @media ($medium-up) {
@@ -83,10 +83,10 @@
     }
 
     .ImageDoubleText--text-container {
-      padding: spacing(8);
+      padding: spacing(30) spacing(8);
 
       @media ($medium-up) {
-        padding: spacing(12);
+        padding: spacing(36) spacing(12);
       }
     }
   }
@@ -104,18 +104,15 @@
     }
 
     .ImageDoubleText--text-container {
-      padding: spacing(8);
-
       @media ($medium-up) {
         order: 1;
-        padding: spacing(12);
       }
     }
   }
 
   &--container--reverse-y {
     .ImageDoubleText--image-container {
-      margin-bottom: spacing(-24);
+      margin-bottom: spacing(-16);
       margin-top: 0;
       order: 1;
 
@@ -127,9 +124,11 @@
     }
 
     .ImageDoubleText--text-container {
+      padding: spacing(30) spacing(8) spacing(16);
       order: 0;
 
       @media ($medium-up) {
+        padding: spacing(36) spacing(12);
         order: initial;
       }
     }
@@ -143,7 +142,10 @@
     }
 
     .ImageDoubleText--text-container {
+      padding: spacing(30) spacing(8) spacing(16);
+
       @media ($medium-up) {
+        padding: spacing(36) spacing(12);
         order: 0;
       }
     }

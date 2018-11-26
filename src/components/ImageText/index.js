@@ -67,7 +67,7 @@ const ImageText = ({ block, z, setRef }) => {
     >
       <div
         className={cx(
-          'flex container-width py4',
+          'flex container-width',
           styles['ImageText__container'],
           {
             [styles['ImageText__container--full-image']]: isFullImage,
