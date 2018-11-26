@@ -96,17 +96,37 @@ const ImageText = ({ block, z, setRef }) => {
             }
           )}
         >
-          {smallTitle ? (
-            <p className={`small-title mb3 text-${smallTitleColor}`}>
-              {smallTitle}
-            </p>
-          ) : null}
-          <h2 className="block-headline mb3">{get(fields, 'title', '')}</h2>
+          <div className="mb3 relative inline-block z-1">
+            {smallTitle ? (
+              <p className={`small-title mb3 text-${smallTitleColor}`}>
+                {smallTitle}
+              </p>
+            ) : null}
+            <h1 className="block-headline">{get(fields, 'title', '')}</h1>
+            <Image
+              style={{
+                transform: `translateX(${get(
+                  fields,
+                  'titleBackgroundImagePosition',
+                  0
+                )}%)`
+              }}
+              className={cx(
+                'absolute z-below t0 b0 my-auto',
+                styles['ImageText__title-illustration']
+              )}
+              src={contentfulImgUtil(
+                get(fields, 'titleBackgroundImage.fields.file.url', ''),
+                '1000',
+                'png'
+              )}
+            />
+          </div>
           <div
             dangerouslySetInnerHTML={{
               __html: marked(get(fields, 'text', ''))
             }}
-            className="markdown-block"
+            className="markdown-block z-1"
           />
           <div
             className={cx(
