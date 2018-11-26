@@ -5,14 +5,21 @@ import articles from 'state/selectors/articles';
 import articlesTags from 'state/selectors/articlesTags';
 import {
   removeSelectedTag,
-  addSelectedTag
+  addSelectedTag,
+  fetchAllNewsArticles
 } from 'state/actions/articlesActions';
 import get from 'utils/get';
 
 class ArticlesLandingContainer extends ContainerBase {
   view = import('views/ArticlesLandingView');
 
-  model = () => {};
+  model = () => {
+    const {
+      actions: { fetchAllNewsArticles }
+    } = this.props;
+
+    return fetchAllNewsArticles();
+  };
 }
 
 const mapStateToProps = state => {
@@ -28,7 +35,14 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({ removeSelectedTag, addSelectedTag }, dispatch)
+    actions: bindActionCreators(
+      {
+        fetchAllNewsArticles,
+        removeSelectedTag,
+        addSelectedTag
+      },
+      dispatch
+    )
   };
 };
 

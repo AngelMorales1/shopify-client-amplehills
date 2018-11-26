@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {
   fetchShopifyProducts,
-  fetchProductLanding
+  fetchProductLanding,
+  fetchContentfulMerch
 } from 'state/actions/productsActions';
 import products from 'state/selectors/products';
 import allMerchandise from 'state/selectors/allMerchandise';
@@ -14,17 +15,23 @@ class ProductLandingContainer extends ContainerBase {
 
   model = () => {
     const {
-      actions: { fetchShopifyProducts, fetchProductLanding }
+      actions: {
+        fetchShopifyProducts,
+        fetchProductLanding,
+        fetchContentfulMerch
+      }
     } = this.props;
 
-    return Promise.all([fetchShopifyProducts(), fetchProductLanding()]).then(
-      ([products, landing]) => {
-        return {
-          products: get(products, 'value'),
-          landing: get(landing, 'value')
-        };
-      }
-    );
+    return Promise.all([
+      fetchShopifyProducts(),
+      fetchProductLanding(),
+      fetchContentfulMerch()
+    ]).then(([products, landing]) => {
+      return {
+        products: get(products, 'value'),
+        landing: get(landing, 'value')
+      };
+    });
   };
 }
 
@@ -40,7 +47,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         fetchShopifyProducts,
-        fetchProductLanding
+        fetchProductLanding,
+        fetchContentfulMerch
       },
       dispatch
     )

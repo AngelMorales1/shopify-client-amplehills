@@ -3,12 +3,19 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import articles from 'state/selectors/articles';
 import article from 'state/selectors/article';
+import { fetchAllNewsArticles } from 'state/actions/articlesActions';
 import get from 'utils/get';
 
 class ArticleDetailContainer extends ContainerBase {
   view = import('views/ArticleDetailView');
 
-  model = () => {};
+  model = () => {
+    const {
+      actions: { fetchAllNewsArticles }
+    } = this.props;
+
+    return fetchAllNewsArticles();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -22,7 +29,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators({ fetchAllNewsArticles }, dispatch)
   };
 };
 

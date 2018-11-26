@@ -6,6 +6,7 @@ import { getEvents } from 'state/actions/eventsActions';
 import { fetchShopifyWholesaleProducts } from 'state/actions/wholesaleActions';
 import events from 'state/selectors/events';
 import wholesaleProducts from 'state/selectors/wholesaleProducts';
+import { getFlavors } from 'state/actions/flavorsActions';
 import flavors from 'state/selectors/flavors';
 
 import get from 'utils/get';
@@ -17,19 +18,22 @@ class GenericPageContainer extends ContainerBase {
     const {
       getGenericPage,
       getEvents,
-      fetchShopifyWholesaleProducts
+      fetchShopifyWholesaleProducts,
+      getFlavors
     } = this.props.actions;
     const { path } = this.props.match;
 
     return Promise.all([
       getGenericPage(path),
       getEvents(),
-      fetchShopifyWholesaleProducts()
-    ]).then(([genericPage, events, wholesaleProduct]) => {
+      fetchShopifyWholesaleProducts(),
+      getFlavors()
+    ]).then(([genericPage, events, wholesaleProduct, flavor]) => {
       return {
         genericPage: get(genericPage, 'value'),
         events: get(events, 'value'),
-        wholesaleProduct: get(wholesaleProduct, 'value')
+        wholesaleProduct: get(wholesaleProduct, 'value'),
+        flavor: get(flavor, 'value')
       };
     });
   };
@@ -63,7 +67,8 @@ const mapDispatchToProps = dispatch => {
       {
         getGenericPage,
         getEvents,
-        fetchShopifyWholesaleProducts
+        fetchShopifyWholesaleProducts,
+        getFlavors
       },
       dispatch
     )

@@ -5,12 +5,8 @@ import { getLocationData } from 'state/actions/locationsActions';
 
 import {
   fetchShopifyProducts,
-  fetchContentfulProducts,
-  fetchContentfulMerch
+  fetchContentfulProducts
 } from 'state/actions/productsActions';
-import { getEvents } from 'state/actions/eventsActions';
-import { getFlavors } from 'state/actions/flavorsActions';
-import { fetchAllNewsArticles } from 'state/actions/articlesActions';
 
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
@@ -23,11 +19,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
-        dispatch(fetchContentfulProducts()),
-        dispatch(getEvents()),
-        dispatch(fetchAllNewsArticles()),
-        dispatch(fetchContentfulMerch()),
-        dispatch(getFlavors())
+        dispatch(fetchContentfulProducts())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);
@@ -35,18 +27,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const checkTimeout = Promise.race([fetchData, timeout]);
 
       return checkTimeout
-        .then(
-          ([
-            checkout,
-            locations,
-            settings,
-            products,
-            contentfulProducts,
-            getEvents,
-            fetchAllNewsArticles,
-            fetchContentfulMerch,
-            getFlavors
-          ]) => resolve()
+        .then(([checkout, locations, settings, products, contentfulProducts]) =>
+          resolve()
         )
         .catch(err => reject(err));
     })
