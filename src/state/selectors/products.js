@@ -29,7 +29,10 @@ export default createSelector(
 
       let link = `/products/${handle}`;
 
-      if (type === ShopifyProductTypes.EVENTS) {
+      if (
+        type === ShopifyProductTypes.EVENTS ||
+        type === ShopifyProductTypes.CLASSES
+      ) {
         link = `/events/${handle}`;
       }
 
@@ -39,6 +42,10 @@ export default createSelector(
 
       if (type === ShopifyProductTypes.PARTY_DEPOSIT) {
         link = 'party-request-form';
+      }
+
+      if (type === ShopifyProductTypes.CAKE_DEPOSIT) {
+        link = 'cake-request-form';
       }
 
       const handlizedProduct = {
