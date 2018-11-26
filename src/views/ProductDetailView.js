@@ -24,7 +24,7 @@ class ProductDetailView extends Component {
               product={product}
               ourPledge={ourPledge}
               productHero={productHero}
-              z={blocks.length + 2}
+              z={get(this, 'props.product.blocks', []).length + 2}
               {...this.props}
             />
           ) : null}
