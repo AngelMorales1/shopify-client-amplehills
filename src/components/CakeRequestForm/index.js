@@ -187,6 +187,7 @@ class CakeRequestForm extends Component {
               cream cake.
             </p>
             <Button
+              childrenWrapperClassName="w100 justify-between"
               variant="style-none"
               onClick={() =>
                 this.setState({

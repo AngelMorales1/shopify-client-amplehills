@@ -22,7 +22,8 @@ const Button = ({
   hover,
   newTab,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
+  childrenWrapperClassName
 }) => {
   const classes = cx(
     styles[`Button--${color}`],
@@ -69,12 +70,14 @@ const Button = ({
         onMouseLeave={onMouseLeave}
       >
         <div className={classes}>
-        {children && !label ? (
-          children
-        ) : (
-          <span className="h100 flex justify-center items-center">{label}</span>
-        )}
-      </div>
+          {children && !label ? (
+            children
+          ) : (
+            <span className="h100 flex justify-center items-center">
+              {label}
+            </span>
+          )}
+        </div>
       </Link>
     );
 
@@ -88,7 +91,12 @@ const Button = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className="h100 flex justify-center items-center">
+      <div
+        className={cx(
+          'h100 flex justify-center items-center',
+          childrenWrapperClassName
+        )}
+      >
         {children && !label ? children : label}
       </div>
     </button>
@@ -111,7 +119,8 @@ Button.propTypes = {
   shadow: PropTypes.bool,
   hover: PropTypes.string,
   onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
+  childrenWrapperClassName: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -128,7 +137,8 @@ Button.defaultProps = {
   shadow: false,
   hover: 'shadow',
   onMouseEnter: () => {},
-  onMouseLeave: () => {}
+  onMouseLeave: () => {},
+  childrenWrapperClassName: ''
 };
 
 export default Button;
