@@ -284,11 +284,12 @@ class PartyRequestForm extends Component {
     const locations = get(this, 'props.partyAvailableLocations', {});
     const locationIds = Object.keys(locations);
     const ageGroups = [
-      '2 - 5 Years old',
-      '4 - 6 Years old',
-      '7 - 10 Years old',
-      '11 - 13 Years old',
-      '14 + Years old'
+      '2 to 5 years old',
+      '4 to 6 years old',
+      '7 to 10 years old',
+      '11 to 13 years old',
+      '14 to 18 years old',
+      'Over 18'
     ];
     const fieldIsEmpty =
       !selectedLocation &&
@@ -538,7 +539,7 @@ class PartyRequestForm extends Component {
           </div>
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
-              If relevant, what’s the age group of the children?
+              What is the age range of your party participants?
             </p>
             <div className="container-width w100 flex flex-row flex-wrap justify-center">
               {ageGroups.map(ageGroup => {
@@ -762,8 +763,10 @@ class PartyRequestForm extends Component {
                   {`Deposit total $${partyDeposit.price}`}
                 </p>
                 <p className={cx(styles['PartyRequestForm__help-text'], 'mb3')}>
-                  Statement that mentions what the customer can expect after
-                  making this deposit
+                  Thank you for partying with us! An Amployee will reach out to
+                  you within two business days to get the party planning
+                  started! Please note a $100.00 deposit and the signing of our
+                  Party Contract is required to reserve your party.
                 </p>
                 <div>
                   <Button
