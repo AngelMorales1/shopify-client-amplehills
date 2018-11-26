@@ -168,7 +168,7 @@ class CakeRequestForm extends Component {
             <Dropdown
               className="w100 text-container-width z-sub-nav"
               color="peach"
-              variant="square"
+              variant={this.state.location ? 'square--selected' : 'square'}
               placeholder="Choose a Location"
               value={get(this, 'state.location.value', null)}
               onChange={this.handleLocationChange}
@@ -248,7 +248,7 @@ class CakeRequestForm extends Component {
             </p>
             <TextField
               className="w100 text-container-width"
-              variant="square"
+              variant={this.state.name ? 'square--selected' : 'square'}
               placeholder="Name"
               onChange={this.handleNameChange}
             />
@@ -259,7 +259,7 @@ class CakeRequestForm extends Component {
             </p>
             <TextField
               className="w100 text-container-width"
-              variant="square"
+              variant={this.state.phone ? 'square--selected' : 'square'}
               placeholder="Phone number"
               onChange={this.handlePhoneChange}
             />
@@ -315,7 +315,7 @@ class CakeRequestForm extends Component {
             <Dropdown
               className="w100 text-container-width z-sub-nav"
               color="peach"
-              variant="square"
+              variant={this.state.flavor ? 'square--selected' : 'square'}
               placeholder="Choose a Flavor"
               value={get(this, 'state.flavor.value', null)}
               onChange={this.handleFlavorChange}
@@ -338,7 +338,7 @@ class CakeRequestForm extends Component {
             <Dropdown
               className="w100 text-container-width"
               color="peach"
-              variant="square"
+              variant={this.state.secondFlavor ? 'square--selected' : 'square'}
               disabled={!selectedLocation}
               placeholder="Choose a Flavor"
               value={get(this, 'state.secondFlavor.value', null)}
