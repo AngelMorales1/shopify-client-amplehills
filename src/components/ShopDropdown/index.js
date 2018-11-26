@@ -38,7 +38,14 @@ const ShopDropdown = ({
         )}
       >
         <div className={cx('w100 pt3 px4 bg-peach fixed drip')}>
-          <div className="content-width mx-auto flex flex-row items-center justify-end">
+          <div
+            className={cx(
+              'content-width mx-auto flex flex-row items-center justify-end',
+              {
+                'justify-center': !merchProducts.length
+              }
+            )}
+          >
             <div className={cx(styles['ShopDropdown__product-wrapper'])}>
               <div
                 className={cx(
