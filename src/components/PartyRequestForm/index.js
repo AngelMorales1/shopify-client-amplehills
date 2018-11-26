@@ -264,7 +264,7 @@ class PartyRequestForm extends Component {
 
   render() {
     const formIsValid = this.validateForm();
-    const { partyAddOns, partyDeposit, addLineItemsStatus } = this.props;
+    const { partyAddOns, partyDeposit, addLineItemsStatus, today } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -382,12 +382,20 @@ class PartyRequestForm extends Component {
                 onMonthChange={() => {
                   this.setState({ dayPickerIsSelected: true });
                 }}
-                onDayClick={day =>
-                  this.setState({
-                    selectedDate: moment(day).format('MMMM DD')
-                  })
-                }
-                initialMonth={this.props.today}
+                onDayClick={day => {
+                  if (day > today) {
+                    this.setState({
+                      selectedDate: moment(day).format('MMMM DD')
+                    });
+                  }
+                }}
+                initialMonth={today}
+                disabledDays={[
+                  today,
+                  {
+                    before: today
+                  }
+                ]}
               />
             </Button>
           </div>
