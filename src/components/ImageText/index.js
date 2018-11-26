@@ -69,7 +69,6 @@ const ImageText = ({ block, z, setRef }) => {
         className={cx(
           'flex container-width py4',
           styles['ImageText__container'],
-          { [styles['ImageText__container--full-image']]: isFullImage },
           {
             [styles['ImageText__container--full-image']]: isFullImage,
             [styles['ImageText__container--reverse']]: isReverseArrangement,
@@ -182,17 +181,25 @@ const ImageText = ({ block, z, setRef }) => {
       </div>
       {isFullImage ? (
         <div
-          className="w100 square col-12 md-col-6"
-          style={{
-            background: `url(${contentfulImgUtil(
-              imageUrl,
-              '1600',
-              imageFileExtension
-            )}) no-repeat center`,
-            backgroundSize: 'cover'
-          }}
-        />
+          className={cx(
+            styles['ImageText__full-image-container'],
+            'w100 col-12 md-col-6 flex'
+          )}
+        >
+          <div
+            className="wh100 square"
+            style={{
+              background: `url(${contentfulImgUtil(
+                imageUrl,
+                '1600',
+                imageFileExtension
+              )}) no-repeat center`,
+              backgroundSize: 'cover'
+            }}
+          />
+        </div>
       ) : null}
+
       {showLocationSearchBar ? <LocationSearch /> : null}
     </div>
   );
