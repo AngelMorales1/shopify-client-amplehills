@@ -23,6 +23,7 @@ class CakeRequestForm extends Component {
     flavor: null,
     secondFlavor: null,
     filling: null,
+    sprinkle: null,
     toppings: [],
     dayPickerIsSelected: false
   };
@@ -65,6 +66,7 @@ class CakeRequestForm extends Component {
   handleFlavorChange = flavor => this.setState({ flavor });
   handleSecondFlavorChange = secondFlavor => this.setState({ secondFlavor });
   handleFillingChange = filling => this.setState({ filling });
+  handleSprinkleChange = sprinkle => this.setState({ sprinkle });
 
   handleAddTopping = topping => {
     const { toppings } = this.state;
@@ -118,6 +120,10 @@ class CakeRequestForm extends Component {
       value: this.state.filling
     },
     {
+      key: 'sprinkle',
+      value: this.state.sprinkle
+    },
+    {
       key: 'Toppings',
       value: this.state.toppings.join(', ')
     },
@@ -149,6 +155,7 @@ class CakeRequestForm extends Component {
     const variants = get(product, 'variants', []);
     const suggestedFlavors = get(this, 'props.cakeFlavors', []);
     const fillings = get(this, 'props.cakeFillings', []);
+    const sprinkles = get(this, 'props.cakeSprinkles', []);
     const toppings = get(this, 'props.cakeToppings', []);
     const locations = get(this, 'props.cakeLocations', {});
     const { pickupDate, dayPickerIsSelected } = this.state;
@@ -176,7 +183,7 @@ class CakeRequestForm extends Component {
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
-              Where would you like to pick up your cake?
+              Where would you like to pick up your ice cream cake?
             </p>
             <Dropdown
               className="w100 text-container-width z-sub-nav"
@@ -193,9 +200,12 @@ class CakeRequestForm extends Component {
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
-              When would you like to pick up your cake?
+              When would you like to pick up your ice cream cake?
             </p>
-            <p className={cx('center mb3')}>Each cake needs 48 hours notice</p>
+            <p className={cx('center mb3 text-container-width')}>
+              Please note, we need 48 hours minimum to create your custom ice
+              cream cake.
+            </p>
             <Button
               variant="style-none"
               onClick={() =>
@@ -258,18 +268,18 @@ class CakeRequestForm extends Component {
             <TextField
               className="w100 text-container-width"
               variant="square"
-              placeholder="Enter a name"
+              placeholder="Name"
               onChange={this.handleNameChange}
             />
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
-              What is the best phone number to reach you?
+              What’s the best phone number to reach you?
             </p>
             <TextField
               className="w100 text-container-width"
               variant="square"
-              placeholder="Enter your phone number"
+              placeholder="Phone number"
               onChange={this.handlePhoneChange}
             />
           </div>
@@ -281,10 +291,7 @@ class CakeRequestForm extends Component {
           </div>
 
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Pick a size!</p>
-            <p className={cx('center mb3')}>
-              We offer two sizes of Ice Cream cakes
-            </p>
+            <p className="bold big center mb2">Pick a size</p>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {variants.map((variant, i) => {
                 const price = get(variant, 'price', (0.0).toFixed(2));
@@ -313,7 +320,7 @@ class CakeRequestForm extends Component {
             </div>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Choose a flavor!</p>
+            <p className="bold big center mb2">Choose your first flavor</p>
             <Button
               variant="primary-small"
               color="peach"
@@ -346,7 +353,7 @@ class CakeRequestForm extends Component {
             </span>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Choose a second flavor!</p>
+            <p className="bold big center mb2">Choose your second flavor</p>
             <Dropdown
               className="w100 text-container-width"
               color="peach"
@@ -370,7 +377,7 @@ class CakeRequestForm extends Component {
             </span>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Choose a filling!</p>
+            <p className="bold big center mb2">Pick a layer</p>
             <div className="form-container-width w100 flex flex-wrap justify-center">
               {fillings.map(filling => {
                 return (
@@ -391,7 +398,36 @@ class CakeRequestForm extends Component {
             </div>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Add additional toppings!</p>
+            <p className="bold big center mb2">
+              What kind of sprinkles would you like?{' '}
+            </p>
+            <p className={cx('center mb3 text-container-width')}>
+              Each ice cream cake is made with a topping of whipped cream and
+              sprinkles.
+            </p>
+            <div className="form-container-width w100 flex flex-wrap justify-center">
+              {sprinkles.map(sprinkle => {
+                return (
+                  <div key={sprinkle.title} className="col-6 md-col-3 p1">
+                    <Button
+                      className="center wh100 white-space-normal px3"
+                      variant={
+                        get(this, 'state.sprinkle', null) === sprinkle.title
+                          ? 'square--selected'
+                          : 'square'
+                      }
+                      label={sprinkle.title}
+                      onClick={() => this.handleSprinkleChange(sprinkle.title)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 mb4 flex flex-column items-center">
+            <p className="bold big center mb2">
+              Would you like any additional toppings?{' '}
+            </p>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {toppings.map((topping, i) => {
                 const selectedToppings = this.state.toppings;
@@ -466,6 +502,10 @@ class CakeRequestForm extends Component {
                     {this.state.filling}
                   </span>
                   <span className="line-height small">
+                    <span className="bold">Sprinkle: </span>
+                    {this.state.sprinkle}
+                  </span>
+                  <span className="line-height small">
                     <span className="bold">Toppings: </span>
                     {this.state.toppings.join(', ')}
                   </span>
@@ -483,8 +523,9 @@ class CakeRequestForm extends Component {
                   : ''}
               </span>
               <span className="line-height small">
-                You will be asked to pay for any additional items or products
-                upon picking up the cake.
+                Thank you so much for your order! When you pick up your ice
+                cream cake, you will be charged for any additional products. Our
+                Amployees can’t wait to make your cake.
               </span>
               <Button
                 disabled={!formIsValid}
