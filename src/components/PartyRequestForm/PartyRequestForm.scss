@@ -2,6 +2,11 @@
 $CRF-close-bar-height: spacing(18);
 
 .PartyRequestForm {
+  &__more-info-button {
+    padding-top: calc(#{spacing(2)} + 0.0625rem);
+    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+  }
+
   &__day-picker-container,
   &__day-picker-container--selected {
     cursor: pointer;
@@ -50,8 +55,8 @@ $CRF-close-bar-height: spacing(18);
   }
 
   &__help-text {
-    line-height: $font-6;
-    font-size: 0.75rem;
+    @extend .line-height;
+    font-size: 0.875rem;
   }
 
   &__footer-text-container {
@@ -64,20 +69,38 @@ $CRF-close-bar-height: spacing(18);
 
   &__party-type-button {
     flex-direction: column;
-    justify-content: center;
 
     @media ($medium-up) {
       flex-direction: row;
-      justify-content: space-between;
       padding: spacing(8) 0;
     }
   }
 
+  &__party-type-inner-button-container {
+    margin: auto 0 0 0;
+
+    @media ($medium-up) {
+      margin: 0 0 0 auto;
+    }
+  }
+
   &__party-type-inner-button {
-    margin-top: spacing(8);
+    margin-top: spacing(4);
 
     @media ($medium-up) {
       margin: 0;
+    }
+  }
+
+  &__party-add-ons-inner-button {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  &__party-add-ons-inner-button {
+    @media ($medium-up) {
+      padding-top: calc(#{spacing(2)} + 0.0625rem);
+      padding-bottom: calc(#{spacing(2)} - 0.0625rem);
     }
   }
 

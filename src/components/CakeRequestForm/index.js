@@ -219,7 +219,10 @@ class CakeRequestForm extends Component {
               variant="primary-small"
               color="peach"
               label="Need Help?"
-              className="uppercase mb3 tout"
+              className={cx(
+                styles['CakeRequestForm__help-button'],
+                'uppercase mb3 tout'
+              )}
               onClick={this.openFlavorModal}
             />
             <Dropdown
@@ -331,41 +334,43 @@ class CakeRequestForm extends Component {
               <span className="bold big mb3">Summary</span>
               {formIsValid ? (
                 <div className="flex flex-column pr3">
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Pickup Location: </span>
                     {this.state.location.label}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Name: </span>
                     {this.state.name}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Phone: </span>
                     {this.state.phone}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Size: </span>
                     {this.state.size.title}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Flavor 1: </span>
                     {this.state.flavor.label}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Flavor 2: </span>
                     {this.state.secondFlavor.label}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Filling: </span>
                     {this.state.filling}
                   </span>
-                  <span className="line-height">
+                  <span className="line-height small">
                     <span className="bold">Toppings: </span>
                     {this.state.toppings.join(', ')}
                   </span>
                 </div>
               ) : (
-                <span className="line-height">Please fill out all fields.</span>
+                <span className="line-height small">
+                  Please fill out all fields.
+                </span>
               )}
             </div>
             <div className="col-12 md-col-5 flex flex-column items-start">
@@ -374,7 +379,7 @@ class CakeRequestForm extends Component {
                   ? `: $${this.state.size.price}`
                   : ''}
               </span>
-              <span className="line-height">
+              <span className="line-height small">
                 You will be asked to pay for any additional items or products
                 upon picking up the cake.
               </span>
