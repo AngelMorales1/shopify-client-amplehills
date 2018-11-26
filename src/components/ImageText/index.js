@@ -6,6 +6,8 @@ import get from 'utils/get';
 import imageModel from 'models/imageModel';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
+import LocationSearch from 'components/LocationSearch';
+
 import styles from './ImageText.scss';
 import { Image, Button } from 'components/base';
 
@@ -32,6 +34,7 @@ const ImageText = ({ block, z, setRef }) => {
   const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
   const imageUrl = get(fields, 'image.fields.file.url', '');
+  const showLocationSearchBar = get(fields, 'showLocationSearchBar', false);
   const imageFileExtension =
     imageUrl.split('.').pop() === 'png' ? 'png' : 'jpg&fl=progressive';
 
@@ -59,7 +62,7 @@ const ImageText = ({ block, z, setRef }) => {
           [styles['ImageText__full-image--reverse']]:
             isFullImage && isReverseArrangement
         },
-        'flex justify-center'
+        'flex justify-center relative'
       )}
     >
       <div
@@ -85,6 +88,9 @@ const ImageText = ({ block, z, setRef }) => {
               [styles[
                 'ImageText__text-content--center'
               ]]: textContentCenterAlign,
+              [styles[
+                'ImageText__text-content--with-location-search'
+              ]]: showLocationSearchBar,
               'md-col-5': imageTextRatioIs5050 && !isFullImage,
               'md-col-6': !imageTextRatioIs5050 && !isFullImage,
               'md-col-9': isFullImage
@@ -187,6 +193,7 @@ const ImageText = ({ block, z, setRef }) => {
           }}
         />
       ) : null}
+      {showLocationSearchBar ? <LocationSearch /> : null}
     </div>
   );
 };

@@ -1,0 +1,58 @@
+@import 'settings', 'typography', 'src/styles/utils';
+
+.LocationSearch {
+  bottom: spacing(24);
+
+  @media ($medium-up) {
+    bottom: spacing(18);
+  }
+
+  &__container {
+    padding: spacing(8);
+    border-radius: radius('m');
+    min-height: spacing(45);
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      align-items: center;
+      min-height: spacing(22);
+      padding: spacing(4) spacing(10);
+    }
+  }
+
+  &__text {
+    font-size: $font-4;
+
+    @media ($medium-up) {
+      font-size: $font-5;
+    }
+  }
+
+  &__text-field-container {
+    min-width: spacing(40);
+  }
+
+  &__button-image {
+    width: spacing(10);
+  }
+
+  &__search-button {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__text-field {
+    input {
+      padding-top: calc(#{spacing(4)} + 0.1875rem);
+      padding-bottom: calc(#{spacing(4)} - 0.1875rem);
+    }
+  }
+
+  &__all-locations-button {
+    margin-top: spacing(4);
+
+    @media ($medium-up) {
+      margin-top: 0;
+    }
+  }
+}
