@@ -25,6 +25,7 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import sortLocation from 'utils/sortLocation';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
@@ -45,6 +46,10 @@ class Nav extends Component {
       [BROOKLYN]: {},
       [FARTHER_FROM_BROOKLYN]: {},
       [FARTHEST_FROM_BROOKLYN]: {}
+    },
+    regionOrder: {
+      fartherOrder: [],
+      farthestOrder: []
     }
   };
 
@@ -53,32 +58,12 @@ class Nav extends Component {
     this.updateWindow();
 
     const locations = get(this, 'props.locations', []);
-    const getlocationSortedByGroup = this.state.locationSortedByGroup;
-    locations.forEach(location => {
-      const region = get(location, 'region', '');
-      if (region === 'Brooklyn') {
-        return getlocationSortedByGroup[BROOKLYN][region]
-          ? getlocationSortedByGroup[BROOKLYN][region].push(location)
-          : (getlocationSortedByGroup[BROOKLYN][region] = [location]);
-      }
-      if (get(location, 'state', '') === 'NY') {
-        return getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region]
-          ? getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region].push(
-              location
-            )
-          : (getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region] = [
-              location
-            ]);
-      }
-      return getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region]
-        ? getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region].push(
-            location
-          )
-        : (getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region] = [
-            location
-          ]);
+    const sortedLocation = sortLocation(locations);
+
+    this.setState({
+      locationSortedByGroup: sortedLocation.locationSortedByGroup,
+      regionOrder: sortedLocation.regionOrder
     });
-    this.setState({ locationSortedByGroup: getlocationSortedByGroup });
   }
 
   updateWindow = () => {
@@ -116,7 +101,8 @@ class Nav extends Component {
       alertIsActive,
       shopDropdownIsOpen,
       locationDropdownIsOpen,
-      locationDropdownImage
+      locationDropdownImage,
+      locations
     } = this.props;
     const {
       openShopDropdown,
@@ -299,6 +285,7 @@ class Nav extends Component {
             openLocationDropdown={openLocationDropdown}
             closeLocationDropdown={closeLocationDropdown}
             locationSortedByGroup={this.state.locationSortedByGroup}
+            regionOrder={this.state.regionOrder}
             locationDropdownImage={locationDropdownImage}
           />
         ) : null}
@@ -355,7 +342,7 @@ const mapStateToProps = state => {
       {}
     ),
     alertIsActive: alertIsActive(state),
-    locations: locations(state), //get(state, 'locations.locations.items', []),
+    locations: locations(state),
     locationDropdownImage: get(
       state,
       'applicationUI.globalSettings.items[0].fields.locationDropdownNavImage.fields.file.url',
