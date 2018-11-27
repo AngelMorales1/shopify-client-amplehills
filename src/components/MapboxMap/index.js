@@ -118,11 +118,14 @@ class MapboxMap extends Component {
       type: 'symbol',
       source: 'source',
       layout: {
-        'icon-allow-overlap': true,
+        'text-font': ['Open Sans Bold'],
+        'text-size': textSize,
+        'icon-optional': true,
         'icon-image': defaultIcon,
         'icon-size': iconSize
       },
       paint: {
+        'text-color': textColor,
         'icon-opacity': ['match', ['get', 'id'], '', 0.5, 1]
       }
     });
@@ -133,15 +136,33 @@ class MapboxMap extends Component {
           type: 'symbol',
           source: 'source',
           layout: {
-            'text-field': '{point_count_abbreviated}',
+            'text-field': [
+              'step',
+              ['zoom'],
+              [
+                'case',
+                ['has', 'point_count'],
+                ['to-string', ['get', 'point_count_abbreviated']],
+                '1'
+              ],
+              12,
+              [
+                'case',
+                ['has', 'point_count'],
+                ['to-string', ['get', 'point_count_abbreviated']],
+                ''
+              ]
+            ],
             'text-font': ['Open Sans Bold'],
-            'text-size': textSize
+            'text-size': textSize,
+            'text-ignore-placement': true
           },
           paint: {
             'text-color': textColor
           }
         })
       : null;
+
     this.setState({ layer, cluster });
   }
 

@@ -90,7 +90,7 @@ const LocationsMap = props => {
         textSize={16}
         textColor="#ffffff"
         mapPadding={150}
-        maxZoom={18}
+        maxZoom={14}
         onClickFeature={onClickFeature}
         onLoad={() => setTimeout(() => props.locationsMapHasLoaded(), 0)}
         featureIdZoomTo={selectedLocation}
