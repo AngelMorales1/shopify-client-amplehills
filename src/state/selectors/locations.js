@@ -48,12 +48,11 @@ export default createSelector(
         if (Days.includes(current)) accumulated[current] = fields[current];
         return accumulated;
       }, {});
-
       const sortedHours = sortHours(hours);
       const currentOpenHours = moment()
         .format('dddd')
         .toLowerCase();
-
+      const navRegionOrder = get(fields, 'navRegionOrder', 100);
       const searchableFields = {
         title,
         address1,
@@ -93,7 +92,8 @@ export default createSelector(
         participantsLimitText,
         text,
         cakes,
-        cakesBucket
+        cakesBucket,
+        navRegionOrder
       };
     });
 

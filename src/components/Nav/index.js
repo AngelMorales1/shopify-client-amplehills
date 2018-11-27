@@ -31,6 +31,7 @@ import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
 import ShopDropdown from 'components/ShopDropdown';
 import LocationDropdown from 'components/LocationDropdown';
+import locations from 'state/selectors/locations';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -54,14 +55,13 @@ class Nav extends Component {
     const locations = get(this, 'props.locations', []);
     const getlocationSortedByGroup = this.state.locationSortedByGroup;
     locations.forEach(location => {
-      const fields = get(location, 'fields', {});
-      const region = get(fields, 'region', '');
+      const region = get(location, 'region', '');
       if (region === 'Brooklyn') {
         return getlocationSortedByGroup[BROOKLYN][region]
           ? getlocationSortedByGroup[BROOKLYN][region].push(location)
           : (getlocationSortedByGroup[BROOKLYN][region] = [location]);
       }
-      if (get(fields, 'state', '') === 'NY') {
+      if (get(location, 'state', '') === 'NY') {
         return getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region]
           ? getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region].push(
               location
@@ -355,7 +355,7 @@ const mapStateToProps = state => {
       {}
     ),
     alertIsActive: alertIsActive(state),
-    locations: get(state, 'locations.locations.items', []),
+    locations: locations(state), //get(state, 'locations.locations.items', []),
     locationDropdownImage: get(
       state,
       'applicationUI.globalSettings.items[0].fields.locationDropdownNavImage.fields.file.url',

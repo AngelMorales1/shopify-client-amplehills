@@ -76,25 +76,29 @@ const LocationDropdown = ({
                               locationSortedByGroup,
                               `${locationGroup}.${region}`,
                               []
-                            ).map(location => {
-                              const fields = get(location, 'fields', {});
-                              const title = get(fields, 'title', '');
-                              const slug = get(fields, 'slug', '');
-                              return (
-                                <Button
-                                  key={title}
-                                  className={cx(
-                                    styles['LocationDropdown__location-link'],
-                                    'text-white light mb1 white-space-normal avenir'
-                                  )}
-                                  onClick={closeLocationDropdown}
-                                  to={`/location/${slug}`}
-                                  label={title}
-                                  variant="style-none"
-                                  hover="underline-white"
-                                />
-                              );
-                            })}
+                            )
+                              .sort(
+                                (a, b) => a.navRegionOrder - b.navRegionOrder
+                              )
+                              .map(location => {
+                                const title = get(location, 'title', '');
+                                const slug = get(location, 'slug', '');
+
+                                return (
+                                  <Button
+                                    key={title}
+                                    className={cx(
+                                      styles['LocationDropdown__location-link'],
+                                      'text-white light mb1 white-space-normal avenir'
+                                    )}
+                                    onClick={closeLocationDropdown}
+                                    to={`/location/${slug}`}
+                                    label={title}
+                                    variant="style-none"
+                                    hover="underline-white"
+                                  />
+                                );
+                              })}
                           </div>
                         );
                       }
