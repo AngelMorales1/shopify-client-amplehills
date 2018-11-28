@@ -74,10 +74,13 @@ class MapboxMap extends Component {
   initializeMap() {
     return new Promise((resolve, reject) => {
       const { styleUrl, maxZoom } = this.props;
+
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
         style: styleUrl,
+        zoom: 6,
+        center: [-73.949997, 40.650002],
         maxZoom
       });
       map.on('load', () => {
@@ -384,7 +387,7 @@ class MapboxMap extends Component {
   zoomToFeature(feature) {
     this.state.map.flyTo({
       zoom: this.props.maxZoom,
-      speed: 1,
+      speed: 2,
       center: feature.geometry.coordinates
     });
   }
