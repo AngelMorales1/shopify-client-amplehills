@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import locationModel from 'models/locationModel';
 import getLocationCity from 'utils/getLocationCity';
+import { Button } from 'components/base';
 
 import styles from './LocationCard.scss';
 
@@ -109,14 +110,14 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
               ) : null}
             </div>
             {location.delivery ? (
-              <div
-                className={cx(
-                  styles['LocationCard__card-tag'],
-                  'uppercase bold bg-madison-blue inline-block text-white mt2'
-                )}
-              >
-                <span className="text-white">Delivery</span>
-              </div>
+              <Button
+                className={cx(styles['LocationCard__card-tag'], 'uppercase')}
+                color="madison-blue"
+                variant="primary-small"
+                label="Delivery"
+                to={location.orderDeliveryLink}
+                newTab={true}
+              />
             ) : null}
           </div>
         </div>
