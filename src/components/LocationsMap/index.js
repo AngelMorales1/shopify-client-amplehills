@@ -83,6 +83,8 @@ const LocationsMap = props => {
             visible: false
           }
         ]}
+        initialZoom={6}
+        initialCenter={[-73.949997, 40.650002]}
         iconSize={1.4}
         cluster={true}
         clusterMaxZoom={14}
@@ -91,6 +93,7 @@ const LocationsMap = props => {
         textColor="#ffffff"
         mapPadding={150}
         maxZoom={14}
+        zoomToFeatureSpeed={2}
         onClickFeature={onClickFeature}
         onLoad={() => setTimeout(() => props.locationsMapHasLoaded(), 0)}
         featureIdZoomTo={selectedLocation}

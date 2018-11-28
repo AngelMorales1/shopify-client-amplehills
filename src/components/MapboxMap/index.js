@@ -73,14 +73,14 @@ class MapboxMap extends Component {
 
   initializeMap() {
     return new Promise((resolve, reject) => {
-      const { styleUrl, maxZoom } = this.props;
+      const { styleUrl, maxZoom, initialCenter, initialZoom } = this.props;
 
       mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
       const map = new mapboxgl.Map({
         container: this.state.mapId,
         style: styleUrl,
-        zoom: 6,
-        center: [-73.949997, 40.650002],
+        zoom: initialZoom,
+        center: initialCenter,
         maxZoom
       });
       map.on('load', () => {
@@ -123,12 +123,10 @@ class MapboxMap extends Component {
       layout: {
         'text-font': ['Open Sans Bold'],
         'text-size': textSize,
-        'icon-optional': true,
         'icon-image': defaultIcon,
         'icon-size': iconSize
       },
       paint: {
-        'text-color': textColor,
         'icon-opacity': ['match', ['get', 'id'], '', 0.5, 1]
       }
     });
@@ -378,9 +376,10 @@ class MapboxMap extends Component {
   };
 
   zoomToFeature(feature) {
+    const { zoomToFeatureSpeed } = this.props;
     this.state.map.flyTo({
       zoom: this.props.maxZoom,
-      speed: 2,
+      speed: zoomToFeatureSpeed,
       center: feature.geometry.coordinates
     });
   }
@@ -419,7 +418,10 @@ MapboxMap.propTypes = {
   hoverFade: PropTypes.bool,
   className: PropTypes.string,
   onLoad: PropTypes.func,
-  maxZoom: PropTypes.number
+  maxZoom: PropTypes.number,
+  zoomToFeatureSpeed: PropTypes.number,
+  initialZoom: PropTypes.number,
+  initialCenter: PropTypes.array
 };
 
 MapboxMap.defaultProps = {
@@ -441,7 +443,10 @@ MapboxMap.defaultProps = {
   collections: [],
   hoverFade: false,
   className: undefined,
-  maxZoom: null
+  maxZoom: null,
+  zoomToFeatureSpeed: 1,
+  initialZoom: 6,
+  initialCenter: [-73.949997, 40.650002]
 };
 
 export default MapboxMap;
