@@ -25,7 +25,7 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
-import sortLocation from 'utils/sortLocation';
+import sortLocationsByGroup from 'utils/sortLocationsByGroup';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
@@ -58,7 +58,7 @@ class Nav extends Component {
     this.updateWindow();
 
     const locations = get(this, 'props.locations', []);
-    const sortedLocation = sortLocation(locations);
+    const sortedLocation = sortLocationsByGroup(locations);
 
     this.setState({
       locationSortedByGroup: sortedLocation.locationSortedByGroup,
