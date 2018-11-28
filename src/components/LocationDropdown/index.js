@@ -15,7 +15,8 @@ const LocationDropdown = ({
   openLocationDropdown,
   closeLocationDropdown,
   locationSortedByGroup,
-  locationDropdownImage
+  locationDropdownImage,
+  regionOrder
 }) => {
   return (
     <div
@@ -48,13 +49,18 @@ const LocationDropdown = ({
             <div className="col-8 flex flex-row items-start justify-between">
               {Object.keys(locationSortedByGroup).map(locationGroup => {
                 let locationGroupTitle = BROOKLYN;
+                let locationGroupRegions = Object.keys(
+                  locationSortedByGroup[locationGroup]
+                );
 
                 if (locationGroup === FARTHER_FROM_BROOKLYN) {
                   locationGroupTitle = FARTHER_FROM_BROOKLYN;
+                  locationGroupRegions = regionOrder.fartherOrder;
                 }
 
                 if (locationGroup === FARTHEST_FROM_BROOKLYN) {
                   locationGroupTitle = FARTHEST_FROM_BROOKLYN;
+                  locationGroupRegions = regionOrder.farthestOrder;
                 }
 
                 return (
@@ -62,24 +68,25 @@ const LocationDropdown = ({
                     <p className="carter text-white mb3 white-space-normal">
                       {locationGroupTitle}
                     </p>
-                    {Object.keys(locationSortedByGroup[locationGroup]).map(
-                      region => {
-                        return (
-                          <div
-                            key={region}
-                            className="flex flex-column items-start mb2"
-                          >
-                            <p className="bold text-white mb1 white-space-normal">
-                              {region}
-                            </p>
-                            {get(
-                              locationSortedByGroup,
-                              `${locationGroup}.${region}`,
-                              []
-                            ).map(location => {
-                              const fields = get(location, 'fields', {});
-                              const title = get(fields, 'title', '');
-                              const slug = get(fields, 'slug', '');
+                    {locationGroupRegions.map(region => {
+                      return (
+                        <div
+                          key={region}
+                          className="flex flex-column items-start mb2"
+                        >
+                          <p className="bold text-white mb1 white-space-normal">
+                            {region}
+                          </p>
+                          {get(
+                            locationSortedByGroup,
+                            `${locationGroup}.${region}`,
+                            []
+                          )
+                            .sort((a, b) => a.navRegionOrder - b.navRegionOrder)
+                            .map(location => {
+                              const title = get(location, 'title', '');
+                              const slug = get(location, 'slug', '');
+
                               return (
                                 <Button
                                   key={title}
@@ -95,10 +102,9 @@ const LocationDropdown = ({
                                 />
                               );
                             })}
-                          </div>
-                        );
-                      }
-                    )}
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}

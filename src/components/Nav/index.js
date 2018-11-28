@@ -25,12 +25,14 @@ import {
 
 import PropTypes from 'prop-types';
 import get from 'utils/get';
+import sortLocationsByGroup from 'utils/sortLocationsByGroup';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import cx from 'classnames';
 import Global from 'constants/Global';
 import imageModel from 'models/imageModel';
 import ShopDropdown from 'components/ShopDropdown';
 import LocationDropdown from 'components/LocationDropdown';
+import locations from 'state/selectors/locations';
 
 import { NavLink } from 'react-router-dom';
 import { Image, Button } from 'components/base';
@@ -44,6 +46,10 @@ class Nav extends Component {
       [BROOKLYN]: {},
       [FARTHER_FROM_BROOKLYN]: {},
       [FARTHEST_FROM_BROOKLYN]: {}
+    },
+    regionOrder: {
+      fartherOrder: [],
+      farthestOrder: []
     }
   };
 
@@ -52,33 +58,12 @@ class Nav extends Component {
     this.updateWindow();
 
     const locations = get(this, 'props.locations', []);
-    const getlocationSortedByGroup = this.state.locationSortedByGroup;
-    locations.forEach(location => {
-      const fields = get(location, 'fields', {});
-      const region = get(fields, 'region', '');
-      if (region === 'Brooklyn') {
-        return getlocationSortedByGroup[BROOKLYN][region]
-          ? getlocationSortedByGroup[BROOKLYN][region].push(location)
-          : (getlocationSortedByGroup[BROOKLYN][region] = [location]);
-      }
-      if (get(fields, 'state', '') === 'NY') {
-        return getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region]
-          ? getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region].push(
-              location
-            )
-          : (getlocationSortedByGroup[FARTHER_FROM_BROOKLYN][region] = [
-              location
-            ]);
-      }
-      return getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region]
-        ? getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region].push(
-            location
-          )
-        : (getlocationSortedByGroup[FARTHEST_FROM_BROOKLYN][region] = [
-            location
-          ]);
+    const sortedLocation = sortLocationsByGroup(locations);
+
+    this.setState({
+      locationSortedByGroup: sortedLocation.locationSortedByGroup,
+      regionOrder: sortedLocation.regionOrder
     });
-    this.setState({ locationSortedByGroup: getlocationSortedByGroup });
   }
 
   updateWindow = () => {
@@ -116,7 +101,8 @@ class Nav extends Component {
       alertIsActive,
       shopDropdownIsOpen,
       locationDropdownIsOpen,
-      locationDropdownImage
+      locationDropdownImage,
+      locations
     } = this.props;
     const {
       openShopDropdown,
@@ -299,6 +285,7 @@ class Nav extends Component {
             openLocationDropdown={openLocationDropdown}
             closeLocationDropdown={closeLocationDropdown}
             locationSortedByGroup={this.state.locationSortedByGroup}
+            regionOrder={this.state.regionOrder}
             locationDropdownImage={locationDropdownImage}
           />
         ) : null}
@@ -355,7 +342,7 @@ const mapStateToProps = state => {
       {}
     ),
     alertIsActive: alertIsActive(state),
-    locations: get(state, 'locations.locations.items', []),
+    locations: locations(state),
     locationDropdownImage: get(
       state,
       'applicationUI.globalSettings.items[0].fields.locationDropdownNavImage.fields.file.url',
