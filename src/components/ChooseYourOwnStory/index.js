@@ -196,7 +196,12 @@ class ChooseYourOwnStory extends Component {
             )}
           >
             <div className="text-container-width mx-auto">
-              <h1 className="block-headline mb4 relative z-1">
+              <h1
+                className={cx(
+                  styles['ChooseYourOwnStory__title'],
+                  'block-headline mb4 relative z-1'
+                )}
+              >
                 {get(fields, 'title')}
               </h1>
               <div className="w100 flex my3">
