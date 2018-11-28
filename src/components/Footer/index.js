@@ -49,7 +49,7 @@ class Footer extends Component {
           <div
             className={cx(
               styles['Footer__contact-us-container'],
-              'flex flex-column justify-between col-12 md-col-5 pt3'
+              'flex flex-column justify-between col-12 md-col-5 pt2'
             )}
           >
             <h2 className="text-white block-headline">
