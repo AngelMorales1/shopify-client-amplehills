@@ -31,17 +31,30 @@ class FooterNewsletter extends Component {
         <div
           className={cx(
             styles['FooterNewsletter__container'],
-            'flex items-center'
+            'flex items-center relative'
           )}
         >
-          <p
+          <div
             className={cx(
-              styles['FooterNewsletter__text'],
-              'my2 text-peach center'
+              styles['FooterNewsletter__text-container'],
+              'flex flex-column justify-center items-center my2'
             )}
           >
-            Sign up for the latest news from us!
-          </p>
+            <p
+              className="small carter center absolute"
+              style={{ top: '-10px' }}
+            >
+              Get the inside scoop on new flavors, discounts and more
+            </p>
+            <p
+              className={cx(
+                styles['FooterNewsletter__text'],
+                'text-peach center'
+              )}
+            >
+              Sign up for our newsletter!
+            </p>
+          </div>
           <Image
             className="my2 xs-hide sm-hide icon"
             alt="Decorative arrow"
