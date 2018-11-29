@@ -28,10 +28,11 @@ $transition-duration: 0.2;
   }
 
   &__card-seasonal-image {
-    width: spacing(16);
-    height: spacing(16);
+    width: spacing(18);
+    height: spacing(18);
     top: spacing(37);
-    right: spacing(12);
+    right: spacing(10);
+    font-size: $font-2;
 
     @media ($medium-up) {
       top: spacing(48);

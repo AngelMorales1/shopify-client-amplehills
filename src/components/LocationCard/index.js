@@ -51,30 +51,17 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
           </span>
         </div>
       ) : null}
-      {location.seasonal ? (
-        <div
-          className={cx(
-            styles['LocationCard__card-seasonal-image'],
-            'z-1 absolute'
-          )}
-          style={{
-            background: 'url(assets/images/seasonal-icon.png) no-repeat center',
-            backgroundSize: 'cover'
-          }}
-        />
-      ) : (
-        <div
-          className={cx(
-            styles['LocationCard__card-seasonal-image'],
-            'z-1 absolute'
-          )}
-          style={{
-            background:
-              'url(assets/images/year-round-icon.png) no-repeat center',
-            backgroundSize: 'cover'
-          }}
-        />
-      )}
+      <div
+        className={cx(
+          styles['LocationCard__card-seasonal-image'],
+          'circle z-1 absolute bg-peach flex justify-center items-center p1',
+          { 'bg-bright-turquoise': location.seasonal }
+        )}
+      >
+        <p className="center carter text-white">
+          {location.seasonal ? 'Seasonal' : 'Year Round'}
+        </p>
+      </div>
       <div
         style={
           location.image
