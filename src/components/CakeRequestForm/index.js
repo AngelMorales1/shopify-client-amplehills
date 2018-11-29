@@ -149,7 +149,7 @@ class CakeRequestForm extends Component {
     const selectedLocation = this.state.location
       ? locations[this.state.location.value]
       : null;
-
+    const cakeSizes = get(this, 'props.cakeSizes', {});
     const availableFlavors = selectedLocation
       ? selectedLocation.availableFlavors.map(flavor =>
           get(flavor, 'fields.title', '')
@@ -329,6 +329,7 @@ class CakeRequestForm extends Component {
                 const price = get(variant, 'price', (0.0).toFixed(2));
                 const title = get(variant, 'title', '');
                 const id = get(variant, 'id', title);
+                const description = get(cakeSizes, `${title}.description`, '');
 
                 return (
                   <div key={id || i} className="col-6 p1">
@@ -343,6 +344,9 @@ class CakeRequestForm extends Component {
                     >
                       <div className="inline-flex flex-column w100 my2">
                         <p className="mb1 white-space-normal center">{title}</p>
+                        <p className="mb1 white-space-normal light">
+                          {description}
+                        </p>
                         <p className="white-space-normal light">${price}</p>
                       </div>
                     </Button>

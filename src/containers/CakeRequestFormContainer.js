@@ -10,6 +10,7 @@ import cakeFlavors from 'state/selectors/cakeFlavors';
 import cakeToppings from 'state/selectors/cakeToppings';
 import cakeFillings from 'state/selectors/cakeFillings';
 import cakeSprinkles from 'state/selectors/cakeSprinkles';
+import cakeSizes from 'state/selectors/cakeSizes';
 
 import get from 'utils/get';
 
@@ -26,7 +27,8 @@ const mapStateToProps = (state, props) => {
     cakeFlavors: cakeFlavors(state),
     cakeToppings: cakeToppings(state),
     cakeFillings: cakeFillings(state),
-    cakeSprinkles: cakeSprinkles(state)
+    cakeSprinkles: cakeSprinkles(state),
+    cakeSizes: cakeSizes(state)
   };
 };
 
