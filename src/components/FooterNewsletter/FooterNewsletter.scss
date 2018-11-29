@@ -25,6 +25,10 @@
     }
   }
 
+  &__help-text {
+    top: spacing(-4);
+  }
+
   &__text {
     font-family: $font-carter;
     font-size: $font-6;

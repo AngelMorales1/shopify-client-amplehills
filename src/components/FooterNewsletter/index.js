@@ -41,10 +41,12 @@ class FooterNewsletter extends Component {
             )}
           >
             <p
-              className="small carter center absolute"
-              style={{ top: '-10px' }}
+              className={cx(
+                styles['FooterNewsletter__help-text'],
+                'small carter center absolute'
+              )}
             >
-              Get the inside scoop on new flavors, discounts and more
+              Get the inside scoop on new flavors, discounts and more.
             </p>
             <p
               className={cx(
