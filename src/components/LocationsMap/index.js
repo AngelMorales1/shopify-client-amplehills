@@ -17,7 +17,8 @@ class LocationsMap extends Component {
       allYear: 0,
       seasonal: 0
     },
-    seasonalIsdisabled: null
+    seasonalIsdisabled: null,
+    showFilteredOutLocationOnMap: false
   };
 
   componentDidMount() {
@@ -51,6 +52,10 @@ class LocationsMap extends Component {
 
   handleRegionClick = (filter, filterIsActive) => {
     const { actions } = this.props;
+    this.setState({
+      seasonalIsdisabled: null,
+      showFilteredOutLocationOnMap: true
+    });
 
     if (filterIsActive) {
       actions.removeLocationFilter({
@@ -64,7 +69,6 @@ class LocationsMap extends Component {
       });
     }
 
-    this.setState({ seasonalIsdisabled: null });
     window.scrollTo(0, 0);
   };
 
@@ -72,13 +76,19 @@ class LocationsMap extends Component {
     const { actions } = this.props;
 
     if (filter.value === this.state.seasonalIsdisabled) {
-      this.setState({ seasonalIsdisabled: null });
+      this.setState({
+        seasonalIsdisabled: null,
+        showFilteredOutLocationOnMap: false
+      });
       actions.removeLocationFilter({
         key: filter.key,
         value: !filter.value
       });
     } else {
-      this.setState({ seasonalIsdisabled: filter.value });
+      this.setState({
+        seasonalIsdisabled: filter.value,
+        showFilteredOutLocationOnMap: false
+      });
       actions.addLocationFilter({
         key: filter.key,
         value: !filter.value
@@ -137,6 +147,7 @@ class LocationsMap extends Component {
               visible: false
             }
           ]}
+          showFilteredOutLocationOnMap={this.state.showFilteredOutLocationOnMap}
           initialZoom={6}
           initialCenter={[-73.949997, 40.650002]}
           iconSize={1.4}
