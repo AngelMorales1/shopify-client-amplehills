@@ -15,4 +15,10 @@
       margin-top: spacing(1);
     }
   }
+
+  &__circle-icon {
+    width: spacing(6);
+    height: spacing(6);
+    font-size: 0.4rem;
+  }
 }

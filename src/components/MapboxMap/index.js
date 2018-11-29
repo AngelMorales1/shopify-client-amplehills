@@ -191,9 +191,16 @@ class MapboxMap extends Component {
   setMapData() {
     const hiddenFeatures = this.featuresNotVisible();
 
+    const filteredFeatures = hiddenFeatures.length
+      ? this.props.featureCollection.features.filter(feature => {
+          const { id } = feature.properties;
+          return !hiddenFeatures.includes(id);
+        })
+      : [];
+
     const filteredGeoJSON = {
       type: 'FeatureCollection',
-      features: this.props.featureCollection.features
+      features: filteredFeatures
     };
 
     this.state.map.getSource('source').setData(filteredGeoJSON);
