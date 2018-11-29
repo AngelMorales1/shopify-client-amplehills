@@ -27,6 +27,14 @@ $CRF-close-bar-height: spacing(18);
     padding-bottom: calc(#{spacing(4)} - 0.0625rem);
   }
 
+  &__build-your-own {
+    @extend .transition-slide-up;
+  }
+
+  &__build-your-own--disable {
+    display: none;
+  }
+
   &__modal {
     &__info {
       height: calc(100% - #{$CRF-close-bar-height});
