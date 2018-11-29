@@ -17,6 +17,7 @@ class CakeRequestForm extends Component {
   state = {
     location: null,
     pickupDate: null,
+    pickupTime: null,
     name: null,
     phone: null,
     size: null,
@@ -32,7 +33,8 @@ class CakeRequestForm extends Component {
   closeFlavorModal = () => this.setState({ flavorModalIsOpen: false });
   validateForm = () => Object.values(this.state).every(value => value !== null);
 
-  handleLocationChange = location => this.setState({ location });
+  handleLocationChange = location =>
+    this.setState({ location, pickupTime: null });
   handleDayClick = day => {
     if (moment(day).isAfter(moment().add(2, 'days'))) {
       this.setState({
@@ -40,6 +42,7 @@ class CakeRequestForm extends Component {
       });
     }
   };
+  handlePickupTimeChange = pickupTime => this.setState({ pickupTime });
   handleNameChange = name => this.setState({ name });
   handlePhoneChange = phone => this.setState({ phone });
   handleSizeChange = size => this.setState({ size });
@@ -74,6 +77,10 @@ class CakeRequestForm extends Component {
     {
       key: 'Pickup Date',
       value: this.state.pickupDate
+    },
+    {
+      key: 'Pickup Time',
+      value: this.state.pickupTime
     },
     {
       key: 'Name',
@@ -130,7 +137,6 @@ class CakeRequestForm extends Component {
 
   render() {
     const formIsValid = this.validateForm();
-
     const product = get(this, 'props.cakeDeposit', {});
     const variants = get(product, 'variants', []);
     const suggestedFlavors = get(this, 'props.cakeFlavors', []);
@@ -149,6 +155,24 @@ class CakeRequestForm extends Component {
           get(flavor, 'fields.title', '')
         )
       : [];
+    const defaultTimeSlots = [
+      {
+        endTime: 'closing',
+        index: 1,
+        startTime: '5pm',
+        uuid: 'defaultTimeSlot2'
+      },
+      {
+        endTime: '5pm',
+        index: 0,
+        startTime: '12pm',
+        uuid: 'defaultTimeSlot1'
+      }
+    ];
+    const pickupTimeSlots =
+      selectedLocation && selectedLocation.cakePickupTimeSlots.length
+        ? selectedLocation.cakePickupTimeSlots.reverse()
+        : defaultTimeSlots.reverse();
 
     return (
       <div className="flex flex-wrap my4">
@@ -241,6 +265,33 @@ class CakeRequestForm extends Component {
                 initialMonth={today}
               />
             </Button>
+          </div>
+          <div className="w100 mb4 flex flex-column items-center">
+            <p className="bold big center mb2">
+              What time of day will you be picking up your ice cream cake?
+            </p>
+            <div className="form-container-width w100 flex flex-wrap justify-center">
+              {pickupTimeSlots.map(timeSlot => {
+                const timeSlotLabel = `${timeSlot.startTime} to ${
+                  timeSlot.endTime
+                }`;
+
+                return (
+                  <div key={timeSlot.uuid} className="col-6 md-col-3 p1">
+                    <Button
+                      className="center wh100 white-space-normal px3"
+                      variant={
+                        get(this, 'state.pickupTime', null) === timeSlotLabel
+                          ? 'square--selected'
+                          : 'square'
+                      }
+                      label={timeSlotLabel}
+                      onClick={() => this.handlePickupTimeChange(timeSlotLabel)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
@@ -457,6 +508,10 @@ class CakeRequestForm extends Component {
                   <span className="line-height small">
                     <span className="bold">Pickup Date: </span>
                     {this.state.pickupDate}
+                  </span>
+                  <span className="line-height small">
+                    <span className="bold">Pickup Time: </span>
+                    {this.state.pickupTime}
                   </span>
                   <span className="line-height">
                     <span className="bold">Name: </span>

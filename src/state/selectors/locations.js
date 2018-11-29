@@ -64,6 +64,15 @@ export default createSelector(
         phone
       };
 
+      const cakePickupTimeSlotsFragments = get(
+        fields,
+        'cakePickupTimeSlots.simpleFragments',
+        {}
+      );
+      const cakePickupTimeSlots = Object.keys(cakePickupTimeSlotsFragments)
+        .length
+        ? fragmentsToArray(cakePickupTimeSlotsFragments)
+        : [];
       const stringifiedSearchableFields = Object.values(searchableFields).map(
         recursivelyStringify
       );
@@ -93,7 +102,8 @@ export default createSelector(
         text,
         cakes,
         cakesBucket,
-        navRegionOrder
+        navRegionOrder,
+        cakePickupTimeSlots
       };
     });
 
