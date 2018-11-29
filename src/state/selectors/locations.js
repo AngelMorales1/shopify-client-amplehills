@@ -71,7 +71,7 @@ export default createSelector(
       );
       const cakePickupTimeSlots = Object.keys(cakePickupTimeSlotsFragments)
         .length
-        ? fragmentsToArray(cakePickupTimeSlotsFragments)
+        ? fragmentsToArray(cakePickupTimeSlotsFragments).reverse()
         : [];
       const stringifiedSearchableFields = Object.values(searchableFields).map(
         recursivelyStringify

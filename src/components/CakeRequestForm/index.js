@@ -128,7 +128,7 @@ class CakeRequestForm extends Component {
       value: this.state.secondFlavor.label
     },
     {
-      key: 'Filling',
+      key: 'Base',
       value: this.state.filling
     },
     {
@@ -183,22 +183,22 @@ class CakeRequestForm extends Component {
       : [];
     const defaultTimeSlots = [
       {
-        endTime: 'closing',
-        index: 1,
-        startTime: '5pm',
-        uuid: 'defaultTimeSlot2'
-      },
-      {
         endTime: '5pm',
         index: 0,
         startTime: '12pm',
         uuid: 'defaultTimeSlot1'
+      },
+      {
+        endTime: 'closing',
+        index: 1,
+        startTime: '5pm',
+        uuid: 'defaultTimeSlot2'
       }
     ];
     const pickupTimeSlots =
       selectedLocation && selectedLocation.cakePickupTimeSlots.length
-        ? selectedLocation.cakePickupTimeSlots.reverse()
-        : defaultTimeSlots.reverse();
+        ? selectedLocation.cakePickupTimeSlots
+        : defaultTimeSlots;
 
     return (
       <div className="flex flex-wrap my4">
@@ -232,7 +232,7 @@ class CakeRequestForm extends Component {
             <p className="bold big center mb2">
               When would you like to pick up your ice cream cake?
             </p>
-            <p className={cx('center mb3 text-container-width')}>
+            <p className={cx('center mb3 help-text-container-width')}>
               Please note, we need 48 hours minimum to create your custom ice
               cream cake.
             </p>
@@ -305,7 +305,7 @@ class CakeRequestForm extends Component {
                 return (
                   <div key={timeSlot.uuid} className="col-6 md-col-3 p1">
                     <Button
-                      className="center wh100 white-space-normal px3"
+                      className="center wh100 white-space-normal px2"
                       variant={
                         get(this, 'state.pickupTime', null) === timeSlotLabel
                           ? 'square--selected'
@@ -511,7 +511,11 @@ class CakeRequestForm extends Component {
               </span>
             </div>
             <div className="w100 mb4 flex flex-column items-center">
-              <p className="bold big center mb2">Pick a layer</p>
+              <p className="bold big center mb2">Pick a base</p>
+              <p className={cx('center mb3 help-text-container-width')}>
+                All ice cream cakes come with a layer of fudge in between the
+                layers of ice cream.
+              </p>
               <div className="form-container-width w100 flex flex-wrap justify-center">
                 {fillings.map(filling => {
                   return (
@@ -536,7 +540,7 @@ class CakeRequestForm extends Component {
             <p className="bold big center mb2">
               What kind of sprinkles would you like?{' '}
             </p>
-            <p className={cx('center mb3 text-container-width')}>
+            <p className={cx('center mb3 help-text-container-width')}>
               Each ice cream cake is made with a topping of whipped cream and
               sprinkles.
             </p>
@@ -637,7 +641,7 @@ class CakeRequestForm extends Component {
                     {this.state.secondFlavor.label}
                   </span>
                   <span className="line-height small">
-                    <span className="bold">Filling: </span>
+                    <span className="bold">Base: </span>
                     {this.state.filling}
                   </span>
                   <span className="line-height small">
@@ -662,9 +666,9 @@ class CakeRequestForm extends Component {
                   : ''}
               </span>
               <span className="line-height small">
-                Thank you so much for your order! When you pick up your ice
-                cream cake, you will be charged for any additional products. Our
-                Amployees can’t wait to make your cake.
+                Thank you so much for your order! Our Amployees can’t wait to
+                make your cake. If we have any questions, we’ll reach out to
+                you. We’ll see you at the shop.
               </span>
               <Button
                 disabled={!formIsValid}
@@ -674,7 +678,7 @@ class CakeRequestForm extends Component {
                   styles['CakeRequestForm__button'],
                   'mt3 inline-block w-auto'
                 )}
-                label="Make Deposit"
+                label="Add to cart!"
               />
             </div>
           </div>
