@@ -16,6 +16,10 @@
     }
   }
 
+  &__seasonal-button--selected {
+    opacity: 0.6;
+  }
+
   &__circle-icon {
     width: spacing(6);
     height: spacing(6);

@@ -290,7 +290,7 @@ LocationsCards.propTypes = {
   locationFilters: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string,
-      value: PropTypes.string
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
     })
   ),
   searchFilter: PropTypes.string,

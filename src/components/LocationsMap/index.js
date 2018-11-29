@@ -16,7 +16,8 @@ class LocationsMap extends Component {
     locationCount: {
       allYear: 0,
       seasonal: 0
-    }
+    },
+    seasonalIsdisabled: null
   };
 
   componentDidMount() {
@@ -63,7 +64,26 @@ class LocationsMap extends Component {
       });
     }
 
+    this.setState({ seasonalIsdisabled: null });
     window.scrollTo(0, 0);
+  };
+
+  handleSeasonalClick = filter => {
+    const { actions } = this.props;
+
+    if (filter.value === this.state.seasonalIsdisabled) {
+      this.setState({ seasonalIsdisabled: null });
+      actions.removeLocationFilter({
+        key: filter.key,
+        value: !filter.value
+      });
+    } else {
+      this.setState({ seasonalIsdisabled: filter.value });
+      actions.addLocationFilter({
+        key: filter.key,
+        value: !filter.value
+      });
+    }
   };
 
   render() {
@@ -161,12 +181,17 @@ class LocationsMap extends Component {
         </div>
         <div className="absolute b0 l0 flex p3">
           {LocationsMapKey.SEASONAL_FILTERS.map(filter => (
-            <div
+            <Button
+              variant="primary-small"
               className={cx(
-                styles['LocationsMap__map-key-item'],
-                'mr3 flex items-center justify-center pl1 pr2 text-dark-gray drop-shadow bg-white bold'
+                'mr3 flex items-center justify-center pl1 pr2 text-dark-gray',
+                {
+                  [styles['LocationsMap__seasonal-button--selected']]:
+                    filter.value === this.state.seasonalIsdisabled
+                }
               )}
               key={filter.value}
+              onClick={() => this.handleSeasonalClick(filter)}
             >
               <div
                 className={cx(
@@ -182,7 +207,7 @@ class LocationsMap extends Component {
                 </p>
               </div>
               <span>{filter.label}</span>
-            </div>
+            </Button>
           ))}
         </div>
       </div>
@@ -206,7 +231,7 @@ LocationsMap.propTypes = {
   locationFilters: PropTypes.arrayOf(
     PropTypes.shape({
       key: PropTypes.string,
-      value: PropTypes.string
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
     })
   ),
   selectedLocation: PropTypes.string,
