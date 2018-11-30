@@ -44,35 +44,37 @@ class FlavorLanding extends Component {
   render() {
     const { setRef, drip, upperDrip, z } = this.props;
     const flavors = get(this, 'props.flavors', {});
-    const filteredFlavor = get(flavors, 'flavors', []).filter(flavor => {
-      if (
-        this.state.activeFilter !== 'All' &&
-        this.state.activeDietaryRestrictions
-      ) {
-        return (
-          get(flavor, `filters.${this.state.activeFilter}`, false) &&
-          get(
+    const filteredFlavor = get(flavors, 'flavors', [])
+      .filter(flavor => {
+        if (
+          this.state.activeFilter !== 'All' &&
+          this.state.activeDietaryRestrictions
+        ) {
+          return (
+            get(flavor, `filters.${this.state.activeFilter}`, false) &&
+            get(
+              flavor,
+              `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
+              false
+            )
+          );
+        }
+
+        if (this.state.activeFilter !== 'All') {
+          return get(flavor, `filters.${this.state.activeFilter}`, false);
+        }
+
+        if (this.state.activeDietaryRestrictions !== '') {
+          return get(
             flavor,
             `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
             false
-          )
-        );
-      }
+          );
+        }
 
-      if (this.state.activeFilter !== 'All') {
-        return get(flavor, `filters.${this.state.activeFilter}`, false);
-      }
-
-      if (this.state.activeDietaryRestrictions !== '') {
-        return get(
-          flavor,
-          `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
-          false
-        );
-      }
-
-      return true;
-    });
+        return true;
+      })
+      .sort((a, b) => a.order - b.order);
 
     return (
       <div
