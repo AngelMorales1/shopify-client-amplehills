@@ -4,6 +4,7 @@
   "license": "MIT",
   "dependencies": {
     "access-control": "^1.0.1",
+    "micro": "^9.3.3",
     "timekit-sdk": "^1.17.1"
   }
 }

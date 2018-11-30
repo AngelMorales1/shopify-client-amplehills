@@ -1,6 +1,7 @@
 const timekit = require('timekit-sdk');
 const access = require('access-control');
 const formatError = require('./utils/formatError');
+const { json } = require('micro');
 
 const cors = access({
   origins: [
@@ -18,7 +19,8 @@ module.exports = async (req, res) => {
   try {
     timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
 
-    return res.end(JSON.stringify(Object.keys(req)));
+    const jsonBody = await json(req);
+    return res.end(JSON.stringify(jsonBody));
 
     const response = await timekit.createBooking(JSON.parse(req.body));
     res.writeHead(200, {
