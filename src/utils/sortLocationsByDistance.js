@@ -1,4 +1,3 @@
-import get from 'utils/get';
 import distance from '@turf/distance';
 import center from '@turf/center';
 import { points } from '@turf/helpers';
