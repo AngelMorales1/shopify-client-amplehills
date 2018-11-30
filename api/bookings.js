@@ -18,8 +18,26 @@ module.exports = async (req, res) => {
 
   try {
     timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
-
-    const response = await timekit.createBooking(await json(req));
+    const {
+      resource_id,
+      graph,
+      start,
+      end,
+      what,
+      where,
+      description,
+      customer
+    } = await json(req);
+    const response = await timekit.createBooking({
+      resource_id,
+      graph,
+      start,
+      end,
+      what,
+      where,
+      description,
+      customer
+    });
     res.writeHead(200, {
       'Content-Type': 'application/json'
     });
