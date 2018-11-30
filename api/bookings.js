@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
   try {
     timekit.configure({ appKey: process.env.TIMEKIT_API_KEY });
 
-    return res.end(JSON.stringify(req.body));
+    return res.end(JSON.stringify(Object.keys(req)));
 
     const response = await timekit.createBooking(JSON.parse(req.body));
     res.writeHead(200, {
