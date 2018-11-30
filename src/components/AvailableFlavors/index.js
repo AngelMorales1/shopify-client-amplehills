@@ -108,7 +108,9 @@ class AvailableFlavors extends Component {
                         Location Special
                       </p>
                     )}
-                    <p className="small bold text-madison-blue">{title}</p>
+                    <p className="small bold text-madison-blue white-space-normal">
+                      {title}
+                    </p>
                   </div>
                 </Button>
               );
