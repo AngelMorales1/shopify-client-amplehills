@@ -146,6 +146,8 @@ class FlavorLanding extends Component {
                 selectClassName="w100"
                 variant="secondary"
                 value={this.state.activeFilter}
+                textColor="madison-blue"
+                color="peach"
                 options={['All']
                   .concat(flavors.collectedFilters)
                   .map(filter => {
