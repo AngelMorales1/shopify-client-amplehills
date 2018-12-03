@@ -90,6 +90,8 @@ class MiniCart extends Component {
                       <div className="w100">
                         <ul className="my1">
                           {cartAttributes.map(cartItemDetail => {
+                            if (`${cartItemDetail}`.startsWith('__'))
+                              return null;
                             return (
                               <li
                                 className="sub-line-item small"

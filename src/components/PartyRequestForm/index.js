@@ -8,9 +8,11 @@ import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
 import moment from 'moment-timezone';
 import marked from 'marked';
 import DayPicker from 'react-day-picker';
+import Raven from 'raven-js';
 import 'react-day-picker/lib/style.css';
 
 import {
+  partyAttrs,
   defaultPartyTypes,
   defaultTimeSlots
 } from 'constants/defaultPartyRequestForm';
@@ -19,6 +21,18 @@ import PartyRequestFormModal from './PartyRequestFormModal';
 
 import cx from 'classnames';
 import styles from './PartyRequestForm.scss';
+
+const {
+  LOCATION,
+  DATE,
+  TIME_SLOT,
+  PARTY_TYPE,
+  NO_OF_GUESTS,
+  AGE,
+  CELEBRATING,
+  ALLERGIES,
+  ADDONS
+} = partyAttrs;
 
 class PartyRequestForm extends Component {
   state = {
@@ -176,34 +190,106 @@ class PartyRequestForm extends Component {
 
     return [
       {
-        key: 'Location',
+        key: LOCATION,
         value: get(locations[selectedLocation], 'title', '')
       },
       {
-        key: 'Date',
+        key: DATE,
         value: selectedDate
       },
       {
-        key: 'Time Slot',
+        key: TIME_SLOT,
         value: selectedTimeSlot
       },
       {
-        key: 'Party Type',
+        key: PARTY_TYPE,
         value: selectedPartyType
       },
       {
-        key: '# of Guests',
+        key: NO_OF_GUESTS,
         value: selectedNumberOfGuests
       },
       {
-        key: 'Age',
+        key: AGE,
         value: selectedAge
       },
       {
-        key: 'Celebrating',
+        key: CELEBRATING,
         value: selectedCelebrating
       }
     ];
+  };
+
+  availabilityDataForSelectedLocation = () => {
+    const locations = get(this, 'props.partyAvailableLocations', {});
+    const { availabilities } = this.props;
+    const { selectedLocation } = this.state;
+    return selectedLocation
+      ? availabilities[locations[selectedLocation].timekitProjectId]
+      : null;
+  };
+
+  locationAvailabilitiesForSelectedDate = () => {
+    const { selectedDate } = this.state;
+    if (!selectedDate) return defaultTimeSlots;
+    return (this.availabilityDataForSelectedLocation() || [])
+      .filter(avail => {
+        return avail.startMoment.format('MMMM DD, YYYY') === selectedDate;
+      })
+      .map((avail, index) => {
+        return {
+          uuid: index,
+          index,
+          timekitAvailability: avail,
+          label: `${avail.startMoment.format('ha')} to ${avail.endMoment.format(
+            'ha'
+          )}`
+        };
+      });
+  };
+
+  makeStringifiedTimekitRequestObject = partyAttributes => {
+    const { selectedTimeSlot } = this.state;
+    const selectedAvailability = this.locationAvailabilitiesForSelectedDate().find(
+      ({ label }) => label === selectedTimeSlot
+    );
+
+    if (!selectedAvailability) {
+      // This is theoretically impossible. A user should not be
+      // be able to call this method without selecting a valid
+      // timeslot that has been derived from real Timekit data.
+      Raven.captureMessage('PartyRequestForm: Impossible State Reached', {
+        level: 'warning',
+        extra: {
+          selectedLocationId: get(this, 'state.selectedLocation'),
+          selectedTimeSlot
+        }
+      });
+      return '';
+    }
+
+    const {
+      timekitAvailability: { start, end, resources }
+    } = selectedAvailability;
+
+    const attrs = partyAttributes.reduce((acc, item) => {
+      acc[item.key] = item.value;
+      return acc;
+    }, {});
+
+    return JSON.stringify({
+      resource_id: resources[0].id,
+      graph: 'instant',
+      start,
+      end,
+      what: `${attrs[PARTY_TYPE]}`,
+      where: `${attrs[LOCATION]}`,
+      description: `${attrs[NO_OF_GUESTS]} guests, ${
+        attrs[AGE]
+      }, celebrating: ${attrs[CELEBRATING]}. Allergies: ${
+        attrs[ALLERGIES]
+      }, Addons: ${attrs[ADDONS]}`
+    });
   };
 
   handleMakeDeposit = () => {
@@ -211,15 +297,21 @@ class PartyRequestForm extends Component {
     const { selectedAddOns, selectedAllergies } = this.state;
 
     if (!errorCheck) {
+      const partyAttributes = this.getPartySummary().concat([
+        { key: ALLERGIES, value: selectedAllergies },
+        {
+          key: ADDONS,
+          value: selectedAddOns.join(', ')
+        }
+      ]);
       const items = [
         {
           variantId: get(this, 'props.partyDeposit.id', ''),
           quantity: 1,
-          customAttributes: this.getPartySummary().concat([
-            { key: 'Allergies', value: selectedAllergies },
+          customAttributes: partyAttributes.concat([
             {
-              key: 'Party Addons',
-              value: selectedAddOns.join(', ')
+              key: '__TIMEKIT_REQUEST_DATA__',
+              value: this.makeStringifiedTimekitRequestObject(partyAttributes)
             }
           ])
         }
@@ -269,7 +361,6 @@ class PartyRequestForm extends Component {
       partyAddOns,
       partyDeposit,
       addLineItemsStatus,
-      availabilities,
       disabledDays,
       getAvailabilityStatus
     } = this.props;
@@ -310,9 +401,7 @@ class PartyRequestForm extends Component {
       !selectedNumberOfGuests &&
       !selectedCelebrating;
 
-    const availabilityDataForSelectedLocation = selectedLocation
-      ? availabilities[locations[selectedLocation].timekitProjectId]
-      : null;
+    const availabilityDataForSelectedLocation = this.availabilityDataForSelectedLocation();
     const availabilityConsideredLoading = availabilityDataForSelectedLocation
       ? false
       : getAvailabilityStatus === PENDING;
@@ -321,21 +410,7 @@ class PartyRequestForm extends Component {
       ? disabledDays[locations[selectedLocation].timekitProjectId] || []
       : [];
 
-    let availsForSelectedDate = defaultTimeSlots;
-    if (selectedDate) {
-      availsForSelectedDate = availabilityDataForSelectedLocation
-        .filter(avail => {
-          return avail.startMoment.format('MMMM DD, YYYY') === selectedDate;
-        })
-        .map((avail, index) => {
-          return {
-            uuid: index,
-            index,
-            startTime: avail.startMoment.format('ha'),
-            endTime: avail.endMoment.format('ha')
-          };
-        });
-    }
+    const availsForSelectedDate = this.locationAvailabilitiesForSelectedDate();
 
     return (
       <div className="w100 flex flex-column items-center">
@@ -485,8 +560,7 @@ class PartyRequestForm extends Component {
             </span>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {availsForSelectedDate.map((timeSlot, index, avails) => {
-                const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
-
+                const { label } = timeSlot;
                 return (
                   <div
                     key={timeSlot.uuid}

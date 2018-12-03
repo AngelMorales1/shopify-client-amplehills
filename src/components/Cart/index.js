@@ -129,6 +129,8 @@ class Cart extends Component {
                         </Link>
                         <div className="flex flex-column mt2">
                           {item.cartAttributes.map(cartItemDetail => {
+                            if (`${cartItemDetail}`.startsWith('__'))
+                              return null;
                             return (
                               <span key={cartItemDetail} className="small mb1">
                                 {cartItemDetail}
@@ -161,6 +163,7 @@ class Cart extends Component {
                         <span className="small bold">{item.title}</span>
                       </Link>
                       {item.cartAttributes.map(cartItemDetail => {
+                        if (`${cartItemDetail}`.startsWith('__')) return null;
                         return (
                           <span key={cartItemDetail} className="small mb1">
                             {cartItemDetail}
