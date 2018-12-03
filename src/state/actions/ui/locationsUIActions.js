@@ -1,3 +1,6 @@
+import MapboxClient from 'lib/MapboxClient';
+import get from 'utils/get';
+
 export const ADD_LOCATION_FILTER = 'ADD_LOCATION_FILTER';
 export const addLocationFilter = filter => {
   return {
@@ -41,5 +44,26 @@ export const CLEAR_LOCATION_SELECTION = 'CLEAR_LOCATION_SELECTION';
 export const clearLocationSelection = () => {
   return {
     type: CLEAR_LOCATION_SELECTION
+  };
+};
+
+export const GET_SEARCH_RESULT = 'GET_SEARCH_RESULT';
+export const getSearchResult = payload => {
+  return {
+    type: GET_SEARCH_RESULT,
+    payload: new Promise((resolve, reject) => {
+      MapboxClient.geocodeForward(payload, { country: 'us' })
+        .then(res => {
+          const feature = get(res, 'entity.features[0]', {});
+          resolve({
+            name: get(feature, 'place_name', ''),
+            type: get(feature, 'place_type[0]', ''),
+            coordinates: get(feature, 'center', [])
+          });
+        })
+        .catch(err => {
+          reject(err);
+        });
+    })
   };
 };

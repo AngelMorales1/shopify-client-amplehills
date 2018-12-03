@@ -13,20 +13,22 @@ export default createSelector(
   state => locations(state),
   state => get(state, 'locationsUI.locationFilters', []),
   state => get(state, 'locationsUI.searchFilter', ''),
-  (locations, locationFilters, searchFilter) => {
+  state => get(state, 'locationsUI.searchResult', ''),
+  (locations, locationFilters, searchFilter, searchResult) => {
+    console.log('filteredLocations', searchResult);
     const filteredLocations = locations.filter(
       location =>
         !locationFilters.length ||
         locationFilters.every(filter => location[filter.key] === filter.value)
     );
 
-    return filteredLocations.filter(
-      location =>
-        !searchFilter ||
-        locationMatchesSearch(
-          location.stringifiedSearchableFields,
-          searchFilter
-        )
-    );
+    return filteredLocations; //.filter(
+    //   location =>
+    //     !searchFilter ||
+    //     locationMatchesSearch(
+    //       location.stringifiedSearchableFields,
+    //       searchFilter
+    //     )
+    // );
   }
 );
