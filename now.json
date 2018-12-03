@@ -9,5 +9,8 @@
     { "src": "/availability", "dest": "/api/availability.js" },
     { "src": "/bookings", "dest": "/api/bookings.js" }
   ],
+  "env": {
+    "TIMEKIT_API_KEY": "@ample-hills-api_timekit-api-key"
+  },
   "version": 2
 }

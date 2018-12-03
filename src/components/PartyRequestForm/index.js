@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 import Global from 'constants/Global';
 import checkoutModel from 'models/checkoutModel';
-import { PENDING, FULFILLED } from 'constants/Status';
+import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
 import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import marked from 'marked';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
@@ -14,6 +14,7 @@ import {
   defaultPartyTypes,
   defaultTimeSlots
 } from 'constants/defaultPartyRequestForm';
+
 import PartyRequestFormModal from './PartyRequestFormModal';
 
 import cx from 'classnames';
@@ -24,7 +25,6 @@ class PartyRequestForm extends Component {
     currentBreakpoint: Global.breakpoints.medium.label,
     selectedLocation: '',
     selectedDate: '',
-    timeSlots: defaultTimeSlots,
     partyTypes: defaultPartyTypes,
     partyTypeIsSelected: false,
     selectedTimeSlot: '',
@@ -235,14 +235,15 @@ class PartyRequestForm extends Component {
     const locations = get(this, 'props.partyAvailableLocations', {});
     const { selectedLocation } = this.state;
 
-    const timeSlots = locations[filter.value].timeSlots;
+    /* Fire off a request for the availability from Timekit here! */
+    this.props.getAvailability(locations[filter.value].timekitProjectId);
+
     const partyTypes = locations[filter.value].partyTypes;
     const participantsLimit = locations[filter.value].participantsLimit;
     const participantsLimitText = locations[filter.value].participantsLimitText;
 
     this.setState({
       selectedLocation: filter.value,
-      timeSlots: timeSlots.length ? timeSlots : defaultTimeSlots,
       partyTypes: partyTypes.length ? partyTypes : defaultPartyTypes,
       participantsLimit,
       participantsLimitText
@@ -264,7 +265,14 @@ class PartyRequestForm extends Component {
 
   render() {
     const formIsValid = this.validateForm();
-    const { partyAddOns, partyDeposit, addLineItemsStatus, today } = this.props;
+    const {
+      partyAddOns,
+      partyDeposit,
+      addLineItemsStatus,
+      availabilities,
+      disabledDays,
+      getAvailabilityStatus
+    } = this.props;
     const {
       selectedLocation,
       selectedAddOns,
@@ -302,6 +310,33 @@ class PartyRequestForm extends Component {
       !selectedNumberOfGuests &&
       !selectedCelebrating;
 
+    const availabilityDataForSelectedLocation = selectedLocation
+      ? availabilities[locations[selectedLocation].timekitProjectId]
+      : null;
+    const availabilityConsideredLoading = availabilityDataForSelectedLocation
+      ? false
+      : getAvailabilityStatus === PENDING;
+    const availabilityDidError = getAvailabilityStatus === REJECTED;
+    const disabledDaysForSelectedLocation = selectedLocation
+      ? disabledDays[locations[selectedLocation].timekitProjectId] || []
+      : [];
+
+    let availsForSelectedDate = defaultTimeSlots;
+    if (selectedDate) {
+      availsForSelectedDate = availabilityDataForSelectedLocation
+        .filter(avail => {
+          return avail.startMoment.format('MMMM DD, YYYY') === selectedDate;
+        })
+        .map((avail, index) => {
+          return {
+            uuid: index,
+            index,
+            startTime: avail.startMoment.format('ha'),
+            endTime: avail.endMoment.format('ha')
+          };
+        });
+    }
+
     return (
       <div className="w100 flex flex-column items-center">
         <div className="w100 flex flex-column items-center px2">
@@ -327,17 +362,47 @@ class PartyRequestForm extends Component {
               placeholder="Choose a Location"
               value={selectedLocation}
               onChange={filter => this.handleLocationChange(filter)}
-              options={locationIds.map(locationId => {
-                const title = locations[locationId].title;
-
-                return { label: title, value: locationId };
-              })}
+              options={locationIds.reduce(
+                (locationsWithTimekitProjectId, locationId) => {
+                  if (!locations[locationId].timekitProjectId)
+                    return locationsWithTimekitProjectId;
+                  const title = locations[locationId].title;
+                  return locationsWithTimekitProjectId.concat({
+                    label: title,
+                    value: locationId
+                  });
+                },
+                []
+              )}
             />
           </div>
-          <div className="w100 mt4 flex flex-column items-center">
-            <p className="bold big center mb3">
-              Do you have a weekend in mind?
-            </p>
+
+          {availabilityConsideredLoading && (
+            <span className="my2 text-white text-peach">
+              {`We're loading availabilities for this location...`}
+            </span>
+          )}
+          {availabilityDidError && (
+            <span className="my2 text-white text-peach">
+              {`Something's not working. Please reload and try again, or send us an email!`}
+            </span>
+          )}
+
+          <div
+            className={cx('w100 mt4 flex flex-column items-center', {
+              [styles[
+                'PartyRequestForm__section-disabled'
+              ]]: !availabilityDataForSelectedLocation
+            })}
+          >
+            <p className="bold big center">Do you have a weekend in mind?</p>
+            <span
+              className={cx('my2 text-white', {
+                'text-peach': !availabilityDataForSelectedLocation
+              })}
+            >
+              You must first select a location
+            </span>
             <Button
               variant="style-none"
               onClick={() =>
@@ -372,6 +437,9 @@ class PartyRequestForm extends Component {
                 }
               />
               <DayPicker
+                disabledDays={disabledDaysForSelectedLocation.map(dt =>
+                  dt.toDate()
+                )}
                 className={cx(
                   styles['PartyRequestForm__day-picker'],
                   'absolute t0 l0 mt4 bg-white text-madison-blue',
@@ -383,42 +451,46 @@ class PartyRequestForm extends Component {
                   this.setState({ dayPickerIsSelected: true });
                 }}
                 onDayClick={day => {
-                  if (day > today) {
-                    this.setState({
-                      selectedDate: moment(day).format('MMMM DD')
-                    });
-                  }
+                  this.setState({
+                    selectedDate: moment(day).format('MMMM DD, YYYY')
+                  });
                 }}
-                initialMonth={today}
-                disabledDays={[
-                  today,
-                  {
-                    before: today
-                  }
-                ]}
+                initialMonth={this.props.today}
+                fromMonth={this.props.today}
+                toMonth={
+                  disabledDaysForSelectedLocation.length
+                    ? disabledDaysForSelectedLocation[
+                        disabledDaysForSelectedLocation.length - 1
+                      ].toDate()
+                    : null
+                }
               />
             </Button>
           </div>
-          <div className="w100 mt4 flex flex-column items-center">
+
+          <div
+            className={cx('w100 mt4 flex flex-column items-center', {
+              [styles['PartyRequestForm__section-disabled']]: !selectedDate
+            })}
+          >
             <p className="bold big center">
               Of these time slots, which is your first choice?
             </p>
             <span
               className={cx('my2 text-white', {
-                'text-peach': !selectedLocation
+                'text-peach': !selectedDate
               })}
             >
-              You must first select a location
+              You must first select a date
             </span>
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
-              {this.state.timeSlots.map(timeSlot => {
-                const timeSlotsLength = this.state.timeSlots.length;
+              {availsForSelectedDate.map((timeSlot, index, avails) => {
                 const label = `${timeSlot.startTime} to ${timeSlot.endTime}`;
 
                 return (
                   <div
                     key={timeSlot.uuid}
-                    style={{ width: this.getButtonWidth(timeSlotsLength) }}
+                    style={{ width: this.getButtonWidth(avails.length) }}
                     className={cx(
                       styles['PartyRequestForm__button-container'],
                       'p1'
@@ -439,13 +511,20 @@ class PartyRequestForm extends Component {
               })}
             </div>
           </div>
-          <div className="w100 mt4 flex flex-column items-center">
+
+          <div
+            className={cx('w100 mt4 flex flex-column items-center', {
+              [styles[
+                'PartyRequestForm__section-disabled'
+              ]]: !availabilityDataForSelectedLocation
+            })}
+          >
             <p className="bold big center">
               Which kind of party is best for you?
             </p>
             <span
               className={cx('my2 text-white', {
-                'text-peach': !selectedLocation
+                'text-peach': !availabilityDataForSelectedLocation
               })}
             >
               You must first select a location
@@ -503,11 +582,18 @@ class PartyRequestForm extends Component {
               })}
             </div>
           </div>
-          <div className="w100 mt4 flex flex-column items-center">
+
+          <div
+            className={cx('w100 mt4 flex flex-column items-center', {
+              [styles[
+                'PartyRequestForm__section-disabled'
+              ]]: !availabilityDataForSelectedLocation
+            })}
+          >
             <p className="bold big center mb2">
               How many participants are you expecting?
             </p>
-            {!selectedLocation ? (
+            {!availabilityDataForSelectedLocation ? (
               <span className={cx('mb2 text-peach')}>
                 You must first select a location
               </span>
@@ -545,6 +631,7 @@ class PartyRequestForm extends Component {
               max={participantsLimit}
             />
           </div>
+
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
               What is the age range of your party participants?
@@ -568,6 +655,7 @@ class PartyRequestForm extends Component {
               })}
             </div>
           </div>
+
           <div className="w100 mt4 flex flex-column items-center">
             <p className="bold big center mb3">
               Who (or what) will we be celebrating?
@@ -661,6 +749,7 @@ class PartyRequestForm extends Component {
               </div>
             </div>
           ) : null}
+
           <div className="w100 my4 flex flex-column items-center">
             <p className="bold big center mb3">
               Are there any dietary restrictions or allergies that we should be

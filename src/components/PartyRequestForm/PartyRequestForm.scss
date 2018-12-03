@@ -119,4 +119,10 @@ $CRF-close-bar-height: spacing(18);
       line-height: $font-5;
     }
   }
+
+  &__section-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }

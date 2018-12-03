@@ -101,8 +101,7 @@ class Nav extends Component {
       alertIsActive,
       shopDropdownIsOpen,
       locationDropdownIsOpen,
-      locationDropdownImage,
-      locations
+      locationDropdownImage
     } = this.props;
     const {
       openShopDropdown,
