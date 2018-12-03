@@ -8,7 +8,6 @@ import { Image, Button } from 'components/base';
 
 const ShopDropdown = ({
   productLanding,
-  alertIsActive,
   shopDropdownIsOpen,
   openShopDropdown,
   closeShopDropdown
@@ -29,13 +28,7 @@ const ShopDropdown = ({
       )}
     >
       <div
-        className={cx(
-          styles['ShopDropdown__nav-container'],
-          {
-            [styles['ShopDropdown__nav-container--with-alert']]: alertIsActive
-          },
-          'absolute z-nav'
-        )}
+        className={cx(styles['ShopDropdown__nav-container'], 'absolute z-nav')}
       >
         <div className={cx('w100 pt3 px4 bg-peach fixed drip')}>
           <div
@@ -141,7 +134,6 @@ export default ShopDropdown;
 
 ShopDropdown.propTypes = {
   productLanding: PropTypes.object,
-  alertIsActive: PropTypes.bool,
   shopDropdownIsOpen: PropTypes.bool,
   openShopDropdown: PropTypes.func,
   closeShopDropdown: PropTypes.func
@@ -149,7 +141,6 @@ ShopDropdown.propTypes = {
 
 ShopDropdown.defaultProps = {
   productLanding: {},
-  alertIsActive: false,
   shopDropdownIsOpen: false,
   openShopDropdown: () => {},
   closeShopDropdown: () => {}
