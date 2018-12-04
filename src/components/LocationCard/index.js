@@ -43,10 +43,12 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
         <div
           className={cx(
             styles['LocationCard__card-tag'],
-            'bg-peach bold text-white absolute m3'
+            'bg-peach bold text-white absolute m3 tag'
           )}
         >
-          <span className={cx(styles['LocationCard__card-text'], 'uppercase')}>
+          <span
+            className={cx(styles['LocationCard__card-text'], 'uppercase bold')}
+          >
             {location.distance} miles away
           </span>
         </div>
