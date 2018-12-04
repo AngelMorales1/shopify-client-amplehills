@@ -27,12 +27,12 @@
   }
 
   &__button {
-    padding-top: calc(#{spacing(1)} + 0.125rem);
-    padding-bottom: calc(#{spacing(1)} - 0.125rem);
+    padding-top: spacing(1) + 0.125rem;
+    padding-bottom: spacing(1) - 0.125rem;
 
     @media ($medium-up) {
-      padding-top: calc(#{spacing(2)} + 0.125rem);
-      padding-bottom: calc(#{spacing(2)} - 0.125rem);
+      padding-top: spacing(2) + 0.125rem;
+      padding-bottom: spacing(2) - 0.125rem;
     }
   }
 

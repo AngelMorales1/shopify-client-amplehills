@@ -3,8 +3,8 @@ $CRF-close-bar-height: spacing(18);
 
 .CakeRequestForm {
   &__help-button {
-    padding-top: calc(#{spacing(2)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+    padding-top: spacing(2) + 0.0625rem;
+    padding-bottom: spacing(2) - 0.0625rem;
   }
 
   &__day-picker-container,
@@ -14,8 +14,8 @@ $CRF-close-bar-height: spacing(18);
     border-radius: radius('xs');
     border: spacing(0.6) solid color('gray');
     padding: spacing(5) spacing(6);
-    padding-top: calc(#{spacing(5)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(5)} - 0.0625rem);
+    padding-top: spacing(5) + 0.0625rem;
+    padding-bottom: spacing(5) - 0.0625rem;
   }
 
   &__day-picker-container--selected {
@@ -23,8 +23,8 @@ $CRF-close-bar-height: spacing(18);
   }
 
   &__button {
-    padding-top: calc(#{spacing(4)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+    padding-top: spacing(4) + 0.0625rem;
+    padding-bottom: spacing(4) - 0.0625rem;
   }
 
   &__build-your-own {

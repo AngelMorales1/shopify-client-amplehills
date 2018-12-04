@@ -43,8 +43,8 @@
     }
 
     input {
-      padding-top: calc(#{spacing(4)} + 0.1875rem);
-      padding-bottom: calc(#{spacing(4)} - 0.1875rem);
+      padding-top: spacing(4) + 0.1875rem;
+      padding-bottom: spacing(4) - 0.1875rem;
     }
   }
 }

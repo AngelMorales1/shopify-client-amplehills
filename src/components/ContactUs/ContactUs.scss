@@ -17,8 +17,8 @@
 
   &__text-field {
     input {
-      padding-top: calc(#{spacing(4)} + 0.0625rem);
-      padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+      padding-top: spacing(4) + 0.0625rem;
+      padding-bottom: spacing(4) - 0.0625rem;
     }
   }
 }
