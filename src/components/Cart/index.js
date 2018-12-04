@@ -8,7 +8,7 @@ import {
   updateNote
 } from 'state/actions/checkoutActions';
 
-import { IDLE, PENDING, FULFILLED, REJECTED } from 'constants/Status';
+import { IDLE, PENDING, REJECTED } from 'constants/Status';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
@@ -42,11 +42,9 @@ class Cart extends Component {
     };
   }
 
-  updateNote = () => {
+  updateNote = note => {
     const checkoutId = get(this.props, 'checkout.id', '');
-    const { note } = this.state;
     const input = { note };
-
     this.props.actions.updateNote(checkoutId, input);
   };
 
@@ -64,6 +62,11 @@ class Cart extends Component {
     );
   };
 
+  handleGiftMessageChange = note => {
+    note ? this.setState({ note }) : this.setState({ note: '' });
+    this.updateNote(note);
+  };
+
   render() {
     const { actions, checkout, items, updatingNote } = this.props;
     const currentNote = get(checkout, 'note', '');
@@ -72,6 +75,7 @@ class Cart extends Component {
       this.state.note !== currentNote
         ? 'transition-slide-up-down--active'
         : null;
+    const getNote = this.state.note ? this.state.note : null;
 
     const cart = (
       <div className="transition-slide-up">
@@ -261,28 +265,7 @@ class Cart extends Component {
                     >
                       Gift Message
                     </h2>
-                    <Button
-                      disabled={
-                        this.state.note === currentNote ||
-                        updatingNote === PENDING
-                      }
-                      className={cx(
-                        'md-hide lg-hide transition-slide-up-down',
-                        isUpdateButtonActive
-                      )}
-                      variant="primary-small"
-                      color="peach"
-                      label="Update"
-                      onClick={this.updateNote}
-                    />
                   </div>
-                  {updatingNote === FULFILLED ? (
-                    <FormFlash
-                      className="mb2"
-                      success={true}
-                      message="Your gift message has updated successfully."
-                    />
-                  ) : null}
                   {updatingNote === REJECTED ? (
                     <FormFlash
                       className="mt1"
@@ -295,11 +278,7 @@ class Cart extends Component {
                     variant="light-gray"
                     placeholder={`Write a message.`}
                     value={this.state.note}
-                    onChange={note =>
-                      note
-                        ? this.setState({ note })
-                        : this.setState({ note: '' })
-                    }
+                    onChange={note => this.handleGiftMessageChange(note)}
                   />
                   <TextField
                     className="mb2 xs-hide sm-hide"
@@ -307,11 +286,7 @@ class Cart extends Component {
                     type={'textarea'}
                     placeholder={`Write a message (don't forget to include your name!)`}
                     value={this.state.note}
-                    onChange={note =>
-                      note
-                        ? this.setState({ note })
-                        : this.setState({ note: '' })
-                    }
+                    onChange={note => this.handleGiftMessageChange(note)}
                   />
                   <span className="uppercase info-text-small">
                     Gift messages will not include prices
@@ -328,20 +303,10 @@ class Cart extends Component {
                     className="inline-block mr3"
                     label="Checkout"
                     color="madison-blue"
-                    to={get(checkout, 'webUrl', '')}
-                  />
-                  <Button
                     disabled={
-                      this.state.note === currentNote ||
-                      updatingNote === PENDING
+                      getNote !== currentNote || updatingNote === PENDING
                     }
-                    className={cx(
-                      'transition-slide-up-down',
-                      isUpdateButtonActive
-                    )}
-                    color="peach"
-                    label="Update"
-                    onClick={this.updateNote}
+                    to={get(checkout, 'webUrl', '')}
                   />
                 </div>
               </div>
@@ -354,6 +319,7 @@ class Cart extends Component {
                 className="inline-block"
                 label="Checkout"
                 color="madison-blue"
+                disabled={getNote !== currentNote || updatingNote === PENDING}
                 to={get(checkout, 'webUrl', '')}
               />
             </div>
