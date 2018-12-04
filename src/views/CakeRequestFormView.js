@@ -15,7 +15,9 @@ class CakeRequestFormView extends Component {
       cakeDeposit,
       actions,
       checkout,
-      cakeSprinkles
+      cakeSprinkles,
+      cakeSizes,
+      cakeRecommendations
     } = this.props;
 
     return (
@@ -27,6 +29,8 @@ class CakeRequestFormView extends Component {
           cakeFillings={cakeFillings}
           cakeSprinkles={cakeSprinkles}
           cakeDeposit={cakeDeposit}
+          cakeSizes={cakeSizes}
+          cakeRecommendations={cakeRecommendations}
           actions={actions}
           checkout={checkout}
           today={new Date()}

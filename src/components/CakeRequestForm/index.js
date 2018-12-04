@@ -17,6 +17,7 @@ class CakeRequestForm extends Component {
   state = {
     location: null,
     pickupDate: null,
+    pickupTime: null,
     name: null,
     phone: null,
     size: null,
@@ -25,14 +26,17 @@ class CakeRequestForm extends Component {
     filling: null,
     sprinkle: null,
     toppings: [],
-    dayPickerIsSelected: false
+    dayPickerIsSelected: false,
+    buildYourOwn: false,
+    recommendFlavorId: ''
   };
 
   openFlavorModal = () => this.setState({ flavorModalIsOpen: true });
   closeFlavorModal = () => this.setState({ flavorModalIsOpen: false });
   validateForm = () => Object.values(this.state).every(value => value !== null);
 
-  handleLocationChange = location => this.setState({ location });
+  handleLocationChange = location =>
+    this.setState({ location, pickupTime: null });
   handleDayClick = day => {
     if (moment(day).isAfter(moment().add(2, 'days'))) {
       this.setState({
@@ -40,6 +44,7 @@ class CakeRequestForm extends Component {
       });
     }
   };
+  handlePickupTimeChange = pickupTime => this.setState({ pickupTime });
   handleNameChange = name => this.setState({ name });
   handlePhoneChange = phone => this.setState({ phone });
   handleSizeChange = size => this.setState({ size });
@@ -66,6 +71,29 @@ class CakeRequestForm extends Component {
     return this.setState({ toppings: newToppings });
   };
 
+  handleRecommendFlavorChange = (
+    recommendFlavorId,
+    flavor1,
+    flavor2,
+    filling
+  ) =>
+    this.setState({
+      buildYourOwn: false,
+      recommendFlavorId,
+      flavor: { label: flavor1, value: flavor1 },
+      secondFlavor: { label: flavor2, value: flavor2 },
+      filling
+    });
+
+  handleBuildYourOwnChange = () =>
+    this.setState({
+      buildYourOwn: true,
+      recommendFlavorId: '',
+      flavor: null,
+      secondFlavor: null,
+      filling: null
+    });
+
   getCakeAttributes = () => [
     {
       key: 'Pickup Location',
@@ -74,6 +102,10 @@ class CakeRequestForm extends Component {
     {
       key: 'Pickup Date',
       value: this.state.pickupDate
+    },
+    {
+      key: 'Pickup Time',
+      value: this.state.pickupTime
     },
     {
       key: 'Name',
@@ -96,7 +128,7 @@ class CakeRequestForm extends Component {
       value: this.state.secondFlavor.label
     },
     {
-      key: 'Filling',
+      key: 'Base',
       value: this.state.filling
     },
     {
@@ -130,7 +162,6 @@ class CakeRequestForm extends Component {
 
   render() {
     const formIsValid = this.validateForm();
-
     const product = get(this, 'props.cakeDeposit', {});
     const variants = get(product, 'variants', []);
     const suggestedFlavors = get(this, 'props.cakeFlavors', []);
@@ -138,17 +169,36 @@ class CakeRequestForm extends Component {
     const sprinkles = get(this, 'props.cakeSprinkles', []);
     const toppings = get(this, 'props.cakeToppings', []);
     const locations = get(this, 'props.cakeLocations', {});
+    const cakeRecommendations = get(this, 'props.cakeRecommendations', []);
     const { pickupDate, dayPickerIsSelected } = this.state;
     const { today } = this.props;
     const selectedLocation = this.state.location
       ? locations[this.state.location.value]
       : null;
-
+    const cakeSizes = get(this, 'props.cakeSizes', {});
     const availableFlavors = selectedLocation
       ? selectedLocation.availableFlavors.map(flavor =>
           get(flavor, 'fields.title', '')
         )
       : [];
+    const defaultTimeSlots = [
+      {
+        endTime: '5pm',
+        index: 0,
+        startTime: '12pm',
+        uuid: 'defaultTimeSlot1'
+      },
+      {
+        endTime: 'closing',
+        index: 1,
+        startTime: '5pm',
+        uuid: 'defaultTimeSlot2'
+      }
+    ];
+    const pickupTimeSlots =
+      selectedLocation && selectedLocation.cakePickupTimeSlots.length
+        ? selectedLocation.cakePickupTimeSlots
+        : defaultTimeSlots;
 
     return (
       <div className="flex flex-wrap my4">
@@ -182,7 +232,7 @@ class CakeRequestForm extends Component {
             <p className="bold big center mb2">
               When would you like to pick up your ice cream cake?
             </p>
-            <p className={cx('center mb3 text-container-width')}>
+            <p className={cx('center mb3 help-text-container-width')}>
               Please note, we need 48 hours minimum to create your custom ice
               cream cake.
             </p>
@@ -244,6 +294,33 @@ class CakeRequestForm extends Component {
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
+              What time of day will you be picking up your ice cream cake?
+            </p>
+            <div className="form-container-width w100 flex flex-wrap justify-center">
+              {pickupTimeSlots.map(timeSlot => {
+                const timeSlotLabel = `${timeSlot.startTime} to ${
+                  timeSlot.endTime
+                }`;
+
+                return (
+                  <div key={timeSlot.uuid} className="col-6 md-col-3 p1">
+                    <Button
+                      className="center wh100 white-space-normal px2"
+                      variant={
+                        get(this, 'state.pickupTime', null) === timeSlotLabel
+                          ? 'square--selected'
+                          : 'square'
+                      }
+                      label={timeSlotLabel}
+                      onClick={() => this.handlePickupTimeChange(timeSlotLabel)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="w100 mb4 flex flex-column items-center">
+            <p className="bold big center mb2">
               Who will be picking up your ice cream cake?
             </p>
             <TextField
@@ -278,6 +355,7 @@ class CakeRequestForm extends Component {
                 const price = get(variant, 'price', (0.0).toFixed(2));
                 const title = get(variant, 'title', '');
                 const id = get(variant, 'id', title);
+                const description = get(cakeSizes, `${title}.description`, '');
 
                 return (
                   <div key={id || i} className="col-6 p1">
@@ -292,6 +370,9 @@ class CakeRequestForm extends Component {
                     >
                       <div className="inline-flex flex-column w100 my2">
                         <p className="mb1 white-space-normal center">{title}</p>
+                        <p className="mb1 white-space-normal light">
+                          {description}
+                        </p>
                         <p className="white-space-normal light">${price}</p>
                       </div>
                     </Button>
@@ -301,7 +382,9 @@ class CakeRequestForm extends Component {
             </div>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Choose your first flavor</p>
+            <p className="bold big center mb2">
+              Pick your ice cream cake flavor combination!
+            </p>
             <Button
               variant="primary-small"
               color="peach"
@@ -312,77 +395,152 @@ class CakeRequestForm extends Component {
               )}
               onClick={this.openFlavorModal}
             />
-            <Dropdown
-              className="w100 text-container-width z-sub-nav"
-              color="peach"
-              variant={this.state.flavor ? 'square--selected' : 'square'}
-              placeholder="Choose a Flavor"
-              value={get(this, 'state.flavor.value', null)}
-              onChange={this.handleFlavorChange}
-              options={availableFlavors.map(flavor => ({
-                label: flavor,
-                value: flavor
-              }))}
-            />
-            <span
-              className={cx('mt2', {
-                'text-white': !!selectedLocation,
-                'text-peach': !selectedLocation
-              })}
-            >
-              You must first select a location
-            </span>
-          </div>
-          <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Choose your second flavor</p>
-            <Dropdown
-              className="w100 text-container-width"
-              color="peach"
-              variant={this.state.secondFlavor ? 'square--selected' : 'square'}
-              disabled={!selectedLocation}
-              placeholder="Choose a Flavor"
-              value={get(this, 'state.secondFlavor.value', null)}
-              onChange={this.handleSecondFlavorChange}
-              options={availableFlavors.map(flavor => ({
-                label: flavor,
-                value: flavor
-              }))}
-            />
-            <span
-              className={cx('mt2', {
-                'text-white': !!selectedLocation,
-                'text-peach': !selectedLocation
-              })}
-            >
-              You must first select a location
-            </span>
-          </div>
-          <div className="w100 mb4 flex flex-column items-center">
-            <p className="bold big center mb2">Pick a layer</p>
-            <div className="form-container-width w100 flex flex-wrap justify-center">
-              {fillings.map(filling => {
+            <p className="bold big center mb2">We recommend these</p>
+            <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
+              {cakeRecommendations.map((cakeRecommendation, i) => {
+                const title = get(cakeRecommendation, 'title', '');
+                const id = get(cakeRecommendation, 'id', title);
+                const base = get(cakeRecommendation, 'base', '');
+                const flavor1 = get(cakeRecommendation, 'flavor1', '');
+                const flavor2 = get(cakeRecommendation, 'flavor2', '');
+
                 return (
-                  <div key={filling.title} className="col-6 md-col-3 p1">
+                  <div key={id || i} className="col-6 p1">
                     <Button
-                      className="center wh100 white-space-normal px3"
+                      onClick={() =>
+                        this.handleRecommendFlavorChange(
+                          id,
+                          flavor1,
+                          flavor2,
+                          base
+                        )
+                      }
+                      className="center wh100"
                       variant={
-                        get(this, 'state.filling', null) === filling.title
+                        get(this, 'state.recommendFlavorId', null) === id
                           ? 'square--selected'
                           : 'square'
                       }
-                      label={filling.title}
-                      onClick={() => this.handleFillingChange(filling.title)}
-                    />
+                    >
+                      <div className="inline-flex flex-column w100 my2">
+                        <p className="mb2 white-space-normal center">{title}</p>
+                        <p className="white-space-normal light line-height">
+                          {`${flavor1} paired with ${flavor2} on a ${base}`}
+                        </p>
+                      </div>
+                    </Button>
                   </div>
                 );
               })}
+              <div className="col-6 p1">
+                <Button
+                  onClick={() => this.handleBuildYourOwnChange()}
+                  className="center wh100"
+                  variant={
+                    get(this, 'state.buildYourOwn', false)
+                      ? 'square--selected'
+                      : 'square'
+                  }
+                >
+                  <div className="inline-flex flex-column w100 my2">
+                    <p className="mb2 white-space-normal center">
+                      Build your own with your choice of flavors!
+                    </p>
+                  </div>
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div
+            className={cx(
+              styles['CakeRequestForm__build-your-own'],
+              'w100 flex flex-column items-center',
+              {
+                [styles['CakeRequestForm__build-your-own--disable']]: !this
+                  .state.buildYourOwn
+              }
+            )}
+          >
+            <div className="w100 mb4 flex flex-column items-center">
+              <p className="bold big center mb2">Choose your first flavor</p>
+              <Dropdown
+                className="w100 text-container-width z-sub-nav"
+                color="peach"
+                variant={this.state.flavor ? 'square--selected' : 'square'}
+                placeholder="Choose a Flavor"
+                value={get(this, 'state.flavor.value', null)}
+                onChange={this.handleFlavorChange}
+                options={availableFlavors.map(flavor => ({
+                  label: flavor,
+                  value: flavor
+                }))}
+              />
+              <span
+                className={cx('mt2', {
+                  'text-white': !!selectedLocation,
+                  'text-peach': !selectedLocation
+                })}
+              >
+                You must first select a location
+              </span>
+            </div>
+            <div className="w100 mb4 flex flex-column items-center">
+              <p className="bold big center mb2">Choose your second flavor</p>
+              <Dropdown
+                className="w100 text-container-width"
+                color="peach"
+                variant={
+                  this.state.secondFlavor ? 'square--selected' : 'square'
+                }
+                disabled={!selectedLocation}
+                placeholder="Choose a Flavor"
+                value={get(this, 'state.secondFlavor.value', null)}
+                onChange={this.handleSecondFlavorChange}
+                options={availableFlavors.map(flavor => ({
+                  label: flavor,
+                  value: flavor
+                }))}
+              />
+              <span
+                className={cx('mt2', {
+                  'text-white': !!selectedLocation,
+                  'text-peach': !selectedLocation
+                })}
+              >
+                You must first select a location
+              </span>
+            </div>
+            <div className="w100 mb4 flex flex-column items-center">
+              <p className="bold big center mb2">Pick a base</p>
+              <p className={cx('center mb3 help-text-container-width')}>
+                All ice cream cakes come with a layer of fudge in between the
+                layers of ice cream.
+              </p>
+              <div className="form-container-width w100 flex flex-wrap justify-center">
+                {fillings.map(filling => {
+                  return (
+                    <div key={filling.title} className="col-6 md-col-3 p1">
+                      <Button
+                        className="center wh100 white-space-normal px3"
+                        variant={
+                          get(this, 'state.filling', null) === filling.title
+                            ? 'square--selected'
+                            : 'square'
+                        }
+                        label={filling.title}
+                        onClick={() => this.handleFillingChange(filling.title)}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
           <div className="w100 mb4 flex flex-column items-center">
             <p className="bold big center mb2">
               What kind of sprinkles would you like?{' '}
             </p>
-            <p className={cx('center mb3 text-container-width')}>
+            <p className={cx('center mb3 help-text-container-width')}>
               Each ice cream cake is made with a topping of whipped cream and
               sprinkles.
             </p>
@@ -458,6 +616,10 @@ class CakeRequestForm extends Component {
                     <span className="bold">Pickup Date: </span>
                     {this.state.pickupDate}
                   </span>
+                  <span className="line-height small">
+                    <span className="bold">Pickup Time: </span>
+                    {this.state.pickupTime}
+                  </span>
                   <span className="line-height">
                     <span className="bold">Name: </span>
                     {this.state.name}
@@ -479,7 +641,7 @@ class CakeRequestForm extends Component {
                     {this.state.secondFlavor.label}
                   </span>
                   <span className="line-height small">
-                    <span className="bold">Filling: </span>
+                    <span className="bold">Base: </span>
                     {this.state.filling}
                   </span>
                   <span className="line-height small">
@@ -504,9 +666,9 @@ class CakeRequestForm extends Component {
                   : ''}
               </span>
               <span className="line-height small">
-                Thank you so much for your order! When you pick up your ice
-                cream cake, you will be charged for any additional products. Our
-                Amployees can’t wait to make your cake.
+                Thank you so much for your order! Our Amployees can’t wait to
+                make your cake. If we have any questions, we’ll reach out to
+                you. We’ll see you at the shop.
               </span>
               <Button
                 disabled={!formIsValid}
@@ -516,7 +678,7 @@ class CakeRequestForm extends Component {
                   styles['CakeRequestForm__button'],
                   'mt3 inline-block w-auto'
                 )}
-                label="Make Deposit"
+                label="Add to cart!"
               />
             </div>
           </div>
