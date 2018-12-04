@@ -162,6 +162,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -255,13 +256,13 @@ ShallowWrapper {
                                                   Array [
                                                             undefined,
                                                             Object {
-                                                              "before": 2018-12-07T22:20:17.546Z,
+                                                              "before": 2018-12-07T22:49:31.016Z,
                                                             },
                                                           ]
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-12-04T22:20:17.413Z}
+                                        initialMonth={2018-12-04T22:49:30.889Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -367,6 +368,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -387,6 +389,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -473,6 +476,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -512,6 +516,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -558,6 +563,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -585,6 +591,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -699,6 +706,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -719,6 +727,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -774,6 +783,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -809,6 +819,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -878,6 +889,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -969,6 +981,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -1062,13 +1075,13 @@ ShallowWrapper {
                                                         Array [
                                                                       undefined,
                                                                       Object {
-                                                                        "before": 2018-12-07T22:20:17.546Z,
+                                                                        "before": 2018-12-07T22:49:31.016Z,
                                                                       },
                                                                     ]
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-12-04T22:20:17.413Z}
+                                          initialMonth={2018-12-04T22:49:30.889Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -1174,6 +1187,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1194,6 +1208,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1280,6 +1295,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1319,6 +1335,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1365,6 +1382,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -1392,6 +1410,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1506,6 +1525,7 @@ ShallowWrapper {
                                                                       onClick={[Function]}
                                                                       onMouseEnter={[Function]}
                                                                       onMouseLeave={[Function]}
+                                                                      openInCurrentTab={false}
                                                                       shadow={false}
                                                                       to=""
                                                                       type="button"
@@ -1526,6 +1546,7 @@ ShallowWrapper {
                                                                       onClick={[Function]}
                                                                       onMouseEnter={[Function]}
                                                                       onMouseLeave={[Function]}
+                                                                      openInCurrentTab={false}
                                                                       shadow={false}
                                                                       to=""
                                                                       type="button"
@@ -1581,6 +1602,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1616,6 +1638,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1804,6 +1827,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -1897,13 +1921,13 @@ ShallowWrapper {
                                                       Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.546Z,
+                                                                          "before": 2018-12-07T22:49:31.016Z,
                                                                         },
                                                                       ]
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-12-04T22:20:17.413Z}
+                                    initialMonth={2018-12-04T22:49:30.889Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -2106,13 +2130,13 @@ ShallowWrapper {
                                             Array [
                                                                   undefined,
                                                                   Object {
-                                                                    "before": 2018-12-07T22:20:17.546Z,
+                                                                    "before": 2018-12-07T22:49:31.016Z,
                                                                   },
                                                                 ]
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-12-04T22:20:17.413Z}
+                      initialMonth={2018-12-04T22:49:30.889Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -2202,6 +2226,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -2312,12 +2337,12 @@ ShallowWrapper {
                       "disabledDays": Array [
                         undefined,
                         Object {
-                          "before": 2018-12-07T22:20:17.546Z,
+                          "before": 2018-12-07T22:49:31.016Z,
                         },
                       ],
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-12-04T22:20:17.413Z,
+                      "initialMonth": 2018-12-04T22:49:30.889Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -2428,6 +2453,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -2448,6 +2474,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -2492,6 +2519,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -2512,6 +2540,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -2539,6 +2568,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -2563,6 +2593,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -2590,6 +2621,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -2614,6 +2646,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -2816,6 +2849,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -2855,6 +2889,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -2918,6 +2953,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -2957,6 +2993,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -3003,6 +3040,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -3063,6 +3101,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -3159,6 +3198,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -3219,6 +3259,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -3327,6 +3368,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -3354,6 +3396,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -3404,6 +3447,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -3446,6 +3490,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -3483,6 +3528,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -3525,6 +3571,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -3667,6 +3714,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -3687,6 +3735,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -3915,6 +3964,7 @@ ShallowWrapper {
                                                                   onClick={[Function]}
                                                                   onMouseEnter={[Function]}
                                                                   onMouseLeave={[Function]}
+                                                                  openInCurrentTab={false}
                                                                   shadow={false}
                                                                   to=""
                                                                   type="button"
@@ -3935,6 +3985,7 @@ ShallowWrapper {
                                                                   onClick={[Function]}
                                                                   onMouseEnter={[Function]}
                                                                   onMouseLeave={[Function]}
+                                                                  openInCurrentTab={false}
                                                                   shadow={false}
                                                                   to=""
                                                                   type="button"
@@ -3991,6 +4042,7 @@ ShallowWrapper {
                                                     onClick={[Function]}
                                                     onMouseEnter={[Function]}
                                                     onMouseLeave={[Function]}
+                                                    openInCurrentTab={false}
                                                     shadow={false}
                                                     to=""
                                                     type="button"
@@ -4011,6 +4063,7 @@ ShallowWrapper {
                                                     onClick={[Function]}
                                                     onMouseEnter={[Function]}
                                                     onMouseLeave={[Function]}
+                                                    openInCurrentTab={false}
                                                     shadow={false}
                                                     to=""
                                                     type="button"
@@ -4038,6 +4091,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -4062,6 +4116,7 @@ ShallowWrapper {
                             "onClick": [Function],
                             "onMouseEnter": [Function],
                             "onMouseLeave": [Function],
+                            "openInCurrentTab": false,
                             "shadow": false,
                             "to": "",
                             "type": "button",
@@ -4089,6 +4144,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -4113,6 +4169,7 @@ ShallowWrapper {
                             "onClick": [Function],
                             "onMouseEnter": [Function],
                             "onMouseLeave": [Function],
+                            "openInCurrentTab": false,
                             "shadow": false,
                             "to": "",
                             "type": "button",
@@ -4234,6 +4291,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -4269,6 +4327,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -4334,6 +4393,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -4369,6 +4429,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -4411,6 +4472,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -4463,6 +4525,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -4537,6 +4600,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -4589,6 +4653,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -4703,6 +4768,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -4758,6 +4824,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -4845,6 +4912,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -4901,6 +4969,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -5003,6 +5072,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -5096,13 +5166,13 @@ ShallowWrapper {
                                                             Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.546Z,
+                                                                          "before": 2018-12-07T22:49:31.016Z,
                                                                         },
                                                                       ]
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-12-04T22:20:17.413Z}
+                                                initialMonth={2018-12-04T22:49:30.889Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -5208,6 +5278,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5228,6 +5299,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5314,6 +5386,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5353,6 +5426,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5399,6 +5473,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -5426,6 +5501,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5540,6 +5616,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -5560,6 +5637,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -5615,6 +5693,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5650,6 +5729,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -5719,6 +5799,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -5810,6 +5891,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -5903,13 +5985,13 @@ ShallowWrapper {
                                                                 Array [
                                                                                 undefined,
                                                                                 Object {
-                                                                                  "before": 2018-12-07T22:20:17.546Z,
+                                                                                  "before": 2018-12-07T22:49:31.016Z,
                                                                                 },
                                                                               ]
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-12-04T22:20:17.413Z}
+                                                initialMonth={2018-12-04T22:49:30.889Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -6015,6 +6097,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6035,6 +6118,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6121,6 +6205,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6160,6 +6245,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6206,6 +6292,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -6233,6 +6320,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6347,6 +6435,7 @@ ShallowWrapper {
                                                                                 onClick={[Function]}
                                                                                 onMouseEnter={[Function]}
                                                                                 onMouseLeave={[Function]}
+                                                                                openInCurrentTab={false}
                                                                                 shadow={false}
                                                                                 to=""
                                                                                 type="button"
@@ -6367,6 +6456,7 @@ ShallowWrapper {
                                                                                 onClick={[Function]}
                                                                                 onMouseEnter={[Function]}
                                                                                 onMouseLeave={[Function]}
+                                                                                openInCurrentTab={false}
                                                                                 shadow={false}
                                                                                 to=""
                                                                                 type="button"
@@ -6422,6 +6512,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6457,6 +6548,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -6645,6 +6737,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -6738,13 +6831,13 @@ ShallowWrapper {
                                                             Array [
                                                                                 undefined,
                                                                                 Object {
-                                                                                  "before": 2018-12-07T22:20:17.546Z,
+                                                                                  "before": 2018-12-07T22:49:31.016Z,
                                                                                 },
                                                                               ]
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-12-04T22:20:17.413Z}
+                                        initialMonth={2018-12-04T22:49:30.889Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -6947,13 +7040,13 @@ ShallowWrapper {
                                                 Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.546Z,
+                                                                          "before": 2018-12-07T22:49:31.016Z,
                                                                         },
                                                                       ]
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-12-04T22:20:17.413Z}
+                        initialMonth={2018-12-04T22:49:30.889Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -7043,6 +7136,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -7153,12 +7247,12 @@ ShallowWrapper {
                         "disabledDays": Array [
                           undefined,
                           Object {
-                            "before": 2018-12-07T22:20:17.546Z,
+                            "before": 2018-12-07T22:49:31.016Z,
                           },
                         ],
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-12-04T22:20:17.413Z,
+                        "initialMonth": 2018-12-04T22:49:30.889Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -7269,6 +7363,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -7289,6 +7384,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -7333,6 +7429,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -7353,6 +7450,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -7380,6 +7478,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -7404,6 +7503,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -7431,6 +7531,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -7455,6 +7556,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -7657,6 +7759,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -7696,6 +7799,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -7759,6 +7863,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -7798,6 +7903,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -7844,6 +7950,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -7904,6 +8011,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -8000,6 +8108,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -8060,6 +8169,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -8168,6 +8278,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -8195,6 +8306,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -8245,6 +8357,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -8287,6 +8400,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -8324,6 +8438,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -8366,6 +8481,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -8508,6 +8624,7 @@ ShallowWrapper {
                                                                                 onClick={[Function]}
                                                                                 onMouseEnter={[Function]}
                                                                                 onMouseLeave={[Function]}
+                                                                                openInCurrentTab={false}
                                                                                 shadow={false}
                                                                                 to=""
                                                                                 type="button"
@@ -8528,6 +8645,7 @@ ShallowWrapper {
                                                                                 onClick={[Function]}
                                                                                 onMouseEnter={[Function]}
                                                                                 onMouseLeave={[Function]}
+                                                                                openInCurrentTab={false}
                                                                                 shadow={false}
                                                                                 to=""
                                                                                 type="button"
@@ -8756,6 +8874,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -8776,6 +8895,7 @@ ShallowWrapper {
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
                                                                         to=""
                                                                         type="button"
@@ -8832,6 +8952,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -8852,6 +8973,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -8879,6 +9001,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -8903,6 +9026,7 @@ ShallowWrapper {
                               "onClick": [Function],
                               "onMouseEnter": [Function],
                               "onMouseLeave": [Function],
+                              "openInCurrentTab": false,
                               "shadow": false,
                               "to": "",
                               "type": "button",
@@ -8930,6 +9054,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -8954,6 +9079,7 @@ ShallowWrapper {
                               "onClick": [Function],
                               "onMouseEnter": [Function],
                               "onMouseLeave": [Function],
+                              "openInCurrentTab": false,
                               "shadow": false,
                               "to": "",
                               "type": "button",
@@ -9075,6 +9201,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -9110,6 +9237,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -9175,6 +9303,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -9210,6 +9339,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -9252,6 +9382,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -9304,6 +9435,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -9378,6 +9510,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -9430,6 +9563,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -9544,6 +9678,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to=""
                                           type="button"
@@ -9599,6 +9734,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -9686,6 +9822,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to=""
                       type="button"
@@ -9742,6 +9879,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "",
                       "type": "button",
@@ -9871,6 +10009,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -9964,13 +10103,13 @@ ShallowWrapper {
                                                   Array [
                                                             undefined,
                                                             Object {
-                                                              "before": 2018-12-07T22:20:17.475Z,
+                                                              "before": 2018-12-07T22:49:30.943Z,
                                                             },
                                                           ]
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-12-04T22:20:17.413Z}
+                                        initialMonth={2018-12-04T22:49:30.889Z}
                                         labels={
                                                   Object {
                                                             "nextMonth": "Next Month",
@@ -10076,6 +10215,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -10096,6 +10236,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -10190,6 +10331,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -10217,6 +10359,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -10402,6 +10545,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -10486,6 +10630,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -10579,13 +10724,13 @@ ShallowWrapper {
                                                         Array [
                                                                       undefined,
                                                                       Object {
-                                                                        "before": 2018-12-07T22:20:17.475Z,
+                                                                        "before": 2018-12-07T22:49:30.943Z,
                                                                       },
                                                                     ]
                                           }
                                           enableOutsideDaysClick={true}
                                           fixedWeeks={false}
-                                          initialMonth={2018-12-04T22:20:17.413Z}
+                                          initialMonth={2018-12-04T22:49:30.889Z}
                                           labels={
                                                         Object {
                                                                       "nextMonth": "Next Month",
@@ -10691,6 +10836,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -10711,6 +10857,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -10805,6 +10952,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -10832,6 +10980,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -11124,6 +11273,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -11217,13 +11367,13 @@ ShallowWrapper {
                                                       Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.475Z,
+                                                                          "before": 2018-12-07T22:49:30.943Z,
                                                                         },
                                                                       ]
                                     }
                                     enableOutsideDaysClick={true}
                                     fixedWeeks={false}
-                                    initialMonth={2018-12-04T22:20:17.413Z}
+                                    initialMonth={2018-12-04T22:49:30.889Z}
                                     labels={
                                                       Object {
                                                                         "nextMonth": "Next Month",
@@ -11426,13 +11576,13 @@ ShallowWrapper {
                                             Array [
                                                                   undefined,
                                                                   Object {
-                                                                    "before": 2018-12-07T22:20:17.475Z,
+                                                                    "before": 2018-12-07T22:49:30.943Z,
                                                                   },
                                                                 ]
                       }
                       enableOutsideDaysClick={true}
                       fixedWeeks={false}
-                      initialMonth={2018-12-04T22:20:17.413Z}
+                      initialMonth={2018-12-04T22:49:30.889Z}
                       labels={
                                             Object {
                                                                   "nextMonth": "Next Month",
@@ -11522,6 +11672,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -11632,12 +11783,12 @@ ShallowWrapper {
                       "disabledDays": Array [
                         undefined,
                         Object {
-                          "before": 2018-12-07T22:20:17.475Z,
+                          "before": 2018-12-07T22:49:30.943Z,
                         },
                       ],
                       "enableOutsideDaysClick": true,
                       "fixedWeeks": false,
-                      "initialMonth": 2018-12-04T22:20:17.413Z,
+                      "initialMonth": 2018-12-04T22:49:30.889Z,
                       "labels": Object {
                         "nextMonth": "Next Month",
                         "previousMonth": "Previous Month",
@@ -11748,6 +11899,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -11768,6 +11920,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -11812,6 +11965,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -11832,6 +11986,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -11859,6 +12014,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -11883,6 +12039,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -11910,6 +12067,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -11934,6 +12092,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -12178,6 +12337,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -12205,6 +12365,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -12255,6 +12416,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -12297,6 +12459,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -12334,6 +12497,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -12376,6 +12540,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -12939,6 +13104,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -12994,6 +13160,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -13081,6 +13248,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -13137,6 +13305,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -13232,6 +13401,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -13325,13 +13495,13 @@ ShallowWrapper {
                                                             Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.475Z,
+                                                                          "before": 2018-12-07T22:49:30.943Z,
                                                                         },
                                                                       ]
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-12-04T22:20:17.413Z}
+                                                initialMonth={2018-12-04T22:49:30.889Z}
                                                 labels={
                                                             Object {
                                                                         "nextMonth": "Next Month",
@@ -13437,6 +13607,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -13457,6 +13628,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -13551,6 +13723,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -13578,6 +13751,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -13763,6 +13937,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -13847,6 +14022,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -13940,13 +14116,13 @@ ShallowWrapper {
                                                                 Array [
                                                                                 undefined,
                                                                                 Object {
-                                                                                  "before": 2018-12-07T22:20:17.475Z,
+                                                                                  "before": 2018-12-07T22:49:30.943Z,
                                                                                 },
                                                                               ]
                                                 }
                                                 enableOutsideDaysClick={true}
                                                 fixedWeeks={false}
-                                                initialMonth={2018-12-04T22:20:17.413Z}
+                                                initialMonth={2018-12-04T22:49:30.889Z}
                                                 labels={
                                                                 Object {
                                                                                 "nextMonth": "Next Month",
@@ -14052,6 +14228,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -14072,6 +14249,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -14166,6 +14344,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -14193,6 +14372,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -14485,6 +14665,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -14578,13 +14759,13 @@ ShallowWrapper {
                                                             Array [
                                                                                 undefined,
                                                                                 Object {
-                                                                                  "before": 2018-12-07T22:20:17.475Z,
+                                                                                  "before": 2018-12-07T22:49:30.943Z,
                                                                                 },
                                                                               ]
                                         }
                                         enableOutsideDaysClick={true}
                                         fixedWeeks={false}
-                                        initialMonth={2018-12-04T22:20:17.413Z}
+                                        initialMonth={2018-12-04T22:49:30.889Z}
                                         labels={
                                                             Object {
                                                                                 "nextMonth": "Next Month",
@@ -14787,13 +14968,13 @@ ShallowWrapper {
                                                 Array [
                                                                         undefined,
                                                                         Object {
-                                                                          "before": 2018-12-07T22:20:17.475Z,
+                                                                          "before": 2018-12-07T22:49:30.943Z,
                                                                         },
                                                                       ]
                         }
                         enableOutsideDaysClick={true}
                         fixedWeeks={false}
-                        initialMonth={2018-12-04T22:20:17.413Z}
+                        initialMonth={2018-12-04T22:49:30.889Z}
                         labels={
                                                 Object {
                                                                         "nextMonth": "Next Month",
@@ -14883,6 +15064,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -14993,12 +15175,12 @@ ShallowWrapper {
                         "disabledDays": Array [
                           undefined,
                           Object {
-                            "before": 2018-12-07T22:20:17.475Z,
+                            "before": 2018-12-07T22:49:30.943Z,
                           },
                         ],
                         "enableOutsideDaysClick": true,
                         "fixedWeeks": false,
-                        "initialMonth": 2018-12-04T22:20:17.413Z,
+                        "initialMonth": 2018-12-04T22:49:30.889Z,
                         "labels": Object {
                           "nextMonth": "Next Month",
                           "previousMonth": "Previous Month",
@@ -15109,6 +15291,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -15129,6 +15312,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -15173,6 +15357,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -15193,6 +15378,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -15220,6 +15406,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -15244,6 +15431,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -15271,6 +15459,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -15295,6 +15484,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -15539,6 +15729,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -15566,6 +15757,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -15616,6 +15808,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -15658,6 +15851,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -15695,6 +15889,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -15737,6 +15932,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -16300,6 +16496,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to=""
                                           type="button"
@@ -16355,6 +16552,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -16442,6 +16640,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to=""
                       type="button"
@@ -16498,6 +16697,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "",
                       "type": "button",

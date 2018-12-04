@@ -36,6 +36,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to=""
           type="button"
@@ -67,6 +68,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to=""
           type="button"
@@ -93,6 +95,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "",
           "type": "button",
@@ -141,6 +144,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "",
           "type": "button",
@@ -171,6 +175,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to=""
             type="button"
@@ -202,6 +207,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to=""
             type="button"
@@ -228,6 +234,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "",
             "type": "button",
@@ -276,6 +283,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "",
             "type": "button",
@@ -335,6 +343,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to=""
           type="button"
@@ -366,6 +375,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to=""
           type="button"
@@ -392,6 +402,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "",
           "type": "button",
@@ -440,6 +451,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "",
           "type": "button",
@@ -470,6 +482,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to=""
             type="button"
@@ -501,6 +514,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to=""
             type="button"
@@ -527,6 +541,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "",
             "type": "button",
@@ -575,6 +590,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "",
             "type": "button",
