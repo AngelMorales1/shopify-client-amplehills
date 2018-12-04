@@ -301,6 +301,7 @@ class Cart extends Component {
                 <div className="mt4 col-4 xs-hide sm-hide flex flex-row">
                   <Button
                     className="inline-block mr3"
+                    openInCurrentTab={true}
                     label="Checkout"
                     color="madison-blue"
                     disabled={
@@ -317,6 +318,7 @@ class Cart extends Component {
               </p>
               <Button
                 className="inline-block"
+                openInCurrentTab={true}
                 label="Checkout"
                 color="madison-blue"
                 disabled={getNote !== currentNote || updatingNote === PENDING}

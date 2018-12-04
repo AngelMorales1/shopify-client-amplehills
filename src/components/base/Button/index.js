@@ -23,7 +23,8 @@ const Button = ({
   newTab,
   onMouseEnter,
   onMouseLeave,
-  childrenWrapperClassName
+  childrenWrapperClassName,
+  openInCurrentTab
 }) => {
   const classes = cx(
     styles[`Button--${color}`],
@@ -46,8 +47,8 @@ const Button = ({
         className={cx('text-decoration-none', {
           'events-none': disabled
         })}
+        target={openInCurrentTab ? '_self' : '_blank'}
         href={to}
-        target="_blank"
         rel="noopener"
         onClick={onClick}
         onMouseEnter={onMouseEnter}
@@ -120,7 +121,8 @@ Button.propTypes = {
   hover: PropTypes.string,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  childrenWrapperClassName: PropTypes.string
+  childrenWrapperClassName: PropTypes.string,
+  openInCurrentTab: PropTypes.bool
 };
 
 Button.defaultProps = {
@@ -138,7 +140,8 @@ Button.defaultProps = {
   hover: 'shadow',
   onMouseEnter: () => {},
   onMouseLeave: () => {},
-  childrenWrapperClassName: ''
+  childrenWrapperClassName: '',
+  openInCurrentTab: false
 };
 
 export default Button;
