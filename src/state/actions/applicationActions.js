@@ -18,7 +18,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const Contentful = isPreview ? PreviewClient() : ContentfulClient();
       Data.setRef('contentful', Contentful);
       const fetchData = Promise.all([
-        dispatch(fetchOrCreateCheckout()),
+        dispatch(fetchOrCreateCheckout(checkoutID)),
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
