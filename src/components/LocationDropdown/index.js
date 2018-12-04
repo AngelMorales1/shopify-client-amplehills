@@ -10,7 +10,6 @@ import {
 import styles from './LocationDropdown.scss';
 import { Image, Button } from 'components/base';
 const LocationDropdown = ({
-  alertIsActive,
   locationDropdownIsOpen,
   openLocationDropdown,
   closeLocationDropdown,
@@ -33,11 +32,6 @@ const LocationDropdown = ({
       <div
         className={cx(
           styles['LocationDropdown__nav-container'],
-          {
-            [styles[
-              'LocationDropdown__nav-container--with-alert'
-            ]]: alertIsActive
-          },
           'absolute z-nav'
         )}
       >
@@ -117,7 +111,6 @@ const LocationDropdown = ({
 };
 export default LocationDropdown;
 LocationDropdown.propTypes = {
-  alertIsActive: PropTypes.bool,
   LocationDropdownIsOpen: PropTypes.bool,
   openLocationDropdown: PropTypes.func,
   closeLocationDropdown: PropTypes.func,
@@ -125,7 +118,6 @@ LocationDropdown.propTypes = {
   locationDropdownImage: PropTypes.string
 };
 LocationDropdown.defaultProps = {
-  alertIsActive: false,
   LocationDropdownIsOpen: false,
   openLocationDropdown: () => {},
   closeLocationDropdown: () => {},

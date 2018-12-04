@@ -121,173 +121,182 @@ class Nav extends Component {
             'z-nav w100 fixed l0 flex bg-peach text-white items-center transition-fade-in'
           )}
         >
-          <div className="col col-4 md-col-5 flex items-center justify-start">
-            {this.state.currentBreakpoint === medium.label ? (
-              <div
-                className={cx(
-                  styles['Nav__left-menu'],
-                  'w100 flex items-center'
-                )}
-              >
-                <Button
-                  className={cx(
-                    styles['Nav__location-button'],
-                    'line-item-title text-decoration-none center text-white'
-                  )}
-                  variant="style-none"
-                  onClick={closeLocationDropdown}
-                  onMouseEnter={() => {
-                    openLocationDropdown();
-                    closeShopDropdown();
-                  }}
-                  to="/locations"
-                  label="Locations"
-                  hover="underline-white"
-                />
-                <NavLink
-                  exact
-                  to="/flavors"
-                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                >
-                  Flavors
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/events"
-                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                >
-                  Events
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/classes-and-socials"
-                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                >
-                  Classes & Socials
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/parties"
-                  className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                >
-                  Parties
-                </NavLink>
-              </div>
-            ) : (
-              <Button
-                variant="style-none"
-                onClick={() => this.toggleMobileNav()}
-              >
-                <Image
-                  alt="menu icon"
-                  src="/assets/images/icon-mobile-menu.svg"
-                />
-              </Button>
-            )}
-          </div>
           <div
             className={cx(
-              styles['logo-container'],
-              'col col-4 md-col-2 h100 flex items-center'
+              styles['Nav__container'],
+              'wh100 bg-peach z-1 flex items-center'
             )}
           >
-            <NavLink exact to="/" className="flex justify-center">
-              <Image
-                className={cx(
-                  styles['logo-container__logo'],
-                  'col-12 md-col-10 px1'
-                )}
-                alt="Click the Ample Hills Logo to return to the homepage"
-                src={contentfulImgUtil(
-                  get(logo, 'fields.file.url', ''),
-                  '500',
-                  'png'
-                )}
-              />
-            </NavLink>
-          </div>
-          <div className="col col-4 md-col-5 flex items-center justify-end">
-            {this.state.currentBreakpoint === 'medium' ? (
-              <Fragment>
-                <NavLink
-                  exact
-                  to="/our-story"
-                  className="text-hover line-item-title text-decoration-none center mr2"
+            <div className="col col-4 md-col-5 flex items-center justify-start">
+              {this.state.currentBreakpoint === medium.label ? (
+                <div
+                  className={cx(
+                    styles['Nav__left-menu'],
+                    'w100 flex items-center'
+                  )}
                 >
-                  Our Story
-                </NavLink>
-                <NavLink
-                  exact
-                  to="/profile"
-                  className="mr2 line-item-title text-decoration-none center"
+                  <Button
+                    className={cx(
+                      styles['Nav__location-button'],
+                      'line-item-title text-decoration-none center text-white'
+                    )}
+                    variant="style-none"
+                    onClick={closeLocationDropdown}
+                    onMouseEnter={() => {
+                      openLocationDropdown();
+                      closeShopDropdown();
+                    }}
+                    to="/locations"
+                    label="Locations"
+                    hover="underline-white"
+                  />
+                  <NavLink
+                    exact
+                    to="/flavors"
+                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
+                  >
+                    Flavors
+                  </NavLink>
+                  <NavLink
+                    exact
+                    to="/events"
+                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
+                  >
+                    Events
+                  </NavLink>
+                  <NavLink
+                    exact
+                    to="/classes-and-socials"
+                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
+                  >
+                    Classes & Socials
+                  </NavLink>
+                  <NavLink
+                    exact
+                    to="/parties"
+                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
+                  >
+                    Parties
+                  </NavLink>
+                </div>
+              ) : (
+                <Button
+                  variant="style-none"
+                  onClick={() => this.toggleMobileNav()}
                 >
                   <Image
-                    className="icon"
-                    src={contentfulImgUtil(
-                      get(
-                        profileIcon,
-                        'fields.file.url',
-                        '/assets/images/bubble-icon.svg'
-                      ),
-                      '200',
-                      'png'
-                    )}
+                    alt="menu icon"
+                    src="/assets/images/icon-mobile-menu.svg"
                   />
-                </NavLink>
-                <Button
-                  className="mr2"
-                  to="/products"
-                  variant="primary-small"
-                  color="white-peach"
-                  label="Shop Online"
-                  onClick={closeShopDropdown}
-                  onMouseEnter={() => {
-                    openShopDropdown();
-                    closeLocationDropdown();
-                  }}
-                  hover="clear-white-border"
-                />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <NavLink exact to="/profile" className="link-text center mx2">
-                  <Image src="/assets/images/icon-profile.svg" />
-                </NavLink>
-              </Fragment>
-            )}
-            <Button
-              className={cx(
-                styles['Nav__cart-button'],
-                'small flex items-center justify-center'
+                </Button>
               )}
-              variant="circle"
-              color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
-              to="/cart"
-              label={this.props.totalItems.toString()}
-              hover="clear-white-border"
-            />
+            </div>
+            <div
+              className={cx(
+                styles['logo-container'],
+                'col col-4 md-col-2 h100 flex items-center'
+              )}
+            >
+              <NavLink exact to="/" className="flex justify-center">
+                <Image
+                  className={cx(
+                    styles['logo-container__logo'],
+                    'col-12 md-col-10 px1'
+                  )}
+                  alt="Click the Ample Hills Logo to return to the homepage"
+                  src={contentfulImgUtil(
+                    get(logo, 'fields.file.url', ''),
+                    '500',
+                    'png'
+                  )}
+                />
+              </NavLink>
+            </div>
+            <div className="col col-4 md-col-5 flex items-center justify-end">
+              {this.state.currentBreakpoint === 'medium' ? (
+                <Fragment>
+                  <NavLink
+                    exact
+                    to="/our-story"
+                    className="text-hover line-item-title text-decoration-none center mr2"
+                  >
+                    Our Story
+                  </NavLink>
+                  <NavLink
+                    exact
+                    to="/profile"
+                    className="mr2 line-item-title text-decoration-none center"
+                  >
+                    <Image
+                      className="icon"
+                      src={contentfulImgUtil(
+                        get(
+                          profileIcon,
+                          'fields.file.url',
+                          '/assets/images/bubble-icon.svg'
+                        ),
+                        '200',
+                        'png'
+                      )}
+                    />
+                  </NavLink>
+                  <Button
+                    className="mr2"
+                    to="/products"
+                    variant="primary-small"
+                    color="white-peach"
+                    label="Shop Online"
+                    onClick={closeShopDropdown}
+                    onMouseEnter={() => {
+                      openShopDropdown();
+                      closeLocationDropdown();
+                    }}
+                    hover="clear-white-border"
+                  />
+                </Fragment>
+              ) : (
+                <Fragment>
+                  <NavLink exact to="/profile" className="link-text center mx2">
+                    <Image src="/assets/images/icon-profile.svg" />
+                  </NavLink>
+                </Fragment>
+              )}
+              <Button
+                className={cx(
+                  styles['Nav__cart-button'],
+                  'small flex items-center justify-center'
+                )}
+                variant="circle"
+                color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
+                to="/cart"
+                label={this.props.totalItems.toString()}
+                hover="clear-white-border"
+              />
+            </div>
+          </div>
+          <div className="w100 absolute t0 l0 z-below">
+            {this.state.currentBreakpoint === medium.label ? (
+              <ShopDropdown
+                shopDropdownIsOpen={shopDropdownIsOpen}
+                productLanding={productLanding}
+                alertIsActive={alertIsActive}
+                openShopDropdown={openShopDropdown}
+                closeShopDropdown={closeShopDropdown}
+              />
+            ) : null}
+            {this.state.currentBreakpoint === medium.label ? (
+              <LocationDropdown
+                locationDropdownIsOpen={locationDropdownIsOpen}
+                alertIsActive={alertIsActive}
+                openLocationDropdown={openLocationDropdown}
+                closeLocationDropdown={closeLocationDropdown}
+                locationSortedByGroup={this.state.locationSortedByGroup}
+                regionOrder={this.state.regionOrder}
+                locationDropdownImage={locationDropdownImage}
+              />
+            ) : null}
           </div>
         </div>
-        {this.state.currentBreakpoint === medium.label ? (
-          <ShopDropdown
-            shopDropdownIsOpen={shopDropdownIsOpen}
-            productLanding={productLanding}
-            alertIsActive={alertIsActive}
-            openShopDropdown={openShopDropdown}
-            closeShopDropdown={closeShopDropdown}
-          />
-        ) : null}
-        {this.state.currentBreakpoint === medium.label ? (
-          <LocationDropdown
-            locationDropdownIsOpen={locationDropdownIsOpen}
-            alertIsActive={alertIsActive}
-            openLocationDropdown={openLocationDropdown}
-            closeLocationDropdown={closeLocationDropdown}
-            locationSortedByGroup={this.state.locationSortedByGroup}
-            regionOrder={this.state.regionOrder}
-            locationDropdownImage={locationDropdownImage}
-          />
-        ) : null}
       </div>
     );
   }

@@ -13,10 +13,6 @@
     height: spacing(70);
   }
 
-  &__nav-container--with-alert {
-    top: calc(#{$header-height-desktop} + #{$alert-height-desktop});
-  }
-
   &__location-link {
     border: 0;
   }
