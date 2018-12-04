@@ -146,8 +146,6 @@ class FlavorLanding extends Component {
                 selectClassName="w100"
                 variant="secondary"
                 value={this.state.activeFilter}
-                textColor="madison-blue"
-                color="peach"
                 options={['All']
                   .concat(flavors.collectedFilters)
                   .map(filter => {
@@ -168,9 +166,9 @@ class FlavorLanding extends Component {
                 fixedWidth={true}
                 selectClassName="w100"
                 variant="small"
-                color="peach"
+                color="madison-blue"
                 placeholder="Dietary Restrictions"
-                textColor="madison-blue"
+                textColor="peach"
                 value={this.state.activeDietaryRestrictions}
                 options={['None']
                   .concat(flavors.collectedDietaryRestrictions)
