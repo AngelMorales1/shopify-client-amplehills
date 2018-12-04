@@ -126,3 +126,9 @@ $CRF-close-bar-height: spacing(18);
     pointer-events: none;
   }
 }
+
+:global {
+  .DayPicker-Day--disabled {
+    pointer-events: none;
+  }
+}

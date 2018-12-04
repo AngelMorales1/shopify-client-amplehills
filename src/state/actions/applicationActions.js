@@ -8,6 +8,8 @@ import {
   fetchContentfulProducts
 } from 'state/actions/productsActions';
 
+import { fetchOrCreateCheckout } from 'state/actions/checkoutActions';
+
 export const INITIALIZE_APPLICATION = 'INITIALIZE_APPLICATION';
 export const initializeApplication = (checkoutID, isPreview) => dispatch => {
   return dispatch({
@@ -16,6 +18,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
       const Contentful = isPreview ? PreviewClient() : ContentfulClient();
       Data.setRef('contentful', Contentful);
       const fetchData = Promise.all([
+        dispatch(fetchOrCreateCheckout()),
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),

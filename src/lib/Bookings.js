@@ -1,6 +1,6 @@
 import QueryString from 'qs';
 
-const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api-g5qlhkswu.now.sh';
+const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api-mz47pgc5d.now.sh';
 
 const Bookings = {
   getAvailability(project_id) {
