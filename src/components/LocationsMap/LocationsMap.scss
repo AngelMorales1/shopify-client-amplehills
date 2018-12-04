@@ -15,4 +15,14 @@
       margin-top: spacing(1);
     }
   }
+
+  &__seasonal-button--selected {
+    opacity: 0.6;
+  }
+
+  &__circle-icon {
+    width: spacing(6);
+    height: spacing(6);
+    font-size: 0.4rem;
+  }
 }
