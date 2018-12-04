@@ -204,6 +204,7 @@ ShallowWrapper {
                                         className="relative"
                               >
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className=""
                                                   color="madison-blue"
                                                   disabled={false}
@@ -331,6 +332,7 @@ ShallowWrapper {
                                     className="relative"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className=""
                                                 color="madison-blue"
                                                 disabled={false}
@@ -435,6 +437,7 @@ ShallowWrapper {
                                 className="relative"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className=""
                                                 color="madison-blue"
                                                 disabled={false}
@@ -599,6 +602,7 @@ ShallowWrapper {
                     className="relative"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className=""
                                         color="madison-blue"
                                         disabled={false}
@@ -661,6 +665,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <Button
+                        childrenWrapperClassName=""
                         className=""
                         color="madison-blue"
                         disabled={false}
@@ -715,6 +720,7 @@ ShallowWrapper {
                             0.00
 </span>,
                         ],
+                        "childrenWrapperClassName": "",
                         "className": "",
                         "color": "madison-blue",
                         "disabled": false,
@@ -891,6 +897,7 @@ ShallowWrapper {
                                                 className="relative"
                                     >
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className=""
                                                             color="madison-blue"
                                                             disabled={false}
@@ -1018,6 +1025,7 @@ ShallowWrapper {
                                           className="relative"
                             >
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className=""
                                                         color="madison-blue"
                                                         disabled={false}
@@ -1122,6 +1130,7 @@ ShallowWrapper {
                                     className="relative"
                   >
                                     <Button
+                                                      childrenWrapperClassName=""
                                                       className=""
                                                       color="madison-blue"
                                                       disabled={false}
@@ -1286,6 +1295,7 @@ ShallowWrapper {
                       className="relative"
 >
                       <Button
+                                            childrenWrapperClassName=""
                                             className=""
                                             color="madison-blue"
                                             disabled={false}
@@ -1348,6 +1358,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": Array [
                         <Button
+                          childrenWrapperClassName=""
                           className=""
                           color="madison-blue"
                           disabled={false}
@@ -1402,6 +1413,7 @@ ShallowWrapper {
                               0.00
 </span>,
                           ],
+                          "childrenWrapperClassName": "",
                           "className": "",
                           "color": "madison-blue",
                           "disabled": false,
@@ -1642,6 +1654,7 @@ ShallowWrapper {
                                         variant={null}
                               />
                               <Button
+                                        childrenWrapperClassName=""
                                         className=""
                                         color="peach"
                                         disabled={true}
@@ -1756,6 +1769,7 @@ ShallowWrapper {
                                     variant={null}
                         />
                         <Button
+                                    childrenWrapperClassName=""
                                     className=""
                                     color="peach"
                                     disabled={true}
@@ -1847,6 +1861,7 @@ ShallowWrapper {
                                 variant={null}
                 />
                 <Button
+                                childrenWrapperClassName=""
                                 className=""
                                 color="peach"
                                 disabled={true}
@@ -1998,6 +2013,7 @@ ShallowWrapper {
                     variant={null}
 />,
                   <Button
+                    childrenWrapperClassName=""
                     className=""
                     color="peach"
                     disabled={true}
@@ -2063,6 +2079,7 @@ ShallowWrapper {
                         0.00
 </span>,
                     ],
+                    "childrenWrapperClassName": "",
                     "className": "",
                     "color": "peach",
                     "disabled": true,
@@ -2205,6 +2222,7 @@ ShallowWrapper {
                                                 variant={null}
                                     />
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className=""
                                                 color="peach"
                                                 disabled={true}
@@ -2319,6 +2337,7 @@ ShallowWrapper {
                                           variant={null}
                             />
                             <Button
+                                          childrenWrapperClassName=""
                                           className=""
                                           color="peach"
                                           disabled={true}
@@ -2410,6 +2429,7 @@ ShallowWrapper {
                                     variant={null}
                   />
                   <Button
+                                    childrenWrapperClassName=""
                                     className=""
                                     color="peach"
                                     disabled={true}
@@ -2561,6 +2581,7 @@ ShallowWrapper {
                       variant={null}
 />,
                     <Button
+                      childrenWrapperClassName=""
                       className=""
                       color="peach"
                       disabled={true}
@@ -2626,6 +2647,7 @@ ShallowWrapper {
                           0.00
 </span>,
                       ],
+                      "childrenWrapperClassName": "",
                       "className": "",
                       "color": "peach",
                       "disabled": true,

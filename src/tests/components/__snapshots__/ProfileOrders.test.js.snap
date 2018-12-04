@@ -102,6 +102,7 @@ ShallowWrapper {
                               className="mt4 flex flex-wrap"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="tag mb2 mr2 bg-peach text-white w-auto"
                                         color="white-denim"
                                         disabled={false}
@@ -117,6 +118,7 @@ ShallowWrapper {
                                         variant="secondary"
                               />
                               <Button
+                                        childrenWrapperClassName=""
                                         className="tag mb2 bg-peach text-white"
                                         color="white-denim"
                                         disabled={false}
@@ -185,6 +187,7 @@ ShallowWrapper {
                             className="mt4 flex flex-wrap"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="tag mb2 mr2 bg-peach text-white w-auto"
                                           color="white-denim"
                                           disabled={false}
@@ -200,6 +203,7 @@ ShallowWrapper {
                                           variant="secondary"
                             />
                             <Button
+                                          childrenWrapperClassName=""
                                           className="tag mb2 bg-peach text-white"
                                           color="white-denim"
                                           disabled={false}
@@ -252,6 +256,7 @@ ShallowWrapper {
                   className="mt4 flex flex-wrap"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="tag mb2 mr2 bg-peach text-white w-auto"
                                     color="white-denim"
                                     disabled={false}
@@ -267,6 +272,7 @@ ShallowWrapper {
                                     variant="secondary"
                   />
                   <Button
+                                    childrenWrapperClassName=""
                                     className="tag mb2 bg-peach text-white"
                                     color="white-denim"
                                     disabled={false}
@@ -363,6 +369,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <Button
+                      childrenWrapperClassName=""
                       className="tag mb2 mr2 bg-peach text-white w-auto"
                       color="white-denim"
                       disabled={false}
@@ -378,6 +385,7 @@ ShallowWrapper {
                       variant="secondary"
 />,
                     <Button
+                      childrenWrapperClassName=""
                       className="tag mb2 bg-peach text-white"
                       color="white-denim"
                       disabled={false}
@@ -403,6 +411,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "tag mb2 mr2 bg-peach text-white w-auto",
                       "color": "white-denim",
                       "disabled": false,
@@ -427,6 +436,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "tag mb2 bg-peach text-white",
                       "color": "white-denim",
                       "disabled": false,
@@ -498,6 +508,7 @@ ShallowWrapper {
                                     className="mt4 flex flex-wrap"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="tag mb2 mr2 bg-peach text-white w-auto"
                                                 color="white-denim"
                                                 disabled={false}
@@ -513,6 +524,7 @@ ShallowWrapper {
                                                 variant="secondary"
                                     />
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="tag mb2 bg-peach text-white"
                                                 color="white-denim"
                                                 disabled={false}
@@ -581,6 +593,7 @@ ShallowWrapper {
                                 className="mt4 flex flex-wrap"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="tag mb2 mr2 bg-peach text-white w-auto"
                                                 color="white-denim"
                                                 disabled={false}
@@ -596,6 +609,7 @@ ShallowWrapper {
                                                 variant="secondary"
                                 />
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="tag mb2 bg-peach text-white"
                                                 color="white-denim"
                                                 disabled={false}
@@ -648,6 +662,7 @@ ShallowWrapper {
                     className="mt4 flex flex-wrap"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className="tag mb2 mr2 bg-peach text-white w-auto"
                                         color="white-denim"
                                         disabled={false}
@@ -663,6 +678,7 @@ ShallowWrapper {
                                         variant="secondary"
                     />
                     <Button
+                                        childrenWrapperClassName=""
                                         className="tag mb2 bg-peach text-white"
                                         color="white-denim"
                                         disabled={false}
@@ -759,6 +775,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <Button
+                        childrenWrapperClassName=""
                         className="tag mb2 mr2 bg-peach text-white w-auto"
                         color="white-denim"
                         disabled={false}
@@ -774,6 +791,7 @@ ShallowWrapper {
                         variant="secondary"
 />,
                       <Button
+                        childrenWrapperClassName=""
                         className="tag mb2 bg-peach text-white"
                         color="white-denim"
                         disabled={false}
@@ -799,6 +817,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "tag mb2 mr2 bg-peach text-white w-auto",
                         "color": "white-denim",
                         "disabled": false,
@@ -823,6 +842,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "tag mb2 bg-peach text-white",
                         "color": "white-denim",
                         "disabled": false,
@@ -910,6 +930,7 @@ ShallowWrapper {
                               You don't have any past orders. Let's fix that!
                     </p>
                     <Button
+                              childrenWrapperClassName=""
                               className="small mt3 pt0 pb1 h100 align-middle"
                               color="peach"
                               disabled={false}
@@ -963,6 +984,7 @@ ShallowWrapper {
                         You don't have any past orders. Let's fix that!
             </p>
             <Button
+                        childrenWrapperClassName=""
                         className="small mt3 pt0 pb1 h100 align-middle"
                         color="peach"
                         disabled={false}
@@ -997,6 +1019,7 @@ ShallowWrapper {
                 You don't have any past orders. Let's fix that!
 </p>,
               <Button
+                childrenWrapperClassName=""
                 className="small mt3 pt0 pb1 h100 align-middle"
                 color="peach"
                 disabled={false}
@@ -1046,6 +1069,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "small mt3 pt0 pb1 h100 align-middle",
                 "color": "peach",
                 "disabled": false,
@@ -1100,6 +1124,7 @@ ShallowWrapper {
                                     You don't have any past orders. Let's fix that!
                         </p>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="small mt3 pt0 pb1 h100 align-middle"
                                     color="peach"
                                     disabled={false}
@@ -1153,6 +1178,7 @@ ShallowWrapper {
                             You don't have any past orders. Let's fix that!
               </p>
               <Button
+                            childrenWrapperClassName=""
                             className="small mt3 pt0 pb1 h100 align-middle"
                             color="peach"
                             disabled={false}
@@ -1187,6 +1213,7 @@ ShallowWrapper {
                   You don't have any past orders. Let's fix that!
 </p>,
                 <Button
+                  childrenWrapperClassName=""
                   className="small mt3 pt0 pb1 h100 align-middle"
                   color="peach"
                   disabled={false}
@@ -1236,6 +1263,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "small mt3 pt0 pb1 h100 align-middle",
                   "color": "peach",
                   "disabled": false,

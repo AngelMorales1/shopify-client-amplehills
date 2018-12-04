@@ -24,6 +24,8 @@ export default {
   },
   partyTypes: [],
   timeSlots: [],
+  timekitProjectId: undefined,
+  navRegionOrder: 100,
   partyAvailable: false,
   orderDeliveryLink: '',
   participantsLimit: 55,

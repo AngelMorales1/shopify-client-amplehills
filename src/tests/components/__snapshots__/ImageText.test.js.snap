@@ -71,18 +71,34 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex container-width py4"
+          className="flex container-width"
 >
           <div
                     className="flex flex-column justify-center col-12 md-col-6"
           >
-                    <h2
-                              className="block-headline mb3"
-                    >
-                              foo
-                    </h2>
                     <div
-                              className="markdown-block"
+                              className="mb3 relative inline-block z-1"
+                    >
+                              <h1
+                                        className="block-headline"
+                              >
+                                        foo
+                              </h1>
+                              <Image
+                                        alt=""
+                                        bg={false}
+                                        className="absolute z-below t0 b0 my-auto"
+                                        onImgLoad={[Function]}
+                                        src="?w=1000&fm=png&q=90"
+                                        style={
+                                                  Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                        }
+                              />
+                    </div>
+                    <div
+                              className="markdown-block z-1"
                               dangerouslySetInnerHTML={
                                         Object {
                                                   "__html": "<p>foo</p>
@@ -110,8 +126,9 @@ ShallowWrapper {
           />
 </div>,
         null,
+        null,
       ],
-      "className": "flex justify-center",
+      "className": "flex justify-center relative",
       "style": Object {
         "zIndex": 0,
       },
@@ -127,13 +144,29 @@ ShallowWrapper {
             <div
               className="flex flex-column justify-center col-12 md-col-6"
 >
-              <h2
-                            className="block-headline mb3"
-              >
-                            foo
-              </h2>
               <div
-                            className="markdown-block"
+                            className="mb3 relative inline-block z-1"
+              >
+                            <h1
+                                          className="block-headline"
+                            >
+                                          foo
+                            </h1>
+                            <Image
+                                          alt=""
+                                          bg={false}
+                                          className="absolute z-below t0 b0 my-auto"
+                                          onImgLoad={[Function]}
+                                          src="?w=1000&fm=png&q=90"
+                                          style={
+                                                        Object {
+                                                                      "transform": "translateX(0%)",
+                                                                    }
+                                          }
+                            />
+              </div>
+              <div
+                            className="markdown-block z-1"
                             dangerouslySetInnerHTML={
                                           Object {
                                                         "__html": "<p>foo</p>
@@ -160,7 +193,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": "flex container-width py4",
+          "className": "flex container-width",
         },
         "ref": null,
         "rendered": Array [
@@ -170,14 +203,29 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                null,
-                <h2
-                  className="block-headline mb3"
->
-                  foo
-</h2>,
                 <div
-                  className="markdown-block"
+                  className="mb3 relative inline-block z-1"
+>
+                  <h1
+                                    className="block-headline"
+                  >
+                                    foo
+                  </h1>
+                  <Image
+                                    alt=""
+                                    bg={false}
+                                    className="absolute z-below t0 b0 my-auto"
+                                    onImgLoad={[Function]}
+                                    src="?w=1000&fm=png&q=90"
+                                    style={
+                                                      Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                    }
+                  />
+</div>,
+                <div
+                  className="markdown-block z-1"
                   dangerouslySetInnerHTML={
                                     Object {
                                                       "__html": "<p>foo</p>
@@ -196,25 +244,76 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              null,
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "foo",
-                  "className": "block-headline mb3",
+                  "children": Array [
+                    null,
+                    <h1
+                      className="block-headline"
+>
+                      foo
+</h1>,
+                    <Image
+                      alt=""
+                      bg={false}
+                      className="absolute z-below t0 b0 my-auto"
+                      onImgLoad={[Function]}
+                      src="?w=1000&fm=png&q=90"
+                      style={
+                                            Object {
+                                                                  "transform": "translateX(0%)",
+                                                                }
+                      }
+/>,
+                  ],
+                  "className": "mb3 relative inline-block z-1",
                 },
                 "ref": null,
-                "rendered": "foo",
-                "type": "h2",
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "foo",
+                      "className": "block-headline",
+                    },
+                    "ref": null,
+                    "rendered": "foo",
+                    "type": "h1",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "alt": "",
+                      "bg": false,
+                      "children": null,
+                      "className": "absolute z-below t0 b0 my-auto",
+                      "onImgLoad": [Function],
+                      "src": "?w=1000&fm=png&q=90",
+                      "style": Object {
+                        "transform": "translateX(0%)",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "markdown-block",
+                  "className": "markdown-block z-1",
                   "dangerouslySetInnerHTML": Object {
                     "__html": "<p>foo</p>
 ",
@@ -269,6 +368,7 @@ ShallowWrapper {
         "type": "div",
       },
       null,
+      null,
     ],
     "type": "div",
   },
@@ -280,18 +380,34 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex container-width py4"
+            className="flex container-width"
 >
             <div
                         className="flex flex-column justify-center col-12 md-col-6"
             >
-                        <h2
-                                    className="block-headline mb3"
-                        >
-                                    foo
-                        </h2>
                         <div
-                                    className="markdown-block"
+                                    className="mb3 relative inline-block z-1"
+                        >
+                                    <h1
+                                                className="block-headline"
+                                    >
+                                                foo
+                                    </h1>
+                                    <Image
+                                                alt=""
+                                                bg={false}
+                                                className="absolute z-below t0 b0 my-auto"
+                                                onImgLoad={[Function]}
+                                                src="?w=1000&fm=png&q=90"
+                                                style={
+                                                            Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                                }
+                                    />
+                        </div>
+                        <div
+                                    className="markdown-block z-1"
                                     dangerouslySetInnerHTML={
                                                 Object {
                                                             "__html": "<p>foo</p>
@@ -319,8 +435,9 @@ ShallowWrapper {
             />
 </div>,
           null,
+          null,
         ],
-        "className": "flex justify-center",
+        "className": "flex justify-center relative",
         "style": Object {
           "zIndex": 0,
         },
@@ -336,13 +453,29 @@ ShallowWrapper {
               <div
                 className="flex flex-column justify-center col-12 md-col-6"
 >
-                <h2
-                                className="block-headline mb3"
-                >
-                                foo
-                </h2>
                 <div
-                                className="markdown-block"
+                                className="mb3 relative inline-block z-1"
+                >
+                                <h1
+                                                className="block-headline"
+                                >
+                                                foo
+                                </h1>
+                                <Image
+                                                alt=""
+                                                bg={false}
+                                                className="absolute z-below t0 b0 my-auto"
+                                                onImgLoad={[Function]}
+                                                src="?w=1000&fm=png&q=90"
+                                                style={
+                                                                Object {
+                                                                                "transform": "translateX(0%)",
+                                                                              }
+                                                }
+                                />
+                </div>
+                <div
+                                className="markdown-block z-1"
                                 dangerouslySetInnerHTML={
                                                 Object {
                                                                 "__html": "<p>foo</p>
@@ -369,7 +502,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": "flex container-width py4",
+            "className": "flex container-width",
           },
           "ref": null,
           "rendered": Array [
@@ -379,14 +512,29 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  null,
-                  <h2
-                    className="block-headline mb3"
->
-                    foo
-</h2>,
                   <div
-                    className="markdown-block"
+                    className="mb3 relative inline-block z-1"
+>
+                    <h1
+                                        className="block-headline"
+                    >
+                                        foo
+                    </h1>
+                    <Image
+                                        alt=""
+                                        bg={false}
+                                        className="absolute z-below t0 b0 my-auto"
+                                        onImgLoad={[Function]}
+                                        src="?w=1000&fm=png&q=90"
+                                        style={
+                                                            Object {
+                                                                                "transform": "translateX(0%)",
+                                                                              }
+                                        }
+                    />
+</div>,
+                  <div
+                    className="markdown-block z-1"
                     dangerouslySetInnerHTML={
                                         Object {
                                                             "__html": "<p>foo</p>
@@ -405,25 +553,76 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                null,
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "foo",
-                    "className": "block-headline mb3",
+                    "children": Array [
+                      null,
+                      <h1
+                        className="block-headline"
+>
+                        foo
+</h1>,
+                      <Image
+                        alt=""
+                        bg={false}
+                        className="absolute z-below t0 b0 my-auto"
+                        onImgLoad={[Function]}
+                        src="?w=1000&fm=png&q=90"
+                        style={
+                                                Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                        }
+/>,
+                    ],
+                    "className": "mb3 relative inline-block z-1",
                   },
                   "ref": null,
-                  "rendered": "foo",
-                  "type": "h2",
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "foo",
+                        "className": "block-headline",
+                      },
+                      "ref": null,
+                      "rendered": "foo",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "alt": "",
+                        "bg": false,
+                        "children": null,
+                        "className": "absolute z-below t0 b0 my-auto",
+                        "onImgLoad": [Function],
+                        "src": "?w=1000&fm=png&q=90",
+                        "style": Object {
+                          "transform": "translateX(0%)",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "markdown-block",
+                    "className": "markdown-block z-1",
                     "dangerouslySetInnerHTML": Object {
                       "__html": "<p>foo</p>
 ",
@@ -477,6 +676,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        null,
         null,
       ],
       "type": "div",
@@ -546,16 +746,32 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex container-width py4"
+          className="flex container-width"
 >
           <div
                     className="flex flex-column justify-center col-12 md-col-5"
           >
-                    <h2
-                              className="block-headline mb3"
-                    />
                     <div
-                              className="markdown-block"
+                              className="mb3 relative inline-block z-1"
+                    >
+                              <h1
+                                        className="block-headline"
+                              />
+                              <Image
+                                        alt=""
+                                        bg={false}
+                                        className="absolute z-below t0 b0 my-auto"
+                                        onImgLoad={[Function]}
+                                        src="?w=1000&fm=png&q=90"
+                                        style={
+                                                  Object {
+                                                            "transform": "translateX(0%)",
+                                                          }
+                                        }
+                              />
+                    </div>
+                    <div
+                              className="markdown-block z-1"
                               dangerouslySetInnerHTML={
                                         Object {
                                                   "__html": "",
@@ -582,8 +798,9 @@ ShallowWrapper {
           />
 </div>,
         null,
+        null,
       ],
-      "className": "flex justify-center",
+      "className": "flex justify-center relative",
       "style": Object {
         "zIndex": 1,
       },
@@ -599,11 +816,27 @@ ShallowWrapper {
             <div
               className="flex flex-column justify-center col-12 md-col-5"
 >
-              <h2
-                            className="block-headline mb3"
-              />
               <div
-                            className="markdown-block"
+                            className="mb3 relative inline-block z-1"
+              >
+                            <h1
+                                          className="block-headline"
+                            />
+                            <Image
+                                          alt=""
+                                          bg={false}
+                                          className="absolute z-below t0 b0 my-auto"
+                                          onImgLoad={[Function]}
+                                          src="?w=1000&fm=png&q=90"
+                                          style={
+                                                        Object {
+                                                                      "transform": "translateX(0%)",
+                                                                    }
+                                          }
+                            />
+              </div>
+              <div
+                            className="markdown-block z-1"
                             dangerouslySetInnerHTML={
                                           Object {
                                                         "__html": "",
@@ -629,7 +862,7 @@ ShallowWrapper {
               }
 />,
           ],
-          "className": "flex container-width py4",
+          "className": "flex container-width",
         },
         "ref": null,
         "rendered": Array [
@@ -639,12 +872,27 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                null,
-                <h2
-                  className="block-headline mb3"
-/>,
                 <div
-                  className="markdown-block"
+                  className="mb3 relative inline-block z-1"
+>
+                  <h1
+                                    className="block-headline"
+                  />
+                  <Image
+                                    alt=""
+                                    bg={false}
+                                    className="absolute z-below t0 b0 my-auto"
+                                    onImgLoad={[Function]}
+                                    src="?w=1000&fm=png&q=90"
+                                    style={
+                                                      Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                    }
+                  />
+</div>,
+                <div
+                  className="markdown-block z-1"
                   dangerouslySetInnerHTML={
                                     Object {
                                                       "__html": "",
@@ -662,25 +910,74 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              null,
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "",
-                  "className": "block-headline mb3",
+                  "children": Array [
+                    null,
+                    <h1
+                      className="block-headline"
+/>,
+                    <Image
+                      alt=""
+                      bg={false}
+                      className="absolute z-below t0 b0 my-auto"
+                      onImgLoad={[Function]}
+                      src="?w=1000&fm=png&q=90"
+                      style={
+                                            Object {
+                                                                  "transform": "translateX(0%)",
+                                                                }
+                      }
+/>,
+                  ],
+                  "className": "mb3 relative inline-block z-1",
                 },
                 "ref": null,
-                "rendered": "",
-                "type": "h2",
+                "rendered": Array [
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "",
+                      "className": "block-headline",
+                    },
+                    "ref": null,
+                    "rendered": "",
+                    "type": "h1",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "alt": "",
+                      "bg": false,
+                      "children": null,
+                      "className": "absolute z-below t0 b0 my-auto",
+                      "onImgLoad": [Function],
+                      "src": "?w=1000&fm=png&q=90",
+                      "style": Object {
+                        "transform": "translateX(0%)",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": "div",
               },
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "markdown-block",
+                  "className": "markdown-block z-1",
                   "dangerouslySetInnerHTML": Object {
                     "__html": "",
                   },
@@ -734,6 +1031,7 @@ ShallowWrapper {
         "type": "div",
       },
       null,
+      null,
     ],
     "type": "div",
   },
@@ -745,16 +1043,32 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex container-width py4"
+            className="flex container-width"
 >
             <div
                         className="flex flex-column justify-center col-12 md-col-5"
             >
-                        <h2
-                                    className="block-headline mb3"
-                        />
                         <div
-                                    className="markdown-block"
+                                    className="mb3 relative inline-block z-1"
+                        >
+                                    <h1
+                                                className="block-headline"
+                                    />
+                                    <Image
+                                                alt=""
+                                                bg={false}
+                                                className="absolute z-below t0 b0 my-auto"
+                                                onImgLoad={[Function]}
+                                                src="?w=1000&fm=png&q=90"
+                                                style={
+                                                            Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                                                }
+                                    />
+                        </div>
+                        <div
+                                    className="markdown-block z-1"
                                     dangerouslySetInnerHTML={
                                                 Object {
                                                             "__html": "",
@@ -781,8 +1095,9 @@ ShallowWrapper {
             />
 </div>,
           null,
+          null,
         ],
-        "className": "flex justify-center",
+        "className": "flex justify-center relative",
         "style": Object {
           "zIndex": 1,
         },
@@ -798,11 +1113,27 @@ ShallowWrapper {
               <div
                 className="flex flex-column justify-center col-12 md-col-5"
 >
-                <h2
-                                className="block-headline mb3"
-                />
                 <div
-                                className="markdown-block"
+                                className="mb3 relative inline-block z-1"
+                >
+                                <h1
+                                                className="block-headline"
+                                />
+                                <Image
+                                                alt=""
+                                                bg={false}
+                                                className="absolute z-below t0 b0 my-auto"
+                                                onImgLoad={[Function]}
+                                                src="?w=1000&fm=png&q=90"
+                                                style={
+                                                                Object {
+                                                                                "transform": "translateX(0%)",
+                                                                              }
+                                                }
+                                />
+                </div>
+                <div
+                                className="markdown-block z-1"
                                 dangerouslySetInnerHTML={
                                                 Object {
                                                                 "__html": "",
@@ -828,7 +1159,7 @@ ShallowWrapper {
                 }
 />,
             ],
-            "className": "flex container-width py4",
+            "className": "flex container-width",
           },
           "ref": null,
           "rendered": Array [
@@ -838,12 +1169,27 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  null,
-                  <h2
-                    className="block-headline mb3"
-/>,
                   <div
-                    className="markdown-block"
+                    className="mb3 relative inline-block z-1"
+>
+                    <h1
+                                        className="block-headline"
+                    />
+                    <Image
+                                        alt=""
+                                        bg={false}
+                                        className="absolute z-below t0 b0 my-auto"
+                                        onImgLoad={[Function]}
+                                        src="?w=1000&fm=png&q=90"
+                                        style={
+                                                            Object {
+                                                                                "transform": "translateX(0%)",
+                                                                              }
+                                        }
+                    />
+</div>,
+                  <div
+                    className="markdown-block z-1"
                     dangerouslySetInnerHTML={
                                         Object {
                                                             "__html": "",
@@ -861,25 +1207,74 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                null,
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "",
-                    "className": "block-headline mb3",
+                    "children": Array [
+                      null,
+                      <h1
+                        className="block-headline"
+/>,
+                      <Image
+                        alt=""
+                        bg={false}
+                        className="absolute z-below t0 b0 my-auto"
+                        onImgLoad={[Function]}
+                        src="?w=1000&fm=png&q=90"
+                        style={
+                                                Object {
+                                                                        "transform": "translateX(0%)",
+                                                                      }
+                        }
+/>,
+                    ],
+                    "className": "mb3 relative inline-block z-1",
                   },
                   "ref": null,
-                  "rendered": "",
-                  "type": "h2",
+                  "rendered": Array [
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "",
+                        "className": "block-headline",
+                      },
+                      "ref": null,
+                      "rendered": "",
+                      "type": "h1",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "alt": "",
+                        "bg": false,
+                        "children": null,
+                        "className": "absolute z-below t0 b0 my-auto",
+                        "onImgLoad": [Function],
+                        "src": "?w=1000&fm=png&q=90",
+                        "style": Object {
+                          "transform": "translateX(0%)",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": "div",
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "markdown-block",
+                    "className": "markdown-block z-1",
                     "dangerouslySetInnerHTML": Object {
                       "__html": "",
                     },
@@ -932,6 +1327,7 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        null,
         null,
       ],
       "type": "div",

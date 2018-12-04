@@ -73,6 +73,7 @@ ShallowWrapper {
                                         Email Address
                               </strong>
                               <Button
+                                        childrenWrapperClassName=""
                                         className="text-peach"
                                         color="white-denim"
                                         disabled={false}
@@ -110,6 +111,7 @@ ShallowWrapper {
                                         Phone Number
                               </strong>
                               <Button
+                                        childrenWrapperClassName=""
                                         className="text-peach"
                                         color="white-denim"
                                         disabled={false}
@@ -145,6 +147,7 @@ ShallowWrapper {
                                         Password
                               </strong>
                               <Button
+                                        childrenWrapperClassName=""
                                         className="text-peach"
                                         color="white-denim"
                                         disabled={false}
@@ -228,6 +231,7 @@ ShallowWrapper {
                                     Email Address
                         </strong>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -267,6 +271,7 @@ ShallowWrapper {
                                 Email Address
                 </strong>
                 <Button
+                                childrenWrapperClassName=""
                                 className="text-peach"
                                 color="white-denim"
                                 disabled={false}
@@ -304,6 +309,7 @@ ShallowWrapper {
                     Email Address
 </strong>,
                   <Button
+                    childrenWrapperClassName=""
                     className="text-peach"
                     color="white-denim"
                     disabled={false}
@@ -341,6 +347,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "text-peach",
                     "color": "white-denim",
                     "disabled": false,
@@ -396,6 +403,7 @@ ShallowWrapper {
                                     Phone Number
                         </strong>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -433,6 +441,7 @@ ShallowWrapper {
                                 Phone Number
                 </strong>
                 <Button
+                                childrenWrapperClassName=""
                                 className="text-peach"
                                 color="white-denim"
                                 disabled={false}
@@ -468,6 +477,7 @@ ShallowWrapper {
                     Phone Number
 </strong>,
                   <Button
+                    childrenWrapperClassName=""
                     className="text-peach"
                     color="white-denim"
                     disabled={false}
@@ -505,6 +515,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "text-peach",
                     "color": "white-denim",
                     "disabled": false,
@@ -559,6 +570,7 @@ ShallowWrapper {
                                     Password
                         </strong>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -596,6 +608,7 @@ ShallowWrapper {
                                 Password
                 </strong>
                 <Button
+                                childrenWrapperClassName=""
                                 className="text-peach"
                                 color="white-denim"
                                 disabled={false}
@@ -631,6 +644,7 @@ ShallowWrapper {
                     Password
 </strong>,
                   <Button
+                    childrenWrapperClassName=""
                     className="text-peach"
                     color="white-denim"
                     disabled={false}
@@ -668,6 +682,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "text-peach",
                     "color": "white-denim",
                     "disabled": false,
@@ -748,6 +763,7 @@ ShallowWrapper {
                                                 Email Address
                                     </strong>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="text-peach"
                                                 color="white-denim"
                                                 disabled={false}
@@ -785,6 +801,7 @@ ShallowWrapper {
                                                 Phone Number
                                     </strong>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="text-peach"
                                                 color="white-denim"
                                                 disabled={false}
@@ -820,6 +837,7 @@ ShallowWrapper {
                                                 Password
                                     </strong>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="text-peach"
                                                 color="white-denim"
                                                 disabled={false}
@@ -903,6 +921,7 @@ ShallowWrapper {
                                           Email Address
                             </strong>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="text-peach"
                                           color="white-denim"
                                           disabled={false}
@@ -942,6 +961,7 @@ ShallowWrapper {
                                     Email Address
                   </strong>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -979,6 +999,7 @@ ShallowWrapper {
                       Email Address
 </strong>,
                     <Button
+                      childrenWrapperClassName=""
                       className="text-peach"
                       color="white-denim"
                       disabled={false}
@@ -1016,6 +1037,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "text-peach",
                       "color": "white-denim",
                       "disabled": false,
@@ -1071,6 +1093,7 @@ ShallowWrapper {
                                           Phone Number
                             </strong>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="text-peach"
                                           color="white-denim"
                                           disabled={false}
@@ -1108,6 +1131,7 @@ ShallowWrapper {
                                     Phone Number
                   </strong>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -1143,6 +1167,7 @@ ShallowWrapper {
                       Phone Number
 </strong>,
                     <Button
+                      childrenWrapperClassName=""
                       className="text-peach"
                       color="white-denim"
                       disabled={false}
@@ -1180,6 +1205,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "text-peach",
                       "color": "white-denim",
                       "disabled": false,
@@ -1234,6 +1260,7 @@ ShallowWrapper {
                                           Password
                             </strong>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="text-peach"
                                           color="white-denim"
                                           disabled={false}
@@ -1271,6 +1298,7 @@ ShallowWrapper {
                                     Password
                   </strong>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -1306,6 +1334,7 @@ ShallowWrapper {
                       Password
 </strong>,
                     <Button
+                      childrenWrapperClassName=""
                       className="text-peach"
                       color="white-denim"
                       disabled={false}
@@ -1343,6 +1372,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "text-peach",
                       "color": "white-denim",
                       "disabled": false,
@@ -1446,6 +1476,7 @@ ShallowWrapper {
                                         Email Address
                               </strong>
                               <Button
+                                        childrenWrapperClassName=""
                                         className="text-peach"
                                         color="white-denim"
                                         disabled={false}
@@ -1482,6 +1513,7 @@ ShallowWrapper {
                                         Password
                               </strong>
                               <Button
+                                        childrenWrapperClassName=""
                                         className="text-peach"
                                         color="white-denim"
                                         disabled={false}
@@ -1539,6 +1571,7 @@ ShallowWrapper {
                                     Email Address
                         </strong>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -1576,6 +1609,7 @@ ShallowWrapper {
                                 Email Address
                 </strong>
                 <Button
+                                childrenWrapperClassName=""
                                 className="text-peach"
                                 color="white-denim"
                                 disabled={false}
@@ -1611,6 +1645,7 @@ ShallowWrapper {
                     Email Address
 </strong>,
                   <Button
+                    childrenWrapperClassName=""
                     className="text-peach"
                     color="white-denim"
                     disabled={false}
@@ -1648,6 +1683,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "text-peach",
                     "color": "white-denim",
                     "disabled": false,
@@ -1704,6 +1740,7 @@ ShallowWrapper {
                                     Password
                         </strong>
                         <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -1741,6 +1778,7 @@ ShallowWrapper {
                                 Password
                 </strong>
                 <Button
+                                childrenWrapperClassName=""
                                 className="text-peach"
                                 color="white-denim"
                                 disabled={false}
@@ -1776,6 +1814,7 @@ ShallowWrapper {
                     Password
 </strong>,
                   <Button
+                    childrenWrapperClassName=""
                     className="text-peach"
                     color="white-denim"
                     disabled={false}
@@ -1813,6 +1852,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "text-peach",
                     "color": "white-denim",
                     "disabled": false,
@@ -1883,6 +1923,7 @@ ShallowWrapper {
                                                 Email Address
                                     </strong>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="text-peach"
                                                 color="white-denim"
                                                 disabled={false}
@@ -1919,6 +1960,7 @@ ShallowWrapper {
                                                 Password
                                     </strong>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="text-peach"
                                                 color="white-denim"
                                                 disabled={false}
@@ -1976,6 +2018,7 @@ ShallowWrapper {
                                           Email Address
                             </strong>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="text-peach"
                                           color="white-denim"
                                           disabled={false}
@@ -2013,6 +2056,7 @@ ShallowWrapper {
                                     Email Address
                   </strong>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -2048,6 +2092,7 @@ ShallowWrapper {
                       Email Address
 </strong>,
                     <Button
+                      childrenWrapperClassName=""
                       className="text-peach"
                       color="white-denim"
                       disabled={false}
@@ -2085,6 +2130,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "text-peach",
                       "color": "white-denim",
                       "disabled": false,
@@ -2141,6 +2187,7 @@ ShallowWrapper {
                                           Password
                             </strong>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="text-peach"
                                           color="white-denim"
                                           disabled={false}
@@ -2178,6 +2225,7 @@ ShallowWrapper {
                                     Password
                   </strong>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="text-peach"
                                     color="white-denim"
                                     disabled={false}
@@ -2213,6 +2261,7 @@ ShallowWrapper {
                       Password
 </strong>,
                     <Button
+                      childrenWrapperClassName=""
                       className="text-peach"
                       color="white-denim"
                       disabled={false}
@@ -2250,6 +2299,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "text-peach",
                       "color": "white-denim",
                       "disabled": false,

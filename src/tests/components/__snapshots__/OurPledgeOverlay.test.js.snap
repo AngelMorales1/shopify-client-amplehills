@@ -34,6 +34,7 @@ ShallowWrapper {
                     className="flex flex-column items-center p3 fixed"
           >
                     <Button
+                              childrenWrapperClassName=""
                               className="t0 r0 m3 fixed"
                               color="white-denim"
                               disabled={false}
@@ -126,6 +127,7 @@ ShallowWrapper {
             className="flex flex-column items-center p3 fixed"
 >
             <Button
+                        childrenWrapperClassName=""
                         className="t0 r0 m3 fixed"
                         color="white-denim"
                         disabled={false}
@@ -201,6 +203,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
+                childrenWrapperClassName=""
                 className="t0 r0 m3 fixed"
                 color="white-denim"
                 disabled={false}
@@ -283,6 +286,7 @@ ShallowWrapper {
                   src="/assets/images/close-icon.svg"
                   style={Object {}}
 />,
+                "childrenWrapperClassName": "",
                 "className": "t0 r0 m3 fixed",
                 "color": "white-denim",
                 "disabled": false,
@@ -514,6 +518,7 @@ ShallowWrapper {
                         className="flex flex-column items-center p3 fixed"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="t0 r0 m3 fixed"
                                     color="white-denim"
                                     disabled={false}
@@ -606,6 +611,7 @@ ShallowWrapper {
               className="flex flex-column items-center p3 fixed"
 >
               <Button
+                            childrenWrapperClassName=""
                             className="t0 r0 m3 fixed"
                             color="white-denim"
                             disabled={false}
@@ -681,6 +687,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Button
+                  childrenWrapperClassName=""
                   className="t0 r0 m3 fixed"
                   color="white-denim"
                   disabled={false}
@@ -763,6 +770,7 @@ ShallowWrapper {
                     src="/assets/images/close-icon.svg"
                     style={Object {}}
 />,
+                  "childrenWrapperClassName": "",
                   "className": "t0 r0 m3 fixed",
                   "color": "white-denim",
                   "disabled": false,
@@ -1021,6 +1029,7 @@ ShallowWrapper {
                     className="flex flex-column items-center p3 fixed"
           >
                     <Button
+                              childrenWrapperClassName=""
                               className="t0 r0 m3 fixed"
                               color="white-denim"
                               disabled={false}
@@ -1111,6 +1120,7 @@ ShallowWrapper {
             className="flex flex-column items-center p3 fixed"
 >
             <Button
+                        childrenWrapperClassName=""
                         className="t0 r0 m3 fixed"
                         color="white-denim"
                         disabled={false}
@@ -1184,6 +1194,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
+                childrenWrapperClassName=""
                 className="t0 r0 m3 fixed"
                 color="white-denim"
                 disabled={false}
@@ -1264,6 +1275,7 @@ ShallowWrapper {
                   src="/assets/images/close-icon.svg"
                   style={Object {}}
 />,
+                "childrenWrapperClassName": "",
                 "className": "t0 r0 m3 fixed",
                 "color": "white-denim",
                 "disabled": false,
@@ -1489,6 +1501,7 @@ ShallowWrapper {
                         className="flex flex-column items-center p3 fixed"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="t0 r0 m3 fixed"
                                     color="white-denim"
                                     disabled={false}
@@ -1579,6 +1592,7 @@ ShallowWrapper {
               className="flex flex-column items-center p3 fixed"
 >
               <Button
+                            childrenWrapperClassName=""
                             className="t0 r0 m3 fixed"
                             color="white-denim"
                             disabled={false}
@@ -1652,6 +1666,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Button
+                  childrenWrapperClassName=""
                   className="t0 r0 m3 fixed"
                   color="white-denim"
                   disabled={false}
@@ -1732,6 +1747,7 @@ ShallowWrapper {
                     src="/assets/images/close-icon.svg"
                     style={Object {}}
 />,
+                  "childrenWrapperClassName": "",
                   "className": "t0 r0 m3 fixed",
                   "color": "white-denim",
                   "disabled": false,

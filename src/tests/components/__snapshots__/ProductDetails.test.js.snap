@@ -301,6 +301,7 @@ ShallowWrapper {
                     The Details
           </h2>
           <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="clear-madison-blue-border"
                     disabled={false}
@@ -434,6 +435,7 @@ ShallowWrapper {
 </h2>,
             Array [
               <Button
+                childrenWrapperClassName=""
                 className="m1"
                 color="clear-madison-blue-border"
                 disabled={false}
@@ -472,6 +474,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
+              "childrenWrapperClassName": "",
               "className": "m1",
               "color": "clear-madison-blue-border",
               "disabled": false,
@@ -1125,6 +1128,7 @@ ShallowWrapper {
                         The Details
             </h2>
             <Button
+                        childrenWrapperClassName=""
                         className="m1"
                         color="clear-madison-blue-border"
                         disabled={false}
@@ -1258,6 +1262,7 @@ ShallowWrapper {
 </h2>,
               Array [
                 <Button
+                  childrenWrapperClassName=""
                   className="m1"
                   color="clear-madison-blue-border"
                   disabled={false}
@@ -1296,6 +1301,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "m1",
                 "color": "clear-madison-blue-border",
                 "disabled": false,
@@ -2000,6 +2006,7 @@ ShallowWrapper {
                     The Details
           </h2>
           <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="clear-madison-blue-border"
                     disabled={false}
@@ -2129,6 +2136,7 @@ ShallowWrapper {
 </h2>,
             Array [
               <Button
+                childrenWrapperClassName=""
                 className="m1"
                 color="clear-madison-blue-border"
                 disabled={false}
@@ -2167,6 +2175,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
+              "childrenWrapperClassName": "",
               "className": "m1",
               "color": "clear-madison-blue-border",
               "disabled": false,
@@ -2800,6 +2809,7 @@ ShallowWrapper {
                         The Details
             </h2>
             <Button
+                        childrenWrapperClassName=""
                         className="m1"
                         color="clear-madison-blue-border"
                         disabled={false}
@@ -2929,6 +2939,7 @@ ShallowWrapper {
 </h2>,
               Array [
                 <Button
+                  childrenWrapperClassName=""
                   className="m1"
                   color="clear-madison-blue-border"
                   disabled={false}
@@ -2967,6 +2978,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "m1",
                 "color": "clear-madison-blue-border",
                 "disabled": false,

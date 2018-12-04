@@ -54,6 +54,7 @@ ShallowWrapper {
                 className="center bold text-madison-blue"
         />
 </div>,
+      "childrenWrapperClassName": "",
       "className": "",
       "color": "white-denim",
       "disabled": false,
@@ -148,6 +149,7 @@ ShallowWrapper {
                     className="center bold text-madison-blue"
           />
 </div>,
+        "childrenWrapperClassName": "",
         "className": "",
         "color": "white-denim",
         "disabled": false,
@@ -275,6 +277,7 @@ ShallowWrapper {
                 className="center bold text-madison-blue"
         />
 </div>,
+      "childrenWrapperClassName": "",
       "className": "",
       "color": "white-denim",
       "disabled": false,
@@ -369,6 +372,7 @@ ShallowWrapper {
                     className="center bold text-madison-blue"
           />
 </div>,
+        "childrenWrapperClassName": "",
         "className": "",
         "color": "white-denim",
         "disabled": false,

@@ -380,6 +380,7 @@ ShallowWrapper {
                                         className="col"
                               >
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className="small"
                                                   color="white-madison-blue"
                                                   disabled={true}
@@ -815,6 +816,7 @@ ShallowWrapper {
                                     className="col"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="small"
                                                 color="white-madison-blue"
                                                 disabled={true}
@@ -953,6 +955,7 @@ ShallowWrapper {
                                 className="col"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="small"
                                                 color="white-madison-blue"
                                                 disabled={true}
@@ -1331,6 +1334,7 @@ ShallowWrapper {
                     className="col"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className="small"
                                         color="white-madison-blue"
                                         disabled={true}
@@ -1459,6 +1463,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <Button
+                      childrenWrapperClassName=""
                       className="small"
                       color="white-madison-blue"
                       disabled={true}
@@ -1502,6 +1507,7 @@ ShallowWrapper {
                           0.00
 </span>,
                       ],
+                      "childrenWrapperClassName": "",
                       "className": "small",
                       "color": "white-madison-blue",
                       "disabled": true,
@@ -1749,6 +1755,7 @@ ShallowWrapper {
                                                 className="col"
                                     >
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className="small"
                                                             color="white-madison-blue"
                                                             disabled={true}
@@ -2184,6 +2191,7 @@ ShallowWrapper {
                                           className="col"
                             >
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className="small"
                                                         color="white-madison-blue"
                                                         disabled={true}
@@ -2322,6 +2330,7 @@ ShallowWrapper {
                                     className="col"
                   >
                                     <Button
+                                                      childrenWrapperClassName=""
                                                       className="small"
                                                       color="white-madison-blue"
                                                       disabled={true}
@@ -2700,6 +2709,7 @@ ShallowWrapper {
                       className="col"
 >
                       <Button
+                                            childrenWrapperClassName=""
                                             className="small"
                                             color="white-madison-blue"
                                             disabled={true}
@@ -2828,6 +2838,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <Button
+                        childrenWrapperClassName=""
                         className="small"
                         color="white-madison-blue"
                         disabled={true}
@@ -2871,6 +2882,7 @@ ShallowWrapper {
                             0.00
 </span>,
                         ],
+                        "childrenWrapperClassName": "",
                         "className": "small",
                         "color": "white-madison-blue",
                         "disabled": true,
@@ -3181,6 +3193,7 @@ ShallowWrapper {
                                         className="col"
                               >
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className="small"
                                                   color="white-madison-blue"
                                                   disabled={true}
@@ -3586,6 +3599,7 @@ ShallowWrapper {
                                     className="col"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="small"
                                                 color="white-madison-blue"
                                                 disabled={true}
@@ -3724,6 +3738,7 @@ ShallowWrapper {
                                 className="col"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="small"
                                                 color="white-madison-blue"
                                                 disabled={true}
@@ -4102,6 +4117,7 @@ ShallowWrapper {
                     className="col"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className="small"
                                         color="white-madison-blue"
                                         disabled={true}
@@ -4230,6 +4246,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <Button
+                      childrenWrapperClassName=""
                       className="small"
                       color="white-madison-blue"
                       disabled={true}
@@ -4273,6 +4290,7 @@ ShallowWrapper {
                           0.00
 </span>,
                       ],
+                      "childrenWrapperClassName": "",
                       "className": "small",
                       "color": "white-madison-blue",
                       "disabled": true,
@@ -4514,6 +4532,7 @@ ShallowWrapper {
                                                 className="col"
                                     >
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className="small"
                                                             color="white-madison-blue"
                                                             disabled={true}
@@ -4919,6 +4938,7 @@ ShallowWrapper {
                                           className="col"
                             >
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className="small"
                                                         color="white-madison-blue"
                                                         disabled={true}
@@ -5057,6 +5077,7 @@ ShallowWrapper {
                                     className="col"
                   >
                                     <Button
+                                                      childrenWrapperClassName=""
                                                       className="small"
                                                       color="white-madison-blue"
                                                       disabled={true}
@@ -5435,6 +5456,7 @@ ShallowWrapper {
                       className="col"
 >
                       <Button
+                                            childrenWrapperClassName=""
                                             className="small"
                                             color="white-madison-blue"
                                             disabled={true}
@@ -5563,6 +5585,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": <Button
+                        childrenWrapperClassName=""
                         className="small"
                         color="white-madison-blue"
                         disabled={true}
@@ -5606,6 +5629,7 @@ ShallowWrapper {
                             0.00
 </span>,
                         ],
+                        "childrenWrapperClassName": "",
                         "className": "small",
                         "color": "white-madison-blue",
                         "disabled": true,

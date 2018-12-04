@@ -141,6 +141,7 @@ ShallowWrapper {
                         </p>
                 </div>
                 <Button
+                        childrenWrapperClassName=""
                         className="mx-auto inline-flex"
                         color="white-peach"
                         disabled={false}
@@ -223,6 +224,7 @@ ShallowWrapper {
                         </p>
             </div>
             <Button
+                        childrenWrapperClassName=""
                         className="mx-auto inline-flex"
                         color="white-peach"
                         disabled={false}
@@ -303,6 +305,7 @@ ShallowWrapper {
                 </p>
 </div>,
               <Button
+                childrenWrapperClassName=""
                 className="mx-auto inline-flex"
                 color="white-peach"
                 disabled={false}
@@ -468,6 +471,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "mx-auto inline-flex",
                 "color": "white-peach",
                 "disabled": false,
@@ -583,6 +587,7 @@ ShallowWrapper {
                               </p>
                     </div>
                     <Button
+                              childrenWrapperClassName=""
                               className="mx-auto inline-flex"
                               color="white-peach"
                               disabled={false}
@@ -665,6 +670,7 @@ ShallowWrapper {
                             </p>
               </div>
               <Button
+                            childrenWrapperClassName=""
                             className="mx-auto inline-flex"
                             color="white-peach"
                             disabled={false}
@@ -745,6 +751,7 @@ ShallowWrapper {
                   </p>
 </div>,
                 <Button
+                  childrenWrapperClassName=""
                   className="mx-auto inline-flex"
                   color="white-peach"
                   disabled={false}
@@ -910,6 +917,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "mx-auto inline-flex",
                   "color": "white-peach",
                   "disabled": false,

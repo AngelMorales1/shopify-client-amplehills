@@ -95,6 +95,7 @@ ShallowWrapper {
                         className="inline-flex"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -304,6 +305,7 @@ ShallowWrapper {
                         className="inline-flex"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -511,6 +513,7 @@ ShallowWrapper {
                 className="inline-flex"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -550,6 +553,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
+                  childrenWrapperClassName=""
                   className="nowrap inline-flex"
                   color="white-peach"
                   disabled={false}
@@ -574,6 +578,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "nowrap inline-flex",
                   "color": "white-peach",
                   "disabled": false,
@@ -1543,6 +1548,7 @@ ShallowWrapper {
                               className="inline-flex"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="nowrap inline-flex"
                                         color="white-peach"
                                         disabled={false}
@@ -1752,6 +1758,7 @@ ShallowWrapper {
                             className="inline-flex"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="nowrap inline-flex"
                                           color="white-peach"
                                           disabled={false}
@@ -1959,6 +1966,7 @@ ShallowWrapper {
                   className="inline-flex"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -1998,6 +2006,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Button
+                    childrenWrapperClassName=""
                     className="nowrap inline-flex"
                     color="white-peach"
                     disabled={false}
@@ -2022,6 +2031,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "nowrap inline-flex",
                     "color": "white-peach",
                     "disabled": false,
@@ -3016,6 +3026,7 @@ ShallowWrapper {
                         className="inline-flex"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -3225,6 +3236,7 @@ ShallowWrapper {
                         className="inline-flex"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -3432,6 +3444,7 @@ ShallowWrapper {
                 className="inline-flex"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -3471,6 +3484,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
+                  childrenWrapperClassName=""
                   className="nowrap inline-flex"
                   color="white-peach"
                   disabled={false}
@@ -3495,6 +3509,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "nowrap inline-flex",
                   "color": "white-peach",
                   "disabled": false,
@@ -4464,6 +4479,7 @@ ShallowWrapper {
                               className="inline-flex"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="nowrap inline-flex"
                                         color="white-peach"
                                         disabled={false}
@@ -4673,6 +4689,7 @@ ShallowWrapper {
                             className="inline-flex"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="nowrap inline-flex"
                                           color="white-peach"
                                           disabled={false}
@@ -4880,6 +4897,7 @@ ShallowWrapper {
                   className="inline-flex"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -4919,6 +4937,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Button
+                    childrenWrapperClassName=""
                     className="nowrap inline-flex"
                     color="white-peach"
                     disabled={false}
@@ -4943,6 +4962,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "nowrap inline-flex",
                     "color": "white-peach",
                     "disabled": false,

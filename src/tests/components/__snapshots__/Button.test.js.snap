@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -105,6 +106,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -247,6 +249,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -387,6 +390,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className=""
     color="white-denim"
     disabled={false}

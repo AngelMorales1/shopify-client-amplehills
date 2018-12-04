@@ -96,6 +96,7 @@ ShallowWrapper {
                     className="carter text-peach center"
           />
           <Button
+                    childrenWrapperClassName=""
                     className="uppercase detail"
                     color="peach"
                     disabled={false}
@@ -133,6 +134,7 @@ ShallowWrapper {
               className="carter text-peach center"
 />,
             <Button
+              childrenWrapperClassName=""
               className="uppercase detail"
               color="peach"
               disabled={false}
@@ -187,6 +189,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
+              "childrenWrapperClassName": "",
               "className": "uppercase detail",
               "color": "peach",
               "disabled": false,
@@ -233,6 +236,7 @@ ShallowWrapper {
                         className="carter text-peach center"
             />
             <Button
+                        childrenWrapperClassName=""
                         className="uppercase detail"
                         color="peach"
                         disabled={false}
@@ -270,6 +274,7 @@ ShallowWrapper {
                 className="carter text-peach center"
 />,
               <Button
+                childrenWrapperClassName=""
                 className="uppercase detail"
                 color="peach"
                 disabled={false}
@@ -324,6 +329,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "uppercase detail",
                 "color": "peach",
                 "disabled": false,

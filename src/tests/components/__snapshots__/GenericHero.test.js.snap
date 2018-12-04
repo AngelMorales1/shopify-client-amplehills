@@ -106,6 +106,7 @@ ShallowWrapper {
                         />
                         <div>
                                 <Button
+                                        childrenWrapperClassName=""
                                         className="inline-flex mt3"
                                         color="madison-blue"
                                         disabled={false}
@@ -167,6 +168,7 @@ ShallowWrapper {
                         />
                         <div>
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="inline-flex mt3"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -224,6 +226,7 @@ ShallowWrapper {
               />
               <div>
                             <Button
+                                          childrenWrapperClassName=""
                                           className="inline-flex mt3"
                                           color="madison-blue"
                                           disabled={false}
@@ -273,6 +276,7 @@ ShallowWrapper {
 />,
                 <div>
                   <Button
+                                    childrenWrapperClassName=""
                                     className="inline-flex mt3"
                                     color="madison-blue"
                                     disabled={false}
@@ -343,6 +347,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Button
+                    childrenWrapperClassName=""
                     className="inline-flex mt3"
                     color="madison-blue"
                     disabled={false}
@@ -365,6 +370,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "inline-flex mt3",
                     "color": "madison-blue",
                     "disabled": false,
@@ -436,6 +442,7 @@ ShallowWrapper {
                               />
                               <div>
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className="inline-flex mt3"
                                                   color="madison-blue"
                                                   disabled={false}
@@ -497,6 +504,7 @@ ShallowWrapper {
                             />
                             <div>
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className="inline-flex mt3"
                                                         color="madison-blue"
                                                         disabled={false}
@@ -554,6 +562,7 @@ ShallowWrapper {
                 />
                 <div>
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="inline-flex mt3"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -603,6 +612,7 @@ ShallowWrapper {
 />,
                   <div>
                     <Button
+                                        childrenWrapperClassName=""
                                         className="inline-flex mt3"
                                         color="madison-blue"
                                         disabled={false}
@@ -673,6 +683,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <Button
+                      childrenWrapperClassName=""
                       className="inline-flex mt3"
                       color="madison-blue"
                       disabled={false}
@@ -695,6 +706,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "inline-flex mt3",
                       "color": "madison-blue",
                       "disabled": false,

@@ -26,6 +26,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Button
+          childrenWrapperClassName=""
           className=""
           color="seafoam-madison-blue-border"
           disabled={false}
@@ -56,6 +57,7 @@ ShallowWrapper {
           variant="quantity-small"
 />,
         <Button
+          childrenWrapperClassName=""
           className=""
           color="seafoam-madison-blue-border"
           disabled={false}
@@ -81,6 +83,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": null,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "seafoam-madison-blue-border",
           "disabled": false,
@@ -128,6 +131,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": null,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "seafoam-madison-blue-border",
           "disabled": false,
@@ -157,6 +161,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Button
+            childrenWrapperClassName=""
             className=""
             color="seafoam-madison-blue-border"
             disabled={false}
@@ -187,6 +192,7 @@ ShallowWrapper {
             variant="quantity-small"
 />,
           <Button
+            childrenWrapperClassName=""
             className=""
             color="seafoam-madison-blue-border"
             disabled={false}
@@ -212,6 +218,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": null,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "seafoam-madison-blue-border",
             "disabled": false,
@@ -259,6 +266,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": null,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "seafoam-madison-blue-border",
             "disabled": false,
@@ -317,6 +325,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Button
+          childrenWrapperClassName=""
           className=""
           color="white-madison-blue-border"
           disabled={false}
@@ -347,6 +356,7 @@ ShallowWrapper {
           variant="quantity"
 />,
         <Button
+          childrenWrapperClassName=""
           className=""
           color="white-madison-blue-border"
           disabled={false}
@@ -372,6 +382,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": null,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "white-madison-blue-border",
           "disabled": false,
@@ -419,6 +430,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": null,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "white-madison-blue-border",
           "disabled": false,
@@ -448,6 +460,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Button
+            childrenWrapperClassName=""
             className=""
             color="white-madison-blue-border"
             disabled={false}
@@ -478,6 +491,7 @@ ShallowWrapper {
             variant="quantity"
 />,
           <Button
+            childrenWrapperClassName=""
             className=""
             color="white-madison-blue-border"
             disabled={false}
@@ -503,6 +517,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": null,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "white-madison-blue-border",
             "disabled": false,
@@ -550,6 +565,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": null,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "white-madison-blue-border",
             "disabled": false,

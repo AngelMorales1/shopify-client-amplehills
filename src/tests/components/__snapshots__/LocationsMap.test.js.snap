@@ -79,6 +79,7 @@ ShallowWrapper {
           className="absolute t0 l0 flex p3"
 >
           <Button
+                    childrenWrapperClassName=""
                     className="mr2 flex flex-wrap items-center drop-shadow"
                     color="madison-blue"
                     disabled={false}
@@ -189,6 +190,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Button
+              childrenWrapperClassName=""
               className="mr2 flex flex-wrap items-center drop-shadow"
               color="madison-blue"
               disabled={false}
@@ -215,6 +217,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": null,
+              "childrenWrapperClassName": "",
               "className": "mr2 flex flex-wrap items-center drop-shadow",
               "color": "madison-blue",
               "disabled": false,
@@ -443,6 +446,7 @@ ShallowWrapper {
             className="absolute t0 l0 flex p3"
 >
             <Button
+                        childrenWrapperClassName=""
                         className="mr2 flex flex-wrap items-center drop-shadow"
                         color="madison-blue"
                         disabled={false}
@@ -553,6 +557,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
+                childrenWrapperClassName=""
                 className="mr2 flex flex-wrap items-center drop-shadow"
                 color="madison-blue"
                 disabled={false}
@@ -579,6 +584,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": null,
+                "childrenWrapperClassName": "",
                 "className": "mr2 flex flex-wrap items-center drop-shadow",
                 "color": "madison-blue",
                 "disabled": false,

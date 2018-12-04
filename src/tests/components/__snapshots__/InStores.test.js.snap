@@ -67,6 +67,7 @@ ShallowWrapper {
                     className="flex flex-row justify-center flex-wrap w100"
           >
                     <Button
+                              childrenWrapperClassName=""
                               className="m1"
                               color="madison-blue"
                               disabled={false}
@@ -82,6 +83,7 @@ ShallowWrapper {
                               variant="primary-small"
                     />
                     <Button
+                              childrenWrapperClassName=""
                               className="m1"
                               color="madison-blue"
                               disabled={false}
@@ -117,6 +119,7 @@ ShallowWrapper {
                               </p>
                     </div>
                     <Button
+                              childrenWrapperClassName=""
                               className=""
                               color="peach"
                               disabled={false}
@@ -148,6 +151,7 @@ ShallowWrapper {
                               </p>
                     </div>
                     <Button
+                              childrenWrapperClassName=""
                               className=""
                               color="peach"
                               disabled={false}
@@ -192,6 +196,7 @@ ShallowWrapper {
               className="flex flex-row justify-center flex-wrap w100"
 >
               <Button
+                            childrenWrapperClassName=""
                             className="m1"
                             color="madison-blue"
                             disabled={false}
@@ -207,6 +212,7 @@ ShallowWrapper {
                             variant="primary-small"
               />
               <Button
+                            childrenWrapperClassName=""
                             className="m1"
                             color="madison-blue"
                             disabled={false}
@@ -261,6 +267,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Button
+                  childrenWrapperClassName=""
                   className="m1"
                   color="madison-blue"
                   disabled={false}
@@ -276,6 +283,7 @@ ShallowWrapper {
                   variant="primary-small"
 />,
                 <Button
+                  childrenWrapperClassName=""
                   className="m1"
                   color="madison-blue"
                   disabled={false}
@@ -301,6 +309,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "m1",
                   "color": "madison-blue",
                   "disabled": false,
@@ -325,6 +334,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "m1",
                   "color": "madison-blue",
                   "disabled": false,
@@ -371,6 +381,7 @@ ShallowWrapper {
                             </p>
               </div>
               <Button
+                            childrenWrapperClassName=""
                             className=""
                             color="peach"
                             disabled={false}
@@ -402,6 +413,7 @@ ShallowWrapper {
                             </p>
               </div>
               <Button
+                            childrenWrapperClassName=""
                             className=""
                             color="peach"
                             disabled={false}
@@ -441,6 +453,7 @@ ShallowWrapper {
                   </p>
 </div>,
                 <Button
+                  childrenWrapperClassName=""
                   className=""
                   color="peach"
                   disabled={false}
@@ -511,6 +524,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "",
                   "color": "peach",
                   "disabled": false,
@@ -551,6 +565,7 @@ ShallowWrapper {
                   </p>
 </div>,
                 <Button
+                  childrenWrapperClassName=""
                   className=""
                   color="peach"
                   disabled={false}
@@ -621,6 +636,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "",
                   "color": "peach",
                   "disabled": false,
@@ -676,6 +692,7 @@ ShallowWrapper {
                         className="flex flex-row justify-center flex-wrap w100"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="madison-blue"
                                     disabled={false}
@@ -691,6 +708,7 @@ ShallowWrapper {
                                     variant="primary-small"
                         />
                         <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="madison-blue"
                                     disabled={false}
@@ -726,6 +744,7 @@ ShallowWrapper {
                                     </p>
                         </div>
                         <Button
+                                    childrenWrapperClassName=""
                                     className=""
                                     color="peach"
                                     disabled={false}
@@ -757,6 +776,7 @@ ShallowWrapper {
                                     </p>
                         </div>
                         <Button
+                                    childrenWrapperClassName=""
                                     className=""
                                     color="peach"
                                     disabled={false}
@@ -801,6 +821,7 @@ ShallowWrapper {
                 className="flex flex-row justify-center flex-wrap w100"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="madison-blue"
                                 disabled={false}
@@ -816,6 +837,7 @@ ShallowWrapper {
                                 variant="primary-small"
                 />
                 <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="madison-blue"
                                 disabled={false}
@@ -870,6 +892,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="madison-blue"
                     disabled={false}
@@ -885,6 +908,7 @@ ShallowWrapper {
                     variant="primary-small"
 />,
                   <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="madison-blue"
                     disabled={false}
@@ -910,6 +934,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "m1",
                     "color": "madison-blue",
                     "disabled": false,
@@ -934,6 +959,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "m1",
                     "color": "madison-blue",
                     "disabled": false,
@@ -980,6 +1006,7 @@ ShallowWrapper {
                                 </p>
                 </div>
                 <Button
+                                childrenWrapperClassName=""
                                 className=""
                                 color="peach"
                                 disabled={false}
@@ -1011,6 +1038,7 @@ ShallowWrapper {
                                 </p>
                 </div>
                 <Button
+                                childrenWrapperClassName=""
                                 className=""
                                 color="peach"
                                 disabled={false}
@@ -1050,6 +1078,7 @@ ShallowWrapper {
                     </p>
 </div>,
                   <Button
+                    childrenWrapperClassName=""
                     className=""
                     color="peach"
                     disabled={false}
@@ -1120,6 +1149,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "",
                     "color": "peach",
                     "disabled": false,
@@ -1160,6 +1190,7 @@ ShallowWrapper {
                     </p>
 </div>,
                   <Button
+                    childrenWrapperClassName=""
                     className=""
                     color="peach"
                     disabled={false}
@@ -1230,6 +1261,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "",
                     "color": "peach",
                     "disabled": false,
