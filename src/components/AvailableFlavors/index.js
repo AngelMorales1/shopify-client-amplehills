@@ -59,7 +59,7 @@ class AvailableFlavors extends Component {
           'py4 px3'
         )}
       >
-        <div className="mx-auto flex flex-column items-center container-width">
+        <div className="mx-auto mt2 flex flex-column items-center container-width">
           <h2 className="block-headline center mb3">{title}</h2>
           <div
             className={cx(
@@ -108,7 +108,9 @@ class AvailableFlavors extends Component {
                         Location Special
                       </p>
                     )}
-                    <p className="small bold text-madison-blue">{title}</p>
+                    <p className="small bold text-madison-blue white-space-normal">
+                      {title}
+                    </p>
                   </div>
                 </Button>
               );

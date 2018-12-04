@@ -233,4 +233,13 @@
       }
     }
   }
+
+  &--text-peach {
+    :global {
+      .Select-placeholder,
+      .Select-value {
+        color: color('peach');
+      }
+    }
+  }
 }
