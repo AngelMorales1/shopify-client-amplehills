@@ -62,9 +62,9 @@ class Cart extends Component {
     );
   };
 
-  handleGiftMessageChange = note => {
-    note ? this.setState({ note }) : this.setState({ note: '' });
-    this.updateNote(note);
+  handleGiftMessageChange = newNote => {
+    const note = newNote || '';
+    this.setState({ note }, () => this.updateNote(note));
   };
 
   render() {
