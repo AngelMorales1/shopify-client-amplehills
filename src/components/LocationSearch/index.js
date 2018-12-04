@@ -30,7 +30,7 @@ class LocationSearch extends Component {
                 'carter text-peach col-7 md-col-12 mr2'
               )}
             >
-              Find an Ample Hill’s Creamery near you
+              Find an Ample Hills near you!
             </h2>
             <Button
               variant="style-none"

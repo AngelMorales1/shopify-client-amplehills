@@ -20,6 +20,10 @@ $menu-height: spacing(37.5);
     }
   }
 
+  &__title {
+    max-width: 24rem;
+  }
+
   &__product-cards {
     order: 2;
 

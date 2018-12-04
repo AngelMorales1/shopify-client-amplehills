@@ -19,13 +19,19 @@
     }
   }
 
-  &__text {
-    font-family: $font-carter;
-    font-size: $font-6;
-
+  &__text-container {
     @media ($medium-up) {
       margin-right: spacing(6);
     }
+  }
+
+  &__help-text {
+    top: spacing(-4);
+  }
+
+  &__text {
+    font-family: $font-carter;
+    font-size: $font-6;
   }
 
   &__text-field {
