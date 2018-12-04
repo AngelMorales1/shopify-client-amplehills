@@ -4,6 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import locationModel from 'models/locationModel';
 import getLocationCity from 'utils/getLocationCity';
+import { Button } from 'components/base';
 
 import styles from './LocationCard.scss';
 
@@ -50,30 +51,17 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
           </span>
         </div>
       ) : null}
-      {location.seasonal ? (
-        <div
-          className={cx(
-            styles['LocationCard__card-seasonal-image'],
-            'z-1 absolute'
-          )}
-          style={{
-            background: 'url(assets/images/seasonal-icon.png) no-repeat center',
-            backgroundSize: 'cover'
-          }}
-        />
-      ) : (
-        <div
-          className={cx(
-            styles['LocationCard__card-seasonal-image'],
-            'z-1 absolute'
-          )}
-          style={{
-            background:
-              'url(assets/images/year-round-icon.png) no-repeat center',
-            backgroundSize: 'cover'
-          }}
-        />
-      )}
+      <div
+        className={cx(
+          styles['LocationCard__card-seasonal-image'],
+          'circle z-1 absolute bg-peach flex justify-center items-center p1',
+          { 'bg-bright-turquoise': location.seasonal }
+        )}
+      >
+        <p className="center carter text-white">
+          {location.seasonal ? 'Seasonal' : 'Year Round'}
+        </p>
+      </div>
       <div
         style={
           location.image
@@ -109,14 +97,14 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
               ) : null}
             </div>
             {location.delivery ? (
-              <div
-                className={cx(
-                  styles['LocationCard__card-tag'],
-                  'uppercase bold bg-madison-blue inline-block text-white mt2'
-                )}
-              >
-                <span className="text-white">Delivery</span>
-              </div>
+              <Button
+                className={cx(styles['LocationCard__card-tag'], 'uppercase')}
+                color="madison-blue"
+                variant="primary-small"
+                label="Delivery"
+                to={location.orderDeliveryLink}
+                newTab={true}
+              />
             ) : null}
           </div>
         </div>
