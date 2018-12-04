@@ -77,12 +77,10 @@ class LocationDetailHero extends Component {
               <div className="col-12 md-col-6 mb4 flex flex-row justify-between items-center">
                 <div className="mr1">
                   <p className="uppercase text-peach bold copy mb1">info</p>
-                  <p className="block-subheadline">{location.address1}</p>
-                  <p className="block-subheadline">
-                    {getLocationCity(location)}
-                  </p>
+                  <p className="small mb1">{location.address1}</p>
+                  <p className="small mb1">{getLocationCity(location)}</p>
                   {location.phone ? (
-                    <p className="block-subheadline">{location.phone}</p>
+                    <p className="small">{location.phone}</p>
                   ) : null}
                 </div>
                 <div
@@ -135,7 +133,7 @@ class LocationDetailHero extends Component {
                 <p className="uppercase text-peach bold copy mb1">hours</p>
                 {closeLocationForTheSeason ? (
                   <FormFlash
-                    className="mb1 center"
+                    className="mb2 center"
                     error={true}
                     message="Closed for the Season"
                   />
@@ -146,10 +144,8 @@ class LocationDetailHero extends Component {
 
                   return !dateIsClosed ? (
                     <div key={key} className="flex flex-row justify-between">
-                      <p className="bold block-subheadline mr1">{key}</p>
-                      <p className="col-5 md-col-6 block-subheadline">
-                        {hour[key]}
-                      </p>
+                      <p className="bold small mr1 mb1">{key}</p>
+                      <p className="col-5 md-col-6 small mb1">{hour[key]}</p>
                     </div>
                   ) : null;
                 })}
