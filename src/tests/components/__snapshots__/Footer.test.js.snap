@@ -84,7 +84,7 @@ ShallowWrapper {
         className="flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt3"
+                className="flex flex-column justify-between col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -294,7 +294,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt3"
+            className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -531,7 +531,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -1537,7 +1537,7 @@ ShallowWrapper {
           className="flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+                    className="flex flex-column justify-between col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -1747,7 +1747,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt3"
+              className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -1984,7 +1984,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [
@@ -3015,7 +3015,7 @@ ShallowWrapper {
         className="flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt3"
+                className="flex flex-column justify-between col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -3225,7 +3225,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt3"
+            className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -3462,7 +3462,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -4468,7 +4468,7 @@ ShallowWrapper {
           className="flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+                    className="flex flex-column justify-between col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -4678,7 +4678,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt3"
+              className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -4915,7 +4915,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [

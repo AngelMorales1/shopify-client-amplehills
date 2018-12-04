@@ -21,13 +21,22 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex items-center"
+          className="flex items-center relative"
 >
-          <p
-                    className="my2 text-peach center"
+          <div
+                    className="flex flex-column justify-center items-center my2"
           >
-                    Sign up for the latest news from us!
-          </p>
+                    <p
+                              className="small carter center absolute"
+                    >
+                              Get the inside scoop on new flavors, discounts and more.
+                    </p>
+                    <p
+                              className="text-peach center"
+                    >
+                              Sign up for our newsletter!
+                    </p>
+          </div>
           <Image
                     alt="Decorative arrow"
                     bg={false}
@@ -52,11 +61,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p
-              className="my2 text-peach center"
+            <div
+              className="flex flex-column justify-center items-center my2"
 >
-              Sign up for the latest news from us!
-</p>,
+              <p
+                            className="small carter center absolute"
+              >
+                            Get the inside scoop on new flavors, discounts and more.
+              </p>
+              <p
+                            className="text-peach center"
+              >
+                            Sign up for our newsletter!
+              </p>
+</div>,
             <Image
               alt="Decorative arrow"
               bg={false}
@@ -66,7 +84,7 @@ ShallowWrapper {
               style={Object {}}
 />,
           ],
-          "className": "flex items-center",
+          "className": "flex items-center relative",
         },
         "ref": null,
         "rendered": Array [
@@ -75,12 +93,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Sign up for the latest news from us!",
-              "className": "my2 text-peach center",
+              "children": Array [
+                <p
+                  className="small carter center absolute"
+>
+                  Get the inside scoop on new flavors, discounts and more.
+</p>,
+                <p
+                  className="text-peach center"
+>
+                  Sign up for our newsletter!
+</p>,
+              ],
+              "className": "flex flex-column justify-center items-center my2",
             },
             "ref": null,
-            "rendered": "Sign up for the latest news from us!",
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Get the inside scoop on new flavors, discounts and more.",
+                  "className": "small carter center absolute",
+                },
+                "ref": null,
+                "rendered": "Get the inside scoop on new flavors, discounts and more.",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign up for our newsletter!",
+                  "className": "text-peach center",
+                },
+                "ref": null,
+                "rendered": "Sign up for our newsletter!",
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -125,13 +179,22 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex items-center"
+            className="flex items-center relative"
 >
-            <p
-                        className="my2 text-peach center"
+            <div
+                        className="flex flex-column justify-center items-center my2"
             >
-                        Sign up for the latest news from us!
-            </p>
+                        <p
+                                    className="small carter center absolute"
+                        >
+                                    Get the inside scoop on new flavors, discounts and more.
+                        </p>
+                        <p
+                                    className="text-peach center"
+                        >
+                                    Sign up for our newsletter!
+                        </p>
+            </div>
             <Image
                         alt="Decorative arrow"
                         bg={false}
@@ -156,11 +219,20 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p
-                className="my2 text-peach center"
+              <div
+                className="flex flex-column justify-center items-center my2"
 >
-                Sign up for the latest news from us!
-</p>,
+                <p
+                                className="small carter center absolute"
+                >
+                                Get the inside scoop on new flavors, discounts and more.
+                </p>
+                <p
+                                className="text-peach center"
+                >
+                                Sign up for our newsletter!
+                </p>
+</div>,
               <Image
                 alt="Decorative arrow"
                 bg={false}
@@ -170,7 +242,7 @@ ShallowWrapper {
                 style={Object {}}
 />,
             ],
-            "className": "flex items-center",
+            "className": "flex items-center relative",
           },
           "ref": null,
           "rendered": Array [
@@ -179,12 +251,48 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Sign up for the latest news from us!",
-                "className": "my2 text-peach center",
+                "children": Array [
+                  <p
+                    className="small carter center absolute"
+>
+                    Get the inside scoop on new flavors, discounts and more.
+</p>,
+                  <p
+                    className="text-peach center"
+>
+                    Sign up for our newsletter!
+</p>,
+                ],
+                "className": "flex flex-column justify-center items-center my2",
               },
               "ref": null,
-              "rendered": "Sign up for the latest news from us!",
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Get the inside scoop on new flavors, discounts and more.",
+                    "className": "small carter center absolute",
+                  },
+                  "ref": null,
+                  "rendered": "Get the inside scoop on new flavors, discounts and more.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Sign up for our newsletter!",
+                    "className": "text-peach center",
+                  },
+                  "ref": null,
+                  "rendered": "Sign up for our newsletter!",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,
@@ -253,13 +361,22 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
-          className="flex items-center"
+          className="flex items-center relative"
 >
-          <p
-                    className="my2 text-peach center"
+          <div
+                    className="flex flex-column justify-center items-center my2"
           >
-                    Sign up for the latest news from us!
-          </p>
+                    <p
+                              className="small carter center absolute"
+                    >
+                              Get the inside scoop on new flavors, discounts and more.
+                    </p>
+                    <p
+                              className="text-peach center"
+                    >
+                              Sign up for our newsletter!
+                    </p>
+          </div>
           <Image
                     alt="Decorative arrow"
                     bg={false}
@@ -284,11 +401,20 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <p
-              className="my2 text-peach center"
+            <div
+              className="flex flex-column justify-center items-center my2"
 >
-              Sign up for the latest news from us!
-</p>,
+              <p
+                            className="small carter center absolute"
+              >
+                            Get the inside scoop on new flavors, discounts and more.
+              </p>
+              <p
+                            className="text-peach center"
+              >
+                            Sign up for our newsletter!
+              </p>
+</div>,
             <Image
               alt="Decorative arrow"
               bg={false}
@@ -298,7 +424,7 @@ ShallowWrapper {
               style={Object {}}
 />,
           ],
-          "className": "flex items-center",
+          "className": "flex items-center relative",
         },
         "ref": null,
         "rendered": Array [
@@ -307,12 +433,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Sign up for the latest news from us!",
-              "className": "my2 text-peach center",
+              "children": Array [
+                <p
+                  className="small carter center absolute"
+>
+                  Get the inside scoop on new flavors, discounts and more.
+</p>,
+                <p
+                  className="text-peach center"
+>
+                  Sign up for our newsletter!
+</p>,
+              ],
+              "className": "flex flex-column justify-center items-center my2",
             },
             "ref": null,
-            "rendered": "Sign up for the latest news from us!",
-            "type": "p",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Get the inside scoop on new flavors, discounts and more.",
+                  "className": "small carter center absolute",
+                },
+                "ref": null,
+                "rendered": "Get the inside scoop on new flavors, discounts and more.",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Sign up for our newsletter!",
+                  "className": "text-peach center",
+                },
+                "ref": null,
+                "rendered": "Sign up for our newsletter!",
+                "type": "p",
+              },
+            ],
+            "type": "div",
           },
           Object {
             "instance": null,
@@ -357,13 +519,22 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex items-center"
+            className="flex items-center relative"
 >
-            <p
-                        className="my2 text-peach center"
+            <div
+                        className="flex flex-column justify-center items-center my2"
             >
-                        Sign up for the latest news from us!
-            </p>
+                        <p
+                                    className="small carter center absolute"
+                        >
+                                    Get the inside scoop on new flavors, discounts and more.
+                        </p>
+                        <p
+                                    className="text-peach center"
+                        >
+                                    Sign up for our newsletter!
+                        </p>
+            </div>
             <Image
                         alt="Decorative arrow"
                         bg={false}
@@ -388,11 +559,20 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <p
-                className="my2 text-peach center"
+              <div
+                className="flex flex-column justify-center items-center my2"
 >
-                Sign up for the latest news from us!
-</p>,
+                <p
+                                className="small carter center absolute"
+                >
+                                Get the inside scoop on new flavors, discounts and more.
+                </p>
+                <p
+                                className="text-peach center"
+                >
+                                Sign up for our newsletter!
+                </p>
+</div>,
               <Image
                 alt="Decorative arrow"
                 bg={false}
@@ -402,7 +582,7 @@ ShallowWrapper {
                 style={Object {}}
 />,
             ],
-            "className": "flex items-center",
+            "className": "flex items-center relative",
           },
           "ref": null,
           "rendered": Array [
@@ -411,12 +591,48 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Sign up for the latest news from us!",
-                "className": "my2 text-peach center",
+                "children": Array [
+                  <p
+                    className="small carter center absolute"
+>
+                    Get the inside scoop on new flavors, discounts and more.
+</p>,
+                  <p
+                    className="text-peach center"
+>
+                    Sign up for our newsletter!
+</p>,
+                ],
+                "className": "flex flex-column justify-center items-center my2",
               },
               "ref": null,
-              "rendered": "Sign up for the latest news from us!",
-              "type": "p",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Get the inside scoop on new flavors, discounts and more.",
+                    "className": "small carter center absolute",
+                  },
+                  "ref": null,
+                  "rendered": "Get the inside scoop on new flavors, discounts and more.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Sign up for our newsletter!",
+                    "className": "text-peach center",
+                  },
+                  "ref": null,
+                  "rendered": "Sign up for our newsletter!",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
             },
             Object {
               "instance": null,

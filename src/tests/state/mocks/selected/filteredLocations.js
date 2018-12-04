@@ -17,6 +17,7 @@ export default [
     region: 'Manhattan',
     state: 'NY',
     zip: '10013',
+    cakePickupTimeSlots: [],
     coordinates: {
       lon: 80.123,
       lat: 40.789

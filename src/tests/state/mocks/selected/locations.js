@@ -28,6 +28,7 @@ export default [
       lat: 40.789
     },
     orderDeliveryLink: '',
+    cakePickupTimeSlots: [],
     participantsLimit: 55,
     participantsLimitText: '',
     partyAvailable: false,
@@ -86,6 +87,7 @@ export default [
     },
     partyAvailable: false,
     orderDeliveryLink: '',
+    cakePickupTimeSlots: [],
     participantsLimit: 55,
     participantsLimitText: '',
     phone: '8881234567',

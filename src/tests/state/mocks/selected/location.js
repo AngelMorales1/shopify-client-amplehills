@@ -10,6 +10,7 @@ export default {
   address1: '110 Bowery',
   address2: 'Fl. 4',
   availableFlavors: [],
+  cakePickupTimeSlots: [],
   cakes: false,
   cakesBucket: '',
   city: 'New York',

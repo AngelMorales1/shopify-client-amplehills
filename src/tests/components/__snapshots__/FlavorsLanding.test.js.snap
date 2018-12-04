@@ -71,7 +71,7 @@ ShallowWrapper {
                         <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -88,7 +88,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                         />
@@ -157,7 +157,7 @@ ShallowWrapper {
                         <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -174,7 +174,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                         />
@@ -245,7 +245,7 @@ ShallowWrapper {
                 <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -262,7 +262,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                 />
@@ -336,7 +336,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   bgColor=""
                   className=""
-                  color="peach"
+                  color="madison-blue"
                   fixedWidth={true}
                   label=""
                   name=""
@@ -353,7 +353,7 @@ ShallowWrapper {
                   selectClassName="w100"
                   shadow={false}
                   textAlignCenter={false}
-                  textColor="madison-blue"
+                  textColor="peach"
                   value=""
                   variant="small"
 />,
@@ -367,7 +367,7 @@ ShallowWrapper {
                 "props": Object {
                   "bgColor": "",
                   "className": "",
-                  "color": "peach",
+                  "color": "madison-blue",
                   "fixedWidth": true,
                   "label": "",
                   "name": "",
@@ -382,7 +382,7 @@ ShallowWrapper {
                   "selectClassName": "w100",
                   "shadow": false,
                   "textAlignCenter": false,
-                  "textColor": "madison-blue",
+                  "textColor": "peach",
                   "value": "",
                   "variant": "small",
                 },
@@ -487,7 +487,7 @@ ShallowWrapper {
                               <Dropdown
                                         bgColor=""
                                         className=""
-                                        color="peach"
+                                        color="madison-blue"
                                         fixedWidth={true}
                                         label=""
                                         name=""
@@ -504,7 +504,7 @@ ShallowWrapper {
                                         selectClassName="w100"
                                         shadow={false}
                                         textAlignCenter={false}
-                                        textColor="madison-blue"
+                                        textColor="peach"
                                         value=""
                                         variant="small"
                               />
@@ -573,7 +573,7 @@ ShallowWrapper {
                             <Dropdown
                                           bgColor=""
                                           className=""
-                                          color="peach"
+                                          color="madison-blue"
                                           fixedWidth={true}
                                           label=""
                                           name=""
@@ -590,7 +590,7 @@ ShallowWrapper {
                                           selectClassName="w100"
                                           shadow={false}
                                           textAlignCenter={false}
-                                          textColor="madison-blue"
+                                          textColor="peach"
                                           value=""
                                           variant="small"
                             />
@@ -661,7 +661,7 @@ ShallowWrapper {
                   <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -678,7 +678,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                   />
@@ -752,7 +752,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     bgColor=""
                     className=""
-                    color="peach"
+                    color="madison-blue"
                     fixedWidth={true}
                     label=""
                     name=""
@@ -769,7 +769,7 @@ ShallowWrapper {
                     selectClassName="w100"
                     shadow={false}
                     textAlignCenter={false}
-                    textColor="madison-blue"
+                    textColor="peach"
                     value=""
                     variant="small"
 />,
@@ -783,7 +783,7 @@ ShallowWrapper {
                   "props": Object {
                     "bgColor": "",
                     "className": "",
-                    "color": "peach",
+                    "color": "madison-blue",
                     "fixedWidth": true,
                     "label": "",
                     "name": "",
@@ -798,7 +798,7 @@ ShallowWrapper {
                     "selectClassName": "w100",
                     "shadow": false,
                     "textAlignCenter": false,
-                    "textColor": "madison-blue",
+                    "textColor": "peach",
                     "value": "",
                     "variant": "small",
                   },
@@ -942,7 +942,7 @@ ShallowWrapper {
                         <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -959,7 +959,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                         />
@@ -1028,7 +1028,7 @@ ShallowWrapper {
                         <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -1045,7 +1045,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                         />
@@ -1116,7 +1116,7 @@ ShallowWrapper {
                 <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -1133,7 +1133,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                 />
@@ -1207,7 +1207,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   bgColor=""
                   className=""
-                  color="peach"
+                  color="madison-blue"
                   fixedWidth={true}
                   label=""
                   name=""
@@ -1224,7 +1224,7 @@ ShallowWrapper {
                   selectClassName="w100"
                   shadow={false}
                   textAlignCenter={false}
-                  textColor="madison-blue"
+                  textColor="peach"
                   value=""
                   variant="small"
 />,
@@ -1238,7 +1238,7 @@ ShallowWrapper {
                 "props": Object {
                   "bgColor": "",
                   "className": "",
-                  "color": "peach",
+                  "color": "madison-blue",
                   "fixedWidth": true,
                   "label": "",
                   "name": "",
@@ -1253,7 +1253,7 @@ ShallowWrapper {
                   "selectClassName": "w100",
                   "shadow": false,
                   "textAlignCenter": false,
-                  "textColor": "madison-blue",
+                  "textColor": "peach",
                   "value": "",
                   "variant": "small",
                 },
@@ -1358,7 +1358,7 @@ ShallowWrapper {
                               <Dropdown
                                         bgColor=""
                                         className=""
-                                        color="peach"
+                                        color="madison-blue"
                                         fixedWidth={true}
                                         label=""
                                         name=""
@@ -1375,7 +1375,7 @@ ShallowWrapper {
                                         selectClassName="w100"
                                         shadow={false}
                                         textAlignCenter={false}
-                                        textColor="madison-blue"
+                                        textColor="peach"
                                         value=""
                                         variant="small"
                               />
@@ -1444,7 +1444,7 @@ ShallowWrapper {
                             <Dropdown
                                           bgColor=""
                                           className=""
-                                          color="peach"
+                                          color="madison-blue"
                                           fixedWidth={true}
                                           label=""
                                           name=""
@@ -1461,7 +1461,7 @@ ShallowWrapper {
                                           selectClassName="w100"
                                           shadow={false}
                                           textAlignCenter={false}
-                                          textColor="madison-blue"
+                                          textColor="peach"
                                           value=""
                                           variant="small"
                             />
@@ -1532,7 +1532,7 @@ ShallowWrapper {
                   <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -1549,7 +1549,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                   />
@@ -1623,7 +1623,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     bgColor=""
                     className=""
-                    color="peach"
+                    color="madison-blue"
                     fixedWidth={true}
                     label=""
                     name=""
@@ -1640,7 +1640,7 @@ ShallowWrapper {
                     selectClassName="w100"
                     shadow={false}
                     textAlignCenter={false}
-                    textColor="madison-blue"
+                    textColor="peach"
                     value=""
                     variant="small"
 />,
@@ -1654,7 +1654,7 @@ ShallowWrapper {
                   "props": Object {
                     "bgColor": "",
                     "className": "",
-                    "color": "peach",
+                    "color": "madison-blue",
                     "fixedWidth": true,
                     "label": "",
                     "name": "",
@@ -1669,7 +1669,7 @@ ShallowWrapper {
                     "selectClassName": "w100",
                     "shadow": false,
                     "textAlignCenter": false,
-                    "textColor": "madison-blue",
+                    "textColor": "peach",
                     "value": "",
                     "variant": "small",
                   },

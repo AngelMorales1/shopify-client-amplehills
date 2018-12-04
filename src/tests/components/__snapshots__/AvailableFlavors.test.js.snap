@@ -34,7 +34,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="mx-auto flex flex-column items-center container-width"
+        className="mx-auto mt2 flex flex-column items-center container-width"
 >
         <h2
                 className="block-headline center mb3"
@@ -66,7 +66,7 @@ ShallowWrapper {
             
 </div>,
         ],
-        "className": "mx-auto flex flex-column items-center container-width",
+        "className": "mx-auto mt2 flex flex-column items-center container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -111,7 +111,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="mx-auto flex flex-column items-center container-width"
+          className="mx-auto mt2 flex flex-column items-center container-width"
 >
           <h2
                     className="block-headline center mb3"
@@ -143,7 +143,7 @@ ShallowWrapper {
               
 </div>,
           ],
-          "className": "mx-auto flex flex-column items-center container-width",
+          "className": "mx-auto mt2 flex flex-column items-center container-width",
         },
         "ref": null,
         "rendered": Array [
@@ -250,7 +250,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="mx-auto flex flex-column items-center container-width"
+        className="mx-auto mt2 flex flex-column items-center container-width"
 >
         <h2
                 className="block-headline center mb3"
@@ -282,7 +282,7 @@ ShallowWrapper {
             
 </div>,
         ],
-        "className": "mx-auto flex flex-column items-center container-width",
+        "className": "mx-auto mt2 flex flex-column items-center container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -327,7 +327,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="mx-auto flex flex-column items-center container-width"
+          className="mx-auto mt2 flex flex-column items-center container-width"
 >
           <h2
                     className="block-headline center mb3"
@@ -359,7 +359,7 @@ ShallowWrapper {
               
 </div>,
           ],
-          "className": "mx-auto flex flex-column items-center container-width",
+          "className": "mx-auto mt2 flex flex-column items-center container-width",
         },
         "ref": null,
         "rendered": Array [
