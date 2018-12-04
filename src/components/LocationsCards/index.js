@@ -15,8 +15,7 @@ import styles from './LocationsCards.scss';
 class LocationsCards extends Component {
   state = {
     position: null,
-    sortedLocations: [],
-    searchValue: ''
+    sortedLocations: []
   };
 
   $cards = {};
@@ -102,7 +101,6 @@ class LocationsCards extends Component {
   };
 
   handleSearchChange = value => {
-    this.setState({ searchValue: value });
     this.props.actions.updateSearchFilter(value);
     this.props.actions.getSearchResult(value);
   };
@@ -181,7 +179,7 @@ class LocationsCards extends Component {
                 )}
               >
                 <TextField
-                  value={this.state.searchValue}
+                  value={searchFilter}
                   variant="primary-search"
                   className={styles['LocationsCards__search']}
                   placeholder={
