@@ -19,8 +19,8 @@
   }
 
   &__filter-button {
-    padding-top: calc(#{spacing(2)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+    padding-top: spacing(2) + 0.0625rem;
+    padding-bottom: spacing(2) - 0.0625rem;
   }
 
   &__dietary-restrictions {

@@ -108,12 +108,12 @@
     border-radius: radius('xs');
     border: spacing(0.6) solid color('gray');
     padding: spacing(5) spacing(6);
-    padding-top: calc(#{spacing(5)} + 0.125rem);
-    padding-bottom: calc(#{spacing(5)} - 0.125rem);
+    padding-top: spacing(5) + 0.125rem;
+    padding-bottom: spacing(5) - 0.125rem;
 
     @media ($medium-up) {
-      padding-top: calc(#{spacing(5)} + 0.1875rem);
-      padding-bottom: calc(#{spacing(5)} - 0.1875rem);
+      padding-top: spacing(5) + 0.1875rem;
+      padding-bottom: spacing(5) - 0.1875rem;
     }
 
     :global {
@@ -175,8 +175,8 @@
             width: 100%;
             height: auto;
             padding: spacing(5) spacing(8) spacing(4);
-            padding-top: calc(#{spacing(5)} + 0.0625rem);
-            padding-bottom: calc(#{spacing(4)} - 0.0625rem);
+            padding-top: spacing(5) + 0.0625rem;
+            padding-bottom: spacing(4) - 0.0625rem;
           }
 
           .Select-menu {

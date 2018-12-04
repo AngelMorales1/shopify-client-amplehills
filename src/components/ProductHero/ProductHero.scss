@@ -11,13 +11,13 @@
 
   &__button {
     padding: spacing(2) spacing(4);
-    padding-top: calc(#{spacing(2)} + 0.0625rem);
-    padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+    padding-top: spacing(2) + 0.0625rem;
+    padding-bottom: spacing(2) - 0.0625rem;
 
     @media ($medium-up) {
       padding: spacing(2) spacing(6);
-      padding-top: calc(#{spacing(2)} + 0.0625rem);
-      padding-bottom: calc(#{spacing(2)} - 0.0625rem);
+      padding-top: spacing(2) + 0.0625rem;
+      padding-bottom: spacing(2) - 0.0625rem;
     }
   }
 
