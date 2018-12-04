@@ -75,7 +75,7 @@ const LocationDropdown = ({
                           className="flex flex-column items-start mb2"
                         >
                           <p className="bold text-white mb1 white-space-normal">
-                            {region}
+                            {locationGroupTitle !== BROOKLYN ? region : null}
                           </p>
                           {get(
                             locationSortedByGroup,
