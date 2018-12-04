@@ -15,5 +15,6 @@ export default {
   PARTY_DEPOSIT: 'Party Deposit',
   Merch: 'Merch',
   MERCH: 'Merch',
-  CAKE_DEPOSIT: 'Cake Deposit'
+  CAKE_DEPOSIT: 'Cake Deposit',
+  'Cake Deposit': 'Cake Deposit'
 };
