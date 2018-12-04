@@ -45,20 +45,23 @@ class FooterNav extends PureComponent {
 
 FooterNav.propTypes = {
   pathname: PropTypes.string,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      simpleFragments: PropTypes.objectOf(
-        PropTypes.shape({
-          icon: PropTypes.shape({
-            data: PropTypes.string,
-            name: PropTypes.name
-          }),
-          uuid: PropTypes.string,
-          link: PropTypes.string,
-          text: PropTypes.string
-        })
-      )
-    })
+  items: PropTypes.oneOfType(
+    PropTypes.arrayOf(
+      PropTypes.shape({
+        simpleFragments: PropTypes.objectOf(
+          PropTypes.shape({
+            icon: PropTypes.shape({
+              data: PropTypes.string,
+              name: PropTypes.name
+            }),
+            uuid: PropTypes.string,
+            link: PropTypes.string,
+            text: PropTypes.string
+          })
+        )
+      })
+    ),
+    PropTypes.object
   )
 };
 
