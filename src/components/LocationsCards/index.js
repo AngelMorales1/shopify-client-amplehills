@@ -114,8 +114,7 @@ class LocationsCards extends Component {
       searchFilter,
       locationResultsLabel,
       selectedLocation,
-      states,
-      searchResult
+      states
     } = this.props;
     const { sortedLocations } = this.state;
 

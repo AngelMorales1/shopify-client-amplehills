@@ -36,8 +36,8 @@ export default createSelector(
     } else {
       const searchResultCoordinates = get(searchResult, 'coordinates', [0, 0]);
 
-      const filteredLocationsWithDistanceFromSearchResult = filteredLocations.map(
-        filteredLocation => {
+      const filteredLocationsWithDistanceFromSearchResult = filteredLocations.reduce(
+        (sanitizedLocation, filteredLocation) => {
           const filteredLocationCoordinates = filteredLocation.coordinates;
           const filteredLocationCoordinatesArray = [
             filteredLocationCoordinates.lon,
@@ -49,10 +49,14 @@ export default createSelector(
             { units: 'miles' }
           );
 
-          filteredLocation.distanceFromSearchResult = distanceFromSearchResult;
+          if (distanceFromSearchResult < 5) {
+            filteredLocation.distanceFromSearchResult = distanceFromSearchResult;
+            sanitizedLocation.push(filteredLocation);
+          }
 
-          return filteredLocation;
-        }
+          return sanitizedLocation;
+        },
+        []
       );
       return filteredLocationsWithDistanceFromSearchResult.sort(
         (a, b) => a.distanceFromSearchResult - b.distanceFromSearchResult
