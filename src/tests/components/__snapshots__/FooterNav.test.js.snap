@@ -47,9 +47,11 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FooterNav
     items={
-        Object {
-            "simpleFragments": Object {},
-          }
+        Array [
+            Object {
+              "simpleFragments": Object {},
+            },
+          ]
     }
     pathname=""
 />,
