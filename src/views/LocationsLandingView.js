@@ -19,6 +19,7 @@ class LocationsLandingView extends Component {
 
     if (searchParam) {
       this.props.actions.updateSearchFilter(searchParam);
+      this.props.actions.getSearchResult(searchParam);
     }
 
     window.addEventListener('resize', this.updateWindow);

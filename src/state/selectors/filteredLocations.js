@@ -26,10 +26,7 @@ const getLocationsInMaxDistance = (searchResult, locations, maxDistance) => {
         { units: 'miles' }
       );
 
-      if (
-        searchResult.type !== 'region' &&
-        distanceFromSearchResult < maxDistance
-      ) {
+      if (distanceFromSearchResult < maxDistance) {
         location.distanceFromSearchResult = distanceFromSearchResult;
         sanitizedLocation.push(location);
       }
