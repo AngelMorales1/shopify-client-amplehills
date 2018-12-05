@@ -22,8 +22,10 @@ export default createSelector(
           const filterName = get(fragment[1], 'value', '');
 
           if (filterName) {
-            collectedFilters.push(filterName);
             sanitisedFilters[filterName] = filterName;
+            !collectedFilters.includes(filterName)
+              ? collectedFilters.push(filterName)
+              : null;
           }
 
           return sanitisedFilters;
@@ -38,8 +40,10 @@ export default createSelector(
         const restrictionName = get(fragment[1], 'value', '');
 
         if (restrictionName) {
-          collectedDietaryRestrictions.push(restrictionName);
           sanitisedDietaryRestrictions[restrictionName] = true;
+          !collectedDietaryRestrictions.includes(restrictionName)
+            ? collectedDietaryRestrictions.push(restrictionName)
+            : null;
         }
 
         return sanitisedDietaryRestrictions;
