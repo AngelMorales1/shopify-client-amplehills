@@ -2,27 +2,27 @@ export default {
   ADDRESSES: {
     GENERAL: {
       label: 'General Info',
-      bucket: 'https://api.formbucket.com/f/buk_kKdxdYIemPLCBDerpzkJEKwN'
+      bucket: 'https://api.formbucket.com/f/buk_epTOnVNtrgUBeCSMyAG5xQ31'
     },
     ORDERS: {
       label: 'Orders',
-      bucket: 'https://api.formbucket.com/f/buk_XQ0dUN0om86uh27oPRwJ0UoW'
+      bucket: 'https://api.formbucket.com/f/buk_d24LoGgTO1jZbA1a5GNe5WDf'
     },
     EVENTS: {
       label: 'Off-Site Events',
-      bucket: 'https://api.formbucket.com/f/buk_joP9qRO98UF0VjDvTpo4fxcX'
+      bucket: 'https://api.formbucket.com/f/buk_GS3rtb4XcgXKWicirLiDHKX3'
     },
     PRESS: {
       label: 'Press',
-      bucket: 'https://api.formbucket.com/f/buk_qfXW1wbPdli0hUuMRxUsoWdB'
+      bucket: 'https://api.formbucket.com/f/buk_TGyEaMqBBY7cGXl07YC0TrFe'
     },
     PARTIES: {
       label: 'Parties',
-      bucket: 'https://api.formbucket.com/f/buk_UH6TQ3Xp9WHXK0kbTT4Wg3jg'
+      bucket: 'https://api.formbucket.com/f/buk_JZNdutmTLDrsGFU4VeL6qPT6'
     },
     CONCERNS: {
       label: 'Comments & Concerns',
-      bucket: 'https://api.formbucket.com/f/buk_yKUCJ0AFMTIByM9A6HzfgqoE'
+      bucket: 'https://api.formbucket.com/f/buk_HGRhSOlE63HOUtVGmr9Ho7sU'
     }
   },
   FIELDS: {
