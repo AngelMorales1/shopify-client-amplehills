@@ -23,9 +23,9 @@ export default createSelector(
 
           if (filterName) {
             sanitisedFilters[filterName] = filterName;
-            !collectedFilters.includes(filterName)
-              ? collectedFilters.push(filterName)
-              : null;
+            if (!collectedFilters.includes(filterName)) {
+              collectedFilters.push(filterName);
+            }
           }
 
           return sanitisedFilters;
@@ -41,9 +41,10 @@ export default createSelector(
 
         if (restrictionName) {
           sanitisedDietaryRestrictions[restrictionName] = true;
-          !collectedDietaryRestrictions.includes(restrictionName)
-            ? collectedDietaryRestrictions.push(restrictionName)
-            : null;
+
+          if (!collectedDietaryRestrictions.includes(restrictionName)) {
+            collectedDietaryRestrictions.push(restrictionName);
+          }
         }
 
         return sanitisedDietaryRestrictions;

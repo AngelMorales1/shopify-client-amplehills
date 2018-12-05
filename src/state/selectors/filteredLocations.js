@@ -87,11 +87,13 @@ export default createSelector(
         )
     );
 
+    const searchResultType = get(searchResult, 'type', '');
+
     if (
-      searchResult.type === 'region' ||
-      searchResult.type === 'place' ||
-      searchResult.type === 'neighborhood' ||
-      searchResult.type === 'locality'
+      searchResultType === 'region' ||
+      searchResultType === 'place' ||
+      searchResultType === 'neighborhood' ||
+      searchResultType === 'locality'
     ) {
       const locationInBox = getLocationInsideBoundingBox(
         searchResult,
