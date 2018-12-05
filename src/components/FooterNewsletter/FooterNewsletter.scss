@@ -26,7 +26,11 @@
   }
 
   &__help-text {
-    top: spacing(-4);
+    top: spacing(-8);
+
+    @media ($medium-up) {
+      top: spacing(-4);
+    }
   }
 
   &__text {

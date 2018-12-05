@@ -46,7 +46,7 @@ class MobileNavModal extends Component {
 
     const classes = cx(
       styles['MobileNavModal'],
-      'fixed flex wh100 bg-white-wash z-nav',
+      'fixed flex wh100 bg-white-wash z-overlay',
       {
         [styles['MobileNavModal--open']]: mobileNavIsOpen
       }

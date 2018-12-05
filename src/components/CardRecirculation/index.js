@@ -48,7 +48,9 @@ const CardRecirculation = ({ block }) => {
                   'png'
                 )}
               />
-              <p className="py2">{get(fields, 'card1Text', '')}</p>
+              <p className="w100 py2 center line-height white-space-normal">
+                {get(fields, 'card1Text', '')}
+              </p>
             </div>
           </Button>
         </div>
@@ -75,7 +77,9 @@ const CardRecirculation = ({ block }) => {
                   'png'
                 )}
               />
-              <p className="py2">{get(fields, 'card2Text', '')}</p>
+              <p className="w100 py2 center line-height white-space-normal">
+                {get(fields, 'card2Text', '')}
+              </p>
             </div>
           </Button>
         </div>
