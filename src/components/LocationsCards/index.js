@@ -22,12 +22,6 @@ class LocationsCards extends Component {
 
   componentDidMount() {
     this.attemptToGetDistanceToStores();
-
-    const param = getUrlParam('search');
-
-    if (param) {
-      this.props.actions.updateSearchFilter(param);
-    }
   }
 
   componentDidUpdate(prevProps, prevState) {
