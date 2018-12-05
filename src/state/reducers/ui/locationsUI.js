@@ -4,13 +4,15 @@ import {
   CLEAR_LOCATION_FILTERS,
   UPDATE_SEARCH_FILTER,
   SELECT_LOCATION,
-  CLEAR_LOCATION_SELECTION
+  CLEAR_LOCATION_SELECTION,
+  GET_SEARCH_RESULT
 } from 'state/actions/ui/locationsUIActions';
 
 const initialState = {
   locationFilters: [],
   searchFilter: '',
-  selectedLocation: null
+  selectedLocation: null,
+  searchResult: {}
 };
 
 export default (state = initialState, action) => {
@@ -51,6 +53,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         selectedLocation: initialState.selectedLocation
+      };
+    case `${GET_SEARCH_RESULT}_FULFILLED`:
+      return {
+        ...state,
+        searchResult: action.payload
       };
     default:
       return state;

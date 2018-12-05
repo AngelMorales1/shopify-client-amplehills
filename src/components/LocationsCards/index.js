@@ -7,7 +7,6 @@ import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import locationModel from 'models/locationModel';
 import LocationsMapFilters from 'constants/LocationsMapFilters';
 import LocationCard from 'components/LocationCard';
-import getUrlParam from 'utils/getUrlParam';
 
 import { Dropdown, TextField, Button } from 'components/base';
 import styles from './LocationsCards.scss';
@@ -99,6 +98,12 @@ class LocationsCards extends Component {
     this.setState({ sortedLocations });
     this.props.locationsCardHasLoaded();
   };
+
+  handleSearchChange = value => {
+    this.props.actions.updateSearchFilter(value);
+    this.props.actions.getSearchResult(value);
+  };
+
   render() {
     const {
       actions,
@@ -108,7 +113,6 @@ class LocationsCards extends Component {
       selectedLocation,
       states
     } = this.props;
-
     const { sortedLocations } = this.state;
 
     const STATE_KEY = get(
@@ -186,9 +190,7 @@ class LocationsCards extends Component {
                         }`
                       : `Search locations`
                   }
-                  onChange={searchFilter =>
-                    actions.updateSearchFilter(searchFilter)
-                  }
+                  onChange={this.handleSearchChange}
                 />
                 <Button
                   disabled={!searchFilter}
