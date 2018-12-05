@@ -1,10 +1,10 @@
 import QueryString from 'qs';
 
-const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api-mz47pgc5d.now.sh';
+const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api.now.sh';
 
 const Bookings = {
   getAvailability(project_id) {
-    const query = QueryString.stringify({ project_id, to: '180 days' });
+    const query = QueryString.stringify({ project_id, to: '6 months' });
     return window
       .fetch(`${AMPLE_HILLS_API_ENDPOINT}/availability?${query}`)
       .then(response => {
