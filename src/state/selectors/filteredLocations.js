@@ -10,6 +10,65 @@ const locationMatchesSearch = (fields, searchFilter) => {
   );
 };
 
+const getLocationsInMaxDistance = (searchResult, locations, maxDistance) => {
+  const searchResultCoordinates = get(searchResult, 'coordinates', [0, 0]);
+
+  const locationsWithinDistanceFromSearchResult = locations.reduce(
+    (sanitizedLocation, location) => {
+      const locationCoordinates = location.coordinates;
+      const locationCoordinatesArray = [
+        locationCoordinates.lon,
+        locationCoordinates.lat
+      ];
+      const distanceFromSearchResult = distance(
+        searchResultCoordinates,
+        locationCoordinatesArray,
+        { units: 'miles' }
+      );
+
+      if (
+        searchResult.type !== 'region' &&
+        distanceFromSearchResult < maxDistance
+      ) {
+        location.distanceFromSearchResult = distanceFromSearchResult;
+        sanitizedLocation.push(location);
+      }
+
+      return sanitizedLocation;
+    },
+    []
+  );
+  return locationsWithinDistanceFromSearchResult.sort(
+    (a, b) => a.distanceFromSearchResult - b.distanceFromSearchResult
+  );
+};
+
+const getLocationInsideBoundingBox = (searchResult, locations) => {
+  const searchResultBbox = get(searchResult, 'bbox', [0, 0, 0, 0]);
+
+  const getLocationInsideBbox = locations.reduce(
+    (locationsInsideBbox, location) => {
+      const locationCoordinates = get(location, 'coordinates', {});
+      const locationLat = get(locationCoordinates, 'lat', 0);
+      const locationLon = get(locationCoordinates, 'lon', 0);
+
+      if (
+        locationLat >= searchResultBbox[1] &&
+        locationLat <= searchResultBbox[3] &&
+        (locationLon >= searchResultBbox[0] &&
+          locationLon <= searchResultBbox[2])
+      ) {
+        locationsInsideBbox.push(location);
+      }
+
+      return locationsInsideBbox;
+    },
+    []
+  );
+
+  return getLocationInsideBbox;
+};
+
 export default createSelector(
   state => locations(state),
   state => get(state, 'locationsUI.locationFilters', []),
@@ -32,70 +91,23 @@ export default createSelector(
     );
 
     if (
-      searchFilterLocations.length &&
-      searchResult.type !== 'region' &&
-      searchResult.type !== 'place' &&
-      searchResult.type !== 'neighborhood' &&
-      searchResult.type !== 'locality'
-    ) {
-      return searchFilterLocations;
-    } else if (
       searchResult.type === 'region' ||
       searchResult.type === 'place' ||
       searchResult.type === 'neighborhood' ||
       searchResult.type === 'locality'
     ) {
-      const searchResultBbox = get(searchResult, 'bbox', [0, 0, 0, 0]);
-
-      const getLocationInsideBbox = filteredLocations.reduce(
-        (locationsInsideBbox, location) => {
-          const locationCoordinates = get(location, 'coordinates', {});
-          const locationLat = get(locationCoordinates, 'lat', 0);
-          const locationLon = get(locationCoordinates, 'lon', 0);
-
-          if (
-            locationLat >= searchResultBbox[1] &&
-            locationLat <= searchResultBbox[3] &&
-            (locationLon >= searchResultBbox[0] &&
-              locationLon <= searchResultBbox[2])
-          ) {
-            locationsInsideBbox.push(location);
-          }
-
-          return locationsInsideBbox;
-        },
-        []
+      const locationInBox = getLocationInsideBoundingBox(
+        searchResult,
+        filteredLocations
       );
-
-      return getLocationInsideBbox;
-    } else {
-      const searchResultCoordinates = get(searchResult, 'coordinates', [0, 0]);
-
-      const filteredLocationsWithDistanceFromSearchResult = filteredLocations.reduce(
-        (sanitizedLocation, filteredLocation) => {
-          const filteredLocationCoordinates = filteredLocation.coordinates;
-          const filteredLocationCoordinatesArray = [
-            filteredLocationCoordinates.lon,
-            filteredLocationCoordinates.lat
-          ];
-          const distanceFromSearchResult = distance(
-            searchResultCoordinates,
-            filteredLocationCoordinatesArray,
-            { units: 'miles' }
-          );
-
-          if (searchResult.type !== 'region' && distanceFromSearchResult < 5) {
-            filteredLocation.distanceFromSearchResult = distanceFromSearchResult;
-            sanitizedLocation.push(filteredLocation);
-          }
-
-          return sanitizedLocation;
-        },
-        []
-      );
-      return filteredLocationsWithDistanceFromSearchResult.sort(
-        (a, b) => a.distanceFromSearchResult - b.distanceFromSearchResult
-      );
+      //If location is not inside of search result, get location in 5 miles from search result.
+      return locationInBox.length
+        ? locationInBox
+        : getLocationsInMaxDistance(searchResult, filteredLocations, 5);
+    } else if (searchFilterLocations.length) {
+      return searchFilterLocations;
     }
+
+    return getLocationsInMaxDistance(searchResult, filteredLocations, 5);
   }
 );

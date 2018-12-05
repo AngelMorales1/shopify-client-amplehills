@@ -36,7 +36,7 @@ const mapStateToProps = state => {
     locationGeoJSON: locationGeoJSON(state),
     locationResultsLabel: locationResultsLabel(state),
     searchFilter: get(state, 'locationsUI.searchFilter', ''),
-    searchResult: get(state, 'locationsUI.searchResult', []),
+    searchResult: get(state, 'locationsUI.searchResult', {}),
     selectedLocation: get(state, 'locationsUI.selectedLocation', null),
     alertIsActive: alertIsActive(state)
   };

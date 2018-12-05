@@ -12,7 +12,7 @@ const initialState = {
   locationFilters: [],
   searchFilter: '',
   selectedLocation: null,
-  searchResult: []
+  searchResult: {}
 };
 
 export default (state = initialState, action) => {
