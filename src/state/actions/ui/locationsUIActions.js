@@ -55,10 +55,12 @@ export const getSearchResult = payload => {
       MapboxClient.geocodeForward(payload, { country: 'us' })
         .then(res => {
           const feature = get(res, 'entity.features[0]', {});
+
           resolve({
             name: get(feature, 'place_name', ''),
             type: get(feature, 'place_type[0]', ''),
-            coordinates: get(feature, 'center', [])
+            bbox: get(feature, 'bbox', [0, 0, 0, 0]),
+            coordinates: get(feature, 'center', [0, 0])
           });
         })
         .catch(err => {

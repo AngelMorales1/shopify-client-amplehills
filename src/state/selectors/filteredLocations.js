@@ -31,8 +31,43 @@ export default createSelector(
         )
     );
 
-    if (searchFilterLocations.length) {
+    if (
+      searchFilterLocations.length &&
+      searchResult.type !== 'region' &&
+      searchResult.type !== 'place' &&
+      searchResult.type !== 'neighborhood' &&
+      searchResult.type !== 'locality'
+    ) {
       return searchFilterLocations;
+    } else if (
+      searchResult.type === 'region' ||
+      searchResult.type === 'place' ||
+      searchResult.type === 'neighborhood' ||
+      searchResult.type === 'locality'
+    ) {
+      const searchResultBbox = get(searchResult, 'bbox', [0, 0, 0, 0]);
+
+      const getLocationInsideBbox = filteredLocations.reduce(
+        (locationsInsideBbox, location) => {
+          const locationCoordinates = get(location, 'coordinates', {});
+          const locationLat = get(locationCoordinates, 'lat', 0);
+          const locationLon = get(locationCoordinates, 'lon', 0);
+
+          if (
+            locationLat >= searchResultBbox[1] &&
+            locationLat <= searchResultBbox[3] &&
+            (locationLon >= searchResultBbox[0] &&
+              locationLon <= searchResultBbox[2])
+          ) {
+            locationsInsideBbox.push(location);
+          }
+
+          return locationsInsideBbox;
+        },
+        []
+      );
+
+      return getLocationInsideBbox;
     } else {
       const searchResultCoordinates = get(searchResult, 'coordinates', [0, 0]);
 
@@ -49,7 +84,7 @@ export default createSelector(
             { units: 'miles' }
           );
 
-          if (distanceFromSearchResult < 5) {
+          if (searchResult.type !== 'region' && distanceFromSearchResult < 5) {
             filteredLocation.distanceFromSearchResult = distanceFromSearchResult;
             sanitizedLocation.push(filteredLocation);
           }
