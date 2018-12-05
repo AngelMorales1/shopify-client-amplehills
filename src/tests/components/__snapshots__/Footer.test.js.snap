@@ -84,7 +84,7 @@ ShallowWrapper {
         className="flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt3"
+                className="flex flex-column justify-between col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -95,6 +95,7 @@ ShallowWrapper {
                         className="inline-flex"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -105,6 +106,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
@@ -293,7 +295,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt3"
+            className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -304,6 +306,7 @@ ShallowWrapper {
                         className="inline-flex"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -314,6 +317,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
@@ -511,6 +515,7 @@ ShallowWrapper {
                 className="inline-flex"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -521,6 +526,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
@@ -528,7 +534,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -550,6 +556,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
+                  childrenWrapperClassName=""
                   className="nowrap inline-flex"
                   color="white-peach"
                   disabled={false}
@@ -560,6 +567,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={true}
                   to="/contact"
                   type="button"
@@ -574,6 +582,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "nowrap inline-flex",
                   "color": "white-peach",
                   "disabled": false,
@@ -584,6 +593,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": true,
                   "to": "/contact",
                   "type": "button",
@@ -1532,7 +1542,7 @@ ShallowWrapper {
           className="flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+                    className="flex flex-column justify-between col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -1543,6 +1553,7 @@ ShallowWrapper {
                               className="inline-flex"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="nowrap inline-flex"
                                         color="white-peach"
                                         disabled={false}
@@ -1553,6 +1564,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={true}
                                         to="/contact"
                                         type="button"
@@ -1741,7 +1753,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt3"
+              className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -1752,6 +1764,7 @@ ShallowWrapper {
                             className="inline-flex"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="nowrap inline-flex"
                                           color="white-peach"
                                           disabled={false}
@@ -1762,6 +1775,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={true}
                                           to="/contact"
                                           type="button"
@@ -1959,6 +1973,7 @@ ShallowWrapper {
                   className="inline-flex"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -1969,6 +1984,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
@@ -1976,7 +1992,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [
@@ -1998,6 +2014,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Button
+                    childrenWrapperClassName=""
                     className="nowrap inline-flex"
                     color="white-peach"
                     disabled={false}
@@ -2008,6 +2025,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={true}
                     to="/contact"
                     type="button"
@@ -2022,6 +2040,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "nowrap inline-flex",
                     "color": "white-peach",
                     "disabled": false,
@@ -2032,6 +2051,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": true,
                     "to": "/contact",
                     "type": "button",
@@ -3005,7 +3025,7 @@ ShallowWrapper {
         className="flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt3"
+                className="flex flex-column justify-between col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -3016,6 +3036,7 @@ ShallowWrapper {
                         className="inline-flex"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -3026,6 +3047,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
@@ -3214,7 +3236,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt3"
+            className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -3225,6 +3247,7 @@ ShallowWrapper {
                         className="inline-flex"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -3235,6 +3258,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
@@ -3432,6 +3456,7 @@ ShallowWrapper {
                 className="inline-flex"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="nowrap inline-flex"
                                 color="white-peach"
                                 disabled={false}
@@ -3442,6 +3467,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
@@ -3449,7 +3475,7 @@ ShallowWrapper {
                 />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -3471,6 +3497,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": <Button
+                  childrenWrapperClassName=""
                   className="nowrap inline-flex"
                   color="white-peach"
                   disabled={false}
@@ -3481,6 +3508,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={true}
                   to="/contact"
                   type="button"
@@ -3495,6 +3523,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "nowrap inline-flex",
                   "color": "white-peach",
                   "disabled": false,
@@ -3505,6 +3534,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": true,
                   "to": "/contact",
                   "type": "button",
@@ -4453,7 +4483,7 @@ ShallowWrapper {
           className="flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt3"
+                    className="flex flex-column justify-between col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -4464,6 +4494,7 @@ ShallowWrapper {
                               className="inline-flex"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="nowrap inline-flex"
                                         color="white-peach"
                                         disabled={false}
@@ -4474,6 +4505,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={true}
                                         to="/contact"
                                         type="button"
@@ -4662,7 +4694,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt3"
+              className="flex flex-column justify-between col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -4673,6 +4705,7 @@ ShallowWrapper {
                             className="inline-flex"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="nowrap inline-flex"
                                           color="white-peach"
                                           disabled={false}
@@ -4683,6 +4716,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={true}
                                           to="/contact"
                                           type="button"
@@ -4880,6 +4914,7 @@ ShallowWrapper {
                   className="inline-flex"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="nowrap inline-flex"
                                     color="white-peach"
                                     disabled={false}
@@ -4890,6 +4925,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
@@ -4897,7 +4933,7 @@ ShallowWrapper {
                   />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt3",
+              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [
@@ -4919,6 +4955,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <Button
+                    childrenWrapperClassName=""
                     className="nowrap inline-flex"
                     color="white-peach"
                     disabled={false}
@@ -4929,6 +4966,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={true}
                     to="/contact"
                     type="button"
@@ -4943,6 +4981,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "nowrap inline-flex",
                     "color": "white-peach",
                     "disabled": false,
@@ -4953,6 +4992,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": true,
                     "to": "/contact",
                     "type": "button",

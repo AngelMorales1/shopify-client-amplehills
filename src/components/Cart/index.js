@@ -71,10 +71,6 @@ class Cart extends Component {
     const { actions, checkout, items, updatingNote } = this.props;
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
-    const isUpdateButtonActive =
-      this.state.note !== currentNote
-        ? 'transition-slide-up-down--active'
-        : null;
     const getNote = this.state.note ? this.state.note : null;
 
     const cart = (

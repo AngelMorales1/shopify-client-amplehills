@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -14,6 +15,7 @@ ShallowWrapper {
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    openInCurrentTab={false}
     shadow={false}
     to=""
     type="button"
@@ -105,6 +107,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -114,6 +117,7 @@ ShallowWrapper {
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    openInCurrentTab={false}
     shadow={false}
     to="https://google.com"
     type="button"
@@ -247,6 +251,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className="foo"
     color="denim"
     disabled={false}
@@ -256,6 +261,7 @@ ShallowWrapper {
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    openInCurrentTab={false}
     shadow={false}
     to="/products"
     type="button"
@@ -387,6 +393,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    childrenWrapperClassName=""
     className=""
     color="white-denim"
     disabled={false}
@@ -396,6 +403,7 @@ ShallowWrapper {
     onClick={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    openInCurrentTab={false}
     shadow={false}
     to=""
     type="button"

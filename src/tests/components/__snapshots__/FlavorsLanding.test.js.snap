@@ -49,6 +49,7 @@ ShallowWrapper {
                         className="w100 flex flex-row flex-wrap justify-center"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="clear-madison-blue-border"
                                 disabled={false}
@@ -58,6 +59,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -70,7 +72,7 @@ ShallowWrapper {
                         <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -87,7 +89,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                         />
@@ -134,6 +136,7 @@ ShallowWrapper {
                         className="w100 flex flex-row flex-wrap justify-center"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="clear-madison-blue-border"
                                     disabled={false}
@@ -143,6 +146,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -155,7 +159,7 @@ ShallowWrapper {
                         <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -172,7 +176,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                         />
@@ -221,6 +225,7 @@ ShallowWrapper {
                 className="w100 flex flex-row flex-wrap justify-center"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="clear-madison-blue-border"
                                 disabled={false}
@@ -230,6 +235,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -242,7 +248,7 @@ ShallowWrapper {
                 <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -259,7 +265,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                 />
@@ -276,6 +282,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="clear-madison-blue-border"
                     disabled={false}
@@ -285,6 +292,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -302,6 +310,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "m1",
                     "color": "clear-madison-blue-border",
                     "disabled": false,
@@ -311,6 +320,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -331,7 +341,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   bgColor=""
                   className=""
-                  color="peach"
+                  color="madison-blue"
                   fixedWidth={true}
                   label=""
                   name=""
@@ -348,7 +358,7 @@ ShallowWrapper {
                   selectClassName="w100"
                   shadow={false}
                   textAlignCenter={false}
-                  textColor="madison-blue"
+                  textColor="peach"
                   value=""
                   variant="small"
 />,
@@ -362,7 +372,7 @@ ShallowWrapper {
                 "props": Object {
                   "bgColor": "",
                   "className": "",
-                  "color": "peach",
+                  "color": "madison-blue",
                   "fixedWidth": true,
                   "label": "",
                   "name": "",
@@ -377,7 +387,7 @@ ShallowWrapper {
                   "selectClassName": "w100",
                   "shadow": false,
                   "textAlignCenter": false,
-                  "textColor": "madison-blue",
+                  "textColor": "peach",
                   "value": "",
                   "variant": "small",
                 },
@@ -460,6 +470,7 @@ ShallowWrapper {
                               className="w100 flex flex-row flex-wrap justify-center"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="m1"
                                         color="clear-madison-blue-border"
                                         disabled={false}
@@ -469,6 +480,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -481,7 +493,7 @@ ShallowWrapper {
                               <Dropdown
                                         bgColor=""
                                         className=""
-                                        color="peach"
+                                        color="madison-blue"
                                         fixedWidth={true}
                                         label=""
                                         name=""
@@ -498,7 +510,7 @@ ShallowWrapper {
                                         selectClassName="w100"
                                         shadow={false}
                                         textAlignCenter={false}
-                                        textColor="madison-blue"
+                                        textColor="peach"
                                         value=""
                                         variant="small"
                               />
@@ -545,6 +557,7 @@ ShallowWrapper {
                             className="w100 flex flex-row flex-wrap justify-center"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="m1"
                                           color="clear-madison-blue-border"
                                           disabled={false}
@@ -554,6 +567,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to=""
                                           type="button"
@@ -566,7 +580,7 @@ ShallowWrapper {
                             <Dropdown
                                           bgColor=""
                                           className=""
-                                          color="peach"
+                                          color="madison-blue"
                                           fixedWidth={true}
                                           label=""
                                           name=""
@@ -583,7 +597,7 @@ ShallowWrapper {
                                           selectClassName="w100"
                                           shadow={false}
                                           textAlignCenter={false}
-                                          textColor="madison-blue"
+                                          textColor="peach"
                                           value=""
                                           variant="small"
                             />
@@ -632,6 +646,7 @@ ShallowWrapper {
                   className="w100 flex flex-row flex-wrap justify-center"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="clear-madison-blue-border"
                                     disabled={false}
@@ -641,6 +656,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -653,7 +669,7 @@ ShallowWrapper {
                   <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -670,7 +686,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                   />
@@ -687,6 +703,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <Button
+                      childrenWrapperClassName=""
                       className="m1"
                       color="clear-madison-blue-border"
                       disabled={false}
@@ -696,6 +713,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to=""
                       type="button"
@@ -713,6 +731,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "m1",
                       "color": "clear-madison-blue-border",
                       "disabled": false,
@@ -722,6 +741,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "",
                       "type": "button",
@@ -742,7 +762,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     bgColor=""
                     className=""
-                    color="peach"
+                    color="madison-blue"
                     fixedWidth={true}
                     label=""
                     name=""
@@ -759,7 +779,7 @@ ShallowWrapper {
                     selectClassName="w100"
                     shadow={false}
                     textAlignCenter={false}
-                    textColor="madison-blue"
+                    textColor="peach"
                     value=""
                     variant="small"
 />,
@@ -773,7 +793,7 @@ ShallowWrapper {
                   "props": Object {
                     "bgColor": "",
                     "className": "",
-                    "color": "peach",
+                    "color": "madison-blue",
                     "fixedWidth": true,
                     "label": "",
                     "name": "",
@@ -788,7 +808,7 @@ ShallowWrapper {
                     "selectClassName": "w100",
                     "shadow": false,
                     "textAlignCenter": false,
-                    "textColor": "madison-blue",
+                    "textColor": "peach",
                     "value": "",
                     "variant": "small",
                   },
@@ -910,6 +930,7 @@ ShallowWrapper {
                         className="w100 flex flex-row flex-wrap justify-center"
                 >
                         <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="clear-madison-blue-border"
                                 disabled={false}
@@ -919,6 +940,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -931,7 +953,7 @@ ShallowWrapper {
                         <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -948,7 +970,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                         />
@@ -995,6 +1017,7 @@ ShallowWrapper {
                         className="w100 flex flex-row flex-wrap justify-center"
             >
                         <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="clear-madison-blue-border"
                                     disabled={false}
@@ -1004,6 +1027,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -1016,7 +1040,7 @@ ShallowWrapper {
                         <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -1033,7 +1057,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                         />
@@ -1082,6 +1106,7 @@ ShallowWrapper {
                 className="w100 flex flex-row flex-wrap justify-center"
 >
                 <Button
+                                childrenWrapperClassName=""
                                 className="m1"
                                 color="clear-madison-blue-border"
                                 disabled={false}
@@ -1091,6 +1116,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -1103,7 +1129,7 @@ ShallowWrapper {
                 <Dropdown
                                 bgColor=""
                                 className=""
-                                color="peach"
+                                color="madison-blue"
                                 fixedWidth={true}
                                 label=""
                                 name=""
@@ -1120,7 +1146,7 @@ ShallowWrapper {
                                 selectClassName="w100"
                                 shadow={false}
                                 textAlignCenter={false}
-                                textColor="madison-blue"
+                                textColor="peach"
                                 value=""
                                 variant="small"
                 />
@@ -1137,6 +1163,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <Button
+                    childrenWrapperClassName=""
                     className="m1"
                     color="clear-madison-blue-border"
                     disabled={false}
@@ -1146,6 +1173,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -1163,6 +1191,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "m1",
                     "color": "clear-madison-blue-border",
                     "disabled": false,
@@ -1172,6 +1201,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -1192,7 +1222,7 @@ ShallowWrapper {
                 "children": <Dropdown
                   bgColor=""
                   className=""
-                  color="peach"
+                  color="madison-blue"
                   fixedWidth={true}
                   label=""
                   name=""
@@ -1209,7 +1239,7 @@ ShallowWrapper {
                   selectClassName="w100"
                   shadow={false}
                   textAlignCenter={false}
-                  textColor="madison-blue"
+                  textColor="peach"
                   value=""
                   variant="small"
 />,
@@ -1223,7 +1253,7 @@ ShallowWrapper {
                 "props": Object {
                   "bgColor": "",
                   "className": "",
-                  "color": "peach",
+                  "color": "madison-blue",
                   "fixedWidth": true,
                   "label": "",
                   "name": "",
@@ -1238,7 +1268,7 @@ ShallowWrapper {
                   "selectClassName": "w100",
                   "shadow": false,
                   "textAlignCenter": false,
-                  "textColor": "madison-blue",
+                  "textColor": "peach",
                   "value": "",
                   "variant": "small",
                 },
@@ -1321,6 +1351,7 @@ ShallowWrapper {
                               className="w100 flex flex-row flex-wrap justify-center"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="m1"
                                         color="clear-madison-blue-border"
                                         disabled={false}
@@ -1330,6 +1361,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -1342,7 +1374,7 @@ ShallowWrapper {
                               <Dropdown
                                         bgColor=""
                                         className=""
-                                        color="peach"
+                                        color="madison-blue"
                                         fixedWidth={true}
                                         label=""
                                         name=""
@@ -1359,7 +1391,7 @@ ShallowWrapper {
                                         selectClassName="w100"
                                         shadow={false}
                                         textAlignCenter={false}
-                                        textColor="madison-blue"
+                                        textColor="peach"
                                         value=""
                                         variant="small"
                               />
@@ -1406,6 +1438,7 @@ ShallowWrapper {
                             className="w100 flex flex-row flex-wrap justify-center"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="m1"
                                           color="clear-madison-blue-border"
                                           disabled={false}
@@ -1415,6 +1448,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to=""
                                           type="button"
@@ -1427,7 +1461,7 @@ ShallowWrapper {
                             <Dropdown
                                           bgColor=""
                                           className=""
-                                          color="peach"
+                                          color="madison-blue"
                                           fixedWidth={true}
                                           label=""
                                           name=""
@@ -1444,7 +1478,7 @@ ShallowWrapper {
                                           selectClassName="w100"
                                           shadow={false}
                                           textAlignCenter={false}
-                                          textColor="madison-blue"
+                                          textColor="peach"
                                           value=""
                                           variant="small"
                             />
@@ -1493,6 +1527,7 @@ ShallowWrapper {
                   className="w100 flex flex-row flex-wrap justify-center"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="m1"
                                     color="clear-madison-blue-border"
                                     disabled={false}
@@ -1502,6 +1537,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -1514,7 +1550,7 @@ ShallowWrapper {
                   <Dropdown
                                     bgColor=""
                                     className=""
-                                    color="peach"
+                                    color="madison-blue"
                                     fixedWidth={true}
                                     label=""
                                     name=""
@@ -1531,7 +1567,7 @@ ShallowWrapper {
                                     selectClassName="w100"
                                     shadow={false}
                                     textAlignCenter={false}
-                                    textColor="madison-blue"
+                                    textColor="peach"
                                     value=""
                                     variant="small"
                   />
@@ -1548,6 +1584,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <Button
+                      childrenWrapperClassName=""
                       className="m1"
                       color="clear-madison-blue-border"
                       disabled={false}
@@ -1557,6 +1594,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to=""
                       type="button"
@@ -1574,6 +1612,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "m1",
                       "color": "clear-madison-blue-border",
                       "disabled": false,
@@ -1583,6 +1622,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "",
                       "type": "button",
@@ -1603,7 +1643,7 @@ ShallowWrapper {
                   "children": <Dropdown
                     bgColor=""
                     className=""
-                    color="peach"
+                    color="madison-blue"
                     fixedWidth={true}
                     label=""
                     name=""
@@ -1620,7 +1660,7 @@ ShallowWrapper {
                     selectClassName="w100"
                     shadow={false}
                     textAlignCenter={false}
-                    textColor="madison-blue"
+                    textColor="peach"
                     value=""
                     variant="small"
 />,
@@ -1634,7 +1674,7 @@ ShallowWrapper {
                   "props": Object {
                     "bgColor": "",
                     "className": "",
-                    "color": "peach",
+                    "color": "madison-blue",
                     "fixedWidth": true,
                     "label": "",
                     "name": "",
@@ -1649,7 +1689,7 @@ ShallowWrapper {
                     "selectClassName": "w100",
                     "shadow": false,
                     "textAlignCenter": false,
-                    "textColor": "madison-blue",
+                    "textColor": "peach",
                     "value": "",
                     "variant": "small",
                   },

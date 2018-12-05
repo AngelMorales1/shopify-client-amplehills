@@ -6,6 +6,7 @@ export default [
     title: 'Location 1',
     text: '',
     image: 'path-to-image.jpg',
+    navRegionOrder: 100,
     contentBlocks: [],
     slug: 'test-location',
     seasonalImage: 'path-to-image.jpg',
@@ -16,6 +17,7 @@ export default [
     region: 'Manhattan',
     state: 'NY',
     zip: '10013',
+    cakePickupTimeSlots: [],
     coordinates: {
       lon: 80.123,
       lat: 40.789
@@ -26,6 +28,7 @@ export default [
     partyAvailable: false,
     partyTypes: [],
     timeSlots: [],
+    timekitProjectId: undefined,
     phone: '8881234567',
     seasonal: false,
     delivery: false,

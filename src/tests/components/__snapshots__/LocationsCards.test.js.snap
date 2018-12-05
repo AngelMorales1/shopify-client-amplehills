@@ -140,6 +140,7 @@ ShallowWrapper {
                                 variant="primary-search"
                         />
                         <Button
+                                childrenWrapperClassName=""
                                 className="transition absolute t0 r0 small undefined"
                                 color="white-denim"
                                 disabled={false}
@@ -149,6 +150,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -277,6 +279,7 @@ ShallowWrapper {
                               variant="primary-search"
                     />
                     <Button
+                              childrenWrapperClassName=""
                               className="transition absolute t0 r0 small undefined"
                               color="white-denim"
                               disabled={false}
@@ -286,6 +289,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -411,6 +415,7 @@ ShallowWrapper {
                             variant="primary-search"
               />
               <Button
+                            childrenWrapperClassName=""
                             className="transition absolute t0 r0 small undefined"
                             color="white-denim"
                             disabled={false}
@@ -420,6 +425,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -578,6 +584,7 @@ ShallowWrapper {
                   variant="primary-search"
 />,
                 <Button
+                  childrenWrapperClassName=""
                   className="transition absolute t0 r0 small undefined"
                   color="white-denim"
                   disabled={false}
@@ -587,6 +594,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -625,6 +633,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "transition absolute t0 r0 small undefined",
                   "color": "white-denim",
                   "disabled": false,
@@ -634,6 +643,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -859,6 +869,7 @@ ShallowWrapper {
                                         variant="primary-search"
                               />
                               <Button
+                                        childrenWrapperClassName=""
                                         className="transition absolute t0 r0 small undefined"
                                         color="white-denim"
                                         disabled={false}
@@ -868,6 +879,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -996,6 +1008,7 @@ ShallowWrapper {
                                     variant="primary-search"
                         />
                         <Button
+                                    childrenWrapperClassName=""
                                     className="transition absolute t0 r0 small undefined"
                                     color="white-denim"
                                     disabled={false}
@@ -1005,6 +1018,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -1130,6 +1144,7 @@ ShallowWrapper {
                                 variant="primary-search"
                 />
                 <Button
+                                childrenWrapperClassName=""
                                 className="transition absolute t0 r0 small undefined"
                                 color="white-denim"
                                 disabled={false}
@@ -1139,6 +1154,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -1297,6 +1313,7 @@ ShallowWrapper {
                     variant="primary-search"
 />,
                   <Button
+                    childrenWrapperClassName=""
                     className="transition absolute t0 r0 small undefined"
                     color="white-denim"
                     disabled={false}
@@ -1306,6 +1323,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -1344,6 +1362,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "transition absolute t0 r0 small undefined",
                     "color": "white-denim",
                     "disabled": false,
@@ -1353,6 +1372,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",
@@ -1664,6 +1684,7 @@ ShallowWrapper {
                                 variant="primary-search"
                         />
                         <Button
+                                childrenWrapperClassName=""
                                 className="transition absolute t0 r0 small"
                                 color="white-denim"
                                 disabled={true}
@@ -1673,6 +1694,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -1791,6 +1813,7 @@ ShallowWrapper {
                               variant="primary-search"
                     />
                     <Button
+                              childrenWrapperClassName=""
                               className="transition absolute t0 r0 small"
                               color="white-denim"
                               disabled={true}
@@ -1800,6 +1823,7 @@ ShallowWrapper {
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
                               to=""
                               type="button"
@@ -1915,6 +1939,7 @@ ShallowWrapper {
                             variant="primary-search"
               />
               <Button
+                            childrenWrapperClassName=""
                             className="transition absolute t0 r0 small"
                             color="white-denim"
                             disabled={true}
@@ -1924,6 +1949,7 @@ ShallowWrapper {
                             onClick={[Function]}
                             onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
+                            openInCurrentTab={false}
                             shadow={false}
                             to=""
                             type="button"
@@ -2072,6 +2098,7 @@ ShallowWrapper {
                   variant="primary-search"
 />,
                 <Button
+                  childrenWrapperClassName=""
                   className="transition absolute t0 r0 small"
                   color="white-denim"
                   disabled={true}
@@ -2081,6 +2108,7 @@ ShallowWrapper {
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
+                  openInCurrentTab={false}
                   shadow={false}
                   to=""
                   type="button"
@@ -2119,6 +2147,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": null,
+                  "childrenWrapperClassName": "",
                   "className": "transition absolute t0 r0 small",
                   "color": "white-denim",
                   "disabled": true,
@@ -2128,6 +2157,7 @@ ShallowWrapper {
                   "onClick": [Function],
                   "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
+                  "openInCurrentTab": false,
                   "shadow": false,
                   "to": "",
                   "type": "button",
@@ -2335,6 +2365,7 @@ ShallowWrapper {
                                         variant="primary-search"
                               />
                               <Button
+                                        childrenWrapperClassName=""
                                         className="transition absolute t0 r0 small"
                                         color="white-denim"
                                         disabled={true}
@@ -2344,6 +2375,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to=""
                                         type="button"
@@ -2462,6 +2494,7 @@ ShallowWrapper {
                                     variant="primary-search"
                         />
                         <Button
+                                    childrenWrapperClassName=""
                                     className="transition absolute t0 r0 small"
                                     color="white-denim"
                                     disabled={true}
@@ -2471,6 +2504,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to=""
                                     type="button"
@@ -2586,6 +2620,7 @@ ShallowWrapper {
                                 variant="primary-search"
                 />
                 <Button
+                                childrenWrapperClassName=""
                                 className="transition absolute t0 r0 small"
                                 color="white-denim"
                                 disabled={true}
@@ -2595,6 +2630,7 @@ ShallowWrapper {
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
                                 to=""
                                 type="button"
@@ -2743,6 +2779,7 @@ ShallowWrapper {
                     variant="primary-search"
 />,
                   <Button
+                    childrenWrapperClassName=""
                     className="transition absolute t0 r0 small"
                     color="white-denim"
                     disabled={true}
@@ -2752,6 +2789,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to=""
                     type="button"
@@ -2790,6 +2828,7 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": null,
+                    "childrenWrapperClassName": "",
                     "className": "transition absolute t0 r0 small",
                     "color": "white-denim",
                     "disabled": true,
@@ -2799,6 +2838,7 @@ ShallowWrapper {
                     "onClick": [Function],
                     "onMouseEnter": [Function],
                     "onMouseLeave": [Function],
+                    "openInCurrentTab": false,
                     "shadow": false,
                     "to": "",
                     "type": "button",

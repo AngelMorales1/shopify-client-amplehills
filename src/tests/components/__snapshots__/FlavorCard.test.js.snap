@@ -54,6 +54,7 @@ ShallowWrapper {
                 className="center bold text-madison-blue"
         />
 </div>,
+      "childrenWrapperClassName": "",
       "className": "",
       "color": "white-denim",
       "disabled": false,
@@ -63,6 +64,7 @@ ShallowWrapper {
       "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
+      "openInCurrentTab": false,
       "shadow": false,
       "to": "/flavors/undefined",
       "type": "button",
@@ -148,6 +150,7 @@ ShallowWrapper {
                     className="center bold text-madison-blue"
           />
 </div>,
+        "childrenWrapperClassName": "",
         "className": "",
         "color": "white-denim",
         "disabled": false,
@@ -157,6 +160,7 @@ ShallowWrapper {
         "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
+        "openInCurrentTab": false,
         "shadow": false,
         "to": "/flavors/undefined",
         "type": "button",
@@ -275,6 +279,7 @@ ShallowWrapper {
                 className="center bold text-madison-blue"
         />
 </div>,
+      "childrenWrapperClassName": "",
       "className": "",
       "color": "white-denim",
       "disabled": false,
@@ -284,6 +289,7 @@ ShallowWrapper {
       "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
+      "openInCurrentTab": false,
       "shadow": false,
       "to": "/flavors/undefined",
       "type": "button",
@@ -369,6 +375,7 @@ ShallowWrapper {
                     className="center bold text-madison-blue"
           />
 </div>,
+        "childrenWrapperClassName": "",
         "className": "",
         "color": "white-denim",
         "disabled": false,
@@ -378,6 +385,7 @@ ShallowWrapper {
         "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
+        "openInCurrentTab": false,
         "shadow": false,
         "to": "/flavors/undefined",
         "type": "button",

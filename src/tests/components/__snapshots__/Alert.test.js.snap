@@ -40,7 +40,7 @@ ShallowWrapper {
           foo
 </a>,
       ],
-      "className": "z-nav w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
+      "className": "z-overlay w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
     },
     "ref": null,
     "rendered": Array [
@@ -93,7 +93,7 @@ ShallowWrapper {
             foo
 </a>,
         ],
-        "className": "z-nav w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
+        "className": "z-overlay w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
       },
       "ref": null,
       "rendered": Array [
@@ -173,7 +173,7 @@ ShallowWrapper {
           rel="noopener"
 />,
       ],
-      "className": "z-nav w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
+      "className": "z-overlay w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
     },
     "ref": null,
     "rendered": Array [
@@ -222,7 +222,7 @@ ShallowWrapper {
             rel="noopener"
 />,
         ],
-        "className": "z-nav w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
+        "className": "z-overlay w100 fixed l0 t0 px1 bg-madison-blue bold flex flex-row justify-center items-center flex-wrap transition-fade-in center",
       },
       "ref": null,
       "rendered": Array [

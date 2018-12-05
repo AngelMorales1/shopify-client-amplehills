@@ -225,17 +225,17 @@ ShallowWrapper {
                                                             info
                                                   </p>
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="small mb1"
                                                   >
                                                             foo
                                                   </p>
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="small mb1"
                                                   >
                                                             foo, foo foo
                                                   </p>
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="small"
                                                   >
                                                             foo
                                                   </p>
@@ -385,6 +385,13 @@ ShallowWrapper {
                                                             }
                                                             hoverFade={false}
                                                             iconSize={0.8}
+                                                            initialCenter={
+                                                                      Array [
+                                                                                -73.949997,
+                                                                                40.650002,
+                                                                              ]
+                                                            }
+                                                            initialZoom={6}
                                                             mapPadding={10}
                                                             maxZoom={15}
                                                             onClickFeature={[Function]}
@@ -392,6 +399,7 @@ ShallowWrapper {
                                                             styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                             textColor="#000000"
                                                             textSize={12}
+                                                            zoomToFeatureSpeed={1}
                                                   />
                                         </div>
                               </div>
@@ -407,12 +415,12 @@ ShallowWrapper {
                                                   className="flex flex-row justify-between"
                                         >
                                                   <p
-                                                            className="bold block-subheadline mr1"
+                                                            className="bold small mr1 mb1"
                                                   >
                                                             foo
                                                   </p>
                                                   <p
-                                                            className="col-5 md-col-6 block-subheadline"
+                                                            className="col-5 md-col-6 small mb1"
                                                   >
                                                             foo
                                                   </p>
@@ -478,17 +486,17 @@ ShallowWrapper {
                                                                       info
                                                         </p>
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="small mb1"
                                                         >
                                                                       foo
                                                         </p>
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="small mb1"
                                                         >
                                                                       foo, foo foo
                                                         </p>
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="small"
                                                         >
                                                                       foo
                                                         </p>
@@ -638,6 +646,13 @@ ShallowWrapper {
                                                                       }
                                                                       hoverFade={false}
                                                                       iconSize={0.8}
+                                                                      initialCenter={
+                                                                                    Array [
+                                                                                                  -73.949997,
+                                                                                                  40.650002,
+                                                                                                ]
+                                                                      }
+                                                                      initialZoom={6}
                                                                       mapPadding={10}
                                                                       maxZoom={15}
                                                                       onClickFeature={[Function]}
@@ -645,6 +660,7 @@ ShallowWrapper {
                                                                       styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                       textColor="#000000"
                                                                       textSize={12}
+                                                                      zoomToFeatureSpeed={1}
                                                         />
                                           </div>
                             </div>
@@ -660,12 +676,12 @@ ShallowWrapper {
                                                         className="flex flex-row justify-between"
                                           >
                                                         <p
-                                                                      className="bold block-subheadline mr1"
+                                                                      className="bold small mr1 mb1"
                                                         >
                                                                       foo
                                                         </p>
                                                         <p
-                                                                      className="col-5 md-col-6 block-subheadline"
+                                                                      className="col-5 md-col-6 small mb1"
                                                         >
                                                                       foo
                                                         </p>
@@ -710,17 +726,17 @@ ShallowWrapper {
                                                                         info
                                                       </p>
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                       >
                                                                         foo
                                                       </p>
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                       >
                                                                         foo, foo foo
                                                       </p>
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="small"
                                                       >
                                                                         foo
                                                       </p>
@@ -870,6 +886,13 @@ ShallowWrapper {
                                                                         }
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                          Array [
+                                                                                                            -73.949997,
+                                                                                                            40.650002,
+                                                                                                          ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -877,6 +900,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                       />
                                     </div>
                   </div>
@@ -892,12 +916,12 @@ ShallowWrapper {
                                                       className="flex flex-row justify-between"
                                     >
                                                       <p
-                                                                        className="bold block-subheadline mr1"
+                                                                        className="bold small mr1 mb1"
                                                       >
                                                                         foo
                                                       </p>
                                                       <p
-                                                                        className="col-5 md-col-6 block-subheadline"
+                                                                        className="col-5 md-col-6 small mb1"
                                                       >
                                                                         foo
                                                       </p>
@@ -940,17 +964,17 @@ ShallowWrapper {
                                                                   info
                                             </p>
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="small mb1"
                                             >
                                                                   foo
                                             </p>
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="small mb1"
                                             >
                                                                   foo, foo foo
                                             </p>
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="small"
                                             >
                                                                   foo
                                             </p>
@@ -1100,6 +1124,13 @@ ShallowWrapper {
                                                                   }
                                                                   hoverFade={false}
                                                                   iconSize={0.8}
+                                                                  initialCenter={
+                                                                                        Array [
+                                                                                                              -73.949997,
+                                                                                                              40.650002,
+                                                                                                            ]
+                                                                  }
+                                                                  initialZoom={6}
                                                                   mapPadding={10}
                                                                   maxZoom={15}
                                                                   onClickFeature={[Function]}
@@ -1107,6 +1138,7 @@ ShallowWrapper {
                                                                   styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                   textColor="#000000"
                                                                   textSize={12}
+                                                                  zoomToFeatureSpeed={1}
                                             />
                       </div>
 </div>,
@@ -1122,12 +1154,12 @@ ShallowWrapper {
                                             className="flex flex-row justify-between"
                       >
                                             <p
-                                                                  className="bold block-subheadline mr1"
+                                                                  className="bold small mr1 mb1"
                                             >
                                                                   foo
                                             </p>
                                             <p
-                                                                  className="col-5 md-col-6 block-subheadline"
+                                                                  className="col-5 md-col-6 small mb1"
                                             >
                                                                   foo
                                             </p>
@@ -1153,17 +1185,17 @@ ShallowWrapper {
                                                     info
                           </p>
                           <p
-                                                    className="block-subheadline"
+                                                    className="small mb1"
                           >
                                                     foo
                           </p>
                           <p
-                                                    className="block-subheadline"
+                                                    className="small mb1"
                           >
                                                     foo, foo foo
                           </p>
                           <p
-                                                    className="block-subheadline"
+                                                    className="small"
                           >
                                                     foo
                           </p>
@@ -1313,6 +1345,13 @@ ShallowWrapper {
                                                     }
                                                     hoverFade={false}
                                                     iconSize={0.8}
+                                                    initialCenter={
+                                                                              Array [
+                                                                                                        -73.949997,
+                                                                                                        40.650002,
+                                                                                                      ]
+                                                    }
+                                                    initialZoom={6}
                                                     mapPadding={10}
                                                     maxZoom={15}
                                                     onClickFeature={[Function]}
@@ -1320,6 +1359,7 @@ ShallowWrapper {
                                                     styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                     textColor="#000000"
                                                     textSize={12}
+                                                    zoomToFeatureSpeed={1}
                           />
 </div>,
                       ],
@@ -1339,17 +1379,17 @@ ShallowWrapper {
                               info
 </p>,
                             <p
-                              className="block-subheadline"
+                              className="small mb1"
 >
                               foo
 </p>,
                             <p
-                              className="block-subheadline"
+                              className="small mb1"
 >
                               foo, foo foo
 </p>,
                             <p
-                              className="block-subheadline"
+                              className="small"
 >
                               foo
 </p>,
@@ -1376,7 +1416,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "foo",
-                              "className": "block-subheadline",
+                              "className": "small mb1",
                             },
                             "ref": null,
                             "rendered": "foo",
@@ -1388,7 +1428,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "foo, foo foo",
-                              "className": "block-subheadline",
+                              "className": "small mb1",
                             },
                             "ref": null,
                             "rendered": "foo, foo foo",
@@ -1400,7 +1440,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "foo",
-                              "className": "block-subheadline",
+                              "className": "small",
                             },
                             "ref": null,
                             "rendered": "foo",
@@ -1556,6 +1596,13 @@ ShallowWrapper {
                             }
                             hoverFade={false}
                             iconSize={0.8}
+                            initialCenter={
+                                                        Array [
+                                                                                    -73.949997,
+                                                                                    40.650002,
+                                                                                  ]
+                            }
+                            initialZoom={6}
                             mapPadding={10}
                             maxZoom={15}
                             onClickFeature={[Function]}
@@ -1563,6 +1610,7 @@ ShallowWrapper {
                             styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                             textColor="#000000"
                             textSize={12}
+                            zoomToFeatureSpeed={1}
 />,
                           "className": "circle z-1 bg-white",
                         },
@@ -1709,6 +1757,11 @@ ShallowWrapper {
                             },
                             "hoverFade": false,
                             "iconSize": 0.8,
+                            "initialCenter": Array [
+                              -73.949997,
+                              40.650002,
+                            ],
+                            "initialZoom": 6,
                             "mapPadding": 10,
                             "maxZoom": 15,
                             "onClickFeature": [Function],
@@ -1716,6 +1769,7 @@ ShallowWrapper {
                             "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
                             "textColor": "#000000",
                             "textSize": 12,
+                            "zoomToFeatureSpeed": 1,
                           },
                           "ref": null,
                           "rendered": null,
@@ -1743,12 +1797,12 @@ ShallowWrapper {
                             className="flex flex-row justify-between"
 >
                             <p
-                                                        className="bold block-subheadline mr1"
+                                                        className="bold small mr1 mb1"
                             >
                                                         foo
                             </p>
                             <p
-                                                        className="col-5 md-col-6 block-subheadline"
+                                                        className="col-5 md-col-6 small mb1"
                             >
                                                         foo
                             </p>
@@ -1779,12 +1833,12 @@ ShallowWrapper {
                         "props": Object {
                           "children": Array [
                             <p
-                              className="bold block-subheadline mr1"
+                              className="bold small mr1 mb1"
 >
                               foo
 </p>,
                             <p
-                              className="col-5 md-col-6 block-subheadline"
+                              className="col-5 md-col-6 small mb1"
 >
                               foo
 </p>,
@@ -1801,7 +1855,7 @@ ShallowWrapper {
                               "children": Array [
                                 "foo",
                               ],
-                              "className": "bold block-subheadline mr1",
+                              "className": "bold small mr1 mb1",
                             },
                             "ref": null,
                             "rendered": Array [
@@ -1815,7 +1869,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "foo",
-                              "className": "col-5 md-col-6 block-subheadline",
+                              "className": "col-5 md-col-6 small mb1",
                             },
                             "ref": null,
                             "rendered": "foo",
@@ -1901,17 +1955,17 @@ ShallowWrapper {
                                                                         info
                                                             </p>
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                             >
                                                                         foo
                                                             </p>
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                             >
                                                                         foo, foo foo
                                                             </p>
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="small"
                                                             >
                                                                         foo
                                                             </p>
@@ -2061,6 +2115,13 @@ ShallowWrapper {
                                                                         }
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                    Array [
+                                                                                                -73.949997,
+                                                                                                40.650002,
+                                                                                              ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -2068,6 +2129,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                             />
                                                 </div>
                                     </div>
@@ -2083,12 +2145,12 @@ ShallowWrapper {
                                                             className="flex flex-row justify-between"
                                                 >
                                                             <p
-                                                                        className="bold block-subheadline mr1"
+                                                                        className="bold small mr1 mb1"
                                                             >
                                                                         foo
                                                             </p>
                                                             <p
-                                                                        className="col-5 md-col-6 block-subheadline"
+                                                                        className="col-5 md-col-6 small mb1"
                                                             >
                                                                         foo
                                                             </p>
@@ -2154,17 +2216,17 @@ ShallowWrapper {
                                                                                 info
                                                                 </p>
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                                 >
                                                                                 foo
                                                                 </p>
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                                 >
                                                                                 foo, foo foo
                                                                 </p>
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="small"
                                                                 >
                                                                                 foo
                                                                 </p>
@@ -2314,6 +2376,13 @@ ShallowWrapper {
                                                                                 }
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
+                                                                                initialCenter={
+                                                                                                Array [
+                                                                                                                -73.949997,
+                                                                                                                40.650002,
+                                                                                                              ]
+                                                                                }
+                                                                                initialZoom={6}
                                                                                 mapPadding={10}
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
@@ -2321,6 +2390,7 @@ ShallowWrapper {
                                                                                 styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
+                                                                                zoomToFeatureSpeed={1}
                                                                 />
                                                 </div>
                                 </div>
@@ -2336,12 +2406,12 @@ ShallowWrapper {
                                                                 className="flex flex-row justify-between"
                                                 >
                                                                 <p
-                                                                                className="bold block-subheadline mr1"
+                                                                                className="bold small mr1 mb1"
                                                                 >
                                                                                 foo
                                                                 </p>
                                                                 <p
-                                                                                className="col-5 md-col-6 block-subheadline"
+                                                                                className="col-5 md-col-6 small mb1"
                                                                 >
                                                                                 foo
                                                                 </p>
@@ -2386,17 +2456,17 @@ ShallowWrapper {
                                                                                 info
                                                             </p>
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                             >
                                                                                 foo
                                                             </p>
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                             >
                                                                                 foo, foo foo
                                                             </p>
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="small"
                                                             >
                                                                                 foo
                                                             </p>
@@ -2546,6 +2616,13 @@ ShallowWrapper {
                                                                                 }
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
+                                                                                initialCenter={
+                                                                                                    Array [
+                                                                                                                        -73.949997,
+                                                                                                                        40.650002,
+                                                                                                                      ]
+                                                                                }
+                                                                                initialZoom={6}
                                                                                 mapPadding={10}
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
@@ -2553,6 +2630,7 @@ ShallowWrapper {
                                                                                 styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
+                                                                                zoomToFeatureSpeed={1}
                                                             />
                                         </div>
                     </div>
@@ -2568,12 +2646,12 @@ ShallowWrapper {
                                                             className="flex flex-row justify-between"
                                         >
                                                             <p
-                                                                                className="bold block-subheadline mr1"
+                                                                                className="bold small mr1 mb1"
                                                             >
                                                                                 foo
                                                             </p>
                                                             <p
-                                                                                className="col-5 md-col-6 block-subheadline"
+                                                                                className="col-5 md-col-6 small mb1"
                                                             >
                                                                                 foo
                                                             </p>
@@ -2616,17 +2694,17 @@ ShallowWrapper {
                                                                         info
                                                 </p>
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                 >
                                                                         foo
                                                 </p>
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                 >
                                                                         foo, foo foo
                                                 </p>
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="small"
                                                 >
                                                                         foo
                                                 </p>
@@ -2776,6 +2854,13 @@ ShallowWrapper {
                                                                         }
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                                Array [
+                                                                                                                        -73.949997,
+                                                                                                                        40.650002,
+                                                                                                                      ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -2783,6 +2868,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                 />
                         </div>
 </div>,
@@ -2798,12 +2884,12 @@ ShallowWrapper {
                                                 className="flex flex-row justify-between"
                         >
                                                 <p
-                                                                        className="bold block-subheadline mr1"
+                                                                        className="bold small mr1 mb1"
                                                 >
                                                                         foo
                                                 </p>
                                                 <p
-                                                                        className="col-5 md-col-6 block-subheadline"
+                                                                        className="col-5 md-col-6 small mb1"
                                                 >
                                                                         foo
                                                 </p>
@@ -2829,17 +2915,17 @@ ShallowWrapper {
                                                         info
                             </p>
                             <p
-                                                        className="block-subheadline"
+                                                        className="small mb1"
                             >
                                                         foo
                             </p>
                             <p
-                                                        className="block-subheadline"
+                                                        className="small mb1"
                             >
                                                         foo, foo foo
                             </p>
                             <p
-                                                        className="block-subheadline"
+                                                        className="small"
                             >
                                                         foo
                             </p>
@@ -2989,6 +3075,13 @@ ShallowWrapper {
                                                         }
                                                         hoverFade={false}
                                                         iconSize={0.8}
+                                                        initialCenter={
+                                                                                    Array [
+                                                                                                                -73.949997,
+                                                                                                                40.650002,
+                                                                                                              ]
+                                                        }
+                                                        initialZoom={6}
                                                         mapPadding={10}
                                                         maxZoom={15}
                                                         onClickFeature={[Function]}
@@ -2996,6 +3089,7 @@ ShallowWrapper {
                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                         textColor="#000000"
                                                         textSize={12}
+                                                        zoomToFeatureSpeed={1}
                             />
 </div>,
                         ],
@@ -3015,17 +3109,17 @@ ShallowWrapper {
                                 info
 </p>,
                               <p
-                                className="block-subheadline"
+                                className="small mb1"
 >
                                 foo
 </p>,
                               <p
-                                className="block-subheadline"
+                                className="small mb1"
 >
                                 foo, foo foo
 </p>,
                               <p
-                                className="block-subheadline"
+                                className="small"
 >
                                 foo
 </p>,
@@ -3052,7 +3146,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "foo",
-                                "className": "block-subheadline",
+                                "className": "small mb1",
                               },
                               "ref": null,
                               "rendered": "foo",
@@ -3064,7 +3158,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "foo, foo foo",
-                                "className": "block-subheadline",
+                                "className": "small mb1",
                               },
                               "ref": null,
                               "rendered": "foo, foo foo",
@@ -3076,7 +3170,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "foo",
-                                "className": "block-subheadline",
+                                "className": "small",
                               },
                               "ref": null,
                               "rendered": "foo",
@@ -3232,6 +3326,13 @@ ShallowWrapper {
                               }
                               hoverFade={false}
                               iconSize={0.8}
+                              initialCenter={
+                                                            Array [
+                                                                                          -73.949997,
+                                                                                          40.650002,
+                                                                                        ]
+                              }
+                              initialZoom={6}
                               mapPadding={10}
                               maxZoom={15}
                               onClickFeature={[Function]}
@@ -3239,6 +3340,7 @@ ShallowWrapper {
                               styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                               textColor="#000000"
                               textSize={12}
+                              zoomToFeatureSpeed={1}
 />,
                             "className": "circle z-1 bg-white",
                           },
@@ -3385,6 +3487,11 @@ ShallowWrapper {
                               },
                               "hoverFade": false,
                               "iconSize": 0.8,
+                              "initialCenter": Array [
+                                -73.949997,
+                                40.650002,
+                              ],
+                              "initialZoom": 6,
                               "mapPadding": 10,
                               "maxZoom": 15,
                               "onClickFeature": [Function],
@@ -3392,6 +3499,7 @@ ShallowWrapper {
                               "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
                               "textColor": "#000000",
                               "textSize": 12,
+                              "zoomToFeatureSpeed": 1,
                             },
                             "ref": null,
                             "rendered": null,
@@ -3419,12 +3527,12 @@ ShallowWrapper {
                               className="flex flex-row justify-between"
 >
                               <p
-                                                            className="bold block-subheadline mr1"
+                                                            className="bold small mr1 mb1"
                               >
                                                             foo
                               </p>
                               <p
-                                                            className="col-5 md-col-6 block-subheadline"
+                                                            className="col-5 md-col-6 small mb1"
                               >
                                                             foo
                               </p>
@@ -3455,12 +3563,12 @@ ShallowWrapper {
                           "props": Object {
                             "children": Array [
                               <p
-                                className="bold block-subheadline mr1"
+                                className="bold small mr1 mb1"
 >
                                 foo
 </p>,
                               <p
-                                className="col-5 md-col-6 block-subheadline"
+                                className="col-5 md-col-6 small mb1"
 >
                                 foo
 </p>,
@@ -3477,7 +3585,7 @@ ShallowWrapper {
                                 "children": Array [
                                   "foo",
                                 ],
-                                "className": "bold block-subheadline mr1",
+                                "className": "bold small mr1 mb1",
                               },
                               "ref": null,
                               "rendered": Array [
@@ -3491,7 +3599,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "foo",
-                                "className": "col-5 md-col-6 block-subheadline",
+                                "className": "col-5 md-col-6 small mb1",
                               },
                               "ref": null,
                               "rendered": "foo",
@@ -3631,10 +3739,10 @@ ShallowWrapper {
                                                             info
                                                   </p>
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="small mb1"
                                                   />
                                                   <p
-                                                            className="block-subheadline"
+                                                            className="small mb1"
                                                   >
                                                             ,  
                                                   </p>
@@ -3671,6 +3779,13 @@ ShallowWrapper {
                                                             featureCollection={Object {}}
                                                             hoverFade={false}
                                                             iconSize={0.8}
+                                                            initialCenter={
+                                                                      Array [
+                                                                                -73.949997,
+                                                                                40.650002,
+                                                                              ]
+                                                            }
+                                                            initialZoom={6}
                                                             mapPadding={10}
                                                             maxZoom={15}
                                                             onClickFeature={[Function]}
@@ -3678,6 +3793,7 @@ ShallowWrapper {
                                                             styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                             textColor="#000000"
                                                             textSize={12}
+                                                            zoomToFeatureSpeed={1}
                                                   />
                                         </div>
                               </div>
@@ -3748,10 +3864,10 @@ ShallowWrapper {
                                                                       info
                                                         </p>
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="small mb1"
                                                         />
                                                         <p
-                                                                      className="block-subheadline"
+                                                                      className="small mb1"
                                                         >
                                                                       ,  
                                                         </p>
@@ -3788,6 +3904,13 @@ ShallowWrapper {
                                                                       featureCollection={Object {}}
                                                                       hoverFade={false}
                                                                       iconSize={0.8}
+                                                                      initialCenter={
+                                                                                    Array [
+                                                                                                  -73.949997,
+                                                                                                  40.650002,
+                                                                                                ]
+                                                                      }
+                                                                      initialZoom={6}
                                                                       mapPadding={10}
                                                                       maxZoom={15}
                                                                       onClickFeature={[Function]}
@@ -3795,6 +3918,7 @@ ShallowWrapper {
                                                                       styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                       textColor="#000000"
                                                                       textSize={12}
+                                                                      zoomToFeatureSpeed={1}
                                                         />
                                           </div>
                             </div>
@@ -3844,10 +3968,10 @@ ShallowWrapper {
                                                                         info
                                                       </p>
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                       />
                                                       <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                       >
                                                                         ,  
                                                       </p>
@@ -3884,6 +4008,13 @@ ShallowWrapper {
                                                                         featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                          Array [
+                                                                                                            -73.949997,
+                                                                                                            40.650002,
+                                                                                                          ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -3891,6 +4022,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                       />
                                     </div>
                   </div>
@@ -3940,10 +4072,10 @@ ShallowWrapper {
                                                                   info
                                             </p>
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="small mb1"
                                             />
                                             <p
-                                                                  className="block-subheadline"
+                                                                  className="small mb1"
                                             >
                                                                   ,  
                                             </p>
@@ -3980,6 +4112,13 @@ ShallowWrapper {
                                                                   featureCollection={Object {}}
                                                                   hoverFade={false}
                                                                   iconSize={0.8}
+                                                                  initialCenter={
+                                                                                        Array [
+                                                                                                              -73.949997,
+                                                                                                              40.650002,
+                                                                                                            ]
+                                                                  }
+                                                                  initialZoom={6}
                                                                   mapPadding={10}
                                                                   maxZoom={15}
                                                                   onClickFeature={[Function]}
@@ -3987,6 +4126,7 @@ ShallowWrapper {
                                                                   styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                   textColor="#000000"
                                                                   textSize={12}
+                                                                  zoomToFeatureSpeed={1}
                                             />
                       </div>
 </div>,
@@ -4019,10 +4159,10 @@ ShallowWrapper {
                                                     info
                           </p>
                           <p
-                                                    className="block-subheadline"
+                                                    className="small mb1"
                           />
                           <p
-                                                    className="block-subheadline"
+                                                    className="small mb1"
                           >
                                                     ,  
                           </p>
@@ -4059,6 +4199,13 @@ ShallowWrapper {
                                                     featureCollection={Object {}}
                                                     hoverFade={false}
                                                     iconSize={0.8}
+                                                    initialCenter={
+                                                                              Array [
+                                                                                                        -73.949997,
+                                                                                                        40.650002,
+                                                                                                      ]
+                                                    }
+                                                    initialZoom={6}
                                                     mapPadding={10}
                                                     maxZoom={15}
                                                     onClickFeature={[Function]}
@@ -4066,6 +4213,7 @@ ShallowWrapper {
                                                     styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                     textColor="#000000"
                                                     textSize={12}
+                                                    zoomToFeatureSpeed={1}
                           />
 </div>,
                       ],
@@ -4085,10 +4233,10 @@ ShallowWrapper {
                               info
 </p>,
                             <p
-                              className="block-subheadline"
+                              className="small mb1"
 />,
                             <p
-                              className="block-subheadline"
+                              className="small mb1"
 >
                               ,  
 </p>,
@@ -4116,7 +4264,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": "",
-                              "className": "block-subheadline",
+                              "className": "small mb1",
                             },
                             "ref": null,
                             "rendered": "",
@@ -4128,7 +4276,7 @@ ShallowWrapper {
                             "nodeType": "host",
                             "props": Object {
                               "children": ",  ",
-                              "className": "block-subheadline",
+                              "className": "small mb1",
                             },
                             "ref": null,
                             "rendered": ",  ",
@@ -4172,6 +4320,13 @@ ShallowWrapper {
                             featureCollection={Object {}}
                             hoverFade={false}
                             iconSize={0.8}
+                            initialCenter={
+                                                        Array [
+                                                                                    -73.949997,
+                                                                                    40.650002,
+                                                                                  ]
+                            }
+                            initialZoom={6}
                             mapPadding={10}
                             maxZoom={15}
                             onClickFeature={[Function]}
@@ -4179,6 +4334,7 @@ ShallowWrapper {
                             styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                             textColor="#000000"
                             textSize={12}
+                            zoomToFeatureSpeed={1}
 />,
                           "className": "circle z-1 bg-white",
                         },
@@ -4214,6 +4370,11 @@ ShallowWrapper {
                             "featureCollection": Object {},
                             "hoverFade": false,
                             "iconSize": 0.8,
+                            "initialCenter": Array [
+                              -73.949997,
+                              40.650002,
+                            ],
+                            "initialZoom": 6,
                             "mapPadding": 10,
                             "maxZoom": 15,
                             "onClickFeature": [Function],
@@ -4221,6 +4382,7 @@ ShallowWrapper {
                             "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
                             "textColor": "#000000",
                             "textSize": 12,
+                            "zoomToFeatureSpeed": 1,
                           },
                           "ref": null,
                           "rendered": null,
@@ -4337,10 +4499,10 @@ ShallowWrapper {
                                                                         info
                                                             </p>
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                             />
                                                             <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                             >
                                                                         ,  
                                                             </p>
@@ -4377,6 +4539,13 @@ ShallowWrapper {
                                                                         featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                    Array [
+                                                                                                -73.949997,
+                                                                                                40.650002,
+                                                                                              ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -4384,6 +4553,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                             />
                                                 </div>
                                     </div>
@@ -4454,10 +4624,10 @@ ShallowWrapper {
                                                                                 info
                                                                 </p>
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                                 />
                                                                 <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                                 >
                                                                                 ,  
                                                                 </p>
@@ -4494,6 +4664,13 @@ ShallowWrapper {
                                                                                 featureCollection={Object {}}
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
+                                                                                initialCenter={
+                                                                                                Array [
+                                                                                                                -73.949997,
+                                                                                                                40.650002,
+                                                                                                              ]
+                                                                                }
+                                                                                initialZoom={6}
                                                                                 mapPadding={10}
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
@@ -4501,6 +4678,7 @@ ShallowWrapper {
                                                                                 styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
+                                                                                zoomToFeatureSpeed={1}
                                                                 />
                                                 </div>
                                 </div>
@@ -4550,10 +4728,10 @@ ShallowWrapper {
                                                                                 info
                                                             </p>
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                             />
                                                             <p
-                                                                                className="block-subheadline"
+                                                                                className="small mb1"
                                                             >
                                                                                 ,  
                                                             </p>
@@ -4590,6 +4768,13 @@ ShallowWrapper {
                                                                                 featureCollection={Object {}}
                                                                                 hoverFade={false}
                                                                                 iconSize={0.8}
+                                                                                initialCenter={
+                                                                                                    Array [
+                                                                                                                        -73.949997,
+                                                                                                                        40.650002,
+                                                                                                                      ]
+                                                                                }
+                                                                                initialZoom={6}
                                                                                 mapPadding={10}
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
@@ -4597,6 +4782,7 @@ ShallowWrapper {
                                                                                 styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
+                                                                                zoomToFeatureSpeed={1}
                                                             />
                                         </div>
                     </div>
@@ -4646,10 +4832,10 @@ ShallowWrapper {
                                                                         info
                                                 </p>
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                 />
                                                 <p
-                                                                        className="block-subheadline"
+                                                                        className="small mb1"
                                                 >
                                                                         ,  
                                                 </p>
@@ -4686,6 +4872,13 @@ ShallowWrapper {
                                                                         featureCollection={Object {}}
                                                                         hoverFade={false}
                                                                         iconSize={0.8}
+                                                                        initialCenter={
+                                                                                                Array [
+                                                                                                                        -73.949997,
+                                                                                                                        40.650002,
+                                                                                                                      ]
+                                                                        }
+                                                                        initialZoom={6}
                                                                         mapPadding={10}
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
@@ -4693,6 +4886,7 @@ ShallowWrapper {
                                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                                         textColor="#000000"
                                                                         textSize={12}
+                                                                        zoomToFeatureSpeed={1}
                                                 />
                         </div>
 </div>,
@@ -4725,10 +4919,10 @@ ShallowWrapper {
                                                         info
                             </p>
                             <p
-                                                        className="block-subheadline"
+                                                        className="small mb1"
                             />
                             <p
-                                                        className="block-subheadline"
+                                                        className="small mb1"
                             >
                                                         ,  
                             </p>
@@ -4765,6 +4959,13 @@ ShallowWrapper {
                                                         featureCollection={Object {}}
                                                         hoverFade={false}
                                                         iconSize={0.8}
+                                                        initialCenter={
+                                                                                    Array [
+                                                                                                                -73.949997,
+                                                                                                                40.650002,
+                                                                                                              ]
+                                                        }
+                                                        initialZoom={6}
                                                         mapPadding={10}
                                                         maxZoom={15}
                                                         onClickFeature={[Function]}
@@ -4772,6 +4973,7 @@ ShallowWrapper {
                                                         styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                                                         textColor="#000000"
                                                         textSize={12}
+                                                        zoomToFeatureSpeed={1}
                             />
 </div>,
                         ],
@@ -4791,10 +4993,10 @@ ShallowWrapper {
                                 info
 </p>,
                               <p
-                                className="block-subheadline"
+                                className="small mb1"
 />,
                               <p
-                                className="block-subheadline"
+                                className="small mb1"
 >
                                 ,  
 </p>,
@@ -4822,7 +5024,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": "",
-                                "className": "block-subheadline",
+                                "className": "small mb1",
                               },
                               "ref": null,
                               "rendered": "",
@@ -4834,7 +5036,7 @@ ShallowWrapper {
                               "nodeType": "host",
                               "props": Object {
                                 "children": ",  ",
-                                "className": "block-subheadline",
+                                "className": "small mb1",
                               },
                               "ref": null,
                               "rendered": ",  ",
@@ -4878,6 +5080,13 @@ ShallowWrapper {
                               featureCollection={Object {}}
                               hoverFade={false}
                               iconSize={0.8}
+                              initialCenter={
+                                                            Array [
+                                                                                          -73.949997,
+                                                                                          40.650002,
+                                                                                        ]
+                              }
+                              initialZoom={6}
                               mapPadding={10}
                               maxZoom={15}
                               onClickFeature={[Function]}
@@ -4885,6 +5094,7 @@ ShallowWrapper {
                               styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
                               textColor="#000000"
                               textSize={12}
+                              zoomToFeatureSpeed={1}
 />,
                             "className": "circle z-1 bg-white",
                           },
@@ -4920,6 +5130,11 @@ ShallowWrapper {
                               "featureCollection": Object {},
                               "hoverFade": false,
                               "iconSize": 0.8,
+                              "initialCenter": Array [
+                                -73.949997,
+                                40.650002,
+                              ],
+                              "initialZoom": 6,
                               "mapPadding": 10,
                               "maxZoom": 15,
                               "onClickFeature": [Function],
@@ -4927,6 +5142,7 @@ ShallowWrapper {
                               "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
                               "textColor": "#000000",
                               "textSize": 12,
+                              "zoomToFeatureSpeed": 1,
                             },
                             "ref": null,
                             "rendered": null,

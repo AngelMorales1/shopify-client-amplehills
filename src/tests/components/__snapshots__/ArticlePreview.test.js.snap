@@ -37,6 +37,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Button
+          childrenWrapperClassName=""
           className=""
           color="white-denim"
           disabled={false}
@@ -46,6 +47,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to="/news/foo"
           type="button"
@@ -65,6 +67,7 @@ ShallowWrapper {
           className="text-container-width"
 >
           <Button
+                    childrenWrapperClassName=""
                     className=""
                     color="white-denim"
                     disabled={false}
@@ -74,6 +77,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to="/news/foo"
                     type="button"
@@ -102,6 +106,7 @@ ShallowWrapper {
                               className="flex flex-row my3"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="mr2"
                                         color="madison-blue"
                                         disabled={false}
@@ -111,6 +116,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to="/news/foo"
                                         type="button"
@@ -122,6 +128,7 @@ ShallowWrapper {
                                         windowWidth={550}
                               >
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className=""
                                                   color="white-madison-blue-border"
                                                   disabled={false}
@@ -131,6 +138,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -159,6 +167,7 @@ ShallowWrapper {
                                   }
             }
 />,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "white-denim",
           "disabled": false,
@@ -168,6 +177,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "/news/foo",
           "type": "button",
@@ -198,6 +208,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Button
+              childrenWrapperClassName=""
               className=""
               color="white-denim"
               disabled={false}
@@ -207,6 +218,7 @@ ShallowWrapper {
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              openInCurrentTab={false}
               shadow={false}
               to="/news/foo"
               type="button"
@@ -235,6 +247,7 @@ ShallowWrapper {
                             className="flex flex-row my3"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="mr2"
                                           color="madison-blue"
                                           disabled={false}
@@ -244,6 +257,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to="/news/foo"
                                           type="button"
@@ -255,6 +269,7 @@ ShallowWrapper {
                                           windowWidth={550}
                             >
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className=""
                                                         color="white-madison-blue-border"
                                                         disabled={false}
@@ -264,6 +279,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -287,6 +303,7 @@ ShallowWrapper {
 >
                 foo
 </h2>,
+              "childrenWrapperClassName": "",
               "className": "",
               "color": "white-denim",
               "disabled": false,
@@ -296,6 +313,7 @@ ShallowWrapper {
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "openInCurrentTab": false,
               "shadow": false,
               "to": "/news/foo",
               "type": "button",
@@ -343,6 +361,7 @@ ShallowWrapper {
                   className="flex flex-row my3"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="mr2"
                                     color="madison-blue"
                                     disabled={false}
@@ -352,6 +371,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to="/news/foo"
                                     type="button"
@@ -363,6 +383,7 @@ ShallowWrapper {
                                     windowWidth={550}
                   >
                                     <Button
+                                                      childrenWrapperClassName=""
                                                       className=""
                                                       color="white-madison-blue-border"
                                                       disabled={false}
@@ -372,6 +393,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -403,6 +425,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <Button
+                      childrenWrapperClassName=""
                       className="mr2"
                       color="madison-blue"
                       disabled={false}
@@ -412,6 +435,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to="/news/foo"
                       type="button"
@@ -423,6 +447,7 @@ ShallowWrapper {
                       windowWidth={550}
 >
                       <Button
+                                            childrenWrapperClassName=""
                                             className=""
                                             color="white-madison-blue-border"
                                             disabled={false}
@@ -432,6 +457,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -449,6 +475,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "mr2",
                       "color": "madison-blue",
                       "disabled": false,
@@ -458,6 +485,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "/news/foo",
                       "type": "button",
@@ -473,6 +501,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": <Button
+                        childrenWrapperClassName=""
                         className=""
                         color="white-madison-blue-border"
                         disabled={false}
@@ -482,6 +511,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -498,6 +528,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "",
                         "color": "white-madison-blue-border",
                         "disabled": false,
@@ -507,6 +538,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -538,6 +570,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Button
+            childrenWrapperClassName=""
             className=""
             color="white-denim"
             disabled={false}
@@ -547,6 +580,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to="/news/foo"
             type="button"
@@ -566,6 +600,7 @@ ShallowWrapper {
             className="text-container-width"
 >
             <Button
+                        childrenWrapperClassName=""
                         className=""
                         color="white-denim"
                         disabled={false}
@@ -575,6 +610,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to="/news/foo"
                         type="button"
@@ -603,6 +639,7 @@ ShallowWrapper {
                                     className="flex flex-row my3"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="mr2"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -612,6 +649,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to="/news/foo"
                                                 type="button"
@@ -623,6 +661,7 @@ ShallowWrapper {
                                                 windowWidth={550}
                                     >
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className=""
                                                             color="white-madison-blue-border"
                                                             disabled={false}
@@ -632,6 +671,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -660,6 +700,7 @@ ShallowWrapper {
                                         }
               }
 />,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "white-denim",
             "disabled": false,
@@ -669,6 +710,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "/news/foo",
             "type": "button",
@@ -699,6 +741,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
+                childrenWrapperClassName=""
                 className=""
                 color="white-denim"
                 disabled={false}
@@ -708,6 +751,7 @@ ShallowWrapper {
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                openInCurrentTab={false}
                 shadow={false}
                 to="/news/foo"
                 type="button"
@@ -736,6 +780,7 @@ ShallowWrapper {
                                 className="flex flex-row my3"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="mr2"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -745,6 +790,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to="/news/foo"
                                                 type="button"
@@ -756,6 +802,7 @@ ShallowWrapper {
                                                 windowWidth={550}
                                 >
                                                 <Button
+                                                                childrenWrapperClassName=""
                                                                 className=""
                                                                 color="white-madison-blue-border"
                                                                 disabled={false}
@@ -765,6 +812,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -788,6 +836,7 @@ ShallowWrapper {
 >
                   foo
 </h2>,
+                "childrenWrapperClassName": "",
                 "className": "",
                 "color": "white-denim",
                 "disabled": false,
@@ -797,6 +846,7 @@ ShallowWrapper {
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
+                "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/news/foo",
                 "type": "button",
@@ -844,6 +894,7 @@ ShallowWrapper {
                     className="flex flex-row my3"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className="mr2"
                                         color="madison-blue"
                                         disabled={false}
@@ -853,6 +904,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to="/news/foo"
                                         type="button"
@@ -864,6 +916,7 @@ ShallowWrapper {
                                         windowWidth={550}
                     >
                                         <Button
+                                                            childrenWrapperClassName=""
                                                             className=""
                                                             color="white-madison-blue-border"
                                                             disabled={false}
@@ -873,6 +926,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -904,6 +958,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <Button
+                        childrenWrapperClassName=""
                         className="mr2"
                         color="madison-blue"
                         disabled={false}
@@ -913,6 +968,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to="/news/foo"
                         type="button"
@@ -924,6 +980,7 @@ ShallowWrapper {
                         windowWidth={550}
 >
                         <Button
+                                                childrenWrapperClassName=""
                                                 className=""
                                                 color="white-madison-blue-border"
                                                 disabled={false}
@@ -933,6 +990,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -950,6 +1008,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "mr2",
                         "color": "madison-blue",
                         "disabled": false,
@@ -959,6 +1018,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "/news/foo",
                         "type": "button",
@@ -974,6 +1034,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": <Button
+                          childrenWrapperClassName=""
                           className=""
                           color="white-madison-blue-border"
                           disabled={false}
@@ -983,6 +1044,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -999,6 +1061,7 @@ ShallowWrapper {
                         "nodeType": "function",
                         "props": Object {
                           "children": null,
+                          "childrenWrapperClassName": "",
                           "className": "",
                           "color": "white-madison-blue-border",
                           "disabled": false,
@@ -1008,6 +1071,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",
@@ -1063,6 +1127,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Button
+          childrenWrapperClassName=""
           className=""
           color="white-denim"
           disabled={false}
@@ -1072,6 +1137,7 @@ ShallowWrapper {
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          openInCurrentTab={false}
           shadow={false}
           to="/news/undefined"
           type="button"
@@ -1091,6 +1157,7 @@ ShallowWrapper {
           className="text-container-width"
 >
           <Button
+                    childrenWrapperClassName=""
                     className=""
                     color="white-denim"
                     disabled={false}
@@ -1100,6 +1167,7 @@ ShallowWrapper {
                     onClick={[Function]}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    openInCurrentTab={false}
                     shadow={false}
                     to="/news/undefined"
                     type="button"
@@ -1124,6 +1192,7 @@ ShallowWrapper {
                               className="flex flex-row my3"
                     >
                               <Button
+                                        childrenWrapperClassName=""
                                         className="mr2"
                                         color="madison-blue"
                                         disabled={false}
@@ -1133,6 +1202,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to="/news/undefined"
                                         type="button"
@@ -1144,6 +1214,7 @@ ShallowWrapper {
                                         windowWidth={550}
                               >
                                         <Button
+                                                  childrenWrapperClassName=""
                                                   className=""
                                                   color="white-madison-blue-border"
                                                   disabled={false}
@@ -1153,6 +1224,7 @@ ShallowWrapper {
                                                   onClick={[Function]}
                                                   onMouseEnter={[Function]}
                                                   onMouseLeave={[Function]}
+                                                  openInCurrentTab={false}
                                                   shadow={false}
                                                   to=""
                                                   type="button"
@@ -1181,6 +1253,7 @@ ShallowWrapper {
                                   }
             }
 />,
+          "childrenWrapperClassName": "",
           "className": "",
           "color": "white-denim",
           "disabled": false,
@@ -1190,6 +1263,7 @@ ShallowWrapper {
           "onClick": [Function],
           "onMouseEnter": [Function],
           "onMouseLeave": [Function],
+          "openInCurrentTab": false,
           "shadow": false,
           "to": "/news/undefined",
           "type": "button",
@@ -1220,6 +1294,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Button
+              childrenWrapperClassName=""
               className=""
               color="white-denim"
               disabled={false}
@@ -1229,6 +1304,7 @@ ShallowWrapper {
               onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              openInCurrentTab={false}
               shadow={false}
               to="/news/undefined"
               type="button"
@@ -1253,6 +1329,7 @@ ShallowWrapper {
                             className="flex flex-row my3"
               >
                             <Button
+                                          childrenWrapperClassName=""
                                           className="mr2"
                                           color="madison-blue"
                                           disabled={false}
@@ -1262,6 +1339,7 @@ ShallowWrapper {
                                           onClick={[Function]}
                                           onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
                                           shadow={false}
                                           to="/news/undefined"
                                           type="button"
@@ -1273,6 +1351,7 @@ ShallowWrapper {
                                           windowWidth={550}
                             >
                                           <Button
+                                                        childrenWrapperClassName=""
                                                         className=""
                                                         color="white-madison-blue-border"
                                                         disabled={false}
@@ -1282,6 +1361,7 @@ ShallowWrapper {
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
                                                         to=""
                                                         type="button"
@@ -1303,6 +1383,7 @@ ShallowWrapper {
               "children": <h2
                 className="bold my2 text-madison-blue avenir"
 />,
+              "childrenWrapperClassName": "",
               "className": "",
               "color": "white-denim",
               "disabled": false,
@@ -1312,6 +1393,7 @@ ShallowWrapper {
               "onClick": [Function],
               "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "openInCurrentTab": false,
               "shadow": false,
               "to": "/news/undefined",
               "type": "button",
@@ -1359,6 +1441,7 @@ ShallowWrapper {
                   className="flex flex-row my3"
 >
                   <Button
+                                    childrenWrapperClassName=""
                                     className="mr2"
                                     color="madison-blue"
                                     disabled={false}
@@ -1368,6 +1451,7 @@ ShallowWrapper {
                                     onClick={[Function]}
                                     onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
                                     shadow={false}
                                     to="/news/undefined"
                                     type="button"
@@ -1379,6 +1463,7 @@ ShallowWrapper {
                                     windowWidth={550}
                   >
                                     <Button
+                                                      childrenWrapperClassName=""
                                                       className=""
                                                       color="white-madison-blue-border"
                                                       disabled={false}
@@ -1388,6 +1473,7 @@ ShallowWrapper {
                                                       onClick={[Function]}
                                                       onMouseEnter={[Function]}
                                                       onMouseLeave={[Function]}
+                                                      openInCurrentTab={false}
                                                       shadow={false}
                                                       to=""
                                                       type="button"
@@ -1419,6 +1505,7 @@ ShallowWrapper {
                 "props": Object {
                   "children": Array [
                     <Button
+                      childrenWrapperClassName=""
                       className="mr2"
                       color="madison-blue"
                       disabled={false}
@@ -1428,6 +1515,7 @@ ShallowWrapper {
                       onClick={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      openInCurrentTab={false}
                       shadow={false}
                       to="/news/undefined"
                       type="button"
@@ -1439,6 +1527,7 @@ ShallowWrapper {
                       windowWidth={550}
 >
                       <Button
+                                            childrenWrapperClassName=""
                                             className=""
                                             color="white-madison-blue-border"
                                             disabled={false}
@@ -1448,6 +1537,7 @@ ShallowWrapper {
                                             onClick={[Function]}
                                             onMouseEnter={[Function]}
                                             onMouseLeave={[Function]}
+                                            openInCurrentTab={false}
                                             shadow={false}
                                             to=""
                                             type="button"
@@ -1465,6 +1555,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": null,
+                      "childrenWrapperClassName": "",
                       "className": "mr2",
                       "color": "madison-blue",
                       "disabled": false,
@@ -1474,6 +1565,7 @@ ShallowWrapper {
                       "onClick": [Function],
                       "onMouseEnter": [Function],
                       "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
                       "shadow": false,
                       "to": "/news/undefined",
                       "type": "button",
@@ -1489,6 +1581,7 @@ ShallowWrapper {
                     "nodeType": "function",
                     "props": Object {
                       "children": <Button
+                        childrenWrapperClassName=""
                         className=""
                         color="white-madison-blue-border"
                         disabled={false}
@@ -1498,6 +1591,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to=""
                         type="button"
@@ -1514,6 +1608,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "",
                         "color": "white-madison-blue-border",
                         "disabled": false,
@@ -1523,6 +1618,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "",
                         "type": "button",
@@ -1554,6 +1650,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Button
+            childrenWrapperClassName=""
             className=""
             color="white-denim"
             disabled={false}
@@ -1563,6 +1660,7 @@ ShallowWrapper {
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            openInCurrentTab={false}
             shadow={false}
             to="/news/undefined"
             type="button"
@@ -1582,6 +1680,7 @@ ShallowWrapper {
             className="text-container-width"
 >
             <Button
+                        childrenWrapperClassName=""
                         className=""
                         color="white-denim"
                         disabled={false}
@@ -1591,6 +1690,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to="/news/undefined"
                         type="button"
@@ -1615,6 +1715,7 @@ ShallowWrapper {
                                     className="flex flex-row my3"
                         >
                                     <Button
+                                                childrenWrapperClassName=""
                                                 className="mr2"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -1624,6 +1725,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to="/news/undefined"
                                                 type="button"
@@ -1635,6 +1737,7 @@ ShallowWrapper {
                                                 windowWidth={550}
                                     >
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className=""
                                                             color="white-madison-blue-border"
                                                             disabled={false}
@@ -1644,6 +1747,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -1672,6 +1776,7 @@ ShallowWrapper {
                                         }
               }
 />,
+            "childrenWrapperClassName": "",
             "className": "",
             "color": "white-denim",
             "disabled": false,
@@ -1681,6 +1786,7 @@ ShallowWrapper {
             "onClick": [Function],
             "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "openInCurrentTab": false,
             "shadow": false,
             "to": "/news/undefined",
             "type": "button",
@@ -1711,6 +1817,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Button
+                childrenWrapperClassName=""
                 className=""
                 color="white-denim"
                 disabled={false}
@@ -1720,6 +1827,7 @@ ShallowWrapper {
                 onClick={[Function]}
                 onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                openInCurrentTab={false}
                 shadow={false}
                 to="/news/undefined"
                 type="button"
@@ -1744,6 +1852,7 @@ ShallowWrapper {
                                 className="flex flex-row my3"
                 >
                                 <Button
+                                                childrenWrapperClassName=""
                                                 className="mr2"
                                                 color="madison-blue"
                                                 disabled={false}
@@ -1753,6 +1862,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to="/news/undefined"
                                                 type="button"
@@ -1764,6 +1874,7 @@ ShallowWrapper {
                                                 windowWidth={550}
                                 >
                                                 <Button
+                                                                childrenWrapperClassName=""
                                                                 className=""
                                                                 color="white-madison-blue-border"
                                                                 disabled={false}
@@ -1773,6 +1884,7 @@ ShallowWrapper {
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
                                                                 to=""
                                                                 type="button"
@@ -1794,6 +1906,7 @@ ShallowWrapper {
                 "children": <h2
                   className="bold my2 text-madison-blue avenir"
 />,
+                "childrenWrapperClassName": "",
                 "className": "",
                 "color": "white-denim",
                 "disabled": false,
@@ -1803,6 +1916,7 @@ ShallowWrapper {
                 "onClick": [Function],
                 "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
+                "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/news/undefined",
                 "type": "button",
@@ -1850,6 +1964,7 @@ ShallowWrapper {
                     className="flex flex-row my3"
 >
                     <Button
+                                        childrenWrapperClassName=""
                                         className="mr2"
                                         color="madison-blue"
                                         disabled={false}
@@ -1859,6 +1974,7 @@ ShallowWrapper {
                                         onClick={[Function]}
                                         onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
                                         shadow={false}
                                         to="/news/undefined"
                                         type="button"
@@ -1870,6 +1986,7 @@ ShallowWrapper {
                                         windowWidth={550}
                     >
                                         <Button
+                                                            childrenWrapperClassName=""
                                                             className=""
                                                             color="white-madison-blue-border"
                                                             disabled={false}
@@ -1879,6 +1996,7 @@ ShallowWrapper {
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
                                                             to=""
                                                             type="button"
@@ -1910,6 +2028,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": Array [
                       <Button
+                        childrenWrapperClassName=""
                         className="mr2"
                         color="madison-blue"
                         disabled={false}
@@ -1919,6 +2038,7 @@ ShallowWrapper {
                         onClick={[Function]}
                         onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        openInCurrentTab={false}
                         shadow={false}
                         to="/news/undefined"
                         type="button"
@@ -1930,6 +2050,7 @@ ShallowWrapper {
                         windowWidth={550}
 >
                         <Button
+                                                childrenWrapperClassName=""
                                                 className=""
                                                 color="white-madison-blue-border"
                                                 disabled={false}
@@ -1939,6 +2060,7 @@ ShallowWrapper {
                                                 onClick={[Function]}
                                                 onMouseEnter={[Function]}
                                                 onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
                                                 shadow={false}
                                                 to=""
                                                 type="button"
@@ -1956,6 +2078,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": null,
+                        "childrenWrapperClassName": "",
                         "className": "mr2",
                         "color": "madison-blue",
                         "disabled": false,
@@ -1965,6 +2088,7 @@ ShallowWrapper {
                         "onClick": [Function],
                         "onMouseEnter": [Function],
                         "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
                         "shadow": false,
                         "to": "/news/undefined",
                         "type": "button",
@@ -1980,6 +2104,7 @@ ShallowWrapper {
                       "nodeType": "function",
                       "props": Object {
                         "children": <Button
+                          childrenWrapperClassName=""
                           className=""
                           color="white-madison-blue-border"
                           disabled={false}
@@ -1989,6 +2114,7 @@ ShallowWrapper {
                           onClick={[Function]}
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
+                          openInCurrentTab={false}
                           shadow={false}
                           to=""
                           type="button"
@@ -2005,6 +2131,7 @@ ShallowWrapper {
                         "nodeType": "function",
                         "props": Object {
                           "children": null,
+                          "childrenWrapperClassName": "",
                           "className": "",
                           "color": "white-madison-blue-border",
                           "disabled": false,
@@ -2014,6 +2141,7 @@ ShallowWrapper {
                           "onClick": [Function],
                           "onMouseEnter": [Function],
                           "onMouseLeave": [Function],
+                          "openInCurrentTab": false,
                           "shadow": false,
                           "to": "",
                           "type": "button",

@@ -119,21 +119,21 @@ ShallowWrapper {
                                         >
                                                 <p
                                                         className="bold text-white mb1 white-space-normal"
-                                                >
-                                                        Brooklyn
-                                                </p>
+                                                />
                                                 <Button
+                                                        childrenWrapperClassName=""
                                                         className="text-white light mb1 white-space-normal avenir"
                                                         color="white-denim"
                                                         disabled={false}
                                                         fullWidth={false}
                                                         hover="underline-white"
-                                                        label="foo"
+                                                        label=""
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
-                                                        to="/location/foo"
+                                                        to="/location/"
                                                         type="button"
                                                         variant="style-none"
                                                 />
@@ -187,21 +187,21 @@ ShallowWrapper {
                                         >
                                                   <p
                                                             className="bold text-white mb1 white-space-normal"
-                                                  >
-                                                            Brooklyn
-                                                  </p>
+                                                  />
                                                   <Button
+                                                            childrenWrapperClassName=""
                                                             className="text-white light mb1 white-space-normal avenir"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
                                                             hover="underline-white"
-                                                            label="foo"
+                                                            label=""
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
-                                                            to="/location/foo"
+                                                            to="/location/"
                                                             type="button"
                                                             variant="style-none"
                                                   />
@@ -249,21 +249,21 @@ ShallowWrapper {
                                     >
                                                 <p
                                                             className="bold text-white mb1 white-space-normal"
-                                                >
-                                                            Brooklyn
-                                                </p>
+                                                />
                                                 <Button
+                                                            childrenWrapperClassName=""
                                                             className="text-white light mb1 white-space-normal avenir"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
                                                             hover="underline-white"
-                                                            label="foo"
+                                                            label=""
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
-                                                            to="/location/foo"
+                                                            to="/location/"
                                                             type="button"
                                                             variant="style-none"
                                                 />
@@ -308,21 +308,21 @@ ShallowWrapper {
                                 >
                                                 <p
                                                                 className="bold text-white mb1 white-space-normal"
-                                                >
-                                                                Brooklyn
-                                                </p>
+                                                />
                                                 <Button
+                                                                childrenWrapperClassName=""
                                                                 className="text-white light mb1 white-space-normal avenir"
                                                                 color="white-denim"
                                                                 disabled={false}
                                                                 fullWidth={false}
                                                                 hover="underline-white"
-                                                                label="foo"
+                                                                label=""
                                                                 onClick={[Function]}
                                                                 onMouseEnter={[Function]}
                                                                 onMouseLeave={[Function]}
+                                                                openInCurrentTab={false}
                                                                 shadow={false}
-                                                                to="/location/foo"
+                                                                to="/location/"
                                                                 type="button"
                                                                 variant="style-none"
                                                 />
@@ -388,21 +388,21 @@ ShallowWrapper {
                     >
                                         <p
                                                             className="bold text-white mb1 white-space-normal"
-                                        >
-                                                            Brooklyn
-                                        </p>
+                                        />
                                         <Button
+                                                            childrenWrapperClassName=""
                                                             className="text-white light mb1 white-space-normal avenir"
                                                             color="white-denim"
                                                             disabled={false}
                                                             fullWidth={false}
                                                             hover="underline-white"
-                                                            label="foo"
+                                                            label=""
                                                             onClick={[Function]}
                                                             onMouseEnter={[Function]}
                                                             onMouseLeave={[Function]}
+                                                            openInCurrentTab={false}
                                                             shadow={false}
-                                                            to="/location/foo"
+                                                            to="/location/"
                                                             type="button"
                                                             variant="style-none"
                                         />
@@ -430,21 +430,21 @@ ShallowWrapper {
 >
                           <p
                                                     className="bold text-white mb1 white-space-normal"
-                          >
-                                                    Brooklyn
-                          </p>
+                          />
                           <Button
+                                                    childrenWrapperClassName=""
                                                     className="text-white light mb1 white-space-normal avenir"
                                                     color="white-denim"
                                                     disabled={false}
                                                     fullWidth={false}
                                                     hover="underline-white"
-                                                    label="foo"
+                                                    label=""
                                                     onClick={[Function]}
                                                     onMouseEnter={[Function]}
                                                     onMouseLeave={[Function]}
+                                                    openInCurrentTab={false}
                                                     shadow={false}
-                                                    to="/location/foo"
+                                                    to="/location/"
                                                     type="button"
                                                     variant="style-none"
                           />
@@ -475,22 +475,22 @@ ShallowWrapper {
                         "children": Array [
                           <p
                             className="bold text-white mb1 white-space-normal"
->
-                            Brooklyn
-</p>,
+/>,
                           Array [
                             <Button
+                              childrenWrapperClassName=""
                               className="text-white light mb1 white-space-normal avenir"
                               color="white-denim"
                               disabled={false}
                               fullWidth={false}
                               hover="underline-white"
-                              label="foo"
+                              label=""
                               onClick={[Function]}
                               onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
+                              openInCurrentTab={false}
                               shadow={false}
-                              to="/location/foo"
+                              to="/location/"
                               type="button"
                               variant="style-none"
 />,
@@ -505,30 +505,32 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "children": "Brooklyn",
+                            "children": null,
                             "className": "bold text-white mb1 white-space-normal",
                           },
                           "ref": null,
-                          "rendered": "Brooklyn",
+                          "rendered": null,
                           "type": "p",
                         },
                         Object {
                           "instance": null,
-                          "key": "foo",
+                          "key": undefined,
                           "nodeType": "function",
                           "props": Object {
                             "children": null,
+                            "childrenWrapperClassName": "",
                             "className": "text-white light mb1 white-space-normal avenir",
                             "color": "white-denim",
                             "disabled": false,
                             "fullWidth": false,
                             "hover": "underline-white",
-                            "label": "foo",
+                            "label": "",
                             "onClick": [Function],
                             "onMouseEnter": [Function],
                             "onMouseLeave": [Function],
+                            "openInCurrentTab": false,
                             "shadow": false,
-                            "to": "/location/foo",
+                            "to": "/location/",
                             "type": "button",
                             "variant": "style-none",
                           },
@@ -597,21 +599,21 @@ ShallowWrapper {
                                                   >
                                                             <p
                                                                       className="bold text-white mb1 white-space-normal"
-                                                            >
-                                                                      Brooklyn
-                                                            </p>
+                                                            />
                                                             <Button
+                                                                      childrenWrapperClassName=""
                                                                       className="text-white light mb1 white-space-normal avenir"
                                                                       color="white-denim"
                                                                       disabled={false}
                                                                       fullWidth={false}
                                                                       hover="underline-white"
-                                                                      label="foo"
+                                                                      label=""
                                                                       onClick={[Function]}
                                                                       onMouseEnter={[Function]}
                                                                       onMouseLeave={[Function]}
+                                                                      openInCurrentTab={false}
                                                                       shadow={false}
-                                                                      to="/location/foo"
+                                                                      to="/location/"
                                                                       type="button"
                                                                       variant="style-none"
                                                             />
@@ -665,21 +667,21 @@ ShallowWrapper {
                                                 >
                                                             <p
                                                                         className="bold text-white mb1 white-space-normal"
-                                                            >
-                                                                        Brooklyn
-                                                            </p>
+                                                            />
                                                             <Button
+                                                                        childrenWrapperClassName=""
                                                                         className="text-white light mb1 white-space-normal avenir"
                                                                         color="white-denim"
                                                                         disabled={false}
                                                                         fullWidth={false}
                                                                         hover="underline-white"
-                                                                        label="foo"
+                                                                        label=""
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
-                                                                        to="/location/foo"
+                                                                        to="/location/"
                                                                         type="button"
                                                                         variant="style-none"
                                                             />
@@ -727,21 +729,21 @@ ShallowWrapper {
                                           >
                                                         <p
                                                                       className="bold text-white mb1 white-space-normal"
-                                                        >
-                                                                      Brooklyn
-                                                        </p>
+                                                        />
                                                         <Button
+                                                                      childrenWrapperClassName=""
                                                                       className="text-white light mb1 white-space-normal avenir"
                                                                       color="white-denim"
                                                                       disabled={false}
                                                                       fullWidth={false}
                                                                       hover="underline-white"
-                                                                      label="foo"
+                                                                      label=""
                                                                       onClick={[Function]}
                                                                       onMouseEnter={[Function]}
                                                                       onMouseLeave={[Function]}
+                                                                      openInCurrentTab={false}
                                                                       shadow={false}
-                                                                      to="/location/foo"
+                                                                      to="/location/"
                                                                       type="button"
                                                                       variant="style-none"
                                                         />
@@ -786,21 +788,21 @@ ShallowWrapper {
                                     >
                                                       <p
                                                                         className="bold text-white mb1 white-space-normal"
-                                                      >
-                                                                        Brooklyn
-                                                      </p>
+                                                      />
                                                       <Button
+                                                                        childrenWrapperClassName=""
                                                                         className="text-white light mb1 white-space-normal avenir"
                                                                         color="white-denim"
                                                                         disabled={false}
                                                                         fullWidth={false}
                                                                         hover="underline-white"
-                                                                        label="foo"
+                                                                        label=""
                                                                         onClick={[Function]}
                                                                         onMouseEnter={[Function]}
                                                                         onMouseLeave={[Function]}
+                                                                        openInCurrentTab={false}
                                                                         shadow={false}
-                                                                        to="/location/foo"
+                                                                        to="/location/"
                                                                         type="button"
                                                                         variant="style-none"
                                                       />
@@ -866,21 +868,21 @@ ShallowWrapper {
                       >
                                             <p
                                                                   className="bold text-white mb1 white-space-normal"
-                                            >
-                                                                  Brooklyn
-                                            </p>
+                                            />
                                             <Button
+                                                                  childrenWrapperClassName=""
                                                                   className="text-white light mb1 white-space-normal avenir"
                                                                   color="white-denim"
                                                                   disabled={false}
                                                                   fullWidth={false}
                                                                   hover="underline-white"
-                                                                  label="foo"
+                                                                  label=""
                                                                   onClick={[Function]}
                                                                   onMouseEnter={[Function]}
                                                                   onMouseLeave={[Function]}
+                                                                  openInCurrentTab={false}
                                                                   shadow={false}
-                                                                  to="/location/foo"
+                                                                  to="/location/"
                                                                   type="button"
                                                                   variant="style-none"
                                             />
@@ -908,21 +910,21 @@ ShallowWrapper {
 >
                             <p
                                                         className="bold text-white mb1 white-space-normal"
-                            >
-                                                        Brooklyn
-                            </p>
+                            />
                             <Button
+                                                        childrenWrapperClassName=""
                                                         className="text-white light mb1 white-space-normal avenir"
                                                         color="white-denim"
                                                         disabled={false}
                                                         fullWidth={false}
                                                         hover="underline-white"
-                                                        label="foo"
+                                                        label=""
                                                         onClick={[Function]}
                                                         onMouseEnter={[Function]}
                                                         onMouseLeave={[Function]}
+                                                        openInCurrentTab={false}
                                                         shadow={false}
-                                                        to="/location/foo"
+                                                        to="/location/"
                                                         type="button"
                                                         variant="style-none"
                             />
@@ -953,22 +955,22 @@ ShallowWrapper {
                           "children": Array [
                             <p
                               className="bold text-white mb1 white-space-normal"
->
-                              Brooklyn
-</p>,
+/>,
                             Array [
                               <Button
+                                childrenWrapperClassName=""
                                 className="text-white light mb1 white-space-normal avenir"
                                 color="white-denim"
                                 disabled={false}
                                 fullWidth={false}
                                 hover="underline-white"
-                                label="foo"
+                                label=""
                                 onClick={[Function]}
                                 onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                openInCurrentTab={false}
                                 shadow={false}
-                                to="/location/foo"
+                                to="/location/"
                                 type="button"
                                 variant="style-none"
 />,
@@ -983,30 +985,32 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Brooklyn",
+                              "children": null,
                               "className": "bold text-white mb1 white-space-normal",
                             },
                             "ref": null,
-                            "rendered": "Brooklyn",
+                            "rendered": null,
                             "type": "p",
                           },
                           Object {
                             "instance": null,
-                            "key": "foo",
+                            "key": undefined,
                             "nodeType": "function",
                             "props": Object {
                               "children": null,
+                              "childrenWrapperClassName": "",
                               "className": "text-white light mb1 white-space-normal avenir",
                               "color": "white-denim",
                               "disabled": false,
                               "fullWidth": false,
                               "hover": "underline-white",
-                              "label": "foo",
+                              "label": "",
                               "onClick": [Function],
                               "onMouseEnter": [Function],
                               "onMouseLeave": [Function],
+                              "openInCurrentTab": false,
                               "shadow": false,
-                              "to": "/location/foo",
+                              "to": "/location/",
                               "type": "button",
                               "variant": "style-none",
                             },
@@ -1049,7 +1053,6 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <LocationDropdown
     LocationDropdownIsOpen={false}
-    alertIsActive={false}
     closeLocationDropdown={[Function]}
     locationDropdownImage=""
     locationSortedByGroup={Object {}}

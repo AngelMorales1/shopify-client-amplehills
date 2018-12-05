@@ -33,6 +33,7 @@ ShallowWrapper {
           foo
 </label>,
       ],
+      "childrenWrapperClassName": "",
       "className": "relative flex bold foo",
       "color": "white-denim",
       "disabled": false,
@@ -42,6 +43,7 @@ ShallowWrapper {
       "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
+      "openInCurrentTab": false,
       "shadow": false,
       "to": "",
       "type": "button",
@@ -79,6 +81,7 @@ ShallowWrapper {
             foo
 </label>,
         ],
+        "childrenWrapperClassName": "",
         "className": "relative flex bold foo",
         "color": "white-denim",
         "disabled": false,
@@ -88,6 +91,7 @@ ShallowWrapper {
         "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
+        "openInCurrentTab": false,
         "shadow": false,
         "to": "",
         "type": "button",
@@ -151,6 +155,7 @@ ShallowWrapper {
           className="pointer"
 />,
       ],
+      "childrenWrapperClassName": "",
       "className": "relative flex bold",
       "color": "white-denim",
       "disabled": false,
@@ -160,6 +165,7 @@ ShallowWrapper {
       "onClick": [Function],
       "onMouseEnter": [Function],
       "onMouseLeave": [Function],
+      "openInCurrentTab": false,
       "shadow": false,
       "to": "",
       "type": "button",
@@ -195,6 +201,7 @@ ShallowWrapper {
             className="pointer"
 />,
         ],
+        "childrenWrapperClassName": "",
         "className": "relative flex bold",
         "color": "white-denim",
         "disabled": false,
@@ -204,6 +211,7 @@ ShallowWrapper {
         "onClick": [Function],
         "onMouseEnter": [Function],
         "onMouseLeave": [Function],
+        "openInCurrentTab": false,
         "shadow": false,
         "to": "",
         "type": "button",

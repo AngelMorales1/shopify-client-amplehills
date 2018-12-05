@@ -7,7 +7,7 @@ import locationModel from 'models/locationModel';
 
 import LocationsMapKey from 'constants/LocationsMapKey';
 
-import { Image, Button } from 'components/base';
+import { Button } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 import styles from './LocationsMap.scss';
 

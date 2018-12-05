@@ -12,7 +12,7 @@ export default {
     handle: PropTypes.string,
     image: PropTypes.string,
     publishedAt: PropTypes.string,
-    tags: PropTypes.object
+    tags: PropTypes.array
   }),
   default: {
     id: '',
@@ -25,6 +25,6 @@ export default {
     handle: '',
     image: '',
     publishedAt: '',
-    tags: {}
+    tags: []
   }
 };
