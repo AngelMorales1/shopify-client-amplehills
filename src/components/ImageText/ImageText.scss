@@ -140,13 +140,16 @@
 
   &__text-content--center {
     max-width: spacing(100);
-    align-items: center;
-    text-align: center;
     margin: 0 auto;
 
     @media ($medium-up) {
       margin: 0;
     }
+  }
+
+  &__content--center {
+    text-align: center;
+    margin: 0 auto;
   }
 
   &__container--full-image {
