@@ -66,15 +66,11 @@ const ImageText = ({ block, z, setRef }) => {
       )}
     >
       <div
-        className={cx(
-          'flex container-width',
-          styles['ImageText__container'],
-          {
-            [styles['ImageText__container--full-image']]: isFullImage,
-            [styles['ImageText__container--reverse']]: isReverseArrangement,
-            'col-12 md-col6': isFullImage
-          }
-        )}
+        className={cx('flex container-width', styles['ImageText__container'], {
+          [styles['ImageText__container--full-image']]: isFullImage,
+          [styles['ImageText__container--reverse']]: isReverseArrangement,
+          'col-12 md-col6': isFullImage
+        })}
       >
         <div
           className={cx(
@@ -98,11 +94,21 @@ const ImageText = ({ block, z, setRef }) => {
         >
           <div className="mb3 relative inline-block z-1">
             {smallTitle ? (
-              <p className={`small-title mb3 text-${smallTitleColor}`}>
+              <p
+                className={cx(`small-title mb3 text-${smallTitleColor}`, {
+                  [styles['ImageText__content--center']]: textContentCenterAlign
+                })}
+              >
                 {smallTitle}
               </p>
             ) : null}
-            <h1 className="block-headline">{get(fields, 'title', '')}</h1>
+            <h1
+              className={cx('block-headline', {
+                [styles['ImageText__content--center']]: textContentCenterAlign
+              })}
+            >
+              {get(fields, 'title', '')}
+            </h1>
             <Image
               style={{
                 transform: `translateX(${get(
@@ -126,12 +132,17 @@ const ImageText = ({ block, z, setRef }) => {
             dangerouslySetInnerHTML={{
               __html: marked(get(fields, 'text', ''))
             }}
-            className="markdown-block z-1"
+            className={cx('markdown-block z-1', {
+              [styles['ImageText__content--center']]: textContentCenterAlign
+            })}
           />
           <div
             className={cx(
               styles['ImageText__button-container'],
-              'flex flex-row flex-wrap items-center'
+              'flex flex-row flex-wrap items-center',
+              {
+                [styles['ImageText__content--center']]: textContentCenterAlign
+              }
             )}
           >
             {blockHasButton ? (
