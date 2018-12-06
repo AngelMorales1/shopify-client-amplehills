@@ -1,5 +1,6 @@
 import { createSelector } from 'reselect';
 import locations from 'state/selectors/locations';
+import sortLocationsByDistance from 'utils/sortLocationsByDistance';
 import Regions from 'constants/Regions';
 
 export default createSelector(
@@ -13,8 +14,9 @@ export default createSelector(
 
       return locationsByRegions;
     }, {});
-
-    return Regions.reduce((locationsByRegions, region) => {
+    const regionsSortedByDistance = sortLocationsByDistance(regions);
+    const getSortedRegions = Regions.concat(regionsSortedByDistance);
+    return getSortedRegions.reduce((locationsByRegions, region) => {
       if (!regions[region]) {
         return {
           ...locationsByRegions,
