@@ -62,7 +62,7 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
             }}
           />
           <span className="bold mt2 mb1 center">{product.title}</span>
-          <span>{`$${product.price.toFixed(2)}`}</span>
+          <span>{product.displayPrice}</span>
         </div>
       </Link>
     </div>
