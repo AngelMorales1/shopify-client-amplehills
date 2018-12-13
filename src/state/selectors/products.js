@@ -12,6 +12,7 @@ export default createSelector(
     ).reduce((handlizedProducts, product) => {
       const node = get(product, 'node', {});
       const price = parseFloat(get(node, 'variants.edges[0].node.price', 0.0));
+
       const id = get(node, 'variants.edges[0].node.id', '');
       const handle = get(node, 'handle', '');
       const type = get(
@@ -24,6 +25,16 @@ export default createSelector(
         const { id, price, title, availableForSale } = variantNode;
         return { id, price, title, available: availableForSale };
       });
+
+      const uniqueVariantPrices = variants
+        .map(variant => parseFloat(variant.price))
+        .filter((price, index, array) => array.indexOf(price) === index)
+        .sort((a, b) => a - b);
+
+      const displayPrice =
+        uniqueVariantPrices.length > 1
+          ? `$${uniqueVariantPrices[0].toFixed(2)}+`
+          : `$${price.toFixed(2)}`;
 
       const available = variants.some(variant => variant.available);
 
@@ -51,6 +62,7 @@ export default createSelector(
       const handlizedProduct = {
         id,
         price,
+        displayPrice,
         variants,
         handle,
         available,

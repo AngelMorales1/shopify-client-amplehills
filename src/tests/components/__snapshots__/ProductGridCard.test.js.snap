@@ -85,9 +85,7 @@ ShallowWrapper {
                     <span
                               className="bold mt2 mb1 center"
                     />
-                    <span>
-                              $0.00
-                    </span>
+                    <span />
           </div>
 </Link>,
       ],
@@ -116,9 +114,7 @@ ShallowWrapper {
             <span
                         className="bold mt2 mb1 center"
             />
-            <span>
-                        $0.00
-            </span>
+            <span />
 </div>,
           "className": "text-decoration-none",
           "exact": true,
@@ -144,9 +140,7 @@ ShallowWrapper {
               <span
                 className="bold mt2 mb1 center"
 />,
-              <span>
-                $0.00
-</span>,
+              <span />,
             ],
             "className": "flex flex-column items-center",
           },
@@ -184,10 +178,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "$0.00",
+                "children": undefined,
               },
               "ref": null,
-              "rendered": "$0.00",
+              "rendered": null,
               "type": "span",
             },
           ],
@@ -227,9 +221,7 @@ ShallowWrapper {
                         <span
                                     className="bold mt2 mb1 center"
                         />
-                        <span>
-                                    $0.00
-                        </span>
+                        <span />
             </div>
 </Link>,
         ],
@@ -258,9 +250,7 @@ ShallowWrapper {
               <span
                             className="bold mt2 mb1 center"
               />
-              <span>
-                            $0.00
-              </span>
+              <span />
 </div>,
             "className": "text-decoration-none",
             "exact": true,
@@ -286,9 +276,7 @@ ShallowWrapper {
                 <span
                   className="bold mt2 mb1 center"
 />,
-                <span>
-                  $0.00
-</span>,
+                <span />,
               ],
               "className": "flex flex-column items-center",
             },
@@ -326,10 +314,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "$0.00",
+                  "children": undefined,
                 },
                 "ref": null,
-                "rendered": "$0.00",
+                "rendered": null,
                 "type": "span",
               },
             ],
@@ -414,9 +402,7 @@ ShallowWrapper {
                     <span
                               className="bold mt2 mb1 center"
                     />
-                    <span>
-                              $0.00
-                    </span>
+                    <span />
           </div>
 </Link>,
       ],
@@ -445,9 +431,7 @@ ShallowWrapper {
             <span
                         className="bold mt2 mb1 center"
             />
-            <span>
-                        $0.00
-            </span>
+            <span />
 </div>,
           "className": "text-decoration-none",
           "exact": true,
@@ -473,9 +457,7 @@ ShallowWrapper {
               <span
                 className="bold mt2 mb1 center"
 />,
-              <span>
-                $0.00
-</span>,
+              <span />,
             ],
             "className": "flex flex-column items-center",
           },
@@ -513,10 +495,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "$0.00",
+                "children": undefined,
               },
               "ref": null,
-              "rendered": "$0.00",
+              "rendered": null,
               "type": "span",
             },
           ],
@@ -556,9 +538,7 @@ ShallowWrapper {
                         <span
                                     className="bold mt2 mb1 center"
                         />
-                        <span>
-                                    $0.00
-                        </span>
+                        <span />
             </div>
 </Link>,
         ],
@@ -587,9 +567,7 @@ ShallowWrapper {
               <span
                             className="bold mt2 mb1 center"
               />
-              <span>
-                            $0.00
-              </span>
+              <span />
 </div>,
             "className": "text-decoration-none",
             "exact": true,
@@ -615,9 +593,7 @@ ShallowWrapper {
                 <span
                   className="bold mt2 mb1 center"
 />,
-                <span>
-                  $0.00
-</span>,
+                <span />,
               ],
               "className": "flex flex-column items-center",
             },
@@ -655,10 +631,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "$0.00",
+                  "children": undefined,
                 },
                 "ref": null,
-                "rendered": "$0.00",
+                "rendered": null,
                 "type": "span",
               },
             ],
