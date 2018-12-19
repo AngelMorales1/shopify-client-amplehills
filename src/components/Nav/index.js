@@ -93,6 +93,36 @@ class Nav extends Component {
     return mobileNavIsOpen ? closeMobileNav() : openMobileNav();
   };
 
+  startLocationDropdownTimer = buttonName => {
+    const { actions } = this.props;
+
+    if (buttonName === 'locations') {
+      this.cancelLocationDropdownTimer('locations');
+      this.locationDropdownTimer = setTimeout(() => {
+        actions.closeShopDropdown();
+        actions.openLocationDropdown();
+      }, 250);
+    }
+
+    if (buttonName === 'shop') {
+      this.cancelLocationDropdownTimer('shop');
+      this.shopDropdownTimer = setTimeout(() => {
+        actions.closeLocationDropdown();
+        actions.openShopDropdown();
+      }, 250);
+    }
+  };
+
+  cancelLocationDropdownTimer = buttonName => {
+    if (buttonName === 'locations') {
+      clearTimeout(this.locationDropdownTimer);
+    }
+
+    if (buttonName === 'shop') {
+      clearTimeout(this.shopDropdownTimer);
+    }
+  };
+
   render() {
     const {
       logo,
@@ -142,10 +172,12 @@ class Nav extends Component {
                     )}
                     variant="style-none"
                     onClick={closeLocationDropdown}
-                    onMouseEnter={() => {
-                      openLocationDropdown();
-                      closeShopDropdown();
-                    }}
+                    onMouseEnter={() =>
+                      this.startLocationDropdownTimer('locations')
+                    }
+                    onMouseLeave={() =>
+                      this.cancelLocationDropdownTimer('locations')
+                    }
                     to="/locations"
                     label="Locations"
                     hover="underline-white"
@@ -247,10 +279,10 @@ class Nav extends Component {
                     color="white-peach"
                     label="Shop Online"
                     onClick={closeShopDropdown}
-                    onMouseEnter={() => {
-                      openShopDropdown();
-                      closeLocationDropdown();
-                    }}
+                    onMouseEnter={() => this.startLocationDropdownTimer('shop')}
+                    onMouseLeave={() =>
+                      this.cancelLocationDropdownTimer('shop')
+                    }
                     hover="clear-white-border"
                   />
                 </Fragment>

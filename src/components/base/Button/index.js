@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import isExternalLink from 'utils/isExternalLink';
 
 import styles from './Button.scss';
+import { setTimeout } from 'timers';
 
 const Button = ({
   className,
@@ -119,7 +120,7 @@ Button.propTypes = {
   to: PropTypes.string,
   shadow: PropTypes.bool,
   hover: PropTypes.string,
-  onMouseEnter: PropTypes.func,
+  onMouseOver: PropTypes.func,
   onMouseLeave: PropTypes.func,
   childrenWrapperClassName: PropTypes.string,
   openInCurrentTab: PropTypes.bool
@@ -138,7 +139,7 @@ Button.defaultProps = {
   to: '',
   shadow: false,
   hover: 'shadow',
-  onMouseEnter: () => {},
+  onMouseOver: () => {},
   onMouseLeave: () => {},
   childrenWrapperClassName: '',
   openInCurrentTab: false
