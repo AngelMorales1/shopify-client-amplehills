@@ -59,6 +59,7 @@ FlavorCard.propTypes = {
     id: PropTypes.string,
     image: PropTypes.string,
     label: PropTypes.string,
+    labelColor: PropTypes.string,
     title: PropTypes.string
   })
 };
@@ -70,6 +71,7 @@ FlavorCard.defaultProps = {
     id: '',
     image: '',
     label: '',
+    labelColor: '',
     title: ''
   }
 };
