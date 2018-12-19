@@ -171,7 +171,7 @@ class CakeRequestForm extends Component {
     const locations = get(this, 'props.cakeLocations', {});
     const cakeRecommendations = get(this, 'props.cakeRecommendations', []);
     const { pickupDate, dayPickerIsSelected } = this.state;
-    const { today } = this.props;
+    const { today, daysAfter } = this.props;
     const selectedLocation = this.state.location
       ? locations[this.state.location.value]
       : null;
@@ -285,7 +285,7 @@ class CakeRequestForm extends Component {
                 disabledDays={[
                   today,
                   {
-                    before: new Date(moment().add(3, 'days'))
+                    before: daysAfter
                   }
                 ]}
                 initialMonth={today}
@@ -779,7 +779,9 @@ CakeRequestForm.propTypes = {
   actions: PropTypes.shape({
     addLineItems: PropTypes.func
   }),
-  checkout: checkoutModel.propTypes
+  checkout: checkoutModel.propTypes,
+  today: PropTypes.instanceOf(Date),
+  daysAfter: PropTypes.instanceOf(Date)
 };
 
 CakeRequestForm.defaultProps = {
@@ -791,7 +793,9 @@ CakeRequestForm.defaultProps = {
   actions: {
     addLineItems: f => f
   },
-  checkout: checkoutModel.defaultProps
+  checkout: checkoutModel.defaultProps,
+  today: new Date(2019, 1, 1),
+  daysAfter: new Date(2019, 1, 1)
 };
 
 export default CakeRequestForm;

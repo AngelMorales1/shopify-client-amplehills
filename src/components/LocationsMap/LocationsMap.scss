@@ -17,7 +17,8 @@
   }
 
   &__seasonal-button--selected {
-    opacity: 0.6;
+    box-shadow: $drop-shadow;
+    transform: translate3d(0, spacing(-0.25), 0);
   }
 
   &__circle-icon {
