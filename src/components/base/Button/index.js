@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import isExternalLink from 'utils/isExternalLink';
 
 import styles from './Button.scss';
+import { setTimeout } from 'timers';
 
 const Button = ({
   className,

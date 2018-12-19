@@ -35,7 +35,7 @@ class Footer extends Component {
   };
 
   render() {
-    const { footerLinks, footerIcons } = this.props;
+    const { footerLinks, footerIcons, footerIllustration } = this.props;
     const { currentBreakpoint } = this.state;
 
     return (
@@ -45,11 +45,16 @@ class Footer extends Component {
           styles['Footer']
         )}
       >
-        <div className={cx(styles['Footer__content'], 'flex container-width')}>
+        <div
+          className={cx(
+            styles['Footer__content'],
+            'relative flex container-width'
+          )}
+        >
           <div
             className={cx(
               styles['Footer__contact-us-container'],
-              'flex flex-column justify-between col-12 md-col-5 pt2'
+              'flex flex-column col-12 md-col-5 pt2'
             )}
           >
             <h2 className="text-white block-headline">
@@ -66,6 +71,14 @@ class Footer extends Component {
                 color="white-peach"
                 shadow={true}
                 className={cx(styles['Footer__button'], 'nowrap inline-flex')}
+              />
+              <Image
+                alt="Decorative left down arrow icon"
+                src="/assets/images/arrow-left-down.svg"
+                className={cx(
+                  'arrow mx3 medium-down-display-none xs-hide sm-hide',
+                  styles['Footer__arrow']
+                )}
               />
             </div>
           </div>
@@ -170,7 +183,12 @@ class Footer extends Component {
                 </a>
               </div>
             </div>
-            <span className="bold small text-white">
+            <span
+              className={cx(
+                styles['Footer__copy-rights'],
+                'bold small text-white'
+              )}
+            >
               &copy; 2018 Ample Hills Creamery.
               <NavLink
                 exact
@@ -195,6 +213,17 @@ class Footer extends Component {
               </NavLink>
             </span>
           </div>
+          <Image
+            src={contentfulImgUtil(
+              get(footerIllustration, 'fields.file.url', ''),
+              '1000',
+              'png'
+            )}
+            className={cx(
+              styles['Footer__illustration'],
+              'medium-down-display-none xs-hide sm-hide'
+            )}
+          />
         </div>
       </div>
     );
