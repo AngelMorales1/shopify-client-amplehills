@@ -18,6 +18,7 @@ class CakeRequestFormView extends Component {
       actions,
       checkout,
       cakeSprinkles,
+      cakeSigns,
       cakeSizes,
       cakeRecommendations
     } = this.props;
@@ -30,6 +31,7 @@ class CakeRequestFormView extends Component {
           cakeToppings={cakeToppings}
           cakeFillings={cakeFillings}
           cakeSprinkles={cakeSprinkles}
+          cakeSigns={cakeSigns}
           cakeDeposit={cakeDeposit}
           cakeSizes={cakeSizes}
           cakeRecommendations={cakeRecommendations}
