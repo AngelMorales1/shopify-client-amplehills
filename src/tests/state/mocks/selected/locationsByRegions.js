@@ -45,9 +45,7 @@ export default {
       zip: '11231'
     }
   ],
-  Florida: [],
   Manhattan: [],
-  'New Jersey': [],
   Queens: [
     {
       address1: '157 Rockaway Beach Blvd.',
