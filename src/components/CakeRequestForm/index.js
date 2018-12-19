@@ -425,7 +425,10 @@ class CakeRequestForm extends Component {
                       <div className="inline-flex flex-column w100 my2">
                         <p className="mb2 white-space-normal center">{title}</p>
                         <p className="white-space-normal light line-height">
-                          {`${flavor1} paired with ${flavor2} on a ${base}`}
+                          <span className="bold">{`${flavor1} `}</span>
+                          paired with
+                          <span className="bold">{` ${flavor2} `}</span>
+                          on a {base}
                         </p>
                       </div>
                     </Button>
