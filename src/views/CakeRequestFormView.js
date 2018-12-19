@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CakeRequestForm from 'components/CakeRequestForm';
 
+import moment from 'moment';
+
 class CakeRequestFormView extends Component {
   render() {
     const { model } = this.props;
@@ -34,6 +36,7 @@ class CakeRequestFormView extends Component {
           actions={actions}
           checkout={checkout}
           today={new Date()}
+          daysAfter={new Date(moment().add(3, 'days'))}
         />
       </div>
     );
