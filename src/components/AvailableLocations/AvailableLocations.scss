@@ -60,6 +60,8 @@
   }
 
   &__button-container {
+    max-width: 100%;
+    overflow: scroll;
     flex-direction: column;
 
     @media ($medium-up) {

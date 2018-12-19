@@ -26,29 +26,31 @@ const AvailableLocations = ({ flavor, block, z, setRef, drip, upperDrip }) => {
       )}
     >
       <h2 className="block-headline center mb3">{blockTitle}</h2>
-      <div
-        className={cx(
-          styles['AvailableLocations__button-container'],
-          'flex w100 items-center justify-center'
-        )}
-      >
-        {availableLocations.map(location => {
-          const fields = get(location, 'fields', {});
-          const locationTitle = get(fields, 'title', '');
-          const slug = get(fields, 'slug', '');
-          const id = get(location, 'sys.id', '');
+      <div className="w100 flex justify-center">
+        <div
+          className={cx(
+            styles['AvailableLocations__button-container'],
+            'inline-flex items-center'
+          )}
+        >
+          {availableLocations.map(location => {
+            const fields = get(location, 'fields', {});
+            const locationTitle = get(fields, 'title', '');
+            const slug = get(fields, 'slug', '');
+            const id = get(location, 'sys.id', '');
 
-          return (
-            <Button
-              key={id}
-              className="uppercase inline-flex m1"
-              variant="primary-small"
-              color="madison-blue"
-              label={locationTitle}
-              to={`/location/${slug}`}
-            />
-          );
-        })}
+            return (
+              <Button
+                key={id}
+                className="uppercase inline-flex m1"
+                variant="primary-small"
+                color="madison-blue"
+                label={locationTitle}
+                to={`/location/${slug}`}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
