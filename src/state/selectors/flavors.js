@@ -14,6 +14,7 @@ export default createSelector(
       const title = get(fields, 'title', '');
       const slug = slugify(title);
       const label = get(fields, 'label', '');
+      const labelColor = get(fields, 'labelColor', '');
       const image = get(fields, 'image.fields.file.url', '');
       const contentBlocks = get(fields, 'contentBlocks', []);
       const availableLocations = get(fields, 'availableLocations', []);
@@ -55,6 +56,7 @@ export default createSelector(
         id,
         title,
         label,
+        labelColor,
         image,
         filters,
         dietaryRestrictions,

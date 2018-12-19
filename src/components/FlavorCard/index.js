@@ -21,8 +21,8 @@ const FlavorCard = ({ flavor }) => {
               styles['FlavorCard__mark'],
               'z-subnav circle bg-peach absolute z-1 flex items-center justify-center m2 r0 t0 p1',
               {
-                'bg-pastel-blue': flavor.label === 'In Store Only',
-                'bg-turquoise': flavor.label === 'Online Only'
+                'bg-pastel-blue': flavor.labelColor === 'blue',
+                'bg-turquoise': flavor.labelColor === 'green'
               }
             )}
           >
