@@ -82,7 +82,7 @@ class LocationsMap extends Component {
       });
       actions.removeLocationFilter({
         key: filter.key,
-        value: !filter.value
+        value: filter.value
       });
     } else {
       this.setState({
@@ -91,7 +91,7 @@ class LocationsMap extends Component {
       });
       actions.addLocationFilter({
         key: filter.key,
-        value: !filter.value
+        value: filter.value
       });
     }
   };
