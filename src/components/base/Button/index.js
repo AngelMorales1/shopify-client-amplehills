@@ -120,7 +120,7 @@ Button.propTypes = {
   to: PropTypes.string,
   shadow: PropTypes.bool,
   hover: PropTypes.string,
-  onMouseOver: PropTypes.func,
+  onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   childrenWrapperClassName: PropTypes.string,
   openInCurrentTab: PropTypes.bool
@@ -139,7 +139,7 @@ Button.defaultProps = {
   to: '',
   shadow: false,
   hover: 'shadow',
-  onMouseOver: () => {},
+  onMouseEnter: () => {},
   onMouseLeave: () => {},
   childrenWrapperClassName: '',
   openInCurrentTab: false

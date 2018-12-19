@@ -51,8 +51,8 @@ ShallowWrapper {
           hover="shadow"
           label="Read about it"
           onClick={[Function]}
+          onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           openInCurrentTab={false}
           shadow={false}
           to=""
@@ -107,8 +107,8 @@ ShallowWrapper {
           "hover": "shadow",
           "label": "Read about it",
           "onClick": [Function],
+          "onMouseEnter": [Function],
           "onMouseLeave": [Function],
-          "onMouseOver": [Function],
           "openInCurrentTab": false,
           "shadow": false,
           "to": "",
@@ -151,8 +151,8 @@ ShallowWrapper {
             hover="shadow"
             label="Read about it"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
             openInCurrentTab={false}
             shadow={false}
             to=""
@@ -207,8 +207,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "Read about it",
             "onClick": [Function],
+            "onMouseEnter": [Function],
             "onMouseLeave": [Function],
-            "onMouseOver": [Function],
             "openInCurrentTab": false,
             "shadow": false,
             "to": "",
@@ -284,8 +284,8 @@ ShallowWrapper {
           hover="shadow"
           label="Read about it"
           onClick={[Function]}
+          onMouseEnter={[Function]}
           onMouseLeave={[Function]}
-          onMouseOver={[Function]}
           openInCurrentTab={false}
           shadow={false}
           to=""
@@ -340,8 +340,8 @@ ShallowWrapper {
           "hover": "shadow",
           "label": "Read about it",
           "onClick": [Function],
+          "onMouseEnter": [Function],
           "onMouseLeave": [Function],
-          "onMouseOver": [Function],
           "openInCurrentTab": false,
           "shadow": false,
           "to": "",
@@ -384,8 +384,8 @@ ShallowWrapper {
             hover="shadow"
             label="Read about it"
             onClick={[Function]}
+            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            onMouseOver={[Function]}
             openInCurrentTab={false}
             shadow={false}
             to=""
@@ -440,8 +440,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "Read about it",
             "onClick": [Function],
+            "onMouseEnter": [Function],
             "onMouseLeave": [Function],
-            "onMouseOver": [Function],
             "openInCurrentTab": false,
             "shadow": false,
             "to": "",

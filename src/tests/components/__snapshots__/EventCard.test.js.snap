@@ -80,8 +80,8 @@ ShallowWrapper {
                               hover="shadow"
                               label="More Info"
                               onClick={[Function]}
+                              onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
-                              onMouseOver={[Function]}
                               openInCurrentTab={false}
                               shadow={false}
                               to="/events/undefined"
@@ -147,8 +147,8 @@ ShallowWrapper {
                             hover="shadow"
                             label="More Info"
                             onClick={[Function]}
+                            onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
-                            onMouseOver={[Function]}
                             openInCurrentTab={false}
                             shadow={false}
                             to="/events/undefined"
@@ -248,8 +248,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="More Info"
                 onClick={[Function]}
+                onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
-                onMouseOver={[Function]}
                 openInCurrentTab={false}
                 shadow={false}
                 to="/events/undefined"
@@ -272,8 +272,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "More Info",
                 "onClick": [Function],
+                "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
-                "onMouseOver": [Function],
                 "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/events/undefined",
@@ -342,8 +342,8 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={false}
                                     to="/events/undefined"
@@ -409,8 +409,8 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
-                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={false}
                                 to="/events/undefined"
@@ -510,8 +510,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="More Info"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  onMouseOver={[Function]}
                   openInCurrentTab={false}
                   shadow={false}
                   to="/events/undefined"
@@ -534,8 +534,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
-                  "onMouseOver": [Function],
                   "openInCurrentTab": false,
                   "shadow": false,
                   "to": "/events/undefined",
@@ -634,8 +634,8 @@ ShallowWrapper {
                               hover="shadow"
                               label="More Info"
                               onClick={[Function]}
+                              onMouseEnter={[Function]}
                               onMouseLeave={[Function]}
-                              onMouseOver={[Function]}
                               openInCurrentTab={false}
                               shadow={false}
                               to="/events/undefined"
@@ -690,8 +690,8 @@ ShallowWrapper {
                             hover="shadow"
                             label="More Info"
                             onClick={[Function]}
+                            onMouseEnter={[Function]}
                             onMouseLeave={[Function]}
-                            onMouseOver={[Function]}
                             openInCurrentTab={false}
                             shadow={false}
                             to="/events/undefined"
@@ -767,8 +767,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="More Info"
                 onClick={[Function]}
+                onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
-                onMouseOver={[Function]}
                 openInCurrentTab={false}
                 shadow={false}
                 to="/events/undefined"
@@ -791,8 +791,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "More Info",
                 "onClick": [Function],
+                "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
-                "onMouseOver": [Function],
                 "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/events/undefined",
@@ -850,8 +850,8 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="More Info"
                                     onClick={[Function]}
+                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
-                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={false}
                                     to="/events/undefined"
@@ -906,8 +906,8 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="More Info"
                                 onClick={[Function]}
+                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
-                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={false}
                                 to="/events/undefined"
@@ -983,8 +983,8 @@ ShallowWrapper {
                   hover="shadow"
                   label="More Info"
                   onClick={[Function]}
+                  onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  onMouseOver={[Function]}
                   openInCurrentTab={false}
                   shadow={false}
                   to="/events/undefined"
@@ -1007,8 +1007,8 @@ ShallowWrapper {
                   "hover": "shadow",
                   "label": "More Info",
                   "onClick": [Function],
+                  "onMouseEnter": [Function],
                   "onMouseLeave": [Function],
-                  "onMouseOver": [Function],
                   "openInCurrentTab": false,
                   "shadow": false,
                   "to": "/events/undefined",
