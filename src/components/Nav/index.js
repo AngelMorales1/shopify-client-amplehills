@@ -93,11 +93,11 @@ class Nav extends Component {
     return mobileNavIsOpen ? closeMobileNav() : openMobileNav();
   };
 
-  startLocationDropdownTimer = buttonName => {
+  startDropdownTimer = buttonName => {
     const { actions } = this.props;
 
     if (buttonName === 'locations') {
-      this.cancelLocationDropdownTimer('locations');
+      this.cancelDropdownTimer('locations');
       this.locationDropdownTimer = setTimeout(() => {
         actions.closeShopDropdown();
         actions.openLocationDropdown();
@@ -105,7 +105,7 @@ class Nav extends Component {
     }
 
     if (buttonName === 'shop') {
-      this.cancelLocationDropdownTimer('shop');
+      this.cancelDropdownTimer('shop');
       this.shopDropdownTimer = setTimeout(() => {
         actions.closeLocationDropdown();
         actions.openShopDropdown();
@@ -113,7 +113,7 @@ class Nav extends Component {
     }
   };
 
-  cancelLocationDropdownTimer = buttonName => {
+  cancelDropdownTimer = buttonName => {
     if (buttonName === 'locations') {
       clearTimeout(this.locationDropdownTimer);
     }
@@ -172,12 +172,8 @@ class Nav extends Component {
                     )}
                     variant="style-none"
                     onClick={closeLocationDropdown}
-                    onMouseEnter={() =>
-                      this.startLocationDropdownTimer('locations')
-                    }
-                    onMouseLeave={() =>
-                      this.cancelLocationDropdownTimer('locations')
-                    }
+                    onMouseEnter={() => this.startDropdownTimer('locations')}
+                    onMouseLeave={() => this.cancelDropdownTimer('locations')}
                     to="/locations"
                     label="Locations"
                     hover="underline-white"
@@ -279,10 +275,8 @@ class Nav extends Component {
                     color="white-peach"
                     label="Shop Online"
                     onClick={closeShopDropdown}
-                    onMouseEnter={() => this.startLocationDropdownTimer('shop')}
-                    onMouseLeave={() =>
-                      this.cancelLocationDropdownTimer('shop')
-                    }
+                    onMouseEnter={() => this.startDropdownTimer('shop')}
+                    onMouseLeave={() => this.cancelDropdownTimer('shop')}
                     hover="clear-white-border"
                   />
                 </Fragment>

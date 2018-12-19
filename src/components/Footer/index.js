@@ -213,19 +213,17 @@ class Footer extends Component {
               </NavLink>
             </span>
           </div>
-          {footerIllustration.fields ? (
-            <Image
-              src={contentfulImgUtil(
-                get(footerIllustration, 'fields.file.url', ''),
-                '1000',
-                'png'
-              )}
-              className={cx(
-                styles['Footer__illustration'],
-                'medium-down-display-none xs-hide sm-hide'
-              )}
-            />
-          ) : null}
+          <Image
+            src={contentfulImgUtil(
+              get(footerIllustration, 'fields.file.url', ''),
+              '1000',
+              'png'
+            )}
+            className={cx(
+              styles['Footer__illustration'],
+              'medium-down-display-none xs-hide sm-hide'
+            )}
+          />
         </div>
       </div>
     );

@@ -81,10 +81,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex container-width"
+        className="relative flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt2"
+                className="flex flex-column col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -104,13 +104,21 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Contact Us"
                                 onClick={[Function]}
-                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
                                 variant="primary-small"
+                        />
+                        <Image
+                                alt="Decorative left down arrow icon"
+                                bg={false}
+                                className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                onImgLoad={[Function]}
+                                src="/assets/images/arrow-left-down.svg"
+                                style={Object {}}
                         />
                 </div>
         </div>
@@ -284,6 +292,14 @@ ShallowWrapper {
                         </NavLink>
                 </span>
         </div>
+        <Image
+                alt=""
+                bg={false}
+                className="medium-down-display-none xs-hide sm-hide"
+                onImgLoad={[Function]}
+                src="/foo?w=1000&fm=png&q=90"
+                style={Object {}}
+        />
 </div>,
       "className": "py4 bg-peach flex items-center justify-center",
     },
@@ -295,7 +311,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt2"
+            className="flex flex-column col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -315,13 +331,21 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Contact Us"
                                     onClick={[Function]}
-                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
                                     variant="primary-small"
+                        />
+                        <Image
+                                    alt="Decorative left down arrow icon"
+                                    bg={false}
+                                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/arrow-left-down.svg"
+                                    style={Object {}}
                         />
             </div>
 </div>,
@@ -495,8 +519,16 @@ ShallowWrapper {
                         </NavLink>
             </span>
 </div>,
+          <Image
+            alt=""
+            bg={false}
+            className="medium-down-display-none xs-hide sm-hide"
+            onImgLoad={[Function]}
+            src="/foo?w=1000&fm=png&q=90"
+            style={Object {}}
+/>,
         ],
-        "className": "flex container-width",
+        "className": "relative flex container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -524,17 +556,25 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Contact Us"
                                 onClick={[Function]}
-                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
                                 variant="primary-small"
                 />
+                <Image
+                                alt="Decorative left down arrow icon"
+                                bg={false}
+                                className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                onImgLoad={[Function]}
+                                src="/assets/images/arrow-left-down.svg"
+                                style={Object {}}
+                />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
+            "className": "flex flex-column col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -555,54 +595,83 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Button
-                  childrenWrapperClassName=""
-                  className="nowrap inline-flex"
-                  color="white-peach"
-                  disabled={false}
-                  exact={true}
-                  fullWidth={false}
-                  hover="shadow"
-                  label="Contact Us"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  openInCurrentTab={false}
-                  shadow={true}
-                  to="/contact"
-                  type="button"
-                  variant="primary-small"
+                "children": Array [
+                  <Button
+                    childrenWrapperClassName=""
+                    className="nowrap inline-flex"
+                    color="white-peach"
+                    disabled={false}
+                    exact={true}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Contact Us"
+                    onClick={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    openInCurrentTab={false}
+                    shadow={true}
+                    to="/contact"
+                    type="button"
+                    variant="primary-small"
 />,
+                  <Image
+                    alt="Decorative left down arrow icon"
+                    bg={false}
+                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                    onImgLoad={[Function]}
+                    src="/assets/images/arrow-left-down.svg"
+                    style={Object {}}
+/>,
+                ],
                 "className": "inline-flex",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "childrenWrapperClassName": "",
-                  "className": "nowrap inline-flex",
-                  "color": "white-peach",
-                  "disabled": false,
-                  "exact": true,
-                  "fullWidth": false,
-                  "hover": "shadow",
-                  "label": "Contact Us",
-                  "onClick": [Function],
-                  "onMouseEnter": [Function],
-                  "onMouseLeave": [Function],
-                  "openInCurrentTab": false,
-                  "shadow": true,
-                  "to": "/contact",
-                  "type": "button",
-                  "variant": "primary-small",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "childrenWrapperClassName": "",
+                    "className": "nowrap inline-flex",
+                    "color": "white-peach",
+                    "disabled": false,
+                    "exact": true,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Contact Us",
+                    "onClick": [Function],
+                    "onMouseLeave": [Function],
+                    "onMouseOver": [Function],
+                    "openInCurrentTab": false,
+                    "shadow": true,
+                    "to": "/contact",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
                 },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "alt": "Decorative left down arrow icon",
+                    "bg": false,
+                    "children": null,
+                    "className": "arrow mx3 medium-down-display-none xs-hide sm-hide",
+                    "onImgLoad": [Function],
+                    "src": "/assets/images/arrow-left-down.svg",
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
           ],
@@ -1527,6 +1596,23 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "",
+            "bg": false,
+            "children": null,
+            "className": "medium-down-display-none xs-hide sm-hide",
+            "onImgLoad": [Function],
+            "src": "/foo?w=1000&fm=png&q=90",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": "div",
     },
@@ -1539,10 +1625,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex container-width"
+          className="relative flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt2"
+                    className="flex flex-column col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -1562,13 +1648,21 @@ ShallowWrapper {
                                         hover="shadow"
                                         label="Contact Us"
                                         onClick={[Function]}
-                                        onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        onMouseOver={[Function]}
                                         openInCurrentTab={false}
                                         shadow={true}
                                         to="/contact"
                                         type="button"
                                         variant="primary-small"
+                              />
+                              <Image
+                                        alt="Decorative left down arrow icon"
+                                        bg={false}
+                                        className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                        onImgLoad={[Function]}
+                                        src="/assets/images/arrow-left-down.svg"
+                                        style={Object {}}
                               />
                     </div>
           </div>
@@ -1742,6 +1836,14 @@ ShallowWrapper {
                               </NavLink>
                     </span>
           </div>
+          <Image
+                    alt=""
+                    bg={false}
+                    className="medium-down-display-none xs-hide sm-hide"
+                    onImgLoad={[Function]}
+                    src="/foo?w=1000&fm=png&q=90"
+                    style={Object {}}
+          />
 </div>,
         "className": "py4 bg-peach flex items-center justify-center",
       },
@@ -1753,7 +1855,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt2"
+              className="flex flex-column col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -1773,13 +1875,21 @@ ShallowWrapper {
                                           hover="shadow"
                                           label="Contact Us"
                                           onClick={[Function]}
-                                          onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          onMouseOver={[Function]}
                                           openInCurrentTab={false}
                                           shadow={true}
                                           to="/contact"
                                           type="button"
                                           variant="primary-small"
+                            />
+                            <Image
+                                          alt="Decorative left down arrow icon"
+                                          bg={false}
+                                          className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                          onImgLoad={[Function]}
+                                          src="/assets/images/arrow-left-down.svg"
+                                          style={Object {}}
                             />
               </div>
 </div>,
@@ -1953,8 +2063,16 @@ ShallowWrapper {
                             </NavLink>
               </span>
 </div>,
+            <Image
+              alt=""
+              bg={false}
+              className="medium-down-display-none xs-hide sm-hide"
+              onImgLoad={[Function]}
+              src="/foo?w=1000&fm=png&q=90"
+              style={Object {}}
+/>,
           ],
-          "className": "flex container-width",
+          "className": "relative flex container-width",
         },
         "ref": null,
         "rendered": Array [
@@ -1982,17 +2100,25 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Contact Us"
                                     onClick={[Function]}
-                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
                                     variant="primary-small"
                   />
+                  <Image
+                                    alt="Decorative left down arrow icon"
+                                    bg={false}
+                                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/arrow-left-down.svg"
+                                    style={Object {}}
+                  />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
+              "className": "flex flex-column col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [
@@ -2013,54 +2139,83 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Button
-                    childrenWrapperClassName=""
-                    className="nowrap inline-flex"
-                    color="white-peach"
-                    disabled={false}
-                    exact={true}
-                    fullWidth={false}
-                    hover="shadow"
-                    label="Contact Us"
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    openInCurrentTab={false}
-                    shadow={true}
-                    to="/contact"
-                    type="button"
-                    variant="primary-small"
+                  "children": Array [
+                    <Button
+                      childrenWrapperClassName=""
+                      className="nowrap inline-flex"
+                      color="white-peach"
+                      disabled={false}
+                      exact={true}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Contact Us"
+                      onClick={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      openInCurrentTab={false}
+                      shadow={true}
+                      to="/contact"
+                      type="button"
+                      variant="primary-small"
 />,
+                    <Image
+                      alt="Decorative left down arrow icon"
+                      bg={false}
+                      className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                      onImgLoad={[Function]}
+                      src="/assets/images/arrow-left-down.svg"
+                      style={Object {}}
+/>,
+                  ],
                   "className": "inline-flex",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": null,
-                    "childrenWrapperClassName": "",
-                    "className": "nowrap inline-flex",
-                    "color": "white-peach",
-                    "disabled": false,
-                    "exact": true,
-                    "fullWidth": false,
-                    "hover": "shadow",
-                    "label": "Contact Us",
-                    "onClick": [Function],
-                    "onMouseEnter": [Function],
-                    "onMouseLeave": [Function],
-                    "openInCurrentTab": false,
-                    "shadow": true,
-                    "to": "/contact",
-                    "type": "button",
-                    "variant": "primary-small",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "childrenWrapperClassName": "",
+                      "className": "nowrap inline-flex",
+                      "color": "white-peach",
+                      "disabled": false,
+                      "exact": true,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Contact Us",
+                      "onClick": [Function],
+                      "onMouseLeave": [Function],
+                      "onMouseOver": [Function],
+                      "openInCurrentTab": false,
+                      "shadow": true,
+                      "to": "/contact",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "alt": "Decorative left down arrow icon",
+                      "bg": false,
+                      "children": null,
+                      "className": "arrow mx3 medium-down-display-none xs-hide sm-hide",
+                      "onImgLoad": [Function],
+                      "src": "/assets/images/arrow-left-down.svg",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
                 "type": "div",
               },
             ],
@@ -2984,6 +3139,23 @@ ShallowWrapper {
               },
             ],
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "",
+              "bg": false,
+              "children": null,
+              "className": "medium-down-display-none xs-hide sm-hide",
+              "onImgLoad": [Function],
+              "src": "/foo?w=1000&fm=png&q=90",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "div",
@@ -3022,10 +3194,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": <div
-        className="flex container-width"
+        className="relative flex container-width"
 >
         <div
-                className="flex flex-column justify-between col-12 md-col-5 pt2"
+                className="flex flex-column col-12 md-col-5 pt2"
         >
                 <h2
                         className="text-white block-headline"
@@ -3045,13 +3217,21 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Contact Us"
                                 onClick={[Function]}
-                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
                                 variant="primary-small"
+                        />
+                        <Image
+                                alt="Decorative left down arrow icon"
+                                bg={false}
+                                className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                onImgLoad={[Function]}
+                                src="/assets/images/arrow-left-down.svg"
+                                style={Object {}}
                         />
                 </div>
         </div>
@@ -3225,6 +3405,14 @@ ShallowWrapper {
                         </NavLink>
                 </span>
         </div>
+        <Image
+                alt=""
+                bg={false}
+                className="medium-down-display-none xs-hide sm-hide"
+                onImgLoad={[Function]}
+                src="?w=1000&fm=png&q=90"
+                style={Object {}}
+        />
 </div>,
       "className": "py4 bg-peach flex items-center justify-center",
     },
@@ -3236,7 +3424,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
-            className="flex flex-column justify-between col-12 md-col-5 pt2"
+            className="flex flex-column col-12 md-col-5 pt2"
 >
             <h2
                         className="text-white block-headline"
@@ -3256,13 +3444,21 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Contact Us"
                                     onClick={[Function]}
-                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
                                     variant="primary-small"
+                        />
+                        <Image
+                                    alt="Decorative left down arrow icon"
+                                    bg={false}
+                                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/arrow-left-down.svg"
+                                    style={Object {}}
                         />
             </div>
 </div>,
@@ -3436,8 +3632,16 @@ ShallowWrapper {
                         </NavLink>
             </span>
 </div>,
+          <Image
+            alt=""
+            bg={false}
+            className="medium-down-display-none xs-hide sm-hide"
+            onImgLoad={[Function]}
+            src="?w=1000&fm=png&q=90"
+            style={Object {}}
+/>,
         ],
-        "className": "flex container-width",
+        "className": "relative flex container-width",
       },
       "ref": null,
       "rendered": Array [
@@ -3465,17 +3669,25 @@ ShallowWrapper {
                                 hover="shadow"
                                 label="Contact Us"
                                 onClick={[Function]}
-                                onMouseEnter={[Function]}
                                 onMouseLeave={[Function]}
+                                onMouseOver={[Function]}
                                 openInCurrentTab={false}
                                 shadow={true}
                                 to="/contact"
                                 type="button"
                                 variant="primary-small"
                 />
+                <Image
+                                alt="Decorative left down arrow icon"
+                                bg={false}
+                                className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                onImgLoad={[Function]}
+                                src="/assets/images/arrow-left-down.svg"
+                                style={Object {}}
+                />
 </div>,
             ],
-            "className": "flex flex-column justify-between col-12 md-col-5 pt2",
+            "className": "flex flex-column col-12 md-col-5 pt2",
           },
           "ref": null,
           "rendered": Array [
@@ -3496,54 +3708,83 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <Button
-                  childrenWrapperClassName=""
-                  className="nowrap inline-flex"
-                  color="white-peach"
-                  disabled={false}
-                  exact={true}
-                  fullWidth={false}
-                  hover="shadow"
-                  label="Contact Us"
-                  onClick={[Function]}
-                  onMouseEnter={[Function]}
-                  onMouseLeave={[Function]}
-                  openInCurrentTab={false}
-                  shadow={true}
-                  to="/contact"
-                  type="button"
-                  variant="primary-small"
+                "children": Array [
+                  <Button
+                    childrenWrapperClassName=""
+                    className="nowrap inline-flex"
+                    color="white-peach"
+                    disabled={false}
+                    exact={true}
+                    fullWidth={false}
+                    hover="shadow"
+                    label="Contact Us"
+                    onClick={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    openInCurrentTab={false}
+                    shadow={true}
+                    to="/contact"
+                    type="button"
+                    variant="primary-small"
 />,
+                  <Image
+                    alt="Decorative left down arrow icon"
+                    bg={false}
+                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                    onImgLoad={[Function]}
+                    src="/assets/images/arrow-left-down.svg"
+                    style={Object {}}
+/>,
+                ],
                 "className": "inline-flex",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": null,
-                  "childrenWrapperClassName": "",
-                  "className": "nowrap inline-flex",
-                  "color": "white-peach",
-                  "disabled": false,
-                  "exact": true,
-                  "fullWidth": false,
-                  "hover": "shadow",
-                  "label": "Contact Us",
-                  "onClick": [Function],
-                  "onMouseEnter": [Function],
-                  "onMouseLeave": [Function],
-                  "openInCurrentTab": false,
-                  "shadow": true,
-                  "to": "/contact",
-                  "type": "button",
-                  "variant": "primary-small",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": null,
+                    "childrenWrapperClassName": "",
+                    "className": "nowrap inline-flex",
+                    "color": "white-peach",
+                    "disabled": false,
+                    "exact": true,
+                    "fullWidth": false,
+                    "hover": "shadow",
+                    "label": "Contact Us",
+                    "onClick": [Function],
+                    "onMouseLeave": [Function],
+                    "onMouseOver": [Function],
+                    "openInCurrentTab": false,
+                    "shadow": true,
+                    "to": "/contact",
+                    "type": "button",
+                    "variant": "primary-small",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
                 },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "alt": "Decorative left down arrow icon",
+                    "bg": false,
+                    "children": null,
+                    "className": "arrow mx3 medium-down-display-none xs-hide sm-hide",
+                    "onImgLoad": [Function],
+                    "src": "/assets/images/arrow-left-down.svg",
+                    "style": Object {},
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": "div",
             },
           ],
@@ -4468,6 +4709,23 @@ ShallowWrapper {
           ],
           "type": "div",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "alt": "",
+            "bg": false,
+            "children": null,
+            "className": "medium-down-display-none xs-hide sm-hide",
+            "onImgLoad": [Function],
+            "src": "?w=1000&fm=png&q=90",
+            "style": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": "div",
     },
@@ -4480,10 +4738,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": <div
-          className="flex container-width"
+          className="relative flex container-width"
 >
           <div
-                    className="flex flex-column justify-between col-12 md-col-5 pt2"
+                    className="flex flex-column col-12 md-col-5 pt2"
           >
                     <h2
                               className="text-white block-headline"
@@ -4503,13 +4761,21 @@ ShallowWrapper {
                                         hover="shadow"
                                         label="Contact Us"
                                         onClick={[Function]}
-                                        onMouseEnter={[Function]}
                                         onMouseLeave={[Function]}
+                                        onMouseOver={[Function]}
                                         openInCurrentTab={false}
                                         shadow={true}
                                         to="/contact"
                                         type="button"
                                         variant="primary-small"
+                              />
+                              <Image
+                                        alt="Decorative left down arrow icon"
+                                        bg={false}
+                                        className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                        onImgLoad={[Function]}
+                                        src="/assets/images/arrow-left-down.svg"
+                                        style={Object {}}
                               />
                     </div>
           </div>
@@ -4683,6 +4949,14 @@ ShallowWrapper {
                               </NavLink>
                     </span>
           </div>
+          <Image
+                    alt=""
+                    bg={false}
+                    className="medium-down-display-none xs-hide sm-hide"
+                    onImgLoad={[Function]}
+                    src="?w=1000&fm=png&q=90"
+                    style={Object {}}
+          />
 </div>,
         "className": "py4 bg-peach flex items-center justify-center",
       },
@@ -4694,7 +4968,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-column justify-between col-12 md-col-5 pt2"
+              className="flex flex-column col-12 md-col-5 pt2"
 >
               <h2
                             className="text-white block-headline"
@@ -4714,13 +4988,21 @@ ShallowWrapper {
                                           hover="shadow"
                                           label="Contact Us"
                                           onClick={[Function]}
-                                          onMouseEnter={[Function]}
                                           onMouseLeave={[Function]}
+                                          onMouseOver={[Function]}
                                           openInCurrentTab={false}
                                           shadow={true}
                                           to="/contact"
                                           type="button"
                                           variant="primary-small"
+                            />
+                            <Image
+                                          alt="Decorative left down arrow icon"
+                                          bg={false}
+                                          className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                          onImgLoad={[Function]}
+                                          src="/assets/images/arrow-left-down.svg"
+                                          style={Object {}}
                             />
               </div>
 </div>,
@@ -4894,8 +5176,16 @@ ShallowWrapper {
                             </NavLink>
               </span>
 </div>,
+            <Image
+              alt=""
+              bg={false}
+              className="medium-down-display-none xs-hide sm-hide"
+              onImgLoad={[Function]}
+              src="?w=1000&fm=png&q=90"
+              style={Object {}}
+/>,
           ],
-          "className": "flex container-width",
+          "className": "relative flex container-width",
         },
         "ref": null,
         "rendered": Array [
@@ -4923,17 +5213,25 @@ ShallowWrapper {
                                     hover="shadow"
                                     label="Contact Us"
                                     onClick={[Function]}
-                                    onMouseEnter={[Function]}
                                     onMouseLeave={[Function]}
+                                    onMouseOver={[Function]}
                                     openInCurrentTab={false}
                                     shadow={true}
                                     to="/contact"
                                     type="button"
                                     variant="primary-small"
                   />
+                  <Image
+                                    alt="Decorative left down arrow icon"
+                                    bg={false}
+                                    className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                                    onImgLoad={[Function]}
+                                    src="/assets/images/arrow-left-down.svg"
+                                    style={Object {}}
+                  />
 </div>,
               ],
-              "className": "flex flex-column justify-between col-12 md-col-5 pt2",
+              "className": "flex flex-column col-12 md-col-5 pt2",
             },
             "ref": null,
             "rendered": Array [
@@ -4954,54 +5252,83 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <Button
-                    childrenWrapperClassName=""
-                    className="nowrap inline-flex"
-                    color="white-peach"
-                    disabled={false}
-                    exact={true}
-                    fullWidth={false}
-                    hover="shadow"
-                    label="Contact Us"
-                    onClick={[Function]}
-                    onMouseEnter={[Function]}
-                    onMouseLeave={[Function]}
-                    openInCurrentTab={false}
-                    shadow={true}
-                    to="/contact"
-                    type="button"
-                    variant="primary-small"
+                  "children": Array [
+                    <Button
+                      childrenWrapperClassName=""
+                      className="nowrap inline-flex"
+                      color="white-peach"
+                      disabled={false}
+                      exact={true}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Contact Us"
+                      onClick={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      openInCurrentTab={false}
+                      shadow={true}
+                      to="/contact"
+                      type="button"
+                      variant="primary-small"
 />,
+                    <Image
+                      alt="Decorative left down arrow icon"
+                      bg={false}
+                      className="arrow mx3 medium-down-display-none xs-hide sm-hide"
+                      onImgLoad={[Function]}
+                      src="/assets/images/arrow-left-down.svg"
+                      style={Object {}}
+/>,
+                  ],
                   "className": "inline-flex",
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": null,
-                    "childrenWrapperClassName": "",
-                    "className": "nowrap inline-flex",
-                    "color": "white-peach",
-                    "disabled": false,
-                    "exact": true,
-                    "fullWidth": false,
-                    "hover": "shadow",
-                    "label": "Contact Us",
-                    "onClick": [Function],
-                    "onMouseEnter": [Function],
-                    "onMouseLeave": [Function],
-                    "openInCurrentTab": false,
-                    "shadow": true,
-                    "to": "/contact",
-                    "type": "button",
-                    "variant": "primary-small",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "childrenWrapperClassName": "",
+                      "className": "nowrap inline-flex",
+                      "color": "white-peach",
+                      "disabled": false,
+                      "exact": true,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Contact Us",
+                      "onClick": [Function],
+                      "onMouseLeave": [Function],
+                      "onMouseOver": [Function],
+                      "openInCurrentTab": false,
+                      "shadow": true,
+                      "to": "/contact",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "alt": "Decorative left down arrow icon",
+                      "bg": false,
+                      "children": null,
+                      "className": "arrow mx3 medium-down-display-none xs-hide sm-hide",
+                      "onImgLoad": [Function],
+                      "src": "/assets/images/arrow-left-down.svg",
+                      "style": Object {},
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
                 "type": "div",
               },
             ],
@@ -5925,6 +6252,23 @@ ShallowWrapper {
               },
             ],
             "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "",
+              "bg": false,
+              "children": null,
+              "className": "medium-down-display-none xs-hide sm-hide",
+              "onImgLoad": [Function],
+              "src": "?w=1000&fm=png&q=90",
+              "style": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
         ],
         "type": "div",

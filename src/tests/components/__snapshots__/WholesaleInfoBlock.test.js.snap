@@ -60,8 +60,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Wholesale Info"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                     openInCurrentTab={false}
                     shadow={false}
                     to="/wholesale"
@@ -138,8 +138,8 @@ ShallowWrapper {
               hover="shadow"
               label="Wholesale Info"
               onClick={[Function]}
-              onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              onMouseOver={[Function]}
               openInCurrentTab={false}
               shadow={false}
               to="/wholesale"
@@ -192,8 +192,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "Wholesale Info",
               "onClick": [Function],
-              "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "onMouseOver": [Function],
               "openInCurrentTab": false,
               "shadow": false,
               "to": "/wholesale",
@@ -255,8 +255,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Wholesale Info"
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
                         openInCurrentTab={false}
                         shadow={false}
                         to="/wholesale"
@@ -333,8 +333,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="Wholesale Info"
                 onClick={[Function]}
-                onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                onMouseOver={[Function]}
                 openInCurrentTab={false}
                 shadow={false}
                 to="/wholesale"
@@ -387,8 +387,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Wholesale Info",
                 "onClick": [Function],
-                "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
+                "onMouseOver": [Function],
                 "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/wholesale",
@@ -473,8 +473,8 @@ ShallowWrapper {
                     hover="shadow"
                     label="Wholesale Info"
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                     openInCurrentTab={false}
                     shadow={false}
                     to="/wholesale"
@@ -548,8 +548,8 @@ ShallowWrapper {
               hover="shadow"
               label="Wholesale Info"
               onClick={[Function]}
-              onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              onMouseOver={[Function]}
               openInCurrentTab={false}
               shadow={false}
               to="/wholesale"
@@ -601,8 +601,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "Wholesale Info",
               "onClick": [Function],
-              "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "onMouseOver": [Function],
               "openInCurrentTab": false,
               "shadow": false,
               "to": "/wholesale",
@@ -661,8 +661,8 @@ ShallowWrapper {
                         hover="shadow"
                         label="Wholesale Info"
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
                         openInCurrentTab={false}
                         shadow={false}
                         to="/wholesale"
@@ -736,8 +736,8 @@ ShallowWrapper {
                 hover="shadow"
                 label="Wholesale Info"
                 onClick={[Function]}
-                onMouseEnter={[Function]}
                 onMouseLeave={[Function]}
+                onMouseOver={[Function]}
                 openInCurrentTab={false}
                 shadow={false}
                 to="/wholesale"
@@ -789,8 +789,8 @@ ShallowWrapper {
                 "hover": "shadow",
                 "label": "Wholesale Info",
                 "onClick": [Function],
-                "onMouseEnter": [Function],
                 "onMouseLeave": [Function],
+                "onMouseOver": [Function],
                 "openInCurrentTab": false,
                 "shadow": false,
                 "to": "/wholesale",

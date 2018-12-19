@@ -90,8 +90,8 @@ ShallowWrapper {
                     hover="shadow"
                     label=""
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                     openInCurrentTab={false}
                     shadow={false}
                     to="foo"
@@ -129,8 +129,8 @@ ShallowWrapper {
                     hover="shadow"
                     label=""
                     onClick={[Function]}
-                    onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
                     openInCurrentTab={false}
                     shadow={false}
                     to="foo"
@@ -175,8 +175,8 @@ ShallowWrapper {
             hover="shadow"
             label=""
             onClick={[Function]}
-            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            onMouseOver={[Function]}
             openInCurrentTab={false}
             shadow={false}
             to="foo"
@@ -234,8 +234,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "",
             "onClick": [Function],
-            "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "onMouseOver": [Function],
             "openInCurrentTab": false,
             "shadow": false,
             "to": "foo",
@@ -317,8 +317,8 @@ ShallowWrapper {
             hover="shadow"
             label=""
             onClick={[Function]}
-            onMouseEnter={[Function]}
             onMouseLeave={[Function]}
+            onMouseOver={[Function]}
             openInCurrentTab={false}
             shadow={false}
             to="foo"
@@ -376,8 +376,8 @@ ShallowWrapper {
             "hover": "shadow",
             "label": "",
             "onClick": [Function],
-            "onMouseEnter": [Function],
             "onMouseLeave": [Function],
+            "onMouseOver": [Function],
             "openInCurrentTab": false,
             "shadow": false,
             "to": "foo",
@@ -467,8 +467,8 @@ ShallowWrapper {
                         hover="shadow"
                         label=""
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
                         openInCurrentTab={false}
                         shadow={false}
                         to="foo"
@@ -506,8 +506,8 @@ ShallowWrapper {
                         hover="shadow"
                         label=""
                         onClick={[Function]}
-                        onMouseEnter={[Function]}
                         onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
                         openInCurrentTab={false}
                         shadow={false}
                         to="foo"
@@ -552,8 +552,8 @@ ShallowWrapper {
               hover="shadow"
               label=""
               onClick={[Function]}
-              onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              onMouseOver={[Function]}
               openInCurrentTab={false}
               shadow={false}
               to="foo"
@@ -611,8 +611,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "",
               "onClick": [Function],
-              "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "onMouseOver": [Function],
               "openInCurrentTab": false,
               "shadow": false,
               "to": "foo",
@@ -694,8 +694,8 @@ ShallowWrapper {
               hover="shadow"
               label=""
               onClick={[Function]}
-              onMouseEnter={[Function]}
               onMouseLeave={[Function]}
+              onMouseOver={[Function]}
               openInCurrentTab={false}
               shadow={false}
               to="foo"
@@ -753,8 +753,8 @@ ShallowWrapper {
               "hover": "shadow",
               "label": "",
               "onClick": [Function],
-              "onMouseEnter": [Function],
               "onMouseLeave": [Function],
+              "onMouseOver": [Function],
               "openInCurrentTab": false,
               "shadow": false,
               "to": "foo",
