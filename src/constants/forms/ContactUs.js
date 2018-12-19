@@ -23,6 +23,14 @@ export default {
     CONCERNS: {
       label: 'Comments & Concerns',
       bucket: 'https://api.formbucket.com/f/buk_HGRhSOlE63HOUtVGmr9Ho7sU'
+    },
+    JOBS: {
+      label: 'Jobs',
+      bucket: 'https://jobs-bucket'
+    },
+    WHOLESALE: {
+      label: 'Wholesale',
+      bucket: 'https://wholesale-bucket'
     }
   },
   FIELDS: {

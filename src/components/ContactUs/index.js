@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import ContactUsForm from 'constants/forms/ContactUs';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { Radio, TextField, Button, FormFlash } from 'components/base';
+import { Radio, TextField, Button, FormFlash, Dropdown } from 'components/base';
 
 import cx from 'classnames';
 import styles from './ContactUs.scss';
@@ -10,6 +10,7 @@ import styles from './ContactUs.scss';
 class ContactUs extends Component {
   state = {
     selectedAddress: '',
+    selectedField: null,
     name: '',
     email: '',
     phone: '',
@@ -22,27 +23,38 @@ class ContactUs extends Component {
     switch (param) {
       case 'general-info':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.GENERAL.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.GENERAL.bucket,
+          selectedField: 'GENERAL'
         });
       case 'orders':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.ORDERS.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.ORDERS.bucket,
+          selectedField: 'ORDERS'
         });
       case 'off-site-events':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.EVENTS.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.EVENTS.bucket,
+          selectedField: 'EVENTS'
         });
       case 'press':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PRESS.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.PRESS.bucket,
+          selectedField: 'PRESS'
         });
       case 'parties':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket,
+          selectedField: 'PARTIES'
         });
-      case 'comments-concerns':
+      case 'jobs':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.CONCERNS.bucket
+          selectedAddress: ContactUsForm.ADDRESSES.JOBS.bucket,
+          selectedField: 'JOBS'
+        });
+      case 'wholesale':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.WHOLESALE.bucket,
+          selectedField: 'WHOLESALE'
         });
       default:
         return null;
@@ -110,7 +122,7 @@ class ContactUs extends Component {
   };
 
   render() {
-    const { error, selectedAddress } = this.state;
+    const { error, selectedAddress, selectedField } = this.state;
     const { formStatus } = this.props;
 
     return (
@@ -123,16 +135,26 @@ class ContactUs extends Component {
         <h2 className="block-headline my2 px2 center">Contact us</h2>
         <p className="my2 px2 center">What can we help you with?</p>
         <form className="flex flex-wrap justify-center text-container-width">
-          <div className="flex flex-wrap justify-center px2 my2">
-            {Object.values(ContactUsForm.ADDRESSES).map(field => (
-              <Radio
-                key={field.label}
-                checked={selectedAddress === field.bucket}
-                onClick={() => this.setState({ selectedAddress: field.bucket })}
-                className="mx2 my1 small"
-                label={field.label}
-              />
-            ))}
+          <div className="w100 flex flex-wrap justify-center px2 my2">
+            <Dropdown
+              fixedWidth={true}
+              className="w100"
+              selectClassName="w100"
+              variant="secondary"
+              placeholder="Choose your inquiry"
+              value={selectedField ? selectedField : null}
+              options={Object.keys(ContactUsForm.ADDRESSES).map(field => {
+                const label = ContactUsForm.ADDRESSES[field].label;
+
+                return { label: label, value: field };
+              })}
+              onChange={filter =>
+                this.setState({
+                  selectedAddress: ContactUsForm.ADDRESSES[filter.value],
+                  selectedField: filter.value
+                })
+              }
+            />
           </div>
           <div className="w100 flex flex-column">
             {Object.values(ContactUsForm.FIELDS).map(field => (
