@@ -28,7 +28,8 @@ class CakeRequestForm extends Component {
     toppings: [],
     dayPickerIsSelected: false,
     buildYourOwn: false,
-    recommendFlavorId: ''
+    recommendFlavorId: '',
+    cakeSign: ''
   };
 
   openFlavorModal = () => this.setState({ flavorModalIsOpen: true });
@@ -52,6 +53,7 @@ class CakeRequestForm extends Component {
   handleSecondFlavorChange = secondFlavor => this.setState({ secondFlavor });
   handleFillingChange = filling => this.setState({ filling });
   handleSprinkleChange = sprinkle => this.setState({ sprinkle });
+  handlecakeSignChange = cakeSign => this.setState({ cakeSign });
 
   handleAddTopping = topping => {
     const { toppings } = this.state;
@@ -142,6 +144,10 @@ class CakeRequestForm extends Component {
     {
       key: 'Fulfillment',
       value: this.props.cakeLocations[this.state.location.value].cakesBucket
+    },
+    {
+      key: 'cakeSign',
+      value: this.state.cakeSign
     }
   ];
 
@@ -167,6 +173,7 @@ class CakeRequestForm extends Component {
     const suggestedFlavors = get(this, 'props.cakeFlavors', []);
     const fillings = get(this, 'props.cakeFillings', []);
     const sprinkles = get(this, 'props.cakeSprinkles', []);
+    const cakeSigns = get(this, 'props.cakeSigns', []);
     const toppings = get(this, 'props.cakeToppings', []);
     const locations = get(this, 'props.cakeLocations', {});
     const cakeRecommendations = get(this, 'props.cakeRecommendations', []);
@@ -425,7 +432,10 @@ class CakeRequestForm extends Component {
                       <div className="inline-flex flex-column w100 my2">
                         <p className="mb2 white-space-normal center">{title}</p>
                         <p className="white-space-normal light line-height">
-                          {`${flavor1} paired with ${flavor2} on a ${base}`}
+                          <span className="bold">{`${flavor1} `}</span>
+                          paired with
+                          <span className="bold">{` ${flavor2} `}</span>
+                          on a {base}
                         </p>
                       </div>
                     </Button>
@@ -601,6 +611,29 @@ class CakeRequestForm extends Component {
               })}
             </div>
           </div>
+          <div className="w100 mb4 flex flex-column items-center">
+            <p className="bold big center mb2">
+              Which complimentary cake sign would you like?
+            </p>
+            <div className="form-container-width w100 flex flex-wrap justify-center">
+              {cakeSigns.map(cakeSign => {
+                return (
+                  <div key={cakeSign.sign} className="col-6 md-col-3 p1">
+                    <Button
+                      className="center wh100 white-space-normal px3"
+                      variant={
+                        get(this, 'state.cakeSign', null) === cakeSign.sign
+                          ? 'square--selected'
+                          : 'square'
+                      }
+                      label={cakeSign.sign}
+                      onClick={() => this.handlecakeSignChange(cakeSign.sign)}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
         <div className="w100 bg-pastel-peach py4">
           <div className="max-width-3 mx-auto flex flex-wrap px3">
@@ -651,6 +684,10 @@ class CakeRequestForm extends Component {
                   <span className="line-height small">
                     <span className="bold">Toppings: </span>
                     {this.state.toppings.join(', ')}
+                  </span>
+                  <span className="line-height small">
+                    <span className="bold">Complimentary cake sign: </span>
+                    {this.state.cakeSign}
                   </span>
                 </div>
               ) : (
