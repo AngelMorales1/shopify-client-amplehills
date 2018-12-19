@@ -52,4 +52,19 @@
       border-bottom: spacing(0.5) solid color('white');
     }
   }
+
+  &__illustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+  }
+
+  &__copy-rights {
+    margin-top: 0;
+
+    @media ($medium-up) {
+      margin-top: spacing(40);
+    }
+  }
 }
