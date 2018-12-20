@@ -12,6 +12,7 @@ ShallowWrapper {
             "id": "",
             "image": "",
             "label": "",
+            "labelColor": "",
             "title": "",
           }
     }
@@ -247,6 +248,7 @@ ShallowWrapper {
             "id": "",
             "image": "",
             "label": "",
+            "labelColor": "",
             "title": "",
           }
     }
