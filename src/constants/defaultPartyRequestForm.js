@@ -1,5 +1,5 @@
 export const defaultPartyTypes = [
-  { uuid: '1', index: 0, partyType: 'Bike Party', link: '/bike-party' },
+  { uuid: '1', index: 0, partyType: 'Bicycle Party', link: '/bike-party' },
   {
     uuid: '2',
     index: 1,

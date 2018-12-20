@@ -524,7 +524,7 @@ ShallowWrapper {
                                                             <p
                                                                       className="white-space-normal"
                                                             >
-                                                                      Bike Party
+                                                                      Bicycle Party
                                                             </p>
                                                             <div
                                                                       className=""
@@ -620,9 +620,9 @@ ShallowWrapper {
                               You must first select a location
                     </span>
                     <p
-                              className="center mb3"
+                              className="center mb3 text-container-width"
                     >
-                              Maximum number of 55
+                              Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                     </p>
                     <TextField
                               address=""
@@ -1317,7 +1317,7 @@ ShallowWrapper {
                                                                       <p
                                                                                     className="white-space-normal"
                                                                       >
-                                                                                    Bike Party
+                                                                                    Bicycle Party
                                                                       </p>
                                                                       <div
                                                                                     className=""
@@ -1413,9 +1413,9 @@ ShallowWrapper {
                             You must first select a location
               </span>
               <p
-                            className="center mb3"
+                            className="center mb3 text-container-width"
               >
-                            Maximum number of 55
+                            Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
               </p>
               <TextField
                             address=""
@@ -2911,7 +2911,7 @@ ShallowWrapper {
                                                                         <p
                                                                                           className="white-space-normal"
                                                                         >
-                                                                                          Bike Party
+                                                                                          Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                           className=""
@@ -3053,7 +3053,7 @@ ShallowWrapper {
                                                                   <p
                                                                                         className="white-space-normal"
                                                                   >
-                                                                                        Bike Party
+                                                                                        Bicycle Party
                                                                   </p>
                                                                   <div
                                                                                         className=""
@@ -3166,7 +3166,7 @@ ShallowWrapper {
                                                 <p
                                                                         className="white-space-normal"
                                                 >
-                                                                        Bike Party
+                                                                        Bicycle Party
                                                 </p>
                                                 <div
                                                                         className=""
@@ -3206,7 +3206,7 @@ ShallowWrapper {
                           <p
                                                     className="white-space-normal"
                           >
-                                                    Bike Party
+                                                    Bicycle Party
                           </p>
                           <div
                                                     className=""
@@ -3257,7 +3257,7 @@ ShallowWrapper {
                             <p
                               className="white-space-normal"
 >
-                              Bike Party
+                              Bicycle Party
 </p>,
                             <div
                               className=""
@@ -3291,11 +3291,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Bike Party",
+                              "children": "Bicycle Party",
                               "className": "white-space-normal",
                             },
                             "ref": null,
-                            "rendered": "Bike Party",
+                            "rendered": "Bicycle Party",
                             "type": "p",
                           },
                           Object {
@@ -3605,9 +3605,9 @@ ShallowWrapper {
                   You must first select a location
 </span>,
                 <p
-                  className="center mb3"
+                  className="center mb3 text-container-width"
 >
-                  Maximum number of 55
+                  Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
 </p>,
                 <TextField
                   address=""
@@ -3657,11 +3657,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Maximum number of 55",
-                  "className": "center mb3",
+                  "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "className": "center mb3 text-container-width",
                 },
                 "ref": null,
-                "rendered": "Maximum number of 55",
+                "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
                 "type": "p",
               },
               Object {
@@ -5262,7 +5262,7 @@ ShallowWrapper {
                                                                         <p
                                                                                     className="white-space-normal"
                                                                         >
-                                                                                    Bike Party
+                                                                                    Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                     className=""
@@ -5358,9 +5358,9 @@ ShallowWrapper {
                                     You must first select a location
                         </span>
                         <p
-                                    className="center mb3"
+                                    className="center mb3 text-container-width"
                         >
-                                    Maximum number of 55
+                                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                         </p>
                         <TextField
                                     address=""
@@ -6055,7 +6055,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                 className="white-space-normal"
                                                                                 >
-                                                                                                Bike Party
+                                                                                                Bicycle Party
                                                                                 </p>
                                                                                 <div
                                                                                                 className=""
@@ -6151,9 +6151,9 @@ ShallowWrapper {
                                 You must first select a location
                 </span>
                 <p
-                                className="center mb3"
+                                className="center mb3 text-container-width"
                 >
-                                Maximum number of 55
+                                Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                 </p>
                 <TextField
                                 address=""
@@ -7649,7 +7649,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                     className="white-space-normal"
                                                                                 >
-                                                                                                    Bike Party
+                                                                                                    Bicycle Party
                                                                                 </p>
                                                                                 <div
                                                                                                     className=""
@@ -7791,7 +7791,7 @@ ShallowWrapper {
                                                                         <p
                                                                                                 className="white-space-normal"
                                                                         >
-                                                                                                Bike Party
+                                                                                                Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                                 className=""
@@ -7904,7 +7904,7 @@ ShallowWrapper {
                                                     <p
                                                                               className="white-space-normal"
                                                     >
-                                                                              Bike Party
+                                                                              Bicycle Party
                                                     </p>
                                                     <div
                                                                               className=""
@@ -7944,7 +7944,7 @@ ShallowWrapper {
                             <p
                                                         className="white-space-normal"
                             >
-                                                        Bike Party
+                                                        Bicycle Party
                             </p>
                             <div
                                                         className=""
@@ -7995,7 +7995,7 @@ ShallowWrapper {
                               <p
                                 className="white-space-normal"
 >
-                                Bike Party
+                                Bicycle Party
 </p>,
                               <div
                                 className=""
@@ -8029,11 +8029,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Bike Party",
+                                "children": "Bicycle Party",
                                 "className": "white-space-normal",
                               },
                               "ref": null,
-                              "rendered": "Bike Party",
+                              "rendered": "Bicycle Party",
                               "type": "p",
                             },
                             Object {
@@ -8343,9 +8343,9 @@ ShallowWrapper {
                     You must first select a location
 </span>,
                   <p
-                    className="center mb3"
+                    className="center mb3 text-container-width"
 >
-                    Maximum number of 55
+                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
 </p>,
                   <TextField
                     address=""
@@ -8395,11 +8395,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Maximum number of 55",
-                    "className": "center mb3",
+                    "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                    "className": "center mb3 text-container-width",
                   },
                   "ref": null,
-                  "rendered": "Maximum number of 55",
+                  "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
                   "type": "p",
                 },
                 Object {
@@ -10062,7 +10062,7 @@ ShallowWrapper {
                                                             <p
                                                                       className="white-space-normal"
                                                             >
-                                                                      Bike Party
+                                                                      Bicycle Party
                                                             </p>
                                                             <div
                                                                       className=""
@@ -10158,9 +10158,9 @@ ShallowWrapper {
                               You must first select a location
                     </span>
                     <p
-                              className="center mb3"
+                              className="center mb3 text-container-width"
                     >
-                              Maximum number of 55
+                              Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                     </p>
                     <TextField
                               address=""
@@ -10855,7 +10855,7 @@ ShallowWrapper {
                                                                       <p
                                                                                     className="white-space-normal"
                                                                       >
-                                                                                    Bike Party
+                                                                                    Bicycle Party
                                                                       </p>
                                                                       <div
                                                                                     className=""
@@ -10951,9 +10951,9 @@ ShallowWrapper {
                             You must first select a location
               </span>
               <p
-                            className="center mb3"
+                            className="center mb3 text-container-width"
               >
-                            Maximum number of 55
+                            Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
               </p>
               <TextField
                             address=""
@@ -12449,7 +12449,7 @@ ShallowWrapper {
                                                                         <p
                                                                                           className="white-space-normal"
                                                                         >
-                                                                                          Bike Party
+                                                                                          Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                           className=""
@@ -12591,7 +12591,7 @@ ShallowWrapper {
                                                                   <p
                                                                                         className="white-space-normal"
                                                                   >
-                                                                                        Bike Party
+                                                                                        Bicycle Party
                                                                   </p>
                                                                   <div
                                                                                         className=""
@@ -12704,7 +12704,7 @@ ShallowWrapper {
                                                 <p
                                                                         className="white-space-normal"
                                                 >
-                                                                        Bike Party
+                                                                        Bicycle Party
                                                 </p>
                                                 <div
                                                                         className=""
@@ -12744,7 +12744,7 @@ ShallowWrapper {
                           <p
                                                     className="white-space-normal"
                           >
-                                                    Bike Party
+                                                    Bicycle Party
                           </p>
                           <div
                                                     className=""
@@ -12795,7 +12795,7 @@ ShallowWrapper {
                             <p
                               className="white-space-normal"
 >
-                              Bike Party
+                              Bicycle Party
 </p>,
                             <div
                               className=""
@@ -12829,11 +12829,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
-                              "children": "Bike Party",
+                              "children": "Bicycle Party",
                               "className": "white-space-normal",
                             },
                             "ref": null,
-                            "rendered": "Bike Party",
+                            "rendered": "Bicycle Party",
                             "type": "p",
                           },
                           Object {
@@ -13143,9 +13143,9 @@ ShallowWrapper {
                   You must first select a location
 </span>,
                 <p
-                  className="center mb3"
+                  className="center mb3 text-container-width"
 >
-                  Maximum number of 55
+                  Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
 </p>,
                 <TextField
                   address=""
@@ -13195,11 +13195,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Maximum number of 55",
-                  "className": "center mb3",
+                  "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "className": "center mb3 text-container-width",
                 },
                 "ref": null,
-                "rendered": "Maximum number of 55",
+                "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
                 "type": "p",
               },
               Object {
@@ -14800,7 +14800,7 @@ ShallowWrapper {
                                                                         <p
                                                                                     className="white-space-normal"
                                                                         >
-                                                                                    Bike Party
+                                                                                    Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                     className=""
@@ -14896,9 +14896,9 @@ ShallowWrapper {
                                     You must first select a location
                         </span>
                         <p
-                                    className="center mb3"
+                                    className="center mb3 text-container-width"
                         >
-                                    Maximum number of 55
+                                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                         </p>
                         <TextField
                                     address=""
@@ -15593,7 +15593,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                 className="white-space-normal"
                                                                                 >
-                                                                                                Bike Party
+                                                                                                Bicycle Party
                                                                                 </p>
                                                                                 <div
                                                                                                 className=""
@@ -15689,9 +15689,9 @@ ShallowWrapper {
                                 You must first select a location
                 </span>
                 <p
-                                className="center mb3"
+                                className="center mb3 text-container-width"
                 >
-                                Maximum number of 55
+                                Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
                 </p>
                 <TextField
                                 address=""
@@ -17187,7 +17187,7 @@ ShallowWrapper {
                                                                                 <p
                                                                                                     className="white-space-normal"
                                                                                 >
-                                                                                                    Bike Party
+                                                                                                    Bicycle Party
                                                                                 </p>
                                                                                 <div
                                                                                                     className=""
@@ -17329,7 +17329,7 @@ ShallowWrapper {
                                                                         <p
                                                                                                 className="white-space-normal"
                                                                         >
-                                                                                                Bike Party
+                                                                                                Bicycle Party
                                                                         </p>
                                                                         <div
                                                                                                 className=""
@@ -17442,7 +17442,7 @@ ShallowWrapper {
                                                     <p
                                                                               className="white-space-normal"
                                                     >
-                                                                              Bike Party
+                                                                              Bicycle Party
                                                     </p>
                                                     <div
                                                                               className=""
@@ -17482,7 +17482,7 @@ ShallowWrapper {
                             <p
                                                         className="white-space-normal"
                             >
-                                                        Bike Party
+                                                        Bicycle Party
                             </p>
                             <div
                                                         className=""
@@ -17533,7 +17533,7 @@ ShallowWrapper {
                               <p
                                 className="white-space-normal"
 >
-                                Bike Party
+                                Bicycle Party
 </p>,
                               <div
                                 className=""
@@ -17567,11 +17567,11 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
-                                "children": "Bike Party",
+                                "children": "Bicycle Party",
                                 "className": "white-space-normal",
                               },
                               "ref": null,
-                              "rendered": "Bike Party",
+                              "rendered": "Bicycle Party",
                               "type": "p",
                             },
                             Object {
@@ -17881,9 +17881,9 @@ ShallowWrapper {
                     You must first select a location
 </span>,
                   <p
-                    className="center mb3"
+                    className="center mb3 text-container-width"
 >
-                    Maximum number of 55
+                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
 </p>,
                   <TextField
                     address=""
@@ -17933,11 +17933,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Maximum number of 55",
-                    "className": "center mb3",
+                    "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                    "className": "center mb3 text-container-width",
                   },
                   "ref": null,
-                  "rendered": "Maximum number of 55",
+                  "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
                   "type": "p",
                 },
                 Object {

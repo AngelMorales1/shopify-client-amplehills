@@ -686,10 +686,11 @@ class PartyRequestForm extends Component {
               <p
                 className={cx(
                   styles['PartyRequestForm__help-text'],
-                  'center mb3'
+                  'center mb3 text-container-width'
                 )}
               >
-                Maximum number of 55
+                {`Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.`}
               </p>
             )}
             <TextField
