@@ -52,8 +52,8 @@
   &--light-yellow-green {
     @extend .bg-light-yellow-green;
   }
-
-  padding: spacing(16) spacing(12);
+  overflow: hidden;
+  padding: spacing(16) spacing(8);
 
   @media ($medium-up) {
     padding: spacing(16) spacing(16);
@@ -61,11 +61,18 @@
 
   &__button-container {
     max-width: 100%;
-    overflow: scroll;
     flex-direction: column;
 
     @media ($medium-up) {
       flex-direction: row;
+    }
+  }
+
+  &__button {
+    font-size: $font-3;
+
+    @media ($medium-up) {
+      font-size: $font-4;
     }
   }
 }

@@ -26,11 +26,11 @@ const AvailableLocations = ({ flavor, block, z, setRef, drip, upperDrip }) => {
       )}
     >
       <h2 className="block-headline center mb3">{blockTitle}</h2>
-      <div className="w100 flex justify-center">
+      <div className="w100 flex justify-center items-center">
         <div
           className={cx(
             styles['AvailableLocations__button-container'],
-            'inline-flex items-center'
+            'flex flex-wrap justify-center items-center'
           )}
         >
           {availableLocations.map(location => {
@@ -42,7 +42,10 @@ const AvailableLocations = ({ flavor, block, z, setRef, drip, upperDrip }) => {
             return (
               <Button
                 key={id}
-                className="uppercase inline-flex m1"
+                className={cx(
+                  styles['AvailableLocations__button'],
+                  'uppercase inline-flex m1'
+                )}
                 variant="primary-small"
                 color="madison-blue"
                 label={locationTitle}
