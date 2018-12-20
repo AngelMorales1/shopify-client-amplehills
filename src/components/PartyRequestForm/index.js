@@ -689,8 +689,8 @@ class PartyRequestForm extends Component {
                   'center mb3 text-container-width'
                 )}
               >
-                Please note, the number of participants allowed at a party
-                depends on each individual location's maximum occupancy.
+                {`Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.`}
               </p>
             )}
             <TextField
