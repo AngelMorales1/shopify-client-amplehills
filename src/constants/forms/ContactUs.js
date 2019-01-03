@@ -26,11 +26,11 @@ export default {
     },
     JOBS: {
       label: 'Jobs',
-      bucket: 'https://jobs-bucket'
+      bucket: 'https://api.formbucket.com/f/buk_A2eBhMont9browa0GelxB34F'
     },
     WHOLESALE: {
       label: 'Wholesale',
-      bucket: 'https://wholesale-bucket'
+      bucket: 'https://api.formbucket.com/f/buk_RynRRsE1rXEFrDIpqiElAIrD'
     }
   },
   FIELDS: {
