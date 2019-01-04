@@ -7,6 +7,7 @@ import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import imageModel from 'models/imageModel';
+import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventoryRequestObject';
 
 import get from 'utils/get';
 import { Image, Button, QuantitySelector, Carousel } from 'components/base';
@@ -35,19 +36,38 @@ class ProductHero extends Component {
 
   addToCart = () => {
     const { product } = this.props;
+
+    let customAttributes = product.preOrderDate
+      ? [
+          {
+            key: 'Shipping Estimate',
+            value: product.preOrderDate
+          }
+        ]
+      : [];
+
+    if (get(product, 'whatsIncluded.whatsIncludedProducts', []).length) {
+      const pintHandles = get(
+        product,
+        'whatsIncluded.whatsIncludedProducts'
+      ).map(p => get(p, 'fields.productHandle', null));
+      customAttributes.concat([
+        {
+          key: '__INVENTORY_REQUEST_DATA__',
+          value: makeStringifiedInventoryRequestObject(
+            pintHandles,
+            this.props.products
+          )
+        }
+      ]);
+    }
+
     const variant = product.id;
     const items = [
       {
         variantId: variant,
         quantity: this.state.quantity,
-        customAttributes: product.preOrderDate
-          ? [
-              {
-                key: 'Shipping Estimate',
-                value: product.preOrderDate
-              }
-            ]
-          : []
+        customAttributes
       }
     ];
 
