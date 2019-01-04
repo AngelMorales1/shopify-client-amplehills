@@ -9,6 +9,7 @@ import productModel from 'models/productModel';
 import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
+import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventoryRequestObject';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -105,10 +106,20 @@ class ChooseYourOwnStory extends Component {
       {
         variantId: variant.id,
         quantity,
-        customAttributes: pints.map((value, i) => {
-          const key = `Item ${i + 1}`;
-          return { key, value };
-        })
+        customAttributes: pints
+          .map((value, i) => {
+            const key = `Item ${i + 1}`;
+            return { key, value };
+          })
+          .concat([
+            {
+              key: '__INVENTORY_REQUEST_DATA__',
+              value: makeStringifiedInventoryRequestObject(
+                pints,
+                this.props.products
+              )
+            }
+          ])
       }
     ];
 
