@@ -141,7 +141,7 @@ class ContactUs extends Component {
               className="w100"
               selectClassName="w100"
               variant="secondary"
-              placeholder="Choose your inquiry"
+              placeholder="Pick a subject"
               value={selectedField ? selectedField : null}
               options={Object.keys(ContactUsForm.ADDRESSES).map(field => {
                 const label = ContactUsForm.ADDRESSES[field].label;
