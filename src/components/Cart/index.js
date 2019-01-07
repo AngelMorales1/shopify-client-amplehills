@@ -72,6 +72,11 @@ class Cart extends Component {
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const getNote = this.state.note ? this.state.note : null;
+    const shippableItemIsIncluded = get(this, 'props.items', []).filter(
+      item => {
+        return get(item, 'product.shippableItem', false);
+      }
+    ).length;
 
     const cart = (
       <div className="transition-slide-up">
@@ -252,47 +257,54 @@ class Cart extends Component {
                 )}
               >
                 <div className="col-12 md-col-6">
-                  <div className="flex justify-between items-center">
-                    <h2
-                      className={cx(
-                        styles['Cart__gift-message'],
-                        'sub-title mb2'
-                      )}
-                    >
-                      Gift Message
-                    </h2>
-                  </div>
-                  {updatingNote === REJECTED ? (
-                    <FormFlash
-                      className="mt1"
-                      error={true}
-                      message="There was an unexpected error while updating your gift message."
-                    />
+                  {shippableItemIsIncluded ? (
+                    <div>
+                      <div className="flex justify-between items-center">
+                        <h2
+                          className={cx(
+                            styles['Cart__gift-message'],
+                            'sub-title mb2'
+                          )}
+                        >
+                          Gift Message
+                        </h2>
+                      </div>
+                      {updatingNote === REJECTED ? (
+                        <FormFlash
+                          className="mt1"
+                          error={true}
+                          message="There was an unexpected error while updating your gift message."
+                        />
+                      ) : null}
+                      <TextField
+                        className="mb2 md-hide lg-hide"
+                        variant="light-gray"
+                        placeholder={`Write a message.`}
+                        value={this.state.note}
+                        onChange={note => this.handleGiftMessageChange(note)}
+                      />
+                      <TextField
+                        className="mb2 xs-hide sm-hide"
+                        variant="light-gray-tall"
+                        type={'textarea'}
+                        placeholder={`Write a message (don't forget to include your name!)`}
+                        value={this.state.note}
+                        onChange={note => this.handleGiftMessageChange(note)}
+                      />
+                      <span className="uppercase info-text-small">
+                        Gift messages will only be applied to shippable
+                        products. They will not be applied to events, cake
+                        orders, or party deposits. Gift messages will not
+                        include prices.
+                      </span>
+                      <div
+                        className={cx(
+                          styles['Cart__block-with-border'],
+                          'mt3 md-hide lg-hide w100'
+                        )}
+                      />
+                    </div>
                   ) : null}
-                  <TextField
-                    className="mb2 md-hide lg-hide"
-                    variant="light-gray"
-                    placeholder={`Write a message.`}
-                    value={this.state.note}
-                    onChange={note => this.handleGiftMessageChange(note)}
-                  />
-                  <TextField
-                    className="mb2 xs-hide sm-hide"
-                    variant="light-gray-tall"
-                    type={'textarea'}
-                    placeholder={`Write a message (don't forget to include your name!)`}
-                    value={this.state.note}
-                    onChange={note => this.handleGiftMessageChange(note)}
-                  />
-                  <span className="uppercase info-text-small">
-                    Gift messages will not include prices
-                  </span>
-                  <div
-                    className={cx(
-                      styles['Cart__block-with-border'],
-                      'mt3 md-hide lg-hide w100'
-                    )}
-                  />
                 </div>
                 <div className="mt4 col-4 xs-hide sm-hide flex flex-row">
                   <Button

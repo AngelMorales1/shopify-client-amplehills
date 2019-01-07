@@ -39,12 +39,14 @@ export default createSelector(
       const available = variants.some(variant => variant.available);
 
       let link = `/products/${handle}`;
+      let shippableItem = true;
 
       if (
         type === ShopifyProductTypes.EVENTS ||
         type === ShopifyProductTypes.CLASSES
       ) {
         link = `/events/${handle}`;
+        shippableItem = false;
       }
 
       if (type === ShopifyProductTypes.MERCH) {
@@ -53,10 +55,12 @@ export default createSelector(
 
       if (type === ShopifyProductTypes.PARTY_DEPOSIT) {
         link = 'party-request-form';
+        shippableItem = false;
       }
 
       if (type === ShopifyProductTypes.CAKE_DEPOSIT) {
         link = 'cake-request-form';
+        shippableItem = false;
       }
 
       const handlizedProduct = {
@@ -67,7 +71,8 @@ export default createSelector(
         handle,
         available,
         type,
-        link
+        link,
+        shippableItem
       };
 
       handlizedProducts[handle] = handlizedProduct;
