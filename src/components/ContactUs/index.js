@@ -9,12 +9,11 @@ import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
   state = {
-    selectedAddress: '',
-    selectedField: null,
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    selected: null
   };
 
   componentDidMount() {
@@ -23,43 +22,35 @@ class ContactUs extends Component {
     switch (param) {
       case 'general-info':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.GENERAL.bucket,
-          selectedField: 'GENERAL'
+          selected: ContactUsForm.ADDRESSES.GENERAL
         });
       case 'orders':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.ORDERS.bucket,
-          selectedField: 'ORDERS'
+          selected: ContactUsForm.ADDRESSES.ORDERS
         });
       case 'off-site-events':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.EVENTS.bucket,
-          selectedField: 'EVENTS'
+          selected: ContactUsForm.ADDRESSES.EVENTS
         });
       case 'press':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PRESS.bucket,
-          selectedField: 'PRESS'
+          selected: ContactUsForm.ADDRESSES.PRESS
         });
       case 'parties':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket,
-          selectedField: 'PARTIES'
+          selected: ContactUsForm.ADDRESSES.PARTIES
         });
       case 'comments-concerns':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.CONCERNS.bucket,
-          selectedField: 'CONCERNS'
+          selected: ContactUsForm.ADDRESSES.CONCERNS
         });
       case 'jobs':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.JOBS.bucket,
-          selectedField: 'JOBS'
+          selected: ContactUsForm.ADDRESSES.JOBS
         });
       case 'wholesale':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.WHOLESALE.bucket,
-          selectedField: 'WHOLESALE'
+          selected: ContactUsForm.ADDRESSES.WHOLESALE
         });
       default:
         return null;
@@ -69,7 +60,7 @@ class ContactUs extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
       this.setState({
-        selectedAddress: '',
+        selecteds: null,
         name: '',
         email: '',
         phone: '',
@@ -77,14 +68,10 @@ class ContactUs extends Component {
       });
   }
 
-  handleChangeAddress = selectedAddress => {
-    this.setState({ selectedAddress });
-  };
-
   formHasErrors = () => {
-    const { selectedAddress, name, email, message } = this.state;
+    const { selected, name, email, message } = this.state;
 
-    if (!selectedAddress) {
+    if (!selected) {
       const error = 'Please select the reason why you are contacting us.';
       this.setState({ error });
       return true;
@@ -114,9 +101,11 @@ class ContactUs extends Component {
   submitContactForm = () => {
     if (this.formHasErrors()) return null;
 
-    const { selectedAddress, name, email, phone, message } = this.state;
+    const { selected, name, email, phone, message } = this.state;
+    const selectedAddress = selected.bucket;
 
     this.setState({ error: '' });
+
     this.props.actions.sendContactForm({
       selectedAddress,
       name,
@@ -127,8 +116,9 @@ class ContactUs extends Component {
   };
 
   render() {
-    const { error, selectedAddress, selectedField } = this.state;
+    const { error, selected } = this.state;
     const { formStatus } = this.props;
+    const { ADDRESSES } = ContactUsForm;
 
     return (
       <div
@@ -147,16 +137,19 @@ class ContactUs extends Component {
               selectClassName="w100"
               variant="secondary"
               placeholder="Pick a subject"
-              value={selectedField ? selectedField : null}
-              options={Object.keys(ContactUsForm.ADDRESSES).map(field => {
-                const label = ContactUsForm.ADDRESSES[field].label;
-
-                return { label: label, value: field };
+              value={
+                selected
+                  ? Object.keys(ADDRESSES).find(
+                      key => ADDRESSES[key].label === selected.label
+                    )
+                  : null
+              }
+              options={Object.keys(ADDRESSES).map(field => {
+                return { label: ADDRESSES[field].label, value: field };
               })}
               onChange={filter =>
                 this.setState({
-                  selectedAddress: ContactUsForm.ADDRESSES[filter.value],
-                  selectedField: filter.value
+                  selected: ADDRESSES[filter.value]
                 })
               }
             />
