@@ -292,7 +292,10 @@ class Cart extends Component {
                         onChange={note => this.handleGiftMessageChange(note)}
                       />
                       <span className="uppercase info-text-small">
-                        Gift messages will not include prices
+                        Gift messages will only be applied to shippable
+                        products. They will not be applied to events, cake
+                        orders, or party deposits. Gift messages will not
+                        include prices.
                       </span>
                       <div
                         className={cx(
