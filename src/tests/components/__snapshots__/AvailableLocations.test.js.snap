@@ -50,10 +50,10 @@ ShallowWrapper {
           foo
 </h2>,
         <div
-          className="w100 flex justify-center"
+          className="w100 flex justify-center items-center"
 >
           <div
-                    className="inline-flex items-center"
+                    className="flex flex-wrap justify-center items-center"
           >
                     
           </div>
@@ -84,11 +84,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="inline-flex items-center"
+            className="flex flex-wrap justify-center items-center"
 >
             
 </div>,
-          "className": "w100 flex justify-center",
+          "className": "w100 flex justify-center items-center",
         },
         "ref": null,
         "rendered": Object {
@@ -97,7 +97,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [],
-            "className": "inline-flex items-center",
+            "className": "flex flex-wrap justify-center items-center",
           },
           "ref": null,
           "rendered": Array [],
@@ -121,10 +121,10 @@ ShallowWrapper {
             foo
 </h2>,
           <div
-            className="w100 flex justify-center"
+            className="w100 flex justify-center items-center"
 >
             <div
-                        className="inline-flex items-center"
+                        className="flex flex-wrap justify-center items-center"
             >
                         
             </div>
@@ -155,11 +155,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="inline-flex items-center"
+              className="flex flex-wrap justify-center items-center"
 >
               
 </div>,
-            "className": "w100 flex justify-center",
+            "className": "w100 flex justify-center items-center",
           },
           "ref": null,
           "rendered": Object {
@@ -168,7 +168,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [],
-              "className": "inline-flex items-center",
+              "className": "flex flex-wrap justify-center items-center",
             },
             "ref": null,
             "rendered": Array [],
@@ -238,10 +238,10 @@ ShallowWrapper {
           className="block-headline center mb3"
 />,
         <div
-          className="w100 flex justify-center"
+          className="w100 flex justify-center items-center"
 >
           <div
-                    className="inline-flex items-center"
+                    className="flex flex-wrap justify-center items-center"
           >
                     
           </div>
@@ -272,11 +272,11 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <div
-            className="inline-flex items-center"
+            className="flex flex-wrap justify-center items-center"
 >
             
 </div>,
-          "className": "w100 flex justify-center",
+          "className": "w100 flex justify-center items-center",
         },
         "ref": null,
         "rendered": Object {
@@ -285,7 +285,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [],
-            "className": "inline-flex items-center",
+            "className": "flex flex-wrap justify-center items-center",
           },
           "ref": null,
           "rendered": Array [],
@@ -307,10 +307,10 @@ ShallowWrapper {
             className="block-headline center mb3"
 />,
           <div
-            className="w100 flex justify-center"
+            className="w100 flex justify-center items-center"
 >
             <div
-                        className="inline-flex items-center"
+                        className="flex flex-wrap justify-center items-center"
             >
                         
             </div>
@@ -341,11 +341,11 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <div
-              className="inline-flex items-center"
+              className="flex flex-wrap justify-center items-center"
 >
               
 </div>,
-            "className": "w100 flex justify-center",
+            "className": "w100 flex justify-center items-center",
           },
           "ref": null,
           "rendered": Object {
@@ -354,7 +354,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [],
-              "className": "inline-flex items-center",
+              "className": "flex flex-wrap justify-center items-center",
             },
             "ref": null,
             "rendered": Array [],

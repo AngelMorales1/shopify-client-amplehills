@@ -101,55 +101,58 @@ ShallowWrapper {
           className="flex flex-wrap justify-center text-container-width"
 >
           <div
-                    className="flex flex-wrap justify-center px2 my2"
+                    className="w100 flex flex-wrap justify-center px2 my2"
           >
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="General Info"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Orders"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Off-Site Events"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Press"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Parties"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Comments & Concerns"
-                              onClick={[Function]}
-                              variant="primary"
+                    <Dropdown
+                              bgColor=""
+                              className="w100"
+                              fixedWidth={true}
+                              label=""
+                              name=""
+                              onChange={[Function]}
+                              options={
+                                        Array [
+                                                  Object {
+                                                    "label": "General Info",
+                                                    "value": "GENERAL",
+                                                  },
+                                                  Object {
+                                                    "label": "Orders",
+                                                    "value": "ORDERS",
+                                                  },
+                                                  Object {
+                                                    "label": "Off-Site Events",
+                                                    "value": "EVENTS",
+                                                  },
+                                                  Object {
+                                                    "label": "Press",
+                                                    "value": "PRESS",
+                                                  },
+                                                  Object {
+                                                    "label": "Parties",
+                                                    "value": "PARTIES",
+                                                  },
+                                                  Object {
+                                                    "label": "Comments & Concerns",
+                                                    "value": "CONCERNS",
+                                                  },
+                                                  Object {
+                                                    "label": "Jobs",
+                                                    "value": "JOBS",
+                                                  },
+                                                  Object {
+                                                    "label": "Wholesale",
+                                                    "value": "WHOLESALE",
+                                                  },
+                                                ]
+                              }
+                              placeholder="Pick a subject"
+                              selectClassName="w100"
+                              shadow={false}
+                              textAlignCenter={false}
+                              textColor=""
+                              value={null}
+                              variant="secondary"
                     />
           </div>
           <div
@@ -270,55 +273,58 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-wrap justify-center px2 my2"
+              className="w100 flex flex-wrap justify-center px2 my2"
 >
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="General Info"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Orders"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Off-Site Events"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Press"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Parties"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Comments & Concerns"
-                            onClick={[Function]}
-                            variant="primary"
+              <Dropdown
+                            bgColor=""
+                            className="w100"
+                            fixedWidth={true}
+                            label=""
+                            name=""
+                            onChange={[Function]}
+                            options={
+                                          Array [
+                                                        Object {
+                                                          "label": "General Info",
+                                                          "value": "GENERAL",
+                                                        },
+                                                        Object {
+                                                          "label": "Orders",
+                                                          "value": "ORDERS",
+                                                        },
+                                                        Object {
+                                                          "label": "Off-Site Events",
+                                                          "value": "EVENTS",
+                                                        },
+                                                        Object {
+                                                          "label": "Press",
+                                                          "value": "PRESS",
+                                                        },
+                                                        Object {
+                                                          "label": "Parties",
+                                                          "value": "PARTIES",
+                                                        },
+                                                        Object {
+                                                          "label": "Comments & Concerns",
+                                                          "value": "CONCERNS",
+                                                        },
+                                                        Object {
+                                                          "label": "Jobs",
+                                                          "value": "JOBS",
+                                                        },
+                                                        Object {
+                                                          "label": "Wholesale",
+                                                          "value": "WHOLESALE",
+                                                        },
+                                                      ]
+                            }
+                            placeholder="Pick a subject"
+                            selectClassName="w100"
+                            shadow={false}
+                            textAlignCenter={false}
+                            textColor=""
+                            value={null}
+                            variant="secondary"
               />
 </div>,
             <div
@@ -412,157 +418,117 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="General Info"
-                  onClick={[Function]}
-                  variant="primary"
+              "children": <Dropdown
+                bgColor=""
+                className="w100"
+                fixedWidth={true}
+                label=""
+                name=""
+                onChange={[Function]}
+                options={
+                                Array [
+                                                Object {
+                                                  "label": "General Info",
+                                                  "value": "GENERAL",
+                                                },
+                                                Object {
+                                                  "label": "Orders",
+                                                  "value": "ORDERS",
+                                                },
+                                                Object {
+                                                  "label": "Off-Site Events",
+                                                  "value": "EVENTS",
+                                                },
+                                                Object {
+                                                  "label": "Press",
+                                                  "value": "PRESS",
+                                                },
+                                                Object {
+                                                  "label": "Parties",
+                                                  "value": "PARTIES",
+                                                },
+                                                Object {
+                                                  "label": "Comments & Concerns",
+                                                  "value": "CONCERNS",
+                                                },
+                                                Object {
+                                                  "label": "Jobs",
+                                                  "value": "JOBS",
+                                                },
+                                                Object {
+                                                  "label": "Wholesale",
+                                                  "value": "WHOLESALE",
+                                                },
+                                              ]
+                }
+                placeholder="Pick a subject"
+                selectClassName="w100"
+                shadow={false}
+                textAlignCenter={false}
+                textColor=""
+                value={null}
+                variant="secondary"
 />,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Orders"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Off-Site Events"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Press"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Parties"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Comments & Concerns"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-              ],
-              "className": "flex flex-wrap justify-center px2 my2",
+              "className": "w100 flex flex-wrap justify-center px2 my2",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "General Info",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "General Info",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bgColor": "",
+                "className": "w100",
+                "fixedWidth": true,
+                "label": "",
+                "name": "",
+                "onChange": [Function],
+                "options": Array [
+                  Object {
+                    "label": "General Info",
+                    "value": "GENERAL",
+                  },
+                  Object {
+                    "label": "Orders",
+                    "value": "ORDERS",
+                  },
+                  Object {
+                    "label": "Off-Site Events",
+                    "value": "EVENTS",
+                  },
+                  Object {
+                    "label": "Press",
+                    "value": "PRESS",
+                  },
+                  Object {
+                    "label": "Parties",
+                    "value": "PARTIES",
+                  },
+                  Object {
+                    "label": "Comments & Concerns",
+                    "value": "CONCERNS",
+                  },
+                  Object {
+                    "label": "Jobs",
+                    "value": "JOBS",
+                  },
+                  Object {
+                    "label": "Wholesale",
+                    "value": "WHOLESALE",
+                  },
+                ],
+                "placeholder": "Pick a subject",
+                "selectClassName": "w100",
+                "shadow": false,
+                "textAlignCenter": false,
+                "textColor": "",
+                "value": null,
+                "variant": "secondary",
               },
-              Object {
-                "instance": null,
-                "key": "Orders",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Orders",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Off-Site Events",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Off-Site Events",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Press",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Press",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Parties",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Parties",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Comments & Concerns",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Comments & Concerns",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
           Object {
@@ -811,55 +777,58 @@ ShallowWrapper {
             className="flex flex-wrap justify-center text-container-width"
 >
             <div
-                        className="flex flex-wrap justify-center px2 my2"
+                        className="w100 flex flex-wrap justify-center px2 my2"
             >
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="General Info"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Orders"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Off-Site Events"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Press"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Parties"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Comments & Concerns"
-                                    onClick={[Function]}
-                                    variant="primary"
+                        <Dropdown
+                                    bgColor=""
+                                    className="w100"
+                                    fixedWidth={true}
+                                    label=""
+                                    name=""
+                                    onChange={[Function]}
+                                    options={
+                                                Array [
+                                                            Object {
+                                                              "label": "General Info",
+                                                              "value": "GENERAL",
+                                                            },
+                                                            Object {
+                                                              "label": "Orders",
+                                                              "value": "ORDERS",
+                                                            },
+                                                            Object {
+                                                              "label": "Off-Site Events",
+                                                              "value": "EVENTS",
+                                                            },
+                                                            Object {
+                                                              "label": "Press",
+                                                              "value": "PRESS",
+                                                            },
+                                                            Object {
+                                                              "label": "Parties",
+                                                              "value": "PARTIES",
+                                                            },
+                                                            Object {
+                                                              "label": "Comments & Concerns",
+                                                              "value": "CONCERNS",
+                                                            },
+                                                            Object {
+                                                              "label": "Jobs",
+                                                              "value": "JOBS",
+                                                            },
+                                                            Object {
+                                                              "label": "Wholesale",
+                                                              "value": "WHOLESALE",
+                                                            },
+                                                          ]
+                                    }
+                                    placeholder="Pick a subject"
+                                    selectClassName="w100"
+                                    shadow={false}
+                                    textAlignCenter={false}
+                                    textColor=""
+                                    value={null}
+                                    variant="secondary"
                         />
             </div>
             <div
@@ -980,55 +949,58 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="flex flex-wrap justify-center px2 my2"
+                className="w100 flex flex-wrap justify-center px2 my2"
 >
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="General Info"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Orders"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Off-Site Events"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Press"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Parties"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Comments & Concerns"
-                                onClick={[Function]}
-                                variant="primary"
+                <Dropdown
+                                bgColor=""
+                                className="w100"
+                                fixedWidth={true}
+                                label=""
+                                name=""
+                                onChange={[Function]}
+                                options={
+                                                Array [
+                                                                Object {
+                                                                  "label": "General Info",
+                                                                  "value": "GENERAL",
+                                                                },
+                                                                Object {
+                                                                  "label": "Orders",
+                                                                  "value": "ORDERS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Off-Site Events",
+                                                                  "value": "EVENTS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Press",
+                                                                  "value": "PRESS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Parties",
+                                                                  "value": "PARTIES",
+                                                                },
+                                                                Object {
+                                                                  "label": "Comments & Concerns",
+                                                                  "value": "CONCERNS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Jobs",
+                                                                  "value": "JOBS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Wholesale",
+                                                                  "value": "WHOLESALE",
+                                                                },
+                                                              ]
+                                }
+                                placeholder="Pick a subject"
+                                selectClassName="w100"
+                                shadow={false}
+                                textAlignCenter={false}
+                                textColor=""
+                                value={null}
+                                variant="secondary"
                 />
 </div>,
               <div
@@ -1122,157 +1094,117 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="General Info"
-                    onClick={[Function]}
-                    variant="primary"
+                "children": <Dropdown
+                  bgColor=""
+                  className="w100"
+                  fixedWidth={true}
+                  label=""
+                  name=""
+                  onChange={[Function]}
+                  options={
+                                    Array [
+                                                      Object {
+                                                        "label": "General Info",
+                                                        "value": "GENERAL",
+                                                      },
+                                                      Object {
+                                                        "label": "Orders",
+                                                        "value": "ORDERS",
+                                                      },
+                                                      Object {
+                                                        "label": "Off-Site Events",
+                                                        "value": "EVENTS",
+                                                      },
+                                                      Object {
+                                                        "label": "Press",
+                                                        "value": "PRESS",
+                                                      },
+                                                      Object {
+                                                        "label": "Parties",
+                                                        "value": "PARTIES",
+                                                      },
+                                                      Object {
+                                                        "label": "Comments & Concerns",
+                                                        "value": "CONCERNS",
+                                                      },
+                                                      Object {
+                                                        "label": "Jobs",
+                                                        "value": "JOBS",
+                                                      },
+                                                      Object {
+                                                        "label": "Wholesale",
+                                                        "value": "WHOLESALE",
+                                                      },
+                                                    ]
+                  }
+                  placeholder="Pick a subject"
+                  selectClassName="w100"
+                  shadow={false}
+                  textAlignCenter={false}
+                  textColor=""
+                  value={null}
+                  variant="secondary"
 />,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Orders"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Off-Site Events"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Press"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Parties"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Comments & Concerns"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                ],
-                "className": "flex flex-wrap justify-center px2 my2",
+                "className": "w100 flex flex-wrap justify-center px2 my2",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "General Info",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "General Info",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bgColor": "",
+                  "className": "w100",
+                  "fixedWidth": true,
+                  "label": "",
+                  "name": "",
+                  "onChange": [Function],
+                  "options": Array [
+                    Object {
+                      "label": "General Info",
+                      "value": "GENERAL",
+                    },
+                    Object {
+                      "label": "Orders",
+                      "value": "ORDERS",
+                    },
+                    Object {
+                      "label": "Off-Site Events",
+                      "value": "EVENTS",
+                    },
+                    Object {
+                      "label": "Press",
+                      "value": "PRESS",
+                    },
+                    Object {
+                      "label": "Parties",
+                      "value": "PARTIES",
+                    },
+                    Object {
+                      "label": "Comments & Concerns",
+                      "value": "CONCERNS",
+                    },
+                    Object {
+                      "label": "Jobs",
+                      "value": "JOBS",
+                    },
+                    Object {
+                      "label": "Wholesale",
+                      "value": "WHOLESALE",
+                    },
+                  ],
+                  "placeholder": "Pick a subject",
+                  "selectClassName": "w100",
+                  "shadow": false,
+                  "textAlignCenter": false,
+                  "textColor": "",
+                  "value": null,
+                  "variant": "secondary",
                 },
-                Object {
-                  "instance": null,
-                  "key": "Orders",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Orders",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Off-Site Events",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Off-Site Events",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Press",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Press",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Parties",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Parties",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Comments & Concerns",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Comments & Concerns",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "div",
             },
             Object {
@@ -1543,55 +1475,58 @@ ShallowWrapper {
           className="flex flex-wrap justify-center text-container-width"
 >
           <div
-                    className="flex flex-wrap justify-center px2 my2"
+                    className="w100 flex flex-wrap justify-center px2 my2"
           >
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="General Info"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Orders"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Off-Site Events"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Press"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Parties"
-                              onClick={[Function]}
-                              variant="primary"
-                    />
-                    <Radio
-                              checked={false}
-                              className="mx2 my1 small"
-                              disabled={false}
-                              label="Comments & Concerns"
-                              onClick={[Function]}
-                              variant="primary"
+                    <Dropdown
+                              bgColor=""
+                              className="w100"
+                              fixedWidth={true}
+                              label=""
+                              name=""
+                              onChange={[Function]}
+                              options={
+                                        Array [
+                                                  Object {
+                                                    "label": "General Info",
+                                                    "value": "GENERAL",
+                                                  },
+                                                  Object {
+                                                    "label": "Orders",
+                                                    "value": "ORDERS",
+                                                  },
+                                                  Object {
+                                                    "label": "Off-Site Events",
+                                                    "value": "EVENTS",
+                                                  },
+                                                  Object {
+                                                    "label": "Press",
+                                                    "value": "PRESS",
+                                                  },
+                                                  Object {
+                                                    "label": "Parties",
+                                                    "value": "PARTIES",
+                                                  },
+                                                  Object {
+                                                    "label": "Comments & Concerns",
+                                                    "value": "CONCERNS",
+                                                  },
+                                                  Object {
+                                                    "label": "Jobs",
+                                                    "value": "JOBS",
+                                                  },
+                                                  Object {
+                                                    "label": "Wholesale",
+                                                    "value": "WHOLESALE",
+                                                  },
+                                                ]
+                              }
+                              placeholder="Pick a subject"
+                              selectClassName="w100"
+                              shadow={false}
+                              textAlignCenter={false}
+                              textColor=""
+                              value={null}
+                              variant="secondary"
                     />
           </div>
           <div
@@ -1712,55 +1647,58 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <div
-              className="flex flex-wrap justify-center px2 my2"
+              className="w100 flex flex-wrap justify-center px2 my2"
 >
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="General Info"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Orders"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Off-Site Events"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Press"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Parties"
-                            onClick={[Function]}
-                            variant="primary"
-              />
-              <Radio
-                            checked={false}
-                            className="mx2 my1 small"
-                            disabled={false}
-                            label="Comments & Concerns"
-                            onClick={[Function]}
-                            variant="primary"
+              <Dropdown
+                            bgColor=""
+                            className="w100"
+                            fixedWidth={true}
+                            label=""
+                            name=""
+                            onChange={[Function]}
+                            options={
+                                          Array [
+                                                        Object {
+                                                          "label": "General Info",
+                                                          "value": "GENERAL",
+                                                        },
+                                                        Object {
+                                                          "label": "Orders",
+                                                          "value": "ORDERS",
+                                                        },
+                                                        Object {
+                                                          "label": "Off-Site Events",
+                                                          "value": "EVENTS",
+                                                        },
+                                                        Object {
+                                                          "label": "Press",
+                                                          "value": "PRESS",
+                                                        },
+                                                        Object {
+                                                          "label": "Parties",
+                                                          "value": "PARTIES",
+                                                        },
+                                                        Object {
+                                                          "label": "Comments & Concerns",
+                                                          "value": "CONCERNS",
+                                                        },
+                                                        Object {
+                                                          "label": "Jobs",
+                                                          "value": "JOBS",
+                                                        },
+                                                        Object {
+                                                          "label": "Wholesale",
+                                                          "value": "WHOLESALE",
+                                                        },
+                                                      ]
+                            }
+                            placeholder="Pick a subject"
+                            selectClassName="w100"
+                            shadow={false}
+                            textAlignCenter={false}
+                            textColor=""
+                            value={null}
+                            variant="secondary"
               />
 </div>,
             <div
@@ -1854,157 +1792,117 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="General Info"
-                  onClick={[Function]}
-                  variant="primary"
+              "children": <Dropdown
+                bgColor=""
+                className="w100"
+                fixedWidth={true}
+                label=""
+                name=""
+                onChange={[Function]}
+                options={
+                                Array [
+                                                Object {
+                                                  "label": "General Info",
+                                                  "value": "GENERAL",
+                                                },
+                                                Object {
+                                                  "label": "Orders",
+                                                  "value": "ORDERS",
+                                                },
+                                                Object {
+                                                  "label": "Off-Site Events",
+                                                  "value": "EVENTS",
+                                                },
+                                                Object {
+                                                  "label": "Press",
+                                                  "value": "PRESS",
+                                                },
+                                                Object {
+                                                  "label": "Parties",
+                                                  "value": "PARTIES",
+                                                },
+                                                Object {
+                                                  "label": "Comments & Concerns",
+                                                  "value": "CONCERNS",
+                                                },
+                                                Object {
+                                                  "label": "Jobs",
+                                                  "value": "JOBS",
+                                                },
+                                                Object {
+                                                  "label": "Wholesale",
+                                                  "value": "WHOLESALE",
+                                                },
+                                              ]
+                }
+                placeholder="Pick a subject"
+                selectClassName="w100"
+                shadow={false}
+                textAlignCenter={false}
+                textColor=""
+                value={null}
+                variant="secondary"
 />,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Orders"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Off-Site Events"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Press"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Parties"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-                <Radio
-                  checked={false}
-                  className="mx2 my1 small"
-                  disabled={false}
-                  label="Comments & Concerns"
-                  onClick={[Function]}
-                  variant="primary"
-/>,
-              ],
-              "className": "flex flex-wrap justify-center px2 my2",
+              "className": "w100 flex flex-wrap justify-center px2 my2",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "General Info",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "General Info",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bgColor": "",
+                "className": "w100",
+                "fixedWidth": true,
+                "label": "",
+                "name": "",
+                "onChange": [Function],
+                "options": Array [
+                  Object {
+                    "label": "General Info",
+                    "value": "GENERAL",
+                  },
+                  Object {
+                    "label": "Orders",
+                    "value": "ORDERS",
+                  },
+                  Object {
+                    "label": "Off-Site Events",
+                    "value": "EVENTS",
+                  },
+                  Object {
+                    "label": "Press",
+                    "value": "PRESS",
+                  },
+                  Object {
+                    "label": "Parties",
+                    "value": "PARTIES",
+                  },
+                  Object {
+                    "label": "Comments & Concerns",
+                    "value": "CONCERNS",
+                  },
+                  Object {
+                    "label": "Jobs",
+                    "value": "JOBS",
+                  },
+                  Object {
+                    "label": "Wholesale",
+                    "value": "WHOLESALE",
+                  },
+                ],
+                "placeholder": "Pick a subject",
+                "selectClassName": "w100",
+                "shadow": false,
+                "textAlignCenter": false,
+                "textColor": "",
+                "value": null,
+                "variant": "secondary",
               },
-              Object {
-                "instance": null,
-                "key": "Orders",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Orders",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Off-Site Events",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Off-Site Events",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Press",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Press",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Parties",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Parties",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": "Comments & Concerns",
-                "nodeType": "function",
-                "props": Object {
-                  "checked": false,
-                  "className": "mx2 my1 small",
-                  "disabled": false,
-                  "label": "Comments & Concerns",
-                  "onClick": [Function],
-                  "variant": "primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             "type": "div",
           },
           Object {
@@ -2253,55 +2151,58 @@ ShallowWrapper {
             className="flex flex-wrap justify-center text-container-width"
 >
             <div
-                        className="flex flex-wrap justify-center px2 my2"
+                        className="w100 flex flex-wrap justify-center px2 my2"
             >
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="General Info"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Orders"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Off-Site Events"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Press"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Parties"
-                                    onClick={[Function]}
-                                    variant="primary"
-                        />
-                        <Radio
-                                    checked={false}
-                                    className="mx2 my1 small"
-                                    disabled={false}
-                                    label="Comments & Concerns"
-                                    onClick={[Function]}
-                                    variant="primary"
+                        <Dropdown
+                                    bgColor=""
+                                    className="w100"
+                                    fixedWidth={true}
+                                    label=""
+                                    name=""
+                                    onChange={[Function]}
+                                    options={
+                                                Array [
+                                                            Object {
+                                                              "label": "General Info",
+                                                              "value": "GENERAL",
+                                                            },
+                                                            Object {
+                                                              "label": "Orders",
+                                                              "value": "ORDERS",
+                                                            },
+                                                            Object {
+                                                              "label": "Off-Site Events",
+                                                              "value": "EVENTS",
+                                                            },
+                                                            Object {
+                                                              "label": "Press",
+                                                              "value": "PRESS",
+                                                            },
+                                                            Object {
+                                                              "label": "Parties",
+                                                              "value": "PARTIES",
+                                                            },
+                                                            Object {
+                                                              "label": "Comments & Concerns",
+                                                              "value": "CONCERNS",
+                                                            },
+                                                            Object {
+                                                              "label": "Jobs",
+                                                              "value": "JOBS",
+                                                            },
+                                                            Object {
+                                                              "label": "Wholesale",
+                                                              "value": "WHOLESALE",
+                                                            },
+                                                          ]
+                                    }
+                                    placeholder="Pick a subject"
+                                    selectClassName="w100"
+                                    shadow={false}
+                                    textAlignCenter={false}
+                                    textColor=""
+                                    value={null}
+                                    variant="secondary"
                         />
             </div>
             <div
@@ -2422,55 +2323,58 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <div
-                className="flex flex-wrap justify-center px2 my2"
+                className="w100 flex flex-wrap justify-center px2 my2"
 >
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="General Info"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Orders"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Off-Site Events"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Press"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Parties"
-                                onClick={[Function]}
-                                variant="primary"
-                />
-                <Radio
-                                checked={false}
-                                className="mx2 my1 small"
-                                disabled={false}
-                                label="Comments & Concerns"
-                                onClick={[Function]}
-                                variant="primary"
+                <Dropdown
+                                bgColor=""
+                                className="w100"
+                                fixedWidth={true}
+                                label=""
+                                name=""
+                                onChange={[Function]}
+                                options={
+                                                Array [
+                                                                Object {
+                                                                  "label": "General Info",
+                                                                  "value": "GENERAL",
+                                                                },
+                                                                Object {
+                                                                  "label": "Orders",
+                                                                  "value": "ORDERS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Off-Site Events",
+                                                                  "value": "EVENTS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Press",
+                                                                  "value": "PRESS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Parties",
+                                                                  "value": "PARTIES",
+                                                                },
+                                                                Object {
+                                                                  "label": "Comments & Concerns",
+                                                                  "value": "CONCERNS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Jobs",
+                                                                  "value": "JOBS",
+                                                                },
+                                                                Object {
+                                                                  "label": "Wholesale",
+                                                                  "value": "WHOLESALE",
+                                                                },
+                                                              ]
+                                }
+                                placeholder="Pick a subject"
+                                selectClassName="w100"
+                                shadow={false}
+                                textAlignCenter={false}
+                                textColor=""
+                                value={null}
+                                variant="secondary"
                 />
 </div>,
               <div
@@ -2564,157 +2468,117 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="General Info"
-                    onClick={[Function]}
-                    variant="primary"
+                "children": <Dropdown
+                  bgColor=""
+                  className="w100"
+                  fixedWidth={true}
+                  label=""
+                  name=""
+                  onChange={[Function]}
+                  options={
+                                    Array [
+                                                      Object {
+                                                        "label": "General Info",
+                                                        "value": "GENERAL",
+                                                      },
+                                                      Object {
+                                                        "label": "Orders",
+                                                        "value": "ORDERS",
+                                                      },
+                                                      Object {
+                                                        "label": "Off-Site Events",
+                                                        "value": "EVENTS",
+                                                      },
+                                                      Object {
+                                                        "label": "Press",
+                                                        "value": "PRESS",
+                                                      },
+                                                      Object {
+                                                        "label": "Parties",
+                                                        "value": "PARTIES",
+                                                      },
+                                                      Object {
+                                                        "label": "Comments & Concerns",
+                                                        "value": "CONCERNS",
+                                                      },
+                                                      Object {
+                                                        "label": "Jobs",
+                                                        "value": "JOBS",
+                                                      },
+                                                      Object {
+                                                        "label": "Wholesale",
+                                                        "value": "WHOLESALE",
+                                                      },
+                                                    ]
+                  }
+                  placeholder="Pick a subject"
+                  selectClassName="w100"
+                  shadow={false}
+                  textAlignCenter={false}
+                  textColor=""
+                  value={null}
+                  variant="secondary"
 />,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Orders"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Off-Site Events"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Press"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Parties"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                  <Radio
-                    checked={false}
-                    className="mx2 my1 small"
-                    disabled={false}
-                    label="Comments & Concerns"
-                    onClick={[Function]}
-                    variant="primary"
-/>,
-                ],
-                "className": "flex flex-wrap justify-center px2 my2",
+                "className": "w100 flex flex-wrap justify-center px2 my2",
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "General Info",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "General Info",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bgColor": "",
+                  "className": "w100",
+                  "fixedWidth": true,
+                  "label": "",
+                  "name": "",
+                  "onChange": [Function],
+                  "options": Array [
+                    Object {
+                      "label": "General Info",
+                      "value": "GENERAL",
+                    },
+                    Object {
+                      "label": "Orders",
+                      "value": "ORDERS",
+                    },
+                    Object {
+                      "label": "Off-Site Events",
+                      "value": "EVENTS",
+                    },
+                    Object {
+                      "label": "Press",
+                      "value": "PRESS",
+                    },
+                    Object {
+                      "label": "Parties",
+                      "value": "PARTIES",
+                    },
+                    Object {
+                      "label": "Comments & Concerns",
+                      "value": "CONCERNS",
+                    },
+                    Object {
+                      "label": "Jobs",
+                      "value": "JOBS",
+                    },
+                    Object {
+                      "label": "Wholesale",
+                      "value": "WHOLESALE",
+                    },
+                  ],
+                  "placeholder": "Pick a subject",
+                  "selectClassName": "w100",
+                  "shadow": false,
+                  "textAlignCenter": false,
+                  "textColor": "",
+                  "value": null,
+                  "variant": "secondary",
                 },
-                Object {
-                  "instance": null,
-                  "key": "Orders",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Orders",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Off-Site Events",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Off-Site Events",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Press",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Press",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Parties",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Parties",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": "Comments & Concerns",
-                  "nodeType": "function",
-                  "props": Object {
-                    "checked": false,
-                    "className": "mx2 my1 small",
-                    "disabled": false,
-                    "label": "Comments & Concerns",
-                    "onClick": [Function],
-                    "variant": "primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-              ],
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
               "type": "div",
             },
             Object {

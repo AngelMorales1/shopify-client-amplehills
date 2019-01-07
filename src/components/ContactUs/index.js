@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import ContactUsForm from 'constants/forms/ContactUs';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { Radio, TextField, Button, FormFlash, Dropdown } from 'components/base';
+import { TextField, Button, FormFlash, Dropdown } from 'components/base';
 
 import cx from 'classnames';
 import styles from './ContactUs.scss';
@@ -45,6 +45,11 @@ class ContactUs extends Component {
         return this.setState({
           selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket,
           selectedField: 'PARTIES'
+        });
+      case 'comments-concerns':
+        return this.setState({
+          selectedAddress: ContactUsForm.ADDRESSES.CONCERNS.bucket,
+          selectedField: 'CONCERNS'
         });
       case 'jobs':
         return this.setState({
