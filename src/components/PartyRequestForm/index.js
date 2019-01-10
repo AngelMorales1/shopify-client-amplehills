@@ -886,7 +886,7 @@ class PartyRequestForm extends Component {
                   Summary
                 </p>
                 {fieldIsEmpty ? (
-                  <p className={cx(styles['PartyRequestForm__help-text'])}>
+                  <p className={styles['PartyRequestForm__help-text']}>
                     Please make required selections
                   </p>
                 ) : (
@@ -896,29 +896,29 @@ class PartyRequestForm extends Component {
                       return value.length ? (
                         <p
                           key={summaryField.value}
-                          className={cx(styles['PartyRequestForm__help-text'])}
+                          className={styles['PartyRequestForm__help-text']}
                         >{`${summaryField.key}: ${summaryField.value}`}</p>
                       ) : null;
                     })}
                   </div>
                 )}
+                {!fieldIsEmpty ? (
+                  <p className={styles['PartyRequestForm__help-text']}>
+                    {this.hasAllergies()}
+                  </p>
+                ) : null}
                 {selectedAddOns.length ? (
-                  <div className="mb2">
+                  <div className="my1">
                     <p>Bells & Whistles:</p>
                     {selectedAddOns.map(addOn => (
                       <p
                         key={addOn}
-                        className={cx(styles['PartyRequestForm__help-text'])}
+                        className={styles['PartyRequestForm__help-text']}
                       >
                         {addOn}
                       </p>
                     ))}
                   </div>
-                ) : null}
-                {!fieldIsEmpty ? (
-                  <p className={cx(styles['PartyRequestForm__help-text'])}>
-                    {this.hasAllergies()}
-                  </p>
                 ) : null}
               </div>
             </div>
