@@ -909,7 +909,14 @@ class PartyRequestForm extends Component {
                 ) : null}
                 {selectedAddOns.length ? (
                   <div className="my1">
-                    <p>Bells & Whistles:</p>
+                    <p
+                      className={cx(
+                        styles['PartyRequestForm__help-text'],
+                        'bold'
+                      )}
+                    >
+                      Bells & Whistles:
+                    </p>
                     {selectedAddOns.map(addOn => (
                       <p
                         key={addOn}
