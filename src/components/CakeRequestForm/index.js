@@ -134,7 +134,7 @@ class CakeRequestForm extends Component {
       value: this.state.filling
     },
     {
-      key: 'sprinkle',
+      key: 'Sprinkles',
       value: this.state.sprinkle
     },
     {
@@ -146,7 +146,7 @@ class CakeRequestForm extends Component {
       value: this.props.cakeLocations[this.state.location.value].cakesBucket
     },
     {
-      key: 'cakeSign',
+      key: 'Cake Sign',
       value: this.state.cakeSign
     }
   ];
@@ -701,6 +701,9 @@ class CakeRequestForm extends Component {
                 Deposit total{this.state.size
                   ? `: $${this.state.size.price}`
                   : ''}
+              </span>
+              <span className="line-height small">
+                {console.log(this.state.toppings)}
               </span>
               <span className="line-height small">
                 Thank you so much for your order! Our Amployees can’t wait to
