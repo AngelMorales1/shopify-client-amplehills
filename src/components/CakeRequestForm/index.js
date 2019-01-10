@@ -57,7 +57,10 @@ class CakeRequestForm extends Component {
 
   handleAddTopping = topping => {
     const { toppings } = this.state;
-    if (toppings.includes(topping)) return null;
+    if (
+      toppings.some(includedTopping => includedTopping.title === topping.title)
+    )
+      return null;
 
     const newToppings = toppings.concat([topping]);
     return this.setState({ toppings: newToppings });
@@ -65,10 +68,13 @@ class CakeRequestForm extends Component {
 
   handleRemoveTopping = topping => {
     const { toppings } = this.state;
-    if (!toppings.includes(topping)) return null;
+    if (
+      !toppings.some(includedTopping => includedTopping.title === topping.title)
+    )
+      return null;
 
     const newToppings = toppings.filter(
-      includedTopping => includedTopping !== topping
+      includedTopping => includedTopping.title !== topping.title
     );
     return this.setState({ toppings: newToppings });
   };
@@ -95,6 +101,16 @@ class CakeRequestForm extends Component {
       secondFlavor: null,
       filling: null
     });
+
+  totalPrice = () => {
+    const cakePrice = parseFloat(get(this, 'state.size.price', 0.0));
+    const toppings = get(this, 'state.toppings', []);
+    const toppingsPrice = toppings.reduce((total, topping) => {
+      return total + parseFloat(topping.price.split('$').join(''));
+    }, 0.0);
+
+    return (cakePrice + toppingsPrice).toFixed(2);
+  };
 
   getCakeAttributes = () => [
     {
@@ -139,7 +155,7 @@ class CakeRequestForm extends Component {
     },
     {
       key: 'Toppings',
-      value: this.state.toppings.join(', ')
+      value: this.state.toppings.map(topping => topping.title).join(', ')
     },
     {
       key: 'Fulfillment',
@@ -580,17 +596,17 @@ class CakeRequestForm extends Component {
             <div className="form-container-width w100 flex flex-row flex-wrap justify-center">
               {toppings.map((topping, i) => {
                 const selectedToppings = this.state.toppings;
-                const toppingIsSelected = selectedToppings.includes(
-                  topping.title
-                );
+                const toppingIsSelected = selectedToppings
+                  .map(topping => topping.title)
+                  .includes(topping.title);
 
                 return (
                   <div key={get(topping, 'id', i)} className="col-6 p1">
                     <Button
                       onClick={
                         toppingIsSelected
-                          ? () => this.handleRemoveTopping(topping.title)
-                          : () => this.handleAddTopping(topping.title)
+                          ? () => this.handleRemoveTopping(topping)
+                          : () => this.handleAddTopping(topping)
                       }
                       className="center wh100"
                       variant={
@@ -678,12 +694,14 @@ class CakeRequestForm extends Component {
                     {this.state.filling}
                   </span>
                   <span className="line-height small">
-                    <span className="bold">Sprinkle: </span>
+                    <span className="bold">Sprinkles: </span>
                     {this.state.sprinkle}
                   </span>
                   <span className="line-height small">
                     <span className="bold">Toppings: </span>
-                    {this.state.toppings.join(', ')}
+                    {this.state.toppings
+                      .map(topping => topping.title)
+                      .join(', ')}
                   </span>
                   <span className="line-height small">
                     <span className="bold">Complimentary cake sign: </span>
@@ -702,8 +720,10 @@ class CakeRequestForm extends Component {
                   ? `: $${this.state.size.price}`
                   : ''}
               </span>
-              <span className="line-height small">
-                {console.log(this.state.toppings)}
+              <span className="line-height small mb3">
+                Note: The total for your purchase is ${this.totalPrice()}!
+                You’ll pay the difference when you pick up your ice cream cake
+                in our scoop shop.
               </span>
               <span className="line-height small">
                 Thank you so much for your order! Our Amployees can’t wait to
