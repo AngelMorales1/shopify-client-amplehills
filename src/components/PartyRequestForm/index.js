@@ -867,7 +867,7 @@ class PartyRequestForm extends Component {
           >
             <div
               className={cx(
-                styles['PartyRequestForm__footer-summery'],
+                styles['PartyRequestForm__footer-summary'],
                 'col-12 md-col-6 flex flex-column h100'
               )}
             >
@@ -886,36 +886,46 @@ class PartyRequestForm extends Component {
                   Summary
                 </p>
                 {fieldIsEmpty ? (
-                  <p className={cx(styles['PartyRequestForm__help-text'])}>
+                  <p className={styles['PartyRequestForm__help-text']}>
                     Please make required selections
                   </p>
                 ) : (
                   <div>
-                    {this.getPartySummary().map(summeryField => {
-                      const value = get(summeryField, 'value', '');
+                    {this.getPartySummary().map(summaryField => {
+                      const value = get(summaryField, 'value', '');
                       return value.length ? (
                         <p
-                          key={summeryField.value}
-                          className={cx(styles['PartyRequestForm__help-text'])}
-                        >{`${summeryField.key}: ${summeryField.value}`}</p>
+                          key={summaryField.value}
+                          className={styles['PartyRequestForm__help-text']}
+                        >{`${summaryField.key}: ${summaryField.value}`}</p>
                       ) : null;
                     })}
                   </div>
                 )}
-                {selectedAddOns.length
-                  ? selectedAddOns.map(addOn => {
-                      return (
-                        <p
-                          key={addOn}
-                          className={cx(styles['PartyRequestForm__help-text'])}
-                        >{`Addon: ${addOn}`}</p>
-                      );
-                    })
-                  : null}
                 {!fieldIsEmpty ? (
-                  <p className={cx(styles['PartyRequestForm__help-text'])}>
+                  <p className={styles['PartyRequestForm__help-text']}>
                     {this.hasAllergies()}
                   </p>
+                ) : null}
+                {selectedAddOns.length ? (
+                  <div className="my1">
+                    <p
+                      className={cx(
+                        styles['PartyRequestForm__help-text'],
+                        'bold'
+                      )}
+                    >
+                      Bells & Whistles:
+                    </p>
+                    {selectedAddOns.map(addOn => (
+                      <p
+                        key={addOn}
+                        className={styles['PartyRequestForm__help-text']}
+                      >
+                        {addOn}
+                      </p>
+                    ))}
+                  </div>
                 ) : null}
               </div>
             </div>
