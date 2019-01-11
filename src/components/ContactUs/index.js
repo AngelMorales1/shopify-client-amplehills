@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import isValidEmailAddress from 'utils/isValidEmailAddress';
 import ContactUsForm from 'constants/forms/ContactUs';
 import { PENDING, FULFILLED, REJECTED } from 'constants/Status';
-import { Radio, TextField, Button, FormFlash } from 'components/base';
+import { TextField, Button, FormFlash, Dropdown } from 'components/base';
 
 import cx from 'classnames';
 import styles from './ContactUs.scss';
 
 class ContactUs extends Component {
   state = {
-    selectedAddress: '',
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
+    selected: null
   };
 
   componentDidMount() {
@@ -22,27 +22,35 @@ class ContactUs extends Component {
     switch (param) {
       case 'general-info':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.GENERAL.bucket
+          selected: ContactUsForm.ADDRESSES.GENERAL
         });
       case 'orders':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.ORDERS.bucket
+          selected: ContactUsForm.ADDRESSES.ORDERS
         });
       case 'off-site-events':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.EVENTS.bucket
+          selected: ContactUsForm.ADDRESSES.EVENTS
         });
       case 'press':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PRESS.bucket
+          selected: ContactUsForm.ADDRESSES.PRESS
         });
       case 'parties':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.PARTIES.bucket
+          selected: ContactUsForm.ADDRESSES.PARTIES
         });
       case 'comments-concerns':
         return this.setState({
-          selectedAddress: ContactUsForm.ADDRESSES.CONCERNS.bucket
+          selected: ContactUsForm.ADDRESSES.CONCERNS
+        });
+      case 'jobs':
+        return this.setState({
+          selected: ContactUsForm.ADDRESSES.JOBS
+        });
+      case 'wholesale':
+        return this.setState({
+          selected: ContactUsForm.ADDRESSES.WHOLESALE
         });
       default:
         return null;
@@ -52,7 +60,7 @@ class ContactUs extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
       this.setState({
-        selectedAddress: '',
+        selecteds: null,
         name: '',
         email: '',
         phone: '',
@@ -60,14 +68,10 @@ class ContactUs extends Component {
       });
   }
 
-  handleChangeAddress = selectedAddress => {
-    this.setState({ selectedAddress });
-  };
-
   formHasErrors = () => {
-    const { selectedAddress, name, email, message } = this.state;
+    const { selected, name, email, message } = this.state;
 
-    if (!selectedAddress) {
+    if (!selected) {
       const error = 'Please select the reason why you are contacting us.';
       this.setState({ error });
       return true;
@@ -97,9 +101,11 @@ class ContactUs extends Component {
   submitContactForm = () => {
     if (this.formHasErrors()) return null;
 
-    const { selectedAddress, name, email, phone, message } = this.state;
+    const { selected, name, email, phone, message } = this.state;
+    const selectedAddress = selected.bucket;
 
     this.setState({ error: '' });
+
     this.props.actions.sendContactForm({
       selectedAddress,
       name,
@@ -110,8 +116,9 @@ class ContactUs extends Component {
   };
 
   render() {
-    const { error, selectedAddress } = this.state;
+    const { error, selected } = this.state;
     const { formStatus } = this.props;
+    const { ADDRESSES } = ContactUsForm;
 
     return (
       <div
@@ -123,16 +130,29 @@ class ContactUs extends Component {
         <h2 className="block-headline my2 px2 center">Contact us</h2>
         <p className="my2 px2 center">What can we help you with?</p>
         <form className="flex flex-wrap justify-center text-container-width">
-          <div className="flex flex-wrap justify-center px2 my2">
-            {Object.values(ContactUsForm.ADDRESSES).map(field => (
-              <Radio
-                key={field.label}
-                checked={selectedAddress === field.bucket}
-                onClick={() => this.setState({ selectedAddress: field.bucket })}
-                className="mx2 my1 small"
-                label={field.label}
-              />
-            ))}
+          <div className="w100 flex flex-wrap justify-center px2 my2">
+            <Dropdown
+              fixedWidth={true}
+              className="w100"
+              selectClassName="w100"
+              variant="secondary"
+              placeholder="Pick a subject"
+              value={
+                selected
+                  ? Object.keys(ADDRESSES).find(
+                      key => ADDRESSES[key].label === selected.label
+                    )
+                  : null
+              }
+              options={Object.keys(ADDRESSES).map(field => {
+                return { label: ADDRESSES[field].label, value: field };
+              })}
+              onChange={filter =>
+                this.setState({
+                  selected: ADDRESSES[filter.value]
+                })
+              }
+            />
           </div>
           <div className="w100 flex flex-column">
             {Object.values(ContactUsForm.FIELDS).map(field => (

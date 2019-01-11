@@ -622,7 +622,8 @@ ShallowWrapper {
                     <p
                               className="center mb3 text-container-width"
                     >
-                              Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                              Please note, the number of participants allowed at a party
+                                              depends on each individual location's maximum occupancy.
                     </p>
                     <TextField
                               address=""
@@ -1415,7 +1416,8 @@ ShallowWrapper {
               <p
                             className="center mb3 text-container-width"
               >
-                            Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                            Please note, the number of participants allowed at a party
+                                            depends on each individual location's maximum occupancy.
               </p>
               <TextField
                             address=""
@@ -3607,7 +3609,8 @@ ShallowWrapper {
                 <p
                   className="center mb3 text-container-width"
 >
-                  Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                  Please note, the number of participants allowed at a party
+                                  depends on each individual location's maximum occupancy.
 </p>,
                 <TextField
                   address=""
@@ -3657,11 +3660,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "children": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                   "className": "center mb3 text-container-width",
                 },
                 "ref": null,
-                "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                "rendered": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                 "type": "p",
               },
               Object {
@@ -5360,7 +5365,8 @@ ShallowWrapper {
                         <p
                                     className="center mb3 text-container-width"
                         >
-                                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                                    Please note, the number of participants allowed at a party
+                                                    depends on each individual location's maximum occupancy.
                         </p>
                         <TextField
                                     address=""
@@ -6153,7 +6159,8 @@ ShallowWrapper {
                 <p
                                 className="center mb3 text-container-width"
                 >
-                                Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                                Please note, the number of participants allowed at a party
+                                                depends on each individual location's maximum occupancy.
                 </p>
                 <TextField
                                 address=""
@@ -8345,7 +8352,8 @@ ShallowWrapper {
                   <p
                     className="center mb3 text-container-width"
 >
-                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                    Please note, the number of participants allowed at a party
+                                    depends on each individual location's maximum occupancy.
 </p>,
                   <TextField
                     address=""
@@ -8395,11 +8403,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                    "children": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                     "className": "center mb3 text-container-width",
                   },
                   "ref": null,
-                  "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "rendered": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                   "type": "p",
                 },
                 Object {
@@ -10160,7 +10170,8 @@ ShallowWrapper {
                     <p
                               className="center mb3 text-container-width"
                     >
-                              Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                              Please note, the number of participants allowed at a party
+                                              depends on each individual location's maximum occupancy.
                     </p>
                     <TextField
                               address=""
@@ -10953,7 +10964,8 @@ ShallowWrapper {
               <p
                             className="center mb3 text-container-width"
               >
-                            Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                            Please note, the number of participants allowed at a party
+                                            depends on each individual location's maximum occupancy.
               </p>
               <TextField
                             address=""
@@ -13145,7 +13157,8 @@ ShallowWrapper {
                 <p
                   className="center mb3 text-container-width"
 >
-                  Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                  Please note, the number of participants allowed at a party
+                                  depends on each individual location's maximum occupancy.
 </p>,
                 <TextField
                   address=""
@@ -13195,11 +13208,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "children": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                   "className": "center mb3 text-container-width",
                 },
                 "ref": null,
-                "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                "rendered": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                 "type": "p",
               },
               Object {
@@ -14898,7 +14913,8 @@ ShallowWrapper {
                         <p
                                     className="center mb3 text-container-width"
                         >
-                                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                                    Please note, the number of participants allowed at a party
+                                                    depends on each individual location's maximum occupancy.
                         </p>
                         <TextField
                                     address=""
@@ -15691,7 +15707,8 @@ ShallowWrapper {
                 <p
                                 className="center mb3 text-container-width"
                 >
-                                Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                                Please note, the number of participants allowed at a party
+                                                depends on each individual location's maximum occupancy.
                 </p>
                 <TextField
                                 address=""
@@ -17883,7 +17900,8 @@ ShallowWrapper {
                   <p
                     className="center mb3 text-container-width"
 >
-                    Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.
+                    Please note, the number of participants allowed at a party
+                                    depends on each individual location's maximum occupancy.
 </p>,
                   <TextField
                     address=""
@@ -17933,11 +17951,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                    "children": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                     "className": "center mb3 text-container-width",
                   },
                   "ref": null,
-                  "rendered": "Please note, the number of participants allowed at a party depends on each individual location's maximum occupancy.",
+                  "rendered": "Please note, the number of participants allowed at a party
+                depends on each individual location's maximum occupancy.",
                   "type": "p",
                 },
                 Object {
