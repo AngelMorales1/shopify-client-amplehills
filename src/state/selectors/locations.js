@@ -5,10 +5,12 @@ import fragmentsToArray from 'utils/fragmentsToArray';
 import recursivelyStringify from 'utils/recursivelyStringify';
 import sortHours from 'utils/sortHours';
 import moment from 'moment';
+import flavors from 'state/selectors/flavors';
 
 export default createSelector(
   state => get(state, 'locations.locations'),
-  locations => {
+  state => flavors(state),
+  (locations, selectedFlavors) => {
     const selectedLocations = get(locations, 'items', []).map(location => {
       const id = get(location, 'sys.id', '');
       const fields = get(location, 'fields', {});
@@ -39,7 +41,6 @@ export default createSelector(
       const partyTypes = fragmentsToArray(partyTypesFragments);
       const timeSlotsFragments = get(fields, 'timeSlots.simpleFragments', {});
       const timeSlots = fragmentsToArray(timeSlotsFragments);
-      const availableFlavors = get(fields, 'availableFlavors', []);
       const participantsLimit = get(fields, 'participantsLimit', 55);
       const participantsLimitText = get(fields, 'participantsLimitText', '');
       const text = get(fields, 'text', '');
@@ -77,6 +78,14 @@ export default createSelector(
       const stringifiedSearchableFields = Object.values(searchableFields).map(
         recursivelyStringify
       );
+
+      const availableFlavors = selectedFlavors.flavors.filter(flavor => {
+        const availableLocations = get(flavor, 'availableLocations', []);
+
+        return availableLocations.some(location => {
+          return get(location, 'sys.id') === id;
+        });
+      });
 
       return {
         ...searchableFields,

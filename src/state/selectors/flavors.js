@@ -51,6 +51,7 @@ export default createSelector(
         return sanitisedDietaryRestrictions;
       }, {});
       const order = get(fields, 'order', 0);
+      const specialLocations = get(fields, 'locationSpecial', []);
 
       return {
         id,
@@ -63,7 +64,8 @@ export default createSelector(
         slug,
         contentBlocks,
         availableLocations,
-        order
+        order,
+        specialLocations
       };
     });
 
