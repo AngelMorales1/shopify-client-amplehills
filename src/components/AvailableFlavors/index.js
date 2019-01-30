@@ -68,21 +68,22 @@ class AvailableFlavors extends Component {
             )}
           >
             {selectedAvailableFlavors.map((flavor, i) => {
-              const fields = get(flavor, 'fields', {});
-              const title = get(fields, 'title', '');
-              const label = get(fields, 'label', '');
-              const image = get(fields, 'image.fields.file.url', '');
-              const slug = slugify(title);
-              const isLocationSpecial = get(fields, 'locationSpecial', []).find(
-                location => {
-                  return get(location, 'sys.id', '') === locationId;
-                }
-              );
+              const {
+                id,
+                title,
+                label,
+                image,
+                slug,
+                specialLocations
+              } = flavor;
+              const isLocationSpecial = specialLocations.find(location => {
+                return get(location, 'sys.id', '') === locationId;
+              });
 
               return (
                 <Button
                   to={`/flavors/${slug}`}
-                  key={get(flavor, 'sys.id', i)}
+                  key={id}
                   variant="style-none"
                   className={cx(
                     styles['AvailableFlavors__card'],

@@ -2,6 +2,7 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getEvents } from 'state/actions/eventsActions';
+import { getFlavors } from 'state/actions/flavorsActions';
 import events from 'state/selectors/events';
 
 import get from 'utils/get';
@@ -14,9 +15,9 @@ class LocationDetailContainer extends ContainerBase {
   view = import('views/LocationDetailView');
 
   model = () => {
-    const { getEvents } = this.props.actions;
+    const { getEvents, getFlavors } = this.props.actions;
 
-    return getEvents();
+    return Promise.all([getEvents(), getFlavors()]);
   };
 }
 
@@ -32,7 +33,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({ getEvents }, dispatch)
+    actions: bindActionCreators({ getEvents, getFlavors }, dispatch)
   };
 };
 
