@@ -470,7 +470,7 @@ class PartyRequestForm extends Component {
               ]]: !availabilityDataForSelectedLocation
             })}
           >
-            <p className="bold big center">Do you have a weekend in mind?</p>
+            <p className="bold big center">Do you have a day in mind?</p>
             <span
               className={cx('my2 text-white', {
                 'text-peach': !availabilityDataForSelectedLocation
