@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { addLineItems } from 'state/actions/checkoutActions';
+import { getFlavors } from 'state/actions/flavorsActions';
 import checkout from 'state/selectors/checkout';
 import cakeDeposit from 'state/selectors/cakeDeposit';
 import cakeLocations from 'state/selectors/cakeLocations';
@@ -18,6 +19,12 @@ import get from 'utils/get';
 
 class CakeRequestFormContainer extends ContainerBase {
   view = import('views/CakeRequestFormView');
+
+  model = () => {
+    const { actions } = this.props;
+
+    return actions.getFlavors();
+  };
 }
 
 const mapStateToProps = (state, props) => {
@@ -40,7 +47,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        addLineItems
+        addLineItems,
+        getFlavors
       },
       dispatch
     )
