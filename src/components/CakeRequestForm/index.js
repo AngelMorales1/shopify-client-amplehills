@@ -201,9 +201,10 @@ class CakeRequestForm extends Component {
     const cakeSizes = get(this, 'props.cakeSizes', {});
     const availableFlavors = selectedLocation
       ? selectedLocation.availableFlavors.map(flavor =>
-          get(flavor, 'fields.title', '')
+          get(flavor, 'title', '')
         )
       : [];
+
     const defaultTimeSlots = [
       {
         endTime: '5pm',
