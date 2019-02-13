@@ -623,6 +623,24 @@ ShallowWrapper {
                               >
                                         Choose your first flavor
                               </p>
+                              <Button
+                                        childrenWrapperClassName=""
+                                        className="uppercase mb3 tout"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Need Help?"
+                                        newTab={true}
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
+                                        shadow={false}
+                                        to="/flavors"
+                                        type="button"
+                                        variant="primary-small"
+                              />
                               <Dropdown
                                         bgColor=""
                                         className="w100 text-container-width z-sub-nav"
@@ -888,6 +906,13 @@ ShallowWrapper {
                               >
                                         Deposit total
                                         
+                              </span>
+                              <span
+                                        className="line-height small mb3"
+                              >
+                                        Note: The total for your purchase is $
+                                        0.00
+                                        ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                               </span>
                               <span
                                         className="line-height small"
@@ -1456,6 +1481,24 @@ ShallowWrapper {
                             >
                                           Choose your first flavor
                             </p>
+                            <Button
+                                          childrenWrapperClassName=""
+                                          className="uppercase mb3 tout"
+                                          color="peach"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Need Help?"
+                                          newTab={true}
+                                          onClick={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
+                                          shadow={false}
+                                          to="/flavors"
+                                          type="button"
+                                          variant="primary-small"
+                            />
                             <Dropdown
                                           bgColor=""
                                           className="w100 text-container-width z-sub-nav"
@@ -3659,6 +3702,24 @@ ShallowWrapper {
                   >
                                     Choose your first flavor
                   </p>
+                  <Button
+                                    childrenWrapperClassName=""
+                                    className="uppercase mb3 tout"
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Need Help?"
+                                    newTab={true}
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
+                                    shadow={false}
+                                    to="/flavors"
+                                    type="button"
+                                    variant="primary-small"
+                  />
                   <Dropdown
                                     bgColor=""
                                     className="w100 text-container-width z-sub-nav"
@@ -3790,6 +3851,24 @@ ShallowWrapper {
 >
                       Choose your first flavor
 </p>,
+                    <Button
+                      childrenWrapperClassName=""
+                      className="uppercase mb3 tout"
+                      color="peach"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Need Help?"
+                      newTab={true}
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      openInCurrentTab={false}
+                      shadow={false}
+                      to="/flavors"
+                      type="button"
+                      variant="primary-small"
+/>,
                     <Dropdown
                       bgColor=""
                       className="w100 text-container-width z-sub-nav"
@@ -3828,6 +3907,33 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": "Choose your first flavor",
                     "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "childrenWrapperClassName": "",
+                      "className": "uppercase mb3 tout",
+                      "color": "peach",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Need Help?",
+                      "newTab": true,
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
+                      "shadow": false,
+                      "to": "/flavors",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
                   Object {
                     "instance": null,
@@ -4831,6 +4937,13 @@ ShallowWrapper {
                                     
                         </span>
                         <span
+                                    className="line-height small mb3"
+                        >
+                                    Note: The total for your purchase is $
+                                    0.00
+                                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+                        </span>
+                        <span
                                     className="line-height small"
                         >
                                     Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -4885,6 +4998,13 @@ ShallowWrapper {
                 >
                                 Deposit total
                                 
+                </span>
+                <span
+                                className="line-height small mb3"
+                >
+                                Note: The total for your purchase is $
+                                0.00
+                                ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                 </span>
                 <span
                                 className="line-height small"
@@ -4975,6 +5095,13 @@ ShallowWrapper {
                     
 </span>,
                   <span
+                    className="line-height small mb3"
+>
+                    Note: The total for your purchase is $
+                    0.00
+                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+</span>,
+                  <span
                     className="line-height small"
 >
                     Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -5016,6 +5143,26 @@ ShallowWrapper {
                   "rendered": Array [
                     "Deposit total",
                     "",
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Note: The total for your purchase is $",
+                      "0.00",
+                      "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
+                    ],
+                    "className": "line-height small mb3",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Note: The total for your purchase is $",
+                    "0.00",
+                    "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
                   ],
                   "type": "span",
                 },
@@ -5609,6 +5756,24 @@ ShallowWrapper {
                                     >
                                                 Choose your first flavor
                                     </p>
+                                    <Button
+                                                childrenWrapperClassName=""
+                                                className="uppercase mb3 tout"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Need Help?"
+                                                newTab={true}
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
+                                                shadow={false}
+                                                to="/flavors"
+                                                type="button"
+                                                variant="primary-small"
+                                    />
                                     <Dropdown
                                                 bgColor=""
                                                 className="w100 text-container-width z-sub-nav"
@@ -5874,6 +6039,13 @@ ShallowWrapper {
                                     >
                                                 Deposit total
                                                 
+                                    </span>
+                                    <span
+                                                className="line-height small mb3"
+                                    >
+                                                Note: The total for your purchase is $
+                                                0.00
+                                                ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                                     </span>
                                     <span
                                                 className="line-height small"
@@ -6442,6 +6614,24 @@ ShallowWrapper {
                                 >
                                                 Choose your first flavor
                                 </p>
+                                <Button
+                                                childrenWrapperClassName=""
+                                                className="uppercase mb3 tout"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Need Help?"
+                                                newTab={true}
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
+                                                shadow={false}
+                                                to="/flavors"
+                                                type="button"
+                                                variant="primary-small"
+                                />
                                 <Dropdown
                                                 bgColor=""
                                                 className="w100 text-container-width z-sub-nav"
@@ -8645,6 +8835,24 @@ ShallowWrapper {
                     >
                                         Choose your first flavor
                     </p>
+                    <Button
+                                        childrenWrapperClassName=""
+                                        className="uppercase mb3 tout"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Need Help?"
+                                        newTab={true}
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
+                                        shadow={false}
+                                        to="/flavors"
+                                        type="button"
+                                        variant="primary-small"
+                    />
                     <Dropdown
                                         bgColor=""
                                         className="w100 text-container-width z-sub-nav"
@@ -8776,6 +8984,24 @@ ShallowWrapper {
 >
                         Choose your first flavor
 </p>,
+                      <Button
+                        childrenWrapperClassName=""
+                        className="uppercase mb3 tout"
+                        color="peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label="Need Help?"
+                        newTab={true}
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        openInCurrentTab={false}
+                        shadow={false}
+                        to="/flavors"
+                        type="button"
+                        variant="primary-small"
+/>,
                       <Dropdown
                         bgColor=""
                         className="w100 text-container-width z-sub-nav"
@@ -8814,6 +9040,33 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": "Choose your first flavor",
                       "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": null,
+                        "childrenWrapperClassName": "",
+                        "className": "uppercase mb3 tout",
+                        "color": "peach",
+                        "disabled": false,
+                        "fullWidth": false,
+                        "hover": "shadow",
+                        "label": "Need Help?",
+                        "newTab": true,
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
+                        "shadow": false,
+                        "to": "/flavors",
+                        "type": "button",
+                        "variant": "primary-small",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
                     },
                     Object {
                       "instance": null,
@@ -9817,6 +10070,13 @@ ShallowWrapper {
                                           
                             </span>
                             <span
+                                          className="line-height small mb3"
+                            >
+                                          Note: The total for your purchase is $
+                                          0.00
+                                          ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+                            </span>
+                            <span
                                           className="line-height small"
                             >
                                           Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -9871,6 +10131,13 @@ ShallowWrapper {
                   >
                                     Deposit total
                                     
+                  </span>
+                  <span
+                                    className="line-height small mb3"
+                  >
+                                    Note: The total for your purchase is $
+                                    0.00
+                                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                   </span>
                   <span
                                     className="line-height small"
@@ -9961,6 +10228,13 @@ ShallowWrapper {
                       
 </span>,
                     <span
+                      className="line-height small mb3"
+>
+                      Note: The total for your purchase is $
+                      0.00
+                      ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+</span>,
+                    <span
                       className="line-height small"
 >
                       Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -10002,6 +10276,26 @@ ShallowWrapper {
                     "rendered": Array [
                       "Deposit total",
                       "",
+                    ],
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Note: The total for your purchase is $",
+                        "0.00",
+                        "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
+                      ],
+                      "className": "line-height small mb3",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Note: The total for your purchase is $",
+                      "0.00",
+                      "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
                     ],
                     "type": "span",
                   },
@@ -10545,6 +10839,24 @@ ShallowWrapper {
                               >
                                         Choose your first flavor
                               </p>
+                              <Button
+                                        childrenWrapperClassName=""
+                                        className="uppercase mb3 tout"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Need Help?"
+                                        newTab={true}
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
+                                        shadow={false}
+                                        to="/flavors"
+                                        type="button"
+                                        variant="primary-small"
+                              />
                               <Dropdown
                                         bgColor=""
                                         className="w100 text-container-width z-sub-nav"
@@ -10698,6 +11010,13 @@ ShallowWrapper {
                               >
                                         Deposit total
                                         
+                              </span>
+                              <span
+                                        className="line-height small mb3"
+                              >
+                                        Note: The total for your purchase is $
+                                        0.00
+                                        ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                               </span>
                               <span
                                         className="line-height small"
@@ -11180,6 +11499,24 @@ ShallowWrapper {
                             >
                                           Choose your first flavor
                             </p>
+                            <Button
+                                          childrenWrapperClassName=""
+                                          className="uppercase mb3 tout"
+                                          color="peach"
+                                          disabled={false}
+                                          fullWidth={false}
+                                          hover="shadow"
+                                          label="Need Help?"
+                                          newTab={true}
+                                          onClick={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          openInCurrentTab={false}
+                                          shadow={false}
+                                          to="/flavors"
+                                          type="button"
+                                          variant="primary-small"
+                            />
                             <Dropdown
                                           bgColor=""
                                           className="w100 text-container-width z-sub-nav"
@@ -12782,6 +13119,24 @@ ShallowWrapper {
                   >
                                     Choose your first flavor
                   </p>
+                  <Button
+                                    childrenWrapperClassName=""
+                                    className="uppercase mb3 tout"
+                                    color="peach"
+                                    disabled={false}
+                                    fullWidth={false}
+                                    hover="shadow"
+                                    label="Need Help?"
+                                    newTab={true}
+                                    onClick={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    openInCurrentTab={false}
+                                    shadow={false}
+                                    to="/flavors"
+                                    type="button"
+                                    variant="primary-small"
+                  />
                   <Dropdown
                                     bgColor=""
                                     className="w100 text-container-width z-sub-nav"
@@ -12872,6 +13227,24 @@ ShallowWrapper {
 >
                       Choose your first flavor
 </p>,
+                    <Button
+                      childrenWrapperClassName=""
+                      className="uppercase mb3 tout"
+                      color="peach"
+                      disabled={false}
+                      fullWidth={false}
+                      hover="shadow"
+                      label="Need Help?"
+                      newTab={true}
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      openInCurrentTab={false}
+                      shadow={false}
+                      to="/flavors"
+                      type="button"
+                      variant="primary-small"
+/>,
                     <Dropdown
                       bgColor=""
                       className="w100 text-container-width z-sub-nav"
@@ -12910,6 +13283,33 @@ ShallowWrapper {
                     "ref": null,
                     "rendered": "Choose your first flavor",
                     "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": null,
+                      "childrenWrapperClassName": "",
+                      "className": "uppercase mb3 tout",
+                      "color": "peach",
+                      "disabled": false,
+                      "fullWidth": false,
+                      "hover": "shadow",
+                      "label": "Need Help?",
+                      "newTab": true,
+                      "onClick": [Function],
+                      "onMouseEnter": [Function],
+                      "onMouseLeave": [Function],
+                      "openInCurrentTab": false,
+                      "shadow": false,
+                      "to": "/flavors",
+                      "type": "button",
+                      "variant": "primary-small",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
                   },
                   Object {
                     "instance": null,
@@ -13321,6 +13721,13 @@ ShallowWrapper {
                                     
                         </span>
                         <span
+                                    className="line-height small mb3"
+                        >
+                                    Note: The total for your purchase is $
+                                    0.00
+                                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+                        </span>
+                        <span
                                     className="line-height small"
                         >
                                     Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -13375,6 +13782,13 @@ ShallowWrapper {
                 >
                                 Deposit total
                                 
+                </span>
+                <span
+                                className="line-height small mb3"
+                >
+                                Note: The total for your purchase is $
+                                0.00
+                                ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                 </span>
                 <span
                                 className="line-height small"
@@ -13465,6 +13879,13 @@ ShallowWrapper {
                     
 </span>,
                   <span
+                    className="line-height small mb3"
+>
+                    Note: The total for your purchase is $
+                    0.00
+                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+</span>,
+                  <span
                     className="line-height small"
 >
                     Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -13506,6 +13927,26 @@ ShallowWrapper {
                   "rendered": Array [
                     "Deposit total",
                     "",
+                  ],
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Note: The total for your purchase is $",
+                      "0.00",
+                      "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
+                    ],
+                    "className": "line-height small mb3",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Note: The total for your purchase is $",
+                    "0.00",
+                    "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
                   ],
                   "type": "span",
                 },
@@ -14013,6 +14454,24 @@ ShallowWrapper {
                                     >
                                                 Choose your first flavor
                                     </p>
+                                    <Button
+                                                childrenWrapperClassName=""
+                                                className="uppercase mb3 tout"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Need Help?"
+                                                newTab={true}
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
+                                                shadow={false}
+                                                to="/flavors"
+                                                type="button"
+                                                variant="primary-small"
+                                    />
                                     <Dropdown
                                                 bgColor=""
                                                 className="w100 text-container-width z-sub-nav"
@@ -14166,6 +14625,13 @@ ShallowWrapper {
                                     >
                                                 Deposit total
                                                 
+                                    </span>
+                                    <span
+                                                className="line-height small mb3"
+                                    >
+                                                Note: The total for your purchase is $
+                                                0.00
+                                                ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                                     </span>
                                     <span
                                                 className="line-height small"
@@ -14648,6 +15114,24 @@ ShallowWrapper {
                                 >
                                                 Choose your first flavor
                                 </p>
+                                <Button
+                                                childrenWrapperClassName=""
+                                                className="uppercase mb3 tout"
+                                                color="peach"
+                                                disabled={false}
+                                                fullWidth={false}
+                                                hover="shadow"
+                                                label="Need Help?"
+                                                newTab={true}
+                                                onClick={[Function]}
+                                                onMouseEnter={[Function]}
+                                                onMouseLeave={[Function]}
+                                                openInCurrentTab={false}
+                                                shadow={false}
+                                                to="/flavors"
+                                                type="button"
+                                                variant="primary-small"
+                                />
                                 <Dropdown
                                                 bgColor=""
                                                 className="w100 text-container-width z-sub-nav"
@@ -16250,6 +16734,24 @@ ShallowWrapper {
                     >
                                         Choose your first flavor
                     </p>
+                    <Button
+                                        childrenWrapperClassName=""
+                                        className="uppercase mb3 tout"
+                                        color="peach"
+                                        disabled={false}
+                                        fullWidth={false}
+                                        hover="shadow"
+                                        label="Need Help?"
+                                        newTab={true}
+                                        onClick={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        openInCurrentTab={false}
+                                        shadow={false}
+                                        to="/flavors"
+                                        type="button"
+                                        variant="primary-small"
+                    />
                     <Dropdown
                                         bgColor=""
                                         className="w100 text-container-width z-sub-nav"
@@ -16340,6 +16842,24 @@ ShallowWrapper {
 >
                         Choose your first flavor
 </p>,
+                      <Button
+                        childrenWrapperClassName=""
+                        className="uppercase mb3 tout"
+                        color="peach"
+                        disabled={false}
+                        fullWidth={false}
+                        hover="shadow"
+                        label="Need Help?"
+                        newTab={true}
+                        onClick={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        openInCurrentTab={false}
+                        shadow={false}
+                        to="/flavors"
+                        type="button"
+                        variant="primary-small"
+/>,
                       <Dropdown
                         bgColor=""
                         className="w100 text-container-width z-sub-nav"
@@ -16378,6 +16898,33 @@ ShallowWrapper {
                       "ref": null,
                       "rendered": "Choose your first flavor",
                       "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": null,
+                        "childrenWrapperClassName": "",
+                        "className": "uppercase mb3 tout",
+                        "color": "peach",
+                        "disabled": false,
+                        "fullWidth": false,
+                        "hover": "shadow",
+                        "label": "Need Help?",
+                        "newTab": true,
+                        "onClick": [Function],
+                        "onMouseEnter": [Function],
+                        "onMouseLeave": [Function],
+                        "openInCurrentTab": false,
+                        "shadow": false,
+                        "to": "/flavors",
+                        "type": "button",
+                        "variant": "primary-small",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
                     },
                     Object {
                       "instance": null,
@@ -16789,6 +17336,13 @@ ShallowWrapper {
                                           
                             </span>
                             <span
+                                          className="line-height small mb3"
+                            >
+                                          Note: The total for your purchase is $
+                                          0.00
+                                          ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+                            </span>
+                            <span
                                           className="line-height small"
                             >
                                           Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -16843,6 +17397,13 @@ ShallowWrapper {
                   >
                                     Deposit total
                                     
+                  </span>
+                  <span
+                                    className="line-height small mb3"
+                  >
+                                    Note: The total for your purchase is $
+                                    0.00
+                                    ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
                   </span>
                   <span
                                     className="line-height small"
@@ -16933,6 +17494,13 @@ ShallowWrapper {
                       
 </span>,
                     <span
+                      className="line-height small mb3"
+>
+                      Note: The total for your purchase is $
+                      0.00
+                      ! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.
+</span>,
+                    <span
                       className="line-height small"
 >
                       Thank you so much for your order! Our Amployees can’t wait to make your cake. If we have any questions, we’ll reach out to you. We’ll see you at the shop.
@@ -16974,6 +17542,26 @@ ShallowWrapper {
                     "rendered": Array [
                       "Deposit total",
                       "",
+                    ],
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Note: The total for your purchase is $",
+                        "0.00",
+                        "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
+                      ],
+                      "className": "line-height small mb3",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Note: The total for your purchase is $",
+                      "0.00",
+                      "! You’ll pay the difference when you pick up your ice cream cake in our scoop shop.",
                     ],
                     "type": "span",
                   },

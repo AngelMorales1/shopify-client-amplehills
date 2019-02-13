@@ -166,7 +166,7 @@ ShallowWrapper {
                     <p
                               className="bold big center"
                     >
-                              Do you have a weekend in mind?
+                              Do you have a day in mind?
                     </p>
                     <span
                               className="my2 text-white text-peach"
@@ -847,7 +847,7 @@ ShallowWrapper {
                                                   Summary
                                         </p>
                                         <p
-                                                  className=""
+                                                  className={undefined}
                                         >
                                                   Please make required selections
                                         </p>
@@ -960,7 +960,7 @@ ShallowWrapper {
               <p
                             className="bold big center"
               >
-                            Do you have a weekend in mind?
+                            Do you have a day in mind?
               </p>
               <span
                             className="my2 text-white text-peach"
@@ -1767,7 +1767,7 @@ ShallowWrapper {
                 <p
                   className="bold big center"
 >
-                  Do you have a weekend in mind?
+                  Do you have a day in mind?
 </p>,
                 <span
                   className="my2 text-white text-peach"
@@ -1970,11 +1970,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Do you have a weekend in mind?",
+                  "children": "Do you have a day in mind?",
                   "className": "bold big center",
                 },
                 "ref": null,
-                "rendered": "Do you have a weekend in mind?",
+                "rendered": "Do you have a day in mind?",
                 "type": "p",
               },
               Object {
@@ -4485,7 +4485,7 @@ ShallowWrapper {
                                                 Summary
                                     </p>
                                     <p
-                                                className=""
+                                                className={undefined}
                                     >
                                                 Please make required selections
                                     </p>
@@ -4550,7 +4550,7 @@ ShallowWrapper {
                                                 Summary
                                 </p>
                                 <p
-                                                className=""
+                                                className={undefined}
                                 >
                                                 Please make required selections
                                 </p>
@@ -4612,7 +4612,7 @@ ShallowWrapper {
                                     Summary
                   </p>
                   <p
-                                    className=""
+                                    className={undefined}
                   >
                                     Please make required selections
                   </p>
@@ -4632,7 +4632,7 @@ ShallowWrapper {
                       Summary
 </p>,
                     <p
-                      className=""
+                      className={undefined}
 >
                       Please make required selections
 </p>,
@@ -4661,7 +4661,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Please make required selections",
-                      "className": "",
+                      "className": undefined,
                     },
                     "ref": null,
                     "rendered": "Please make required selections",
@@ -4909,7 +4909,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center"
                         >
-                                    Do you have a weekend in mind?
+                                    Do you have a day in mind?
                         </p>
                         <span
                                     className="my2 text-white text-peach"
@@ -5590,7 +5590,7 @@ ShallowWrapper {
                                                             Summary
                                                 </p>
                                                 <p
-                                                            className=""
+                                                            className={undefined}
                                                 >
                                                             Please make required selections
                                                 </p>
@@ -5703,7 +5703,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center"
                 >
-                                Do you have a weekend in mind?
+                                Do you have a day in mind?
                 </p>
                 <span
                                 className="my2 text-white text-peach"
@@ -6510,7 +6510,7 @@ ShallowWrapper {
                   <p
                     className="bold big center"
 >
-                    Do you have a weekend in mind?
+                    Do you have a day in mind?
 </p>,
                   <span
                     className="my2 text-white text-peach"
@@ -6713,11 +6713,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Do you have a weekend in mind?",
+                    "children": "Do you have a day in mind?",
                     "className": "bold big center",
                   },
                   "ref": null,
-                  "rendered": "Do you have a weekend in mind?",
+                  "rendered": "Do you have a day in mind?",
                   "type": "p",
                 },
                 Object {
@@ -9228,7 +9228,7 @@ ShallowWrapper {
                                                         Summary
                                           </p>
                                           <p
-                                                        className=""
+                                                        className={undefined}
                                           >
                                                         Please make required selections
                                           </p>
@@ -9293,7 +9293,7 @@ ShallowWrapper {
                                                       Summary
                                     </p>
                                     <p
-                                                      className=""
+                                                      className={undefined}
                                     >
                                                       Please make required selections
                                     </p>
@@ -9355,7 +9355,7 @@ ShallowWrapper {
                                         Summary
                     </p>
                     <p
-                                        className=""
+                                        className={undefined}
                     >
                                         Please make required selections
                     </p>
@@ -9375,7 +9375,7 @@ ShallowWrapper {
                         Summary
 </p>,
                       <p
-                        className=""
+                        className={undefined}
 >
                         Please make required selections
 </p>,
@@ -9404,7 +9404,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Please make required selections",
-                        "className": "",
+                        "className": undefined,
                       },
                       "ref": null,
                       "rendered": "Please make required selections",
@@ -9714,7 +9714,7 @@ ShallowWrapper {
                     <p
                               className="bold big center"
                     >
-                              Do you have a weekend in mind?
+                              Do you have a day in mind?
                     </p>
                     <span
                               className="my2 text-white text-peach"
@@ -10395,7 +10395,7 @@ ShallowWrapper {
                                                   Summary
                                         </p>
                                         <p
-                                                  className=""
+                                                  className={undefined}
                                         >
                                                   Please make required selections
                                         </p>
@@ -10508,7 +10508,7 @@ ShallowWrapper {
               <p
                             className="bold big center"
               >
-                            Do you have a weekend in mind?
+                            Do you have a day in mind?
               </p>
               <span
                             className="my2 text-white text-peach"
@@ -11315,7 +11315,7 @@ ShallowWrapper {
                 <p
                   className="bold big center"
 >
-                  Do you have a weekend in mind?
+                  Do you have a day in mind?
 </p>,
                 <span
                   className="my2 text-white text-peach"
@@ -11518,11 +11518,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Do you have a weekend in mind?",
+                  "children": "Do you have a day in mind?",
                   "className": "bold big center",
                 },
                 "ref": null,
-                "rendered": "Do you have a weekend in mind?",
+                "rendered": "Do you have a day in mind?",
                 "type": "p",
               },
               Object {
@@ -14033,7 +14033,7 @@ ShallowWrapper {
                                                 Summary
                                     </p>
                                     <p
-                                                className=""
+                                                className={undefined}
                                     >
                                                 Please make required selections
                                     </p>
@@ -14098,7 +14098,7 @@ ShallowWrapper {
                                                 Summary
                                 </p>
                                 <p
-                                                className=""
+                                                className={undefined}
                                 >
                                                 Please make required selections
                                 </p>
@@ -14160,7 +14160,7 @@ ShallowWrapper {
                                     Summary
                   </p>
                   <p
-                                    className=""
+                                    className={undefined}
                   >
                                     Please make required selections
                   </p>
@@ -14180,7 +14180,7 @@ ShallowWrapper {
                       Summary
 </p>,
                     <p
-                      className=""
+                      className={undefined}
 >
                       Please make required selections
 </p>,
@@ -14209,7 +14209,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Please make required selections",
-                      "className": "",
+                      "className": undefined,
                     },
                     "ref": null,
                     "rendered": "Please make required selections",
@@ -14457,7 +14457,7 @@ ShallowWrapper {
                         <p
                                     className="bold big center"
                         >
-                                    Do you have a weekend in mind?
+                                    Do you have a day in mind?
                         </p>
                         <span
                                     className="my2 text-white text-peach"
@@ -15138,7 +15138,7 @@ ShallowWrapper {
                                                             Summary
                                                 </p>
                                                 <p
-                                                            className=""
+                                                            className={undefined}
                                                 >
                                                             Please make required selections
                                                 </p>
@@ -15251,7 +15251,7 @@ ShallowWrapper {
                 <p
                                 className="bold big center"
                 >
-                                Do you have a weekend in mind?
+                                Do you have a day in mind?
                 </p>
                 <span
                                 className="my2 text-white text-peach"
@@ -16058,7 +16058,7 @@ ShallowWrapper {
                   <p
                     className="bold big center"
 >
-                    Do you have a weekend in mind?
+                    Do you have a day in mind?
 </p>,
                   <span
                     className="my2 text-white text-peach"
@@ -16261,11 +16261,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Do you have a weekend in mind?",
+                    "children": "Do you have a day in mind?",
                     "className": "bold big center",
                   },
                   "ref": null,
-                  "rendered": "Do you have a weekend in mind?",
+                  "rendered": "Do you have a day in mind?",
                   "type": "p",
                 },
                 Object {
@@ -18776,7 +18776,7 @@ ShallowWrapper {
                                                         Summary
                                           </p>
                                           <p
-                                                        className=""
+                                                        className={undefined}
                                           >
                                                         Please make required selections
                                           </p>
@@ -18841,7 +18841,7 @@ ShallowWrapper {
                                                       Summary
                                     </p>
                                     <p
-                                                      className=""
+                                                      className={undefined}
                                     >
                                                       Please make required selections
                                     </p>
@@ -18903,7 +18903,7 @@ ShallowWrapper {
                                         Summary
                     </p>
                     <p
-                                        className=""
+                                        className={undefined}
                     >
                                         Please make required selections
                     </p>
@@ -18923,7 +18923,7 @@ ShallowWrapper {
                         Summary
 </p>,
                       <p
-                        className=""
+                        className={undefined}
 >
                         Please make required selections
 </p>,
@@ -18952,7 +18952,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Please make required selections",
-                        "className": "",
+                        "className": undefined,
                       },
                       "ref": null,
                       "rendered": "Please make required selections",
