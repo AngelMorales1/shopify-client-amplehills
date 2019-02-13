@@ -490,6 +490,17 @@ class CakeRequestForm extends Component {
           >
             <div className="w100 mb4 flex flex-column items-center">
               <p className="bold big center mb2">Choose your first flavor</p>
+              <Button
+                variant="primary-small"
+                color="peach"
+                label="Need Help?"
+                className={cx(
+                  styles['CakeRequestForm__help-button'],
+                  'uppercase mb3 tout'
+                )}
+                to="/flavors"
+                newTab={true}
+              />
               <Dropdown
                 className="w100 text-container-width z-sub-nav"
                 color="peach"
