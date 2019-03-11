@@ -24,7 +24,19 @@ class HTMLEmbed extends Component {
   }
 }
 
-HTMLEmbed.propTypes = {};
+HTMLEmbed.propTypes = {
+  block: PropTypes.shape({
+    fields: PropTypes.shape({
+      fragmentType: PropTypes.shape({
+        simpleFragments: PropTypes.objectOf(
+          PropTypes.shape({
+            html: PropTypes.string
+          })
+        )
+      })
+    })
+  })
+};
 
 HTMLEmbed.defaultProps = {};
 
