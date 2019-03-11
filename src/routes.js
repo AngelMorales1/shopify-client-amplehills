@@ -80,6 +80,7 @@ const Routes = ({ location }) => (
     <Route exact path="/bike-party" component={GenericPageContainer} />
     <Route exact path="/scoop-tab-party" component={GenericPageContainer} />
     <Route exact path="/jobs" component={GenericPageContainer} />
+    <Route exact path="/flavor-frenzy" component={GenericPageContainer} />
     <Route
       exact
       path="/party-request-form"
