@@ -20,6 +20,7 @@ import AvailableFlavors from 'components/AvailableFlavors';
 import FlavorsLanding from 'components/FlavorsLanding';
 import CardRecirculation from 'components/CardRecirculation';
 import MultipleImageText from 'components/MultipleImageText';
+import HTMLEmbed from 'components/HTMLEmbed';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -55,6 +56,7 @@ const BlockSwitch = props => {
       const contentType = get(fields, 'contentType', '');
       const drip = get(fields, 'drip', false);
       const upperDrip = get(fields, 'upperDrip', false);
+      console.log(contentType);
 
       switch (contentType) {
         case "What's Included Block":
@@ -83,6 +85,8 @@ const BlockSwitch = props => {
           return (
             <MultipleImageText {...props} drip={drip} upperDrip={upperDrip} />
           );
+        case 'HTML Embed':
+          return <HTMLEmbed {...props} drip={drip} upperDrip={upperDrip} />;
         default:
           return null;
       }
