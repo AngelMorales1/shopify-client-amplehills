@@ -56,7 +56,6 @@ const BlockSwitch = props => {
       const contentType = get(fields, 'contentType', '');
       const drip = get(fields, 'drip', false);
       const upperDrip = get(fields, 'upperDrip', false);
-      console.log(contentType);
 
       switch (contentType) {
         case "What's Included Block":
