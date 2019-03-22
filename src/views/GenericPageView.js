@@ -4,15 +4,18 @@ import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import BlockSwitch from 'components/BlockSwitch';
+import ErrorPage from 'components/ErrorPage';
 import { SubNav } from 'components/base';
 
 class GenericPageView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, blocks, subNavIsOn } = this.props;
+    const { model, blocks, subNavIsOn, pageNotFound } = this.props;
 
     if (model.isError) return <h1>Error</h1>;
+
+    if (pageNotFound) return <ErrorPage errorIs404={true} />;
 
     const menuList = get(this, 'props.blocks', []).reduce((menu, block) => {
       const blockType = get(block, 'sys.contentType.sys.id', '');

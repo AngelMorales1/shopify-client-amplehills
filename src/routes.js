@@ -58,29 +58,9 @@ const Routes = ({ location }) => (
     <Route exact path="/locations" component={LocationsLandingContainer} />
     <Route exact path="/contact" component={ContactUsContainer} />
     <Route exact path="/cart" component={Cart} />
-    <Route exact path="/privacy-policy" component={GenericPageContainer} />
-    <Route exact path="/web-accessibility" component={GenericPageContainer} />
-    <Route exact path="/press" component={GenericPageContainer} />
-    <Route exact path="/our-story" component={GenericPageContainer} />
-    <Route exact path="/classes-and-socials" component={GenericPageContainer} />
-    <Route exact path="/ice-cream-classes" component={GenericPageContainer} />
-    <Route exact path="/ice-cream-socials" component={GenericPageContainer} />
-    <Route exact path="/events" component={GenericPageContainer} />
-    <Route exact path="/weddings" component={GenericPageContainer} />
-    <Route exact path="/parties" component={GenericPageContainer} />
-    <Route exact path="/field-trips" component={GenericPageContainer} />
-    <Route exact path="/pints-and-postcards" component={GenericPageContainer} />
-    <Route exact path="/catering" component={GenericPageContainer} />
-    <Route exact path="/ice-cream-cakes" component={GenericPageContainer} />
-    <Route exact path="/faq" component={GenericPageContainer} />
+    <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route exact path="/news" component={ArticlesLandingContainer} />
-    <Route exact path="/wholesale" component={GenericPageContainer} />
-    <Route exact path="/flavors" component={GenericPageContainer} />
     <Route exact path="/in-stores" component={InStoresContainer} />
-    <Route exact path="/bike-party" component={GenericPageContainer} />
-    <Route exact path="/scoop-tab-party" component={GenericPageContainer} />
-    <Route exact path="/jobs" component={GenericPageContainer} />
-    <Route exact path="/flavor-frenzy-2019" component={GenericPageContainer} />
     <Route
       exact
       path="/party-request-form"

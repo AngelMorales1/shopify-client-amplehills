@@ -22,9 +22,14 @@ class GenericPageContainer extends ContainerBase {
       getFlavors
     } = this.props.actions;
     const { path } = this.props.match;
+    const generichPageSlug = get(
+      this,
+      'props.match.params.genericPageSlug',
+      ''
+    );
 
     return Promise.all([
-      getGenericPage(path),
+      getGenericPage(`/${generichPageSlug}`),
       getEvents(),
       fetchShopifyWholesaleProducts(),
       getFlavors()
@@ -57,7 +62,8 @@ const mapStateToProps = state => {
     ),
     events: events(state),
     wholesaleProducts: wholesaleProducts(state),
-    flavors: flavors(state)
+    flavors: flavors(state),
+    pageNotFound: !get(state, 'genericPage.genericPage.items', []).length
   };
 };
 
