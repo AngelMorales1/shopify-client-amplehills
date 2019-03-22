@@ -7,6 +7,7 @@ export default {
       availableLocations: [],
       contentBlocks: [],
       slug: 'flavor-1',
+      specialLocations: [],
       filters: {
         chocolate: 'chocolate'
       },
@@ -25,6 +26,7 @@ export default {
       availableLocations: [],
       contentBlocks: [],
       slug: 'flavor-2',
+      specialLocations: [],
       id: '30e8A5crO0KwMwWcOmAAmG',
       image: '/image-url',
       label: 'In Store Only',
