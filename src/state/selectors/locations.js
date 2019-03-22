@@ -79,13 +79,15 @@ export default createSelector(
         recursivelyStringify
       );
 
-      const availableFlavors = selectedFlavors.flavors.filter(flavor => {
-        const availableLocations = get(flavor, 'availableLocations', []);
+      const availableFlavors = get(selectedFlavors, 'flavors', []).filter(
+        flavor => {
+          const availableLocations = get(flavor, 'availableLocations', []);
 
-        return availableLocations.some(location => {
-          return get(location, 'sys.id') === id;
-        });
-      });
+          return availableLocations.some(location => {
+            return get(location, 'sys.id') === id;
+          });
+        }
+      );
 
       return {
         ...searchableFields,

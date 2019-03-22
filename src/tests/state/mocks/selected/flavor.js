@@ -2,6 +2,7 @@ export default {
   dietaryRestrictions: {},
   contentBlocks: [],
   slug: 'flavor-1',
+  specialLocations: [],
   availableLocations: [],
   filters: {
     chocolate: 'chocolate'

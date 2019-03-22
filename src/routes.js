@@ -58,7 +58,6 @@ const Routes = ({ location }) => (
     <Route exact path="/locations" component={LocationsLandingContainer} />
     <Route exact path="/contact" component={ContactUsContainer} />
     <Route exact path="/cart" component={Cart} />
-    <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route exact path="/news" component={ArticlesLandingContainer} />
     <Route exact path="/in-stores" component={InStoresContainer} />
     <Route
@@ -74,6 +73,7 @@ const Routes = ({ location }) => (
     {isStaging() ? (
       <Route exact path="/style-guide" component={GenericPageContainer} />
     ) : null}
+    <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route path="*" render={() => <ErrorPage errorIs404={true} />} />
   </Switch>
 );
