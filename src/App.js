@@ -96,7 +96,7 @@ class App extends Component {
           />
           <MiniCart />
           <MobileNavModal />
-          {showSubscribeNewsletterModal ? (
+          {!!showSubscribeNewsletterModal ? (
             <NewsletterModal
               subscribeNewsletterTitle={subscribeNewsletterTitle}
               subscribeNewsletterDescription={subscribeNewsletterDescription}
@@ -162,7 +162,8 @@ App.propTypes = {
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string,
-    footerNav: PropTypes.object
+    footerNav: PropTypes.object,
+    showSubscribeNewsletterModal: PropTypes.bool
   }),
   locations: PropTypes.arrayOf(locationModel.propTypes),
   forceErrorPage: PropTypes.bool
