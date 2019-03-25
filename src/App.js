@@ -71,10 +71,7 @@ class App extends Component {
       instagramIcon,
       twitterIcon,
       profileIcon,
-      logo,
-      showSubscribeNewsletterModal,
-      subscribeNewsletterTitle,
-      subscribeNewsletterDescription
+      logo
     } = globalSettings;
 
     const alert = Object.values(
@@ -96,12 +93,7 @@ class App extends Component {
           />
           <MiniCart />
           <MobileNavModal />
-          {!!showSubscribeNewsletterModal ? (
-            <NewsletterModal
-              subscribeNewsletterTitle={subscribeNewsletterTitle}
-              subscribeNewsletterDescription={subscribeNewsletterDescription}
-            />
-          ) : null}
+          <NewsletterModal />
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
@@ -162,8 +154,7 @@ App.propTypes = {
     facebookLink: PropTypes.string,
     instagramLink: PropTypes.string,
     twitterLink: PropTypes.string,
-    footerNav: PropTypes.object,
-    showSubscribeNewsletterModal: PropTypes.bool
+    footerNav: PropTypes.object
   }),
   locations: PropTypes.arrayOf(locationModel.propTypes),
   forceErrorPage: PropTypes.bool

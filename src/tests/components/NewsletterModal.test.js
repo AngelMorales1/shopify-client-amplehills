@@ -1,20 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { shallow } from 'enzyme';
 
+import { store } from 'store';
 import NewsletterModal from 'components/NewsletterModal';
 
-it('renders without data', () => {
-  const component = shallow(<NewsletterModal />);
-
-  expect(component).toMatchSnapshot();
-});
-
-it('renders with data', () => {
+it('renders without crashing', () => {
   const component = shallow(
-    <NewsletterModal
-      subscribeNewsletterTitle={'foo'}
-      subscribeNewsletterDescription={'foo'}
-    />
+    <Provider store={store}>
+      <NewsletterModal />
+    </Provider>
   );
 
   expect(component).toMatchSnapshot();

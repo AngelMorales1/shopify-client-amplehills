@@ -15,6 +15,18 @@
     transform: translate3d(0, 0, 0);
   }
 
+  &--alert-active {
+    top: calc(
+      #{$header-height-mobile} + #{spacing(4)} + #{$alert-height-mobile}
+    );
+
+    @media ($medium-up) {
+      top: calc(
+        #{$header-height-desktop} + #{spacing(8)} + #{$alert-height-desktop}
+      );
+    }
+  }
+
   &__title {
     font-family: $font-carter;
     font-size: $font-5;

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import get from 'utils/get';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import styles from './NewsletterModal.scss';
 import { Image, Button, TextField, FormFlash } from 'components/base';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import alertIsActive from 'state/selectors/alertIsActive';
 
 class NewsletterModal extends Component {
   state = {
@@ -19,20 +23,33 @@ class NewsletterModal extends Component {
   }
 
   render() {
-    const {
-      subscribeNewsletterTitle,
-      subscribeNewsletterDescription
-    } = this.props;
+    const { alertIsActive, globalSettings } = this.props;
+    const subscribeNewsletterTitle = get(
+      globalSettings,
+      'subscribeNewsletterTitle',
+      'Subscribe to our newsletter!'
+    );
+    const subscribeNewsletterDescription = get(
+      globalSettings,
+      'subscribeNewsletterDescription',
+      ''
+    );
+    const showSubscribeNewsletterModal = get(
+      globalSettings,
+      'showSubscribeNewsletterModal',
+      false
+    );
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
-    return (
+    return showSubscribeNewsletterModal ? (
       <div
         className={cx(
           styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
           {
             [styles['NewsletterModal--active']]: this.state
-              .newsletterModalIsActive
+              .newsletterModalIsActive,
+            [styles['NewsletterModal--alert-active']]: alertIsActive
           }
         )}
       >
@@ -103,18 +120,28 @@ class NewsletterModal extends Component {
           }}
         />
       </div>
-    );
+    ) : null;
   }
 }
 
-NewsletterModal.propTypes = {
-  subscribeNewsletterTitle: PropTypes.string,
-  subscribeNewsletterDescription: PropTypes.string
+const mapStateToProps = state => {
+  return {
+    globalSettings: get(
+      state,
+      'applicationUI.globalSettings.items[0].fields',
+      {}
+    ),
+    alertIsActive: alertIsActive(state)
+  };
 };
 
-NewsletterModal.defaultProps = {
-  subscribeNewsletterTitle: 'Subscribe to our newsletter!',
-  subscribeNewsletterDescription: ''
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators({}, dispatch)
+  };
 };
 
-export default NewsletterModal;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NewsletterModal);
