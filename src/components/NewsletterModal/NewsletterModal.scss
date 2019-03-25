@@ -1,0 +1,27 @@
+@import 'settings';
+
+.NewsletterModal {
+  top: calc(#{$header-height-mobile} + #{spacing(4)});
+  max-width: 24rem;
+
+  @media ($medium-up) {
+    top: calc(#{$header-height-desktop} + #{spacing(8)});
+  }
+
+  &__title {
+    font-family: $font-carter;
+    font-size: $font-5;
+  }
+
+  &__close {
+    width: spacing(3);
+  }
+
+  &__text-field {
+    transform: translate3d(0, spacing(-0.5), 0);
+    input {
+      padding-top: spacing(2) + 0.0625rem;
+      padding-bottom: spacing(2) - 0.0625rem;
+    }
+  }
+}

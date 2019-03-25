@@ -95,6 +95,22 @@
     }
   }
 
+  &--madison-blue-border-round-small {
+    input {
+      @extend .text-madison-blue;
+
+      border: spacing(1) solid color('madison-blue');
+      border-radius: radius('l');
+      padding-left: spacing(6);
+      padding-right: spacing(6);
+      font-size: $font-3;
+
+      &::placeholder {
+        @extend .text-madison-blue;
+      }
+    }
+  }
+
   &--madison-blue-border {
     input {
       @extend .bg-madison-blue;

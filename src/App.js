@@ -25,6 +25,7 @@ import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
 import FooterNav from 'components/FooterNav';
 import Alert from 'components/Alert';
+import NewsletterModal from 'components/NewsletterModal';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -70,7 +71,10 @@ class App extends Component {
       instagramIcon,
       twitterIcon,
       profileIcon,
-      logo
+      logo,
+      showSubscribeNewsletterModal,
+      subscribeNewsletterTitle,
+      subscribeNewsletterDescription
     } = globalSettings;
 
     const alert = Object.values(
@@ -92,6 +96,12 @@ class App extends Component {
           />
           <MiniCart />
           <MobileNavModal />
+          {showSubscribeNewsletterModal ? (
+            <NewsletterModal
+              subscribeNewsletterTitle={subscribeNewsletterTitle}
+              subscribeNewsletterDescription={subscribeNewsletterDescription}
+            />
+          ) : null}
           <div className="content-wrapper">
             <Routes location={get(this, 'props.location')} />
             <FooterNewsletter pathname={get(this, 'props.location.pathname')} />
