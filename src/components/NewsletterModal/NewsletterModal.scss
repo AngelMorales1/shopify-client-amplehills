@@ -7,8 +7,8 @@
   max-width: 100%;
 
   @media ($medium-up) {
-    max-width: 24rem;
     top: calc(#{$header-height-desktop} + #{spacing(8)});
+    max-width: 24rem;
   }
 
   &--active {

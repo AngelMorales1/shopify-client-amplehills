@@ -58,55 +58,54 @@ class NewsletterModal extends Component {
         ) : null}
         <MailchimpSubscribe
           url={url}
-          render={({ subscribe, status, message }) => (
-            <div className="mt2 flex flex-column">
-              <div className="flex flex-row items-center">
-                <div
-                  className={cx(
-                    styles['NewsletterModal__text-field'],
-                    'px1 relative flex items-center'
-                  )}
-                >
-                  <TextField
-                    value={this.state.emailAddress}
-                    onChange={value => this.setState({ emailAddress: value })}
-                    className="w100"
-                    placeholder="Email address"
-                    variant="madison-blue-border-round-small"
+          render={({ subscribe, status, message }) => {
+            if (status === 'success' && this.state.newsletterModalIsActive) {
+              this.setState({ newsletterModalIsActive: false });
+            }
+
+            return (
+              <div className="mt2 flex flex-column">
+                <div className="flex flex-row items-center">
+                  <div
+                    className={cx(
+                      styles['NewsletterModal__text-field'],
+                      'px1 relative flex items-center'
+                    )}
+                  >
+                    <TextField
+                      value={this.state.emailAddress}
+                      onChange={value => this.setState({ emailAddress: value })}
+                      className="w100"
+                      placeholder="Email address"
+                      variant="madison-blue-border-round-small"
+                    />
+                  </div>
+                  <Button
+                    className="px2"
+                    label="Submit"
+                    variant="primary-small"
+                    color="madison-blue"
+                    shadow={true}
+                    onClick={() =>
+                      subscribe({ EMAIL: this.state.emailAddress })
+                    }
                   />
                 </div>
-                <Button
-                  className="px2"
-                  label="Submit"
-                  variant="primary-small"
-                  color="madison-blue"
-                  shadow={true}
-                  onClick={() => subscribe({ EMAIL: this.state.emailAddress })}
-                />
+                {status === 'error' ? (
+                  <FormFlash
+                    className="z-1 mt2 mx1"
+                    error={true}
+                    message={message}
+                  />
+                ) : null}
               </div>
-              {status === 'error' ? (
-                <FormFlash
-                  className="z-1 mt2 mx1"
-                  error={true}
-                  message={message}
-                />
-              ) : null}
-              {status === 'success' ? (
-                <FormFlash
-                  className="z-1 mt2 mx1"
-                  success={true}
-                  message={message}
-                />
-              ) : null}
-            </div>
-          )}
+            );
+          }}
         />
       </div>
     );
   }
 }
-
-export default NewsletterModal;
 
 NewsletterModal.propTypes = {
   subscribeNewsletterTitle: PropTypes.string,
@@ -117,3 +116,5 @@ NewsletterModal.defaultProps = {
   subscribeNewsletterTitle: 'Subscribe to our newsletter!',
   subscribeNewsletterDescription: ''
 };
+
+export default NewsletterModal;
