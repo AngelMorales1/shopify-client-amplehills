@@ -8,8 +8,15 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 class NewsletterModal extends Component {
   state = {
-    emailAddress: ''
+    emailAddress: '',
+    newsletterModalIsActive: false
   };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ newsletterModalIsActive: true });
+    }, 5000);
+  }
 
   render() {
     const {
@@ -21,8 +28,12 @@ class NewsletterModal extends Component {
     return (
       <div
         className={cx(
+          styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
-          styles['NewsletterModal']
+          {
+            [styles['NewsletterModal--active']]: this.state
+              .newsletterModalIsActive
+          }
         )}
       >
         <div className="flex flex-row items-center justify-between">
@@ -31,7 +42,7 @@ class NewsletterModal extends Component {
           </p>
           <Button
             variant="style-none"
-            onClick={this.handleMenuClick}
+            onClick={() => this.setState({ newsletterModalIsActive: false })}
             className={cx(styles['NewsletterModal__close'], 'mx1')}
           >
             <Image

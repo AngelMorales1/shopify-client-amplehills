@@ -2,10 +2,17 @@
 
 .NewsletterModal {
   top: calc(#{$header-height-mobile} + #{spacing(4)});
-  max-width: 24rem;
+  transform: translate3d(spacing(180), 0, 0);
+  transition: transform 0.7s ease;
+  max-width: 100%;
 
   @media ($medium-up) {
+    max-width: 24rem;
     top: calc(#{$header-height-desktop} + #{spacing(8)});
+  }
+
+  &--active {
+    transform: translate3d(0, 0, 0);
   }
 
   &__title {
