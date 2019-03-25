@@ -31,10 +31,7 @@ class NewsletterModal extends Component {
       newsletterModalIsActive,
       actions
     } = this.props;
-<<<<<<< HEAD
-
-=======
->>>>>>> add action to open and close newsletter modal
+    
     const subscribeNewsletterTitle = get(
       globalSettings,
       'subscribeNewsletterTitle',
