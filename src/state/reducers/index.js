@@ -6,7 +6,6 @@ import mobileNavUI from './ui/mobileNavUI';
 import customerUI from './ui/customerUI';
 import productUI from './ui/productUI';
 import locationsUI from './ui/locationsUI';
-import newsletterModal from './ui/newsletterModal';
 import locations from './locations';
 import products from './products';
 import customer from './customer';
@@ -34,6 +33,5 @@ export default {
   articles,
   wholesale,
   flavors,
-  bookings,
-  newsletterModal
+  bookings
 };

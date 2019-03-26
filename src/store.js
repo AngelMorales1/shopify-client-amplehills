@@ -52,18 +52,6 @@ try {
   }
 }
 
-const hideNewsletterModalUntil = localStorage.getItem(
-  'hideNewsletterModalUntil'
-);
-const date = new Date();
-
-if (
-  hideNewsletterModalUntil !== null &&
-  parseInt(hideNewsletterModalUntil, 10) < date.getTime()
-) {
-  localStorage.removeItem('hideNewsletterModalUntil');
-}
-
 const persistConfig = {
   key: 'root',
   storage,

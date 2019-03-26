@@ -8,30 +8,52 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import styles from './NewsletterModal.scss';
 import { Image, Button, TextField, FormFlash } from 'components/base';
 import alertIsActive from 'state/selectors/alertIsActive';
-import {
-  openNewsletterModal,
-  closeNewsletterModal
-} from 'state/actions/ui/newsletterModalActions';
+import { hideNewsletterModal } from 'state/actions/ui/newsletterModalActions';
 
 class NewsletterModal extends Component {
-  state = {
-    emailAddress: ''
-  };
+  constructor(props) {
+    super(...arguments);
+
+    this.state = {
+      emailAddress: '',
+      newsletterModalIsActive: false
+    };
+
+    this.date = new Date();
+
+    const { hideNewsletterModalUntil, actions } = props;
+
+    if (
+      hideNewsletterModalUntil !== null &&
+      hideNewsletterModalUntil < this.date.getTime()
+    ) {
+      actions.hideNewsletterModal(null);
+    }
+  }
 
   componentDidMount() {
     const { actions } = this.props;
 
-    setTimeout(actions.openNewsletterModal, 5000);
+    setTimeout(() => {
+      this.setState({ newsletterModalIsActive: true });
+    }, 5000);
   }
+
+  handleClose = () => {
+    const { actions } = this.props;
+    const weekLater = this.date.getTime() + 7 * 24 * 60 * 60 * 1000;
+
+    actions.hideNewsletterModal(weekLater);
+  };
 
   render() {
     const {
       alertIsActive,
       globalSettings,
-      newsletterModalIsActive,
+      hideNewsletterModalUntil,
       actions
     } = this.props;
-    
+    const { newsletterModalIsActive } = this.state;
     const subscribeNewsletterTitle = get(
       globalSettings,
       'subscribeNewsletterTitle',
@@ -50,7 +72,7 @@ class NewsletterModal extends Component {
 
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
-    if (!showSubscribeNewsletterModal) return null;
+    if (!showSubscribeNewsletterModal && !!hideNewsletterModalUntil) return null;
 
     return (
       <div
@@ -87,7 +109,9 @@ class NewsletterModal extends Component {
           url={url}
           render={({ subscribe, status, message }) => {
             if (status === 'success' && newsletterModalIsActive) {
-              actions.closeNewsletterModal();
+              const monthLater = this.date.getTime() + 30 * 24 * 60 * 60 * 1000;
+
+              actions.hideNewsletterModal(monthLater);
             }
 
             return (
@@ -138,19 +162,16 @@ const mapStateToProps = state => {
   return {
     globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
     alertIsActive: alertIsActive(state),
-    newsletterModalIsActive: get(
+    hideNewsletterModalUntil: get(
       state,
-      'newsletterModal.newsletterModalIsActive'
+      'session.newsletterModal.hideNewsletterModalUntil'
     )
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators(
-      { openNewsletterModal, closeNewsletterModal },
-      dispatch
-    )
+    actions: bindActionCreators({ hideNewsletterModal }, dispatch)
   };
 };
 
