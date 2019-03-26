@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import get from 'utils/get';
@@ -9,21 +8,30 @@ import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import styles from './NewsletterModal.scss';
 import { Image, Button, TextField, FormFlash } from 'components/base';
 import alertIsActive from 'state/selectors/alertIsActive';
+import {
+  openNewsletterModal,
+  closeNewsletterModal
+} from 'state/actions/ui/newsletterModalActions';
 
 class NewsletterModal extends Component {
   state = {
-    emailAddress: '',
-    newsletterModalIsActive: false
+    emailAddress: ''
   };
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({ newsletterModalIsActive: true });
-    }, 5000);
+    const { actions } = this.props;
+
+    setTimeout(actions.openNewsletterModal, 5000);
   }
 
   render() {
-    const { alertIsActive, globalSettings } = this.props;
+    const {
+      alertIsActive,
+      globalSettings,
+      newsletterModalIsActive,
+      actions
+    } = this.props;
+
     const subscribeNewsletterTitle = get(
       globalSettings,
       'subscribeNewsletterTitle',
@@ -39,16 +47,18 @@ class NewsletterModal extends Component {
       'showSubscribeNewsletterModal',
       false
     );
+
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
-    return showSubscribeNewsletterModal ? (
+    if (!showSubscribeNewsletterModal) return null;
+
+    return (
       <div
         className={cx(
           styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
           {
-            [styles['NewsletterModal--active']]: this.state
-              .newsletterModalIsActive,
+            [styles['NewsletterModal--active']]: newsletterModalIsActive,
             [styles['NewsletterModal--alert-active']]: alertIsActive
           }
         )}
@@ -59,7 +69,7 @@ class NewsletterModal extends Component {
           </p>
           <Button
             variant="style-none"
-            onClick={() => this.setState({ newsletterModalIsActive: false })}
+            onClick={actions.closeNewsletterModal}
             className={cx(styles['NewsletterModal__close'], 'mx1')}
           >
             <Image
@@ -76,8 +86,8 @@ class NewsletterModal extends Component {
         <MailchimpSubscribe
           url={url}
           render={({ subscribe, status, message }) => {
-            if (status === 'success' && this.state.newsletterModalIsActive) {
-              this.setState({ newsletterModalIsActive: false });
+            if (status === 'success' && newsletterModalIsActive) {
+              actions.closeNewsletterModal();
             }
 
             return (
@@ -120,24 +130,27 @@ class NewsletterModal extends Component {
           }}
         />
       </div>
-    ) : null;
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    globalSettings: get(
+    globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
+    alertIsActive: alertIsActive(state),
+    newsletterModalIsActive: get(
       state,
-      'applicationUI.globalSettings.items[0].fields',
-      {}
-    ),
-    alertIsActive: alertIsActive(state)
+      'newsletterModal.newsletterModalIsActive'
+    )
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators(
+      { openNewsletterModal, closeNewsletterModal },
+      dispatch
+    )
   };
 };
 
