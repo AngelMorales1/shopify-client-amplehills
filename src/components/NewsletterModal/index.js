@@ -5,30 +5,43 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import styles from './NewsletterModal.scss';
-import { Image, Button, TextField, FormFlash } from 'components/base';
-import alertIsActive from 'state/selectors/alertIsActive';
+import moment from 'moment';
 import {
   openNewsletterModal,
   closeNewsletterModal
 } from 'state/actions/ui/newsletterModalActions';
+import alertIsActive from 'state/selectors/alertIsActive';
+
+import { Image, Button, TextField, FormFlash } from 'components/base';
+import styles from './NewsletterModal.scss';
 
 class NewsletterModal extends Component {
-  state = {
-    emailAddress: ''
-  };
+  constructor(props) {
+    super(...arguments);
+
+    this.state = {
+      emailAddress: ''
+    };
+  }
 
   componentDidMount() {
-    const { actions } = this.props;
+    const { actions, renewModalDate } = this.props;
 
-    setTimeout(actions.openNewsletterModal, 5000);
+    if (!renewModalDate) setTimeout(actions.openNewsletterModal, 5000);
   }
+
+  handleClose = () => {
+    const { actions } = this.props;
+    const oneWeekLater = moment().add(1, 'weeks');
+
+    actions.closeNewsletterModal(oneWeekLater);
+  };
 
   render() {
     const {
       alertIsActive,
       globalSettings,
-      newsletterModalIsActive,
+      modalIsActive,
       actions
     } = this.props;
 
@@ -58,7 +71,7 @@ class NewsletterModal extends Component {
           styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
           {
-            [styles['NewsletterModal--active']]: newsletterModalIsActive,
+            [styles['NewsletterModal--active']]: modalIsActive,
             [styles['NewsletterModal--alert-active']]: alertIsActive
           }
         )}
@@ -69,7 +82,7 @@ class NewsletterModal extends Component {
           </p>
           <Button
             variant="style-none"
-            onClick={actions.closeNewsletterModal}
+            onClick={this.handleClose}
             className={cx(styles['NewsletterModal__close'], 'mx1')}
           >
             <Image
@@ -79,19 +92,25 @@ class NewsletterModal extends Component {
           </Button>
         </div>
         {subscribeNewsletterDescription ? (
-          <p className="block-subheadline pl1 pr3">
+          <p
+            className={cx(
+              styles['NewsletterModal__description'],
+              'pl1 pr3 mt1'
+            )}
+          >
             {subscribeNewsletterDescription}
           </p>
         ) : null}
         <MailchimpSubscribe
           url={url}
           render={({ subscribe, status, message }) => {
-            if (status === 'success' && newsletterModalIsActive) {
-              actions.closeNewsletterModal();
+            if (status === 'success' && modalIsActive) {
+              const oneMonthLater = moment().add(1, 'months');
+              setTimeout(() => actions.closeNewsletterModal(oneMonthLater), 0);
             }
 
             return (
-              <div className="mt2 flex flex-column">
+              <div className="mt3 flex flex-column">
                 <div className="flex flex-row items-center">
                   <div
                     className={cx(
@@ -101,7 +120,7 @@ class NewsletterModal extends Component {
                   >
                     <TextField
                       value={this.state.emailAddress}
-                      onChange={value => this.setState({ emailAddress: value })}
+                      onChange={emailAddress => this.setState({ emailAddress })}
                       className="w100"
                       placeholder="Email address"
                       variant="madison-blue-border-round-small"
@@ -138,17 +157,18 @@ const mapStateToProps = state => {
   return {
     globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
     alertIsActive: alertIsActive(state),
-    newsletterModalIsActive: get(
-      state,
-      'newsletterModal.newsletterModalIsActive'
-    )
+    modalIsActive: get(state, 'session.newsletterModal.modalIsActive', false),
+    renewModalDate: get(state, 'session.newsletterModal.renewModalDate', null)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
-      { openNewsletterModal, closeNewsletterModal },
+      {
+        openNewsletterModal,
+        closeNewsletterModal
+      },
       dispatch
     )
   };
