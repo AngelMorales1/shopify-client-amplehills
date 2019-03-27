@@ -79,7 +79,8 @@
     }
   }
 
-  &--madison-blue-border-round {
+  &--madison-blue-border-round,
+  &--madison-blue-border-round-small {
     input {
       @extend .text-madison-blue;
 
@@ -92,6 +93,12 @@
       &::placeholder {
         @extend .text-madison-blue;
       }
+    }
+  }
+
+  &--madison-blue-border-round-small {
+    input {
+      font-size: $font-3;
     }
   }
 
