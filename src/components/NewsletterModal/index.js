@@ -92,7 +92,12 @@ class NewsletterModal extends Component {
           </Button>
         </div>
         {subscribeNewsletterDescription ? (
-          <p className="block-subheadline pl1 pr3">
+          <p
+            className={cx(
+              styles['NewsletterModal__description'],
+              'pl1 pr3 mt1'
+            )}
+          >
             {subscribeNewsletterDescription}
           </p>
         ) : null}
@@ -105,7 +110,7 @@ class NewsletterModal extends Component {
             }
 
             return (
-              <div className="mt2 flex flex-column">
+              <div className="mt3 flex flex-column">
                 <div className="flex flex-row items-center">
                   <div
                     className={cx(
