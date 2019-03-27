@@ -5,10 +5,12 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import styles from './NewsletterModal.scss';
-import { Image, Button, TextField, FormFlash } from 'components/base';
-import alertIsActive from 'state/selectors/alertIsActive';
+import moment from 'moment';
 import { hideNewsletterModal } from 'state/actions/ui/newsletterModalActions';
+import alertIsActive from 'state/selectors/alertIsActive';
+
+import { Image, Button, TextField, FormFlash } from 'components/base';
+import styles from './NewsletterModal.scss';
 
 class NewsletterModal extends Component {
   constructor(props) {
@@ -19,30 +21,33 @@ class NewsletterModal extends Component {
       newsletterModalIsActive: false
     };
 
-    this.date = new Date();
+    this.date = moment();
 
     const { hideNewsletterModalUntil, actions } = props;
 
     if (
       hideNewsletterModalUntil !== null &&
-      hideNewsletterModalUntil < this.date.getTime()
+      moment().isAfter(moment(hideNewsletterModalUntil))
     ) {
       actions.hideNewsletterModal(null);
     }
   }
 
   componentDidMount() {
-    const { actions } = this.props;
+    const { actions, hideNewsletterModalUntil } = this.props;
 
-    setTimeout(() => {
-      this.setState({ newsletterModalIsActive: true });
-    }, 5000);
+    if (!hideNewsletterModalUntil) {
+      setTimeout(() => {
+        this.setState({ newsletterModalIsActive: true });
+      }, 5000);
+    }
   }
 
   handleClose = () => {
     const { actions } = this.props;
-    const weekLater = this.date.getTime() + 7 * 24 * 60 * 60 * 1000;
+    const weekLater = this.date.add(7, 'days');
 
+    this.setState({ newsletterModalIsActive: false });
     actions.hideNewsletterModal(weekLater);
   };
 
@@ -53,6 +58,7 @@ class NewsletterModal extends Component {
       hideNewsletterModalUntil,
       actions
     } = this.props;
+
     const { newsletterModalIsActive } = this.state;
     const subscribeNewsletterTitle = get(
       globalSettings,
@@ -72,7 +78,7 @@ class NewsletterModal extends Component {
 
     const url = process.env.REACT_APP_MAILCHIMP_URL;
 
-    if (!showSubscribeNewsletterModal && !!hideNewsletterModalUntil) return null;
+    if (!showSubscribeNewsletterModal) return null;
 
     return (
       <div
@@ -80,7 +86,8 @@ class NewsletterModal extends Component {
           styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
           {
-            [styles['NewsletterModal--active']]: newsletterModalIsActive,
+            [styles['NewsletterModal--active']]: this.state
+              .newsletterModalIsActive,
             [styles['NewsletterModal--alert-active']]: alertIsActive
           }
         )}
@@ -91,7 +98,7 @@ class NewsletterModal extends Component {
           </p>
           <Button
             variant="style-none"
-            onClick={actions.closeNewsletterModal}
+            onClick={this.handleClose}
             className={cx(styles['NewsletterModal__close'], 'mx1')}
           >
             <Image
@@ -109,8 +116,8 @@ class NewsletterModal extends Component {
           url={url}
           render={({ subscribe, status, message }) => {
             if (status === 'success' && newsletterModalIsActive) {
-              const monthLater = this.date.getTime() + 30 * 24 * 60 * 60 * 1000;
-
+              const monthLater = this.date.add(30, 'days');
+              this.setState({ newsletterModalIsActive: false });
               actions.hideNewsletterModal(monthLater);
             }
 
