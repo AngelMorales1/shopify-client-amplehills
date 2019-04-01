@@ -3,6 +3,20 @@ import PropTypes from 'prop-types';
 import get from 'utils/get';
 
 class HTMLEmbed extends Component {
+  componentDidMount() {
+    if (!document.getElementById('play-buzz')) {
+      this.loadScript();
+    }
+  }
+
+  loadScript = () => {
+    const script = document.createElement('script');
+    script.src = 'https://embed.playbuzz.com/sdk.js';
+    script.async = true;
+
+    document.body.appendChild(script);
+  };
+
   render() {
     const fields = get(this, 'props.block.fields');
     if (!fields) return null;
