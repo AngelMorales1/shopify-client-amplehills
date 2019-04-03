@@ -120,7 +120,7 @@ class LocationsMap extends Component {
           className="z-0"
           featureCollection={locationGeoJSON}
           defaultIcon="year-round-icon"
-          styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+          styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
           collections={[
             {
               name: 'Selected',
