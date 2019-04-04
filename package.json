@@ -16,7 +16,7 @@
     "history": "^4.7.2",
     "lodash": "^4.17.10",
     "mapbox": "^1.0.0-beta10",
-    "mapbox-gl": "^0.47.0",
+    "mapbox-gl": "^0.53.1",
     "marked": "^0.4.0",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
