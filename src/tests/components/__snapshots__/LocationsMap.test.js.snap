@@ -79,7 +79,7 @@ ShallowWrapper {
           onClickFeature={[Function]}
           onLoad={[Function]}
           showFilteredOutLocationOnMap={false}
-          styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+          styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
           textColor="#ffffff"
           textSize={16}
           zoomToFeatureSpeed={2}
@@ -217,7 +217,7 @@ ShallowWrapper {
           "onClickFeature": [Function],
           "onLoad": [Function],
           "showFilteredOutLocationOnMap": false,
-          "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+          "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
           "textColor": "#ffffff",
           "textSize": 16,
           "zoomToFeatureSpeed": 2,
@@ -559,7 +559,7 @@ ShallowWrapper {
             onClickFeature={[Function]}
             onLoad={[Function]}
             showFilteredOutLocationOnMap={false}
-            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+            styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
             textColor="#ffffff"
             textSize={16}
             zoomToFeatureSpeed={2}
@@ -697,7 +697,7 @@ ShallowWrapper {
             "onClickFeature": [Function],
             "onLoad": [Function],
             "showFilteredOutLocationOnMap": false,
-            "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+            "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
             "textColor": "#ffffff",
             "textSize": 16,
             "zoomToFeatureSpeed": 2,

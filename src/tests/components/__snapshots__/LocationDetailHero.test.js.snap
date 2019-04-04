@@ -396,7 +396,7 @@ ShallowWrapper {
                                                             maxZoom={15}
                                                             onClickFeature={[Function]}
                                                             onLoad={[Function]}
-                                                            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                            styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                             textColor="#000000"
                                                             textSize={12}
                                                             zoomToFeatureSpeed={1}
@@ -657,7 +657,7 @@ ShallowWrapper {
                                                                       maxZoom={15}
                                                                       onClickFeature={[Function]}
                                                                       onLoad={[Function]}
-                                                                      styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                      styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                       textColor="#000000"
                                                                       textSize={12}
                                                                       zoomToFeatureSpeed={1}
@@ -897,7 +897,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -1135,7 +1135,7 @@ ShallowWrapper {
                                                                   maxZoom={15}
                                                                   onClickFeature={[Function]}
                                                                   onLoad={[Function]}
-                                                                  styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                  styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                   textColor="#000000"
                                                                   textSize={12}
                                                                   zoomToFeatureSpeed={1}
@@ -1356,7 +1356,7 @@ ShallowWrapper {
                                                     maxZoom={15}
                                                     onClickFeature={[Function]}
                                                     onLoad={[Function]}
-                                                    styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                    styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                     textColor="#000000"
                                                     textSize={12}
                                                     zoomToFeatureSpeed={1}
@@ -1607,7 +1607,7 @@ ShallowWrapper {
                             maxZoom={15}
                             onClickFeature={[Function]}
                             onLoad={[Function]}
-                            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                            styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                             textColor="#000000"
                             textSize={12}
                             zoomToFeatureSpeed={1}
@@ -1766,7 +1766,7 @@ ShallowWrapper {
                             "maxZoom": 15,
                             "onClickFeature": [Function],
                             "onLoad": [Function],
-                            "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+                            "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
                             "textColor": "#000000",
                             "textSize": 12,
                             "zoomToFeatureSpeed": 1,
@@ -2126,7 +2126,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -2387,7 +2387,7 @@ ShallowWrapper {
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
                                                                                 onLoad={[Function]}
-                                                                                styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                                styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
                                                                                 zoomToFeatureSpeed={1}
@@ -2627,7 +2627,7 @@ ShallowWrapper {
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
                                                                                 onLoad={[Function]}
-                                                                                styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                                styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
                                                                                 zoomToFeatureSpeed={1}
@@ -2865,7 +2865,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -3086,7 +3086,7 @@ ShallowWrapper {
                                                         maxZoom={15}
                                                         onClickFeature={[Function]}
                                                         onLoad={[Function]}
-                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                         textColor="#000000"
                                                         textSize={12}
                                                         zoomToFeatureSpeed={1}
@@ -3337,7 +3337,7 @@ ShallowWrapper {
                               maxZoom={15}
                               onClickFeature={[Function]}
                               onLoad={[Function]}
-                              styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                              styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                               textColor="#000000"
                               textSize={12}
                               zoomToFeatureSpeed={1}
@@ -3496,7 +3496,7 @@ ShallowWrapper {
                               "maxZoom": 15,
                               "onClickFeature": [Function],
                               "onLoad": [Function],
-                              "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+                              "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
                               "textColor": "#000000",
                               "textSize": 12,
                               "zoomToFeatureSpeed": 1,
@@ -3790,7 +3790,7 @@ ShallowWrapper {
                                                             maxZoom={15}
                                                             onClickFeature={[Function]}
                                                             onLoad={[Function]}
-                                                            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                            styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                             textColor="#000000"
                                                             textSize={12}
                                                             zoomToFeatureSpeed={1}
@@ -3915,7 +3915,7 @@ ShallowWrapper {
                                                                       maxZoom={15}
                                                                       onClickFeature={[Function]}
                                                                       onLoad={[Function]}
-                                                                      styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                      styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                       textColor="#000000"
                                                                       textSize={12}
                                                                       zoomToFeatureSpeed={1}
@@ -4019,7 +4019,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -4123,7 +4123,7 @@ ShallowWrapper {
                                                                   maxZoom={15}
                                                                   onClickFeature={[Function]}
                                                                   onLoad={[Function]}
-                                                                  styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                  styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                   textColor="#000000"
                                                                   textSize={12}
                                                                   zoomToFeatureSpeed={1}
@@ -4210,7 +4210,7 @@ ShallowWrapper {
                                                     maxZoom={15}
                                                     onClickFeature={[Function]}
                                                     onLoad={[Function]}
-                                                    styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                    styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                     textColor="#000000"
                                                     textSize={12}
                                                     zoomToFeatureSpeed={1}
@@ -4331,7 +4331,7 @@ ShallowWrapper {
                             maxZoom={15}
                             onClickFeature={[Function]}
                             onLoad={[Function]}
-                            styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                            styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                             textColor="#000000"
                             textSize={12}
                             zoomToFeatureSpeed={1}
@@ -4379,7 +4379,7 @@ ShallowWrapper {
                             "maxZoom": 15,
                             "onClickFeature": [Function],
                             "onLoad": [Function],
-                            "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+                            "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
                             "textColor": "#000000",
                             "textSize": 12,
                             "zoomToFeatureSpeed": 1,
@@ -4550,7 +4550,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -4675,7 +4675,7 @@ ShallowWrapper {
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
                                                                                 onLoad={[Function]}
-                                                                                styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                                styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
                                                                                 zoomToFeatureSpeed={1}
@@ -4779,7 +4779,7 @@ ShallowWrapper {
                                                                                 maxZoom={15}
                                                                                 onClickFeature={[Function]}
                                                                                 onLoad={[Function]}
-                                                                                styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                                styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                                 textColor="#000000"
                                                                                 textSize={12}
                                                                                 zoomToFeatureSpeed={1}
@@ -4883,7 +4883,7 @@ ShallowWrapper {
                                                                         maxZoom={15}
                                                                         onClickFeature={[Function]}
                                                                         onLoad={[Function]}
-                                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                                         textColor="#000000"
                                                                         textSize={12}
                                                                         zoomToFeatureSpeed={1}
@@ -4970,7 +4970,7 @@ ShallowWrapper {
                                                         maxZoom={15}
                                                         onClickFeature={[Function]}
                                                         onLoad={[Function]}
-                                                        styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                                                        styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                                                         textColor="#000000"
                                                         textSize={12}
                                                         zoomToFeatureSpeed={1}
@@ -5091,7 +5091,7 @@ ShallowWrapper {
                               maxZoom={15}
                               onClickFeature={[Function]}
                               onLoad={[Function]}
-                              styleUrl="mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q"
+                              styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
                               textColor="#000000"
                               textSize={12}
                               zoomToFeatureSpeed={1}
@@ -5139,7 +5139,7 @@ ShallowWrapper {
                               "maxZoom": 15,
                               "onClickFeature": [Function],
                               "onLoad": [Function],
-                              "styleUrl": "mapbox://styles/joshiefishbein/cjjyuj8fq0hrj2ro2j8066e4q",
+                              "styleUrl": "mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34",
                               "textColor": "#000000",
                               "textSize": 12,
                               "zoomToFeatureSpeed": 1,
