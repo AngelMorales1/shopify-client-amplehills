@@ -29,6 +29,8 @@ class SignInView extends Component {
 
     if (get(customer, 'id')) return <Redirect to="/profile" />;
 
+    console.log('VIEW RENDER', this.props);
+
     return (
       <div className="SignIn text-container-width transition-slide-up mt3 mx-auto p3">
         <h1 className="block-headline">Sign In</h1>
