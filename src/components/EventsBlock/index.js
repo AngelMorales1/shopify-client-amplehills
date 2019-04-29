@@ -206,7 +206,7 @@ EventsBlock.defaultProps = {
       locationFilterButton: false
     }
   },
-  events: {},
+  events: null,
   setRef: () => {}
 };
 

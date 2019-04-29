@@ -69,7 +69,7 @@ MultipleImageText.defaultProps = {
     fields: {
       contentType: '',
       MultipleImageText: {
-        simpleFragments: {}
+        simpleFragments: null
       }
     }
   }

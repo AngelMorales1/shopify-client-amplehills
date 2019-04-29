@@ -239,8 +239,8 @@ LocationDetailHero.propTypes = {
 
 LocationDetailHero.defaultProps = {
   location: locationModel.default,
-  locationGeoJSON: {},
-  events: {}
+  locationGeoJSON: null,
+  events: null
 };
 
 export default LocationDetailHero;

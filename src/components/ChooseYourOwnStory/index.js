@@ -416,7 +416,7 @@ ChooseYourOwnStory.defaultProps = {
     closeOurPledge: () => {}
   },
   product: productModel.default,
-  products: {},
+  products: null,
   block: {
     title: '',
     description: '',

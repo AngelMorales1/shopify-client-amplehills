@@ -193,7 +193,7 @@ ArticleDetail.propTypes = {
 };
 
 ArticleDetail.defaultProps = {
-  article: {},
+  article: null,
   newsArticles: []
 };
 

@@ -83,10 +83,10 @@ PressCarouselCards.propTypes = {
 };
 
 PressCarouselCards.defaultProps = {
-  pressItemsInBlock: {},
+  pressItemsInBlock: null,
   pressItems: {
     fragments: [],
-    simpleFragments: {}
+    simpleFragments: null
   }
 };
 

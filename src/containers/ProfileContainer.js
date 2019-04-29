@@ -34,7 +34,7 @@ const mapStateToProps = state => {
       []
     ),
     errors: get(state, 'customerUI.errors', ''),
-    checkout: checkout(state), //get(state, 'session.checkout', {}),
+    checkout: checkout(state),
     products: products(state),
     customer: customer(state)
   };

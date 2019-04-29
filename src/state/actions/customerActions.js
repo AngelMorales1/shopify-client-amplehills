@@ -91,7 +91,7 @@ export const fetchCustomer = customerAccessToken => dispatch => {
         variables: { customerAccessToken },
         fetchPolicy: 'no-cache'
       }).then(res => {
-        const customer = get(res, 'data.customer', {});
+        const customer = get(res, 'data.customer');
         console.log('FETCH PASS', customer);
         return resolve(customer);
       });
@@ -126,7 +126,7 @@ export const updateCustomer = (customerAccessToken, customer) => dispatch => {
 
         return resolve({
           accessToken: newAccessToken,
-          customer: get(res, 'data.customerUpdate.customer', {})
+          customer: get(res, 'data.customerUpdate.customer')
         });
       });
     })

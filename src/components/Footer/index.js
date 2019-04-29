@@ -238,6 +238,6 @@ Footer.propTypes = {
 };
 
 Footer.defaultProps = {
-  footerLinks: {},
-  footerIcons: {}
+  footerLinks: null,
+  footerIcons: null
 };

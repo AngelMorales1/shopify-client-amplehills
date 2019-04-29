@@ -57,7 +57,7 @@ PressBlock.propTypes = {
 };
 
 PressBlock.defaultProps = {
-  pressItems: {},
+  pressItems: null,
   z: 1,
   setRef: () => {},
   drip: false

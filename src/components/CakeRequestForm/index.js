@@ -857,11 +857,11 @@ CakeRequestForm.propTypes = {
 };
 
 CakeRequestForm.defaultProps = {
-  cakeLocations: {},
+  cakeLocations: null,
   cakeFlavors: [],
   cakeToppings: [],
   cakeFillings: [],
-  cakeDeposit: {},
+  cakeDeposit: null,
   actions: {
     addLineItems: f => f
   },

@@ -63,7 +63,7 @@ FooterNav.propTypes = {
 FooterNav.defaultProps = {
   pathname: '',
   items: {
-    simpleFragments: {}
+    simpleFragments: null
   }
 };
 

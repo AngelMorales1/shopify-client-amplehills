@@ -156,7 +156,7 @@ InStores.propTypes = {
 };
 
 InStores.defaultProps = {
-  localRetailers: {},
+  localRetailers: null,
   text: ''
 };
 
