@@ -156,9 +156,9 @@ ProductWhatsIncluded.defaultProps = {
     whatsIncludedProducts: []
   },
   z: 1,
-  products: {},
+  products: null,
   setRef: () => {},
-  wholesaleProducts: {}
+  wholesaleProducts: null
 };
 
 export default ProductWhatsIncluded;

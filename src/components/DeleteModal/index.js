@@ -107,7 +107,7 @@ DeleteModal.defaultProps = {
 const mapStateToProps = state => {
   return {
     ...state,
-    checkout: get(state, 'session.checkout', {}),
+    checkout: get(state, 'session.checkout'),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
   };

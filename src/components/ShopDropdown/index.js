@@ -140,7 +140,7 @@ ShopDropdown.propTypes = {
 };
 
 ShopDropdown.defaultProps = {
-  productLanding: {},
+  productLanding: null,
   shopDropdownIsOpen: false,
   openShopDropdown: () => {},
   closeShopDropdown: () => {}

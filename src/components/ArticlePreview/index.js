@@ -87,7 +87,7 @@ ArticlePreview.propTypes = {
 };
 
 ArticlePreview.defaultProps = {
-  article: {}
+  article: null
 };
 
 export default ArticlePreview;

@@ -230,7 +230,7 @@ MobileNavModal.defaultProps = {
   },
   mobileNavIsOpen: false,
   locations: [],
-  locationsByRegions: {}
+  locationsByRegions: null
 };
 
 export default connect(

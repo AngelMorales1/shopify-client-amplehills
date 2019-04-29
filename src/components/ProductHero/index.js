@@ -281,7 +281,7 @@ ProductHero.propTypes = {
 };
 
 ProductHero.defaultProps = {
-  data: {},
+  data: null,
   z: 1,
   product: productModel.default,
   ourPledge: {

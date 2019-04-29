@@ -52,6 +52,6 @@ HTMLEmbed.propTypes = {
   })
 };
 
-HTMLEmbed.defaultProps = {};
+HTMLEmbed.defaultProps = null;
 
 export default HTMLEmbed;

@@ -121,6 +121,6 @@ LocationDropdown.defaultProps = {
   LocationDropdownIsOpen: false,
   openLocationDropdown: () => {},
   closeLocationDropdown: () => {},
-  locationSortedByGroup: {},
+  locationSortedByGroup: null,
   locationDropdownImage: ''
 };

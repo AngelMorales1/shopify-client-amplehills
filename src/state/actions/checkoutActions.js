@@ -39,7 +39,7 @@ export const fetchCheckout = checkoutId => dispatch => {
       if (get(res, 'data.node.completedAt', false))
         return dispatch(createCheckout());
 
-      return get(res, 'data.node', {});
+      return get(res, 'data.node');
     })
   });
 };
@@ -52,7 +52,7 @@ export const createCheckout = () => dispatch => {
       mutation: checkoutCreate,
       variables: { input: {} }
     }).then(checkout => {
-      return get(checkout, 'data.checkoutCreate.checkout', {});
+      return get(checkout, 'data.checkoutCreate.checkout');
     })
   });
 };
@@ -72,7 +72,7 @@ export const addLineItems = (checkoutId, lineItems) => dispatch => {
           );
         }
 
-        return resolve(get(res, 'data.checkoutLineItemsAdd.checkout', {}));
+        return resolve(get(res, 'data.checkoutLineItemsAdd.checkout'));
       });
     })
   }).then(() => dispatch(openMiniCart()));
@@ -110,7 +110,7 @@ export const confirmRemoveLineItems = (checkoutId, lineItemIds) => dispatch => {
         }
 
         lineItemIds.map(id => dispatch(cancelRemoveLineItems(id)));
-        return resolve(get(res, 'data.checkoutLineItemsRemove.checkout', {}));
+        return resolve(get(res, 'data.checkoutLineItemsRemove.checkout'));
       });
     })
   });
@@ -132,7 +132,7 @@ export const updateLineItems = (checkoutId, lineItems) => dispatch => {
           );
         }
 
-        return resolve(get(res, 'data.checkoutLineItemsUpdate.checkout', {}));
+        return resolve(get(res, 'data.checkoutLineItemsUpdate.checkout'));
       });
     })
   });

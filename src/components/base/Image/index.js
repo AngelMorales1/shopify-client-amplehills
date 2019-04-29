@@ -81,7 +81,7 @@ Image.defaultProps = {
   alt: '',
   bg: false,
   src: '',
-  style: {},
+  style: null,
   children: null,
   className: 'w100',
   onImgLoad: () => {}

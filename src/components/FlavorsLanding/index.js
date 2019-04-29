@@ -215,8 +215,8 @@ FlavorLanding.defaultProps = {
     collectedFilters: [],
     flavors: [
       {
-        dietaryRestrictions: {},
-        filters: {},
+        dietaryRestrictions: null,
+        filters: null,
         id: '',
         image: '',
         label: '',

@@ -257,7 +257,7 @@ LocationsMap.defaultProps = {
     addLocationFilter: () => {},
     removeLocationFilter: () => {}
   },
-  locationGeoJSON: {},
+  locationGeoJSON: null,
   locations: [],
   locationFilters: [],
   states: []

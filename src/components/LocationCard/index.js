@@ -121,7 +121,7 @@ LocationCard.propTypes = {
 };
 
 LocationCard.defaultProps = {
-  location: {},
+  location: null,
   selectedLocation: null
 };
 

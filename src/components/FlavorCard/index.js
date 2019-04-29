@@ -66,8 +66,8 @@ FlavorCard.propTypes = {
 
 FlavorCard.defaultProps = {
   flavor: {
-    dietaryRestrictions: {},
-    filters: {},
+    dietaryRestrictions: null,
+    filters: null,
     id: '',
     image: '',
     label: '',

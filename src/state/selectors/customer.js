@@ -5,11 +5,13 @@ import products from 'state/selectors/product.js';
 
 import get from 'utils/get';
 
+const emptyCustomer = { id: '' };
+
 export default createSelector(
   state => get(state, 'customer'),
   state => products(state),
   (customer, products) => {
-    if (!get(customer, 'id', '')) return { id: '' };
+    if (!get(customer, 'id', '')) return emptyCustomer;
     const id = get(customer, 'id', '');
     const email = get(customer, 'email', '');
     const firstName = get(customer, 'firstName', '');

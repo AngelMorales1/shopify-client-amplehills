@@ -8,7 +8,7 @@ import { Image, Button, TextField, FormFlash, Dropdown } from 'components/base';
 import moment from 'moment-timezone';
 import marked from 'marked';
 import DayPicker from 'react-day-picker';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/browser';
 import 'react-day-picker/lib/style.css';
 
 import {
@@ -258,7 +258,7 @@ class PartyRequestForm extends Component {
       // This is theoretically impossible. A user should not be
       // be able to call this method without selecting a valid
       // timeslot that has been derived from real Timekit data.
-      Raven.captureMessage('PartyRequestForm: Impossible State Reached', {
+      Sentry.captureMessage('PartyRequestForm: Impossible State Reached', {
         level: 'warning',
         extra: {
           selectedLocationId: get(this, 'state.selectedLocation'),
