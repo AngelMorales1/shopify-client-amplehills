@@ -29,7 +29,7 @@ class ProfileView extends Component {
 
     return (
       <div className="Profile">
-        <div className="bg-iceberg drip pb2">
+        <div className="bg-sky-blue drip pb2">
           <div className="transition-slide-up container-width mx-auto pt4 px2 center">
             <p className="block-headline">
               {firstName && lastName ? `${firstName} ${lastName}` : 'Profile'}
