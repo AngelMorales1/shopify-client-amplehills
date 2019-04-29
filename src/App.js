@@ -59,24 +59,25 @@ class App extends Component {
       alertIsActive
     } = this.props;
 
-    const {
-      facebookLink,
-      instagramLink,
-      twitterLink,
-      footerIllustration,
-      footerNav,
-      forceErrorPage,
-      forceErrorPageOnProduction,
-      facebookIcon,
-      instagramIcon,
-      twitterIcon,
-      profileIcon,
-      logo
-    } = globalSettings;
+    const facebookLink = get(globalSettings, 'facebookLink');
+    const instagramLink = get(globalSettings, 'instagramLink');
+    const twitterLink = get(globalSettings, 'twitterLink');
+    const footerIllustration = get(globalSettings, 'footerIllustration');
+    const footerNav = get(globalSettings, 'footerNav');
+    const forceErrorPage = get(globalSettings, 'forceErrorPage');
+    const forceErrorPageOnProduction = get(
+      globalSettings,
+      'forceErrorPageOnProduction'
+    );
+    const facebookIcon = get(globalSettings, 'facebookIcon');
+    const instagramIcon = get(globalSettings, 'instagramIcon');
+    const twitterIcon = get(globalSettings, 'twitterIcon');
+    const profileIcon = get(globalSettings, 'profileIcon');
+    const logo = get(globalSettings, 'logo');
 
     const alert = Object.values(
-      get(globalSettings, 'alertBanner.simpleFragments', {})
-    )[0];
+      get(globalSettings, 'alertBanner.simpleFragments[0]', '')
+    );
 
     if (
       applicationStatus === FULFILLED &&
@@ -129,11 +130,7 @@ const mapStateToProps = state => {
     applicationStatus: get(state, 'status.initializeApplication'),
     checkout: checkout(state),
     locations: locations(state),
-    globalSettings: get(
-      state,
-      'applicationUI.globalSettings.items[0].fields',
-      {}
-    ),
+    globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
     alertIsActive: alertIsActive(state)
   };
 };
@@ -161,7 +158,7 @@ App.propTypes = {
 };
 
 App.defaultProps = {
-  globalSettings: {},
+  globalSettings: null,
   locations: [],
   forceErrorPage: false
 };
