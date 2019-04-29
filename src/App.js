@@ -31,12 +31,13 @@ import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
 
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const {
       applicationStatus,
       checkout,
       actions: { initializeApplication }
     } = this.props;
+
     if (applicationStatus === IDLE) {
       const checkoutId = get(checkout, 'id', false);
       const isPreview = isContentfulPreview();

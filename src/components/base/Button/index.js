@@ -8,8 +8,6 @@ import styles from './Button.scss';
 
 class Button extends PureComponent {
   render() {
-    console.log('BUTTON RENDER', this.props);
-
     const {
       className,
       label,

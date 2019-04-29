@@ -33,8 +33,6 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
         mutation: customerAccessTokenCreate,
         variables: { input }
       }).then(customerAccessToken => {
-        console.log('SIGN IN THEN', customerAccessToken, input, checkoutId);
-
         if (
           get(
             customerAccessToken,
@@ -42,7 +40,6 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
             []
           ).length
         ) {
-          console.log('REJECT');
           return reject(
             get(
               customerAccessToken,
@@ -51,7 +48,6 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
             )
           );
         }
-        console.log('PASS');
 
         const accessToken = get(
           customerAccessToken,
@@ -62,7 +58,6 @@ export const signInCustomer = (input, checkoutId) => dispatch => {
         return dispatch(
           checkoutCustomerAssociate(checkoutId, accessToken)
         ).then(res => {
-          console.log('checkoutCustomerAssociate PASS', res, accessToken);
           return dispatch(fetchCustomer(accessToken)).then(() =>
             resolve(accessToken)
           );
@@ -84,15 +79,12 @@ export const fetchCustomer = customerAccessToken => dispatch => {
   return dispatch({
     type: FETCH_CUSTOMER,
     payload: new Promise(resolve => {
-      console.log('FETCH CUSTOMER', customerAccessToken);
-
       return Apollo.query({
         query: customerFetch,
         variables: { customerAccessToken },
         fetchPolicy: 'no-cache'
       }).then(res => {
         const customer = get(res, 'data.customer');
-        console.log('FETCH PASS', customer);
         return resolve(customer);
       });
     })

@@ -23,12 +23,12 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 /* Only load sentry on production */
 if (isProd()) {
-  Raven.config(
-    'https://1d555991ae8a4e51b29c702028ca3a67@sentry.io/1265500'
-  ).install({
-    release: packageJSON.version
-  });
-  middleware.push(createRavenMiddleware(Raven));
+  // Raven.config(
+  //   'https://1d555991ae8a4e51b29c702028ca3a67@sentry.io/1265500'
+  // ).install({
+  //   release: packageJSON.version
+  // });
+  // middleware.push(createRavenMiddleware(Raven));
 }
 
 /* Flush Localstorage when PackageJSON version changes */

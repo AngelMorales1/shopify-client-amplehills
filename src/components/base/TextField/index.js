@@ -27,8 +27,6 @@ const TextField = ({
     w100: fullWidth
   });
 
-  console.log('TextField RENDER');
-
   const _id = id || name;
 
   return (

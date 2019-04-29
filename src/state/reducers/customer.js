@@ -12,7 +12,6 @@ const initialState = {
 export default (state = initialState, action) => {
   const { type } = action;
 
-  console.log('CUSTOMER REDUCER', action.type, action);
   switch (type) {
     case `${FETCH_CUSTOMER}_FULFILLED`:
       return {
