@@ -27,8 +27,6 @@ if (isProd()) {
     dsn: 'https://1d555991ae8a4e51b29c702028ca3a67@sentry.io/1265500'
   });
 
-  Sentry.captureMessage('Test');
-
   middleware.push(createSentryMiddleware(Sentry));
 }
 
