@@ -3,6 +3,7 @@
   "version": "1.4.3.1",
   "private": true,
   "dependencies": {
+    "@sentry/browser": "^5.1.1",
     "@turf/center": "^6.0.1",
     "@turf/distance": "^6.0.1",
     "apollo-boost": "^0.3.1",
@@ -11,7 +12,7 @@
     "apollo-client": "^2.5.1",
     "apollo-link-context": "^1.0.17",
     "apollo-link-http": "^1.5.14",
-    "basscss": "^8.0.4",
+    "basscss": "8.0.4",
     "contentful": "^6.1.1",
     "graphql": "^0.13.2",
     "history": "^4.7.2",
@@ -25,8 +26,6 @@
     "nuka-carousel": "^4.3.11",
     "prop-types": "^15.6.1",
     "qs": "^6.5.2",
-    "raven-for-redux": "^1.4.0",
-    "raven-js": "^3.27.0",
     "react": "^16.4.0",
     "react-apollo": "^2.1.9",
     "react-day-picker": "^7.2.4",
@@ -42,6 +41,7 @@
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
     "redux-promise-middleware": "^5.1.1",
+    "redux-sentry-middleware": "^0.0.15",
     "redux-thunk": "^2.3.0",
     "what-input": "^5.1.1"
   },
