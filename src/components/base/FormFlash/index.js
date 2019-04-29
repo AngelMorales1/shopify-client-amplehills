@@ -4,6 +4,7 @@ import cx from 'classnames';
 import styles from './FormFlash.scss';
 
 const FormFlash = ({ className, message, success, error }) => {
+  console.log('FormFlash RENDER');
   const classes = cx(
     styles['FormFlash'],
     className,

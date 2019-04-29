@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import isExternalLink from 'utils/isExternalLink';
 
 import styles from './Button.scss';
-import { setTimeout } from 'timers';
 
 const Button = ({
   className,
@@ -27,6 +26,7 @@ const Button = ({
   childrenWrapperClassName,
   openInCurrentTab
 }) => {
+  console.log('BUTTON RENDER');
   const classes = cx(
     styles[`Button--${color}`],
     {
