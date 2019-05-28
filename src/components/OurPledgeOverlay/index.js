@@ -21,7 +21,7 @@ const OurPledgeOverlay = ({
   );
 
   return (
-    <div className={classes}>
+    <div className={classes} aria-hidden={!ourPledgeOverlayIsOpen}>
       <div
         onClick={closeOurPledgeOverlay}
         className="wh100 t0 l0 bg-white-wash-blur fixed"
@@ -39,6 +39,7 @@ const OurPledgeOverlay = ({
           )}
         >
           <Button
+            ariaLabel="Close 'Our Pledge' informational popup"
             variant="style-none"
             onClick={closeOurPledgeOverlay}
             className="t0 r0 m3 fixed"

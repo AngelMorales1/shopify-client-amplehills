@@ -130,6 +130,9 @@ class ProductHero extends Component {
             >
               {productHeroCarouselImages.map((image, i) => (
                 <div
+                  role="img"
+                  title={`Image ${i + 1}: ${get(image, 'fields.title')}`}
+                  ariaLabel={`Image ${i + 1}: ${get(image, 'fields.title')}`}
                   key={get(image, 'sys.id', i)}
                   className="wh100 square"
                   style={{

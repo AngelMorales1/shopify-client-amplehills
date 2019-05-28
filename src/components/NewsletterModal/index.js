@@ -75,12 +75,14 @@ class NewsletterModal extends Component {
             [styles['NewsletterModal--alert-active']]: alertIsActive
           }
         )}
+        aria-hidden={!modalIsActive}
       >
         <div className="flex flex-row items-center justify-between">
           <p className={cx(styles['NewsletterModal__title'], 'px1 text-peach')}>
             {subscribeNewsletterTitle}
           </p>
           <Button
+            ariaLabel="Close the newsletter subscribe popup"
             variant="style-none"
             onClick={this.handleClose}
             className={cx(styles['NewsletterModal__close'], 'mx1')}
@@ -124,6 +126,7 @@ class NewsletterModal extends Component {
                       className="w100"
                       placeholder="Email address"
                       variant="madison-blue-border-round-small"
+                      ariaLabel="Enter your email address to subscribe"
                     />
                   </div>
                   <Button

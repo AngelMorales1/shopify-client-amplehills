@@ -20,7 +20,8 @@ const TextField = ({
   color,
   fullWidth,
   min,
-  max
+  max,
+  ariaLabel
 }) => {
   const classes = cx(styles['TextField'], 'field-group', className, {
     [styles['TextField--error']]: error,
@@ -47,6 +48,7 @@ const TextField = ({
       ) : null}
       {type === 'textarea' ? (
         <textarea
+          aria-label={ariaLabel}
           id={_id}
           name={name}
           onBlur={e => onBlur(e.target.value)}
@@ -58,6 +60,7 @@ const TextField = ({
         />
       ) : (
         <input
+          aria-label={ariaLabel}
           id={_id}
           name={name}
           onBlur={e => onBlur(e.target.value)}
@@ -76,6 +79,7 @@ const TextField = ({
 };
 
 TextField.propTypes = {
+  ariaLabel: PropTypes.string,
   id: PropTypes.string,
   address: PropTypes.string,
   className: PropTypes.string,
@@ -96,6 +100,7 @@ TextField.propTypes = {
 };
 
 TextField.defaultProps = {
+  ariaLabel: '',
   address: '',
   className: '',
   onBlur: () => {},

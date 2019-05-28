@@ -10,7 +10,8 @@ const QuantitySelector = ({
   onChange,
   allowZero,
   variant,
-  color
+  color,
+  title
 }) => {
   const changeQuantity = value => {
     const quantity = allowZero ? Math.max(0, value) : Math.max(1, value);
@@ -66,12 +67,14 @@ const QuantitySelector = ({
   return (
     <div className={cx('flex items-center', className)}>
       <Button
+        ariaLabel="Decrement quantity"
         variant={buttonVariant(variant)}
         color={colorVariation(color).buttonColor}
         label="–"
         onClick={() => changeQuantity(quantity - 1)}
       />
       <TextField
+        ariaLabel={`Quantity of ${title || 'item'}`}
         variant={textfieldVariant(variant)}
         value={quantity}
         color={colorVariation(color).inputColor}
@@ -79,6 +82,7 @@ const QuantitySelector = ({
         onChange={value => changeQuantity(value)}
       />
       <Button
+        ariaLabel="Increment quantity"
         variant={buttonVariant(variant)}
         color={colorVariation(color).buttonColor}
         label="+"
@@ -89,6 +93,7 @@ const QuantitySelector = ({
 };
 
 QuantitySelector.propTypes = {
+  title: PropTypes.string,
   className: PropTypes.string,
   quantity: PropTypes.number,
   onChange: PropTypes.func,
@@ -98,6 +103,7 @@ QuantitySelector.propTypes = {
 };
 
 QuantitySelector.defaultProps = {
+  title: '',
   className: '',
   quantity: 1,
   onChange: () => {},

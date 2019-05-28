@@ -19,17 +19,19 @@ const DeleteModal = props => {
     actions.confirmRemoveLineItems(get(props, 'checkout.id', null), items);
   };
 
+  const deleteModalIsActive = props.lineItemsBeingRemoved.length;
+
   const classes = cx(
     'fixed-cover bg-white-wash flex justify-center items-center transition',
     styles['DeleteModal'],
     {
-      [styles['DeleteModal--active']]: props.lineItemsBeingRemoved.length
+      [styles['DeleteModal--active']]: deleteModalIsActive
     }
   );
   const id = props.lineItemsBeingRemoved[0];
 
   return (
-    <div className={classes}>
+    <div className={classes} aria-hidden={!deleteModalIsActive}>
       <div
         className={cx(
           styles['DeleteModal-inner'],
@@ -43,6 +45,7 @@ const DeleteModal = props => {
         </div>
         <div className="flex justify-end items-center">
           <Button
+            ariaLabel="Do not remove this item"
             variant="style-none"
             label="Cancel"
             hover={'underline-peach'}
@@ -50,6 +53,7 @@ const DeleteModal = props => {
             onClick={() => props.actions.cancelRemoveLineItems(id)}
           />
           <Button
+            ariaLabel="Remove this item"
             variant="primary"
             color="madison-blue"
             label="Yes"

@@ -53,9 +53,10 @@ class MobileNavModal extends Component {
     );
 
     return (
-      <div className={classes}>
+      <div className={classes} aria-hidden={!mobileNavIsOpen}>
         <div className="overflow-scroll w100 bg-white">
           <Button
+            ariaLabel="Close Mobile Menu"
             variant="style-none"
             onClick={this.handleMenuClick}
             className="m3"
@@ -73,6 +74,7 @@ class MobileNavModal extends Component {
                 Locations
               </NavLink>
               <Button
+                ariaLabel="Open Locations menu"
                 className={cx(
                   { 'display-none': this.state.dropdownIsOpen },
                   'ml1 transition-slide-up'
@@ -85,6 +87,7 @@ class MobileNavModal extends Component {
                 <Image src="/assets/images/arrow-dropdown-open.svg" />
               </Button>
               <Button
+                ariaLabel="Close Locations menu"
                 className={cx(
                   { 'display-none': !this.state.dropdownIsOpen },
                   'ml1 transition-slide-up'
@@ -111,6 +114,7 @@ class MobileNavModal extends Component {
                       'my3 transition-slide-up-large flex flex-column',
                       { 'display-none': !this.state.dropdownIsOpen }
                     )}
+                    aria-hidden={!this.state.dropdownIsOpen}
                   >
                     <p className="bold mb1">{region}</p>
                     {locations.map(location => (

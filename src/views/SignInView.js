@@ -47,6 +47,7 @@ class SignInView extends Component {
         <div className="my3">
           <form onSubmit={e => this.signIn(e)}>
             <TextField
+              ariaLabel="Enter your email"
               className="mb2"
               id="email"
               color="light-gray"
@@ -54,6 +55,7 @@ class SignInView extends Component {
               onChange={this.handleEmailInputChange}
             />
             <TextField
+              ariaLabel="Enter your password"
               className="mb2"
               id="password"
               color="light-gray"
@@ -62,6 +64,7 @@ class SignInView extends Component {
               onChange={this.handlePasswordInputChange}
             />
             <Button
+              ariaLabel="Login"
               disabled={customerSigningIn === PENDING}
               className="mt2"
               type="submit"

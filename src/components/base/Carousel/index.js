@@ -86,6 +86,7 @@ class Carousel extends Component {
                     )}
                   >
                     <Button
+                      ariaLabel={`Advance to image ${i + 1}`}
                       className={cx('big', {
                         'text-peach': !dotColor,
                         'text-white': dotColor === 'white'

@@ -189,6 +189,8 @@ class Cart extends Component {
                         )}
                       >
                         <Button
+                          ariaLabel={`Remove ${item.title ||
+                            'item'} from your cart.`}
                           variant="style-none"
                           onClick={() => actions.removeLineItems(item.id)}
                         >
@@ -200,6 +202,7 @@ class Cart extends Component {
                       </div>
                       <div className="flex items-center">
                         <QuantitySelector
+                          title={item.title}
                           quantity={item.quantity}
                           variant="small"
                           onChange={quantity =>
@@ -277,17 +280,19 @@ class Cart extends Component {
                         />
                       ) : null}
                       <TextField
+                        ariaLabel="Add your gift message here"
                         className="mb2 md-hide lg-hide"
                         variant="light-gray"
-                        placeholder={`Write a message.`}
+                        placeholder="Write a message."
                         value={this.state.note}
                         onChange={note => this.handleGiftMessageChange(note)}
                       />
                       <TextField
+                        ariaLabel="Add your gift message here"
                         className="mb2 xs-hide sm-hide"
                         variant="light-gray-tall"
-                        type={'textarea'}
-                        placeholder={`Write a message (don't forget to include your name!)`}
+                        type="textarea"
+                        placeholder="Write a message (don't forget to include your name!)"
                         value={this.state.note}
                         onChange={note => this.handleGiftMessageChange(note)}
                       />
@@ -308,6 +313,7 @@ class Cart extends Component {
                 </div>
                 <div className="mt4 col-4 xs-hide sm-hide flex flex-row">
                   <Button
+                    ariaLabel="Checkout"
                     className="inline-block mr3"
                     openInCurrentTab={true}
                     label="Checkout"
@@ -325,6 +331,7 @@ class Cart extends Component {
                 Subtotal: ${this.props.checkout.subtotalPrice}
               </p>
               <Button
+                ariaLabel="Checkout"
                 className="inline-block"
                 openInCurrentTab={true}
                 label="Checkout"
@@ -344,6 +351,7 @@ class Cart extends Component {
         <h2 className="block-headline mt4 mb3">Your cart is empty!</h2>
         <Link className="text-decoration-none" to={`/products`}>
           <Button
+            ariaLabel="Find your pint"
             label="Find Your Pint &rarr;"
             color="madison-blue"
             variant="primary"

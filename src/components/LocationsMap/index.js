@@ -165,6 +165,7 @@ class LocationsMap extends Component {
         />
         <div className="absolute t0 l0 flex p3">
           <Button
+            ariaLabel="Show all locations"
             className="mr2 flex flex-wrap items-center drop-shadow"
             color={locationFilters.length ? 'white-denim' : 'madison-blue'}
             variant="primary-small"
@@ -180,6 +181,7 @@ class LocationsMap extends Component {
 
             return (
               <Button
+                ariaLabel={`Only show locations in ${filter.label}`}
                 className="mr2 flex items-center drop-shadow mb2"
                 color={filterIsActive ? 'madison-blue' : 'white-denim'}
                 variant="primary-small"
@@ -193,6 +195,7 @@ class LocationsMap extends Component {
         <div className="absolute b0 l0 flex p3">
           {LocationsMapKey.SEASONAL_FILTERS.map(filter => (
             <Button
+              ariaLabel={`View all locations that are ${filter.label}`}
               variant="primary-small"
               className={cx(
                 'mr3 flex items-center justify-center pl1 pr2 text-dark-gray',

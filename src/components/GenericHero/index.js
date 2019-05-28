@@ -50,7 +50,7 @@ const GenericHero = ({ block, z }) => {
         {image1 && image2 ? (
           <Image
             className={cx(styles['GenericHero__image'], 'col-7 md-col-2 m2')}
-            alt={`${title} image`}
+            alt={title ? `${title} image` : ''}
             src={contentfulImgUtil(
               get(image1, 'fields.file.url', ''),
               '1400',
@@ -79,7 +79,7 @@ const GenericHero = ({ block, z }) => {
             {image1 && !imageRight && !image2 ? (
               <Image
                 className={cx(styles['GenericHero__image'], 'w100 pt3')}
-                alt={`${title} image`}
+                alt={title ? `${title} image` : ''}
                 src={contentfulImgUtil(
                   get(image1, 'fields.file.url', ''),
                   '1400',
@@ -104,7 +104,7 @@ const GenericHero = ({ block, z }) => {
           <div className="col-12 md-col-6 flex flex-row items-center justify-center ">
             <Image
               className={cx(styles['GenericHero__image'], 'col-10 my4')}
-              alt={`${title} image`}
+              alt={title ? `${title} image` : ''}
               src={contentfulImgUtil(
                 get(image1, 'fields.file.url', ''),
                 '1400',
@@ -116,7 +116,7 @@ const GenericHero = ({ block, z }) => {
         {image2 ? (
           <Image
             className={cx(styles['GenericHero__image'], 'col-7 md-col-2 m2')}
-            alt={`${title} image`}
+            alt={title ? `${title} image` : ''}
             src={contentfulImgUtil(
               get(image2, 'fields.file.url', ''),
               '1400',

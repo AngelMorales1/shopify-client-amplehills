@@ -49,7 +49,7 @@ const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
             <Image
               className={cx(styles['FlavorCarouselCards__image'])}
               src={image}
-              alt={`${title} image`}
+              alt={title ? `${title} image` : ''}
             />
             <p
               className={cx(

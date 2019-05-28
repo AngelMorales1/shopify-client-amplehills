@@ -52,6 +52,7 @@ const OurPledge = ({
         <div className="col col-4 md-col-3 px2 right-align flex flex-column justify-end">
           <div className={cx(styles['OurPledge__more-info'], 'ml-auto')}>
             <Button
+              ariaLabel="Open our pledge popup"
               variant="style-none"
               onClick={actions.openOurPledge}
               label="More Info"

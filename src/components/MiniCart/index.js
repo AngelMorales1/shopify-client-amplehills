@@ -39,6 +39,7 @@ class MiniCart extends Component {
     const {
       checkout,
       items,
+      miniCartIsOpen,
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
@@ -46,16 +47,17 @@ class MiniCart extends Component {
       styles['MiniCart'],
       'col-11 fixed z-nav bg-white card drop-shadow-xlarge',
       {
-        [styles['MiniCart--open']]: this.props.miniCartIsOpen
+        [styles['MiniCart--open']]: miniCartIsOpen
       }
     );
 
     return (
-      <div className="relative">
+      <div className="relative" aria-hidden={!miniCartIsOpen}>
         <div className={classes}>
           <div className="mb3 pt3 px3 center relative">
             <strong className="callout">Cart</strong>
             <Button
+              ariaLabel="Close Mini Cart"
               variant="icon-small"
               className={cx(styles['MiniCart__close-button'], 'absolute r0 m3')}
               onClick={() => closeMiniCart()}
@@ -107,6 +109,7 @@ class MiniCart extends Component {
                   </div>
                   <div className="w100 flex justify-between">
                     <QuantitySelector
+                      title={item.title}
                       quantity={item.quantity}
                       variant="medium"
                       onChange={quantity =>
@@ -114,6 +117,7 @@ class MiniCart extends Component {
                       }
                     />
                     <Button
+                      ariaLabel={`Remove ${item.title || 'item'} from the cart`}
                       variant="icon"
                       onClick={() => removeLineItems(item.id)}
                     >

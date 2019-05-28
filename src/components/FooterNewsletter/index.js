@@ -79,6 +79,7 @@ class FooterNewsletter extends Component {
                 )}
               >
                 <TextField
+                  ariaLabel="Enter your email address to subscribe"
                   value={this.state.emailAddress}
                   onChange={value => this.setState({ emailAddress: value })}
                   className="w100"

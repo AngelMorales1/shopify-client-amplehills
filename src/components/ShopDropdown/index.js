@@ -26,6 +26,7 @@ const ShopDropdown = ({
         },
         'relative'
       )}
+      aria-hidden={!shopDropdownIsOpen}
     >
       <div
         className={cx(styles['ShopDropdown__nav-container'], 'absolute z-nav')}
@@ -59,6 +60,7 @@ const ShopDropdown = ({
                   return (
                     <div key={get(product, 'sys.id', '')} className="mx1">
                       <Button
+                        ariaLabel={`Go to ${title}`}
                         onClick={closeShopDropdown}
                         key={handle}
                         variant="style-none"
@@ -111,6 +113,7 @@ const ShopDropdown = ({
                     const handle = get(fields, 'handle', '');
                     return (
                       <Button
+                        ariaLabel={`Go to ${title}`}
                         onClick={closeShopDropdown}
                         key={handle}
                         variant="style-none"

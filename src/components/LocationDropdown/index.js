@@ -28,6 +28,7 @@ const LocationDropdown = ({
         },
         'relative'
       )}
+      aria-hidden={!locationDropdownIsOpen}
     >
       <div
         className={cx(

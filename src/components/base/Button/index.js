@@ -25,7 +25,8 @@ class Button extends PureComponent {
       onMouseEnter,
       onMouseLeave,
       childrenWrapperClassName,
-      openInCurrentTab
+      openInCurrentTab,
+      ariaLabel
     } = this.props;
 
     const classes = cx(
@@ -69,6 +70,7 @@ class Button extends PureComponent {
               'events-none': disabled
             })}
             to={to}
+            aria-label={ariaLabel}
             onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
@@ -90,6 +92,7 @@ class Button extends PureComponent {
 
     return (
       <button
+        aria-label={ariaLabel}
         type={type}
         onClick={onClick}
         className={classes}
@@ -125,7 +128,8 @@ Button.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   childrenWrapperClassName: PropTypes.string,
-  openInCurrentTab: PropTypes.bool
+  openInCurrentTab: PropTypes.bool,
+  ariaLabel: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -144,7 +148,8 @@ Button.defaultProps = {
   onMouseEnter: () => {},
   onMouseLeave: () => {},
   childrenWrapperClassName: '',
-  openInCurrentTab: false
+  openInCurrentTab: false,
+  ariaLabel: ''
 };
 
 export default Button;

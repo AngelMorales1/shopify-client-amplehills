@@ -89,6 +89,11 @@ class FAQBlock extends Component {
                 <div key={uuid} className="my2 w100">
                   <div className="flex flex-row justify-between items-start">
                     <Button
+                      ariaLabel={`Open question: ${get(
+                        fragment,
+                        'question',
+                        ''
+                      )}`}
                       className={cx(
                         styles['FAQBlock__question'],
                         'col-10 flex flex-start'
@@ -109,15 +114,19 @@ class FAQBlock extends Component {
                         { 'display-none': dropdownIsOpen },
                         'transition-slide-up col-2'
                       )}
+                      ariaLabel="Open dropdown"
                       variant="style-none"
                       onClick={() => this.setState({ selectedItem: uuid })}
                     >
                       <Image
                         className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
                         src="/assets/images/arrow-dropdown-active-peach.svg"
+                        alt="Open dropdown icon."
                       />
                     </Button>
                     <Button
+                      aria-hidden={!dropdownIsOpen}
+                      ariaLabel="Close dropdown"
                       className={cx(
                         { 'display-none': !dropdownIsOpen },
                         'transition-slide-up col-2'
@@ -128,10 +137,12 @@ class FAQBlock extends Component {
                       <Image
                         className={cx(styles['FAQBlock__arrow'], 'ml-auto')}
                         src="/assets/images/arrow-dropdown-inactive-peach.svg"
+                        alt="Close dropdown icon."
                       />
                     </Button>
                   </div>
                   <p
+                    aria-hidden={!dropdownIsOpen}
                     className={cx(
                       styles['FAQBlock__answer'],
                       { 'display-none': !dropdownIsOpen },

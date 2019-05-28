@@ -13,7 +13,11 @@ const ArticlePreview = ({ article }) => {
 
   return (
     <div className={cx(styles['ArticlePreview'], 'px2')}>
-      <Button variant="style-none" to={`/news/${article.handle}`}>
+      <Button
+        ariaLabel={article.title}
+        variant="style-none"
+        to={`/news/${article.handle}`}
+      >
         <div
           className={cx(
             styles['ArticlePreview__image'],
@@ -60,6 +64,7 @@ const ArticlePreview = ({ article }) => {
           <p className="block-subheadline">{excerpt}</p>
           <div className="flex flex-row my3">
             <Button
+              ariaLabel={`Read more about the article: ${article.title}`}
               to={`/news/${article.handle}`}
               className="mr2"
               variant="primary-small"

@@ -256,6 +256,7 @@ class Nav extends Component {
                     className="mr2 line-item-title text-decoration-none center"
                   >
                     <Image
+                      alt="Profile and user dashboard"
                       className="icon"
                       src={contentfulImgUtil(
                         get(
@@ -288,6 +289,7 @@ class Nav extends Component {
                 </Fragment>
               )}
               <Button
+                ariaLabel="Go to Cart"
                 className={cx(
                   styles['Nav__cart-button'],
                   'small flex items-center justify-center'
