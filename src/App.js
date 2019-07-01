@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import 'what-input';
 
 import { initializeApplication } from 'state/actions/applicationActions';
+import { unsetFlashMessage } from 'state/actions/ui/applicationUIActions';
 import locations from 'state/selectors/locations';
 import checkout from 'state/selectors/checkout';
 import alertIsActive from 'state/selectors/alertIsActive';
@@ -26,6 +27,7 @@ import FooterNewsletter from 'components/FooterNewsletter';
 import FooterNav from 'components/FooterNav';
 import Alert from 'components/Alert';
 import NewsletterModal from 'components/NewsletterModal';
+import { FormFlash } from 'components/base';
 
 import 'basscss/css/basscss.min.css';
 import './styles/app.scss';
@@ -54,9 +56,11 @@ class App extends Component {
 
   render() {
     const {
+      actions,
       applicationStatus,
       locations,
       globalSettings,
+      flashMessages,
       alertIsActive
     } = this.props;
 
@@ -93,6 +97,20 @@ class App extends Component {
             logo={logo}
             profileIcon={profileIcon}
           />
+          {flashMessages && flashMessages.length && (
+            <div className="FlashMessages fixed w100 px2 z-nav">
+              {flashMessages.map(flash => (
+                <FormFlash
+                  error={true}
+                  message={flash.message}
+                  unsetFlash={() => {
+                    console.log(flash);
+                    return actions.unsetFlashMessage(flash.uuid);
+                  }}
+                />
+              ))}
+            </div>
+          )}
           <MiniCart />
           <MobileNavModal />
           <NewsletterModal />
@@ -132,7 +150,8 @@ const mapStateToProps = state => {
     checkout: checkout(state),
     locations: locations(state),
     globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
-    alertIsActive: alertIsActive(state)
+    alertIsActive: alertIsActive(state),
+    flashMessages: get(state, 'applicationUI.flashMessages')
   };
 };
 
@@ -140,7 +159,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        initializeApplication
+        initializeApplication,
+        unsetFlashMessage
       },
       dispatch
     )

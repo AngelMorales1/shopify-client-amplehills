@@ -25,7 +25,7 @@ export const setFlashMessage = message => ({
   }
 });
 
-export const UNSET_FLASH_MESSAGE = 'SET_FLASH_MESSAGE';
+export const UNSET_FLASH_MESSAGE = 'UNSET_FLASH_MESSAGE';
 export const unsetFlashMessage = uuid => ({
   type: UNSET_FLASH_MESSAGE,
   payload: uuid
