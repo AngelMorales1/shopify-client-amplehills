@@ -104,7 +104,6 @@ class App extends Component {
                   error={true}
                   message={flash.message}
                   unsetFlash={() => {
-                    console.log(flash);
                     return actions.unsetFlashMessage(flash.uuid);
                   }}
                 />
