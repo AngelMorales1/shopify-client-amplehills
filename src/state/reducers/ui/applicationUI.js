@@ -1,7 +1,12 @@
-import { GET_GLOBAL_SETTINGS } from 'state/actions/ui/applicationUIActions';
+import {
+  GET_GLOBAL_SETTINGS,
+  SET_FLASH_MESSAGE,
+  UNSET_FLASH_MESSAGE
+} from 'state/actions/ui/applicationUIActions';
 
 const initialState = {
-  globalSettings: {}
+  globalSettings: {},
+  flashMessages: []
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +16,18 @@ export default (state = initialState, action) => {
       return {
         ...state,
         globalSettings: action.payload
+      };
+    case SET_FLASH_MESSAGE:
+      return {
+        ...state,
+        flashMessages: state.flashMessages.concat([action.payload])
+      };
+    case UNSET_FLASH_MESSAGE:
+      return {
+        ...state,
+        flashMessages: state.flashMessages.filter(
+          flash => flash.uuid !== action.payload
+        )
       };
     default:
       return state;
