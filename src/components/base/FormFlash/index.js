@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+
+import { Button, Image } from 'components/base';
 import styles from './FormFlash.scss';
 
-const FormFlash = ({ className, message, success, error }) => {
+const FormFlash = ({ className, message, success, error, unsetFlash }) => {
   const classes = cx(
     styles['FormFlash'],
     className,
-    'py1 px2 transition-enter',
+    'flex py1 px2 transition-enter justify-between',
     {
       [styles['FormFlash--success']]: success,
       [styles['FormFlash--error']]: error
@@ -16,6 +18,16 @@ const FormFlash = ({ className, message, success, error }) => {
   return (
     <div className={classes}>
       <p className="copy bold">{message}</p>
+      {unsetFlash && (
+        <Button
+          ariaLabel="Close this message"
+          variant="style-none"
+          onClick={unsetFlash}
+          className="mx1"
+        >
+          <Image alt="Close button" src="/assets/images/close-icon-navy.svg" />
+        </Button>
+      )}
     </div>
   );
 };

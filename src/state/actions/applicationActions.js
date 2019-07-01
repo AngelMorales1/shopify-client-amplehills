@@ -1,6 +1,9 @@
 import Data from 'lib/Data';
 import ContentfulClient, { PreviewClient } from 'lib/Contentful';
-import { getGlobalSettings } from 'state/actions/ui/applicationUIActions';
+import {
+  getGlobalSettings,
+  checkForFlashMessages
+} from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
 
 import {
@@ -22,7 +25,8 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
         dispatch(fetchShopifyProducts()),
-        dispatch(fetchContentfulProducts())
+        dispatch(fetchContentfulProducts()),
+        dispatch(checkForFlashMessages())
       ]);
       const timeout = new Promise((resolve, reject) => {
         setTimeout(() => reject('Timeout'), 10000);

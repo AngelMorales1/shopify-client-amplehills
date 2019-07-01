@@ -11,6 +11,8 @@ import {
   checkoutLineItemsUpdate
 } from 'state/graphql/checkout';
 import { openMiniCart } from 'state/actions/ui/miniCartUIActions';
+import ShopifyErrors from 'constants/ShopifyErrors';
+import resetLocalStorage from 'utils/resetLocalStorage';
 import get from 'utils/get';
 
 export const FETCH_OR_CREATE_CHECKOUT = 'FETCH_OR_CREATE_CHECKOUT';
@@ -18,8 +20,9 @@ export const fetchOrCreateCheckout = checkoutId => dispatch => {
   return dispatch({
     type: FETCH_OR_CREATE_CHECKOUT,
     payload: new Promise(resolve => {
-      if (!checkoutId)
+      if (!checkoutId) {
         return dispatch(createCheckout()).then(checkout => resolve(checkout));
+      }
 
       return dispatch(fetchCheckout(checkoutId)).then(checkout =>
         resolve(checkout)
@@ -36,8 +39,9 @@ export const fetchCheckout = checkoutId => dispatch => {
       query: checkoutFetch,
       variables: { id: checkoutId }
     }).then(res => {
-      if (get(res, 'data.node.completedAt', false))
+      if (get(res, 'data.node.completedAt', false)) {
         return dispatch(createCheckout());
+      }
 
       return get(res, 'data.node');
     })
@@ -67,6 +71,15 @@ export const addLineItems = (checkoutId, lineItems) => dispatch => {
         variables: { lineItems, checkoutId }
       }).then(res => {
         if (get(res, 'data.checkoutLineItemsAdd.userErrors', []).length) {
+          if (
+            get(res, 'data.checkoutLineItemsAdd.userErrors[0].message') ===
+            ShopifyErrors.STALE_CHECKOUT
+          ) {
+            resetLocalStorage();
+            window.location.href =
+              window.location.href + '?resetCheckoutToken=true';
+          }
+
           return reject(
             get(res, 'data.checkoutLineItemsAdd.userErrors[0].message', '')
           );

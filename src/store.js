@@ -17,6 +17,7 @@ import session from 'state/reducers/session';
 
 import isContentfulPreview from 'utils/isContentfulPreview';
 import customLocalStorage from 'utils/customLocalStorage';
+import resetLocalStorage from 'utils/resetLocalStorage';
 
 const middleware = [thunk, promiseMiddleware()];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -36,7 +37,7 @@ try {
     localStorage.getItem('_ample_version') !== packageJSON.version ||
     isContentfulPreview()
   ) {
-    localStorage.removeItem('persist:root');
+    resetLocalStorage();
     localStorage.setItem('_ample_version', packageJSON.version);
   }
 } catch (e) {
@@ -46,7 +47,7 @@ try {
     localStorage.getItem('_ample_version') !== packageJSON.version ||
     isContentfulPreview()
   ) {
-    localStorage.removeItem('persist:root');
+    resetLocalStorage();
     localStorage.setItem('_ample_version', packageJSON.version);
   }
 }
