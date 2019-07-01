@@ -1,6 +1,6 @@
 {
   "name": "ample",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "private": true,
   "dependencies": {
     "@sentry/browser": "^5.1.1",
