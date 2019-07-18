@@ -189,7 +189,7 @@ class Footer extends Component {
                 'bold small text-white'
               )}
             >
-              &copy; 2018 Ample Hills Creamery.
+              &copy;{` ${new Date().getFullYear()} Ample Hills Creamery.`}
               <NavLink
                 exact
                 to="/privacy-policy"
