@@ -97,7 +97,7 @@ class App extends Component {
             logo={logo}
             profileIcon={profileIcon}
           />
-          {flashMessages && flashMessages.length && (
+          {flashMessages && flashMessages.length ? (
             <div className="FlashMessages fixed w100 px2 z-nav">
               {flashMessages.map(flash => (
                 <FormFlash
@@ -109,7 +109,7 @@ class App extends Component {
                 />
               ))}
             </div>
-          )}
+          ) : null}
           <MiniCart />
           <MobileNavModal />
           <NewsletterModal />
