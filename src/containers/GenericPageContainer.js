@@ -10,6 +10,7 @@ import { getFlavors } from 'state/actions/flavorsActions';
 import flavors from 'state/selectors/flavors';
 
 import get from 'utils/get';
+import isStaging from 'utils/isStaging';
 
 class GenericPageContainer extends ContainerBase {
   view = import('views/GenericPageView');
@@ -27,6 +28,12 @@ class GenericPageContainer extends ContainerBase {
       'props.match.params.genericPageSlug',
       ''
     );
+
+    if (generichPageSlug === 'style-guide') {
+      if (!isStaging()) {
+        return;
+      }
+    }
 
     return Promise.all([
       getGenericPage(`/${generichPageSlug}`),

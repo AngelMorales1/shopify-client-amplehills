@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import isStaging from 'utils/isStaging';
 
 import ProductLandingContainer from 'containers/ProductLandingContainer';
 import ProductDetailContainer from 'containers/ProductDetailContainer';
@@ -70,9 +69,6 @@ const Routes = ({ location }) => (
       path="/cake-request-form"
       component={CakeRequestFormContainer}
     />
-    {isStaging() ? (
-      <Route exact path="/style-guide" component={GenericPageContainer} />
-    ) : null}
     <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route path="*" render={() => <ErrorPage errorIs404={true} />} />
   </Switch>
