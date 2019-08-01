@@ -70,7 +70,7 @@ class Button extends PureComponent {
               'events-none': disabled
             })}
             to={to}
-            aria-label={ariaLabel}
+            aria-label={ariaLabel || label}
             onClick={onClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
@@ -92,7 +92,7 @@ class Button extends PureComponent {
 
     return (
       <button
-        aria-label={ariaLabel}
+        aria-label={ariaLabel || label}
         type={type}
         onClick={onClick}
         className={classes}

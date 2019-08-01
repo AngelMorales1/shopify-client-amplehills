@@ -39,8 +39,12 @@ class LocationSearch extends Component {
                 styles['LocationSearch__button-image'],
                 'md-hide lg-hide p0'
               )}
+              ariaLabel="All Locations"
             >
-              <Image src="/assets/images/arrow-inside-circle.svg" />
+              <Image
+                src="/assets/images/arrow-inside-circle.svg"
+                alt="Click to go see all locations"
+              />
             </Button>
           </div>
           <div className="xs-hide sm-hide col-5 flex flex-row items-center ml-auto mr0">
@@ -55,6 +59,7 @@ class LocationSearch extends Component {
                 onChange={value => this.setState({ address: value })}
                 className={cx(styles['LocationSearch__text-field'], 'w100')}
                 placeholder="Address or Zip"
+                ariaLabel="Enter your address or zip"
                 variant="madison-blue-border-round"
               />
             </div>
