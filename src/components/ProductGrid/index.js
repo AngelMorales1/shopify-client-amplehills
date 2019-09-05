@@ -7,13 +7,17 @@ const ProductGrid = ({ products, productIsMerchandise }) => {
   return (
     <div className="ProductGrid">
       <div className="flex flex-wrap container-width mx-auto px2 justify-center">
-        {products.map(product => (
-          <ProductGridCard
-            key={product.id}
-            product={product}
-            productIsMerchandise={productIsMerchandise}
-          />
-        ))}
+        {products.map(product => {
+          if (!product) return null;
+
+          return (
+            <ProductGridCard
+              key={product.id}
+              product={product}
+              productIsMerchandise={productIsMerchandise}
+            />
+          );
+        })}
       </div>
     </div>
   );
