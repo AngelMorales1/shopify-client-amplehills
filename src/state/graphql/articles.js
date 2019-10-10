@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 export const fetchAllNewsArticlesQuery = gql`
   query allNewsArticles($cursor: String) {
-    blogs(first: 1, query: news) {
+    blogs(first: 1, query: "tags:news") {
       edges {
         node {
           articles(reverse: true, first: 250, after: $cursor) {
