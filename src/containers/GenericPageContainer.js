@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getGenericPage } from 'state/actions/genericPageActions';
 import { getEvents } from 'state/actions/eventsActions';
+import { fetchShopifyWholesaleProducts } from 'state/actions/wholesaleActions';
 import events from 'state/selectors/events';
 import wholesaleProducts from 'state/selectors/wholesaleProducts';
 import { getFlavors } from 'state/actions/flavorsActions';
@@ -37,12 +38,14 @@ class GenericPageContainer extends ContainerBase {
     return Promise.all([
       getGenericPage(`/${generichPageSlug}`),
       getEvents(),
-      getFlavors()
-    ]).then(([genericPage, events, flavor]) => {
+      getFlavors(),
+      fetchShopifyWholesaleProducts()
+    ]).then(([genericPage, events, flavor, wholesaleProduct]) => {
       return {
         genericPage: get(genericPage, 'value'),
         events: get(events, 'value'),
-        flavor: get(flavor, 'value')
+        flavor: get(flavor, 'value'),
+        wholesaleProduct: get(wholesaleProduct, 'value')
       };
     });
   };
@@ -66,7 +69,8 @@ const mapStateToProps = state => {
     ),
     events: events(state),
     flavors: flavors(state),
-    pageNotFound: !get(state, 'genericPage.genericPage.items', []).length
+    pageNotFound: !get(state, 'genericPage.genericPage.items', []).length,
+    wholesaleProducts: wholesaleProducts(state)
   };
 };
 
@@ -76,7 +80,8 @@ const mapDispatchToProps = dispatch => {
       {
         getGenericPage,
         getEvents,
-        getFlavors
+        getFlavors,
+        fetchShopifyWholesaleProducts
       },
       dispatch
     )
