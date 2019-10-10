@@ -3,6 +3,7 @@ import { Redirect } from 'react-router';
 import { Button } from 'components/base';
 import ProfileInfo from 'components/ProfileInfo';
 import ProfileOrders from 'components/ProfileOrders';
+import ErrorPage from 'components/ErrorPage';
 
 class ProfileView extends Component {
   signOut = () => {
@@ -22,7 +23,7 @@ class ProfileView extends Component {
       errors,
       products
     } = this.props;
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const { id, firstName, lastName } = customer;
     if (!id) return <Redirect to="/sign-in" />;

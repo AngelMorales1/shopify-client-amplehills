@@ -4,11 +4,12 @@ import productHasHero from 'utils/productHasHero';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
+import ErrorPage from 'components/ErrorPage';
 
 class ProductDetailView extends Component {
   render() {
     const { model } = this.props;
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const {
       ourPledge,

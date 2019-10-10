@@ -13,7 +13,7 @@ class GenericPageView extends Component {
   render() {
     const { model, blocks, subNavIsOn, pageNotFound } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     if (pageNotFound) return <ErrorPage errorIs404={true} />;
 

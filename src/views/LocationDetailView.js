@@ -6,6 +6,7 @@ import SubNavScrollOption from 'constants/SubNavScrollOption';
 import LocationDetailHero from 'components/LocationDetailHero';
 import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
+import ErrorPage from 'components/ErrorPage';
 
 class LocationDetailView extends Component {
   refBlocks = {};
@@ -13,7 +14,7 @@ class LocationDetailView extends Component {
   render() {
     const { model, blocks, location, locationGeoJSON, events } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const menuList = location.contentBlocks.map(block =>
       get(block, 'fields.title', '')

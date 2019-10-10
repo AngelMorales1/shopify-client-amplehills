@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PartyRequestForm from 'components/PartyRequestForm';
+import ErrorPage from 'components/ErrorPage';
 
 class PartyRequestFormView extends Component {
   render() {
     const { model } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const {
       partyAvailableLocations,

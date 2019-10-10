@@ -3,11 +3,12 @@ import get from 'utils/get';
 
 import MerchDetails from 'components/MerchDetails';
 import BlockSwitch from 'components/BlockSwitch';
+import ErrorPage from 'components/ErrorPage';
 
 class MerchDetailView extends Component {
   render() {
     const { model, merch, actions, checkout } = this.props;
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
     const blocks = get(merch, 'contentBlocks', []);
 
     return (
