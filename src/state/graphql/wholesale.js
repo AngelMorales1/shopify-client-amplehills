@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export const fetchWholesaleProducts = gql`
   query WholesaleProducts {
     shop {
-      products(first: 250, query: wholesale) {
+      products(first: 250, query: "tag:wholesale") {
         edges {
           node {
             availableForSale
