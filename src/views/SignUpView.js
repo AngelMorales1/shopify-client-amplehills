@@ -4,6 +4,7 @@ import get from 'utils/get';
 import { PENDING } from 'constants/Status';
 
 import { Button, TextField } from 'components/base';
+import ErrorPage from 'components/ErrorPage';
 
 class SignUpView extends Component {
   state = {
@@ -22,7 +23,7 @@ class SignUpView extends Component {
 
   render() {
     const { model, customer, customerSigningUp } = this.props;
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     if (get(customer, 'id')) return <Redirect to="/profile" />;
 

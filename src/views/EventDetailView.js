@@ -3,13 +3,14 @@ import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
 import EventDetailHero from 'components/EventDetailHero';
+import ErrorPage from 'components/ErrorPage';
 
 class EventDetailView extends Component {
   render() {
     const { model, event } = this.props;
     const blocks = get(event, 'contentBlocks', []);
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     return (
       <div className="EventDetailView">

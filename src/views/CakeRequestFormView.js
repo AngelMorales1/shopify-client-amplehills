@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CakeRequestForm from 'components/CakeRequestForm';
+import ErrorPage from 'components/ErrorPage';
 
 import moment from 'moment';
 
@@ -7,7 +8,7 @@ class CakeRequestFormView extends Component {
   render() {
     const { model } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const {
       cakeLocations,

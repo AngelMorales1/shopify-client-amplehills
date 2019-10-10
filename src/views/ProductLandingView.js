@@ -7,13 +7,14 @@ import { SubNav } from 'components/base';
 import get from 'utils/get';
 import ProductGrid from 'components/ProductGrid';
 import WholesaleInfoBlock from 'components/WholesaleInfoBlock';
+import ErrorPage from 'components/ErrorPage';
 
 class ProductLandingView extends Component {
   refBlocks = {};
 
   render() {
     const { model, products, allMerchandise } = this.props;
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const content = get(model, 'landing.items[0].fields', {});
     const iceCreamTitle = get(content, 'iceCreamTitle', '');

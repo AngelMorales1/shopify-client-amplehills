@@ -4,6 +4,7 @@ import get from 'utils/get';
 import { PENDING, REJECTED } from 'constants/Status';
 
 import { Button, TextField, FormFlash } from 'components/base';
+import ErrorPage from 'components/ErrorPage';
 import getUrlParam from 'utils/getUrlParam';
 
 class SignInView extends Component {
@@ -25,7 +26,7 @@ class SignInView extends Component {
   render() {
     const { model, customer, customerSigningIn } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     if (get(customer, 'id')) return <Redirect to="/profile" />;
 

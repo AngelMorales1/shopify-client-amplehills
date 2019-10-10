@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
+import ErrorPage from 'components/ErrorPage';
 
 class FlavorDetailView extends Component {
   render() {
     const { model, flavor } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const blocks = get(flavor, 'contentBlocks', []);
 

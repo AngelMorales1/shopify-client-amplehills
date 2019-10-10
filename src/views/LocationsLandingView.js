@@ -6,6 +6,7 @@ import get from 'utils/get';
 
 import LocationsMap from 'components/LocationsMap';
 import LocationsCards from 'components/LocationsCards';
+import ErrorPage from 'components/ErrorPage';
 
 class LocationsLandingView extends Component {
   state = {
@@ -59,7 +60,7 @@ class LocationsLandingView extends Component {
   render() {
     const { model, alertIsActive, locations } = this.props;
 
-    if (model.isError) return <h1>Error</h1>;
+    if (model.isError) return <ErrorPage />;
 
     const mapPosition = alertIsActive
       ? Global.headerHeight.desktop + Global.alertHeight.desktop
