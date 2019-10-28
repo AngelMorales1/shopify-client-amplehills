@@ -142,6 +142,14 @@ class MobileNavModal extends Component {
             </NavLink>
             <NavLink
               exact
+              to="/catering"
+              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
+              onClick={this.handleMenuClick}
+            >
+              Catering
+            </NavLink>
+            <NavLink
+              exact
               to="/classes-and-socials"
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={this.handleMenuClick}
@@ -154,15 +162,7 @@ class MobileNavModal extends Component {
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={this.handleMenuClick}
             >
-              Parties
-            </NavLink>
-            <NavLink
-              exact
-              to="/events"
-              className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
-              onClick={this.handleMenuClick}
-            >
-              Events
+              Parties & Events
             </NavLink>
             <NavLink
               exact

@@ -187,10 +187,10 @@ class Nav extends Component {
                   </NavLink>
                   <NavLink
                     exact
-                    to="/events"
+                    to="/catering"
                     className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                   >
-                    Events
+                    Catering
                   </NavLink>
                   <NavLink
                     exact
@@ -204,7 +204,7 @@ class Nav extends Component {
                     to="/parties"
                     className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
                   >
-                    Parties
+                    Parties & Events
                   </NavLink>
                 </div>
               ) : (
