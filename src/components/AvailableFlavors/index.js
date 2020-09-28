@@ -5,7 +5,6 @@ import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
 import locationModel from 'models/locationModel';
-import slugify from 'utils/slugify';
 
 import { Button, Image } from 'components/base';
 import styles from './AvailableFlavors.scss';
@@ -98,12 +97,11 @@ class AvailableFlavors extends Component {
                     src={contentfulImgUtil(image, '200')}
                   />
                   <div className="col-6 ml1">
-                    {label &&
-                      !isLocationSpecial && (
-                        <p className="mb1 carter light detail text-peach">
-                          {label}
-                        </p>
-                      )}
+                    {label && !isLocationSpecial && (
+                      <p className="mb1 carter light detail text-peach">
+                        {label}
+                      </p>
+                    )}
                     {isLocationSpecial && (
                       <p className="mb1 carter light detail text-peach">
                         Location Special

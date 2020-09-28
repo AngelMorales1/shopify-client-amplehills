@@ -22,7 +22,6 @@ class GenericPageContainer extends ContainerBase {
       fetchShopifyWholesaleProducts,
       getFlavors
     } = this.props.actions;
-    const { path } = this.props.match;
     const generichPageSlug = get(
       this,
       'props.match.params.genericPageSlug',
