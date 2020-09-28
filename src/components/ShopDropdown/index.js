@@ -44,7 +44,7 @@ const ShopDropdown = ({
               <div
                 className={cx(
                   styles['ShopDropdown__product-container'],
-                  'flex flex-row justify-between mx-auto'
+                  'flex flex-row justify-center mx-auto'
                 )}
               >
                 {iceCreamProducts.map(product => {
