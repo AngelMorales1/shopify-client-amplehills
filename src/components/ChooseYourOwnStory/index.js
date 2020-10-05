@@ -12,6 +12,8 @@ import PintSizes from 'constants/PintSizes';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventoryRequestObject';
+import gtag from 'utils/gtag';
+import cartIsMaxed from 'utils/cartIsMaxed';
 
 import { Radio, Image, Button, QuantitySelector } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -152,7 +154,21 @@ class ChooseYourOwnStory extends Component {
     //   }
     // ];
 
+    if (cartIsMaxed(this.props.lineItems)) {
+      this.props.actions.openCartMax();
+      return null;
+    }
+
     this.props.actions.addLineItems(this.props.checkout.id, items);
+
+    gtag('event', 'add_to_cart', {
+      send_to: 'AW-596545311',
+      value: 12 * pints.length,
+      items: items.map(item => ({
+        id: item.variantId,
+        google_business_vertical: 'retail'
+      }))
+    });
   };
 
   render() {
@@ -415,6 +431,7 @@ class ChooseYourOwnStory extends Component {
 ChooseYourOwnStory.propTypes = {
   actions: PropTypes.shape({
     addLineItems: PropTypes.func,
+    openCartMaxModal: PropTypes.func,
     openOurPledge: PropTypes.func,
     closeOurPledge: PropTypes.func
   }),
@@ -440,6 +457,7 @@ ChooseYourOwnStory.propTypes = {
 
 ChooseYourOwnStory.defaultProps = {
   actions: {
+    openCartMaxModal: () => {},
     addLineItems: () => {},
     openOurPledge: () => {},
     closeOurPledge: () => {}

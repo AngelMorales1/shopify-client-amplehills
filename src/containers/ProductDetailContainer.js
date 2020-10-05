@@ -7,9 +7,11 @@ import {
   openOurPledge,
   closeOurPledge
 } from 'state/actions/ui/productUIActions';
+import { openCartMax } from 'state/actions/ui/cartMaxUIActions';
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
 import product from 'state/selectors/product';
+import lineItems from 'state/selectors/lineItems';
 
 import get from 'utils/get';
 
@@ -28,6 +30,7 @@ const mapStateToProps = (state, props) => {
       'applicationUI.globalSettings.items[0].fields',
       {}
     ),
+    lineItems: lineItems(state),
     product: product(state, props),
     products: products(state),
     ourPledge: get(
@@ -53,7 +56,8 @@ const mapDispatchToProps = dispatch => {
       {
         addLineItems,
         openOurPledge,
-        closeOurPledge
+        closeOurPledge,
+        openCartMax
       },
       dispatch
     )

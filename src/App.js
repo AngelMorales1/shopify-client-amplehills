@@ -21,6 +21,7 @@ import Loader from 'components/Loader';
 import ErrorPage from 'components/ErrorPage';
 import Nav from 'components/Nav';
 import MiniCart from 'components/MiniCart';
+import CartMaxModal from 'components/CartMaxModal';
 import MobileNavModal from 'components/MobileNavModal';
 import Footer from 'components/Footer';
 import FooterNewsletter from 'components/FooterNewsletter';
@@ -111,6 +112,7 @@ class App extends Component {
             </div>
           ) : null}
           <MiniCart />
+          <CartMaxModal />
           <MobileNavModal />
           <NewsletterModal />
           <div className="content-wrapper">

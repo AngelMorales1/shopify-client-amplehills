@@ -1,6 +1,7 @@
 import status from './status';
 import applicationUI from './ui/applicationUI';
 import miniCartUI from './ui/miniCartUI';
+import cartMaxUI from './ui/cartMaxUI';
 import dropdownNavUI from './ui/dropdownNavUI';
 import mobileNavUI from './ui/mobileNavUI';
 import customerUI from './ui/customerUI';
@@ -20,6 +21,7 @@ export default {
   status,
   applicationUI,
   miniCartUI,
+  cartMaxUI,
   dropdownNavUI,
   customerUI,
   locationsUI,
