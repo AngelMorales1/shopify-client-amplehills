@@ -2,20 +2,39 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import cx from 'classnames';
+
 import {
   confirmRemoveLineItems,
   cancelRemoveLineItems
 } from 'state/actions/checkoutActions';
 
 import { Button } from 'components/base';
-import cx from 'classnames';
+
 import get from 'utils/get';
+import lineItems from 'state/selectors/lineItems';
 import styles from './DeleteModal.scss';
 
 const DeleteModal = props => {
   const confirmRemoveLineItems = item => {
-    const items = [item];
+    const { lineItems } = props;
+    const lineItem = lineItems.find(lineItem => lineItem.id === item);
+    const idAttr = get(lineItem, 'attributes', []).find(
+      attr => attr.key === '__CYOS_PACK_ID__'
+    );
+    const pack = idAttr ? idAttr.value : '';
+    const items = !!pack
+      ? lineItems
+          .filter(lineItem => {
+            const attrs = get(lineItem, 'attributes', []);
+            const idAttr = attrs.find(attr => attr.key === '__CYOS_PACK_ID__');
+
+            return idAttr.value === pack;
+          })
+          .map(lineItem => lineItem.id)
+      : [item];
     const { actions } = props;
+
     actions.confirmRemoveLineItems(get(props, 'checkout.id', null), items);
   };
 
@@ -40,7 +59,8 @@ const DeleteModal = props => {
       >
         <div className="mb4">
           <span className="big bold">
-            Are you sure you want to remove this from your cart?
+            Removing this item from your cart will remove all items included in
+            this pack. Do you want to remove these items?
           </span>
         </div>
         <div className="flex justify-end items-center">
@@ -112,6 +132,7 @@ const mapStateToProps = state => {
   return {
     ...state,
     checkout: get(state, 'session.checkout'),
+    lineItems: lineItems(state),
     lineItemsBeingUpdated: get(state, 'status.lineItemsBeingUpdated', []),
     lineItemsBeingRemoved: get(state, 'status.lineItemsBeingRemoved', [])
   };

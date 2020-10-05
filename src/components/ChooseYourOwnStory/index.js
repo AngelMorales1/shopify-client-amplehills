@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import get from 'utils/get';
+import uuid from 'uuid/v4';
 import marked from 'marked';
+
+import get from 'utils/get';
 import getLineItemPrice from 'utils/getLineItemPrice';
 import getPintSizeFromTitle from 'utils/getPintSizeFromTitle';
 import productModel from 'models/productModel';
@@ -95,33 +97,60 @@ class ChooseYourOwnStory extends Component {
   handleAddToCart = () => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
-    const quantity = get(this.state, 'quantity', 1);
+    // const quantity = get(this.state, 'quantity', 1);
+    const products = get(this.props, 'products', {});
 
     if (pints.length !== size) return null;
 
-    const variant = this.props.product.variants.find(
-      variant => getPintSizeFromTitle(variant.title) === size
-    );
-    const items = [
-      {
-        variantId: variant.id,
-        quantity,
-        customAttributes: pints
-          .map((value, i) => {
-            const key = `Item ${i + 1}`;
-            return { key, value };
-          })
-          .concat([
-            {
-              key: '__INVENTORY_REQUEST_DATA__',
-              value: makeStringifiedInventoryRequestObject(
-                pints,
-                this.props.products
-              )
-            }
-          ])
-      }
-    ];
+    // const variant = this.props.product.variants.find(
+    //   variant => getPintSizeFromTitle(variant.title) === size
+    // );
+
+    const packUuid = uuid();
+
+    // Now that items have to be broken up in the cart
+    const items = pints.map((pint, i) => {
+      const product = products[pint];
+
+      return {
+        variantId: get(product, 'variants[0].id'),
+        quantity: 1,
+        customAttributes: [
+          {
+            key: `__CYOS_PACK_ID__`,
+            value: packUuid
+          },
+          {
+            key: '__INVENTORY_REQUEST_DATA__',
+            value: makeStringifiedInventoryRequestObject(
+              pints,
+              this.props.products
+            )
+          }
+        ]
+      };
+    });
+
+    // const items = [
+    //   {
+    //     variantId: variant.id,
+    //     quantity,
+    //     customAttributes: pints
+    //       .map((value, i) => {
+    //         const key = `Item ${i + 1}`;
+    //         return { key, value };
+    //       })
+    //       .concat([
+    //         {
+    //           key: '__INVENTORY_REQUEST_DATA__',
+    //           value: makeStringifiedInventoryRequestObject(
+    //             pints,
+    //             this.props.products
+    //           )
+    //         }
+    //       ])
+    //   }
+    // ];
 
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };

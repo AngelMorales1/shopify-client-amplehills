@@ -203,6 +203,7 @@ class Cart extends Component {
                       <div className="flex items-center">
                         <QuantitySelector
                           title={item.title}
+                          disabled={true}
                           quantity={item.quantity}
                           variant="small"
                           onChange={quantity =>

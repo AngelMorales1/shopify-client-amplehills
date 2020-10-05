@@ -11,7 +11,8 @@ const QuantitySelector = ({
   allowZero,
   variant,
   color,
-  title
+  title,
+  disabled
 }) => {
   const changeQuantity = value => {
     const quantity = allowZero ? Math.max(0, value) : Math.max(1, value);
@@ -65,7 +66,11 @@ const QuantitySelector = ({
   };
 
   return (
-    <div className={cx('flex items-center', className)}>
+    <div
+      className={cx('flex items-center', className, {
+        'events-none': disabled
+      })}
+    >
       <Button
         ariaLabel="Decrement quantity"
         variant={buttonVariant(variant)}
@@ -99,7 +104,8 @@ QuantitySelector.propTypes = {
   onChange: PropTypes.func,
   allowZero: PropTypes.bool,
   variant: PropTypes.string,
-  color: PropTypes.string
+  color: PropTypes.string,
+  disabled: PropTypes.bool
 };
 
 QuantitySelector.defaultProps = {
@@ -109,7 +115,8 @@ QuantitySelector.defaultProps = {
   onChange: () => {},
   allowZero: false,
   variant: '',
-  color: ''
+  color: '',
+  disabled: false
 };
 
 export default QuantitySelector;
