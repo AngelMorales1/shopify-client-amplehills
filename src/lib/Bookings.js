@@ -1,6 +1,6 @@
 import QueryString from 'qs';
 
-const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api.now.sh';
+const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api.vercel.app';
 
 const Bookings = {
   getAvailability(project_id) {

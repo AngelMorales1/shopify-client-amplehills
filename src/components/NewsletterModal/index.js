@@ -4,15 +4,16 @@ import { bindActionCreators } from 'redux';
 import cx from 'classnames';
 
 import get from 'utils/get';
-import MailchimpSubscribe from 'react-mailchimp-subscribe';
 import moment from 'moment';
 import {
   openNewsletterModal,
   closeNewsletterModal
 } from 'state/actions/ui/newsletterModalActions';
+import { klaviyoSignup } from 'state/actions/klaviyoActions';
 import alertIsActive from 'state/selectors/alertIsActive';
 
 import { Image, Button, TextField, FormFlash } from 'components/base';
+import { FULFILLED, REJECTED } from 'constants/Status';
 import styles from './NewsletterModal.scss';
 
 class NewsletterModal extends Component {
@@ -42,6 +43,7 @@ class NewsletterModal extends Component {
       alertIsActive,
       globalSettings,
       modalIsActive,
+      klaviyoSignupStatus,
       actions
     } = this.props;
 
@@ -61,9 +63,12 @@ class NewsletterModal extends Component {
       false
     );
 
-    const url = process.env.REACT_APP_MAILCHIMP_URL;
-
     if (!showSubscribeNewsletterModal) return null;
+
+    if (klaviyoSignupStatus === FULFILLED && modalIsActive) {
+      const oneMonthLater = moment().add(1, 'months');
+      setTimeout(() => actions.closeNewsletterModal(oneMonthLater), 0);
+    }
 
     return (
       <div
@@ -103,54 +108,40 @@ class NewsletterModal extends Component {
             {subscribeNewsletterDescription}
           </p>
         ) : null}
-        <MailchimpSubscribe
-          url={url}
-          render={({ subscribe, status, message }) => {
-            if (status === 'success' && modalIsActive) {
-              const oneMonthLater = moment().add(1, 'months');
-              setTimeout(() => actions.closeNewsletterModal(oneMonthLater), 0);
-            }
-
-            return (
-              <div className="mt3 flex flex-column">
-                <div className="flex flex-row items-center">
-                  <div
-                    className={cx(
-                      styles['NewsletterModal__text-field'],
-                      'px1 relative flex items-center'
-                    )}
-                  >
-                    <TextField
-                      value={this.state.emailAddress}
-                      onChange={emailAddress => this.setState({ emailAddress })}
-                      className="w100"
-                      placeholder="Email address"
-                      variant="madison-blue-border-round-small"
-                      ariaLabel="Enter your email address to subscribe"
-                    />
-                  </div>
-                  <Button
-                    className="px2"
-                    label="Submit"
-                    variant="primary-small"
-                    color="madison-blue"
-                    shadow={true}
-                    onClick={() =>
-                      subscribe({ EMAIL: this.state.emailAddress })
-                    }
-                  />
-                </div>
-                {status === 'error' ? (
-                  <FormFlash
-                    className="z-1 mt2 mx1"
-                    error={true}
-                    message={message}
-                  />
-                ) : null}
-              </div>
-            );
-          }}
-        />
+        <div className="mt3 flex flex-column">
+          <div className="flex flex-row items-center">
+            <div
+              className={cx(
+                styles['NewsletterModal__text-field'],
+                'px1 relative flex items-center'
+              )}
+            >
+              <TextField
+                value={this.state.emailAddress}
+                onChange={emailAddress => this.setState({ emailAddress })}
+                className="w100"
+                placeholder="Email address"
+                variant="madison-blue-border-round-small"
+                ariaLabel="Enter your email address to subscribe"
+              />
+            </div>
+            <Button
+              className="px2"
+              label="Submit"
+              variant="primary-small"
+              color="madison-blue"
+              shadow={true}
+              onClick={() => actions.klaviyoSignup(this.state.emailAddress)}
+            />
+          </div>
+          {klaviyoSignupStatus === REJECTED && (
+            <FormFlash
+              className="z-1 mt2 mx1"
+              error={true}
+              message="There was an error while attempting to subscribe. Please try again later."
+            />
+          )}
+        </div>
       </div>
     );
   }
@@ -161,7 +152,8 @@ const mapStateToProps = state => {
     globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
     alertIsActive: alertIsActive(state),
     modalIsActive: get(state, 'session.newsletterModal.modalIsActive', false),
-    renewModalDate: get(state, 'session.newsletterModal.renewModalDate', null)
+    renewModalDate: get(state, 'session.newsletterModal.renewModalDate', null),
+    klaviyoSignupStatus: get(state, 'status.klaviyoSignup')
   };
 };
 
@@ -170,7 +162,8 @@ const mapDispatchToProps = dispatch => {
     actions: bindActionCreators(
       {
         openNewsletterModal,
-        closeNewsletterModal
+        closeNewsletterModal,
+        klaviyoSignup
       },
       dispatch
     )

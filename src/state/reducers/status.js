@@ -14,6 +14,7 @@ import {
 } from 'state/actions/customerActions';
 import { SEND_CONTACT_FORM } from 'state/actions/ui/contactUIActions';
 import { GET_AVAILABILITY } from 'state/actions/bookingsActions';
+import { KLAVIYO_SIGNUP } from 'state/actions/klaviyoActions';
 
 const initialState = {
   initializeApplication: IDLE,
@@ -24,7 +25,8 @@ const initialState = {
   customerSigningUp: IDLE,
   updatingNote: IDLE,
   contactUsFormStatus: IDLE,
-  getAvailability: IDLE
+  getAvailability: IDLE,
+  klaviyoSignup: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -116,6 +118,13 @@ export default (state = initialState, action) => {
         ...state,
         contactUsFormStatus: REJECTED
       };
+
+    case `${KLAVIYO_SIGNUP}_PENDING`:
+      return { ...state, klaviyoSignup: PENDING };
+    case `${KLAVIYO_SIGNUP}_FULFILLED`:
+      return { ...state, klaviyoSignup: FULFILLED };
+    case `${KLAVIYO_SIGNUP}_REJECTED`:
+      return { ...state, klaviyoSignup: REJECTED };
 
     default:
       return state;
