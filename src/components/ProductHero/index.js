@@ -10,6 +10,7 @@ import imageModel from 'models/imageModel';
 import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventoryRequestObject';
 
 import get from 'utils/get';
+import gtag from 'utils/gtag';
 import { Image, Button, QuantitySelector, Carousel } from 'components/base';
 import OurPledge from 'components/OurPledge';
 
@@ -70,6 +71,15 @@ class ProductHero extends Component {
         customAttributes
       }
     ];
+
+    gtag('event', 'add_to_cart', {
+      send_to: 'AW-596545311',
+      value: product.price,
+      items: items.map(item => ({
+        id: item.variantId,
+        google_business_verical: 'retail'
+      }))
+    });
 
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };

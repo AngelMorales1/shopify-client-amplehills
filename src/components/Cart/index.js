@@ -13,6 +13,7 @@ import { IDLE, PENDING, REJECTED } from 'constants/Status';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import gtag from 'utils/gtag';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
 import allMerchandise from 'state/selectors/allMerchandise';
@@ -65,6 +66,12 @@ class Cart extends Component {
   handleGiftMessageChange = newNote => {
     const note = newNote || '';
     this.setState({ note }, () => this.updateNote(note));
+  };
+
+  handleCheckoutClick = () => {
+    gtag('event', 'conversion', {
+      send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC'
+    });
   };
 
   render() {
@@ -323,6 +330,7 @@ class Cart extends Component {
                       getNote !== currentNote || updatingNote === PENDING
                     }
                     to={get(checkout, 'webUrl', '')}
+                    onClick={this.handleCheckoutClick}
                   />
                 </div>
               </div>
@@ -339,6 +347,7 @@ class Cart extends Component {
                 color="madison-blue"
                 disabled={getNote !== currentNote || updatingNote === PENDING}
                 to={get(checkout, 'webUrl', '')}
+                onClick={this.handleCheckoutClick}
               />
             </div>
           </div>

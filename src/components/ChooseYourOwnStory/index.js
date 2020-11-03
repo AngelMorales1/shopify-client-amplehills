@@ -40,6 +40,10 @@ class ChooseYourOwnStory extends Component {
     window.addEventListener('scroll', this.updateMenu);
     this.updateWindow();
     this.updateMenu();
+
+    gtag('event', 'conversion', {
+      send_to: 'AW-596545311/8o1BCLn1oOYBEJ-eupwC'
+    });
   }
 
   updateMenu = () => {
@@ -99,18 +103,13 @@ class ChooseYourOwnStory extends Component {
   handleAddToCart = () => {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
-    // const quantity = get(this.state, 'quantity', 1);
     const products = get(this.props, 'products', {});
 
     if (pints.length !== size) return null;
 
-    // const variant = this.props.product.variants.find(
-    //   variant => getPintSizeFromTitle(variant.title) === size
-    // );
-
     const packUuid = uuid();
 
-    // Now that items have to be broken up in the cart
+    // This bundles packs together so we can limit pints in a package
     const items = pints.map((pint, i) => {
       const product = products[pint];
 
@@ -133,33 +132,10 @@ class ChooseYourOwnStory extends Component {
       };
     });
 
-    // const items = [
-    //   {
-    //     variantId: variant.id,
-    //     quantity,
-    //     customAttributes: pints
-    //       .map((value, i) => {
-    //         const key = `Item ${i + 1}`;
-    //         return { key, value };
-    //       })
-    //       .concat([
-    //         {
-    //           key: '__INVENTORY_REQUEST_DATA__',
-    //           value: makeStringifiedInventoryRequestObject(
-    //             pints,
-    //             this.props.products
-    //           )
-    //         }
-    //       ])
-    //   }
-    // ];
-
     if (cartIsMaxed(this.props.lineItems)) {
       this.props.actions.openCartMax();
       return null;
     }
-
-    this.props.actions.addLineItems(this.props.checkout.id, items);
 
     gtag('event', 'add_to_cart', {
       send_to: 'AW-596545311',
@@ -169,6 +145,8 @@ class ChooseYourOwnStory extends Component {
         google_business_vertical: 'retail'
       }))
     });
+
+    this.props.actions.addLineItems(this.props.checkout.id, items);
   };
 
   render() {
