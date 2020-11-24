@@ -211,8 +211,7 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {(false && // Forcing products to only be available in CYOS for now
-                (available && subItemsAvailable)) ||
+              {(available && subItemsAvailable) ||
               product.preOrderDate ||
               (forceAvailable && available) ? (
                 <div className="relative">
