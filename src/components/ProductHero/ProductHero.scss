@@ -9,6 +9,14 @@
     }
   }
 
+  &__alert {
+    border-radius: 1rem;
+    background: color('white-wash');
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 0.65rem;
+  }
+
   &__button {
     padding: spacing(2) spacing(4);
     padding-top: spacing(2) + 0.0625rem;

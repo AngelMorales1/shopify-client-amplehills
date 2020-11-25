@@ -125,7 +125,12 @@ class ProductHero extends Component {
         style={{ zIndex: z }}
       >
         {productHeroAlert ? (
-          <div className="absolute center mt3 uppercase tout z-1 w100">
+          <div
+            className={cx(
+              styles['ProductHero__alert'],
+              'absolute center inline-block mx-auto mt3 uppercase tout z-1 py1 px2'
+            )}
+          >
             {productHeroAlert}
           </div>
         ) : null}
@@ -171,7 +176,9 @@ class ProductHero extends Component {
         <div className="col col-12 md-col-6 py4 flex flex-column justify-around">
           <div className="col-12 md-col-8 px3 mx-auto">
             <div className="mb4 relative inline-block">
-              <h1 className="block-headline">{productHeroTitle}</h1>
+              <h1 className={cx('block-headline', { mt3: !!productHeroAlert })}>
+                {productHeroTitle}
+              </h1>
               <Image
                 style={{
                   transform: `translateX(${productHeroTitleBackgroundImagePosition}%)`
@@ -229,13 +236,6 @@ class ProductHero extends Component {
                       ${(price * this.state.quantity).toFixed(2)}
                     </span>
                   </Button>
-                  <div className="absolute w100 mt1 center">
-                    <span
-                      className={cx(styles['ProductHero__shipping'], 'bold')}
-                    >
-                      Shipping Included
-                    </span>
-                  </div>
                 </div>
               ) : (
                 <Button
