@@ -29,7 +29,7 @@ const DeleteModal = props => {
             const attrs = get(lineItem, 'attributes', []);
             const idAttr = attrs.find(attr => attr.key === '__CYOS_PACK_ID__');
 
-            return idAttr.value === pack;
+            return !!idAttr && idAttr.value === pack;
           })
           .map(lineItem => lineItem.id)
       : [item];
