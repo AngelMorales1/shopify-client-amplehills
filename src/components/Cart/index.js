@@ -64,7 +64,7 @@ class Cart extends Component {
   };
 
   handleGiftMessageChange = newNote => {
-    const note = newNote || '';
+    const note = newNote.substr(0, 250) || '';
     this.setState({ note }, () => this.updateNote(note));
   };
 
@@ -279,6 +279,16 @@ class Cart extends Component {
                         >
                           Gift Message
                         </h2>
+                        {!!this.state.note && (
+                          <div
+                            className={cx(
+                              styles['Cart__gift-message-limit'],
+                              'info-text-small'
+                            )}
+                          >
+                            {this.state.note.length} / 250
+                          </div>
+                        )}
                       </div>
                       {updatingNote === REJECTED ? (
                         <FormFlash

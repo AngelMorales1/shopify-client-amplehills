@@ -74,7 +74,8 @@
     }
   }
 
-  &__gift-message {
+  &__gift-message,
+  &__gift-message-limit {
     margin-top: 0;
 
     @media ($medium-up) {
