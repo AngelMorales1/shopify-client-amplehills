@@ -175,7 +175,7 @@ class Nav extends Component {
                     onMouseEnter={() => this.startDropdownTimer('locations')}
                     onMouseLeave={() => this.cancelDropdownTimer('locations')}
                     to="/locations"
-                    label="Locations"
+                    label="Scoop Shops"
                     hover="underline-white"
                   />
                   <NavLink

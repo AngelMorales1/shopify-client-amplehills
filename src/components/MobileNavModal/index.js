@@ -71,7 +71,7 @@ class MobileNavModal extends Component {
                 className={cx(styles['MobileNavModal__link-text'])}
                 onClick={this.handleMenuClick}
               >
-                Locations
+                Scoop Shops
               </NavLink>
               <Button
                 ariaLabel="Open Locations menu"
