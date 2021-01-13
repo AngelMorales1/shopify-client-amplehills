@@ -40,6 +40,7 @@ class LocationsCards extends Component {
 
   attemptToGetDistanceToStores = () => {
     const locations = this.props.filteredLocations;
+
     if ('geolocation' in window.navigator) {
       return this.getDistanceToStores(locations);
     } else {
@@ -68,6 +69,10 @@ class LocationsCards extends Component {
             { sortedLocations: locations },
             this.props.locationsCardHasLoaded
           );
+        },
+        {
+          maximumAge: 1000 * 60 * 60 * 24 * 30,
+          timeout: 1000 * 10
         }
       );
     }
@@ -123,6 +128,8 @@ class LocationsCards extends Component {
     const activeStateFilter = locationFilters.find(
       filter => filter.key === STATE_KEY
     );
+
+    console.log('SORT', sortedLocations);
 
     return (
       <div

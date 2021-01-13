@@ -69,6 +69,7 @@ class MapboxMap extends Component {
 
   componentWillUnmount() {
     if (this.state.map) this.state.map.remove();
+    this.unbindClickListeners();
   }
 
   initializeMap() {
