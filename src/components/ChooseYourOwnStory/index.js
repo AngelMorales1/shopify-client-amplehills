@@ -137,14 +137,17 @@ class ChooseYourOwnStory extends Component {
       return null;
     }
 
-    gtag('event', 'add_to_cart', {
-      send_to: 'AW-596545311',
-      value: 12 * pints.length,
-      items: items.map(item => ({
-        id: item.variantId,
-        google_business_vertical: 'retail'
-      }))
+    gtag('event', 'conversion', {
+      send_to: 'AW-596545311/SAzDCOHHj-wBEJ-eupwC'
     });
+    // gtag('event', 'add_to_cart', {
+    //   send_to: 'AW-596545311',
+    //   value: 12 * pints.length,
+    //   items: items.map(item => ({
+    //     id: item.variantId,
+    //     google_business_vertical: 'retail'
+    //   }))
+    // });
 
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };
