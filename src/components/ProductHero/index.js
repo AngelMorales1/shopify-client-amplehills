@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
+import uuid from 'uuid/v4';
 import productModel from 'models/productModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
@@ -47,30 +48,44 @@ class ProductHero extends Component {
         ]
       : [];
 
-    if (get(product, 'whatsIncluded.whatsIncludedProducts', []).length) {
-      const pintHandles = get(
-        product,
-        'whatsIncluded.whatsIncludedProducts'
-      ).map(p => get(p, 'fields.productHandle', null));
-      customAttributes.concat([
-        {
-          key: '__INVENTORY_REQUEST_DATA__',
-          value: makeStringifiedInventoryRequestObject(
-            pintHandles,
-            this.props.products
-          )
-        }
-      ]);
-    }
+    // if (get(product, 'whatsIncluded.whatsIncludedProducts', []).length) {
+    //   const pintHandles = get(
+    //     product,
+    //     'whatsIncluded.whatsIncludedProducts'
+    //   ).map(p => get(p, 'fields.productHandle', null));
+    //   customAttributes.concat([
+    //     {
+    //       key: '__INVENTORY_REQUEST_DATA__',
+    //       value: makeStringifiedInventoryRequestObject(
+    //         pintHandles,
+    //         this.props.products
+    //       )
+    //     }
+    //   ]);
+    // }
 
+    const packUuid = uuid();
     const variant = product.id;
-    const items = [
-      {
-        variantId: variant,
-        quantity: this.state.quantity,
-        customAttributes
-      }
-    ];
+    const items =
+      product.subItems && product.subItems.length
+        ? product.subItems.map(item => {
+            const foundProduct = this.props.products[item];
+            return {
+              quantity: this.state.quantity,
+              variantId: this.props.products[item].id,
+              customAttributes: {
+                key: `__CYOS_PACK_ID__`,
+                value: packUuid
+              }
+            };
+          })
+        : [
+            {
+              variantId: variant,
+              quantity: this.state.quantity,
+              customAttributes
+            }
+          ];
 
     gtag('event', 'add_to_cart', {
       send_to: 'AW-596545311',
@@ -115,6 +130,8 @@ class ProductHero extends Component {
     } = this.props;
     const { available, subItemsAvailable, price, forceAvailable } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
+
+    console.log(product);
 
     return (
       <div
