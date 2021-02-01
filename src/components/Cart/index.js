@@ -69,9 +69,22 @@ class Cart extends Component {
   };
 
   handleCheckoutClick = () => {
-    gtag('event', 'conversion', {
-      send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC'
-    });
+    // gtag('event', 'conversion', {
+    //   send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC'
+    // });
+    function gtag_report_conversion(url) {
+      var callback = function() {
+        if (typeof url != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC',
+        event_callback: callback
+      });
+      return false;
+    }
+    gtag_report_conversion();
   };
 
   render() {

@@ -14,6 +14,7 @@ class ProductDetailView extends Component {
     const {
       ourPledge,
       product,
+      products,
       product: { blocks, productHero, whatsIncluded }
     } = this.props;
 
@@ -22,6 +23,7 @@ class ProductDetailView extends Component {
         <div>
           {productHasHero(product) ? (
             <ProductHero
+              products={products}
               product={product}
               ourPledge={ourPledge}
               productHero={productHero}
