@@ -2,6 +2,7 @@ import fetch from 'node-fetch';
 import * as functions from 'firebase-functions';
 import * as Sentry from '@sentry/node';
 import access from 'access-control';
+import get from 'lodash/get';
 
 import formatError from './../../utils/formatError';
 
@@ -23,9 +24,9 @@ const klaviyo = functions.https.onRequest(async (req, res) => {
   if (cors(req, res)) return;
 
   try {
-    const { email } = req.body;
+    const email = get(JSON.parse(req.body), 'email');
 
-    const body = {
+    const data = {
       api_key: functions.config().klaviyo.api_key,
       profiles: [{ email }]
     };
@@ -35,7 +36,7 @@ const klaviyo = functions.https.onRequest(async (req, res) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(data)
     });
 
     res.writeHead(200, {
