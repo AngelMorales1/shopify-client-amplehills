@@ -16,5 +16,5 @@
     "allowJs": true
   },
   "compileOnSave": true,
-  "include": ["src"]
+  "include": ["src", "package.d.ts"]
 }

@@ -1,13 +1,27 @@
 import fetch from 'node-fetch';
 import * as functions from 'firebase-functions';
 import * as Sentry from '@sentry/node';
+import access from 'access-control';
 
 import formatError from './../../utils/formatError';
 
 Sentry.init({ dsn: 'https://fce8c7e47cdd484d913ebdfc94801f33@sentry.io/1395390' });
 const KLAVIYO_ENDPOINT = 'https://a.klaviyo.com/api/v2/list/SrNKwg/subscribe';
 
+const cors = access({
+  origins: [
+    'https://www.amplehills.com',
+    'https://staging.amplehills.com',
+    'http://localhost:3000',
+    'https://ampletest.myshopify.com'
+  ],
+  methods: ['POST'],
+  credentials: false
+});
+
 const klaviyo = functions.https.onRequest(async (req, res) => {
+  if (cors(req, res)) return;
+
   try {
     const { email } = req.body;
 
