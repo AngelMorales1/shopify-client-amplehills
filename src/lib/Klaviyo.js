@@ -1,4 +1,5 @@
-const AMPLE_HILLS_API_ENDPOINT = 'https://ample-hills-api.vercel.app';
+const AMPLE_HILLS_API_ENDPOINT =
+  'https://us-central1-ample-hills-api.cloudfunctions.net';
 
 const Klaviyo = {
   signup(email) {
