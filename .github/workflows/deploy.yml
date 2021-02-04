@@ -4,15 +4,12 @@ on: push
 
 jobs:
   deploy-api:
-    name: Deploy
+    name: Deploy API
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-
-      - name: Navigate to API directory
-        run: cd api
 
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
@@ -20,6 +17,7 @@ jobs:
           args: deploy --only functions
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: ./api
 
   deploy-staging:
     name: Deploy Staging
