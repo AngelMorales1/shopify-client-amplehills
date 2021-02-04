@@ -28,9 +28,7 @@ jobs:
       - name: Yarn Install
         run: cd api/functions && yarn install
       - name: Typescript Compiler
-        uses: icrawl/action-tsc@v1
-        with:
-          project: ./api/functions
+        run: npm i -g typescript
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
