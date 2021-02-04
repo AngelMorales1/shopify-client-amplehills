@@ -3,13 +3,34 @@ name: Deployer
 on: push
 
 jobs:
+  deploy-api:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Navigate to API directory
+        run: cd api
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
   deploy-staging:
     name: Deploy Staging
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/staging'
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       # Checkout the repo
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
       # Use Node.js 12.x
@@ -19,43 +40,27 @@ jobs:
           node-version: '12.x'
 
       # Restore Node Modules from Cache
-      - name: Cache node modules
+      - name: Cache Node Modules
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       # Install & Build
       - name: Yarn Install
         run: yarn install
       - name: Yarn Build
         run: NODE_ENV=production CI="" yarn build
 
-      # Deploy & Activate!
+      # Deploy to S3 & Invalidate Cloudfront
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
+        uses: reggionick/s3-deploy@v3
         with:
-          args: --acl public-read --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_STAGING_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
-          SOURCE_DIR: "build"
-      - name: Invalidate Cloudfront
-        uses: awact/cloudfront-action@master
-        env:
-          SOURCE_PATH: './*'
-          AWS_REGION: 'us-east-1'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_STAGING_ID }}
+          folder: build
+          bucket: ${{ secrets.AWS_STAGING_BUCKET }}
+          bucket-region: us-east-1
+          delete-removed: true
+          dist-id: ${{ secrets.AWS_CLOUDFRONT_STAGING_ID }}
 
   deploy-production:
     name: Deploy Production
@@ -63,7 +68,7 @@ jobs:
     if: github.ref == 'refs/heads/production'
     steps:
       # Checkout the repo
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v2
 
       # Use Node.js 12.x
@@ -75,38 +80,22 @@ jobs:
       # Restore Node Modules from Cache
       - name: Cache node modules
         uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       # Install & Build
       - name: Yarn Install
         run: yarn install
       - name: Yarn Build
         run: NODE_ENV=production CI="" yarn build
 
-      # Deploy & Activate!
+      # Deploy to S3 & Invalidate Cloudfront
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
+        uses: reggionick/s3-deploy@v3
         with:
-          args: --acl public-read --delete
-        env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "us-east-1"
-          SOURCE_DIR: "build"
-      - name: Invalidate Cloudfront
-        uses: awact/cloudfront-action@master
-        env:
-          SOURCE_PATH: './*'
-          AWS_REGION: 'us-east-1'
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_PRODUCTION_ID }}
+          folder: build
+          bucket: ${{ secrets.AWS_PRODUCTION_BUCKET }}
+          bucket-region: us-east-1
+          delete-removed: true
+          dist-id: ${{ secrets.AWS_CLOUDFRONT_PRODUCTION_ID }}
