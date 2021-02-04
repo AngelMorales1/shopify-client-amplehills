@@ -11,6 +11,24 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
 
+      # Use Node.js 12.x
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      # Restore Node Modules from Cache
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      # Install & Build
+      - name: Yarn Install
+        run: cd api/functions && yarn install
+      - name: Typescript Compiler
+        uses: icrawl/action-tsc@v1
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
