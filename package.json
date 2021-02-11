@@ -3,6 +3,7 @@
   "version": "1.5.3",
   "private": true,
   "dependencies": {
+    "@sanity/client": "^2.2.6",
     "@sentry/browser": "^5.1.1",
     "@turf/center": "^6.0.1",
     "@turf/distance": "^6.0.1",

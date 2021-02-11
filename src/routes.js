@@ -18,6 +18,7 @@ import ArticlesLandingContainer from 'containers/ArticlesLandingContainer';
 import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
 import FlavorDetailContainer from 'containers/FlavorDetailContainer';
+import FlavorFrenzyContainer from 'containers/FlavorFrenzyContainer';
 import InStoresContainer from 'containers/InStoresContainer';
 import ErrorPage from 'components/ErrorPage';
 
@@ -49,6 +50,11 @@ const Routes = ({ location }) => (
       exact
       path="/flavors/:flavorHandle"
       component={FlavorDetailContainer}
+    />
+    <Route
+      exact
+      path="/flavor-frenzies/:flavorFrenzy"
+      component={FlavorFrenzyContainer}
     />
     <Route exact path="/products" component={ProductLandingContainer} />
     <Route exact path="/profile" component={ProfileContainer} />

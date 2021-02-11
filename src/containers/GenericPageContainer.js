@@ -22,20 +22,16 @@ class GenericPageContainer extends ContainerBase {
       fetchShopifyWholesaleProducts,
       getFlavors
     } = this.props.actions;
-    const generichPageSlug = get(
-      this,
-      'props.match.params.genericPageSlug',
-      ''
-    );
+    const genericPageSlug = get(this, 'props.match.params.genericPageSlug', '');
 
-    if (generichPageSlug === 'style-guide') {
+    if (genericPageSlug === 'style-guide') {
       if (!isStaging()) {
         return;
       }
     }
 
     return Promise.all([
-      getGenericPage(`/${generichPageSlug}`),
+      getGenericPage(`/${genericPageSlug}`),
       getEvents(),
       getFlavors(),
       fetchShopifyWholesaleProducts()
