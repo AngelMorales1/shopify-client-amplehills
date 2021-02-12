@@ -1,3 +1,13 @@
+export type FlavorFrenzyVote = {
+  _createdAt: Date;
+  _id: string;
+  flavorFrenzy: string;
+  round: string;
+  match: string;
+  flavor: string;
+};
+
+
 export type ShippingRate = {
   service_name: string;
   service_code: string;
