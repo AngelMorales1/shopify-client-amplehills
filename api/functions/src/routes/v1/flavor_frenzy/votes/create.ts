@@ -23,10 +23,11 @@ export default functions.https.onRequest(async function(request, response) {
   if (cors(request, response)) return;
 
   try {
-    const flavorFrenzy = get(request, 'body.flavorFrenzy');
-    const round = get(request, 'body.round');
-    const match = get(request, 'body.match');
-    const flavor = get(request, 'body.flavor');
+    const body = JSON.parse(request.body);
+    const flavorFrenzy = get(body, 'flavorFrenzy');
+    const round = get(body, 'round');
+    const match = get(body, 'match');
+    const flavor = get(body, 'flavor');
 
     if (!flavorFrenzy || !round || !match || !flavor) {
       response.writeHead(400, {

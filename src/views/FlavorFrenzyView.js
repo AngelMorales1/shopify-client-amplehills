@@ -3,18 +3,23 @@ import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ErrorPage from 'components/ErrorPage';
+import FlavorFrenzyCarousel from 'components/FlavorFrenzyCarousel';
 
 class FlavorFrenzyView extends Component {
   render() {
-    const { model, flavor } = this.props;
+    const { model } = this.props;
 
     if (model.isError) return <ErrorPage />;
 
-    console.log('MODEL', model);
-    const blocks = get(flavor, 'contentBlocks', []);
+    const flavorFrenzy = get(model, 'flavorFrenzy');
+    const votes = get(model, 'votes');
+    const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+
+    if (!flavorFrenzy) return <ErrorPage />;
 
     return (
       <div className="FlavorFrenzyView">
+        <FlavorFrenzyCarousel flavorFrenzy={flavorFrenzy} votes={votes} />
         {blocks &&
           blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);

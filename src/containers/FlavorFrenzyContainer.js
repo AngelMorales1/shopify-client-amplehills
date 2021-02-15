@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import get from 'lodash/get';
 
+import Firestore from 'lib/Firestore';
 import {
   getGenericPage,
   getFlavorFrenzy
@@ -19,18 +20,18 @@ class FlavorLandingContainer extends ContainerBase {
     return Promise.all([
       getGenericPage(`/${slug}`, true),
       getFlavorFrenzy(`${slug}`)
-    ]).then(([genericPage, flavorFrenzy]) => {
+    ]).then(async ([genericPage, flavorFrenzy]) => {
+      const votes = await Firestore.FlavorFrenzy.getVotes(
+        get(flavorFrenzy, 'value._id')
+      );
       return {
         genericPage: get(genericPage, 'value'),
-        flavorFrenzy: get(flavorFrenzy, 'value')
+        flavorFrenzy: get(flavorFrenzy, 'value'),
+        votes
       };
     });
   };
 }
-
-const mapStateToProps = (state, props) => {
-  return {};
-};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -39,6 +40,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(FlavorLandingContainer);

@@ -21,9 +21,10 @@ export default functions.https.onRequest(async function(request, response) {
   if (cors(request, response)) return;
 
   try {
+    const flavorFrenzy = request.query.id;
     const votes: FlavorFrenzyVote[] = [];
     
-    (await db.collection('votes').get()).forEach(doc => {
+    (await db.collection('votes').where('flavorFrenzy', '==', flavorFrenzy).get()).forEach(doc => {
       votes.push({
         _id: doc.id,
         _createdAt: doc.createTime.toDate(),

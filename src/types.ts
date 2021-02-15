@@ -1,6 +1,6 @@
 export type FlavorFrenzyVote = {
-  _createdAt: Date;
-  _id: string;
+  _createdAt?: Date;
+  _id?: string;
   flavorFrenzy: string;
   round: string;
   match: string;

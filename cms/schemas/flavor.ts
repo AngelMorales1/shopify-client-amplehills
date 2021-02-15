@@ -18,6 +18,12 @@ export default {
       validation: Rule => Rule.required().custom(slugIsValid),
       description:
         'This is the URL for the flavor. Should look like "the-name-of-the-flavor" all lowercase and separated by hyhens. This should match the Shopify product handle if there is one. Example: "pb-wins-the-cup"'
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'array',
+      of: [{ type: 'block' }]
     }
   ]
 };

@@ -1,9 +1,9 @@
 import environmentIsLocal from 'utils/environmentIsLocal';
-import { FlavorFrenzyVote } from 'types';
+// import { FlavorFrenzyVote } from 'types';
 
-const API_VERSION = '/api/v1';
+const API_VERSION = 'api/v1';
 const BASE_URL = environmentIsLocal()
-  ? 'https://localhost:5000'
+  ? 'http://localhost:5000'
   : 'https://ample-hills.web.app';
 
 const Endpoints = {
@@ -15,13 +15,16 @@ const Endpoints = {
 
 const Firestore = {
   FlavorFrenzy: {
-    createVote: function(vote: FlavorFrenzyVote) {
+    createVote: function(vote) {
       return fetch(Endpoints.FlavorFrenzy.CREATE_VOTE, {
-        body: JSON.stringify({ vote })
+        method: 'post',
+        body: JSON.stringify({ ...vote })
       });
     },
-    getVotes: function(flavorFrenzyId: string) {
-      return fetch(`${Endpoints.FlavorFrenzy.GET_VOTES}/${flavorFrenzyId}`);
+    getVotes: function(id) {
+      return fetch(`${Endpoints.FlavorFrenzy.GET_VOTES}?id=${id}`).then(res =>
+        res.json()
+      );
     }
   }
 };

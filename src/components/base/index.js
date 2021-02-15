@@ -9,6 +9,7 @@ import Modal from './Modal';
 import Carousel from './Carousel';
 import HorizontalCarousel from './HorizontalCarousel';
 import SubNav from './SubNav';
+import PortableText from './PortableText';
 
 export {
   Button,
@@ -21,5 +22,6 @@ export {
   Modal,
   Carousel,
   HorizontalCarousel,
-  SubNav
+  SubNav,
+  PortableText
 };

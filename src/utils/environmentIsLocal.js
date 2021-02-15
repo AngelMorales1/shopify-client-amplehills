@@ -1,6 +1,6 @@
 import Environments from 'constants/Environments';
 
-export default (simulateLocalEnvironment: boolean = false): boolean => {
+export default (simulateLocalEnvironment = false) => {
   if (simulateLocalEnvironment) return true;
 
   return Environments.LOCAL.hostnames.includes(window.location.host);

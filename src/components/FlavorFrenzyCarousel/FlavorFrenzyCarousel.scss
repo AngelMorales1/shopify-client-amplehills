@@ -1,0 +1,44 @@
+@import 'settings';
+
+.FlavorFrenzyCarousel {
+  &__slide {
+    min-height: 90vh;
+  }
+
+  &__slide-title {
+    font-family: $font-carter;
+    font-size: $font-6;
+
+    @media ($medium-up) {
+      font-size: $font-7;
+      line-height: $font-7;
+    }
+  }
+
+  &__indicator {
+    @media ($medium-up) {
+      padding: spacing(2);
+    }
+  }
+
+  &__vote-card {
+    border-radius: radius('s');
+    width: spacing(75);
+    height: spacing(100);
+
+    @media ($medium-up) {
+      width: spacing(80);
+      height: spacing(112);
+    }
+  }
+
+  &__card-title {
+    font-family: $font-carter;
+    font-size: $font-5;
+
+    @media ($medium-up) {
+      font-size: $font-6;
+      line-height: $font-6;
+    }
+  }
+}

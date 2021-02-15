@@ -1,5 +1,8 @@
 import sanityClient from '@sanity/client';
 
+import * as Groq from 'lib/Groq';
+import * as Serializers from 'lib/Serializers';
+
 export const SanityClient = sanityClient({
   projectId: '1v8tcmfe',
   dataset: 'production',
@@ -7,10 +10,10 @@ export const SanityClient = sanityClient({
 });
 
 export const Sanity = {
-  fetchFlavorFrenzy: async function(slug) {
+  fetchFlavorFrenzy: function(slug) {
     return SanityClient.fetch(
-      `*[_type == 'flavorFrenzy' && slug == '${slug}']`
-    );
+      `*[_type == 'flavorFrenzy' && slug == '${slug}'][0] ${Groq.FlavorFrenzy}`
+    ).then(Serializers.flavorFrenzy);
   }
 };
 
