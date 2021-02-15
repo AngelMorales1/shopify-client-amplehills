@@ -1,0 +1,17 @@
+@import 'settings';
+
+.FullWidthImages {
+  &__desktop {
+    display: none;
+
+    @media ($medium-up) {
+      display: block;
+    }
+  }
+
+  &__mobile {
+    @media ($medium-up) {
+      display: none;
+    }
+  }
+}

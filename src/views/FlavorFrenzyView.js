@@ -1,11 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import get from 'utils/get';
+import scrollTo from 'react-scroll-to-component';
+
+import SCROLL_OPTIONS from 'constants/SubNavScrollOption';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ErrorPage from 'components/ErrorPage';
 import FlavorFrenzyCarousel from 'components/FlavorFrenzyCarousel';
+import GenericHero from 'components/GenericHero';
+import { Button } from 'components/base';
 
 class FlavorFrenzyView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.carouselRef = createRef();
+  }
+
   render() {
     const { model } = this.props;
 
@@ -19,7 +30,36 @@ class FlavorFrenzyView extends Component {
 
     return (
       <div className="FlavorFrenzyView">
-        <FlavorFrenzyCarousel flavorFrenzy={flavorFrenzy} votes={votes} />
+        <GenericHero
+          block={{
+            fields: {
+              title: flavorFrenzy.name,
+              text: flavorFrenzy.description,
+              drip: true,
+              color: 'pink'
+            }
+          }}
+          renderButton={() => (
+            <div className="flex justify-center">
+              <Button
+                ariaLabel="Scroll to Flavor Frenzy"
+                variant="primary"
+                color="madison-blue"
+                type="button"
+                onClick={() =>
+                  scrollTo(this.carouselRef.current, SCROLL_OPTIONS)
+                }
+              >
+                Let the Games Begin!
+              </Button>
+            </div>
+          )}
+        />
+        <FlavorFrenzyCarousel
+          innerRef={this.carouselRef}
+          flavorFrenzy={flavorFrenzy}
+          votes={votes}
+        />
         {blocks &&
           blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);

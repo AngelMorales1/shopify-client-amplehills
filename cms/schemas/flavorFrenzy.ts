@@ -20,6 +20,12 @@ export default {
         'This is the URL for the flavor frenzy. Should look like "the-name-of-the-flavor" all lowercase and separated by hyhens. Example: "flavor-frenzy-2021"'
     },
     {
+      name: 'description',
+      title: 'Description',
+      type: 'array',
+      of: [{ type: 'block' }]
+    },
+    {
       name: 'rounds',
       title: 'Rounds',
       type: 'array',

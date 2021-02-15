@@ -1,6 +1,8 @@
 @import 'settings';
 
 .FlavorFrenzyCarousel {
+  margin-top: -100px; // drip
+
   &__slide {
     min-height: 90vh;
   }
@@ -24,21 +26,54 @@
   &__vote-card {
     border-radius: radius('s');
     width: spacing(75);
-    height: spacing(100);
+    height: spacing(110);
+    padding: 1rem;
+    margin: 0 1rem;
 
     @media ($medium-up) {
+      padding: 2rem;
+      margin: 0 2rem;
       width: spacing(80);
-      height: spacing(112);
+      height: spacing(118);
     }
   }
 
   &__card-title {
     font-family: $font-carter;
-    font-size: $font-5;
+    font-size: $font-4;
 
     @media ($medium-up) {
       font-size: $font-6;
-      line-height: $font-6;
+      line-height: $font-7;
+    }
+  }
+
+  &__card-controls {
+    padding: 0 1rem 1rem;
+    flex-direction: column;
+
+    @media ($medium-up) {
+      padding: 0 2rem 2rem;
+      flex-direction: row;
+    }
+  }
+
+  &__vote-count {
+    flex-direction: row;
+    margin-top: 0.75rem;
+
+    @media ($medium-up) {
+      margin-left: 1rem;
+      margin-top: 0;
+      flex-direction: column;
+    }
+  }
+
+  &__vote-button {
+    width: 100%;
+
+    @media ($medium-up) {
+      width: auto;
     }
   }
 }

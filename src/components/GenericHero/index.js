@@ -7,9 +7,9 @@ import marked from 'marked';
 
 import imageModel from 'models/imageModel';
 import styles from './GenericHero.scss';
-import { Image, Button } from 'components/base';
+import { Image, Button, PortableText } from 'components/base';
 
-const GenericHero = ({ block, z }) => {
+const GenericHero = ({ block, z, renderButton }) => {
   const fields = get(block, 'fields', {});
   const title = get(fields, 'title', '');
   const image1 = get(fields, 'image1', null);
@@ -32,6 +32,8 @@ const GenericHero = ({ block, z }) => {
     },
     'pb2 z-sub-nav'
   );
+
+  const textIsPortableText = text && get(text, '[0]._type') === 'block';
 
   return (
     <div style={{ zIndex: z }} className={classes}>
@@ -68,14 +70,19 @@ const GenericHero = ({ block, z }) => {
             )}
           >
             <p className="block-headline pt3">{title}</p>
-            {text ? (
+            {text && textIsPortableText && (
+              <div className="markdown-block pt3">
+                <PortableText blocks={text} />
+              </div>
+            )}
+            {text && !textIsPortableText && (
               <div
                 dangerouslySetInnerHTML={{
                   __html: marked(text)
                 }}
                 className="markdown-block pt3"
               />
-            ) : null}
+            )}
             {image1 && !imageRight && !image2 ? (
               <Image
                 className={cx(styles['GenericHero__image'], 'w100 pt3')}
@@ -98,6 +105,9 @@ const GenericHero = ({ block, z }) => {
                 />
               </div>
             ) : null}
+            {renderButton &&
+              typeof renderButton === 'function' &&
+              renderButton()}
           </div>
         </div>
         {imageRight ? (

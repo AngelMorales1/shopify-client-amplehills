@@ -7,7 +7,7 @@ import Firestore from 'lib/Firestore';
 import { Button, PortableText } from 'components/base';
 import styles from './FlavorFrenzyCarousel.scss';
 
-const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
+const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
   const round = get(flavorFrenzy, 'activeRound');
   const matches = get(round, 'matches', []);
   const [index, setIndex] = useState(0);
@@ -46,11 +46,14 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
     const votesInMatch = votes.filter(vote => vote.match === match);
     const votesForFlavor = votesInMatch.filter(vote => vote.flavor === flavor);
 
+    if (!votesInMatch.length || !votesForFlavor.length) return 0;
+
     return ((votesForFlavor.length / votesInMatch.length) * 100).toFixed(0);
   };
 
   return (
     <div
+      ref={innerRef}
       className={cx(
         styles['FlavorFrenzyCarousel'],
         'bg-white flex flex-column justify-center items-center relative'
@@ -64,7 +67,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
         renderCenterRightControls={() => {}}
         renderBottomCenterControls={props => (
           <ul className="flex items-center">
-            {[...Array(matches.length)].map((dot, i) => (
+            {[...Array(matches.length + 1)].map((dot, i) => (
               <li
                 key={i}
                 className={cx(
@@ -106,7 +109,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
                 <div
                   className={cx(
                     styles['FlavorFrenzyCarousel__vote-card'],
-                    'bg-white mx3 p3 relative'
+                    'bg-white relative'
                   )}
                 >
                   <div
@@ -124,15 +127,26 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
                     >
                       {flavor.name}
                     </span>
-                    <span className="markdown-block small mb2">
+                    <span className="markdown-block small mb2 xs-hide sm-hide">
+                      <PortableText blocks={flavor.description} />
+                    </span>
+                    <span className="markdown-block extra-small mb2 md-hide lg-hide">
                       <PortableText blocks={flavor.description} />
                     </span>
                   </div>
-                  <div className="absolute b0 l0 flex items-center w100 px3 pb3">
+                  <div
+                    className={cx(
+                      styles['FlavorFrenzyCarousel__card-controls'],
+                      'absolute b0 l0 flex w100'
+                    )}
+                  >
                     <Button
                       variant="primary"
                       color="madison-blue"
-                      className="align-end"
+                      className={cx(
+                        styles['FlavorFrenzyCarousel__vote-button'],
+                        'align-end'
+                      )}
                       disabled={
                         !!pendingVote || localStorage.getItem(match._id)
                       }
@@ -147,10 +161,18 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
                     >
                       Choose Flavor
                     </Button>
-                    <div className="flex flex-column items-center justify-center ml2">
-                      <span className="callout text-peach">
+                    <div
+                      className={cx(
+                        styles['FlavorFrenzyCarousel__vote-count'],
+                        'flex items-center justify-center'
+                      )}
+                    >
+                      <span className="callout text-peach xs-hide sm-hide">
                         {getPercentageOfVote(match._id, flavor._id)}%
                       </span>
+                      <p className="bold extra-small pb1 md-hide lg-hide">
+                        {getPercentageOfVote(match._id, flavor._id)}% &nbsp;
+                      </p>
                       <p className="text-peach extra-small pb1 uppercase semi-bold">
                         of the vote
                       </p>
@@ -164,7 +186,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
         <div
           className={cx(
             styles['FlavorFrenzyCarousel__slide'],
-            'flex items-center justify-center flex-column h100 w100 bg-light-turquoise'
+            'flex items-center justify-center flex-column h100 w100 bg-light-turquoise p2'
           )}
         >
           <span className="small-title text-peach mb2">

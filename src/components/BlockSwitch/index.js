@@ -3,6 +3,7 @@ import React from 'react';
 import get from 'utils/get';
 
 import ProductDetails from 'components/ProductDetails';
+import FullWidthImages from 'components/FullWidthImages';
 import ImageText from 'components/ImageText';
 import ImageDoubleText from 'components/ImageDoubleText';
 import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
@@ -27,6 +28,8 @@ const BlockSwitch = props => {
   const type = get(block, 'sys.contentType.sys.id');
 
   switch (type) {
+    case 'blockFullWidthImages':
+      return <FullWidthImages {...props} />;
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
     case 'blockImageText':
