@@ -4,6 +4,8 @@ import Nuka from 'nuka-carousel';
 import get from 'lodash/get';
 
 import Firestore from 'lib/Firestore';
+import portableTextAsString from 'utils/portableTextAsString';
+
 import { Button, PortableText } from 'components/base';
 import styles from './FlavorFrenzyCarousel.scss';
 
@@ -56,13 +58,15 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
       ref={innerRef}
       className={cx(
         styles['FlavorFrenzyCarousel'],
-        'bg-white flex flex-column justify-center items-center relative'
+        'bg-light-turquoise flex flex-column justify-center items-center relative pb1'
       )}
     >
       <Nuka
         slideIndex={index}
         afterSlide={setIndex}
         dragging={false}
+        swiping={false}
+        heightMode="current"
         renderCenterLeftControls={() => {}}
         renderCenterRightControls={() => {}}
         renderBottomCenterControls={props => (
@@ -93,13 +97,13 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
           <div
             className={cx(
               styles['FlavorFrenzyCarousel__slide'],
-              'flex items-center justify-center flex-column h100 w100 bg-light-turquoise'
+              'flex items-center justify-center flex-column h100 w100'
             )}
           >
             <div
               className={cx(
                 styles['FlavorFrenzyCarousel__slide-title'],
-                'w100 center p3 mb4'
+                'w100 center p3'
               )}
             >
               <span>Vote for a Flavor in Each Match Up!</span>
@@ -130,7 +134,19 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
                     <span className="markdown-block small mb2 xs-hide sm-hide">
                       <PortableText blocks={flavor.description} />
                     </span>
-                    <span className="markdown-block extra-small mb2 md-hide lg-hide">
+                    <span
+                      className={cx(
+                        'markdown-block extra-small mb2 md-hide lg-hide',
+                        {
+                          'extra-small':
+                            portableTextAsString(flavor.description).length <
+                            160,
+                          'xx-small':
+                            portableTextAsString(flavor.description).length >=
+                            160
+                        }
+                      )}
+                    >
                       <PortableText blocks={flavor.description} />
                     </span>
                   </div>

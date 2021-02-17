@@ -299,6 +299,15 @@ UI elements
       text-align: center;
     }
   }
+
+  &.extra-small > p {
+    font-size: $font-4;
+    line-height: $font-6;
+  }
+  &.xx-small > p {
+    font-size: $font-2;
+    line-height: $font-4;
+  }
 }
 
 .subnav {
