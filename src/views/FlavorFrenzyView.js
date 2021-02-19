@@ -7,6 +7,7 @@ import SCROLL_OPTIONS from 'constants/SubNavScrollOption';
 import BlockSwitch from 'components/BlockSwitch';
 import ErrorPage from 'components/ErrorPage';
 import FlavorFrenzyCarousel from 'components/FlavorFrenzyCarousel';
+import FlavorFrenzyPredictions from 'components/FlavorFrenzyPredictions';
 import GenericHero from 'components/GenericHero';
 import { Button } from 'components/base';
 
@@ -25,6 +26,13 @@ class FlavorFrenzyView extends Component {
     const flavorFrenzy = get(model, 'flavorFrenzy');
     const votes = get(model, 'votes');
     const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+    const predictionsAreActive = get(
+      flavorFrenzy,
+      'predictions.isActive',
+      false
+    );
+    const winner = get(flavorFrenzy, 'winner');
+    const votingIsActive = !predictionsAreActive && !winner;
 
     if (!flavorFrenzy) return <ErrorPage />;
 
@@ -33,8 +41,8 @@ class FlavorFrenzyView extends Component {
         <GenericHero
           block={{
             fields: {
-              title: flavorFrenzy.name,
-              text: flavorFrenzy.description,
+              title: get(flavorFrenzy, 'hero.title', flavorFrenzy.name),
+              text: get(flavorFrenzy, 'hero.description'),
               drip: true,
               color: 'pink'
             }
@@ -50,16 +58,21 @@ class FlavorFrenzyView extends Component {
                   scrollTo(this.carouselRef.current, SCROLL_OPTIONS)
                 }
               >
-                Let the Games Begin!
+                {get(flavorFrenzy, 'hero.buttonText', 'Let the Games Begin!')}
               </Button>
             </div>
           )}
         />
-        <FlavorFrenzyCarousel
-          innerRef={this.carouselRef}
-          flavorFrenzy={flavorFrenzy}
-          votes={votes}
-        />
+        {predictionsAreActive && (
+          <FlavorFrenzyPredictions flavorFrenzy={flavorFrenzy} />
+        )}
+        {votingIsActive && (
+          <FlavorFrenzyCarousel
+            innerRef={this.carouselRef}
+            flavorFrenzy={flavorFrenzy}
+            votes={votes}
+          />
+        )}
         {blocks &&
           blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);

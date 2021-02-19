@@ -24,6 +24,7 @@
     height: spacing(4);
     width: spacing(4);
     margin-right: spacing(2);
+    flex-shrink: 0;
   }
 
   &--white {

@@ -15,6 +15,10 @@
         "source": "/api/v1/flavor_frenzy/votes/create",
         "function": "flavor_frenzy_votes_create"
       },
+      {
+        "source": "/api/v1/flavor_frenzy/predictions/create",
+        "function": "flavor_frenzy_predictions_create"
+      },
 
       {
         "source": "/shipping",

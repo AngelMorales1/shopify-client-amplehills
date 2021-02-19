@@ -4,6 +4,11 @@ export default {
   name: 'flavorFrenzy',
   title: 'Flavor Frenzy',
   type: 'document',
+  fieldsets: [{
+    name: 'flavors',
+    title: 'Flavors',
+    options: { collapsible: true, collapsed: true },
+  }],
   fields: [
     {
       name: 'name',
@@ -20,15 +25,69 @@ export default {
         'This is the URL for the flavor frenzy. Should look like "the-name-of-the-flavor" all lowercase and separated by hyhens. Example: "flavor-frenzy-2021"'
     },
     {
-      name: 'description',
-      title: 'Description',
-      type: 'array',
-      of: [{ type: 'block' }]
+      name: 'hero',
+      title: 'Hero',
+      type: 'object',
+      options: { collapsible: true, collapsed: true },
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'array',
+          of: [{ type: 'block' }]
+        },
+        {
+          name: 'buttonText',
+          title: 'Button Text',
+          type: 'string'
+        }
+      ]
+    },
+    {
+      name: 'predictions',
+      title: 'Predictions',
+      type: 'object',
+      options: { collapsible: true, collapsed: true },
+      fields: [
+        {
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+          description: 'This will populate the title text in the Predictions block.'
+        },
+        {
+          name: 'description',
+          title: 'Description',
+          type: 'array',
+          of: [{ type: 'block' }],
+          description: 'This will populate the description text in the Predictions block.'
+        },
+        {
+          name: 'isActive',
+          title: 'Predictions are active?',
+          type: 'boolean',
+          description: 'This will replace the voting carousel with a selection of all participating flavors for users to predict which will win.',
+        },
+      ]
+    },
+    {
+      name: 'winner',
+      title: 'Winner',
+      type: 'reference',
+      fieldset: 'flavors',
+      to: [{ type: 'flavor' }],
+      description: 'Entering a winner will effectively close all voting and lock in the vote.'
     },
     {
       name: 'rounds',
       title: 'Rounds',
       type: 'array',
+      fieldset: 'flavors',
       of: [{
         type: 'object',
         fields: [

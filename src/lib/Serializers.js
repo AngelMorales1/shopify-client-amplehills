@@ -12,7 +12,7 @@ export const flavorFrenzy = memoize(function(data) {
   const flavors = Object.values(
     matches.reduce((flavors, match) => {
       const flavor1 = get(match, 'flavor1');
-      const flavor2 = get(match, 'flavor1');
+      const flavor2 = get(match, 'flavor2');
 
       if (flavor1) flavors[flavor1.slug] = flavor1;
       if (flavor2) flavors[flavor2.slug] = flavor2;

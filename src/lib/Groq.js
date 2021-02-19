@@ -10,7 +10,9 @@ export const FlavorFrenzy = `{
   _createdAt,
   name,
   slug,
-  description,
+  hero,
+  predictions,
+  winner,
   "rounds": rounds[]{
     ...,
     "_id": _key,

@@ -21,9 +21,18 @@ class FlavorLandingContainer extends ContainerBase {
       getGenericPage(`/${slug}`, true),
       getFlavorFrenzy(`${slug}`)
     ]).then(async ([genericPage, flavorFrenzy]) => {
-      const votes = await Firestore.FlavorFrenzy.getVotes(
-        get(flavorFrenzy, 'value._id')
+      const id = get(flavorFrenzy, 'value._id');
+      const predictionsActive = get(
+        flavorFrenzy,
+        'value.predictions.isActive',
+        false
       );
+      const winner = get(flavorFrenzy, 'value.winner');
+      const votes =
+        !predictionsActive && !winner
+          ? await Firestore.FlavorFrenzy.getVotes(id)
+          : [];
+
       return {
         genericPage: get(genericPage, 'value'),
         flavorFrenzy: get(flavorFrenzy, 'value'),
