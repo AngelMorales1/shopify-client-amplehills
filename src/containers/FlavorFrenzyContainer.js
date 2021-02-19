@@ -15,7 +15,7 @@ class FlavorLandingContainer extends ContainerBase {
   model = () => {
     const { getGenericPage, getFlavorFrenzy } = this.props.actions;
 
-    const slug = get(this, 'props.match.params.flavorFrenzy', '');
+    const slug = 'flavor-frenzy-2021';
 
     return Promise.all([
       getGenericPage(`/${slug}`, true),

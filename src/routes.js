@@ -51,11 +51,6 @@ const Routes = ({ location }) => (
       path="/flavors/:flavorHandle"
       component={FlavorDetailContainer}
     />
-    <Route
-      exact
-      path="/flavor-frenzies/:flavorFrenzy"
-      component={FlavorFrenzyContainer}
-    />
     <Route exact path="/products" component={ProductLandingContainer} />
     <Route exact path="/profile" component={ProfileContainer} />
     <Route exact path="/sign-in" component={SignInContainer} />
@@ -75,6 +70,7 @@ const Routes = ({ location }) => (
       path="/cake-request-form"
       component={CakeRequestFormContainer}
     />
+    <Route exact path="/flavor-frenzy-2021" component={FlavorFrenzyContainer} />
     <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route path="*" render={() => <ErrorPage errorIs404={true} />} />
   </Switch>
