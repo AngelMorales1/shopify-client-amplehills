@@ -55,14 +55,14 @@ const FlavorFrenzyPredictions = ({ flavorFrenzy }) => {
         </div>
       ) : (
         <Fragment>
-          <div className="flex flex-column items-center justify-center col-12 md-col-8 lg-col-4 center mb3">
+          <div className="flex flex-column items-center justify-center col-12 md-col-8 lg-col-5 center mb2">
             <h2 className={cx(styles['FlavorFrenzyPredictions__title'])}>
               {title}
             </h2>
             {!!description && (
-              <span className="markdown-block">
+              <div className="markdown-block portable-text">
                 <PortableText blocks={description} />
-              </span>
+              </div>
             )}
           </div>
           <div className="container-width mxauto flex items-center justify-center flex-wrap mb4">

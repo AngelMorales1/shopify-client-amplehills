@@ -9,7 +9,7 @@ import portableTextAsString from 'utils/portableTextAsString';
 import { Button, PortableText } from 'components/base';
 import styles from './FlavorFrenzyCarousel.scss';
 
-const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
+const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
   const round = get(flavorFrenzy, 'activeRound');
   const matches = get(round, 'matches', []);
   const [index, setIndex] = useState(0);
@@ -55,7 +55,6 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes, innerRef }) => {
 
   return (
     <div
-      ref={innerRef}
       className={cx(
         styles['FlavorFrenzyCarousel'],
         'bg-light-turquoise flex flex-column justify-center items-center relative pb1'

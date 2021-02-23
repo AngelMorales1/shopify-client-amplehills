@@ -24,8 +24,12 @@ const klaviyo = functions.https.onRequest(async (req, res) => {
   if (cors(req, res)) return;
 
   try {
-    const email = get(JSON.parse(req.body), 'email');
-    const prediction = get(JSON.parse(req.body), 'prediction');
+    let { body } = req;
+    
+    body = typeof body === 'object' ? body : JSON.parse(body);
+
+    const email = get(body, 'email');
+    const prediction = get(body, 'prediction');
 
     const data = {
       api_key: functions.config().klaviyo.api_key,

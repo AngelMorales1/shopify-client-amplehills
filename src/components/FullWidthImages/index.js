@@ -6,13 +6,13 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import { Image } from 'components/base';
 import styles from './FullWidthImages.scss';
 
-const FullWidthImages = ({ block, z }) => {
+const FullWidthImages = ({ block, z, blockRef }) => {
   const fields = get(block, 'fields');
   const desktopImages = get(fields, 'desktopImages', []);
   const mobileImages = get(fields, 'mobileImages', []);
 
   return (
-    <div className={cx(styles['FullWidthImages'], 'w100')}>
+    <div ref={blockRef} className={cx(styles['FullWidthImages'], 'w100')}>
       <div className={styles['FullWidthImages__desktop']}>
         {desktopImages &&
           desktopImages.map(image => (

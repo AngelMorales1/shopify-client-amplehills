@@ -219,6 +219,24 @@ UI elements
   width: spacing(6);
 }
 
+.portable-text p {
+  @extend .block-subheadline;
+  margin-bottom: spacing(8);
+
+  > a {
+    text-decoration: none;
+    border-bottom: spacing(0.5) solid color('peach');
+  }
+
+  > strong {
+    @extend .bold;
+  }
+
+  > img {
+    width: 100%;
+  }
+}
+
 .markdown-block {
   > h1 {
     @extend .carter;

@@ -15,7 +15,14 @@ class FlavorFrenzyView extends Component {
   constructor(props) {
     super(props);
 
-    this.carouselRef = createRef();
+    const { model } = props;
+    const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+    this.blockRefs = blocks.map(createRef);
+    this.bracketIndex = blocks.findIndex(block => {
+      const type = get(block, 'sys.contentType.sys.id');
+
+      return type === 'blockFullWidthImages';
+    });
   }
 
   render() {
@@ -55,7 +62,10 @@ class FlavorFrenzyView extends Component {
                 color="madison-blue"
                 type="button"
                 onClick={() =>
-                  scrollTo(this.carouselRef.current, SCROLL_OPTIONS)
+                  scrollTo(this.blockRefs[this.bracketIndex].current, {
+                    ...SCROLL_OPTIONS,
+                    offset: -200
+                  })
                 }
               >
                 {get(flavorFrenzy, 'hero.buttonText', 'Let the Games Begin!')}
@@ -67,11 +77,7 @@ class FlavorFrenzyView extends Component {
           <FlavorFrenzyPredictions flavorFrenzy={flavorFrenzy} />
         )}
         {votingIsActive && (
-          <FlavorFrenzyCarousel
-            innerRef={this.carouselRef}
-            flavorFrenzy={flavorFrenzy}
-            votes={votes}
-          />
+          <FlavorFrenzyCarousel flavorFrenzy={flavorFrenzy} votes={votes} />
         )}
         {blocks &&
           blocks.map((block, i) => {
@@ -80,6 +86,7 @@ class FlavorFrenzyView extends Component {
 
             return (
               <BlockSwitch
+                blockRef={this.blockRefs[i]}
                 key={get(block, 'sys.id', i)}
                 block={block}
                 z={blocks.length - i + additionalZIndex}
