@@ -260,9 +260,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
                           styles['FlavorFrenzyCarousel__vote-button'],
                           'align-end'
                         )}
-                        disabled={
-                          !!pendingVote || localStorage.getItem(match._id)
-                        }
+                        disabled={pendingVote}
                         onClick={() => {
                           setSelectedVotes({
                             ...selectedVotes,
