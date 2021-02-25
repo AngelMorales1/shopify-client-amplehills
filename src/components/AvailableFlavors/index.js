@@ -29,8 +29,9 @@ class AvailableFlavors extends Component {
     const currentBreakpoint =
       window.innerWidth <= medium.lowerbound ? small.label : medium.label;
 
-    if (this.state.currentBreakpoint !== currentBreakpoint)
+    if (this.state.currentBreakpoint !== currentBreakpoint) {
       this.setState({ currentBreakpoint });
+    }
   };
 
   render() {

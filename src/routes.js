@@ -19,6 +19,7 @@ import ArticleDetailContainer from 'containers/ArticleDetailContainer';
 import MerchDetailContainer from 'containers/MerchDetailContainer';
 import FlavorDetailContainer from 'containers/FlavorDetailContainer';
 import FlavorFrenzyContainer from 'containers/FlavorFrenzyContainer';
+import FlavorFrenzyThankYouContainer from 'containers/FlavorFrenzyThankYouContainer';
 import InStoresContainer from 'containers/InStoresContainer';
 import ErrorPage from 'components/ErrorPage';
 
@@ -70,7 +71,13 @@ const Routes = ({ location }) => (
       path="/cake-request-form"
       component={CakeRequestFormContainer}
     />
+    {/* Temporary routes */}
     <Route exact path="/flavor-frenzy-2021" component={FlavorFrenzyContainer} />
+    <Route
+      exact
+      path="/flavor-frenzy-2021/thank-you"
+      component={FlavorFrenzyThankYouContainer}
+    />
     <Route exact path="/:genericPageSlug" component={GenericPageContainer} />
     <Route path="*" render={() => <ErrorPage errorIs404={true} />} />
   </Switch>
