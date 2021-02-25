@@ -14,7 +14,8 @@ export const SanityPreviewClient = sanityClient({
   projectId: '1v8tcmfe',
   dataset: 'production',
   token: process.env.REACT_APP_SANITY_PREVIEW_TOKEN,
-  useCdn: false
+  useCdn: false,
+  withCredentials: true
 });
 
 const getPreviewId = () => getUrlParam('preview');
