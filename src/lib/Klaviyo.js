@@ -18,6 +18,19 @@ const Klaviyo = {
         return response.json();
       });
   },
+  signupV1(email, list) {
+    return window
+      .fetch(`${BASE_URL}/api/v1/klaviyo`, {
+        method: 'post',
+        body: JSON.stringify({ email, list })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw response;
+        }
+        return response.json();
+      });
+  },
   flavorFrenzyPrediction(email, prediction) {
     return window
       .fetch(`${BASE_URL}/api/v1/flavor_frenzy/predictions/create`, {

@@ -1,0 +1,52 @@
+@import 'settings';
+
+.NewsletterModal {
+  top: calc(#{$header-height-mobile} + #{spacing(4)});
+  transform: translate3d(spacing(180), 0, 0);
+  transition: transform 0.7s ease;
+  max-width: 100%;
+
+  @media ($medium-up) {
+    top: calc(#{$header-height-desktop} + #{spacing(8)});
+    max-width: 24rem;
+  }
+
+  &--active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &--alert-active {
+    top: calc(
+      #{$header-height-mobile} + #{spacing(4)} + #{$alert-height-mobile}
+    );
+
+    @media ($medium-up) {
+      top: calc(
+        #{$header-height-desktop} + #{spacing(8)} + #{$alert-height-desktop}
+      );
+    }
+  }
+
+  &__title {
+    font-family: $font-carter;
+    font-size: $font-5;
+  }
+
+  &__description {
+    font-size: $font-3;
+    line-height: $font-5;
+    letter-spacing: spacing(0.1);
+  }
+
+  &__close {
+    width: spacing(3);
+  }
+
+  &__text-field {
+    transform: translate3d(0, spacing(-0.5), 0);
+    input {
+      padding-top: spacing(2) + 0.0625rem;
+      padding-bottom: spacing(2) - 0.0625rem;
+    }
+  }
+}

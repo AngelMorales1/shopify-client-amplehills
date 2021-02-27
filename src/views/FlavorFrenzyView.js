@@ -8,6 +8,7 @@ import BlockSwitch from 'components/BlockSwitch';
 import ErrorPage from 'components/ErrorPage';
 import FlavorFrenzyCarousel from 'components/FlavorFrenzyCarousel';
 import FlavorFrenzyPredictions from 'components/FlavorFrenzyPredictions';
+import FlavorFrenzyNewsletterModal from 'components/FlavorFrenzyNewsletterModal';
 import GenericHero from 'components/GenericHero';
 import { Button } from 'components/base';
 
@@ -94,6 +95,7 @@ class FlavorFrenzyView extends Component {
               />
             );
           })}
+        <FlavorFrenzyNewsletterModal votingIsActive={votingIsActive} />
       </div>
     );
   }

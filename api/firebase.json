@@ -8,6 +8,10 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
+        "source": "/api/v1/klaviyo",
+        "function": "klaviyoV1"
+      },
+      {
         "source": "/api/v1/flavor_frenzy/votes",
         "function": "flavor_frenzy_votes"
       },

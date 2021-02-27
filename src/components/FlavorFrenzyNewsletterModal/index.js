@@ -5,12 +5,8 @@ import cx from 'classnames';
 
 import get from 'utils/get';
 import moment from 'moment';
-import {
-  openNewsletterModal,
-  closeNewsletterModal
-} from 'state/actions/ui/newsletterModalActions';
-import { klaviyoSignup } from 'state/actions/klaviyoActions';
-import alertIsActive from 'state/selectors/alertIsActive';
+import { closeNewsletterModal } from 'state/actions/ui/newsletterModalActions';
+import { klaviyoListSignup } from 'state/actions/klaviyoActions';
 
 import { Image, Button, TextField, FormFlash } from 'components/base';
 import { FULFILLED, REJECTED } from 'constants/Status';
@@ -21,55 +17,37 @@ class NewsletterModal extends Component {
     super(...arguments);
 
     this.state = {
-      emailAddress: ''
+      emailAddress: '',
+      isActive: false
     };
   }
 
   componentDidMount() {
-    const { actions, renewModalDate } = this.props;
+    const { votingIsActive, actions, renewModalDate } = this.props;
 
-    if (!renewModalDate && !window.location.href.includes('flavor-frenzy')) {
-      setTimeout(actions.openNewsletterModal, 5000);
+    if (!localStorage.getItem('ff_newsletter_signup') && votingIsActive) {
+      actions.closeNewsletterModal(renewModalDate);
+      setTimeout(() => this.setState({ isActive: true }), 5000);
     }
   }
 
   handleClose = () => {
-    const { actions } = this.props;
-    const oneWeekLater = moment().add(1, 'weeks');
+    const oneDayLater = moment().add(1, 'days');
 
-    actions.closeNewsletterModal(oneWeekLater);
+    localStorage.setItem('ff_newsletter_signup', oneDayLater);
+    this.setState({ isActive: false });
   };
 
   render() {
-    const {
-      alertIsActive,
-      globalSettings,
-      modalIsActive,
-      klaviyoSignupStatus,
-      actions
-    } = this.props;
+    const { votingIsActive, klaviyoListSignupStatus, actions } = this.props;
+    const { isActive } = this.state;
 
-    const subscribeNewsletterTitle = get(
-      globalSettings,
-      'subscribeNewsletterTitle',
-      'Subscribe to our newsletter!'
-    );
-    const subscribeNewsletterDescription = get(
-      globalSettings,
-      'subscribeNewsletterDescription',
-      ''
-    );
-    const showSubscribeNewsletterModal = get(
-      globalSettings,
-      'showSubscribeNewsletterModal',
-      false
-    );
+    if (!votingIsActive) return null;
 
-    if (!showSubscribeNewsletterModal) return null;
-
-    if (klaviyoSignupStatus === FULFILLED && modalIsActive) {
+    if (klaviyoListSignupStatus === FULFILLED && isActive) {
       const oneMonthLater = moment().add(1, 'months');
-      setTimeout(() => actions.closeNewsletterModal(oneMonthLater), 0);
+      localStorage.setItem('ff_newsletter_signup', oneMonthLater);
+      this.setState({ isActive: false });
     }
 
     return (
@@ -78,15 +56,14 @@ class NewsletterModal extends Component {
           styles['NewsletterModal'],
           'fixed z-nav bg-white card drop-shadow-xlarge px1 py2 mx2 r0',
           {
-            [styles['NewsletterModal--active']]: modalIsActive,
-            [styles['NewsletterModal--alert-active']]: alertIsActive
+            [styles['NewsletterModal--active']]: isActive
           }
         )}
-        aria-hidden={!modalIsActive}
+        aria-hidden={!isActive}
       >
         <div className="flex flex-row items-center justify-between">
           <p className={cx(styles['NewsletterModal__title'], 'px1 text-peach')}>
-            {subscribeNewsletterTitle}
+            Flavor Frenzy 2021
           </p>
           <Button
             ariaLabel="Close the newsletter subscribe popup"
@@ -100,16 +77,12 @@ class NewsletterModal extends Component {
             />
           </Button>
         </div>
-        {subscribeNewsletterDescription ? (
-          <p
-            className={cx(
-              styles['NewsletterModal__description'],
-              'pl1 pr3 mt1'
-            )}
-          >
-            {subscribeNewsletterDescription}
-          </p>
-        ) : null}
+        <p
+          className={cx(styles['NewsletterModal__description'], 'pl1 pr3 mt1')}
+        >
+          Want to know when the next round opens and the winner is declared?
+          Enter your email below!
+        </p>
         <div className="mt3 flex flex-column">
           <div className="flex flex-row items-center">
             <div
@@ -133,10 +106,12 @@ class NewsletterModal extends Component {
               variant="primary-small"
               color="madison-blue"
               shadow={true}
-              onClick={() => actions.klaviyoSignup(this.state.emailAddress)}
+              onClick={() =>
+                actions.klaviyoListSignup(this.state.emailAddress, 'WW9nrp')
+              }
             />
           </div>
-          {klaviyoSignupStatus === REJECTED && (
+          {klaviyoListSignupStatus === REJECTED && (
             <FormFlash
               className="z-1 mt2 mx1"
               error={true}
@@ -151,11 +126,8 @@ class NewsletterModal extends Component {
 
 const mapStateToProps = state => {
   return {
-    globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
-    alertIsActive: alertIsActive(state),
-    modalIsActive: get(state, 'session.newsletterModal.modalIsActive', false),
     renewModalDate: get(state, 'session.newsletterModal.renewModalDate', null),
-    klaviyoSignupStatus: get(state, 'status.klaviyoSignup')
+    klaviyoListSignupStatus: get(state, 'status.klaviyoListSignup')
   };
 };
 
@@ -163,9 +135,8 @@ const mapDispatchToProps = dispatch => {
   return {
     actions: bindActionCreators(
       {
-        openNewsletterModal,
         closeNewsletterModal,
-        klaviyoSignup
+        klaviyoListSignup
       },
       dispatch
     )

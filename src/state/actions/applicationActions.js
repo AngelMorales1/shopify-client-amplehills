@@ -29,7 +29,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(checkForFlashMessages())
       ]);
       const timeout = new Promise((resolve, reject) => {
-        setTimeout(() => reject('Timeout'), 10000);
+        setTimeout(() => reject('Timeout'), 30000);
       });
       const checkTimeout = Promise.race([fetchData, timeout]);
 
