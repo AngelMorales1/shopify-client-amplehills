@@ -96,7 +96,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
     }
   }, [pendingVote, setPendingVote]);
 
-  const hasVoted = !!localStorage.getItem(flavorFrenzy.name);
+  const hasVoted = !!localStorage.getItem(flavorFrenzy.name) && false; // Always lets users play
   useEffect(() => {
     if (getUrlParam('clear')) localStorage.removeItem(flavorFrenzy.name);
   }, []);
