@@ -20,6 +20,10 @@
         "function": "flavor_frenzy_votes_create"
       },
       {
+        "source": "/api/v1/flavor_frenzy/votes/migrate",
+        "function": "flavor_frenzy_votes_migrate"
+      },
+      {
         "source": "/api/v1/flavor_frenzy/predictions/create",
         "function": "flavor_frenzy_predictions_create"
       },
