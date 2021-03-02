@@ -17,30 +17,47 @@ const cors = access({
   credentials: false
 });
 
-export default functions.https.onRequest(async function(request, response) {
-  if (cors(request, response)) return;
+const runtimeOpts: functions.RuntimeOptions = {
+  timeoutSeconds: 300,
+  memory: '2GB'
+};
 
-  try {
-    const flavorFrenzy = request.query.id;
-    const votes: FlavorFrenzyVote[] = [];
-    
-    (await db.collection('votes').where('flavorFrenzy', '==', flavorFrenzy).get()).forEach(doc => {
-      votes.push({
-        _id: doc.id,
-        _createdAt: doc.createTime.toDate(),
-        ...doc.data()
-      } as FlavorFrenzyVote);
-    });
+export default functions
+  .runWith(runtimeOpts)
+  .https.onRequest(async function(request, response) {
+    if (cors(request, response)) return;
 
-    response.writeHead(200, {
-      'Content-Type': 'application/json'
-    });
-    return response.end(JSON.stringify(votes));
-  } catch (e) {
-    Sentry.captureException(e);
-    response.writeHead((e && e.status) || 500, {
-      'Content-Type': 'application/json'
-    });
-    return response.end(JSON.stringify(formatError(e)));
+    try {
+      console.time('AMPLE_HILLS_FF_FETCH');
+      const flavorFrenzy = request.query.id;
+      const votes: FlavorFrenzyVote[] = [];
+      
+      (await db.collection('votes').where('flavorFrenzy', '==', flavorFrenzy).limit(1500).get()).forEach(doc => {
+        votes.push({
+          _id: doc.id,
+          _createdAt: doc.createTime.toDate(),
+          ...doc.data()
+        } as FlavorFrenzyVote);
+      });
+      console.timeEnd('AMPLE_HILLS_FF_FETCH');
+
+      response.setHeader('Access-Control-Allow-Origin', '*');
+      response.setHeader('Access-Control-Allow-Credentials', 'true');
+      response.setHeader(
+        'Cache-Control',
+        'max-age=0, s-maxage=300, stale-while-revalidate=300'
+      );
+
+      response.writeHead(200, {
+        'Content-Type': 'application/json'
+      });
+      return response.end(JSON.stringify(votes));
+    } catch (e) {
+      Sentry.captureException(e);
+      response.writeHead((e && e.status) || 500, {
+        'Content-Type': 'application/json'
+      });
+      return response.end(JSON.stringify(formatError(e)));
+    }
   }
-});
+);
