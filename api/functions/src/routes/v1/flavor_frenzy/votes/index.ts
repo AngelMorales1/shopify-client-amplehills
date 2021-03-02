@@ -4,7 +4,6 @@ import * as Sentry from '@sentry/node';
 
 import db from './../../../../lib/db';
 import formatError from './../../../../utils/formatError';
-import { FlavorFrenzyVote } from './../../../../types';
 
 const cors = access({
   origins: [
@@ -29,15 +28,10 @@ export default functions
 
     try {
       console.time('AMPLE_HILLS_FF_FETCH');
-      const flavorFrenzy = request.query.id;
-      const votes: FlavorFrenzyVote[] = [];
+      const matches: { [key: string]: number | string }[] = [];
       
-      (await db.collection('votes').where('flavorFrenzy', '==', flavorFrenzy).limit(1500).get()).forEach(doc => {
-        votes.push({
-          _id: doc.id,
-          _createdAt: doc.createTime.toDate(),
-          ...doc.data()
-        } as FlavorFrenzyVote);
+      (await db.collection('totals').where('match', '!=', '').get()).forEach(doc => {
+        matches.push({ _id: doc.id, ...doc.data() });
       });
       console.timeEnd('AMPLE_HILLS_FF_FETCH');
 
@@ -51,7 +45,7 @@ export default functions
       response.writeHead(200, {
         'Content-Type': 'application/json'
       });
-      return response.end(JSON.stringify(votes));
+      return response.end(JSON.stringify(matches));
     } catch (e) {
       Sentry.captureException(e);
       response.writeHead((e && e.status) || 500, {

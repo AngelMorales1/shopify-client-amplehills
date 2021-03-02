@@ -33,12 +33,15 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
   );
 
   const getPercentageOfVote = (match, flavor) => {
-    const votesInMatch = votes.filter(vote => vote.match === match);
-    const votesForFlavor = votesInMatch.filter(vote => vote.flavor === flavor);
+    const votesByMatch = votes.find(remoteMatch => remoteMatch.match === match);
+    const votesInMatch = Object.values(votesByMatch)
+      .filter(flavorVoteCount => typeof flavorVoteCount === 'number')
+      .reduce((votesInMatch, vote) => votesInMatch + vote, 0);
+    const votesForFlavor = votesByMatch[flavor];
 
-    if (!votesInMatch.length || !votesForFlavor.length) return 0;
+    if (!votesInMatch || !votesForFlavor) return 0;
 
-    return ((votesForFlavor.length / votesInMatch.length) * 100).toFixed(0);
+    return ((votesForFlavor / votesInMatch) * 100).toFixed(0);
   };
 
   const previousSlide = () => {
