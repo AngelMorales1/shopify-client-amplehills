@@ -78,10 +78,12 @@ export default functions
           );
 
           await db.collection('totals').doc(match._id).set({
+            ...match,
             match: matchId,
             ...totals
           });
         } else {
+          // Spread this so it doesn't erase data
           const newMatch: admin.firestore.DocumentReference = await db.collection('totals').doc(uuid.v4());
           await newMatch.set({ 
             match: matchId,
