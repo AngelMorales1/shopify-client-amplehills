@@ -10,6 +10,8 @@ const cors = access({
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
     'http://localhost:3000',
+    'http://localhost:3333',
+    'https://ample-hills.sanity.studio',
     'https://ampletest.myshopify.com'
   ],
   methods: ['GET'],

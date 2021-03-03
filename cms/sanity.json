@@ -26,6 +26,10 @@
       "path": "./schemas/schema"
     },
     {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./structure"
+    },
+    {
       "implements": "part:@sanity/production-preview/resolve-production-url",
       "path": "./utils/resolveProductionUrl"
     }
