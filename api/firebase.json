@@ -24,8 +24,16 @@
         "function": "flavor_frenzy_votes_migrate"
       },
       {
+        "source": "/api/v1/flavor_frenzy/votes/match_total",
+        "function": "flavor_frenzy_votes_match_total"
+      },
+      {
         "source": "/api/v1/flavor_frenzy/votes/total",
         "function": "flavor_frenzy_votes_total"
+      },
+      {
+        "source": "/api/v1/flavor_frenzy/votes/admin_total",
+        "function": "flavor_frenzy_votes_admin_total"
       },
       {
         "source": "/api/v1/flavor_frenzy/predictions/create",
