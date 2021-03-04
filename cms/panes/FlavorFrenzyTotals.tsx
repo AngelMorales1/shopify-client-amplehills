@@ -17,7 +17,7 @@ import SanityClient from './../lib/SanityClient';
 
 const BASE_URL = process.env.NODE_ENV === 'development'
   ? 'http://localhost:5000'
-  : 'https://ample-hills-api';
+  : 'https://ample-hills-api.web.app';
 
 const newTotalsArray = (
   totals: { [key: string]: number | string }[],
