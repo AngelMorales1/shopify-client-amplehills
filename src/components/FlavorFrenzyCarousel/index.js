@@ -321,7 +321,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
                 be locked in!
               </p>
             </div>
-            <div className="my3 flex flex-wrap items-center container-width mxauto">
+            <div className="my3 flex flex-wrap items-center justify-center container-width mxauto">
               {Object.entries(selectedVotes).map(([match, flavor]) => {
                 const matchIndex = matches.findIndex(
                   matchObj => matchObj._id === match

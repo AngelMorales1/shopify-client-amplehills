@@ -108,7 +108,7 @@ const FlavorFrenzyPane: FC<{ document: any }> = ({ document }) => {
                 {!!totals.length ? (
                   <Flex>
                     <span style={{ marginRight: '1rem' }}><strong>Total Votes: </strong>{totalVotes}</span>
-                    <span><strong>Estimated Participants: </strong>~{(totalVotes / 8).toFixed(0)}</span>
+                    <span><strong>Estimated Participants: </strong>~{(totalVotes / roundMatches.length).toFixed(0)}</span>
                   </Flex>
                 ) : (
                   <Spinner />
