@@ -39,6 +39,8 @@ const FlavorFrenzyPane: FC<{ document: any }> = ({ document }) => {
   const [totals, setTotals] = useState<{ [key: string]: number | string }[]>([]);
   const [editedMatches, setEditedMatches] = useState<string[]>([]);
   const [pendingChanges, setPendingChanges] = useState<string>('');
+  const [votesInQueue, setVotesInQueue] = useState<number>(0);
+  const [isMigratingVotes, setIsMigratingVotes] = useState<boolean>(false);
 
   const { published } = document;
   const { rounds } = published;
@@ -54,8 +56,15 @@ const FlavorFrenzyPane: FC<{ document: any }> = ({ document }) => {
       ));
     };
 
+    const fetchVotesInQueue = async () => {
+      setVotesInQueue(await fetch(`${BASE_URL}/api/v1/flavor_frenzy/votes/total?id=${published.name}`).then(
+        res => res.json()
+      ));
+    };
+
     fetchFlavors();
     fetchTotals();
+    fetchVotesInQueue();
   }, []);
 
   useEffect(() => {
@@ -75,8 +84,34 @@ const FlavorFrenzyPane: FC<{ document: any }> = ({ document }) => {
     }
   }, [pendingChanges]);
 
+  useEffect(() => {
+    if (isMigratingVotes) {
+      const migrateVotes = async function() {
+        await fetch(`${BASE_URL}/api/v1/flavor_frenzy/votes/migrate?id=${published.name}`)
+
+        setIsMigratingVotes(false);
+        window.location.reload();
+      }
+
+      migrateVotes();
+    }
+  }, [isMigratingVotes])
+
   return (
     <ThemeProvider theme={studioTheme}>
+      <Card 
+        padding={[3, 3, 4]}
+      >
+        <Flex justify="flex-end" align="center">
+          <span style={{ marginRight: '1rem' }}><strong>Votes Queued: </strong>{votesInQueue}</span>
+          <Button
+            tone="positive"
+            disabled={isMigratingVotes || !votesInQueue}
+            onClick={() => setIsMigratingVotes(true)}
+            text="Migrate Votes in Queue"
+          />
+        </Flex>
+      </Card>
       <Stack space={[3, 3, 4]}>
         {rounds.map(round => {
           const roundMatches = round.matches.map(match => match._key);

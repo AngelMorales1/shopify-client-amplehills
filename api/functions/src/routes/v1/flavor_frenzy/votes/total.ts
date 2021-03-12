@@ -9,6 +9,8 @@ const cors = access({
   origins: [
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
+    'http://localhost:3333',
+    'https://ample-hills.sanity.studio',
     'http://localhost:3000',
     'https://ampletest.myshopify.com'
   ],
