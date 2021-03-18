@@ -7,6 +7,9 @@ const BASE_URL = environmentIsLocal()
   : 'https://ample-hills-api.web.app';
 
 const Endpoints = {
+  HappyFox: {
+    CREATE_TICKET: `${BASE_URL}/${API_VERSION}/happy_fox/tickets/create`
+  },
   FlavorFrenzy: {
     GET_VOTES: `${BASE_URL}/${API_VERSION}/flavor_frenzy/votes`,
     CREATE_VOTE: `${BASE_URL}/${API_VERSION}/flavor_frenzy/votes/create`
@@ -14,6 +17,14 @@ const Endpoints = {
 };
 
 const Firestore = {
+  HappyFox: {
+    createTicket: function(ticket) {
+      return fetch(Endpoints.HappyFox.CREATE_TICKET, {
+        method: 'post',
+        body: JSON.stringify(ticket)
+      });
+    }
+  },
   FlavorFrenzy: {
     createVote: function(vote) {
       return fetch(Endpoints.FlavorFrenzy.CREATE_VOTE, {

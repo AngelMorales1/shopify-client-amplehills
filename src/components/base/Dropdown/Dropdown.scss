@@ -167,6 +167,10 @@
         border-radius: radius('l');
         height: auto;
 
+        .Select-option {
+          padding: spacing(4) spacing(6);
+        }
+
         &.w100 {
           .Select-control {
             display: flex;

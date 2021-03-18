@@ -338,7 +338,8 @@ class MapboxMap extends Component {
 
   unbindClickListeners() {
     const { map } = this.state;
-    map.off('click', 'layer', this.handleFeatureClick);
+
+    if (map) map.off('click', 'layer', this.handleFeatureClick);
   }
 
   bindMouseListeners() {

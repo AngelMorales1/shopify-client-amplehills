@@ -12,6 +12,10 @@
         "function": "klaviyoV1"
       },
       {
+        "source": "/api/v1/happy_fox/tickets/create",
+        "function": "happy_fox_tickets_create"
+      },
+      {
         "source": "/api/v1/flavor_frenzy/votes",
         "function": "flavor_frenzy_votes"
       },

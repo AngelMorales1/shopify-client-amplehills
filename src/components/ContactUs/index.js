@@ -13,6 +13,7 @@ class ContactUs extends Component {
     email: '',
     phone: '',
     message: '',
+    title: '',
     selected: null
   };
 
@@ -60,16 +61,17 @@ class ContactUs extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.formStatus === PENDING && this.props.formStatus === FULFILLED)
       this.setState({
-        selecteds: null,
+        selected: null,
         name: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
+        title: ''
       });
   }
 
   formHasErrors = () => {
-    const { selected, name, email, message } = this.state;
+    const { selected, name, email, message, title } = this.state;
 
     if (!selected) {
       const error = 'Please select the reason why you are contacting us.';
@@ -89,6 +91,12 @@ class ContactUs extends Component {
       return true;
     }
 
+    if (!title) {
+      const error = 'Please provide a title.';
+      this.setState({ error });
+      return true;
+    }
+
     if (!message) {
       const error = 'Please write a message.';
       this.setState({ error });
@@ -101,17 +109,17 @@ class ContactUs extends Component {
   submitContactForm = () => {
     if (this.formHasErrors()) return null;
 
-    const { selected, name, email, phone, message } = this.state;
-    const selectedAddress = selected.bucket;
+    const { selected, name, email, phone, message, title } = this.state;
 
     this.setState({ error: '' });
 
     this.props.actions.sendContactForm({
-      selectedAddress,
+      category: selected.happyFoxCategory,
       name,
       email,
       phone,
-      message
+      text: message,
+      subject: title
     });
   };
 

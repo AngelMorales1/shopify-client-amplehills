@@ -2,6 +2,7 @@ import shipping from './routes/shipping';
 import klaviyo from './routes/klaviyo';
 
 import klaviyoV1 from './routes/v1/klaviyo';
+import happy_fox_tickets_create from './routes/v1/happy_fox/tickets/create';
 import flavor_frenzy_votes from './routes/v1/flavor_frenzy/votes';
 import flavor_frenzy_votes_create from './routes/v1/flavor_frenzy/votes/create';
 import flavor_frenzy_votes_migrate from './routes/v1/flavor_frenzy/votes/migrate';
@@ -15,6 +16,9 @@ export {
   klaviyo,
 
   klaviyoV1,
+
+  happy_fox_tickets_create,
+
   flavor_frenzy_votes,
   flavor_frenzy_votes_create,
   flavor_frenzy_votes_migrate,

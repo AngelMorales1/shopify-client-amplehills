@@ -129,8 +129,6 @@ class LocationsCards extends Component {
       filter => filter.key === STATE_KEY
     );
 
-    console.log('SORT', sortedLocations);
-
     return (
       <div
         className={cx(
