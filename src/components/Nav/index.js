@@ -165,10 +165,17 @@ class Nav extends Component {
                     'w100 flex items-center'
                   )}
                 >
+                  <NavLink
+                    exact
+                    to="/flavors"
+                    className="text-hover mr3 line-item-title text-decoration-none center xs-hide sm-hide"
+                  >
+                    Ice Cream Flavors
+                  </NavLink>
                   <Button
                     className={cx(
                       styles['Nav__location-button'],
-                      'line-item-title text-decoration-none center text-white'
+                      'line-item-title text-decoration-none center text-white mr3'
                     )}
                     variant="style-none"
                     onClick={closeLocationDropdown}
@@ -180,31 +187,10 @@ class Nav extends Component {
                   />
                   <NavLink
                     exact
-                    to="/flavors"
-                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
+                    to="/in-stores"
+                    className="text-hover mr3 line-item-title text-decoration-none center xs-hide sm-hide"
                   >
-                    Flavors
-                  </NavLink>
-                  <NavLink
-                    exact
-                    to="/catering"
-                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                  >
-                    Catering
-                  </NavLink>
-                  <NavLink
-                    exact
-                    to="/classes-and-socials"
-                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                  >
-                    Classes & Socials
-                  </NavLink>
-                  <NavLink
-                    exact
-                    to="/parties"
-                    className="text-hover ml2 line-item-title text-decoration-none center xs-hide sm-hide"
-                  >
-                    Parties & Events
+                    Where to Buy
                   </NavLink>
                 </div>
               ) : (
@@ -274,7 +260,7 @@ class Nav extends Component {
                     to="/products"
                     variant="primary-small"
                     color="white-peach"
-                    label="Shop Online"
+                    label="Order Online"
                     onClick={closeShopDropdown}
                     onMouseEnter={() => this.startDropdownTimer('shop')}
                     onMouseLeave={() => this.cancelDropdownTimer('shop')}

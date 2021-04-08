@@ -1,12 +1,19 @@
 import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+import Sanity from 'lib/Sanity';
 import get from 'utils/get';
 
 class InStoresContainer extends ContainerBase {
   view = import('views/InStoresView');
 
-  model = () => {};
+  model = () => {
+    return Promise.all([
+      Sanity.fetchInStores(),
+      Sanity.fetchRetailLocations()
+    ]).then(([content, retailLocations]) => ({ content, retailLocations }));
+  };
 }
 
 const mapStateToProps = state => {

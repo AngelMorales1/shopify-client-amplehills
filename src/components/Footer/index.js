@@ -48,7 +48,7 @@ class Footer extends Component {
         <div
           className={cx(
             styles['Footer__content'],
-            'relative flex container-width'
+            'relative flex container-width col-12'
           )}
         >
           <div
@@ -85,56 +85,90 @@ class Footer extends Component {
           <div
             className={cx(
               styles['Footer__link-container'],
-              'flex flex-column justify-start col-12 md-col-5'
+              'flex flex-column justify-start col-12 md-col-7'
             )}
           >
-            <div className="col-3 flex flex-row mb4">
-              <div className="flex flex-column justify-around mr4 pr2 xs-hide sm-hide">
+            <div
+              className={cx(
+                styles['Footer__link-container-inner'],
+                'col-12 flex flex-row mb4'
+              )}
+            >
+              <div
+                className={cx(
+                  styles['Footer__link-column'],
+                  'flex flex-column mr4 pr2 mt1'
+                )}
+              >
                 <Link
                   to="/news"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>News</span>
                 </Link>
                 <Link
                   to="/press"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>Press</span>
                 </Link>
                 <Link
                   to="/faq"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>FAQ</span>
                 </Link>
-              </div>
-              <div className="flex flex-column justify-around mr4 pr4 xs-hide sm-hide">
                 <Link
                   to="/jobs"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>Jobs</span>
                 </Link>
+              </div>
+              <div
+                className={cx(
+                  styles['Footer__link-column'],
+                  'flex flex-column mr4 mt1'
+                )}
+              >
                 <Link
                   to="/wholesale"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>Wholesale</span>
                 </Link>
                 <Link
-                  to="/in-stores"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  to="/catering"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
-                  <span className={cx(styles['Footer__link'])}>In Stores</span>
+                  <span className={cx(styles['Footer__link'])}>Catering</span>
+                </Link>
+                <Link
+                  to="/classes-and-socials"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
+                >
+                  <span className={cx(styles['Footer__link'])}>
+                    Classes & Socials
+                  </span>
+                </Link>
+                <Link
+                  to="/parties"
+                  className="mb3 mt1 flex items-center bold text-white text-decoration-none"
+                >
+                  <span className={cx(styles['Footer__link'])}>
+                    Parties & Events
+                  </span>
                 </Link>
               </div>
-              <div className="flex flex-column">
+              <div className={cx(styles['Footer__social-links'], 'mr4 pr2')}>
                 <a
                   href={get(footerLinks, 'instagramLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className={cx(
+                    styles['Footer__social-link'],
+                    'mt1 mb3 flex items-center bold text-white text-decoration-none'
+                  )}
                 >
                   <Image
                     alt="Instagram icon"
@@ -151,7 +185,10 @@ class Footer extends Component {
                   href={get(footerLinks, 'twitterLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className={cx(
+                    styles['Footer__social-link'],
+                    'mt1 mb3 flex items-center bold text-white text-decoration-none'
+                  )}
                 >
                   <Image
                     alt="Twitter icon"
@@ -168,7 +205,10 @@ class Footer extends Component {
                   href={get(footerLinks, 'facebookLink', '')}
                   target="_blank"
                   rel="noopener"
-                  className="my2 flex items-center bold text-white text-decoration-none"
+                  className={cx(
+                    styles['Footer__social-link'],
+                    'mt1 mb3 flex items-center bold text-white text-decoration-none'
+                  )}
                 >
                   <Image
                     alt="Facebook icon"

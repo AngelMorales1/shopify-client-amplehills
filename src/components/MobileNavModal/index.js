@@ -63,7 +63,7 @@ class MobileNavModal extends Component {
           >
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
-          <div className="flex flex-column justify-start pl4">
+          <div className="flex flex-column justify-start pl3">
             <div className="my2">
               <NavLink
                 exact
@@ -138,7 +138,7 @@ class MobileNavModal extends Component {
               className={cx(styles['MobileNavModal__link-text'], 'my2 mr-auto')}
               onClick={this.handleMenuClick}
             >
-              Flavors
+              Ice Cream Flavors
             </NavLink>
             <NavLink
               exact
@@ -188,7 +188,7 @@ class MobileNavModal extends Component {
               to="/products"
               variant="primary-small"
               color="peach"
-              label="Shop Online"
+              label="Order Online"
               hover="clear-peach-border"
               onClick={this.handleMenuClick}
             />

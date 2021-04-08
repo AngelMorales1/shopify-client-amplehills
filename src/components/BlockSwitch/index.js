@@ -22,6 +22,7 @@ import FlavorsLanding from 'components/FlavorsLanding';
 import CardRecirculation from 'components/CardRecirculation';
 import MultipleImageText from 'components/MultipleImageText';
 import HTMLEmbed from 'components/HTMLEmbed';
+import PintFinderBlock from 'components/PintFinderBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -89,6 +90,11 @@ const BlockSwitch = props => {
           );
         case 'HTML Embed':
           return <HTMLEmbed {...props} drip={drip} upperDrip={upperDrip} />;
+
+        case 'Pint Finder (In-Stores)':
+          return (
+            <PintFinderBlock {...props} drip={drip} upperDrip={upperDrip} />
+          );
         default:
           return null;
       }

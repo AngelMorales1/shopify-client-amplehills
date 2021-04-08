@@ -25,6 +25,26 @@ const Structure = S.list()
   .items([
     S.documentTypeListItem('flavor').title('Flavors').icon(IceCream),
     S.documentTypeListItem('flavorFrenzy').title('Flavor Frenzy').icon(Vote),
+    S.listItem()
+      .title('In-Stores')
+      .icon()
+      .child(
+        S.list()
+          .title('In-Stores Settings')
+          .items([
+            S.documentTypeListItem('inStores')
+              .title('Content')
+              .child(S.document().schemaType('inStores').documentId('_inStores')),
+            S.listItem()
+              .title('Retail Locations')
+              .icon()
+              .child(S.documentTypeList('retailLocation').title('Retail Locations')),
+            S.listItem()
+              .title('Location Tags')
+              .icon()
+              .child(S.documentTypeList('retailLocationTag').title('Location Tags')),
+          ])
+      )
   ]);
 
 export default Structure;

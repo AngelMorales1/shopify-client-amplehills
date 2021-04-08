@@ -42,6 +42,24 @@
     }
   }
 
+  &__link-container-inner {
+    flex-wrap: wrap;
+
+    @media ($medium-up) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__link-column {
+    &:nth-child(2) {
+      padding-right: 1rem;
+
+      @media ($medium-up) {
+        padding-right: 2.5rem;
+      }
+    }
+  }
+
   &__link {
     padding-bottom: spacing(1);
     border-bottom: spacing(0.5) solid transparent;
@@ -50,6 +68,29 @@
     &:hover {
       color: color('white');
       border-bottom: spacing(0.5) solid color('white');
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
+
+    @media ($medium-up) {
+      margin-top: 0.5rem;
+      flex-direction: column;
+      width: auto;
+    }
+  }
+
+  &__social-link {
+    margin-right: 3rem;
+
+    @media ($medium-up) {
+      margin-right: 0;
     }
   }
 

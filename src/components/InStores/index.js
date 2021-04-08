@@ -1,22 +1,64 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import marked from 'marked';
 import cx from 'classnames';
-import get from 'utils/get';
-import Global from 'constants/Global';
+import memoize from 'lodash/memoize';
+import { VscLoading, VscLocation } from 'react-icons/vsc';
 
-import { Button, Dropdown } from 'components/base';
+import Global from 'constants/Global';
+import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
+
+import { Button, Dropdown, PortableText, TextField } from 'components/base';
 import styles from './InStores.scss';
 
 class InStores extends Component {
   state = {
+    itemsToShow: 10,
     activeFilter: '',
-    currentBreakpoint: Global.breakpoints.medium.label
+    address: '',
+    coords: null,
+    radius: 10,
+    isPending: true,
+    isConfirmed: false,
+    isUsingGeolocation: false,
+    currentBreakpoint: Global.breakpoints.medium.label,
+    email: '',
+    grocery: ''
   };
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
     this.updateWindow();
+
+    if ('geolocation' in window.navigator) {
+      const { coords } = this.state;
+
+      if (!coords) {
+        window.navigator.geolocation.getCurrentPosition(
+          position =>
+            this.setState({
+              coords: {
+                longitude: position.coords.longitude,
+                latitude: position.coords.latitude
+              },
+              isPending: false,
+              isConfirmed: true,
+              isUsingGeolocation: true
+            }),
+          error =>
+            this.setState({
+              ...this.state,
+              coords: null,
+              isPending: false,
+              isConfirmed: false,
+              isUsingGeolocation: false
+            }),
+          {
+            maximumAge: 1000 * 60 * 60 * 24 * 30,
+            timeout: 1000 * 10
+          }
+        );
+      }
+    }
   }
 
   componentWillUnmount() {
@@ -40,40 +82,154 @@ class InStores extends Component {
     return this.setState({ activeFilter: filter });
   };
 
+  handleLoadMore = () => {
+    this.setState(state => ({
+      ...state,
+      itemsToShow: this.state.itemsToShow + 10
+    }));
+  };
+
+  handleSearch = () => {
+    console.log('search', this.state.address);
+  };
+
+  handleChangeAddress = address =>
+    this.setState(state => ({ ...state, address }));
+  handleRadiusChange = radius => this.setState(state => ({ ...state, radius }));
+  handleClear = () =>
+    this.setState(state => ({
+      ...state,
+      coords: null,
+      isPending: false,
+      isConfirmed: false,
+      isUsingGeolocation: false
+    }));
+
+  locationsByDistance = memoize((coords, retailLocations) =>
+    retailLocations.reduce((locationsByDistance, retailer) => {
+      const milesBetweenLocations = !!coords
+        ? getDistanceBetweenLocations(
+            retailer.geopoint.lat,
+            retailer.geopoint.lng,
+            coords.latitude,
+            coords.longitude
+          )
+        : 0;
+
+      locationsByDistance.push({
+        distance: milesBetweenLocations,
+        retailer
+      });
+
+      return locationsByDistance;
+    }, [])
+  );
+
   render() {
-    const { localRetailers, text } = this.props;
-    const { activeFilter, currentBreakpoint } = this.state;
+    const { retailLocations, content } = this.props;
+    const {
+      activeFilter,
+      currentBreakpoint,
+      coords,
+      address,
+      radius,
+      itemsToShow,
+      isPending,
+      isConfirmed,
+      isUsingGeolocation
+    } = this.state;
     const { medium } = Global.breakpoints;
-    const localRetailersValues = Object.values(localRetailers);
-    const uniqueFilters = localRetailersValues.reduce(
-      (uniqueFilters, localRetailer) => {
-        const filter = localRetailer.filter.toUpperCase();
-        if (!uniqueFilters[filter]) {
-          uniqueFilters[filter] = true;
-        }
 
-        return uniqueFilters;
-      },
-      {}
+    const uniqueFilters = {}; // TO-DO
+    const locationsByDistance = this.locationsByDistance(
+      coords,
+      retailLocations
     );
-
-    const selectedLocalRetailers = activeFilter
-      ? localRetailersValues.filter(
-          retailer => retailer.filter.toUpperCase() === activeFilter
-        )
-      : localRetailersValues;
+    const filteredLocations = locationsByDistance
+      .filter(retailer => retailer.distance <= radius)
+      .sort((a, b) => a.distance - b.distance);
 
     return (
       <div>
         <div className="bg-sky-blue py4 px3 flex flex-column justify-center items-center drip">
-          <h2 className="block-headline center mb3">Local Retailers</h2>
+          <h1 className="block-headline center mb3">{content.title}</h1>
+          <div className="markdown-block center text-container-width">
+            <PortableText blocks={content.body} />
+          </div>
+          <div className="relative my2 col-12 md-col-6 lg-col-4">
+            <TextField
+              type="text"
+              className="col-12"
+              name="zip"
+              placeholder="Enter your zip code"
+              variant="primary-search"
+              disabled={isPending}
+              value={!!isUsingGeolocation ? 'Current Location' : address}
+              onChange={this.handleChangeAddress}
+            />
+            <div
+              className={cx(
+                styles['InStores__input-control'],
+                'flex items-center'
+              )}
+            >
+              {isPending && (
+                <div
+                  className={cx(
+                    styles['InStores__loader'],
+                    'text-dusty-gray mr1'
+                  )}
+                >
+                  <VscLoading />
+                </div>
+              )}
+              {isConfirmed ? (
+                <Button
+                  key="1-button"
+                  variant="underline-peach"
+                  className="text-peach mr1"
+                  label="Clear"
+                  onClick={this.handleClear}
+                />
+              ) : (
+                <Button
+                  key="2-button"
+                  disabled={isPending}
+                  variant="primary-small"
+                  label="Search"
+                  color="madison-blue"
+                  onClick={this.handleSearch}
+                />
+              )}
+            </div>
+          </div>
           <div
-            dangerouslySetInnerHTML={{
-              __html: marked(text)
-            }}
-            className="markdown-block center text-container-width"
-          />
-          <div className="flex flex-row justify-center flex-wrap w100">
+            className={cx(
+              styles['InStores__radius-dropdown-container'],
+              'col-12 center'
+            )}
+          >
+            <span className="small">
+              Showing {filteredLocations.length} retailers within
+            </span>
+            <Dropdown
+              textAlignCenter={true}
+              color="peach"
+              textColor="peach"
+              className={cx(
+                styles['InStores__radius-dropdown'],
+                'wauto mx1 small inline-block'
+              )}
+              variant="underline"
+              value={this.state.radius}
+              options={[5, 10, 25, 100].map(distance => {
+                return { label: `${distance} mi`, value: distance };
+              })}
+              onChange={radius => this.handleRadiusChange(radius.value)}
+            />
+            <span className="small xs-hide sm-hide">of your location</span>
+          </div>
+          <div className="hide flex flex-row justify-center flex-wrap w100">
             {currentBreakpoint === medium.label ? (
               Object.keys(uniqueFilters).map(filter => (
                 <Button
@@ -110,40 +266,115 @@ class InStores extends Component {
           </div>
         </div>
         <div className="mt3 py4 px3 flex flex-column items-center">
-          {selectedLocalRetailers.map((localRetailer, i) => {
-            return (
+          {filteredLocations.slice(0, itemsToShow).map((retailer, i) => (
+            <div
+              key={retailer.retailer.address}
+              className={cx(
+                styles['InStores__local-retailer-container'],
+                'flex form-container-width justify-between w100 my2 p3 transition-slide-up-large'
+              )}
+              style={{ animationDelay: `${(i % 10) * 0.1}s` }}
+            >
               <div
-                key={get(localRetailer, 'uuid', i)}
                 className={cx(
-                  styles['InStores__local-retailer-container'],
-                  'flex form-container-width justify-between w100 my2 p3'
+                  styles['InStores__local-retailer-text-container']
                 )}
               >
-                <div
+                <p className="bold mb1">{retailer.retailer.name}</p>
+                <p>{`${retailer.retailer.address}, ${retailer.retailer.city}, ${
+                  retailer.retailer.state
+                } ${retailer.retailer.zip}`}</p>
+                {!!retailer.distance && (
+                  <p className="mt1 text-dusty-gray">
+                    {retailer.distance} miles away
+                  </p>
+                )}
+              </div>
+              <Button
+                className={cx(styles['InStores__local-retailer-button'])}
+                variant="primary-small"
+                color="peach"
+                label="Get Directions"
+              />
+            </div>
+          ))}
+          {!filteredLocations.length && (
+            <div
+              className={cx(
+                styles['InStores__no-results'],
+                'flex flex-column mt3 transition-slide-up-large'
+              )}
+            >
+              <span className="block-headline center mb3">
+                {content.noResults.title}
+              </span>
+              <div className="markdown-block center text-container-width">
+                <PortableText blocks={content.noResults.body} />
+              </div>
+              <div className="mt1">
+                <TextField
+                  className="mt2"
+                  placeholder="Email address"
+                  variant="light-gray"
+                  value={this.state.email}
+                />
+                <TextField
+                  className="mt2"
+                  placeholder="Grocery store of choice"
+                  variant="light-gray"
+                  value={this.state.grocery}
+                />
+                <p
                   className={cx(
-                    styles['InStores__local-retailer-text-container']
+                    styles['InStores__summary'],
+                    'mt2 small center'
                   )}
                 >
-                  <p className="bold mb1">{localRetailer.title}</p>
-                  <p>{`${get(localRetailer, 'address', '')}, ${get(
-                    localRetailer,
-                    'city',
-                    ''
-                  )}, ${get(localRetailer, 'state', '')} ${get(
-                    localRetailer,
-                    'zip',
-                    ''
-                  )}`}</p>
-                </div>
+                  Requesting pints within <strong>{radius} miles</strong> of
+                  <strong className="nowrap">
+                    <div
+                      className={cx(
+                        styles['InStores__location-pin'],
+                        'inline-block'
+                      )}
+                    >
+                      <VscLocation />
+                    </div>
+                    <span className="text-peach">
+                      {!!coords ? 'Current Location' : address}
+                    </span>
+                  </strong>
+                </p>
                 <Button
-                  className={cx(styles['InStores__local-retailer-button'])}
-                  variant="primary-small"
-                  color="peach"
-                  label={localRetailer.number}
+                  className={cx(
+                    styles['InStores__submit-email-button'],
+                    'mt3 px4 mx-auto'
+                  )}
+                  variant="primary"
+                  color="madison-blue"
+                  label="Submit"
+                  disabled={!!this.state.email && !!this.state.grocery}
+                  onClick={this.handleSubmitEmail}
                 />
               </div>
-            );
-          })}
+            </div>
+          )}
+          {itemsToShow < filteredLocations.length && (
+            <div className="InStores__load-more">
+              <div className="mt2 mb4">
+                <strong>
+                  Showing {itemsToShow} of {filteredLocations.length} results
+                </strong>
+              </div>
+              <Button
+                className={cx(styles['InStores__pagination-button'], 'mx-auto')}
+                variant="primary"
+                color="madison-blue"
+                label="Load More"
+                onClick={this.handleLoadMore}
+              />
+            </div>
+          )}
         </div>
       </div>
     );

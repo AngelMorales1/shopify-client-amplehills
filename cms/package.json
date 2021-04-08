@@ -27,7 +27,8 @@
     "prop-types": "^15.6",
     "react": "^16.2",
     "react-dom": "^16.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "states-us": "^1.0.1"
   },
   "devDependencies": {}
 }

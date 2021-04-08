@@ -1,8 +1,10 @@
 import React, { PureComponent } from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 
 import RoutesWithoutFooterExtras from 'constants/RoutesWithoutFooterExtras';
 import get from 'utils/get';
+import styles from './FooterNav.scss';
 
 class FooterNav extends PureComponent {
   routeOmitsFooterNav = () => {
@@ -17,12 +19,20 @@ class FooterNav extends PureComponent {
     if (!items.length) return null;
 
     return (
-      <div className="xs-hide sm-hide col-12 drip bg-white z-1 relative">
-        <div className="container-width mx-auto flex py3">
+      <div className="col-12 drip bg-white z-1 relative">
+        <div
+          className={cx(
+            styles['FooterNav__link-container'],
+            'container-width mx-auto flex justify-center py3'
+          )}
+        >
           {items.map(item => (
             <div
               key={get(item, 'uuid')}
-              className="w100 flex flex-column center"
+              className={cx(
+                styles['FooterNav__link'],
+                'flex flex-column center'
+              )}
             >
               <a
                 className="text-decoration-none hover-slide-up"

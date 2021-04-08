@@ -24,3 +24,25 @@ export const FlavorFrenzy = `{
     }
   }
 }`;
+
+export const InStores = `{
+  _id,
+  _createdAt,
+  title,
+  body,
+  noResultsTitle,
+  noResultsBody
+}`;
+
+export const RetailLocation = `{
+  _id,
+  _createdAt,
+  name,
+  address,
+  city,
+  state,
+  zip,
+  geopoint,
+  distributor,
+  tags[]->{ ... }
+}`;

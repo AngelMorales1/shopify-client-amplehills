@@ -1,9 +1,41 @@
 @import 'settings';
 
 .InStores {
+  &__input-control {
+    position: absolute;
+    top: 50%;
+    right: 0.65rem;
+    transform: translateY(-45%);
+  }
+
+  &__loader svg {
+    animation: rotate linear infinite 2.75s;
+  }
+
+  &__location-pin {
+    margin-left: 3px;
+    color: color('peach');
+    fill: color('peach');
+
+    svg {
+      transform: translateY(2px);
+    }
+  }
+
+  &__radius-dropdown {
+    margin-top: 0.25rem;
+    white-space: nowrap;
+  }
+
+  &__summary {
+    line-height: 1.5rem;
+  }
+
   &__local-retailer-container {
+    animation-fill-mode: forwards;
     border: spacing(0.7) solid color('light-gray');
     border-radius: radius('s');
+    opacity: 0;
     flex-direction: column;
     align-items: flex-start;
 
@@ -23,5 +55,22 @@
 
   &__local-retailer-button {
     letter-spacing: spacing(0.3);
+  }
+
+  &__no-results {
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

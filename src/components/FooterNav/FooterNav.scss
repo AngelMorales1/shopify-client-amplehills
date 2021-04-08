@@ -1,0 +1,19 @@
+@import 'settings', 'src/styles/typography';
+
+.FooterNav {
+  &__link-container {
+    flex-wrap: wrap;
+
+    @media ($medium-up) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__link {
+    width: 50%;
+
+    @media ($medium-up) {
+      width: auto;
+    }
+  }
+}

@@ -4,10 +4,18 @@ import ErrorPage from 'components/ErrorPage';
 
 class InStoresView extends Component {
   render() {
-    const { model, localRetailers, text } = this.props;
+    const { model } = this.props;
+
     if (model.isError) return <ErrorPage />;
 
-    return <InStores localRetailers={localRetailers} text={text} />;
+    console.log('MODEL;', model);
+
+    return (
+      <InStores
+        retailLocations={model.retailLocations}
+        content={model.content}
+      />
+    );
   }
 }
 

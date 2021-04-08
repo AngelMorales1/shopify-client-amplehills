@@ -34,6 +34,23 @@ export const Sanity = {
         }`;
 
     return client.fetch(query).then(Serializers.flavorFrenzy);
+  },
+  fetchInStores: function() {
+    const previewId = getPreviewId();
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+
+    const query = !!previewId
+      ? `*[_type == 'inStores' && _id == '${previewId}'][0] ${Groq.InStores}`
+      : `*[_type == 'inStores' && _id == '_inStores'][0] ${Groq.InStores}`;
+
+    return client.fetch(query).then(Serializers.inStores);
+  },
+  fetchRetailLocations: function() {
+    const previewId = getPreviewId();
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'retailLocation'] ${Groq.RetailLocation}`;
+
+    return client.fetch(query).then(Serializers.retailLocations);
   }
 };
 
