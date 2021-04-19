@@ -161,7 +161,7 @@ class InStores extends Component {
               type="text"
               className="col-12"
               name="zip"
-              placeholder="Enter your zip code"
+              placeholder="Use current location"
               variant="primary-search"
               disabled={isPending}
               value={!!isUsingGeolocation ? 'Current Location' : address}
@@ -210,7 +210,7 @@ class InStores extends Component {
             )}
           >
             <span className="small">
-              Showing {filteredLocations.length} retailers within
+              Showing {filteredLocations.length} stores within
             </span>
             <Dropdown
               textAlignCenter={true}

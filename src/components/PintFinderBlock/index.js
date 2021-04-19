@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import { VscLoading } from 'react-icons/vsc';
+import { Link } from 'react-router-dom';
+// import { VscLoading } from 'react-icons/vsc';
 
 import { Button, Dropdown, TextField } from 'components/base';
 import styles from './PintFinderBlock.scss';
@@ -17,7 +18,6 @@ class PintFinderBlock extends Component {
 
   render() {
     const { address, radius } = this.state;
-    console.log('POP', this.props);
 
     return (
       <div
@@ -31,41 +31,43 @@ class PintFinderBlock extends Component {
           )}
         >
           <div className="col-12 md-col-6">
-            <h2 className="block-headline mb3">Local Retailers</h2>
+            <h2 className="block-headline mb3">Local Grocery Stores</h2>
             <div className="markdown-block text-container-width">
               <p>
-                Find our ice cream in a retailer or scoop shop near you. Enter
-                your zip code or use your current location to locate the closest
-                pint!
+                Find our pints in a freezer aisle near you. Just enter your zip
+                code or use your current location to track down the closest
+                pints.
               </p>
             </div>
           </div>
           <div className="col-12 md-col-6 flex flex-column justify-center items-center ">
             <div className="relative mb2 col-12 md-col-10">
-              <TextField
-                type="text"
-                className="col-12"
-                name="zip"
-                placeholder="Enter your zip code"
-                variant="primary-search"
-                value={address}
-                onChange={this.handleChangeAddress}
-              />
-              <div
-                className={cx(
-                  styles['PintFinder__input-control'],
-                  'flex items-center'
-                )}
-              >
-                <Button
-                  key="2-button"
-                  disabled={!address}
-                  variant="primary-small"
-                  label="Search"
-                  color="madison-blue"
-                  onClick={this.handleSearch}
+              <Link to="/in-stores">
+                <TextField
+                  type="text"
+                  className="col-12"
+                  name="zip"
+                  placeholder="Enter your zip code"
+                  variant="primary-search"
+                  value={address}
+                  onChange={this.handleChangeAddress}
                 />
-              </div>
+                <div
+                  className={cx(
+                    styles['PintFinder__input-control'],
+                    'flex items-center'
+                  )}
+                >
+                  <Button
+                    key="2-button"
+                    disabled={!address}
+                    variant="primary-small"
+                    label="Search"
+                    color="madison-blue"
+                    onClick={this.handleSearch}
+                  />
+                </div>
+              </Link>
             </div>
             <div
               className={cx(
@@ -73,7 +75,7 @@ class PintFinderBlock extends Component {
                 'col-12 center'
               )}
             >
-              <span className="small">Search for retailers within</span>
+              <span className="small">Search for stores within</span>
               <Dropdown
                 textAlignCenter={true}
                 color="peach"
