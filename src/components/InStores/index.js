@@ -88,6 +88,7 @@ class InStores extends Component {
       if (!coords) {
         window.navigator.geolocation.getCurrentPosition(
           position => {
+            console.log('GEO POSITION', position);
             this.setState({
               coords: {
                 longitude: position.coords.longitude,
@@ -99,6 +100,7 @@ class InStores extends Component {
             });
           },
           error => {
+            console.log('GEO ERROR', error);
             this.setState({
               ...this.state,
               coords: null,
@@ -239,17 +241,17 @@ class InStores extends Component {
                 'flex items-center'
               )}
             >
-              {isPending ||
-                (getSearchResultStatus === Status.PENDING && (
-                  <div
-                    className={cx(
-                      styles['InStores__loader'],
-                      'text-dusty-gray mr1'
-                    )}
-                  >
-                    <VscLoading />
-                  </div>
-                ))}
+              {(isPending || getSearchResultStatus === Status.PENDING) && (
+                <div
+                  className={cx(
+                    styles['InStores__loader'],
+                    'text-dusty-gray mr1'
+                  )}
+                >
+                  {console.log('loading')}
+                  <VscLoading />
+                </div>
+              )}
               {!isPending && !address && (
                 <Button
                   ariaLabel="Use current location"

@@ -55,7 +55,6 @@ export default (state = initialState, action) => {
         selectedLocation: initialState.selectedLocation
       };
     case `${GET_SEARCH_RESULT}_FULFILLED`:
-      console.log('FUL', action.payload);
       return {
         ...state,
         searchResult: action.payload
