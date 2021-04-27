@@ -248,7 +248,6 @@ class InStores extends Component {
                     'text-dusty-gray mr1'
                   )}
                 >
-                  {console.log('loading')}
                   <VscLoading />
                 </div>
               )}
