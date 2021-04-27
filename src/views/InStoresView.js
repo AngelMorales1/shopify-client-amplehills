@@ -8,10 +8,12 @@ class InStoresView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
-    console.log('MODEL;', model);
-
     return (
       <InStores
+        getSearchResultStatus={this.props.getSearchResultStatus}
+        klaviyoListSignupStatus={this.props.klaviyoListSignupStatus}
+        searchResult={this.props.searchResult}
+        actions={this.props.actions}
         retailLocations={model.retailLocations}
         content={model.content}
       />

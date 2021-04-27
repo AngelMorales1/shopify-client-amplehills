@@ -2,6 +2,9 @@ import ContainerBase from 'lib/ContainerBase';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { getSearchResult } from 'state/actions/ui/locationsUIActions';
+import { klaviyoListSignup } from 'state/actions/klaviyoActions';
+
 import Sanity from 'lib/Sanity';
 import get from 'utils/get';
 
@@ -20,13 +23,19 @@ const mapStateToProps = state => {
   const fields = get(state, 'applicationUI.globalSettings.items[0].fields', {});
   return {
     text: get(fields, 'inStoresText', ''),
+    searchResult: get(state, 'locationsUI.searchResult'),
+    getSearchResultStatus: get(state, 'status.getSearchResult'),
+    klaviyoListSignupStatus: get(state, 'status.klaviyoListSignup'),
     localRetailers: get(fields, 'inStoresLocalRetailers.simpleFragments', {})
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators(
+      { getSearchResult, klaviyoListSignup },
+      dispatch
+    )
   };
 };
 

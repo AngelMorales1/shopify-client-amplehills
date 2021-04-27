@@ -48,24 +48,26 @@ export const clearLocationSelection = () => {
 };
 
 export const GET_SEARCH_RESULT = 'GET_SEARCH_RESULT';
-export const getSearchResult = payload => {
+export const getSearchResult = address => {
   return {
     type: GET_SEARCH_RESULT,
-    payload: new Promise((resolve, reject) => {
-      MapboxClient.geocodeForward(payload, { country: 'us' })
-        .then(res => {
-          const feature = get(res, 'entity.features[0]', {});
+    payload: !!address
+      ? new Promise((resolve, reject) => {
+          MapboxClient.geocodeForward(address, { country: 'us' })
+            .then(res => {
+              const feature = get(res, 'entity.features[0]', {});
 
-          resolve({
-            name: get(feature, 'place_name', ''),
-            type: get(feature, 'place_type[0]', ''),
-            bbox: get(feature, 'bbox', [0, 0, 0, 0]),
-            coordinates: get(feature, 'center', [0, 0])
-          });
+              resolve({
+                name: get(feature, 'place_name', ''),
+                type: get(feature, 'place_type[0]', ''),
+                bbox: get(feature, 'bbox', [0, 0, 0, 0]),
+                coordinates: get(feature, 'center', [0, 0])
+              });
+            })
+            .catch(err => {
+              reject(err);
+            });
         })
-        .catch(err => {
-          reject(err);
-        });
-    })
+      : Promise.resolve({})
   };
 };

@@ -19,6 +19,7 @@ class Button extends PureComponent {
       fullWidth,
       type,
       to,
+      title,
       shadow,
       hover,
       newTab,
@@ -98,6 +99,7 @@ class Button extends PureComponent {
         className={classes}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        title={title}
       >
         <div
           className={cx(

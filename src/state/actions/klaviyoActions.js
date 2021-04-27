@@ -7,7 +7,7 @@ export const klaviyoSignup = email => ({
 });
 
 export const KLAVIYO_LIST_SIGNUP = 'KLAVIYO_LIST_SIGNUP';
-export const klaviyoListSignup = (email, list) => ({
+export const klaviyoListSignup = (email, list, body) => ({
   type: KLAVIYO_LIST_SIGNUP,
-  payload: Klaviyo.signupV1(email, list)
+  payload: Klaviyo.signupV1(email, list, body)
 });

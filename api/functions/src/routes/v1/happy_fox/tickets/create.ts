@@ -71,8 +71,6 @@ const create_ticket = functions.https.onRequest(async (req, res) => {
       "t-cf-8": "Not provided",
       "t-cf-9": "Not provided"
     };
-    console.log(data)
-    console.log(AUTH)
 
     const ticket = await fetch(ENDPOINT, {
       method: 'post',

@@ -5,7 +5,9 @@ import memoize from 'lodash/memoize';
 import { VscLoading, VscLocation } from 'react-icons/vsc';
 
 import Global from 'constants/Global';
+import * as Status from 'constants/Status';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
+import getUrlParam from 'utils/getUrlParam';
 
 import { Button, Dropdown, PortableText, TextField } from 'components/base';
 import styles from './InStores.scss';
@@ -17,52 +19,55 @@ class InStores extends Component {
     address: '',
     coords: null,
     radius: 10,
-    isPending: true,
+    isPending: false,
     isConfirmed: false,
     isUsingGeolocation: false,
     currentBreakpoint: Global.breakpoints.medium.label,
     email: '',
-    grocery: ''
+    grocery: '',
+    hasSubmittedNoResultsForm: false
   };
 
   componentDidMount() {
     window.addEventListener('resize', this.updateWindow);
     this.updateWindow();
 
-    if ('geolocation' in window.navigator) {
-      const { coords } = this.state;
+    const search = getUrlParam('location');
+    if (search && search === 'current') {
+      this.handleGeolocate();
+    }
 
-      if (!coords) {
-        window.navigator.geolocation.getCurrentPosition(
-          position =>
-            this.setState({
-              coords: {
-                longitude: position.coords.longitude,
-                latitude: position.coords.latitude
-              },
-              isPending: false,
-              isConfirmed: true,
-              isUsingGeolocation: true
-            }),
-          error =>
-            this.setState({
-              ...this.state,
-              coords: null,
-              isPending: false,
-              isConfirmed: false,
-              isUsingGeolocation: false
-            }),
-          {
-            maximumAge: 1000 * 60 * 60 * 24 * 30,
-            timeout: 1000 * 10
-          }
-        );
-      }
+    if (search && search !== 'current') {
+      this.setState({ address: search }, this.handleSearch);
     }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindow);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      this.state.address &&
+      this.props.searchResult &&
+      this.props.searchResult.coordinates &&
+      (!this.state.coords ||
+        this.props.searchResult.coordinates[0] !== this.state.coords.longitude)
+    ) {
+      this.setState({
+        coords: {
+          longitude: this.props.searchResult.coordinates[0],
+          latitude: this.props.searchResult.coordinates[1]
+        }
+      });
+    }
+
+    if (
+      prevProps.klaviyoListSignupStatus === Status.PENDING &&
+      this.props.klaviyoListSignupStatus === Status.FULFILLED
+    ) {
+      this.setState({ hasSubmittedNoResultsForm: true });
+    }
   }
 
   updateWindow = () => {
@@ -72,6 +77,43 @@ class InStores extends Component {
 
     if (this.state.currentBreakpoint !== currentBreakpoint)
       this.setState({ currentBreakpoint });
+  };
+
+  handleGeolocate = () => {
+    this.setState({ isUsingGeolocation: true, isPending: true });
+
+    if ('geolocation' in window.navigator) {
+      const { coords } = this.state;
+
+      if (!coords) {
+        window.navigator.geolocation.getCurrentPosition(
+          position => {
+            this.setState({
+              coords: {
+                longitude: position.coords.longitude,
+                latitude: position.coords.latitude
+              },
+              isPending: false,
+              isConfirmed: true,
+              isUsingGeolocation: true
+            });
+          },
+          error => {
+            this.setState({
+              ...this.state,
+              coords: null,
+              isPending: false,
+              isConfirmed: false,
+              isUsingGeolocation: false
+            });
+          },
+          {
+            maximumAge: 1000 * 60 * 60 * 24 * 30,
+            timeout: 1000 * 10
+          }
+        );
+      }
+    }
   };
 
   handleFilterButtonClick = filter => {
@@ -90,20 +132,38 @@ class InStores extends Component {
   };
 
   handleSearch = () => {
-    console.log('search', this.state.address);
+    this.props.actions.getSearchResult(this.state.address);
   };
 
   handleChangeAddress = address =>
     this.setState(state => ({ ...state, address }));
+  handleChangeEmail = email => this.setState(state => ({ ...state, email }));
+  handleChangeGrocery = grocery =>
+    this.setState(state => ({ ...state, grocery }));
   handleRadiusChange = radius => this.setState(state => ({ ...state, radius }));
-  handleClear = () =>
+  handleClear = () => {
+    this.props.actions.getSearchResult(null);
     this.setState(state => ({
       ...state,
       coords: null,
       isPending: false,
       isConfirmed: false,
-      isUsingGeolocation: false
+      isUsingGeolocation: false,
+      address: ''
     }));
+  };
+
+  handleSubmitNoResults = () => {
+    const LIST_ID = 'S8MVV9';
+    const { email, grocery, radius, address, coords } = this.state;
+
+    this.props.actions.klaviyoListSignup(email, LIST_ID, {
+      grocery,
+      radius,
+      address,
+      coords
+    });
+  };
 
   locationsByDistance = memoize((coords, retailLocations) =>
     retailLocations.reduce((locationsByDistance, retailer) => {
@@ -126,7 +186,12 @@ class InStores extends Component {
   );
 
   render() {
-    const { retailLocations, content } = this.props;
+    const {
+      retailLocations,
+      content,
+      searchResult,
+      getSearchResultStatus
+    } = this.props;
     const {
       activeFilter,
       currentBreakpoint,
@@ -136,7 +201,8 @@ class InStores extends Component {
       itemsToShow,
       isPending,
       isConfirmed,
-      isUsingGeolocation
+      isUsingGeolocation,
+      hasSubmittedNoResultsForm
     } = this.state;
     const { medium } = Global.breakpoints;
 
@@ -161,7 +227,7 @@ class InStores extends Component {
               type="text"
               className="col-12"
               name="zip"
-              placeholder="Use current location"
+              placeholder="Enter your ZIP code"
               variant="primary-search"
               disabled={isPending}
               value={!!isUsingGeolocation ? 'Current Location' : address}
@@ -173,17 +239,30 @@ class InStores extends Component {
                 'flex items-center'
               )}
             >
-              {isPending && (
-                <div
-                  className={cx(
-                    styles['InStores__loader'],
-                    'text-dusty-gray mr1'
-                  )}
+              {isPending ||
+                (getSearchResultStatus === Status.PENDING && (
+                  <div
+                    className={cx(
+                      styles['InStores__loader'],
+                      'text-dusty-gray mr1'
+                    )}
+                  >
+                    <VscLoading />
+                  </div>
+                ))}
+              {!isPending && !address && (
+                <Button
+                  ariaLabel="Use current location"
+                  title="Use current location"
+                  variant="no-style"
+                  onClick={this.handleGeolocate}
+                  className={cx(styles['InStores__current-location-button'])}
                 >
-                  <VscLoading />
-                </div>
+                  <VscLocation />
+                </Button>
               )}
-              {isConfirmed ? (
+              {(isConfirmed && isUsingGeolocation) ||
+              (address && searchResult.coordinates) ? (
                 <Button
                   key="1-button"
                   variant="underline-peach"
@@ -295,6 +374,9 @@ class InStores extends Component {
                 variant="primary-small"
                 color="peach"
                 label="Get Directions"
+                to={`https://maps.google.com/?q=${retailer.retailer.address}, ${
+                  retailer.retailer.city
+                }, ${retailer.retailer.state} ${retailer.retailer.zip}`}
               />
             </div>
           ))}
@@ -306,57 +388,70 @@ class InStores extends Component {
               )}
             >
               <span className="block-headline center mb3">
-                {content.noResults.title}
+                {hasSubmittedNoResultsForm
+                  ? 'Thank You'
+                  : content.noResults.title}
               </span>
               <div className="markdown-block center text-container-width">
-                <PortableText blocks={content.noResults.body} />
+                {hasSubmittedNoResultsForm ? (
+                  <p>
+                    We will reach out to your when we begin selling pints in
+                    your area. Stay tuned!
+                  </p>
+                ) : (
+                  <PortableText blocks={content.noResults.body} />
+                )}
               </div>
-              <div className="mt1">
-                <TextField
-                  className="mt2"
-                  placeholder="Email address"
-                  variant="light-gray"
-                  value={this.state.email}
-                />
-                <TextField
-                  className="mt2"
-                  placeholder="Grocery store of choice"
-                  variant="light-gray"
-                  value={this.state.grocery}
-                />
-                <p
-                  className={cx(
-                    styles['InStores__summary'],
-                    'mt2 small center'
-                  )}
-                >
-                  Requesting pints within <strong>{radius} miles</strong> of
-                  <strong className="nowrap">
-                    <div
-                      className={cx(
-                        styles['InStores__location-pin'],
-                        'inline-block'
-                      )}
-                    >
-                      <VscLocation />
-                    </div>
-                    <span className="text-peach">
-                      {!!coords ? 'Current Location' : address}
-                    </span>
-                  </strong>
-                </p>
-                <Button
-                  className={cx(
-                    styles['InStores__submit-email-button'],
-                    'mt3 px4 mx-auto'
-                  )}
-                  variant="primary"
-                  color="madison-blue"
-                  label="Submit"
-                  disabled={!!this.state.email && !!this.state.grocery}
-                  onClick={this.handleSubmitEmail}
-                />
-              </div>
+              {!hasSubmittedNoResultsForm && (
+                <div className="mt1">
+                  <TextField
+                    className="mt2"
+                    placeholder="Email address"
+                    variant="light-gray"
+                    value={this.state.email}
+                    onChange={this.handleChangeEmail}
+                  />
+                  <TextField
+                    className="mt2"
+                    placeholder="Grocery store of choice"
+                    variant="light-gray"
+                    value={this.state.grocery}
+                    onChange={this.handleChangeGrocery}
+                  />
+                  <p
+                    className={cx(
+                      styles['InStores__summary'],
+                      'mt2 small center'
+                    )}
+                  >
+                    Requesting pints within <strong>{radius} miles</strong> of
+                    <strong className="nowrap">
+                      <div
+                        className={cx(
+                          styles['InStores__location-pin'],
+                          'inline-block'
+                        )}
+                      >
+                        <VscLocation />
+                      </div>
+                      <span className="text-peach">
+                        {!!address ? address : 'Current Location'}
+                      </span>
+                    </strong>
+                  </p>
+                  <Button
+                    className={cx(
+                      styles['InStores__submit-email-button'],
+                      'mt3 px4 mx-auto'
+                    )}
+                    variant="primary"
+                    color="madison-blue"
+                    label="Submit"
+                    disabled={!this.state.email || !this.state.grocery}
+                    onClick={this.handleSubmitNoResults}
+                  />
+                </div>
+              )}
             </div>
           )}
           {itemsToShow < filteredLocations.length && (

@@ -30,10 +30,11 @@ const klaviyo = functions.https.onRequest(async (req, res) => {
     body = typeof body === 'object' ? body : JSON.parse(body);
     const email = get(body, 'email');
     const list = !!get(body, 'list') ? get(body, 'list') : 'SrNKwg';
+    const mergeVariables = get(body, 'body', {});
 
     const data = {
       api_key: functions.config().klaviyo.api_key,
-      profiles: [{ email }]
+      profiles: [{ email, ...mergeVariables }]
     };
 
     await fetch(endpoint(list), {

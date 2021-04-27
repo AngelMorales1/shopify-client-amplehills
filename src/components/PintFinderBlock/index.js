@@ -42,32 +42,30 @@ class PintFinderBlock extends Component {
           </div>
           <div className="col-12 md-col-6 flex flex-column justify-center items-center ">
             <div className="relative mb2 col-12 md-col-10">
-              <Link to="/in-stores">
-                <TextField
-                  type="text"
-                  className="col-12"
-                  name="zip"
-                  placeholder="Enter your zip code"
-                  variant="primary-search"
-                  value={address}
-                  onChange={this.handleChangeAddress}
+              <TextField
+                type="text"
+                className="col-12"
+                name="zip"
+                placeholder="Enter your zip code"
+                variant="primary-search"
+                value={address}
+                onChange={this.handleChangeAddress}
+              />
+              <div
+                className={cx(
+                  styles['PintFinder__input-control'],
+                  'flex items-center'
+                )}
+              >
+                <Button
+                  key="2-button"
+                  disabled={!address}
+                  variant="primary-small"
+                  label="Search"
+                  color="madison-blue"
+                  to={`/in-stores?location=${address}`}
                 />
-                <div
-                  className={cx(
-                    styles['PintFinder__input-control'],
-                    'flex items-center'
-                  )}
-                >
-                  <Button
-                    key="2-button"
-                    disabled={!address}
-                    variant="primary-small"
-                    label="Search"
-                    color="madison-blue"
-                    onClick={this.handleSearch}
-                  />
-                </div>
-              </Link>
+              </div>
             </div>
             <div
               className={cx(

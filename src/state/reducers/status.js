@@ -13,6 +13,7 @@ import {
   SIGN_UP_CUSTOMER
 } from 'state/actions/customerActions';
 import { SEND_CONTACT_FORM } from 'state/actions/ui/contactUIActions';
+import { GET_SEARCH_RESULT } from 'state/actions/ui/locationsUIActions';
 import { GET_AVAILABILITY } from 'state/actions/bookingsActions';
 import {
   KLAVIYO_SIGNUP,
@@ -29,7 +30,9 @@ const initialState = {
   updatingNote: IDLE,
   contactUsFormStatus: IDLE,
   getAvailability: IDLE,
-  klaviyoSignup: IDLE
+  klaviyoSignup: IDLE,
+  klaviyoListSignup: IDLE,
+  getSearchResult: IDLE
 };
 
 export default (state = initialState, action) => {
@@ -105,6 +108,13 @@ export default (state = initialState, action) => {
       return { ...state, updatingNote: FULFILLED };
     case `${UPDATE_NOTE}_REJECTED`:
       return { ...state, updatingNote: REJECTED };
+
+    case `${GET_SEARCH_RESULT}_PENDING`:
+      return { ...state, getSearchResult: PENDING };
+    case `${GET_SEARCH_RESULT}_FULFILLED`:
+      return { ...state, getSearchResult: FULFILLED };
+    case `${GET_SEARCH_RESULT}_REJECTED`:
+      return { ...state, getSearchResult: REJECTED };
 
     case `${SEND_CONTACT_FORM}_${PENDING}`:
       return {

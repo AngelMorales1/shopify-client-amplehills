@@ -10,6 +10,25 @@
 
   &__loader svg {
     animation: rotate linear infinite 2.75s;
+    margin-right: 0.25rem;
+  }
+
+  &__current-location-button {
+    background: color('white');
+    border-radius: 50%;
+    overflow: hidden;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      transform: none;
+    }
+
+    svg {
+      fill: color('madison-blue');
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 
   &__location-pin {

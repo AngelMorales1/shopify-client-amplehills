@@ -18,11 +18,11 @@ const Klaviyo = {
         return response.json();
       });
   },
-  signupV1(email, list) {
+  signupV1(email, list, body = {}) {
     return window
       .fetch(`${BASE_URL}/api/v1/klaviyo`, {
         method: 'post',
-        body: JSON.stringify({ email, list })
+        body: JSON.stringify({ email, list, body })
       })
       .then(response => {
         if (!response.ok) {
