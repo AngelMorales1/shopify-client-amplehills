@@ -9,8 +9,41 @@ import * as Status from 'constants/Status';
 import getDistanceBetweenLocations from 'utils/getDistanceBetweenLocations';
 import getUrlParam from 'utils/getUrlParam';
 
+import ScoopShopLineItemCard from 'components/ScoopShopLineItemCard';
 import { Button, Dropdown, PortableText, TextField } from 'components/base';
 import styles from './InStores.scss';
+
+const GroceryStores = [
+  'Kroger',
+  'Sam’s Club',
+  'Publix',
+  'Whole Foods',
+  'Stop & Shop ',
+  'Shop Rite',
+  'Wegmans',
+  'Key Food',
+  'Other'
+];
+
+const ShoppingFrequency = [
+  'More than once a week',
+  'Once a week',
+  '1-3 times a month',
+  'Once every 3 months',
+  'Less often than once every 3 months'
+];
+
+const Flavors = [
+  'Ooey Gooey Butter Cake',
+  'Coffee Toffee Coffee',
+  'Just Vanilla, Please!',
+  'Baked/Unbaked',
+  'Peppermint Pattie',
+  'PB Wins the Cup',
+  'Chocolate Milk & Cookies',
+  'Nonna D’s Oatmeal Lace',
+  'Vegan flavors'
+];
 
 class InStores extends Component {
   state = {
@@ -25,7 +58,9 @@ class InStores extends Component {
     currentBreakpoint: Global.breakpoints.medium.label,
     email: '',
     grocery: '',
-    hasSubmittedNoResultsForm: false
+    hasSubmittedNoResultsForm: false,
+    frequency: '',
+    flavors: ''
   };
 
   componentDidMount() {
@@ -142,6 +177,10 @@ class InStores extends Component {
   handleChangeEmail = email => this.setState(state => ({ ...state, email }));
   handleChangeGrocery = grocery =>
     this.setState(state => ({ ...state, grocery }));
+  handleChangeFrequency = frequency =>
+    this.setState(state => ({ ...state, frequency }));
+  handleChangeFlavors = flavors =>
+    this.setState(state => ({ ...state, flavors }));
   handleRadiusChange = radius => this.setState(state => ({ ...state, radius }));
   handleClear = () => {
     this.props.actions.getSearchResult(null);
@@ -157,15 +196,29 @@ class InStores extends Component {
 
   handleSubmitNoResults = () => {
     const LIST_ID = 'S8MVV9';
-    const { email, grocery, radius, address, coords } = this.state;
+    const {
+      email,
+      grocery,
+      radius,
+      address,
+      coords,
+      flavors,
+      frequency
+    } = this.state;
 
     this.props.actions.klaviyoListSignup(email, LIST_ID, {
-      grocery,
+      flavors: flavors.map(flavor => flavor.value),
+      frequency: frequency.value,
+      grocery: grocery.map(store => store.value),
       radius,
       address,
       coords
     });
   };
+
+  locations = memoize((retailLocations, scoopShopLocations) => {
+    return [...retailLocations, ...scoopShopLocations];
+  });
 
   locationsByDistance = memoize((coords, retailLocations) =>
     retailLocations.reduce((locationsByDistance, retailer) => {
@@ -190,6 +243,7 @@ class InStores extends Component {
   render() {
     const {
       retailLocations,
+      scoopShopLocations,
       content,
       searchResult,
       getSearchResultStatus
@@ -209,10 +263,9 @@ class InStores extends Component {
     const { medium } = Global.breakpoints;
 
     const uniqueFilters = {}; // TO-DO
-    const locationsByDistance = this.locationsByDistance(
-      coords,
-      retailLocations
-    );
+    const locations = this.locations(retailLocations, scoopShopLocations);
+    const locationsByDistance = this.locationsByDistance(coords, locations);
+
     const filteredLocations = locationsByDistance
       .filter(retailer => retailer.distance <= radius)
       .sort((a, b) => a.distance - b.distance);
@@ -301,7 +354,10 @@ class InStores extends Component {
                 'wauto mx1 small inline-block'
               )}
               variant="underline"
-              value={this.state.radius}
+              value={{
+                label: `${this.state.radius} mi`,
+                value: this.state.radius
+              }}
               options={[5, 10, 25, 100].map(distance => {
                 return { label: `${distance} mi`, value: distance };
               })}
@@ -346,41 +402,53 @@ class InStores extends Component {
           </div>
         </div>
         <div className="mt3 py4 px3 flex flex-column items-center">
-          {filteredLocations.slice(0, itemsToShow).map((retailer, i) => (
-            <div
-              key={retailer.retailer.address}
-              className={cx(
-                styles['InStores__local-retailer-container'],
-                'flex form-container-width justify-between w100 my2 p3 transition-slide-up-large'
-              )}
-              style={{ animationDelay: `${(i % 10) * 0.1}s` }}
-            >
-              <div
-                className={cx(
-                  styles['InStores__local-retailer-text-container']
-                )}
-              >
-                <p className="bold mb1">{retailer.retailer.name}</p>
-                <p>{`${retailer.retailer.address}, ${retailer.retailer.city}, ${
-                  retailer.retailer.state
-                } ${retailer.retailer.zip}`}</p>
-                {!!retailer.distance && (
-                  <p className="mt1 text-dusty-gray">
-                    {retailer.distance} miles away
-                  </p>
-                )}
-              </div>
-              <Button
-                className={cx(styles['InStores__local-retailer-button'])}
-                variant="primary-small"
-                color="peach"
-                label="Get Directions"
-                to={`https://maps.google.com/?q=${retailer.retailer.address}, ${
-                  retailer.retailer.city
-                }, ${retailer.retailer.state} ${retailer.retailer.zip}`}
+          {filteredLocations.slice(0, itemsToShow).map((retailer, i) => {
+            const isScoopShop =
+              retailer.retailer.slug || retailer.retailer.title;
+
+            return isScoopShop ? (
+              <ScoopShopLineItemCard
+                location={retailer.retailer}
+                distance={retailer.distance}
               />
-            </div>
-          ))}
+            ) : (
+              <div
+                key={retailer.retailer.address}
+                className={cx(
+                  styles['InStores__local-retailer-container'],
+                  'flex form-container-width justify-between w100 my2 p3 transition-slide-up-large'
+                )}
+                style={{ animationDelay: `${(i % 10) * 0.1}s` }}
+              >
+                <div
+                  className={cx(
+                    styles['InStores__local-retailer-text-container']
+                  )}
+                >
+                  <p className="bold mb1">{retailer.retailer.name}</p>
+                  <p>{`${retailer.retailer.address}, ${
+                    retailer.retailer.city
+                  }, ${retailer.retailer.state} ${retailer.retailer.zip}`}</p>
+                  {!!retailer.distance && (
+                    <p className="mt1 text-dusty-gray">
+                      {retailer.distance} miles away
+                    </p>
+                  )}
+                </div>
+                <Button
+                  className={cx(styles['InStores__local-retailer-button'])}
+                  variant="primary-small"
+                  color="peach"
+                  label="Get Directions"
+                  to={`https://maps.google.com/?q=${
+                    retailer.retailer.address
+                  }, ${retailer.retailer.city}, ${retailer.retailer.state} ${
+                    retailer.retailer.zip
+                  }`}
+                />
+              </div>
+            );
+          })}
           {!filteredLocations.length && (
             <div
               className={cx(
@@ -404,7 +472,7 @@ class InStores extends Component {
                 )}
               </div>
               {!hasSubmittedNoResultsForm && (
-                <div className="mt1">
+                <div className="mt1 text-container-width">
                   <TextField
                     className="mt2"
                     placeholder="Email address"
@@ -412,17 +480,45 @@ class InStores extends Component {
                     value={this.state.email}
                     onChange={this.handleChangeEmail}
                   />
-                  <TextField
-                    className="mt2"
+                  <Dropdown
+                    className="mt2 w100 relative z-3"
                     placeholder="Grocery store of choice"
-                    variant="light-gray"
+                    variant="primary-new"
                     value={this.state.grocery}
                     onChange={this.handleChangeGrocery}
+                    isMulti={true}
+                    options={GroceryStores.map(store => ({
+                      value: store,
+                      label: store
+                    }))}
                   />
-                  <p
+                  <Dropdown
+                    className="mt2 w100 z-2"
+                    placeholder="How often do you buy ice cream?"
+                    variant="primary-new"
+                    value={this.state.frequency}
+                    onChange={this.handleChangeFrequency}
+                    options={ShoppingFrequency.map(frequency => ({
+                      value: frequency,
+                      label: frequency
+                    }))}
+                  />
+                  <Dropdown
+                    className="mt2 w100"
+                    placeholder="Which Ample Hills flavors do you prefer?"
+                    variant="primary-new"
+                    value={this.state.flavors}
+                    onChange={this.handleChangeFlavors}
+                    isMulti={true}
+                    options={Flavors.map(flavor => ({
+                      value: flavor,
+                      label: flavor
+                    }))}
+                  />
+                  <span
                     className={cx(
                       styles['InStores__summary'],
-                      'mt2 small center'
+                      'mt2 small center text-center block'
                     )}
                   >
                     Requesting pints within <strong>{radius} miles</strong> of
@@ -439,7 +535,7 @@ class InStores extends Component {
                         {!!address ? address : 'Current Location'}
                       </span>
                     </strong>
-                  </p>
+                  </span>
                   <Button
                     className={cx(
                       styles['InStores__submit-email-button'],
@@ -448,7 +544,12 @@ class InStores extends Component {
                     variant="primary"
                     color="madison-blue"
                     label="Submit"
-                    disabled={!this.state.email || !this.state.grocery}
+                    disabled={
+                      !this.state.email ||
+                      !this.state.grocery ||
+                      !this.state.frequency ||
+                      !this.state.flavors
+                    }
                     onClick={this.handleSubmitNoResults}
                   />
                 </div>

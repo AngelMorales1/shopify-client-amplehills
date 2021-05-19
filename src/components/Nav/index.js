@@ -17,6 +17,7 @@ import {
   closeLocationDropdown
 } from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
+import lineItems from 'state/selectors/lineItems';
 import {
   FARTHER_FROM_BROOKLYN,
   FARTHEST_FROM_BROOKLYN,
@@ -140,7 +141,11 @@ class Nav extends Component {
       closeLocationDropdown
     } = this.props.actions;
     const { medium } = Global.breakpoints;
-    const cartIsEmpty = this.props.totalItems === 0;
+
+    const filteredItems = this.props.lineItems.filter(
+      item => item.product.handle !== item.product.headerId
+    );
+    const cartIsEmpty = filteredItems.length === 0;
 
     return (
       <div className="w100">
@@ -283,7 +288,7 @@ class Nav extends Component {
                 variant="circle"
                 color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
                 to="/cart"
-                label={this.props.totalItems.toString()}
+                label={filteredItems.length.toString()}
                 hover="clear-white-border"
               />
             </div>
@@ -358,6 +363,7 @@ const mapStateToProps = state => {
     shopDropdownIsOpen: get(state, 'dropdownNavUI.shopDropdownIsOpen'),
     locationDropdownIsOpen: get(state, 'dropdownNavUI.locationDropdownIsOpen'),
     totalItems: totalItems(state),
+    lineItems: lineItems(state),
     productLanding: get(
       state,
       'applicationUI.globalSettings.items[0].fields.productLanding.fields',

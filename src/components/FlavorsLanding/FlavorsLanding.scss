@@ -25,14 +25,14 @@
 
   &__dietary-restrictions {
     min-width: spacing(50);
-    margin: spacing(4) spacing(8);
+    margin: spacing(4) 0;
     justify-content: center;
 
     @media ($medium-up) {
       margin: 0;
       position: absolute;
       right: 0;
-      top: spacing(5);
+      top: 0;
       justify-content: start;
     }
   }

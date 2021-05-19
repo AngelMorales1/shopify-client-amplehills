@@ -8,7 +8,6 @@ import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import imageModel from 'models/imageModel';
-import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventoryRequestObject';
 
 import get from 'utils/get';
 import gtag from 'utils/gtag';
@@ -37,7 +36,7 @@ class ProductHero extends Component {
   }
 
   addToCart = () => {
-    const { product } = this.props;
+    const { product, products } = this.props;
 
     let customAttributes = product.preOrderDate
       ? [
@@ -69,10 +68,10 @@ class ProductHero extends Component {
     const items =
       product.subItems && product.subItems.length
         ? product.subItems.map(item => {
-            const foundProduct = this.props.products[item];
+            // const foundProduct = this.props.products[item];
             return {
               quantity: this.state.quantity,
-              variantId: this.props.products[item].id,
+              variantId: products[item].id,
               customAttributes: {
                 key: `__CYOS_PACK_ID__`,
                 value: packUuid
@@ -86,6 +85,19 @@ class ProductHero extends Component {
               customAttributes
             }
           ];
+
+    if (product.headerId) {
+      const headerItem = {
+        quantity: this.state.quantity,
+        variantId: products[product.headerId].id,
+        customAttributes: {
+          key: `__CYOS_PACK_ID__`,
+          value: packUuid
+        }
+      };
+
+      items.push(headerItem);
+    }
 
     gtag('event', 'add_to_cart', {
       send_to: 'AW-596545311',
@@ -130,8 +142,6 @@ class ProductHero extends Component {
     } = this.props;
     const { available, subItemsAvailable, price, forceAvailable } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
-
-    console.log(product);
 
     return (
       <div

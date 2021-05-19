@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import { getSearchResult } from 'state/actions/ui/locationsUIActions';
 import { klaviyoListSignup } from 'state/actions/klaviyoActions';
+import locations from 'state/selectors/locations';
 
 import Sanity from 'lib/Sanity';
 import get from 'utils/get';
@@ -24,6 +25,7 @@ const mapStateToProps = state => {
   return {
     text: get(fields, 'inStoresText', ''),
     searchResult: get(state, 'locationsUI.searchResult'),
+    scoopShopLocations: locations(state),
     getSearchResultStatus: get(state, 'status.getSearchResult'),
     klaviyoListSignupStatus: get(state, 'status.klaviyoListSignup'),
     localRetailers: get(fields, 'inStoresLocalRetailers.simpleFragments', {})

@@ -82,8 +82,95 @@ class Dropdown extends Component {
       shadow,
       textColor,
       fixedWidth,
-      textAlignCenter
+      textAlignCenter,
+      isMulti
     } = this.props;
+
+    let styleSet;
+    if (variant === 'primary-new') {
+      styleSet = {
+        container: provided => ({
+          ...provided,
+          maxWidth: '100%'
+        }),
+        control: (provided, state) => ({
+          ...provided,
+          width: state.selectProps.width,
+          background: '#ededed',
+          border: 0,
+          outline: 0,
+          minHeight: '3.75rem',
+          fontWeight: 'bold',
+          fontSize: '.875rem',
+          maxWidth: '100%'
+        }),
+        singleValue: provided => ({
+          ...provided,
+          color: '#13436d'
+        }),
+        multiValue: provided => ({
+          ...provided,
+          background: '#ffda8c',
+          cursor: 'pointer'
+        }),
+        multiValueLabel: provided => ({
+          ...provided,
+          padding: '.5rem 1rem .25rem',
+          color: '#13436d'
+        }),
+        valueContainer: provided => ({
+          ...provided,
+          padding: '0 20px'
+        })
+      };
+    }
+
+    if (variant === 'underline') {
+      styleSet = {
+        control: (provided, state) => ({
+          ...provided,
+          width: state.selectProps.width,
+          border: '0 !important',
+          boxShadow: 'none',
+          outline: 0,
+          background: 'transparent',
+          height: '1rem',
+          fontWeight: 'bold',
+          fontSize: '.825rem'
+        }),
+        dropdownIndicator: provided => ({
+          ...provided,
+          padding: 0,
+          marginLeft: '.25rem',
+          color: '#fe5c60'
+        }),
+        input: provided => ({
+          ...provided,
+          minWidth: '2rem'
+        }),
+        indicatorSeparator: provided => ({
+          ...provided,
+          display: 'none'
+        }),
+        indicatorsContainer: provided => ({
+          ...provided,
+          height: '90%'
+        }),
+        singleValue: provided => ({
+          ...provided,
+          color: '#fe5c60'
+        }),
+        valueContainer: provided => ({
+          ...provided,
+          padding: '0 5px'
+        }),
+        placeholder: provided => ({
+          ...provided,
+          color: '#fe5c60'
+        })
+      };
+    }
+
     return (
       <div
         className={cx(
@@ -114,7 +201,7 @@ class Dropdown extends Component {
         <Select
           className={cx(
             styles['Dropdown'],
-            'relative inline-block',
+            'relative inline-block w100',
             selectClassName,
             {
               [styles['Dropdown--open']]: this.state.menuIsOpen,
@@ -131,6 +218,8 @@ class Dropdown extends Component {
           placeholder={placeholder}
           onChange={this.onChange}
           arrowRenderer={this.getArrowRenderer(color)}
+          isMulti={isMulti}
+          styles={styleSet}
         />
       </div>
     );

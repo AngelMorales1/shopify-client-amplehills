@@ -153,7 +153,7 @@ class LocationsCards extends Component {
                 <Dropdown
                   className="w100 flex"
                   selectClassName="w100"
-                  variant="secondary"
+                  variant="underline"
                   placeholder="All states"
                   value={
                     activeStateFilter

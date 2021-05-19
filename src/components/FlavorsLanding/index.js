@@ -11,7 +11,7 @@ import FlavorCard from 'components/FlavorCard';
 class FlavorLanding extends Component {
   state = {
     activeFilter: 'All',
-    activeDietaryRestrictions: '',
+    activeDietaryRestrictions: 'Dietary Restrictions',
     currentBreakpoint: Global.breakpoints.medium.label
   };
 
@@ -48,7 +48,7 @@ class FlavorLanding extends Component {
       .filter(flavor => {
         if (
           this.state.activeFilter !== 'All' &&
-          this.state.activeDietaryRestrictions
+          this.state.activeDietaryRestrictions !== 'Dietary Restrictions'
         ) {
           return (
             get(flavor, `filters.${this.state.activeFilter}`, false) &&
@@ -64,7 +64,7 @@ class FlavorLanding extends Component {
           return get(flavor, `filters.${this.state.activeFilter}`, false);
         }
 
-        if (this.state.activeDietaryRestrictions !== '') {
+        if (this.state.activeDietaryRestrictions !== 'Dietary Restrictions') {
           return get(
             flavor,
             `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
@@ -144,8 +144,11 @@ class FlavorLanding extends Component {
               <Dropdown
                 className="mb2 z-2"
                 selectClassName="w100"
-                variant="secondary"
-                value={this.state.activeFilter}
+                variant="underline"
+                value={{
+                  label: this.state.activeFilter,
+                  value: this.state.activeFilter
+                }}
                 options={['All']
                   .concat(flavors.collectedFilters)
                   .map(filter => {
@@ -166,11 +169,14 @@ class FlavorLanding extends Component {
                 fixedWidth={true}
                 selectClassName="w100"
                 variant="small"
-                color="madison-blue"
+                variant="underline"
                 placeholder="Dietary Restrictions"
                 textColor="peach"
-                value={this.state.activeDietaryRestrictions}
-                options={['None']
+                value={{
+                  label: this.state.activeDietaryRestrictions,
+                  value: this.state.activeDietaryRestrictions
+                }}
+                options={['Dietary Restrictions']
                   .concat(flavors.collectedDietaryRestrictions)
                   .map(filter => {
                     return { label: filter, value: filter };

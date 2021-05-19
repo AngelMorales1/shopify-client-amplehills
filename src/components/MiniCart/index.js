@@ -43,6 +43,10 @@ class MiniCart extends Component {
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
+    const filteredItems = items.filter(
+      item => item.product.handle !== item.product.headerId
+    );
+
     const classes = cx(
       styles['MiniCart'],
       'col-11 fixed z-nav bg-white card drop-shadow-xlarge',
@@ -67,7 +71,7 @@ class MiniCart extends Component {
           </div>
 
           <div className={cx(styles['MiniCart__line-items'], 'mb2 px3')}>
-            {items.map(item => {
+            {filteredItems.map(item => {
               const classes = cx(styles['MiniCart__line-item'], 'mb3', {
                 mb4: item.cartAttributes.length,
                 [styles['MiniCart__line-item--updating']]:
@@ -133,7 +137,7 @@ class MiniCart extends Component {
           <div className="my3 px3 flex justify-between items-center">
             <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
             <Button
-              disabled={!items.length}
+              disabled={!filteredItems.length}
               to="/cart"
               color="madison-blue"
               onClick={() => closeMiniCart()}

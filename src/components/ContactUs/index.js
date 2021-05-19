@@ -138,18 +138,19 @@ class ContactUs extends Component {
         <h2 className="block-headline my2 px2 center">Contact us</h2>
         <p className="my2 px2 center">What can we help you with?</p>
         <form className="flex flex-wrap justify-center text-container-width">
-          <div className="w100 flex flex-wrap justify-center px2 my2">
+          <div className="w100 flex flex-wrap justify-center px1 my1">
             <Dropdown
               fixedWidth={true}
               className="w100"
-              selectClassName="w100"
-              variant="secondary"
+              variant="primary-new"
               placeholder="Pick a subject"
               value={
                 selected
-                  ? Object.keys(ADDRESSES).find(
-                      key => ADDRESSES[key].label === selected.label
-                    )
+                  ? ADDRESSES[
+                      Object.keys(ADDRESSES).find(
+                        key => ADDRESSES[key].label === selected.label
+                      )
+                    ]
                   : null
               }
               options={Object.keys(ADDRESSES).map(field => {

@@ -24,6 +24,10 @@ export default createSelector(
       const state = get(fields, 'state', '');
       const zip = get(fields, 'zip', '');
       const coordinates = get(fields, 'location', {});
+      const geopoint = {
+        lat: get(fields, 'location.lat', 0),
+        lng: get(fields, 'location.lon', 0)
+      };
       const phone = get(fields, 'phone', '');
       const seasonal = get(fields, 'seasonal', true);
       const delivery = get(fields, 'delivery', false);
@@ -102,6 +106,7 @@ export default createSelector(
         timekitProjectId,
         partyAvailable,
         partyTypes,
+        geopoint,
         timeSlots,
         orderDeliveryLink,
         closeLocationForTheSeason,

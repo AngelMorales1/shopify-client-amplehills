@@ -49,6 +49,8 @@ class ProductLandingView extends Component {
       return menu;
     };
 
+    console.log('SS', products);
+
     const productLandingHasMerchandise = merchandiseGridProducts.length;
 
     return (

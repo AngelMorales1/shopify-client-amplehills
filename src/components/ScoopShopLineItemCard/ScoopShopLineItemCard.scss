@@ -1,0 +1,48 @@
+@import 'settings';
+
+.ScoopShopLineItemCard {
+  &__inner {
+    animation-fill-mode: forwards;
+    border-radius: radius('s');
+    opacity: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__inner-info {
+    padding: 1.5rem 1.25rem;
+
+    @media ($medium-up) {
+      padding: 2rem;
+    }
+  }
+
+  &__image-container {
+    min-height: 18rem;
+    height: 100%;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: $font-6;
+
+    @media ($medium-up) {
+      font-size: $font-7;
+    }
+  }
+
+  &__directions-button {
+    letter-spacing: spacing(0.1);
+  }
+}

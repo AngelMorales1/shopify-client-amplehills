@@ -74,7 +74,7 @@ class Cart extends Component {
     // });
     function gtag_report_conversion(url) {
       var callback = function() {
-        if (typeof url != 'undefined') {
+        if (typeof url !== 'undefined') {
           window.location = url;
         }
       };
@@ -97,6 +97,9 @@ class Cart extends Component {
         return get(item, 'product.shippableItem', false);
       }
     ).length;
+    const filteredItems = this.props.items.filter(
+      item => item.product.handle !== item.product.headerId
+    );
 
     const cart = (
       <div className="transition-slide-up">
@@ -132,7 +135,7 @@ class Cart extends Component {
             </div>
 
             <div className={cx(styles['Cart__block-with-border'], 'my3')}>
-              {get(this, 'props.items', []).map(item => {
+              {filteredItems.map(item => {
                 const product = item.product;
                 const hasCartDetail = get(item, 'cartAttributes', []).length;
 

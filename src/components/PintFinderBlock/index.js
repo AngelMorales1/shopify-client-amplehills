@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
-// import { VscLoading } from 'react-icons/vsc';
 
 import { Button, Dropdown, TextField } from 'components/base';
 import styles from './PintFinderBlock.scss';
@@ -83,7 +81,7 @@ class PintFinderBlock extends Component {
                   'wauto mx1 small inline-block'
                 )}
                 variant="underline"
-                value={radius}
+                value={{ label: `${radius} mi`, value: radius }}
                 options={[5, 10, 25, 100].map(distance => {
                   return { label: `${distance} mi`, value: distance };
                 })}

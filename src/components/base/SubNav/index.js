@@ -33,18 +33,8 @@ class SubNav extends Component {
     }
   };
 
-  updateMenu = () => {
-    this.setState({ activeMenu: '' });
-    this.removeEventListener();
-  };
-
-  removeEventListener = () => {
-    window.removeEventListener('scroll', this.updateMenu);
-  };
-
   onMenuClick = menuTitle => {
     this.setState({ activeMenu: menuTitle });
-    setTimeout(() => window.addEventListener('scroll', this.updateMenu), 1500);
   };
 
   render() {
@@ -81,23 +71,27 @@ class SubNav extends Component {
               />
             ))}
           </div>
-        ) : (
-          <Dropdown
-            className={cx(styles['SubNav__dropdown'], 'w100 mx2')}
-            selectClassName="w100"
-            variant="secondary"
-            placeholder="Select menu"
-            value={this.state.activeMenu ? this.state.activeMenu : null}
-            options={menuList.map(menu => {
-              return { label: menu, value: menu };
-            })}
-            onChange={filter => {
-              onClick(filter.value);
-              this.onMenuClick(filter.value);
-            }}
-            shadow={true}
-          />
-        )}
+        ) : null}
+        {
+          // TO-DO: Re-enable this
+          // ) : (
+          //   <Dropdown
+          //     className={cx(styles['SubNav__dropdown'], 'w100 mx2')}
+          //     selectClassName="w100"
+          //     variant="secondary"
+          //     placeholder="Select menu"
+          //     value={this.state.activeMenu ? this.state.activeMenu : null}
+          //     options={menuList.map(menu => {
+          //       return { label: menu, value: menu };
+          //     })}
+          //     onChange={filter => {
+          //       onClick(filter.value);
+          //       this.onMenuClick(filter.value);
+          //     }}
+          //     shadow={true}
+          //   />
+          // )}
+        }
       </div>
     );
   }

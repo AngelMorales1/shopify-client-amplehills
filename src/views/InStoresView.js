@@ -16,6 +16,7 @@ class InStoresView extends Component {
         actions={this.props.actions}
         retailLocations={model.retailLocations}
         content={model.content}
+        scoopShopLocations={this.props.scoopShopLocations}
       />
     );
   }

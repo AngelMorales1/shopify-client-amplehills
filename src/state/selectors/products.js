@@ -167,6 +167,8 @@ export default createSelector(
             return variants.some(variant => variant.available);
           });
         const forceAvailable = get(product, 'fields.forceAvailable', false);
+        const headerId = get(product, 'fields.headerId', '');
+        const price = get(product, 'fields.price', 0);
 
         const link = `/products/${handle}`;
 
@@ -187,7 +189,9 @@ export default createSelector(
           limitedEdition,
           forceAvailable,
           link,
-          ...shopifyProduct
+          headerId,
+          ...shopifyProduct,
+          price: price || shopifyProduct.price
         };
 
         return mergedProducts;
