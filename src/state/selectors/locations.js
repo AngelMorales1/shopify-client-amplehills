@@ -58,6 +58,22 @@ export default createSelector(
       const currentOpenHours = moment()
         .format('dddd')
         .toLowerCase();
+      const isOpen = (function() {
+        const hoursArr = hours[currentOpenHours].split('-');
+
+        const now = moment();
+        const open = moment(
+          `${now.format('YYYY MM DD')} ${hoursArr[0]}`,
+          'YYYY MM DD hha'
+        );
+        const close = moment(
+          `${now.format('YYYY MM DD')} ${hoursArr[1]}`,
+          'YYYY MM DD hha'
+        );
+        const isOpen = now.isBetween(open, close);
+
+        return isOpen;
+      })();
       const navRegionOrder = get(fields, 'navRegionOrder', 100);
       const searchableFields = {
         title,
@@ -121,7 +137,8 @@ export default createSelector(
         cakes,
         cakesBucket,
         navRegionOrder,
-        cakePickupTimeSlots
+        cakePickupTimeSlots,
+        isOpen
       };
     });
 

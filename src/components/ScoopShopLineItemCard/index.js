@@ -51,7 +51,9 @@ const ScoopShopLineItemCard = ({ location, distance }) => {
             {location.title}
           </span>
           <div className="flex flex-wrap mb3">
-            <Radio checked={true} label="Open Now" className="mr3 mb1" />
+            {location.isOpen && (
+              <Radio checked={true} label="Open Now" className="mr3 mb1" />
+            )}
             <Radio
               checked={true}
               label="Sells Ice Cream Pints"
