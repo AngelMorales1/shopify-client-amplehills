@@ -73,8 +73,9 @@ const orderAsBoxes = function(items: ShopifyRateItem[]): number[] {
 }
 
 const bestTimeInTransitForDestination = function(destination: string): number | null {
-  const reno = get(Reno, destination);
-  const harrisburg = get(Harrisburg, destination);
+  const sanitizedDestination = destination.substr(0, 5);
+  const reno = get(Reno, sanitizedDestination);
+  const harrisburg = get(Harrisburg, sanitizedDestination);
 
   if (!reno && !harrisburg) return null;
 
