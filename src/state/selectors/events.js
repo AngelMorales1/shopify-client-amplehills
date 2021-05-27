@@ -101,6 +101,10 @@ export default createSelector(
             return { ...sortedFragment, sortedDate, sortedTime };
           });
 
+      const seoTitle = get(fields, 'seoTitle', '');
+      const seoDescription = get(fields, 'seoDescription', '');
+      const seoImage = get(fields, 'seoImage.fields.file.url', '');
+
       mergedProducts[handle] = {
         title,
         handle,
@@ -116,6 +120,9 @@ export default createSelector(
         datesAndTimes,
         locationPhone,
         blockCardButtonLabel,
+        seoTitle,
+        seoDescription,
+        seoImage,
         ...shopifyProduct
       };
 

@@ -4,6 +4,7 @@ import scrollTo from 'react-scroll-to-component';
 import SubNavScrollOption from 'constants/SubNavScrollOption';
 
 import BlockSwitch from 'components/BlockSwitch';
+import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 import { SubNav } from 'components/base';
 
@@ -31,8 +32,31 @@ class GenericPageView extends Component {
       return menu;
     }, []);
 
+    const slug = get(model, 'genericPage.items[0].fields.slug', '');
+    const seoTitle = get(model, 'genericPage.items[0].fields.seoTitle', '')
+      ? get(model, 'genericPage.items[0].fields.seoTitle', '')
+      : slug === '/'
+      ? 'Ample Hills Creamery – Order Online'
+      : `${get(
+          model,
+          'genericPage.items[0].fields.title',
+          ''
+        )} - Ample Hills Creamery`;
+
+    const seoDescription = get(
+      model,
+      'genericPage.items[0].fields.seoDescription',
+      ''
+    );
+    const seoImage = get(
+      model,
+      'genericPage.items[0].fields.seoImage.fields.file.url',
+      ''
+    );
+
     return (
       <Fragment>
+        <Meta title={seoTitle} description={seoDescription} image={seoImage} />
         {subNavIsOn ? (
           <SubNav
             onClick={menuTitle =>

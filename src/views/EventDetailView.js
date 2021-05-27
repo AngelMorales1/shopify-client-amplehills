@@ -3,6 +3,7 @@ import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
 import EventDetailHero from 'components/EventDetailHero';
+import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
 class EventDetailView extends Component {
@@ -12,8 +13,15 @@ class EventDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
+    console.log('ee', event);
+
     return (
       <div className="EventDetailView">
+        <Meta
+          title={event.seoTitle}
+          description={event.seoDescription}
+          image={event.seoImage}
+        />
         <EventDetailHero event={event} {...this.props} />
         {blocks &&
           blocks.map((block, i) => {

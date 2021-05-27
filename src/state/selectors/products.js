@@ -172,6 +172,10 @@ export default createSelector(
 
         const link = `/products/${handle}`;
 
+        const seoTitle = get(product, 'fields.seoTitle', '');
+        const seoDescription = get(product, 'fields.seoDescription', '');
+        const seoImage = get(product, 'fields.seoImage.fields.file.url', '');
+
         mergedProducts[handle] = {
           title,
           handle,
@@ -190,6 +194,9 @@ export default createSelector(
           forceAvailable,
           link,
           headerId,
+          seoTitle,
+          seoDescription,
+          seoImage,
           ...shopifyProduct,
           price: price || shopifyProduct.price
         };

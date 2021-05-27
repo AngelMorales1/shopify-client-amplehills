@@ -168,7 +168,6 @@ class FlavorLanding extends Component {
               <Dropdown
                 fixedWidth={true}
                 selectClassName="w100"
-                variant="small"
                 variant="underline"
                 placeholder="Dietary Restrictions"
                 textColor="peach"

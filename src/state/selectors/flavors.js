@@ -53,6 +53,10 @@ export default createSelector(
       const order = get(fields, 'order', 0);
       const specialLocations = get(fields, 'locationSpecial', []);
 
+      const seoTitle = get(fields, 'seoTitle', '');
+      const seoDescription = get(fields, 'seoDescription', '');
+      const seoImage = get(fields, 'seoImage.fields.file.url', '');
+
       return {
         id,
         title,
@@ -65,7 +69,10 @@ export default createSelector(
         contentBlocks,
         availableLocations,
         order,
-        specialLocations
+        specialLocations,
+        seoTitle,
+        seoDescription,
+        seoImage
       };
     });
 

@@ -4,6 +4,7 @@ import productHasHero from 'utils/productHasHero';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
+import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
 class ProductDetailView extends Component {
@@ -20,6 +21,11 @@ class ProductDetailView extends Component {
 
     return (
       <div className="ProductDetailView">
+        <Meta
+          title={product.seoTitle}
+          description={product.seoDescription}
+          image={product.seoImage}
+        />
         <div>
           {productHasHero(product) ? (
             <ProductHero

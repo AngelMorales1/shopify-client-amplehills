@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
+import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
 class FlavorDetailView extends Component {
@@ -14,6 +15,11 @@ class FlavorDetailView extends Component {
 
     return (
       <div className="FlavorDetailView">
+        <Meta
+          title={flavor.seoTitle}
+          description={flavor.seoDescription}
+          image={flavor.seoImage}
+        />
         {blocks &&
           blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);

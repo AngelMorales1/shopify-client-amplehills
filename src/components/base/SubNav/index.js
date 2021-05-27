@@ -4,7 +4,7 @@ import cx from 'classnames';
 import Global from 'constants/Global';
 
 import styles from './SubNav.scss';
-import { Button, Dropdown } from 'components/base';
+import { Button } from 'components/base';
 
 class SubNav extends Component {
   state = {

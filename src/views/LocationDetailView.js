@@ -6,6 +6,7 @@ import SubNavScrollOption from 'constants/SubNavScrollOption';
 import LocationDetailHero from 'components/LocationDetailHero';
 import BlockSwitch from 'components/BlockSwitch';
 import { SubNav } from 'components/base';
+import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
 class LocationDetailView extends Component {
@@ -24,6 +25,11 @@ class LocationDetailView extends Component {
 
     return (
       <Fragment>
+        <Meta
+          title={location.seoTitle}
+          description={location.seoDescription}
+          image={location.seoImage}
+        />
         {blocksLength ? (
           <SubNav
             onClick={menuTitle =>

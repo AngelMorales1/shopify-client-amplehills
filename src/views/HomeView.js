@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 
 import ErrorPage from 'components/ErrorPage';
-
+//  TO-DO: not used, remove
 class HomeView extends Component {
   render() {
     const { model } = this.props;

@@ -108,6 +108,9 @@ export default createSelector(
           });
         }
       );
+      const seoTitle = get(fields, 'seoTitle', '');
+      const seoDescription = get(fields, 'seoDescription', '');
+      const seoImage = get(fields, 'seoImage.fields.file.url', '');
 
       return {
         ...searchableFields,
@@ -138,7 +141,10 @@ export default createSelector(
         cakesBucket,
         navRegionOrder,
         cakePickupTimeSlots,
-        isOpen
+        isOpen,
+        seoTitle,
+        seoDescription,
+        seoImage
       };
     });
 
