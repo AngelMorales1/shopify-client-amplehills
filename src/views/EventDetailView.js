@@ -13,8 +13,6 @@ class EventDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
-    console.log('ee', event);
-
     return (
       <div className="EventDetailView">
         <Meta
