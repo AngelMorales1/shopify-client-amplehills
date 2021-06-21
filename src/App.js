@@ -92,7 +92,14 @@ class App extends Component {
     ) {
       return (
         <div className="App">
-          {alertIsActive ? <Alert alert={alert} /> : null}
+          {alertIsActive && (
+            <Alert
+              alert={{
+                alertCopy:
+                  "Our online store will be shut down on 6/22 for system maintenance. We'll be back soon!"
+              }}
+            />
+          )}
           <Nav
             alertIsActive={alertIsActive}
             logo={logo}
