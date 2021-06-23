@@ -235,7 +235,7 @@ class ProductHero extends Component {
               className={cx(
                 // Temporary
                 styles['ProductHero__downtime'],
-                'bg-deep-yellow card p3 detail my3'
+                'bg-deep-yellow card detail my3'
               )}
             >
               <span className="callout-small block mb2">
@@ -246,7 +246,13 @@ class ProductHero extends Component {
                 worry, we’ll be back online in a few days (with a li’l
                 makeover!).
               </strong>
-              <div className="mt3 flex items-center">
+              <div
+                className={cx(
+                  // Temporary
+                  styles['ProductHero__downtime__buttons'],
+                  'mt3 flex items-center'
+                )}
+              >
                 <Button
                   color="peach"
                   variant="primary-small"

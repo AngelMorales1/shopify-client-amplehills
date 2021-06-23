@@ -96,7 +96,7 @@ class App extends Component {
             <Alert
               alert={{
                 alertCopy:
-                  "Our online store will be shut down on 6/22 for system maintenance. We'll be back soon!"
+                  'Our online store is shut down for system maintenance. Don’t worry, we’ll be back online in a few days (with a li’l makeover!).'
               }}
             />
           )}

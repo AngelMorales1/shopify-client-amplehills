@@ -97,6 +97,29 @@ $menu-height: spacing(37.5);
     animation: down-time 1.5s forwards;
     opacity: 0;
     transform: translateY(2rem);
+    padding: 1.5rem;
+
+    @media ($medium-up) {
+      padding: 2rem;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      align-items: start;
+
+      a {
+        margin-top: 1rem;
+      }
+
+      @media ($medium-up) {
+        flex-direction: row;
+        align-items: center;
+
+        a {
+          margin-top: 0rem;
+        }
+      }
+    }
   }
 
   @keyframes down-time {
