@@ -49,7 +49,7 @@ const ProductShoppableCard = ({
             <span className="w100 bold mt2 mb1 block">{product.title}</span>
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
-          {product.available ? (
+          {product.available && false ? ( // Temporary: Remove when site relaunches
             <div className={actionClasses}>
               <QuantitySelector
                 className={cx(

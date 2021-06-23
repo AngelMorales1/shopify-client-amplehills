@@ -192,6 +192,8 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
+    console.log('products', this.props);
+
     return (
       <div
         className={cx(styles['ChooseYourOwnStory'], 'relative')}
@@ -254,6 +256,39 @@ class ChooseYourOwnStory extends Component {
                   />
                 ))}
               </div>
+              <div
+                className={cx(
+                  // Temporary
+                  styles['ChooseYourOwnStory__downtime'],
+                  'bg-deep-yellow card p3 detail my3'
+                )}
+              >
+                <span className="callout-small block mb2">
+                  Planned Maintenance
+                </span>
+                <strong>
+                  Our online store is shut down for system maintenance. Don’t
+                  worry, we’ll be back online in a few days (with a li’l
+                  makeover!).
+                </strong>
+                <div className="mt3 flex items-center">
+                  <Button
+                    color="peach"
+                    variant="primary-small"
+                    className="small mr2"
+                    onClick={this.props.actions.openNewsletterModal}
+                  >
+                    Get Notified
+                  </Button>
+                  <Button
+                    variant="underline-peach"
+                    className="small"
+                    to="/in-stores"
+                  >
+                    Find a Pint Near You
+                  </Button>
+                </div>
+              </div>
               <div className="mb4">
                 <div
                   dangerouslySetInnerHTML={{
@@ -280,6 +315,7 @@ class ChooseYourOwnStory extends Component {
           className={cx(
             styles['ChooseYourOwnStory__menu'],
             'z-sub-nav b0 l0 w100 bg-madison-blue text-white p3 transition-slide-up-menu',
+            'display-none', // Temporary: remove when site relaunches
             this.state.menuPosition
           )}
         >

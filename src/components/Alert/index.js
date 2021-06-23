@@ -5,7 +5,6 @@ import cx from 'classnames';
 import styles from './Alert.scss';
 
 const Alert = ({ alert }) => {
-  console.log('ww', alert);
   return (
     <div
       className={cx(

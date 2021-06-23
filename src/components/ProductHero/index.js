@@ -31,8 +31,9 @@ class ProductHero extends Component {
     if (
       prevProps.addLineItemsStatus === PENDING &&
       this.props.addLineItemsStatus === FULFILLED
-    )
+    ) {
       this.didAddToCart();
+    }
   }
 
   addToCart = () => {
@@ -229,6 +230,40 @@ class ProductHero extends Component {
                 className="markdown-block"
               />
             </div>
+
+            <div
+              className={cx(
+                // Temporary
+                styles['ProductHero__downtime'],
+                'bg-deep-yellow card p3 detail my3'
+              )}
+            >
+              <span className="callout-small block mb2">
+                Planned Maintenance
+              </span>
+              <strong>
+                Our online store is shut down for system maintenance. Don’t
+                worry, we’ll be back online in a few days (with a li’l
+                makeover!).
+              </strong>
+              <div className="mt3 flex items-center">
+                <Button
+                  color="peach"
+                  variant="primary-small"
+                  className="small mr2"
+                  onClick={this.props.actions.openNewsletterModal}
+                >
+                  Get Notified
+                </Button>
+                <Button
+                  variant="underline-peach"
+                  className="small"
+                  to="/in-stores"
+                >
+                  Find a Pint Near You
+                </Button>
+              </div>
+            </div>
             {product.preOrderDate ? (
               <div className="mt3 mb2">
                 <strong className="text-peach bold small">
@@ -245,9 +280,10 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {(available && subItemsAvailable) ||
+              {/* {(available && subItemsAvailable) ||
               product.preOrderDate ||
-              (forceAvailable && available) ? (
+              (forceAvailable && available) ? ( */}
+              {false ? ( // Temporary
                 <div className="relative">
                   <Button
                     className={cx(styles['ProductHero__button'])}
