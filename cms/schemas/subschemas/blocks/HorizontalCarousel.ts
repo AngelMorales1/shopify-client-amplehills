@@ -1,6 +1,6 @@
-import image from './../image';
-import color from './../color';
-import portableText from './../portableText';
+import image from '../image';
+import color from '../color';
+import portableText from '../portableText';
 
 export default {
   type: 'object',

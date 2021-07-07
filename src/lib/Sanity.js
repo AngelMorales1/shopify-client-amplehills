@@ -51,6 +51,20 @@ export const Sanity = {
     const query = `*[_type == 'retailLocation'] ${Groq.RetailLocation}`;
 
     return client.fetch(query).then(Serializers.retailLocations);
+  },
+  fetchProducts: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'product'] ${Groq.Product}`;
+
+    return client.fetch(query).then(Serializers.products);
+  },
+  fetchFlavors: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'flavor'] ${Groq.Flavor}`;
+
+    return client.fetch(query).then(Serializers.flavors);
   }
 };
 

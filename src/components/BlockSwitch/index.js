@@ -26,14 +26,14 @@ import PintFinderBlock from 'components/PintFinderBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
-  const type = get(block, 'sys.contentType.sys.id');
+  const type = get(block, '_type') || get(block, 'sys.contentType.sys.id', '');
 
   switch (type) {
     case 'blockFullWidthImages':
       return <FullWidthImages {...props} />;
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
-    case 'blockImageText':
+    case 'imageText':
       return <ImageText {...props} />;
     case 'blockImageDoubleText':
       return <ImageDoubleText {...props} />;
@@ -51,7 +51,7 @@ const BlockSwitch = props => {
       return <EventsBlock {...props} />;
     case 'blockImageVideoCarousel':
       return <ImageVideoCarousel {...props} />;
-    case 'blockFaq':
+    case 'faq':
       return <FAQBlock {...props} />;
     case 'blockCardRecirculation':
       return <CardRecirculation {...props} />;

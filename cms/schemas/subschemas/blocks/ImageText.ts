@@ -51,7 +51,7 @@ export default {
       name: 'buttonColor',
       title: 'Button Color',
       fieldset: 'buttons',
-      limit: ['peach', 'navy']
+      limit: ['peach', 'blue']
     }),
     {
       name: 'buttonLink',
@@ -90,6 +90,19 @@ export default {
       title: 'Reverse Image/Text Arrangement?',
       fieldset: 'options',
       type: 'boolean'
+    },
+    {
+      name: 'fullImage',
+      title: 'Scale Image to Fit Box Entirely?',
+      fieldset: 'options',
+      type: 'boolean'
+    },
+    {
+      name: 'is5050',
+      title: 'Is 50% / 50%?',
+      fieldset: 'options',
+      type: 'boolean',
+      initialValue: () => true
     },
   ]
 };

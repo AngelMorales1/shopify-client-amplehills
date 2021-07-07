@@ -1,10 +1,3 @@
-export const Flavor = `{
-  _id,
-  name,
-  slug,
-  description
-}`;
-
 export const FlavorFrenzy = `{
   _id,
   _createdAt,
@@ -34,6 +27,22 @@ export const InStores = `{
   noResultsBody
 }`;
 
+export const Img = `{
+  'src': asset->url,
+  alt,
+  credit,
+  caption,
+  crop,
+  hotspot,
+  'id': asset->_id,
+  'metadata': asset->metadata
+}`;
+
+export const Block = `{
+  ...,
+  'image': image${Img}
+}`;
+
 export const RetailLocation = `{
   _id,
   _createdAt,
@@ -45,4 +54,47 @@ export const RetailLocation = `{
   geopoint,
   distributor,
   tags[]->{ ... }
+}`;
+
+export const Product = `{
+  _id,
+  _createdAt,
+  title,
+  productHandle,
+  price,
+  flavorDescription,
+  gridImage{
+    'src': asset->url
+  },
+  pintImage{
+    'src': asset->url
+  },
+  description,
+  availableInBYO,
+  exclusiveToBYO,
+  blocks,
+  seoTitle,
+  seoDescription,
+  seoImage
+}`;
+
+export const Flavor = `{
+  _id,
+  _createdAt,
+  name,
+  slug,
+  showOnFlavorsPage,
+  dietaryRestrictions,
+  filters,
+  labelColor,
+  availableLocations,
+  order,
+  image{
+    'src': asset->url
+  },
+  description,
+  blocks[]${Block},
+  seoTitle,
+  seoDescription,
+  seoImage
 }`;

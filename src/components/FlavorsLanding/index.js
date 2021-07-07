@@ -8,6 +8,20 @@ import styles from './FlavorsLanding.scss';
 import { Button, Dropdown } from 'components/base';
 import FlavorCard from 'components/FlavorCard';
 
+const FILTERS = {
+  shopSpecific: 'Shop-Specific',
+  shipsNationwide: 'Ships Nationwide',
+  'mix-ins': "Full O' Mix-ins",
+  chocolatey: 'Chocolatey'
+};
+
+const DIETARY_RESTRICTIONS = {
+  dietaryRestrictions: 'Dietary Restrictions',
+  glutenFree: 'Gluten Free',
+  vegan: 'Vegan',
+  nuts: 'Contains Nuts'
+};
+
 class FlavorLanding extends Component {
   state = {
     activeFilter: 'All',
@@ -43,36 +57,21 @@ class FlavorLanding extends Component {
 
   render() {
     const { setRef, drip, upperDrip, z } = this.props;
+
     const flavors = get(this, 'props.flavors', {});
-    const filteredFlavor = get(flavors, 'flavors', [])
+    const filteredFlavors = get(flavors, 'flavors', [])
+      .filter(flavor => flavor.showOnFlavorsPage)
       .filter(flavor => {
-        if (
-          this.state.activeFilter !== 'All' &&
-          this.state.activeDietaryRestrictions !== 'Dietary Restrictions'
-        ) {
-          return (
-            get(flavor, `filters.${this.state.activeFilter}`, false) &&
-            get(
-              flavor,
-              `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
-              false
-            )
+        const filtered =
+          this.state.activeFilter === 'All' ||
+          flavor.filters.includes(this.state.activeFilter);
+        const diet =
+          this.state.activeDietaryRestrictions === 'Dietary Restrictions' ||
+          flavor.dietaryRestrictions.includes(
+            this.state.activeDietaryRestrictions
           );
-        }
 
-        if (this.state.activeFilter !== 'All') {
-          return get(flavor, `filters.${this.state.activeFilter}`, false);
-        }
-
-        if (this.state.activeDietaryRestrictions !== 'Dietary Restrictions') {
-          return get(
-            flavor,
-            `dietaryRestrictions.${this.state.activeDietaryRestrictions}`,
-            false
-          );
-        }
-
-        return true;
+        return filtered && diet;
       })
       .sort((a, b) => a.order - b.order);
 
@@ -129,7 +128,7 @@ class FlavorLanding extends Component {
                       )}
                       color={color}
                       key={filter}
-                      label={filter}
+                      label={FILTERS[filter]}
                       variant="primary-small"
                       onClick={() =>
                         this.setState({
@@ -146,13 +145,17 @@ class FlavorLanding extends Component {
                 selectClassName="w100"
                 variant="underline"
                 value={{
-                  label: this.state.activeFilter,
+                  label:
+                    this.state.activeFilter === 'All'
+                      ? 'All'
+                      : FILTERS[this.state.activeFilter],
                   value: this.state.activeFilter
                 }}
                 options={['All']
                   .concat(flavors.collectedFilters)
                   .map(filter => {
-                    return { label: filter, value: filter };
+                    if (filter === 'All') return { label: 'All', value: 'All' };
+                    return { label: FILTERS[filter], value: filter };
                   })}
                 onChange={filter =>
                   this.setState({ activeFilter: filter.value })
@@ -171,14 +174,33 @@ class FlavorLanding extends Component {
                 variant="underline"
                 placeholder="Dietary Restrictions"
                 textColor="peach"
-                value={{
-                  label: this.state.activeDietaryRestrictions,
-                  value: this.state.activeDietaryRestrictions
-                }}
+                value={
+                  this.state.activeDietaryRestrictions ===
+                  'Dietary Restrictions'
+                    ? {
+                        label: 'Dietary Restrictions',
+                        value: 'Dietary Restrictions'
+                      }
+                    : {
+                        label:
+                          DIETARY_RESTRICTIONS[
+                            this.state.activeDietaryRestrictions
+                          ],
+                        value: this.state.activeDietaryRestrictions
+                      }
+                }
                 options={['Dietary Restrictions']
                   .concat(flavors.collectedDietaryRestrictions)
                   .map(filter => {
-                    return { label: filter, value: filter };
+                    let label = '';
+
+                    if (filter === 'glutenFree') label = 'Gluten Free';
+                    if (filter === 'vegan') label = 'Vegan';
+                    if (filter === 'nuts') label = 'Contains Nuts';
+                    if (filter === 'Dietary Restrictions')
+                      label = 'Dietary Restrictions';
+
+                    return { label, value: filter };
                   })}
                 onChange={filter =>
                   this.handleDietaryRestrictionsClick(filter.value)
@@ -187,7 +209,7 @@ class FlavorLanding extends Component {
             </div>
           </div>
           <div className="flex flex-row flex-wrap justify-center">
-            {filteredFlavor.map((flavor, i) => (
+            {filteredFlavors.map((flavor, i) => (
               <FlavorCard key={get(flavor, 'id', i)} flavor={flavor} />
             ))}
           </div>

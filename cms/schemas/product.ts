@@ -141,12 +141,13 @@ export default {
   preview: {
     select: {
       title: 'title',
-      image: 'pintImage'
+      image: 'pintImage',
+      grid: 'gridImage',
     },
     prepare(selection) {
       return {
         title: selection.title,
-        media: selection.image
+        media: selection.image || selection.grid
       }
     }
   }

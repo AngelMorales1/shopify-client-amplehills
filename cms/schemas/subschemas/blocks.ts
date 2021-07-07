@@ -8,6 +8,7 @@ import HorizontalCarousel from './blocks/HorizontalCarousel';
 import CenteredCarousel from './blocks/CenteredCarousel';
 import Text from './blocks/Text';
 import UpcomingEvents from './blocks/UpcomingEvents';
+import HtmlEmbed from './blocks/HtmlEmbed';
 
 export default options => ({
   type: 'array',
@@ -21,7 +22,8 @@ export default options => ({
     HorizontalCarousel,
     CenteredCarousel,
     Text,
-    UpcomingEvents
+    UpcomingEvents,
+    HtmlEmbed
   ],
   ...options
 });

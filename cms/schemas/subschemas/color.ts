@@ -1,55 +1,55 @@
 const COLORS = [
   {
     value: 'pink',
-    label: 'Pink',
+    title: 'Pink',
   },
   {
     value: 'blue',
-    label: 'Blue',
+    title: 'Blue',
   },
   {
     value: 'peach',
-    label: 'Peach',
+    title: 'Peach',
   },
   {
     value: 'yellow',
-    label: 'Yellow',
+    title: 'Yellow',
   },
   {
     value: 'light-pink',
-    label: 'Light Pink',
+    title: 'Light Pink',
   },
   {
     value: 'light-yellow',
-    label: 'Light Yellow',
+    title: 'Light Yellow',
   },
   {
     value: 'light-peach',
-    label: 'Peach',
+    title: 'Peach',
   },
   {
     value: 'mustard',
-    label: 'Mustard',
+    title: 'Mustard',
   },
   {
     value: 'light-turquoise',
-    label: 'Light Turquoise',
+    title: 'Light Turquoise',
   },
   {
     value: 'light-orange',
-    label: 'Light Orange',
+    title: 'Light Orange',
   },
   {
     value: 'peach-pink',
-    label: 'Peach Pink',
+    title: 'Peach Pink',
   },
   {
     value: 'yellow-green',
-    label: 'Yellow Green',
+    title: 'Yellow Green',
   },
   {
     value: 'light-yellow-green',
-    label: 'Light Yellow Green',
+    title: 'Light Yellow Green',
   }
 ];
 

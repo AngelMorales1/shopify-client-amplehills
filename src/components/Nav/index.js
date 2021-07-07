@@ -18,6 +18,7 @@ import {
 } from 'state/actions/ui/dropdownNavUIActions';
 import alertIsActive from 'state/selectors/alertIsActive';
 import lineItems from 'state/selectors/lineItems';
+import products from 'state/selectors/products';
 import {
   FARTHER_FROM_BROOKLYN,
   FARTHEST_FROM_BROOKLYN,
@@ -132,7 +133,8 @@ class Nav extends Component {
       alertIsActive,
       shopDropdownIsOpen,
       locationDropdownIsOpen,
-      locationDropdownImage
+      locationDropdownImage,
+      products
     } = this.props;
     const {
       openShopDropdown,
@@ -296,6 +298,7 @@ class Nav extends Component {
           <div className="w100 absolute t0 l0 z-below">
             {this.state.currentBreakpoint === medium.label ? (
               <ShopDropdown
+                products={products}
                 shopDropdownIsOpen={shopDropdownIsOpen}
                 productLanding={productLanding}
                 alertIsActive={alertIsActive}
@@ -369,6 +372,7 @@ const mapStateToProps = state => {
       'applicationUI.globalSettings.items[0].fields.productLanding.fields',
       {}
     ),
+    products: products(state),
     alertIsActive: alertIsActive(state),
     locations: locations(state),
     locationDropdownImage: get(

@@ -1,5 +1,6 @@
 import Data from 'lib/Data';
 import { client as Apollo } from 'lib/Apollo';
+import Sanity from 'lib/Sanity';
 
 import { fetchProducts } from 'state/graphql/products';
 
@@ -17,10 +18,7 @@ export const FETCH_CONTENTFUL_PRODUCTS = 'FETCH_CONTENTFUL_PRODUCTS';
 export const fetchContentfulProducts = payload => dispatch => {
   return dispatch({
     type: FETCH_CONTENTFUL_PRODUCTS,
-    payload: Data.getEntries({
-      content_type: 'productPage',
-      include: 4
-    })
+    payload: Sanity.fetchProducts()
   });
 };
 

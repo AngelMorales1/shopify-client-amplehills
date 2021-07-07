@@ -12,13 +12,16 @@ class GenericPageView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, blocks, subNavIsOn, pageNotFound } = this.props;
+    const { model, subNavIsOn, pageNotFound } = this.props;
 
     if (model.isError) return <ErrorPage />;
 
     if (pageNotFound) return <ErrorPage errorIs404={true} />;
 
-    const menuList = get(this, 'props.blocks', []).reduce((menu, block) => {
+    const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+
+    console.log('SBL', blocks);
+    const menuList = blocks.reduce((menu, block) => {
       const blockType = get(block, 'sys.contentType.sys.id', '');
       const fields = get(block, 'fields', false);
 

@@ -139,11 +139,12 @@
   }
 
   &__text-content--center {
-    max-width: spacing(100);
+    max-width: spacing(120);
     margin: 0 auto;
 
     @media ($medium-up) {
       margin: 0;
+      padding: 0 !important;
     }
   }
 

@@ -10,7 +10,8 @@ const ShopDropdown = ({
   productLanding,
   shopDropdownIsOpen,
   openShopDropdown,
-  closeShopDropdown
+  closeShopDropdown,
+  products
 }) => {
   const iceCreamProducts = get(productLanding, 'iceCreamProducts', []);
   const merchProducts = get(productLanding, 'merchandiseProducts', []);
@@ -47,15 +48,14 @@ const ShopDropdown = ({
                   'flex flex-row justify-center mx-auto'
                 )}
               >
-                {iceCreamProducts.map(product => {
-                  const fields = get(product, 'fields', {});
-                  const image = get(
-                    fields,
-                    'dropdownNavImage.fields.file.url',
-                    ''
-                  );
-                  const title = get(fields, 'productTitle', '');
+                {iceCreamProducts.map(landingProduct => {
+                  const fields = get(landingProduct, 'fields', {});
                   const handle = get(fields, 'productHandle', '');
+                  const product = get(products, handle);
+
+                  if (!product) return null;
+                  const image = get(product, 'gridImage', '');
+                  const title = get(product, 'title', '');
 
                   return (
                     <div key={get(product, 'sys.id', '')} className="mx1">

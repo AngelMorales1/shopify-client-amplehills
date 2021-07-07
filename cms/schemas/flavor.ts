@@ -28,6 +28,11 @@ export default {
         'This is the URL for the flavor. Should look like "the-name-of-the-flavor" all lowercase and separated by hyhens. This should match the Shopify product handle if there is one. Example: "pb-wins-the-cup"'
     },
     {
+      name: 'showOnFlavorsPage',
+      title: 'Show on Flavors Page?',
+      type: 'boolean'
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'array',
@@ -50,15 +55,15 @@ export default {
         list: [
           {
             value: 'nuts',
-            label: 'Contains Nuts',
+            title: 'Contains Nuts',
           },
           {
             value: 'glutenFree',
-            label: 'Gluten Free'
+            title: 'Gluten Free'
           },
           {
             value: 'vegan',
-            label: 'Vegan'
+            title: 'Vegan'
           }
         ]
       }
@@ -72,41 +77,19 @@ export default {
         list: [
           {
             value: 'shipsNationwide',
-            label: 'Ships Nationwide',
+            title: 'Ships Nationwide',
           },
           {
             value: 'mix-ins',
-            label: 'Full O\' Mix-Ins'
+            title: 'Full O\' Mix-Ins'
           },
           {
             value: 'chocolatey',
-            label: 'Chocolatey'
+            title: 'Chocolatey'
           },
           {
             value: 'shopSpecific',
-            label: 'Shop Specific'
-          }
-        ]
-      }
-    },
-    {
-      name: 'labelColor',
-      title: 'Label Color',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        list: [
-          {
-            value: 'green',
-            label: 'Green',
-          },
-          {
-            value: 'red',
-            label: 'Red'
-          },
-          {
-            value: 'blue',
-            label: 'Blue'
+            title: 'Shop Specific'
           }
         ]
       }

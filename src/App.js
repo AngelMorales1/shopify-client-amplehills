@@ -95,8 +95,7 @@ class App extends Component {
           {alertIsActive && (
             <Alert
               alert={{
-                alertCopy:
-                  'Our online store is shut down for system maintenance. Don’t worry, we’ll be back online in a few days (with a li’l makeover!).'
+                alertCopy: 'Our online store is back open!'
               }}
             />
           )}

@@ -54,10 +54,7 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
               }
             )}
             style={{
-              background: `url(${contentfulImgUtil(
-                product.gridImage,
-                '500'
-              )}) no-repeat center`,
+              background: `url(${product.gridImage}?w=800) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />

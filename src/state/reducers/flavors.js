@@ -1,7 +1,7 @@
 import { GET_FLAVORS } from 'state/actions/flavorsActions';
 
 const initialState = {
-  flavors: {}
+  flavors: []
 };
 
 export default (state = initialState, action) => {

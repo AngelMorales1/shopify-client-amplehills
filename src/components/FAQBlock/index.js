@@ -15,26 +15,13 @@ class FAQBlock extends Component {
   render() {
     const { z, block, setRef } = this.props;
     const { selectedItem } = this.state;
-    const fields = get(block, 'fields', {});
-    const title = get(fields, 'title', '');
-    const dripIsOn = get(fields, 'drip', false);
-    const upperDripIsOn = get(fields, 'upperDrip', false);
-    const buttonLabel = get(fields, 'buttonLabel', '');
-    const buttonLink = get(fields, 'buttonLink', '');
-    const text = get(fields, 'text', '');
-    const fragments = get(fields, 'headingAndQa.fragments', []).map(
-      fragment => {
-        return fragment.reduce((sortedFragment, fragmentItem) => {
-          const key = fragmentItem.key.toLowerCase();
-
-          if (fragmentItem.value) {
-            sortedFragment[key] = fragmentItem.value;
-          }
-
-          return sortedFragment;
-        }, {});
-      }
-    );
+    const title = get(block, 'title', '');
+    const dripIsOn = get(block, 'drip', false);
+    const upperDripIsOn = get(block, 'upperDrip', false);
+    const buttonLabel = get(block, 'buttonLabel', '');
+    const buttonLink = get(block, 'buttonLink', '');
+    const text = get(block, 'text', '');
+    const rows = get(block, 'questions', []);
 
     return (
       <div
@@ -71,11 +58,11 @@ class FAQBlock extends Component {
               'col-12 md-col-8 form-container-width'
             )}
           >
-            {fragments.map(fragment => {
-              const uuid = get(fragment, 'uuid', '');
+            {rows.map(row => {
+              const uuid = get(row, '_key', '');
               const dropdownIsOpen = selectedItem === uuid;
 
-              return get(fragment, 'type', '') === 'Heading' ? (
+              return get(row, '_type', '') === 'heading' ? (
                 <p
                   key={uuid}
                   className={cx(
@@ -83,17 +70,13 @@ class FAQBlock extends Component {
                     'uppercase bold text-peach mb3'
                   )}
                 >
-                  {get(fragment, 'heading', '')}
+                  {get(row, 'heading', '')}
                 </p>
               ) : (
                 <div key={uuid} className="my2 w100">
                   <div className="flex flex-row justify-between items-start">
                     <Button
-                      ariaLabel={`Open question: ${get(
-                        fragment,
-                        'question',
-                        ''
-                      )}`}
+                      ariaLabel={`Open question: ${get(row, 'question', '')}`}
                       className={cx(
                         styles['FAQBlock__question'],
                         'col-10 flex flex-start'
@@ -106,7 +89,7 @@ class FAQBlock extends Component {
                       }
                     >
                       <p className="text-madison-blue semi-bold">
-                        {get(fragment, 'question', '')}
+                        {get(row, 'question', '')}
                       </p>
                     </Button>
                     <Button
@@ -149,7 +132,7 @@ class FAQBlock extends Component {
                       'block-subheadline pt4 pb4 mb3 transition-slide-up'
                     )}
                   >
-                    {get(fragment, 'answer', '')}
+                    {get(row, 'answer', '')}
                   </p>
                 </div>
               );

@@ -49,7 +49,7 @@ const ProductShoppableCard = ({
             <span className="w100 bold mt2 mb1 block">{product.title}</span>
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
-          {product.available && false ? ( // Temporary: Remove when site relaunches
+          {product.available ? (
             <div className={actionClasses}>
               <QuantitySelector
                 className={cx(
@@ -71,6 +71,9 @@ const ProductShoppableCard = ({
                 label="+ Add"
                 onClick={() => handleAddProduct(product.handle)}
               />
+              <div className="absolute t0 r0 mt1">
+                <strong>${product.price.toFixed(2)}</strong>
+              </div>
             </div>
           ) : (
             <div className={actionClasses}>

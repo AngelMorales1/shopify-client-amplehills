@@ -22,9 +22,16 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'string',
+          type: 'object',
           name: 'heading',
-          title: 'Heading'
+          title: 'Heading',
+          fields: [
+            {
+              type: 'string',
+              name: 'heading',
+              title: 'Heading',
+            }
+          ]
         },
         {
           type: 'object',
