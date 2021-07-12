@@ -280,10 +280,9 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {/* {(available && subItemsAvailable) ||
+              {(available && subItemsAvailable) ||
               product.preOrderDate ||
-              (forceAvailable && available) ? ( */}
-              {false ? ( // Temporary
+              (forceAvailable && available) ? (
                 <div className="relative">
                   <Button
                     className={cx(styles['ProductHero__button'])}
