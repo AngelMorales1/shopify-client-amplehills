@@ -162,10 +162,13 @@ class LocationsCards extends Component {
                   }
                   options={[{ label: 'All states', value: 'All' }]
                     .concat(states)
-                    .map(filter => ({
-                      label: filter.label,
-                      value: filter.value
-                    }))}
+                    .map(filter => {
+                      if (!filter) return;
+                      return {
+                        label: filter.label,
+                        value: filter.value
+                      };
+                    })}
                   onChange={filter =>
                     filter.value === 'All'
                       ? actions.clearLocationFilters()

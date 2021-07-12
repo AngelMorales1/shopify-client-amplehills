@@ -29,6 +29,11 @@ export default {
       title: 'Subtitle',
       type: 'string'
     },
+    color({
+      name: 'subtitleColor',
+      title: 'Subtitle Color',
+      limit: ['peach', 'blue']
+    }),
     {
       name: 'title1',
       title: 'Title 1',
@@ -90,6 +95,12 @@ export default {
     {
       name: 'drip',
       title: 'Has Drip?',
+      fieldset: 'options',
+      type: 'boolean'
+    },
+    {
+      name: 'upperDrip',
+      title: 'Has Upper Drip?',
       fieldset: 'options',
       type: 'boolean'
     },

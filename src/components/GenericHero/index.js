@@ -10,18 +10,17 @@ import styles from './GenericHero.scss';
 import { Image, Button, PortableText } from 'components/base';
 
 const GenericHero = ({ block, z, renderButton }) => {
-  const fields = get(block, 'fields', {});
-  const title = get(fields, 'title', '');
-  const image1 = get(fields, 'image1', null);
-  const image2 = get(fields, 'image2', null);
-  const dripIsOn = get(fields, 'drip', false);
-  const upperDripIsOn = get(fields, 'upperDrip', false);
-  const colorClass = `GenericHero--${get(fields, 'color', 'white')}`;
-  const text = get(fields, 'text', '');
-  const imageRight = get(fields, 'imageRight', false);
-  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
-  const buttonLabel = get(fields, 'buttonLabel', '');
-  const buttonLink = get(fields, 'buttonLink', '');
+  const title = get(block, 'title', '');
+  const image1 = get(block, 'image1', null);
+  const image2 = get(block, 'image2', null);
+  const dripIsOn = get(block, 'drip', false);
+  const upperDripIsOn = get(block, 'upperDrip', false);
+  const colorClass = `GenericHero--${get(block, 'backgroundColor', 'white')}`;
+  const text = get(block, 'text', '');
+  const imageRight = get(block, 'imageRight', false);
+  const isReverseArrangement = get(block, 'isReverseArrangement', false);
+  const buttonLabel = get(block, 'buttonLabel', '');
+  const buttonLink = get(block, 'buttonLink', '');
   const blockHasButton = !!buttonLabel && !!buttonLink;
   const classes = cx(
     styles[colorClass],
@@ -69,7 +68,7 @@ const GenericHero = ({ block, z, renderButton }) => {
               'transition-slide-up py4 px2 col-10 md-col-8 center'
             )}
           >
-            <p className="block-headline pt3">{title}</p>
+            <h1 className="block-headline pt3">{title}</h1>
             {text && textIsPortableText && (
               <div className="markdown-block pt3">
                 <PortableText blocks={text} />

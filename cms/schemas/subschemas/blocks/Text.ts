@@ -4,7 +4,7 @@ import portableText from './../portableText';
 
 export default {
   type: 'object',
-  name: 'text',
+  name: 'textBlock',
   title: 'Text',
   fieldsets: [
     {
@@ -63,6 +63,18 @@ export default {
       fieldset: 'buttons',
       type: 'url',
       validation: Rule => Rule.uri({ allowRelative: true })
+    },
+    {
+      name: 'titleOnLeft',
+      title: 'Title on Left?',
+      fieldset: 'options',
+      type: 'boolean'
+    },
+    {
+      name: 'titleOnLeftVerticallyCentered',
+      title: 'Title on Left is Vertically Centered?',
+      fieldset: 'options',
+      type: 'boolean'
     },
     {
       name: 'centerAlignTextContent',

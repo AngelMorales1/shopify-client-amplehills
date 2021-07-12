@@ -12,32 +12,28 @@ class GenericPageView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, subNavIsOn, pageNotFound } = this.props;
+    const { model, pageNotFound } = this.props;
 
     if (model.isError) return <ErrorPage />;
 
     if (pageNotFound) return <ErrorPage errorIs404={true} />;
 
-    const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+    const genericPage = model.genericPage;
+    const blocks = get(genericPage, 'blocks', []);
+    const showSubnav = get(genericPage, 'showSubnav', false);
 
-    console.log('SBL', blocks);
     const menuList = blocks.reduce((menu, block) => {
-      const blockType = get(block, 'sys.contentType.sys.id', '');
-      const fields = get(block, 'fields', false);
+      const blockType = get(block, '_type', '');
+      const title = get(block, 'title', '') || get(block, 'name', '');
 
-      if (blockType === 'blockGenericHero' || fields === false) {
-        return menu;
-      }
-
-      const title = get(block, 'fields.title', '');
-      menu.push(title);
+      if (blockType !== 'genericHero' && !!title) menu.push(title);
 
       return menu;
     }, []);
 
-    const slug = get(model, 'genericPage.items[0].fields.slug', '');
-    const seoTitle = get(model, 'genericPage.items[0].fields.seoTitle', '')
-      ? get(model, 'genericPage.items[0].fields.seoTitle', '')
+    const slug = get(genericPage, 'slug', '');
+    const seoTitle = get(genericPage, 'seoTitle', '')
+      ? get(genericPage, 'seoTitle', '')
       : slug === '/'
       ? 'Ample Hills Creamery – Order Online'
       : `${get(
@@ -46,21 +42,13 @@ class GenericPageView extends Component {
           ''
         )} - Ample Hills Creamery`;
 
-    const seoDescription = get(
-      model,
-      'genericPage.items[0].fields.seoDescription',
-      ''
-    );
-    const seoImage = get(
-      model,
-      'genericPage.items[0].fields.seoImage.fields.file.url',
-      ''
-    );
+    const seoDescription = get(genericPage, 'seoDescription', '');
+    const seoImage = get(model, 'seoImage', '');
 
     return (
       <Fragment>
         <Meta title={seoTitle} description={seoDescription} image={seoImage} />
-        {subNavIsOn ? (
+        {showSubnav ? (
           <SubNav
             onClick={menuTitle =>
               scrollTo(this.refBlocks[menuTitle], SubNavScrollOption)
@@ -72,8 +60,8 @@ class GenericPageView extends Component {
         <div>
           {blocks &&
             blocks.map((block, i) => {
-              const title = get(block, 'fields.title', '');
-              const upperDripIsOn = get(block, 'fields.upperDrip', false);
+              const title = get(block, 'title', '') || get(block, 'name', '');
+              const upperDripIsOn = get(block, 'upperDrip', false);
               const additionalZIndex = upperDripIsOn ? 1 : 0;
 
               return (

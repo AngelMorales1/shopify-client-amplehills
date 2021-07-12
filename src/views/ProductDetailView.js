@@ -20,8 +20,6 @@ class ProductDetailView extends Component {
       product: { blocks, productHero, whatsIncluded }
     } = this.props;
 
-    console.log('11', products);
-
     return (
       <div className="ProductDetailView">
         <Meta

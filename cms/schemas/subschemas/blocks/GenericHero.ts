@@ -16,6 +16,11 @@ export default {
       name: 'buttons',
       title: 'Buttons',
       options: { collapsible: true, collapsed: true }
+    },
+    {
+      name: 'image',
+      title: 'Image',
+      options: { collapsible: true, collapsed: true }
     }
   ],
   fields: [
@@ -28,9 +33,14 @@ export default {
       name: 'text',
       title: 'Text'
     }),
+    color({
+      name: 'backgroundColor',
+      title: 'Background Color'
+    }),
     image({
       name: 'image',
-      title: 'Image'
+      title: 'Image',
+      fieldset: 'image'
     }),
     {
       name: 'imagePosition',
@@ -38,12 +48,9 @@ export default {
       type: 'string',
       options: {
         list: ['Stacked', 'Inline']
-      }
+      },
+      fieldset: 'image'
     },
-    color({
-      name: 'backgroundColor',
-      title: 'Background Color'
-    }),
     {
       name: 'buttonLabel',
       title: 'Button Label',

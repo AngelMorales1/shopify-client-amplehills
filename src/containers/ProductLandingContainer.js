@@ -37,6 +37,7 @@ class ProductLandingContainer extends ContainerBase {
 
 const mapStateToProps = state => {
   return {
+    settings: get(state, 'applicationUI.settings', {}),
     products: products(state),
     allMerchandise: allMerchandise(state)
   };

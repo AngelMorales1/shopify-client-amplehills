@@ -1,9 +1,5 @@
 const COLORS = [
   {
-    value: 'pink',
-    title: 'Pink',
-  },
-  {
     value: 'blue',
     title: 'Blue',
   },
@@ -12,24 +8,24 @@ const COLORS = [
     title: 'Peach',
   },
   {
-    value: 'yellow',
-    title: 'Yellow',
+    value: 'purple',
+    title: 'Purple',
+  },
+  {
+    value: 'pink',
+    title: 'Pink',
   },
   {
     value: 'light-pink',
     title: 'Light Pink',
   },
   {
+    value: 'yellow',
+    title: 'Yellow',
+  },
+  {
     value: 'light-yellow',
     title: 'Light Yellow',
-  },
-  {
-    value: 'light-peach',
-    title: 'Peach',
-  },
-  {
-    value: 'mustard',
-    title: 'Mustard',
   },
   {
     value: 'light-turquoise',
@@ -38,10 +34,6 @@ const COLORS = [
   {
     value: 'light-orange',
     title: 'Light Orange',
-  },
-  {
-    value: 'peach-pink',
-    title: 'Peach Pink',
   },
   {
     value: 'yellow-green',

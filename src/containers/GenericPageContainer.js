@@ -31,7 +31,7 @@ class GenericPageContainer extends ContainerBase {
     }
 
     return Promise.all([
-      getGenericPage(`/${genericPageSlug}`),
+      getGenericPage(`${!!genericPageSlug ? genericPageSlug : 'home'}`),
       getEvents(),
       getFlavors(),
       fetchShopifyWholesaleProducts()
@@ -57,14 +57,9 @@ const mapStateToProps = state => {
       state,
       'applicationUI.globalSettings.items[0].fields.pressItems'
     ),
-    subNavIsOn: get(
-      state,
-      'genericPage.genericPage.items[0].fields.subNavigation',
-      false
-    ),
     events: events(state),
     flavors: flavors(state),
-    pageNotFound: !get(state, 'genericPage.genericPage.items', []).length,
+    pageNotFound: !get(state, 'genericPage.genericPage.name', ''),
     wholesaleProducts: wholesaleProducts(state)
   };
 };

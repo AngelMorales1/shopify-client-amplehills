@@ -9,6 +9,9 @@ import CenteredCarousel from './blocks/CenteredCarousel';
 import Text from './blocks/Text';
 import UpcomingEvents from './blocks/UpcomingEvents';
 import HtmlEmbed from './blocks/HtmlEmbed';
+import PintFinder from './blocks/PintFinder';
+import FlavorIndex from './blocks/FlavorIndex';
+import Press from './blocks/Press';
 
 export default options => ({
   type: 'array',
@@ -23,7 +26,10 @@ export default options => ({
     CenteredCarousel,
     Text,
     UpcomingEvents,
-    HtmlEmbed
+    HtmlEmbed,
+    PintFinder,
+    FlavorIndex,
+    Press
   ],
   ...options
 });

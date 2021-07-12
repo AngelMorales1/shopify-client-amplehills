@@ -11,8 +11,6 @@ class FlavorDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
-    console.log('FLAVBOR', flavor);
-
     return (
       <div className="FlavorDetailView">
         <Meta
@@ -24,8 +22,6 @@ class FlavorDetailView extends Component {
           flavor.blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);
             const additionalZIndex = upperDripIsOn ? 1 : 0;
-
-            console.log('block', block);
 
             return (
               <BlockSwitch

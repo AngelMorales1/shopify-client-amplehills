@@ -17,7 +17,8 @@ import {
   Image,
   FormFlash,
   TextField,
-  QuantitySelector
+  QuantitySelector,
+  PortableText
 } from 'components/base';
 import styles from './EventDetailHero.scss';
 
@@ -172,10 +173,7 @@ class EventDetailHero extends Component {
             <div
               className="aspect-4-3 w100"
               style={{
-                background: `url(${contentfulImgUtil(
-                  event.image,
-                  '1600'
-                )}) no-repeat center`,
+                background: `url(${event.image.src}?w=1200) no-repeat center`,
                 backgroundSize: 'cover'
               }}
             />
@@ -328,7 +326,8 @@ class EventDetailHero extends Component {
                   </span>
                   {shoppableItem && selectedEventIsAvailable ? (
                     <span className="ml2">
-                      ${(
+                      $
+                      {(
                         this.getItemPrice(this.state.selectedItem) * quantity
                       ).toFixed(2)}
                     </span>
@@ -338,12 +337,9 @@ class EventDetailHero extends Component {
               {event.datesAndTimes.length > 1 && event.text ? (
                 <p className="copy text-peach bold mb1">Details</p>
               ) : null}
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: marked(get(event, 'text', ''))
-                }}
-                className="markdown-block"
-              />
+              <div className="portable-text">
+                <PortableText blocks={event.text} />
+              </div>
             </div>
           </div>
         </div>

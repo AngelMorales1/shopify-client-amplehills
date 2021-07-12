@@ -62,8 +62,16 @@ class App extends Component {
       locations,
       globalSettings,
       flashMessages,
-      alertIsActive
+      alertIsActive,
+      settings
     } = this.props;
+
+    if (settings && settings.permanentRedirects) {
+      settings.permanentRedirects.forEach(redirect => {
+        if (redirect.from === window.location.pathname)
+          window.location.href = redirect.to;
+      });
+    }
 
     const facebookLink = get(globalSettings, 'facebookLink');
     const instagramLink = get(globalSettings, 'instagramLink');
@@ -157,6 +165,7 @@ const mapStateToProps = state => {
     checkout: checkout(state),
     locations: locations(state),
     globalSettings: get(state, 'applicationUI.globalSettings.items[0].fields'),
+    settings: get(state, 'applicationUI.settings'),
     alertIsActive: alertIsActive(state),
     flashMessages: get(state, 'applicationUI.flashMessages')
   };

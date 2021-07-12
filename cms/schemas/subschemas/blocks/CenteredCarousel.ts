@@ -6,6 +6,13 @@ export default {
   type: 'object',
   name: 'centeredCarousel',
   title: 'Centered Carousel',
+  fieldsets: [
+    {
+      name: 'options',
+      title: 'Options',
+      options: { collapsible: true, collapsed: true }
+    },
+  ],
   fields: [
     {
       name: 'title',
@@ -26,7 +33,14 @@ export default {
     {
       name: 'drip',
       title: 'Has Drip?',
-      type: 'boolean'
+      type: 'boolean',
+      fieldset: 'options'
+    },
+    {
+      name: 'upperDrip',
+      title: 'Has Upper Drip?',
+      type: 'boolean',
+      fieldset: 'options'
     },
   ]
 };

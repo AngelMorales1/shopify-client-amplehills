@@ -9,15 +9,15 @@ import styles from './CardRecirculation.scss';
 import { Button, Image } from 'components/base';
 
 const CardRecirculation = ({ block }) => {
-  const fields = get(block, 'fields', {});
-  const card1HasData = Object.keys(fields).find(field =>
-    field.includes('card1')
-  );
-  const card1Color = get(fields, 'card1Color', 'dark-blue');
-  const card2HasData = Object.keys(fields).find(field =>
-    field.includes('card2')
-  );
-  const card2Color = get(fields, 'card2Color', 'dark-blue');
+  const text1 = get(block, 'text1', '');
+  const link1 = get(block, 'link1', '');
+  const color1 = get(block, 'color1', '');
+  const image1 = get(block, 'image1.src', '');
+
+  const text2 = get(block, 'text2', '');
+  const link2 = get(block, 'link2', '');
+  const color2 = get(block, 'color2', '');
+  const image2 = get(block, 'image2.src', '');
 
   return (
     <div
@@ -26,64 +26,48 @@ const CardRecirculation = ({ block }) => {
         'w100 p3 mt4 flex content-width mx-auto'
       )}
     >
-      {card1HasData ? (
+      {!!text1 && !!link1 && (
         <div className="col-12 md-col-6 m1">
-          <Button
-            to={get(fields, 'card1Link', '')}
-            className="text-white w100"
-            variant="style-none"
-          >
+          <Button to={link1} className="text-white w100" variant="style-none">
             <div
               className={cx(
                 styles['CardRecirculation__card'],
-                styles[`CardRecirculation__card--${card1Color}`],
+                styles[`CardRecirculation__card--${color1}`],
                 'flex flex-column items-center justify-between p3 w100'
               )}
             >
               <Image
                 className={cx(styles['CardRecirculation__card-image'], 'mt2')}
-                src={contentfulImgUtil(
-                  get(fields, 'card1Image.fields.file.url', ''),
-                  '300',
-                  'png'
-                )}
+                src={`${image1}?w=600`}
               />
               <p className="w100 py2 center line-height white-space-normal">
-                {get(fields, 'card1Text', '')}
+                {text1}
               </p>
             </div>
           </Button>
         </div>
-      ) : null}
-      {card2HasData ? (
+      )}
+      {!!text2 && !!link2 && (
         <div className="col-12 md-col-6 m1">
-          <Button
-            to={get(fields, 'card2Link', '')}
-            className="text-white w100"
-            variant="style-none"
-          >
+          <Button to={link2} className="text-white w100" variant="style-none">
             <div
               className={cx(
                 styles['CardRecirculation__card'],
-                styles[`CardRecirculation__card--${card2Color}`],
+                styles[`CardRecirculation__card--${color2}`],
                 'flex flex-column items-center justify-between p3 w100'
               )}
             >
               <Image
                 className={cx(styles['CardRecirculation__card-image'], 'mt2')}
-                src={contentfulImgUtil(
-                  get(fields, 'card2Image.fields.file.url', ''),
-                  '300',
-                  'png'
-                )}
+                src={`${image2}?w=600`}
               />
               <p className="w100 py2 center line-height white-space-normal">
-                {get(fields, 'card2Text', '')}
+                {text2}
               </p>
             </div>
           </Button>
         </div>
-      ) : null}
+      )}
     </div>
   );
 };

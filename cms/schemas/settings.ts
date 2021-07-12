@@ -12,6 +12,16 @@ export default {
       options: { collapsible: true, collapsed: true }
     },
     {
+      name: 'productNav',
+      title: 'Product Navigation',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
+      name: 'redirects',
+      title: 'Redirects',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
       name: 'newsletter',
       title: 'Newsletter',
       options: { collapsible: true, collapsed: true }
@@ -62,6 +72,14 @@ export default {
       name: 'productsInNav',
       title: 'Products in Dropdown',
       type: 'array',
+      fieldset: 'productNav',
+      of: [{ type: 'reference', to: [{ type: 'product' }]}]
+    },
+    {
+      name: 'productsOnLanding',
+      title: 'Products on Product Landing',
+      type: 'array',
+      fieldset: 'productNav',
       of: [{ type: 'reference', to: [{ type: 'product' }]}]
     },
     image({
@@ -165,5 +183,43 @@ export default {
       title: 'Instagram Icon',
       fieldset: 'social'
     }),
+    {
+      title: 'Permanent Redirects (301)',
+      fieldset: 'redirects',
+      name: 'permanentRedirects',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'from',
+              type: 'string',
+              title: 'From',
+              description: 'The original slug (/example).'
+            },
+            {
+              name: 'to',
+              type: 'string',
+              title: 'To',
+              description: 'The target slug (/example/target-page).'
+            }
+          ],
+          preview: {
+            select: {
+              from: 'from',
+              to: 'to'
+            },
+            prepare(selection) {
+              const { from, to } = selection;
+              const title = `${from} ⟶ ${to}`;
+              return { title };
+            }
+          }
+          //
+        }
+      ],
+      description: 'Add custom redirects here.'
+    }
   ]
 };

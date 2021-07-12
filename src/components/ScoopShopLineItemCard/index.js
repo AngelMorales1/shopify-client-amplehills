@@ -25,7 +25,7 @@ const ScoopShopLineItemCard = ({ location, distance }) => {
           )}
         >
           <Image
-            src={location.image}
+            src={`${location.image.src}?w=600`}
             className={cx(
               styles['ScoopShopLineItemCard__image'],
               'w100 h100 block'

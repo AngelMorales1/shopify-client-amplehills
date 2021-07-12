@@ -134,7 +134,8 @@ class Nav extends Component {
       shopDropdownIsOpen,
       locationDropdownIsOpen,
       locationDropdownImage,
-      products
+      products,
+      settings
     } = this.props;
     const {
       openShopDropdown,
@@ -304,6 +305,7 @@ class Nav extends Component {
                 alertIsActive={alertIsActive}
                 openShopDropdown={openShopDropdown}
                 closeShopDropdown={closeShopDropdown}
+                settings={settings}
               />
             ) : null}
             {this.state.currentBreakpoint === medium.label ? (
@@ -375,6 +377,7 @@ const mapStateToProps = state => {
     products: products(state),
     alertIsActive: alertIsActive(state),
     locations: locations(state),
+    settings: get(state, 'applicationUI.settings', {}),
     locationDropdownImage: get(
       state,
       'applicationUI.globalSettings.items[0].fields.locationDropdownNavImage.fields.file.url',

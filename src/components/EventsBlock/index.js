@@ -6,7 +6,7 @@ import get from 'utils/get';
 import EventCard from 'components/EventCard';
 import EventTypes from 'constants/EventTypes';
 
-import { Button } from 'components/base';
+import { Button, PortableText } from 'components/base';
 import styles from './EventsBlock.scss';
 
 class EventsBlock extends Component {
@@ -17,7 +17,7 @@ class EventsBlock extends Component {
   };
 
   componentDidMount() {
-    const events = get(this, 'props.block.fields.events', {});
+    const events = get(this, 'props.block.events', {});
     const selectedEvents = Object.values(events).length
       ? this.getCustomEvents()
       : this.getAllEvents();
@@ -38,7 +38,7 @@ class EventsBlock extends Component {
   cardIsActive = event => {
     const locationFilterButtonIsOn = get(
       this,
-      'props.block.fields.locationFilterButton',
+      'props.block.locationFilterButton',
       false
     );
 
@@ -70,7 +70,7 @@ class EventsBlock extends Component {
   getAllEvents = () => {
     const events = get(this, 'props.events', {});
     const allEvents = Object.values(events);
-    const blockEventType = get(this, 'props.block.fields.eventType', '');
+    const blockEventType = get(this, 'props.block.eventType', '');
 
     return allEvents.filter(event => {
       const eventType = get(event, 'eventType', '');
@@ -85,7 +85,7 @@ class EventsBlock extends Component {
 
   getCustomEvents = () => {
     const events = get(this, 'props.events', {});
-    const customEvents = get(this, 'props.block.fields.events', []);
+    const customEvents = get(this, 'props.block.events', []);
     const allEvents = Object.values(events);
 
     return customEvents.map(customEvent => {
@@ -96,18 +96,14 @@ class EventsBlock extends Component {
 
   render() {
     const { z, block, setRef } = this.props;
+
     const { buttonLabels, selectedEvents } = this.state;
-    const fields = get(block, 'fields', {});
-    const dripIsOn = get(fields, 'drip', false);
-    const upperDripIsOn = get(fields, 'upperDrip', false);
-    const colorClass = `EventsBlock--${get(
-      fields,
-      'backgroundColor',
-      'white'
-    )}`;
-    const title = get(fields, 'title', '');
-    const text = get(fields, 'text', '');
-    const locationFilterButtonIsOn = get(fields, 'locationFilterButton', false);
+    const dripIsOn = get(block, 'drip', false);
+    const upperDripIsOn = get(block, 'upperDrip', false);
+    const colorClass = `EventsBlock--${get(block, 'backgroundColor', 'white')}`;
+    const title = get(block, 'title', '');
+    const text = get(block, 'text', '');
+    const locationFilterButtonIsOn = get(block, 'locationFilterButton', false);
 
     return (
       <div
@@ -124,12 +120,9 @@ class EventsBlock extends Component {
       >
         <div className="px2 text-container-width center">
           <h2 className="block-headline mt4 mb3">{title}</h2>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: marked(text)
-            }}
-            className="markdown-block"
-          />
+          <div className="portable-text">
+            <PortableText blocks={text} />
+          </div>
         </div>
         {locationFilterButtonIsOn ? (
           <div

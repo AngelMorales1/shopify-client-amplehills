@@ -27,8 +27,13 @@ export default {
     {
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'string'
+      type: 'string',
     },
+    color({
+      name: 'subtitleColor',
+      title: 'Subtitle Color',
+      limit: ['peach', 'blue']
+    }),
     portableText({
       name: 'text',
       title: 'Text'

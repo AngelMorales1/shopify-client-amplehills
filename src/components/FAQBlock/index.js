@@ -4,7 +4,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import marked from 'marked';
 
-import { Button, Image } from 'components/base';
+import { Button, Image, PortableText } from 'components/base';
 import styles from './FAQBlock.scss';
 
 class FAQBlock extends Component {
@@ -138,12 +138,9 @@ class FAQBlock extends Component {
               );
             })}
             {text ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: marked(text)
-                }}
-                className="markdown-block semi-bold mt3"
-              />
+              <div className="markdown-block semi-bold mt3">
+                <PortableText blocks={text} />
+              </div>
             ) : null}
           </div>
         </div>

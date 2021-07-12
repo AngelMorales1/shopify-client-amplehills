@@ -38,9 +38,31 @@ export const Img = `{
   'metadata': asset->metadata
 }`;
 
+export const FlavorLink = `{
+  _id,
+  _createdAt,
+  name,
+  slug,
+  filters,
+  labelColor,
+  image{
+    'src': asset->url
+  }
+}`;
+
 export const Block = `{
   ...,
-  'image': image${Img}
+  'image': image${Img},
+  'images': images[]${Img},
+  'image1': image1${Img},
+  'image2': image2${Img},
+  'pressItems': pressItems[]{
+    ...,
+    'logo': logo${Img}
+  },
+  'items': items[]->{
+    _type == 'flavor' => ${FlavorLink}
+  }
 }`;
 
 export const RetailLocation = `{
@@ -63,6 +85,9 @@ export const Product = `{
   productHandle,
   price,
   flavorDescription,
+  heroImage{
+    'src': asset->url
+  },
   gridImage{
     'src': asset->url
   },
@@ -97,4 +122,69 @@ export const Flavor = `{
   seoTitle,
   seoDescription,
   seoImage
+}`;
+
+export const Location = `{
+  _id,
+  _createdAt,
+  name,
+  slug,
+  hours,
+  region,
+  address1,
+  address2,
+  city,
+  state,
+  zip,
+  phone,
+  longitude,
+  latitude,
+  seasonal,
+  delivery,
+  offersParties,
+  offersCakes,
+  order,
+  image{
+    'src': asset->url
+  },
+  description,
+  blocks[]${Block},
+  seoTitle,
+  seoDescription,
+  seoImage
+}`;
+
+export const Page = `{
+  _id,
+  _createdAt,
+  name,
+  slug,
+  showSubnav,
+  blocks[]${Block},
+  seoTitle,
+  seoDescription,
+  seoImage
+}`;
+
+export const Event = `{
+  _id,
+  _createdAt,
+  name,
+  handle,
+  text,
+  location->${Location},
+  image${Img},
+  eventType,
+  blocks[]${Block},
+  cardText,
+  cardButtonLabel,
+  seoTitle,
+  seoDescription,
+  seoImage
+}`;
+
+export const Settings = `{
+  ...,
+  productsInNav[]->${Product},
+  productsOnLanding[]->${Product}
 }`;

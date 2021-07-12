@@ -35,7 +35,12 @@ export default {
       description:
         'This takes the place of the slug/url. This must match the Shopify handle if there is one.'
     },
-    
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'reference',
+      to: [{ type: 'location' }]
+    },
     portableText({
       name: 'text',
       title: 'Text'
@@ -43,6 +48,10 @@ export default {
     image({
       name: 'image',
       title: 'Image'
+    }),
+    blocks({
+      name: 'blocks',
+      title: 'Content Blocks'
     }),
     {
       name: 'eventType',
@@ -52,13 +61,11 @@ export default {
         list: ['Pints and Postcards', 'Ice Cream Socials', 'Ice Cream Classes']
       }
     },
-    {
+    portableText({
       name: 'cardText',
       title: 'Card Text',
-      type: 'text',
-      rows: 3,
       fieldset: 'cardContent'
-    },
+    }),
     {
       name: 'cardButtonLabel',
       title: 'Card Button Label',

@@ -68,7 +68,7 @@ const LocationCard = ({ locationUrl, location, selectedLocation, getRef }) => {
         style={
           location.image
             ? {
-                background: `url(${location.image}) no-repeat center`,
+                background: `url(${location.image.src}?w=480) no-repeat center`,
                 backgroundSize: 'cover'
               }
             : null

@@ -198,9 +198,6 @@ class ChooseYourOwnStory extends Component {
       }
     ];
 
-    console.log('products', this.props);
-    console.log('pints', this.state.pints);
-
     return (
       <div
         className={cx(styles['ChooseYourOwnStory'], 'relative')}

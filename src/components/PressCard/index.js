@@ -16,8 +16,8 @@ const PressCard = ({ pressCard }) => {
     >
       <Image
         className={cx(styles['PressCard__logo'])}
-        src={get(pressCard, 'logoImage.data', '')}
-        alt={`${pressCard.title} logo`}
+        src={`${pressCard.logo.src}?w=300`}
+        alt={`${pressCard.publication} logo`}
       />
       <span
         className={cx(
@@ -25,11 +25,11 @@ const PressCard = ({ pressCard }) => {
           'carter text-peach center py3 mb2'
         )}
       >
-        {`“${pressCard.quote}”`}
+        {pressCard.quote}
       </span>
       <Button
         className={cx(styles['PressCard__button'], 'uppercase')}
-        to={pressCard.linkUrl}
+        to={pressCard.link}
         label="Read about it"
         variant="primary-small"
         color="peach"

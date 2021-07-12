@@ -137,6 +137,18 @@ export default {
       fieldset: 'contact'
     },
     {
+      name: 'longitude',
+      title: 'Longitude',
+      type: 'string',
+      fieldset: 'contact'
+    },
+    {
+      name: 'latitude',
+      title: 'Latitude',
+      type: 'string',
+      fieldset: 'contact'
+    },
+    {
       name: 'seasonal',
       title: 'Is Seasonal?',
       type: 'boolean',
@@ -146,6 +158,12 @@ export default {
       name: 'delivery',
       title: 'Offers Delivery?',
       type: 'boolean',
+      fieldset: 'options'
+    },
+    {
+      name: 'deliveryLink',
+      title: 'Delivery Link',
+      type: 'string',
       fieldset: 'options'
     },
     {

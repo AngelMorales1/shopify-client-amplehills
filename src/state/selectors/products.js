@@ -90,6 +90,7 @@ export default createSelector(
         const description = get(product, 'description', '');
         const flavorDescription = get(product, 'flavorDescription', '');
         const gridImage = get(product, 'gridImage.src', '');
+        const heroImage = get(product, 'heroImage', '');
         const pintImage = get(product, 'pintImage.src', '');
         const blocks = get(product, 'blocks', []);
         // const preOrderDate = get(product, 'fields.preOrderDate', false);
@@ -182,6 +183,7 @@ export default createSelector(
           flavorDescription,
           description,
           gridImage,
+          heroImage,
           pintImage,
           blocks,
           subItems,

@@ -8,57 +8,62 @@ import moment from 'moment';
 import flavors from 'state/selectors/flavors';
 
 export default createSelector(
-  state => get(state, 'locations.locations'),
+  state => get(state, 'locations.locations', []),
   state => flavors(state),
   (locations, selectedFlavors) => {
-    const selectedLocations = get(locations, 'items', []).map(location => {
-      const id = get(location, 'sys.id', '');
-      const fields = get(location, 'fields', {});
-      const title = get(fields, 'title', '');
-      const image = get(fields, 'image.fields.file.url', '');
-      const seasonalImage = get(fields, 'seasonalImage.fields.file.url', '');
-      const address1 = get(fields, 'address1', '');
-      const address2 = get(fields, 'address2', '');
-      const city = get(fields, 'city', '');
-      const region = get(fields, 'region', '');
-      const state = get(fields, 'state', '');
-      const zip = get(fields, 'zip', '');
-      const coordinates = get(fields, 'location', {});
-      const geopoint = {
-        lat: get(fields, 'location.lat', 0),
-        lng: get(fields, 'location.lon', 0)
+    const selectedLocations = locations.map(location => {
+      const id = get(location, '_id', '');
+
+      const title = get(location, 'name', '');
+      const image = get(location, 'image', '');
+      const seasonalImage = get(location, 'seasonalImage.fields.file.url', ''); // TO-DO remove
+      const address1 = get(location, 'address1', '');
+      const address2 = get(location, 'address2', '');
+      const city = get(location, 'city', '');
+      const region = get(location, 'region', '');
+      const state = get(location, 'state', '');
+      const zip = get(location, 'zip', '');
+      const coordinates = {
+        lat: get(location, 'latitude', ''),
+        lon: get(location, 'longitude', '')
       };
-      const phone = get(fields, 'phone', '');
-      const seasonal = get(fields, 'seasonal', true);
-      const delivery = get(fields, 'delivery', false);
-      const orderDeliveryLink = get(fields, 'orderDeliveryLink', '');
-      const closeLocationForTheSeason = get(
-        fields,
-        'closeLocationForTheSeason',
-        false
+      const geopoint = {
+        lat: get(location, 'latitude', 0),
+        lng: get(location, 'longitude', 0)
+      };
+      const phone = get(location, 'phone', '');
+      const seasonal = get(location, 'seasonal', true);
+      const delivery = get(location, 'delivery', false);
+      const orderDeliveryLink = get(location, 'deliveryLink', '');
+      const closeLocationForTheSeason = false; // TO-DO remove
+      const contentBlocks = get(location, 'blocks', []);
+
+      const slug = get(location, 'slug', '');
+      // const timekitProjectId = get(location, 'timekitProjectId');
+      // const partyAvailable = get(location, 'partyAvailable', false);
+      // const partyTypesFragments = get(location, 'partyTypes.simpleFragments', {});
+      // const partyTypes = fragmentsToArray(partyTypesFragments);
+      // const timeSlotsFragments = get(location, 'timeSlots.simpleFragments', {});
+      // const timeSlots = fragmentsToArray(timeSlotsFragments);
+      // const participantsLimit = get(location, 'participantsLimit', 55);
+      // const participantsLimitText = get(location, 'participantsLimitText', '');
+      const description = get(location, 'description', '');
+      // const cakes = get(location, 'cakes', false);
+      // const cakesBucket = get(location, 'cakeOrderingBucket', '');
+      const hours = Object.keys(get(location, 'hours', {})).reduce(
+        (accumulated, current) => {
+          if (Days.includes(current))
+            accumulated[current] = get(location, `hours.${current}`, '');
+          return accumulated;
+        },
+        {}
       );
-      const contentBlocks = get(fields, 'contentBlocks', []);
-      const slug = get(fields, 'slug', '');
-      const timekitProjectId = get(fields, 'timekitProjectId');
-      const partyAvailable = get(fields, 'partyAvailable', false);
-      const partyTypesFragments = get(fields, 'partyTypes.simpleFragments', {});
-      const partyTypes = fragmentsToArray(partyTypesFragments);
-      const timeSlotsFragments = get(fields, 'timeSlots.simpleFragments', {});
-      const timeSlots = fragmentsToArray(timeSlotsFragments);
-      const participantsLimit = get(fields, 'participantsLimit', 55);
-      const participantsLimitText = get(fields, 'participantsLimitText', '');
-      const text = get(fields, 'text', '');
-      const cakes = get(fields, 'cakes', false);
-      const cakesBucket = get(fields, 'cakeOrderingBucket', '');
-      const hours = Object.keys(fields).reduce((accumulated, current) => {
-        if (Days.includes(current)) accumulated[current] = fields[current];
-        return accumulated;
-      }, {});
       const sortedHours = sortHours(hours);
       const currentOpenHours = moment()
         .format('dddd')
         .toLowerCase();
       const isOpen = (function() {
+        if (!hours[currentOpenHours]) return false;
         const hoursArr = hours[currentOpenHours].split('-');
 
         const now = moment();
@@ -74,7 +79,7 @@ export default createSelector(
 
         return isOpen;
       })();
-      const navRegionOrder = get(fields, 'navRegionOrder', 100);
+      const navRegionOrder = get(location, 'navRegionOrder', 100); // TO-DO remove
       const searchableFields = {
         title,
         address1,
@@ -85,32 +90,30 @@ export default createSelector(
         zip,
         phone
       };
-
-      const cakePickupTimeSlotsFragments = get(
-        fields,
-        'cakePickupTimeSlots.simpleFragments',
-        {}
-      );
-      const cakePickupTimeSlots = Object.keys(cakePickupTimeSlotsFragments)
-        .length
-        ? fragmentsToArray(cakePickupTimeSlotsFragments).reverse()
-        : [];
       const stringifiedSearchableFields = Object.values(searchableFields).map(
         recursivelyStringify
       );
 
-      const availableFlavors = get(selectedFlavors, 'flavors', []).filter(
-        flavor => {
-          const availableLocations = get(flavor, 'availableLocations', []);
+      // const cakePickupTimeSlotsFragments = get(
+      //   fields,
+      //   'cakePickupTimeSlots.simpleFragments',
+      //   {}
+      // );
+      // const cakePickupTimeSlots = Object.keys(cakePickupTimeSlotsFragments)
+      //   .length
+      //   ? fragmentsToArray(cakePickupTimeSlotsFragments).reverse()
+      //   : [];
 
-          return availableLocations.some(location => {
-            return get(location, 'sys.id') === id;
-          });
-        }
-      );
-      const seoTitle = get(fields, 'seoTitle', '');
-      const seoDescription = get(fields, 'seoDescription', '');
-      const seoImage = get(fields, 'seoImage.fields.file.url', '');
+      const availableFlavors = selectedFlavors.flavors.filter(flavor => {
+        const availableLocations = get(flavor, 'availableLocations', []);
+
+        return availableLocations.some(location => {
+          return get(location, 'sys.id') === id;
+        });
+      });
+      const seoTitle = get(location, 'seoTitle', '');
+      const seoDescription = get(location, 'seoDescription', '');
+      const seoImage = get(location, 'seoImage.fields.file.url', '');
 
       return {
         ...searchableFields,
@@ -122,11 +125,11 @@ export default createSelector(
         hours,
         sortedHours,
         delivery,
-        timekitProjectId,
-        partyAvailable,
-        partyTypes,
+        // timekitProjectId,
+        // partyAvailable,
+        // partyTypes,
         geopoint,
-        timeSlots,
+        // timeSlots,
         orderDeliveryLink,
         closeLocationForTheSeason,
         currentOpenHours,
@@ -134,13 +137,13 @@ export default createSelector(
         contentBlocks,
         slug,
         availableFlavors,
-        participantsLimit,
-        participantsLimitText,
-        text,
-        cakes,
-        cakesBucket,
+        // participantsLimit,
+        // participantsLimitText,
+        description,
+        // cakes,
+        // cakesBucket,
         navRegionOrder,
-        cakePickupTimeSlots,
+        // cakePickupTimeSlots,
         isOpen,
         seoTitle,
         seoDescription,

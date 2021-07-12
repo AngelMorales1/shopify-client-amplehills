@@ -11,7 +11,8 @@ const ShopDropdown = ({
   shopDropdownIsOpen,
   openShopDropdown,
   closeShopDropdown,
-  products
+  products,
+  settings
 }) => {
   const iceCreamProducts = get(productLanding, 'iceCreamProducts', []);
   const merchProducts = get(productLanding, 'merchandiseProducts', []);
@@ -48,23 +49,16 @@ const ShopDropdown = ({
                   'flex flex-row justify-center mx-auto'
                 )}
               >
-                {iceCreamProducts.map(landingProduct => {
-                  const fields = get(landingProduct, 'fields', {});
-                  const handle = get(fields, 'productHandle', '');
-                  const product = get(products, handle);
-
+                {settings.productsInNav.map(product => {
                   if (!product) return null;
-                  const image = get(product, 'gridImage', '');
-                  const title = get(product, 'title', '');
 
                   return (
-                    <div key={get(product, 'sys.id', '')} className="mx1">
+                    <div key={product._id} className="mx1">
                       <Button
-                        ariaLabel={`Go to ${title}`}
+                        ariaLabel={`Go to ${product.title}`}
                         onClick={closeShopDropdown}
-                        key={handle}
                         variant="style-none"
-                        to={`/products/${handle}`}
+                        to={`/products/${product.productHandle}`}
                       >
                         <div
                           className={cx(
@@ -83,7 +77,7 @@ const ShopDropdown = ({
                                 styles['ShopDropdown__image'],
                                 'wh100'
                               )}
-                              src={image}
+                              src={`${product.gridImage.src}?w=400`}
                             />
                           </div>
                           <div
@@ -93,7 +87,7 @@ const ShopDropdown = ({
                             )}
                           >
                             <p className="white-space-normal center text-heavy-gray">
-                              {title}
+                              {product.title}
                             </p>
                           </div>
                         </div>
@@ -103,7 +97,7 @@ const ShopDropdown = ({
                 })}
               </div>
             </div>
-            {merchProducts.length ? (
+            {/* {merchProducts.length ? (
               <div className={cx(styles['ShopDropdown__merch-container'])}>
                 <div className="ml2">
                   <p className="text-white bold">Merch</p>
@@ -125,7 +119,7 @@ const ShopDropdown = ({
                   })}
                 </div>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>

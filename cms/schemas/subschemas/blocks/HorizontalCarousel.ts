@@ -12,6 +12,11 @@ export default {
       title: 'Options',
       options: { collapsible: true, collapsed: true }
     },
+    {
+      name: 'buttons',
+      title: 'Buttons',
+      options: { collapsible: true, collapsed: true }
+    }
   ],
   fields: [
     {
@@ -19,6 +24,16 @@ export default {
       title: 'Title',
       type: 'string'
     },
+    {
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+    },
+    color({
+      name: 'subtitleColor',
+      title: 'Subtitle Color',
+      limit: ['peach', 'blue']
+    }),
     portableText({
       name: 'text',
       title: 'Text'

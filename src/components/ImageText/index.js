@@ -32,7 +32,7 @@ const ImageText = ({ block, z, setRef }) => {
   const linkedTextLink = get(block, 'linkedTextLink', '');
   const textContentCenterAlign = get(block, 'centerAlignTextContent', false);
   const smallTitle = subtitle;
-  const smallTitleColor = get(block, 'smallTitleColor', 'madison-blue');
+  const smallTitleColor = get(block, 'subtitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
   const imageUrl = `${get(block, 'image.src', '')}?w=1200&q=90`;
   const showLocationSearchBar = get(block, 'showLocationSearchBar', false);

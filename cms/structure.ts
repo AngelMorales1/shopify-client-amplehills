@@ -6,9 +6,9 @@ import {
   FaChartBar as ChartIcon,
   FaShoppingCart as Cart,
   FaTag as Tag,
-  FaParagraph as Paragraph
+  FaParagraph as Paragraph,
 } from 'react-icons/fa';
-import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront } from 'react-icons/io5';
+import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings } from 'react-icons/io5';
 
 import FlavorFrenzyTotals from './panes/FlavorFrenzyTotals';
 
@@ -53,6 +53,15 @@ const Structure = S.list()
               .icon(Tag)
               .child(S.documentTypeList('retailLocationTag').title('Location Tags')),
           ])
+      ),
+    S.divider(),
+    S.documentTypeListItem('settings')
+      .title('Settings')
+      .icon(IoSettings)
+      .child(
+        S.document()
+          .schemaType('settings')
+          .documentId('_settings')
       )
   ]);
 
