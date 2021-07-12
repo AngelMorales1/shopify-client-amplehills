@@ -15,11 +15,10 @@ const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
   return (
     <Fragment>
       {selectedFlavorItems.map((flavor, i) => {
-        const id = get(flavor, 'sys.id', i);
-        const fields = get(flavor, 'fields', {});
-        const title = get(fields, 'title', '');
-        const image = get(fields, 'image.fields.file.url', '');
-        const label = get(fields, 'label', '');
+        const id = get(flavor, '_id', i);
+        const title = get(flavor, 'name', '');
+        const image = get(flavor, 'image.src', '');
+        const label = get(flavor, 'label', '');
 
         return (
           <div
@@ -48,7 +47,7 @@ const FlavorCarouselCards = ({ flavorItems, numberOfCardToRender }) => {
             ) : null}
             <Image
               className={cx(styles['FlavorCarouselCards__image'])}
-              src={image}
+              src={`${image}?w=300`}
               alt={title ? `${title} image` : ''}
             />
             <p

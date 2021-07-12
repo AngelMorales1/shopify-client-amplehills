@@ -9,7 +9,7 @@ import moment from 'moment';
 import eventModel from 'models/eventModel';
 
 import styles from './EventCard.scss';
-import { Button } from 'components/base';
+import { Button, PortableText } from 'components/base';
 
 const EventCard = ({ event, active }) => {
   const datesAndTimes = event.datesAndTimes;
@@ -35,10 +35,7 @@ const EventCard = ({ event, active }) => {
       <div
         className={cx(styles['EventCard__image'], 'col-12 md-col-6')}
         style={{
-          background: `url(${contentfulImgUtil(
-            event.image,
-            '900'
-          )}) no-repeat center`,
+          background: `url(${event.image.src}?w=900) no-repeat center`,
           backgroundSize: 'cover'
         }}
       />
@@ -73,12 +70,9 @@ const EventCard = ({ event, active }) => {
             </div>
           ) : null}
           {event.blockCardText ? (
-            <p
-              dangerouslySetInnerHTML={{
-                __html: marked(event.blockCardText)
-              }}
-              className={cx(styles['EventCard__text'], 'mt1')}
-            />
+            <p className={cx(styles['EventCard__text'], 'mt1')}>
+              <PortableText blocks={event.blockCardText} />
+            </p>
           ) : null}
         </div>
         <div>

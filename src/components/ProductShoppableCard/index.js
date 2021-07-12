@@ -71,6 +71,9 @@ const ProductShoppableCard = ({
                 label="+ Add"
                 onClick={() => handleAddProduct(product.handle)}
               />
+              <div className="absolute t0 r0 mt1">
+                <strong>${product.price.toFixed(2)}</strong>
+              </div>
             </div>
           ) : (
             <div className={actionClasses}>

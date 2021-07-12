@@ -21,6 +21,16 @@ export const SanityPreviewClient = sanityClient({
 const getPreviewId = () => getUrlParam('preview');
 
 export const Sanity = {
+  fetchGlobalSettings: function() {
+    const previewId = getPreviewId();
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+
+    const query = `*[_type == 'settings' && _id == '_settings'][0] ${
+      Groq.Settings
+    }`;
+
+    return client.fetch(query).then(Serializers.settings);
+  },
   fetchFlavorFrenzy: function(slug) {
     const previewId = getPreviewId();
     const client = !!previewId ? SanityPreviewClient : SanityClient;
@@ -51,6 +61,41 @@ export const Sanity = {
     const query = `*[_type == 'retailLocation'] ${Groq.RetailLocation}`;
 
     return client.fetch(query).then(Serializers.retailLocations);
+  },
+  fetchProducts: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'product'] ${Groq.Product}`;
+
+    return client.fetch(query).then(Serializers.products);
+  },
+  fetchFlavors: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'flavor'] ${Groq.Flavor}`;
+
+    return client.fetch(query).then(Serializers.flavors);
+  },
+  fetchLocations: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'location'] ${Groq.Location}`;
+
+    return client.fetch(query).then(Serializers.locations);
+  },
+  fetchGenericPage: function(slug) {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'page' && slug == '${slug}'][0] ${Groq.Page}`;
+
+    return client.fetch(query).then(Serializers.page);
+  },
+  fetchEvents: function() {
+    const previewId = false; // TO-DO
+    const client = !!previewId ? SanityPreviewClient : SanityClient;
+    const query = `*[_type == 'event'] ${Groq.Event}`;
+
+    return client.fetch(query).then(Serializers.event);
   }
 };
 

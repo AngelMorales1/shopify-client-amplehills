@@ -7,6 +7,7 @@ import {
   openOurPledge,
   closeOurPledge
 } from 'state/actions/ui/productUIActions';
+import { openNewsletterModal } from 'state/actions/ui/newsletterModalActions';
 import { openCartMax } from 'state/actions/ui/cartMaxUIActions';
 import checkout from 'state/selectors/checkout';
 import products from 'state/selectors/products';
@@ -57,7 +58,8 @@ const mapDispatchToProps = dispatch => {
         addLineItems,
         openOurPledge,
         closeOurPledge,
-        openCartMax
+        openCartMax,
+        openNewsletterModal
       },
       dispatch
     )

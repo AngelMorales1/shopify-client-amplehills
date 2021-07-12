@@ -17,8 +17,8 @@ class LocationDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
-    const menuList = location.contentBlocks.map(block =>
-      get(block, 'fields.title', '')
+    const menuList = location.contentBlocks.map(
+      block => get(block, 'title', '') || get(block, 'name', '')
     );
 
     const blocksLength = get(location, 'contentBlocks', []).length;
@@ -47,7 +47,7 @@ class LocationDetailView extends Component {
           />
           {blocks &&
             blocks.map((block, i) => {
-              const title = get(block, 'fields.title', '');
+              const title = get(block, 'title', '') || get(block, 'name', '');
               const upperDripIsOn = get(block, 'fields.upperDrip', false);
               const additionalZIndex = upperDripIsOn ? 1 : 0;
               const blockZIndex = blocksLength - i + additionalZIndex;

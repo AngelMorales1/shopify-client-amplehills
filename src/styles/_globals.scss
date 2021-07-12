@@ -241,7 +241,8 @@ UI elements
   }
 }
 
-.markdown-block {
+.markdown-block,
+.portable-text > div {
   > h1 {
     @extend .carter;
     font-size: $font-6;
@@ -249,7 +250,8 @@ UI elements
   }
 
   > h2 {
-    @extend .block-headline;
+    @extend .block-subheadline;
+    @extend .bold;
     margin-bottom: spacing(4);
   }
 
@@ -313,7 +315,17 @@ UI elements
   }
 
   blockquote {
+    margin-bottom: 1.25rem;
+    border-left: 3px solid color('yellow');
+    padding-top: 0.125rem;
+    padding-left: 0.75rem;
     width: 100%;
+
+    > em {
+      @extend .carter;
+      font-size: 0.85rem;
+      line-height: 1.5rem;
+    }
 
     > p {
       width: 80%;
@@ -329,6 +341,43 @@ UI elements
   &.xx-small > p {
     font-size: $font-2;
     line-height: $font-4;
+  }
+}
+
+.portable-text {
+  ol,
+  ul {
+    > li {
+      @extend .block-subheadline;
+      margin: spacing(2) 0;
+    }
+  }
+
+  ul > li::before {
+    content: '- ';
+  }
+
+  ol {
+    > li {
+      margin: spacing(2) spacing(10);
+      position: relative;
+      list-style-type: none;
+    }
+    > li::before {
+      @extend .circle;
+      background-color: color('peach');
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: spacing(-6);
+      width: 6px;
+      height: 6px;
+      top: calc((#{$font-6} / 2) - 4px);
+
+      @media ($medium-up) {
+        top: calc((#{$font-7} / 2) - 4px);
+      }
+    }
   }
 }
 

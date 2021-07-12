@@ -38,11 +38,7 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
       <Link
         className="text-decoration-none"
         exact
-        to={
-          productIsMerchandise
-            ? `/merchandise/${product.handle}`
-            : `/products/${product.handle}`
-        }
+        to={`/products/${product.productHandle}`} // TO-DO Use merged product then product.link
       >
         <div className="flex flex-column items-center">
           <div
@@ -54,10 +50,9 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
               }
             )}
             style={{
-              background: `url(${contentfulImgUtil(
-                product.gridImage,
-                '500'
-              )}) no-repeat center`,
+              background: `url(${
+                product.gridImage.src
+              }?w=800) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />

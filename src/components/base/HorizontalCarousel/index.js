@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import marked from 'marked';
 
 import styles from './HorizontalCarousel.scss';
-import { Button } from 'components/base';
+import { Button, PortableText } from 'components/base';
 
 const HorizontalCarousel = ({
   className,
@@ -35,14 +34,13 @@ const HorizontalCarousel = ({
         </p>
         {text ? (
           <div
-            dangerouslySetInnerHTML={{
-              __html: marked(text)
-            }}
             className={cx(
               styles['HorizontalCarousel__text'],
-              'markdown-block mb2'
+              'portable-text mb2'
             )}
-          />
+          >
+            <PortableText blocks={text} />
+          </div>
         ) : null}
         {buttonLabel && buttonLink ? (
           <Button

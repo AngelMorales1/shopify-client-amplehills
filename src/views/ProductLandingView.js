@@ -13,47 +13,49 @@ class ProductLandingView extends Component {
   refBlocks = {};
 
   render() {
-    const { model, products, allMerchandise } = this.props;
+    const { model, products, allMerchandise, settings } = this.props;
     if (model.isError) return <ErrorPage />;
+
+    // TO-DO clean up this file
 
     const content = get(model, 'landing.items[0].fields', {});
     const iceCreamTitle = get(content, 'iceCreamTitle', '');
-    const merchandiseTitle = get(content, 'merchandiseTitle', '');
+    // const merchandiseTitle = get(content, 'merchandiseTitle', '');
 
-    const iceCreamGridProducts = get(content, 'iceCreamProducts', []).map(
-      product => {
-        const handle = get(product, 'fields.productHandle', '');
-        return products[handle];
-      }
-    );
+    // const iceCreamGridProducts = get(content, 'iceCreamProducts', []).map(
+    //   product => {
+    //     const handle = get(product, 'fields.productHandle', '');
+    //     return products[handle];
+    //   }
+    // );
 
-    const merchandiseGridProducts = get(content, 'merchandiseProducts', []).map(
-      product => {
-        const handle = get(product, 'fields.handle', '');
-        return allMerchandise[handle];
-      }
-    );
+    // const merchandiseGridProducts = get(content, 'merchandiseProducts', []).map(
+    //   product => {
+    //     const handle = get(product, 'fields.handle', '');
+    //     return allMerchandise[handle];
+    //   }
+    // );
 
-    const subNavIsOn = get(content, 'subNavigation', false);
-    const menuList = () => {
-      const menu = [];
+    // const subNavIsOn = get(content, 'subNavigation', false);
+    // const menuList = () => {
+    //   const menu = [];
 
-      if (iceCreamTitle) {
-        menu.push(iceCreamTitle);
-      }
+    //   if (iceCreamTitle) {
+    //     menu.push(iceCreamTitle);
+    //   }
 
-      if (merchandiseTitle) {
-        menu.push(merchandiseTitle);
-      }
+    //   if (merchandiseTitle) {
+    //     menu.push(merchandiseTitle);
+    //   }
 
-      return menu;
-    };
+    //   return menu;
+    // };
 
-    const productLandingHasMerchandise = merchandiseGridProducts.length;
+    // const productLandingHasMerchandise = merchandiseGridProducts.length;
 
     return (
       <div className="ProductLanding mb3 transition-slide-up">
-        {subNavIsOn && productLandingHasMerchandise ? (
+        {/* {subNavIsOn && productLandingHasMerchandise ? (
           <div className="drip w100 bg-pastel-peach py4">
             <SubNav
               onClick={menuTitle =>
@@ -63,7 +65,7 @@ class ProductLandingView extends Component {
               className="subnav"
             />
           </div>
-        ) : null}
+        ) : null} */}
         <div className="my4 px3 text-container-width mx-auto center">
           <h2 className="block-headline text-peach mb2">{iceCreamTitle}</h2>
           <p
@@ -74,8 +76,8 @@ class ProductLandingView extends Component {
             className="markdown-block"
           />
         </div>
-        <ProductGrid products={iceCreamGridProducts} />
-        {productLandingHasMerchandise ? (
+        <ProductGrid products={settings.productsOnLanding} />
+        {/* {productLandingHasMerchandise ? (
           <div className="my4 pt4 px3 text-container-width mx-auto center">
             <h2 className="block-headline text-peach mb2">
               {merchandiseTitle}
@@ -94,14 +96,14 @@ class ProductLandingView extends Component {
             products={merchandiseGridProducts}
             productIsMerchandise={true}
           />
-        ) : null}
-        {!get(content, 'hideWholesaleBlock', false) ? (
+        ) : null} */}
+        {/* {!get(content, 'hideWholesaleBlock', false) ? (
           <WholesaleInfoBlock
             image={get(content, 'wholesaleImage.fields.file.url', '')}
             title={get(content, 'wholesaleTitle', '')}
             description={get(content, 'wholesaleDescription', '')}
           />
-        ) : null}
+        ) : null} */}
       </div>
     );
   }

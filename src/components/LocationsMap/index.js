@@ -173,6 +173,8 @@ class LocationsMap extends Component {
             onClick={actions.clearLocationFilters}
           />
           {states.map(filter => {
+            if (!filter) return null;
+
             const filterIsActive = locationFilters.some(
               activeFilter =>
                 activeFilter.key === filter.key &&

@@ -11,8 +11,6 @@ class FlavorDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
-    const blocks = get(flavor, 'contentBlocks', []);
-
     return (
       <div className="FlavorDetailView">
         <Meta
@@ -20,16 +18,16 @@ class FlavorDetailView extends Component {
           description={flavor.seoDescription}
           image={flavor.seoImage}
         />
-        {blocks &&
-          blocks.map((block, i) => {
+        {flavor.blocks &&
+          flavor.blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);
             const additionalZIndex = upperDripIsOn ? 1 : 0;
 
             return (
               <BlockSwitch
-                key={get(block, 'sys.id', i)}
+                key={get(block, '_key', i)}
                 block={block}
-                z={blocks.length - i + additionalZIndex}
+                z={flavor.blocks.length - i + additionalZIndex}
                 {...this.props}
               />
             );

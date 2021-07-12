@@ -7,28 +7,28 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
-import { Button } from 'components/base';
+import { Button, PortableText } from 'components/base';
 
 const ImageDoubleText = ({ block, z, setRef }) => {
-  const fields = get(block, 'fields', {});
   const colorClass = `ImageDoubleText--${get(
-    fields,
+    block,
     'backgroundColor',
     'white'
   )}`;
-  const reverseArrangementX = get(fields, 'reverseArrangementX', false);
-  const reverseArrangementY = get(fields, 'reverseArrangementY', false);
-  const smallTitle = get(fields, 'smallTitle', '');
-  const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
-  const title = get(fields, 'title', '');
-  const title1 = get(fields, 'title1', '');
-  const text1 = get(fields, 'text1', '');
-  const title2 = get(fields, 'title2', '');
-  const text2 = get(fields, 'text2', '');
-  const buttonLabel = get(fields, 'buttonLabel', '');
-  const buttonLink = get(fields, 'buttonLink', '');
-  const dripIsOn = get(fields, 'drip', false);
-  const upperDripIsOn = get(fields, 'upperDrip', false);
+  const reverseArrangementX = get(block, 'reverseX', false);
+  const reverseArrangementY = get(block, 'reverseY', false);
+  const smallTitle = get(block, 'subtitle', '');
+  const smallTitleColor = get(block, 'subtitleColor', 'madison-blue');
+  const title = get(block, 'title', '');
+  const title1 = get(block, 'title1', '');
+  const text1 = get(block, 'text1', '');
+  const title2 = get(block, 'title2', '');
+  const text2 = get(block, 'text2', '');
+  const buttonLabel = get(block, 'buttonLabel', '');
+  const buttonLink = get(block, 'buttonLink', '');
+  const dripIsOn = get(block, 'drip', false);
+  const upperDripIsOn = get(block, 'upperDrip', false);
+  const image = get(block, 'image.src', '');
 
   return (
     <div
@@ -64,10 +64,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
               'circle square'
             )}
             style={{
-              background: `url(${contentfulImgUtil(
-                get(fields, 'image.fields.file.url', ''),
-                '1400'
-              )}) no-repeat center`,
+              background: `url(${image}?w=1200) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />
@@ -91,28 +88,18 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             ) : null}
             {title1 || text1 ? (
               <div className="mb3">
-                <h2 className="block-headline mb2">
-                  {get(fields, 'title1', '')}
-                </h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: marked(get(fields, 'text1', ''))
-                  }}
-                  className="markdown-block"
-                />
+                <h2 className="block-headline mb2">{title1}</h2>
+                <div className="portable-text">
+                  <PortableText blocks={text1} />
+                </div>
               </div>
             ) : null}
             {title2 || text2 ? (
               <div>
-                <h2 className="block-headline mb2">
-                  {get(fields, 'title2', '')}
-                </h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: marked(get(fields, 'text2', ''))
-                  }}
-                  className="markdown-block"
-                />
+                <h2 className="block-headline mb2">{title1}</h2>
+                <div className="portable-text">
+                  <PortableText blocks={text2} />
+                </div>
               </div>
             ) : null}
             {buttonLabel ? (

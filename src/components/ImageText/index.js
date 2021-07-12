@@ -9,38 +9,37 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import LocationSearch from 'components/LocationSearch';
 
 import styles from './ImageText.scss';
-import { Image, Button } from 'components/base';
+import { Image, Button, PortableText } from 'components/base';
 
 const ImageText = ({ block, z, setRef }) => {
-  const fields = get(block, 'fields', {});
-  const colorClass = `ImageText--${get(fields, 'backgroundColor', 'white')}`;
-  const positionY = get(fields, 'imagePositionY', 0);
-  const positionX = get(fields, 'imagePositionX', 0);
-  const isReverseArrangement = get(fields, 'isReverseArrangement', false);
-  const dripIsOn = get(fields, 'drip', false);
-  const upperDripIsOn = get(fields, 'upperDrip', false);
-  const isFullImage = get(fields, 'fullImage', false);
-  const imageTextRatio = get(fields, 'imageTextRatio', '40:60');
-  const imageTextRatioIs5050 = imageTextRatio === '50:50';
-  const buttonLabel = get(fields, 'buttonLabel', '');
-  const buttonLink = get(fields, 'buttonLink', '');
+  const title = get(block, 'title', '');
+  const subtitle = get(block, 'subtitle', '');
+  const text = get(block, 'text', '');
+  const colorClass = `ImageText--${get(block, 'backgroundColor', 'white')}`;
+  const positionY = get(block, 'imagePositionY', 0);
+  const positionX = get(block, 'imagePositionX', 0);
+  const isReverseArrangement = get(block, 'reverse', false);
+  const dripIsOn = get(block, 'drip', false);
+  const upperDripIsOn = get(block, 'upperDrip', false);
+  const isFullImage = get(block, 'fullImage', true);
+  const imageTextRatioIs5050 = get(block, 'is5050', true);
+  const buttonLabel = get(block, 'buttonLabel', '');
+  const buttonLink = get(block, 'buttonLink', '');
   const blockHasButton = buttonLabel && buttonLink;
-  const buttonColor = get(fields, 'buttonColor', 'peach');
-  const linkedTextDescription = get(fields, 'linkedTextDescription', '');
-  const linkedTextLabel = get(fields, 'linkedTextLabel', '');
-  const linkedTextLink = get(fields, 'linkedTextLink', '');
-  const textContentCenterAlign = get(fields, 'textContentCenterAlign', '');
-  const smallTitle = get(fields, 'smallTitle', '');
-  const smallTitleColor = get(fields, 'smallTitleColor', 'madison-blue');
+  const buttonColor = get(block, 'buttonColor', 'peach');
+  const linkedTextDescription = get(block, 'linkedTextDescription', '');
+  const linkedTextLabel = get(block, 'linkedTextLabel', '');
+  const linkedTextLink = get(block, 'linkedTextLink', '');
+  const textContentCenterAlign = get(block, 'centerAlignTextContent', false);
+  const smallTitle = subtitle;
+  const smallTitleColor = get(block, 'subtitleColor', 'madison-blue');
   const blockHasLinkedText = linkedTextLabel && linkedTextLink;
-  const imageUrl = get(fields, 'image.fields.file.url', '');
-  const showLocationSearchBar = get(fields, 'showLocationSearchBar', false);
-  const imageFileExtension =
-    imageUrl.split('.').pop() === 'png' ? 'png' : 'jpg&fl=progressive';
+  const imageUrl = `${get(block, 'image.src', '')}?w=1200&q=90`;
+  const showLocationSearchBar = get(block, 'showLocationSearchBar', false);
 
   const getButtonColor = colorName => {
     switch (colorName) {
-      case 'navy':
+      case 'blue':
         return 'madison-blue';
       default:
         return 'peach';
@@ -69,7 +68,7 @@ const ImageText = ({ block, z, setRef }) => {
         className={cx('flex container-width', styles['ImageText__container'], {
           [styles['ImageText__container--full-image']]: isFullImage,
           [styles['ImageText__container--reverse']]: isReverseArrangement,
-          'col-12 md-col6': isFullImage
+          'col-12': isFullImage
         })}
       >
         <div
@@ -107,12 +106,12 @@ const ImageText = ({ block, z, setRef }) => {
                 [styles['ImageText__content--center']]: textContentCenterAlign
               })}
             >
-              {get(fields, 'title', '')}
+              {title}
             </h1>
-            <Image
+            {/* <Image
               style={{
                 transform: `translateX(${get(
-                  fields,
+                  block,
                   'titleBackgroundImagePosition',
                   0
                 )}%)`
@@ -122,20 +121,19 @@ const ImageText = ({ block, z, setRef }) => {
                 styles['ImageText__title-illustration']
               )}
               src={contentfulImgUtil(
-                get(fields, 'titleBackgroundImage.fields.file.url', ''),
+                get(block, 'titleBackgroundImage.fields.file.url', ''),
                 '1000',
                 'png'
               )}
-            />
+            /> */}
           </div>
           <div
-            dangerouslySetInnerHTML={{
-              __html: marked(get(fields, 'text', ''))
-            }}
-            className={cx('markdown-block z-1', {
+            className={cx('portable-text z-1', {
               [styles['ImageText__content--center']]: textContentCenterAlign
             })}
-          />
+          >
+            <PortableText blocks={text} />
+          </div>
           <div
             className={cx(
               styles['ImageText__button-container'],
@@ -205,8 +203,8 @@ const ImageText = ({ block, z, setRef }) => {
             style={{
               transform: `translate(${positionX}%, ${positionY}%)`
             }}
-            alt={`${get(fields, 'title', '')} illustration`}
-            src={contentfulImgUtil(imageUrl, '1400', imageFileExtension)}
+            alt={`${get(block, 'title', '')} illustration`}
+            src={imageUrl}
           />
         ) : null}
       </div>
@@ -220,11 +218,7 @@ const ImageText = ({ block, z, setRef }) => {
           <div
             className="wh100 square"
             style={{
-              background: `url(${contentfulImgUtil(
-                imageUrl,
-                '1600',
-                imageFileExtension
-              )}) no-repeat center`,
+              background: `url(${imageUrl}) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />

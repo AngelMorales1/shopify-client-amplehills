@@ -15,7 +15,13 @@ import makeStringifiedInventoryRequestObject from 'utils/makeStringifiedInventor
 import gtag from 'utils/gtag';
 import cartIsMaxed from 'utils/cartIsMaxed';
 
-import { Radio, Image, Button, QuantitySelector } from 'components/base';
+import {
+  PortableText,
+  Radio,
+  Image,
+  Button,
+  QuantitySelector
+} from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import OurPledge from 'components/OurPledge';
 import ProductShoppableCard from 'components/ProductShoppableCard';
@@ -167,9 +173,7 @@ class ChooseYourOwnStory extends Component {
       actions,
       ourPledgeOverlayIsOpen
     } = this.props;
-    const fields = get(block, 'fields', {});
-
-    const handle = get(this.props.product, 'handle', 'choose-your-own-story');
+    const handle = get(this.props.product, 'handle', 'build-you-own');
     const product = get(products, handle, {});
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
@@ -180,15 +184,17 @@ class ChooseYourOwnStory extends Component {
     const activeVariantPrice = get(activeVariant, 'price', 0);
     const activeVariantId = get(activeVariant, 'id', '');
 
-    const shoppableProducts = get(fields, 'products', []);
+    const shoppableProducts = Object.values(products).filter(
+      product => product.availableInByo
+    );
     const breadcrumbs = [
       {
         to: '/products',
         label: 'Order Online'
       },
       {
-        to: '/products/choose-your-own-story',
-        label: 'Choose Your Own Story'
+        to: '/products/build-your-own',
+        label: 'Build Your Own'
       }
     ];
 
@@ -209,15 +215,14 @@ class ChooseYourOwnStory extends Component {
             )}
           >
             {shoppableProducts.map(product => {
-              const handle = get(product, 'fields.productHandle', '');
-              if (!get(products, handle, false)) return null;
-
               return (
                 <ProductShoppableCard
-                  key={handle}
-                  product={get(products, handle)}
-                  handleAddProduct={() => this.handleAddProduct(handle)}
-                  handleRemoveProduct={() => this.handleRemoveProduct(handle)}
+                  key={product.handle}
+                  product={product}
+                  handleAddProduct={() => this.handleAddProduct(product.handle)}
+                  handleRemoveProduct={() =>
+                    this.handleRemoveProduct(product.handle)
+                  }
                   quantity={pints.filter(pint => pint === handle).length}
                 />
               );
@@ -239,7 +244,7 @@ class ChooseYourOwnStory extends Component {
                   'block-headline mb4 relative z-1'
                 )}
               >
-                {get(fields, 'title')}
+                {product.title}
               </h1>
               <div className="w100 flex my3">
                 {productVariant.map(variant => (
@@ -254,13 +259,53 @@ class ChooseYourOwnStory extends Component {
                   />
                 ))}
               </div>
-              <div className="mb4">
+              {/* <div
+                className={cx(
+                  // Temporary
+                  styles['ChooseYourOwnStory__downtime'],
+                  'bg-deep-yellow card detail my3'
+                )}
+              >
+                <span className="callout-small block mb2">
+                  Planned Maintenance
+                </span>
+                <strong>
+                  Our online store is shut down for system maintenance. Don’t
+                  worry, we’ll be back online in a few days (with a li’l
+                  makeover!).
+                </strong>
                 <div
+                  className={cx(
+                    // Temporary
+                    styles['ChooseYourOwnStory__downtime__buttons'],
+                    'mt3 flex items-center'
+                  )}
+                >
+                  <Button
+                    color="peach"
+                    variant="primary-small"
+                    className="small mr2"
+                    onClick={this.props.actions.openNewsletterModal}
+                  >
+                    Get Notified
+                  </Button>
+                  <Button
+                    variant="underline-peach"
+                    className="small"
+                    to="/in-stores"
+                  >
+                    Find a Pint Near You
+                  </Button>
+                </div>
+              </div> */}
+              <div className="mb4 portable-text">
+                {/* <div
                   dangerouslySetInnerHTML={{
                     __html: marked(get(fields, 'description', ''))
                   }}
                   className="markdown-block"
-                />
+                /> */}
+                <PortableText blocks={product.description} />
               </div>
               <OurPledge
                 actions={actions}
@@ -384,7 +429,12 @@ class ChooseYourOwnStory extends Component {
                       {size !== pints.length ? 'Keep Choosing!' : 'Add to Cart'}
                     </span>
                     <span>
-                      ${getLineItemPrice(activeVariantPrice, quantity)}
+                      $
+                      {this.state.pints
+                        .reduce((total, handle) => {
+                          return total + this.props.products[handle].price;
+                        }, 0)
+                        .toFixed(2)}
                     </span>
                   </Button>
                 ) : (
@@ -396,7 +446,12 @@ class ChooseYourOwnStory extends Component {
                   >
                     <span className="mr2">Sold Out</span>
                     <span>
-                      ${getLineItemPrice(activeVariantPrice, quantity)}
+                      $
+                      {this.state.pints
+                        .reduce((total, handle) => {
+                          return total + this.props.products[handle].price;
+                        }, 0)
+                        .toFixed(2)}
                     </span>
                   </Button>
                 )}

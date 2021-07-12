@@ -23,38 +23,53 @@ import CardRecirculation from 'components/CardRecirculation';
 import MultipleImageText from 'components/MultipleImageText';
 import HTMLEmbed from 'components/HTMLEmbed';
 import PintFinderBlock from 'components/PintFinderBlock';
+import TextBlock from 'components/TextBlock';
 
 const BlockSwitch = props => {
   const { block } = props;
-  const type = get(block, 'sys.contentType.sys.id');
+  const type = get(block, '_type') || get(block, 'sys.contentType.sys.id', '');
 
   switch (type) {
     case 'blockFullWidthImages':
       return <FullWidthImages {...props} />;
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
-    case 'blockImageText':
+    case 'imageText':
       return <ImageText {...props} />;
+    case 'imageDoubleText':
     case 'blockImageDoubleText':
       return <ImageDoubleText {...props} />;
     case 'blockChooseYourOwnStory':
       return <ChooseYourOwnStory {...props} />;
     case 'blockComicStrip':
       return <ComicStrip {...props} />;
+    case 'textBlock':
+      return <TextBlock {...props} />;
     case 'blockMarkdown':
       return <MarkdownBlock {...props} />;
+    case 'genericHero':
     case 'blockGenericHero':
       return <GenericHero {...props} />;
+    case 'horizontalCarousel':
     case 'blockHorizontalCarousel':
       return <HorizontalCarouselBlock {...props} />;
+    case 'upcomingEvents':
     case 'blockUpcomingEvents':
       return <EventsBlock {...props} />;
+    case 'centeredCarousel':
     case 'blockImageVideoCarousel':
       return <ImageVideoCarousel {...props} />;
-    case 'blockFaq':
+    case 'faq':
       return <FAQBlock {...props} />;
+    case 'pintFinder':
+      return <PintFinderBlock {...props} />;
+    case 'flavorIndex':
+      return <FlavorsLanding {...props} drip={true} />;
+    case 'cardRecirculation':
     case 'blockCardRecirculation':
       return <CardRecirculation {...props} />;
+    case 'press':
+      return <PressBlock {...props} />;
     case 'blockFixedContent':
       const fields = get(block, 'fields', {});
       const contentType = get(fields, 'contentType', '');

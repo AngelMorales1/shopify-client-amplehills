@@ -1,7 +1,8 @@
 import Data from 'lib/Data';
 import ContentfulClient, { PreviewClient } from 'lib/Contentful';
 import {
-  getGlobalSettings,
+  getGlobalSettings, // TO-DO remove
+  fetchGlobalSettings,
   checkForFlashMessages
 } from 'state/actions/ui/applicationUIActions';
 import { getLocationData } from 'state/actions/locationsActions';
@@ -24,6 +25,7 @@ export const initializeApplication = (checkoutID, isPreview) => dispatch => {
         dispatch(fetchOrCreateCheckout(checkoutID)),
         dispatch(getLocationData()),
         dispatch(getGlobalSettings()),
+        dispatch(fetchGlobalSettings()),
         dispatch(fetchShopifyProducts()),
         dispatch(fetchContentfulProducts()),
         dispatch(checkForFlashMessages())

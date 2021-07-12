@@ -5,7 +5,6 @@ import cx from 'classnames';
 import styles from './Alert.scss';
 
 const Alert = ({ alert }) => {
-  console.log('ww', alert);
   return (
     <div
       className={cx(
@@ -16,19 +15,19 @@ const Alert = ({ alert }) => {
       <span className={cx(styles['Alert__text'], 'text-white')}>
         {alert.alertCopy}
       </span>
-      {alert.linkCopy && alert.linkUrl && (
-        <a
-          className={cx(
-            styles['Alert__linked-text'],
-            styles['Alert__text'],
-            'text-peach'
-          )}
-          rel="noopener"
-          href={`${alert.linkUrl}`}
-        >
-          {alert.linkCopy}
-        </a>
-      )}
+      {/* {alert.linkCopy && alert.linkUrl && ( */}
+      <a
+        className={cx(
+          styles['Alert__linked-text'],
+          styles['Alert__text'],
+          'text-peach'
+        )}
+        rel="noopener"
+        href="/products/build-your-own"
+      >
+        Shop Now
+      </a>
+      {/* )} */}
     </div>
   );
 };

@@ -57,3 +57,27 @@ export const retailLocation = memoize(function(data) {
 
   return { name, address, city, state, zip, distributor, geopoint, tags };
 });
+
+export const products = memoize(function(data) {
+  return data;
+});
+
+export const flavors = memoize(function(data) {
+  return data;
+});
+
+export const locations = memoize(function(data) {
+  return data;
+});
+
+export const page = memoize(function(data) {
+  return data;
+});
+
+export const event = memoize(function(data) {
+  return data;
+});
+
+export const settings = memoize(function(data) {
+  return data;
+});

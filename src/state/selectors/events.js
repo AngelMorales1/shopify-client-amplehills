@@ -37,25 +37,24 @@ export default createSelector(
 
     return products;
   },
-  state => get(state, 'events.events'),
-  (shopifyProducts, contentfulProduct) => {
-    const events = get(contentfulProduct, 'items', []);
+  state => get(state, 'events'),
+  (shopifyProducts, events) => {
+    if (!events || !events.events || !events.events.length) return {};
 
-    return events.reduce((mergedProducts, event) => {
-      const fields = get(event, 'fields', {});
-      const title = get(fields, 'title', '');
-      const handle = get(fields, 'eventHandle', '');
-      const contentfulId = get(event, 'sys.id', '');
-      const blockCardText = get(fields, 'blockCardText', '');
-      const eventType = get(fields, 'eventType', '');
-      const image = get(fields, 'image.fields.file.url', '');
-      const locationTitle = get(fields, 'location.fields.title', '');
-      const locationId = get(fields, 'location.sys.id', '');
-      const locationPhone = get(fields, 'location.fields.phone', '');
-      const contentBlocks = get(fields, 'contentBlocks', []);
-      const text = get(fields, 'text', '');
+    return events.events.reduce((mergedProducts, event) => {
+      const title = get(event, 'name', '');
+      const handle = get(event, 'handle', '');
+      const contentfulId = get(event, '_id', '');
+      const blockCardText = get(event, 'cardText', '');
+      const eventType = get(event, 'eventType', '');
+      const image = get(event, 'image', '');
+      const locationTitle = get(event, 'location.name', '');
+      const locationId = get(event, 'location._id', '');
+      const locationPhone = get(event, 'location.phone', '');
+      const contentBlocks = get(event, 'blocks', []);
+      const text = get(event, 'text', '');
       const link = `/events/${handle}`;
-      const blockCardButtonLabel = get(fields, 'blockCardButtonLabel', '');
+      const blockCardButtonLabel = get(event, 'cardButtonLabel', '');
 
       const shopifyProduct = get(shopifyProducts, handle, {
         id: null,
@@ -77,7 +76,7 @@ export default createSelector(
 
             return { time, date, sortedDate, sortedTime };
           })
-        : get(fields, 'datesAndTimes.fragments', []).map(fragment => {
+        : get(event, 'datesAndTimes.fragments', []).map(fragment => {
             const sortedFragment = fragment.reduce(
               (sortedDateAndTime, dateAndTime) => {
                 const key = dateAndTime.key.toLowerCase();
@@ -101,9 +100,9 @@ export default createSelector(
             return { ...sortedFragment, sortedDate, sortedTime };
           });
 
-      const seoTitle = get(fields, 'seoTitle', '');
-      const seoDescription = get(fields, 'seoDescription', '');
-      const seoImage = get(fields, 'seoImage.fields.file.url', '');
+      const seoTitle = get(event, 'seoTitle', '');
+      const seoDescription = get(event, 'seoDescription', '');
+      const seoImage = get(event, 'seoImage.fields.file.url', '');
 
       mergedProducts[handle] = {
         title,

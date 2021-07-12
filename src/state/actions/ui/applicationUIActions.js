@@ -5,6 +5,8 @@ import ParamMatches from 'constants/ParamMatches';
 import getUrlParam from 'utils/getUrlParam';
 import get from 'utils/get';
 
+import Sanity from 'lib/Sanity';
+
 export const GET_GLOBAL_SETTINGS = 'GET_GLOBAL_SETTINGS';
 export const getGlobalSettings = () => dispatch => {
   return dispatch({
@@ -13,6 +15,14 @@ export const getGlobalSettings = () => dispatch => {
       content_type: 'globalSettings',
       include: 4
     })
+  });
+};
+
+export const FETCH_GLOBAL_SETTINGS = 'FETCH_GLOBAL_SETTINGS';
+export const fetchGlobalSettings = () => dispatch => {
+  return dispatch({
+    type: FETCH_GLOBAL_SETTINGS,
+    payload: Sanity.fetchGlobalSettings()
   });
 };
 

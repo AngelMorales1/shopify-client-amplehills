@@ -10,16 +10,14 @@ import { HorizontalCarousel } from 'components/base';
 
 const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
   const setRef = get(props, 'setRef', () => {});
-  const fields = get(block, 'fields', {});
-  const dripIsOn = get(fields, 'drip', false);
-  const upperDripIsOn = get(fields, 'upperDrip', false);
-  const backgroundColor = get(fields, 'color', 'white');
-  const flavorItems = get(block, 'fields.flavorItems', []);
-  const pressItemsInBlock = get(fields, 'pressItems.simpleFragments', {});
-  const sortByLatest = get(fields, 'sortByLatest', true);
-  const isCustomOrder =
-    flavorItems.length || Object.keys(pressItemsInBlock).length;
-  const numberOfCardToRender = get(fields, 'showCardNumber', null);
+  const dripIsOn = get(block, 'drip', false);
+  const upperDripIsOn = get(block, 'upperDrip', false);
+  const backgroundColor = get(block, 'backgroundColor', 'white');
+  const items = get(block, 'items', []);
+  // const pressItemsInBlock = get(block, 'pressItems.simpleFragments', {});
+  const numberOfCardToRender = get(block, 'showCardNumber', null);
+
+  if (!items.length) return null;
 
   return (
     <div
@@ -32,23 +30,16 @@ const HorizontalCarouselBlock = ({ block, z, pressItems, ...props }) => {
       )}
     >
       <HorizontalCarousel
-        title={get(fields, 'title', '')}
-        text={get(fields, 'text', '')}
-        buttonLink={get(fields, 'buttonLink', '')}
-        buttonLabel={get(fields, 'buttonLabel', '')}
-        isReverseOrder={!isCustomOrder && !sortByLatest ? true : false}
+        title={get(block, 'title', '')}
+        text={get(block, 'text', '')}
+        buttonLink={get(block, 'buttonLink', '')}
+        buttonLabel={get(block, 'buttonLabel', '')}
+        isReverseOrder={false}
       >
-        {flavorItems.length ? (
-          <FlavorCarouselCards
-            flavorItems={flavorItems}
-            numberOfCardToRender={numberOfCardToRender}
-          />
+        {items[0] ? (
+          <FlavorCarouselCards flavorItems={items} />
         ) : (
-          <PressCarouselCards
-            pressItemsInBlock={pressItemsInBlock}
-            numberOfCardToRender={numberOfCardToRender}
-            pressItems={pressItems}
-          />
+          <PressCarouselCards pressItemsInBlock={items} />
         )}
       </HorizontalCarousel>
     </div>

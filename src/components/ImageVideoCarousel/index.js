@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
 import Global from 'constants/Global';
 
 import styles from './ImageVideoCarousel.scss';
@@ -43,11 +42,10 @@ class ImageVideoCarousel extends Component {
 
   render() {
     const { block, z, setRef } = this.props;
-    const fields = get(block, 'fields', {});
-    const title = get(fields, 'title', '');
-    const contents = get(fields, 'contents', []);
-    const dripIsOn = get(fields, 'drip', false);
-    const upperDripIsOn = get(fields, 'upperDrip', false);
+    const title = get(block, 'title', '');
+    const contents = get(block, 'images', []);
+    const dripIsOn = get(block, 'drip', false);
+    const upperDripIsOn = get(block, 'upperDrip', false);
     const currentBreakpointIsSmall = this.state.currentBreakpoint === 'small';
 
     return (
@@ -72,10 +70,9 @@ class ImageVideoCarousel extends Component {
             )}
           >
             {contents.map((content, i) => {
-              const contentFields = get(content, 'fields', {});
-              const url = get(contentFields, 'file.url', '');
-              const id = get(content, 'sys.id', '');
-              const videoUrl = get(contentFields, 'description', '');
+              const url = get(content, 'src', '');
+              const id = get(content, 'id', '');
+              const videoUrl = get(content, 'description', '');
               const contentIsYoutube = videoUrl.includes('youtube');
               const contentIsVimeo = videoUrl.includes('vimeo');
 
@@ -98,10 +95,7 @@ class ImageVideoCarousel extends Component {
                     <div
                       className="aspect-ratio-16-9"
                       style={{
-                        background: `url(${contentfulImgUtil(
-                          url,
-                          '1200'
-                        )}) no-repeat center`,
+                        background: `url(${url}?w=1000) no-repeat center`,
                         backgroundSize: 'contain'
                       }}
                     />

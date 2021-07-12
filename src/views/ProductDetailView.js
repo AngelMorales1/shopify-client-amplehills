@@ -4,6 +4,7 @@ import productHasHero from 'utils/productHasHero';
 
 import BlockSwitch from 'components/BlockSwitch';
 import ProductHero from 'components/ProductHero';
+import ChooseYourOwnStory from 'components/ChooseYourOwnStory';
 import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
@@ -37,6 +38,9 @@ class ProductDetailView extends Component {
               {...this.props}
             />
           ) : null}
+          {product.handle === 'build-your-own' && (
+            <ChooseYourOwnStory {...this.props} />
+          )}
           {blocks &&
             blocks.map((block, i) => {
               const upperDripIsOn = get(block, 'fields.upperDrip', false);

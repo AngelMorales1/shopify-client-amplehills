@@ -83,70 +83,70 @@ export default createSelector(
   },
   state => get(state, 'products.contentfulProducts', []),
   (shopifyProducts, contentful) => {
-    const products = get(contentful, 'items', []);
-    const mergedContentfulProducts = products.reduce(
+    const mergedContentfulProducts = contentful.reduce(
       (mergedProducts, product) => {
-        const title = get(product, 'fields.productTitle', '');
-        const handle = get(product, 'fields.productHandle', '');
-        const description = get(product, 'fields.description', '');
-        const flavorDescription = get(product, 'fields.flavorDescription', '');
-        const gridImage = get(product, 'fields.image.fields.file.url', '');
-        const pintImage = get(product, 'fields.pintImage.fields.file.url', '');
-        const blocks = get(product, 'fields.contentBlocks', []);
-        const preOrderDate = get(product, 'fields.preOrderDate', false);
-        const cartDetails = get(product, 'fields.cartDetails', '');
-        const productHeroCarouselImages = get(
-          product,
-          'fields.productHeroCarouselImages',
-          []
-        );
-        const productHeroImage = get(
-          product,
-          'fields.productHeroImage.fields.file.url',
-          ''
-        );
-        const productHeroTitle = get(product, 'fields.productHeroTitle', '');
-        const productHeroAlert = get(product, 'fields.productHeroAlert', '');
-        const productHeroTitleBackgroundImage = get(
-          product,
-          'fields.productHeroTitleBackgroundImage.fields.file.url',
-          ''
-        );
-        const productHeroTitleBackgroundImagePosition = get(
-          product,
-          'fields.productHeroTitleBackgroundImagePosition',
-          0
-        );
-        const productHero = {
-          productHeroCarouselImages,
-          productHeroImage,
-          productHeroTitle,
-          productHeroTitleBackgroundImage,
-          productHeroTitleBackgroundImagePosition,
-          productHeroAlert
-        };
-        const whatsIncludedDrip = get(
-          product,
-          'fields.whatsIncludedDrip',
-          false
-        );
-        const whatsIncludedIllustration = get(
-          product,
-          'fields.whatsIncludedIllustration.fields.file.url',
-          ''
-        );
-        const whatsIncludedProducts = get(
-          product,
-          'fields.whatsIncludedProducts',
-          []
-        );
-        const whatsIncluded = {
-          whatsIncludedDrip,
-          whatsIncludedIllustration,
-          whatsIncludedProducts
-        };
+        const title = get(product, 'title', '');
+        const handle = get(product, 'productHandle', '');
+        const description = get(product, 'description', '');
+        const flavorDescription = get(product, 'flavorDescription', '');
+        const gridImage = get(product, 'gridImage.src', '');
+        const heroImage = get(product, 'heroImage', '');
+        const pintImage = get(product, 'pintImage.src', '');
+        const blocks = get(product, 'blocks', []);
+        // const preOrderDate = get(product, 'fields.preOrderDate', false);
+        // const cartDetails = get(product, 'fields.cartDetails', '');
+        // const productHeroCarouselImages = get(
+        //   product,
+        //   'fields.productHeroCarouselImages',
+        //   []
+        // );
+        // const productHeroImage = get(
+        //   product,
+        //   'fields.productHeroImage.fields.file.url',
+        //   ''
+        // );
+        // const productHeroTitle = get(product, 'fields.productHeroTitle', '');
+        // const productHeroAlert = get(product, 'fields.productHeroAlert', '');
+        // const productHeroTitleBackgroundImage = get(
+        //   product,
+        //   'fields.productHeroTitleBackgroundImage.fields.file.url',
+        //   ''
+        // );
+        // const productHeroTitleBackgroundImagePosition = get(
+        //   product,
+        //   'fields.productHeroTitleBackgroundImagePosition',
+        //   0
+        // );
+        // const productHero = {
+        //   productHeroCarouselImages,
+        //   productHeroImage,
+        //   productHeroTitle,
+        //   productHeroTitleBackgroundImage,
+        //   productHeroTitleBackgroundImagePosition,
+        //   productHeroAlert
+        // };
+        // const whatsIncludedDrip = get(
+        //   product,
+        //   'fields.whatsIncludedDrip',
+        //   false
+        // );
+        // const whatsIncludedIllustration = get(
+        //   product,
+        //   'fields.whatsIncludedIllustration.fields.file.url',
+        //   ''
+        // );
+        // const whatsIncludedProducts = get(
+        //   product,
+        //   'fields.whatsIncludedProducts',
+        //   []
+        // );
+        // const whatsIncluded = {
+        //   whatsIncludedDrip,
+        //   whatsIncludedIllustration,
+        //   whatsIncludedProducts
+        // };
 
-        const limitedEdition = get(product, 'fields.limitedEdition', false);
+        const limitedEdition = get(product, 'limitedEdition', false);
 
         const shopifyProduct = get(shopifyProducts, handle, {
           id: null,
@@ -156,7 +156,7 @@ export default createSelector(
           available: false,
           link: ''
         });
-        const subItems = get(product, 'fields.subItems', []).map(subItem => {
+        const subItems = get(product, 'subItems', []).map(subItem => {
           return get(subItem, 'fields.productHandle', '');
         });
         const subItemsAvailable =
@@ -166,15 +166,16 @@ export default createSelector(
             const variants = get(shopifySubItem, 'variants', []);
             return variants.some(variant => variant.available);
           });
-        const forceAvailable = get(product, 'fields.forceAvailable', false);
-        const headerId = get(product, 'fields.headerId', '');
-        const price = get(product, 'fields.price', 0);
+        const forceAvailable = get(product, 'forceAvailable', false);
+        const headerId = get(product, 'headerId', '');
+        const price = get(product, 'price', 0);
 
         const link = `/products/${handle}`;
+        const availableInByo = get(product, 'availableInBYO', false);
 
-        const seoTitle = get(product, 'fields.seoTitle', '');
-        const seoDescription = get(product, 'fields.seoDescription', '');
-        const seoImage = get(product, 'fields.seoImage.fields.file.url', '');
+        const seoTitle = get(product, 'seoTitle', '');
+        const seoDescription = get(product, 'seoDescription', '');
+        const seoImage = get(product, 'seoImage.fields.file.url', '');
 
         mergedProducts[handle] = {
           title,
@@ -182,21 +183,23 @@ export default createSelector(
           flavorDescription,
           description,
           gridImage,
+          heroImage,
           pintImage,
           blocks,
           subItems,
           subItemsAvailable,
-          preOrderDate,
-          cartDetails,
-          productHero,
-          whatsIncluded,
-          limitedEdition,
+          availableInByo,
+          // preOrderDate,
+          // cartDetails,
+          // productHero,
+          // whatsIncluded,
+          // limitedEdition,
           forceAvailable,
           link,
           headerId,
-          seoTitle,
-          seoDescription,
-          seoImage,
+          // seoTitle,
+          // seoDescription,
+          // seoImage,
           ...shopifyProduct,
           price: price || shopifyProduct.price
         };

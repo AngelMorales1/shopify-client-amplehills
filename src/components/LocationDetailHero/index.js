@@ -8,7 +8,7 @@ import marked from 'marked';
 import locationModel from 'models/locationModel';
 
 import styles from './LocationDetailHero.scss';
-import { Button, FormFlash } from 'components/base';
+import { Button, FormFlash, PortableText } from 'components/base';
 import MapboxMap from 'components/MapboxMap';
 
 class LocationDetailHero extends Component {
@@ -41,10 +41,7 @@ class LocationDetailHero extends Component {
         <div
           className="col col-12 md-col-6 square"
           style={{
-            background: `url(${contentfulImgUtil(
-              get(location, 'image', ''),
-              '1600'
-            )}) no-repeat center`,
+            background: `url(${location.image.src}?w=1200) no-repeat center`,
             backgroundSize: 'cover'
           }}
         />
@@ -59,14 +56,11 @@ class LocationDetailHero extends Component {
               }
             )}
           >
-            <h2 className="block-headline mt4">{location.title}</h2>
-            {location.text ? (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: marked(location.text)
-                }}
-                className="markdown-block mt3"
-              />
+            <h1 className="block-headline mt4">{location.title}</h1>
+            {location.description ? (
+              <div className="portable-text mt3">
+                <PortableText blocks={location.description} />
+              </div>
             ) : null}
             <div
               className={cx(
@@ -83,51 +77,53 @@ class LocationDetailHero extends Component {
                     <p className="small">{location.phone}</p>
                   ) : null}
                 </div>
-                <div
-                  className={cx(
-                    styles['LocationDetailHero__map'],
-                    'circle z-1 bg-white'
-                  )}
-                >
-                  <MapboxMap
-                    className="z-0 wh100 circle"
-                    featureCollection={locationGeoJSON}
-                    defaultIcon="year-round-icon"
-                    styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
-                    iconSize={0.8}
-                    mapPadding={10}
-                    maxZoom={15}
-                    collections={[
-                      {
-                        name: 'SeasonalLocations',
-                        filter: {
-                          ids: location.seasonal ? [location.id] : []
+                {location.coordinates.lon && location.coordinates.lat && (
+                  <div
+                    className={cx(
+                      styles['LocationDetailHero__map'],
+                      'circle z-1 bg-white'
+                    )}
+                  >
+                    <MapboxMap
+                      className="z-0 wh100 circle"
+                      featureCollection={locationGeoJSON}
+                      defaultIcon="year-round-icon"
+                      styleUrl="mapbox://styles/amplemaps/cju1mzre610to1fqusknqhq34"
+                      iconSize={0.8}
+                      mapPadding={10}
+                      maxZoom={15}
+                      collections={[
+                        {
+                          name: 'SeasonalLocations',
+                          filter: {
+                            ids: location.seasonal ? [location.id] : []
+                          },
+                          icon: 'seasonal-icon'
                         },
-                        icon: 'seasonal-icon'
-                      },
-                      {
-                        name: 'unselectedLocation',
-                        filter: {
-                          ids: get(locationGeoJSON, 'features', []).reduce(
-                            (filteredIds, feature) => {
-                              if (
-                                get(feature, 'properties.id', '') !==
-                                location.id
-                              ) {
-                                filteredIds.push(
-                                  get(feature, 'properties.id', '')
-                                );
-                              }
-                              return filteredIds;
-                            },
-                            []
-                          )
-                        },
-                        visible: false
-                      }
-                    ]}
-                  />
-                </div>
+                        {
+                          name: 'unselectedLocation',
+                          filter: {
+                            ids: get(locationGeoJSON, 'features', []).reduce(
+                              (filteredIds, feature) => {
+                                if (
+                                  get(feature, 'properties.id', '') !==
+                                  location.id
+                                ) {
+                                  filteredIds.push(
+                                    get(feature, 'properties.id', '')
+                                  );
+                                }
+                                return filteredIds;
+                              },
+                              []
+                            )
+                          },
+                          visible: false
+                        }
+                      ]}
+                    />
+                  </div>
+                )}
               </div>
               <div className="col-12 md-col-6 mb4">
                 <p className="uppercase text-peach bold copy mb1">hours</p>
@@ -159,8 +155,7 @@ class LocationDetailHero extends Component {
               {
                 [styles[
                   'LocationDetailHero__button-container--with-one-button'
-                ]]:
-                  !event || !partyIsAvailable || !cakeOrderAvailable
+                ]]: !event || !partyIsAvailable || !cakeOrderAvailable
               }
             )}
           >

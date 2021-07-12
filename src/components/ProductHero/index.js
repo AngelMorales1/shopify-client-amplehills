@@ -11,7 +11,13 @@ import imageModel from 'models/imageModel';
 
 import get from 'utils/get';
 import gtag from 'utils/gtag';
-import { Image, Button, QuantitySelector, Carousel } from 'components/base';
+import {
+  Image,
+  Button,
+  QuantitySelector,
+  Carousel,
+  PortableText
+} from 'components/base';
 import OurPledge from 'components/OurPledge';
 
 import styles from './ProductHero.scss';
@@ -31,8 +37,9 @@ class ProductHero extends Component {
     if (
       prevProps.addLineItemsStatus === PENDING &&
       this.props.addLineItemsStatus === FULFILLED
-    )
+    ) {
       this.didAddToCart();
+    }
   }
 
   addToCart = () => {
@@ -140,7 +147,13 @@ class ProductHero extends Component {
       actions,
       z
     } = this.props;
-    const { available, subItemsAvailable, price, forceAvailable } = product;
+    const {
+      available,
+      subItemsAvailable,
+      price,
+      forceAvailable,
+      title
+    } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
 
     return (
@@ -192,10 +205,9 @@ class ProductHero extends Component {
           <div
             className="col col-12 md-col-6 square"
             style={{
-              background: `url(${contentfulImgUtil(
-                productHeroImage,
-                '1600'
-              )}) no-repeat center`,
+              background: `url(${
+                product.heroImage.src
+              }?w=1200) no-repeat center`,
               backgroundSize: 'cover'
             }}
           />
@@ -204,31 +216,54 @@ class ProductHero extends Component {
           <div className="col-12 md-col-8 px3 mx-auto">
             <div className="mb4 relative inline-block">
               <h1 className={cx('block-headline', { mt3: !!productHeroAlert })}>
-                {productHeroTitle}
+                {title}
               </h1>
-              <Image
-                style={{
-                  transform: `translateX(${productHeroTitleBackgroundImagePosition}%)`
-                }}
-                className={cx(
-                  'absolute z-below t0 b0 my-auto',
-                  styles['ProductHero__title-illustration']
-                )}
-                src={contentfulImgUtil(
-                  productHeroTitleBackgroundImage,
-                  '1000',
-                  'png'
-                )}
-              />
             </div>
             <div>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: marked(get(product, 'description', ''))
-                }}
-                className="markdown-block"
-              />
+              <p className="portable-text">
+                <PortableText blocks={product.description} />
+              </p>
             </div>
+            {/* 
+            <div
+              className={cx(
+                // Temporary
+                styles['ProductHero__downtime'],
+                'bg-deep-yellow card detail my3'
+              )}
+            >
+              <span className="callout-small block mb2">
+                Planned Maintenance
+              </span>
+              <strong>
+                Our online store is shut down for system maintenance. Don’t
+                worry, we’ll be back online in a few days (with a li’l
+                makeover!).
+              </strong>
+              <div
+                className={cx(
+                  // Temporary
+                  styles['ProductHero__downtime__buttons'],
+                  'mt3 flex items-center'
+                )}
+              >
+                <Button
+                  color="peach"
+                  variant="primary-small"
+                  className="small mr2"
+                  onClick={this.props.actions.openNewsletterModal}
+                >
+                  Get Notified
+                </Button>
+                <Button
+                  variant="underline-peach"
+                  className="small"
+                  to="/in-stores"
+                >
+                  Find a Pint Near You
+                </Button>
+              </div>
+            </div> */}
             {product.preOrderDate ? (
               <div className="mt3 mb2">
                 <strong className="text-peach bold small">
@@ -245,9 +280,10 @@ class ProductHero extends Component {
                 quantity={this.state.quantity}
                 onChange={value => this.setState({ quantity: value })}
               />
-              {(available && subItemsAvailable) ||
+              {/* {(available && subItemsAvailable) ||
               product.preOrderDate ||
-              (forceAvailable && available) ? (
+              (forceAvailable && available) ? ( */}
+              {false ? ( // Temporary
                 <div className="relative">
                   <Button
                     className={cx(styles['ProductHero__button'])}

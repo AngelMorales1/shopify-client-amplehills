@@ -1,0 +1,136 @@
+@import 'settings', 'typography', 'utils';
+
+.TextBlock {
+  @extend .text-madison-blue;
+
+  &--white {
+    @extend .bg-white;
+  }
+
+  &--yellow {
+    @extend .bg-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
+    @extend .bg-light-peach;
+  }
+
+  &--light-orange {
+    @extend .bg-light-orange;
+  }
+
+  &--peach-pink {
+    @extend .bg-peach-pink;
+  }
+
+  &--yellow-green {
+    @extend .bg-yellow-green;
+  }
+
+  &--light-yellow-green {
+    @extend .bg-light-yellow-green;
+  }
+
+  &--title-left {
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+    }
+
+    .TextBlock__title-container {
+      margin: spacing(16) 0 0;
+
+      @media ($medium-up) {
+        margin: spacing(16) spacing(8);
+      }
+    }
+  }
+
+  &--title-top {
+    flex-direction: column;
+    align-items: center;
+
+    .TextBlock__title-container {
+      text-align: center;
+      margin: spacing(16) 0 0;
+
+      @media ($medium-up) {
+        margin: spacing(16) spacing(8);
+      }
+    }
+  }
+
+  &__title-container--left {
+    @media ($medium-up) {
+      padding-right: spacing(30);
+    }
+  }
+
+  &__title-container--center {
+    display: flex;
+    align-items: center;
+    padding-bottom: spacing(8);
+  }
+
+  &__content-container {
+    @media ($medium-up) {
+      margin-left: spacing(4);
+    }
+  }
+
+  &__content-container--two-column {
+    display: flex;
+    flex-direction: column;
+
+    @media ($medium-up) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      > .TextBlock__content {
+        margin-right: spacing(8);
+      }
+    }
+  }
+
+  &__button-container {
+    align-items: center;
+
+    @media ($medium-up) {
+      align-items: start;
+    }
+  }
+
+  &__button-text {
+    max-width: spacing(80);
+    text-align: center;
+
+    @media ($medium-up) {
+      text-align: start;
+    }
+  }
+}

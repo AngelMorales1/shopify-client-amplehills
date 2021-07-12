@@ -1,85 +1,61 @@
 import { createSelector } from 'reselect';
+import uniq from 'lodash/uniq';
 import get from 'utils/get';
 
-import slugify from 'utils/slugify';
-
 export default createSelector(
-  state => get(state, 'flavors.flavors'),
+  state => get(state, 'flavors.flavors', []),
   flavors => {
-    const collectedFilters = [];
-    const collectedDietaryRestrictions = [];
-    const sanitisedFlavors = get(flavors, 'items', []).map(flavor => {
-      const id = get(flavor, 'sys.id', '');
-      const fields = get(flavor, 'fields', {});
-      const title = get(fields, 'title', '');
-      const slug = slugify(title);
-      const label = get(fields, 'label', '');
-      const labelColor = get(fields, 'labelColor', '');
-      const image = get(fields, 'image.fields.file.url', '');
-      const contentBlocks = get(fields, 'contentBlocks', []);
-      const availableLocations = get(fields, 'availableLocations', []);
-      const filters = get(fields, 'filters.fragments', []).reduce(
-        (sanitisedFilters, fragment) => {
-          const filterName = get(fragment[1], 'value', '');
+    let collectedFilters = [];
+    let collectedDietaryRestrictions = [];
+    const sanitizedFlavors =
+      !!flavors.map &&
+      flavors.map(flavor => {
+        const id = get(flavor, '_id', '');
+        const title = get(flavor, 'name', '');
+        const slug = get(flavor, 'slug', '');
+        const showOnFlavorsPage = get(flavor, 'showOnFlavorsPage', false);
+        const label = get(flavor, 'label', '');
+        const labelColor = get(flavor, 'labelColor', 'red');
+        const image = get(flavor, 'image.src', '');
+        const blocks = get(flavor, 'blocks', []);
+        const availableLocations = get(flavor, 'availableLocations', []);
+        const filters = get(flavor, 'filters', []);
+        const dietaryRestrictions = get(flavor, 'dietaryRestrictions', []);
 
-          if (filterName) {
-            sanitisedFilters[filterName] = filterName;
-            if (!collectedFilters.includes(filterName)) {
-              collectedFilters.push(filterName);
-            }
-          }
+        collectedFilters = [...collectedFilters, ...filters];
+        collectedDietaryRestrictions = [
+          ...collectedDietaryRestrictions,
+          ...dietaryRestrictions
+        ];
 
-          return sanitisedFilters;
-        },
-        {}
-      );
-      const dietaryRestrictions = get(
-        fields,
-        'dietaryRestrictions.fragments',
-        []
-      ).reduce((sanitisedDietaryRestrictions, fragment) => {
-        const restrictionName = get(fragment[1], 'value', '');
+        const order = get(flavor, 'order', 0);
+        const seoTitle = get(flavor, 'seoTitle', '');
+        const seoDescription = get(flavor, 'seoDescription', '');
+        const seoImage = get(flavor, 'seoImage.fields.file.url', '');
 
-        if (restrictionName) {
-          sanitisedDietaryRestrictions[restrictionName] = true;
-
-          if (!collectedDietaryRestrictions.includes(restrictionName)) {
-            collectedDietaryRestrictions.push(restrictionName);
-          }
-        }
-
-        return sanitisedDietaryRestrictions;
-      }, {});
-      const order = get(fields, 'order', 0);
-      const specialLocations = get(fields, 'locationSpecial', []);
-
-      const seoTitle = get(fields, 'seoTitle', '');
-      const seoDescription = get(fields, 'seoDescription', '');
-      const seoImage = get(fields, 'seoImage.fields.file.url', '');
-
-      return {
-        id,
-        title,
-        label,
-        labelColor,
-        image,
-        filters,
-        dietaryRestrictions,
-        slug,
-        contentBlocks,
-        availableLocations,
-        order,
-        specialLocations,
-        seoTitle,
-        seoDescription,
-        seoImage
-      };
-    });
+        return {
+          id,
+          title,
+          label,
+          labelColor,
+          showOnFlavorsPage,
+          image,
+          filters,
+          dietaryRestrictions,
+          slug,
+          blocks,
+          availableLocations,
+          order,
+          seoTitle,
+          seoDescription,
+          seoImage
+        };
+      });
 
     return {
-      flavors: sanitisedFlavors,
-      collectedFilters,
-      collectedDietaryRestrictions
+      flavors: sanitizedFlavors,
+      collectedFilters: uniq(collectedFilters),
+      collectedDietaryRestrictions: uniq(collectedDietaryRestrictions)
     };
   }
 );
