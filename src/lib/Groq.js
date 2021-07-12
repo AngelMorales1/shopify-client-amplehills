@@ -97,7 +97,7 @@ export const Product = `{
   description,
   availableInBYO,
   exclusiveToBYO,
-  blocks,
+  blocks[]${Block},
   seoTitle,
   seoDescription,
   seoImage

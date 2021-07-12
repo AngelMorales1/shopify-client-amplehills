@@ -43,12 +43,12 @@ class ProductDetailView extends Component {
           )}
           {blocks &&
             blocks.map((block, i) => {
-              const upperDripIsOn = get(block, 'fields.upperDrip', false);
+              const upperDripIsOn = get(block, 'upperDrip', false);
               const additionalZIndex = upperDripIsOn ? 1 : 0;
 
               return (
                 <BlockSwitch
-                  key={get(block, 'sys.id', i)}
+                  key={get(block, '_key', i)}
                   block={block}
                   product={product}
                   ourPledge={ourPledge}
