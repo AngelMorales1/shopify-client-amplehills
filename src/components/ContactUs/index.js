@@ -13,7 +13,7 @@ class ContactUs extends Component {
     email: '',
     phone: '',
     message: '',
-    title: '',
+    subject: '',
     selected: null
   };
 
@@ -66,12 +66,12 @@ class ContactUs extends Component {
         email: '',
         phone: '',
         message: '',
-        title: ''
+        subject: ''
       });
   }
 
   formHasErrors = () => {
-    const { selected, name, email, message, title } = this.state;
+    const { selected, name, email, message, subject } = this.state;
 
     if (!selected) {
       const error = 'Please select the reason why you are contacting us.';
@@ -91,8 +91,8 @@ class ContactUs extends Component {
       return true;
     }
 
-    if (!title) {
-      const error = 'Please provide a title.';
+    if (!subject) {
+      const error = 'Please provide a subject.';
       this.setState({ error });
       return true;
     }
@@ -109,7 +109,7 @@ class ContactUs extends Component {
   submitContactForm = () => {
     if (this.formHasErrors()) return null;
 
-    const { selected, name, email, phone, message, title } = this.state;
+    const { selected, name, email, phone, message, subject } = this.state;
 
     this.setState({ error: '' });
 
@@ -119,7 +119,7 @@ class ContactUs extends Component {
       email,
       phone,
       text: message,
-      subject: title
+      title: subject
     });
   };
 

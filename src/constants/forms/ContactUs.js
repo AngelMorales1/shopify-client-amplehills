@@ -57,9 +57,9 @@ export default {
       id: 'phone',
       type: 'tel'
     },
-    TITLE: {
-      label: 'Title',
-      id: 'title',
+    SUBJECT: {
+      label: 'Subject',
+      id: 'subject',
       type: 'text'
     },
     MESSAGE: {
