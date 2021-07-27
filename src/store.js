@@ -22,6 +22,10 @@ import resetLocalStorage from 'utils/resetLocalStorage';
 const middleware = [thunk, promiseMiddleware()];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+console.warn(
+  `AH App Version: v${packageJSON.version} ${new Date().toISOString()}`
+);
+
 /* Only load sentry on production */
 if (isProd()) {
   Sentry.init({
