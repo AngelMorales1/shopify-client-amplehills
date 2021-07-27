@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import marked from 'marked';
 import cx from 'classnames';
 import get from 'utils/get';
-import contentfulImgUtil from 'utils/contentfulImgUtil';
+import portableTextAsString from 'utils/portableTextAsString';
 import imageModel from 'models/imageModel';
 
 import styles from './ImageDoubleText.scss';
@@ -22,6 +21,8 @@ const ImageDoubleText = ({ block, z, setRef }) => {
   const title = get(block, 'title', '');
   const title1 = get(block, 'title1', '');
   const text1 = get(block, 'text1', '');
+  const smallTitle2 = get(block, 'subtitle2', '');
+  const smallTitle2Color = get(block, 'subtitle2Color', 'madison-blue');
   const title2 = get(block, 'title2', '');
   const text2 = get(block, 'text2', '');
   const buttonLabel = get(block, 'buttonLabel', '');
@@ -75,7 +76,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             )}
           >
             {smallTitle ? (
-              <p className={`text-${smallTitleColor} small-title mb3`}>
+              <p className={`text-${smallTitleColor} small-title mb2`}>
                 {smallTitle}
               </p>
             ) : null}
@@ -87,16 +88,28 @@ const ImageDoubleText = ({ block, z, setRef }) => {
               </h2>
             ) : null}
             {title1 || text1 ? (
-              <div className="mb3">
-                <h2 className="block-headline mb2">{title1}</h2>
+              <div
+                className={cx({
+                  mb4:
+                    title2 || (text2 && !!portableTextAsString(text2).length),
+                  mb3:
+                    !title2 && !(text2 && !!portableTextAsString(text2).length)
+                })}
+              >
+                <h2 className="block-headline mb3">{title1}</h2>
                 <div className="portable-text">
                   <PortableText blocks={text1} />
                 </div>
               </div>
             ) : null}
-            {title2 || text2 ? (
-              <div>
-                <h2 className="block-headline mb2">{title1}</h2>
+            {smallTitle2 ? (
+              <p className={`text-${smallTitle2Color} small-title mb2`}>
+                {smallTitle2}
+              </p>
+            ) : null}
+            {title2 || (text2 && !!portableTextAsString(text2).length) ? (
+              <div className="mb3">
+                <h2 className="block-headline mb2">{title2}</h2>
                 <div className="portable-text">
                   <PortableText blocks={text2} />
                 </div>
@@ -105,7 +118,7 @@ const ImageDoubleText = ({ block, z, setRef }) => {
             {buttonLabel ? (
               <Button
                 variant="primary-responsive"
-                className="inline-flex mt2"
+                className="inline-flex"
                 color="peach"
                 label={buttonLabel}
                 to={buttonLink}

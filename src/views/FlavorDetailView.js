@@ -11,6 +11,8 @@ class FlavorDetailView extends Component {
 
     if (model.isError) return <ErrorPage />;
 
+    console.log('FLAV', flavor);
+
     return (
       <div className="FlavorDetailView">
         <Meta

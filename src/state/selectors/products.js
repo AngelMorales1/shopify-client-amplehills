@@ -14,7 +14,11 @@ export default createSelector(
       const price = parseFloat(get(node, 'variants.edges[0].node.price', 0.0));
 
       const id = get(node, 'variants.edges[0].node.id', '');
-      const handle = get(node, 'handle', '');
+
+      // TO-DO permanent fix to have additional field connecting product Handle
+      let handle = get(node, 'handle', '');
+      if (handle === 'our-classics-4-pack') handle = 'the-classics';
+
       const type = get(
         ShopifyProductTypes,
         get(node, 'productType', null),
@@ -172,10 +176,11 @@ export default createSelector(
 
         const link = `/products/${handle}`;
         const availableInByo = get(product, 'availableInBYO', false);
+        const order = get(product, 'order', 999999);
 
         const seoTitle = get(product, 'seoTitle', '');
         const seoDescription = get(product, 'seoDescription', '');
-        const seoImage = get(product, 'seoImage.fields.file.url', '');
+        const seoImage = get(product, 'seoImage.src', '');
 
         mergedProducts[handle] = {
           title,
@@ -189,6 +194,7 @@ export default createSelector(
           subItems,
           subItemsAvailable,
           availableInByo,
+          order,
           // preOrderDate,
           // cartDetails,
           // productHero,
@@ -197,9 +203,9 @@ export default createSelector(
           forceAvailable,
           link,
           headerId,
-          // seoTitle,
-          // seoDescription,
-          // seoImage,
+          seoTitle,
+          seoDescription,
+          seoImage,
           ...shopifyProduct,
           price: price || shopifyProduct.price
         };

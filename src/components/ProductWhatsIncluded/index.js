@@ -8,6 +8,7 @@ import contentfulImgUtil from 'utils/contentfulImgUtil';
 import styles from './ProductWhatsIncluded.scss';
 import { Image } from 'components/base';
 
+// TO-DO Rename to ProductPintList
 const ProductWhatsIncluded = ({
   block,
   z,
@@ -17,21 +18,17 @@ const ProductWhatsIncluded = ({
     whatsIncludedIllustration,
     whatsIncludedProducts
   },
-  drip,
   upperDrip,
   setRef,
   wholesaleProducts
 }) => {
-  const fields = get(block, 'fields', {});
+  // TO-DO Use merged products instead of only Sanity products, elimate expansion;
+
   const colorClass = `ProductWhatsIncluded--${get(
-    fields,
+    block,
     'backgroundColor',
     'light-pink'
   )}`;
-  const renderWholesaleFlavors = !whatsIncludedProducts.length;
-  const flavors = renderWholesaleFlavors
-    ? Object.keys(wholesaleProducts)
-    : whatsIncludedProducts;
 
   return (
     <div
@@ -40,15 +37,18 @@ const ProductWhatsIncluded = ({
         styles['ProductWhatsIncluded'],
         styles[colorClass],
         'flex justify-between relative',
-        { drip: whatsIncludedDrip || drip, 'upper-drip': upperDrip }
+        {
+          drip: get(block, 'drip', false),
+          'upper-drip': get(block, 'upperDrip', false)
+        }
       )}
       style={{ zIndex: z }}
     >
       <div className="col-12 md-col-6">
         <h2 className="block-headline my3 nowrap center flex flex-column items-center justify-center">
-          {renderWholesaleFlavors ? 'Available Flavors' : "What's included"}
+          {block.title}
         </h2>
-        {whatsIncludedIllustration ? (
+        {/* {whatsIncludedIllustration ? (
           <div className="center xs-hide sm-hide mx-auto">
             <Image
               className="col-4 mt3"
@@ -56,42 +56,37 @@ const ProductWhatsIncluded = ({
               src={contentfulImgUtil(whatsIncludedIllustration, '600', 'png')}
             />
           </div>
-        ) : null}
+        ) : null} */}
       </div>
       <div className="flex flex-column col-12 md-col-6">
-        {flavors.map(includedItem => {
-          const handle = renderWholesaleFlavors
-            ? includedItem
-            : get(includedItem, 'fields.productHandle', '');
-          const product = renderWholesaleFlavors
-            ? get(wholesaleProducts, handle, {})
-            : get(products, handle, {});
+        {block.products.map(product => {
+          // TO-DO Change to <ul> <li>
 
           return (
             <div
-              key={handle}
+              key={product._key}
               className={cx(
                 styles['ProductWhatsIncluded__flavor-container'],
-                'flex items-start my2 col-12'
+                'flex items-center my2 col-12'
               )}
             >
               <div className="mr3 col-2">
                 <Image
                   alt={`${product.title} image`}
-                  src={contentfulImgUtil(product.pintImage, '500', 'png')}
+                  src={`${product.pintImage.src}?w=400`}
                 />
               </div>
               <div className="col-10">
-                <h3 className="description-title bold mb2">{`1x ${
-                  product.title
-                }`}</h3>
+                <h3 className="description-title bold mb2">
+                  1x {product.title}
+                </h3>
                 <p className="block-subheadline">{product.flavorDescription}</p>
               </div>
             </div>
           );
         })}
       </div>
-      {whatsIncludedIllustration ? (
+      {/* {whatsIncludedIllustration ? (
         <div
           className={cx(
             styles['ProductWhatsIncluded__illustration'],
@@ -104,7 +99,7 @@ const ProductWhatsIncluded = ({
             src={contentfulImgUtil(whatsIncludedIllustration, '600', 'png')}
           />
         </div>
-      ) : null}
+      ) : null} */}
     </div>
   );
 };

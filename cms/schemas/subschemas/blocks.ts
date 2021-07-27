@@ -12,6 +12,8 @@ import HtmlEmbed from './blocks/HtmlEmbed';
 import PintFinder from './blocks/PintFinder';
 import FlavorIndex from './blocks/FlavorIndex';
 import Press from './blocks/Press';
+import DetailsTabs from './blocks/DetailsTabs';
+import ProductPintList from './blocks/ProductPintList';
 
 export default options => ({
   type: 'array',
@@ -29,7 +31,9 @@ export default options => ({
     HtmlEmbed,
     PintFinder,
     FlavorIndex,
-    Press
+    Press,
+    DetailsTabs,
+    ProductPintList
   ],
   ...options
 });

@@ -56,12 +56,15 @@ export default createSelector(
       const link = `/events/${handle}`;
       const blockCardButtonLabel = get(event, 'cardButtonLabel', '');
 
-      const shopifyProduct = get(shopifyProducts, handle, {
-        id: null,
-        price: null,
-        variants: [],
-        available: false
-      });
+      // TO-DO fix these events in Shopify to have better handles
+      const shopifyProduct =
+        get(shopifyProducts, handle) ||
+        get(shopifyProducts, handle.split('-').join(''), {
+          id: null,
+          price: null,
+          variants: [],
+          available: false
+        });
 
       const datesAndTimes = shopifyProduct.id
         ? shopifyProduct.variants.map(variant => {

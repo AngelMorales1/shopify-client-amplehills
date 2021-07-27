@@ -214,19 +214,23 @@ class ChooseYourOwnStory extends Component {
               'flex flex-wrap col-12 lg-col-6 px2'
             )}
           >
-            {shoppableProducts.map(product => {
-              return (
-                <ProductShoppableCard
-                  key={product.handle}
-                  product={product}
-                  handleAddProduct={() => this.handleAddProduct(product.handle)}
-                  handleRemoveProduct={() =>
-                    this.handleRemoveProduct(product.handle)
-                  }
-                  quantity={pints.filter(pint => pint === handle).length}
-                />
-              );
-            })}
+            {shoppableProducts
+              .sort((a, b) => a.order - b.order)
+              .map(product => {
+                return (
+                  <ProductShoppableCard
+                    key={product.handle}
+                    product={product}
+                    handleAddProduct={() =>
+                      this.handleAddProduct(product.handle)
+                    }
+                    handleRemoveProduct={() =>
+                      this.handleRemoveProduct(product.handle)
+                    }
+                    quantity={pints.filter(pint => pint === handle).length}
+                  />
+                );
+              })}
           </div>
           <div
             className={cx(

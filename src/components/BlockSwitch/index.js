@@ -29,11 +29,15 @@ const BlockSwitch = props => {
   const { block } = props;
   const type = get(block, '_type') || get(block, 'sys.contentType.sys.id', '');
 
+  // TO-DO remove old contentful block switch
   switch (type) {
     case 'blockFullWidthImages':
       return <FullWidthImages {...props} />;
+    case 'detailsTabs':
     case 'blockProductDetails':
       return <ProductDetails {...props} />;
+    case 'productPintList':
+      return <ProductWhatsIncluded {...props} />;
     case 'imageText':
       return <ImageText {...props} />;
     case 'imageDoubleText':

@@ -50,18 +50,49 @@ export const FlavorLink = `{
   }
 }`;
 
+export const ProductLink = `{
+  _id,
+  _createdAt,
+  title,
+  productHandle,
+  price,
+  flavorDescription,
+  heroImage{
+    'src': asset->url
+  },
+  gridImage{
+    'src': asset->url
+  },
+  pintImage{
+    'src': asset->url
+  },
+  description,
+  availableInBYO,
+  exclusiveToBYO,
+  order,
+}`;
+
 export const Block = `{
   ...,
   'image': image${Img},
   'images': images[]${Img},
   'image1': image1${Img},
   'image2': image2${Img},
+  'products': products[]->${ProductLink},
   'pressItems': pressItems[]{
     ...,
     'logo': logo${Img}
   },
   'items': items[]->{
     _type == 'flavor' => ${FlavorLink}
+  },
+  'tabs': tabs[]{
+    _type == 'tab' => {
+      ...,
+      'image': image${Img},
+      'image1': image1${Img},
+      'image2': image2${Img},
+    }
   }
 }`;
 
@@ -97,6 +128,7 @@ export const Product = `{
   description,
   availableInBYO,
   exclusiveToBYO,
+  order,
   blocks[]${Block},
   seoTitle,
   seoDescription,

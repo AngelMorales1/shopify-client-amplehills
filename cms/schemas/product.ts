@@ -100,6 +100,13 @@ export default {
       fieldset: 'options'
     },
     {
+      name: 'order',
+      title: 'BYO Order',
+      type: 'number',
+      fieldset: 'options',
+      description: 'Products will be shown on BYO from lowest to highest.'
+    },
+    {
       name: 'exclusiveBYO',
       title: 'Exclusively to BYO packs?',
       type: 'boolean',

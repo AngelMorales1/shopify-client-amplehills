@@ -144,19 +144,17 @@ class Footer extends Component {
                   <span className={cx(styles['Footer__link'])}>Catering</span>
                 </Link>
                 <Link
-                  to="/classes-and-socials"
+                  to="/events"
                   className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
-                  <span className={cx(styles['Footer__link'])}>
-                    Classes & Socials
-                  </span>
+                  <span className={cx(styles['Footer__link'])}>Events</span>
                 </Link>
                 <Link
                   to="/parties"
                   className="mb3 mt1 flex items-center bold text-white text-decoration-none"
                 >
                   <span className={cx(styles['Footer__link'])}>
-                    Parties & Events
+                    Parties & Rentals
                   </span>
                 </Link>
               </div>
@@ -235,11 +233,23 @@ class Footer extends Component {
                 to="/privacy-policy"
                 className={cx(
                   styles['Footer__link'],
-                  'text-decoration-none mx1'
+                  'text-decoration-none ml1'
                 )}
               >
                 Privacy Policy
               </NavLink>
+              ,
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://pos.toasttab.com/terms-of-service"
+                className={cx(
+                  styles['Footer__link'],
+                  'text-decoration-none mx1'
+                )}
+              >
+                Toast Privacy Policy
+              </a>
               &
               <NavLink
                 exact

@@ -5,7 +5,7 @@ import cx from 'classnames';
 import get from 'utils/get';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 
-import { Image, Button } from 'components/base';
+import { Image, Button, PortableText } from 'components/base';
 import styles from './ProductDetails.scss';
 
 class ProductDetails extends Component {
@@ -25,11 +25,14 @@ class ProductDetails extends Component {
 
   render() {
     const { block, z, setRef } = this.props;
-    const fields = get(block, 'fields', {});
-    const details = get(fields, 'productDetails', []);
-    const colorClass = `ProductDetails--${get(fields, 'color', 'white')}`;
-    const dripIsOn = get(fields, 'drip', false);
-    const upperDripIsOn = get(fields, 'upperDrip', false);
+    const tabs = get(block, 'tabs', []);
+    const colorClass = `ProductDetails--${get(
+      block,
+      'backgroundColor',
+      'white'
+    )}`;
+    const dripIsOn = get(block, 'drip', false);
+    const upperDripIsOn = get(block, 'upperDrip', false);
 
     return (
       <div
@@ -42,8 +45,8 @@ class ProductDetails extends Component {
       >
         <div className="flex justify-center flex-wrap center mb3">
           <h2 className="block-headline w100 my3">The Details</h2>
-          {details.map((detail, i) => {
-            const color = this.isActiveFlavor(get(detail, 'sys.id', ''), i)
+          {tabs.map((tab, i) => {
+            const color = this.isActiveFlavor(get(tab, '_key', ''), i)
               ? 'clear-madison-blue-border'
               : 'madison-blue';
 
@@ -53,11 +56,11 @@ class ProductDetails extends Component {
                 color={color}
                 variant="primary-small"
                 shadow={true}
-                key={get(detail, 'sys.id', i)}
-                label={get(detail, 'fields.title', '')}
+                key={get(tab, '_key', i)}
+                label={get(tab, 'name', '')}
                 onClick={() =>
                   this.setState({
-                    activeFlavor: get(detail, 'sys.id', '')
+                    activeFlavor: get(tab, '_key', '')
                   })
                 }
               />
@@ -65,21 +68,20 @@ class ProductDetails extends Component {
           })}
         </div>
         <div className={`${styles['ProductDetails--container']}`}>
-          {details.map((detail, i) => {
-            const fields = get(detail, 'fields', {});
+          {tabs.map((detail, i) => {
             const classes = cx(
               styles['ProductDetail'],
               'transition-slide-up-large container-width mx-auto flex items-center py3',
               {
                 [styles['ProductDetail--active']]: this.isActiveFlavor(
-                  get(detail, 'sys.id', ''),
+                  get(detail, '_key', ''),
                   i
                 )
               }
             );
 
             return (
-              <div className={classes} key={get(detail, 'sys.id', '')}>
+              <div className={classes} key={get(detail, '_key', '')}>
                 <div className="col-12 md-col-6">
                   <div
                     className={cx(
@@ -94,24 +96,19 @@ class ProductDetails extends Component {
                       )}
                     >
                       <Image
-                        alt={`${get(fields, 'title', '')} description image`}
-                        src={contentfulImgUtil(
-                          get(fields, 'text1Image.fields.file.url', ''),
-                          '500',
-                          'png'
-                        )}
+                        alt={`${get(block, 'title', '')} description image`}
+                        src={`${get(detail, 'image1.src', '')}?w=400`}
                       />
                     </div>
                     <div className="md-col-10">
                       <p
-                        dangerouslySetInnerHTML={{
-                          __html: marked(get(fields, 'text1', ''))
-                        }}
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'markdown-block'
+                          'portable-text'
                         )}
-                      />
+                      >
+                        <PortableText blocks={get(detail, 'text1', '')} />
+                      </p>
                     </div>
                   </div>
                   <div
@@ -127,24 +124,19 @@ class ProductDetails extends Component {
                       )}
                     >
                       <Image
-                        alt={`${get(fields, 'title', '')} description image`}
-                        src={contentfulImgUtil(
-                          get(fields, 'text2Image.fields.file.url', ''),
-                          '500',
-                          'png'
-                        )}
+                        alt={`${get(block, 'title', '')} description image`}
+                        src={`${get(detail, 'image2.src', '')}?w=400`}
                       />
                     </div>
                     <div className="md-col-10">
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: marked(get(fields, 'text2', ''))
-                        }}
+                      <p
                         className={cx(
                           styles['ProductDetail--description-text'],
-                          'markdown-block'
+                          'portable-text'
                         )}
-                      />
+                      >
+                        <PortableText blocks={get(detail, 'text2', '')} />
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -164,7 +156,7 @@ class ProductDetails extends Component {
                         'absolute center callout-small z-1'
                       )}
                     >
-                      {get(fields, 'flavorHighlight', '')}
+                      {get(detail, 'imageStickerText', '')}
                     </p>
                     <div
                       className={`${
@@ -176,14 +168,11 @@ class ProductDetails extends Component {
                     <div
                       className="circle square"
                       style={{
-                        background: `url(${contentfulImgUtil(
-                          get(
-                            fields,
-                            'flavorHighlightImage.fields.file.url',
-                            ''
-                          ),
-                          '1400'
-                        )}) no-repeat center`,
+                        background: `url(${get(
+                          detail,
+                          'image.src',
+                          ''
+                        )}?w=1200) no-repeat center`,
                         backgroundSize: 'cover'
                       }}
                     />
