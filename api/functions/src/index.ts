@@ -10,6 +10,7 @@ import flavor_frenzy_votes_match_total from './routes/v1/flavor_frenzy/votes/mat
 import flavor_frenzy_votes_admin_total from './routes/v1/flavor_frenzy/votes/admin_total';
 import flavor_frenzy_votes_total from './routes/v1/flavor_frenzy/votes/total';
 import flavor_frenzy_predictions_create from './routes/v1/flavor_frenzy/predictions/create';
+import webhooks_shopify_orders_create from './routes/v1/webhooks/shopify/orders/create';
 
 export {
   shipping,
@@ -25,5 +26,7 @@ export {
   flavor_frenzy_votes_match_total,
   flavor_frenzy_votes_admin_total,
   flavor_frenzy_votes_total,
-  flavor_frenzy_predictions_create
+  flavor_frenzy_predictions_create,
+
+  webhooks_shopify_orders_create
 };

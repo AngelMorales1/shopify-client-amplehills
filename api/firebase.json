@@ -45,6 +45,11 @@
       },
 
       {
+        "source": "/api/v1/webhooks/shopify/orders/create",
+        "function": "webhooks_shopify_orders_create"
+      },
+
+      {
         "source": "/shipping",
         "function": "shipping"
       },
