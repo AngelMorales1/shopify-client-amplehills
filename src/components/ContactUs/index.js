@@ -119,7 +119,7 @@ class ContactUs extends Component {
       email,
       phone,
       text: message,
-      title: subject
+      subject
     });
   };
 
