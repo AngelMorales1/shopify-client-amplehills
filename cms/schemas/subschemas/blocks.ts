@@ -11,6 +11,7 @@ import UpcomingEvents from './blocks/UpcomingEvents';
 import HtmlEmbed from './blocks/HtmlEmbed';
 import PintFinder from './blocks/PintFinder';
 import FlavorIndex from './blocks/FlavorIndex';
+import Video from './blocks/Video';
 import Press from './blocks/Press';
 import DetailsTabs from './blocks/DetailsTabs';
 import ProductPintList from './blocks/ProductPintList';
@@ -33,7 +34,8 @@ export default options => ({
     FlavorIndex,
     Press,
     DetailsTabs,
-    ProductPintList
+    ProductPintList,
+    Video
   ],
   ...options
 });

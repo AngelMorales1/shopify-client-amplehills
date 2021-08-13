@@ -13,6 +13,7 @@ import GenericHero from 'components/GenericHero';
 import HorizontalCarouselBlock from 'components/HorizontalCarouselBlock';
 import EventsBlock from 'components/EventsBlock';
 import ImageVideoCarousel from 'components/ImageVideoCarousel';
+import VideoBlock from 'components/VideoBlock';
 import FAQBlock from 'components/FAQBlock';
 import ProductWhatsIncluded from 'components/ProductWhatsIncluded';
 import AvailableLocations from 'components/AvailableLocations';
@@ -63,6 +64,8 @@ const BlockSwitch = props => {
     case 'centeredCarousel':
     case 'blockImageVideoCarousel':
       return <ImageVideoCarousel {...props} />;
+    case 'videoBlock':
+      return <VideoBlock {...props} />;
     case 'faq':
       return <FAQBlock {...props} />;
     case 'pintFinder':
