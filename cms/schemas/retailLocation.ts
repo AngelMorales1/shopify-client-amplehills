@@ -49,11 +49,12 @@ export default {
     {
       name: 'distributor',
       title: 'Distributor',
-      type: 'string'
+      type: 'string',
+      hidden: true,
     },
     {
       name: 'distributor_ref',
-      title: 'Distributor Ref',
+      title: 'Distributor',
       type: 'reference',
       to: [{ type: 'distributor' }]
     },
