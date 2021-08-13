@@ -52,6 +52,12 @@ export default {
       type: 'string'
     },
     {
+      name: 'distributor_ref',
+      title: 'Distributor Ref',
+      type: 'reference',
+      to: [{ type: 'distributor' }]
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',

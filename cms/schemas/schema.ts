@@ -10,6 +10,7 @@ import flavorFrenzy from './flavorFrenzy';
 import inStores from './inStores';
 import retailLocation from './retailLocation';
 import retailLocationTag from './retailLocationTag';
+import distributor from './distributor';
 import settings from './settings';
 
 export default createSchema({
@@ -20,6 +21,7 @@ export default createSchema({
     inStores,
     retailLocation,
     retailLocationTag,
+    distributor,
     location,
     event,
     page,

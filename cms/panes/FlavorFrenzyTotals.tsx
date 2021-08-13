@@ -34,7 +34,6 @@ const newTotalsArray = (
 }, [])
 
 const FlavorFrenzyPane: FC<{ document: any }> = ({ document }) => {
-  console.log(document);
   const [flavors, setFlavors] = useState<{ _id: string; name: string; }[]>([]);
   const [totals, setTotals] = useState<{ [key: string]: number | string }[]>([]);
   const [editedMatches, setEditedMatches] = useState<string[]>([]);

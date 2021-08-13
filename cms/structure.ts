@@ -6,10 +6,14 @@ import {
   FaChartBar as ChartIcon,
   FaShoppingCart as Cart,
   FaTag as Tag,
+  FaTruck as Truck,
+  FaSearchLocation as SearchLocation,
   FaParagraph as Paragraph,
 } from 'react-icons/fa';
 import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings } from 'react-icons/io5';
+import { RiLayoutFill } from 'react-icons/ri';
 
+import SanityClient from './lib/SanityClient';
 import FlavorFrenzyTotals from './panes/FlavorFrenzyTotals';
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
@@ -41,13 +45,34 @@ const Structure = S.list()
           .title('In-Stores Settings')
           .items([
             S.documentTypeListItem('inStores')
-              .title('Content')
-              .icon(Paragraph)
+              .title('Web Content')
+              .icon(RiLayoutFill)
               .child(S.document().schemaType('inStores').documentId('_inStores')),
+            S.divider(),
             S.listItem()
               .title('Retail Locations')
               .icon(IoLocation)
               .child(S.documentTypeList('retailLocation').title('Retail Locations')),
+            S.listItem()
+              .title('By Distributor')
+              .icon(SearchLocation)
+              .child(
+                S.documentList()
+                  .title('Distributor')
+                  .schemaType('distributor')
+                  .filter('_type == "distributor"')
+                  .child(id =>
+                    S.documentList()
+                      .title('Retail Locations')
+                      .schemaType('retailLocation')
+                      .filter(`_type == "retailLocation" && $id == distributor_ref._ref`)
+                      .params({ id })
+              )),
+            S.divider(),
+            S.listItem()
+              .title('Distributors')
+              .icon(Truck)
+              .child(S.documentTypeList('distributor').title('Distributors')),
             S.listItem()
               .title('Location Tags')
               .icon(Tag)
