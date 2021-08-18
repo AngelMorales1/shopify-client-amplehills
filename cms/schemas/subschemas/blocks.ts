@@ -7,6 +7,7 @@ import ImageDoubleText from './blocks/ImageDoubleText';
 import HorizontalCarousel from './blocks/HorizontalCarousel';
 import CenteredCarousel from './blocks/CenteredCarousel';
 import Text from './blocks/Text';
+import LongText from './blocks/LongText';
 import UpcomingEvents from './blocks/UpcomingEvents';
 import HtmlEmbed from './blocks/HtmlEmbed';
 import PintFinder from './blocks/PintFinder';
@@ -28,6 +29,7 @@ export default options => ({
     HorizontalCarousel,
     CenteredCarousel,
     Text,
+    LongText,
     UpcomingEvents,
     HtmlEmbed,
     PintFinder,

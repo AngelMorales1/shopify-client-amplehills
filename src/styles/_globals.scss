@@ -241,6 +241,41 @@ UI elements
   }
 }
 
+.text-column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media ($medium-up) {
+    align-items: center;
+  }
+
+  > p,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    max-width: 42rem;
+
+    @media ($medium-up) {
+      min-width: 42rem;
+    }
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-size: $font-6;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
 .markdown-block,
 .portable-text > div {
   > h1 {

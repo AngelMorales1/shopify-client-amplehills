@@ -28,6 +28,7 @@ class EventDetailView extends Component {
 
             return (
               <BlockSwitch
+                setRef={f => f}
                 key={get(block, 'sys.id', i)}
                 block={block}
                 z={blocks.length - i + additionalZIndex}

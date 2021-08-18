@@ -1,0 +1,77 @@
+@import 'settings';
+
+.TwoUpCardLinks {
+  flex-direction: column;
+
+  @media ($medium-up) {
+    flex-direction: row;
+    max-width: 60rem;
+  }
+
+  &__card {
+    width: 100%;
+    border-radius: radius('s');
+
+    @media ($medium-up) {
+      width: 50%;
+    }
+
+    &:nth-child(odd) {
+      @media ($medium-up) {
+        margin-right: 2rem;
+      }
+    }
+
+    &--white {
+      @extend .bg-white;
+    }
+
+    &--yellow {
+      @extend .bg-yellow;
+    }
+
+    &--light-yellow {
+      @extend .bg-light-yellow;
+    }
+
+    &--mustard {
+      @extend .bg-deep-yellow;
+    }
+
+    &--blue {
+      @extend .bg-sky-blue;
+    }
+
+    &--light-turquoise {
+      @extend .bg-light-turquoise;
+    }
+
+    &--pink {
+      @extend .bg-light-pink;
+    }
+
+    &--light-pink {
+      @extend .bg-baby-pink;
+    }
+
+    &--light-peach {
+      @extend .bg-light-peach;
+    }
+
+    &--light-orange {
+      @extend .bg-light-orange;
+    }
+
+    &--peach-pink {
+      @extend .bg-peach-pink;
+    }
+
+    &--yellow-green {
+      @extend .bg-yellow-green;
+    }
+
+    &--light-yellow-green {
+      @extend .bg-light-yellow-green;
+    }
+  }
+}

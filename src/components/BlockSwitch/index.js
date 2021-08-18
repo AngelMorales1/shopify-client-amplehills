@@ -25,6 +25,7 @@ import MultipleImageText from 'components/MultipleImageText';
 import HTMLEmbed from 'components/HTMLEmbed';
 import PintFinderBlock from 'components/PintFinderBlock';
 import TextBlock from 'components/TextBlock';
+import LongText from 'components/LongText';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -50,6 +51,8 @@ const BlockSwitch = props => {
       return <ComicStrip {...props} />;
     case 'textBlock':
       return <TextBlock {...props} />;
+    case 'longText':
+      return <LongText {...props} />;
     case 'blockMarkdown':
       return <MarkdownBlock {...props} />;
     case 'genericHero':
