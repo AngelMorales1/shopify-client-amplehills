@@ -15,6 +15,16 @@ export default {
       options: { collapsible: true, collapsed: true }
     },
     {
+      name: 'deprecated',
+      title: 'Deprecated',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
+      name: 'hero',
+      title: 'Hero',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
       name: 'cardContent',
       title: 'Card Content',
       options: { collapsible: true, collapsed: true }
@@ -41,13 +51,30 @@ export default {
       type: 'reference',
       to: [{ type: 'location' }]
     },
-    portableText({
-      name: 'text',
-      title: 'Text'
-    }),
+    {
+      name: 'heroColor',
+      title: 'Hero Color',
+      type: 'string',
+      fieldset: 'hero',
+    },
+    {
+      name: 'heroDescription',
+      title: 'Short Hero Description',
+      type: 'text',
+      validation: Rule => Rule.required().min(20).max(350),
+      fieldset: 'hero',
+    },
+    {
+      name: 'variants',
+      title: 'Variants (Dates)',
+      type: 'array',
+      of: [{ type: 'eventVariant' }],
+      fieldset: 'hero'
+    },
     image({
       name: 'image',
-      title: 'Image'
+      title: 'Image',
+      fieldset: 'hero'
     }),
     blocks({
       name: 'blocks',
@@ -90,5 +117,10 @@ export default {
       type: 'image',
       fieldset: 'seo'
     },
+    portableText({
+      name: 'text',
+      title: 'Text',
+      fieldset: 'deprecated'
+    }),
   ]
 };

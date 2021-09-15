@@ -79,6 +79,10 @@ export const Block = `{
   'image1': image1${Img},
   'image2': image2${Img},
   'products': products[]->${ProductLink},
+  'features': features[]{
+    ...,
+    'image': image${Img}
+  },
   'pressItems': pressItems[]{
     ...,
     'logo': logo${Img}
@@ -206,6 +210,9 @@ export const Event = `{
   text,
   location->${Location},
   image${Img},
+  'shopifyVariants': variants,
+  heroColor,
+  heroDescription,
   eventType,
   blocks[]${Block},
   cardText,

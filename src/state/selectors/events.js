@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 import get from 'utils/get';
 import getShortTimeFormat from 'utils/getShortTimeFormat';
+import { compareAsc, format, parse } from 'date-fns';
 import moment from 'moment';
 
 export default createSelector(
@@ -18,6 +19,7 @@ export default createSelector(
       const variants = get(node, 'variants.edges', []).map(variant => {
         const variantNode = get(variant, 'node', {});
         const { id, price, title, availableForSale } = variantNode;
+
         return { id, price, date: title, available: availableForSale };
       });
 
@@ -51,6 +53,12 @@ export default createSelector(
       const locationTitle = get(event, 'location.name', '');
       const locationId = get(event, 'location._id', '');
       const locationPhone = get(event, 'location.phone', '');
+      const locationSlug = get(event, 'location.slug', '');
+      const locationAddress1 = get(event, 'location.address1', '');
+      const locationCity = get(event, 'location.city', '');
+      const locationState = get(event, 'location.state', '');
+      const locationZip = get(event, 'location.zip', '');
+      const locationAddress = `${locationAddress1}, ${locationCity}, ${locationState}`;
       const contentBlocks = get(event, 'blocks', []);
       const text = get(event, 'text', '');
       const link = `/events/${handle}`;
@@ -103,6 +111,10 @@ export default createSelector(
             return { ...sortedFragment, sortedDate, sortedTime };
           });
 
+      const heroColor = get(event, 'heroColor', '#fff');
+      const heroDescription = get(event, 'heroDescription', '');
+      const shopifyVariants = get(event, 'shopifyVariants', []);
+
       const seoTitle = get(event, 'seoTitle', '');
       const seoDescription = get(event, 'seoDescription', '');
       const seoImage = get(event, 'seoImage.fields.file.url', '');
@@ -114,18 +126,34 @@ export default createSelector(
         blockCardText,
         eventType,
         image,
-        locationTitle,
-        locationId,
         contentBlocks,
         text,
         link,
         datesAndTimes,
         locationPhone,
+        locationSlug,
+        locationAddress,
+        locationTitle,
+        locationId,
         blockCardButtonLabel,
+        heroColor,
+        heroDescription,
+        shopifyVariants,
         seoTitle,
         seoDescription,
         seoImage,
-        ...shopifyProduct
+        ...shopifyProduct,
+        variants: shopifyProduct.variants.map(variant => {
+          const sanitizedDate = variant.date.split('-')[0];
+          const datetime = sanitizedDate.includes(':')
+            ? parse(sanitizedDate, 'MM/dd/yyyy, h:mma', new Date())
+            : parse(sanitizedDate, 'MM/dd/yyyy, ha', new Date());
+
+          const dateStr = format(datetime, 'MM/dd/yyyy');
+          const timeStr = format(datetime, 'ha');
+
+          return { ...variant, datetime, dateStr, timeStr };
+        })
       };
 
       return mergedProducts;

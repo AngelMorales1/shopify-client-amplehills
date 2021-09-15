@@ -147,6 +147,11 @@ strong {
   line-height: $font-7;
 }
 
+.small-copy {
+  font-size: $font-3;
+  line-height: $font-5;
+}
+
 .detail {
   font-size: $font-2;
   line-height: $font-6;
@@ -211,6 +216,10 @@ strong {
   font-size: 0.6875rem;
   letter-spacing: spacing(0.1);
   line-height: $font-6;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1px;
 }
 
 .price-text {

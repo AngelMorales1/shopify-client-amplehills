@@ -100,12 +100,8 @@ class App extends Component {
     ) {
       return (
         <div className="App">
-          {alertIsActive && (
-            <Alert
-              alert={{
-                alertCopy: 'Our online store is back open!'
-              }}
-            />
+          {settings && settings.alert && !!settings.alert.length && (
+            <Alert alert={settings.alert} />
           )}
           <Nav
             alertIsActive={alertIsActive}

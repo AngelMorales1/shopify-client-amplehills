@@ -14,7 +14,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/production-preview",
-    "media"
+    "media",
+    "color-picker"
   ],
   "env": {
     "development": {

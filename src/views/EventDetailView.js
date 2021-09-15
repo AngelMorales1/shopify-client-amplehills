@@ -3,6 +3,7 @@ import get from 'utils/get';
 
 import BlockSwitch from 'components/BlockSwitch';
 import EventDetailHero from 'components/EventDetailHero';
+import EventDetailHeroV2 from 'components/EventDetailHeroV2';
 import Meta from 'components/Meta';
 import ErrorPage from 'components/ErrorPage';
 
@@ -20,7 +21,8 @@ class EventDetailView extends Component {
           description={event.seoDescription}
           image={event.seoImage}
         />
-        <EventDetailHero event={event} {...this.props} />
+        {/* <EventDetailHero event={event} {...this.props} /> */}
+        <EventDetailHeroV2 event={event} {...this.props} />
         {blocks &&
           blocks.map((block, i) => {
             const upperDripIsOn = get(block, 'fields.upperDrip', false);

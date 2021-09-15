@@ -1,0 +1,73 @@
+@import 'settings', 'typography', 'utils';
+
+.Featured3UpContent {
+  @extend .text-madison-blue;
+
+  &__features {
+    padding: 0 0.5rem;
+
+    @media ($medium-up) {
+      padding: 0 4rem;
+    }
+  }
+
+  &__feature {
+    padding: 0.5rem;
+
+    @media ($medium-up) {
+      padding: 1rem;
+    }
+  }
+
+  &--white {
+    @extend .bg-white;
+  }
+
+  &--yellow {
+    @extend .bg-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
+    @extend .bg-light-peach;
+  }
+
+  &--light-orange {
+    @extend .bg-light-orange;
+  }
+
+  &--peach-pink {
+    @extend .bg-peach-pink;
+  }
+
+  &--yellow-green {
+    @extend .bg-yellow-green;
+  }
+
+  &--light-yellow-green {
+    @extend .bg-light-yellow-green;
+  }
+}

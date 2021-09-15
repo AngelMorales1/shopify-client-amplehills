@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
+import { PortableText } from 'components/base';
+
 import styles from './Alert.scss';
 
 const Alert = ({ alert }) => {
@@ -13,10 +15,10 @@ const Alert = ({ alert }) => {
       )}
     >
       <span className={cx(styles['Alert__text'], 'text-white')}>
-        {alert.alertCopy}
+        <PortableText blocks={alert} />
       </span>
       {/* {alert.linkCopy && alert.linkUrl && ( */}
-      <a
+      {/* <a
         className={cx(
           styles['Alert__linked-text'],
           styles['Alert__text'],
@@ -26,7 +28,7 @@ const Alert = ({ alert }) => {
         href="/products/build-your-own"
       >
         Shop Now
-      </a>
+      </a> */}
       {/* )} */}
     </div>
   );

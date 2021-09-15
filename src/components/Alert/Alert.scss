@@ -23,14 +23,14 @@
     @media ($medium-up) {
       font-size: $font-2;
     }
-  }
 
-  &__linked-text {
-    margin-left: spacing(1);
-    text-decoration: none;
-  }
+    a {
+      color: color('peach');
+      text-decoration: none;
 
-  &__linked-text:hover {
-    color: color('yellow');
+      &:hover {
+        color: color('yellow');
+      }
+    }
   }
 }

@@ -26,6 +26,7 @@ import HTMLEmbed from 'components/HTMLEmbed';
 import PintFinderBlock from 'components/PintFinderBlock';
 import TextBlock from 'components/TextBlock';
 import LongText from 'components/LongText';
+import Featured3UpContent from 'components/Featured3UpContent';
 
 const BlockSwitch = props => {
   const { block } = props;
@@ -53,6 +54,9 @@ const BlockSwitch = props => {
       return <TextBlock {...props} />;
     case 'longText':
       return <LongText {...props} />;
+    // return null;
+    case 'featured3UpContent':
+      return <Featured3UpContent {...props} />;
     case 'blockMarkdown':
       return <MarkdownBlock {...props} />;
     case 'genericHero':

@@ -16,6 +16,7 @@ import Video from './blocks/Video';
 import Press from './blocks/Press';
 import DetailsTabs from './blocks/DetailsTabs';
 import ProductPintList from './blocks/ProductPintList';
+import Featured3UpContent from './blocks/Featured3UpContent';
 
 export default options => ({
   type: 'array',
@@ -30,6 +31,7 @@ export default options => ({
     CenteredCarousel,
     Text,
     LongText,
+    Featured3UpContent,
     UpcomingEvents,
     HtmlEmbed,
     PintFinder,

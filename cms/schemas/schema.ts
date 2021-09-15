@@ -13,9 +13,12 @@ import retailLocationTag from './retailLocationTag';
 import distributor from './distributor';
 import settings from './settings';
 
+import eventVariant from './subschemas/eventVariant';
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
+    // Documents
     flavor,
     flavorFrenzy,
     inStores,
@@ -26,6 +29,9 @@ export default createSchema({
     event,
     page,
     product,
-    settings
+    settings,
+
+    // Objects
+    eventVariant
   ])
 })
