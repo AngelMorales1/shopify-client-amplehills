@@ -9,6 +9,7 @@ import CenteredCarousel from './blocks/CenteredCarousel';
 import Text from './blocks/Text';
 import LongText from './blocks/LongText';
 import UpcomingEvents from './blocks/UpcomingEvents';
+import EventsGrid from './blocks/EventsGrid';
 import HtmlEmbed from './blocks/HtmlEmbed';
 import PintFinder from './blocks/PintFinder';
 import FlavorIndex from './blocks/FlavorIndex';
@@ -33,6 +34,7 @@ export default options => ({
     LongText,
     Featured3UpContent,
     UpcomingEvents,
+    EventsGrid,
     HtmlEmbed,
     PintFinder,
     FlavorIndex,

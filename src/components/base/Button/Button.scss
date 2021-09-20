@@ -250,6 +250,7 @@
   &--madison-blue {
     @extend .bg-madison-blue;
     @extend .text-white;
+    border: spacing(1) solid color('madison-blue');
   }
 
   &--burgundy {
@@ -325,6 +326,35 @@
     border-radius: radius('0');
     padding: 0;
     color: color('peach');
+    position: relative;
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
+
+    &:hover {
+      box-shadow: unset;
+
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: unset;
+      }
+    }
+  }
+
+  &--underline-madison-blue {
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: radius('0');
+    padding: 0;
+    color: color('madison-blue');
     position: relative;
 
     &::after {

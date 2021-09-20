@@ -38,6 +38,7 @@ const Featured3UpContent = ({ block, z, setRef }) => {
         >
           {get(block, 'features', []).map(feature => (
             <div
+              key={feature._key}
               className={cx(
                 styles['Featured3UpContent__feature'],
                 'col-6 md-col-4'

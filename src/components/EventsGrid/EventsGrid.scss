@@ -1,0 +1,117 @@
+@import 'settings', 'typography', 'utils';
+
+.EventsGrid {
+  @extend .text-madison-blue;
+
+  &__header {
+    padding: 2rem 0.5rem 0;
+
+    @media ($medium-up) {
+      padding: 2rem 1rem 0;
+    }
+
+    @media ($large-up) {
+      padding: 2rem 4rem 0;
+    }
+  }
+
+  &__header-control {
+    padding: 0.5rem;
+
+    @media ($medium-up) {
+      padding: 1rem;
+    }
+  }
+
+  &__events {
+    padding: 0.5rem;
+
+    @media ($medium-up) {
+      padding: 0.5rem 1rem;
+    }
+
+    @media ($large-up) {
+      padding: 0.5rem 4rem;
+    }
+  }
+
+  &__event {
+    padding: 0.5rem;
+
+    @media ($medium-up) {
+      padding: 1rem;
+    }
+  }
+
+  &__event-image-container {
+    height: 20rem;
+  }
+
+  &__calendar {
+    top: calc(100% + 0.5rem);
+    width: 20rem;
+    // max-width: calc(100% - 2rem);
+  }
+
+  &__button-icon-small {
+    width: 0.65rem;
+    height: auto;
+  }
+
+  &__location-dropdown {
+    right: 0;
+    top: calc(100% + 1rem);
+  }
+
+  &--white {
+    @extend .bg-white;
+  }
+
+  &--yellow {
+    @extend .bg-yellow;
+  }
+
+  &--light-yellow {
+    @extend .bg-light-yellow;
+  }
+
+  &--mustard {
+    @extend .bg-deep-yellow;
+  }
+
+  &--blue {
+    @extend .bg-sky-blue;
+  }
+
+  &--light-turquoise {
+    @extend .bg-light-turquoise;
+  }
+
+  &--pink {
+    @extend .bg-light-pink;
+  }
+
+  &--light-pink {
+    @extend .bg-baby-pink;
+  }
+
+  &--light-peach {
+    @extend .bg-light-peach;
+  }
+
+  &--light-orange {
+    @extend .bg-light-orange;
+  }
+
+  &--peach-pink {
+    @extend .bg-peach-pink;
+  }
+
+  &--yellow-green {
+    @extend .bg-yellow-green;
+  }
+
+  &--light-yellow-green {
+    @extend .bg-light-yellow-green;
+  }
+}
