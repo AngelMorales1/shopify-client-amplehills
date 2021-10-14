@@ -9,6 +9,17 @@ import gtag from 'utils/gtag';
 import { QuantitySelector, Button, Image } from 'components/base';
 import styles from './EventDetailHeroV2.scss';
 
+const knownPermutationsOfDateStrings = date => [
+  format(date, 'M/d/yy'),
+  format(date, 'MM/d/yy'),
+  format(date, 'M/dd/yy'),
+  format(date, 'MM/dd/yy'),
+  format(date, 'M/d/yyyy'),
+  format(date, 'MM/d/yyyy'),
+  format(date, 'M/dd/yyyy'),
+  format(date, 'MM/dd/yyyy')
+];
+
 class EventDetailHeroV2 extends React.Component {
   state = {
     selectedVariant: null,
@@ -16,16 +27,15 @@ class EventDetailHeroV2 extends React.Component {
     selectedTime: null,
     dateIsOpen: false,
     timeIsOpen: false,
-    quantity: 1
+    quantity: 1,
+    imageLoaded: false
   };
 
   constructor(props) {
     super(props);
 
     const firstVariant = props.event.variants.find(variant => {
-      const date = parse(variant.date, 'MM/dd/yyyy, ha', new Date());
-
-      return compareAsc(date, new Date()) === 1;
+      return compareAsc(variant.datetime, new Date()) === 1;
     });
 
     if (firstVariant) this.state.selectedVariant = firstVariant;
@@ -64,9 +74,9 @@ class EventDetailHeroV2 extends React.Component {
   };
 
   selectDate = date => {
-    const dateStr = format(date, 'MM/dd/yyyy');
+    const dateStrings = knownPermutationsOfDateStrings(date);
     const selectedVariant = this.props.event.variants.find(variant => {
-      return dateStr === variant.dateStr;
+      return dateStrings.includes(variant.dateStr);
     });
 
     return this.setState({ selectedVariant, dateIsOpen: false });
@@ -84,9 +94,14 @@ class EventDetailHeroV2 extends React.Component {
   };
 
   tileClassName = ({ date }) => {
-    const availableDates = this.props.event.variants.map(variant => {
-      return parse(variant.date, 'MM/dd/yyyy, ha', new Date());
-    });
+    const availableDates = this.props.event.variants
+      .filter(variant => {
+        const startTime = variant.datetime;
+        const now = new Date();
+
+        return compareAsc(startTime, now) === 1;
+      })
+      .map(variant => variant.datetime);
 
     if (availableDates.find(dDate => isSameDay(dDate, date))) {
       return 'react-calendar__tile--available';
@@ -94,9 +109,14 @@ class EventDetailHeroV2 extends React.Component {
   };
 
   tileDisabled = ({ date }) => {
-    const availableDates = this.props.event.variants.map(variant => {
-      return parse(variant.date, 'MM/dd/yyyy, ha', new Date());
-    });
+    const availableDates = this.props.event.variants
+      .filter(variant => {
+        const startTime = variant.datetime;
+        const now = new Date();
+
+        return compareAsc(startTime, now) === 1;
+      })
+      .map(variant => variant.datetime);
 
     return !availableDates.some(dDate => isSameDay(dDate, date));
   };
@@ -105,8 +125,8 @@ class EventDetailHeroV2 extends React.Component {
     const { event } = this.props;
     const { selectedVariant, dateIsOpen, timeIsOpen, quantity } = this.state;
 
-    const filteredVariants = event.shopifyVariants.filter(variant => {
-      const startTime = new Date(variant.datetime);
+    const filteredVariants = event.variants.filter(variant => {
+      const startTime = variant.datetime;
       const now = new Date();
 
       return compareAsc(startTime, now) === 1;
@@ -114,19 +134,31 @@ class EventDetailHeroV2 extends React.Component {
 
     const timesByDate = event.variants.reduce((timesByDate, variant) => {
       const dateArr = variant.date.split(',');
-      const date = (dateArr[0] || '').trim();
       const time = (dateArr[1] || '').trim();
 
-      if (date) {
-        timesByDate[date] = !!timesByDate[date]
-          ? [...timesByDate[date], time]
-          : [time];
+      if (time) {
+        const dateStrings = knownPermutationsOfDateStrings(variant.datetime);
+        dateStrings.forEach(date => {
+          if (!!timesByDate[date]) {
+            timesByDate[date] = timesByDate[date].includes(time)
+              ? timesByDate[date]
+              : [...timesByDate[date], time];
+          } else {
+            timesByDate[date] = [time];
+          }
+        });
       }
 
       return timesByDate;
     }, {});
 
-    const doorsOpen = subMinutes(selectedVariant.datetime, 15);
+    const doorsOpen = selectedVariant
+      ? subMinutes(selectedVariant.datetime, 30)
+      : null;
+    const available = !!selectedVariant && selectedVariant.available;
+    const price = !!selectedVariant
+      ? selectedVariant.price
+      : event.variants[0].price;
 
     return (
       <div
@@ -142,10 +174,20 @@ class EventDetailHeroV2 extends React.Component {
           <div
             className={cx(
               styles['EventDetailHeroV2__image'],
-              'col-12 md-col-6 p1'
+              'col-12 md-col-6 p1',
+              {
+                [styles['EventDetailHeroV2__image--class']]:
+                  event.eventType === 'Ice Cream Classes',
+                [styles['EventDetailHeroV2__image--loaded']]: this.state
+                  .imageLoaded
+              }
             )}
           >
-            <Image className="col-12" src={event.image.src} />
+            <Image
+              onImgLoad={() => this.setState({ imageLoaded: true })}
+              className="col-12"
+              src={event.image.src}
+            />
           </div>
           <div
             className={cx(
@@ -184,10 +226,12 @@ class EventDetailHeroV2 extends React.Component {
                       src="/assets/images/icon-calendar.svg"
                     />
                     <strong className="ml1 text-peach avenir col-12 left-align">
-                      {format(
-                        new Date(selectedVariant.datetime),
-                        'MMMM dd, YYY'
-                      )}
+                      {selectedVariant
+                        ? format(
+                            new Date(selectedVariant.datetime),
+                            'MMMM dd, YYY'
+                          )
+                        : 'No Upcoming Dates'}
                     </strong>
                     <Image
                       className={styles['EventDetailHeroV2__button-icon-small']}
@@ -213,27 +257,31 @@ class EventDetailHeroV2 extends React.Component {
                   )}
                 </div>
                 <div className="relative col-12">
-                  <button
-                    className={styles['EventDetailHeroV2__hero-button']}
-                    aria-label="Select Time."
-                    onClick={
-                      timeIsOpen
-                        ? this.closeTimeSelector
-                        : this.openTimeSelector
-                    }
-                  >
-                    <Image
-                      className={styles['EventDetailHeroV2__button-icon']}
-                      src="/assets/images/icon-clock.svg"
-                    />
-                    <strong className="ml1 text-peach avenir col-12 left-align">
-                      {format(new Date(selectedVariant.datetime), 'h:mm a')}
-                    </strong>
-                    <Image
-                      className={styles['EventDetailHeroV2__button-icon-small']}
-                      src="/assets/images/arrow-dropdown.svg"
-                    />
-                  </button>
+                  {selectedVariant && (
+                    <button
+                      className={styles['EventDetailHeroV2__hero-button']}
+                      aria-label="Select Time."
+                      onClick={
+                        timeIsOpen
+                          ? this.closeTimeSelector
+                          : this.openTimeSelector
+                      }
+                    >
+                      <Image
+                        className={styles['EventDetailHeroV2__button-icon']}
+                        src="/assets/images/icon-clock.svg"
+                      />
+                      <strong className="ml1 text-peach avenir col-12 left-align">
+                        {format(new Date(selectedVariant.datetime), 'h:mm a')}
+                      </strong>
+                      <Image
+                        className={
+                          styles['EventDetailHeroV2__button-icon-small']
+                        }
+                        src="/assets/images/arrow-dropdown.svg"
+                      />
+                    </button>
+                  )}
                   {timeIsOpen && (
                     <div
                       className={cx(
@@ -260,10 +308,11 @@ class EventDetailHeroV2 extends React.Component {
                   )}
                 </div>
               </div>
-
-              <strong className="text-peach small uppercase mt3 mb1 block extra-small letter-spacing-1">
-                Doors Open {format(doorsOpen, 'h:mma')}
-              </strong>
+              {doorsOpen && (
+                <strong className="text-peach small uppercase mt3 mb1 block extra-small letter-spacing-1">
+                  Doors Open {format(doorsOpen, 'h:mma')}
+                </strong>
+              )}
               <span className="copy">{event.heroDescription}</span>
               <div className="w100 flex flex-row justify-between items-center flex-wrap my3">
                 <QuantitySelector
@@ -282,14 +331,14 @@ class EventDetailHeroV2 extends React.Component {
                   variant="primary"
                   className={cx(styles['EventDetailHero__action-button'])}
                   color="madison-blue"
-                  disabled={!selectedVariant.available}
+                  disabled={!available}
                   onClick={this.addToCart}
                 >
                   <span className="mr-auto">
-                    {selectedVariant.available ? 'Add to Cart' : 'Sold Out'}
+                    {available ? 'Add to Cart' : 'Sold Out'}
                   </span>
                   <span className="ml2">
-                    ${(parseInt(selectedVariant.price) * quantity).toFixed(2)}
+                    ${(parseInt(price) * quantity).toFixed(2)}
                   </span>
                 </Button>
               </div>

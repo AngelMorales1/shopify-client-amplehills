@@ -114,6 +114,7 @@ export default createSelector(
       const heroColor = get(event, 'heroColor', '#fff');
       const heroDescription = get(event, 'heroDescription', '');
       const shopifyVariants = get(event, 'shopifyVariants', []);
+      const frequency = get(event, 'frequency', '');
 
       const seoTitle = get(event, 'seoTitle', '');
       const seoDescription = get(event, 'seoDescription', '');
@@ -138,18 +139,37 @@ export default createSelector(
         blockCardButtonLabel,
         heroColor,
         heroDescription,
+        frequency,
         shopifyVariants,
         seoTitle,
         seoDescription,
         seoImage,
         ...shopifyProduct,
         variants: shopifyProduct.variants.map(variant => {
-          const sanitizedDate = variant.date.split('-')[0];
-          const datetime = sanitizedDate.includes(':')
-            ? parse(sanitizedDate, 'MM/dd/yyyy, h:mma', new Date())
-            : parse(sanitizedDate, 'MM/dd/yyyy, ha', new Date());
+          const dateStrWithoutEndTime = variant.date.split('-')[0];
+          const sanitizedDate = variant.date.split(',');
 
-          const dateStr = format(datetime, 'MM/dd/yyyy');
+          // Compensating for year to be 2 or 4 digits
+          const m =
+            get(sanitizedDate[0].split('/'), '[0]', '').length === 2
+              ? 'MM'
+              : 'M';
+          const d =
+            get(sanitizedDate[0].split('/'), '[1]', '').length === 2
+              ? 'dd'
+              : 'd';
+          const y =
+            get(sanitizedDate[0].split('/'), '[2]', '').length === 2
+              ? 'yy'
+              : 'yyyy';
+          const t = sanitizedDate[1].includes(':') ? 'h:mma' : 'ha';
+          const datetime = parse(
+            dateStrWithoutEndTime,
+            `${m}/${d}/${y}, ${t}`,
+            new Date()
+          );
+
+          const dateStr = format(datetime, `${m}/${d}/${y}`);
           const timeStr = format(datetime, 'ha');
 
           return { ...variant, datetime, dateStr, timeStr };

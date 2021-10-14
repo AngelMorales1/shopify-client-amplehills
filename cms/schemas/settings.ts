@@ -17,6 +17,11 @@ export default {
       options: { collapsible: true, collapsed: true }
     },
     {
+      name: 'cart',
+      title: 'Cart',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
       name: 'redirects',
       title: 'Redirects',
       options: { collapsible: true, collapsed: true }
@@ -82,6 +87,11 @@ export default {
       fieldset: 'productNav',
       of: [{ type: 'reference', to: [{ type: 'product' }]}]
     },
+    portableText({
+      name: 'cartWarningMessage',
+      title: 'Warning Message',
+      fieldset: 'cart'
+    }),
     image({
       name: 'ourPledgeIcon',
       title: 'Our Pledge Icon',

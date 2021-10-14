@@ -55,10 +55,10 @@ const BlockSwitch = props => {
       return <TextBlock {...props} />;
     case 'longText':
       return <LongText {...props} />;
-    // return null;
     case 'featured3UpContent':
       return <Featured3UpContent {...props} />;
     case 'eventsGrid':
+      // return null;
       return <EventsGrid {...props} />;
     case 'blockMarkdown':
       return <MarkdownBlock {...props} />;

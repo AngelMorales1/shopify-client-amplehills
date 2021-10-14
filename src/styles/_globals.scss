@@ -512,7 +512,8 @@ UI elements
         z-index: 0;
         position: absolute;
         top: 1px;
-        left: 6px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 
@@ -531,7 +532,8 @@ UI elements
         z-index: -1;
         position: absolute;
         top: 1px;
-        left: 6px;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }

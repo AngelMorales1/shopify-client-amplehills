@@ -2,6 +2,15 @@
 
 .LongText {
   @extend .text-madison-blue;
+  padding-bottom: 2rem;
+
+  @media ($medium-up) {
+    padding-bottom: 3rem;
+  }
+
+  @media ($large-up) {
+    padding-bottom: 4rem;
+  }
 
   &--white {
     @extend .bg-white;

@@ -9,6 +9,10 @@
     @media ($medium-up) {
       padding: 0 4rem;
     }
+
+    @media ($large-up) {
+      padding: 0 10rem;
+    }
   }
 
   &__feature {
@@ -16,6 +20,10 @@
 
     @media ($medium-up) {
       padding: 1rem;
+    }
+
+    @media ($large-up) {
+      padding: 1.25rem;
     }
   }
 

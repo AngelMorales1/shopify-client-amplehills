@@ -11,9 +11,30 @@
     }
   }
 
+  &__image {
+    opacity: 0;
+    transition: opacity 1s;
+
+    &--loaded {
+      opacity: 1;
+    }
+
+    img {
+      animation: rock-to-and-fro 8s ease-in-out infinite;
+    }
+
+    &--class {
+      img {
+        animation: none;
+      }
+    }
+  }
+
   &__info {
     padding: 0.65rem;
     justify-content: center;
+    z-index: 1;
+    position: relative;
 
     @media ($medium-up) {
       padding: 3rem;
@@ -148,5 +169,17 @@
       align-items: center;
       margin-top: 0;
     }
+  }
+}
+
+@keyframes rock-to-and-fro {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(-3deg);
   }
 }

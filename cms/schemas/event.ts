@@ -88,6 +88,13 @@ export default {
         list: ['Pints and Postcards', 'Ice Cream Socials', 'Ice Cream Classes']
       }
     },
+    {
+      name: 'frequency',
+      title: 'Frequency',
+      type: 'string',
+      fieldset: 'cardContent',
+      description: '"Every first Monday of the month!"'
+    },
     portableText({
       name: 'cardText',
       title: 'Card Text',

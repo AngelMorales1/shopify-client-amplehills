@@ -203,6 +203,7 @@ export const Page = `{
 }`;
 
 export const Event = `{
+  ...,
   _id,
   _createdAt,
   name,
@@ -224,6 +225,7 @@ export const Event = `{
 
 export const Settings = `{
   ...,
+  cartWarningMessage,
   productsInNav[]->${Product},
   productsOnLanding[]->${Product}
 }`;

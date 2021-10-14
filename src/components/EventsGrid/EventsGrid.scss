@@ -17,9 +17,28 @@
 
   &__header-control {
     padding: 0.5rem;
+    flex-wrap: wrap;
 
-    @media ($medium-up) {
+    @media ($large-up) {
       padding: 1rem;
+      flex-wrap: nowrap;
+    }
+
+    &--date,
+    &--location {
+      display: none;
+
+      @media ($large-up) {
+        display: flex;
+      }
+    }
+
+    &--categories {
+      button {
+        @media ($large-up) {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -37,6 +56,10 @@
 
   &__event {
     padding: 0.5rem;
+
+    a:hover {
+      color: color('madison-blue');
+    }
 
     @media ($medium-up) {
       padding: 1rem;
@@ -61,6 +84,19 @@
   &__location-dropdown {
     right: 0;
     top: calc(100% + 1rem);
+  }
+
+  &__card-timing {
+    font-size: $font-3;
+    margin-left: 6px;
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 100%;
+      border-bottom: spacing(0.5) solid color('peach');
+    }
   }
 
   &--white {

@@ -28,7 +28,8 @@ import {
   Image,
   QuantitySelector,
   TextField,
-  FormFlash
+  FormFlash,
+  PortableText
 } from 'components/base';
 import DeleteModal from 'components/DeleteModal';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -88,7 +89,7 @@ class Cart extends Component {
   };
 
   render() {
-    const { actions, checkout, items, updatingNote } = this.props;
+    const { actions, checkout, items, updatingNote, settings } = this.props;
     const currentNote = get(checkout, 'note', '');
     const breadcrumbs = [{ to: '/products', label: 'Continue Shopping' }];
     const getNote = this.state.note ? this.state.note : null;
@@ -100,6 +101,8 @@ class Cart extends Component {
     const filteredItems = this.props.items.filter(
       item => item.product.handle !== item.product.headerId
     );
+
+    const cartWarningMessage = get(settings, 'cartWarningMessage', '');
 
     const cart = (
       <div className="transition-slide-up">
@@ -263,6 +266,16 @@ class Cart extends Component {
                     'col-12 md-col-4'
                   )}
                 >
+                  {!!cartWarningMessage && !!cartWarningMessage.length && (
+                    <div
+                      className={cx(
+                        styles['Cart__warning-message'],
+                        'mb2 bg-yellow p2 portable-text transition-slide-up-large sm-hide xs-hide'
+                      )}
+                    >
+                      <PortableText blocks={cartWarningMessage} />
+                    </div>
+                  )}
                   <p
                     className={cx(
                       styles['Cart__shipping-info__tax'],
@@ -276,7 +289,16 @@ class Cart extends Component {
                   </p>
                 </div>
               </div>
-
+              {!!cartWarningMessage && !!cartWarningMessage.length && (
+                <div
+                  className={cx(
+                    styles['Cart__warning-message'],
+                    'col-12 mb2 bg-yellow p2 portable-text transition-slide-up-large md-hide lg-hide'
+                  )}
+                >
+                  <PortableText blocks={cartWarningMessage} />
+                </div>
+              )}
               <div
                 className={cx(
                   styles['Cart__message-checkout-container'],
@@ -411,6 +433,7 @@ const mapStateToProps = state => {
     items: lineItems(state),
     products: products(state),
     events: events(state),
+    settings: get(state, 'applicationUI.settings'),
     partyDeposit: partyDeposit(state),
     allMerchandise: allMerchandise(state)
   };

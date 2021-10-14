@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import get from 'lodash/get';
 import cx from 'classnames';
+import { Link } from 'react-router-dom';
 import { isAfter, isBefore, format } from 'date-fns';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -66,18 +67,45 @@ const EventsGrid = ({ block, z, setRef, events }) => {
     if (selectedCategory !== defaultCategory) {
       if (selectedCategory === 'Ample Hills Live') {
         if (event.eventType !== 'Ice Cream Socials') {
-          return;
+          return false;
         }
       } else {
-        if (event.eventType !== selectedCategory) return;
+        if (event.eventType !== selectedCategory) return false;
       }
     }
 
     if (
       selectedLocation !== defaultLocation &&
       selectedLocation !== event.locationTitle
-    )
-      return;
+    ) {
+      return false;
+    }
+
+    if (!!to && !from) {
+      const hasDateAfterTo = event.variants.some(variant =>
+        isAfter(variant.datetime, to)
+      );
+
+      if (!hasDateAfterTo) return false;
+    }
+
+    if (!to && !!from) {
+      const hasDateBeforeFrom = event.variants.some(variant =>
+        isBefore(variant.datetime, from)
+      );
+
+      if (!hasDateBeforeFrom) return false;
+    }
+
+    if (!!to && !!from) {
+      const hasDateWithinRange = event.variants.some(variant => {
+        return (
+          isAfter(variant.datetime, to) && isBefore(variant.datetime, from)
+        );
+      });
+
+      if (!hasDateWithinRange) return false;
+    }
 
     return true;
   }, []);
@@ -109,6 +137,7 @@ const EventsGrid = ({ block, z, setRef, events }) => {
           <div
             className={cx(
               styles['EventsGrid__header-control'],
+              styles['EventsGrid__header-control--date'],
               'col-4 flex items-center'
             )}
           >
@@ -195,13 +224,14 @@ const EventsGrid = ({ block, z, setRef, events }) => {
           <div
             className={cx(
               styles['EventsGrid__header-control'],
-              'col-4 flex justify-center'
+              styles['EventsGrid__header-control--categories'],
+              'col-12 lg-col-4 flex justify-center'
             )}
           >
             {categories.map(category => (
               <Button
                 variant="primary-small"
-                className="mx1"
+                className="mx1 mb2"
                 color={
                   category === selectedCategory
                     ? 'madison-blue'
@@ -216,6 +246,7 @@ const EventsGrid = ({ block, z, setRef, events }) => {
           <div
             className={cx(
               styles['EventsGrid__header-control'],
+              styles['EventsGrid__header-control--location'],
               'col-4 flex justify-end'
             )}
           >
@@ -267,37 +298,82 @@ const EventsGrid = ({ block, z, setRef, events }) => {
           'flex flex-wrap justify-center'
         )}
       >
-        {filteredEvents.map(event => (
-          <div
-            key={event.id}
-            className={cx(styles['EventsGrid__event'], 'col-12 md-col-6')}
-          >
+        {filteredEvents.map(event => {
+          const firstValidVariant = event.variants.find(variant =>
+            isAfter(variant.datetime, new Date())
+          );
+
+          return (
             <div
-              className={cx(
-                styles['EventsGrid__event-inner'],
-                'card flex flex-wrap col-12 justify-center bg-white h100'
-              )}
+              key={event.id}
+              className={cx(styles['EventsGrid__event'], 'col-12 md-col-6')}
             >
-              {console.log('AAA', event)}
-              <div
-                className={cx(
-                  styles['EventsGrid__event-image-container'],
-                  'col-12 md-col-5 flex justify-center items-center'
-                )}
-                style={{ background: event.heroColor }}
-              >
-                <Image
-                  className={cx(styles['EventsGrid__event-image'], 'col-12')}
-                  src={event.image.src}
-                  alt={`${event.title} illustration.`}
-                />
-              </div>
-              <div className="col-12 md-col-7 p3">
-                <span className="small-title">{event.title}</span>
-              </div>
+              <Link to={event.link} className="text-decoration-none no-hover">
+                <div
+                  className={cx(
+                    styles['EventsGrid__event-inner'],
+                    'card flex flex-wrap col-12 justify-center bg-white h100'
+                  )}
+                >
+                  <div
+                    className={cx(
+                      styles['EventsGrid__event-image-container'],
+                      'col-12 md-col-5 flex justify-center items-center'
+                    )}
+                    style={{ background: event.heroColor }}
+                  >
+                    <Image
+                      className={cx(
+                        styles['EventsGrid__event-image'],
+                        'col-12'
+                      )}
+                      src={event.image.src}
+                      alt={`${event.title} illustration.`}
+                    />
+                  </div>
+                  <div className="col-12 md-col-7 p3 flex flex-column justify-between items-start">
+                    <div className="mb2">
+                      <span className="carter callout">{event.title}</span>
+                      {!!event.frequency && (
+                        <div className="mt1">
+                          <strong className="text-peach small">
+                            {event.frequency}
+                          </strong>
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex items-start flex-column justify-start">
+                      <span className="small block mb1">
+                        {event.variants.length} available times
+                      </span>
+                      {!!firstValidVariant && (
+                        <span className="small">
+                          <span>Next:</span>
+                          <strong
+                            className={cx(
+                              styles['EventsGrid__card-timing'],
+                              'relative inline-block ml1'
+                            )}
+                          >
+                            {format(
+                              firstValidVariant.datetime,
+                              'MMM dd, yyyy - h:mm a'
+                            )}
+                          </strong>
+                        </span>
+                      )}
+                    </div>
+                    <div className="mt3">
+                      <Button variant="primary" color="peach" to={event.link}>
+                        More Info
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

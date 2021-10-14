@@ -20,6 +20,7 @@ const LongText = props => {
       ref={refBlock => setRef(refBlock)}
       style={{ zIndex: z }}
       className={cx(
+        styles['LongText'],
         styles[colorClass],
         'flex justify-center px3 items-center text-center'
       )}

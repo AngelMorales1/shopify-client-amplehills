@@ -128,6 +128,16 @@
     }
   }
 
+  &__warning-message {
+    animation-duration: 1s !important;
+    animation-direction: forwards !important;
+    border-radius: radius('s');
+
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+
   &__message-checkout-container {
     flex-direction: column;
     order: 1;
