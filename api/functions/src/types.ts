@@ -30,3 +30,8 @@ export type ShopifyRateItem = {
   product_id: string | number;
   variant_id: string | number;
 }
+
+export type Product = {
+  title: string;
+  productType: string;
+}

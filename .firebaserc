@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ample-hills-api"
+  },
+  "targets": {
+    "ample-hills-api": {
+      "hosting": {
+        "www": [
+          "amplehills-com"
+        ]
+      }
+    }
+  }
+}

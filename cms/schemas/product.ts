@@ -127,6 +127,19 @@ export default {
       fieldset: 'options'
     },
     {
+      name: 'forcePreOrder',
+      title: 'Force Pre-Order?',
+      type: 'boolean',
+      fieldset: 'options'
+    },
+    {
+      name: 'preOrderText',
+      title: 'Pre-Order Text',
+      description: 'This will appear under the "Add" button on the Product Hero and in the cart.',
+      fieldset: 'options',
+      type: 'string'
+    },
+    {
       name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',

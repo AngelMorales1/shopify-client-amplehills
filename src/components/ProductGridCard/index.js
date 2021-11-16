@@ -15,7 +15,7 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
         'md-col-4': !productIsMerchandise
       })}
     >
-      {product.limitedEdition ? (
+      {product.forcePreOrder ? (
         <div
           className={cx(
             {
@@ -31,7 +31,7 @@ const ProductGridCard = ({ product, productIsMerchandise }) => {
               'center carter text-white'
             )}
           >
-            Limited Edition
+            Pre-Order!
           </p>
         </div>
       ) : null}

@@ -132,6 +132,8 @@ export const Product = `{
   description,
   availableInBYO,
   exclusiveToBYO,
+  forcePreOrder,
+  preOrderText,
   order,
   blocks[]${Block},
   seoTitle,

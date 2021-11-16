@@ -2,6 +2,7 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 import * as Sentry from '@sentry/browser';
+import { Integrations } from '@sentry/tracing';
 import packageJSON from '../package.json';
 
 import isProd from 'utils/isProd';
@@ -29,7 +30,10 @@ console.warn(
 /* Only load sentry on production */
 if (isProd()) {
   Sentry.init({
-    dsn: 'https://1d555991ae8a4e51b29c702028ca3a67@sentry.io/1265500'
+    dsn:
+      'https://db9966e6d2fb47a89b74e8ebf20fff75@o1059639.ingest.sentry.io/6048440',
+    integrations: [new Integrations.BrowserTracing()],
+    tracesSampleRate: 1.0
   });
 
   middleware.push(createSentryMiddleware(Sentry));

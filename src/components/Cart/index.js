@@ -158,6 +158,13 @@ class Cart extends Component {
                         >
                           <span className="small bold">{item.title}</span>
                         </Link>
+                        {item.product.preOrderText && (
+                          <div className="w100 my1">
+                            <strong className="extra-small text-peach">
+                              {item.product.preOrderText}
+                            </strong>
+                          </div>
+                        )}
                         <div className="flex flex-column mt2">
                           {item.cartAttributes.map(cartItemDetail => {
                             if (`${cartItemDetail}`.startsWith('__'))
@@ -193,6 +200,13 @@ class Cart extends Component {
                       >
                         <span className="small bold">{item.title}</span>
                       </Link>
+                      {item.product.preOrderText && (
+                        <div className="w100 my1">
+                          <strong className="extra-small text-peach">
+                            {item.product.preOrderText}
+                          </strong>
+                        </div>
+                      )}
                       {item.cartAttributes.map(cartItemDetail => {
                         if (`${cartItemDetail}`.startsWith('__')) return null;
                         return (

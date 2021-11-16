@@ -48,6 +48,14 @@
         "source": "/api/v1/webhooks/shopify/orders/create",
         "function": "webhooks_shopify_orders_create"
       },
+      {
+        "source": "/api/v1/events/attendees",
+        "function": "events_attendees"
+      },
+      {
+        "source": "/api/v1/events/attendees/create",
+        "function": "events_attendees_create"
+      },
 
       {
         "source": "/shipping",

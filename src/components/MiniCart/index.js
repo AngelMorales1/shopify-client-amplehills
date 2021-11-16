@@ -92,6 +92,13 @@ class MiniCart extends Component {
                         ${item.price}
                       </span>
                     </div>
+                    {item.product.preOrderText && (
+                      <div className="w100 my1">
+                        <strong className="extra-small text-peach">
+                          {item.product.preOrderText}
+                        </strong>
+                      </div>
+                    )}
                     {cartAttributes.length ? (
                       <div className="w100">
                         <ul className="my1">

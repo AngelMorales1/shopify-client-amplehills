@@ -13,6 +13,7 @@ const cors = access({
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
     'http://localhost:3000',
+    'https://amplehills.com',
     'https://ampletest.myshopify.com'
   ],
   methods: ['POST'],
@@ -45,7 +46,7 @@ export default functions.https.onRequest(async function(request, response) {
     return response.end(JSON.stringify(vote.id));
   } catch (e) {
     Sentry.captureException(e);
-    response.writeHead((e && e.status) || 500, {
+    response.writeHead((e && get(e, 'status')) || 500, {
       'Content-Type': 'application/json'
     });
     return response.end(JSON.stringify(formatError(e)));

@@ -162,12 +162,16 @@ export default createSelector(
             get(sanitizedDate[0].split('/'), '[2]', '').length === 2
               ? 'yy'
               : 'yyyy';
-          const t = sanitizedDate[1].includes(':') ? 'h:mma' : 'ha';
-          const datetime = parse(
-            dateStrWithoutEndTime,
-            `${m}/${d}/${y}, ${t}`,
-            new Date()
-          );
+          const t =
+            sanitizedDate[1] && sanitizedDate[1].includes(':') ? 'h:mma' : 'ha';
+          const datetime =
+            dateStrWithoutEndTime === 'Default Title'
+              ? new Date()
+              : parse(
+                  dateStrWithoutEndTime,
+                  `${m}/${d}/${y}, ${t}`,
+                  new Date()
+                );
 
           const dateStr = format(datetime, `${m}/${d}/${y}`);
           const timeStr = format(datetime, 'ha');

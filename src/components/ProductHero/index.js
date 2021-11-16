@@ -281,23 +281,30 @@ class ProductHero extends Component {
                 onChange={value => this.setState({ quantity: value })}
               />
               {(available && subItemsAvailable) ||
-              product.preOrderDate ||
+              product.forcePreOrder ||
               (forceAvailable && available) ? (
-                <div className="relative">
+                <div className="relative center">
                   <Button
-                    className={cx(styles['ProductHero__button'])}
+                    className={cx(styles['ProductHero__button'], {
+                      mt2: !!product.preOrderText
+                    })}
                     color="madison-blue"
                     variant="primary-responsive"
                     shadow={true}
                     onClick={this.addToCart}
                   >
                     <span>
-                      {product.preOrderDate ? 'Pre-Order' : 'Add to Cart'}
+                      {product.forcePreOrder ? 'Pre-Order' : 'Add to Cart'}
                     </span>
                     <span className="ml2">
                       ${(price * this.state.quantity).toFixed(2)}
                     </span>
                   </Button>
+                  {!!product.preOrderText && (
+                    <strong className="mt1 extra-small text-peach">
+                      {product.preOrderText}
+                    </strong>
+                  )}
                 </div>
               ) : (
                 <Button

@@ -171,6 +171,8 @@ export default createSelector(
             return variants.some(variant => variant.available);
           });
         const forceAvailable = get(product, 'forceAvailable', false);
+        const forcePreOrder = get(product, 'forcePreOrder', false);
+        const preOrderText = get(product, 'preOrderText', null);
         const headerId = get(product, 'headerId', '');
         const price = get(product, 'price', 0);
 
@@ -195,6 +197,8 @@ export default createSelector(
           subItemsAvailable,
           availableInByo,
           order,
+          forcePreOrder,
+          preOrderText,
           // preOrderDate,
           // cartDetails,
           // productHero,

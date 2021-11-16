@@ -7,6 +7,7 @@ import 'react-calendar/dist/Calendar.css';
 import gtag from 'utils/gtag';
 
 import { QuantitySelector, Button, Image } from 'components/base';
+import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './EventDetailHeroV2.scss';
 
 const knownPermutationsOfDateStrings = date => [
@@ -160,6 +161,20 @@ class EventDetailHeroV2 extends React.Component {
       ? selectedVariant.price
       : event.variants[0].price;
 
+    const breadcrumbs = [
+      { to: '/events', label: 'Events' },
+      {
+        to:
+          event.eventType === 'Ice Cream Socials'
+            ? '/ice-cream-socials' // TO-DO : change to /events/ample-hills-live
+            : '/ice-cream-classes',
+        label:
+          event.eventType === 'Ice Cream Socials'
+            ? 'Ample Hills Live'
+            : 'Ice Cream Classes'
+      }
+    ];
+
     return (
       <div
         className={cx(styles['EventDetailHeroV2'], 'drip col-12')}
@@ -201,6 +216,10 @@ class EventDetailHeroV2 extends React.Component {
                 'card bg-white portable-text'
               )}
             >
+              <Breadcrumbs
+                className={styles['EventDetailHeroV2__breadcrumbs']}
+                breadcrumbs={breadcrumbs}
+              />
               <h1 className="block-headline mb3 mt2">{event.title}</h1>
               <strong className="small">{`${
                 filteredVariants.length

@@ -7,7 +7,7 @@
 // const formatError = require('./utils/formatError');
 // const { json } = require('micro');
 
-// Sentry.init({ dsn: 'https://fce8c7e47cdd484d913ebdfc94801f33@sentry.io/1395390' });
+// Sentry.init({ dsn: "https://2d4cc299ad4b4fc889aa333c99653eef@o1059639.ingest.sentry.io/6048443" });
 
 // const cors = access({
 //   origins: [

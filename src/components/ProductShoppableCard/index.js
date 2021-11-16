@@ -59,6 +59,7 @@ const ProductShoppableCard = ({
                 quantity={quantity}
                 color="seafoam"
                 allowZero={true}
+                variant="byo"
                 onChange={newQuantity => handleQuantityChange(newQuantity)}
               />
               <Button

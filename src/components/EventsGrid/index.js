@@ -110,8 +110,6 @@ const EventsGrid = ({ block, z, setRef, events }) => {
     return true;
   }, []);
 
-  console.log('DOFGID', block, events);
-
   return (
     <div
       ref={refBlock => setRef(refBlock)}

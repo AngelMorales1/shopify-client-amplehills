@@ -1,6 +1,7 @@
 import * as functions from 'firebase-functions';
 import access from 'access-control';
 import * as Sentry from '@sentry/node';
+import get from 'lodash/get';
 
 import db from './../../../../lib/db';
 import formatError from './../../../../utils/formatError';
@@ -10,6 +11,7 @@ const cors = access({
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
     'http://localhost:3333',
+    'https://amplehills.com',
     'https://ample-hills.sanity.studio',
     'http://localhost:3000',
     'https://ampletest.myshopify.com'
@@ -44,7 +46,7 @@ export default functions
       return response.end(JSON.stringify(votes.length));
     } catch (e) {
       Sentry.captureException(e);
-      response.writeHead((e && e.status) || 500, {
+      response.writeHead((e && get(e, 'status')) || 500, {
         'Content-Type': 'application/json'
       });
       return response.end(JSON.stringify(formatError(e)));

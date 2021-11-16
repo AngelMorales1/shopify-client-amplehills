@@ -158,6 +158,10 @@ class ChooseYourOwnStory extends Component {
     this.props.actions.addLineItems(this.props.checkout.id, items);
   };
 
+  clearPints = () => {
+    this.setState({ pints: [] });
+  };
+
   render() {
     const pints = get(this.state, 'pints', []);
     const size = get(this.state, 'size', PintSizes.FOUR.size);
@@ -227,7 +231,9 @@ class ChooseYourOwnStory extends Component {
                     handleRemoveProduct={() =>
                       this.handleRemoveProduct(product.handle)
                     }
-                    quantity={pints.filter(pint => pint === handle).length}
+                    quantity={
+                      pints.filter(pint => pint === product.handle).length
+                    }
                   />
                 );
               })}
@@ -359,9 +365,20 @@ class ChooseYourOwnStory extends Component {
                 'col flex flex-wrap items-center xs-hide sm-hide md-hide'
               )}
             >
-              <label className="small bold">
-                Choose {PintSizes[pintSize].label} Flavors
-              </label>
+              <div>
+                <label className="small bold">
+                  Choose {PintSizes[pintSize].label} Flavors
+                </label>
+                {!!pints.length && (
+                  <Button
+                    variant="underline-peach"
+                    className="extra-small uppercase ml2"
+                    onClick={this.clearPints}
+                  >
+                    Clear
+                  </Button>
+                )}
+              </div>
               <div className="flex justify-start w100 pt2">
                 {pints.map((handle, i) => (
                   <Image
@@ -398,9 +415,18 @@ class ChooseYourOwnStory extends Component {
             >
               <div className="lg-hide xl-hide col col-7">
                 <div className="col col-12">
-                  <span className="small bold">
+                  <label className="small bold">
                     Choose {PintSizes[pintSize].label} Flavors
-                  </span>
+                  </label>
+                  {!!pints.length && (
+                    <Button
+                      variant="underline-peach"
+                      className="extra-small uppercase ml2"
+                      onClick={this.clearPints}
+                    >
+                      Clear
+                    </Button>
+                  )}
                 </div>
               </div>
               <div
@@ -411,17 +437,51 @@ class ChooseYourOwnStory extends Component {
               >
                 <QuantitySelector
                   color="madison-blue-white-border"
+                  className="xs-hide sm-hide md-hide"
                   quantity={quantity}
                   variant={this.state.currentBreakpoint}
                   onChange={value => this.setState({ quantity: value })}
                 />
+                <div className="flex justify-start w100 lg-hide xl-hide">
+                  {pints.map((handle, i) => (
+                    <Image
+                      key={i}
+                      className={cx(
+                        styles['ChooseYourOwnStory__pint-icon'],
+                        styles['ChooseYourOwnStory__pint-icon--small'],
+                        'mr1'
+                      )}
+                      src={contentfulImgUtil(
+                        get(products, `[${handle}].pintImage`, ''),
+                        '200',
+                        'png'
+                      )}
+                    />
+                  ))}
+                  {[...Array(size - pints.length)].map((_, i) => (
+                    <div
+                      key={i}
+                      className={cx(
+                        styles['ChooseYourOwnStory__pint-icon'],
+                        styles['ChooseYourOwnStory__pint-icon--small'],
+                        'mr1'
+                      )}
+                    >
+                      <Image src="/assets/images/icon-pint.svg" />
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="col">
                 {product.available ? (
                   <Button
                     className={cx(
                       styles['ChooseYourOwnStory__button-text'],
-                      'small flex flex-row justify-between'
+                      'small flex flex-row justify-between',
+                      {
+                        [styles['ChooseYourOwnStory__button-text--enabled']]:
+                          size === pints.length
+                      }
                     )}
                     disabled={size !== pints.length}
                     variant="primary-small"

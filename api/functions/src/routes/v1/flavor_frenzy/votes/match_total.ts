@@ -11,6 +11,7 @@ const cors = access({
   origins: [
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
+    'https://amplehills.com',
     'http://localhost:3333',
     'https://ample-hills.sanity.studio',
     'http://localhost:3000',
@@ -49,7 +50,7 @@ export default functions.https.onRequest(async function(request, response) {
     return response.end(JSON.stringify({ matchData, remoteMatch }));
   } catch (e) {
     Sentry.captureException(e);
-    response.writeHead((e && e.status) || 500, {
+    response.writeHead((e && get(e, 'status')) || 500, {
       'Content-Type': 'application/json'
     });
     return response.end(JSON.stringify(formatError(e)));

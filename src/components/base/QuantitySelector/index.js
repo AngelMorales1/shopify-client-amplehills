@@ -47,6 +47,7 @@ const QuantitySelector = ({
     switch (variant) {
       case 'small':
         return 'quantity-small';
+      case 'byo':
       case 'medium':
         return 'quantity-medium';
       default:
@@ -58,6 +59,7 @@ const QuantitySelector = ({
     switch (variant) {
       case 'small':
         return 'circle-small';
+      case 'byo':
       case 'medium':
         return 'circle-medium';
       default:
@@ -83,7 +85,10 @@ const QuantitySelector = ({
         variant={textfieldVariant(variant)}
         value={quantity}
         color={colorVariation(color).inputColor}
-        className="copy mx2"
+        className={cx('copy', {
+          mx1: variant === 'byo',
+          mx2: variant !== 'byo'
+        })}
         onChange={value => changeQuantity(value)}
       />
       <Button

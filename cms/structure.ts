@@ -10,11 +10,12 @@ import {
   FaSearchLocation as SearchLocation,
   FaParagraph as Paragraph,
 } from 'react-icons/fa';
-import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings } from 'react-icons/io5';
+import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings, IoPeopleSharp } from 'react-icons/io5';
 import { RiLayoutFill } from 'react-icons/ri';
 
 import SanityClient from './lib/SanityClient';
 import FlavorFrenzyTotals from './panes/FlavorFrenzyTotals';
+import EventAttendees from './panes/EventAttendees';
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
   if (schemaType === 'flavorFrenzy') {
@@ -24,6 +25,16 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
         .component(FlavorFrenzyTotals)
         .title('Totals')
         .icon(ChartIcon)
+    ]);
+  }
+
+  if (schemaType === 'event') {
+    return S.document().views([
+      S.view.form().icon(PenIcon),
+      S.view
+        .component(EventAttendees)
+        .title('Attendees')
+        .icon(IoPeopleSharp)
     ]);
   }
 };

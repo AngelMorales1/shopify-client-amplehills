@@ -6,13 +6,14 @@ import get from 'lodash/get';
 
 import formatError from './../../../../utils/formatError';
 
-Sentry.init({ dsn: 'https://fce8c7e47cdd484d913ebdfc94801f33@sentry.io/1395390' });
+Sentry.init({ dsn: "https://2d4cc299ad4b4fc889aa333c99653eef@o1059639.ingest.sentry.io/6048443" });
 const KLAVIYO_ENDPOINT = 'https://a.klaviyo.com/api/v2/list/WW9nrp/subscribe';
 
 const cors = access({
   origins: [
     'https://www.amplehills.com',
     'https://staging.amplehills.com',
+    'https://amplehills.com',
     'http://localhost:3000',
     'https://ampletest.myshopify.com'
   ],
@@ -50,7 +51,7 @@ const klaviyo = functions.https.onRequest(async (req, res) => {
     return res.end(JSON.stringify({ status: 'ok' }));
   } catch (e) {
     Sentry.captureException(e);
-    res.writeHead((e && e.status) || 500, {
+    res.writeHead((e && get(e, 'status')) || 500, {
       'Content-Type': 'application/json'
     });
     return res.end(JSON.stringify(formatError(e)));
