@@ -175,7 +175,8 @@ class ChooseYourOwnStory extends Component {
       products,
       ourPledge,
       actions,
-      ourPledgeOverlayIsOpen
+      ourPledgeOverlayIsOpen,
+      settings
     } = this.props;
     const handle = get(this.props.product, 'handle', 'build-you-own');
     const product = get(products, handle, {});
@@ -320,13 +321,9 @@ class ChooseYourOwnStory extends Component {
               <OurPledge
                 actions={actions}
                 ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
-                shippingInformation={get(
-                  ourPledgeData,
-                  'shippingInformation',
-                  ''
-                )}
-                shippingPledge={get(ourPledgeData, 'shippingPledge', '')}
-                calloutImage={get(ourPledgeData, 'calloutImage.data', '')}
+                shippingInformation={get(settings, 'ourPledgeShippingInfo', '')}
+                shippingPledge={get(settings, 'ourPledgeShippingPledge', '')}
+                calloutImage={get(settings, 'ourPledgeIcon.src', '')}
               />
             </div>
           </div>
