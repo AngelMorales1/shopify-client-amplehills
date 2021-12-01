@@ -32,7 +32,6 @@ class ProductDetailView extends Component {
             <ProductHero
               products={products}
               product={product}
-              ourPledge={ourPledge}
               productHero={productHero}
               z={get(this, 'props.product.blocks', []).length + 2}
               {...this.props}
@@ -51,6 +50,7 @@ class ProductDetailView extends Component {
                   key={get(block, '_key', i)}
                   block={block}
                   product={product}
+                  // TO-DO: Remove this OurPledge from whatever uses it and force it to use new sanity fields
                   ourPledge={ourPledge}
                   whatsIncluded={whatsIncluded}
                   z={blocks.length - i + additionalZIndex}

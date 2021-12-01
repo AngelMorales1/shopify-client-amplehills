@@ -145,6 +145,7 @@ class ProductHero extends Component {
       ourPledge,
       ourPledgeOverlayIsOpen,
       actions,
+      settings,
       z
     } = this.props;
     const {
@@ -155,6 +156,8 @@ class ProductHero extends Component {
       title
     } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
+
+    console.log('SS', settings);
 
     return (
       <div
@@ -324,13 +327,9 @@ class ProductHero extends Component {
             <OurPledge
               actions={actions}
               ourPledgeOverlayIsOpen={ourPledgeOverlayIsOpen}
-              shippingInformation={get(
-                ourPledgeData,
-                'shippingInformation',
-                ''
-              )}
-              shippingPledge={get(ourPledgeData, 'shippingPledge', '')}
-              calloutImage={get(ourPledgeData, 'calloutImage.data', '')}
+              shippingInformation={get(settings, 'ourPledgeShippingInfo', '')}
+              shippingPledge={get(settings, 'ourPledgeShippingPledge', '')}
+              calloutImage={get(settings, 'ourPledgeIcon.src', '')}
             />
           </div>
         </div>

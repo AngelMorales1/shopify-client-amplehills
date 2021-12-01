@@ -4,7 +4,7 @@ import marked from 'marked';
 import cx from 'classnames';
 import styles from './OurPledgeOverlay.scss';
 
-import { Image, Button } from 'components/base';
+import { Image, Button, PortableText } from 'components/base';
 
 const OurPledgeOverlay = ({
   closeOurPledgeOverlay,
@@ -54,19 +54,15 @@ const OurPledgeOverlay = ({
               <h2 className="my2 callout text-madison-blue">
                 Shipping information
               </h2>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: marked(shippingInformation)
-                }}
-                className="mb2 markdown-block text-madison-blue"
-              />
+              <p className="mb2 portable-text text-madison-blue">
+                <PortableText blocks={shippingInformation} />
+              </p>
             </div>
             <div>
               <h2 className="my2 callout text-madison-blue">Shipping Pledge</h2>
-              <p
-                dangerouslySetInnerHTML={{ __html: marked(shippingPledge) }}
-                className="markdown-block text-madison-blue"
-              />
+              <p className="portable-text text-madison-blue">
+                <PortableText blocks={shippingPledge} />
+              </p>
             </div>
           </div>
         </div>

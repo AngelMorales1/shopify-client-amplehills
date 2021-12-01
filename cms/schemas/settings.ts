@@ -97,23 +97,16 @@ export default {
       title: 'Our Pledge Icon',
       fieldset: 'pledge'
     }),
-    image({
-      name: 'ourPledgeCalloutImage',
-      title: 'Our Pledge Callout Image',
-      fieldset: 'pledge'
-    }),
-    {
+    portableText({
       name: 'ourPledgeShippingInfo',
       title: 'Shipping Information',
-      type: 'string',
       fieldset: 'pledge'
-    },
-    {
+    }),
+    portableText({
       name: 'ourPledgeShippingPledge',
       title: 'Pledge',
-      type: 'string',
       fieldset: 'pledge'
-    },
+    }),
     {
       name: 'footerNav',
       title: 'Footer Nav',

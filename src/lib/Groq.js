@@ -228,6 +228,7 @@ export const Event = `{
 export const Settings = `{
   ...,
   cartWarningMessage,
+  ourPledgeIcon${Img},
   productsInNav[]->${Product},
   productsOnLanding[]->${Product}
 }`;
