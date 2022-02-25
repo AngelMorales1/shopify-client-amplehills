@@ -63,7 +63,7 @@ class NewsletterModal extends Component {
       >
         <div className="flex flex-row items-center justify-between">
           <p className={cx(styles['NewsletterModal__title'], 'px1 text-peach')}>
-            Flavor Frenzy 2021
+            Flavor Frenzy 2022
           </p>
           <Button
             ariaLabel="Close the newsletter subscribe popup"

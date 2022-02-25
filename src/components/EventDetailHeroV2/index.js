@@ -36,8 +36,15 @@ class EventDetailHeroV2 extends React.Component {
     super(props);
 
     const firstVariant = props.event.variants.find(variant => {
+      console.log(
+        variant.datetime,
+        new Date(),
+        compareAsc(variant.datetime, new Date())
+      );
       return compareAsc(variant.datetime, new Date()) === 1;
     });
+
+    console.log('FV', firstVariant, props.event.variants);
 
     if (firstVariant) this.state.selectedVariant = firstVariant;
   }
@@ -175,6 +182,8 @@ class EventDetailHeroV2 extends React.Component {
       }
     ];
 
+    console.log('EEEE', event);
+
     return (
       <div
         className={cx(styles['EventDetailHeroV2'], 'drip col-12')}
@@ -235,7 +244,7 @@ class EventDetailHeroV2 extends React.Component {
                     className={styles['EventDetailHeroV2__hero-button']}
                     aria-label="Select Date."
                     onClick={
-                      dateIsOpen
+                      dateIsOpen || !selectedVariant
                         ? this.closeDateSelector
                         : this.openDateSelector
                     }

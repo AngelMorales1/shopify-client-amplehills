@@ -1,4 +1,5 @@
 import slugIsValid from '../utils/slugIsValid';
+import blocks from './subschemas/blocks';
 
 export default {
   name: 'flavorFrenzy',
@@ -155,6 +156,10 @@ export default {
           }
         }
       }]
-    }
+    },
+    blocks({
+      name: 'blocks',
+      title: 'Content Blocks'
+    })
   ]
 };

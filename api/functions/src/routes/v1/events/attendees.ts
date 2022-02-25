@@ -47,6 +47,13 @@ const attendees = functions.https.onRequest(async (req, res) => {
       return res.end();
     }
 
+    let ding: any = [];
+    (await db.collection('eventAttendees').where('name', '==', name).get()).forEach(rec => {
+      ding.push(rec.data());
+    });
+    console.log('DING', ding.length);
+    ding.forEach((don: any) => console.log(don.variantName))
+
     const events: { [key: string]: any}= {};
     for (let i = 0; i < variants.length; i++) {
       events[variants[i] as string] = [];
@@ -54,7 +61,8 @@ const attendees = functions.https.onRequest(async (req, res) => {
         .where('name', '==', name)
         .where('variantName', '==', variants[i])
         .get();
-      
+  
+
       records.forEach((doc: any) => {
         const record = {
           _id: doc.id,

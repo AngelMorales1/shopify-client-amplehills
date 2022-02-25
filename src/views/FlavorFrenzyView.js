@@ -33,7 +33,7 @@ class FlavorFrenzyView extends Component {
 
     const flavorFrenzy = get(model, 'flavorFrenzy');
     const votes = get(model, 'votes');
-    const blocks = get(model, 'genericPage.items[0].fields.contentBlocks', []);
+    const blocks = get(model, 'flavorFrenzy.blocks', []);
     const predictionsAreActive = get(
       flavorFrenzy,
       'predictions.isActive',
@@ -48,12 +48,10 @@ class FlavorFrenzyView extends Component {
       <div className="FlavorFrenzyView">
         <GenericHero
           block={{
-            fields: {
-              title: get(flavorFrenzy, 'hero.title', flavorFrenzy.name),
-              text: get(flavorFrenzy, 'hero.description'),
-              drip: true,
-              color: 'pink'
-            }
+            title: get(flavorFrenzy, 'hero.title', flavorFrenzy.name),
+            text: get(flavorFrenzy, 'hero.description'),
+            drip: true,
+            backgroundColor: 'pink'
           }}
           renderButton={() => (
             <div className="flex justify-center">
@@ -82,6 +80,8 @@ class FlavorFrenzyView extends Component {
         )}
         {blocks &&
           blocks.map((block, i) => {
+            console.log('BLOCKS', block);
+
             const upperDripIsOn = get(block, 'fields.upperDrip', false);
             const additionalZIndex = upperDripIsOn ? 1 : 0;
 

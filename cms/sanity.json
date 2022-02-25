@@ -29,7 +29,7 @@
     },
     {
       "name": "part:@sanity/desk-tool/structure",
-      "path": "./structure"
+      "path": "./structure.tsx"
     },
     {
       "implements": "part:@sanity/production-preview/resolve-production-url",

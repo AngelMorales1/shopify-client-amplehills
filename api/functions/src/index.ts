@@ -13,6 +13,7 @@ import flavor_frenzy_predictions_create from './routes/v1/flavor_frenzy/predicti
 import events_attendees from './routes/v1/events/attendees';
 import events_attendees_create from './routes/v1/events/create_attendee';
 import webhooks_shopify_orders_create from './routes/v1/webhooks/shopify/orders/create';
+import webhooks_shopify_orders_create_ticket from './routes/v1/webhooks/shopify/orders/create_ticket';
 
 export {
   shipping,
@@ -31,6 +32,7 @@ export {
   flavor_frenzy_predictions_create,
 
   webhooks_shopify_orders_create,
+  webhooks_shopify_orders_create_ticket,
   events_attendees,
   events_attendees_create
 };

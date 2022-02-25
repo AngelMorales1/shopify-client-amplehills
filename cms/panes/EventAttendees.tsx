@@ -41,13 +41,15 @@ const totalAttendees = function(date, orders) {
 }
 
 const EventAttendees: FC<{ document: any }> = ({ document }) => {
-  const { published } = document;
+  const { published, displayed, draft } = document;
   const [attendees, setAttendees] = useState<{ [key: string]: any[] } | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const doc = published || displayed || draft;
+
   useEffect(() => {
-    const name = published.name;
-    const variants = (published.variants || []).map(variant => variant.shopifyName);
+    const name = doc?.name;
+    const variants = (doc.variants || []).map(variant => variant.shopifyName);
 
     const fetchAttendees = async () => {
       setIsLoading(true);
@@ -56,7 +58,7 @@ const EventAttendees: FC<{ document: any }> = ({ document }) => {
     };
 
     fetchAttendees();
-  }, [published]);
+  }, [doc]);
 
   const exportToCsv = useCallback((date, data) => {
     const csvExporter = new ExportToCsv({ 
@@ -65,8 +67,8 @@ const EventAttendees: FC<{ document: any }> = ({ document }) => {
       decimalSeparator: '.',
       showLabels: true, 
       showTitle: true,
-      title: `${published.name} - ${date}`,
-      filename: `${published.name.toLowerCase().split(' ').join('-')}-${date.split(' ').join('-').split('/').join('-').split(',').join('-')}`,
+      title: `${doc.name} - ${date}`,
+      filename: `${doc.name.toLowerCase().split(' ').join('-')}-${date.split(' ').join('-').split('/').join('-').split(',').join('-')}`,
       useTextFile: false,
       useBom: true,
       useKeysAsHeaders: true

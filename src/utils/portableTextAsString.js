@@ -1,6 +1,8 @@
 import get from 'lodash/get';
 
 const portableTextAsString = portableText => {
+  if (!portableText) return '';
+
   if (typeof portableText === 'string') {
     return portableText;
   }

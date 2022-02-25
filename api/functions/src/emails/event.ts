@@ -50,8 +50,8 @@ export const compose = (config: EventEmailConfig): string => `
       </tr>
       <tr width="600px">
         <td width="600px">
-          <div style="background: url('https://cdn.sanity.io/images/1v8tcmfe/production/bad5a1c62c92a6601a5ddb6254410b8e32e1caa1-1330x1760.png'); background-size: cover; background-position: center center; background-repeat: no-repeat; width: 600px; height: 794px; overflow: auto;" >
-            <div style="border: dotted #fe5c60 5px; width: 300px; ${config.title.length > 21 ? 'padding: 25px; height: 300px;' : 'padding: 50px 25px; height: 250px;'} margin-top: 225px; margin-left: 120px; text-align: center; background: #fff;">
+          <div style="background: url('https://cdn.sanity.io/images/1v8tcmfe/production/0c5e045c2475cec9f82ffeef02547b641fef0801-1000x1554.png?fit=max&w=1200&h=1200'); background-size: cover; background-position: center center; background-repeat: no-repeat; width: 600px; height: 934px; overflow: auto;" >
+            <div style="border: dotted #fe5c60 5px; width: 300px; ${config.title.length > 21 ? 'padding: 25px; height: 300px;' : 'padding: 50px 25px; height: 250px;'} margin-top: 292px; margin-left: 120px; text-align: center; background: #fff;">
               <p style="margin-bottom: 30px"><img width="126px" height="18px" src="https://cdn.sanity.io/images/1v8tcmfe/production/a79b40c5f852f58afb96e8ffdce5972c67451320-275x39.png?fit=max&w=1200&h=1200" alt="You're going to:" /></p>
               <p style="${config.title.length > 21 ? 'font-size: 24px; line-height: 29px;' : 'font-size: 30px; line-height: 35px;'}">
                 <strong>${config.title}</strong>

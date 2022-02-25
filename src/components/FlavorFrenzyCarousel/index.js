@@ -94,7 +94,7 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
           })
         );
         localStorage.setItem(flavorFrenzy.name, true);
-        window.location.href = '/flavor-frenzy-2021/thank-you';
+        window.location.href = '/flavor-frenzy-2022/thank-you';
       };
 
       vote();
@@ -193,110 +193,117 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
             </div>
           )}
         >
-          {matches.map(match => (
-            <div
-              className={cx(
-                styles['FlavorFrenzyCarousel__slide'],
-                'flex items-center justify-center flex-column h100 w100'
-              )}
-            >
+          {matches.map(match => {
+            if (!match.flavor1)
+              return console.warn('Match not rendered: Requires Flavor 1');
+            if (!match.flavor2)
+              return console.warn('Match not rendered: Requires Flavor 2');
+
+            return (
               <div
                 className={cx(
-                  styles['FlavorFrenzyCarousel__slide-title'],
-                  'w100 center p3'
+                  styles['FlavorFrenzyCarousel__slide'],
+                  'flex items-center justify-center flex-column h100 w100'
                 )}
               >
-                <span>Vote for a Flavor in Each Match Up!</span>
-              </div>
-              <div className="flex justify-center items-center w100">
-                {[match.flavor1, match.flavor2].map(flavor => (
-                  <div
-                    className={cx(
-                      styles['FlavorFrenzyCarousel__vote-card'],
-                      'bg-white relative'
-                    )}
-                  >
+                <div
+                  className={cx(
+                    styles['FlavorFrenzyCarousel__slide-title'],
+                    'w100 center p3'
+                  )}
+                >
+                  <span>Vote for a Flavor in Each Match Up!</span>
+                </div>
+                <div className="flex justify-center items-center w100">
+                  {[match.flavor1, match.flavor2].map(flavor => (
                     <div
                       className={cx(
-                        styles['FlavorFrenzyCarousel__vote-card-info'],
-                        'flex flex-column'
+                        styles['FlavorFrenzyCarousel__vote-card'],
+                        'bg-white relative'
                       )}
                     >
-                      <span className="small-title text-peach mb1">
-                        Vote for
-                      </span>
-                      <span
-                        className={cx(
-                          styles['FlavorFrenzyCarousel__card-title'],
-                          'mb2'
-                        )}
-                      >
-                        {flavor.name}
-                      </span>
-                      <span className="markdown-block small mb2 xs-hide sm-hide">
-                        <PortableText blocks={flavor.description} />
-                      </span>
-                      <span
-                        className={cx(
-                          'markdown-block extra-small mb2 md-hide lg-hide',
-                          {
-                            'extra-small':
-                              portableTextAsString(flavor.description).length <
-                              160,
-                            'xx-small':
-                              portableTextAsString(flavor.description).length >=
-                              160
-                          }
-                        )}
-                      >
-                        <PortableText blocks={flavor.description} />
-                      </span>
-                    </div>
-                    <div
-                      className={cx(
-                        styles['FlavorFrenzyCarousel__card-controls'],
-                        'absolute b0 l0 flex w100'
-                      )}
-                    >
-                      <Button
-                        variant="primary"
-                        color="madison-blue"
-                        className={cx(
-                          styles['FlavorFrenzyCarousel__vote-button'],
-                          'align-end'
-                        )}
-                        disabled={pendingVote}
-                        onClick={() => {
-                          setSelectedVotes({
-                            ...selectedVotes,
-                            [match._id]: flavor._id
-                          });
-                        }}
-                      >
-                        Choose Flavor
-                      </Button>
                       <div
                         className={cx(
-                          styles['FlavorFrenzyCarousel__vote-count'],
-                          'flex items-center justify-center'
+                          styles['FlavorFrenzyCarousel__vote-card-info'],
+                          'flex flex-column'
                         )}
                       >
-                        <span className="callout text-peach xs-hide sm-hide">
-                          {getPercentageOfVote(match._id, flavor._id)}%
+                        <span className="small-title text-peach mb1">
+                          Vote for
                         </span>
-                        <p className="bold extra-small pb1 md-hide lg-hide">
-                          {getPercentageOfVote(match._id, flavor._id)}% &nbsp;
-                        </p>
-                        <p className="text-peach extra-small pb1 uppercase semi-bold">
-                          of the vote
-                        </p>
+                        <span
+                          className={cx(
+                            styles['FlavorFrenzyCarousel__card-title'],
+                            'mb2'
+                          )}
+                        >
+                          {flavor.name}
+                        </span>
+                        <span className="markdown-block small mb2 xs-hide sm-hide">
+                          <PortableText blocks={flavor.description} />
+                        </span>
+                        <span
+                          className={cx(
+                            'markdown-block extra-small mb2 md-hide lg-hide',
+                            {
+                              'extra-small':
+                                portableTextAsString(flavor.description)
+                                  .length < 160,
+                              'xx-small':
+                                portableTextAsString(flavor.description)
+                                  .length >= 160
+                            }
+                          )}
+                        >
+                          <PortableText blocks={flavor.description} />
+                        </span>
+                      </div>
+                      <div
+                        className={cx(
+                          styles['FlavorFrenzyCarousel__card-controls'],
+                          'absolute b0 l0 flex w100'
+                        )}
+                      >
+                        <Button
+                          variant="primary"
+                          color="madison-blue"
+                          className={cx(
+                            styles['FlavorFrenzyCarousel__vote-button'],
+                            'align-end'
+                          )}
+                          disabled={pendingVote}
+                          onClick={() => {
+                            setSelectedVotes({
+                              ...selectedVotes,
+                              [match._id]: flavor._id
+                            });
+                          }}
+                        >
+                          Choose Flavor
+                        </Button>
+                        <div
+                          className={cx(
+                            styles['FlavorFrenzyCarousel__vote-count'],
+                            'flex items-center justify-center'
+                          )}
+                        >
+                          <span className="callout text-peach xs-hide sm-hide">
+                            {getPercentageOfVote(match._id, flavor._id)}%
+                          </span>
+                          <p className="bold extra-small pb1 md-hide lg-hide">
+                            {getPercentageOfVote(match._id, flavor._id)}% &nbsp;
+                          </p>
+                          <p className="text-peach extra-small pb1 uppercase semi-bold">
+                            of the vote
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
           <div
             className={cx(
               styles['FlavorFrenzyCarousel__slide'],
@@ -323,6 +330,11 @@ const FlavorFrenzyCarousel = ({ flavorFrenzy, votes }) => {
             </div>
             <div className="my3 flex flex-wrap items-center justify-center container-width mxauto">
               {Object.entries(selectedVotes).map(([match, flavor]) => {
+                if (!match.flavor1)
+                  return console.warn('Match not rendered: Requires Flavor 1');
+                if (!match.flavor2)
+                  return console.warn('Match not rendered: Requires Flavor 2');
+
                 const matchIndex = matches.findIndex(
                   matchObj => matchObj._id === match
                 );

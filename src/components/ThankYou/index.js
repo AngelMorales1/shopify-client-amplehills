@@ -22,7 +22,7 @@ const ThankYou = () => (
       </div>
       <div className="flex items-center justify-center">
         <Button
-          to="/flavor-frenzy-2021"
+          to="/flavor-frenzy-2022"
           label="Return to Flavor Frenzy"
           color="madison-blue"
           variant="primary"

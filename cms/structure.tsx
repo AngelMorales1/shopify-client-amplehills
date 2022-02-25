@@ -1,3 +1,4 @@
+import React from 'react';
 import S from '@sanity/desk-tool/structure-builder';
 import {
   FaPen as PenIcon,
@@ -6,15 +7,17 @@ import {
   FaChartBar as ChartIcon,
   FaShoppingCart as Cart,
   FaTag as Tag,
+  FaDownload,
   FaTruck as Truck,
   FaSearchLocation as SearchLocation,
   FaParagraph as Paragraph,
 } from 'react-icons/fa';
-import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings, IoPeopleSharp } from 'react-icons/io5';
+import { IoLocation, IoCalendarClear, IoDocumentSharp, IoStorefront, IoSettings, IoPeopleSharp, IoDownload } from 'react-icons/io5';
 import { RiLayoutFill } from 'react-icons/ri';
 
 import SanityClient from './lib/SanityClient';
 import FlavorFrenzyTotals from './panes/FlavorFrenzyTotals';
+import DownloadCSV from './panes/DownloadCSV';
 import EventAttendees from './panes/EventAttendees';
 
 export const getDefaultDocumentNode = ({ schemaType }) => {
@@ -88,6 +91,10 @@ const Structure = S.list()
               .title('Location Tags')
               .icon(Tag)
               .child(S.documentTypeList('retailLocationTag').title('Location Tags')),
+            S.listItem()
+              .title('Download CSV')
+              .icon(FaDownload)
+              .child(S.component(DownloadCSV).title('Download CSV')),
           ])
       ),
     S.divider(),

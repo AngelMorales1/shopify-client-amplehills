@@ -72,10 +72,10 @@ const Routes = ({ location }) => (
       component={CakeRequestFormContainer}
     />
     {/* Temporary routes */}
-    <Route exact path="/flavor-frenzy-2021" component={FlavorFrenzyContainer} />
+    <Route exact path="/flavor-frenzy-2022" component={FlavorFrenzyContainer} />
     <Route
       exact
-      path="/flavor-frenzy-2021/thank-you"
+      path="/flavor-frenzy-2022/thank-you"
       component={FlavorFrenzyThankYouContainer}
     />
     <Route exact path="/:genericPageSlug" component={GenericPageContainer} />

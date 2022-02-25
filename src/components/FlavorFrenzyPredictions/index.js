@@ -49,7 +49,7 @@ const FlavorFrenzyPredictions = ({ flavorFrenzy }) => {
           </h2>
           <span className="copy">
             You predicted <strong>{prediction}</strong> will win Flavor Frenzy
-            2021. Voting will open soon, so watch your email inbox for Flavor
+            2022. Voting will open soon, so watch your email inbox for Flavor
             Frenzy updates!
           </span>
         </div>
