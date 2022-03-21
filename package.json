@@ -28,7 +28,7 @@
     "marked": "^0.4.0",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
-    "node-sass": "^4.9.0",
+    "node-sass": "npm:sass",
     "nuka-carousel": "^4.3.11",
     "prop-types": "^15.6.1",
     "qs": "^6.5.2",

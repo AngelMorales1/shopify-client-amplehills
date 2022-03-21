@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "website"
-  },
   "api": {
-    "projectId": "",
-    "dataset": "prod_2"
+    "projectId": "dln5ca6t",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "ample-hills-creamery"
   },
   "plugins": [
     "@sanity/base",

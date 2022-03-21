@@ -5,13 +5,13 @@ import * as Serializers from 'lib/Serializers';
 import getUrlParam from 'utils/getUrlParam';
 
 export const SanityClient = sanityClient({
-  projectId: '1v8tcmfe',
+  projectId: 'dln5ca6t',
   dataset: 'production',
   useCdn: true
 });
 
 export const SanityPreviewClient = sanityClient({
-  projectId: '1v8tcmfe',
+  projectId: 'dln5ca6t',
   dataset: 'production',
   token: process.env.REACT_APP_SANITY_PREVIEW_TOKEN,
   useCdn: false,
@@ -65,7 +65,7 @@ export const Sanity = {
   fetchProducts: function() {
     const previewId = false; // TO-DO
     const client = !!previewId ? SanityPreviewClient : SanityClient;
-    const query = `*[_type == 'product'] ${Groq.Product}`;
+    const query = `*[_type == 'product' && !defined(store.id)] ${Groq.Product}`;
 
     return client.fetch(query).then(Serializers.products);
   },

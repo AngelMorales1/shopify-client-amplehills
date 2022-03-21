@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import marked from 'marked';
 
 import get from 'utils/get';

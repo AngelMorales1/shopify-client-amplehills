@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
 import PropTypes from 'prop-types';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import cx from 'classnames';
 
 class MapboxMap extends Component {

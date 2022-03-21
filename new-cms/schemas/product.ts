@@ -37,13 +37,6 @@ export default {
       type: 'string',
       description: "The name of the flavor."
     },
-    // Shopify product
-    {
-      name: 'store',
-      title: 'Shopify',
-      type: 'shopifyProduct',
-      description: 'Product data from Shopify (read-only)'
-    },
     {
       name: 'productHandle',
       title: 'Product Handle / Slug',
@@ -164,16 +157,25 @@ export default {
       type: 'image',
       fieldset: 'seo'
     },
+    // Shopify product
+    {
+      name: 'store',
+      title: 'Shopify',
+      type: 'shopifyProduct',
+      description: 'Product data from Shopify (read-only)'
+    },
   ],
   preview: {
     select: {
       title: 'title',
       image: 'pintImage',
       grid: 'gridImage',
+      store: 'store'
     },
     prepare(selection) {
       return {
-        title: selection.title,
+        title: selection.title || `${selection.store.title}`,
+        subtitle: !!selection.title ? '' : 'SHOPIFY ONLY',
         media: selection.image || selection.grid
       }
     }

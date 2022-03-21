@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 import cx from 'classnames';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import productModel from 'models/productModel';
 import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
@@ -156,8 +156,6 @@ class ProductHero extends Component {
       title
     } = product;
     const ourPledgeData = get(ourPledge, Object.keys(ourPledge)[0], {});
-
-    console.log('SS', settings);
 
     return (
       <div
