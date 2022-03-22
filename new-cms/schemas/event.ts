@@ -25,6 +25,11 @@ export default {
       options: { collapsible: true, collapsed: true }
     },
     {
+      name: 'content',
+      title: 'Page Content',
+      options: { collapsible: true, collapsed: true }
+    },
+    {
       name: 'cardContent',
       title: 'Card Content',
       options: { collapsible: true, collapsed: true }
@@ -46,10 +51,26 @@ export default {
         'This takes the place of the slug/url. This must match the Shopify handle if there is one.'
     },
     {
+      name: 'product',
+      title: 'Event Product (Shopify Connect)',
+      type: 'reference',
+      to: [{
+        type: 'product'
+      }]
+    },
+    {
       name: 'location',
       title: 'Location',
       type: 'reference',
       to: [{ type: 'location' }]
+    },
+    {
+      name: 'eventType',
+      title: 'Event Type',
+      type: 'string',
+      options: {
+        list: ['Pints and Postcards', 'Ice Cream Socials', 'Ice Cream Classes']
+      }
     },
     {
       name: 'heroColor',
@@ -64,13 +85,6 @@ export default {
       validation: Rule => Rule.required().min(20).max(350),
       fieldset: 'hero',
     },
-    {
-      name: 'variants',
-      title: 'Variants (Dates)',
-      type: 'array',
-      of: [{ type: 'eventVariant' }],
-      fieldset: 'hero'
-    },
     image({
       name: 'image',
       title: 'Image',
@@ -78,16 +92,9 @@ export default {
     }),
     blocks({
       name: 'blocks',
-      title: 'Content Blocks'
+      title: 'Content Blocks',
+      fieldset: 'content'
     }),
-    {
-      name: 'eventType',
-      title: 'Event Type',
-      type: 'string',
-      options: {
-        list: ['Pints and Postcards', 'Ice Cream Socials', 'Ice Cream Classes']
-      }
-    },
     {
       name: 'frequency',
       title: 'Frequency',
@@ -129,5 +136,13 @@ export default {
       title: 'Text',
       fieldset: 'deprecated'
     }),
+    {
+      name: 'variants',
+      title: 'Variants (Dates)',
+      type: 'array',
+      of: [{ type: 'eventVariant' }],
+      fieldset: 'deprecated',
+      hidden: true
+    },
   ]
 };

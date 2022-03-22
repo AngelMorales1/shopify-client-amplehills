@@ -114,6 +114,7 @@ export default createSelector(
       const heroColor = get(event, 'heroColor', '#fff');
       const heroDescription = get(event, 'heroDescription', '');
       const shopifyVariants = get(event, 'shopifyVariants', []);
+      const product = get(event, 'product', '');
       const frequency = get(event, 'frequency', '');
 
       const seoTitle = get(event, 'seoTitle', '');
@@ -144,7 +145,16 @@ export default createSelector(
         seoTitle,
         seoDescription,
         seoImage,
+        product,
         ...shopifyProduct,
+        availability: shopifyProduct.variants.reduce(
+          (availability, variant) => {
+            availability[variant.date] = variant.available;
+
+            return availability;
+          },
+          {}
+        ),
         variants: shopifyProduct.variants.map(variant => {
           const dateStrWithoutEndTime = variant.date.split('-')[0];
           const sanitizedDate = variant.date.split(',');

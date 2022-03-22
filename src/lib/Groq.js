@@ -221,6 +221,7 @@ export const Event = `{
   blocks[]${Block},
   cardText,
   cardButtonLabel,
+  'product': product->{ ..., 'store': { ...store, 'variants': store.variants[]->{ ... } } },
   seoTitle,
   seoDescription,
   seoImage

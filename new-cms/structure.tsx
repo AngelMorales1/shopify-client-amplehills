@@ -53,7 +53,6 @@ const Structure = S.list()
         .schemaType('product')
         .filter('_type == "product" && !defined(store.id)')
     ),
-    S.documentTypeListItem('product').title('Products').icon(Cart),
     S.documentTypeListItem('event').title('Events').icon(IoCalendarClear),
     S.documentTypeListItem('page').title('Web Pages').icon(IoDocumentSharp),
     S.documentTypeListItem('flavorFrenzy').title('Flavor Frenzy').icon(Vote),

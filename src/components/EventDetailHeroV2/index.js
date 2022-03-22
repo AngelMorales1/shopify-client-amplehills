@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { compareAsc, format, parse, isSameDay, subMinutes } from 'date-fns';
+import get from 'lodash/get';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
@@ -10,16 +11,22 @@ import { QuantitySelector, Button, Image } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
 import styles from './EventDetailHeroV2.scss';
 
-const knownPermutationsOfDateStrings = date => [
-  format(date, 'M/d/yy'),
-  format(date, 'MM/d/yy'),
-  format(date, 'M/dd/yy'),
-  format(date, 'MM/dd/yy'),
-  format(date, 'M/d/yyyy'),
-  format(date, 'MM/d/yyyy'),
-  format(date, 'M/dd/yyyy'),
-  format(date, 'MM/dd/yyyy')
+const dateStrings = [
+  'M/d/yy',
+  'MM/d/yy',
+  'M/dd/yy',
+  'MM/dd/yy',
+  'M/d/yyyy',
+  'MM/d/yyyy',
+  'M/dd/yyyy',
+  'MM/dd/yyyy'
 ];
+const knownPermutationsOfDateStrings = date =>
+  dateStrings.map(str => format(date, str));
+const dateFromString = date => {
+  const dateWithoutTime = date.split(',')[0].split(' - ')[0];
+  return new Date(Date.parse(dateWithoutTime));
+};
 
 class EventDetailHeroV2 extends React.Component {
   state = {
@@ -35,16 +42,10 @@ class EventDetailHeroV2 extends React.Component {
   constructor(props) {
     super(props);
 
-    const firstVariant = props.event.variants.find(variant => {
-      console.log(
-        variant.datetime,
-        new Date(),
-        compareAsc(variant.datetime, new Date())
-      );
-      return compareAsc(variant.datetime, new Date()) === 1;
+    const firstVariant = props.event.product.store.variants.find(variant => {
+      const dateFromVariant = dateFromString(variant.store.title);
+      return compareAsc(dateFromVariant, new Date()) === 1;
     });
-
-    console.log('FV', firstVariant, props.event.variants);
 
     if (firstVariant) this.state.selectedVariant = firstVariant;
   }
@@ -83,33 +84,36 @@ class EventDetailHeroV2 extends React.Component {
 
   selectDate = date => {
     const dateStrings = knownPermutationsOfDateStrings(date);
-    const selectedVariant = this.props.event.variants.find(variant => {
-      return dateStrings.includes(variant.dateStr);
-    });
+
+    const selectedVariant = this.props.event.product.store.variants.find(
+      variant => {
+        return dateStrings.includes(variant.store.title.split(',')[0]);
+      }
+    );
 
     return this.setState({ selectedVariant, dateIsOpen: false });
   };
 
   selectVariant = time => {
-    const selectedDate = this.state.selectedVariant.dateStr;
+    const selectedDate = this.state.selectedVariant.store.title.split(',')[0];
 
     const dateStr = `${selectedDate}, ${time}`;
-    const selectedVariant = this.props.event.variants.find(
-      variant => variant.date === dateStr
+    const selectedVariant = this.props.event.product.store.variants.find(
+      variant => variant.store.title === dateStr
     );
 
     return this.setState({ selectedVariant, timeIsOpen: false });
   };
 
   tileClassName = ({ date }) => {
-    const availableDates = this.props.event.variants
+    const availableDates = this.props.event.product.store.variants
       .filter(variant => {
-        const startTime = variant.datetime;
+        const startTime = dateFromString(variant.store.title);
         const now = new Date();
 
         return compareAsc(startTime, now) === 1;
       })
-      .map(variant => variant.datetime);
+      .map(variant => dateFromString(variant.store.title));
 
     if (availableDates.find(dDate => isSameDay(dDate, date))) {
       return 'react-calendar__tile--available';
@@ -117,14 +121,14 @@ class EventDetailHeroV2 extends React.Component {
   };
 
   tileDisabled = ({ date }) => {
-    const availableDates = this.props.event.variants
+    const availableDates = this.props.event.product.store.variants
       .filter(variant => {
-        const startTime = variant.datetime;
+        const startTime = dateFromString(variant.store.title);
         const now = new Date();
 
         return compareAsc(startTime, now) === 1;
       })
-      .map(variant => variant.datetime);
+      .map(variant => dateFromString(variant.store.title));
 
     return !availableDates.some(dDate => isSameDay(dDate, date));
   };
@@ -133,40 +137,48 @@ class EventDetailHeroV2 extends React.Component {
     const { event } = this.props;
     const { selectedVariant, dateIsOpen, timeIsOpen, quantity } = this.state;
 
-    const filteredVariants = event.variants.filter(variant => {
-      const startTime = variant.datetime;
+    const filteredVariants = event.product.store.variants.filter(variant => {
+      const startTime = dateFromString(variant.store.title);
       const now = new Date();
 
       return compareAsc(startTime, now) === 1;
     });
 
-    const timesByDate = event.variants.reduce((timesByDate, variant) => {
-      const dateArr = variant.date.split(',');
-      const time = (dateArr[1] || '').trim();
+    const timesByDate = event.product.store.variants.reduce(
+      (timesByDate, variant) => {
+        const dateArr = variant.store.title.split(',');
+        const time = (dateArr[1] || '').trim();
 
-      if (time) {
-        const dateStrings = knownPermutationsOfDateStrings(variant.datetime);
-        dateStrings.forEach(date => {
-          if (!!timesByDate[date]) {
-            timesByDate[date] = timesByDate[date].includes(time)
-              ? timesByDate[date]
-              : [...timesByDate[date], time];
-          } else {
-            timesByDate[date] = [time];
-          }
-        });
-      }
+        if (time) {
+          const dateStrings = knownPermutationsOfDateStrings(
+            dateFromString(variant.store.title)
+          );
+          dateStrings.forEach(date => {
+            if (!!timesByDate[date]) {
+              timesByDate[date] = timesByDate[date].includes(time)
+                ? timesByDate[date]
+                : [...timesByDate[date], time];
+            } else {
+              timesByDate[date] = [time];
+            }
+          });
+        }
 
-      return timesByDate;
-    }, {});
+        return timesByDate;
+      },
+      {}
+    );
+
+    const selectedTimeStr = get(selectedVariant.store.title.split(', '), '[1]');
 
     const doorsOpen = selectedVariant
-      ? subMinutes(selectedVariant.datetime, 30)
+      ? subMinutes(dateFromString(selectedVariant.store.title), 30)
       : null;
-    const available = !!selectedVariant && selectedVariant.available;
+    const available =
+      !!selectedVariant && event.availability[selectedVariant.store.title];
     const price = !!selectedVariant
-      ? selectedVariant.price
-      : event.variants[0].price;
+      ? selectedVariant.store.price
+      : event.product.store.variants[0].price;
 
     const breadcrumbs = [
       { to: '/events', label: 'Events' },
@@ -181,8 +193,6 @@ class EventDetailHeroV2 extends React.Component {
             : 'Ice Cream Classes'
       }
     ];
-
-    console.log('EEEE', event);
 
     return (
       <div
@@ -256,7 +266,7 @@ class EventDetailHeroV2 extends React.Component {
                     <strong className="ml1 text-peach avenir col-12 left-align">
                       {selectedVariant
                         ? format(
-                            new Date(selectedVariant.datetime),
+                            dateFromString(selectedVariant.store.title),
                             'MMMM dd, YYY'
                           )
                         : 'No Upcoming Dates'}
@@ -277,7 +287,7 @@ class EventDetailHeroV2 extends React.Component {
                         tileClassName={this.tileClassName}
                         tileDisabled={this.tileDisabled}
                         onClickDay={this.selectDate}
-                        value={selectedVariant.datetime}
+                        value={dateFromString(selectedVariant.store.title)}
                         minDetail="month"
                         maxDetail="month"
                       />
@@ -300,7 +310,16 @@ class EventDetailHeroV2 extends React.Component {
                         src="/assets/images/icon-clock.svg"
                       />
                       <strong className="ml1 text-peach avenir col-12 left-align">
-                        {format(new Date(selectedVariant.datetime), 'h:mm a')}
+                        {selectedTimeStr.includes(':')
+                          ? selectedTimeStr
+                          : format(
+                              parse(
+                                `2020-01-01 ${selectedTimeStr}`,
+                                'yyyy-MM-dd ha',
+                                new Date()
+                              ),
+                              'h:mm a'
+                            )}
                       </strong>
                       <Image
                         className={
@@ -317,7 +336,9 @@ class EventDetailHeroV2 extends React.Component {
                         'absolute t0'
                       )}
                     >
-                      {timesByDate[selectedVariant.dateStr].map(time => (
+                      {timesByDate[
+                        selectedVariant.store.title.split(',')[0]
+                      ].map(time => (
                         <button
                           className={cx(
                             styles['EventDetailHeroV2__time-button'],
