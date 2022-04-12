@@ -1,5 +1,5 @@
 const BASE_URL = window.location.href.includes('localhost')
-  ? 'http://localhost:5000'
+  ? 'http://localhost:5050'
   : 'https://ample-hills-api.web.app';
 const VERSION = 'v1';
 

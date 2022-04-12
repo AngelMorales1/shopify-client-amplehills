@@ -14,6 +14,7 @@ const cors = access({
     'https://staging.amplehills.com',
     'http://localhost:3000',
     'https://amplehills.com',
+    'https://ample-hills-creamery.sanity.studio',
     'https://ampletest.myshopify.com'
   ],
   methods: ['POST'],

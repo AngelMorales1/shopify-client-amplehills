@@ -141,8 +141,7 @@ export default {
       title: 'Variants (Dates)',
       type: 'array',
       of: [{ type: 'eventVariant' }],
-      fieldset: 'deprecated',
-      hidden: true
+      fieldset: 'deprecated'
     },
   ]
 };

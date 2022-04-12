@@ -24,6 +24,7 @@ const cors = access({
     'http://localhost:3000',
     'http://localhost:3333',
     'https://ample-hills.sanity.studio',
+    'https://ample-hills-creamery.sanity.studio',
     'https://ampletest.myshopify.com'
   ],
   methods: ['POST'],
@@ -39,6 +40,9 @@ const attendees = functions.https.onRequest(async (req, res) => {
     body = typeof body === 'object' ? body : JSON.parse(body);
 
     const { name, variants, callerId } = body;
+
+    console.log('NAME', name, callerId);
+    console.log('VARIANTS', variants);
 
     if (callerId !== '2ec6b100-7e60-46f1-821d-2c39e2c1935d') {
       res.writeHead(403, {
@@ -91,6 +95,10 @@ const attendees = functions.https.onRequest(async (req, res) => {
     return res.end(JSON.stringify(events));
   } catch (e) {
     Sentry.captureException(e);
+
+    console.log('EEEEE');
+    console.error(e);
+
     res.writeHead((!!e && get(e, 'status')) || 500, {
       'Content-Type': 'application/json'
     });

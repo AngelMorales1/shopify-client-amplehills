@@ -13,6 +13,7 @@ const cors = access({
     'http://localhost:3000',
     'http://localhost:3333',
     'https://amplehills.com',
+    'https://ample-hills-creamery.sanity.studio',
     'https://ample-hills.sanity.studio',
     'https://ampletest.myshopify.com'
   ],

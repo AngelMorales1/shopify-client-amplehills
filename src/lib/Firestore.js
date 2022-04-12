@@ -3,7 +3,7 @@ import environmentIsLocal from 'utils/environmentIsLocal';
 
 const API_VERSION = 'api/v1';
 const BASE_URL = environmentIsLocal()
-  ? 'http://localhost:5000'
+  ? 'http://localhost:5050'
   : 'https://ample-hills-api.web.app';
 
 const Endpoints = {

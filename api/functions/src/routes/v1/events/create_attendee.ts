@@ -23,12 +23,16 @@ const cors = access({
     'http://localhost:3000',
     'https://ampletest.myshopify.com',
     'https://ample-hills.sanity.studio',
+    'https://ample-hills-creamery.sanity.studio',
     'http://localhost:3333'
   ],
   methods: ['POST'],
   credentials: false
 });
 
+const datetimeFromVariantTitle = (str: string) => {
+  return new Date(Date.parse(str.split(',')[0]));
+}
 
 const create = functions.https.onRequest(async (req, res) => {
   if (cors(req, res)) return;
@@ -38,8 +42,14 @@ const create = functions.https.onRequest(async (req, res) => {
     
     body = typeof body === 'object' ? body : JSON.parse(body);
 
+    console.log('BODY', body);
+
     const order = await Shopify.fetchOrder(body.id);
     const events = await Shopify.products.fetchEvents();
+
+    console.log('ORDER', order);
+    console.log('EVENTS', events);
+
     const eventsInOrder = order.line_items.filter(
       (item: any) => events.find((event: any) => event.title === item.title)
     );
@@ -51,28 +61,36 @@ const create = functions.https.onRequest(async (req, res) => {
     eventsInOrder.forEach(async (event: any) => {
       const sanityEvent: any = await Sanity.fetchEventByTitle(event.title);
 
+      console.log('SANITY EVEBT',  sanityEvent.product.store.variants)
+
       if (!sanityEvent || !sanityEvent.name) {
         console.log('NO SANITY EVENT FOUND FOR EVENT');
         return;
       }
 
-      const sanityVariant = sanityEvent.variants?.find((variant: any) => {
-        return variant.shopifyName === event.variant_title
+      const sanityVariant = sanityEvent.product?.store?.variants?.find((variant: any) => {
+        return variant.store.title === event.variant_title
       });
 
       if (!sanityVariant) {
-        console.log('EEEEE', sanityEvent)
         console.log('NO SANITY VARIANT FOUND FOR EVENT');
         return;
       }
 
+      console.log('PREPPING NEW DOC');
       const eventAttendee: admin.firestore.DocumentReference = await db.collection('eventAttendees').doc(uuid.v4());
-      const setEvent = await eventAttendee.set({
+      
+      console.log(datetimeFromVariantTitle(sanityVariant.store.title));
+
+      const newData = {
         orderId: body.id,
         name: event.title,
         variantName: event.variant_title,
-        date: sanityVariant.datetime
-      });
+        date: datetimeFromVariantTitle(sanityVariant.store.title)
+      };
+      console.log('SETTING NEW DOC DATA');
+      console.table(newData);
+      const setEvent = await eventAttendee.set(newData);
 
       const eventLocation = sanityEvent.location;
       console.log('SANITY', eventLocation, setEvent);
