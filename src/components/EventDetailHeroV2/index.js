@@ -68,7 +68,17 @@ class EventDetailHeroV2 extends React.Component {
 
   addToCart = () => {
     const { selectedVariant, quantity } = this.state;
-    const items = [{ quantity, variantId: selectedVariant.id }];
+
+    console.log('AAA', selectedVariant, quantity);
+
+    const items = [
+      {
+        quantity,
+        variantId: window.btoa(
+          `gid://shopify/ProductVariant/${selectedVariant.store.id}`
+        )
+      }
+    ];
 
     gtag('event', 'add_to_cart', {
       send_to: 'AW-596545311',

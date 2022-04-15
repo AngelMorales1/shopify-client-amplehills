@@ -3,6 +3,7 @@ import sanityClient from '@sanity/client';
 export const SanityClient = sanityClient({
   projectId: 'dln5ca6t',
   dataset: 'production',
+  apiVersion: '2022-04-01',
   useCdn: true
 });
 
