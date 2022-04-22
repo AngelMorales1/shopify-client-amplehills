@@ -2,9 +2,9 @@
   position: relative;
   &::before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
-    padding-top: ($height / $width) * 100%;
+    padding-top: calc((#{$height} / #{$width}) * 100%);
   }
   > .inner {
     position: absolute;

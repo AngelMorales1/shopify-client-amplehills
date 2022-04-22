@@ -1,11 +1,19 @@
 import React from 'react';
 import cx from 'classnames';
-import { compareAsc, format, parse, isSameDay, subMinutes } from 'date-fns';
+import {
+  compareAsc,
+  format,
+  parse,
+  isSameDay,
+  subMinutes,
+  addHours
+} from 'date-fns';
 import get from 'lodash/get';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 import gtag from 'utils/gtag';
+import parseTime from 'utils/parseTime';
 
 import { QuantitySelector, Button, Image } from 'components/base';
 import Breadcrumbs from 'components/Breadcrumbs';
@@ -25,6 +33,7 @@ const knownPermutationsOfDateStrings = date =>
   dateStrings.map(str => format(date, str));
 const dateFromString = date => {
   const dateWithoutTime = date.split(',')[0].split(' - ')[0];
+
   return new Date(Date.parse(dateWithoutTime));
 };
 
@@ -181,9 +190,13 @@ class EventDetailHeroV2 extends React.Component {
 
     const selectedTimeStr = get(selectedVariant.store.title.split(', '), '[1]');
 
-    const doorsOpen = selectedVariant
-      ? subMinutes(dateFromString(selectedVariant.store.title), 30)
-      : null;
+    let doorsOpen = subMinutes(parseTime(selectedTimeStr.split('-')[0]), 30);
+    doorsOpen =
+      selectedTimeStr.includes('PM') &&
+      format(doorsOpen, 'h:mma').includes('AM')
+        ? addHours(doorsOpen, 12)
+        : doorsOpen;
+
     const available =
       !!selectedVariant && event.availability[selectedVariant.store.title];
     const price = !!selectedVariant
