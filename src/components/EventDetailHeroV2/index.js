@@ -53,7 +53,10 @@ class EventDetailHeroV2 extends React.Component {
 
     const firstVariant = props.event.product.store.variants.find(variant => {
       const dateFromVariant = dateFromString(variant.store.title);
-      return compareAsc(dateFromVariant, new Date()) === 1;
+      return (
+        compareAsc(dateFromVariant, new Date()) === 1 ||
+        isSameDay(dateFromVariant, new Date())
+      );
     });
 
     if (firstVariant) this.state.selectedVariant = firstVariant;
@@ -130,7 +133,7 @@ class EventDetailHeroV2 extends React.Component {
         const startTime = dateFromString(variant.store.title);
         const now = new Date();
 
-        return compareAsc(startTime, now) === 1;
+        return compareAsc(startTime, now) === 1 || isSameDay(startTime, now);
       })
       .map(variant => dateFromString(variant.store.title));
 
@@ -145,7 +148,7 @@ class EventDetailHeroV2 extends React.Component {
         const startTime = dateFromString(variant.store.title);
         const now = new Date();
 
-        return compareAsc(startTime, now) === 1;
+        return compareAsc(startTime, now) === 1 || isSameDay(startTime, now);
       })
       .map(variant => dateFromString(variant.store.title));
 
@@ -160,7 +163,7 @@ class EventDetailHeroV2 extends React.Component {
       const startTime = dateFromString(variant.store.title);
       const now = new Date();
 
-      return compareAsc(startTime, now) === 1;
+      return compareAsc(startTime, now) === 1 || isSameDay(startTime, now);
     });
 
     const timesByDate = event.product.store.variants.reduce(
