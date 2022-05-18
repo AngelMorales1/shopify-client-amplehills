@@ -1,6 +1,6 @@
 {
   "name": "ample",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "private": true,
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
