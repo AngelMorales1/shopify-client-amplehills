@@ -98,9 +98,9 @@ class Cart extends Component {
         return get(item, 'product.shippableItem', false);
       }
     ).length;
-    const filteredItems = this.props.items.filter(
-      item => item.product.handle !== item.product.headerId
-    );
+    // const filteredItems = this.props.items.filter(
+    //   item => item.product.handle !== item.product.headerId
+    // );
 
     const cartWarningMessage = get(settings, 'cartWarningMessage', '');
 
