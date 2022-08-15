@@ -43,9 +43,9 @@ class MiniCart extends Component {
       actions: { closeMiniCart, removeLineItems }
     } = this.props;
 
-    // const filteredItems = items.filter(
-    //   item => item.product.handle !== item.product.headerId
-    // );
+    const filteredItems = items.filter(
+      item => item.product.handle !== item.product.headerId
+    );
 
     const classes = cx(
       styles['MiniCart'],
