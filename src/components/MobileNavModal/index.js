@@ -64,6 +64,18 @@ class MobileNavModal extends Component {
             <Image alt="Close button" src="/assets/images/close-icon.svg" />
           </Button>
           <div className="flex flex-column justify-start pl3">
+            <Button
+              className={cx(
+                styles['MobileNavModal__button'],
+                'my2 inline-flex'
+              )}
+              to="/products"
+              variant="primary-small"
+              color="peach"
+              label="Order Online"
+              hover="clear-peach-border"
+              onClick={this.handleMenuClick}
+            />
             <div className="my2">
               <NavLink
                 exact
@@ -180,18 +192,6 @@ class MobileNavModal extends Component {
             >
               Contact Us
             </NavLink>
-            <Button
-              className={cx(
-                styles['MobileNavModal__button'],
-                'my2 inline-flex'
-              )}
-              to="/products"
-              variant="primary-small"
-              color="peach"
-              label="Order Online"
-              hover="clear-peach-border"
-              onClick={this.handleMenuClick}
-            />
           </div>
         </div>
       </div>
