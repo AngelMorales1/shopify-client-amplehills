@@ -13,7 +13,7 @@ import { IDLE, PENDING, REJECTED } from 'constants/Status';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
-import gtag from 'utils/gtag';
+import { gtag, reportConversion } from 'utils/gtag';
 import products from 'state/selectors/products';
 import events from 'state/selectors/events';
 import allMerchandise from 'state/selectors/allMerchandise';
@@ -73,19 +73,8 @@ class Cart extends Component {
     // gtag('event', 'conversion', {
     //   send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC'
     // });
-    function gtag_report_conversion(url) {
-      var callback = function() {
-        if (typeof url !== 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-        send_to: 'AW-596545311/AQ6BCNH7hOYBEJ-eupwC',
-        event_callback: callback
-      });
-      return false;
-    }
-    gtag_report_conversion();
+
+    return reportConversion('AW-596545311/AQ6BCNH7hOYBEJ-eupwC');
   };
 
   render() {

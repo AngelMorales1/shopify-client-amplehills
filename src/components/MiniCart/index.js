@@ -17,6 +17,7 @@ import partyDeposit from 'state/selectors/partyDeposit';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import get from 'utils/get';
+import { gtag, reportConversion } from 'utils/gtag';
 import checkoutModel from 'models/checkoutModel';
 
 import { Button, Image, QuantitySelector } from 'components/base';
@@ -34,6 +35,9 @@ class MiniCart extends Component {
 
     this.props.actions.updateLineItems(this.props.checkout.id, items);
   };
+
+  handleCheckoutClick = () =>
+    reportConversion('AW-596545311/AQ6BCNH7hOYBEJ-eupwC');
 
   render() {
     const {
@@ -145,9 +149,10 @@ class MiniCart extends Component {
             <span className="bold">Subtotal: ${checkout.subtotalPrice}</span>
             <Button
               disabled={!filteredItems.length}
-              to="/cart"
+              openInCurrentTab={true}
+              to={get(checkout, 'webUrl', '')}
               color="madison-blue"
-              onClick={() => closeMiniCart()}
+              onClick={this.handleCheckoutClick}
               label="Checkout"
               className="mb1"
             />
