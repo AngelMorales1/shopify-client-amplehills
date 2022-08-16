@@ -173,6 +173,18 @@ class Nav extends Component {
                     'w100 flex items-center'
                   )}
                 >
+                  {/* TODO */}
+                  <Button
+                    className="mr2"
+                    to="/products"
+                    variant="primary-small"
+                    color="white-peach"
+                    label="Order Online"
+                    onClick={closeShopDropdown}
+                    onMouseEnter={() => this.startDropdownTimer('shop')}
+                    onMouseLeave={() => this.cancelDropdownTimer('shop')}
+                    hover="clear-white-border"
+                  />
                   <NavLink
                     exact
                     to="/flavors"
@@ -263,17 +275,6 @@ class Nav extends Component {
                       )}
                     />
                   </NavLink>
-                  <Button
-                    className="mr2"
-                    to="/products"
-                    variant="primary-small"
-                    color="white-peach"
-                    label="Order Online"
-                    onClick={closeShopDropdown}
-                    onMouseEnter={() => this.startDropdownTimer('shop')}
-                    onMouseLeave={() => this.cancelDropdownTimer('shop')}
-                    hover="clear-white-border"
-                  />
                 </Fragment>
               ) : (
                 <Fragment>
