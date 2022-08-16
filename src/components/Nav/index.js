@@ -173,7 +173,6 @@ class Nav extends Component {
                     'w100 flex items-center'
                   )}
                 >
-                  {/* TODO */}
                   <Button
                     className="mr2"
                     to="/products"
@@ -291,7 +290,7 @@ class Nav extends Component {
                 )}
                 variant="circle"
                 color={cartIsEmpty ? 'burgundy' : 'madison-blue'}
-                to="/cart"
+                onClick={this.toggleMiniCart}
                 label={filteredItems.length.toString()}
                 hover="clear-white-border"
               />
