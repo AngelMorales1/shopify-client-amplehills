@@ -5,7 +5,15 @@ const BASE_URL =
 const SEARCH_PARAM = '?preview=';
 
 export default function resolveProductionUrl(document) {
-  if (document._type === 'flavorFrenzy') {
-    return `${BASE_URL}${document.slug}${SEARCH_PARAM}${document._id}`
+  switch (document._type) {
+    case 'flavorFrenzy':
+      return `${BASE_URL}${document.slug}${SEARCH_PARAM}${document._id}`
+    case 'page':
+      return `${BASE_URL}${document.slug}`
+    default:
+      console.log("ERROR IN THE CONTENT TYPE",document)
+      break;
   }
+  
+  
 };
