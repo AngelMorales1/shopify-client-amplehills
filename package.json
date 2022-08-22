@@ -59,7 +59,8 @@
     "build": "react-app-rewired build",
     "test": "cross-env CI=true react-app-rewired test --verbose --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase deploy --only hosting:www"
+    "deploy": "yarn build && firebase deploy --only hosting:www",
+    "deploy:staging": "yarn build && npx firebase-tools hosting:channel:deploy staging"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.0",
