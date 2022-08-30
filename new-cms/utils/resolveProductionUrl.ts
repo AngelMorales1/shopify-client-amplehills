@@ -1,6 +1,6 @@
 const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://staging.amplehills.com/'
+    ? 'https://www.amplehills.com/'
     : 'http://localhost:3000/';
 const SEARCH_PARAM = '?preview=';
 
