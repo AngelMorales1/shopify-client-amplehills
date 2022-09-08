@@ -8,6 +8,7 @@ import { PENDING, FULFILLED } from 'constants/Status';
 import Global from 'constants/Global';
 import contentfulImgUtil from 'utils/contentfulImgUtil';
 import imageModel from 'models/imageModel';
+import cartIsMaxed from 'utils/cartIsMaxed';
 
 import get from 'utils/get';
 import gtag from 'utils/gtag';
@@ -104,6 +105,31 @@ class ProductHero extends Component {
       };
 
       items.push(headerItem);
+    }
+
+    const MAX_ITEMS = 2;
+
+    const itemsAreMaxed = function(cartItems, addedItem) {
+      let isMaxed = false;
+      cartItems.forEach(cartItem => {
+        const item = addedItem[0];
+
+        if (cartItem.productId === item.variantId) {
+          // No more than MAX_ITEMS items can be added to the cart
+          if (cartItem.quantity + item.quantity > MAX_ITEMS) {
+            isMaxed = true;
+          }
+        }
+      });
+      return isMaxed;
+    };
+
+    if (
+      items[0].quantity > MAX_ITEMS ||
+      itemsAreMaxed(this.props.lineItems, items)
+    ) {
+      this.props.actions.openCartMax();
+      return null;
     }
 
     gtag('event', 'add_to_cart', {
