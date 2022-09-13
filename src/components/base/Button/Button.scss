@@ -309,6 +309,20 @@
     border: spacing(1) solid color('white');
   }
 
+  &--white-madison-red-border {
+    @extend .bg-white;
+    @extend .text-madison-blue;
+    border: spacing(1) solid color('peach');
+    color: color('peach');
+    &.Button--circle-small {
+      border-width: spacing(0.5);
+    }
+
+    &.Button--circle-medium {
+      border-width: spacing(0.7);
+    }
+  }
+
   &--style-none {
     background-color: transparent;
     box-shadow: unset;

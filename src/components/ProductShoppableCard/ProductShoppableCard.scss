@@ -1,5 +1,41 @@
 @import 'settings';
 
+.text-input-alcohol {
+  font-size: 10px;
+}
+
+.margin {
+  margin: 20px 0;
+}
+
+.round {
+  position: relative;
+  padding: 0;
+  label {
+    background-color: #fff;
+    border: 2px solid #13466d;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+
+  input[type='checkbox'] {
+    visibility: hidden;
+  }
+
+  input[type='checkbox']:checked + label {
+    background-color: #13466d;
+    border-color: #13466d;
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
 .ProductShoppableCard {
   padding: spacing(4);
 

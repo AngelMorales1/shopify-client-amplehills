@@ -12,7 +12,7 @@ export default createSelector(
     ).reduce((handlizedProducts, product) => {
       const node = get(product, 'node', {});
       const price = parseFloat(get(node, 'variants.edges[0].node.price', 0.0));
-
+      const tags = get(node, 'tags', []);
       const id = get(node, 'variants.edges[0].node.id', '');
 
       // TO-DO permanent fix to have additional field connecting product Handle
@@ -76,13 +76,13 @@ export default createSelector(
         available,
         type,
         link,
-        shippableItem
+        shippableItem,
+        tags
       };
 
       handlizedProducts[handle] = handlizedProduct;
       return handlizedProducts;
     }, {});
-
     return products;
   },
   state => get(state, 'products.contentfulProducts', []),

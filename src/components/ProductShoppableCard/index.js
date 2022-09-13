@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import productModel from 'models/productModel';
@@ -13,6 +13,17 @@ const ProductShoppableCard = ({
   handleAddProduct,
   handleRemoveProduct
 }) => {
+  const [ageChecker, setAgeChecker] = useState({});
+  useEffect(() => {
+    product.tags.forEach(tag => {
+      if (tag === 'CYOS') {
+        setAgeChecker({ ...ageChecker, prodContainsAlcohol: true });
+        return;
+      }
+      console.log(product);
+    });
+  }, []);
+
   const handleQuantityChange = newQuantity => {
     if (newQuantity > quantity) handleAddProduct(product.handle);
     if (newQuantity < quantity) handleRemoveProduct(product.handle);
@@ -49,6 +60,33 @@ const ProductShoppableCard = ({
             <span className="w100 bold mt2 mb1 block">{product.title}</span>
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
+          {ageChecker.prodContainsAlcohol && (
+            <div className={cx(styles['margin'])}>
+              <div>
+                <p className="detail bold text-peach">
+                  THIS FLAVOR CONTAINS ALCOHOL
+                </p>
+              </div>
+              <div className="flex flex-row items-start">
+                <div className={styles['round']}>
+                  <input
+                    type="checkbox"
+                    id={product.handle}
+                    onChange={() =>
+                      setAgeChecker({
+                        ...ageChecker,
+                        olderThan21: !ageChecker.olderThan21
+                      })
+                    }
+                  />
+                  <label for={product.handle} />
+                </div>
+                <p className={cx(styles['text-input-alcohol'], 'text-peach ')}>
+                  I CERTIFY THAT I AM 21 YEARS OLD OR OLDER
+                </p>
+              </div>
+            </div>
+          )}
           {product.available ? (
             <div className={actionClasses}>
               <QuantitySelector
@@ -68,8 +106,19 @@ const ProductShoppableCard = ({
                   'small bg-seafoam absolute t0 l0 transition-slide-swap-replace'
                 )}
                 variant="primary-small"
-                color="white-madison-blue-border"
-                label="+ Add"
+                color={
+                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
+                    ? 'white-madison-red-border'
+                    : 'white-madison-blue-border'
+                }
+                label={
+                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
+                    ? '21+ Only'
+                    : '+ Add'
+                }
+                disabled={
+                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
+                }
                 onClick={() => handleAddProduct(product.handle)}
               />
               <div className="absolute t0 r0 mt1">
