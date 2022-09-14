@@ -13,10 +13,13 @@ const ProductShoppableCard = ({
   handleAddProduct,
   handleRemoveProduct
 }) => {
+  const ALCOHOL_TAG = 'CYOS';
+
   const [ageChecker, setAgeChecker] = useState({});
+
   useEffect(() => {
     product.tags.forEach(tag => {
-      if (tag === 'alcohol') {
+      if (tag === ALCOHOL_TAG) {
         setAgeChecker({ ...ageChecker, prodContainsAlcohol: true });
         return;
       }
@@ -43,19 +46,19 @@ const ProductShoppableCard = ({
     });
   };
 
-  const handleAgeClassName = function(firstClassName, secondClassName) {
-    if (!firstClassName && !secondClassName) {
-      if (!ageChecker.olderThan21 && ageChecker.prodContainsAlcohol) {
-        return true;
-      } else {
-        return false;
-      }
+  const oldEnough = (allowed, notAllowed) => {
+    if (!ageChecker.olderThan21 && ageChecker.prodContainsAlcohol) {
+      return allowed;
     } else {
-      if (!ageChecker.olderThan21 && ageChecker.prodContainsAlcohol) {
-        return firstClassName;
-      } else {
-        return secondClassName;
-      }
+      return notAllowed;
+    }
+  };
+
+  const ageCheckerValid = function(firstClassName, secondClassName) {
+    if (!firstClassName && !secondClassName) {
+      return oldEnough(true, false);
+    } else {
+      return oldEnough(firstClassName, secondClassName);
     }
   };
 
@@ -123,12 +126,12 @@ const ProductShoppableCard = ({
                   'small bg-seafoam absolute t0 l0 transition-slide-swap-replace'
                 )}
                 variant="primary-small"
-                color={handleAgeClassName(
+                color={ageCheckerValid(
                   'white-madison-red-border',
                   'white-madison-blue-border'
                 )}
-                label={handleAgeClassName('21+ Only', '+ Add')}
-                disabled={handleAgeClassName()}
+                label={ageCheckerValid('21+ Only', '+ Add')}
+                disabled={ageCheckerValid()}
                 onClick={() => handleAddProduct(product.handle)}
               />
               <div className="absolute t0 r0 mt1">
