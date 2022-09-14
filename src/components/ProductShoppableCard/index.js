@@ -16,11 +16,10 @@ const ProductShoppableCard = ({
   const [ageChecker, setAgeChecker] = useState({});
   useEffect(() => {
     product.tags.forEach(tag => {
-      if (tag === 'CYOS') {
+      if (tag === 'alcohol') {
         setAgeChecker({ ...ageChecker, prodContainsAlcohol: true });
         return;
       }
-      console.log(product);
     });
   }, []);
 
@@ -36,6 +35,29 @@ const ProductShoppableCard = ({
       [styles['ProductShoppableCard__actions--has-quantity']]: quantity
     }
   );
+
+  const handleAgeCheckbox = function() {
+    setAgeChecker({
+      ...ageChecker,
+      olderThan21: !ageChecker.olderThan21
+    });
+  };
+
+  const handleAgeClassName = function(firstClassName, secondClassName) {
+    if (!firstClassName && !secondClassName) {
+      if (!ageChecker.olderThan21 && ageChecker.prodContainsAlcohol) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      if (!ageChecker.olderThan21 && ageChecker.prodContainsAlcohol) {
+        return firstClassName;
+      } else {
+        return secondClassName;
+      }
+    }
+  };
 
   return (
     <div className={cx(styles['ProductShoppableCard'], 'flex col-12 sm-col-6')}>
@@ -61,27 +83,22 @@ const ProductShoppableCard = ({
             <p className="detail mb3">{product.flavorDescription}</p>
           </div>
           {ageChecker.prodContainsAlcohol && (
-            <div className={cx(styles['margin'])}>
+            <div className={styles.margin}>
               <div>
                 <p className="detail bold text-peach">
                   THIS FLAVOR CONTAINS ALCOHOL
                 </p>
               </div>
               <div className="flex flex-row items-start">
-                <div className={styles['round']}>
+                <div className={styles.round}>
                   <input
                     type="checkbox"
                     id={product.handle}
-                    onChange={() =>
-                      setAgeChecker({
-                        ...ageChecker,
-                        olderThan21: !ageChecker.olderThan21
-                      })
-                    }
+                    onChange={handleAgeCheckbox}
                   />
                   <label for={product.handle} />
                 </div>
-                <p className={cx(styles['text-input-alcohol'], 'text-peach ')}>
+                <p className={cx(styles.textInputAlcohol, 'text-peach ')}>
                   I CERTIFY THAT I AM 21 YEARS OLD OR OLDER
                 </p>
               </div>
@@ -106,19 +123,12 @@ const ProductShoppableCard = ({
                   'small bg-seafoam absolute t0 l0 transition-slide-swap-replace'
                 )}
                 variant="primary-small"
-                color={
-                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
-                    ? 'white-madison-red-border'
-                    : 'white-madison-blue-border'
-                }
-                label={
-                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
-                    ? '21+ Only'
-                    : '+ Add'
-                }
-                disabled={
-                  !ageChecker.olderThan21 && ageChecker.prodContainsAlcohol
-                }
+                color={handleAgeClassName(
+                  'white-madison-red-border',
+                  'white-madison-blue-border'
+                )}
+                label={handleAgeClassName('21+ Only', '+ Add')}
+                disabled={handleAgeClassName()}
                 onClick={() => handleAddProduct(product.handle)}
               />
               <div className="absolute t0 r0 mt1">
