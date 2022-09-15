@@ -54,11 +54,11 @@ const ProductShoppableCard = ({
     }
   };
 
-  const ageCheckerValid = function(firstClassName, secondClassName) {
-    if (!firstClassName && !secondClassName) {
+  const ageCheckerValid = function(allowedClass, notAllowedClass) {
+    if (!allowedClass && !notAllowedClass) {
       return oldEnough(true, false);
     } else {
-      return oldEnough(firstClassName, secondClassName);
+      return oldEnough(allowedClass, notAllowedClass);
     }
   };
 
