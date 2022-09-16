@@ -108,12 +108,11 @@ class ProductHero extends Component {
     }
 
     const MAX_ITEMS = 2;
+    let isMaxed = false;
 
     const itemsAreMaxed = function(cartItems, addedItem) {
-      let isMaxed = false;
+      const item = addedItem[0];
       cartItems.forEach(cartItem => {
-        const item = addedItem[0];
-
         if (cartItem.productId === item.variantId) {
           // No more than MAX_ITEMS items can be added to the cart
           if (cartItem.quantity + item.quantity > MAX_ITEMS) {
