@@ -108,23 +108,19 @@ class ProductHero extends Component {
     }
 
     const MAX_ITEMS = 2;
-    let isMaxed = false;
 
     const itemsAreMaxed = function(cartItems, addedItem) {
       const item = addedItem[0];
-      cartItems.forEach(cartItem => {
+      return cartItems.find(cartItem => {
         if (cartItem.productId === item.variantId) {
           // No more than MAX_ITEMS items can be added to the cart
-          if (cartItem.quantity + item.quantity > MAX_ITEMS) {
-            isMaxed = true;
-          }
+          return cartItem.quantity + item.quantity >= MAX_ITEMS;
         }
       });
-      return isMaxed;
     };
 
     if (
-      items[0].quantity > MAX_ITEMS ||
+      items[0].quantity >= MAX_ITEMS ||
       itemsAreMaxed(this.props.lineItems, items)
     ) {
       this.props.actions.openCartMax();

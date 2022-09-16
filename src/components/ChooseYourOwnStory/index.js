@@ -138,7 +138,22 @@ class ChooseYourOwnStory extends Component {
       };
     });
 
-    if (cartIsMaxed(this.props.lineItems)) {
+    const MAX_ITEMS = 2;
+
+    const itemsAreMaxed = function(cartItems, addedItem) {
+      const item = addedItem[0];
+      return cartItems.find(cartItem => {
+        if (cartItem.productId === item.variantId) {
+          // No more than MAX_ITEMS items can be added to the cart
+          return cartItem.quantity + item.quantity >= MAX_ITEMS;
+        }
+      });
+    };
+
+    if (
+      items[0].quantity >= MAX_ITEMS ||
+      itemsAreMaxed(this.props.lineItems, items)
+    ) {
       this.props.actions.openCartMax();
       return null;
     }
